@@ -52,7 +52,7 @@ public final class GeostoreSpeedLimitProto extends com.google.api.client.json.Ge
   }
 
   /**
-   * RESERVED
+   * The source of the speed limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GeostoreSpeedLimitProto extends com.google.api.client.json.Ge
   }
 
   /**
-   * RESERVED
+   * The source of the speed limit.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -124,7 +124,7 @@ public final class GeostoreSpeedLimitProto extends com.google.api.client.json.Ge
   }
 
   /**
-   * RESERVED
+   * The source of the speed limit.
    * @param sourceType sourceType or {@code null} for none
    */
   public GeostoreSpeedLimitProto setSourceType(java.lang.String sourceType) {

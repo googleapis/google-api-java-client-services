@@ -37,7 +37,7 @@ public final class QualityNsrNsrChunksWithSourceInfo extends com.google.api.clie
   private QualityNsrNsrChunksProto nsrChunks;
 
   /**
-   * These are annotated in the Goldmine NSR annotator.
+   * Annotated in the SitechunksAnnotator and copied over in NsrAnnotator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class QualityNsrNsrChunksWithSourceInfo extends com.google.api.clie
   }
 
   /**
-   * These are annotated in the Goldmine NSR annotator.
+   * Annotated in the SitechunksAnnotator and copied over in NsrAnnotator.
    * @return value or {@code null} for none
    */
   public java.lang.String getSiteChunkSource() {
@@ -67,7 +67,7 @@ public final class QualityNsrNsrChunksWithSourceInfo extends com.google.api.clie
   }
 
   /**
-   * These are annotated in the Goldmine NSR annotator.
+   * Annotated in the SitechunksAnnotator and copied over in NsrAnnotator.
    * @param siteChunkSource siteChunkSource or {@code null} for none
    */
   public QualityNsrNsrChunksWithSourceInfo setSiteChunkSource(java.lang.String siteChunkSource) {

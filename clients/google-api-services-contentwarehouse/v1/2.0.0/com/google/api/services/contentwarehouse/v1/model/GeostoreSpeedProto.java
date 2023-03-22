@@ -31,18 +31,21 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreSpeedProto extends com.google.api.client.json.GenericJson {
 
   /**
+   * All speed values are stored in kilometers per hour.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float speed;
 
   /**
+   * Mapfacts only allows unit to be KILOMETERS_PER_HOUR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String unit;
 
   /**
+   * All speed values are stored in kilometers per hour.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSpeed() {
@@ -50,6 +53,7 @@ public final class GeostoreSpeedProto extends com.google.api.client.json.Generic
   }
 
   /**
+   * All speed values are stored in kilometers per hour.
    * @param speed speed or {@code null} for none
    */
   public GeostoreSpeedProto setSpeed(java.lang.Float speed) {
@@ -58,6 +62,7 @@ public final class GeostoreSpeedProto extends com.google.api.client.json.Generic
   }
 
   /**
+   * Mapfacts only allows unit to be KILOMETERS_PER_HOUR.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -65,6 +70,7 @@ public final class GeostoreSpeedProto extends com.google.api.client.json.Generic
   }
 
   /**
+   * Mapfacts only allows unit to be KILOMETERS_PER_HOUR.
    * @param unit unit or {@code null} for none
    */
   public GeostoreSpeedProto setUnit(java.lang.String unit) {

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 44
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 47
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -154,6 +154,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean isFullyGrounded;
 
   /**
+   * Whether the intent is a media control intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMediaControlIntent;
+
+  /**
    * Whether the intent is a PlayGenericMusic-type intent.
    * The value may be {@code null}.
    */
@@ -200,6 +207,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double maxHgrScoreAcrossBindingSets;
+
+  /**
+   * Rank of the intent as reported by NSP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer nspRank;
 
   /**
    * Number of alternative hypotheses from speech recognition(S3).
@@ -284,6 +298,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float predictedIntentConfidence;
+
+  /**
+   * Used in HGR to modify the ranker based on input experimental flag and intent name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rankerName;
 
   /**
    * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
@@ -603,6 +624,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the intent is a media control intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMediaControlIntent() {
+    return isMediaControlIntent;
+  }
+
+  /**
+   * Whether the intent is a media control intent.
+   * @param isMediaControlIntent isMediaControlIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsMediaControlIntent(java.lang.Boolean isMediaControlIntent) {
+    this.isMediaControlIntent = isMediaControlIntent;
+    return this;
+  }
+
+  /**
    * Whether the intent is a PlayGenericMusic-type intent.
    * @return value or {@code null} for none
    */
@@ -713,6 +751,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setMaxHgrScoreAcrossBindingSets(java.lang.Double maxHgrScoreAcrossBindingSets) {
     this.maxHgrScoreAcrossBindingSets = maxHgrScoreAcrossBindingSets;
+    return this;
+  }
+
+  /**
+   * Rank of the intent as reported by NSP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNspRank() {
+    return nspRank;
+  }
+
+  /**
+   * Rank of the intent as reported by NSP.
+   * @param nspRank nspRank or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNspRank(java.lang.Integer nspRank) {
+    this.nspRank = nspRank;
     return this;
   }
 
@@ -914,6 +969,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setPredictedIntentConfidence(java.lang.Float predictedIntentConfidence) {
     this.predictedIntentConfidence = predictedIntentConfidence;
+    return this;
+  }
+
+  /**
+   * Used in HGR to modify the ranker based on input experimental flag and intent name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRankerName() {
+    return rankerName;
+  }
+
+  /**
+   * Used in HGR to modify the ranker based on input experimental flag and intent name.
+   * @param rankerName rankerName or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setRankerName(java.lang.String rankerName) {
+    this.rankerName = rankerName;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 6
+ * Features to be passed from Media GP to HGR. Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -29,6 +29,20 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantGroundingRankerMediaGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Release type for an album container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String albumReleaseType;
+
+  /**
+   * True if the argument's type was explicitly mentioned in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasTypeSemanticEdge;
 
   /**
    * Whether the candidate is YouTube CAST_VIDEO candidate. CAST_VIDEO is a deeplink platform. This
@@ -73,6 +87,47 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Double scubedPSaiMusic;
+
+  /**
+   * Type of the media item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * Release type for an album container.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlbumReleaseType() {
+    return albumReleaseType;
+  }
+
+  /**
+   * Release type for an album container.
+   * @param albumReleaseType albumReleaseType or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setAlbumReleaseType(java.lang.String albumReleaseType) {
+    this.albumReleaseType = albumReleaseType;
+    return this;
+  }
+
+  /**
+   * True if the argument's type was explicitly mentioned in the query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasTypeSemanticEdge() {
+    return hasTypeSemanticEdge;
+  }
+
+  /**
+   * True if the argument's type was explicitly mentioned in the query.
+   * @param hasTypeSemanticEdge hasTypeSemanticEdge or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setHasTypeSemanticEdge(java.lang.Boolean hasTypeSemanticEdge) {
+    this.hasTypeSemanticEdge = hasTypeSemanticEdge;
+    return this;
+  }
 
   /**
    * Whether the candidate is YouTube CAST_VIDEO candidate. CAST_VIDEO is a deeplink platform. This
@@ -174,6 +229,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setScubedPSaiMusic(java.lang.Double scubedPSaiMusic) {
     this.scubedPSaiMusic = scubedPSaiMusic;
+    return this;
+  }
+
+  /**
+   * Type of the media item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of the media item.
+   * @param type type or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

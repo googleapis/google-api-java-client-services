@@ -45,6 +45,14 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
   private java.util.List<java.lang.String> allowedPackageNames;
 
   /**
+   * Set to true for keys that are used in an Android application that is available for download in
+   * app stores in addition to the Google Play Store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportNonGoogleAppStoreDistribution;
+
+  /**
    * If set to true, allowed_package_names are not enforced.
    * @return value or {@code null} for none
    */
@@ -75,6 +83,25 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends co
    */
   public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings setAllowedPackageNames(java.util.List<java.lang.String> allowedPackageNames) {
     this.allowedPackageNames = allowedPackageNames;
+    return this;
+  }
+
+  /**
+   * Set to true for keys that are used in an Android application that is available for download in
+   * app stores in addition to the Google Play Store.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportNonGoogleAppStoreDistribution() {
+    return supportNonGoogleAppStoreDistribution;
+  }
+
+  /**
+   * Set to true for keys that are used in an Android application that is available for download in
+   * app stores in addition to the Google Play Store.
+   * @param supportNonGoogleAppStoreDistribution supportNonGoogleAppStoreDistribution or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings setSupportNonGoogleAppStoreDistribution(java.lang.Boolean supportNonGoogleAppStoreDistribution) {
+    this.supportNonGoogleAppStoreDistribution = supportNonGoogleAppStoreDistribution;
     return this;
   }
 

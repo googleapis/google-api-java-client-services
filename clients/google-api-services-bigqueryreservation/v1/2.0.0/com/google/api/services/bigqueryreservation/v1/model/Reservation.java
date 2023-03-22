@@ -56,7 +56,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String creationTime;
 
   /**
-   * Do not use.
+   * Edition of the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Do not use.
+   * Edition of the reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -178,7 +178,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Do not use.
+   * Edition of the reservation.
    * @param edition edition or {@code null} for none
    */
   public Reservation setEdition(java.lang.String edition) {

@@ -119,6 +119,21 @@ public final class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extend
   private AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats profileOwnerStats;
 
   /**
+   * Returned only when explicitly requested in the request mask as
+   * read_only_profile_info.unjoined_email_certificates. Equivalent to fetching the Emails & the
+   * Email Certificates with the acls ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiEmail> unjoinedEmailCertificates;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiEmail used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiEmail.class);
+  }
+
+  /**
    * The account email linked to the profile, if any exists and is visible to the requester.
    * @return value or {@code null} for none
    */
@@ -323,6 +338,27 @@ public final class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extend
    */
   public AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo setProfileOwnerStats(AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats profileOwnerStats) {
     this.profileOwnerStats = profileOwnerStats;
+    return this;
+  }
+
+  /**
+   * Returned only when explicitly requested in the request mask as
+   * read_only_profile_info.unjoined_email_certificates. Equivalent to fetching the Emails & the
+   * Email Certificates with the acls ignored.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiEmail> getUnjoinedEmailCertificates() {
+    return unjoinedEmailCertificates;
+  }
+
+  /**
+   * Returned only when explicitly requested in the request mask as
+   * read_only_profile_info.unjoined_email_certificates. Equivalent to fetching the Emails & the
+   * Email Certificates with the acls ignored.
+   * @param unjoinedEmailCertificates unjoinedEmailCertificates or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo setUnjoinedEmailCertificates(java.util.List<AppsPeopleOzExternalMergedpeopleapiEmail> unjoinedEmailCertificates) {
+    this.unjoinedEmailCertificates = unjoinedEmailCertificates;
     return this;
   }
 

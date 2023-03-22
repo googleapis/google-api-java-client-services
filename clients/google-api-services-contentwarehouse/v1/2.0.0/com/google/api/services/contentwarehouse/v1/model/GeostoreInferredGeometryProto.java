@@ -17,10 +17,14 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Inferred geometry defines the geometry of a feature through the geometry of other features. For
- * instance, the geometry of a timezone can be specified as the union of all the countries it
- * applies to. See: go/inferred-geometry and go/geo-schema:composite-geometry-editor for more
- * details.
+ * Inferred geometry defines the geometry of a feature as the union or exclusion of the geometry of
+ * other features. For instance, the geometry of a timezone can be specified as the union of all the
+ * countries it applies to. In this scenario, the timezone will can be considered a "composite
+ * feature", while the countries are its "composing features". A composite feature must have a
+ * bidirectional reference between itself and all its composing features. A composite feature refers
+ * to its composing features via `geometry_composition`, while the composing features must refer
+ * back to the composing feature via `defines_geometry_for`. See: go/inferred-geometry and go/geo-
+ * schema:composite-geometry-editor for more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -47,7 +51,7 @@ public final class GeostoreInferredGeometryProto extends com.google.api.client.j
   }
 
   /**
-   * Features whose geometry defines the geometry of this feature.
+   * Features whose geometry defines the geometry of this feature (i.e. "composing features").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +75,7 @@ public final class GeostoreInferredGeometryProto extends com.google.api.client.j
   }
 
   /**
-   * Features whose geometry defines the geometry of this feature.
+   * Features whose geometry defines the geometry of this feature (i.e. "composing features").
    * @return value or {@code null} for none
    */
   public GeostoreGeometryComposition getGeometryComposition() {
@@ -79,7 +83,7 @@ public final class GeostoreInferredGeometryProto extends com.google.api.client.j
   }
 
   /**
-   * Features whose geometry defines the geometry of this feature.
+   * Features whose geometry defines the geometry of this feature (i.e. "composing features").
    * @param geometryComposition geometryComposition or {@code null} for none
    */
   public GeostoreInferredGeometryProto setGeometryComposition(GeostoreGeometryComposition geometryComposition) {

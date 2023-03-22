@@ -255,6 +255,29 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * The project and location in which the application should be created, specified in the
+       * format projects/locations
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The project and location in which the application should be created, specified in the format
+     projects/locations
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The project and location in which the application should be created, specified in the
+       * format projects/locations
+       */
+      public Create setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -6566,6 +6589,160 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        */
       public class Applications {
 
+        /**
+         * Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The
+         * ID of the target Cloud Platform project. location - The region
+         * (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application
+         * located.For more information about App Engine applications, see Managing Projects, Applications,
+         * and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+         *
+         * Create a request for the method "applications.create".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `parent`. The project and location in which the application should be created, specified in
+         *        the format projects/locations
+         * @param locationsId Part of `parent`. See documentation of `projectsId`.
+         * @param content the {@link com.google.api.services.appengine.v1.model.Application}
+         * @return the request
+         */
+        public Create create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.appengine.v1.model.Application content) throws java.io.IOException {
+          Create result = new Create(projectsId, locationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications";
+
+          /**
+           * Creates an App Engine application for a Google Cloud Platform project. Required fields: id -
+           * The ID of the target Cloud Platform project. location - The region
+           * (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application
+           * located.For more information about App Engine applications, see Managing Projects,
+           * Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+           *
+           * Create a request for the method "applications.create".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `parent`. The project and location in which the application should be created, specified in
+         *        the format projects/locations
+           * @param locationsId Part of `parent`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.v1.model.Application}
+           * @since 1.13
+           */
+          protected Create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.appengine.v1.model.Application content) {
+            super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Part of `parent`. The project and location in which the application should be created,
+           * specified in the format projects/locations
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `parent`. The project and location in which the application should be created, specified in
+         the format projects/locations
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /**
+           * Part of `parent`. The project and location in which the application should be created,
+           * specified in the format projects/locations
+           */
+          public Create setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `parent`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `parent`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `parent`. See documentation of `projectsId`. */
+          public Create setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets information about an application.
          *

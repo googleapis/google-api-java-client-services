@@ -54,7 +54,7 @@ public final class IdentityAwareProxy extends com.google.api.client.json.Generic
   private java.lang.String oauth2ClientSecret;
 
   /**
-   * Hex-encoded SHA-256 hash of the client secret.@OutputOnly
+   * Output only. Hex-encoded SHA-256 hash of the client secret.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class IdentityAwareProxy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Hex-encoded SHA-256 hash of the client secret.@OutputOnly
+   * Output only. Hex-encoded SHA-256 hash of the client secret.@OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getOauth2ClientSecretSha256() {
@@ -126,7 +126,7 @@ public final class IdentityAwareProxy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Hex-encoded SHA-256 hash of the client secret.@OutputOnly
+   * Output only. Hex-encoded SHA-256 hash of the client secret.@OutputOnly
    * @param oauth2ClientSecretSha256 oauth2ClientSecretSha256 or {@code null} for none
    */
   public IdentityAwareProxy setOauth2ClientSecretSha256(java.lang.String oauth2ClientSecretSha256) {

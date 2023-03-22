@@ -33,7 +33,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-
+   * objects/annotations/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +142,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-
+   * objects/annotations/
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -151,7 +153,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-
+   * objects/annotations/
    * @param annotations annotations or {@code null} for none
    */
   public Resource setAnnotations(java.util.Map<String, java.lang.String> annotations) {

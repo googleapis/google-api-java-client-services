@@ -57,6 +57,19 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion exte
   private java.lang.String description;
 
   /**
+   * Optional. Error Catch Task configuration for the IntegrationTemplateVersion. It's optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudIntegrationsV1alphaErrorCatcherConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaErrorCatcherConfig.class);
+  }
+
+  /**
    * Optional. The last modifier's email address. Generated based on the End User Credentials/LOAS
    * role of the user making the call.
    * The value may be {@code null}.
@@ -206,6 +219,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion exte
    */
   public GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Error Catch Task configuration for the IntegrationTemplateVersion. It's optional.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> getErrorCatcherConfigs() {
+    return errorCatcherConfigs;
+  }
+
+  /**
+   * Optional. Error Catch Task configuration for the IntegrationTemplateVersion. It's optional.
+   * @param errorCatcherConfigs errorCatcherConfigs or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion setErrorCatcherConfigs(java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs) {
+    this.errorCatcherConfigs = errorCatcherConfigs;
     return this;
   }
 

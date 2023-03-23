@@ -3705,33 +3705,39 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. Standard filter field, we support filtering on all fields in
-             * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-             * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\" Also
-             * supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-             * event_execution_state=\"FAILED\"
+             * Optional. Standard filter field, we support filtering on following fields:
+             * workflow_name: the name of the integration. CreateTimestamp: the execution created
+             * time. event_execution_state: the state of the executions. execution_id: the id of the
+             * execution. trigger_id: the id of the trigger. parameter_type: the type of the
+             * parameters involved in the execution. All fields support for EQUALS, in additional:
+             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For
+             * example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT
+             * For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Standard filter field, we support filtering on all fields in EventExecutionParamIndexes
-           table. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN,
-           GREATER_THAN ParameterKey, ParameterValue, ParameterType support for HAS For example:
-           "parameter_value" HAS \"parameter1\" Also supports operators like AND, OR, NOT For example,
-           trigger_id=\"id1\" AND event_execution_state=\"FAILED\"
+            /** Optional. Standard filter field, we support filtering on following fields: workflow_name: the name
+           of the integration. CreateTimestamp: the execution created time. event_execution_state: the state
+           of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger.
+           parameter_type: the type of the parameters involved in the execution. All fields support for
+           EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support
+           for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For
+           example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Standard filter field, we support filtering on all fields in
-             * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-             * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\" Also
-             * supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-             * event_execution_state=\"FAILED\"
+             * Optional. Standard filter field, we support filtering on following fields:
+             * workflow_name: the name of the integration. CreateTimestamp: the execution created
+             * time. event_execution_state: the state of the executions. execution_id: the id of the
+             * execution. trigger_id: the id of the trigger. parameter_type: the type of the
+             * parameters involved in the execution. All fields support for EQUALS, in additional:
+             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For
+             * example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT
+             * For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -8250,6 +8256,135 @@ public class Integrations extends com.google.api.client.googleapis.services.json
         public class IntegrationsOperations {
 
           /**
+           * Delete the selected integration and all versions inside
+           *
+           * Create a request for the method "integrations.delete".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The location resource of the request.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
+
+            /**
+             * Delete the selected integration and all versions inside
+             *
+             * Create a request for the method "integrations.delete".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The location resource of the request.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The location resource of the request. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The location resource of the request.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The location resource of the request. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Executes integrations synchronously by passing the trigger id in the request body. The request is
            * not returned until the requested executions are either fulfilled or experienced an error. If the
            * integration name is not specified (passing `-`), all of the associated integration under the
@@ -9210,33 +9345,39 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Optional. Standard filter field, we support filtering on all fields in
-               * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-               * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\"
-               * Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-               * event_execution_state=\"FAILED\"
+               * Optional. Standard filter field, we support filtering on following fields:
+               * workflow_name: the name of the integration. CreateTimestamp: the execution created
+               * time. event_execution_state: the state of the executions. execution_id: the id of
+               * the execution. trigger_id: the id of the trigger. parameter_type: the type of the
+               * parameters involved in the execution. All fields support for EQUALS, in additional:
+               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS
+               * For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR,
+               * NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. Standard filter field, we support filtering on all fields in EventExecutionParamIndexes
-             table. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN,
-             GREATER_THAN ParameterKey, ParameterValue, ParameterType support for HAS For example:
-             "parameter_value" HAS \"parameter1\" Also supports operators like AND, OR, NOT For example,
-             trigger_id=\"id1\" AND event_execution_state=\"FAILED\"
+              /** Optional. Standard filter field, we support filtering on following fields: workflow_name: the name
+             of the integration. CreateTimestamp: the execution created time. event_execution_state: the state
+             of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger.
+             parameter_type: the type of the parameters involved in the execution. All fields support for
+             EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support
+             for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For
+             example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. Standard filter field, we support filtering on all fields in
-               * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-               * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\"
-               * Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-               * event_execution_state=\"FAILED\"
+               * Optional. Standard filter field, we support filtering on following fields:
+               * workflow_name: the name of the integration. CreateTimestamp: the execution created
+               * time. event_execution_state: the state of the executions. execution_id: the id of
+               * the execution. trigger_id: the id of the trigger. parameter_type: the type of the
+               * parameters involved in the execution. All fields support for EQUALS, in additional:
+               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS
+               * For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR,
+               * NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;

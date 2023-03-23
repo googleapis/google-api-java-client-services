@@ -14730,6 +14730,145 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets metrics associated with the FHIR store.
+           *
+           * Create a request for the method "fhirStores.getFHIRStoreMetrics".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link GetFHIRStoreMetrics#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the FHIR store to get metrics for.
+           * @return the request
+           */
+          public GetFHIRStoreMetrics getFHIRStoreMetrics(java.lang.String name) throws java.io.IOException {
+            GetFHIRStoreMetrics result = new GetFHIRStoreMetrics(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetFHIRStoreMetrics extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.FhirStoreMetrics> {
+
+            private static final String REST_PATH = "v1/{+name}:getFHIRStoreMetrics";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Gets metrics associated with the FHIR store.
+             *
+             * Create a request for the method "fhirStores.getFHIRStoreMetrics".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link GetFHIRStoreMetrics#execute()} method to invoke the remote
+             * operation. <p> {@link GetFHIRStoreMetrics#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name The resource name of the FHIR store to get metrics for.
+             * @since 1.13
+             */
+            protected GetFHIRStoreMetrics(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.FhirStoreMetrics.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetFHIRStoreMetrics set$Xgafv(java.lang.String $Xgafv) {
+              return (GetFHIRStoreMetrics) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setAccessToken(java.lang.String accessToken) {
+              return (GetFHIRStoreMetrics) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setAlt(java.lang.String alt) {
+              return (GetFHIRStoreMetrics) super.setAlt(alt);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setCallback(java.lang.String callback) {
+              return (GetFHIRStoreMetrics) super.setCallback(callback);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setFields(java.lang.String fields) {
+              return (GetFHIRStoreMetrics) super.setFields(fields);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setKey(java.lang.String key) {
+              return (GetFHIRStoreMetrics) super.setKey(key);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setOauthToken(java.lang.String oauthToken) {
+              return (GetFHIRStoreMetrics) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetFHIRStoreMetrics) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setQuotaUser(java.lang.String quotaUser) {
+              return (GetFHIRStoreMetrics) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setUploadType(java.lang.String uploadType) {
+              return (GetFHIRStoreMetrics) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetFHIRStoreMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetFHIRStoreMetrics) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the FHIR store to get metrics for. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the FHIR store to get metrics for.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the FHIR store to get metrics for. */
+            public GetFHIRStoreMetrics setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetFHIRStoreMetrics set(String parameterName, Object value) {
+              return (GetFHIRStoreMetrics) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -16142,13 +16281,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * String of comma-delimited FHIR resource types. If provided, only resources of the
-               * specified resource type(s) are returned.
+               * specified resource type(s) are returned. Specifying multiple `_type` parameters
+               * isn't supported. For example, the result of `_type=Observation&_type=Encounter` is
+               * undefined. Use `_type=Observation,Encounter` instead.
                */
               @com.google.api.client.util.Key("_type")
               private java.lang.String type;
 
               /** String of comma-delimited FHIR resource types. If provided, only resources of the specified
-             resource type(s) are returned.
+             resource type(s) are returned. Specifying multiple `_type` parameters isn't supported. For example,
+             the result of `_type=Observation&_type=Encounter` is undefined. Use `_type=Observation,Encounter`
+             instead.
                */
               public java.lang.String getType() {
                 return type;
@@ -16156,7 +16299,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * String of comma-delimited FHIR resource types. If provided, only resources of the
-               * specified resource type(s) are returned.
+               * specified resource type(s) are returned. Specifying multiple `_type` parameters
+               * isn't supported. For example, the result of `_type=Observation&_type=Encounter` is
+               * undefined. Use `_type=Observation,Encounter` instead.
                */
               public PatientEverything setType(java.lang.String type) {
                 this.type = type;

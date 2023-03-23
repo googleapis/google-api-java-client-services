@@ -112,6 +112,13 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. The deployed url for the function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String url;
+
+  /**
    * Describes the Build step of the function that builds a container from the given source.
    * @return value or {@code null} for none
    */
@@ -303,6 +310,23 @@ public final class Function extends com.google.api.client.json.GenericJson {
    */
   public Function setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The deployed url for the function.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrl() {
+    return url;
+  }
+
+  /**
+   * Output only. The deployed url for the function.
+   * @param url url or {@code null} for none
+   */
+  public Function setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 

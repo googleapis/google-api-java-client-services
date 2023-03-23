@@ -46,8 +46,8 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSet extends com.google
 
   /**
    * Immutable. A logical expression of ExpandedDataSet filters applied to dimension included in the
-   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the change of
-   * encountering `other row`.
+   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the chance of
+   * encountering `other` row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSet extends com.google
 
   /**
    * Immutable. A logical expression of ExpandedDataSet filters applied to dimension included in the
-   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the change of
-   * encountering `other row`.
+   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the chance of
+   * encountering `other` row.
    * @return value or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression getDimensionFilterExpression() {
@@ -132,8 +132,8 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSet extends com.google
 
   /**
    * Immutable. A logical expression of ExpandedDataSet filters applied to dimension included in the
-   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the change of
-   * encountering `other row`.
+   * ExpandedDataSet. This filter is used to reduce the number of rows and thus the chance of
+   * encountering `other` row.
    * @param dimensionFilterExpression dimensionFilterExpression or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaExpandedDataSet setDimensionFilterExpression(GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression dimensionFilterExpression) {

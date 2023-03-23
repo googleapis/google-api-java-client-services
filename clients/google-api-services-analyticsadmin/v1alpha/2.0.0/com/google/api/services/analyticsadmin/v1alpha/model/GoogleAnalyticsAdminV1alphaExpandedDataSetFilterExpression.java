@@ -48,7 +48,7 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression ex
   private GoogleAnalyticsAdminV1alphaExpandedDataSetFilter filter;
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It must include a
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It must include a
    * dimension_filter. This cannot be set on the top level ExpandedDataSetFilterExpression.
    * The value may be {@code null}.
    */
@@ -96,7 +96,7 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression ex
   }
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It must include a
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It must include a
    * dimension_filter. This cannot be set on the top level ExpandedDataSetFilterExpression.
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class GoogleAnalyticsAdminV1alphaExpandedDataSetFilterExpression ex
   }
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It must include a
+   * A filter expression to be NOT'ed (that is, inverted, complemented). It must include a
    * dimension_filter. This cannot be set on the top level ExpandedDataSetFilterExpression.
    * @param notExpression notExpression or {@code null} for none
    */

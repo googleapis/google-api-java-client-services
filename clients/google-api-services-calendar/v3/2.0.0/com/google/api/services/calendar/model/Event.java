@@ -127,7 +127,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event.
+   * event.  - "workingLocation" - A working location event. Developer Preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -376,7 +376,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String visibility;
 
   /**
-   * Working Location event data. Read-only.
+   * Developer Preview: Working Location event data. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -695,7 +695,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event.
+   * event.  - "workingLocation" - A working location event. Developer Preview.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -705,7 +705,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
    * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event.
+   * event.  - "workingLocation" - A working location event. Developer Preview.
    * @param eventType eventType or {@code null} for none
    */
   public Event setEventType(java.lang.String eventType) {
@@ -1416,7 +1416,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working Location event data. Read-only.
+   * Developer Preview: Working Location event data. Read-only.
    * @return value or {@code null} for none
    */
   public EventWorkingLocationProperties getWorkingLocationProperties() {
@@ -1424,7 +1424,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working Location event data. Read-only.
+   * Developer Preview: Working Location event data. Read-only.
    * @param workingLocationProperties workingLocationProperties or {@code null} for none
    */
   public Event setWorkingLocationProperties(EventWorkingLocationProperties workingLocationProperties) {

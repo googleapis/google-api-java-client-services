@@ -32,11 +32,34 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Timestamp this resource value config was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
+   * Description of the resource value config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Name for the resource value config
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
+   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
+   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceLabelsSelector;
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
@@ -72,6 +95,47 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.util.List<java.lang.String> tagValues;
 
   /**
+   * Output only. Timestamp this resource value config was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. Timestamp this resource value config was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Timestamp this resource value config was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Description of the resource value config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Description of the resource value config.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
    * Name for the resource value config
    * @return value or {@code null} for none
    */
@@ -85,6 +149,27 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
+   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
+   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceLabelsSelector() {
+    return resourceLabelsSelector;
+  }
+
+  /**
+   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
+   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
+   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * @param resourceLabelsSelector resourceLabelsSelector or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setResourceLabelsSelector(java.util.Map<String, java.lang.String> resourceLabelsSelector) {
+    this.resourceLabelsSelector = resourceLabelsSelector;
     return this;
   }
 
@@ -163,6 +248,23 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setTagValues(java.util.List<java.lang.String> tagValues) {
     this.tagValues = tagValues;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp this resource value config was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp this resource value config was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1ResourceValueConfig setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

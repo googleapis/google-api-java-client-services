@@ -31,7 +31,7 @@ package com.google.api.services.datafusion.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of accelerators enabled for this CDF instance.
+   * Output only. List of accelerators enabled for this CDF instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String apiEndpoint;
 
   /**
-   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * Output only. Available versions that the instance can be upgraded to using
+   * UpdateInstanceRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,7 +257,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String zone;
 
   /**
-   * List of accelerators enabled for this CDF instance.
+   * Output only. List of accelerators enabled for this CDF instance.
    * @return value or {@code null} for none
    */
   public java.util.List<Accelerator> getAccelerators() {
@@ -264,7 +265,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of accelerators enabled for this CDF instance.
+   * Output only. List of accelerators enabled for this CDF instance.
    * @param accelerators accelerators or {@code null} for none
    */
   public Instance setAccelerators(java.util.List<Accelerator> accelerators) {
@@ -290,7 +291,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * Output only. Available versions that the instance can be upgraded to using
+   * UpdateInstanceRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<Version> getAvailableVersion() {
@@ -298,7 +300,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+   * Output only. Available versions that the instance can be upgraded to using
+   * UpdateInstanceRequest.
    * @param availableVersion availableVersion or {@code null} for none
    */
   public Instance setAvailableVersion(java.util.List<Version> availableVersion) {

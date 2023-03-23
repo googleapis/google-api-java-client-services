@@ -31,6 +31,19 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * Events that should occur after the job has completed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2ActionDetails> actionDetails;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2ActionDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2ActionDetails.class);
+  }
+
+  /**
    * Time when the job was created.
    * The value may be {@code null}.
    */
@@ -99,6 +112,23 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Events that should occur after the job has completed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2ActionDetails> getActionDetails() {
+    return actionDetails;
+  }
+
+  /**
+   * Events that should occur after the job has completed.
+   * @param actionDetails actionDetails or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DlpJob setActionDetails(java.util.List<GooglePrivacyDlpV2ActionDetails> actionDetails) {
+    this.actionDetails = actionDetails;
+    return this;
+  }
 
   /**
    * Time when the job was created.

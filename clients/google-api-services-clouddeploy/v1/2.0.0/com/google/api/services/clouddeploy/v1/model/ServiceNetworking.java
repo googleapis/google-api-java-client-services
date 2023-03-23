@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Strategy contains deployment strategy information.
+ * Information about the Kubernetes Service networking configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Strategy extends com.google.api.client.json.GenericJson {
+public final class ServiceNetworking extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Required. Name of the Kubernetes Deployment whose traffic is managed by the specified Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Canary canary;
+  private java.lang.String deployment;
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Required. Name of the Kubernetes Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Standard standard;
+  private java.lang.String service;
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Required. Name of the Kubernetes Deployment whose traffic is managed by the specified Service.
    * @return value or {@code null} for none
    */
-  public Canary getCanary() {
-    return canary;
+  public java.lang.String getDeployment() {
+    return deployment;
   }
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
-   * @param canary canary or {@code null} for none
+   * Required. Name of the Kubernetes Deployment whose traffic is managed by the specified Service.
+   * @param deployment deployment or {@code null} for none
    */
-  public Strategy setCanary(Canary canary) {
-    this.canary = canary;
+  public ServiceNetworking setDeployment(java.lang.String deployment) {
+    this.deployment = deployment;
     return this;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Required. Name of the Kubernetes Service.
    * @return value or {@code null} for none
    */
-  public Standard getStandard() {
-    return standard;
+  public java.lang.String getService() {
+    return service;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
-   * @param standard standard or {@code null} for none
+   * Required. Name of the Kubernetes Service.
+   * @param service service or {@code null} for none
    */
-  public Strategy setStandard(Standard standard) {
-    this.standard = standard;
+  public ServiceNetworking setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 
   @Override
-  public Strategy set(String fieldName, Object value) {
-    return (Strategy) super.set(fieldName, value);
+  public ServiceNetworking set(String fieldName, Object value) {
+    return (ServiceNetworking) super.set(fieldName, value);
   }
 
   @Override
-  public Strategy clone() {
-    return (Strategy) super.clone();
+  public ServiceNetworking clone() {
+    return (ServiceNetworking) super.clone();
   }
 
 }

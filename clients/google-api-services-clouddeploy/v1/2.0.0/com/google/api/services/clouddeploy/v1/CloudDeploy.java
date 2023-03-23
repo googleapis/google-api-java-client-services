@@ -3095,6 +3095,151 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           public class Rollouts {
 
             /**
+             * Advances a Rollout in a given project and location.
+             *
+             * Create a request for the method "rollouts.advance".
+             *
+             * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+             * parameters, call the {@link Advance#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest}
+             * @return the request
+             */
+            public Advance advance(java.lang.String name, com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest content) throws java.io.IOException {
+              Advance result = new Advance(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Advance extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.AdvanceRolloutResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:advance";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+
+              /**
+               * Advances a Rollout in a given project and location.
+               *
+               * Create a request for the method "rollouts.advance".
+               *
+               * This request holds the parameters needed by the the clouddeploy server.  After setting any
+               * optional parameters, call the {@link Advance#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Advance#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+               * @param content the {@link com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest}
+               * @since 1.13
+               */
+              protected Advance(java.lang.String name, com.google.api.services.clouddeploy.v1.model.AdvanceRolloutRequest content) {
+                super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.AdvanceRolloutResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Advance set$Xgafv(java.lang.String $Xgafv) {
+                return (Advance) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Advance setAccessToken(java.lang.String accessToken) {
+                return (Advance) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Advance setAlt(java.lang.String alt) {
+                return (Advance) super.setAlt(alt);
+              }
+
+              @Override
+              public Advance setCallback(java.lang.String callback) {
+                return (Advance) super.setCallback(callback);
+              }
+
+              @Override
+              public Advance setFields(java.lang.String fields) {
+                return (Advance) super.setFields(fields);
+              }
+
+              @Override
+              public Advance setKey(java.lang.String key) {
+                return (Advance) super.setKey(key);
+              }
+
+              @Override
+              public Advance setOauthToken(java.lang.String oauthToken) {
+                return (Advance) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Advance setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Advance) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Advance setQuotaUser(java.lang.String quotaUser) {
+                return (Advance) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Advance setUploadType(java.lang.String uploadType) {
+                return (Advance) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Advance setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Advance) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the Rollout. Format is
+             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             releases/{release}/rollouts/{rollout}.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              public Advance setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Advance set(String parameterName, Object value) {
+                return (Advance) super.set(parameterName, value);
+              }
+            }
+            /**
              * Approves a Rollout.
              *
              * Create a request for the method "rollouts.approve".
@@ -3237,6 +3382,151 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               @Override
               public Approve set(String parameterName, Object value) {
                 return (Approve) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Cancels a Rollout in a given project and location.
+             *
+             * Create a request for the method "rollouts.cancel".
+             *
+             * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+             * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest}
+             * @return the request
+             */
+            public Cancel cancel(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest content) throws java.io.IOException {
+              Cancel result = new Cancel(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Cancel extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.CancelRolloutResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:cancel";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+
+              /**
+               * Cancels a Rollout in a given project and location.
+               *
+               * Create a request for the method "rollouts.cancel".
+               *
+               * This request holds the parameters needed by the the clouddeploy server.  After setting any
+               * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+               * @param content the {@link com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest}
+               * @since 1.13
+               */
+              protected Cancel(java.lang.String name, com.google.api.services.clouddeploy.v1.model.CancelRolloutRequest content) {
+                super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.CancelRolloutResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Cancel set$Xgafv(java.lang.String $Xgafv) {
+                return (Cancel) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Cancel setAccessToken(java.lang.String accessToken) {
+                return (Cancel) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Cancel setAlt(java.lang.String alt) {
+                return (Cancel) super.setAlt(alt);
+              }
+
+              @Override
+              public Cancel setCallback(java.lang.String callback) {
+                return (Cancel) super.setCallback(callback);
+              }
+
+              @Override
+              public Cancel setFields(java.lang.String fields) {
+                return (Cancel) super.setFields(fields);
+              }
+
+              @Override
+              public Cancel setKey(java.lang.String key) {
+                return (Cancel) super.setKey(key);
+              }
+
+              @Override
+              public Cancel setOauthToken(java.lang.String oauthToken) {
+                return (Cancel) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Cancel) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Cancel setQuotaUser(java.lang.String quotaUser) {
+                return (Cancel) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Cancel setUploadType(java.lang.String uploadType) {
+                return (Cancel) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Cancel) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the Rollout. Format is
+             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             releases/{release}/rollouts/{rollout}.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              public Cancel setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Cancel set(String parameterName, Object value) {
+                return (Cancel) super.set(parameterName, value);
               }
             }
             /**
@@ -3637,6 +3927,151 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Ignores the specified Job in a Rollout.
+             *
+             * Create a request for the method "rollouts.ignoreJob".
+             *
+             * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+             * parameters, call the {@link IgnoreJob#execute()} method to invoke the remote operation.
+             *
+             * @param rollout Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+             * @param content the {@link com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest}
+             * @return the request
+             */
+            public IgnoreJob ignoreJob(java.lang.String rollout, com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest content) throws java.io.IOException {
+              IgnoreJob result = new IgnoreJob(rollout, content);
+              initialize(result);
+              return result;
+            }
+
+            public class IgnoreJob extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.IgnoreJobResponse> {
+
+              private static final String REST_PATH = "v1/{+rollout}:ignoreJob";
+
+              private final java.util.regex.Pattern ROLLOUT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+
+              /**
+               * Ignores the specified Job in a Rollout.
+               *
+               * Create a request for the method "rollouts.ignoreJob".
+               *
+               * This request holds the parameters needed by the the clouddeploy server.  After setting any
+               * optional parameters, call the {@link IgnoreJob#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * IgnoreJob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param rollout Required. Name of the Rollout. Format is
+             *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             *        releases/{release}/rollouts/{rollout}.
+               * @param content the {@link com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest}
+               * @since 1.13
+               */
+              protected IgnoreJob(java.lang.String rollout, com.google.api.services.clouddeploy.v1.model.IgnoreJobRequest content) {
+                super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.IgnoreJobResponse.class);
+                this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+                      "Parameter rollout must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+              }
+
+              @Override
+              public IgnoreJob set$Xgafv(java.lang.String $Xgafv) {
+                return (IgnoreJob) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public IgnoreJob setAccessToken(java.lang.String accessToken) {
+                return (IgnoreJob) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public IgnoreJob setAlt(java.lang.String alt) {
+                return (IgnoreJob) super.setAlt(alt);
+              }
+
+              @Override
+              public IgnoreJob setCallback(java.lang.String callback) {
+                return (IgnoreJob) super.setCallback(callback);
+              }
+
+              @Override
+              public IgnoreJob setFields(java.lang.String fields) {
+                return (IgnoreJob) super.setFields(fields);
+              }
+
+              @Override
+              public IgnoreJob setKey(java.lang.String key) {
+                return (IgnoreJob) super.setKey(key);
+              }
+
+              @Override
+              public IgnoreJob setOauthToken(java.lang.String oauthToken) {
+                return (IgnoreJob) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public IgnoreJob setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (IgnoreJob) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public IgnoreJob setQuotaUser(java.lang.String quotaUser) {
+                return (IgnoreJob) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public IgnoreJob setUploadType(java.lang.String uploadType) {
+                return (IgnoreJob) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public IgnoreJob setUploadProtocol(java.lang.String uploadProtocol) {
+                return (IgnoreJob) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String rollout;
+
+              /** Required. Name of the Rollout. Format is
+             projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+             releases/{release}/rollouts/{rollout}.
+               */
+              public java.lang.String getRollout() {
+                return rollout;
+              }
+
+              /**
+               * Required. Name of the Rollout. Format is
+               * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               * releases/{release}/rollouts/{rollout}.
+               */
+              public IgnoreJob setRollout(java.lang.String rollout) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+                      "Parameter rollout must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+$");
+                }
+                this.rollout = rollout;
+                return this;
+              }
+
+              @Override
+              public IgnoreJob set(String parameterName, Object value) {
+                return (IgnoreJob) super.set(parameterName, value);
               }
             }
             /**
@@ -4423,6 +4858,151 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
                 @Override
                 public List set(String parameterName, Object value) {
                   return (List) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Terminates a Job Run in a given project and location.
+               *
+               * Create a request for the method "jobRuns.terminate".
+               *
+               * This request holds the parameters needed by the clouddeploy server.  After setting any optional
+               * parameters, call the {@link Terminate#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Name of the `JobRun`. Format must be
+               *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               *        releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+               * @param content the {@link com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest}
+               * @return the request
+               */
+              public Terminate terminate(java.lang.String name, com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest content) throws java.io.IOException {
+                Terminate result = new Terminate(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Terminate extends CloudDeployRequest<com.google.api.services.clouddeploy.v1.model.TerminateJobRunResponse> {
+
+                private static final String REST_PATH = "v1/{+name}:terminate";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+
+                /**
+                 * Terminates a Job Run in a given project and location.
+                 *
+                 * Create a request for the method "jobRuns.terminate".
+                 *
+                 * This request holds the parameters needed by the the clouddeploy server.  After setting any
+                 * optional parameters, call the {@link Terminate#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * Terminate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Name of the `JobRun`. Format must be
+               *        projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               *        releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 * @param content the {@link com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest}
+                 * @since 1.13
+                 */
+                protected Terminate(java.lang.String name, com.google.api.services.clouddeploy.v1.model.TerminateJobRunRequest content) {
+                  super(CloudDeploy.this, "POST", REST_PATH, content, com.google.api.services.clouddeploy.v1.model.TerminateJobRunResponse.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Terminate set$Xgafv(java.lang.String $Xgafv) {
+                  return (Terminate) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Terminate setAccessToken(java.lang.String accessToken) {
+                  return (Terminate) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Terminate setAlt(java.lang.String alt) {
+                  return (Terminate) super.setAlt(alt);
+                }
+
+                @Override
+                public Terminate setCallback(java.lang.String callback) {
+                  return (Terminate) super.setCallback(callback);
+                }
+
+                @Override
+                public Terminate setFields(java.lang.String fields) {
+                  return (Terminate) super.setFields(fields);
+                }
+
+                @Override
+                public Terminate setKey(java.lang.String key) {
+                  return (Terminate) super.setKey(key);
+                }
+
+                @Override
+                public Terminate setOauthToken(java.lang.String oauthToken) {
+                  return (Terminate) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Terminate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Terminate) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Terminate setQuotaUser(java.lang.String quotaUser) {
+                  return (Terminate) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Terminate setUploadType(java.lang.String uploadType) {
+                  return (Terminate) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Terminate setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Terminate) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Name of the `JobRun`. Format must be
+                 * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+                 * releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Name of the `JobRun`. Format must be
+               projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+               releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Name of the `JobRun`. Format must be
+                 * projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}/
+                 * releases/{release}/rollouts/{rollout}/jobRuns/{jobRun}.
+                 */
+                public Terminate setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/deliveryPipelines/[^/]+/releases/[^/]+/rollouts/[^/]+/jobRuns/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Terminate set(String parameterName, Object value) {
+                  return (Terminate) super.set(parameterName, value);
                 }
               }
 

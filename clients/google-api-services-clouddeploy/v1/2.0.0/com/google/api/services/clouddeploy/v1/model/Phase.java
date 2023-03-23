@@ -52,6 +52,13 @@ public final class Phase extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Output only. Additional information on why the Phase was skipped, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String skipMessage;
+
+  /**
    * Output only. Current state of the Phase.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class Phase extends com.google.api.client.json.GenericJson {
    */
   public Phase setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Additional information on why the Phase was skipped, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSkipMessage() {
+    return skipMessage;
+  }
+
+  /**
+   * Output only. Additional information on why the Phase was skipped, if available.
+   * @param skipMessage skipMessage or {@code null} for none
+   */
+  public Phase setSkipMessage(java.lang.String skipMessage) {
+    this.skipMessage = skipMessage;
     return this;
   }
 

@@ -101,7 +101,9 @@ public final class ClientLibrarySettings extends com.google.api.client.json.Gene
   private RubySettings rubySettings;
 
   /**
-   * Version of the API to apply these settings to.
+   * Version of the API to apply these settings to. This is the full protobuf package for the API,
+   * ending in the version element. Examples: "google.cloud.speech.v1" and
+   * "google.spanner.admin.database.v1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,7 +280,9 @@ public final class ClientLibrarySettings extends com.google.api.client.json.Gene
   }
 
   /**
-   * Version of the API to apply these settings to.
+   * Version of the API to apply these settings to. This is the full protobuf package for the API,
+   * ending in the version element. Examples: "google.cloud.speech.v1" and
+   * "google.spanner.admin.database.v1".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -286,7 +290,9 @@ public final class ClientLibrarySettings extends com.google.api.client.json.Gene
   }
 
   /**
-   * Version of the API to apply these settings to.
+   * Version of the API to apply these settings to. This is the full protobuf package for the API,
+   * ending in the version element. Examples: "google.cloud.speech.v1" and
+   * "google.spanner.admin.database.v1".
    * @param version version or {@code null} for none
    */
   public ClientLibrarySettings setVersion(java.lang.String version) {

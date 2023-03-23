@@ -47,8 +47,8 @@ public final class V1Beta1ConsumerQuotaLimit extends com.google.api.client.json.
 
   /**
    * The resource name of the quota limit. An example name would be: `services/compute.googleapis.co
-   * m/projects/123/quotas/metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion` The
-   * resource name is intended to be opaque and should not be parsed for its component strings,
+   * m/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+   * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * The value may be {@code null}.
    */
@@ -119,8 +119,8 @@ public final class V1Beta1ConsumerQuotaLimit extends com.google.api.client.json.
 
   /**
    * The resource name of the quota limit. An example name would be: `services/compute.googleapis.co
-   * m/projects/123/quotas/metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion` The
-   * resource name is intended to be opaque and should not be parsed for its component strings,
+   * m/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+   * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * @return value or {@code null} for none
    */
@@ -130,8 +130,8 @@ public final class V1Beta1ConsumerQuotaLimit extends com.google.api.client.json.
 
   /**
    * The resource name of the quota limit. An example name would be: `services/compute.googleapis.co
-   * m/projects/123/quotas/metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion` The
-   * resource name is intended to be opaque and should not be parsed for its component strings,
+   * m/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+   * The resource name is intended to be opaque and should not be parsed for its component strings,
    * since its representation could change in the future.
    * @param name name or {@code null} for none
    */

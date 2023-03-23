@@ -2774,6 +2774,167 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Connectors connectors = new Connectors(...);}
+       *   {@code Connectors.Global.List request = connectors.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * GetGlobalSettings gets settings of a project. GlobalSettings is a singleton resource.
+         *
+         * Create a request for the method "global.getSettings".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the Settings.
+         * @return the request
+         */
+        public GetSettings getSettings(java.lang.String name) throws java.io.IOException {
+          GetSettings result = new GetSettings(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetSettings extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Settings> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/settings$");
+
+          /**
+           * GetGlobalSettings gets settings of a project. GlobalSettings is a singleton resource.
+           *
+           * Create a request for the method "global.getSettings".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link GetSettings#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Settings.
+           * @since 1.13
+           */
+          protected GetSettings(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.Settings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/settings$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (GetSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetSettings setAccessToken(java.lang.String accessToken) {
+            return (GetSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetSettings setAlt(java.lang.String alt) {
+            return (GetSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public GetSettings setCallback(java.lang.String callback) {
+            return (GetSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public GetSettings setFields(java.lang.String fields) {
+            return (GetSettings) super.setFields(fields);
+          }
+
+          @Override
+          public GetSettings setKey(java.lang.String key) {
+            return (GetSettings) super.setKey(key);
+          }
+
+          @Override
+          public GetSettings setOauthToken(java.lang.String oauthToken) {
+            return (GetSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetSettings setQuotaUser(java.lang.String quotaUser) {
+            return (GetSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetSettings setUploadType(java.lang.String uploadType) {
+            return (GetSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the Settings. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Settings.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the Settings. */
+          public GetSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/settings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetSettings set(String parameterName, Object value) {
+            return (GetSettings) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -3211,12 +3372,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -3241,12 +3397,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

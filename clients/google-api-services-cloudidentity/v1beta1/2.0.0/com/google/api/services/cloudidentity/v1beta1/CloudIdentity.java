@@ -6981,6 +6981,262 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
+       * Searches direct groups of a member.
+       *
+       * Create a request for the method "memberships.searchDirectGroups".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link SearchDirectGroups#execute()} method to invoke the remote operation.
+       *
+       * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: groups/{group_id}, where group_id is always '-' as this
+       *        API will search across all groups for a given member.
+       * @return the request
+       */
+      public SearchDirectGroups searchDirectGroups(java.lang.String parent) throws java.io.IOException {
+        SearchDirectGroups result = new SearchDirectGroups(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchDirectGroups extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1beta1.model.SearchDirectGroupsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/memberships:searchDirectGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+$");
+
+        /**
+         * Searches direct groups of a member.
+         *
+         * Create a request for the method "memberships.searchDirectGroups".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link SearchDirectGroups#execute()} method to invoke the remote
+         * operation. <p> {@link SearchDirectGroups#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param parent [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+       *        transitive memberships in. Format: groups/{group_id}, where group_id is always '-' as this
+       *        API will search across all groups for a given member.
+         * @since 1.13
+         */
+        protected SearchDirectGroups(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1beta1.model.SearchDirectGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public SearchDirectGroups set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchDirectGroups) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchDirectGroups setAccessToken(java.lang.String accessToken) {
+          return (SearchDirectGroups) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchDirectGroups setAlt(java.lang.String alt) {
+          return (SearchDirectGroups) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchDirectGroups setCallback(java.lang.String callback) {
+          return (SearchDirectGroups) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchDirectGroups setFields(java.lang.String fields) {
+          return (SearchDirectGroups) super.setFields(fields);
+        }
+
+        @Override
+        public SearchDirectGroups setKey(java.lang.String key) {
+          return (SearchDirectGroups) super.setKey(key);
+        }
+
+        @Override
+        public SearchDirectGroups setOauthToken(java.lang.String oauthToken) {
+          return (SearchDirectGroups) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchDirectGroups setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchDirectGroups) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchDirectGroups setQuotaUser(java.lang.String quotaUser) {
+          return (SearchDirectGroups) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchDirectGroups setUploadType(java.lang.String uploadType) {
+          return (SearchDirectGroups) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchDirectGroups setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchDirectGroups) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: groups/{group_id}, where group_id is always '-'
+         * as this API will search across all groups for a given member.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /**[ Resource name](https://cloud.google.com/apis/design/resource_names) of the group to search
+      [ transitive memberships in. Format: groups/{group_id}, where group_id is always '-' as this API
+      [ will search across all groups for a given member.
+      [
+
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * [Resource name](https://cloud.google.com/apis/design/resource_names) of the group to
+         * search transitive memberships in. Format: groups/{group_id}, where group_id is always '-'
+         * as this API will search across all groups for a given member.
+         */
+        public SearchDirectGroups setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^groups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The ordering of membership relation for the display name or email in the response. The
+         * syntax for this field can be found at
+         * https://cloud.google.com/apis/design/design_patterns#sorting_order. Example: Sort by the
+         * ascending display name: order_by="group_name" or order_by="group_name asc". Sort by the
+         * descending display name: order_by="group_name desc". Sort by the ascending group key:
+         * order_by="group_key" or order_by="group_key asc". Sort by the descending group key:
+         * order_by="group_key desc".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** The ordering of membership relation for the display name or email in the response. The syntax for
+       this field can be found at https://cloud.google.com/apis/design/design_patterns#sorting_order.
+       Example: Sort by the ascending display name: order_by="group_name" or order_by="group_name asc".
+       Sort by the descending display name: order_by="group_name desc". Sort by the ascending group key:
+       order_by="group_key" or order_by="group_key asc". Sort by the descending group key:
+       order_by="group_key desc".
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * The ordering of membership relation for the display name or email in the response. The
+         * syntax for this field can be found at
+         * https://cloud.google.com/apis/design/design_patterns#sorting_order. Example: Sort by the
+         * ascending display name: order_by="group_name" or order_by="group_name asc". Sort by the
+         * descending display name: order_by="group_name desc". Sort by the ascending group key:
+         * order_by="group_key" or order_by="group_key asc". Sort by the descending group key:
+         * order_by="group_key desc".
+         */
+        public SearchDirectGroups setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The default page size is 200 (max 1000).
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The default page size is 200 (max 1000). */
+        public SearchDirectGroups setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token value returned from a previous list request, if any
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token value returned from a previous list request, if any */
+        public SearchDirectGroups setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). Users can
+         * search on label attributes of groups. CONTAINS match ('in') is supported on labels.
+         * Identity-mapped groups are uniquely identified by both a `member_key_id` and a
+         * `member_key_namespace`, which requires an additional query input: `member_key_namespace`.
+         * Example query: `member_key_id == 'member_key_id_value' && 'label_value' in labels`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Required. A CEL expression that MUST include member specification AND label(s). Users can search on
+       label attributes of groups. CONTAINS match ('in') is supported on labels. Identity-mapped groups
+       are uniquely identified by both a `member_key_id` and a `member_key_namespace`, which requires an
+       additional query input: `member_key_namespace`. Example query: `member_key_id ==
+       'member_key_id_value' && 'label_value' in labels`
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /**
+         * Required. A CEL expression that MUST include member specification AND label(s). Users can
+         * search on label attributes of groups. CONTAINS match ('in') is supported on labels.
+         * Identity-mapped groups are uniquely identified by both a `member_key_id` and a
+         * `member_key_namespace`, which requires an additional query input: `member_key_namespace`.
+         * Example query: `member_key_id == 'member_key_id_value' && 'label_value' in labels`
+         */
+        public SearchDirectGroups setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        @Override
+        public SearchDirectGroups set(String parameterName, Object value) {
+          return (SearchDirectGroups) super.set(parameterName, value);
+        }
+      }
+      /**
        * Search transitive groups of a member. **Note:** This feature is only available to Google
        * Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity
        * Premium accounts. A transitive group is any group that has a direct or indirect membership to the

@@ -38,6 +38,13 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Delivery setting associated with the membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deliverySetting;
+
+  /**
    * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
    * `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
    * The value may be {@code null}.
@@ -89,6 +96,23 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Delivery setting associated with the membership.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeliverySetting() {
+    return deliverySetting;
+  }
+
+  /**
+   * Output only. Delivery setting associated with the membership.
+   * @param deliverySetting deliverySetting or {@code null} for none
+   */
+  public Membership setDeliverySetting(java.lang.String deliverySetting) {
+    this.deliverySetting = deliverySetting;
     return this;
   }
 

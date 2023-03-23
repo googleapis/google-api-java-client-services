@@ -3297,13 +3297,20 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
-           * org_unit_id - serial_number - device_id
+           * org_unit_id - serial_number - device_id - reports_timestamp The "reports_timestamp"
+           * filter accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu"
+           * format with nanosecond resolution and up to nine fractional digits. Both formats should
+           * be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Only include resources that match the filter. Supported filter fields: - org_unit_id -
-         serial_number - device_id
+         serial_number - device_id - reports_timestamp The "reports_timestamp" filter accepts either the
+         Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond resolution and up
+         to nine fractional digits. Both formats should be surrounded by simple double quotes. Examples:
+         "2014-10-02T15:01:23Z", "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public java.lang.String getFilter() {
             return filter;
@@ -3311,7 +3318,11 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
-           * org_unit_id - serial_number - device_id
+           * org_unit_id - serial_number - device_id - reports_timestamp The "reports_timestamp"
+           * filter accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu"
+           * format with nanosecond resolution and up to nine fractional digits. Both formats should
+           * be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3538,15 +3549,19 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
            * device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type
-           * The "timestamp" filter accepts either Epoch milliseconds or RFC 3339 formatted time
-           * surrounded by simple double quotes.
+           * The "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339
+           * UTC "Zulu" format with nanosecond resolution and up to nine fractional digits. Both
+           * formats should be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Only include resources that match the filter. Supported filter fields: - device_id -
          user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type The "timestamp" filter
-         accepts either Epoch milliseconds or RFC 3339 formatted time surrounded by simple double quotes.
+         accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond
+         resolution and up to nine fractional digits. Both formats should be surrounded by simple double
+         quotes. Examples: "2014-10-02T15:01:23Z", "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public java.lang.String getFilter() {
             return filter;
@@ -3555,8 +3570,10 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           /**
            * Optional. Only include resources that match the filter. Supported filter fields: -
            * device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type
-           * The "timestamp" filter accepts either Epoch milliseconds or RFC 3339 formatted time
-           * surrounded by simple double quotes.
+           * The "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339
+           * UTC "Zulu" format with nanosecond resolution and up to nine fractional digits. Both
+           * formats should be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

@@ -3030,6 +3030,141 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Get the application player ids for the currently authenticated player across all requested games
+     * by the same developer as the calling application. This will only return ids for players that
+     * actually have an id (scoped or otherwise) with that game.
+     *
+     * Create a request for the method "players.getMultipleApplicationPlayerIds".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GetMultipleApplicationPlayerIds#execute()} method to invoke the
+     * remote operation.
+     *
+     * @return the request
+     */
+    public GetMultipleApplicationPlayerIds getMultipleApplicationPlayerIds() throws java.io.IOException {
+      GetMultipleApplicationPlayerIds result = new GetMultipleApplicationPlayerIds();
+      initialize(result);
+      return result;
+    }
+
+    public class GetMultipleApplicationPlayerIds extends GamesRequest<com.google.api.services.games.model.GetMultipleApplicationPlayerIdsResponse> {
+
+      private static final String REST_PATH = "games/v1/players/me/multipleApplicationPlayerIds";
+
+      /**
+       * Get the application player ids for the currently authenticated player across all requested
+       * games by the same developer as the calling application. This will only return ids for players
+       * that actually have an id (scoped or otherwise) with that game.
+       *
+       * Create a request for the method "players.getMultipleApplicationPlayerIds".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GetMultipleApplicationPlayerIds#execute()} method to invoke the
+       * remote operation. <p> {@link GetMultipleApplicationPlayerIds#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetMultipleApplicationPlayerIds() {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.GetMultipleApplicationPlayerIdsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds set$Xgafv(java.lang.String $Xgafv) {
+        return (GetMultipleApplicationPlayerIds) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setAccessToken(java.lang.String accessToken) {
+        return (GetMultipleApplicationPlayerIds) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setAlt(java.lang.String alt) {
+        return (GetMultipleApplicationPlayerIds) super.setAlt(alt);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setCallback(java.lang.String callback) {
+        return (GetMultipleApplicationPlayerIds) super.setCallback(callback);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setFields(java.lang.String fields) {
+        return (GetMultipleApplicationPlayerIds) super.setFields(fields);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setKey(java.lang.String key) {
+        return (GetMultipleApplicationPlayerIds) super.setKey(key);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setOauthToken(java.lang.String oauthToken) {
+        return (GetMultipleApplicationPlayerIds) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetMultipleApplicationPlayerIds) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setQuotaUser(java.lang.String quotaUser) {
+        return (GetMultipleApplicationPlayerIds) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setUploadType(java.lang.String uploadType) {
+        return (GetMultipleApplicationPlayerIds) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetMultipleApplicationPlayerIds) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> applicationIds;
+
+      /** Required. The application IDs from the Google Play developer console for the games to return scoped
+     ids for.
+       */
+      public java.util.List<java.lang.String> getApplicationIds() {
+        return applicationIds;
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      public GetMultipleApplicationPlayerIds setApplicationIds(java.util.List<java.lang.String> applicationIds) {
+        this.applicationIds = applicationIds;
+        return this;
+      }
+
+      @Override
+      public GetMultipleApplicationPlayerIds set(String parameterName, Object value) {
+        return (GetMultipleApplicationPlayerIds) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves scoped player identifiers for currently authenticated user.
      *
      * Create a request for the method "players.getScopedPlayerIds".

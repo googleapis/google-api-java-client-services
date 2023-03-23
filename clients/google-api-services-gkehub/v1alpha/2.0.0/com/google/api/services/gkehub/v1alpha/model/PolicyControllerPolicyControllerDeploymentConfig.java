@@ -44,6 +44,13 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
   private java.lang.Boolean podAntiAffinity;
 
   /**
+   * Pod tolerations of node taints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PolicyControllerToleration> podTolerations;
+
+  /**
    * Pod replica count.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
    */
   public PolicyControllerPolicyControllerDeploymentConfig setPodAntiAffinity(java.lang.Boolean podAntiAffinity) {
     this.podAntiAffinity = podAntiAffinity;
+    return this;
+  }
+
+  /**
+   * Pod tolerations of node taints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PolicyControllerToleration> getPodTolerations() {
+    return podTolerations;
+  }
+
+  /**
+   * Pod tolerations of node taints.
+   * @param podTolerations podTolerations or {@code null} for none
+   */
+  public PolicyControllerPolicyControllerDeploymentConfig setPodTolerations(java.util.List<PolicyControllerToleration> podTolerations) {
+    this.podTolerations = podTolerations;
     return this;
   }
 

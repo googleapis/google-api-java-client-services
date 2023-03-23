@@ -62,8 +62,9 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   /**
    * The image URI. The image is fetched once at insertion time and a copy is stored for display
    * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
-   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
-   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
+   * must be in one of PNG, JPEG, or GIF format. The provided URI must be publicly accessible and at
+   * most 2 kB in length. The URI itself is saved with the image, and exposed via the
+   * ImageProperties.content_uri field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +142,9 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   /**
    * The image URI. The image is fetched once at insertion time and a copy is stored for display
    * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
-   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
-   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
+   * must be in one of PNG, JPEG, or GIF format. The provided URI must be publicly accessible and at
+   * most 2 kB in length. The URI itself is saved with the image, and exposed via the
+   * ImageProperties.content_uri field.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -152,8 +154,9 @@ public final class InsertInlineImageRequest extends com.google.api.client.json.G
   /**
    * The image URI. The image is fetched once at insertion time and a copy is stored for display
    * inside the document. Images must be less than 50MB in size, cannot exceed 25 megapixels, and
-   * must be in one of PNG, JPEG, or GIF format. The provided URI can be at most 2 kB in length. The
-   * URI itself is saved with the image, and exposed via the ImageProperties.content_uri field.
+   * must be in one of PNG, JPEG, or GIF format. The provided URI must be publicly accessible and at
+   * most 2 kB in length. The URI itself is saved with the image, and exposed via the
+   * ImageProperties.content_uri field.
    * @param uri uri or {@code null} for none
    */
   public InsertInlineImageRequest setUri(java.lang.String uri) {

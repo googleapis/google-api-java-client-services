@@ -17,7 +17,14 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * Identifies the cluster-scoped resources to restore from the Backup.
+ * Defines the scope of cluster-scoped resources to restore. Some group kinds are not reasonable
+ * choices for a restore, and will cause an error if selected here. Any scope selection that would
+ * restore "all valid" resources automatically excludes these group kinds. -
+ * gkebackup.gke.io/BackupJob - gkebackup.gke.io/RestoreJob - metrics.k8s.io/NodeMetrics -
+ * migration.k8s.io/StorageState - migration.k8s.io/StorageVersionMigration - Node -
+ * snapshot.storage.k8s.io/VolumeSnapshotContent - storage.k8s.io/CSINode Some group kinds are
+ * driven by restore configuration elsewhere, and will cause an error if selected here. - Namespace
+ * - PersistentVolume
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -30,18 +37,16 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ClusterResourceRestoreScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of "types" of cluster-scoped resources to be restored from the Backup. An empty list
-   * means that NO cluster-scoped resources will be restored. Note that Namespaces and
-   * PersistentVolume restoration is handled separately and is not governed by this field.
+   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
+   * the selected resources will be restored. Mutually exclusive to any other field in the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GroupKind> selectedGroupKinds;
 
   /**
-   * A list of "types" of cluster-scoped resources to be restored from the Backup. An empty list
-   * means that NO cluster-scoped resources will be restored. Note that Namespaces and
-   * PersistentVolume restoration is handled separately and is not governed by this field.
+   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
+   * the selected resources will be restored. Mutually exclusive to any other field in the message.
    * @return value or {@code null} for none
    */
   public java.util.List<GroupKind> getSelectedGroupKinds() {
@@ -49,9 +54,8 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * A list of "types" of cluster-scoped resources to be restored from the Backup. An empty list
-   * means that NO cluster-scoped resources will be restored. Note that Namespaces and
-   * PersistentVolume restoration is handled separately and is not governed by this field.
+   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
+   * the selected resources will be restored. Mutually exclusive to any other field in the message.
    * @param selectedGroupKinds selectedGroupKinds or {@code null} for none
    */
   public ClusterResourceRestoreScope setSelectedGroupKinds(java.util.List<GroupKind> selectedGroupKinds) {

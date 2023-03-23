@@ -46,7 +46,7 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
    * If this field is NOT specified, then ALL fields matched by the target_json_path expression will
-   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for for this
+   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for this
    * field will only match empty fields.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
    * If this field is NOT specified, then ALL fields matched by the target_json_path expression will
-   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for for this
+   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for this
    * field will only match empty fields.
    * @return value or {@code null} for none
    */
@@ -131,7 +131,7 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
    * If this field is NOT specified, then ALL fields matched by the target_json_path expression will
-   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for for this
+   * undergo substitution. Note that an empty (e.g., "", rather than unspecified) value for this
    * field will only match empty fields.
    * @param originalValuePattern originalValuePattern or {@code null} for none
    */

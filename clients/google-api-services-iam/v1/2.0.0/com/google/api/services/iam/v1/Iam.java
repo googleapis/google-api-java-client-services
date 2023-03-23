@@ -2977,6 +2977,772 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         public class Keys {
 
           /**
+           * Creates a new WorkforcePoolProviderKey in a WorkforcePoolProvider.
+           *
+           * Create a request for the method "keys.create".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The provider to create this key in.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderKey}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderKey content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/keys";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Creates a new WorkforcePoolProviderKey in a WorkforcePoolProvider.
+             *
+             * Create a request for the method "keys.create".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The provider to create this key in.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkforcePoolProviderKey}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkforcePoolProviderKey content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The provider to create this key in. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The provider to create this key in.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The provider to create this key in. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the key, which becomes the final component of the
+             * resource name. This value must be 4-32 characters, and may contain the characters
+             * [a-z0-9-].
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String workforcePoolProviderKeyId;
+
+            /** Required. The ID to use for the key, which becomes the final component of the resource name. This
+           value must be 4-32 characters, and may contain the characters [a-z0-9-].
+             */
+            public java.lang.String getWorkforcePoolProviderKeyId() {
+              return workforcePoolProviderKeyId;
+            }
+
+            /**
+             * Required. The ID to use for the key, which becomes the final component of the
+             * resource name. This value must be 4-32 characters, and may contain the characters
+             * [a-z0-9-].
+             */
+            public Create setWorkforcePoolProviderKeyId(java.lang.String workforcePoolProviderKeyId) {
+              this.workforcePoolProviderKeyId = workforcePoolProviderKeyId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a WorkforcePoolProviderKey. You can undelete a key for 30 days. After 30 days, deletion
+           * is permanent.
+           *
+           * Create a request for the method "keys.delete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the key to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+            /**
+             * Deletes a WorkforcePoolProviderKey. You can undelete a key for 30 days. After 30 days, deletion
+             * is permanent.
+             *
+             * Create a request for the method "keys.delete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the key to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the key to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the key to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the key to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a WorkforcePoolProviderKey.
+           *
+           * Create a request for the method "keys.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the key to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkforcePoolProviderKey> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+            /**
+             * Gets a WorkforcePoolProviderKey.
+             *
+             * Create a request for the method "keys.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the key to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkforcePoolProviderKey.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the key to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the key to retrieve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the key to retrieve. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all non-deleted WorkforcePoolProviderKeys in a WorkforcePoolProvider. If `show_deleted` is
+           * set to `true`, then deleted keys are also listed.
+           *
+           * Create a request for the method "keys.list".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The provider resource to list encryption keys for. Format:
+           *        `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkforcePoolProviderKeysResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/keys";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Lists all non-deleted WorkforcePoolProviderKeys in a WorkforcePoolProvider. If `show_deleted`
+             * is set to `true`, then deleted keys are also listed.
+             *
+             * Create a request for the method "keys.list".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The provider resource to list encryption keys for. Format:
+           *        `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkforcePoolProviderKeysResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The provider resource to list encryption keys for. Format:
+             * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The provider resource to list encryption keys for. Format:
+           `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The provider resource to list encryption keys for. Format:
+             * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of keys to return. If unspecified, all keys are returned. The
+             * maximum value is 10; values above 10 are truncated to 10.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of keys to return. If unspecified, all keys are returned. The maximum value is
+           10; values above 10 are truncated to 10.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of keys to return. If unspecified, all keys are returned. The
+             * maximum value is 10; values above 10 are truncated to 10.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkforcePoolProviderKeys` call. Provide
+             * this to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListWorkforcePoolProviderKeys` call. Provide this to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkforcePoolProviderKeys` call. Provide
+             * this to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Whether to return soft-deleted keys. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** Whether to return soft-deleted keys.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /** Whether to return soft-deleted keys. */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Undeletes a WorkforcePoolProviderKey, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "keys.undelete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the key to undelete.
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderKeyRequest}
+           * @return the request
+           */
+          public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderKeyRequest content) throws java.io.IOException {
+            Undelete result = new Undelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:undelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+            /**
+             * Undeletes a WorkforcePoolProviderKey, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "keys.undelete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the key to undelete.
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderKeyRequest}
+             * @since 1.13
+             */
+            protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkforcePoolProviderKeyRequest content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public Undelete set$Xgafv(java.lang.String $Xgafv) {
+              return (Undelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Undelete setAccessToken(java.lang.String accessToken) {
+              return (Undelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Undelete setAlt(java.lang.String alt) {
+              return (Undelete) super.setAlt(alt);
+            }
+
+            @Override
+            public Undelete setCallback(java.lang.String callback) {
+              return (Undelete) super.setCallback(callback);
+            }
+
+            @Override
+            public Undelete setFields(java.lang.String fields) {
+              return (Undelete) super.setFields(fields);
+            }
+
+            @Override
+            public Undelete setKey(java.lang.String key) {
+              return (Undelete) super.setKey(key);
+            }
+
+            @Override
+            public Undelete setOauthToken(java.lang.String oauthToken) {
+              return (Undelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Undelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Undelete setQuotaUser(java.lang.String quotaUser) {
+              return (Undelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Undelete setUploadType(java.lang.String uploadType) {
+              return (Undelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Undelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the key to undelete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the key to undelete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the key to undelete. */
+            public Undelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^locations/[^/]+/workforcePools/[^/]+/providers/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Undelete set(String parameterName, Object value) {
+              return (Undelete) super.set(parameterName, value);
+            }
+          }
+
+          /**
            * An accessor for creating requests from the Operations collection.
            *
            * <p>The typical use is:</p>
@@ -7472,6 +8238,763 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * The "keys" collection of methods.
            */
           public class Keys {
+
+            /**
+             * Create a new WorkloadIdentityPoolProviderKey in a WorkloadIdentityPoolProvider.
+             *
+             * Create a request for the method "keys.create".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent provider resource to create the key in.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+parent}/keys";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+              /**
+               * Create a new WorkloadIdentityPoolProviderKey in a WorkloadIdentityPoolProvider.
+               *
+               * Create a request for the method "keys.create".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent provider resource to create the key in.
+               * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent provider resource to create the key in. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent provider resource to create the key in.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent provider resource to create the key in. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the key, which becomes the final component of the
+               * resource name. This value should be 4-32 characters, and may contain the characters
+               * [a-z0-9-].
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String workloadIdentityPoolProviderKeyId;
+
+              /** Required. The ID to use for the key, which becomes the final component of the resource name. This
+             value should be 4-32 characters, and may contain the characters [a-z0-9-].
+               */
+              public java.lang.String getWorkloadIdentityPoolProviderKeyId() {
+                return workloadIdentityPoolProviderKeyId;
+              }
+
+              /**
+               * Required. The ID to use for the key, which becomes the final component of the
+               * resource name. This value should be 4-32 characters, and may contain the characters
+               * [a-z0-9-].
+               */
+              public Create setWorkloadIdentityPoolProviderKeyId(java.lang.String workloadIdentityPoolProviderKeyId) {
+                this.workloadIdentityPoolProviderKeyId = workloadIdentityPoolProviderKeyId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes an WorkloadIdentityPoolProviderKey. You can undelete a key for 30 days. After 30 days,
+             * deletion is permanent.
+             *
+             * Create a request for the method "keys.delete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the encryption key to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+              /**
+               * Deletes an WorkloadIdentityPoolProviderKey. You can undelete a key for 30 days. After 30 days,
+               * deletion is permanent.
+               *
+               * Create a request for the method "keys.delete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the encryption key to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the encryption key to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the encryption key to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the encryption key to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets an individual WorkloadIdentityPoolProviderKey.
+             *
+             * Create a request for the method "keys.get".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the key to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+              /**
+               * Gets an individual WorkloadIdentityPoolProviderKey.
+               *
+               * Create a request for the method "keys.get".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the key to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProviderKey.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the key to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the key to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the key to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all non-deleted WorkloadIdentityPoolProviderKeys in a project. If show_deleted is set to
+             * `true`, then deleted pools are also listed.
+             *
+             * Create a request for the method "keys.list".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent provider resource to list encryption keys for.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolProviderKeysResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/keys";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+              /**
+               * Lists all non-deleted WorkloadIdentityPoolProviderKeys in a project. If show_deleted is set to
+               * `true`, then deleted pools are also listed.
+               *
+               * Create a request for the method "keys.list".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent provider resource to list encryption keys for.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolProviderKeysResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent provider resource to list encryption keys for. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent provider resource to list encryption keys for.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent provider resource to list encryption keys for. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The maximum number of keys to return. If unspecified, all keys are returned. The
+               * maximum value is 10; values above 10 are truncated to 10.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of keys to return. If unspecified, all keys are returned. The maximum value is
+             10; values above 10 are truncated to 10.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * The maximum number of keys to return. If unspecified, all keys are returned. The
+               * maximum value is 10; values above 10 are truncated to 10.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token, received from a previous `ListWorkloadIdentityPoolProviderKeys` call.
+               * Provide this to retrieve the subsequent page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token, received from a previous `ListWorkloadIdentityPoolProviderKeys` call. Provide this to
+             retrieve the subsequent page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token, received from a previous `ListWorkloadIdentityPoolProviderKeys` call.
+               * Provide this to retrieve the subsequent page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Whether to return soft deleted resources as well. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean showDeleted;
+
+              /** Whether to return soft deleted resources as well.
+               */
+              public java.lang.Boolean getShowDeleted() {
+                return showDeleted;
+              }
+
+              /** Whether to return soft deleted resources as well. */
+              public List setShowDeleted(java.lang.Boolean showDeleted) {
+                this.showDeleted = showDeleted;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Undeletes an WorkloadIdentityPoolProviderKey, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "keys.undelete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the encryption key to undelete.
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderKeyRequest}
+             * @return the request
+             */
+            public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderKeyRequest content) throws java.io.IOException {
+              Undelete result = new Undelete(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}:undelete";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+
+              /**
+               * Undeletes an WorkloadIdentityPoolProviderKey, as long as it was deleted fewer than 30 days ago.
+               *
+               * Create a request for the method "keys.undelete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+               * {@link
+               * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the encryption key to undelete.
+               * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderKeyRequest}
+               * @since 1.13
+               */
+              protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderKeyRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+              }
+
+              @Override
+              public Undelete set$Xgafv(java.lang.String $Xgafv) {
+                return (Undelete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Undelete setAccessToken(java.lang.String accessToken) {
+                return (Undelete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Undelete setAlt(java.lang.String alt) {
+                return (Undelete) super.setAlt(alt);
+              }
+
+              @Override
+              public Undelete setCallback(java.lang.String callback) {
+                return (Undelete) super.setCallback(callback);
+              }
+
+              @Override
+              public Undelete setFields(java.lang.String fields) {
+                return (Undelete) super.setFields(fields);
+              }
+
+              @Override
+              public Undelete setKey(java.lang.String key) {
+                return (Undelete) super.setKey(key);
+              }
+
+              @Override
+              public Undelete setOauthToken(java.lang.String oauthToken) {
+                return (Undelete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Undelete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Undelete setQuotaUser(java.lang.String quotaUser) {
+                return (Undelete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Undelete setUploadType(java.lang.String uploadType) {
+                return (Undelete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Undelete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the encryption key to undelete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the encryption key to undelete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the encryption key to undelete. */
+              public Undelete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+/keys/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Undelete set(String parameterName, Object value) {
+                return (Undelete) super.set(parameterName, value);
+              }
+            }
 
             /**
              * An accessor for creating requests from the Operations collection.

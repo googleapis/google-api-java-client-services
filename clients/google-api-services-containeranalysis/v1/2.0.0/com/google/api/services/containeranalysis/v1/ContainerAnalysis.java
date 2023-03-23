@@ -3501,6 +3501,169 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       }
 
     }
+    /**
+     * An accessor for creating requests from the Resources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+     *   {@code ContainerAnalysis.Resources.List request = containeranalysis.resources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Resources resources() {
+      return new Resources();
+    }
+
+    /**
+     * The "resources" collection of methods.
+     */
+    public class Resources {
+
+      /**
+       * Gets a summary of the packages within a given resource.
+       *
+       * Create a request for the method "resources.generatePackagesSummary".
+       *
+       * This request holds the parameters needed by the containeranalysis server.  After setting any
+       * optional parameters, call the {@link GeneratePackagesSummary#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The name of the resource to get a packages summary for in the form of
+       *        `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+       * @param content the {@link com.google.api.services.containeranalysis.v1.model.GeneratePackagesSummaryRequest}
+       * @return the request
+       */
+      public GeneratePackagesSummary generatePackagesSummary(java.lang.String name, com.google.api.services.containeranalysis.v1.model.GeneratePackagesSummaryRequest content) throws java.io.IOException {
+        GeneratePackagesSummary result = new GeneratePackagesSummary(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GeneratePackagesSummary extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1.model.PackagesSummaryResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:generatePackagesSummary";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/resources/.*$");
+
+        /**
+         * Gets a summary of the packages within a given resource.
+         *
+         * Create a request for the method "resources.generatePackagesSummary".
+         *
+         * This request holds the parameters needed by the the containeranalysis server.  After setting
+         * any optional parameters, call the {@link GeneratePackagesSummary#execute()} method to invoke
+         * the remote operation. <p> {@link GeneratePackagesSummary#initialize(com.google.api.client.googl
+         * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the resource to get a packages summary for in the form of
+       *        `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1.model.GeneratePackagesSummaryRequest}
+         * @since 1.13
+         */
+        protected GeneratePackagesSummary(java.lang.String name, com.google.api.services.containeranalysis.v1.model.GeneratePackagesSummaryRequest content) {
+          super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1.model.PackagesSummaryResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/resources/.*$");
+          }
+        }
+
+        @Override
+        public GeneratePackagesSummary set$Xgafv(java.lang.String $Xgafv) {
+          return (GeneratePackagesSummary) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GeneratePackagesSummary setAccessToken(java.lang.String accessToken) {
+          return (GeneratePackagesSummary) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GeneratePackagesSummary setAlt(java.lang.String alt) {
+          return (GeneratePackagesSummary) super.setAlt(alt);
+        }
+
+        @Override
+        public GeneratePackagesSummary setCallback(java.lang.String callback) {
+          return (GeneratePackagesSummary) super.setCallback(callback);
+        }
+
+        @Override
+        public GeneratePackagesSummary setFields(java.lang.String fields) {
+          return (GeneratePackagesSummary) super.setFields(fields);
+        }
+
+        @Override
+        public GeneratePackagesSummary setKey(java.lang.String key) {
+          return (GeneratePackagesSummary) super.setKey(key);
+        }
+
+        @Override
+        public GeneratePackagesSummary setOauthToken(java.lang.String oauthToken) {
+          return (GeneratePackagesSummary) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GeneratePackagesSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GeneratePackagesSummary) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GeneratePackagesSummary setQuotaUser(java.lang.String quotaUser) {
+          return (GeneratePackagesSummary) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GeneratePackagesSummary setUploadType(java.lang.String uploadType) {
+          return (GeneratePackagesSummary) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GeneratePackagesSummary setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GeneratePackagesSummary) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource to get a packages summary for in the form of
+         * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource to get a packages summary for in the form of
+       `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource to get a packages summary for in the form of
+         * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         */
+        public GeneratePackagesSummary setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/resources/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GeneratePackagesSummary set(String parameterName, Object value) {
+          return (GeneratePackagesSummary) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

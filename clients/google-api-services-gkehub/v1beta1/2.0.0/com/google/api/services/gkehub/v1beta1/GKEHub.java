@@ -883,6 +883,29 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
+           * Optional. If set to true, any subresource from this Membership will also be deleted.
+           * Otherwise, the request will only work if the Membership has no subresource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any subresource from this Membership will also be deleted. Otherwise, the
+         request will only work if the Membership has no subresource.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any subresource from this Membership will also be deleted.
+           * Otherwise, the request will only work if the Membership has no subresource.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
            * Optional. A request ID to identify requests. Specify a unique request ID so that if you
            * must retry your request, the server will know to ignore the request if it has already
            * been completed. The server will guarantee that for at least 60 minutes after the first
@@ -3159,12 +3182,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -3189,12 +3207,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

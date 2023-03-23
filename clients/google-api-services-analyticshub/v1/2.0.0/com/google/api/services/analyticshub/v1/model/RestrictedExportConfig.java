@@ -37,13 +37,6 @@ public final class RestrictedExportConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean enabled;
 
   /**
-   * If true, restrict direct table access(read api/tabledata.list) on linked table.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean restrictDirectTableAccess;
-
-  /**
    * If true, restrict export of query result derived from restricted linked dataset table.
    * The value may be {@code null}.
    */
@@ -64,23 +57,6 @@ public final class RestrictedExportConfig extends com.google.api.client.json.Gen
    */
   public RestrictedExportConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
-    return this;
-  }
-
-  /**
-   * If true, restrict direct table access(read api/tabledata.list) on linked table.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getRestrictDirectTableAccess() {
-    return restrictDirectTableAccess;
-  }
-
-  /**
-   * If true, restrict direct table access(read api/tabledata.list) on linked table.
-   * @param restrictDirectTableAccess restrictDirectTableAccess or {@code null} for none
-   */
-  public RestrictedExportConfig setRestrictDirectTableAccess(java.lang.Boolean restrictDirectTableAccess) {
-    this.restrictDirectTableAccess = restrictDirectTableAccess;
     return this;
   }
 

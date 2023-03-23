@@ -64,7 +64,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private java.lang.String parentDocumentId;
 
   /**
-   * Required. The identifier of the schema located in the same data store.
+   * The identifier of the schema located in the same data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * Required. The identifier of the schema located in the same data store.
+   * The identifier of the schema located in the same data store.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaId() {
@@ -167,7 +167,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * Required. The identifier of the schema located in the same data store.
+   * The identifier of the schema located in the same data store.
    * @param schemaId schemaId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setSchemaId(java.lang.String schemaId) {

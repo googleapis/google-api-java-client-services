@@ -40,17 +40,18 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   private java.lang.Boolean enable;
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
    * selected. Expressions can select different attribute types from `attributes`:
-   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
-   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
-   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
-   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
-   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
-   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
-   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
-   * of Example expression: attributes.saml_attributes.filter(x, x.name in
-   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
+   * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
+   * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
+   * in `` with the given `` name, otherwise returns empty. - emitAs `.emitAs()`: Sets the `` name
+   * field to the given `` for propagation in selected output credentials. - strict `.strict()`:
+   * Ignores the `x-goog-iap-attr-` prefix for the provided `` when propagating with the `HEADER`
+   * output credential, such as request headers. - append `.append()` OR `.append()`: Appends the
+   * provided `` or `` to the end of ``. Example expression: `attributes.saml_attributes.filter(x,
+   * x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,17 +87,18 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
    * selected. Expressions can select different attribute types from `attributes`:
-   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
-   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
-   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
-   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
-   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
-   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
-   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
-   * of Example expression: attributes.saml_attributes.filter(x, x.name in
-   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
+   * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
+   * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
+   * in `` with the given `` name, otherwise returns empty. - emitAs `.emitAs()`: Sets the `` name
+   * field to the given `` for propagation in selected output credentials. - strict `.strict()`:
+   * Ignores the `x-goog-iap-attr-` prefix for the provided `` when propagating with the `HEADER`
+   * output credential, such as request headers. - append `.append()` OR `.append()`: Appends the
+   * provided `` or `` to the end of ``. Example expression: `attributes.saml_attributes.filter(x,
+   * x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())`
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -104,17 +106,18 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. Maximum of 45 attributes can be
+   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
    * selected. Expressions can select different attribute types from `attributes`:
-   * `attributes.saml_attributes`, `attributes.iap_attributes`. Limited functions are supported: -
-   * filter: .filter(, ) -> returns a subset of where is true for every item - in: in -> returns
-   * true if contains - selectByName: .selectByName() -> returns the attribute in with the given
-   * name, otherwise returns empty. - emitAs: .emitAs() -> sets the name field to the given for
-   * propagation in selected output credentials. - strict: .strict() -> ignore the `x-goog-iap-
-   * attr-` prefix for the provided attribute when propagating via the `HEADER` output credential,
-   * i.e. request headers. - append: .append() OR .append() -> append the provided or onto the end
-   * of Example expression: attributes.saml_attributes.filter(x, x.name in
-   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())
+   * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
+   * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
+   * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
+   * in `` with the given `` name, otherwise returns empty. - emitAs `.emitAs()`: Sets the `` name
+   * field to the given `` for propagation in selected output credentials. - strict `.strict()`:
+   * Ignores the `x-goog-iap-attr-` prefix for the provided `` when propagating with the `HEADER`
+   * output credential, such as request headers. - append `.append()` OR `.append()`: Appends the
+   * provided `` or `` to the end of ``. Example expression: `attributes.saml_attributes.filter(x,
+   * x.name in
+   * ['test']).append(attributes.iap_attributes.selectByName('exact').emitAs('custom').strict())`
    * @param expression expression or {@code null} for none
    */
   public AttributePropagationSettings setExpression(java.lang.String expression) {

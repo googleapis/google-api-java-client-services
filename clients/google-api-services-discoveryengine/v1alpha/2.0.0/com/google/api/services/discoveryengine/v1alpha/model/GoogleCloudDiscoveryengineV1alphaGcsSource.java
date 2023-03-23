@@ -45,7 +45,8 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
+   * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
+   * MB if `data_schema` is `content`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,8 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
+   * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
+   * MB if `data_schema` is `content`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputUris() {
@@ -93,7 +95,8 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
    * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files or 100000 files if the data_schema is `content`. And each file can be up to 2 GB.
+   * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
+   * MB if `data_schema` is `content`).
    * @param inputUris inputUris or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource setInputUris(java.util.List<java.lang.String> inputUris) {

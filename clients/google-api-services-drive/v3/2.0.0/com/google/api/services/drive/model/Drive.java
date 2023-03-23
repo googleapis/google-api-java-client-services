@@ -31,7 +31,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
+   * set. This is a write-only field; it can only be set on drive.drives.update requests that don't
    * set themeId. When specified, all fields of the backgroundImageFile must be set.
    * The value may be {@code null}.
    */
@@ -53,8 +53,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private Capabilities capabilities;
 
   /**
-   * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * The color of this shared drive as an RGB hex string. It can only be set on drive.drives.update
+   * requests that don't set themeId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private Restrictions restrictions;
 
   /**
-   * The ID of the theme from which the background image and color will be set. The set of possible
+   * The ID of the theme from which the background image and color are set. The set of possible
    * driveThemes can be retrieved from a drive.about.get response. When not specified on a
    * drive.drives.create request, a random theme is chosen from which the background image and color
    * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
@@ -123,7 +123,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
+   * set. This is a write-only field; it can only be set on drive.drives.update requests that don't
    * set themeId. When specified, all fields of the backgroundImageFile must be set.
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
+   * set. This is a write-only field; it can only be set on drive.drives.update requests that don't
    * set themeId. When specified, all fields of the backgroundImageFile must be set.
    * @param backgroundImageFile backgroundImageFile or {@code null} for none
    */
@@ -177,8 +177,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * The color of this shared drive as an RGB hex string. It can only be set on drive.drives.update
+   * requests that don't set themeId.
    * @return value or {@code null} for none
    */
   public java.lang.String getColorRgb() {
@@ -186,8 +186,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * The color of this shared drive as an RGB hex string. It can only be set on drive.drives.update
+   * requests that don't set themeId.
    * @param colorRgb colorRgb or {@code null} for none
    */
   public Drive setColorRgb(java.lang.String colorRgb) {
@@ -317,7 +317,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the theme from which the background image and color will be set. The set of possible
+   * The ID of the theme from which the background image and color are set. The set of possible
    * driveThemes can be retrieved from a drive.about.get response. When not specified on a
    * drive.drives.create request, a random theme is chosen from which the background image and color
    * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
@@ -329,7 +329,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the theme from which the background image and color will be set. The set of possible
+   * The ID of the theme from which the background image and color are set. The set of possible
    * driveThemes can be retrieved from a drive.about.get response. When not specified on a
    * drive.drives.create request, a random theme is chosen from which the background image and color
    * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
@@ -353,7 +353,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is set.
-   * This is a write only field; it can only be set on drive.drives.update requests that don't set
+   * This is a write-only field; it can only be set on drive.drives.update requests that don't set
    * themeId. When specified, all fields of the backgroundImageFile must be set.
    */
   public static final class BackgroundImageFile extends com.google.api.client.json.GenericJson {

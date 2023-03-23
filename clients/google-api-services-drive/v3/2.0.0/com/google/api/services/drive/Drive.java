@@ -1047,7 +1047,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribes to changes for a user.
+     * Subscribes to changes for a user. To use this method, you must include the pageToken query
+     * parameter.
      *
      * Create a request for the method "changes.watch".
      *
@@ -1071,7 +1072,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "changes/watch";
 
       /**
-       * Subscribes to changes for a user.
+       * Subscribes to changes for a user. To use this method, you must include the pageToken query
+       * parameter.
        *
        * Create a request for the method "changes.watch".
        *
@@ -3327,7 +3329,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates the metadate for a shared drive.
+     * Updates the metadata for a shared drive.
      *
      * Create a request for the method "drives.update".
      *
@@ -3349,7 +3351,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}";
 
       /**
-       * Updates the metadate for a shared drive.
+       * Updates the metadata for a shared drive.
        *
        * Create a request for the method "drives.update".
        *
@@ -3419,25 +3421,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the shared drive
-       * belongs.
+       * Issue the request as a domain administrator. If set to true, then the requester is granted
+       * access if they're an administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
-      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the shared drive belongs. [default:
-     false]
+      /** Issue the request as a domain administrator. If set to true, then the requester is granted access
+     if they're an administrator of the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
       }
 
       /**
-       * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the shared drive
-       * belongs.
+       * Issue the request as a domain administrator. If set to true, then the requester is granted
+       * access if they're an administrator of the domain to which the shared drive belongs.
        */
       public Update setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -3461,8 +3460,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the shared drive belongs.
+       * Issue the request as a domain administrator. If set to true, then the requester is granted access
+     if they're an administrator of the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -6900,7 +6899,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Permissions {
 
     /**
-     * Creates a permission for a file or shared drive.
+     * Creates a permission for a file or shared drive. For more information on creating permissions,
+     * see Share files, folders & drives.
      *
      * Create a request for the method "permissions.create".
      *
@@ -6922,7 +6922,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Creates a permission for a file or shared drive.
+       * Creates a permission for a file or shared drive. For more information on creating permissions,
+       * see Share files, folders & drives.
        *
        * Create a request for the method "permissions.create".
        *

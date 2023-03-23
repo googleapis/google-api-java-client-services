@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Strategy contains deployment strategy information.
+ * KubernetesConfig contains the Kubernetes runtime configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Strategy extends com.google.api.client.json.GenericJson {
+public final class KubernetesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Kubernetes Gateway API service mesh configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Canary canary;
+  private GatewayServiceMesh gatewayServiceMesh;
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Kubernetes Service networking configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Standard standard;
+  private ServiceNetworking serviceNetworking;
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Kubernetes Gateway API service mesh configuration.
    * @return value or {@code null} for none
    */
-  public Canary getCanary() {
-    return canary;
+  public GatewayServiceMesh getGatewayServiceMesh() {
+    return gatewayServiceMesh;
   }
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
-   * @param canary canary or {@code null} for none
+   * Kubernetes Gateway API service mesh configuration.
+   * @param gatewayServiceMesh gatewayServiceMesh or {@code null} for none
    */
-  public Strategy setCanary(Canary canary) {
-    this.canary = canary;
+  public KubernetesConfig setGatewayServiceMesh(GatewayServiceMesh gatewayServiceMesh) {
+    this.gatewayServiceMesh = gatewayServiceMesh;
     return this;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Kubernetes Service networking configuration.
    * @return value or {@code null} for none
    */
-  public Standard getStandard() {
-    return standard;
+  public ServiceNetworking getServiceNetworking() {
+    return serviceNetworking;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
-   * @param standard standard or {@code null} for none
+   * Kubernetes Service networking configuration.
+   * @param serviceNetworking serviceNetworking or {@code null} for none
    */
-  public Strategy setStandard(Standard standard) {
-    this.standard = standard;
+  public KubernetesConfig setServiceNetworking(ServiceNetworking serviceNetworking) {
+    this.serviceNetworking = serviceNetworking;
     return this;
   }
 
   @Override
-  public Strategy set(String fieldName, Object value) {
-    return (Strategy) super.set(fieldName, value);
+  public KubernetesConfig set(String fieldName, Object value) {
+    return (KubernetesConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Strategy clone() {
-    return (Strategy) super.clone();
+  public KubernetesConfig clone() {
+    return (KubernetesConfig) super.clone();
   }
 
 }

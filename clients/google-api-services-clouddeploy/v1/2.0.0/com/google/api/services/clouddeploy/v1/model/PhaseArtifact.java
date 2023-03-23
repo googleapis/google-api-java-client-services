@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The artifacts produced by a target render operation.
+ * Contains the paths to the artifacts, relative to the URI, for a phase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,15 +28,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TargetArtifact extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Output only. URI of a directory containing the artifacts. This contains deployment
-   * configuration used by Skaffold during a rollout, and all paths are relative to this location.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String artifactUri;
+public final class PhaseArtifact extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. File path of the rendered manifest relative to the URI.
@@ -46,43 +38,11 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   private java.lang.String manifestPath;
 
   /**
-   * Output only. Map from the phase ID to the phase artifacts for the `Target`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, PhaseArtifact> phaseArtifacts;
-
-  static {
-    // hack to force ProGuard to consider PhaseArtifact used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PhaseArtifact.class);
-  }
-
-  /**
    * Output only. File path of the resolved Skaffold configuration relative to the URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String skaffoldConfigPath;
-
-  /**
-   * Output only. URI of a directory containing the artifacts. This contains deployment
-   * configuration used by Skaffold during a rollout, and all paths are relative to this location.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getArtifactUri() {
-    return artifactUri;
-  }
-
-  /**
-   * Output only. URI of a directory containing the artifacts. This contains deployment
-   * configuration used by Skaffold during a rollout, and all paths are relative to this location.
-   * @param artifactUri artifactUri or {@code null} for none
-   */
-  public TargetArtifact setArtifactUri(java.lang.String artifactUri) {
-    this.artifactUri = artifactUri;
-    return this;
-  }
 
   /**
    * Output only. File path of the rendered manifest relative to the URI.
@@ -96,25 +56,8 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
    * Output only. File path of the rendered manifest relative to the URI.
    * @param manifestPath manifestPath or {@code null} for none
    */
-  public TargetArtifact setManifestPath(java.lang.String manifestPath) {
+  public PhaseArtifact setManifestPath(java.lang.String manifestPath) {
     this.manifestPath = manifestPath;
-    return this;
-  }
-
-  /**
-   * Output only. Map from the phase ID to the phase artifacts for the `Target`.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, PhaseArtifact> getPhaseArtifacts() {
-    return phaseArtifacts;
-  }
-
-  /**
-   * Output only. Map from the phase ID to the phase artifacts for the `Target`.
-   * @param phaseArtifacts phaseArtifacts or {@code null} for none
-   */
-  public TargetArtifact setPhaseArtifacts(java.util.Map<String, PhaseArtifact> phaseArtifacts) {
-    this.phaseArtifacts = phaseArtifacts;
     return this;
   }
 
@@ -130,19 +73,19 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
    * Output only. File path of the resolved Skaffold configuration relative to the URI.
    * @param skaffoldConfigPath skaffoldConfigPath or {@code null} for none
    */
-  public TargetArtifact setSkaffoldConfigPath(java.lang.String skaffoldConfigPath) {
+  public PhaseArtifact setSkaffoldConfigPath(java.lang.String skaffoldConfigPath) {
     this.skaffoldConfigPath = skaffoldConfigPath;
     return this;
   }
 
   @Override
-  public TargetArtifact set(String fieldName, Object value) {
-    return (TargetArtifact) super.set(fieldName, value);
+  public PhaseArtifact set(String fieldName, Object value) {
+    return (PhaseArtifact) super.set(fieldName, value);
   }
 
   @Override
-  public TargetArtifact clone() {
-    return (TargetArtifact) super.clone();
+  public PhaseArtifact clone() {
+    return (PhaseArtifact) super.clone();
   }
 
 }

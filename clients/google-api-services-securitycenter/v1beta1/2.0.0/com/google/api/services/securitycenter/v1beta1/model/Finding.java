@@ -61,6 +61,20 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Cloud DLP data profile associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudDlpDataProfile cloudDlpDataProfile;
+
+  /**
+   * Cloud DLP inspection associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudDlpInspection cloudDlpInspection;
+
+  /**
    * Contains compliance information for security standards associated to the finding.
    * The value may be {@code null}.
    */
@@ -232,6 +246,14 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private MitreAttack mitreAttack;
 
   /**
+   * Unique identifier of the module which generated the finding. Example:
+   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String moduleName;
+
+  /**
    * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
    * attributes of a finding, a finding provider shouldn't set the value of mute.
    * The value may be {@code null}.
@@ -270,6 +292,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String nextSteps;
+
+  /**
+   * Contains information about the org policy constraints associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrgPolicyConstraint> orgPolicyConstraints;
 
   /**
    * The relative resource name of the source the finding belongs to. See:
@@ -406,6 +435,40 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Cloud DLP data profile associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public CloudDlpDataProfile getCloudDlpDataProfile() {
+    return cloudDlpDataProfile;
+  }
+
+  /**
+   * Cloud DLP data profile associated with the finding.
+   * @param cloudDlpDataProfile cloudDlpDataProfile or {@code null} for none
+   */
+  public Finding setCloudDlpDataProfile(CloudDlpDataProfile cloudDlpDataProfile) {
+    this.cloudDlpDataProfile = cloudDlpDataProfile;
+    return this;
+  }
+
+  /**
+   * Cloud DLP inspection associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public CloudDlpInspection getCloudDlpInspection() {
+    return cloudDlpInspection;
+  }
+
+  /**
+   * Cloud DLP inspection associated with the finding.
+   * @param cloudDlpInspection cloudDlpInspection or {@code null} for none
+   */
+  public Finding setCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
+    this.cloudDlpInspection = cloudDlpInspection;
     return this;
   }
 
@@ -746,6 +809,25 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Unique identifier of the module which generated the finding. Example:
+   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModuleName() {
+    return moduleName;
+  }
+
+  /**
+   * Unique identifier of the module which generated the finding. Example:
+   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
+   * @param moduleName moduleName or {@code null} for none
+   */
+  public Finding setModuleName(java.lang.String moduleName) {
+    this.moduleName = moduleName;
+    return this;
+  }
+
+  /**
    * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
    * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @return value or {@code null} for none
@@ -837,6 +919,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setNextSteps(java.lang.String nextSteps) {
     this.nextSteps = nextSteps;
+    return this;
+  }
+
+  /**
+   * Contains information about the org policy constraints associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrgPolicyConstraint> getOrgPolicyConstraints() {
+    return orgPolicyConstraints;
+  }
+
+  /**
+   * Contains information about the org policy constraints associated with the finding.
+   * @param orgPolicyConstraints orgPolicyConstraints or {@code null} for none
+   */
+  public Finding setOrgPolicyConstraints(java.util.List<OrgPolicyConstraint> orgPolicyConstraints) {
+    this.orgPolicyConstraints = orgPolicyConstraints;
     return this;
   }
 

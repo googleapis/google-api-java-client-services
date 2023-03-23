@@ -75,9 +75,9 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
 
   /**
    * The resource name of the quota settings on this metric for this consumer. An example name would
-   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/quota/metrics/compute.googl
-   * eapis.com%2Fcpus The resource name is intended to be opaque and should not be parsed for its
-   * component strings, since its representation could change in the future.
+   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/consumerQuotaMetrics/comput
+   * e.googleapis.com%2Fcpus` The resource name is intended to be opaque and should not be parsed
+   * for its component strings, since its representation could change in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,9 +166,9 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
 
   /**
    * The resource name of the quota settings on this metric for this consumer. An example name would
-   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/quota/metrics/compute.googl
-   * eapis.com%2Fcpus The resource name is intended to be opaque and should not be parsed for its
-   * component strings, since its representation could change in the future.
+   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/consumerQuotaMetrics/comput
+   * e.googleapis.com%2Fcpus` The resource name is intended to be opaque and should not be parsed
+   * for its component strings, since its representation could change in the future.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -177,9 +177,9 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
 
   /**
    * The resource name of the quota settings on this metric for this consumer. An example name would
-   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/quota/metrics/compute.googl
-   * eapis.com%2Fcpus The resource name is intended to be opaque and should not be parsed for its
-   * component strings, since its representation could change in the future.
+   * be: `services/serviceconsumermanagement.googleapis.com/projects/123/consumerQuotaMetrics/comput
+   * e.googleapis.com%2Fcpus` The resource name is intended to be opaque and should not be parsed
+   * for its component strings, since its representation could change in the future.
    * @param name name or {@code null} for none
    */
   public V1Beta1ConsumerQuotaMetric setName(java.lang.String name) {

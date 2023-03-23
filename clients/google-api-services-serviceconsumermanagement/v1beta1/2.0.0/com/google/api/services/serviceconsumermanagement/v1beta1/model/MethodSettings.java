@@ -33,9 +33,10 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
   /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.
    * Complements RPCs that use the annotations in google/longrunning/operations.proto. Example of a
-   * YAML configuration:: publishing: method_behavior: - selector: CreateAdDomain long_running:
-   * initial_poll_delay: seconds: 60 # 1 minute poll_delay_multiplier: 1.5 max_poll_delay: seconds:
-   * 360 # 6 minutes total_poll_timeout: seconds: 54000 # 90 minutes
+   * YAML configuration:: publishing: method_settings: - selector:
+   * google.cloud.speech.v2.Speech.BatchRecognize long_running: initial_poll_delay: seconds: 60 # 1
+   * minute poll_delay_multiplier: 1.5 max_poll_delay: seconds: 360 # 6 minutes total_poll_timeout:
+   * seconds: 54000 # 90 minutes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,9 +53,10 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
   /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.
    * Complements RPCs that use the annotations in google/longrunning/operations.proto. Example of a
-   * YAML configuration:: publishing: method_behavior: - selector: CreateAdDomain long_running:
-   * initial_poll_delay: seconds: 60 # 1 minute poll_delay_multiplier: 1.5 max_poll_delay: seconds:
-   * 360 # 6 minutes total_poll_timeout: seconds: 54000 # 90 minutes
+   * YAML configuration:: publishing: method_settings: - selector:
+   * google.cloud.speech.v2.Speech.BatchRecognize long_running: initial_poll_delay: seconds: 60 # 1
+   * minute poll_delay_multiplier: 1.5 max_poll_delay: seconds: 360 # 6 minutes total_poll_timeout:
+   * seconds: 54000 # 90 minutes
    * @return value or {@code null} for none
    */
   public LongRunning getLongRunning() {
@@ -64,9 +66,10 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
   /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.
    * Complements RPCs that use the annotations in google/longrunning/operations.proto. Example of a
-   * YAML configuration:: publishing: method_behavior: - selector: CreateAdDomain long_running:
-   * initial_poll_delay: seconds: 60 # 1 minute poll_delay_multiplier: 1.5 max_poll_delay: seconds:
-   * 360 # 6 minutes total_poll_timeout: seconds: 54000 # 90 minutes
+   * YAML configuration:: publishing: method_settings: - selector:
+   * google.cloud.speech.v2.Speech.BatchRecognize long_running: initial_poll_delay: seconds: 60 # 1
+   * minute poll_delay_multiplier: 1.5 max_poll_delay: seconds: 360 # 6 minutes total_poll_timeout:
+   * seconds: 54000 # 90 minutes
    * @param longRunning longRunning or {@code null} for none
    */
   public MethodSettings setLongRunning(LongRunning longRunning) {

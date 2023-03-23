@@ -37,7 +37,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   private java.lang.String formUrl;
 
   /**
-   * URL of the form responses document. Only set if respsonses have been recorded and only when the
+   * URL of the form responses document. Only set if responses have been recorded and only when the
    * requesting user is an editor of the form. Read-only.
    * The value may be {@code null}.
    */
@@ -76,7 +76,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the form responses document. Only set if respsonses have been recorded and only when the
+   * URL of the form responses document. Only set if responses have been recorded and only when the
    * requesting user is an editor of the form. Read-only.
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the form responses document. Only set if respsonses have been recorded and only when the
+   * URL of the form responses document. Only set if responses have been recorded and only when the
    * requesting user is an editor of the form. Read-only.
    * @param responseUrl responseUrl or {@code null} for none
    */

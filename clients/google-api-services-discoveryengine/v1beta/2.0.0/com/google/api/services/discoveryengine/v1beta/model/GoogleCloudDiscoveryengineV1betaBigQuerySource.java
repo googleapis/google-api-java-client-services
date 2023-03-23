@@ -30,9 +30,12 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid document.id.
+   * The schema to use when parsing the data from the source. Supported values for user event
+   * imports: * `user_event` (default): One UserEvent per row. Supported values for document
+   * imports: * `document` (default): One Document format per row. Each document must have a valid
+   * Document.id and one of Document.json_data or Document.struct_data. * `custom_data`: One custom
+   * data per row in arbitrary format that conforms the defined Schema of the data store. This can
+   * only be used by the Generic Data Store vertical.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +80,12 @@ public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.go
   private java.lang.String tableId;
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid document.id.
+   * The schema to use when parsing the data from the source. Supported values for user event
+   * imports: * `user_event` (default): One UserEvent per row. Supported values for document
+   * imports: * `document` (default): One Document format per row. Each document must have a valid
+   * Document.id and one of Document.json_data or Document.struct_data. * `custom_data`: One custom
+   * data per row in arbitrary format that conforms the defined Schema of the data store. This can
+   * only be used by the Generic Data Store vertical.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -87,9 +93,12 @@ public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.go
   }
 
   /**
-   * The schema to use when parsing the data from the source. Supported values for imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document
-   * per line. Each document must have a valid document.id.
+   * The schema to use when parsing the data from the source. Supported values for user event
+   * imports: * `user_event` (default): One UserEvent per row. Supported values for document
+   * imports: * `document` (default): One Document format per row. Each document must have a valid
+   * Document.id and one of Document.json_data or Document.struct_data. * `custom_data`: One custom
+   * data per row in arbitrary format that conforms the defined Schema of the data store. This can
+   * only be used by the Generic Data Store vertical.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaBigQuerySource setDataSchema(java.lang.String dataSchema) {

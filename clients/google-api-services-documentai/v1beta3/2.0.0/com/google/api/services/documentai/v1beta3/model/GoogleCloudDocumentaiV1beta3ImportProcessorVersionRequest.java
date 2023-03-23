@@ -36,14 +36,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The source processor version to import from.
+   * The source processor version to import from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String processorVersionSource;
 
   /**
-   * Required. The source processor version to import from.
+   * The source processor version to import from.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessorVersionSource() {
@@ -51,7 +51,7 @@ public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest ext
   }
 
   /**
-   * Required. The source processor version to import from.
+   * The source processor version to import from.
    * @param processorVersionSource processorVersionSource or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest setProcessorVersionSource(java.lang.String processorVersionSource) {

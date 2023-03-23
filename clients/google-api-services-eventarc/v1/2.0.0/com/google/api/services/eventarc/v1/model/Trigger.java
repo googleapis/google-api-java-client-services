@@ -75,6 +75,15 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
+   * from the CloudEvent data field. This will be set to `application/json` if the value is not
+   * defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventDataContentType;
+
+  /**
    * Required. Unordered list. The list of filters that applies to event attributes. Only events
    * that match all the provided filters are sent to the destination.
    * The value may be {@code null}.
@@ -232,6 +241,27 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    */
   public Trigger setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
+   * from the CloudEvent data field. This will be set to `application/json` if the value is not
+   * defined.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventDataContentType() {
+    return eventDataContentType;
+  }
+
+  /**
+   * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
+   * from the CloudEvent data field. This will be set to `application/json` if the value is not
+   * defined.
+   * @param eventDataContentType eventDataContentType or {@code null} for none
+   */
+  public Trigger setEventDataContentType(java.lang.String eventDataContentType) {
+    this.eventDataContentType = eventDataContentType;
     return this;
   }
 

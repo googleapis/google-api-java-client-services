@@ -46,6 +46,13 @@ public final class TargetRender extends com.google.api.client.json.GenericJson {
   private java.lang.String failureMessage;
 
   /**
+   * Output only. Metadata related to the `Release` render for this Target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RenderMetadata metadata;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to render the
    * manifest for this target. Format is `projects/{project}/locations/{location}/builds/{build}`.
    * The value may be {@code null}.
@@ -93,6 +100,23 @@ public final class TargetRender extends com.google.api.client.json.GenericJson {
    */
   public TargetRender setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata related to the `Release` render for this Target.
+   * @return value or {@code null} for none
+   */
+  public RenderMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata related to the `Release` render for this Target.
+   * @param metadata metadata or {@code null} for none
+   */
+  public TargetRender setMetadata(RenderMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

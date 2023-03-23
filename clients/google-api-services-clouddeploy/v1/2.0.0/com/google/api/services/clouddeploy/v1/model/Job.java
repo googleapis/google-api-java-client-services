@@ -66,6 +66,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String jobRun;
 
   /**
+   * Output only. Additional information on why the Job was skipped, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String skipMessage;
+
+  /**
    * Output only. The current state of the Job.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setJobRun(java.lang.String jobRun) {
     this.jobRun = jobRun;
+    return this;
+  }
+
+  /**
+   * Output only. Additional information on why the Job was skipped, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSkipMessage() {
+    return skipMessage;
+  }
+
+  /**
+   * Output only. Additional information on why the Job was skipped, if available.
+   * @param skipMessage skipMessage or {@code null} for none
+   */
+  public Job setSkipMessage(java.lang.String skipMessage) {
+    this.skipMessage = skipMessage;
     return this;
   }
 

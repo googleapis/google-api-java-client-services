@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Strategy contains deployment strategy information.
+ * RuntimeConfig contains the runtime specific configurations for a deployment strategy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Strategy extends com.google.api.client.json.GenericJson {
+public final class RuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Cloud Run runtime configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Canary canary;
+  private CloudRunConfig cloudRun;
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Kubernetes runtime configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Standard standard;
+  private KubernetesConfig kubernetes;
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
+   * Cloud Run runtime configuration.
    * @return value or {@code null} for none
    */
-  public Canary getCanary() {
-    return canary;
+  public CloudRunConfig getCloudRun() {
+    return cloudRun;
   }
 
   /**
-   * Canary deployment strategy provides progressive percentage based deployments to a Target.
-   * @param canary canary or {@code null} for none
+   * Cloud Run runtime configuration.
+   * @param cloudRun cloudRun or {@code null} for none
    */
-  public Strategy setCanary(Canary canary) {
-    this.canary = canary;
+  public RuntimeConfig setCloudRun(CloudRunConfig cloudRun) {
+    this.cloudRun = cloudRun;
     return this;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
+   * Kubernetes runtime configuration.
    * @return value or {@code null} for none
    */
-  public Standard getStandard() {
-    return standard;
+  public KubernetesConfig getKubernetes() {
+    return kubernetes;
   }
 
   /**
-   * Standard deployment strategy executes a single deploy and allows verifying the deployment.
-   * @param standard standard or {@code null} for none
+   * Kubernetes runtime configuration.
+   * @param kubernetes kubernetes or {@code null} for none
    */
-  public Strategy setStandard(Standard standard) {
-    this.standard = standard;
+  public RuntimeConfig setKubernetes(KubernetesConfig kubernetes) {
+    this.kubernetes = kubernetes;
     return this;
   }
 
   @Override
-  public Strategy set(String fieldName, Object value) {
-    return (Strategy) super.set(fieldName, value);
+  public RuntimeConfig set(String fieldName, Object value) {
+    return (RuntimeConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Strategy clone() {
-    return (Strategy) super.clone();
+  public RuntimeConfig clone() {
+    return (RuntimeConfig) super.clone();
   }
 
 }

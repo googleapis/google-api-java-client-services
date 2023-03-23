@@ -32,7 +32,7 @@ package com.google.api.services.serviceusage.v1beta1.model;
  * configuration: apis: - name: google.storage.v2.Storage mixins: - name:
  * google.acl.v1.AccessControl The mixin construct implies that all methods in `AccessControl` are
  * also declared with same name and request/response types in `Storage`. A documentation generator
- * or annotation processor will see the effective `Storage.GetAcl` method after inheriting
+ * or annotation processor will see the effective `Storage.GetAcl` method after inherting
  * documentation and annotations as follows: service Storage { // Get the underlying ACL object. rpc
  * GetAcl(GetAclRequest) returns (Acl) { option (google.api.http).get = "/v2/{resource=**}:getAcl";
  * } ... } Note how the version in the path pattern changed from `v1` to `v2`. If the `root` field

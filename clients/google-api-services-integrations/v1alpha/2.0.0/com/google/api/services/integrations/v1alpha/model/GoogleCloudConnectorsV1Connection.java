@@ -145,6 +145,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String serviceDirectory;
 
   /**
+   * Optional. Ssl config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1SslConfig sslConfig;
+
+  /**
    * Output only. Current status of the connection.
    * The value may be {@code null}.
    */
@@ -420,6 +427,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setServiceDirectory(java.lang.String serviceDirectory) {
     this.serviceDirectory = serviceDirectory;
+    return this;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1SslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setSslConfig(GoogleCloudConnectorsV1SslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

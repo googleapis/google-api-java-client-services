@@ -37,11 +37,32 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends co
   private EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit audit;
 
   /**
+   * The event data user sends as request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientId;
+
+  /**
+   * KMS info, used by cmek/gmek integration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseCrmEventbusProtoCloudKmsConfig cloudKmsConfig;
+
+  /**
    * Auto-generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createdTimestamp;
+
+  /**
+   * Encrypted SuspensionResolutionInfo
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptedSuspensionResolutionInfo;
 
   /**
    * Required. ID of the associated execution.
@@ -106,6 +127,13 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends co
   private java.lang.String workflowName;
 
   /**
+   * Wrapped dek
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String wrappedDek;
+
+  /**
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit getAudit() {
@@ -117,6 +145,40 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends co
    */
   public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setAudit(EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit audit) {
     this.audit = audit;
+    return this;
+  }
+
+  /**
+   * The event data user sends as request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientId() {
+    return clientId;
+  }
+
+  /**
+   * The event data user sends as request.
+   * @param clientId clientId or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setClientId(java.lang.String clientId) {
+    this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * KMS info, used by cmek/gmek integration
+   * @return value or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoCloudKmsConfig getCloudKmsConfig() {
+    return cloudKmsConfig;
+  }
+
+  /**
+   * KMS info, used by cmek/gmek integration
+   * @param cloudKmsConfig cloudKmsConfig or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setCloudKmsConfig(EnterpriseCrmEventbusProtoCloudKmsConfig cloudKmsConfig) {
+    this.cloudKmsConfig = cloudKmsConfig;
     return this;
   }
 
@@ -134,6 +196,51 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends co
    */
   public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setCreatedTimestamp(String createdTimestamp) {
     this.createdTimestamp = createdTimestamp;
+    return this;
+  }
+
+  /**
+   * Encrypted SuspensionResolutionInfo
+   * @see #decodeEncryptedSuspensionResolutionInfo()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptedSuspensionResolutionInfo() {
+    return encryptedSuspensionResolutionInfo;
+  }
+
+  /**
+   * Encrypted SuspensionResolutionInfo
+   * @see #getEncryptedSuspensionResolutionInfo()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeEncryptedSuspensionResolutionInfo() {
+    return com.google.api.client.util.Base64.decodeBase64(encryptedSuspensionResolutionInfo);
+  }
+
+  /**
+   * Encrypted SuspensionResolutionInfo
+   * @see #encodeEncryptedSuspensionResolutionInfo()
+   * @param encryptedSuspensionResolutionInfo encryptedSuspensionResolutionInfo or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setEncryptedSuspensionResolutionInfo(java.lang.String encryptedSuspensionResolutionInfo) {
+    this.encryptedSuspensionResolutionInfo = encryptedSuspensionResolutionInfo;
+    return this;
+  }
+
+  /**
+   * Encrypted SuspensionResolutionInfo
+   * @see #setEncryptedSuspensionResolutionInfo()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo encodeEncryptedSuspensionResolutionInfo(byte[] encryptedSuspensionResolutionInfo) {
+    this.encryptedSuspensionResolutionInfo = com.google.api.client.util.Base64.encodeBase64URLSafeString(encryptedSuspensionResolutionInfo);
     return this;
   }
 
@@ -285,6 +392,51 @@ public final class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends co
    */
   public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setWorkflowName(java.lang.String workflowName) {
     this.workflowName = workflowName;
+    return this;
+  }
+
+  /**
+   * Wrapped dek
+   * @see #decodeWrappedDek()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWrappedDek() {
+    return wrappedDek;
+  }
+
+  /**
+   * Wrapped dek
+   * @see #getWrappedDek()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeWrappedDek() {
+    return com.google.api.client.util.Base64.decodeBase64(wrappedDek);
+  }
+
+  /**
+   * Wrapped dek
+   * @see #encodeWrappedDek()
+   * @param wrappedDek wrappedDek or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo setWrappedDek(java.lang.String wrappedDek) {
+    this.wrappedDek = wrappedDek;
+    return this;
+  }
+
+  /**
+   * Wrapped dek
+   * @see #setWrappedDek()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public EnterpriseCrmEventbusProtoSuspensionResolutionInfo encodeWrappedDek(byte[] wrappedDek) {
+    this.wrappedDek = com.google.api.client.util.Base64.encodeBase64URLSafeString(wrappedDek);
     return this;
   }
 

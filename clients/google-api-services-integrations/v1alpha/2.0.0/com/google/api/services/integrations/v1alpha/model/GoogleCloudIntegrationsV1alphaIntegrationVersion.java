@@ -53,6 +53,19 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   private java.lang.String description;
 
   /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudIntegrationsV1alphaErrorCatcherConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaErrorCatcherConfig.class);
+  }
+
+  /**
    * Optional. Parameters that are expected to be passed to the integration when an event is
    * triggered. This consists of all the parameters that are expected in the integration execution.
    * This gives the user the ability to provide default values, add information like PII and also
@@ -114,6 +127,15 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentTemplateId;
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runAsServiceAccount;
 
   /**
    * Optional. An increasing sequence that is set when a new snapshot is created. The last created
@@ -259,6 +281,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> getErrorCatcherConfigs() {
+    return errorCatcherConfigs;
+  }
+
+  /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * @param errorCatcherConfigs errorCatcherConfigs or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setErrorCatcherConfigs(java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs) {
+    this.errorCatcherConfigs = errorCatcherConfigs;
+    return this;
+  }
+
+  /**
    * Optional. Parameters that are expected to be passed to the integration when an event is
    * triggered. This consists of all the parameters that are expected in the integration execution.
    * This gives the user the ability to provide default values, add information like PII and also
@@ -390,6 +429,27 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setParentTemplateId(java.lang.String parentTemplateId) {
     this.parentTemplateId = parentTemplateId;
+    return this;
+  }
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunAsServiceAccount() {
+    return runAsServiceAccount;
+  }
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * @param runAsServiceAccount runAsServiceAccount or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setRunAsServiceAccount(java.lang.String runAsServiceAccount) {
+    this.runAsServiceAccount = runAsServiceAccount;
     return this;
   }
 

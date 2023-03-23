@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1alpha.model;
 
 /**
- * Configuration detail of a trigger. Next available id: 17
+ * Configuration detail of a trigger. Next available id: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -69,6 +69,14 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> enabledClients;
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
 
   /**
    * The user created label for a particular trigger.
@@ -231,6 +239,25 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setEnabledClients(java.util.List<java.lang.String> enabledClients) {
     this.enabledClients = enabledClients;
+    return this;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
     return this;
   }
 

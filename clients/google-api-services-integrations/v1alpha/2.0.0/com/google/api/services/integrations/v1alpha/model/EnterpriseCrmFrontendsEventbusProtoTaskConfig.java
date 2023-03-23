@@ -77,6 +77,20 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
   private java.lang.Boolean disableStrictTypeValidation;
 
   /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalTaskType;
+
+  /**
    * Optional. Determines the number of times the task will be retried on failure and with what
    * retry strategy. This is applicable for asynchronous calls to Eventbus alone (Post To Queue,
    * Schedule etc.).
@@ -337,6 +351,40 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
    */
   public EnterpriseCrmFrontendsEventbusProtoTaskConfig setDisableStrictTypeValidation(java.lang.Boolean disableStrictTypeValidation) {
     this.disableStrictTypeValidation = disableStrictTypeValidation;
+    return this;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTaskConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalTaskType() {
+    return externalTaskType;
+  }
+
+  /**
+   * @param externalTaskType externalTaskType or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTaskConfig setExternalTaskType(java.lang.String externalTaskType) {
+    this.externalTaskType = externalTaskType;
     return this;
   }
 

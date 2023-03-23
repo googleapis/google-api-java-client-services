@@ -47,6 +47,21 @@ public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.a
   private java.lang.String displayName;
 
   /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
+
+  /**
+   * Optional. External task type of the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalTaskType;
+
+  /**
    * Optional. Determines the number of times the task will be retried on failure and with what
    * retry strategy. This is applicable for asynchronous calls to Eventbus alone (Post To Queue,
    * Schedule etc.).
@@ -96,6 +111,13 @@ public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.a
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaEventParameter.class);
   }
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaCoordinate position;
 
   /**
    * Optional. Determines what action to take upon successful task completion.
@@ -175,6 +197,42 @@ public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.a
    */
   public GoogleCloudIntegrationsV1alphaTaskConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTaskConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
+    return this;
+  }
+
+  /**
+   * Optional. External task type of the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalTaskType() {
+    return externalTaskType;
+  }
+
+  /**
+   * Optional. External task type of the task
+   * @param externalTaskType externalTaskType or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTaskConfig setExternalTaskType(java.lang.String externalTaskType) {
+    this.externalTaskType = externalTaskType;
     return this;
   }
 
@@ -268,6 +326,23 @@ public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.a
    */
   public GoogleCloudIntegrationsV1alphaTaskConfig setParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaEventParameter> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCoordinate getPosition() {
+    return position;
+  }
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * @param position position or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTaskConfig setPosition(GoogleCloudIntegrationsV1alphaCoordinate position) {
+    this.position = position;
     return this;
   }
 

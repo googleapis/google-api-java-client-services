@@ -3042,25 +3042,28 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The field mask specifying which IAP settings should be updated. If omitted, the all of the
+       * The field mask specifying which IAP settings should be updated. If omitted, then all of the
        * settings are updated. See https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask
+       * buffers/docs/reference/google.protobuf#fieldmask. Note: All IAP reauth settings must always
+       * be set together, using the field mask: `iapSettings.accessSettings.reauthSettings`.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The field mask specifying which IAP settings should be updated. If omitted, the all of the settings
-     are updated. See https://developers.google.com/protocol-
-     buffers/docs/reference/google.protobuf#fieldmask
+      /** The field mask specifying which IAP settings should be updated. If omitted, then all of the
+     settings are updated. See https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask. Note: All IAP reauth settings must always be set
+     together, using the field mask: `iapSettings.accessSettings.reauthSettings`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The field mask specifying which IAP settings should be updated. If omitted, the all of the
+       * The field mask specifying which IAP settings should be updated. If omitted, then all of the
        * settings are updated. See https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask
+       * buffers/docs/reference/google.protobuf#fieldmask. Note: All IAP reauth settings must always
+       * be set together, using the field mask: `iapSettings.accessSettings.reauthSettings`.
        */
       public UpdateIapSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

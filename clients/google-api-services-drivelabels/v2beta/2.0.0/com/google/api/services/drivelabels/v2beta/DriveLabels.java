@@ -1208,6 +1208,29 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
 
       /**
+       * The customer to scope this list request to. For example: "customers/abcd1234". If unset,
+       * will return all labels within the current customer.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** The customer to scope this list request to. For example: "customers/abcd1234". If unset, will
+     return all labels within the current customer.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * The customer to scope this list request to. For example: "customers/abcd1234". If unset,
+       * will return all labels within the current customer.
+       */
+      public List setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
+      /**
        * The BCP-47 language code to use for evaluating localized field labels. When not specified,
        * values in the default configured language are used.
        */
@@ -4343,6 +4366,29 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
               "^users/[^/]+/capabilities$");
         }
         this.name = name;
+        return this;
+      }
+
+      /**
+       * The customer to scope this request to. For example: "customers/abcd1234". If unset, will
+       * return settings within the current customer.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** The customer to scope this request to. For example: "customers/abcd1234". If unset, will return
+     settings within the current customer.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * The customer to scope this request to. For example: "customers/abcd1234". If unset, will
+       * return settings within the current customer.
+       */
+      public GetCapabilities setCustomer(java.lang.String customer) {
+        this.customer = customer;
         return this;
       }
 

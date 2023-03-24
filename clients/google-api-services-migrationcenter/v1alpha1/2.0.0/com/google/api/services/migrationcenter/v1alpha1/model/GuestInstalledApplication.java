@@ -30,7 +30,7 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class GuestInstalledApplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Installed application name .
+   * Installed application name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
   private java.lang.String version;
 
   /**
-   * Installed application name .
+   * Installed application name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -73,7 +73,7 @@ public final class GuestInstalledApplication extends com.google.api.client.json.
   }
 
   /**
-   * Installed application name .
+   * Installed application name.
    * @param name name or {@code null} for none
    */
   public GuestInstalledApplication setName(java.lang.String name) {

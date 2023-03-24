@@ -70,6 +70,15 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   private java.lang.String attributionToken;
 
   /**
+   * Represents the banner of the user event, for projects that combine banners. For example:
+   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String banner;
+
+  /**
    * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
@@ -85,15 +94,6 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private GoogleCloudRetailV2betaCompletionDetail completionDetail;
-
-  /**
-   * Represents the domain of the user event, for projects that combine domains. For example:
-   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String domain;
 
   /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
@@ -339,6 +339,27 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
   }
 
   /**
+   * Represents the banner of the user event, for projects that combine banners. For example:
+   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBanner() {
+    return banner;
+  }
+
+  /**
+   * Represents the banner of the user event, for projects that combine banners. For example:
+   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
+   * meds, etc. under one project.
+   * @param banner banner or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaUserEvent setBanner(java.lang.String banner) {
+    this.banner = banner;
+    return this;
+  }
+
+  /**
    * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
@@ -375,27 +396,6 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    */
   public GoogleCloudRetailV2betaUserEvent setCompletionDetail(GoogleCloudRetailV2betaCompletionDetail completionDetail) {
     this.completionDetail = completionDetail;
-    return this;
-  }
-
-  /**
-   * Represents the domain of the user event, for projects that combine domains. For example:
-   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDomain() {
-    return domain;
-  }
-
-  /**
-   * Represents the domain of the user event, for projects that combine domains. For example:
-   * retailer can have events from multiple domains like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * @param domain domain or {@code null} for none
-   */
-  public GoogleCloudRetailV2betaUserEvent setDomain(java.lang.String domain) {
-    this.domain = domain;
     return this;
   }
 

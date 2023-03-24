@@ -46,9 +46,9 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
    * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
    * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
-   * ANY("Phones")) * (brands: ANY("Pixel")) AND (colors: ANY("Red") OR categories: ANY("Phones"))
-   * For more information, see [Filter recommendations](https://cloud.google.com/retail/docs/filter-
-   * recs).
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones")) For more information, see [Filter
+   * recommendations](https://cloud.google.com/retail/docs/filter-recs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,9 +147,9 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
    * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
    * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
-   * ANY("Phones")) * (brands: ANY("Pixel")) AND (colors: ANY("Red") OR categories: ANY("Phones"))
-   * For more information, see [Filter recommendations](https://cloud.google.com/retail/docs/filter-
-   * recs).
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones")) For more information, see [Filter
+   * recommendations](https://cloud.google.com/retail/docs/filter-recs).
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -173,9 +173,9 @@ public final class GoogleCloudRetailV2alphaPredictRequest extends com.google.api
    * "EXPIRED" or "DELETED" regardless of filter choices. If `filterSyntaxV2` is set to true under
    * the `params` field, then attribute-based expressions are expected instead of the above
    * described tag-based syntax. Examples: * (colors: ANY("Red", "Blue")) AND NOT (categories:
-   * ANY("Phones")) * (brands: ANY("Pixel")) AND (colors: ANY("Red") OR categories: ANY("Phones"))
-   * For more information, see [Filter recommendations](https://cloud.google.com/retail/docs/filter-
-   * recs).
+   * ANY("Phones")) * (availability: ANY("IN_STOCK")) AND (colors: ANY("Red") OR categories:
+   * ANY("Phones")) For more information, see [Filter
+   * recommendations](https://cloud.google.com/retail/docs/filter-recs).
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudRetailV2alphaPredictRequest setFilter(java.lang.String filter) {

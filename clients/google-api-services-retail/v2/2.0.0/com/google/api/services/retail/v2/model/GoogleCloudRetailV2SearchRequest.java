@@ -30,6 +30,15 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2SearchRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents the banner in request, for projects that combine banners. For example: a retailer
+   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
+   * etc. under one project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String banner;
+
+  /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
    * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
@@ -242,6 +251,27 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String visitorId;
+
+  /**
+   * Represents the banner in request, for projects that combine banners. For example: a retailer
+   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
+   * etc. under one project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBanner() {
+    return banner;
+  }
+
+  /**
+   * Represents the banner in request, for projects that combine banners. For example: a retailer
+   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
+   * etc. under one project.
+   * @param banner banner or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchRequest setBanner(java.lang.String banner) {
+    this.banner = banner;
+    return this;
+  }
 
   /**
    * Boost specification to boost certain products. See more details at this [user

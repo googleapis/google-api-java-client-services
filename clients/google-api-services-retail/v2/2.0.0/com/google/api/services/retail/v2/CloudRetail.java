@@ -339,6 +339,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
+          /** The banner context for completion suggestions. */
+          @com.google.api.client.util.Key
+          private java.lang.String banner;
+
+          /** The banner context for completion suggestions.
+           */
+          public java.lang.String getBanner() {
+            return banner;
+          }
+
+          /** The banner context for completion suggestions. */
+          public CompleteQuery setBanner(java.lang.String banner) {
+            this.banner = banner;
+            return this;
+          }
+
           /**
            * Determines which dataset to use for fetching completion. "user-data" will use the
            * imported dataset through CompletionService.ImportCompletionData. "cloud-retail" will

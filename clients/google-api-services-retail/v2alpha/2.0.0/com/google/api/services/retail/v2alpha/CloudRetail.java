@@ -339,6 +339,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
+          /** The banner context for completion suggestions. */
+          @com.google.api.client.util.Key
+          private java.lang.String banner;
+
+          /** The banner context for completion suggestions.
+           */
+          public java.lang.String getBanner() {
+            return banner;
+          }
+
+          /** The banner context for completion suggestions. */
+          public CompleteQuery setBanner(java.lang.String banner) {
+            this.banner = banner;
+            return this;
+          }
+
           /**
            * Determines which dataset to use for fetching completion. "user-data" will use the
            * imported dataset through CompletionService.ImportCompletionData. "cloud-retail" will
@@ -6059,6 +6075,484 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the MerchantCenterAccountLinks collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRetail retail = new CloudRetail(...);}
+         *   {@code CloudRetail.MerchantCenterAccountLinks.List request = retail.merchantCenterAccountLinks().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public MerchantCenterAccountLinks merchantCenterAccountLinks() {
+          return new MerchantCenterAccountLinks();
+        }
+
+        /**
+         * The "merchantCenterAccountLinks" collection of methods.
+         */
+        public class MerchantCenterAccountLinks {
+
+          /**
+           * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different oneof
+           * field, if so an INVALID_ARGUMENT is returned.
+           *
+           * Create a request for the method "merchantCenterAccountLinks.createMerchantCenterAccountLink".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link CreateMerchantCenterAccountLink#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/lo
+           *        cations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account
+           *        _link`.
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
+           * @return the request
+           */
+          public CreateMerchantCenterAccountLink createMerchantCenterAccountLink(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) throws java.io.IOException {
+            CreateMerchantCenterAccountLink result = new CreateMerchantCenterAccountLink(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CreateMerchantCenterAccountLink extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+
+            /**
+             * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different
+             * oneof field, if so an INVALID_ARGUMENT is returned.
+             *
+             * Create a request for the method "merchantCenterAccountLinks.createMerchantCenterAccountLink".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link CreateMerchantCenterAccountLink#execute()} method to invoke the
+             * remote operation. <p> {@link CreateMerchantCenterAccountLink#initialize(com.google.api.client.g
+             * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/lo
+           *        cations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account
+           *        _link`.
+             * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
+             * @since 1.13
+             */
+            protected CreateMerchantCenterAccountLink(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) {
+              super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink set$Xgafv(java.lang.String $Xgafv) {
+              return (CreateMerchantCenterAccountLink) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setAccessToken(java.lang.String accessToken) {
+              return (CreateMerchantCenterAccountLink) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setAlt(java.lang.String alt) {
+              return (CreateMerchantCenterAccountLink) super.setAlt(alt);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setCallback(java.lang.String callback) {
+              return (CreateMerchantCenterAccountLink) super.setCallback(callback);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setFields(java.lang.String fields) {
+              return (CreateMerchantCenterAccountLink) super.setFields(fields);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setKey(java.lang.String key) {
+              return (CreateMerchantCenterAccountLink) super.setKey(key);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setOauthToken(java.lang.String oauthToken) {
+              return (CreateMerchantCenterAccountLink) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CreateMerchantCenterAccountLink) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setQuotaUser(java.lang.String quotaUser) {
+              return (CreateMerchantCenterAccountLink) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setUploadType(java.lang.String uploadType) {
+              return (CreateMerchantCenterAccountLink) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CreateMerchantCenterAccountLink) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Immutable. Full resource name of the Merchant Center Account Link, such
+             * as `projects/locations/global/catalogs/default_catalog/merchantCenterAccountLinks/mer
+             * chant_center_account_link`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/l
+           ocations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account_link`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Immutable. Full resource name of the Merchant Center Account Link, such
+             * as `projects/locations/global/catalogs/default_catalog/merchantCenterAccountLinks/mer
+             * chant_center_account_link`.
+             */
+            public CreateMerchantCenterAccountLink setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The branch resource where this MerchantCenterAccountLink will be created.
+             * Format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
+           projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The branch resource where this MerchantCenterAccountLink will be created.
+             * Format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+             */
+            public CreateMerchantCenterAccountLink setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public CreateMerchantCenterAccountLink set(String parameterName, Object value) {
+              return (CreateMerchantCenterAccountLink) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a MerchantCenterAccountLink. If the MerchantCenterAccountLink to delete does not exist, a
+           * NOT_FOUND error is returned.
+           *
+           * Create a request for the method "merchantCenterAccountLinks.delete".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{ca
+           *        talog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+
+            /**
+             * Deletes a MerchantCenterAccountLink. If the MerchantCenterAccountLink to delete does not exist,
+             * a NOT_FOUND error is returned.
+             *
+             * Create a request for the method "merchantCenterAccountLinks.delete".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{ca
+           *        talog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRetail.this, "DELETE", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name. Format: projects/{project_number}/locations/{location_i
+             * d}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{c
+           atalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full resource name. Format: projects/{project_number}/locations/{location_i
+             * d}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all MerchantCenterAccountLinks under the specified parent Catalog.
+           *
+           * Create a request for the method "merchantCenterAccountLinks.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent Catalog of the resource. It must match this format:
+           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/merchantCenterAccountLinks";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Lists all MerchantCenterAccountLinks under the specified parent Catalog.
+             *
+             * Create a request for the method "merchantCenterAccountLinks.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent Catalog of the resource. It must match this format:
+           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent Catalog of the resource. It must match this format:
+             * projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent Catalog of the resource. It must match this format:
+           projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent Catalog of the resource. It must match this format:
+             * projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
 

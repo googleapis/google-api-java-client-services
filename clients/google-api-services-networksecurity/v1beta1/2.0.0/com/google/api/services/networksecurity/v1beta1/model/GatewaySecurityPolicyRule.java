@@ -89,6 +89,14 @@ public final class GatewaySecurityPolicyRule extends com.google.api.client.json.
   private java.lang.String sessionMatcher;
 
   /**
+   * Optional. Flag to enable TLS inspection of traffic matching on , can only be true if the parent
+   * GatewaySecurityPolicy references a TLSInspectionConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean tlsInspectionEnabled;
+
+  /**
    * Output only. Time when the rule was updated.
    * The value may be {@code null}.
    */
@@ -232,6 +240,25 @@ public final class GatewaySecurityPolicyRule extends com.google.api.client.json.
    */
   public GatewaySecurityPolicyRule setSessionMatcher(java.lang.String sessionMatcher) {
     this.sessionMatcher = sessionMatcher;
+    return this;
+  }
+
+  /**
+   * Optional. Flag to enable TLS inspection of traffic matching on , can only be true if the parent
+   * GatewaySecurityPolicy references a TLSInspectionConfig.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTlsInspectionEnabled() {
+    return tlsInspectionEnabled;
+  }
+
+  /**
+   * Optional. Flag to enable TLS inspection of traffic matching on , can only be true if the parent
+   * GatewaySecurityPolicy references a TLSInspectionConfig.
+   * @param tlsInspectionEnabled tlsInspectionEnabled or {@code null} for none
+   */
+  public GatewaySecurityPolicyRule setTlsInspectionEnabled(java.lang.Boolean tlsInspectionEnabled) {
+    this.tlsInspectionEnabled = tlsInspectionEnabled;
     return this;
   }
 

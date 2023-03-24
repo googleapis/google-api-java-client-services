@@ -17,8 +17,8 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * The GatewaySecurityPolicy resource contains a collection of GatewaySecurityPolicyRules and
- * associated metadata.
+ * The TlsInspectionPolicy resource contains references to CA pools in Certificate Authority Service
+ * and associated metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -28,7 +28,16 @@ package com.google.api.services.networksecurity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GatewaySecurityPolicy extends com.google.api.client.json.GenericJson {
+public final class TlsInspectionPolicy extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Required. A CA pool resource used to issue interception certificates. The CA pool string has a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/caPools/{ca_pool}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String caPool;
 
   /**
    * Output only. The timestamp when the resource was created.
@@ -46,20 +55,12 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
 
   /**
    * Required. Name of the resource. Name is of the form
-   * projects/{project}/locations/{location}/gatewaySecurityPolicies/{gateway_security_policy}
-   * gateway_security_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+   * projects/{project}/locations/{location}/tlsInspectionPolicies/{tls_inspection_policy}
+   * tls_inspection_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. Name of a TLS Inspection Policy resource that defines how TLS inspection will be
-   * performed for any rule(s) which enables it.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String tlsInspectionPolicy;
 
   /**
    * Output only. The timestamp when the resource was updated.
@@ -67,6 +68,27 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Required. A CA pool resource used to issue interception certificates. The CA pool string has a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/caPools/{ca_pool}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCaPool() {
+    return caPool;
+  }
+
+  /**
+   * Required. A CA pool resource used to issue interception certificates. The CA pool string has a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/caPools/{ca_pool}".
+   * @param caPool caPool or {@code null} for none
+   */
+  public TlsInspectionPolicy setCaPool(java.lang.String caPool) {
+    this.caPool = caPool;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when the resource was created.
@@ -80,7 +102,7 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
    * Output only. The timestamp when the resource was created.
    * @param createTime createTime or {@code null} for none
    */
-  public GatewaySecurityPolicy setCreateTime(String createTime) {
+  public TlsInspectionPolicy setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -97,15 +119,15 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
    * Optional. Free-text description of the resource.
    * @param description description or {@code null} for none
    */
-  public GatewaySecurityPolicy setDescription(java.lang.String description) {
+  public TlsInspectionPolicy setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
 
   /**
    * Required. Name of the resource. Name is of the form
-   * projects/{project}/locations/{location}/gatewaySecurityPolicies/{gateway_security_policy}
-   * gateway_security_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+   * projects/{project}/locations/{location}/tlsInspectionPolicies/{tls_inspection_policy}
+   * tls_inspection_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,31 +136,12 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
 
   /**
    * Required. Name of the resource. Name is of the form
-   * projects/{project}/locations/{location}/gatewaySecurityPolicies/{gateway_security_policy}
-   * gateway_security_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
+   * projects/{project}/locations/{location}/tlsInspectionPolicies/{tls_inspection_policy}
+   * tls_inspection_policy should match the pattern:(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$).
    * @param name name or {@code null} for none
    */
-  public GatewaySecurityPolicy setName(java.lang.String name) {
+  public TlsInspectionPolicy setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. Name of a TLS Inspection Policy resource that defines how TLS inspection will be
-   * performed for any rule(s) which enables it.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTlsInspectionPolicy() {
-    return tlsInspectionPolicy;
-  }
-
-  /**
-   * Optional. Name of a TLS Inspection Policy resource that defines how TLS inspection will be
-   * performed for any rule(s) which enables it.
-   * @param tlsInspectionPolicy tlsInspectionPolicy or {@code null} for none
-   */
-  public GatewaySecurityPolicy setTlsInspectionPolicy(java.lang.String tlsInspectionPolicy) {
-    this.tlsInspectionPolicy = tlsInspectionPolicy;
     return this;
   }
 
@@ -154,19 +157,19 @@ public final class GatewaySecurityPolicy extends com.google.api.client.json.Gene
    * Output only. The timestamp when the resource was updated.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GatewaySecurityPolicy setUpdateTime(String updateTime) {
+  public TlsInspectionPolicy setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GatewaySecurityPolicy set(String fieldName, Object value) {
-    return (GatewaySecurityPolicy) super.set(fieldName, value);
+  public TlsInspectionPolicy set(String fieldName, Object value) {
+    return (TlsInspectionPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public GatewaySecurityPolicy clone() {
-    return (GatewaySecurityPolicy) super.clone();
+  public TlsInspectionPolicy clone() {
+    return (TlsInspectionPolicy) super.clone();
   }
 
 }

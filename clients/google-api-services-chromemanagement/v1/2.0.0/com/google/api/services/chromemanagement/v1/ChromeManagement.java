@@ -2681,7 +2681,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Generate report of devices that have a specified app installed.
+       * Generate report of managed Chrome browser devices that have a specified app installed.
        *
        * Create a request for the method "reports.findInstalledAppDevices".
        *
@@ -2707,7 +2707,7 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^customers/[^/]+$");
 
         /**
-         * Generate report of devices that have a specified app installed.
+         * Generate report of managed Chrome browser devices that have a specified app installed.
          *
          * Create a request for the method "reports.findInstalledAppDevices".
          *

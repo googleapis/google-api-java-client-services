@@ -17,7 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Represents a subresource of a given resource, and associated bindings with it.
+ * Represents a subresource of the given resource, and associated bindings with it. Currently
+ * supported subresources are column and partition schema fields within a table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -40,7 +41,7 @@ public final class GoogleCloudDataplexV1DataAttributeBindingPath extends com.goo
 
   /**
    * Required. The name identifier of the path. Nested columns should be of the form:
-   * 'country.state.city'.
+   * 'address.city'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,7 @@ public final class GoogleCloudDataplexV1DataAttributeBindingPath extends com.goo
 
   /**
    * Required. The name identifier of the path. Nested columns should be of the form:
-   * 'country.state.city'.
+   * 'address.city'.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,7 +79,7 @@ public final class GoogleCloudDataplexV1DataAttributeBindingPath extends com.goo
 
   /**
    * Required. The name identifier of the path. Nested columns should be of the form:
-   * 'country.state.city'.
+   * 'address.city'.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAttributeBindingPath setName(java.lang.String name) {

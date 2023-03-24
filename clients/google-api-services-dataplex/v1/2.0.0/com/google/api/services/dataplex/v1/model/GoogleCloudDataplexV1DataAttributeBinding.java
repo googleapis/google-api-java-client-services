@@ -85,8 +85,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   private java.lang.String name;
 
   /**
-   * Optional. The list of paths for items within the associated resource (eg. columns within a
-   * table) along with attribute bindings.
+   * Optional. The list of paths for items within the associated resource (eg. columns and
+   * partitions within a table) along with attribute bindings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,8 +248,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   }
 
   /**
-   * Optional. The list of paths for items within the associated resource (eg. columns within a
-   * table) along with attribute bindings.
+   * Optional. The list of paths for items within the associated resource (eg. columns and
+   * partitions within a table) along with attribute bindings.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataAttributeBindingPath> getPaths() {
@@ -257,8 +257,8 @@ public final class GoogleCloudDataplexV1DataAttributeBinding extends com.google.
   }
 
   /**
-   * Optional. The list of paths for items within the associated resource (eg. columns within a
-   * table) along with attribute bindings.
+   * Optional. The list of paths for items within the associated resource (eg. columns and
+   * partitions within a table) along with attribute bindings.
    * @param paths paths or {@code null} for none
    */
   public GoogleCloudDataplexV1DataAttributeBinding setPaths(java.util.List<GoogleCloudDataplexV1DataAttributeBindingPath> paths) {

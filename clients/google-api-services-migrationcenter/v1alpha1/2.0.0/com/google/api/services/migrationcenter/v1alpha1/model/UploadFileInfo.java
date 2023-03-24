@@ -30,6 +30,20 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class UploadFileInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The headers that were used to sign the URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> headers;
+
+  /**
+   * Output only. Upload URI for the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String signedUri;
+
+  /**
    * Output only. Upload URI for the file.
    * The value may be {@code null}.
    */
@@ -42,6 +56,40 @@ public final class UploadFileInfo extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private String uriExpirationTime;
+
+  /**
+   * Output only. The headers that were used to sign the URL.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getHeaders() {
+    return headers;
+  }
+
+  /**
+   * Output only. The headers that were used to sign the URL.
+   * @param headers headers or {@code null} for none
+   */
+  public UploadFileInfo setHeaders(java.util.Map<String, java.lang.String> headers) {
+    this.headers = headers;
+    return this;
+  }
+
+  /**
+   * Output only. Upload URI for the file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSignedUri() {
+    return signedUri;
+  }
+
+  /**
+   * Output only. Upload URI for the file.
+   * @param signedUri signedUri or {@code null} for none
+   */
+  public UploadFileInfo setSignedUri(java.lang.String signedUri) {
+    this.signedUri = signedUri;
+    return this;
+  }
 
   /**
    * Output only. Upload URI for the file.

@@ -993,6 +993,1787 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
 
     }
     /**
+     * An accessor for creating requests from the Errors collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Errors.List request = playdeveloperreporting.errors().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Errors errors() {
+      return new Errors();
+    }
+
+    /**
+     * The "errors" collection of methods.
+     */
+    public class Errors {
+
+      /**
+       * An accessor for creating requests from the Counts collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+       *   {@code Playdeveloperreporting.Counts.List request = playdeveloperreporting.counts().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Counts counts() {
+        return new Counts();
+      }
+
+      /**
+       * The "counts" collection of methods.
+       */
+      public class Counts {
+
+        /**
+         * Describes the properties of the metrics set.
+         *
+         * Create a request for the method "counts.get".
+         *
+         * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the errors metric set. Format: apps/{app}/errorCountMetricSet
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1ErrorCountMetricSet> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^apps/[^/]+/errorCountMetricSet$");
+
+          /**
+           * Describes the properties of the metrics set.
+           *
+           * Create a request for the method "counts.get".
+           *
+           * This request holds the parameters needed by the the playdeveloperreporting server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the errors metric set. Format: apps/{app}/errorCountMetricSet
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1ErrorCountMetricSet.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^apps/[^/]+/errorCountMetricSet$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the errors metric set. Format: apps/{app}/errorCountMetricSet */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the errors metric set. Format: apps/{app}/errorCountMetricSet
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the errors metric set. Format: apps/{app}/errorCountMetricSet */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^apps/[^/]+/errorCountMetricSet$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Queries the metrics in the metrics set.
+         *
+         * Create a request for the method "counts.query".
+         *
+         * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+         * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name. Format: apps/{app}/errorCountMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest}
+         * @return the request
+         */
+        public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest content) throws java.io.IOException {
+          Query result = new Query(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:query";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^apps/[^/]+/errorCountMetricSet$");
+
+          /**
+           * Queries the metrics in the metrics set.
+           *
+           * Create a request for the method "counts.query".
+           *
+           * This request holds the parameters needed by the the playdeveloperreporting server.  After
+           * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name. Format: apps/{app}/errorCountMetricSet
+           * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest}
+           * @since 1.13
+           */
+          protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest content) {
+            super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^apps/[^/]+/errorCountMetricSet$");
+            }
+          }
+
+          @Override
+          public Query set$Xgafv(java.lang.String $Xgafv) {
+            return (Query) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Query setAccessToken(java.lang.String accessToken) {
+            return (Query) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Query setAlt(java.lang.String alt) {
+            return (Query) super.setAlt(alt);
+          }
+
+          @Override
+          public Query setCallback(java.lang.String callback) {
+            return (Query) super.setCallback(callback);
+          }
+
+          @Override
+          public Query setFields(java.lang.String fields) {
+            return (Query) super.setFields(fields);
+          }
+
+          @Override
+          public Query setKey(java.lang.String key) {
+            return (Query) super.setKey(key);
+          }
+
+          @Override
+          public Query setOauthToken(java.lang.String oauthToken) {
+            return (Query) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Query) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Query setQuotaUser(java.lang.String quotaUser) {
+            return (Query) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Query setUploadType(java.lang.String uploadType) {
+            return (Query) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Query setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Query) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name. Format: apps/{app}/errorCountMetricSet */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name. Format: apps/{app}/errorCountMetricSet
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name. Format: apps/{app}/errorCountMetricSet */
+          public Query setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^apps/[^/]+/errorCountMetricSet$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Query set(String parameterName, Object value) {
+            return (Query) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Issues collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+       *   {@code Playdeveloperreporting.Issues.List request = playdeveloperreporting.issues().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Issues issues() {
+        return new Issues();
+      }
+
+      /**
+       * The "issues" collection of methods.
+       */
+      public class Issues {
+
+        /**
+         * Searches all error issues in which reports have been grouped.
+         *
+         * Create a request for the method "issues.search".
+         *
+         * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+         * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource of the error issues, indicating the application for which they were
+         *        received. Format: apps/{app}
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/errorIssues:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^apps/[^/]+$");
+
+          /**
+           * Searches all error issues in which reports have been grouped.
+           *
+           * Create a request for the method "issues.search".
+           *
+           * This request holds the parameters needed by the the playdeveloperreporting server.  After
+           * setting any optional parameters, call the {@link Search#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource of the error issues, indicating the application for which they were
+         *        received. Format: apps/{app}
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource of the error issues, indicating the application for which
+           * they were received. Format: apps/{app}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource of the error issues, indicating the application for which they were
+         received. Format: apps/{app}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource of the error issues, indicating the application for which
+           * they were received. Format: apps/{app}
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A selection predicate to retrieve only a subset of the issues. Counts in the returned
+           * error issues will only reflect occurrences that matched the filter. For filtering
+           * basics, please check [AIP-160](https://google.aip.dev/160). ** Supported field names:**
+           * * `apiLevel`: Matches error issues that occurred in the requested Android versions
+           * (specified as the numeric API level) only. Example: `apiLevel = 28 OR apiLevel = 29`. *
+           * `versionCode`: Matches error issues that occurred in the requested app version codes
+           * only. Example: `versionCode = 123 OR versionCode = 456`. * `deviceModel`: Matches error
+           * issues that occurred in the requested devices. Example: `deviceModel = "walleye" OR
+           * deviceModel = "marlin"`. * `deviceType`: Matches error issues that occurred in the
+           * requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches
+           * error issues of the requested types only. Valid candidates: `CRASH`, `ANR`. Example:
+           * `errorIssueType = CRASH OR errorIssueType = ANR`. * `appProcessState`: Matches error
+           * issues on the process state of an app, indicating whether an app runs in the foreground
+           * (user-visible) or background. Valid candidates: `FOREGROUND`, `BACKGROUND`. Example:
+           * `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches error issues that are
+           * user-perceived. It is not accompanied by any operators. Example: `isUserPerceived`. **
+           * Supported operators:** * Comparison operators: The only supported comparison operator
+           * is equality. The filtered field must appear on the left hand side of the comparison. *
+           * Logical Operators: Logical operators `AND` and `OR` can be used to build complex
+           * filters following a conjunctive normal form (CNF), i.e., conjunctions of disjunctions.
+           * The `OR` operator takes precedence over `AND` so the use of parenthesis is not
+           * necessary when building CNF. The `OR` operator is only supported to build disjunctions
+           * that apply to the same field, e.g., `versionCode = 123 OR errorIssueType = ANR` is not
+           * a valid filter. ** Examples ** Some valid filtering expressions: * `versionCode = 123
+           * AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType = OR errorIssueType =
+           * CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType = CRASH)`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A selection predicate to retrieve only a subset of the issues. Counts in the returned error issues
+         will only reflect occurrences that matched the filter. For filtering basics, please check
+         [AIP-160](https://google.aip.dev/160). ** Supported field names:** * `apiLevel`: Matches error
+         issues that occurred in the requested Android versions (specified as the numeric API level) only.
+         Example: `apiLevel = 28 OR apiLevel = 29`. * `versionCode`: Matches error issues that occurred in
+         the requested app version codes only. Example: `versionCode = 123 OR versionCode = 456`. *
+         `deviceModel`: Matches error issues that occurred in the requested devices. Example: `deviceModel =
+         "walleye" OR deviceModel = "marlin"`. * `deviceType`: Matches error issues that occurred in the
+         requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches error issues
+         of the requested types only. Valid candidates: `CRASH`, `ANR`. Example: `errorIssueType = CRASH OR
+         errorIssueType = ANR`. * `appProcessState`: Matches error issues on the process state of an app,
+         indicating whether an app runs in the foreground (user-visible) or background. Valid candidates:
+         `FOREGROUND`, `BACKGROUND`. Example: `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches
+         error issues that are user-perceived. It is not accompanied by any operators. Example:
+         `isUserPerceived`. ** Supported operators:** * Comparison operators: The only supported comparison
+         operator is equality. The filtered field must appear on the left hand side of the comparison. *
+         Logical Operators: Logical operators `AND` and `OR` can be used to build complex filters following
+         a conjunctive normal form (CNF), i.e., conjunctions of disjunctions. The `OR` operator takes
+         precedence over `AND` so the use of parenthesis is not necessary when building CNF. The `OR`
+         operator is only supported to build disjunctions that apply to the same field, e.g., `versionCode =
+         123 OR errorIssueType = ANR` is not a valid filter. ** Examples ** Some valid filtering
+         expressions: * `versionCode = 123 AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType
+         = OR errorIssueType = CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType = CRASH)`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A selection predicate to retrieve only a subset of the issues. Counts in the returned
+           * error issues will only reflect occurrences that matched the filter. For filtering
+           * basics, please check [AIP-160](https://google.aip.dev/160). ** Supported field names:**
+           * * `apiLevel`: Matches error issues that occurred in the requested Android versions
+           * (specified as the numeric API level) only. Example: `apiLevel = 28 OR apiLevel = 29`. *
+           * `versionCode`: Matches error issues that occurred in the requested app version codes
+           * only. Example: `versionCode = 123 OR versionCode = 456`. * `deviceModel`: Matches error
+           * issues that occurred in the requested devices. Example: `deviceModel = "walleye" OR
+           * deviceModel = "marlin"`. * `deviceType`: Matches error issues that occurred in the
+           * requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches
+           * error issues of the requested types only. Valid candidates: `CRASH`, `ANR`. Example:
+           * `errorIssueType = CRASH OR errorIssueType = ANR`. * `appProcessState`: Matches error
+           * issues on the process state of an app, indicating whether an app runs in the foreground
+           * (user-visible) or background. Valid candidates: `FOREGROUND`, `BACKGROUND`. Example:
+           * `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches error issues that are
+           * user-perceived. It is not accompanied by any operators. Example: `isUserPerceived`. **
+           * Supported operators:** * Comparison operators: The only supported comparison operator
+           * is equality. The filtered field must appear on the left hand side of the comparison. *
+           * Logical Operators: Logical operators `AND` and `OR` can be used to build complex
+           * filters following a conjunctive normal form (CNF), i.e., conjunctions of disjunctions.
+           * The `OR` operator takes precedence over `AND` so the use of parenthesis is not
+           * necessary when building CNF. The `OR` operator is only supported to build disjunctions
+           * that apply to the same field, e.g., `versionCode = 123 OR errorIssueType = ANR` is not
+           * a valid filter. ** Examples ** Some valid filtering expressions: * `versionCode = 123
+           * AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType = OR errorIssueType =
+           * CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType = CRASH)`
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          @com.google.api.client.util.Key("interval.endTime.day")
+          private java.lang.Integer intervalEndTimeDay;
+
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
+           */
+          public java.lang.Integer getIntervalEndTimeDay() {
+            return intervalEndTimeDay;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          public Search setIntervalEndTimeDay(java.lang.Integer intervalEndTimeDay) {
+            this.intervalEndTimeDay = intervalEndTimeDay;
+            return this;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          @com.google.api.client.util.Key("interval.endTime.hours")
+          private java.lang.Integer intervalEndTimeHours;
+
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
+           */
+          public java.lang.Integer getIntervalEndTimeHours() {
+            return intervalEndTimeHours;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          public Search setIntervalEndTimeHours(java.lang.Integer intervalEndTimeHours) {
+            this.intervalEndTimeHours = intervalEndTimeHours;
+            return this;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          @com.google.api.client.util.Key("interval.endTime.minutes")
+          private java.lang.Integer intervalEndTimeMinutes;
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+           */
+          public java.lang.Integer getIntervalEndTimeMinutes() {
+            return intervalEndTimeMinutes;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          public Search setIntervalEndTimeMinutes(java.lang.Integer intervalEndTimeMinutes) {
+            this.intervalEndTimeMinutes = intervalEndTimeMinutes;
+            return this;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          @com.google.api.client.util.Key("interval.endTime.month")
+          private java.lang.Integer intervalEndTimeMonth;
+
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+           */
+          public java.lang.Integer getIntervalEndTimeMonth() {
+            return intervalEndTimeMonth;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          public Search setIntervalEndTimeMonth(java.lang.Integer intervalEndTimeMonth) {
+            this.intervalEndTimeMonth = intervalEndTimeMonth;
+            return this;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          @com.google.api.client.util.Key("interval.endTime.nanos")
+          private java.lang.Integer intervalEndTimeNanos;
+
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+           */
+          public java.lang.Integer getIntervalEndTimeNanos() {
+            return intervalEndTimeNanos;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          public Search setIntervalEndTimeNanos(java.lang.Integer intervalEndTimeNanos) {
+            this.intervalEndTimeNanos = intervalEndTimeNanos;
+            return this;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          @com.google.api.client.util.Key("interval.endTime.seconds")
+          private java.lang.Integer intervalEndTimeSeconds;
+
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
+           */
+          public java.lang.Integer getIntervalEndTimeSeconds() {
+            return intervalEndTimeSeconds;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          public Search setIntervalEndTimeSeconds(java.lang.Integer intervalEndTimeSeconds) {
+            this.intervalEndTimeSeconds = intervalEndTimeSeconds;
+            return this;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          @com.google.api.client.util.Key("interval.endTime.timeZone.id")
+          private java.lang.String intervalEndTimeTimeZoneId;
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+           */
+          public java.lang.String getIntervalEndTimeTimeZoneId() {
+            return intervalEndTimeTimeZoneId;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          public Search setIntervalEndTimeTimeZoneId(java.lang.String intervalEndTimeTimeZoneId) {
+            this.intervalEndTimeTimeZoneId = intervalEndTimeTimeZoneId;
+            return this;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          @com.google.api.client.util.Key("interval.endTime.timeZone.version")
+          private java.lang.String intervalEndTimeTimeZoneVersion;
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+           */
+          public java.lang.String getIntervalEndTimeTimeZoneVersion() {
+            return intervalEndTimeTimeZoneVersion;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          public Search setIntervalEndTimeTimeZoneVersion(java.lang.String intervalEndTimeTimeZoneVersion) {
+            this.intervalEndTimeTimeZoneVersion = intervalEndTimeTimeZoneVersion;
+            return this;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          @com.google.api.client.util.Key("interval.endTime.utcOffset")
+          private String intervalEndTimeUtcOffset;
+
+          /** UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of
+         -4:00 would be represented as { seconds: -14400 }.
+           */
+          public String getIntervalEndTimeUtcOffset() {
+            return intervalEndTimeUtcOffset;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          public Search setIntervalEndTimeUtcOffset(String intervalEndTimeUtcOffset) {
+            this.intervalEndTimeUtcOffset = intervalEndTimeUtcOffset;
+            return this;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          @com.google.api.client.util.Key("interval.endTime.year")
+          private java.lang.Integer intervalEndTimeYear;
+
+          /** Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+           */
+          public java.lang.Integer getIntervalEndTimeYear() {
+            return intervalEndTimeYear;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          public Search setIntervalEndTimeYear(java.lang.Integer intervalEndTimeYear) {
+            this.intervalEndTimeYear = intervalEndTimeYear;
+            return this;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          @com.google.api.client.util.Key("interval.startTime.day")
+          private java.lang.Integer intervalStartTimeDay;
+
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
+           */
+          public java.lang.Integer getIntervalStartTimeDay() {
+            return intervalStartTimeDay;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          public Search setIntervalStartTimeDay(java.lang.Integer intervalStartTimeDay) {
+            this.intervalStartTimeDay = intervalStartTimeDay;
+            return this;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          @com.google.api.client.util.Key("interval.startTime.hours")
+          private java.lang.Integer intervalStartTimeHours;
+
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
+           */
+          public java.lang.Integer getIntervalStartTimeHours() {
+            return intervalStartTimeHours;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          public Search setIntervalStartTimeHours(java.lang.Integer intervalStartTimeHours) {
+            this.intervalStartTimeHours = intervalStartTimeHours;
+            return this;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          @com.google.api.client.util.Key("interval.startTime.minutes")
+          private java.lang.Integer intervalStartTimeMinutes;
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+           */
+          public java.lang.Integer getIntervalStartTimeMinutes() {
+            return intervalStartTimeMinutes;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          public Search setIntervalStartTimeMinutes(java.lang.Integer intervalStartTimeMinutes) {
+            this.intervalStartTimeMinutes = intervalStartTimeMinutes;
+            return this;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          @com.google.api.client.util.Key("interval.startTime.month")
+          private java.lang.Integer intervalStartTimeMonth;
+
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+           */
+          public java.lang.Integer getIntervalStartTimeMonth() {
+            return intervalStartTimeMonth;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          public Search setIntervalStartTimeMonth(java.lang.Integer intervalStartTimeMonth) {
+            this.intervalStartTimeMonth = intervalStartTimeMonth;
+            return this;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          @com.google.api.client.util.Key("interval.startTime.nanos")
+          private java.lang.Integer intervalStartTimeNanos;
+
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+           */
+          public java.lang.Integer getIntervalStartTimeNanos() {
+            return intervalStartTimeNanos;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          public Search setIntervalStartTimeNanos(java.lang.Integer intervalStartTimeNanos) {
+            this.intervalStartTimeNanos = intervalStartTimeNanos;
+            return this;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          @com.google.api.client.util.Key("interval.startTime.seconds")
+          private java.lang.Integer intervalStartTimeSeconds;
+
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
+           */
+          public java.lang.Integer getIntervalStartTimeSeconds() {
+            return intervalStartTimeSeconds;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          public Search setIntervalStartTimeSeconds(java.lang.Integer intervalStartTimeSeconds) {
+            this.intervalStartTimeSeconds = intervalStartTimeSeconds;
+            return this;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          @com.google.api.client.util.Key("interval.startTime.timeZone.id")
+          private java.lang.String intervalStartTimeTimeZoneId;
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+           */
+          public java.lang.String getIntervalStartTimeTimeZoneId() {
+            return intervalStartTimeTimeZoneId;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          public Search setIntervalStartTimeTimeZoneId(java.lang.String intervalStartTimeTimeZoneId) {
+            this.intervalStartTimeTimeZoneId = intervalStartTimeTimeZoneId;
+            return this;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          @com.google.api.client.util.Key("interval.startTime.timeZone.version")
+          private java.lang.String intervalStartTimeTimeZoneVersion;
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+           */
+          public java.lang.String getIntervalStartTimeTimeZoneVersion() {
+            return intervalStartTimeTimeZoneVersion;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          public Search setIntervalStartTimeTimeZoneVersion(java.lang.String intervalStartTimeTimeZoneVersion) {
+            this.intervalStartTimeTimeZoneVersion = intervalStartTimeTimeZoneVersion;
+            return this;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          @com.google.api.client.util.Key("interval.startTime.utcOffset")
+          private String intervalStartTimeUtcOffset;
+
+          /** UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of
+         -4:00 would be represented as { seconds: -14400 }.
+           */
+          public String getIntervalStartTimeUtcOffset() {
+            return intervalStartTimeUtcOffset;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          public Search setIntervalStartTimeUtcOffset(String intervalStartTimeUtcOffset) {
+            this.intervalStartTimeUtcOffset = intervalStartTimeUtcOffset;
+            return this;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          @com.google.api.client.util.Key("interval.startTime.year")
+          private java.lang.Integer intervalStartTimeYear;
+
+          /** Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+           */
+          public java.lang.Integer getIntervalStartTimeYear() {
+            return intervalStartTimeYear;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          public Search setIntervalStartTimeYear(java.lang.Integer intervalStartTimeYear) {
+            this.intervalStartTimeYear = intervalStartTimeYear;
+            return this;
+          }
+
+          /**
+           * The maximum number of error issues to return. The service may return fewer than this
+           * value. If unspecified, at most 50 error issues will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of error issues to return. The service may return fewer than this value. If
+         unspecified, at most 50 error issues will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of error issues to return. The service may return fewer than this
+           * value. If unspecified, at most 50 error issues will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to the request must match the call
+           * that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to the request must match the call that provided the page
+         token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to the request must match the call
+           * that provided the page token.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Reports collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+       *   {@code Playdeveloperreporting.Reports.List request = playdeveloperreporting.reports().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Reports reports() {
+        return new Reports();
+      }
+
+      /**
+       * The "reports" collection of methods.
+       */
+      public class Reports {
+
+        /**
+         * Searches all error reports received for an app.
+         *
+         * Create a request for the method "reports.search".
+         *
+         * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+         * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource of the reports, indicating the application for which they were received.
+         *        Format: apps/{app}
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/errorReports:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^apps/[^/]+$");
+
+          /**
+           * Searches all error reports received for an app.
+           *
+           * Create a request for the method "reports.search".
+           *
+           * This request holds the parameters needed by the the playdeveloperreporting server.  After
+           * setting any optional parameters, call the {@link Search#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource of the reports, indicating the application for which they were received.
+         *        Format: apps/{app}
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource of the reports, indicating the application for which they
+           * were received. Format: apps/{app}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource of the reports, indicating the application for which they were received.
+         Format: apps/{app}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent resource of the reports, indicating the application for which they
+           * were received. Format: apps/{app}
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A selection predicate to retrieve only a subset of the reports. For filtering basics,
+           * please check [AIP-160](https://google.aip.dev/160). ** Supported field names:** *
+           * `apiLevel`: Matches error reports that occurred in the requested Android versions
+           * (specified as the numeric API level) only. Example: `apiLevel = 28 OR apiLevel = 29`. *
+           * `versionCode`: Matches error reports that occurred in the requested app version codes
+           * only. Example: `versionCode = 123 OR versionCode = 456`. * `deviceModel`: Matches error
+           * reports that occurred in the requested devices. Example: `deviceModel = "walleye" OR
+           * deviceModel = "marlin"`. * `deviceType`: Matches error reports that occurred in the
+           * requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches
+           * error reports of the requested types only. Valid candidates: `JAVA_CRASH`,
+           * `NATIVE_CRASH`, `ANR`. Example: `errorIssueType = JAVA_CRASH OR errorIssueType =
+           * NATIVE_CRASH`. * `errorIssueId`: Matches error reports belonging to the requested error
+           * issue ids only. Example: `errorIssueId = 1234 OR errorIssueId = 4567`. *
+           * `appProcessState`: Matches error reports on the process state of an app, indicating
+           * whether an app runs in the foreground (user-visible) or background. Valid candidates:
+           * `FOREGROUND`, `BACKGROUND`. Example: `appProcessState = FOREGROUND`. *
+           * `isUserPerceived`: Matches error reports that are user-perceived. It is not accompanied
+           * by any operators. Example: `isUserPerceived`. ** Supported operators:** * Comparison
+           * operators: The only supported comparison operator is equality. The filtered field must
+           * appear on the left hand side of the comparison. * Logical Operators: Logical operators
+           * `AND` and `OR` can be used to build complex filters following a conjunctive normal form
+           * (CNF), i.e., conjunctions of disjunctions. The `OR` operator takes precedence over
+           * `AND` so the use of parenthesis is not necessary when building CNF. The `OR` operator
+           * is only supported to build disjunctions that apply to the same field, e.g.,
+           * `versionCode = 123 OR versionCode = ANR`. The filter expression `versionCode = 123 OR
+           * errorIssueType = ANR` is not valid. ** Examples ** Some valid filtering expressions: *
+           * `versionCode = 123 AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType =
+           * OR errorIssueType = CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType
+           * = CRASH)`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A selection predicate to retrieve only a subset of the reports. For filtering basics, please check
+         [AIP-160](https://google.aip.dev/160). ** Supported field names:** * `apiLevel`: Matches error
+         reports that occurred in the requested Android versions (specified as the numeric API level) only.
+         Example: `apiLevel = 28 OR apiLevel = 29`. * `versionCode`: Matches error reports that occurred in
+         the requested app version codes only. Example: `versionCode = 123 OR versionCode = 456`. *
+         `deviceModel`: Matches error reports that occurred in the requested devices. Example: `deviceModel
+         = "walleye" OR deviceModel = "marlin"`. * `deviceType`: Matches error reports that occurred in the
+         requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches error reports
+         of the requested types only. Valid candidates: `JAVA_CRASH`, `NATIVE_CRASH`, `ANR`. Example:
+         `errorIssueType = JAVA_CRASH OR errorIssueType = NATIVE_CRASH`. * `errorIssueId`: Matches error
+         reports belonging to the requested error issue ids only. Example: `errorIssueId = 1234 OR
+         errorIssueId = 4567`. * `appProcessState`: Matches error reports on the process state of an app,
+         indicating whether an app runs in the foreground (user-visible) or background. Valid candidates:
+         `FOREGROUND`, `BACKGROUND`. Example: `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches
+         error reports that are user-perceived. It is not accompanied by any operators. Example:
+         `isUserPerceived`. ** Supported operators:** * Comparison operators: The only supported comparison
+         operator is equality. The filtered field must appear on the left hand side of the comparison. *
+         Logical Operators: Logical operators `AND` and `OR` can be used to build complex filters following
+         a conjunctive normal form (CNF), i.e., conjunctions of disjunctions. The `OR` operator takes
+         precedence over `AND` so the use of parenthesis is not necessary when building CNF. The `OR`
+         operator is only supported to build disjunctions that apply to the same field, e.g., `versionCode =
+         123 OR versionCode = ANR`. The filter expression `versionCode = 123 OR errorIssueType = ANR` is not
+         valid. ** Examples ** Some valid filtering expressions: * `versionCode = 123 AND errorIssueType =
+         ANR` * `versionCode = 123 AND errorIssueType = OR errorIssueType = CRASH` * `versionCode = 123 AND
+         (errorIssueType = OR errorIssueType = CRASH)`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A selection predicate to retrieve only a subset of the reports. For filtering basics,
+           * please check [AIP-160](https://google.aip.dev/160). ** Supported field names:** *
+           * `apiLevel`: Matches error reports that occurred in the requested Android versions
+           * (specified as the numeric API level) only. Example: `apiLevel = 28 OR apiLevel = 29`. *
+           * `versionCode`: Matches error reports that occurred in the requested app version codes
+           * only. Example: `versionCode = 123 OR versionCode = 456`. * `deviceModel`: Matches error
+           * reports that occurred in the requested devices. Example: `deviceModel = "walleye" OR
+           * deviceModel = "marlin"`. * `deviceType`: Matches error reports that occurred in the
+           * requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches
+           * error reports of the requested types only. Valid candidates: `JAVA_CRASH`,
+           * `NATIVE_CRASH`, `ANR`. Example: `errorIssueType = JAVA_CRASH OR errorIssueType =
+           * NATIVE_CRASH`. * `errorIssueId`: Matches error reports belonging to the requested error
+           * issue ids only. Example: `errorIssueId = 1234 OR errorIssueId = 4567`. *
+           * `appProcessState`: Matches error reports on the process state of an app, indicating
+           * whether an app runs in the foreground (user-visible) or background. Valid candidates:
+           * `FOREGROUND`, `BACKGROUND`. Example: `appProcessState = FOREGROUND`. *
+           * `isUserPerceived`: Matches error reports that are user-perceived. It is not accompanied
+           * by any operators. Example: `isUserPerceived`. ** Supported operators:** * Comparison
+           * operators: The only supported comparison operator is equality. The filtered field must
+           * appear on the left hand side of the comparison. * Logical Operators: Logical operators
+           * `AND` and `OR` can be used to build complex filters following a conjunctive normal form
+           * (CNF), i.e., conjunctions of disjunctions. The `OR` operator takes precedence over
+           * `AND` so the use of parenthesis is not necessary when building CNF. The `OR` operator
+           * is only supported to build disjunctions that apply to the same field, e.g.,
+           * `versionCode = 123 OR versionCode = ANR`. The filter expression `versionCode = 123 OR
+           * errorIssueType = ANR` is not valid. ** Examples ** Some valid filtering expressions: *
+           * `versionCode = 123 AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType =
+           * OR errorIssueType = CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType
+           * = CRASH)`
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          @com.google.api.client.util.Key("interval.endTime.day")
+          private java.lang.Integer intervalEndTimeDay;
+
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
+           */
+          public java.lang.Integer getIntervalEndTimeDay() {
+            return intervalEndTimeDay;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          public Search setIntervalEndTimeDay(java.lang.Integer intervalEndTimeDay) {
+            this.intervalEndTimeDay = intervalEndTimeDay;
+            return this;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          @com.google.api.client.util.Key("interval.endTime.hours")
+          private java.lang.Integer intervalEndTimeHours;
+
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
+           */
+          public java.lang.Integer getIntervalEndTimeHours() {
+            return intervalEndTimeHours;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          public Search setIntervalEndTimeHours(java.lang.Integer intervalEndTimeHours) {
+            this.intervalEndTimeHours = intervalEndTimeHours;
+            return this;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          @com.google.api.client.util.Key("interval.endTime.minutes")
+          private java.lang.Integer intervalEndTimeMinutes;
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+           */
+          public java.lang.Integer getIntervalEndTimeMinutes() {
+            return intervalEndTimeMinutes;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          public Search setIntervalEndTimeMinutes(java.lang.Integer intervalEndTimeMinutes) {
+            this.intervalEndTimeMinutes = intervalEndTimeMinutes;
+            return this;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          @com.google.api.client.util.Key("interval.endTime.month")
+          private java.lang.Integer intervalEndTimeMonth;
+
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+           */
+          public java.lang.Integer getIntervalEndTimeMonth() {
+            return intervalEndTimeMonth;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          public Search setIntervalEndTimeMonth(java.lang.Integer intervalEndTimeMonth) {
+            this.intervalEndTimeMonth = intervalEndTimeMonth;
+            return this;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          @com.google.api.client.util.Key("interval.endTime.nanos")
+          private java.lang.Integer intervalEndTimeNanos;
+
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+           */
+          public java.lang.Integer getIntervalEndTimeNanos() {
+            return intervalEndTimeNanos;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          public Search setIntervalEndTimeNanos(java.lang.Integer intervalEndTimeNanos) {
+            this.intervalEndTimeNanos = intervalEndTimeNanos;
+            return this;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          @com.google.api.client.util.Key("interval.endTime.seconds")
+          private java.lang.Integer intervalEndTimeSeconds;
+
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
+           */
+          public java.lang.Integer getIntervalEndTimeSeconds() {
+            return intervalEndTimeSeconds;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          public Search setIntervalEndTimeSeconds(java.lang.Integer intervalEndTimeSeconds) {
+            this.intervalEndTimeSeconds = intervalEndTimeSeconds;
+            return this;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          @com.google.api.client.util.Key("interval.endTime.timeZone.id")
+          private java.lang.String intervalEndTimeTimeZoneId;
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+           */
+          public java.lang.String getIntervalEndTimeTimeZoneId() {
+            return intervalEndTimeTimeZoneId;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          public Search setIntervalEndTimeTimeZoneId(java.lang.String intervalEndTimeTimeZoneId) {
+            this.intervalEndTimeTimeZoneId = intervalEndTimeTimeZoneId;
+            return this;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          @com.google.api.client.util.Key("interval.endTime.timeZone.version")
+          private java.lang.String intervalEndTimeTimeZoneVersion;
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+           */
+          public java.lang.String getIntervalEndTimeTimeZoneVersion() {
+            return intervalEndTimeTimeZoneVersion;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          public Search setIntervalEndTimeTimeZoneVersion(java.lang.String intervalEndTimeTimeZoneVersion) {
+            this.intervalEndTimeTimeZoneVersion = intervalEndTimeTimeZoneVersion;
+            return this;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          @com.google.api.client.util.Key("interval.endTime.utcOffset")
+          private String intervalEndTimeUtcOffset;
+
+          /** UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of
+         -4:00 would be represented as { seconds: -14400 }.
+           */
+          public String getIntervalEndTimeUtcOffset() {
+            return intervalEndTimeUtcOffset;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          public Search setIntervalEndTimeUtcOffset(String intervalEndTimeUtcOffset) {
+            this.intervalEndTimeUtcOffset = intervalEndTimeUtcOffset;
+            return this;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          @com.google.api.client.util.Key("interval.endTime.year")
+          private java.lang.Integer intervalEndTimeYear;
+
+          /** Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+           */
+          public java.lang.Integer getIntervalEndTimeYear() {
+            return intervalEndTimeYear;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          public Search setIntervalEndTimeYear(java.lang.Integer intervalEndTimeYear) {
+            this.intervalEndTimeYear = intervalEndTimeYear;
+            return this;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          @com.google.api.client.util.Key("interval.startTime.day")
+          private java.lang.Integer intervalStartTimeDay;
+
+          /** Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
+         datetime without a day.
+           */
+          public java.lang.Integer getIntervalStartTimeDay() {
+            return intervalStartTimeDay;
+          }
+
+          /**
+           * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if
+           * specifying a datetime without a day.
+           */
+          public Search setIntervalStartTimeDay(java.lang.Integer intervalStartTimeDay) {
+            this.intervalStartTimeDay = intervalStartTimeDay;
+            return this;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          @com.google.api.client.util.Key("interval.startTime.hours")
+          private java.lang.Integer intervalStartTimeHours;
+
+          /** Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API
+         may choose to allow the value "24:00:00" for scenarios like business closing time.
+           */
+          public java.lang.Integer getIntervalStartTimeHours() {
+            return intervalStartTimeHours;
+          }
+
+          /**
+           * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0
+           * (midnight). An API may choose to allow the value "24:00:00" for scenarios like business
+           * closing time.
+           */
+          public Search setIntervalStartTimeHours(java.lang.Integer intervalStartTimeHours) {
+            this.intervalStartTimeHours = intervalStartTimeHours;
+            return this;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          @com.google.api.client.util.Key("interval.startTime.minutes")
+          private java.lang.Integer intervalStartTimeMinutes;
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+           */
+          public java.lang.Integer getIntervalStartTimeMinutes() {
+            return intervalStartTimeMinutes;
+          }
+
+          /** Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0. */
+          public Search setIntervalStartTimeMinutes(java.lang.Integer intervalStartTimeMinutes) {
+            this.intervalStartTimeMinutes = intervalStartTimeMinutes;
+            return this;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          @com.google.api.client.util.Key("interval.startTime.month")
+          private java.lang.Integer intervalStartTimeMonth;
+
+          /** Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+           */
+          public java.lang.Integer getIntervalStartTimeMonth() {
+            return intervalStartTimeMonth;
+          }
+
+          /**
+           * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a
+           * month.
+           */
+          public Search setIntervalStartTimeMonth(java.lang.Integer intervalStartTimeMonth) {
+            this.intervalStartTimeMonth = intervalStartTimeMonth;
+            return this;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          @com.google.api.client.util.Key("interval.startTime.nanos")
+          private java.lang.Integer intervalStartTimeNanos;
+
+          /** Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+           */
+          public java.lang.Integer getIntervalStartTimeNanos() {
+            return intervalStartTimeNanos;
+          }
+
+          /**
+           * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults
+           * to 0.
+           */
+          public Search setIntervalStartTimeNanos(java.lang.Integer intervalStartTimeNanos) {
+            this.intervalStartTimeNanos = intervalStartTimeNanos;
+            return this;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          @com.google.api.client.util.Key("interval.startTime.seconds")
+          private java.lang.Integer intervalStartTimeSeconds;
+
+          /** Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may
+         allow the value 60 if it allows leap-seconds.
+           */
+          public java.lang.Integer getIntervalStartTimeSeconds() {
+            return intervalStartTimeSeconds;
+          }
+
+          /**
+           * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0.
+           * An API may allow the value 60 if it allows leap-seconds.
+           */
+          public Search setIntervalStartTimeSeconds(java.lang.Integer intervalStartTimeSeconds) {
+            this.intervalStartTimeSeconds = intervalStartTimeSeconds;
+            return this;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          @com.google.api.client.util.Key("interval.startTime.timeZone.id")
+          private java.lang.String intervalStartTimeTimeZoneId;
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York".
+           */
+          public java.lang.String getIntervalStartTimeTimeZoneId() {
+            return intervalStartTimeTimeZoneId;
+          }
+
+          /** IANA Time Zone Database time zone, e.g. "America/New_York". */
+          public Search setIntervalStartTimeTimeZoneId(java.lang.String intervalStartTimeTimeZoneId) {
+            this.intervalStartTimeTimeZoneId = intervalStartTimeTimeZoneId;
+            return this;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          @com.google.api.client.util.Key("interval.startTime.timeZone.version")
+          private java.lang.String intervalStartTimeTimeZoneVersion;
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a".
+           */
+          public java.lang.String getIntervalStartTimeTimeZoneVersion() {
+            return intervalStartTimeTimeZoneVersion;
+          }
+
+          /** Optional. IANA Time Zone Database version number, e.g. "2019a". */
+          public Search setIntervalStartTimeTimeZoneVersion(java.lang.String intervalStartTimeTimeZoneVersion) {
+            this.intervalStartTimeTimeZoneVersion = intervalStartTimeTimeZoneVersion;
+            return this;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          @com.google.api.client.util.Key("interval.startTime.utcOffset")
+          private String intervalStartTimeUtcOffset;
+
+          /** UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of
+         -4:00 would be represented as { seconds: -14400 }.
+           */
+          public String getIntervalStartTimeUtcOffset() {
+            return intervalStartTimeUtcOffset;
+          }
+
+          /**
+           * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC
+           * offset of -4:00 would be represented as { seconds: -14400 }.
+           */
+          public Search setIntervalStartTimeUtcOffset(String intervalStartTimeUtcOffset) {
+            this.intervalStartTimeUtcOffset = intervalStartTimeUtcOffset;
+            return this;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          @com.google.api.client.util.Key("interval.startTime.year")
+          private java.lang.Integer intervalStartTimeYear;
+
+          /** Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+           */
+          public java.lang.Integer getIntervalStartTimeYear() {
+            return intervalStartTimeYear;
+          }
+
+          /**
+           * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a
+           * year.
+           */
+          public Search setIntervalStartTimeYear(java.lang.Integer intervalStartTimeYear) {
+            this.intervalStartTimeYear = intervalStartTimeYear;
+            return this;
+          }
+
+          /**
+           * The maximum number of reports to return. The service may return fewer than this value.
+           * If unspecified, at most 50 reports will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of reports to return. The service may return fewer than this value. If
+         unspecified, at most 50 reports will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of reports to return. The service may return fewer than this value.
+           * If unspecified, at most 50 reports will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `SearchErrorReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchErrorReports` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `SearchErrorReports` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `SearchErrorReports` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `SearchErrorReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchErrorReports` must match the call that provided the page token.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Excessivewakeuprate collection.
      *
      * <p>The typical use is:</p>
@@ -1272,6 +3053,590 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^apps/[^/]+/excessiveWakeupRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Slowrenderingrate collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Slowrenderingrate.List request = playdeveloperreporting.slowrenderingrate().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Slowrenderingrate slowrenderingrate() {
+      return new Slowrenderingrate();
+    }
+
+    /**
+     * The "slowrenderingrate" collection of methods.
+     */
+    public class Slowrenderingrate {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "slowrenderingrate.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SlowRenderingRateMetricSet> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowRenderingRateMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "slowrenderingrate.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SlowRenderingRateMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "slowrenderingrate.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowRenderingRateMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "slowrenderingrate.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Slowstartrate collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Slowstartrate.List request = playdeveloperreporting.slowstartrate().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Slowstartrate slowstartrate() {
+      return new Slowstartrate();
+    }
+
+    /**
+     * The "slowstartrate" collection of methods.
+     */
+    public class Slowstartrate {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "slowstartrate.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SlowStartRateMetricSet> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowStartRateMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "slowstartrate.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1SlowStartRateMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "slowstartrate.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowStartRateMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "slowstartrate.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QuerySlowStartRateMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
           }
           this.name = name;
           return this;

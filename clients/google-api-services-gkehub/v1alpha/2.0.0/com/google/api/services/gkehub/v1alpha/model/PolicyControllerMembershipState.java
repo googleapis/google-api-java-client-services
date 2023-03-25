@@ -38,11 +38,19 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest
+   * manifest TODO (b/271878194): Remove this
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, PolicyControllerOnClusterState> contentStates;
+
+  /**
+   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
+   * this
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerPolicyContentState policyContentState;
 
   /**
    * The overall Policy Controller lifecycle state observed by the Hub Feature controller.
@@ -70,7 +78,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest
+   * manifest TODO (b/271878194): Remove this
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PolicyControllerOnClusterState> getContentStates() {
@@ -79,11 +87,30 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest
+   * manifest TODO (b/271878194): Remove this
    * @param contentStates contentStates or {@code null} for none
    */
   public PolicyControllerMembershipState setContentStates(java.util.Map<String, PolicyControllerOnClusterState> contentStates) {
     this.contentStates = contentStates;
+    return this;
+  }
+
+  /**
+   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
+   * this
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerPolicyContentState getPolicyContentState() {
+    return policyContentState;
+  }
+
+  /**
+   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
+   * this
+   * @param policyContentState policyContentState or {@code null} for none
+   */
+  public PolicyControllerMembershipState setPolicyContentState(PolicyControllerPolicyContentState policyContentState) {
+    this.policyContentState = policyContentState;
     return this;
   }
 

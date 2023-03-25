@@ -44,6 +44,13 @@ public final class PolicyControllerPolicyContentSpec extends com.google.api.clie
   }
 
   /**
+   * Configures the installation of the Template Library.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerTemplateLibraryConfig templateLibrary;
+
+  /**
    * map of bundle name to BundleInstallSpec. The bundle name maps to the `bundleName` key in the
    * `policycontroller.gke.io/constraintData` annotation on a constraint.
    * @return value or {@code null} for none
@@ -59,6 +66,23 @@ public final class PolicyControllerPolicyContentSpec extends com.google.api.clie
    */
   public PolicyControllerPolicyContentSpec setBundles(java.util.Map<String, PolicyControllerBundleInstallSpec> bundles) {
     this.bundles = bundles;
+    return this;
+  }
+
+  /**
+   * Configures the installation of the Template Library.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerTemplateLibraryConfig getTemplateLibrary() {
+    return templateLibrary;
+  }
+
+  /**
+   * Configures the installation of the Template Library.
+   * @param templateLibrary templateLibrary or {@code null} for none
+   */
+  public PolicyControllerPolicyContentSpec setTemplateLibrary(PolicyControllerTemplateLibraryConfig templateLibrary) {
+    this.templateLibrary = templateLibrary;
     return this;
   }
 

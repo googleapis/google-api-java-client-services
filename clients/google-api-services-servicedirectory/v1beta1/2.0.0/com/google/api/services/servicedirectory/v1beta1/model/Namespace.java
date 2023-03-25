@@ -54,6 +54,13 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. A globally unique identifier (in UUID4 format) for this namespace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. The timestamp when the namespace was last updated.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
    */
   public Namespace setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A globally unique identifier (in UUID4 format) for this namespace.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. A globally unique identifier (in UUID4 format) for this namespace.
+   * @param uid uid or {@code null} for none
+   */
+  public Namespace setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

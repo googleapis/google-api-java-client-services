@@ -89,6 +89,13 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
+   * Output only. A globally unique identifier (in UUID4 format) for this endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. The timestamp when the endpoint was last updated.
    * The value may be {@code null}.
    */
@@ -224,6 +231,23 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Output only. A globally unique identifier (in UUID4 format) for this endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. A globally unique identifier (in UUID4 format) for this endpoint.
+   * @param uid uid or {@code null} for none
+   */
+  public Endpoint setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

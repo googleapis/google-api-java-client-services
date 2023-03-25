@@ -3066,6 +3066,590 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
 
     }
     /**
+     * An accessor for creating requests from the Slowrenderingrate collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Slowrenderingrate.List request = playdeveloperreporting.slowrenderingrate().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Slowrenderingrate slowrenderingrate() {
+      return new Slowrenderingrate();
+    }
+
+    /**
+     * The "slowrenderingrate" collection of methods.
+     */
+    public class Slowrenderingrate {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "slowrenderingrate.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SlowRenderingRateMetricSet> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowRenderingRateMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "slowrenderingrate.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SlowRenderingRateMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "slowrenderingrate.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetResponse> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowRenderingRateMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "slowrenderingrate.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowRenderingRateMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowRenderingRateMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowRenderingRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Slowstartrate collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Slowstartrate.List request = playdeveloperreporting.slowstartrate().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Slowstartrate slowstartrate() {
+      return new Slowstartrate();
+    }
+
+    /**
+     * The "slowstartrate" collection of methods.
+     */
+    public class Slowstartrate {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "slowstartrate.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowStartRateMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "slowstartrate.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SlowStartRateMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "slowstartrate.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetResponse> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/slowStartRateMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "slowstartrate.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QuerySlowStartRateMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/slowStartRateMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/slowStartRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Stuckbackgroundwakelockrate collection.
      *
      * <p>The typical use is:</p>

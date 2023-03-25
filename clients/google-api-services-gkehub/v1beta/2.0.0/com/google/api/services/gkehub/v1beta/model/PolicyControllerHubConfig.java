@@ -106,7 +106,8 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private java.lang.Boolean referentialRulesEnabled;
 
   /**
-   * Configures the library templates to install along with Policy Controller.
+   * Configures the library templates to install along with Policy Controller. TODO (b/271878194):
+   * Remove this
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +296,8 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   }
 
   /**
-   * Configures the library templates to install along with Policy Controller.
+   * Configures the library templates to install along with Policy Controller. TODO (b/271878194):
+   * Remove this
    * @return value or {@code null} for none
    */
   public PolicyControllerTemplateLibraryConfig getTemplateLibraryConfig() {
@@ -303,7 +305,8 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   }
 
   /**
-   * Configures the library templates to install along with Policy Controller.
+   * Configures the library templates to install along with Policy Controller. TODO (b/271878194):
+   * Remove this
    * @param templateLibraryConfig templateLibraryConfig or {@code null} for none
    */
   public PolicyControllerHubConfig setTemplateLibraryConfig(PolicyControllerTemplateLibraryConfig templateLibraryConfig) {

@@ -30,21 +30,22 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class PolicyControllerBundleInstallSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * the set of namespaces to be exempted from the bundle
+   * the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exemptedNamespaces;
 
   /**
-   * Management specifies how the bundle will be managed by the controller.
+   * Management specifies how the bundle will be managed by the controller. TODO (b/271878194):
+   * Remove this
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String management;
 
   /**
-   * the set of namespaces to be exempted from the bundle
+   * the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExemptedNamespaces() {
@@ -52,7 +53,7 @@ public final class PolicyControllerBundleInstallSpec extends com.google.api.clie
   }
 
   /**
-   * the set of namespaces to be exempted from the bundle
+   * the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
    * @param exemptedNamespaces exemptedNamespaces or {@code null} for none
    */
   public PolicyControllerBundleInstallSpec setExemptedNamespaces(java.util.List<java.lang.String> exemptedNamespaces) {
@@ -61,7 +62,8 @@ public final class PolicyControllerBundleInstallSpec extends com.google.api.clie
   }
 
   /**
-   * Management specifies how the bundle will be managed by the controller.
+   * Management specifies how the bundle will be managed by the controller. TODO (b/271878194):
+   * Remove this
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -69,7 +71,8 @@ public final class PolicyControllerBundleInstallSpec extends com.google.api.clie
   }
 
   /**
-   * Management specifies how the bundle will be managed by the controller.
+   * Management specifies how the bundle will be managed by the controller. TODO (b/271878194):
+   * Remove this
    * @param management management or {@code null} for none
    */
   public PolicyControllerBundleInstallSpec setManagement(java.lang.String management) {

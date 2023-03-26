@@ -78,8 +78,7 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
-   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
-   * field should be set for Java/Scala language type.
+   * the main_file_uri field must be set for Python.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +87,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   /**
    * Configuration properties as a set of key/value pairs, which will be passed on to the Spark
    * application. For more information, see [Apache
-   * Spark](https://spark.apache.org/docs/latest/index.html).
+   * Spark](https://spark.apache.org/docs/latest/index.html) and the [procedure option
+   * list](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#procedure_option_list).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,8 +225,7 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
-   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
-   * field should be set for Java/Scala language type.
+   * the main_file_uri field must be set for Python.
    * @return value or {@code null} for none
    */
   public java.lang.String getMainFileUri() {
@@ -234,8 +234,7 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * The main file/jar URI of the Spark application. Exactly one of the definition_body field and
-   * the main_file_uri field must be set for Python. Exactly one of main_class and main_file_uri
-   * field should be set for Java/Scala language type.
+   * the main_file_uri field must be set for Python.
    * @param mainFileUri mainFileUri or {@code null} for none
    */
   public SparkOptions setMainFileUri(java.lang.String mainFileUri) {
@@ -246,7 +245,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   /**
    * Configuration properties as a set of key/value pairs, which will be passed on to the Spark
    * application. For more information, see [Apache
-   * Spark](https://spark.apache.org/docs/latest/index.html).
+   * Spark](https://spark.apache.org/docs/latest/index.html) and the [procedure option
+   * list](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#procedure_option_list).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -256,7 +257,9 @@ public final class SparkOptions extends com.google.api.client.json.GenericJson {
   /**
    * Configuration properties as a set of key/value pairs, which will be passed on to the Spark
    * application. For more information, see [Apache
-   * Spark](https://spark.apache.org/docs/latest/index.html).
+   * Spark](https://spark.apache.org/docs/latest/index.html) and the [procedure option
+   * list](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#procedure_option_list).
    * @param properties properties or {@code null} for none
    */
   public SparkOptions setProperties(java.util.Map<String, java.lang.String> properties) {

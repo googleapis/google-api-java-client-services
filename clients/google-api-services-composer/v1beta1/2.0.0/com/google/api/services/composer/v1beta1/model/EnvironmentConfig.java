@@ -30,6 +30,16 @@ package com.google.api.services.composer.v1beta1.model;
 public final class EnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The 'bring your own identity' variant of the URI of the Apache Airflow Web UI
+   * hosted within this environment, to be accessed with external identities using workforce
+   * identity federation (see [Access environments with workforce identity
+   * federation](/composer/docs/composer-2/access-environments-with-workforce-identity-federation)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String airflowByoidUri;
+
+  /**
    * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
    * web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
    * The value may be {@code null}.
@@ -163,6 +173,29 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private WorkloadsConfig workloadsConfig;
+
+  /**
+   * Output only. The 'bring your own identity' variant of the URI of the Apache Airflow Web UI
+   * hosted within this environment, to be accessed with external identities using workforce
+   * identity federation (see [Access environments with workforce identity
+   * federation](/composer/docs/composer-2/access-environments-with-workforce-identity-federation)).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAirflowByoidUri() {
+    return airflowByoidUri;
+  }
+
+  /**
+   * Output only. The 'bring your own identity' variant of the URI of the Apache Airflow Web UI
+   * hosted within this environment, to be accessed with external identities using workforce
+   * identity federation (see [Access environments with workforce identity
+   * federation](/composer/docs/composer-2/access-environments-with-workforce-identity-federation)).
+   * @param airflowByoidUri airflowByoidUri or {@code null} for none
+   */
+  public EnvironmentConfig setAirflowByoidUri(java.lang.String airflowByoidUri) {
+    this.airflowByoidUri = airflowByoidUri;
+    return this;
+  }
 
   /**
    * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow

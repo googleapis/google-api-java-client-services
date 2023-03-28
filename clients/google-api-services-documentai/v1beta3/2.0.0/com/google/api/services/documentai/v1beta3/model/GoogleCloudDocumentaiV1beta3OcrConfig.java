@@ -31,7 +31,10 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +72,10 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   private GoogleCloudDocumentaiV1beta3OcrConfigHints hints;
 
   /**
-   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdvancedOcrOptions() {
@@ -77,7 +83,10 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   }
 
   /**
-   * A list of advanced OCR options to further fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * @param advancedOcrOptions advancedOcrOptions or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig setAdvancedOcrOptions(java.util.List<java.lang.String> advancedOcrOptions) {

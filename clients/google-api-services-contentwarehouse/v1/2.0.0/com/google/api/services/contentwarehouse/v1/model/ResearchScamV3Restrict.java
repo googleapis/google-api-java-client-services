@@ -48,6 +48,22 @@ public final class ResearchScamV3Restrict extends com.google.api.client.json.Gen
   }
 
   /**
+   * This field allows restricts to be based on numeric comparisons rather than categorical tokens.
+   * HINT: To allow a range of values in a namespace (e.g. 42 <= x < 128), specify the same
+   * namespace twice in the query, e.g.: {namespace: "x" op: LESS value_int: 128 } {namespace: "x"
+   * op: GREATER_EQUAL value_int: 42 }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResearchScamNumericRestrictNamespace> numericNamespaces;
+
+  static {
+    // hack to force ProGuard to consider ResearchScamNumericRestrictNamespace used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ResearchScamNumericRestrictNamespace.class);
+  }
+
+  /**
    * / NAMESPACES - a repeating field, where each entry specifies the set of tokens, within a single
    * namespace, that apply to the query, or database point, on which this V3Restrict proto is
    * defined. Note that: * Your overall query is an AND across namespaces. * Explicitly specifying a
@@ -69,6 +85,29 @@ public final class ResearchScamV3Restrict extends com.google.api.client.json.Gen
    */
   public ResearchScamV3Restrict setNamespaces(java.util.List<ResearchScamTokenNamespace> namespaces) {
     this.namespaces = namespaces;
+    return this;
+  }
+
+  /**
+   * This field allows restricts to be based on numeric comparisons rather than categorical tokens.
+   * HINT: To allow a range of values in a namespace (e.g. 42 <= x < 128), specify the same
+   * namespace twice in the query, e.g.: {namespace: "x" op: LESS value_int: 128 } {namespace: "x"
+   * op: GREATER_EQUAL value_int: 42 }
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResearchScamNumericRestrictNamespace> getNumericNamespaces() {
+    return numericNamespaces;
+  }
+
+  /**
+   * This field allows restricts to be based on numeric comparisons rather than categorical tokens.
+   * HINT: To allow a range of values in a namespace (e.g. 42 <= x < 128), specify the same
+   * namespace twice in the query, e.g.: {namespace: "x" op: LESS value_int: 128 } {namespace: "x"
+   * op: GREATER_EQUAL value_int: 42 }
+   * @param numericNamespaces numericNamespaces or {@code null} for none
+   */
+  public ResearchScamV3Restrict setNumericNamespaces(java.util.List<ResearchScamNumericRestrictNamespace> numericNamespaces) {
+    this.numericNamespaces = numericNamespaces;
     return this;
   }
 

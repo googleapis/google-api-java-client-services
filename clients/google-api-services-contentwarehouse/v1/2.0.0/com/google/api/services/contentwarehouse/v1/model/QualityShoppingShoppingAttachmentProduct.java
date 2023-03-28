@@ -107,6 +107,13 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
   private QualityShoppingShoppingAttachmentPBlock pblock;
 
   /**
+   * Product level Browseonomy ids from shopping_annotation.product.browseonomy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> productBrowseonomyIds;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -309,6 +316,23 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    */
   public QualityShoppingShoppingAttachmentProduct setPblock(QualityShoppingShoppingAttachmentPBlock pblock) {
     this.pblock = pblock;
+    return this;
+  }
+
+  /**
+   * Product level Browseonomy ids from shopping_annotation.product.browseonomy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getProductBrowseonomyIds() {
+    return productBrowseonomyIds;
+  }
+
+  /**
+   * Product level Browseonomy ids from shopping_annotation.product.browseonomy.
+   * @param productBrowseonomyIds productBrowseonomyIds or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentProduct setProductBrowseonomyIds(java.util.List<java.lang.Integer> productBrowseonomyIds) {
+    this.productBrowseonomyIds = productBrowseonomyIds;
     return this;
   }
 

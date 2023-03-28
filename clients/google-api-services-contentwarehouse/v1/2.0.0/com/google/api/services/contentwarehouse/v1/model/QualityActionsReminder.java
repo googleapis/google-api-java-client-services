@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 32
+ * Next id: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -165,6 +165,14 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private QualityActionsReminderDynamiteGroup dynamiteGroupAssignmentSource;
+
+  /**
+   * OPTIONAL. Device ID for home notification which should have loud notification. See go/device-
+   * id-storage-in-tasks
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extraNotificationDeviceId;
 
   /**
    * DEPRECATED. Use `client_id` or `server_id` instead.
@@ -549,6 +557,25 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
    */
   public QualityActionsReminder setDynamiteGroupAssignmentSource(QualityActionsReminderDynamiteGroup dynamiteGroupAssignmentSource) {
     this.dynamiteGroupAssignmentSource = dynamiteGroupAssignmentSource;
+    return this;
+  }
+
+  /**
+   * OPTIONAL. Device ID for home notification which should have loud notification. See go/device-
+   * id-storage-in-tasks
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtraNotificationDeviceId() {
+    return extraNotificationDeviceId;
+  }
+
+  /**
+   * OPTIONAL. Device ID for home notification which should have loud notification. See go/device-
+   * id-storage-in-tasks
+   * @param extraNotificationDeviceId extraNotificationDeviceId or {@code null} for none
+   */
+  public QualityActionsReminder setExtraNotificationDeviceId(java.lang.String extraNotificationDeviceId) {
+    this.extraNotificationDeviceId = extraNotificationDeviceId;
     return this;
   }
 

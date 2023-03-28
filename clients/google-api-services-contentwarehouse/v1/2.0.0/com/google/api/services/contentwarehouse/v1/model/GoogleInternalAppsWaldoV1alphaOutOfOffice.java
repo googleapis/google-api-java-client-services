@@ -51,13 +51,6 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
   private String committedUntil;
 
   /**
-   * TODO(b/265939748) To be removed, always false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean committedUntilIsMixed;
-
-  /**
    * The summary of the corresponding OOO block in Calendar. This is entered by the user, so we
    * return it "as is" - no i18n.
    * The value may be {@code null}.
@@ -108,23 +101,6 @@ public final class GoogleInternalAppsWaldoV1alphaOutOfOffice extends com.google.
    */
   public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntil(String committedUntil) {
     this.committedUntil = committedUntil;
-    return this;
-  }
-
-  /**
-   * TODO(b/265939748) To be removed, always false.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getCommittedUntilIsMixed() {
-    return committedUntilIsMixed;
-  }
-
-  /**
-   * TODO(b/265939748) To be removed, always false.
-   * @param committedUntilIsMixed committedUntilIsMixed or {@code null} for none
-   */
-  public GoogleInternalAppsWaldoV1alphaOutOfOffice setCommittedUntilIsMixed(java.lang.Boolean committedUntilIsMixed) {
-    this.committedUntilIsMixed = committedUntilIsMixed;
     return this;
   }
 

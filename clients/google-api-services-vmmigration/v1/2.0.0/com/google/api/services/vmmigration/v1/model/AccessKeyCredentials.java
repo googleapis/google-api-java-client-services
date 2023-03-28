@@ -44,6 +44,14 @@ public final class AccessKeyCredentials extends com.google.api.client.json.Gener
   private java.lang.String secretAccessKey;
 
   /**
+   * Input only. AWS session token. Used only when AWS security token service (STS) is responsible
+   * for creating the temporary credentials.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sessionToken;
+
+  /**
    * AWS access key ID.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class AccessKeyCredentials extends com.google.api.client.json.Gener
    */
   public AccessKeyCredentials setSecretAccessKey(java.lang.String secretAccessKey) {
     this.secretAccessKey = secretAccessKey;
+    return this;
+  }
+
+  /**
+   * Input only. AWS session token. Used only when AWS security token service (STS) is responsible
+   * for creating the temporary credentials.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSessionToken() {
+    return sessionToken;
+  }
+
+  /**
+   * Input only. AWS session token. Used only when AWS security token service (STS) is responsible
+   * for creating the temporary credentials.
+   * @param sessionToken sessionToken or {@code null} for none
+   */
+  public AccessKeyCredentials setSessionToken(java.lang.String sessionToken) {
+    this.sessionToken = sessionToken;
     return this;
   }
 

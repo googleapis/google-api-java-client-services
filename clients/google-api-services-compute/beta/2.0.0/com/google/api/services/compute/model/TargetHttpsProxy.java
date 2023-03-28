@@ -178,8 +178,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -576,8 +578,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * @return value or {@code null} for none
    */
   public java.lang.String getServerTlsPolicy() {
@@ -588,8 +592,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * @param serverTlsPolicy serverTlsPolicy or {@code null} for none
    */
   public TargetHttpsProxy setServerTlsPolicy(java.lang.String serverTlsPolicy) {

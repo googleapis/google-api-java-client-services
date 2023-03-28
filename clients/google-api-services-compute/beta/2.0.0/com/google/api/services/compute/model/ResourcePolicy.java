@@ -44,6 +44,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Resource policy for disk consistency groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyDiskConsistencyGroupPolicy diskConsistencyGroupPolicy;
+
+  /**
    * Resource policy for instances for placement configuration.
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Resource policy for disk consistency groups.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyDiskConsistencyGroupPolicy getDiskConsistencyGroupPolicy() {
+    return diskConsistencyGroupPolicy;
+  }
+
+  /**
+   * Resource policy for disk consistency groups.
+   * @param diskConsistencyGroupPolicy diskConsistencyGroupPolicy or {@code null} for none
+   */
+  public ResourcePolicy setDiskConsistencyGroupPolicy(ResourcePolicyDiskConsistencyGroupPolicy diskConsistencyGroupPolicy) {
+    this.diskConsistencyGroupPolicy = diskConsistencyGroupPolicy;
     return this;
   }
 

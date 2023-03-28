@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Represents an Interconnect resource. An Interconnect resource is a dedicated connection between
- * the GCP network and your on-premises network. For more information, read the Dedicated
+ * the Google Cloud network and your on-premises network. For more information, read the Dedicated
  * Interconnect Overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

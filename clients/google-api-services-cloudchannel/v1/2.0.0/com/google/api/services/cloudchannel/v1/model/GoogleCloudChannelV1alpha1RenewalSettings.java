@@ -74,6 +74,14 @@ public final class GoogleCloudChannelV1alpha1RenewalSettings extends com.google.
   private java.lang.Boolean resizeUnitCount;
 
   /**
+   * Output only. The offer resource name that the entitlement will renew on at the end date. Takes
+   * the form: accounts/{account_id}/offers/{offer_id}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scheduledRenewalOffer;
+
+  /**
    * If true, disables commitment-based offer on renewal and switches to flexible or pay as you go.
    * Deprecated: Use `payment_plan` instead.
    * @return value or {@code null} for none
@@ -176,6 +184,25 @@ public final class GoogleCloudChannelV1alpha1RenewalSettings extends com.google.
    */
   public GoogleCloudChannelV1alpha1RenewalSettings setResizeUnitCount(java.lang.Boolean resizeUnitCount) {
     this.resizeUnitCount = resizeUnitCount;
+    return this;
+  }
+
+  /**
+   * Output only. The offer resource name that the entitlement will renew on at the end date. Takes
+   * the form: accounts/{account_id}/offers/{offer_id}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScheduledRenewalOffer() {
+    return scheduledRenewalOffer;
+  }
+
+  /**
+   * Output only. The offer resource name that the entitlement will renew on at the end date. Takes
+   * the form: accounts/{account_id}/offers/{offer_id}.
+   * @param scheduledRenewalOffer scheduledRenewalOffer or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1RenewalSettings setScheduledRenewalOffer(java.lang.String scheduledRenewalOffer) {
+    this.scheduledRenewalOffer = scheduledRenewalOffer;
     return this;
   }
 

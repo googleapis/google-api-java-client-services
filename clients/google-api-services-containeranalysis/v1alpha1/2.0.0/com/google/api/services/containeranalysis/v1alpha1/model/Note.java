@@ -138,6 +138,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private DocumentNote sbom;
 
   /**
+   * A note describing a reference to an SBOM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SBOMReferenceNote sbomReference;
+
+  /**
    * A one sentence description of this `Note`.
    * The value may be {@code null}.
    */
@@ -450,6 +457,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setSbom(DocumentNote sbom) {
     this.sbom = sbom;
+    return this;
+  }
+
+  /**
+   * A note describing a reference to an SBOM.
+   * @return value or {@code null} for none
+   */
+  public SBOMReferenceNote getSbomReference() {
+    return sbomReference;
+  }
+
+  /**
+   * A note describing a reference to an SBOM.
+   * @param sbomReference sbomReference or {@code null} for none
+   */
+  public Note setSbomReference(SBOMReferenceNote sbomReference) {
+    this.sbomReference = sbomReference;
     return this;
   }
 

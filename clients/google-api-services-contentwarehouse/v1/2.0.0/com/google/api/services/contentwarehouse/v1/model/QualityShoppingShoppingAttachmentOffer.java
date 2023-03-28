@@ -51,6 +51,13 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   private java.util.List<java.math.BigInteger> fingerprintOfOfferUrls;
 
   /**
+   * Global trade item number (GTIN).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> gtinValue;
+
+  /**
    * image_id is sorted and distinct for efficient search during serving.
    * The value may be {@code null}.
    */
@@ -178,6 +185,23 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
    */
   public QualityShoppingShoppingAttachmentOffer setFingerprintOfOfferUrls(java.util.List<java.math.BigInteger> fingerprintOfOfferUrls) {
     this.fingerprintOfOfferUrls = fingerprintOfOfferUrls;
+    return this;
+  }
+
+  /**
+   * Global trade item number (GTIN).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGtinValue() {
+    return gtinValue;
+  }
+
+  /**
+   * Global trade item number (GTIN).
+   * @param gtinValue gtinValue or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentOffer setGtinValue(java.util.List<java.lang.String> gtinValue) {
+    this.gtinValue = gtinValue;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Provider GP for ranking in HGR. Next ID: 2
+ * Features to be extracted from Provider GP for ranking in HGR. Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,12 +31,63 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantGroundingRankerProviderGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> providerClusterId;
+
+  /**
+   * ProviderId for the provider in the binding set. PRR specific feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantContextProviderId providerId;
+
+  /**
    * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates
    * both policy rules and quality considerations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float pslScore;
+
+  /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProviderClusterId() {
+    return providerClusterId;
+  }
+
+  /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * @param providerClusterId providerClusterId or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterId(java.util.List<java.lang.String> providerClusterId) {
+    this.providerClusterId = providerClusterId;
+    return this;
+  }
+
+  /**
+   * ProviderId for the provider in the binding set. PRR specific feature.
+   * @return value or {@code null} for none
+   */
+  public AssistantContextProviderId getProviderId() {
+    return providerId;
+  }
+
+  /**
+   * ProviderId for the provider in the binding set. PRR specific feature.
+   * @param providerId providerId or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderId(AssistantContextProviderId providerId) {
+    this.providerId = providerId;
+    return this;
+  }
 
   /**
    * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates

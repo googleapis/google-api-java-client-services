@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ScienceCitationFundingExtractionInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set when we clear all extracted funding from this citation in the parser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("ClearedFunding")
+  private java.lang.String clearedFunding;
+
+  /**
    * Text block context from which the funding entry was extracted. Optionally filled and intended
    * to be used for offline analysis.
    * The value may be {@code null}.
@@ -55,6 +62,23 @@ public final class ScienceCitationFundingExtractionInfo extends com.google.api.c
    */
   @com.google.api.client.util.Key("Source")
   private java.lang.String source;
+
+  /**
+   * Set when we clear all extracted funding from this citation in the parser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClearedFunding() {
+    return clearedFunding;
+  }
+
+  /**
+   * Set when we clear all extracted funding from this citation in the parser.
+   * @param clearedFunding clearedFunding or {@code null} for none
+   */
+  public ScienceCitationFundingExtractionInfo setClearedFunding(java.lang.String clearedFunding) {
+    this.clearedFunding = clearedFunding;
+    return this;
+  }
 
   /**
    * Text block context from which the funding entry was extracted. Optionally filled and intended

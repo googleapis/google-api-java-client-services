@@ -68,9 +68,7 @@ public final class QualityOrbitAsteroidBeltDocumentIntentScores extends com.goog
   private java.util.List<java.lang.Integer> scores;
 
   /**
-   * Version 0: Presence of an intent label in the 'intents' field represents our best-effort
-   * classification. The 'scores' field is not meaningful. Version 1: Values in the 'scores' field
-   * represent the estimated precision of the classifier for a threshold at that score.
+   * DEPRECATED. DO NOT USE IT FOR ANY REASON! contact orbit@ if necessary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,9 +164,7 @@ public final class QualityOrbitAsteroidBeltDocumentIntentScores extends com.goog
   }
 
   /**
-   * Version 0: Presence of an intent label in the 'intents' field represents our best-effort
-   * classification. The 'scores' field is not meaningful. Version 1: Values in the 'scores' field
-   * represent the estimated precision of the classifier for a threshold at that score.
+   * DEPRECATED. DO NOT USE IT FOR ANY REASON! contact orbit@ if necessary.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -176,9 +172,7 @@ public final class QualityOrbitAsteroidBeltDocumentIntentScores extends com.goog
   }
 
   /**
-   * Version 0: Presence of an intent label in the 'intents' field represents our best-effort
-   * classification. The 'scores' field is not meaningful. Version 1: Values in the 'scores' field
-   * represent the estimated precision of the classifier for a threshold at that score.
+   * DEPRECATED. DO NOT USE IT FOR ANY REASON! contact orbit@ if necessary.
    * @param version version or {@code null} for none
    */
   public QualityOrbitAsteroidBeltDocumentIntentScores setVersion(java.lang.Integer version) {

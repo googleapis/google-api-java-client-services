@@ -45,6 +45,20 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.String date;
 
   /**
+   * The latest time for the planned maintenance window to start. This timestamp value is in RFC3339
+   * text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestWindowStartTime;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceStatus;
+
+  /**
    * [Output Only] The start time window of the maintenance disruption. DEPRECATED: Use
    * window_start_time instead.
    * The value may be {@code null}.
@@ -66,6 +80,22 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The time by which the maintenance disruption will be completed. This timestamp value is in
+   * RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String windowEndTime;
+
+  /**
+   * The current start time of the maintenance window. This timestamp value is in RFC3339 text
+   * format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String windowStartTime;
 
   /**
    * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
@@ -100,6 +130,40 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   public UpcomingMaintenance setDate(java.lang.String date) {
     this.date = date;
+    return this;
+  }
+
+  /**
+   * The latest time for the planned maintenance window to start. This timestamp value is in RFC3339
+   * text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestWindowStartTime() {
+    return latestWindowStartTime;
+  }
+
+  /**
+   * The latest time for the planned maintenance window to start. This timestamp value is in RFC3339
+   * text format.
+   * @param latestWindowStartTime latestWindowStartTime or {@code null} for none
+   */
+  public UpcomingMaintenance setLatestWindowStartTime(java.lang.String latestWindowStartTime) {
+    this.latestWindowStartTime = latestWindowStartTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceStatus() {
+    return maintenanceStatus;
+  }
+
+  /**
+   * @param maintenanceStatus maintenanceStatus or {@code null} for none
+   */
+  public UpcomingMaintenance setMaintenanceStatus(java.lang.String maintenanceStatus) {
+    this.maintenanceStatus = maintenanceStatus;
     return this;
   }
 
@@ -155,6 +219,44 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   public UpcomingMaintenance setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * The time by which the maintenance disruption will be completed. This timestamp value is in
+   * RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWindowEndTime() {
+    return windowEndTime;
+  }
+
+  /**
+   * The time by which the maintenance disruption will be completed. This timestamp value is in
+   * RFC3339 text format.
+   * @param windowEndTime windowEndTime or {@code null} for none
+   */
+  public UpcomingMaintenance setWindowEndTime(java.lang.String windowEndTime) {
+    this.windowEndTime = windowEndTime;
+    return this;
+  }
+
+  /**
+   * The current start time of the maintenance window. This timestamp value is in RFC3339 text
+   * format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWindowStartTime() {
+    return windowStartTime;
+  }
+
+  /**
+   * The current start time of the maintenance window. This timestamp value is in RFC3339 text
+   * format.
+   * @param windowStartTime windowStartTime or {@code null} for none
+   */
+  public UpcomingMaintenance setWindowStartTime(java.lang.String windowStartTime) {
+    this.windowStartTime = windowStartTime;
     return this;
   }
 

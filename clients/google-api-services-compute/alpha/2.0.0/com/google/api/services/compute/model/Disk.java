@@ -90,6 +90,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * Specifies whether the disk restored from a source snapshot should erase Windows specific VSS
    * signature.
    * The value may be {@code null}.
@@ -624,6 +632,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {
     this.diskEncryptionKey = diskEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public Disk setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

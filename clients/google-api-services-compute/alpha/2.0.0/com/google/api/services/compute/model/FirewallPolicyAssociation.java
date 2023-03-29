@@ -59,6 +59,17 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
+   * An integer indicating the priority of an association. The priority must be a positive value
+   * between 1 and 2147483647. Firewall Policies are evaluated from highest to lowest priority where
+   * 1 is the highest priority and 2147483647 is the lowest priority. The default value is `1000`.
+   * If two associations have the same priority then lexicographical order on association names is
+   * applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer priority;
+
+  /**
    * [Output Only] The short name of the firewall policy of the association.
    * The value may be {@code null}.
    */
@@ -132,6 +143,31 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
    */
   public FirewallPolicyAssociation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * An integer indicating the priority of an association. The priority must be a positive value
+   * between 1 and 2147483647. Firewall Policies are evaluated from highest to lowest priority where
+   * 1 is the highest priority and 2147483647 is the lowest priority. The default value is `1000`.
+   * If two associations have the same priority then lexicographical order on association names is
+   * applied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPriority() {
+    return priority;
+  }
+
+  /**
+   * An integer indicating the priority of an association. The priority must be a positive value
+   * between 1 and 2147483647. Firewall Policies are evaluated from highest to lowest priority where
+   * 1 is the highest priority and 2147483647 is the lowest priority. The default value is `1000`.
+   * If two associations have the same priority then lexicographical order on association names is
+   * applied.
+   * @param priority priority or {@code null} for none
+   */
+  public FirewallPolicyAssociation setPriority(java.lang.Integer priority) {
+    this.priority = priority;
     return this;
   }
 

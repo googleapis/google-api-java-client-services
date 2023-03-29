@@ -30,18 +30,18 @@ package com.google.api.services.compute.model;
 public final class RouterBgpPeerCustomLearnedIpRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
-   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
-   * IPv6.
+   * The custom learned route IP address range. Must be a valid CIDR-formatted prefix. If an IP
+   * address is provided without a subnet mask, it is interpreted as, for IPv4, a `/32` singular IP
+   * address range, and, for IPv6, `/128`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String range;
 
   /**
-   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
-   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
-   * IPv6.
+   * The custom learned route IP address range. Must be a valid CIDR-formatted prefix. If an IP
+   * address is provided without a subnet mask, it is interpreted as, for IPv4, a `/32` singular IP
+   * address range, and, for IPv6, `/128`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRange() {
@@ -49,9 +49,9 @@ public final class RouterBgpPeerCustomLearnedIpRange extends com.google.api.clie
   }
 
   /**
-   * The Custom Learned Route IP range. Must be a valid CIDR-formatted prefix. If an IP is provided
-   * without a subnet mask, it is interpreted as a /32 singular IP range for IPv4, and /128 for
-   * IPv6.
+   * The custom learned route IP address range. Must be a valid CIDR-formatted prefix. If an IP
+   * address is provided without a subnet mask, it is interpreted as, for IPv4, a `/32` singular IP
+   * address range, and, for IPv6, `/128`.
    * @param range range or {@code null} for none
    */
   public RouterBgpPeerCustomLearnedIpRange setRange(java.lang.String range) {

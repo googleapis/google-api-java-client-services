@@ -119,6 +119,14 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopGateway;
 
   /**
+   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * matching packets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextHopHub;
+
+  /**
    * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching
    * packets or the IP address of the forwarding Rule. For example, the following are all valid
    * URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region
@@ -442,6 +450,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopGateway(java.lang.String nextHopGateway) {
     this.nextHopGateway = nextHopGateway;
+    return this;
+  }
+
+  /**
+   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * matching packets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextHopHub() {
+    return nextHopHub;
+  }
+
+  /**
+   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * matching packets.
+   * @param nextHopHub nextHopHub or {@code null} for none
+   */
+  public Route setNextHopHub(java.lang.String nextHopHub) {
+    this.nextHopHub = nextHopHub;
     return this;
   }
 

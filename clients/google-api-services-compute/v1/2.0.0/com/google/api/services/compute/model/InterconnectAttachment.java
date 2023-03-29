@@ -197,7 +197,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN
    * attachment. If this field is not specified when creating the VLAN attachment, then later on
    * when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is
-   * allocated from the regional external IP address pool. Not currently available publicly.
+   * allocated from the regional external IP address pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -728,7 +728,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN
    * attachment. If this field is not specified when creating the VLAN attachment, then later on
    * when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is
-   * allocated from the regional external IP address pool. Not currently available publicly.
+   * allocated from the regional external IP address pool.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIpsecInternalAddresses() {
@@ -745,7 +745,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN
    * attachment. If this field is not specified when creating the VLAN attachment, then later on
    * when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is
-   * allocated from the regional external IP address pool. Not currently available publicly.
+   * allocated from the regional external IP address pool.
    * @param ipsecInternalAddresses ipsecInternalAddresses or {@code null} for none
    */
   public InterconnectAttachment setIpsecInternalAddresses(java.util.List<java.lang.String> ipsecInternalAddresses) {

@@ -51,7 +51,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String forwardingRuleIp;
 
   /**
-   * Health state of the instance.
+   * Health state of the IPv4 address of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Health state of the instance.
+   * Health state of the IPv4 address of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthState() {
@@ -152,7 +152,7 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Health state of the instance.
+   * Health state of the IPv4 address of the instance.
    * @param healthState healthState or {@code null} for none
    */
   public HealthStatus setHealthState(java.lang.String healthState) {

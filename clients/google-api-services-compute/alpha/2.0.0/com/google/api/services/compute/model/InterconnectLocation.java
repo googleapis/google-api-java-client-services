@@ -49,6 +49,22 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String availabilityZone;
 
   /**
+   * [Output only] List of features available at this interconnect location, which can take one of
+   * the following values: - MACSEC
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableFeatures;
+
+  /**
+   * [Output only] List of link types available at this interconnect location, which can take one of
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableLinkTypes;
+
+  /**
    * [Output Only] Metropolitan area designator that indicates which city an interconnect is
    * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * The value may be {@code null}.
@@ -198,6 +214,44 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setAvailabilityZone(java.lang.String availabilityZone) {
     this.availabilityZone = availabilityZone;
+    return this;
+  }
+
+  /**
+   * [Output only] List of features available at this interconnect location, which can take one of
+   * the following values: - MACSEC
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableFeatures() {
+    return availableFeatures;
+  }
+
+  /**
+   * [Output only] List of features available at this interconnect location, which can take one of
+   * the following values: - MACSEC
+   * @param availableFeatures availableFeatures or {@code null} for none
+   */
+  public InterconnectLocation setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
+    this.availableFeatures = availableFeatures;
+    return this;
+  }
+
+  /**
+   * [Output only] List of link types available at this interconnect location, which can take one of
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableLinkTypes() {
+    return availableLinkTypes;
+  }
+
+  /**
+   * [Output only] List of link types available at this interconnect location, which can take one of
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * @param availableLinkTypes availableLinkTypes or {@code null} for none
+   */
+  public InterconnectLocation setAvailableLinkTypes(java.util.List<java.lang.String> availableLinkTypes) {
+    this.availableLinkTypes = availableLinkTypes;
     return this;
   }
 

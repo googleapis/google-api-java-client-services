@@ -80,7 +80,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String firewallPolicy;
 
   /**
-   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by Google
+   * Cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,7 +302,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by Google
+   * Cloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayIPv4() {
@@ -309,7 +311,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by Google
+   * Cloud.
    * @param gatewayIPv4 gatewayIPv4 or {@code null} for none
    */
   public Network setGatewayIPv4(java.lang.String gatewayIPv4) {

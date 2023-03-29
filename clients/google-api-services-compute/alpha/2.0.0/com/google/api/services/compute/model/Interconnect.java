@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Represents an Interconnect resource. An Interconnect resource is a dedicated connection between
- * the GCP network and your on-premises network. For more information, read the Dedicated
+ * the Google Cloud network and your on-premises network. For more information, read the Dedicated
  * Interconnect Overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -39,6 +39,16 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminEnabled;
+
+  /**
+   * [Output only] List of features available for this interconnect, which can take one of the
+   * following values: - MACSEC If present then the interconnect was created on MACsec capable
+   * hardware ports. If not present then the interconnect is provisioned on non-MACsec capable ports
+   * and MACsec enablement will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableFeatures;
 
   /**
    * [Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.
@@ -237,6 +247,18 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String remoteLocation;
 
   /**
+   * Optional. List of features requested for this interconnect, which can take one of the following
+   * values: - MACSEC If specified then the interconnect will be created on MACsec capable hardware
+   * ports. If not specified, the default value is false, which will allocate non-MACsec capable
+   * ports first if available. This parameter can only be provided during interconnect INSERT and
+   * cannot be changed using interconnect PATCH. Please review Interconnect Pricing for implications
+   * on enabling this flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> requestedFeatures;
+
+  /**
    * Target number of physical links in the link bundle, as requested by the customer.
    * The value may be {@code null}.
    */
@@ -294,6 +316,29 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setAdminEnabled(java.lang.Boolean adminEnabled) {
     this.adminEnabled = adminEnabled;
+    return this;
+  }
+
+  /**
+   * [Output only] List of features available for this interconnect, which can take one of the
+   * following values: - MACSEC If present then the interconnect was created on MACsec capable
+   * hardware ports. If not present then the interconnect is provisioned on non-MACsec capable ports
+   * and MACsec enablement will fail.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableFeatures() {
+    return availableFeatures;
+  }
+
+  /**
+   * [Output only] List of features available for this interconnect, which can take one of the
+   * following values: - MACSEC If present then the interconnect was created on MACsec capable
+   * hardware ports. If not present then the interconnect is provisioned on non-MACsec capable ports
+   * and MACsec enablement will fail.
+   * @param availableFeatures availableFeatures or {@code null} for none
+   */
+  public Interconnect setAvailableFeatures(java.util.List<java.lang.String> availableFeatures) {
+    this.availableFeatures = availableFeatures;
     return this;
   }
 
@@ -793,6 +838,33 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setRemoteLocation(java.lang.String remoteLocation) {
     this.remoteLocation = remoteLocation;
+    return this;
+  }
+
+  /**
+   * Optional. List of features requested for this interconnect, which can take one of the following
+   * values: - MACSEC If specified then the interconnect will be created on MACsec capable hardware
+   * ports. If not specified, the default value is false, which will allocate non-MACsec capable
+   * ports first if available. This parameter can only be provided during interconnect INSERT and
+   * cannot be changed using interconnect PATCH. Please review Interconnect Pricing for implications
+   * on enabling this flag.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRequestedFeatures() {
+    return requestedFeatures;
+  }
+
+  /**
+   * Optional. List of features requested for this interconnect, which can take one of the following
+   * values: - MACSEC If specified then the interconnect will be created on MACsec capable hardware
+   * ports. If not specified, the default value is false, which will allocate non-MACsec capable
+   * ports first if available. This parameter can only be provided during interconnect INSERT and
+   * cannot be changed using interconnect PATCH. Please review Interconnect Pricing for implications
+   * on enabling this flag.
+   * @param requestedFeatures requestedFeatures or {@code null} for none
+   */
+  public Interconnect setRequestedFeatures(java.util.List<java.lang.String> requestedFeatures) {
+    this.requestedFeatures = requestedFeatures;
     return this;
   }
 

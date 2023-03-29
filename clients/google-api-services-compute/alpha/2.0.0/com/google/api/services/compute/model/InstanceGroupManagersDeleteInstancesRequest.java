@@ -31,7 +31,8 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
 
   /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
-   * zones/[ZONE]/instances/[INSTANCE_NAME].
+   * zones/[ZONE]/instances/[INSTANCE_NAME]. Queued instances do not have URL and can be deleted
+   * only by name. One cannot specify both URLs and names in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +51,8 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
 
   /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
-   * zones/[ZONE]/instances/[INSTANCE_NAME].
+   * zones/[ZONE]/instances/[INSTANCE_NAME]. Queued instances do not have URL and can be deleted
+   * only by name. One cannot specify both URLs and names in a single request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstances() {
@@ -59,7 +61,8 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
 
   /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
-   * zones/[ZONE]/instances/[INSTANCE_NAME].
+   * zones/[ZONE]/instances/[INSTANCE_NAME]. Queued instances do not have URL and can be deleted
+   * only by name. One cannot specify both URLs and names in a single request.
    * @param instances instances or {@code null} for none
    */
   public InstanceGroupManagersDeleteInstancesRequest setInstances(java.util.List<java.lang.String> instances) {

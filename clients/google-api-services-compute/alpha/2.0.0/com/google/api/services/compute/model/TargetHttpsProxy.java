@@ -111,6 +111,17 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> httpFilters;
 
   /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer httpKeepAliveTimeoutSec;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -185,8 +196,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -431,6 +444,31 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHttpKeepAliveTimeoutSec() {
+    return httpKeepAliveTimeoutSec;
+  }
+
+  /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * @param httpKeepAliveTimeoutSec httpKeepAliveTimeoutSec or {@code null} for none
+   */
+  public TargetHttpsProxy setHttpKeepAliveTimeoutSec(java.lang.Integer httpKeepAliveTimeoutSec) {
+    this.httpKeepAliveTimeoutSec = httpKeepAliveTimeoutSec;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -600,8 +638,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * @return value or {@code null} for none
    */
   public java.lang.String getServerTlsPolicy() {
@@ -612,8 +652,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field
-   * currently has no impact.
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
+   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
+   * not encrypted.
    * @param serverTlsPolicy serverTlsPolicy or {@code null} for none
    */
   public TargetHttpsProxy setServerTlsPolicy(java.lang.String serverTlsPolicy) {

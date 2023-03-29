@@ -64,6 +64,13 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.String ipAddress;
 
   /**
+   * Optional IPv6 address of network endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6Address;
+
+  /**
    * Optional port number of network endpoint. If not specified, the defaultPort for the network
    * endpoint group will be used.
    * The value may be {@code null}.
@@ -148,6 +155,23 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   public NetworkEndpoint setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * Optional IPv6 address of network endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * Optional IPv6 address of network endpoint.
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public NetworkEndpoint setIpv6Address(java.lang.String ipv6Address) {
+    this.ipv6Address = ipv6Address;
     return this;
   }
 

@@ -82,6 +82,12 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Double memberCountScore;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Double memberMetadataCount;
 
   /**
@@ -243,6 +249,21 @@ public final class DynamiteSpacesScoringInfo extends com.google.api.client.json.
    */
   public DynamiteSpacesScoringInfo setLastReadTimestampSecs(java.lang.Long lastReadTimestampSecs) {
     this.lastReadTimestampSecs = lastReadTimestampSecs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMemberCountScore() {
+    return memberCountScore;
+  }
+
+  /**
+   * @param memberCountScore memberCountScore or {@code null} for none
+   */
+  public DynamiteSpacesScoringInfo setMemberCountScore(java.lang.Double memberCountScore) {
+    this.memberCountScore = memberCountScore;
     return this;
   }
 

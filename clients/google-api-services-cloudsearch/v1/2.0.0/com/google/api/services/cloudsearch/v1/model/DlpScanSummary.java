@@ -32,6 +32,12 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DlpScanSummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DlpAction dlpAction;
+
+  /**
    * The scan ID of the corresponding {@link DlpViolationScanRecord} in the {@link
    * EphemeralDlpScans} Spanner table. This can be used to fetch additional details about the scan,
    * e.g. for audit logging.
@@ -58,6 +64,21 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String scanOutcome;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public DlpAction getDlpAction() {
+    return dlpAction;
+  }
+
+  /**
+   * @param dlpAction dlpAction or {@code null} for none
+   */
+  public DlpScanSummary setDlpAction(DlpAction dlpAction) {
+    this.dlpAction = dlpAction;
+    return this;
+  }
 
   /**
    * The scan ID of the corresponding {@link DlpViolationScanRecord} in the {@link

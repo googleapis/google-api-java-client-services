@@ -181,7 +181,7 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the texttospeech server.  After setting any optional
        * parameters, call the {@link SynthesizeLongAudio#execute()} method to invoke the remote operation.
        *
-       * @param parent The resource states of the request in the form of `projects/locations/voices`.
+       * @param parent The resource states of the request in the form of `projects/locations`.
        * @param content the {@link com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest}
        * @return the request
        */
@@ -209,7 +209,7 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent The resource states of the request in the form of `projects/locations/voices`.
+         * @param parent The resource states of the request in the form of `projects/locations`.
          * @param content the {@link com.google.api.services.texttospeech.v1beta1.model.SynthesizeLongAudioRequest}
          * @since 1.13
          */
@@ -278,17 +278,17 @@ public class Texttospeech extends com.google.api.client.googleapis.services.json
           return (SynthesizeLongAudio) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource states of the request in the form of `projects/locations/voices`. */
+        /** The resource states of the request in the form of `projects/locations`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource states of the request in the form of `projects/locations/voices`.
+        /** The resource states of the request in the form of `projects/locations`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The resource states of the request in the form of `projects/locations/voices`. */
+        /** The resource states of the request in the form of `projects/locations`. */
         public SynthesizeLongAudio setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

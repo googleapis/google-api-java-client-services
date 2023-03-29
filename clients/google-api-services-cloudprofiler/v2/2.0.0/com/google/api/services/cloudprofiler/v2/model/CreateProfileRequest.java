@@ -32,21 +32,21 @@ package com.google.api.services.cloudprofiler.v2.model;
 public final class CreateProfileRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Deployment details.
+   * Deployment details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Deployment deployment;
 
   /**
-   * Required. One or more profile types that the agent is capable of providing.
+   * One or more profile types that the agent is capable of providing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> profileType;
 
   /**
-   * Required. Deployment details.
+   * Deployment details.
    * @return value or {@code null} for none
    */
   public Deployment getDeployment() {
@@ -54,7 +54,7 @@ public final class CreateProfileRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Deployment details.
+   * Deployment details.
    * @param deployment deployment or {@code null} for none
    */
   public CreateProfileRequest setDeployment(Deployment deployment) {
@@ -63,7 +63,7 @@ public final class CreateProfileRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. One or more profile types that the agent is capable of providing.
+   * One or more profile types that the agent is capable of providing.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProfileType() {
@@ -71,7 +71,7 @@ public final class CreateProfileRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. One or more profile types that the agent is capable of providing.
+   * One or more profile types that the agent is capable of providing.
    * @param profileType profileType or {@code null} for none
    */
   public CreateProfileRequest setProfileType(java.util.List<java.lang.String> profileType) {

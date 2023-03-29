@@ -57,7 +57,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpRequest extends com.
 
   /**
    * An opaque string from a previous SignInWithIdp response. If set, it can be used to repeat the
-   * sign-in operation from the previous SignInWithIdp operation.
+   * sign-in operation from the previous SignInWithIdp operation. This may be present if the user
+   * needs to confirm their account information as part of a previous federated login attempt, or
+   * perform account linking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +203,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpRequest extends com.
 
   /**
    * An opaque string from a previous SignInWithIdp response. If set, it can be used to repeat the
-   * sign-in operation from the previous SignInWithIdp operation.
+   * sign-in operation from the previous SignInWithIdp operation. This may be present if the user
+   * needs to confirm their account information as part of a previous federated login attempt, or
+   * perform account linking.
    * @return value or {@code null} for none
    */
   public java.lang.String getPendingToken() {
@@ -210,7 +214,9 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithIdpRequest extends com.
 
   /**
    * An opaque string from a previous SignInWithIdp response. If set, it can be used to repeat the
-   * sign-in operation from the previous SignInWithIdp operation.
+   * sign-in operation from the previous SignInWithIdp operation. This may be present if the user
+   * needs to confirm their account information as part of a previous federated login attempt, or
+   * perform account linking.
    * @param pendingToken pendingToken or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignInWithIdpRequest setPendingToken(java.lang.String pendingToken) {

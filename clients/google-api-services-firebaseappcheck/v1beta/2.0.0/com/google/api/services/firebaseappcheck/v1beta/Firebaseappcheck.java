@@ -7127,15 +7127,15 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * The maximum number of Services to return in the response. Only explicitly configured
          * services are returned. The server may return fewer than this at its own discretion. If no
-         * value is specified (or too large a value is specified), the server will impose its own
-         * limit.
+         * value is specified or set to zero (or too large a value is specified), the server will
+         * impose its own limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The maximum number of Services to return in the response. Only explicitly configured services are
-       returned. The server may return fewer than this at its own discretion. If no value is specified (or
-       too large a value is specified), the server will impose its own limit.
+       returned. The server may return fewer than this at its own discretion. If no value is specified or
+       set to zero (or too large a value is specified), the server will impose its own limit.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -7144,8 +7144,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * The maximum number of Services to return in the response. Only explicitly configured
          * services are returned. The server may return fewer than this at its own discretion. If no
-         * value is specified (or too large a value is specified), the server will impose its own
-         * limit.
+         * value is specified or set to zero (or too large a value is specified), the server will
+         * impose its own limit.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

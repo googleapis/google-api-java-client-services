@@ -32,6 +32,24 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class Gateway extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
+   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
+   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> addresses;
+
+  /**
+   * Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate
+   * (selected based on SNI) when establishing a TLS connection. This feature only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> certificateUrls;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -46,6 +64,16 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should
+   * apply security policy to inbound (VM to Proxy) initiated connections. For example:
+   * `projects/locations/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of
+   * type 'SECURE_WEB_GATEWAY'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewaySecurityPolicy;
+
+  /**
    * Optional. Set of label tags associated with the Gateway resource.
    * The value may be {@code null}.
    */
@@ -58,6 +86,15 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The relative resource name identifying the VPC network that is using this
+   * configuration. For example: `projects/global/networks/network-1`. Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
 
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
@@ -94,6 +131,15 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.lang.String serverTlsPolicy;
 
   /**
+   * Optional. The relative resource name identifying the subnetwork in which this SWG is allocated.
+   * For example: `projects/regions/us-central1/subnetworks/network-1` Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnetwork;
+
+  /**
    * Immutable. The type of the customer managed gateway. This field is required. If unspecified, an
    * error is returned.
    * The value may be {@code null}.
@@ -107,6 +153,48 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
+   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
+   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAddresses() {
+    return addresses;
+  }
+
+  /**
+   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
+   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
+   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * @param addresses addresses or {@code null} for none
+   */
+  public Gateway setAddresses(java.util.List<java.lang.String> addresses) {
+    this.addresses = addresses;
+    return this;
+  }
+
+  /**
+   * Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate
+   * (selected based on SNI) when establishing a TLS connection. This feature only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCertificateUrls() {
+    return certificateUrls;
+  }
+
+  /**
+   * Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate
+   * (selected based on SNI) when establishing a TLS connection. This feature only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'.
+   * @param certificateUrls certificateUrls or {@code null} for none
+   */
+  public Gateway setCertificateUrls(java.util.List<java.lang.String> certificateUrls) {
+    this.certificateUrls = certificateUrls;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when the resource was created.
@@ -143,6 +231,29 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should
+   * apply security policy to inbound (VM to Proxy) initiated connections. For example:
+   * `projects/locations/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of
+   * type 'SECURE_WEB_GATEWAY'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewaySecurityPolicy() {
+    return gatewaySecurityPolicy;
+  }
+
+  /**
+   * Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should
+   * apply security policy to inbound (VM to Proxy) initiated connections. For example:
+   * `projects/locations/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of
+   * type 'SECURE_WEB_GATEWAY'.
+   * @param gatewaySecurityPolicy gatewaySecurityPolicy or {@code null} for none
+   */
+  public Gateway setGatewaySecurityPolicy(java.lang.String gatewaySecurityPolicy) {
+    this.gatewaySecurityPolicy = gatewaySecurityPolicy;
+    return this;
+  }
+
+  /**
    * Optional. Set of label tags associated with the Gateway resource.
    * @return value or {@code null} for none
    */
@@ -173,6 +284,27 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The relative resource name identifying the VPC network that is using this
+   * configuration. For example: `projects/global/networks/network-1`. Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Optional. The relative resource name identifying the VPC network that is using this
+   * configuration. For example: `projects/global/networks/network-1`. Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY'.
+   * @param network network or {@code null} for none
+   */
+  public Gateway setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 
@@ -253,6 +385,27 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setServerTlsPolicy(java.lang.String serverTlsPolicy) {
     this.serverTlsPolicy = serverTlsPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. The relative resource name identifying the subnetwork in which this SWG is allocated.
+   * For example: `projects/regions/us-central1/subnetworks/network-1` Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnetwork() {
+    return subnetwork;
+  }
+
+  /**
+   * Optional. The relative resource name identifying the subnetwork in which this SWG is allocated.
+   * For example: `projects/regions/us-central1/subnetworks/network-1` Currently, this field is
+   * specific to gateways of type 'SECURE_WEB_GATEWAY".
+   * @param subnetwork subnetwork or {@code null} for none
+   */
+  public Gateway setSubnetwork(java.lang.String subnetwork) {
+    this.subnetwork = subnetwork;
     return this;
   }
 

@@ -41,7 +41,7 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   private String endTime;
 
   /**
-   * Export to a Cloud Storage destination.
+   * Exports to a Cloud Storage destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Export to a Cloud Storage destination.
+   * Exports to a Cloud Storage destination.
    * @return value or {@code null} for none
    */
   public GcsDestination getGcsDestination() {
@@ -92,7 +92,7 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Export to a Cloud Storage destination.
+   * Exports to a Cloud Storage destination.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public ExportMessagesRequest setGcsDestination(GcsDestination gcsDestination) {

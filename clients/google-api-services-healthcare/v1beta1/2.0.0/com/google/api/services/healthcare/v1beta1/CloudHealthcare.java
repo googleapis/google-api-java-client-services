@@ -19914,6 +19914,289 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Gets all incoming references to a given target FHIR resource. Can also get all incoming
+             * references when the target resource does not exist, for example, if the target has been deleted.
+             * On success, the response body contains a Bundle with type `searchset`, where each entry in the
+             * Bundle contains the full content of the resource. If the operation fails, an `OperationOutcome`
+             * is returned describing the failure. If the request cannot be mapped to a valid API method on a
+             * FHIR store, a generic Google Cloud error might be returned instead.
+             *
+             * Create a request for the method "fhir.Resource-incoming-references".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ResourceIncomingReferences#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent Required. The name of the FHIR store that holds the target resource.
+             * @return the request
+             */
+            public ResourceIncomingReferences resourceIncomingReferences(java.lang.String parent) throws java.io.IOException {
+              ResourceIncomingReferences result = new ResourceIncomingReferences(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class ResourceIncomingReferences extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir/$references";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              /**
+               * Gets all incoming references to a given target FHIR resource. Can also get all incoming
+               * references when the target resource does not exist, for example, if the target has been
+               * deleted. On success, the response body contains a Bundle with type `searchset`, where each
+               * entry in the Bundle contains the full content of the resource. If the operation fails, an
+               * `OperationOutcome` is returned describing the failure. If the request cannot be mapped to a
+               * valid API method on a FHIR store, a generic Google Cloud error might be returned instead.
+               *
+               * Create a request for the method "fhir.Resource-incoming-references".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ResourceIncomingReferences#execute()} method to invoke the
+               * remote operation. <p> {@link ResourceIncomingReferences#initialize(com.google.api.client.google
+               * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the FHIR store that holds the target resource.
+               * @since 1.13
+               */
+              protected ResourceIncomingReferences(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ResourceIncomingReferences set$Xgafv(java.lang.String $Xgafv) {
+                return (ResourceIncomingReferences) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ResourceIncomingReferences setAccessToken(java.lang.String accessToken) {
+                return (ResourceIncomingReferences) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ResourceIncomingReferences setAlt(java.lang.String alt) {
+                return (ResourceIncomingReferences) super.setAlt(alt);
+              }
+
+              @Override
+              public ResourceIncomingReferences setCallback(java.lang.String callback) {
+                return (ResourceIncomingReferences) super.setCallback(callback);
+              }
+
+              @Override
+              public ResourceIncomingReferences setFields(java.lang.String fields) {
+                return (ResourceIncomingReferences) super.setFields(fields);
+              }
+
+              @Override
+              public ResourceIncomingReferences setKey(java.lang.String key) {
+                return (ResourceIncomingReferences) super.setKey(key);
+              }
+
+              @Override
+              public ResourceIncomingReferences setOauthToken(java.lang.String oauthToken) {
+                return (ResourceIncomingReferences) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ResourceIncomingReferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ResourceIncomingReferences) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ResourceIncomingReferences setQuotaUser(java.lang.String quotaUser) {
+                return (ResourceIncomingReferences) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ResourceIncomingReferences setUploadType(java.lang.String uploadType) {
+                return (ResourceIncomingReferences) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ResourceIncomingReferences setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ResourceIncomingReferences) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the FHIR store that holds the target resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the FHIR store that holds the target resource.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The name of the FHIR store that holds the target resource. */
+              public ResourceIncomingReferences setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Maximum number of resources in a page. If not specified, 100 is used. May not be
+               * larger than 1000.
+               */
+              @com.google.api.client.util.Key("_count")
+              private java.lang.Integer count;
+
+              /** Maximum number of resources in a page. If not specified, 100 is used. May not be larger than 1000.
+               */
+              public java.lang.Integer getCount() {
+                return count;
+              }
+
+              /**
+               * Maximum number of resources in a page. If not specified, 100 is used. May not be
+               * larger than 1000.
+               */
+              public ResourceIncomingReferences setCount(java.lang.Integer count) {
+                this.count = count;
+                return this;
+              }
+
+              /**
+               * Used to retrieve the next page of results when using pagination. Set `_page_token`
+               * to the value of _page_token set in next page links' url. Next page are returned in
+               * the response bundle's links field, where `link.relation` is "next". Omit
+               * `_page_token` if no previous request has been made.
+               */
+              @com.google.api.client.util.Key("_page_token")
+              private java.lang.String pageToken;
+
+              /** Used to retrieve the next page of results when using pagination. Set `_page_token` to the value of
+             _page_token set in next page links' url. Next page are returned in the response bundle's links
+             field, where `link.relation` is "next". Omit `_page_token` if no previous request has been made.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Used to retrieve the next page of results when using pagination. Set `_page_token`
+               * to the value of _page_token set in next page links' url. Next page are returned in
+               * the response bundle's links field, where `link.relation` is "next". Omit
+               * `_page_token` if no previous request has been made.
+               */
+              public ResourceIncomingReferences setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Used to simplify the representation of the returned resources. `_summary=text`
+               * returns only the `text`, `id`, and `meta` top-level fields. `_summary=data` removes
+               * the `text` field and returns all other fields. `_summary=false` returns all parts
+               * of the resource(s). Either not providing this parameter or providing an empty value
+               * to this parameter also returns all parts of the resource(s).
+               */
+              @com.google.api.client.util.Key("_summary")
+              private java.lang.String summary;
+
+              /** Used to simplify the representation of the returned resources. `_summary=text` returns only the
+             `text`, `id`, and `meta` top-level fields. `_summary=data` removes the `text` field and returns all
+             other fields. `_summary=false` returns all parts of the resource(s). Either not providing this
+             parameter or providing an empty value to this parameter also returns all parts of the resource(s).
+               */
+              public java.lang.String getSummary() {
+                return summary;
+              }
+
+              /**
+               * Used to simplify the representation of the returned resources. `_summary=text`
+               * returns only the `text`, `id`, and `meta` top-level fields. `_summary=data` removes
+               * the `text` field and returns all other fields. `_summary=false` returns all parts
+               * of the resource(s). Either not providing this parameter or providing an empty value
+               * to this parameter also returns all parts of the resource(s).
+               */
+              public ResourceIncomingReferences setSummary(java.lang.String summary) {
+                this.summary = summary;
+                return this;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned. If not provided or an empty value is
+               * provided, no filter on the returned resource type(s) is applied.
+               */
+              @com.google.api.client.util.Key("_type")
+              private java.lang.String type;
+
+              /** String of comma-delimited FHIR resource types. If provided, only resources of the specified
+             resource type(s) are returned. If not provided or an empty value is provided, no filter on the
+             returned resource type(s) is applied.
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned. If not provided or an empty value is
+               * provided, no filter on the returned resource type(s) is applied.
+               */
+              public ResourceIncomingReferences setType(java.lang.String type) {
+                this.type = type;
+                return this;
+              }
+
+              /**
+               * Required. The target whose incoming references are requested. This param is
+               * required and must not be empty. It uses the format "ResourceType/ResourceID", for
+               * example, target=ResourceType/ResourceID.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String target;
+
+              /** Required. The target whose incoming references are requested. This param is required and must not
+             be empty. It uses the format "ResourceType/ResourceID", for example,
+             target=ResourceType/ResourceID.
+               */
+              public java.lang.String getTarget() {
+                return target;
+              }
+
+              /**
+               * Required. The target whose incoming references are requested. This param is
+               * required and must not be empty. It uses the format "ResourceType/ResourceID", for
+               * example, target=ResourceType/ResourceID.
+               */
+              public ResourceIncomingReferences setTarget(java.lang.String target) {
+                this.target = target;
+                return this;
+              }
+
+              @Override
+              public ResourceIncomingReferences set(String parameterName, Object value) {
+                return (ResourceIncomingReferences) super.set(parameterName, value);
+              }
+            }
+            /**
              * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
              * store. To remove all versions of a resource, first delete the current version and then call this
              * method. This is not a FHIR standard operation. For samples that show how to call `Resource-
@@ -22302,7 +22585,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `:below`, `:[type]`, `:not`, and `recurse` (DSTU2 and STU3) or `:iterate` (R4). Supported search
              * result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
              * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to 100,
-             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there are
+             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. The server might
+             * return fewer resources than requested to prevent excessively large responses. If there are
              * additional results, the returned `Bundle` contains a link of `relation` "next", which has a
              * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
@@ -22366,15 +22650,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * STU3) or `:iterate` (R4). Supported search result parameters: `_sort`, `_count`, `_include`,
                * `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The maximum number of search
                * results returned defaults to 100, which can be overridden by the `_count` parameter up to a
-               * maximum limit of 1000. If there are additional results, the returned `Bundle` contains a link
-               * of `relation` "next", which has a `_page_token` parameter for an opaque pagination token that
-               * can be used to retrieve the next page. Resources with a total size larger than 5MB or a field
-               * count larger than 50,000 might not be fully searchable as the server might trim its generated
-               * search index in those cases. Note: FHIR resources are indexed asynchronously, so there might be
-               * a slight delay between the time a resource is created or changes and when the change is
-               * reflected in search results. For samples and detailed information, see [Searching for FHIR
-               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * maximum limit of 1000. The server might return fewer resources than requested to prevent
+               * excessively large responses. If there are additional results, the returned `Bundle` contains a
+               * link of `relation` "next", which has a `_page_token` parameter for an opaque pagination token
+               * that can be used to retrieve the next page. Resources with a total size larger than 5MB or a
+               * field count larger than 50,000 might not be fully searchable as the server might trim its
+               * generated search index in those cases. Note: FHIR resources are indexed asynchronously, so
+               * there might be a slight delay between the time a resource is created or changes and when the
+               * change is reflected in search results. For samples and detailed information, see [Searching for
+               * FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced
+               * FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -22509,7 +22794,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `:below`, `:[type]`, `:not`, and `recurse` (DSTU2 and STU3) or `:iterate` (R4). Supported search
              * result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
              * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to 100,
-             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there are
+             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. The server might
+             * return fewer resources than requested to prevent excessively large responses. If there are
              * additional results, the returned `Bundle` contains a link of `relation` "next", which has a
              * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
@@ -22577,15 +22863,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * STU3) or `:iterate` (R4). Supported search result parameters: `_sort`, `_count`, `_include`,
                * `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The maximum number of search
                * results returned defaults to 100, which can be overridden by the `_count` parameter up to a
-               * maximum limit of 1000. If there are additional results, the returned `Bundle` contains a link
-               * of `relation` "next", which has a `_page_token` parameter for an opaque pagination token that
-               * can be used to retrieve the next page. Resources with a total size larger than 5MB or a field
-               * count larger than 50,000 might not be fully searchable as the server might trim its generated
-               * search index in those cases. Note: FHIR resources are indexed asynchronously, so there might be
-               * a slight delay between the time a resource is created or changes and when the change is
-               * reflected in search results. For samples and detailed information, see [Searching for FHIR
-               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * maximum limit of 1000. The server might return fewer resources than requested to prevent
+               * excessively large responses. If there are additional results, the returned `Bundle` contains a
+               * link of `relation` "next", which has a `_page_token` parameter for an opaque pagination token
+               * that can be used to retrieve the next page. Resources with a total size larger than 5MB or a
+               * field count larger than 50,000 might not be fully searchable as the server might trim its
+               * generated search index in those cases. Note: FHIR resources are indexed asynchronously, so
+               * there might be a slight delay between the time a resource is created or changes and when the
+               * change is reflected in search results. For samples and detailed information, see [Searching for
+               * FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced
+               * FHIR search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *
@@ -24970,7 +25257,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the dataset this message belongs to.
+             * @param parent The name of the HL7v2 store this message belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CreateMessageRequest}
              * @return the request
              */
@@ -25001,7 +25288,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the dataset this message belongs to.
+               * @param parent The name of the HL7v2 store this message belongs to.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CreateMessageRequest}
                * @since 1.13
                */
@@ -25070,17 +25357,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the dataset this message belongs to. */
+              /** The name of the HL7v2 store this message belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the dataset this message belongs to.
+              /** The name of the HL7v2 store this message belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the dataset this message belongs to. */
+              /** The name of the HL7v2 store this message belongs to. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26362,12 +26649,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-           * the binding to use different resource name schemes, such as `users/operations`. To override the
-           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -26392,12 +26674,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-             * override the binding to use different resource name schemes, such as `users/operations`. To
-             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-             * their service configuration. For backwards compatibility, the default name includes the
-             * operations collection id, however overriding users must ensure the name binding is the parent
-             * resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *

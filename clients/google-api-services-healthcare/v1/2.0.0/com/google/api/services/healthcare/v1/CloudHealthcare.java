@@ -18071,7 +18071,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `:below`, `:[type]`, `:not`, and `recurse` (DSTU2 and STU3) or `:iterate` (R4). Supported search
              * result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
              * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to 100,
-             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there are
+             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. The server might
+             * return fewer resources than requested to prevent excessively large responses. If there are
              * additional results, the returned `Bundle` contains a link of `relation` "next", which has a
              * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
@@ -18135,7 +18136,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
                * `_summary=text`, `_summary=data`, and `_elements`. The maximum number of search results
                * returned defaults to 100, which can be overridden by the `_count` parameter up to a maximum
-               * limit of 1000. If there are additional results, the returned `Bundle` contains a link of
+               * limit of 1000. The server might return fewer resources than requested to prevent excessively
+               * large responses. If there are additional results, the returned `Bundle` contains a link of
                * `relation` "next", which has a `_page_token` parameter for an opaque pagination token that can
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
@@ -18278,7 +18280,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `:below`, `:[type]`, `:not`, and `recurse` (DSTU2 and STU3) or `:iterate` (R4). Supported search
              * result parameters: `_sort`, `_count`, `_include`, `_revinclude`, `_summary=text`,
              * `_summary=data`, and `_elements`. The maximum number of search results returned defaults to 100,
-             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. If there are
+             * which can be overridden by the `_count` parameter up to a maximum limit of 1000. The server might
+             * return fewer resources than requested to prevent excessively large responses. If there are
              * additional results, the returned `Bundle` contains a link of `relation` "next", which has a
              * `_page_token` parameter for an opaque pagination token that can be used to retrieve the next
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
@@ -18346,7 +18349,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
                * `_summary=text`, `_summary=data`, and `_elements`. The maximum number of search results
                * returned defaults to 100, which can be overridden by the `_count` parameter up to a maximum
-               * limit of 1000. If there are additional results, the returned `Bundle` contains a link of
+               * limit of 1000. The server might return fewer resources than requested to prevent excessively
+               * large responses. If there are additional results, the returned `Bundle` contains a link of
                * `relation` "next", which has a `_page_token` parameter for an opaque pagination token that can
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
@@ -20540,7 +20544,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the healthcare server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the dataset this message belongs to.
+             * @param parent The name of the HL7v2 store this message belongs to.
              * @param content the {@link com.google.api.services.healthcare.v1.model.CreateMessageRequest}
              * @return the request
              */
@@ -20571,7 +20575,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent The name of the dataset this message belongs to.
+               * @param parent The name of the HL7v2 store this message belongs to.
                * @param content the {@link com.google.api.services.healthcare.v1.model.CreateMessageRequest}
                * @since 1.13
                */
@@ -20640,17 +20644,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the dataset this message belongs to. */
+              /** The name of the HL7v2 store this message belongs to. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** The name of the dataset this message belongs to.
+              /** The name of the HL7v2 store this message belongs to.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** The name of the dataset this message belongs to. */
+              /** The name of the HL7v2 store this message belongs to. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21932,12 +21936,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-           * the binding to use different resource name schemes, such as `users/operations`. To override the
-           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -21962,12 +21961,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-             * override the binding to use different resource name schemes, such as `users/operations`. To
-             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-             * their service configuration. For backwards compatibility, the default name includes the
-             * operations collection id, however overriding users must ensure the name binding is the parent
-             * resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *

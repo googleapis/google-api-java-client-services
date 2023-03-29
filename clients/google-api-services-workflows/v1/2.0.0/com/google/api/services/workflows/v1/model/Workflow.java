@@ -30,6 +30,15 @@ package com.google.api.services.workflows.v1.model;
 public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Describes the level of platform logging to apply to calls and call responses during
+   * executions of this workflow. If both the workflow and the execution specify a logging level,
+   * the execution level takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String callLogLevel;
+
+  /**
    * Output only. The timestamp for when the workflow was created.
    * The value may be {@code null}.
    */
@@ -111,6 +120,27 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Describes the level of platform logging to apply to calls and call responses during
+   * executions of this workflow. If both the workflow and the execution specify a logging level,
+   * the execution level takes precedence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCallLogLevel() {
+    return callLogLevel;
+  }
+
+  /**
+   * Optional. Describes the level of platform logging to apply to calls and call responses during
+   * executions of this workflow. If both the workflow and the execution specify a logging level,
+   * the execution level takes precedence.
+   * @param callLogLevel callLogLevel or {@code null} for none
+   */
+  public Workflow setCallLogLevel(java.lang.String callLogLevel) {
+    this.callLogLevel = callLogLevel;
+    return this;
+  }
 
   /**
    * Output only. The timestamp for when the workflow was created.

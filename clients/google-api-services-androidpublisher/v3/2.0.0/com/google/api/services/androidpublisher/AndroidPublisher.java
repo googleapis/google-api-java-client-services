@@ -6236,7 +6236,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track.
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
@@ -6261,7 +6262,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track.
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
@@ -6368,17 +6370,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** Identifier of the track.
+        /** Identifier of the track. [More on track name](https://developers.google.com/android-
+       publisher/tracks#ff-track-name)
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         public Get setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -6543,7 +6552,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track.
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -6570,7 +6580,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track.
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -6668,17 +6679,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** Identifier of the track.
+        /** Identifier of the track. [More on track name](https://developers.google.com/android-
+       publisher/tracks#ff-track-name)
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         public Patch setTrack(java.lang.String track) {
           this.track = track;
           return this;
@@ -6699,7 +6717,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track.
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -6726,7 +6745,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track.
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -6824,17 +6844,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** Identifier of the track.
+        /** Identifier of the track. [More on track name](https://developers.google.com/android-
+       publisher/tracks#ff-track-name)
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /** Identifier of the track. */
+        /**
+         * Identifier of the track. [More on track name](https://developers.google.com/android-
+         * publisher/tracks#ff-track-name)
+         */
         public Update setTrack(java.lang.String track) {
           this.track = track;
           return this;

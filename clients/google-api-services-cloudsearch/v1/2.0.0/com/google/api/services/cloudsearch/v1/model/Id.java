@@ -32,7 +32,11 @@ public final class Id extends com.google.api.client.json.GenericJson {
 
   /**
    * The User account in which the DirEntry was originally created. If name_space==GAIA, then it's
-   * the gaia_id of the user this id is referring to.
+   * the gaia_id of the user this id is referring to. This field should really be called the "bucket
+   * ID", not the creator ID. In some circumstances, such as copying a Google Docs file, a user can
+   * create an item in a different user's bucket, so it should not be relied upon for anything other
+   * than bucket location. To look up the requesting user who initially created item, use the
+   * `creator_id` DirEntry field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,7 +65,11 @@ public final class Id extends com.google.api.client.json.GenericJson {
 
   /**
    * The User account in which the DirEntry was originally created. If name_space==GAIA, then it's
-   * the gaia_id of the user this id is referring to.
+   * the gaia_id of the user this id is referring to. This field should really be called the "bucket
+   * ID", not the creator ID. In some circumstances, such as copying a Google Docs file, a user can
+   * create an item in a different user's bucket, so it should not be relied upon for anything other
+   * than bucket location. To look up the requesting user who initially created item, use the
+   * `creator_id` DirEntry field instead.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getCreatorUserId() {
@@ -70,7 +78,11 @@ public final class Id extends com.google.api.client.json.GenericJson {
 
   /**
    * The User account in which the DirEntry was originally created. If name_space==GAIA, then it's
-   * the gaia_id of the user this id is referring to.
+   * the gaia_id of the user this id is referring to. This field should really be called the "bucket
+   * ID", not the creator ID. In some circumstances, such as copying a Google Docs file, a user can
+   * create an item in a different user's bucket, so it should not be relied upon for anything other
+   * than bucket location. To look up the requesting user who initially created item, use the
+   * `creator_id` DirEntry field instead.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
   public Id setCreatorUserId(java.math.BigInteger creatorUserId) {

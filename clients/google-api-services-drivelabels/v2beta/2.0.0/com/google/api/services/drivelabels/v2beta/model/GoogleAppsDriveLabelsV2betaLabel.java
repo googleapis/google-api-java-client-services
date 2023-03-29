@@ -60,6 +60,13 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
   private GoogleAppsDriveLabelsV2betaUserInfo creator;
 
   /**
+   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customer;
+
+  /**
    * Output only. The time this label was disabled. This value has no meaning when the label is not
    * disabled.
    * The value may be {@code null}.
@@ -259,6 +266,23 @@ public final class GoogleAppsDriveLabelsV2betaLabel extends com.google.api.clien
    */
   public GoogleAppsDriveLabelsV2betaLabel setCreator(GoogleAppsDriveLabelsV2betaUserInfo creator) {
     this.creator = creator;
+    return this;
+  }
+
+  /**
+   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomer() {
+    return customer;
+  }
+
+  /**
+   * Output only. The customer this label belongs to. For example: "customers/123abc789."
+   * @param customer customer or {@code null} for none
+   */
+  public GoogleAppsDriveLabelsV2betaLabel setCustomer(java.lang.String customer) {
+    this.customer = customer;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * NOTE WHEN ADDING NEW PROTO FIELDS: Be sure to add datapol annotations to new fields with
- * potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 31
+ * potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 32
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -51,6 +51,19 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String chipRenderType;
+
+  /**
+   * Contains additional metadata that further enhances the annotation when it is returned as part
+   * of search response. For example, this can be used to define how the annotation matches the
+   * search. Information can be used to highlight in rendering search results. The following are the
+   * different annotation text fields that can be highlighted by this field: 1. DriveMetadata.title
+   * 2. UploadMetadata.content_name 3.
+   * GsuiteIntegrationMetadata.TasksMessageIntegrationRenderData.title 4.
+   * GsuiteIntegrationMetadata.CalendarEventAnnotationData.title
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedMessageComponentSearchInfo componentSearchInfo;
 
   /**
    * The value may be {@code null}.
@@ -296,6 +309,35 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   public Annotation setChipRenderType(java.lang.String chipRenderType) {
     this.chipRenderType = chipRenderType;
+    return this;
+  }
+
+  /**
+   * Contains additional metadata that further enhances the annotation when it is returned as part
+   * of search response. For example, this can be used to define how the annotation matches the
+   * search. Information can be used to highlight in rendering search results. The following are the
+   * different annotation text fields that can be highlighted by this field: 1. DriveMetadata.title
+   * 2. UploadMetadata.content_name 3.
+   * GsuiteIntegrationMetadata.TasksMessageIntegrationRenderData.title 4.
+   * GsuiteIntegrationMetadata.CalendarEventAnnotationData.title
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedMessageComponentSearchInfo getComponentSearchInfo() {
+    return componentSearchInfo;
+  }
+
+  /**
+   * Contains additional metadata that further enhances the annotation when it is returned as part
+   * of search response. For example, this can be used to define how the annotation matches the
+   * search. Information can be used to highlight in rendering search results. The following are the
+   * different annotation text fields that can be highlighted by this field: 1. DriveMetadata.title
+   * 2. UploadMetadata.content_name 3.
+   * GsuiteIntegrationMetadata.TasksMessageIntegrationRenderData.title 4.
+   * GsuiteIntegrationMetadata.CalendarEventAnnotationData.title
+   * @param componentSearchInfo componentSearchInfo or {@code null} for none
+   */
+  public Annotation setComponentSearchInfo(AppsDynamiteSharedMessageComponentSearchInfo componentSearchInfo) {
+    this.componentSearchInfo = componentSearchInfo;
     return this;
   }
 

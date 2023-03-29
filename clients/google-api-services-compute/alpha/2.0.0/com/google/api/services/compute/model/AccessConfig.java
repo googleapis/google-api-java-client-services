@@ -31,17 +31,18 @@ package com.google.api.services.compute.model;
 public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
-   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
-   * will automatically assign an external IPv6 address from the instance's subnetwork.
+   * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
+   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * use a static external IP address, it must be unused and in the same region as the instance's
+   * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
+   * the instance's subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIpv6;
 
   /**
-   * The prefix length of the external IPv6 range.
+   * Applies to ipv6AccessConfigs only. The prefix length of the external IPv6 range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,18 +56,19 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT, but
-   * you can use any arbitrary string, such as My external IP or Network Access.
+   * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
+   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Specify an unused static external IP address available to the project or leave this field
+   * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
+   * external IP address, it must live in the same region as the zone of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,17 +127,19 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean setPublicPtr;
 
   /**
-   * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+   * The type of configuration. In accessConfigs (IPv4), the default and only option is
+   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
-   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
-   * will automatically assign an external IPv6 address from the instance's subnetwork.
+   * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
+   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * use a static external IP address, it must be unused and in the same region as the instance's
+   * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
+   * the instance's subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6() {
@@ -143,10 +147,11 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The first IPv6 address of the external IPv6 range associated with this instance, prefix length
-   * is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address,
-   * it must be unused and in the same region as the instance's zone. If not specified, Google Cloud
-   * will automatically assign an external IPv6 address from the instance's subnetwork.
+   * Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated
+   * with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To
+   * use a static external IP address, it must be unused and in the same region as the instance's
+   * zone. If not specified, Google Cloud will automatically assign an external IPv6 address from
+   * the instance's subnetwork.
    * @param externalIpv6 externalIpv6 or {@code null} for none
    */
   public AccessConfig setExternalIpv6(java.lang.String externalIpv6) {
@@ -155,7 +160,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix length of the external IPv6 range.
+   * Applies to ipv6AccessConfigs only. The prefix length of the external IPv6 range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExternalIpv6PrefixLength() {
@@ -163,7 +168,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The prefix length of the external IPv6 range.
+   * Applies to ipv6AccessConfigs only. The prefix length of the external IPv6 range.
    * @param externalIpv6PrefixLength externalIpv6PrefixLength or {@code null} for none
    */
   public AccessConfig setExternalIpv6PrefixLength(java.lang.Integer externalIpv6PrefixLength) {
@@ -189,8 +194,9 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT, but
-   * you can use any arbitrary string, such as My external IP or Network Access.
+   * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
+   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -198,8 +204,9 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT, but
-   * you can use any arbitrary string, such as My external IP or Network Access.
+   * The name of this access configuration. In accessConfigs (IPv4), the default and recommended
+   * name is External NAT, but you can use any arbitrary string, such as My external IP or Network
+   * Access. In ipv6AccessConfigs, the recommend name is External IPv6.
    * @param name name or {@code null} for none
    */
   public AccessConfig setName(java.lang.String name) {
@@ -208,10 +215,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Specify an unused static external IP address available to the project or leave this field
+   * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
+   * external IP address, it must live in the same region as the zone of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getNatIP() {
@@ -219,10 +226,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Applies to accessConfigs (IPv4) only. An external IP address associated with this instance.
+   * Specify an unused static external IP address available to the project or leave this field
+   * undefined to use an IP from a shared ephemeral IP address pool. If you specify a static
+   * external IP address, it must live in the same region as the zone of the instance.
    * @param natIP natIP or {@code null} for none
    */
   public AccessConfig setNatIP(java.lang.String natIP) {
@@ -353,7 +360,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+   * The type of configuration. In accessConfigs (IPv4), the default and only option is
+   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -361,7 +369,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+   * The type of configuration. In accessConfigs (IPv4), the default and only option is
+   * ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
    * @param type type or {@code null} for none
    */
   public AccessConfig setType(java.lang.String type) {

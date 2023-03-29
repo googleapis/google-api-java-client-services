@@ -39,12 +39,6 @@ public final class SetCommonInstanceMetadataOperationMetadataPerLocationOperatio
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String operation;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
@@ -59,21 +53,6 @@ public final class SetCommonInstanceMetadataOperationMetadataPerLocationOperatio
    */
   public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo setError(Status error) {
     this.error = error;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOperation() {
-    return operation;
-  }
-
-  /**
-   * @param operation operation or {@code null} for none
-   */
-  public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo setOperation(java.lang.String operation) {
-    this.operation = operation;
     return this;
   }
 

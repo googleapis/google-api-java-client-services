@@ -31,7 +31,7 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full comment body. Maximum of 120000 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String plainTextBody;
 
   /**
-   * The full comment body. Maximum of 120000 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
    * @return value or {@code null} for none
    */
   public java.lang.String getBody() {
@@ -75,7 +75,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full comment body. Maximum of 120000 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
    * @param body body or {@code null} for none
    */
   public Comment setBody(java.lang.String body) {

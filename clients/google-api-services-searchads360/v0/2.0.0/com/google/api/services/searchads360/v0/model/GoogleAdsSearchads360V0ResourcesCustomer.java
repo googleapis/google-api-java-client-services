@@ -60,6 +60,14 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   private GoogleAdsSearchads360V0ResourcesConversionTrackingSetting conversionTrackingSetting;
 
   /**
+   * Output only. The timestamp when this customer was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTime;
+
+  /**
    * Immutable. The currency in which the account operates. A subset of the currency codes from the
    * ISO 4217 standard is supported.
    * The value may be {@code null}.
@@ -89,7 +97,7 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   private java.lang.String engineId;
 
   /**
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,6 +225,25 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   }
 
   /**
+   * Output only. The timestamp when this customer was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. The timestamp when this customer was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setCreationTime(java.lang.String creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
    * Immutable. The currency in which the account operates. A subset of the currency codes from the
    * ISO 4217 standard is supported.
    * @return value or {@code null} for none
@@ -287,7 +314,7 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   }
 
   /**
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinalUrlSuffix() {
@@ -295,7 +322,7 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   }
 
   /**
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
    * @param finalUrlSuffix finalUrlSuffix or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCustomer setFinalUrlSuffix(java.lang.String finalUrlSuffix) {

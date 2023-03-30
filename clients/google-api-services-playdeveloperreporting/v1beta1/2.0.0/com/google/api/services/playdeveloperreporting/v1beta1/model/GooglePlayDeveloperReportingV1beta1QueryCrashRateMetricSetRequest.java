@@ -84,7 +84,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
    * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
    * actively during the aggregation period. An app is considered to be in active use if it is
    * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times.
+   * aggregate this count further, as it may result in users being counted multiple times. The value
+   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
+   * of the value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +225,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
    * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
    * actively during the aggregation period. An app is considered to be in active use if it is
    * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times.
+   * aggregate this count further, as it may result in users being counted multiple times. The value
+   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
+   * of the value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -250,7 +254,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
    * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
    * actively during the aggregation period. An app is considered to be in active use if it is
    * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times.
+   * aggregate this count further, as it may result in users being counted multiple times. The value
+   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
+   * of the value.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {

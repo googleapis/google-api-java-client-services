@@ -38,6 +38,27 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAdGroup adGroup;
 
   /**
+   * The ad referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd;
+
+  /**
+   * The ad group ad label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel;
+
+  /**
+   * The ad group audience view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAudienceView adGroupAudienceView;
+
+  /**
    * The bid modifier referenced in the query.
    * The value may be {@code null}.
    */
@@ -50,6 +71,27 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesAdGroupCriterion adGroupCriterion;
+
+  /**
+   * The ad group criterion label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel adGroupCriterionLabel;
+
+  /**
+   * The ad group label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupLabel adGroupLabel;
+
+  /**
+   * The age range view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView;
 
   /**
    * The bidding strategy referenced in the query.
@@ -66,6 +108,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesCampaign campaign;
 
   /**
+   * The campaign audience view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCampaignAudienceView campaignAudienceView;
+
+  /**
    * The campaign budget referenced in the query.
    * The value may be {@code null}.
    */
@@ -78,6 +127,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion;
+
+  /**
+   * The campaign label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel;
 
   /**
    * The conversion action referenced in the query.
@@ -121,11 +177,39 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesCustomerManagerLink customerManagerLink;
 
   /**
+   * The dynamic search ads search term view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView;
+
+  /**
+   * The gender view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesGenderView genderView;
+
+  /**
    * The keyword view referenced in the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesKeywordView keywordView;
+
+  /**
+   * The label referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesLabel label;
+
+  /**
+   * The location view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesLocationView locationView;
 
   /**
    * The metrics.
@@ -149,6 +233,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0CommonSegments segments;
 
   /**
+   * The user list referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesUserList userList;
+
+  /**
+   * The webpage view referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesWebpageView webpageView;
+
+  /**
    * The ad group referenced in the query.
    * @return value or {@code null} for none
    */
@@ -162,6 +260,57 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroup(GoogleAdsSearchads360V0ResourcesAdGroup adGroup) {
     this.adGroup = adGroup;
+    return this;
+  }
+
+  /**
+   * The ad referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAd getAdGroupAd() {
+    return adGroupAd;
+  }
+
+  /**
+   * The ad referenced in the query.
+   * @param adGroupAd adGroupAd or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAd(GoogleAdsSearchads360V0ResourcesAdGroupAd adGroupAd) {
+    this.adGroupAd = adGroupAd;
+    return this;
+  }
+
+  /**
+   * The ad group ad label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAdLabel getAdGroupAdLabel() {
+    return adGroupAdLabel;
+  }
+
+  /**
+   * The ad group ad label referenced in the query.
+   * @param adGroupAdLabel adGroupAdLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAdLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel) {
+    this.adGroupAdLabel = adGroupAdLabel;
+    return this;
+  }
+
+  /**
+   * The ad group audience view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAudienceView getAdGroupAudienceView() {
+    return adGroupAudienceView;
+  }
+
+  /**
+   * The ad group audience view referenced in the query.
+   * @param adGroupAudienceView adGroupAudienceView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAudienceView(GoogleAdsSearchads360V0ResourcesAdGroupAudienceView adGroupAudienceView) {
+    this.adGroupAudienceView = adGroupAudienceView;
     return this;
   }
 
@@ -200,6 +349,57 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The ad group criterion label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel getAdGroupCriterionLabel() {
+    return adGroupCriterionLabel;
+  }
+
+  /**
+   * The ad group criterion label referenced in the query.
+   * @param adGroupCriterionLabel adGroupCriterionLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupCriterionLabel(GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel adGroupCriterionLabel) {
+    this.adGroupCriterionLabel = adGroupCriterionLabel;
+    return this;
+  }
+
+  /**
+   * The ad group label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupLabel getAdGroupLabel() {
+    return adGroupLabel;
+  }
+
+  /**
+   * The ad group label referenced in the query.
+   * @param adGroupLabel adGroupLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupLabel(GoogleAdsSearchads360V0ResourcesAdGroupLabel adGroupLabel) {
+    this.adGroupLabel = adGroupLabel;
+    return this;
+  }
+
+  /**
+   * The age range view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAgeRangeView getAgeRangeView() {
+    return ageRangeView;
+  }
+
+  /**
+   * The age range view referenced in the query.
+   * @param ageRangeView ageRangeView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAgeRangeView(GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView) {
+    this.ageRangeView = ageRangeView;
+    return this;
+  }
+
+  /**
    * The bidding strategy referenced in the query.
    * @return value or {@code null} for none
    */
@@ -234,6 +434,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The campaign audience view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignAudienceView getCampaignAudienceView() {
+    return campaignAudienceView;
+  }
+
+  /**
+   * The campaign audience view referenced in the query.
+   * @param campaignAudienceView campaignAudienceView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignAudienceView(GoogleAdsSearchads360V0ResourcesCampaignAudienceView campaignAudienceView) {
+    this.campaignAudienceView = campaignAudienceView;
+    return this;
+  }
+
+  /**
    * The campaign budget referenced in the query.
    * @return value or {@code null} for none
    */
@@ -264,6 +481,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignCriterion(GoogleAdsSearchads360V0ResourcesCampaignCriterion campaignCriterion) {
     this.campaignCriterion = campaignCriterion;
+    return this;
+  }
+
+  /**
+   * The campaign label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignLabel getCampaignLabel() {
+    return campaignLabel;
+  }
+
+  /**
+   * The campaign label referenced in the query.
+   * @param campaignLabel campaignLabel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignLabel(GoogleAdsSearchads360V0ResourcesCampaignLabel campaignLabel) {
+    this.campaignLabel = campaignLabel;
     return this;
   }
 
@@ -353,6 +587,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The dynamic search ads search term view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView getDynamicSearchAdsSearchTermView() {
+    return dynamicSearchAdsSearchTermView;
+  }
+
+  /**
+   * The dynamic search ads search term view referenced in the query.
+   * @param dynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setDynamicSearchAdsSearchTermView(GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView dynamicSearchAdsSearchTermView) {
+    this.dynamicSearchAdsSearchTermView = dynamicSearchAdsSearchTermView;
+    return this;
+  }
+
+  /**
+   * The gender view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesGenderView getGenderView() {
+    return genderView;
+  }
+
+  /**
+   * The gender view referenced in the query.
+   * @param genderView genderView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setGenderView(GoogleAdsSearchads360V0ResourcesGenderView genderView) {
+    this.genderView = genderView;
+    return this;
+  }
+
+  /**
    * The keyword view referenced in the query.
    * @return value or {@code null} for none
    */
@@ -366,6 +634,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setKeywordView(GoogleAdsSearchads360V0ResourcesKeywordView keywordView) {
     this.keywordView = keywordView;
+    return this;
+  }
+
+  /**
+   * The label referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesLabel getLabel() {
+    return label;
+  }
+
+  /**
+   * The label referenced in the query.
+   * @param label label or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setLabel(GoogleAdsSearchads360V0ResourcesLabel label) {
+    this.label = label;
+    return this;
+  }
+
+  /**
+   * The location view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesLocationView getLocationView() {
+    return locationView;
+  }
+
+  /**
+   * The location view referenced in the query.
+   * @param locationView locationView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setLocationView(GoogleAdsSearchads360V0ResourcesLocationView locationView) {
+    this.locationView = locationView;
     return this;
   }
 
@@ -417,6 +719,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setSegments(GoogleAdsSearchads360V0CommonSegments segments) {
     this.segments = segments;
+    return this;
+  }
+
+  /**
+   * The user list referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesUserList getUserList() {
+    return userList;
+  }
+
+  /**
+   * The user list referenced in the query.
+   * @param userList userList or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setUserList(GoogleAdsSearchads360V0ResourcesUserList userList) {
+    this.userList = userList;
+    return this;
+  }
+
+  /**
+   * The webpage view referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesWebpageView getWebpageView() {
+    return webpageView;
+  }
+
+  /**
+   * The webpage view referenced in the query.
+   * @param webpageView webpageView or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setWebpageView(GoogleAdsSearchads360V0ResourcesWebpageView webpageView) {
+    this.webpageView = webpageView;
     return this;
   }
 

@@ -83,7 +83,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. The resource instance type on which this policy applies. Format will be of the form
-   * : "/" Example: * `compute.googleapis.com/Instance`.
+   * : `/` Example: * `compute.googleapis.com/Instance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. The resource instance type on which this policy applies. Format will be of the form
-   * : "/" Example: * `compute.googleapis.com/Instance`.
+   * : `/` Example: * `compute.googleapis.com/Instance`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -224,7 +224,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Immutable. The resource instance type on which this policy applies. Format will be of the form
-   * : "/" Example: * `compute.googleapis.com/Instance`.
+   * : `/` Example: * `compute.googleapis.com/Instance`.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

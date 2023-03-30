@@ -39,6 +39,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends co
   private java.lang.Double bidModifier;
 
   /**
+   * Immutable. A device criterion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonDeviceInfo device;
+
+  /**
    * Immutable. The resource name of the ad group bid modifier. Ad group bid modifier resource names
    * have the form: `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * The value may be {@code null}.
@@ -62,6 +69,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends co
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier setBidModifier(java.lang.Double bidModifier) {
     this.bidModifier = bidModifier;
+    return this;
+  }
+
+  /**
+   * Immutable. A device criterion.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonDeviceInfo getDevice() {
+    return device;
+  }
+
+  /**
+   * Immutable. A device criterion.
+   * @param device device or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupBidModifier setDevice(GoogleAdsSearchads360V0CommonDeviceInfo device) {
+    this.device = device;
     return this;
   }
 

@@ -70,7 +70,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * Absolute count of individual error reports that have been received for an app. *
    * `distinctUsers` (`google.type.Decimal`): Count of distinct users for which reports have been
    * received. Care must be taken not to aggregate this count further, as it may result in users
-   * being counted multiple times.
+   * being counted multiple times. This value is not rounded, however it may be an approximation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * Absolute count of individual error reports that have been received for an app. *
    * `distinctUsers` (`google.type.Decimal`): Count of distinct users for which reports have been
    * received. Care must be taken not to aggregate this count further, as it may result in users
-   * being counted multiple times.
+   * being counted multiple times. This value is not rounded, however it may be an approximation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -195,7 +195,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetR
    * Absolute count of individual error reports that have been received for an app. *
    * `distinctUsers` (`google.type.Decimal`): Count of distinct users for which reports have been
    * received. Care must be taken not to aggregate this count further, as it may result in users
-   * being counted multiple times.
+   * being counted multiple times. This value is not rounded, however it may be an approximation.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryErrorCountMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {

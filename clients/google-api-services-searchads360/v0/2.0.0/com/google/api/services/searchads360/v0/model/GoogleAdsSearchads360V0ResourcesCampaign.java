@@ -87,11 +87,21 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   private java.lang.String campaignBudget;
 
   /**
-   * Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use
+   * creation_time instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String createTime;
+
+  /**
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTime;
 
   /**
    * The setting for controlling Dynamic Search Ads (DSA).
@@ -508,7 +518,9 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use
+   * creation_time instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreateTime() {
@@ -516,11 +528,32 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
   }
 
   /**
-   * Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use
+   * creation_time instead.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setCreateTime(java.lang.String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. The timestamp when this campaign was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaign setCreationTime(java.lang.String creationTime) {
+    this.creationTime = creationTime;
     return this;
   }
 

@@ -42,7 +42,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * The entity's properties. The map's keys are property names. A property name matching regex
    * `__.*__` is reserved. A reserved property name is forbidden in certain documented contexts. The
-   * name must not contain more than 500 characters. The name cannot be `""`.
+   * map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * The entity's properties. The map's keys are property names. A property name matching regex
    * `__.*__` is reserved. A reserved property name is forbidden in certain documented contexts. The
-   * name must not contain more than 500 characters. The name cannot be `""`.
+   * map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Value> getProperties() {
@@ -82,7 +82,7 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * The entity's properties. The map's keys are property names. A property name matching regex
    * `__.*__` is reserved. A reserved property name is forbidden in certain documented contexts. The
-   * name must not contain more than 500 characters. The name cannot be `""`.
+   * map keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be empty.
    * @param properties properties or {@code null} for none
    */
   public Entity setProperties(java.util.Map<String, Value> properties) {

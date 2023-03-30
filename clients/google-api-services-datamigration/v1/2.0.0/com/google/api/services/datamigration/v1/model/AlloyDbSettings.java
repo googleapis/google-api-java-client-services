@@ -31,6 +31,15 @@ package com.google.api.services.datamigration.v1.model;
 public final class AlloyDbSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The encryption config can be specified to encrypt the data disks and other persistent
+   * data resources of a cluster with a customer-managed encryption key (CMEK). When this field is
+   * not specified, the cluster will then use default encryption scheme to protect the user data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
    * Required. Input only. Initial user to setup during cluster creation. Required.
    * The value may be {@code null}.
    */
@@ -60,6 +69,27 @@ public final class AlloyDbSettings extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcNetwork;
+
+  /**
+   * Optional. The encryption config can be specified to encrypt the data disks and other persistent
+   * data resources of a cluster with a customer-managed encryption key (CMEK). When this field is
+   * not specified, the cluster will then use default encryption scheme to protect the user data.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. The encryption config can be specified to encrypt the data disks and other persistent
+   * data resources of a cluster with a customer-managed encryption key (CMEK). When this field is
+   * not specified, the cluster will then use default encryption scheme to protect the user data.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public AlloyDbSettings setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
+    return this;
+  }
 
   /**
    * Required. Input only. Initial user to setup during cluster creation. Required.

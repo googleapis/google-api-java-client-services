@@ -294,13 +294,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String nextSteps;
 
   /**
-   * Contains information about the org policy constraints associated with the finding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<OrgPolicyConstraint> orgPolicyConstraints;
-
-  /**
    * The relative resource name of the source the finding belongs to. See:
    * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
    * immutable after creation time. For example:
@@ -919,23 +912,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setNextSteps(java.lang.String nextSteps) {
     this.nextSteps = nextSteps;
-    return this;
-  }
-
-  /**
-   * Contains information about the org policy constraints associated with the finding.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<OrgPolicyConstraint> getOrgPolicyConstraints() {
-    return orgPolicyConstraints;
-  }
-
-  /**
-   * Contains information about the org policy constraints associated with the finding.
-   * @param orgPolicyConstraints orgPolicyConstraints or {@code null} for none
-   */
-  public Finding setOrgPolicyConstraints(java.util.List<OrgPolicyConstraint> orgPolicyConstraints) {
-    this.orgPolicyConstraints = orgPolicyConstraints;
     return this;
   }
 

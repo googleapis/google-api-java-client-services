@@ -38,6 +38,49 @@ public final class DotnetSettings extends com.google.api.client.json.GenericJson
   private CommonLanguageSettings common;
 
   /**
+   * Namespaces which must be aliased in snippets due to a known (but non-generator-predictable)
+   * naming collision
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> forcedNamespaceAliases;
+
+  /**
+   * Method signatures (in the form "service.method(signature)") which are provided separately, so
+   * shouldn't be generated. Snippets *calling* these methods are still generated, however.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> handwrittenSignatures;
+
+  /**
+   * List of full resource types to ignore during generation. This is typically used for API-
+   * specific Location resources, which should be handled by the generator as if they were actually
+   * the common Location resources. Example entry: "documentai.googleapis.com/Location"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ignoredResources;
+
+  /**
+   * Map from full resource types to the effective short name for the resource. This is used when
+   * otherwise resource named from different services would cause naming collisions. Example entry:
+   * "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> renamedResources;
+
+  /**
+   * Map from original service names to renamed versions. This is used when the default generated
+   * types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to
+   * SubscriberServiceApi.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> renamedServices;
+
+  /**
    * Some settings.
    * @return value or {@code null} for none
    */
@@ -51,6 +94,107 @@ public final class DotnetSettings extends com.google.api.client.json.GenericJson
    */
   public DotnetSettings setCommon(CommonLanguageSettings common) {
     this.common = common;
+    return this;
+  }
+
+  /**
+   * Namespaces which must be aliased in snippets due to a known (but non-generator-predictable)
+   * naming collision
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getForcedNamespaceAliases() {
+    return forcedNamespaceAliases;
+  }
+
+  /**
+   * Namespaces which must be aliased in snippets due to a known (but non-generator-predictable)
+   * naming collision
+   * @param forcedNamespaceAliases forcedNamespaceAliases or {@code null} for none
+   */
+  public DotnetSettings setForcedNamespaceAliases(java.util.List<java.lang.String> forcedNamespaceAliases) {
+    this.forcedNamespaceAliases = forcedNamespaceAliases;
+    return this;
+  }
+
+  /**
+   * Method signatures (in the form "service.method(signature)") which are provided separately, so
+   * shouldn't be generated. Snippets *calling* these methods are still generated, however.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHandwrittenSignatures() {
+    return handwrittenSignatures;
+  }
+
+  /**
+   * Method signatures (in the form "service.method(signature)") which are provided separately, so
+   * shouldn't be generated. Snippets *calling* these methods are still generated, however.
+   * @param handwrittenSignatures handwrittenSignatures or {@code null} for none
+   */
+  public DotnetSettings setHandwrittenSignatures(java.util.List<java.lang.String> handwrittenSignatures) {
+    this.handwrittenSignatures = handwrittenSignatures;
+    return this;
+  }
+
+  /**
+   * List of full resource types to ignore during generation. This is typically used for API-
+   * specific Location resources, which should be handled by the generator as if they were actually
+   * the common Location resources. Example entry: "documentai.googleapis.com/Location"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIgnoredResources() {
+    return ignoredResources;
+  }
+
+  /**
+   * List of full resource types to ignore during generation. This is typically used for API-
+   * specific Location resources, which should be handled by the generator as if they were actually
+   * the common Location resources. Example entry: "documentai.googleapis.com/Location"
+   * @param ignoredResources ignoredResources or {@code null} for none
+   */
+  public DotnetSettings setIgnoredResources(java.util.List<java.lang.String> ignoredResources) {
+    this.ignoredResources = ignoredResources;
+    return this;
+  }
+
+  /**
+   * Map from full resource types to the effective short name for the resource. This is used when
+   * otherwise resource named from different services would cause naming collisions. Example entry:
+   * "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRenamedResources() {
+    return renamedResources;
+  }
+
+  /**
+   * Map from full resource types to the effective short name for the resource. This is used when
+   * otherwise resource named from different services would cause naming collisions. Example entry:
+   * "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"
+   * @param renamedResources renamedResources or {@code null} for none
+   */
+  public DotnetSettings setRenamedResources(java.util.Map<String, java.lang.String> renamedResources) {
+    this.renamedResources = renamedResources;
+    return this;
+  }
+
+  /**
+   * Map from original service names to renamed versions. This is used when the default generated
+   * types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to
+   * SubscriberServiceApi.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRenamedServices() {
+    return renamedServices;
+  }
+
+  /**
+   * Map from original service names to renamed versions. This is used when the default generated
+   * types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to
+   * SubscriberServiceApi.
+   * @param renamedServices renamedServices or {@code null} for none
+   */
+  public DotnetSettings setRenamedServices(java.util.Map<String, java.lang.String> renamedServices) {
+    this.renamedServices = renamedServices;
     return this;
   }
 

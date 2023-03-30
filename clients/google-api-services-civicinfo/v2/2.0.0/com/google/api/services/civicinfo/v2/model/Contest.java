@@ -110,14 +110,6 @@ public final class Contest extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> primaryParties;
 
   /**
-   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
-   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String primaryParty;
-
-  /**
    * The set of ballot responses for the referendum. A ballot response represents a line on the
    * ballot. Common examples might include "yes" or "no" for referenda. This field is only populated
    * for contests of type 'Referendum'.
@@ -402,25 +394,6 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    */
   public Contest setPrimaryParties(java.util.List<java.lang.String> primaryParties) {
     this.primaryParties = primaryParties;
-    return this;
-  }
-
-  /**
-   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
-   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPrimaryParty() {
-    return primaryParty;
-  }
-
-  /**
-   * [DEPRECATED] If this is a partisan election, the name of the party it is for. This field as
-   * deprecated in favor of the array "primaryParties", as contests may contain more than one party.
-   * @param primaryParty primaryParty or {@code null} for none
-   */
-  public Contest setPrimaryParty(java.lang.String primaryParty) {
-    this.primaryParty = primaryParty;
     return this;
   }
 

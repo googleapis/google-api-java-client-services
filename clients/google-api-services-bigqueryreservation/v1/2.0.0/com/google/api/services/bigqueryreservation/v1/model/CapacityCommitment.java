@@ -68,7 +68,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
    * set to true, this commitment is placed in the organization's secondary region which is
    * designated for disaster recovery purposes. If false, this commitment is placed in the
-   * organization's default region.
+   * organization's default region. NOTE: this is a preview feature. Project must be allow-listed in
+   * order to set this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +191,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
    * set to true, this commitment is placed in the organization's secondary region which is
    * designated for disaster recovery purposes. If false, this commitment is placed in the
-   * organization's default region.
+   * organization's default region. NOTE: this is a preview feature. Project must be allow-listed in
+   * order to set this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMultiRegionAuxiliary() {
@@ -201,7 +203,8 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
    * set to true, this commitment is placed in the organization's secondary region which is
    * designated for disaster recovery purposes. If false, this commitment is placed in the
-   * organization's default region.
+   * organization's default region. NOTE: this is a preview feature. Project must be allow-listed in
+   * order to set this field.
    * @param multiRegionAuxiliary multiRegionAuxiliary or {@code null} for none
    */
   public CapacityCommitment setMultiRegionAuxiliary(java.lang.Boolean multiRegionAuxiliary) {

@@ -31,6 +31,13 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Assessment of this transaction for behavioral trust.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict;
+
+  /**
    * Assessment of this transaction for risk of being part of a card testing attack.
    * The value may be {@code null}.
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
    */
   @com.google.api.client.util.Key
   private java.lang.Float transactionRisk;
+
+  /**
+   * Assessment of this transaction for behavioral trust.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict getBehavioralTrustVerdict() {
+    return behavioralTrustVerdict;
+  }
+
+  /**
+   * Assessment of this transaction for behavioral trust.
+   * @param behavioralTrustVerdict behavioralTrustVerdict or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setBehavioralTrustVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict behavioralTrustVerdict) {
+    this.behavioralTrustVerdict = behavioralTrustVerdict;
+    return this;
+  }
 
   /**
    * Assessment of this transaction for risk of being part of a card testing attack.

@@ -31,7 +31,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceRegionalPersistentDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the disk to use.
+   * Type of the disk to use. Defaults to pd-standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.String reclaimPolicy;
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set.
+   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.String sourceSnapshot;
 
   /**
-   * Type of the disk to use.
+   * Type of the disk to use. Defaults to pd-standard.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -76,7 +76,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Type of the disk to use.
+   * Type of the disk to use. Defaults to pd-standard.
    * @param diskType diskType or {@code null} for none
    */
   public GceRegionalPersistentDisk setDiskType(java.lang.String diskType) {
@@ -86,7 +86,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
    * @return value or {@code null} for none
    */
   public java.lang.String getFsType() {
@@ -95,7 +95,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
    * @param fsType fsType or {@code null} for none
    */
   public GceRegionalPersistentDisk setFsType(java.lang.String fsType) {
@@ -121,7 +121,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set.
+   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSizeGb() {
@@ -129,7 +129,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set.
+   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public GceRegionalPersistentDisk setSizeGb(java.lang.Integer sizeGb) {

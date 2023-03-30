@@ -38,6 +38,16 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String architecture;
 
   /**
+   * The binary package. This is significant when the source is different than the binary itself.
+   * Historically if they've differed, we've stored the name of the source and its version in the
+   * package/version fields, but we should also store the binary package info, as that's what's
+   * actually installed. See https://b.corp.google.com/issues/175908657#comment15
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Binary binary;
+
+  /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
    * may manifest. Examples include distro or storage location for vulnerable jar.
    * The value may be {@code null}.
@@ -150,6 +160,29 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setArchitecture(java.lang.String architecture) {
     this.architecture = architecture;
+    return this;
+  }
+
+  /**
+   * The binary package. This is significant when the source is different than the binary itself.
+   * Historically if they've differed, we've stored the name of the source and its version in the
+   * package/version fields, but we should also store the binary package info, as that's what's
+   * actually installed. See https://b.corp.google.com/issues/175908657#comment15
+   * @return value or {@code null} for none
+   */
+  public Binary getBinary() {
+    return binary;
+  }
+
+  /**
+   * The binary package. This is significant when the source is different than the binary itself.
+   * Historically if they've differed, we've stored the name of the source and its version in the
+   * package/version fields, but we should also store the binary package info, as that's what's
+   * actually installed. See https://b.corp.google.com/issues/175908657#comment15
+   * @param binary binary or {@code null} for none
+   */
+  public PackageData setBinary(Binary binary) {
+    this.binary = binary;
     return this;
   }
 

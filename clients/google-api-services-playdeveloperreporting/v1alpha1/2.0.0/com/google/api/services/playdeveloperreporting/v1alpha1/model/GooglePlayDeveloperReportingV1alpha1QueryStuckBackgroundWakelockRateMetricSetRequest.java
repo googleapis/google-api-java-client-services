@@ -76,7 +76,9 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakel
    * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
    * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
    * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * this count further, as it may result in users being counted multiple times. The value is
+   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
+   * the value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +209,9 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakel
    * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
    * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
    * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * this count further, as it may result in users being counted multiple times. The value is
+   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
+   * the value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -226,7 +230,9 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakel
    * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
    * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
    * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times.
+   * this count further, as it may result in users being counted multiple times. The value is
+   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
+   * the value.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakelockRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {

@@ -5126,24 +5126,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the Nodes1 collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Sasportal sasportal = new Sasportal(...);}
-       *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+       *   {@code Sasportal.Nodes1.List request = sasportal.nodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public Nodes1 nodes() {
+        return new Nodes1();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class Nodes1 {
 
         /**
          * Creates a new node.
@@ -9415,24 +9415,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
     }
     /**
-     * An accessor for creating requests from the Nodes collection.
+     * An accessor for creating requests from the Nodes1 collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code Sasportal sasportal = new Sasportal(...);}
-     *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+     *   {@code Sasportal.Nodes1.List request = sasportal.nodes().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Nodes nodes() {
-      return new Nodes();
+    public Nodes1 nodes() {
+      return new Nodes1();
     }
 
     /**
      * The "nodes" collection of methods.
      */
-    public class Nodes {
+    public class Nodes1 {
 
       /**
        * Creates a new node.
@@ -11162,24 +11162,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the Nodes2 collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Sasportal sasportal = new Sasportal(...);}
-       *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+       *   {@code Sasportal.Nodes2.List request = sasportal.nodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public Nodes2 nodes() {
+        return new Nodes2();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class Nodes2 {
 
         /**
          * Creates a new node.

@@ -5145,24 +5145,24 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the Nodes1 collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code SASPortalTesting prod_tt_sasportal = new SASPortalTesting(...);}
-       *   {@code SASPortalTesting.Nodes.List request = prod_tt_sasportal.nodes().list(parameters ...)}
+       *   {@code SASPortalTesting.Nodes1.List request = prod_tt_sasportal.nodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public Nodes1 nodes() {
+        return new Nodes1();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class Nodes1 {
 
         /**
          * Creates a new node.
@@ -9451,24 +9451,24 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
 
     }
     /**
-     * An accessor for creating requests from the Nodes collection.
+     * An accessor for creating requests from the Nodes1 collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code SASPortalTesting prod_tt_sasportal = new SASPortalTesting(...);}
-     *   {@code SASPortalTesting.Nodes.List request = prod_tt_sasportal.nodes().list(parameters ...)}
+     *   {@code SASPortalTesting.Nodes1.List request = prod_tt_sasportal.nodes().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Nodes nodes() {
-      return new Nodes();
+    public Nodes1 nodes() {
+      return new Nodes1();
     }
 
     /**
      * The "nodes" collection of methods.
      */
-    public class Nodes {
+    public class Nodes1 {
 
       /**
        * Creates a new node.
@@ -11204,24 +11204,24 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the Nodes2 collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code SASPortalTesting prod_tt_sasportal = new SASPortalTesting(...);}
-       *   {@code SASPortalTesting.Nodes.List request = prod_tt_sasportal.nodes().list(parameters ...)}
+       *   {@code SASPortalTesting.Nodes2.List request = prod_tt_sasportal.nodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public Nodes2 nodes() {
+        return new Nodes2();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class Nodes2 {
 
         /**
          * Creates a new node.

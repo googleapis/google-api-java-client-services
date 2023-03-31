@@ -1771,6 +1771,139 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Create a longrunning conversation upload operation. This method differs from CreateConversation
+         * by allowing audio transcription and optional DLP redaction.
+         *
+         * Create a request for the method "conversations.upload".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the conversation.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1UploadConversationRequest}
+         * @return the request
+         */
+        public Upload upload(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1UploadConversationRequest content) throws java.io.IOException {
+          Upload result = new Upload(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upload extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/conversations:upload";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a longrunning conversation upload operation. This method differs from CreateConversation
+           * by allowing audio transcription and optional DLP redaction.
+           *
+           * Create a request for the method "conversations.upload".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Upload#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the conversation.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1UploadConversationRequest}
+           * @since 1.13
+           */
+          protected Upload(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1UploadConversationRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upload set$Xgafv(java.lang.String $Xgafv) {
+            return (Upload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upload setAccessToken(java.lang.String accessToken) {
+            return (Upload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upload setAlt(java.lang.String alt) {
+            return (Upload) super.setAlt(alt);
+          }
+
+          @Override
+          public Upload setCallback(java.lang.String callback) {
+            return (Upload) super.setCallback(callback);
+          }
+
+          @Override
+          public Upload setFields(java.lang.String fields) {
+            return (Upload) super.setFields(fields);
+          }
+
+          @Override
+          public Upload setKey(java.lang.String key) {
+            return (Upload) super.setKey(key);
+          }
+
+          @Override
+          public Upload setOauthToken(java.lang.String oauthToken) {
+            return (Upload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upload setQuotaUser(java.lang.String quotaUser) {
+            return (Upload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upload setUploadType(java.lang.String uploadType) {
+            return (Upload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource of the conversation. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the conversation.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource of the conversation. */
+          public Upload setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Upload set(String parameterName, Object value) {
+            return (Upload) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Analyses collection.

@@ -101,7 +101,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxCapacityGb;
 
   /**
-   * Output only. The max number of shares allowed.
+   * The max number of shares allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -334,7 +334,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The max number of shares allowed.
+   * The max number of shares allowed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxShareCount() {
@@ -342,7 +342,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The max number of shares allowed.
+   * The max number of shares allowed.
    * @param maxShareCount maxShareCount or {@code null} for none
    */
   public Instance setMaxShareCount(java.lang.Long maxShareCount) {

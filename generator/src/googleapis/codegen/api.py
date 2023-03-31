@@ -33,7 +33,6 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import json
 import logging
 import operator
-import re
 import urlparse
 
 from googleapis.codegen import data_types

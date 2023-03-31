@@ -73,7 +73,7 @@ class TemplateObjectsTest(basetest.TestCase):
                                       language_model=self.language_model)
     bar = template_objects.CodeObject({'className': 'Bar'}, None, parent=foo)
     baz = template_objects.CodeObject({'className': 'Baz'}, None, parent=bar)
-    self.assertEquals(['Foo', 'Bar'], baz.parentPath)
+    self.assertEquals(['Foo', 'Bar'], baz.parentPath())
 
   def _TestRender(self, source, ctxt, expected):
     t = django_template.Template(source)

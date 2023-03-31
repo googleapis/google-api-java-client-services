@@ -22,6 +22,7 @@ in template expansion.
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import copy
+import re
 
 from googleapis.codegen import utilities
 from googleapis.codegen.django_helpers import MarkSafe
@@ -127,6 +128,37 @@ class CodeObject(UseableInTemplates):
     if d:
       self.SetTemplateValue('description',
                             self.ValidateAndSanitizeComment(self.StripHTML(d)))
+
+  def ComputeNonDuplicatedName(self, class_name):
+    parent_path = self.parentPath()
+    occurrences = 0
+
+    def increment_name(s, n):
+      """
+      Increments the number (if any) of the duplicated class name
+      :param s: class_name
+      :param n: occurrences
+      :return: new class_name with incremented occurrence (e.g. Test1 to Test2
+      or Test to Test1)
+      """
+      return s[0: - len(str(n - 1)) if n > 1 else len(s)] + str(n), n
+
+    # increase occurrences as they occur in the path
+    # from root class to current one
+    for parent_class_name in parent_path:
+      if class_name == parent_class_name:
+        class_name, occurrences = increment_name(class_name, occurrences + 1)
+
+    # increase occurrences as they occur in sibling resources
+    if self.parent is not None:
+      siblings = self.parent.children
+      for sibling in siblings:
+        if not isinstance(sibling, CodeObject):
+          continue
+        if sibling.GetTemplateValue('className') == class_name:
+          class_name, occurrences = increment_name(occurrences, occurrences + 1)
+
+    return class_name
 
   @classmethod
   def ValidateName(cls, name):
@@ -268,7 +300,7 @@ class CodeObject(UseableInTemplates):
                   or self.values.get('name', ''))
     return full_name
 
-  @property
+
   def parentPath(self):  # pylint: disable=g-bad-name
     """Returns the classNames from my ultimate parent to my immediate parent.
 
@@ -282,6 +314,7 @@ class CodeObject(UseableInTemplates):
     """
     parent_list = self.ancestors
     return [p.values.get('className') for p in parent_list]
+
 
   @property
   def ancestors(self):

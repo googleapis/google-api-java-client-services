@@ -72,21 +72,21 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   private String timeshiftDuration;
 
   /**
-   * The properties applied to the X axis.
+   * The properties applied to the x-axis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Axis xAxis;
 
   /**
-   * The properties applied to the Y2 axis.
+   * The properties applied to the y2-axis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Axis y2Axis;
 
   /**
-   * The properties applied to the Y axis.
+   * The properties applied to the y-axis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +165,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the X axis.
+   * The properties applied to the x-axis.
    * @return value or {@code null} for none
    */
   public Axis getXAxis() {
@@ -173,7 +173,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the X axis.
+   * The properties applied to the x-axis.
    * @param xAxis xAxis or {@code null} for none
    */
   public XyChart setXAxis(Axis xAxis) {
@@ -182,7 +182,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the Y2 axis.
+   * The properties applied to the y2-axis.
    * @return value or {@code null} for none
    */
   public Axis getY2Axis() {
@@ -190,7 +190,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the Y2 axis.
+   * The properties applied to the y2-axis.
    * @param y2Axis y2Axis or {@code null} for none
    */
   public XyChart setY2Axis(Axis y2Axis) {
@@ -199,7 +199,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the Y axis.
+   * The properties applied to the y-axis.
    * @return value or {@code null} for none
    */
   public Axis getYAxis() {
@@ -207,7 +207,7 @@ public final class XyChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The properties applied to the Y axis.
+   * The properties applied to the y-axis.
    * @param yAxis yAxis or {@code null} for none
    */
   public XyChart setYAxis(Axis yAxis) {

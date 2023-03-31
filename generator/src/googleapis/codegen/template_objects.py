@@ -22,7 +22,6 @@ in template expansion.
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import copy
-import re
 
 from googleapis.codegen import utilities
 from googleapis.codegen.django_helpers import MarkSafe
@@ -153,8 +152,6 @@ class CodeObject(UseableInTemplates):
     if self.parent is not None:
       siblings = self.parent.children
       for sibling in siblings:
-        if not isinstance(sibling, CodeObject):
-          continue
         if sibling.GetTemplateValue('className') == class_name:
           class_name, occurrences = increment_name(occurrences, occurrences + 1)
 

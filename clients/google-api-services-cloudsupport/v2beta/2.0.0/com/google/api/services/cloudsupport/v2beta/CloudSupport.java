@@ -349,6 +349,933 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class Cases {
 
     /**
+     * Close the specified case.
+     *
+     * Create a request for the method "cases.close".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link Close#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The fully qualified name of the case resource to be closed.
+     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
+     * @return the request
+     */
+    public Close close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) throws java.io.IOException {
+      Close result = new Close(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Close extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+
+      private static final String REST_PATH = "v2beta/{+name}:close";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+      /**
+       * Close the specified case.
+       *
+       * Create a request for the method "cases.close".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link Close#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Close#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The fully qualified name of the case resource to be closed.
+       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
+       * @since 1.13
+       */
+      protected Close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+      }
+
+      @Override
+      public Close set$Xgafv(java.lang.String $Xgafv) {
+        return (Close) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Close setAccessToken(java.lang.String accessToken) {
+        return (Close) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Close setAlt(java.lang.String alt) {
+        return (Close) super.setAlt(alt);
+      }
+
+      @Override
+      public Close setCallback(java.lang.String callback) {
+        return (Close) super.setCallback(callback);
+      }
+
+      @Override
+      public Close setFields(java.lang.String fields) {
+        return (Close) super.setFields(fields);
+      }
+
+      @Override
+      public Close setKey(java.lang.String key) {
+        return (Close) super.setKey(key);
+      }
+
+      @Override
+      public Close setOauthToken(java.lang.String oauthToken) {
+        return (Close) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Close setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Close) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Close setQuotaUser(java.lang.String quotaUser) {
+        return (Close) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Close setUploadType(java.lang.String uploadType) {
+        return (Close) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Close setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Close) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The fully qualified name of the case resource to be closed. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The fully qualified name of the case resource to be closed.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The fully qualified name of the case resource to be closed. */
+      public Close setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Close set(String parameterName, Object value) {
+        return (Close) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Create a new case and associate it with the given Cloud resource. The case object must have the
+     * following fields set: display_name, description, classification, and severity.
+     *
+     * Create a request for the method "cases.create".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The name of the Cloud resource under which the case should be created.
+     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+     * @return the request
+     */
+    public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
+      Create result = new Create(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+
+      private static final String REST_PATH = "v2beta/{+parent}/cases";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Create a new case and associate it with the given Cloud resource. The case object must have the
+       * following fields set: display_name, description, classification, and severity.
+       *
+       * Create a request for the method "cases.create".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The name of the Cloud resource under which the case should be created.
+       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+       * @since 1.13
+       */
+      protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the Cloud resource under which the case should be created. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The name of the Cloud resource under which the case should be created.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. The name of the Cloud resource under which the case should be created. */
+      public Create setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Escalate a case. Escalating a case will initiate the Cloud Support escalation management process.
+     * This operation is only available to certain Customer Care tiers. Go to
+     * https://cloud.google.com/support and look for 'Technical support escalations' in the feature list
+     * to find out which tiers are able to perform escalations.
+     *
+     * Create a request for the method "cases.escalate".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The fully qualified name of the Case resource to be escalated.
+     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
+     * @return the request
+     */
+    public Escalate escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) throws java.io.IOException {
+      Escalate result = new Escalate(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Escalate extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+
+      private static final String REST_PATH = "v2beta/{+name}:escalate";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+      /**
+       * Escalate a case. Escalating a case will initiate the Cloud Support escalation management
+       * process. This operation is only available to certain Customer Care tiers. Go to
+       * https://cloud.google.com/support and look for 'Technical support escalations' in the feature
+       * list to find out which tiers are able to perform escalations.
+       *
+       * Create a request for the method "cases.escalate".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Escalate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The fully qualified name of the Case resource to be escalated.
+       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
+       * @since 1.13
+       */
+      protected Escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+      }
+
+      @Override
+      public Escalate set$Xgafv(java.lang.String $Xgafv) {
+        return (Escalate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Escalate setAccessToken(java.lang.String accessToken) {
+        return (Escalate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Escalate setAlt(java.lang.String alt) {
+        return (Escalate) super.setAlt(alt);
+      }
+
+      @Override
+      public Escalate setCallback(java.lang.String callback) {
+        return (Escalate) super.setCallback(callback);
+      }
+
+      @Override
+      public Escalate setFields(java.lang.String fields) {
+        return (Escalate) super.setFields(fields);
+      }
+
+      @Override
+      public Escalate setKey(java.lang.String key) {
+        return (Escalate) super.setKey(key);
+      }
+
+      @Override
+      public Escalate setOauthToken(java.lang.String oauthToken) {
+        return (Escalate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Escalate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Escalate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Escalate setQuotaUser(java.lang.String quotaUser) {
+        return (Escalate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Escalate setUploadType(java.lang.String uploadType) {
+        return (Escalate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Escalate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Escalate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The fully qualified name of the Case resource to be escalated. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The fully qualified name of the Case resource to be escalated.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The fully qualified name of the Case resource to be escalated. */
+      public Escalate setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Escalate set(String parameterName, Object value) {
+        return (Escalate) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieve the specified case.
+     *
+     * Create a request for the method "cases.get".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The fully qualified name of a case to be retrieved.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+
+      private static final String REST_PATH = "v2beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+      /**
+       * Retrieve the specified case.
+       *
+       * Create a request for the method "cases.get".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The fully qualified name of a case to be retrieved.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The fully qualified name of a case to be retrieved. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The fully qualified name of a case to be retrieved.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The fully qualified name of a case to be retrieved. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns
+     * only the cases directly parented by that organization. To retrieve all cases under an
+     * organization, including cases parented by projects under that organization, use `cases.search`.
+     *
+     * Create a request for the method "cases.list".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The fully qualified name of parent resource to list cases under.
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse> {
+
+      private static final String REST_PATH = "v2beta/{+parent}/cases";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Retrieve all cases under the specified parent. Note: Listing cases under an Organization
+       * returns only the cases directly parented by that organization. To retrieve all cases under an
+       * organization, including cases parented by projects under that organization, use `cases.search`.
+       *
+       * Create a request for the method "cases.list".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The fully qualified name of parent resource to list cases under.
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The fully qualified name of parent resource to list cases under. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The fully qualified name of parent resource to list cases under.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. The fully qualified name of parent resource to list cases under. */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * An expression written in filter language. If non-empty, the query returns the cases that
+       * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
+       * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
+       * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
+       * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
+       * `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are `S0`,
+       * `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case creator.
+       * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
+       * `state=OPEN AND (priority=P0 OR priority=P1)`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** An expression written in filter language. If non-empty, the query returns the cases that match the
+     filter. Else, the query doesn't filter the cases. Filter expressions use the following fields with
+     the operators equals (`=`) and `AND`: - `state`: The accepted values are `OPEN` or `CLOSED`. -
+     `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
+     values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
+     [DEPRECATED] `severity`: The accepted values are `S0`, `S1`, `S2`, `S3`, or `S4`. -
+     `creator.email`: The email address of the case creator. Examples: - `state=CLOSED` - `state=OPEN
+     AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR priority=P1)`
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * An expression written in filter language. If non-empty, the query returns the cases that
+       * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
+       * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
+       * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
+       * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
+       * `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are `S0`,
+       * `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case creator.
+       * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
+       * `state=OPEN AND (priority=P0 OR priority=P1)`
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The maximum number of cases fetched with each request. Defaults to 10. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of cases fetched with each request. Defaults to 10.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The maximum number of cases fetched with each request. Defaults to 10. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A token identifying the page of results to return. If unspecified, the first page is
+       * retrieved.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying the page of results to return. If unspecified, the first page is
+       * retrieved.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the specified case. Only a subset of fields can be updated.
+     *
+     * Create a request for the method "cases.patch".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name The resource name for the case.
+     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+
+      private static final String REST_PATH = "v2beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+      /**
+       * Update the specified case. Only a subset of fields can be updated.
+       *
+       * Create a request for the method "cases.patch".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource name for the case.
+       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
+        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The resource name for the case. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource name for the case.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The resource name for the case. */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * A list of attributes of the case object that should be updated as part of this request.
+       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
+       * are specified, all supported fields are updated. WARNING: If you do not provide a field
+       * mask, then you may accidentally clear some fields. For example, if you leave field mask
+       * empty and do not provide a value for subscriber_email_addresses, then
+       * subscriber_email_addresses is updated to empty.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** A list of attributes of the case object that should be updated as part of this request. Supported
+     values are severity, display_name, and subscriber_email_addresses. If no fields are specified, all
+     supported fields are updated. WARNING: If you do not provide a field mask, then you may
+     accidentally clear some fields. For example, if you leave field mask empty and do not provide a
+     value for subscriber_email_addresses, then subscriber_email_addresses is updated to empty.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * A list of attributes of the case object that should be updated as part of this request.
+       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
+       * are specified, all supported fields are updated. WARNING: If you do not provide a field
+       * mask, then you may accidentally clear some fields. For example, if you leave field mask
+       * empty and do not provide a value for subscriber_email_addresses, then
+       * subscriber_email_addresses is updated to empty.
+       */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
      * Search cases using the specified query.
      *
      * Create a request for the method "cases.search".
@@ -566,6 +1493,542 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
 
+    /**
+     * An accessor for creating requests from the Attachments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
+     *   {@code CloudSupport.Attachments.List request = cloudsupport.attachments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Attachments attachments() {
+      return new Attachments();
+    }
+
+    /**
+     * The "attachments" collection of methods.
+     */
+    public class Attachments {
+
+      /**
+       * Retrieve all attachments associated with a support case.
+       *
+       * Create a request for the method "attachments.list".
+       *
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of Case object for which attachments should be listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse> {
+
+        private static final String REST_PATH = "v2beta/{+parent}/attachments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+        /**
+         * Retrieve all attachments associated with a support case.
+         *
+         * Create a request for the method "attachments.list".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of Case object for which attachments should be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of Case object for which attachments should be listed. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of Case object for which attachments should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The resource name of Case object for which attachments should be listed. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of attachments fetched with each request. If not provided, the default
+         * is 10. The maximum page size that will be returned is 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of attachments fetched with each request. If not provided, the default is 10.
+       The maximum page size that will be returned is 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of attachments fetched with each request. If not provided, the default
+         * is 10. The maximum page size that will be returned is 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying the page of results to return. If unspecified, the first page is
+         * retrieved.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying the page of results to return. If unspecified, the first page is
+         * retrieved.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Comments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
+     *   {@code CloudSupport.Comments.List request = cloudsupport.comments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Comments comments() {
+      return new Comments();
+    }
+
+    /**
+     * The "comments" collection of methods.
+     */
+    public class Comments {
+
+      /**
+       * Add a new comment to the specified Case. The comment object must have the following fields set:
+       * body.
+       *
+       * Create a request for the method "comments.create".
+       *
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of Case to which this comment should be added.
+       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Comment> {
+
+        private static final String REST_PATH = "v2beta/{+parent}/comments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+        /**
+         * Add a new comment to the specified Case. The comment object must have the following fields set:
+         * body.
+         *
+         * Create a request for the method "comments.create".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of Case to which this comment should be added.
+         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) {
+          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Comment.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of Case to which this comment should be added. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of Case to which this comment should be added.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The resource name of Case to which this comment should be added. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieve all Comments associated with the Case object.
+       *
+       * Create a request for the method "comments.list".
+       *
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of Case object for which comments should be listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse> {
+
+        private static final String REST_PATH = "v2beta/{+parent}/comments";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+        /**
+         * Retrieve all Comments associated with the Case object.
+         *
+         * Create a request for the method "comments.list".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of Case object for which comments should be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of Case object for which comments should be listed. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of Case object for which comments should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The resource name of Case object for which comments should be listed. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/cases/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The maximum number of comments fetched with each request. Defaults to 10. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of comments fetched with each request. Defaults to 10.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of comments fetched with each request. Defaults to 10. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token identifying the page of results to return. If unspecified, the first page is
+         * retrieved.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying the page of results to return. If unspecified, the first page is
+         * retrieved.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -610,7 +2073,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v2beta/{+name}:download";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+/attachments/[^/]+$");
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
 
       /**
        * Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
@@ -632,7 +2095,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^organizations/[^/]+/cases/[^/]+/attachments/[^/]+$");
+              "^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
         }
         initializeMediaDownload();
       }
@@ -740,7 +2203,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^organizations/[^/]+/cases/[^/]+/attachments/[^/]+$");
+              "^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
         }
         this.name = name;
         return this;
@@ -800,7 +2263,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v2beta/{+parent}/attachments";
 
       private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
        * Create a file attachment on a case or Cloud resource. The attachment object must have the
@@ -824,7 +2287,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
               "Parameter parent must conform to the pattern " +
-              "^organizations/[^/]+/cases/[^/]+$");
+              "^[^/]+/[^/]+/cases/[^/]+$");
         }
       }
 
@@ -932,7 +2395,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
               "Parameter parent must conform to the pattern " +
-              "^organizations/[^/]+/cases/[^/]+$");
+              "^[^/]+/[^/]+/cases/[^/]+$");
         }
         this.parent = parent;
         return this;
@@ -944,3022 +2407,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
 
-  }
-
-  /**
-   * An accessor for creating requests from the Organizations collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-   *   {@code CloudSupport.Organizations.List request = cloudsupport.organizations().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Organizations organizations() {
-    return new Organizations();
-  }
-
-  /**
-   * The "organizations" collection of methods.
-   */
-  public class Organizations {
-
-    /**
-     * Update the specified case. Only a subset of fields can be updated.
-     *
-     * Create a request for the method "organizations.updateCases".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link UpdateCases#execute()} method to invoke the remote operation.
-     *
-     * @param name The resource name for the case.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-     * @return the request
-     */
-    public UpdateCases updateCases(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
-      UpdateCases result = new UpdateCases(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateCases extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-      private static final String REST_PATH = "v2beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^organizations/[^/]+/cases$");
-
-      /**
-       * Update the specified case. Only a subset of fields can be updated.
-       *
-       * Create a request for the method "organizations.updateCases".
-       *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link UpdateCases#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * UpdateCases#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The resource name for the case.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-       * @since 1.13
-       */
-      protected UpdateCases(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^organizations/[^/]+/cases$");
-        }
-      }
-
-      @Override
-      public UpdateCases set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateCases) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateCases setAccessToken(java.lang.String accessToken) {
-        return (UpdateCases) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateCases setAlt(java.lang.String alt) {
-        return (UpdateCases) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateCases setCallback(java.lang.String callback) {
-        return (UpdateCases) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateCases setFields(java.lang.String fields) {
-        return (UpdateCases) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateCases setKey(java.lang.String key) {
-        return (UpdateCases) super.setKey(key);
-      }
-
-      @Override
-      public UpdateCases setOauthToken(java.lang.String oauthToken) {
-        return (UpdateCases) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateCases setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateCases) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateCases setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateCases) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateCases setUploadType(java.lang.String uploadType) {
-        return (UpdateCases) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateCases setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateCases) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The resource name for the case. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The resource name for the case.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The resource name for the case. */
-      public UpdateCases setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^organizations/[^/]+/cases$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
-       */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** A list of attributes of the case object that should be updated as part of this request. Supported
-     values are severity, display_name, and subscriber_email_addresses. If no fields are specified, all
-     supported fields are updated. WARNING: If you do not provide a field mask, then you may
-     accidentally clear some fields. For example, if you leave field mask empty and do not provide a
-     value for subscriber_email_addresses, then subscriber_email_addresses is updated to empty.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
-       */
-      public UpdateCases setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateCases set(String parameterName, Object value) {
-        return (UpdateCases) super.set(parameterName, value);
-      }
-    }
-
-    /**
-     * An accessor for creating requests from the Cases collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-     *   {@code CloudSupport.Cases.List request = cloudsupport.cases().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Cases cases() {
-      return new Cases();
-    }
-
-    /**
-     * The "cases" collection of methods.
-     */
-    public class Cases {
-
-      /**
-       * Close the specified case.
-       *
-       * Create a request for the method "cases.close".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Close#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of the case resource to be closed.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
-       * @return the request
-       */
-      public Close close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) throws java.io.IOException {
-        Close result = new Close(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Close extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}:close";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-        /**
-         * Close the specified case.
-         *
-         * Create a request for the method "cases.close".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Close#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Close#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of the case resource to be closed.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
-         * @since 1.13
-         */
-        protected Close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public Close set$Xgafv(java.lang.String $Xgafv) {
-          return (Close) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Close setAccessToken(java.lang.String accessToken) {
-          return (Close) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Close setAlt(java.lang.String alt) {
-          return (Close) super.setAlt(alt);
-        }
-
-        @Override
-        public Close setCallback(java.lang.String callback) {
-          return (Close) super.setCallback(callback);
-        }
-
-        @Override
-        public Close setFields(java.lang.String fields) {
-          return (Close) super.setFields(fields);
-        }
-
-        @Override
-        public Close setKey(java.lang.String key) {
-          return (Close) super.setKey(key);
-        }
-
-        @Override
-        public Close setOauthToken(java.lang.String oauthToken) {
-          return (Close) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Close setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Close) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Close setQuotaUser(java.lang.String quotaUser) {
-          return (Close) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Close setUploadType(java.lang.String uploadType) {
-          return (Close) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Close setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Close) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of the case resource to be closed. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of the case resource to be closed.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of the case resource to be closed. */
-        public Close setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Close set(String parameterName, Object value) {
-          return (Close) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Create a new case and associate it with the given Cloud resource. The case object must have the
-       * following fields set: display_name, description, classification, and severity.
-       *
-       * Create a request for the method "cases.create".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The name of the Cloud resource under which the case should be created.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-       * @return the request
-       */
-      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
-        Create result = new Create(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+parent}/cases";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+$");
-
-        /**
-         * Create a new case and associate it with the given Cloud resource. The case object must have the
-         * following fields set: display_name, description, classification, and severity.
-         *
-         * Create a request for the method "cases.create".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The name of the Cloud resource under which the case should be created.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-         * @since 1.13
-         */
-        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+$");
-          }
-        }
-
-        @Override
-        public Create set$Xgafv(java.lang.String $Xgafv) {
-          return (Create) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setCallback(java.lang.String callback) {
-          return (Create) super.setCallback(callback);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUploadType(java.lang.String uploadType) {
-          return (Create) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Create setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Create) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The name of the Cloud resource under which the case should be created. */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The name of the Cloud resource under which the case should be created.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /** Required. The name of the Cloud resource under which the case should be created. */
-        public Create setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Escalate a case. Escalating a case will initiate the Cloud Support escalation management process.
-       * This operation is only available to certain Customer Care tiers. Go to
-       * https://cloud.google.com/support and look for 'Technical support escalations' in the feature list
-       * to find out which tiers are able to perform escalations.
-       *
-       * Create a request for the method "cases.escalate".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of the Case resource to be escalated.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
-       * @return the request
-       */
-      public Escalate escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) throws java.io.IOException {
-        Escalate result = new Escalate(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Escalate extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}:escalate";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-        /**
-         * Escalate a case. Escalating a case will initiate the Cloud Support escalation management
-         * process. This operation is only available to certain Customer Care tiers. Go to
-         * https://cloud.google.com/support and look for 'Technical support escalations' in the feature
-         * list to find out which tiers are able to perform escalations.
-         *
-         * Create a request for the method "cases.escalate".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Escalate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of the Case resource to be escalated.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
-         * @since 1.13
-         */
-        protected Escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public Escalate set$Xgafv(java.lang.String $Xgafv) {
-          return (Escalate) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Escalate setAccessToken(java.lang.String accessToken) {
-          return (Escalate) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Escalate setAlt(java.lang.String alt) {
-          return (Escalate) super.setAlt(alt);
-        }
-
-        @Override
-        public Escalate setCallback(java.lang.String callback) {
-          return (Escalate) super.setCallback(callback);
-        }
-
-        @Override
-        public Escalate setFields(java.lang.String fields) {
-          return (Escalate) super.setFields(fields);
-        }
-
-        @Override
-        public Escalate setKey(java.lang.String key) {
-          return (Escalate) super.setKey(key);
-        }
-
-        @Override
-        public Escalate setOauthToken(java.lang.String oauthToken) {
-          return (Escalate) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Escalate setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Escalate) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Escalate setQuotaUser(java.lang.String quotaUser) {
-          return (Escalate) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Escalate setUploadType(java.lang.String uploadType) {
-          return (Escalate) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Escalate setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Escalate) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of the Case resource to be escalated. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of the Case resource to be escalated.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of the Case resource to be escalated. */
-        public Escalate setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Escalate set(String parameterName, Object value) {
-          return (Escalate) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Retrieve the specified case.
-       *
-       * Create a request for the method "cases.get".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of a case to be retrieved.
-       * @return the request
-       */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-        /**
-         * Retrieve the specified case.
-         *
-         * Create a request for the method "cases.get".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of a case to be retrieved.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of a case to be retrieved. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of a case to be retrieved.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of a case to be retrieved. */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^organizations/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns
-       * only the cases directly parented by that organization. To retrieve all cases under an
-       * organization, including cases parented by projects under that organization, use `cases.search`.
-       *
-       * Create a request for the method "cases.list".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The fully qualified name of parent resource to list cases under.
-       * @return the request
-       */
-      public List list(java.lang.String parent) throws java.io.IOException {
-        List result = new List(parent);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse> {
-
-        private static final String REST_PATH = "v2beta/{+parent}/cases";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+$");
-
-        /**
-         * Retrieve all cases under the specified parent. Note: Listing cases under an Organization
-         * returns only the cases directly parented by that organization. To retrieve all cases under an
-         * organization, including cases parented by projects under that organization, use `cases.search`.
-         *
-         * Create a request for the method "cases.list".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The fully qualified name of parent resource to list cases under.
-         * @since 1.13
-         */
-        protected List(java.lang.String parent) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of parent resource to list cases under. */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The fully qualified name of parent resource to list cases under.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /** Required. The fully qualified name of parent resource to list cases under. */
-        public List setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        /**
-         * An expression written in filter language. If non-empty, the query returns the cases that
-         * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-         * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted
-         * values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`,
-         * `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator. For
-         * example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are
-         * `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
-         * creator. Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"`
-         * - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** An expression written in filter language. If non-empty, the query returns the cases that match the
-       filter. Else, the query doesn't filter the cases. Filter expressions use the following fields with
-       the operators equals (`=`) and `AND`: - `state`: The accepted values are `OPEN` or `CLOSED`. -
-       `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
-       values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-       [DEPRECATED] `severity`: The accepted values are `S0`, `S1`, `S2`, `S3`, or `S4`. -
-       `creator.email`: The email address of the case creator. Examples: - `state=CLOSED` - `state=OPEN
-       AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /**
-         * An expression written in filter language. If non-empty, the query returns the cases that
-         * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-         * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted
-         * values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`,
-         * `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator. For
-         * example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are
-         * `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
-         * creator. Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"`
-         * - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
-          return this;
-        }
-
-        /** The maximum number of cases fetched with each request. Defaults to 10. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of cases fetched with each request. Defaults to 10.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The maximum number of cases fetched with each request. Defaults to 10. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-
-      /**
-       * An accessor for creating requests from the Attachments collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-       *   {@code CloudSupport.Attachments.List request = cloudsupport.attachments().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Attachments attachments() {
-        return new Attachments();
-      }
-
-      /**
-       * The "attachments" collection of methods.
-       */
-      public class Attachments {
-
-        /**
-         * Retrieve all attachments associated with a support case.
-         *
-         * Create a request for the method "attachments.list".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case object for which attachments should be listed.
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/attachments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-          /**
-           * Retrieve all attachments associated with a support case.
-           *
-           * Create a request for the method "attachments.list".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case object for which attachments should be listed.
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case object for which attachments should be listed. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case object for which attachments should be listed.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case object for which attachments should be listed. */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The maximum number of attachments fetched with each request. If not provided, the
-           * default is 10. The maximum page size that will be returned is 100.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of attachments fetched with each request. If not provided, the default is 10.
-         The maximum page size that will be returned is 100.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * The maximum number of attachments fetched with each request. If not provided, the
-           * default is 10. The maximum page size that will be returned is 100.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the Comments collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-       *   {@code CloudSupport.Comments.List request = cloudsupport.comments().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Comments comments() {
-        return new Comments();
-      }
-
-      /**
-       * The "comments" collection of methods.
-       */
-      public class Comments {
-
-        /**
-         * Add a new comment to the specified Case. The comment object must have the following fields set:
-         * body.
-         *
-         * Create a request for the method "comments.create".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case to which this comment should be added.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Comment> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/comments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-          /**
-           * Add a new comment to the specified Case. The comment object must have the following fields set:
-           * body.
-           *
-           * Create a request for the method "comments.create".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case to which this comment should be added.
-           * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) {
-            super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Comment.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case to which this comment should be added. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case to which this comment should be added.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case to which this comment should be added. */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Retrieve all Comments associated with the Case object.
-         *
-         * Create a request for the method "comments.list".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case object for which comments should be listed.
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/comments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+/cases/[^/]+$");
-
-          /**
-           * Retrieve all Comments associated with the Case object.
-           *
-           * Create a request for the method "comments.list".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case object for which comments should be listed.
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case object for which comments should be listed. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case object for which comments should be listed.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case object for which comments should be listed. */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** The maximum number of comments fetched with each request. Defaults to 10. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of comments fetched with each request. Defaults to 10.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The maximum number of comments fetched with each request. Defaults to 10. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
-      }
-    }
-  }
-
-  /**
-   * An accessor for creating requests from the Projects collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-   *   {@code CloudSupport.Projects.List request = cloudsupport.projects().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Projects projects() {
-    return new Projects();
-  }
-
-  /**
-   * The "projects" collection of methods.
-   */
-  public class Projects {
-
-    /**
-     * Update the specified case. Only a subset of fields can be updated.
-     *
-     * Create a request for the method "projects.updateCases".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link UpdateCases#execute()} method to invoke the remote operation.
-     *
-     * @param name The resource name for the case.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-     * @return the request
-     */
-    public UpdateCases updateCases(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
-      UpdateCases result = new UpdateCases(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class UpdateCases extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-      private static final String REST_PATH = "v2beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/cases$");
-
-      /**
-       * Update the specified case. Only a subset of fields can be updated.
-       *
-       * Create a request for the method "projects.updateCases".
-       *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link UpdateCases#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * UpdateCases#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The resource name for the case.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-       * @since 1.13
-       */
-      protected UpdateCases(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/cases$");
-        }
-      }
-
-      @Override
-      public UpdateCases set$Xgafv(java.lang.String $Xgafv) {
-        return (UpdateCases) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public UpdateCases setAccessToken(java.lang.String accessToken) {
-        return (UpdateCases) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public UpdateCases setAlt(java.lang.String alt) {
-        return (UpdateCases) super.setAlt(alt);
-      }
-
-      @Override
-      public UpdateCases setCallback(java.lang.String callback) {
-        return (UpdateCases) super.setCallback(callback);
-      }
-
-      @Override
-      public UpdateCases setFields(java.lang.String fields) {
-        return (UpdateCases) super.setFields(fields);
-      }
-
-      @Override
-      public UpdateCases setKey(java.lang.String key) {
-        return (UpdateCases) super.setKey(key);
-      }
-
-      @Override
-      public UpdateCases setOauthToken(java.lang.String oauthToken) {
-        return (UpdateCases) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public UpdateCases setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (UpdateCases) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public UpdateCases setQuotaUser(java.lang.String quotaUser) {
-        return (UpdateCases) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public UpdateCases setUploadType(java.lang.String uploadType) {
-        return (UpdateCases) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public UpdateCases setUploadProtocol(java.lang.String uploadProtocol) {
-        return (UpdateCases) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The resource name for the case. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The resource name for the case.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The resource name for the case. */
-      public UpdateCases setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/cases$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
-       */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** A list of attributes of the case object that should be updated as part of this request. Supported
-     values are severity, display_name, and subscriber_email_addresses. If no fields are specified, all
-     supported fields are updated. WARNING: If you do not provide a field mask, then you may
-     accidentally clear some fields. For example, if you leave field mask empty and do not provide a
-     value for subscriber_email_addresses, then subscriber_email_addresses is updated to empty.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /**
-       * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
-       */
-      public UpdateCases setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public UpdateCases set(String parameterName, Object value) {
-        return (UpdateCases) super.set(parameterName, value);
-      }
-    }
-
-    /**
-     * An accessor for creating requests from the Cases collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-     *   {@code CloudSupport.Cases.List request = cloudsupport.cases().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Cases cases() {
-      return new Cases();
-    }
-
-    /**
-     * The "cases" collection of methods.
-     */
-    public class Cases {
-
-      /**
-       * Close the specified case.
-       *
-       * Create a request for the method "cases.close".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Close#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of the case resource to be closed.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
-       * @return the request
-       */
-      public Close close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) throws java.io.IOException {
-        Close result = new Close(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Close extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}:close";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-        /**
-         * Close the specified case.
-         *
-         * Create a request for the method "cases.close".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Close#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Close#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of the case resource to be closed.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
-         * @since 1.13
-         */
-        protected Close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public Close set$Xgafv(java.lang.String $Xgafv) {
-          return (Close) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Close setAccessToken(java.lang.String accessToken) {
-          return (Close) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Close setAlt(java.lang.String alt) {
-          return (Close) super.setAlt(alt);
-        }
-
-        @Override
-        public Close setCallback(java.lang.String callback) {
-          return (Close) super.setCallback(callback);
-        }
-
-        @Override
-        public Close setFields(java.lang.String fields) {
-          return (Close) super.setFields(fields);
-        }
-
-        @Override
-        public Close setKey(java.lang.String key) {
-          return (Close) super.setKey(key);
-        }
-
-        @Override
-        public Close setOauthToken(java.lang.String oauthToken) {
-          return (Close) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Close setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Close) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Close setQuotaUser(java.lang.String quotaUser) {
-          return (Close) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Close setUploadType(java.lang.String uploadType) {
-          return (Close) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Close setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Close) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of the case resource to be closed. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of the case resource to be closed.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of the case resource to be closed. */
-        public Close setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Close set(String parameterName, Object value) {
-          return (Close) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Create a new case and associate it with the given Cloud resource. The case object must have the
-       * following fields set: display_name, description, classification, and severity.
-       *
-       * Create a request for the method "cases.create".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The name of the Cloud resource under which the case should be created.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-       * @return the request
-       */
-      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
-        Create result = new Create(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+parent}/cases";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-        /**
-         * Create a new case and associate it with the given Cloud resource. The case object must have the
-         * following fields set: display_name, description, classification, and severity.
-         *
-         * Create a request for the method "cases.create".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The name of the Cloud resource under which the case should be created.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
-         * @since 1.13
-         */
-        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-        }
-
-        @Override
-        public Create set$Xgafv(java.lang.String $Xgafv) {
-          return (Create) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Create setAccessToken(java.lang.String accessToken) {
-          return (Create) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Create setAlt(java.lang.String alt) {
-          return (Create) super.setAlt(alt);
-        }
-
-        @Override
-        public Create setCallback(java.lang.String callback) {
-          return (Create) super.setCallback(callback);
-        }
-
-        @Override
-        public Create setFields(java.lang.String fields) {
-          return (Create) super.setFields(fields);
-        }
-
-        @Override
-        public Create setKey(java.lang.String key) {
-          return (Create) super.setKey(key);
-        }
-
-        @Override
-        public Create setOauthToken(java.lang.String oauthToken) {
-          return (Create) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Create) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Create setQuotaUser(java.lang.String quotaUser) {
-          return (Create) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Create setUploadType(java.lang.String uploadType) {
-          return (Create) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Create setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Create) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The name of the Cloud resource under which the case should be created. */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The name of the Cloud resource under which the case should be created.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /** Required. The name of the Cloud resource under which the case should be created. */
-        public Create setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public Create set(String parameterName, Object value) {
-          return (Create) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Escalate a case. Escalating a case will initiate the Cloud Support escalation management process.
-       * This operation is only available to certain Customer Care tiers. Go to
-       * https://cloud.google.com/support and look for 'Technical support escalations' in the feature list
-       * to find out which tiers are able to perform escalations.
-       *
-       * Create a request for the method "cases.escalate".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of the Case resource to be escalated.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
-       * @return the request
-       */
-      public Escalate escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) throws java.io.IOException {
-        Escalate result = new Escalate(name, content);
-        initialize(result);
-        return result;
-      }
-
-      public class Escalate extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}:escalate";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-        /**
-         * Escalate a case. Escalating a case will initiate the Cloud Support escalation management
-         * process. This operation is only available to certain Customer Care tiers. Go to
-         * https://cloud.google.com/support and look for 'Technical support escalations' in the feature
-         * list to find out which tiers are able to perform escalations.
-         *
-         * Create a request for the method "cases.escalate".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Escalate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of the Case resource to be escalated.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
-         * @since 1.13
-         */
-        protected Escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public Escalate set$Xgafv(java.lang.String $Xgafv) {
-          return (Escalate) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Escalate setAccessToken(java.lang.String accessToken) {
-          return (Escalate) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Escalate setAlt(java.lang.String alt) {
-          return (Escalate) super.setAlt(alt);
-        }
-
-        @Override
-        public Escalate setCallback(java.lang.String callback) {
-          return (Escalate) super.setCallback(callback);
-        }
-
-        @Override
-        public Escalate setFields(java.lang.String fields) {
-          return (Escalate) super.setFields(fields);
-        }
-
-        @Override
-        public Escalate setKey(java.lang.String key) {
-          return (Escalate) super.setKey(key);
-        }
-
-        @Override
-        public Escalate setOauthToken(java.lang.String oauthToken) {
-          return (Escalate) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Escalate setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Escalate) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Escalate setQuotaUser(java.lang.String quotaUser) {
-          return (Escalate) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Escalate setUploadType(java.lang.String uploadType) {
-          return (Escalate) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Escalate setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Escalate) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of the Case resource to be escalated. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of the Case resource to be escalated.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of the Case resource to be escalated. */
-        public Escalate setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Escalate set(String parameterName, Object value) {
-          return (Escalate) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Retrieve the specified case.
-       *
-       * Create a request for the method "cases.get".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param name Required. The fully qualified name of a case to be retrieved.
-       * @return the request
-       */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
-
-        private static final String REST_PATH = "v2beta/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-        /**
-         * Retrieve the specified case.
-         *
-         * Create a request for the method "cases.get".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name Required. The fully qualified name of a case to be retrieved.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of a case to be retrieved. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** Required. The fully qualified name of a case to be retrieved.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** Required. The fully qualified name of a case to be retrieved. */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/cases/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns
-       * only the cases directly parented by that organization. To retrieve all cases under an
-       * organization, including cases parented by projects under that organization, use `cases.search`.
-       *
-       * Create a request for the method "cases.list".
-       *
-       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The fully qualified name of parent resource to list cases under.
-       * @return the request
-       */
-      public List list(java.lang.String parent) throws java.io.IOException {
-        List result = new List(parent);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse> {
-
-        private static final String REST_PATH = "v2beta/{+parent}/cases";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-        /**
-         * Retrieve all cases under the specified parent. Note: Listing cases under an Organization
-         * returns only the cases directly parented by that organization. To retrieve all cases under an
-         * organization, including cases parented by projects under that organization, use `cases.search`.
-         *
-         * Create a request for the method "cases.list".
-         *
-         * This request holds the parameters needed by the the cloudsupport server.  After setting any
-         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The fully qualified name of parent resource to list cases under.
-         * @since 1.13
-         */
-        protected List(java.lang.String parent) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** Required. The fully qualified name of parent resource to list cases under. */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The fully qualified name of parent resource to list cases under.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /** Required. The fully qualified name of parent resource to list cases under. */
-        public List setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        /**
-         * An expression written in filter language. If non-empty, the query returns the cases that
-         * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-         * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted
-         * values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`,
-         * `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator. For
-         * example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are
-         * `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
-         * creator. Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"`
-         * - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** An expression written in filter language. If non-empty, the query returns the cases that match the
-       filter. Else, the query doesn't filter the cases. Filter expressions use the following fields with
-       the operators equals (`=`) and `AND`: - `state`: The accepted values are `OPEN` or `CLOSED`. -
-       `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
-       values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-       [DEPRECATED] `severity`: The accepted values are `S0`, `S1`, `S2`, `S3`, or `S4`. -
-       `creator.email`: The email address of the case creator. Examples: - `state=CLOSED` - `state=OPEN
-       AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /**
-         * An expression written in filter language. If non-empty, the query returns the cases that
-         * match the filter. Else, the query doesn't filter the cases. Filter expressions use the
-         * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted
-         * values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`,
-         * `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator. For
-         * example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are
-         * `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
-         * creator. Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"`
-         * - `state=OPEN AND (priority=P0 OR priority=P1)`
-         */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
-          return this;
-        }
-
-        /** The maximum number of cases fetched with each request. Defaults to 10. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of cases fetched with each request. Defaults to 10.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The maximum number of cases fetched with each request. Defaults to 10. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-
-      /**
-       * An accessor for creating requests from the Attachments collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-       *   {@code CloudSupport.Attachments.List request = cloudsupport.attachments().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Attachments attachments() {
-        return new Attachments();
-      }
-
-      /**
-       * The "attachments" collection of methods.
-       */
-      public class Attachments {
-
-        /**
-         * Retrieve all attachments associated with a support case.
-         *
-         * Create a request for the method "attachments.list".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case object for which attachments should be listed.
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/attachments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-          /**
-           * Retrieve all attachments associated with a support case.
-           *
-           * Create a request for the method "attachments.list".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case object for which attachments should be listed.
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case object for which attachments should be listed. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case object for which attachments should be listed.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case object for which attachments should be listed. */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The maximum number of attachments fetched with each request. If not provided, the
-           * default is 10. The maximum page size that will be returned is 100.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of attachments fetched with each request. If not provided, the default is 10.
-         The maximum page size that will be returned is 100.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * The maximum number of attachments fetched with each request. If not provided, the
-           * default is 10. The maximum page size that will be returned is 100.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the Comments collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-       *   {@code CloudSupport.Comments.List request = cloudsupport.comments().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Comments comments() {
-        return new Comments();
-      }
-
-      /**
-       * The "comments" collection of methods.
-       */
-      public class Comments {
-
-        /**
-         * Add a new comment to the specified Case. The comment object must have the following fields set:
-         * body.
-         *
-         * Create a request for the method "comments.create".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case to which this comment should be added.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Comment> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/comments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-          /**
-           * Add a new comment to the specified Case. The comment object must have the following fields set:
-           * body.
-           *
-           * Create a request for the method "comments.create".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case to which this comment should be added.
-           * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) {
-            super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Comment.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case to which this comment should be added. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case to which this comment should be added.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case to which this comment should be added. */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Retrieve all Comments associated with the Case object.
-         *
-         * Create a request for the method "comments.list".
-         *
-         * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The resource name of Case object for which comments should be listed.
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse> {
-
-          private static final String REST_PATH = "v2beta/{+parent}/comments";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/cases/[^/]+$");
-
-          /**
-           * Retrieve all Comments associated with the Case object.
-           *
-           * Create a request for the method "comments.list".
-           *
-           * This request holds the parameters needed by the the cloudsupport server.  After setting any
-           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The resource name of Case object for which comments should be listed.
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The resource name of Case object for which comments should be listed. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The resource name of Case object for which comments should be listed.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The resource name of Case object for which comments should be listed. */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/cases/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /** The maximum number of comments fetched with each request. Defaults to 10. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of comments fetched with each request. Defaults to 10.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The maximum number of comments fetched with each request. Defaults to 10. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying the page of results to return. If unspecified, the first page is
-           * retrieved.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
-      }
-    }
   }
 
   /**

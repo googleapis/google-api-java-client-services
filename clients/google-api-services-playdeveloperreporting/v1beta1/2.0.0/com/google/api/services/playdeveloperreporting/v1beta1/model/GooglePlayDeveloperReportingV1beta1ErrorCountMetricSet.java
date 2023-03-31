@@ -24,17 +24,17 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
  * Absolute count of individual error reports that have been received for an app. * `distinctUsers`
  * (`google.type.Decimal`): Count of distinct users for which reports have been received. Care must
  * be taken not to aggregate this count further, as it may result in users being counted multiple
- * times. **Required dimension:** This dimension must be always specified in all requests in the
- * `dimensions` field in query requests. * `reportType` (string): the type of error. The value
- * should correspond to one of the possible values in ErrorType. **Supported dimensions:** *
- * `apiLevel` (string): the API level of Android that was running on the user's device. *
- * `versionCode` (int64): version of the app that was running on the user's device. * `deviceModel`
- * (string): unique identifier of the user's device model. * `deviceType` (string): identifier of
- * the device's form factor, e.g., PHONE. * `issueId` (string): the id an error was assigned to. The
- * value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
- * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make
- * of the device's primary system-on-chip, e.g., Samsung.
- * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+ * times. This value is not rounded, however it may be an approximation. **Required dimension:**
+ * This dimension must be always specified in all requests in the `dimensions` field in query
+ * requests. * `reportType` (string): the type of error. The value should correspond to one of the
+ * possible values in ErrorType. **Supported dimensions:** * `apiLevel` (string): the API level of
+ * Android that was running on the user's device. * `versionCode` (int64): version of the app that
+ * was running on the user's device. * `deviceModel` (string): unique identifier of the user's
+ * device model. * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. *
+ * `issueId` (string): the id an error was assigned to. The value should correspond to the `{issue}`
+ * component of the issue name. * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets
+ * (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g.,
+ * Samsung. [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
  * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) * `deviceCpuMake`
  * (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel` (string): Model of the

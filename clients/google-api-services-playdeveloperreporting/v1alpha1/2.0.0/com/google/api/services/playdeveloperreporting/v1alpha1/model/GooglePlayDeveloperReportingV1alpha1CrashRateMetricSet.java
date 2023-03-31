@@ -39,10 +39,11 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
  * `crashRate` and `userPerceivedCrashRate` metrics. A user is counted in this metric if they used
  * the app actively during the aggregation period. An app is considered to be in active use if it is
  * displaying any activity or executing any foreground service. Care must be taken not to aggregate
- * this count further, as it may result in users being counted multiple times. **Supported
- * dimensions:** * `apiLevel` (string): the API level of Android that was running on the user's
- * device. * `versionCode` (int64): version of the app that was running on the user's device. *
- * `deviceModel` (string): unique identifier of the user's device model. * `deviceType` (string):
+ * this count further, as it may result in users being counted multiple times. The value is rounded
+ * to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of the value.
+ * **Supported dimensions:** * `apiLevel` (string): the API level of Android that was running on the
+ * user's device. * `versionCode` (int64): version of the app that was running on the user's device.
+ * * `deviceModel` (string): unique identifier of the user's device model. * `deviceType` (string):
  * the type (also known as form factor) of the user's device. * `countryCode` (string): the country
  * or region of the user's device based on their IP address, represented as a 2-letter ISO-3166 code
  * (e.g. US for the United States). * `deviceRamBucket` (int64): RAM of the device, in MB, in

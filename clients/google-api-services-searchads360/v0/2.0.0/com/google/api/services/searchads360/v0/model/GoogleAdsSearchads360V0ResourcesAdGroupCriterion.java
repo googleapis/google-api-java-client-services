@@ -60,6 +60,14 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private java.lang.Long cpcBidMicros;
 
   /**
+   * Output only. The timestamp when this ad group criterion was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTime;
+
+  /**
    * Output only. The ID of the criterion.
    * The value may be {@code null}.
    */
@@ -72,6 +80,15 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long effectiveCpcBidMicros;
+
+  /**
+   * Output only. ID of the ad group criterion in the external engine account. This field is for
+   * non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads
+   * entity, use "ad_group_criterion.criterion_id" instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engineId;
 
   /**
    * Output only. The Engine Status for ad group criterion.
@@ -109,6 +126,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private GoogleAdsSearchads360V0CommonKeywordInfo keyword;
 
   /**
+   * Output only. The resource names of labels attached to this ad group criterion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> labels;
+
+  /**
    * Output only. The datetime when this ad group criterion was last modified. The datetime is in
    * the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
    * The value may be {@code null}.
@@ -122,6 +146,21 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup;
+
+  /**
+   * Immutable. Location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonLocationInfo location;
+
+  /**
+   * Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is
+   * immutable. To switch a criterion from positive to negative, remove then re-add it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean negative;
 
   /**
    * Output only. Information regarding the quality of the criterion.
@@ -164,6 +203,14 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUserListInfo userList;
 
   /**
    * Immutable. Webpage
@@ -243,6 +290,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
+   * Output only. The timestamp when this ad group criterion was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. The timestamp when this ad group criterion was created. The timestamp is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setCreationTime(java.lang.String creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
    * Output only. The ID of the criterion.
    * @return value or {@code null} for none
    */
@@ -273,6 +339,27 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setEffectiveCpcBidMicros(java.lang.Long effectiveCpcBidMicros) {
     this.effectiveCpcBidMicros = effectiveCpcBidMicros;
+    return this;
+  }
+
+  /**
+   * Output only. ID of the ad group criterion in the external engine account. This field is for
+   * non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads
+   * entity, use "ad_group_criterion.criterion_id" instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngineId() {
+    return engineId;
+  }
+
+  /**
+   * Output only. ID of the ad group criterion in the external engine account. This field is for
+   * non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads
+   * entity, use "ad_group_criterion.criterion_id" instead.
+   * @param engineId engineId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setEngineId(java.lang.String engineId) {
+    this.engineId = engineId;
     return this;
   }
 
@@ -362,6 +449,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
+   * Output only. The resource names of labels attached to this ad group criterion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Output only. The resource names of labels attached to this ad group criterion.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setLabels(java.util.List<java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * Output only. The datetime when this ad group criterion was last modified. The datetime is in
    * the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
    * @return value or {@code null} for none
@@ -394,6 +498,42 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setListingGroup(GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup) {
     this.listingGroup = listingGroup;
+    return this;
+  }
+
+  /**
+   * Immutable. Location.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonLocationInfo getLocation() {
+    return location;
+  }
+
+  /**
+   * Immutable. Location.
+   * @param location location or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setLocation(GoogleAdsSearchads360V0CommonLocationInfo location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
+   * Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is
+   * immutable. To switch a criterion from positive to negative, remove then re-add it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNegative() {
+    return negative;
+  }
+
+  /**
+   * Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is
+   * immutable. To switch a criterion from positive to negative, remove then re-add it.
+   * @param negative negative or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setNegative(java.lang.Boolean negative) {
+    this.negative = negative;
     return this;
   }
 
@@ -493,6 +633,25 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUserListInfo getUserList() {
+    return userList;
+  }
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * @param userList userList or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setUserList(GoogleAdsSearchads360V0CommonUserListInfo userList) {
+    this.userList = userList;
     return this;
   }
 

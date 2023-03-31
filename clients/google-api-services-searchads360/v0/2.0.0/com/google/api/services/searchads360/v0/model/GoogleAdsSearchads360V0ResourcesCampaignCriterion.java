@@ -31,6 +31,13 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Age range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange;
+
+  /**
    * The modifier for the bids when the criterion matches. The modifier must be in the range: 0.1 -
    * 10.0. Most targetable criteria types support modifiers. Use 0 to opt out of a Device type.
    * The value may be {@code null}.
@@ -60,11 +67,33 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   private java.lang.String displayName;
 
   /**
+   * Immutable. Gender.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonGenderInfo gender;
+
+  /**
+   * Immutable. Keyword.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonKeywordInfo keyword;
+
+  /**
    * Immutable. Language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonLanguageInfo language;
+
+  /**
+   * Output only. The datetime when this campaign criterion was last modified. The datetime is in
+   * the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastModifiedTime;
 
   /**
    * Immutable. Location.
@@ -96,11 +125,50 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   private java.lang.String resourceName;
 
   /**
+   * The status of the criterion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * Output only. The type of the criterion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUserListInfo userList;
+
+  /**
+   * Immutable. Webpage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonWebpageInfo webpage;
+
+  /**
+   * Immutable. Age range.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonAgeRangeInfo getAgeRange() {
+    return ageRange;
+  }
+
+  /**
+   * Immutable. Age range.
+   * @param ageRange ageRange or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setAgeRange(GoogleAdsSearchads360V0CommonAgeRangeInfo ageRange) {
+    this.ageRange = ageRange;
+    return this;
+  }
 
   /**
    * The modifier for the bids when the criterion matches. The modifier must be in the range: 0.1 -
@@ -173,6 +241,40 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   }
 
   /**
+   * Immutable. Gender.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonGenderInfo getGender() {
+    return gender;
+  }
+
+  /**
+   * Immutable. Gender.
+   * @param gender gender or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setGender(GoogleAdsSearchads360V0CommonGenderInfo gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  /**
+   * Immutable. Keyword.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonKeywordInfo getKeyword() {
+    return keyword;
+  }
+
+  /**
+   * Immutable. Keyword.
+   * @param keyword keyword or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setKeyword(GoogleAdsSearchads360V0CommonKeywordInfo keyword) {
+    this.keyword = keyword;
+    return this;
+  }
+
+  /**
    * Immutable. Language.
    * @return value or {@code null} for none
    */
@@ -186,6 +288,25 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
    */
   public GoogleAdsSearchads360V0ResourcesCampaignCriterion setLanguage(GoogleAdsSearchads360V0CommonLanguageInfo language) {
     this.language = language;
+    return this;
+  }
+
+  /**
+   * Output only. The datetime when this campaign criterion was last modified. The datetime is in
+   * the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastModifiedTime() {
+    return lastModifiedTime;
+  }
+
+  /**
+   * Output only. The datetime when this campaign criterion was last modified. The datetime is in
+   * the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * @param lastModifiedTime lastModifiedTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setLastModifiedTime(java.lang.String lastModifiedTime) {
+    this.lastModifiedTime = lastModifiedTime;
     return this;
   }
 
@@ -260,6 +381,23 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   }
 
   /**
+   * The status of the criterion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * The status of the criterion.
+   * @param status status or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setStatus(java.lang.String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * Output only. The type of the criterion.
    * @return value or {@code null} for none
    */
@@ -273,6 +411,42 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
    */
   public GoogleAdsSearchads360V0ResourcesCampaignCriterion setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUserListInfo getUserList() {
+    return userList;
+  }
+
+  /**
+   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
+   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * @param userList userList or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setUserList(GoogleAdsSearchads360V0CommonUserListInfo userList) {
+    this.userList = userList;
+    return this;
+  }
+
+  /**
+   * Immutable. Webpage.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonWebpageInfo getWebpage() {
+    return webpage;
+  }
+
+  /**
+   * Immutable. Webpage.
+   * @param webpage webpage or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignCriterion setWebpage(GoogleAdsSearchads360V0CommonWebpageInfo webpage) {
+    this.webpage = webpage;
     return this;
   }
 

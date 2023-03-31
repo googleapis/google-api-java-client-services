@@ -45,11 +45,69 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   private java.lang.Long cpcBidMicros;
 
   /**
+   * Output only. The timestamp when this ad_group was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTime;
+
+  /**
+   * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad
+   * group's end date. If this field is set, then the ad group ends at the end of the specified date
+   * in the customer's time zone. This field is only available for Microsoft Advertising and
+   * Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endDate;
+
+  /**
+   * Output only. ID of the ad group in the external engine account. This field is for non-Google
+   * Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use
+   * "ad_group.id" instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engineId;
+
+  /**
+   * Output only. The Engine Status for ad group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engineStatus;
+
+  /**
    * Output only. The ID of the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long id;
+
+  /**
+   * Output only. The resource names of labels attached to this ad group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> labels;
+
+  /**
+   * Output only. The language of the ads and keywords in an ad group. This field is only available
+   * for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-
+   * us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
+   * Output only. The datetime when this ad group was last modified. The datetime is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastModifiedTime;
 
   /**
    * The name of the ad group. This field is required and should not be empty when creating new ad
@@ -70,11 +128,29 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   private java.lang.String resourceName;
 
   /**
+   * Output only. Date when this ad group starts serving ads. By default, the ad group starts now or
+   * the ad group's start date, whichever is later. If this field is set, then the ad group starts
+   * at the beginning of the specified date in the customer's time zone. This field is only
+   * available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example:
+   * 2019-03-14
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startDate;
+
+  /**
    * The status of the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * Setting for targeting related features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting;
 
   /**
    * Immutable. The type of the ad group.
@@ -118,6 +194,86 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   }
 
   /**
+   * Output only. The timestamp when this ad_group was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. The timestamp when this ad_group was created. The timestamp is in the customer's
+   * time zone and in "yyyy-MM-dd HH:mm:ss" format.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setCreationTime(java.lang.String creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad
+   * group's end date. If this field is set, then the ad group ends at the end of the specified date
+   * in the customer's time zone. This field is only available for Microsoft Advertising and
+   * Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndDate() {
+    return endDate;
+  }
+
+  /**
+   * Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad
+   * group's end date. If this field is set, then the ad group ends at the end of the specified date
+   * in the customer's time zone. This field is only available for Microsoft Advertising and
+   * Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+   * @param endDate endDate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setEndDate(java.lang.String endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+  /**
+   * Output only. ID of the ad group in the external engine account. This field is for non-Google
+   * Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use
+   * "ad_group.id" instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngineId() {
+    return engineId;
+  }
+
+  /**
+   * Output only. ID of the ad group in the external engine account. This field is for non-Google
+   * Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use
+   * "ad_group.id" instead.
+   * @param engineId engineId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setEngineId(java.lang.String engineId) {
+    this.engineId = engineId;
+    return this;
+  }
+
+  /**
+   * Output only. The Engine Status for ad group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngineStatus() {
+    return engineStatus;
+  }
+
+  /**
+   * Output only. The Engine Status for ad group.
+   * @param engineStatus engineStatus or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setEngineStatus(java.lang.String engineStatus) {
+    this.engineStatus = engineStatus;
+    return this;
+  }
+
+  /**
    * Output only. The ID of the ad group.
    * @return value or {@code null} for none
    */
@@ -131,6 +287,63 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setId(java.lang.Long id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. The resource names of labels attached to this ad group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Output only. The resource names of labels attached to this ad group.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setLabels(java.util.List<java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The language of the ads and keywords in an ad group. This field is only available
+   * for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-
+   * us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Output only. The language of the ads and keywords in an ad group. This field is only available
+   * for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-
+   * us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Output only. The datetime when this ad group was last modified. The datetime is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastModifiedTime() {
+    return lastModifiedTime;
+  }
+
+  /**
+   * Output only. The datetime when this ad group was last modified. The datetime is in the
+   * customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+   * @param lastModifiedTime lastModifiedTime or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setLastModifiedTime(java.lang.String lastModifiedTime) {
+    this.lastModifiedTime = lastModifiedTime;
     return this;
   }
 
@@ -177,6 +390,31 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   }
 
   /**
+   * Output only. Date when this ad group starts serving ads. By default, the ad group starts now or
+   * the ad group's start date, whichever is later. If this field is set, then the ad group starts
+   * at the beginning of the specified date in the customer's time zone. This field is only
+   * available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example:
+   * 2019-03-14
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartDate() {
+    return startDate;
+  }
+
+  /**
+   * Output only. Date when this ad group starts serving ads. By default, the ad group starts now or
+   * the ad group's start date, whichever is later. If this field is set, then the ad group starts
+   * at the beginning of the specified date in the customer's time zone. This field is only
+   * available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example:
+   * 2019-03-14
+   * @param startDate startDate or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setStartDate(java.lang.String startDate) {
+    this.startDate = startDate;
+    return this;
+  }
+
+  /**
    * The status of the ad group.
    * @return value or {@code null} for none
    */
@@ -190,6 +428,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Setting for targeting related features.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonTargetingSetting getTargetingSetting() {
+    return targetingSetting;
+  }
+
+  /**
+   * Setting for targeting related features.
+   * @param targetingSetting targetingSetting or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroup setTargetingSetting(GoogleAdsSearchads360V0CommonTargetingSetting targetingSetting) {
+    this.targetingSetting = targetingSetting;
     return this;
   }
 

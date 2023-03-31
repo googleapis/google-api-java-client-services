@@ -572,6 +572,14 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double valuePerConversionsByConversionDate;
 
   /**
+   * Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing
+   * page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double visits;
+
+  /**
    * The percent of your ad impressions that are shown as the very first ad above the organic search
    * results.
    * @return value or {@code null} for none
@@ -1848,6 +1856,25 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    */
   public GoogleAdsSearchads360V0CommonMetrics setValuePerConversionsByConversionDate(java.lang.Double valuePerConversionsByConversionDate) {
     this.valuePerConversionsByConversionDate = valuePerConversionsByConversionDate;
+    return this;
+  }
+
+  /**
+   * Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing
+   * page.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getVisits() {
+    return visits;
+  }
+
+  /**
+   * Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing
+   * page.
+   * @param visits visits or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonMetrics setVisits(java.lang.Double visits) {
+    this.visits = visits;
     return this;
   }
 

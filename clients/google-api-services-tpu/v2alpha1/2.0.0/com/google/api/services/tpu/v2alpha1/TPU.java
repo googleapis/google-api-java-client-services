@@ -3088,19 +3088,19 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+           * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
            */
           @com.google.api.client.util.Key
           private java.lang.String queuedResourceId;
 
-          /** The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+          /** The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
            */
           public java.lang.String getQueuedResourceId() {
             return queuedResourceId;
           }
 
           /**
-           * The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+           * The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
            */
           public Create setQueuedResourceId(java.lang.String queuedResourceId) {
             this.queuedResourceId = queuedResourceId;

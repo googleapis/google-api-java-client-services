@@ -59,6 +59,14 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private QueueingPolicy queueingPolicy;
 
   /**
+   * Name of the reservation in which the resource should be provisioned. Format:
+   * projects/{project}/locations/{zone}/reservations/{reservation}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationName;
+
+  /**
    * Output only. State of the QueuedResource request.
    * The value may be {@code null}.
    */
@@ -137,6 +145,25 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   public QueuedResource setQueueingPolicy(QueueingPolicy queueingPolicy) {
     this.queueingPolicy = queueingPolicy;
+    return this;
+  }
+
+  /**
+   * Name of the reservation in which the resource should be provisioned. Format:
+   * projects/{project}/locations/{zone}/reservations/{reservation}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationName() {
+    return reservationName;
+  }
+
+  /**
+   * Name of the reservation in which the resource should be provisioned. Format:
+   * projects/{project}/locations/{zone}/reservations/{reservation}
+   * @param reservationName reservationName or {@code null} for none
+   */
+  public QueuedResource setReservationName(java.lang.String reservationName) {
+    this.reservationName = reservationName;
     return this;
   }
 

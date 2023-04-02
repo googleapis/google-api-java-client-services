@@ -58,6 +58,18 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
+   * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodCIDROverprovisionConfig podCidrOverprovisionConfig;
+
+  /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
    * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
@@ -139,6 +151,33 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
     this.networkPerformanceConfig = networkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
+   * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * @return value or {@code null} for none
+   */
+  public PodCIDROverprovisionConfig getPodCidrOverprovisionConfig() {
+    return podCidrOverprovisionConfig;
+  }
+
+  /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
+   * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * @param podCidrOverprovisionConfig podCidrOverprovisionConfig or {@code null} for none
+   */
+  public NodeNetworkConfig setPodCidrOverprovisionConfig(PodCIDROverprovisionConfig podCidrOverprovisionConfig) {
+    this.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
     return this;
   }
 

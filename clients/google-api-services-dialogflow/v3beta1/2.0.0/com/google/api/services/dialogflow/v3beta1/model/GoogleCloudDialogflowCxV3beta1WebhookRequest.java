@@ -40,6 +40,13 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequest extends com.goog
   private java.lang.String detectIntentResponseId;
 
   /**
+   * If DTMF was provided as input, this field will contain the DTMF digits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dtmfDigits;
+
+  /**
    * Always present. Information about the fulfillment that triggered this webhook call.
    * The value may be {@code null}.
    */
@@ -149,6 +156,23 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequest extends com.goog
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequest setDetectIntentResponseId(java.lang.String detectIntentResponseId) {
     this.detectIntentResponseId = detectIntentResponseId;
+    return this;
+  }
+
+  /**
+   * If DTMF was provided as input, this field will contain the DTMF digits.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDtmfDigits() {
+    return dtmfDigits;
+  }
+
+  /**
+   * If DTMF was provided as input, this field will contain the DTMF digits.
+   * @param dtmfDigits dtmfDigits or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1WebhookRequest setDtmfDigits(java.lang.String dtmfDigits) {
+    this.dtmfDigits = dtmfDigits;
     return this;
   }
 

@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   private java.util.Map<String, java.lang.Object> diagnosticInfo;
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DTMFInput.
+   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +225,7 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DTMFInput.
+   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DtmfInput getDtmf() {
@@ -233,7 +233,7 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DTMFInput.
+   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * @param dtmf dtmf or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setDtmf(GoogleCloudDialogflowCxV3DtmfInput dtmf) {

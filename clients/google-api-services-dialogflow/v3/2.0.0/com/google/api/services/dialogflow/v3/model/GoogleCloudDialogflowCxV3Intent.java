@@ -19,7 +19,7 @@ package com.google.api.services.dialogflow.v3.model;
 /**
  * An intent represents a user's intent to interact with a conversational agent. You can provide
  * information for the Dialogflow API to use to match user input to an intent by adding training
- * phrases (i.e., examples of user input) to your intent.
+ * phrases (i.e., examples of user input) to your intent. Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

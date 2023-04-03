@@ -108,6 +108,18 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.String nodeIpv4CidrBlock;
 
   /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the cluster. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is doubled and then
+   * rounded off to next power of 2 to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodCIDROverprovisionConfig podCidrOverprovisionConfig;
+
+  /**
    * This field is deprecated, use services_ipv4_cidr_block.
    * The value may be {@code null}.
    */
@@ -372,6 +384,33 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setNodeIpv4CidrBlock(java.lang.String nodeIpv4CidrBlock) {
     this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the cluster. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is doubled and then
+   * rounded off to next power of 2 to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * @return value or {@code null} for none
+   */
+  public PodCIDROverprovisionConfig getPodCidrOverprovisionConfig() {
+    return podCidrOverprovisionConfig;
+  }
+
+  /**
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the cluster. Pod CIDR size per node
+   * depends on max_pods_per_node. By default, the value of max_pods_per_node is doubled and then
+   * rounded off to next power of 2 to get the size of pod CIDR block per node. Example:
+   * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
+   * IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32
+   * IPs (/27) when overprovisioning is disabled.
+   * @param podCidrOverprovisionConfig podCidrOverprovisionConfig or {@code null} for none
+   */
+  public IPAllocationPolicy setPodCidrOverprovisionConfig(PodCIDROverprovisionConfig podCidrOverprovisionConfig) {
+    this.podCidrOverprovisionConfig = podCidrOverprovisionConfig;
     return this;
   }
 

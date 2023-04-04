@@ -86,7 +86,7 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data
-   * and operation. For example: "standard" or "nearline".
+   * and operation. For example: "standard" and "nearline".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +225,7 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data
-   * and operation. For example: "standard" or "nearline".
+   * and operation. For example: "standard" and "nearline".
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageClass() {
@@ -234,7 +234,7 @@ public final class CloudStorageWorkload extends com.google.api.client.json.Gener
 
   /**
    * The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data
-   * and operation. For example: "standard" or "nearline".
+   * and operation. For example: "standard" and "nearline".
    * @param storageClass storageClass or {@code null} for none
    */
   public CloudStorageWorkload setStorageClass(java.lang.String storageClass) {

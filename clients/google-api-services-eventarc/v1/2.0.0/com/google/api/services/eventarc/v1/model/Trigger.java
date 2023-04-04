@@ -76,8 +76,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
-   * from the CloudEvent data field. This will be set to `application/json` if the value is not
-   * defined.
+   * from the CloudEvent data field. This is set to `application/json` if the value is not defined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +245,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
-   * from the CloudEvent data field. This will be set to `application/json` if the value is not
-   * defined.
+   * from the CloudEvent data field. This is set to `application/json` if the value is not defined.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventDataContentType() {
@@ -256,8 +254,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. EventDataContentType specifies the type of payload in MIME format that is expected
-   * from the CloudEvent data field. This will be set to `application/json` if the value is not
-   * defined.
+   * from the CloudEvent data field. This is set to `application/json` if the value is not defined.
    * @param eventDataContentType eventDataContentType or {@code null} for none
    */
   public Trigger setEventDataContentType(java.lang.String eventDataContentType) {

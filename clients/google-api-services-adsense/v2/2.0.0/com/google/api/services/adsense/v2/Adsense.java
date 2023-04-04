@@ -754,25 +754,25 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListAccounts` must
-       * match the call that provided the page token.
+       * A page token, received from a previous `ListChildAccounts` call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided to `ListChildAccounts`
+       * must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A page token, received from a previous `ListAccounts` call. Provide this to retrieve the subsequent
-     page. When paginating, all other parameters provided to `ListAccounts` must match the call that
-     provided the page token.
+      /** A page token, received from a previous `ListChildAccounts` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `ListChildAccounts` must match
+     the call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListAccounts` must
-       * match the call that provided the page token.
+       * A page token, received from a previous `ListChildAccounts` call. Provide this to retrieve
+       * the subsequent page. When paginating, all other parameters provided to `ListChildAccounts`
+       * must match the call that provided the page token.
        */
       public ListChildAccounts setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -6039,25 +6039,25 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * A page token, received from a previous `ListPayments` call. Provide this to retrieve
-           * the subsequent page. When paginating, all other parameters provided to `ListPayments`
-           * must match the call that provided the page token.
+           * A page token, received from a previous `ListSavedReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSavedReports` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListPayments` call. Provide this to retrieve the subsequent
-         page. When paginating, all other parameters provided to `ListPayments` must match the call that
-         provided the page token.
+          /** A page token, received from a previous `ListSavedReports` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListSavedReports` must match
+         the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListPayments` call. Provide this to retrieve
-           * the subsequent page. When paginating, all other parameters provided to `ListPayments`
-           * must match the call that provided the page token.
+           * A page token, received from a previous `ListSavedReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSavedReports` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-tasks</artifactId>
-  <version>v1-rev20210709-2.0.0</version>
-  <name>Tasks API v1-rev20210709-2.0.0</name>
+  <version>v1-rev20230401-2.0.0</version>
+  <name>Google Tasks API v1-rev20230401-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Tasks API ${project.version}</doctitle>
-          <windowtitle>Tasks API ${project.version}</windowtitle>
+          <doctitle>Google Tasks API ${project.version}</doctitle>
+          <windowtitle>Google Tasks API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.43.1/</link>

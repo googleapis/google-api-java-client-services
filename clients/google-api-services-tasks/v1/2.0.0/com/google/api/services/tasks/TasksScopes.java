@@ -17,7 +17,7 @@
 package com.google.api.services.tasks;
 
 /**
- * Available OAuth 2.0 scopes for use with the Tasks API.
+ * Available OAuth 2.0 scopes for use with the Google Tasks API.
  *
  * @since 1.4
  */

@@ -30,11 +30,18 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The namespace of the policy type for the request.
+   * The namespace of the policy type for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyNamespace;
+
+  /**
+   * The schema name of the policy for the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policySchema;
 
   /**
    * Required. The key of the target for which we want to retrieve the group priority ordering. The
@@ -45,7 +52,7 @@ public final class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest 
   private GoogleChromePolicyVersionsV1PolicyTargetKey policyTargetKey;
 
   /**
-   * Required. The namespace of the policy type for the request.
+   * The namespace of the policy type for the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyNamespace() {
@@ -53,11 +60,28 @@ public final class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest 
   }
 
   /**
-   * Required. The namespace of the policy type for the request.
+   * The namespace of the policy type for the request.
    * @param policyNamespace policyNamespace or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest setPolicyNamespace(java.lang.String policyNamespace) {
     this.policyNamespace = policyNamespace;
+    return this;
+  }
+
+  /**
+   * The schema name of the policy for the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicySchema() {
+    return policySchema;
+  }
+
+  /**
+   * The schema name of the policy for the request.
+   * @param policySchema policySchema or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest setPolicySchema(java.lang.String policySchema) {
+    this.policySchema = policySchema;
     return this;
   }
 

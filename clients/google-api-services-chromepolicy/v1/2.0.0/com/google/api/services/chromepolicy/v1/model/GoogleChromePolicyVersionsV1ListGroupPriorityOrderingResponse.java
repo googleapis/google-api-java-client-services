@@ -44,6 +44,13 @@ public final class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse
   private java.lang.String policyNamespace;
 
   /**
+   * Output only. The schema name of the policy for the group IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policySchema;
+
+  /**
    * Output only. The target resource for which the group priority ordering has been retrieved.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse
    */
   public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse setPolicyNamespace(java.lang.String policyNamespace) {
     this.policyNamespace = policyNamespace;
+    return this;
+  }
+
+  /**
+   * Output only. The schema name of the policy for the group IDs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicySchema() {
+    return policySchema;
+  }
+
+  /**
+   * Output only. The schema name of the policy for the group IDs.
+   * @param policySchema policySchema or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse setPolicySchema(java.lang.String policySchema) {
+    this.policySchema = policySchema;
     return this;
   }
 

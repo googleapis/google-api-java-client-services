@@ -60,6 +60,14 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private ReplicationCycle currentSyncInfo;
 
   /**
+   * Output only. Provides details of future CutoverJobs of a MigratingVm. Set to empty when cutover
+   * forecast is unavailable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CutoverForecast cutoverForecast;
+
+  /**
    * The description attached to the migrating VM by the user.
    * The value may be {@code null}.
    */
@@ -254,6 +262,25 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setCurrentSyncInfo(ReplicationCycle currentSyncInfo) {
     this.currentSyncInfo = currentSyncInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Provides details of future CutoverJobs of a MigratingVm. Set to empty when cutover
+   * forecast is unavailable.
+   * @return value or {@code null} for none
+   */
+  public CutoverForecast getCutoverForecast() {
+    return cutoverForecast;
+  }
+
+  /**
+   * Output only. Provides details of future CutoverJobs of a MigratingVm. Set to empty when cutover
+   * forecast is unavailable.
+   * @param cutoverForecast cutoverForecast or {@code null} for none
+   */
+  public MigratingVm setCutoverForecast(CutoverForecast cutoverForecast) {
+    this.cutoverForecast = cutoverForecast;
     return this;
   }
 

@@ -20697,6 +20697,330 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Recommendations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Recommendations.List request = content.recommendations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Recommendations recommendations() {
+    return new Recommendations();
+  }
+
+  /**
+   * The "recommendations" collection of methods.
+   */
+  public class Recommendations {
+
+    /**
+     * Generates recommendations for a merchant.
+     *
+     * Create a request for the method "recommendations.generate".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account to fetch recommendations for.
+     * @return the request
+     */
+    public Generate generate(java.lang.Long merchantId) throws java.io.IOException {
+      Generate result = new Generate(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class Generate extends ShoppingContentRequest<com.google.api.services.content.model.GenerateRecommendationsResponse> {
+
+      private static final String REST_PATH = "{merchantId}/recommendations/generate";
+
+      /**
+       * Generates recommendations for a merchant.
+       *
+       * Create a request for the method "recommendations.generate".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Generate#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account to fetch recommendations for.
+       * @since 1.13
+       */
+      protected Generate(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.GenerateRecommendationsResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Generate set$Xgafv(java.lang.String $Xgafv) {
+        return (Generate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Generate setAccessToken(java.lang.String accessToken) {
+        return (Generate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Generate setAlt(java.lang.String alt) {
+        return (Generate) super.setAlt(alt);
+      }
+
+      @Override
+      public Generate setCallback(java.lang.String callback) {
+        return (Generate) super.setCallback(callback);
+      }
+
+      @Override
+      public Generate setFields(java.lang.String fields) {
+        return (Generate) super.setFields(fields);
+      }
+
+      @Override
+      public Generate setKey(java.lang.String key) {
+        return (Generate) super.setKey(key);
+      }
+
+      @Override
+      public Generate setOauthToken(java.lang.String oauthToken) {
+        return (Generate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Generate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Generate setQuotaUser(java.lang.String quotaUser) {
+        return (Generate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Generate setUploadType(java.lang.String uploadType) {
+        return (Generate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Generate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account to fetch recommendations for. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account to fetch recommendations for.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account to fetch recommendations for. */
+      public Generate setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Optional. List of allowed tags. Tags are a set of predefined strings that describe the
+       * category that individual recommendation types. User can specify zero or more tags in this
+       * field to indicate what group of recommendations they want to receive. Current list of
+       * supported tags: - TREND
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedTag;
+
+      /** Optional. List of allowed tags. Tags are a set of predefined strings that describe the category
+     that individual recommendation types. User can specify zero or more tags in this field to indicate
+     what group of recommendations they want to receive. Current list of supported tags: - TREND
+       */
+      public java.util.List<java.lang.String> getAllowedTag() {
+        return allowedTag;
+      }
+
+      /**
+       * Optional. List of allowed tags. Tags are a set of predefined strings that describe the
+       * category that individual recommendation types. User can specify zero or more tags in this
+       * field to indicate what group of recommendations they want to receive. Current list of
+       * supported tags: - TREND
+       */
+      public Generate setAllowedTag(java.util.List<java.lang.String> allowedTag) {
+        this.allowedTag = allowedTag;
+        return this;
+      }
+
+      /**
+       * Optional. Language code of the client. If not set, the result will be in default language
+       * (English). This language code affects all fields prefixed with "localized". This should be
+       * set to ISO 639-1 country code. List of currently verified supported language code: en, fr,
+       * cs, da, de, es, it, nl, no, pl, pt, pt, fi, sv, vi, tr, th, ko, zh-CN, zh-TW, ja, id, hi
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional. Language code of the client. If not set, the result will be in default language
+     (English). This language code affects all fields prefixed with "localized". This should be set to
+     ISO 639-1 country code. List of currently verified supported language code: en, fr, cs, da, de, es,
+     it, nl, no, pl, pt, pt, fi, sv, vi, tr, th, ko, zh-CN, zh-TW, ja, id, hi
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional. Language code of the client. If not set, the result will be in default language
+       * (English). This language code affects all fields prefixed with "localized". This should be
+       * set to ISO 639-1 country code. List of currently verified supported language code: en, fr,
+       * cs, da, de, es, it, nl, no, pl, pt, pt, fi, sv, vi, tr, th, ko, zh-CN, zh-TW, ja, id, hi
+       */
+      public Generate setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      @Override
+      public Generate set(String parameterName, Object value) {
+        return (Generate) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Reports an interaction on a recommendation for a merchant.
+     *
+     * Create a request for the method "recommendations.reportInteraction".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link ReportInteraction#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that wants to report an interaction.
+     * @param content the {@link com.google.api.services.content.model.ReportInteractionRequest}
+     * @return the request
+     */
+    public ReportInteraction reportInteraction(java.lang.Long merchantId, com.google.api.services.content.model.ReportInteractionRequest content) throws java.io.IOException {
+      ReportInteraction result = new ReportInteraction(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ReportInteraction extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "{merchantId}/recommendations/reportInteraction";
+
+      /**
+       * Reports an interaction on a recommendation for a merchant.
+       *
+       * Create a request for the method "recommendations.reportInteraction".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link ReportInteraction#execute()} method to invoke the remote operation.
+       * <p> {@link ReportInteraction#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that wants to report an interaction.
+       * @param content the {@link com.google.api.services.content.model.ReportInteractionRequest}
+       * @since 1.13
+       */
+      protected ReportInteraction(java.lang.Long merchantId, com.google.api.services.content.model.ReportInteractionRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public ReportInteraction set$Xgafv(java.lang.String $Xgafv) {
+        return (ReportInteraction) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ReportInteraction setAccessToken(java.lang.String accessToken) {
+        return (ReportInteraction) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ReportInteraction setAlt(java.lang.String alt) {
+        return (ReportInteraction) super.setAlt(alt);
+      }
+
+      @Override
+      public ReportInteraction setCallback(java.lang.String callback) {
+        return (ReportInteraction) super.setCallback(callback);
+      }
+
+      @Override
+      public ReportInteraction setFields(java.lang.String fields) {
+        return (ReportInteraction) super.setFields(fields);
+      }
+
+      @Override
+      public ReportInteraction setKey(java.lang.String key) {
+        return (ReportInteraction) super.setKey(key);
+      }
+
+      @Override
+      public ReportInteraction setOauthToken(java.lang.String oauthToken) {
+        return (ReportInteraction) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ReportInteraction setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ReportInteraction) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ReportInteraction setQuotaUser(java.lang.String quotaUser) {
+        return (ReportInteraction) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ReportInteraction setUploadType(java.lang.String uploadType) {
+        return (ReportInteraction) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ReportInteraction setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ReportInteraction) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that wants to report an interaction. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that wants to report an interaction.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that wants to report an interaction. */
+      public ReportInteraction setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public ReportInteraction set(String parameterName, Object value) {
+        return (ReportInteraction) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Regionalinventory collection.
    *
    * <p>The typical use is:</p>

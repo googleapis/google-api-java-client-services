@@ -2857,14 +2857,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of dataScans to return. The service may return fewer than this
-           * value. If unspecified, at most 10 scans will be returned. The maximum value is 1000;
+           * value. If unspecified, at most 500 scans will be returned. The maximum value is 1000;
            * values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of dataScans to return. The service may return fewer than this value. If
-         unspecified, at most 10 scans will be returned. The maximum value is 1000; values above 1000 will
+         unspecified, at most 500 scans will be returned. The maximum value is 1000; values above 1000 will
          be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
@@ -2873,7 +2873,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Maximum number of dataScans to return. The service may return fewer than this
-           * value. If unspecified, at most 10 scans will be returned. The maximum value is 1000;
+           * value. If unspecified, at most 500 scans will be returned. The maximum value is 1000;
            * values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {

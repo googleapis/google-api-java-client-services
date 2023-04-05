@@ -52,8 +52,11 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo profile;
 
   /**
-   * The field data type. Possible values include: STRING BYTE INT64 INT32 INT16 DOUBLE FLOAT
-   * DECIMAL BOOLEAN BINARY TIMESTAMP DATE TIME NULL RECORD
+   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
+   * table, it is the BigQuery Table Schema
+   * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
+   * Dataplex Entity, it is the Entity Schema
+   * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +116,11 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The field data type. Possible values include: STRING BYTE INT64 INT32 INT16 DOUBLE FLOAT
-   * DECIMAL BOOLEAN BINARY TIMESTAMP DATE TIME NULL RECORD
+   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
+   * table, it is the BigQuery Table Schema
+   * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
+   * Dataplex Entity, it is the Entity Schema
+   * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -122,8 +128,11 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileField extends co
   }
 
   /**
-   * The field data type. Possible values include: STRING BYTE INT64 INT32 INT16 DOUBLE FLOAT
-   * DECIMAL BOOLEAN BINARY TIMESTAMP DATE TIME NULL RECORD
+   * The data type retrieved from the schema of the data source. For instance, for a BigQuery native
+   * table, it is the BigQuery Table Schema
+   * (https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#tablefieldschema). For a
+   * Dataplex Entity, it is the Entity Schema
+   * (https://cloud.google.com/dataplex/docs/reference/rpc/google.cloud.dataplex.v1#type_3).
    * @param type type or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileField setType(java.lang.String type) {

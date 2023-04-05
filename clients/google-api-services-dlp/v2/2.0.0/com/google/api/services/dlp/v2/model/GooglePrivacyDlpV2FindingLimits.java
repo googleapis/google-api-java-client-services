@@ -41,17 +41,22 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   private java.util.List<GooglePrivacyDlpV2InfoTypeLimit> maxFindingsPerInfoType;
 
   /**
-   * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
-   * within `InspectContentRequest`, this field is ignored.
+   * Max number of findings that are returned for each item scanned. When set within an
+   * InspectContentRequest, this field is ignored. This value isn't a hard limit. If the number of
+   * findings for an item reaches this limit, the inspection of that item ends gradually, not
+   * abruptly. Therefore, the actual number of findings that Cloud DLP returns for the item can be
+   * multiple times higher than this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxFindingsPerItem;
 
   /**
-   * Max number of findings that will be returned per request/job. When set within
-   * `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+   * Max number of findings that are returned per request or job. If you set this field in an
+   * InspectContentRequest, the resulting maximum value is the value that you set or 3,000,
+   * whichever is lower. This value isn't a hard limit. If an inspection reaches this limit, the
+   * inspection ends gradually, not abruptly. Therefore, the actual number of findings that Cloud
+   * DLP returns can be multiple times higher than this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +80,11 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   }
 
   /**
-   * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
-   * within `InspectContentRequest`, this field is ignored.
+   * Max number of findings that are returned for each item scanned. When set within an
+   * InspectContentRequest, this field is ignored. This value isn't a hard limit. If the number of
+   * findings for an item reaches this limit, the inspection of that item ends gradually, not
+   * abruptly. Therefore, the actual number of findings that Cloud DLP returns for the item can be
+   * multiple times higher than this value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFindingsPerItem() {
@@ -85,9 +92,11 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   }
 
   /**
-   * Max number of findings that will be returned for each item scanned. When set within
-   * `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set
-   * within `InspectContentRequest`, this field is ignored.
+   * Max number of findings that are returned for each item scanned. When set within an
+   * InspectContentRequest, this field is ignored. This value isn't a hard limit. If the number of
+   * findings for an item reaches this limit, the inspection of that item ends gradually, not
+   * abruptly. Therefore, the actual number of findings that Cloud DLP returns for the item can be
+   * multiple times higher than this value.
    * @param maxFindingsPerItem maxFindingsPerItem or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits setMaxFindingsPerItem(java.lang.Integer maxFindingsPerItem) {
@@ -96,8 +105,11 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   }
 
   /**
-   * Max number of findings that will be returned per request/job. When set within
-   * `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+   * Max number of findings that are returned per request or job. If you set this field in an
+   * InspectContentRequest, the resulting maximum value is the value that you set or 3,000,
+   * whichever is lower. This value isn't a hard limit. If an inspection reaches this limit, the
+   * inspection ends gradually, not abruptly. Therefore, the actual number of findings that Cloud
+   * DLP returns can be multiple times higher than this value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFindingsPerRequest() {
@@ -105,8 +117,11 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   }
 
   /**
-   * Max number of findings that will be returned per request/job. When set within
-   * `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+   * Max number of findings that are returned per request or job. If you set this field in an
+   * InspectContentRequest, the resulting maximum value is the value that you set or 3,000,
+   * whichever is lower. This value isn't a hard limit. If an inspection reaches this limit, the
+   * inspection ends gradually, not abruptly. Therefore, the actual number of findings that Cloud
+   * DLP returns can be multiple times higher than this value.
    * @param maxFindingsPerRequest maxFindingsPerRequest or {@code null} for none
    */
   public GooglePrivacyDlpV2FindingLimits setMaxFindingsPerRequest(java.lang.Integer maxFindingsPerRequest) {

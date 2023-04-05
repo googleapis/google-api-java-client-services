@@ -46,6 +46,17 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated
+   * with the workflow. Format:
+   * projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as
+   * a wildcard for the `{project}` or not providing one at all will infer the project from the
+   * account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyName;
+
+  /**
    * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
    * The value may be {@code null}.
    */
@@ -115,6 +126,14 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. Error regarding the state of the workflow. For example, this field will have error
+   * details if the execution data is unavailable due to revoked KMS key permissions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StateError stateError;
+
+  /**
    * Output only. The timestamp for when the workflow was last updated.
    * The value may be {@code null}.
    */
@@ -156,6 +175,31 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   public Workflow setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated
+   * with the workflow. Format:
+   * projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as
+   * a wildcard for the `{project}` or not providing one at all will infer the project from the
+   * account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyName() {
+    return cryptoKeyName;
+  }
+
+  /**
+   * Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated
+   * with the workflow. Format:
+   * projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as
+   * a wildcard for the `{project}` or not providing one at all will infer the project from the
+   * account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+   * @param cryptoKeyName cryptoKeyName or {@code null} for none
+   */
+  public Workflow setCryptoKeyName(java.lang.String cryptoKeyName) {
+    this.cryptoKeyName = cryptoKeyName;
     return this;
   }
 
@@ -318,6 +362,25 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   public Workflow setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Error regarding the state of the workflow. For example, this field will have error
+   * details if the execution data is unavailable due to revoked KMS key permissions.
+   * @return value or {@code null} for none
+   */
+  public StateError getStateError() {
+    return stateError;
+  }
+
+  /**
+   * Output only. Error regarding the state of the workflow. For example, this field will have error
+   * details if the execution data is unavailable due to revoked KMS key permissions.
+   * @param stateError stateError or {@code null} for none
+   */
+  public Workflow setStateError(StateError stateError) {
+    this.stateError = stateError;
     return this;
   }
 

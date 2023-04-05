@@ -168,7 +168,7 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
   private java.lang.String matchingText;
 
   /**
-   * Metadata attatched to the name.
+   * Metadata attached to the name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -578,7 +578,7 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
   }
 
   /**
-   * Metadata attatched to the name.
+   * Metadata attached to the name.
    * @return value or {@code null} for none
    */
   public RepositoryWebrefConceptNameMetadata getNameMetadata() {
@@ -586,7 +586,7 @@ public final class RepositoryWebrefMention extends com.google.api.client.json.Ge
   }
 
   /**
-   * Metadata attatched to the name.
+   * Metadata attached to the name.
    * @param nameMetadata nameMetadata or {@code null} for none
    */
   public RepositoryWebrefMention setNameMetadata(RepositoryWebrefConceptNameMetadata nameMetadata) {

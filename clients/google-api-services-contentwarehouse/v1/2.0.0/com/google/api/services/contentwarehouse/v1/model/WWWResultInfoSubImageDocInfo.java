@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The following message contains info of sub image docs, it is populated in query_state and
- * consumed in web image boost twiddler: (go/WebImageBoostTwiddler).
+ * consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 25
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -56,6 +56,13 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String deepCropBytes;
+
+  /**
+   * EQ* v3: Deep Image Engagingness(DImE) go/deep-image-engagingness-slides
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float dimeScore;
 
   /**
    * The value may be {@code null}.
@@ -278,6 +285,23 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   public WWWResultInfoSubImageDocInfo encodeDeepCropBytes(byte[] deepCropBytes) {
     this.deepCropBytes = com.google.api.client.util.Base64.encodeBase64URLSafeString(deepCropBytes);
+    return this;
+  }
+
+  /**
+   * EQ* v3: Deep Image Engagingness(DImE) go/deep-image-engagingness-slides
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDimeScore() {
+    return dimeScore;
+  }
+
+  /**
+   * EQ* v3: Deep Image Engagingness(DImE) go/deep-image-engagingness-slides
+   * @param dimeScore dimeScore or {@code null} for none
+   */
+  public WWWResultInfoSubImageDocInfo setDimeScore(java.lang.Float dimeScore) {
+    this.dimeScore = dimeScore;
     return this;
   }
 

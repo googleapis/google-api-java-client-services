@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Provider GP for ranking in HGR. Next ID: 4
+ * Features to be extracted from Provider GP for ranking in HGR. Next ID: 5
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -29,6 +29,13 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantGroundingRankerProviderGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Indicates that fulfillment on this provider will happen within the provider app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInAppProvider;
 
   /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated
@@ -52,6 +59,23 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
    */
   @com.google.api.client.util.Key
   private java.lang.Float pslScore;
+
+  /**
+   * Indicates that fulfillment on this provider will happen within the provider app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInAppProvider() {
+    return isInAppProvider;
+  }
+
+  /**
+   * Indicates that fulfillment on this provider will happen within the provider app.
+   * @param isInAppProvider isInAppProvider or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setIsInAppProvider(java.lang.Boolean isInAppProvider) {
+    this.isInAppProvider = isInAppProvider;
+    return this;
+  }
 
   /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated

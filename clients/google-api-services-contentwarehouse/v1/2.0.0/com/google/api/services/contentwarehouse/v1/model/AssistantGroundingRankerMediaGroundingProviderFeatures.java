@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 9
+ * Features to be passed from Media GP to HGR. Next ID: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -38,6 +38,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   private java.lang.String albumReleaseType;
 
   /**
+   * Temporary ambiguity classifier signal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ambiguityClassifier;
+
+  /**
    * True if the argument's type was explicitly mentioned in the query.
    * The value may be {@code null}.
    */
@@ -53,6 +60,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCastVideo;
+
+  /**
+   * True if the media search query is included in the entity name and artists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMediaSearchQuerySubsetOfEntityNameAndArtist;
 
   /**
    * True if the media deeplink has tag SEED_RADIO.
@@ -96,6 +110,12 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   private java.lang.String type;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double youtubeConfidenceScore;
+
+  /**
    * Release type for an album container.
    * @return value or {@code null} for none
    */
@@ -109,6 +129,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setAlbumReleaseType(java.lang.String albumReleaseType) {
     this.albumReleaseType = albumReleaseType;
+    return this;
+  }
+
+  /**
+   * Temporary ambiguity classifier signal.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAmbiguityClassifier() {
+    return ambiguityClassifier;
+  }
+
+  /**
+   * Temporary ambiguity classifier signal.
+   * @param ambiguityClassifier ambiguityClassifier or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setAmbiguityClassifier(java.lang.String ambiguityClassifier) {
+    this.ambiguityClassifier = ambiguityClassifier;
     return this;
   }
 
@@ -149,6 +186,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsCastVideo(java.lang.Boolean isCastVideo) {
     this.isCastVideo = isCastVideo;
+    return this;
+  }
+
+  /**
+   * True if the media search query is included in the entity name and artists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMediaSearchQuerySubsetOfEntityNameAndArtist() {
+    return isMediaSearchQuerySubsetOfEntityNameAndArtist;
+  }
+
+  /**
+   * True if the media search query is included in the entity name and artists.
+   * @param isMediaSearchQuerySubsetOfEntityNameAndArtist isMediaSearchQuerySubsetOfEntityNameAndArtist or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsMediaSearchQuerySubsetOfEntityNameAndArtist(java.lang.Boolean isMediaSearchQuerySubsetOfEntityNameAndArtist) {
+    this.isMediaSearchQuerySubsetOfEntityNameAndArtist = isMediaSearchQuerySubsetOfEntityNameAndArtist;
     return this;
   }
 
@@ -246,6 +300,21 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getYoutubeConfidenceScore() {
+    return youtubeConfidenceScore;
+  }
+
+  /**
+   * @param youtubeConfidenceScore youtubeConfidenceScore or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setYoutubeConfidenceScore(java.lang.Double youtubeConfidenceScore) {
+    this.youtubeConfidenceScore = youtubeConfidenceScore;
     return this;
   }
 

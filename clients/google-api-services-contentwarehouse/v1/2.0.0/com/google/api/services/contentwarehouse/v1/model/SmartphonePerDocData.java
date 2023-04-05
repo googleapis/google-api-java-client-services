@@ -98,13 +98,6 @@ public final class SmartphonePerDocData extends com.google.api.client.json.Gener
   private java.lang.Double maximumFlashRatio;
 
   /**
-   * Mobile friendliness score in the range of [0, 100]. See go/modena-ranking.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer mobileFriendlyScore;
-
-  /**
    * Indicates if the page is violating mobile interstitial policy and should be demoted. See go
    * /interstitials-ranking-dd for details.
    * The value may be {@code null}.
@@ -265,23 +258,6 @@ public final class SmartphonePerDocData extends com.google.api.client.json.Gener
    */
   public SmartphonePerDocData setMaximumFlashRatio(java.lang.Double maximumFlashRatio) {
     this.maximumFlashRatio = maximumFlashRatio;
-    return this;
-  }
-
-  /**
-   * Mobile friendliness score in the range of [0, 100]. See go/modena-ranking.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMobileFriendlyScore() {
-    return mobileFriendlyScore;
-  }
-
-  /**
-   * Mobile friendliness score in the range of [0, 100]. See go/modena-ranking.
-   * @param mobileFriendlyScore mobileFriendlyScore or {@code null} for none
-   */
-  public SmartphonePerDocData setMobileFriendlyScore(java.lang.Integer mobileFriendlyScore) {
-    this.mobileFriendlyScore = mobileFriendlyScore;
     return this;
   }
 

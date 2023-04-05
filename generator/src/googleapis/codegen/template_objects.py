@@ -128,7 +128,8 @@ class CodeObject(UseableInTemplates):
       self.SetTemplateValue('description',
                             self.ValidateAndSanitizeComment(self.StripHTML(d)))
 
-  def ComputeNonDuplicatedName(self, class_name):
+  def ComputeNonDuplicatedName(self, original_class_name):
+    class_name = original_class_name
     parent_path = self.parentPath()
     occurrences = 0
 
@@ -153,7 +154,7 @@ class CodeObject(UseableInTemplates):
       siblings = self.parent.children
       for sibling in siblings:
         if sibling.GetTemplateValue('className') == class_name:
-          class_name, occurrences = increment_name(occurrences, occurrences + 1)
+          class_name, occurrences = increment_name(class_name, occurrences + 1)
 
     return class_name
 

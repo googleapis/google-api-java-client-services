@@ -6592,6 +6592,142 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Retrieves a TagKey by its namespaced name. This method will return `PERMISSION_DENIED` if the key
+     * does not exist or the user does not have permission to view it.
+     *
+     * Create a request for the method "tagKeys.getNamespaced".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetNamespaced#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GetNamespaced getNamespaced() throws java.io.IOException {
+      GetNamespaced result = new GetNamespaced();
+      initialize(result);
+      return result;
+    }
+
+    public class GetNamespaced extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TagKey> {
+
+      private static final String REST_PATH = "v3/tagKeys/namespaced";
+
+      /**
+       * Retrieves a TagKey by its namespaced name. This method will return `PERMISSION_DENIED` if the
+       * key does not exist or the user does not have permission to view it.
+       *
+       * Create a request for the method "tagKeys.getNamespaced".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetNamespaced#execute()} method to invoke the remote
+       * operation. <p> {@link GetNamespaced#initialize(com.google.api.client.googleapis.services.Abstra
+       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetNamespaced() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.TagKey.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetNamespaced set$Xgafv(java.lang.String $Xgafv) {
+        return (GetNamespaced) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetNamespaced setAccessToken(java.lang.String accessToken) {
+        return (GetNamespaced) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetNamespaced setAlt(java.lang.String alt) {
+        return (GetNamespaced) super.setAlt(alt);
+      }
+
+      @Override
+      public GetNamespaced setCallback(java.lang.String callback) {
+        return (GetNamespaced) super.setCallback(callback);
+      }
+
+      @Override
+      public GetNamespaced setFields(java.lang.String fields) {
+        return (GetNamespaced) super.setFields(fields);
+      }
+
+      @Override
+      public GetNamespaced setKey(java.lang.String key) {
+        return (GetNamespaced) super.setKey(key);
+      }
+
+      @Override
+      public GetNamespaced setOauthToken(java.lang.String oauthToken) {
+        return (GetNamespaced) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetNamespaced setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetNamespaced) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetNamespaced setQuotaUser(java.lang.String quotaUser) {
+        return (GetNamespaced) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetNamespaced setUploadType(java.lang.String uploadType) {
+        return (GetNamespaced) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetNamespaced setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetNamespaced) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A namespaced tag key name in the format `{parentId}/{tagKeyShort}`, such as
+       * `42/foo` for a key with short name "foo" under the organization with ID 42 or `r2-d2/bar`
+       * for a key with short name "bar" under the project `r2-d2`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. A namespaced tag key name in the format `{parentId}/{tagKeyShort}`, such as `42/foo` for
+     a key with short name "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+     name "bar" under the project `r2-d2`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. A namespaced tag key name in the format `{parentId}/{tagKeyShort}`, such as
+       * `42/foo` for a key with short name "foo" under the organization with ID 42 or `r2-d2/bar`
+       * for a key with short name "bar" under the project `r2-d2`.
+       */
+      public GetNamespaced setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetNamespaced set(String parameterName, Object value) {
+        return (GetNamespaced) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists all TagKeys for a parent resource.
      *
      * Create a request for the method "tagKeys.list".
@@ -7870,6 +8006,147 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       @Override
       public GetIamPolicy set(String parameterName, Object value) {
         return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a TagValue by its namespaced name. This method will return `PERMISSION_DENIED` if the
+     * value does not exist or the user does not have permission to view it.
+     *
+     * Create a request for the method "tagValues.getNamespaced".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetNamespaced#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GetNamespaced getNamespaced() throws java.io.IOException {
+      GetNamespaced result = new GetNamespaced();
+      initialize(result);
+      return result;
+    }
+
+    public class GetNamespaced extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TagValue> {
+
+      private static final String REST_PATH = "v3/tagValues/namespaced";
+
+      /**
+       * Retrieves a TagValue by its namespaced name. This method will return `PERMISSION_DENIED` if the
+       * value does not exist or the user does not have permission to view it.
+       *
+       * Create a request for the method "tagValues.getNamespaced".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetNamespaced#execute()} method to invoke the remote
+       * operation. <p> {@link GetNamespaced#initialize(com.google.api.client.googleapis.services.Abstra
+       * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetNamespaced() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.TagValue.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetNamespaced set$Xgafv(java.lang.String $Xgafv) {
+        return (GetNamespaced) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetNamespaced setAccessToken(java.lang.String accessToken) {
+        return (GetNamespaced) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetNamespaced setAlt(java.lang.String alt) {
+        return (GetNamespaced) super.setAlt(alt);
+      }
+
+      @Override
+      public GetNamespaced setCallback(java.lang.String callback) {
+        return (GetNamespaced) super.setCallback(callback);
+      }
+
+      @Override
+      public GetNamespaced setFields(java.lang.String fields) {
+        return (GetNamespaced) super.setFields(fields);
+      }
+
+      @Override
+      public GetNamespaced setKey(java.lang.String key) {
+        return (GetNamespaced) super.setKey(key);
+      }
+
+      @Override
+      public GetNamespaced setOauthToken(java.lang.String oauthToken) {
+        return (GetNamespaced) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetNamespaced setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetNamespaced) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetNamespaced setQuotaUser(java.lang.String quotaUser) {
+        return (GetNamespaced) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetNamespaced setUploadType(java.lang.String uploadType) {
+        return (GetNamespaced) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetNamespaced setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetNamespaced) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A namespaced tag value name in the following format:
+       * `{parentId}/{tagKeyShort}/{tagValueShort}` Examples: - `42/foo/abc` for a value with short
+       * name "abc" under the key with short name "foo" under the organization with ID 42 -
+       * `r2-d2/bar/xyz` for a value with short name "xyz" under the key with short name "bar" under
+       * the project with ID "r2-d2"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. A namespaced tag value name in the following format:
+     `{parentId}/{tagKeyShort}/{tagValueShort}` Examples: - `42/foo/abc` for a value with short name
+     "abc" under the key with short name "foo" under the organization with ID 42 - `r2-d2/bar/xyz` for a
+     value with short name "xyz" under the key with short name "bar" under the project with ID "r2-d2"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. A namespaced tag value name in the following format:
+       * `{parentId}/{tagKeyShort}/{tagValueShort}` Examples: - `42/foo/abc` for a value with short
+       * name "abc" under the key with short name "foo" under the organization with ID 42 -
+       * `r2-d2/bar/xyz` for a value with short name "xyz" under the key with short name "bar" under
+       * the project with ID "r2-d2"
+       */
+      public GetNamespaced setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetNamespaced set(String parameterName, Object value) {
+        return (GetNamespaced) super.set(parameterName, value);
       }
     }
     /**

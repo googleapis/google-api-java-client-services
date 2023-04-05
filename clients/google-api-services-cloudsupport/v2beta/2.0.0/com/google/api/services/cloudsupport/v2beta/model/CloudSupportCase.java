@@ -38,6 +38,14 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private CaseClassification classification;
 
   /**
+   * A user-supplied email address to send case update notifications for. This should only be used
+   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contactEmail;
+
+  /**
    * Output only. The time this case was created.
    * The value may be {@code null}.
    */
@@ -156,6 +164,25 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
    */
   public CloudSupportCase setClassification(CaseClassification classification) {
     this.classification = classification;
+    return this;
+  }
+
+  /**
+   * A user-supplied email address to send case update notifications for. This should only be used
+   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContactEmail() {
+    return contactEmail;
+  }
+
+  /**
+   * A user-supplied email address to send case update notifications for. This should only be used
+   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * @param contactEmail contactEmail or {@code null} for none
+   */
+  public CloudSupportCase setContactEmail(java.lang.String contactEmail) {
+    this.contactEmail = contactEmail;
     return this;
   }
 

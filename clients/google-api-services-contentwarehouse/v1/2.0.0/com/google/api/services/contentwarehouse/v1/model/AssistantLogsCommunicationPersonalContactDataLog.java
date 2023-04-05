@@ -84,7 +84,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
    * Contact owner's gaia id from
    * cs/symbol::symbol:quality_qrewrite.PersonalContactData.shared_contact_owner_gaia_id. Only
    * populated for is_shared = true and non sign-out mode and user is not the owner of the
-   * contact(shared contact from other user).
+   * contact(shared contact from other user). This field is not being logged in P2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -101,7 +101,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
   /**
    * If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that
    * have been marked as shared. - User is calling shared contacts from some other user's contact
-   * list.
+   * list. This field is not being logged in P2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -371,7 +371,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
    * Contact owner's gaia id from
    * cs/symbol::symbol:quality_qrewrite.PersonalContactData.shared_contact_owner_gaia_id. Only
    * populated for is_shared = true and non sign-out mode and user is not the owner of the
-   * contact(shared contact from other user).
+   * contact(shared contact from other user). This field is not being logged in P2.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGaiaId() {
@@ -382,7 +382,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
    * Contact owner's gaia id from
    * cs/symbol::symbol:quality_qrewrite.PersonalContactData.shared_contact_owner_gaia_id. Only
    * populated for is_shared = true and non sign-out mode and user is not the owner of the
-   * contact(shared contact from other user).
+   * contact(shared contact from other user). This field is not being logged in P2.
    * @param gaiaId gaiaId or {@code null} for none
    */
   public AssistantLogsCommunicationPersonalContactDataLog setGaiaId(java.lang.Long gaiaId) {
@@ -412,7 +412,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
   /**
    * If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that
    * have been marked as shared. - User is calling shared contacts from some other user's contact
-   * list.
+   * list. This field is not being logged in P2.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsShared() {
@@ -422,7 +422,7 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
   /**
    * If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that
    * have been marked as shared. - User is calling shared contacts from some other user's contact
-   * list.
+   * list. This field is not being logged in P2.
    * @param isShared isShared or {@code null} for none
    */
   public AssistantLogsCommunicationPersonalContactDataLog setIsShared(java.lang.Boolean isShared) {

@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1RunPipelineMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The pipeline metadata for Export-to-CDW pipeline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata exportToCdwPipelineMetadata;
+
+  /**
    * Number of files that have failed at some point in the pipeline.
    * The value may be {@code null}.
    */
@@ -45,6 +52,20 @@ public final class GoogleCloudContentwarehouseV1RunPipelineMetadata extends com.
   private GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata gcsIngestPipelineMetadata;
 
   /**
+   * The list of response details of each document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus> individualDocumentStatuses;
+
+  /**
+   * The pipeline metadata for Process-with-DocAi pipeline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata processWithDocAiPipelineMetadata;
+
+  /**
    * Number of files that were processed by the pipeline.
    * The value may be {@code null}.
    */
@@ -57,6 +78,23 @@ public final class GoogleCloudContentwarehouseV1RunPipelineMetadata extends com.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContentwarehouseV1UserInfo userInfo;
+
+  /**
+   * The pipeline metadata for Export-to-CDW pipeline.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata getExportToCdwPipelineMetadata() {
+    return exportToCdwPipelineMetadata;
+  }
+
+  /**
+   * The pipeline metadata for Export-to-CDW pipeline.
+   * @param exportToCdwPipelineMetadata exportToCdwPipelineMetadata or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadata setExportToCdwPipelineMetadata(GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata exportToCdwPipelineMetadata) {
+    this.exportToCdwPipelineMetadata = exportToCdwPipelineMetadata;
+    return this;
+  }
 
   /**
    * Number of files that have failed at some point in the pipeline.
@@ -89,6 +127,40 @@ public final class GoogleCloudContentwarehouseV1RunPipelineMetadata extends com.
    */
   public GoogleCloudContentwarehouseV1RunPipelineMetadata setGcsIngestPipelineMetadata(GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata gcsIngestPipelineMetadata) {
     this.gcsIngestPipelineMetadata = gcsIngestPipelineMetadata;
+    return this;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus> getIndividualDocumentStatuses() {
+    return individualDocumentStatuses;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @param individualDocumentStatuses individualDocumentStatuses or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadata setIndividualDocumentStatuses(java.util.List<GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus> individualDocumentStatuses) {
+    this.individualDocumentStatuses = individualDocumentStatuses;
+    return this;
+  }
+
+  /**
+   * The pipeline metadata for Process-with-DocAi pipeline.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata getProcessWithDocAiPipelineMetadata() {
+    return processWithDocAiPipelineMetadata;
+  }
+
+  /**
+   * The pipeline metadata for Process-with-DocAi pipeline.
+   * @param processWithDocAiPipelineMetadata processWithDocAiPipelineMetadata or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadata setProcessWithDocAiPipelineMetadata(GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata processWithDocAiPipelineMetadata) {
+    this.processWithDocAiPipelineMetadata = processWithDocAiPipelineMetadata;
     return this;
   }
 

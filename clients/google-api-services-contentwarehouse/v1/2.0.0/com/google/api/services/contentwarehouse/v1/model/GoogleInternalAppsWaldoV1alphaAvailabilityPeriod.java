@@ -32,7 +32,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleInternalAppsWaldoV1alphaAvailabilityPeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Day of week, 0 for Sunday, 1 for Monday, ...
+   * Day of week, 1 for Monday, ..., 7 for Sunday.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleInternalAppsWaldoV1alphaAvailabilityPeriod extends com.
   private java.lang.Integer periodStartMinutes;
 
   /**
-   * Day of week, 0 for Sunday, 1 for Monday, ...
+   * Day of week, 1 for Monday, ..., 7 for Sunday.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDayOfWeek() {
@@ -61,7 +61,7 @@ public final class GoogleInternalAppsWaldoV1alphaAvailabilityPeriod extends com.
   }
 
   /**
-   * Day of week, 0 for Sunday, 1 for Monday, ...
+   * Day of week, 1 for Monday, ..., 7 for Sunday.
    * @param dayOfWeek dayOfWeek or {@code null} for none
    */
   public GoogleInternalAppsWaldoV1alphaAvailabilityPeriod setDayOfWeek(java.lang.Integer dayOfWeek) {

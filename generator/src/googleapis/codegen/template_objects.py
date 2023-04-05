@@ -263,6 +263,15 @@ class CodeObject(UseableInTemplates):
     return MarkSafe(self.RelativeClassName(None))
 
   @property
+  def lowerClassName(self):  # pylint: disable=g-bad-name
+    lower_class_name = self.GetTemplateValue('lowerClassName')
+    if not lower_class_name:
+      lower_class_name = self.values['className']
+      lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
+    lower_class_name = MarkSafe(lower_class_name)
+    self.SetTemplateValue('lowerClassName', lower_class_name)
+    return lower_class_name
+  @property
   def packageRelativeClassName(self):  # pylint: disable=g-bad-name
     """Returns the class name for this object relative to its package.
 

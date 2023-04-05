@@ -31,6 +31,15 @@ package com.google.api.services.container.v1beta1.model;
 public final class IPAllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdditionalPodRangesConfig additionalPodRangesConfig;
+
+  /**
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network
    * routes. By default we do not allow cluster CIDR ranges to intersect with any user declared
    * routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger
@@ -208,6 +217,27 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useRoutes;
+
+  /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * @return value or {@code null} for none
+   */
+  public AdditionalPodRangesConfig getAdditionalPodRangesConfig() {
+    return additionalPodRangesConfig;
+  }
+
+  /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * @param additionalPodRangesConfig additionalPodRangesConfig or {@code null} for none
+   */
+  public IPAllocationPolicy setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
+    this.additionalPodRangesConfig = additionalPodRangesConfig;
+    return this;
+  }
 
   /**
    * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network

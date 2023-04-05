@@ -32,6 +32,14 @@ package com.google.api.services.container.model;
 public final class ClusterUpdate extends com.google.api.client.json.GenericJson {
 
   /**
+   * The additional pod ranges to be added to the cluster. These pod ranges can be used by node
+   * pools to allocate pod IPs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdditionalPodRangesConfig additionalPodRangesConfig;
+
+  /**
    * Configurations for the various addons available to run in the cluster.
    * The value may be {@code null}.
    */
@@ -341,6 +349,33 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * The additional pod ranges that are to be removed from the cluster. The pod ranges specified
+   * here must have been specified earlier in the 'additional_pod_ranges_config' argument.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdditionalPodRangesConfig removedAdditionalPodRangesConfig;
+
+  /**
+   * The additional pod ranges to be added to the cluster. These pod ranges can be used by node
+   * pools to allocate pod IPs.
+   * @return value or {@code null} for none
+   */
+  public AdditionalPodRangesConfig getAdditionalPodRangesConfig() {
+    return additionalPodRangesConfig;
+  }
+
+  /**
+   * The additional pod ranges to be added to the cluster. These pod ranges can be used by node
+   * pools to allocate pod IPs.
+   * @param additionalPodRangesConfig additionalPodRangesConfig or {@code null} for none
+   */
+  public ClusterUpdate setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
+    this.additionalPodRangesConfig = additionalPodRangesConfig;
+    return this;
+  }
 
   /**
    * Configurations for the various addons available to run in the cluster.
@@ -1081,6 +1116,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The additional pod ranges that are to be removed from the cluster. The pod ranges specified
+   * here must have been specified earlier in the 'additional_pod_ranges_config' argument.
+   * @return value or {@code null} for none
+   */
+  public AdditionalPodRangesConfig getRemovedAdditionalPodRangesConfig() {
+    return removedAdditionalPodRangesConfig;
+  }
+
+  /**
+   * The additional pod ranges that are to be removed from the cluster. The pod ranges specified
+   * here must have been specified earlier in the 'additional_pod_ranges_config' argument.
+   * @param removedAdditionalPodRangesConfig removedAdditionalPodRangesConfig or {@code null} for none
+   */
+  public ClusterUpdate setRemovedAdditionalPodRangesConfig(AdditionalPodRangesConfig removedAdditionalPodRangesConfig) {
+    this.removedAdditionalPodRangesConfig = removedAdditionalPodRangesConfig;
     return this;
   }
 

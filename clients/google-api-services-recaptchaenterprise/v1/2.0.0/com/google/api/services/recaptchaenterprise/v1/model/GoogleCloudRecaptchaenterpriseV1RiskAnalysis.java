@@ -31,6 +31,14 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
+   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
+   * subject to change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> extendedVerdictReasons;
+
+  /**
    * Reasons contributing to the risk analysis verdict.
    * The value may be {@code null}.
    */
@@ -44,6 +52,25 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
+
+  /**
+   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
+   * subject to change.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExtendedVerdictReasons() {
+    return extendedVerdictReasons;
+  }
+
+  /**
+   * Extended verdict reasons to be used for experimentation only. The set of possible reasons is
+   * subject to change.
+   * @param extendedVerdictReasons extendedVerdictReasons or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setExtendedVerdictReasons(java.util.List<java.lang.String> extendedVerdictReasons) {
+    this.extendedVerdictReasons = extendedVerdictReasons;
+    return this;
+  }
 
   /**
    * Reasons contributing to the risk analysis verdict.

@@ -3246,8 +3246,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Links {
 
           /**
-           * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to read
-           * the logs stored in the bucket. A bucket may currently only contain one link.
+           * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+           * read the logs stored in the log bucket. A log bucket may currently only contain one link.
            *
            * Create a request for the method "links.create".
            *
@@ -3276,8 +3276,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to
-             * read the logs stored in the bucket. A bucket may currently only contain one link.
+             * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+             * read the logs stored in the log bucket. A log bucket may currently only contain one link.
              *
              * Create a request for the method "links.create".
              *
@@ -4844,8 +4844,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * This request holds the parameters needed by the logging server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -4872,8 +4872,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -4952,22 +4952,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+              /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
@@ -5036,7 +5036,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -5044,25 +5044,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               @com.google.api.client.util.Key
               private java.util.List<java.lang.String> resourceNames;
 
-              /** Optional. The resource name that owns the logs:
+              /** Optional. List of resource names to list logs for:
              projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
              queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+             added to this list.
                */
               public java.util.List<java.lang.String> getResourceNames() {
                 return resourceNames;
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -5070,7 +5071,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
                 this.resourceNames = resourceNames;
@@ -5772,8 +5773,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5800,8 +5801,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5880,21 +5881,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+        /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
@@ -5960,37 +5961,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
-        /** Optional. The resource name that owns the logs:
+        /** Optional. List of resource names to list logs for:
        projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
        queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+       added to this list.
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -11818,8 +11822,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Links {
 
           /**
-           * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to read
-           * the logs stored in the bucket. A bucket may currently only contain one link.
+           * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+           * read the logs stored in the log bucket. A log bucket may currently only contain one link.
            *
            * Create a request for the method "links.create".
            *
@@ -11848,8 +11852,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to
-             * read the logs stored in the bucket. A bucket may currently only contain one link.
+             * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+             * read the logs stored in the log bucket. A log bucket may currently only contain one link.
              *
              * Create a request for the method "links.create".
              *
@@ -13416,8 +13420,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * This request holds the parameters needed by the logging server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -13444,8 +13448,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -13524,22 +13528,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+              /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
@@ -13608,7 +13612,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -13616,25 +13620,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               @com.google.api.client.util.Key
               private java.util.List<java.lang.String> resourceNames;
 
-              /** Optional. The resource name that owns the logs:
+              /** Optional. List of resource names to list logs for:
              projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
              queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+             added to this list.
                */
               public java.util.List<java.lang.String> getResourceNames() {
                 return resourceNames;
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -13642,7 +13647,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
                 this.resourceNames = resourceNames;
@@ -14344,8 +14349,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -14372,8 +14377,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -14452,21 +14457,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+        /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
@@ -14532,37 +14537,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
-        /** Optional. The resource name that owns the logs:
+        /** Optional. List of resource names to list logs for:
        projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
        queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+       added to this list.
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -17619,8 +17627,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       public class Links {
 
         /**
-         * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to read
-         * the logs stored in the bucket. A bucket may currently only contain one link.
+         * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+         * read the logs stored in the log bucket. A log bucket may currently only contain one link.
          *
          * Create a request for the method "links.create".
          *
@@ -17649,8 +17657,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
           /**
-           * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to
-           * read the logs stored in the bucket. A bucket may currently only contain one link.
+           * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+           * read the logs stored in the log bucket. A log bucket may currently only contain one link.
            *
            * Create a request for the method "links.create".
            *
@@ -19873,8 +19881,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the logging server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-     *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+     * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+     *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -19901,8 +19909,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-     *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+     *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -19981,21 +19989,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       * Required. The resource name to list logs for: projects/[PROJECT_ID]
        * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-     organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+      /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+     billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+       * Required. The resource name to list logs for: projects/[PROJECT_ID]
        * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        */
       public List setParent(java.lang.String parent) {
@@ -20061,37 +20069,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Optional. The resource name that owns the logs:
+       * Optional. List of resource names to list logs for:
        * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIE
        * W_ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
        * support legacy queries, it could also be: projects/[PROJECT_ID]
-       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The
+       * resource name in the parent field is added to this list.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** Optional. The resource name that owns the logs:
+      /** Optional. List of resource names to list logs for:
      projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
      organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
      billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
      folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
      queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-     billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+     billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+     added to this list.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
       }
 
       /**
-       * Optional. The resource name that owns the logs:
+       * Optional. List of resource names to list logs for:
        * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        * billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIE
        * W_ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
        * support legacy queries, it could also be: projects/[PROJECT_ID]
-       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The
+       * resource name in the parent field is added to this list.
        */
       public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
@@ -23789,8 +23800,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Links {
 
           /**
-           * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to read
-           * the logs stored in the bucket. A bucket may currently only contain one link.
+           * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+           * read the logs stored in the log bucket. A log bucket may currently only contain one link.
            *
            * Create a request for the method "links.create".
            *
@@ -23819,8 +23830,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to
-             * read the logs stored in the bucket. A bucket may currently only contain one link.
+             * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+             * read the logs stored in the log bucket. A log bucket may currently only contain one link.
              *
              * Create a request for the method "links.create".
              *
@@ -25387,8 +25398,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * This request holds the parameters needed by the logging server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -25415,8 +25426,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -25495,22 +25506,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+              /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
@@ -25579,7 +25590,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -25587,25 +25598,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               @com.google.api.client.util.Key
               private java.util.List<java.lang.String> resourceNames;
 
-              /** Optional. The resource name that owns the logs:
+              /** Optional. List of resource names to list logs for:
              projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
              queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+             added to this list.
                */
               public java.util.List<java.lang.String> getResourceNames() {
                 return resourceNames;
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -25613,7 +25625,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
                 this.resourceNames = resourceNames;
@@ -26315,8 +26327,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -26343,8 +26355,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -26423,21 +26435,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+        /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
@@ -26503,37 +26515,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
-        /** Optional. The resource name that owns the logs:
+        /** Optional. List of resource names to list logs for:
        projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
        queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+       added to this list.
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;
@@ -30856,8 +30871,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         public class Links {
 
           /**
-           * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to read
-           * the logs stored in the bucket. A bucket may currently only contain one link.
+           * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+           * read the logs stored in the log bucket. A log bucket may currently only contain one link.
            *
            * Create a request for the method "links.create".
            *
@@ -30886,8 +30901,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
 
             /**
-             * Asynchronously creates linked dataset in BigQuery which makes it possible to use BugQuery to
-             * read the logs stored in the bucket. A bucket may currently only contain one link.
+             * Asynchronously creates a linked dataset in BigQuery which makes it possible to use BigQuery to
+             * read the logs stored in the log bucket. A log bucket may currently only contain one link.
              *
              * Create a request for the method "links.create".
              *
@@ -32454,8 +32469,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * This request holds the parameters needed by the logging server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -32482,8 +32497,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+               * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -32562,22 +32577,22 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-             organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+              /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+               * Required. The resource name to list logs for: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
                * folders/[FOLDER_ID]
                */
@@ -32646,7 +32661,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -32654,25 +32669,26 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               @com.google.api.client.util.Key
               private java.util.List<java.lang.String> resourceNames;
 
-              /** Optional. The resource name that owns the logs:
+              /** Optional. List of resource names to list logs for:
              projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
              folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
              queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+             billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+             added to this list.
                */
               public java.util.List<java.lang.String> getResourceNames() {
                 return resourceNames;
               }
 
               /**
-               * Optional. The resource name that owns the logs:
+               * Optional. List of resource names to list logs for:
                * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] o
                * rganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[V
                * IEW_ID] billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKE
@@ -32680,7 +32696,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                * folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
                * support legacy queries, it could also be: projects/[PROJECT_ID]
                * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
-               * folders/[FOLDER_ID]
+               * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
                */
               public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
                 this.resourceNames = resourceNames;
@@ -33382,8 +33398,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the logging server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -33410,8 +33426,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       *        organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * @param parent Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       *        billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -33490,21 +33506,21 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name that owns the logs: projects/[PROJECT_ID]
-       organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+        /** Required. The resource name to list logs for: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name that owns the logs: projects/[PROJECT_ID]
+         * Required. The resource name to list logs for: projects/[PROJECT_ID]
          * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
          */
         public List setParent(java.lang.String parent) {
@@ -33570,37 +33586,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> resourceNames;
 
-        /** Optional. The resource name that owns the logs:
+        /** Optional. List of resource names to list logs for:
        projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
        folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To support legacy
        queries, it could also be: projects/[PROJECT_ID] organizations/[ORGANIZATION_ID]
-       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+       billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]The resource name in the parent field is
+       added to this list.
          */
         public java.util.List<java.lang.String> getResourceNames() {
           return resourceNames;
         }
 
         /**
-         * Optional. The resource name that owns the logs:
+         * Optional. List of resource names to list logs for:
          * projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] organiz
          * ations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID] bill
          * ingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_
          * ID] folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]To
          * support legacy queries, it could also be: projects/[PROJECT_ID]
-         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID] folders/[FOLDER_ID]
+         * organizations/[ORGANIZATION_ID] billingAccounts/[BILLING_ACCOUNT_ID]
+         * folders/[FOLDER_ID]The resource name in the parent field is added to this list.
          */
         public List setResourceNames(java.util.List<java.lang.String> resourceNames) {
           this.resourceNames = resourceNames;

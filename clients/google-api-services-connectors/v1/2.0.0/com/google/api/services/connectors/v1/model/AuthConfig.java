@@ -44,6 +44,13 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String authType;
 
   /**
+   * Oauth2AuthCodeFlow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Oauth2AuthCodeFlow oauth2AuthCodeFlow;
+
+  /**
    * Oauth2ClientCredentials.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    */
   public AuthConfig setAuthType(java.lang.String authType) {
     this.authType = authType;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @return value or {@code null} for none
+   */
+  public Oauth2AuthCodeFlow getOauth2AuthCodeFlow() {
+    return oauth2AuthCodeFlow;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @param oauth2AuthCodeFlow oauth2AuthCodeFlow or {@code null} for none
+   */
+  public AuthConfig setOauth2AuthCodeFlow(Oauth2AuthCodeFlow oauth2AuthCodeFlow) {
+    this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
     return this;
   }
 

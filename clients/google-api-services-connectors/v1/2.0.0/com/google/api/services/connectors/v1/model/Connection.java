@@ -113,6 +113,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private LockConfig lockConfig;
 
   /**
+   * Optional. Log configuration for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorsLogConfig logConfig;
+
+  /**
    * Output only. Resource name of the Connection. Format:
    * projects/{project}/locations/{location}/connections/{connection}
    * The value may be {@code null}.
@@ -352,6 +359,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setLockConfig(LockConfig lockConfig) {
     this.lockConfig = lockConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Log configuration for the connection.
+   * @return value or {@code null} for none
+   */
+  public ConnectorsLogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * Optional. Log configuration for the connection.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public Connection setLogConfig(ConnectorsLogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

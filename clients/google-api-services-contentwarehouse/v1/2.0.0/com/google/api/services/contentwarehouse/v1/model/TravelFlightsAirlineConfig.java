@@ -34,8 +34,8 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    * Populated using airlines_company_ids.csv for AdWords company map
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.Integer adwordsCid;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long adwordsCid;
 
   /**
    * STAR_ALLIANCE
@@ -184,7 +184,7 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    * Populated using airlines_company_ids.csv for AdWords company map
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getAdwordsCid() {
+  public java.lang.Long getAdwordsCid() {
     return adwordsCid;
   }
 
@@ -192,7 +192,7 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    * Populated using airlines_company_ids.csv for AdWords company map
    * @param adwordsCid adwordsCid or {@code null} for none
    */
-  public TravelFlightsAirlineConfig setAdwordsCid(java.lang.Integer adwordsCid) {
+  public TravelFlightsAirlineConfig setAdwordsCid(java.lang.Long adwordsCid) {
     this.adwordsCid = adwordsCid;
     return this;
   }

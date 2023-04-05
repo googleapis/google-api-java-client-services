@@ -31,6 +31,15 @@ package com.google.api.services.container.model;
 public final class IPAllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdditionalPodRangesConfig additionalPodRangesConfig;
+
+  /**
    * This field is deprecated, use cluster_ipv4_cidr_block.
    * The value may be {@code null}.
    */
@@ -195,6 +204,27 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useRoutes;
+
+  /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * @return value or {@code null} for none
+   */
+  public AdditionalPodRangesConfig getAdditionalPodRangesConfig() {
+    return additionalPodRangesConfig;
+  }
+
+  /**
+   * Output only. [Output only] The additional pod ranges that are added to the cluster. These pod
+   * ranges can be used by new node pools to allocate pod IPs automatically. Once the range is
+   * removed it will not show up in IPAllocationPolicy.
+   * @param additionalPodRangesConfig additionalPodRangesConfig or {@code null} for none
+   */
+  public IPAllocationPolicy setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
+    this.additionalPodRangesConfig = additionalPodRangesConfig;
+    return this;
+  }
 
   /**
    * This field is deprecated, use cluster_ipv4_cidr_block.

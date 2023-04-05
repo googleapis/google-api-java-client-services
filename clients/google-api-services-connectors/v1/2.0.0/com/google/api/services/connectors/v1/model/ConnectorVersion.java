@@ -63,6 +63,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
+   * Output only. List of destination configs needed to create a connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DestinationConfigTemplate> destinationConfigTemplates;
+
+  /**
    * Output only. Display name.
    * The value may be {@code null}.
    */
@@ -190,6 +197,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. List of destination configs needed to create a connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DestinationConfigTemplate> getDestinationConfigTemplates() {
+    return destinationConfigTemplates;
+  }
+
+  /**
+   * Output only. List of destination configs needed to create a connection.
+   * @param destinationConfigTemplates destinationConfigTemplates or {@code null} for none
+   */
+  public ConnectorVersion setDestinationConfigTemplates(java.util.List<DestinationConfigTemplate> destinationConfigTemplates) {
+    this.destinationConfigTemplates = destinationConfigTemplates;
     return this;
   }
 

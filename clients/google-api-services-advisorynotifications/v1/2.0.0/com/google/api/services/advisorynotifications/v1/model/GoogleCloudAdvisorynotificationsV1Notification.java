@@ -59,6 +59,13 @@ public final class GoogleCloudAdvisorynotificationsV1Notification extends com.go
   private java.lang.String name;
 
   /**
+   * Type of notification
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notificationType;
+
+  /**
    * The subject line of the notification.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class GoogleCloudAdvisorynotificationsV1Notification extends com.go
    */
   public GoogleCloudAdvisorynotificationsV1Notification setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Type of notification
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotificationType() {
+    return notificationType;
+  }
+
+  /**
+   * Type of notification
+   * @param notificationType notificationType or {@code null} for none
+   */
+  public GoogleCloudAdvisorynotificationsV1Notification setNotificationType(java.lang.String notificationType) {
+    this.notificationType = notificationType;
     return this;
   }
 

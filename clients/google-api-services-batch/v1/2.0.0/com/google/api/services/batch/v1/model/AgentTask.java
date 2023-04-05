@@ -66,6 +66,13 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
   private java.lang.String task;
 
   /**
+   * TaskSource represents the source of the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskSource;
+
+  /**
    * The intended state of the task.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
    */
   public AgentTask setTask(java.lang.String task) {
     this.task = task;
+    return this;
+  }
+
+  /**
+   * TaskSource represents the source of the task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskSource() {
+    return taskSource;
+  }
+
+  /**
+   * TaskSource represents the source of the task.
+   * @param taskSource taskSource or {@code null} for none
+   */
+  public AgentTask setTaskSource(java.lang.String taskSource) {
+    this.taskSource = taskSource;
     return this;
   }
 

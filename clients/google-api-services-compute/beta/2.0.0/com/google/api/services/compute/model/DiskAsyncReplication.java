@@ -30,6 +30,22 @@ package com.google.api.services.compute.model;
 public final class DiskAsyncReplication extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consistencyGroupPolicy;
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consistencyGroupPolicyId;
+
+  /**
    * The other disk asynchronously replicated to or from the current disk. You can provide this as a
    * partial or full URL to the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk -
@@ -49,6 +65,44 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String diskId;
+
+  /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsistencyGroupPolicy() {
+    return consistencyGroupPolicy;
+  }
+
+  /**
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * @param consistencyGroupPolicy consistencyGroupPolicy or {@code null} for none
+   */
+  public DiskAsyncReplication setConsistencyGroupPolicy(java.lang.String consistencyGroupPolicy) {
+    this.consistencyGroupPolicy = consistencyGroupPolicy;
+    return this;
+  }
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsistencyGroupPolicyId() {
+    return consistencyGroupPolicyId;
+  }
+
+  /**
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
+   * @param consistencyGroupPolicyId consistencyGroupPolicyId or {@code null} for none
+   */
+  public DiskAsyncReplication setConsistencyGroupPolicyId(java.lang.String consistencyGroupPolicyId) {
+    this.consistencyGroupPolicyId = consistencyGroupPolicyId;
+    return this;
+  }
 
   /**
    * The other disk asynchronously replicated to or from the current disk. You can provide this as a

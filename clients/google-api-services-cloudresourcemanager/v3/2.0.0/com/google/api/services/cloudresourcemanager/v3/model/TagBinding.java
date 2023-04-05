@@ -56,6 +56,16 @@ public final class TagBinding extends com.google.api.client.json.GenericJson {
   private java.lang.String tagValue;
 
   /**
+   * The namespaced name for the TagValue of the TagBinding. Must be in the format
+   * `{parent_id}/{tag_key_short_name}/{short_name}`. For methods that support TagValue namespaced
+   * name, only one of tag_value_namespaced_name or tag_value may be filled. Requests with both
+   * fields will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tagValueNamespacedName;
+
+  /**
    * Output only. The name of the TagBinding. This is a String of the form: `tagBindings/{full-
    * resource-name}/{tag-value-name}` (e.g.
    * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`).
@@ -109,6 +119,29 @@ public final class TagBinding extends com.google.api.client.json.GenericJson {
    */
   public TagBinding setTagValue(java.lang.String tagValue) {
     this.tagValue = tagValue;
+    return this;
+  }
+
+  /**
+   * The namespaced name for the TagValue of the TagBinding. Must be in the format
+   * `{parent_id}/{tag_key_short_name}/{short_name}`. For methods that support TagValue namespaced
+   * name, only one of tag_value_namespaced_name or tag_value may be filled. Requests with both
+   * fields will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTagValueNamespacedName() {
+    return tagValueNamespacedName;
+  }
+
+  /**
+   * The namespaced name for the TagValue of the TagBinding. Must be in the format
+   * `{parent_id}/{tag_key_short_name}/{short_name}`. For methods that support TagValue namespaced
+   * name, only one of tag_value_namespaced_name or tag_value may be filled. Requests with both
+   * fields will be rejected.
+   * @param tagValueNamespacedName tagValueNamespacedName or {@code null} for none
+   */
+  public TagBinding setTagValueNamespacedName(java.lang.String tagValueNamespacedName) {
+    this.tagValueNamespacedName = tagValueNamespacedName;
     return this;
   }
 

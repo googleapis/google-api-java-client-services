@@ -138,6 +138,7 @@ class CodeObject(UseableInTemplates):
     for parent_class_name in parent_path:
       if class_name == parent_class_name:
         class_name = parent_path[-1] + '_' + class_name
+        self.SetTemplateValue('isDuplicate', True)
 
     # increase occurrences as they occur in sibling resources
     if self.parent is not None:
@@ -147,6 +148,7 @@ class CodeObject(UseableInTemplates):
           # Importing at the top of the file will cause an import error
           from googleapis.codegen.api import Resource
           class_name = class_name + ('Resource' if isinstance(sibling, Resource) else 'Method')
+          self.SetTemplateValue('isDuplicate', True)
 
     return class_name
 
@@ -257,12 +259,16 @@ class CodeObject(UseableInTemplates):
   @property
   def lowerClassName(self):  # pylint: disable=g-bad-name
     lower_class_name = self.GetTemplateValue('lowerClassName')
+    is_duplicate = self.GetTemplateValue('isDuplicate')
     if not lower_class_name:
-      lower_class_name = self.values['className']
-      lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
-      # Used to remove underscores from de-duplicated class names
-      # (e.g. Nodes_Nodes -> nodesNodes)
-      lower_class_name = lower_class_name.replace('_', '')
+      if is_duplicate:
+        lower_class_name = self.values['className']
+        lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
+        # Used to remove underscores from de-duplicated class names
+        # (e.g. Nodes_Nodes -> nodesNodes)
+        lower_class_name = lower_class_name.replace('_', '')
+      else:
+        lower_class_name = self.codeName
     lower_class_name = MarkSafe(lower_class_name)
     self.SetTemplateValue('lowerClassName', lower_class_name)
     return lower_class_name

@@ -60,8 +60,8 @@ public final class Function extends com.google.api.client.json.GenericJson {
   private EventTrigger eventTrigger;
 
   /**
-   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
-   * resources. It must match the pattern
+   * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt
+   * function resources. It must match the pattern
    * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * The value may be {@code null}.
    */
@@ -182,8 +182,8 @@ public final class Function extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
-   * resources. It must match the pattern
+   * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt
+   * function resources. It must match the pattern
    * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @return value or {@code null} for none
    */
@@ -192,8 +192,8 @@ public final class Function extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function
-   * resources. It must match the pattern
+   * [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt
+   * function resources. It must match the pattern
    * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */

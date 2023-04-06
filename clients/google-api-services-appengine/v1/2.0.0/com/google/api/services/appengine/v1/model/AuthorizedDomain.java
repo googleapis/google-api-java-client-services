@@ -18,7 +18,7 @@ package com.google.api.services.appengine.v1.model;
 
 /**
  * A domain that a user has been authorized to administer. To authorize use of a domain, verify
- * ownership via Webmaster Central (https://www.google.com/webmasters/verification/home).
+ * ownership via Search Console (https://search.google.com/search-console/welcome).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:

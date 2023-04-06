@@ -128,32 +128,27 @@ class CodeObject(UseableInTemplates):
       self.SetTemplateValue('description',
                             self.ValidateAndSanitizeComment(self.StripHTML(d)))
 
-  def ComputeNonDuplicatedName(self, class_name):
+  def ComputeNonDuplicatedName(self, original_class_name):
+    class_name = original_class_name
     parent_path = self.parentPath()
     occurrences = 0
-
-    def increment_name(s, n):
-      """
-      Increments the number (if any) of the duplicated class name
-      :param s: class_name
-      :param n: occurrences
-      :return: new class_name with incremented occurrence (e.g. Test1 to Test2
-      or Test to Test1)
-      """
-      return s[0: - len(str(n - 1)) if n > 1 else len(s)] + str(n), n
 
     # increase occurrences as they occur in the path
     # from root class to current one
     for parent_class_name in parent_path:
       if class_name == parent_class_name:
-        class_name, occurrences = increment_name(class_name, occurrences + 1)
+        class_name = parent_path[-1] + '_' + class_name
+        self.SetTemplateValue('isDuplicate', True)
 
     # increase occurrences as they occur in sibling resources
     if self.parent is not None:
       siblings = self.parent.children
       for sibling in siblings:
         if sibling.GetTemplateValue('className') == class_name:
-          class_name, occurrences = increment_name(occurrences, occurrences + 1)
+          # Importing at the top of the file will cause an import error
+          from googleapis.codegen.api import Resource
+          class_name = class_name + ('Resource' if isinstance(sibling, Resource) else 'Method')
+          self.SetTemplateValue('isDuplicate', True)
 
     return class_name
 
@@ -261,6 +256,22 @@ class CodeObject(UseableInTemplates):
       return module.name + class_name_delimiter + self.RelativeClassName(None)
     return MarkSafe(self.RelativeClassName(None))
 
+  @property
+  def lowerClassName(self):  # pylint: disable=g-bad-name
+    lower_class_name = self.GetTemplateValue('lowerClassName')
+    is_duplicate = self.GetTemplateValue('isDuplicate')
+    if not lower_class_name:
+      if is_duplicate:
+        lower_class_name = self.values['className']
+        lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
+        # Used to remove underscores from de-duplicated class names
+        # (e.g. Nodes_Nodes -> nodesNodes)
+        lower_class_name = lower_class_name.replace('_', '')
+      else:
+        lower_class_name = self.codeName
+    lower_class_name = MarkSafe(lower_class_name)
+    self.SetTemplateValue('lowerClassName', lower_class_name)
+    return lower_class_name
   @property
   def packageRelativeClassName(self):  # pylint: disable=g-bad-name
     """Returns the class name for this object relative to its package.

@@ -69,13 +69,6 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
   private java.lang.String resourceName;
 
   /**
-   * Immutable. Details pertaining to a text ad.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo textAd;
-
-  /**
    * Output only. The type of ad.
    * The value may be {@code null}.
    */
@@ -170,23 +163,6 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   public GoogleAdsSearchads360V0ResourcesAd setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
-    return this;
-  }
-
-  /**
-   * Immutable. Details pertaining to a text ad.
-   * @return value or {@code null} for none
-   */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo getTextAd() {
-    return textAd;
-  }
-
-  /**
-   * Immutable. Details pertaining to a text ad.
-   * @param textAd textAd or {@code null} for none
-   */
-  public GoogleAdsSearchads360V0ResourcesAd setTextAd(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo textAd) {
-    this.textAd = textAd;
     return this;
   }
 

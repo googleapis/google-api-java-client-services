@@ -133,28 +133,20 @@ class CodeObject(UseableInTemplates):
     parent_path = self.parentPath()
     occurrences = 0
 
-    def increment_name(s, n):
-      """
-      Increments the number (if any) of the duplicated class name
-      :param s: class_name
-      :param n: occurrences
-      :return: new class_name with incremented occurrence (e.g. Test1 to Test2
-      or Test to Test1)
-      """
-      return s[0: - len(str(n - 1)) if n > 1 else len(s)] + str(n), n
-
     # increase occurrences as they occur in the path
     # from root class to current one
     for parent_class_name in parent_path:
       if class_name == parent_class_name:
-        class_name, occurrences = increment_name(class_name, occurrences + 1)
+        class_name = parent_path[-1] + '_' + class_name
 
     # increase occurrences as they occur in sibling resources
     if self.parent is not None:
       siblings = self.parent.children
       for sibling in siblings:
         if sibling.GetTemplateValue('className') == class_name:
-          class_name, occurrences = increment_name(class_name, occurrences + 1)
+          # Importing at the top of the file will cause an import error
+          from googleapis.codegen.api import Resource
+          class_name = class_name + ('Resource' if isinstance(sibling, Resource) else 'Method')
 
     return class_name
 
@@ -268,6 +260,9 @@ class CodeObject(UseableInTemplates):
     if not lower_class_name:
       lower_class_name = self.values['className']
       lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
+      # Used to remove underscores from de-duplicated class names
+      # (e.g. Nodes_Nodes -> nodesNodes)
+      lower_class_name = lower_class_name.replace('_', '')
     lower_class_name = MarkSafe(lower_class_name)
     self.SetTemplateValue('lowerClassName', lower_class_name)
     return lower_class_name

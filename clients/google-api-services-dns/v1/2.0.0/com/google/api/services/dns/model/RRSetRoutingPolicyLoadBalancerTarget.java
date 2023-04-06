@@ -30,7 +30,7 @@ package com.google.api.services.dns.model;
 public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * The frontend IP address of the
+   * The frontend IP address of the Load Balancer to health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,43 +49,44 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   private java.lang.String kind;
 
   /**
+   * The type of Load Balancer specified by this target. Must match the configuration of the Load
+   * Balancer located at the LoadBalancerTarget's IP address/port and region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String loadBalancerType;
 
   /**
-   * The fully qualified url of the network on which the ILB is
+   * The fully qualified url of the network on which the ILB is present. This should be formatted
+   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUrl;
 
   /**
-   * Load Balancer to health check. The configured port of the Load Balancer.
+   * The configured port of the Load Balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String port;
 
   /**
-   * present. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project
-   * ID in which the ILB exists.
+   * The project ID in which the ILB exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The region for regional ILBs.
+   * The region in which the ILB exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * The frontend IP address of the
+   * The frontend IP address of the Load Balancer to health check.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -93,7 +94,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The frontend IP address of the
+   * The frontend IP address of the Load Balancer to health check.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setIpAddress(java.lang.String ipAddress) {
@@ -132,6 +133,8 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
+   * The type of Load Balancer specified by this target. Must match the configuration of the Load
+   * Balancer located at the LoadBalancerTarget's IP address/port and region.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancerType() {
@@ -139,6 +142,8 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
+   * The type of Load Balancer specified by this target. Must match the configuration of the Load
+   * Balancer located at the LoadBalancerTarget's IP address/port and region.
    * @param loadBalancerType loadBalancerType or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setLoadBalancerType(java.lang.String loadBalancerType) {
@@ -147,7 +152,8 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The fully qualified url of the network on which the ILB is
+   * The fully qualified url of the network on which the ILB is present. This should be formatted
+   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUrl() {
@@ -155,7 +161,8 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The fully qualified url of the network on which the ILB is
+   * The fully qualified url of the network on which the ILB is present. This should be formatted
+   * like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @param networkUrl networkUrl or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setNetworkUrl(java.lang.String networkUrl) {
@@ -164,7 +171,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * Load Balancer to health check. The configured port of the Load Balancer.
+   * The configured port of the Load Balancer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPort() {
@@ -172,7 +179,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * Load Balancer to health check. The configured port of the Load Balancer.
+   * The configured port of the Load Balancer.
    * @param port port or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setPort(java.lang.String port) {
@@ -181,9 +188,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * present. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project
-   * ID in which the ILB exists.
+   * The project ID in which the ILB exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -191,9 +196,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * present. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project
-   * ID in which the ILB exists.
+   * The project ID in which the ILB exists.
    * @param project project or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setProject(java.lang.String project) {
@@ -202,7 +205,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The region for regional ILBs.
+   * The region in which the ILB exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -210,7 +213,7 @@ public final class RRSetRoutingPolicyLoadBalancerTarget extends com.google.api.c
   }
 
   /**
-   * The region for regional ILBs.
+   * The region in which the ILB exists.
    * @param region region or {@code null} for none
    */
   public RRSetRoutingPolicyLoadBalancerTarget setRegion(java.lang.String region) {

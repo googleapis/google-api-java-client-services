@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Request of updating permission settings for a partner workload.
+ * Request for updating permission settings for a partner workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation

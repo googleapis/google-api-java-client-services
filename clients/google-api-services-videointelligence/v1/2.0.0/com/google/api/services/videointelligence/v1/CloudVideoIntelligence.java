@@ -194,24 +194,24 @@ public class CloudVideoIntelligence extends com.google.api.client.googleapis.ser
       public class Locations {
 
         /**
-         * An accessor for creating requests from the Operations1 collection.
+         * An accessor for creating requests from the Locations_Operations collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code CloudVideoIntelligence videointelligence = new CloudVideoIntelligence(...);}
-         *   {@code CloudVideoIntelligence.Operations1.List request = videointelligence.operations().list(parameters ...)}
+         *   {@code CloudVideoIntelligence.Locations_Operations.List request = videointelligence.locationsOperations().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Operations1 operations() {
-          return new Operations1();
+        public Locations_Operations locationsOperations() {
+          return new Locations_Operations();
         }
 
         /**
          * The "operations" collection of methods.
          */
-        public class Operations1 {
+        public class Locations_Operations {
 
           /**
            * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to

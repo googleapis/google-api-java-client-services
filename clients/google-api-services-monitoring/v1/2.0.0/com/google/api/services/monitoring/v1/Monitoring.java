@@ -3013,24 +3013,24 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
             }
             /**
-             * An accessor for creating requests from the Labels collection.
+             * An accessor for creating requests from the LabelsMethod collection.
              *
              * <p>The typical use is:</p>
              * <pre>
              *   {@code Monitoring monitoring = new Monitoring(...);}
-             *   {@code Monitoring.Labels.List request = monitoring.labels().list(parameters ...)}
+             *   {@code Monitoring.LabelsMethod.List request = monitoring.labelsMethod().list(parameters ...)}
              * </pre>
              *
              * @return the resource collection
              */
-            public Labels labels() {
-              return new Labels();
+            public LabelsMethod labelsMethod() {
+              return new LabelsMethod();
             }
 
             /**
              * The "labels" collection of methods.
              */
-            public class Labels {
+            public class LabelsMethod {
 
               /**
                * Lists labels for metrics.

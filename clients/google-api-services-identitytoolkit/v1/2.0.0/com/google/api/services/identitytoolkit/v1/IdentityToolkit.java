@@ -2316,24 +2316,24 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
     }
 
     /**
-     * An accessor for creating requests from the Accounts collection.
+     * An accessor for creating requests from the AccountsMethod collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code IdentityToolkit identitytoolkit = new IdentityToolkit(...);}
-     *   {@code IdentityToolkit.Accounts.List request = identitytoolkit.accounts().list(parameters ...)}
+     *   {@code IdentityToolkit.AccountsMethod.List request = identitytoolkit.accountsMethod().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Accounts accounts() {
-      return new Accounts();
+    public AccountsMethod accountsMethod() {
+      return new AccountsMethod();
     }
 
     /**
      * The "accounts" collection of methods.
      */
-    public class Accounts {
+    public class AccountsMethod {
 
       /**
        * Uploads multiple accounts into the Google Cloud project. If there is a problem uploading one or
@@ -3974,24 +3974,24 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * An accessor for creating requests from the Accounts collection.
+       * An accessor for creating requests from the AccountsMethod collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code IdentityToolkit identitytoolkit = new IdentityToolkit(...);}
-       *   {@code IdentityToolkit.Accounts.List request = identitytoolkit.accounts().list(parameters ...)}
+       *   {@code IdentityToolkit.AccountsMethod.List request = identitytoolkit.accountsMethod().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Accounts accounts() {
-        return new Accounts();
+      public AccountsMethod accountsMethod() {
+        return new AccountsMethod();
       }
 
       /**
        * The "accounts" collection of methods.
        */
-      public class Accounts {
+      public class AccountsMethod {
 
         /**
          * Uploads multiple accounts into the Google Cloud project. If there is a problem uploading one or

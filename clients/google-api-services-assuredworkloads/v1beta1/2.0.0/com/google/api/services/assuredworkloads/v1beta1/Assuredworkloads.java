@@ -1561,64 +1561,64 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * An accessor for creating requests from the Organizations1 collection.
+         * An accessor for creating requests from the Workloads_Organizations collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-         *   {@code Assuredworkloads.Organizations1.List request = assuredworkloads.organizations().list(parameters ...)}
+         *   {@code Assuredworkloads.Workloads_Organizations.List request = assuredworkloads.workloadsOrganizations().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Organizations1 organizations() {
-          return new Organizations1();
+        public Workloads_Organizations workloadsOrganizations() {
+          return new Workloads_Organizations();
         }
 
         /**
          * The "organizations" collection of methods.
          */
-        public class Organizations1 {
+        public class Workloads_Organizations {
 
           /**
-           * An accessor for creating requests from the Locations1 collection.
+           * An accessor for creating requests from the Workloads_Organizations_Locations collection.
            *
            * <p>The typical use is:</p>
            * <pre>
            *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-           *   {@code Assuredworkloads.Locations1.List request = assuredworkloads.locations().list(parameters ...)}
+           *   {@code Assuredworkloads.Workloads_Organizations_Locations.List request = assuredworkloads.workloadsOrganizationsLocations().list(parameters ...)}
            * </pre>
            *
            * @return the resource collection
            */
-          public Locations1 locations() {
-            return new Locations1();
+          public Workloads_Organizations_Locations workloadsOrganizationsLocations() {
+            return new Workloads_Organizations_Locations();
           }
 
           /**
            * The "locations" collection of methods.
            */
-          public class Locations1 {
+          public class Workloads_Organizations_Locations {
 
             /**
-             * An accessor for creating requests from the Workloads1 collection.
+             * An accessor for creating requests from the Workloads_Organizations_Locations_Workloads collection.
              *
              * <p>The typical use is:</p>
              * <pre>
              *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-             *   {@code Assuredworkloads.Workloads1.List request = assuredworkloads.workloads().list(parameters ...)}
+             *   {@code Assuredworkloads.Workloads_Organizations_Locations_Workloads.List request = assuredworkloads.workloadsOrganizationsLocationsWorkloads().list(parameters ...)}
              * </pre>
              *
              * @return the resource collection
              */
-            public Workloads1 workloads() {
-              return new Workloads1();
+            public Workloads_Organizations_Locations_Workloads workloadsOrganizationsLocationsWorkloads() {
+              return new Workloads_Organizations_Locations_Workloads();
             }
 
             /**
              * The "workloads" collection of methods.
              */
-            public class Workloads1 {
+            public class Workloads_Organizations_Locations_Workloads {
 
               /**
                * Analyzes a hypothetical move of a source project or project-based workload to a target

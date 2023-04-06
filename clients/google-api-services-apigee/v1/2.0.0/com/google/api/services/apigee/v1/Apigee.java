@@ -3889,24 +3889,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
-       * An accessor for creating requests from the Attributes collection.
+       * An accessor for creating requests from the AttributesMethod collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Apigee apigee = new Apigee(...);}
-       *   {@code Apigee.Attributes.List request = apigee.attributes().list(parameters ...)}
+       *   {@code Apigee.AttributesMethod.List request = apigee.attributesMethod().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Attributes attributes() {
-        return new Attributes();
+      public AttributesMethod attributesMethod() {
+        return new AttributesMethod();
       }
 
       /**
        * The "attributes" collection of methods.
        */
-      public class Attributes {
+      public class AttributesMethod {
 
         /**
          * Deletes an API product attribute.
@@ -12458,24 +12458,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * An accessor for creating requests from the Attributes collection.
+         * An accessor for creating requests from the AttributesMethod collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code Apigee apigee = new Apigee(...);}
-         *   {@code Apigee.Attributes.List request = apigee.attributes().list(parameters ...)}
+         *   {@code Apigee.AttributesMethod.List request = apigee.attributesMethod().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Attributes attributes() {
-          return new Attributes();
+        public AttributesMethod attributesMethod() {
+          return new AttributesMethod();
         }
 
         /**
          * The "attributes" collection of methods.
          */
-        public class Attributes {
+        public class AttributesMethod {
 
           /**
            * Deletes a developer app attribute.
@@ -14196,24 +14196,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           }
           /**
-           * An accessor for creating requests from the Create collection.
+           * An accessor for creating requests from the CreateMethod collection.
            *
            * <p>The typical use is:</p>
            * <pre>
            *   {@code Apigee apigee = new Apigee(...);}
-           *   {@code Apigee.Create.List request = apigee.create().list(parameters ...)}
+           *   {@code Apigee.CreateMethod.List request = apigee.createMethod().list(parameters ...)}
            * </pre>
            *
            * @return the resource collection
            */
-          public Create create() {
-            return new Create();
+          public CreateMethod createMethod() {
+            return new CreateMethod();
           }
 
           /**
            * The "create" collection of methods.
            */
-          public class Create {
+          public class CreateMethod {
 
             /**
              * Creates a custom consumer key and secret for a developer app. This is particularly useful if you
@@ -14229,20 +14229,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Create a request for the method "create.create".
              *
              * This request holds the parameters needed by the apigee server.  After setting any optional
-             * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation.
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent Parent of the developer app key. Use the following structure in your request:
              *        `organizations/{org}/developers/{developer_email}/apps`
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
              * @return the request
              */
-            public CreateRequest create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) throws java.io.IOException {
-              CreateRequest result = new CreateRequest(parent, content);
+            public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) throws java.io.IOException {
+              Create result = new Create(parent, content);
               initialize(result);
               return result;
             }
 
-            public class CreateRequest extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey> {
+            public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey> {
 
               private static final String REST_PATH = "v1/{+parent}/keys/create";
 
@@ -14263,17 +14263,16 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * Create a request for the method "create.create".
                *
                * This request holds the parameters needed by the the apigee server.  After setting any optional
-               * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation. <p>
-               * {@link CreateRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
-               * equest)} must be called to initialize this instance immediately after invoking the constructor.
-               * </p>
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent Parent of the developer app key. Use the following structure in your request:
              *        `organizations/{org}/developers/{developer_email}/apps`
                * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
                * @since 1.13
                */
-              protected CreateRequest(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) {
+              protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) {
                 super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -14284,58 +14283,58 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               }
 
               @Override
-              public CreateRequest set$Xgafv(java.lang.String $Xgafv) {
-                return (CreateRequest) super.set$Xgafv($Xgafv);
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public CreateRequest setAccessToken(java.lang.String accessToken) {
-                return (CreateRequest) super.setAccessToken(accessToken);
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
               }
 
               @Override
-              public CreateRequest setAlt(java.lang.String alt) {
-                return (CreateRequest) super.setAlt(alt);
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
               }
 
               @Override
-              public CreateRequest setCallback(java.lang.String callback) {
-                return (CreateRequest) super.setCallback(callback);
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
               }
 
               @Override
-              public CreateRequest setFields(java.lang.String fields) {
-                return (CreateRequest) super.setFields(fields);
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
               }
 
               @Override
-              public CreateRequest setKey(java.lang.String key) {
-                return (CreateRequest) super.setKey(key);
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
               }
 
               @Override
-              public CreateRequest setOauthToken(java.lang.String oauthToken) {
-                return (CreateRequest) super.setOauthToken(oauthToken);
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public CreateRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (CreateRequest) super.setPrettyPrint(prettyPrint);
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public CreateRequest setQuotaUser(java.lang.String quotaUser) {
-                return (CreateRequest) super.setQuotaUser(quotaUser);
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public CreateRequest setUploadType(java.lang.String uploadType) {
-                return (CreateRequest) super.setUploadType(uploadType);
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
               }
 
               @Override
-              public CreateRequest setUploadProtocol(java.lang.String uploadProtocol) {
-                return (CreateRequest) super.setUploadProtocol(uploadProtocol);
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
               /**
@@ -14356,7 +14355,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * Parent of the developer app key. Use the following structure in your request:
                * `organizations/{org}/developers/{developer_email}/apps`
                */
-              public CreateRequest setParent(java.lang.String parent) {
+              public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -14367,8 +14366,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               }
 
               @Override
-              public CreateRequest set(String parameterName, Object value) {
-                return (CreateRequest) super.set(parameterName, value);
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
               }
             }
 
@@ -14376,24 +14375,24 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * An accessor for creating requests from the Attributes collection.
+       * An accessor for creating requests from the AttributesMethod collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Apigee apigee = new Apigee(...);}
-       *   {@code Apigee.Attributes.List request = apigee.attributes().list(parameters ...)}
+       *   {@code Apigee.AttributesMethod.List request = apigee.attributesMethod().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Attributes attributes() {
-        return new Attributes();
+      public AttributesMethod attributesMethod() {
+        return new AttributesMethod();
       }
 
       /**
        * The "attributes" collection of methods.
        */
-      public class Attributes {
+      public class AttributesMethod {
 
         /**
          * Deletes a developer attribute.

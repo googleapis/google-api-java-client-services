@@ -31,8 +31,8 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. May be
-   * missing.
+   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
+   * may be missing, and in the common case of the generic space, it definitely will be.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   private java.lang.String space;
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. May be
-   * missing.
+   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
+   * may be missing, and in the common case of the generic space, it definitely will be.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCanonicalCode() {
@@ -77,8 +77,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. May be
-   * missing.
+   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
+   * may be missing, and in the common case of the generic space, it definitely will be.
    * @param canonicalCode canonicalCode or {@code null} for none
    */
   public StatusProto setCanonicalCode(java.lang.Integer canonicalCode) {

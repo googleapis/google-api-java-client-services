@@ -7339,6 +7339,196 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
+         * Updates a Cloud Spanner database. The returned long-running operation can be used to track the
+         * progress of updating the database. If the named database does not exist, returns `NOT_FOUND`.
+         * While the operation is pending: * The database's reconciling field is set to true. * Cancelling
+         * the operation is best-effort. If the cancellation succeeds, the operation metadata's cancel_time
+         * is set, the updates are reverted, and the operation terminates with a `CANCELLED` status. * New
+         * UpdateDatabase requests will return a `FAILED_PRECONDITION` error until the pending operation is
+         * done (returns successfully or with error). * Reading the database via the API continues to give
+         * the pre-request values. Upon completion of the returned operation: * The new values are in effect
+         * and readable via the API. * The database's reconciling field becomes false. The returned long-
+         * running operation will have a name of the format `projects//instances//databases//operations/`
+         * and can be used to track the database modification. The metadata field type is
+         * UpdateDatabaseMetadata. The response field type is Database, if successful.
+         *
+         * Create a request for the method "databases.patch".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the database. Values are of the form `projects//instances//databases/`, where
+         *        `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other
+         *        API methods to identify the database.
+         * @param content the {@link com.google.api.services.spanner.v1.model.Database}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.spanner.v1.model.Database content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+          /**
+           * Updates a Cloud Spanner database. The returned long-running operation can be used to track the
+           * progress of updating the database. If the named database does not exist, returns `NOT_FOUND`.
+           * While the operation is pending: * The database's reconciling field is set to true. * Cancelling
+           * the operation is best-effort. If the cancellation succeeds, the operation metadata's
+           * cancel_time is set, the updates are reverted, and the operation terminates with a `CANCELLED`
+           * status. * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error until the
+           * pending operation is done (returns successfully or with error). * Reading the database via the
+           * API continues to give the pre-request values. Upon completion of the returned operation: * The
+           * new values are in effect and readable via the API. * The database's reconciling field becomes
+           * false. The returned long-running operation will have a name of the format
+           * `projects//instances//databases//operations/` and can be used to track the database
+           * modification. The metadata field type is UpdateDatabaseMetadata. The response field type is
+           * Database, if successful.
+           *
+           * Create a request for the method "databases.patch".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the database. Values are of the form `projects//instances//databases/`, where
+         *        `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other
+         *        API methods to identify the database.
+           * @param content the {@link com.google.api.services.spanner.v1.model.Database}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.spanner.v1.model.Database content) {
+            super(Spanner.this, "PATCH", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the database. Values are of the form
+           * `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE`
+           * statement. This name can be passed to other API methods to identify the database.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the database. Values are of the form `projects//instances//databases/`, where
+         `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other API methods
+         to identify the database.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the database. Values are of the form
+           * `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE`
+           * statement. This name can be passed to other API methods to identify the database.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The list of fields to update. Currently, only `enable_drop_protection` field
+           * can be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update. Currently, only `enable_drop_protection` field can be
+         updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The list of fields to update. Currently, only `enable_drop_protection` field
+           * can be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
          * Create a new database by restoring from a completed backup. The new database must be in the same
          * project and in an instance with the same instance configuration as the instance containing the
          * backup. The returned database long-running operation has a name of the format

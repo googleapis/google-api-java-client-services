@@ -63,11 +63,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   private java.lang.Boolean reset;
 
   /**
-   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one policy rule where condition is unset. -
-   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
-   * without a condition. - During policy evaluation, policy rules with conditions that are true for
-   * a target resource take precedence.
+   * In policies for boolean constraints, the following requirements apply: - There must be one and
+   * only one policy rule where condition is unset. - Boolean policy rules with conditions must set
+   * `enforced` to the opposite of the policy rule without a condition. - During policy evaluation,
+   * policy rules with conditions that are true for a target resource take precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,11 +152,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one policy rule where condition is unset. -
-   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
-   * without a condition. - During policy evaluation, policy rules with conditions that are true for
-   * a target resource take precedence.
+   * In policies for boolean constraints, the following requirements apply: - There must be one and
+   * only one policy rule where condition is unset. - Boolean policy rules with conditions must set
+   * `enforced` to the opposite of the policy rule without a condition. - During policy evaluation,
+   * policy rules with conditions that are true for a target resource take precedence.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOrgpolicyV2PolicySpecPolicyRule> getRules() {
@@ -165,11 +163,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpec extends com.google.api.clien
   }
 
   /**
-   * Up to 10 policy rules are allowed. In policies for boolean constraints, the following
-   * requirements apply: - There must be one and only one policy rule where condition is unset. -
-   * Boolean policy rules with conditions must set `enforced` to the opposite of the policy rule
-   * without a condition. - During policy evaluation, policy rules with conditions that are true for
-   * a target resource take precedence.
+   * In policies for boolean constraints, the following requirements apply: - There must be one and
+   * only one policy rule where condition is unset. - Boolean policy rules with conditions must set
+   * `enforced` to the opposite of the policy rule without a condition. - During policy evaluation,
+   * policy rules with conditions that are true for a target resource take precedence.
    * @param rules rules or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec setRules(java.util.List<GoogleCloudOrgpolicyV2PolicySpecPolicyRule> rules) {

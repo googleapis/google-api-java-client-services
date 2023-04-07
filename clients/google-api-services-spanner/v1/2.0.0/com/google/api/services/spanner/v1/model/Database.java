@@ -63,6 +63,13 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String earliestVersionTime;
 
   /**
+   * Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDropProtection;
+
+  /**
    * Output only. For databases that are using customer managed encryption, this field contains the
    * encryption configuration for the database. For databases that are using Google default or other
    * types of encryption, this field is empty.
@@ -91,6 +98,14 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. If true, the database is being updated. If false, there are no ongoing update
+   * operations for the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reconciling;
 
   /**
    * Output only. Applicable only for restored databases. Contains information about the restore
@@ -195,6 +210,23 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDropProtection() {
+    return enableDropProtection;
+  }
+
+  /**
+   * Whether drop protection is enabled for this database. Defaults to false, if not set.
+   * @param enableDropProtection enableDropProtection or {@code null} for none
+   */
+  public Database setEnableDropProtection(java.lang.Boolean enableDropProtection) {
+    this.enableDropProtection = enableDropProtection;
+    return this;
+  }
+
+  /**
    * Output only. For databases that are using customer managed encryption, this field contains the
    * encryption configuration for the database. For databases that are using Google default or other
    * types of encryption, this field is empty.
@@ -260,6 +292,25 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. If true, the database is being updated. If false, there are no ongoing update
+   * operations for the database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReconciling() {
+    return reconciling;
+  }
+
+  /**
+   * Output only. If true, the database is being updated. If false, there are no ongoing update
+   * operations for the database.
+   * @param reconciling reconciling or {@code null} for none
+   */
+  public Database setReconciling(java.lang.Boolean reconciling) {
+    this.reconciling = reconciling;
     return this;
   }
 

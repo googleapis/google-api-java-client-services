@@ -31,8 +31,8 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tags that should be deleted from the Data Catalog. Caller should populate template name and
-   * column only.
+   * Optional. Tags that should be deleted from the Data Catalog. Caller should populate template
+   * name and column only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.cl
   }
 
   /**
-   * Tags that should be ingested into the Data Catalog. Caller should populate template name,
-   * column and fields.
+   * Optional. Tags that should be ingested into the Data Catalog. Caller should populate template
+   * name, column and fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.cl
   private GoogleCloudDatacatalogV1Entry v1Entry;
 
   /**
-   * Tags that should be deleted from the Data Catalog. Caller should populate template name and
-   * column only.
+   * Optional. Tags that should be deleted from the Data Catalog. Caller should populate template
+   * name and column only.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDatacatalogV1Tag> getAbsentTags() {
@@ -75,8 +75,8 @@ public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.cl
   }
 
   /**
-   * Tags that should be deleted from the Data Catalog. Caller should populate template name and
-   * column only.
+   * Optional. Tags that should be deleted from the Data Catalog. Caller should populate template
+   * name and column only.
    * @param absentTags absentTags or {@code null} for none
    */
   public GoogleCloudDatacatalogV1TaggedEntry setAbsentTags(java.util.List<GoogleCloudDatacatalogV1Tag> absentTags) {
@@ -85,8 +85,8 @@ public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.cl
   }
 
   /**
-   * Tags that should be ingested into the Data Catalog. Caller should populate template name,
-   * column and fields.
+   * Optional. Tags that should be ingested into the Data Catalog. Caller should populate template
+   * name, column and fields.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDatacatalogV1Tag> getPresentTags() {
@@ -94,8 +94,8 @@ public final class GoogleCloudDatacatalogV1TaggedEntry extends com.google.api.cl
   }
 
   /**
-   * Tags that should be ingested into the Data Catalog. Caller should populate template name,
-   * column and fields.
+   * Optional. Tags that should be ingested into the Data Catalog. Caller should populate template
+   * name, column and fields.
    * @param presentTags presentTags or {@code null} for none
    */
   public GoogleCloudDatacatalogV1TaggedEntry setPresentTags(java.util.List<GoogleCloudDatacatalogV1Tag> presentTags) {

@@ -107,6 +107,13 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   private java.lang.String numTags;
 
   /**
+   * Number of transformations in the container version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String numTransformations;
+
+  /**
    * Number of triggers in the container version.
    * The value may be {@code null}.
    */
@@ -318,6 +325,23 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
    */
   public ContainerVersionHeader setNumTags(java.lang.String numTags) {
     this.numTags = numTags;
+    return this;
+  }
+
+  /**
+   * Number of transformations in the container version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNumTransformations() {
+    return numTransformations;
+  }
+
+  /**
+   * Number of transformations in the container version.
+   * @param numTransformations numTransformations or {@code null} for none
+   */
+  public ContainerVersionHeader setNumTransformations(java.lang.String numTransformations) {
+    this.numTransformations = numTransformations;
     return this;
   }
 

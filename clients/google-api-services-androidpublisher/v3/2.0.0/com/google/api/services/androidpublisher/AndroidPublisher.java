@@ -6877,6 +6877,485 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Externaltransactions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Externaltransactions.List request = androidpublisher.externaltransactions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Externaltransactions externaltransactions() {
+    return new Externaltransactions();
+  }
+
+  /**
+   * The "externaltransactions" collection of methods.
+   */
+  public class Externaltransactions {
+
+    /**
+     * Creates a new external transaction.
+     *
+     * Create a request for the method "externaltransactions.createexternaltransaction".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Createexternaltransaction#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param parent Required. The parent resource where this external transaction will be created. Format:
+     *        applications/{package_name}
+     * @param content the {@link com.google.api.services.androidpublisher.model.ExternalTransaction}
+     * @return the request
+     */
+    public Createexternaltransaction createexternaltransaction(java.lang.String parent, com.google.api.services.androidpublisher.model.ExternalTransaction content) throws java.io.IOException {
+      Createexternaltransaction result = new Createexternaltransaction(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Createexternaltransaction extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExternalTransaction> {
+
+      private static final String REST_PATH = "androidpublisher/v3/{+parent}/externalTransactions";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^applications/[^/]+$");
+
+      /**
+       * Creates a new external transaction.
+       *
+       * Create a request for the method "externaltransactions.createexternaltransaction".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Createexternaltransaction#execute()} method to invoke the
+       * remote operation. <p> {@link Createexternaltransaction#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The parent resource where this external transaction will be created. Format:
+     *        applications/{package_name}
+       * @param content the {@link com.google.api.services.androidpublisher.model.ExternalTransaction}
+       * @since 1.13
+       */
+      protected Createexternaltransaction(java.lang.String parent, com.google.api.services.androidpublisher.model.ExternalTransaction content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.ExternalTransaction.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^applications/[^/]+$");
+        }
+      }
+
+      @Override
+      public Createexternaltransaction set$Xgafv(java.lang.String $Xgafv) {
+        return (Createexternaltransaction) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createexternaltransaction setAccessToken(java.lang.String accessToken) {
+        return (Createexternaltransaction) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Createexternaltransaction setAlt(java.lang.String alt) {
+        return (Createexternaltransaction) super.setAlt(alt);
+      }
+
+      @Override
+      public Createexternaltransaction setCallback(java.lang.String callback) {
+        return (Createexternaltransaction) super.setCallback(callback);
+      }
+
+      @Override
+      public Createexternaltransaction setFields(java.lang.String fields) {
+        return (Createexternaltransaction) super.setFields(fields);
+      }
+
+      @Override
+      public Createexternaltransaction setKey(java.lang.String key) {
+        return (Createexternaltransaction) super.setKey(key);
+      }
+
+      @Override
+      public Createexternaltransaction setOauthToken(java.lang.String oauthToken) {
+        return (Createexternaltransaction) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Createexternaltransaction setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Createexternaltransaction) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Createexternaltransaction setQuotaUser(java.lang.String quotaUser) {
+        return (Createexternaltransaction) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Createexternaltransaction setUploadType(java.lang.String uploadType) {
+        return (Createexternaltransaction) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createexternaltransaction setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createexternaltransaction) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent resource where this external transaction will be created. Format:
+       * applications/{package_name}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent resource where this external transaction will be created. Format:
+     applications/{package_name}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent resource where this external transaction will be created. Format:
+       * applications/{package_name}
+       */
+      public Createexternaltransaction setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^applications/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Required. The id to use for the external transaction. Must be unique across all other
+       * transactions for the app. This value should be 1-63 characters and valid characters are
+       * /a-z0-9_-/.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String externalTransactionId;
+
+      /** Required. The id to use for the external transaction. Must be unique across all other transactions
+     for the app. This value should be 1-63 characters and valid characters are /a-z0-9_-/.
+       */
+      public java.lang.String getExternalTransactionId() {
+        return externalTransactionId;
+      }
+
+      /**
+       * Required. The id to use for the external transaction. Must be unique across all other
+       * transactions for the app. This value should be 1-63 characters and valid characters are
+       * /a-z0-9_-/.
+       */
+      public Createexternaltransaction setExternalTransactionId(java.lang.String externalTransactionId) {
+        this.externalTransactionId = externalTransactionId;
+        return this;
+      }
+
+      @Override
+      public Createexternaltransaction set(String parameterName, Object value) {
+        return (Createexternaltransaction) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets an existing external transaction.
+     *
+     * Create a request for the method "externaltransactions.getexternaltransaction".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Getexternaltransaction#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the external transaction to retrieve. Format:
+     *        applications/{package_name}/externalTransactions/{external_transaction}
+     * @return the request
+     */
+    public Getexternaltransaction getexternaltransaction(java.lang.String name) throws java.io.IOException {
+      Getexternaltransaction result = new Getexternaltransaction(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Getexternaltransaction extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExternalTransaction> {
+
+      private static final String REST_PATH = "androidpublisher/v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^applications/[^/]+/externalTransactions/[^/]+$");
+
+      /**
+       * Gets an existing external transaction.
+       *
+       * Create a request for the method "externaltransactions.getexternaltransaction".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Getexternaltransaction#execute()} method to invoke the
+       * remote operation. <p> {@link Getexternaltransaction#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the external transaction to retrieve. Format:
+     *        applications/{package_name}/externalTransactions/{external_transaction}
+       * @since 1.13
+       */
+      protected Getexternaltransaction(java.lang.String name) {
+        super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ExternalTransaction.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^applications/[^/]+/externalTransactions/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Getexternaltransaction set$Xgafv(java.lang.String $Xgafv) {
+        return (Getexternaltransaction) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getexternaltransaction setAccessToken(java.lang.String accessToken) {
+        return (Getexternaltransaction) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Getexternaltransaction setAlt(java.lang.String alt) {
+        return (Getexternaltransaction) super.setAlt(alt);
+      }
+
+      @Override
+      public Getexternaltransaction setCallback(java.lang.String callback) {
+        return (Getexternaltransaction) super.setCallback(callback);
+      }
+
+      @Override
+      public Getexternaltransaction setFields(java.lang.String fields) {
+        return (Getexternaltransaction) super.setFields(fields);
+      }
+
+      @Override
+      public Getexternaltransaction setKey(java.lang.String key) {
+        return (Getexternaltransaction) super.setKey(key);
+      }
+
+      @Override
+      public Getexternaltransaction setOauthToken(java.lang.String oauthToken) {
+        return (Getexternaltransaction) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Getexternaltransaction setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Getexternaltransaction) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Getexternaltransaction setQuotaUser(java.lang.String quotaUser) {
+        return (Getexternaltransaction) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Getexternaltransaction setUploadType(java.lang.String uploadType) {
+        return (Getexternaltransaction) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getexternaltransaction setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getexternaltransaction) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the external transaction to retrieve. Format:
+       * applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the external transaction to retrieve. Format:
+     applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the external transaction to retrieve. Format:
+       * applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      public Getexternaltransaction setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^applications/[^/]+/externalTransactions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Getexternaltransaction set(String parameterName, Object value) {
+        return (Getexternaltransaction) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Refunds or partially refunds an existing external transaction.
+     *
+     * Create a request for the method "externaltransactions.refundexternaltransaction".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Refundexternaltransaction#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the external transaction that will be refunded. Format:
+     *        applications/{package_name}/externalTransactions/{external_transaction}
+     * @param content the {@link com.google.api.services.androidpublisher.model.RefundExternalTransactionRequest}
+     * @return the request
+     */
+    public Refundexternaltransaction refundexternaltransaction(java.lang.String name, com.google.api.services.androidpublisher.model.RefundExternalTransactionRequest content) throws java.io.IOException {
+      Refundexternaltransaction result = new Refundexternaltransaction(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Refundexternaltransaction extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ExternalTransaction> {
+
+      private static final String REST_PATH = "androidpublisher/v3/{+name}:refund";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^applications/[^/]+/externalTransactions/[^/]+$");
+
+      /**
+       * Refunds or partially refunds an existing external transaction.
+       *
+       * Create a request for the method "externaltransactions.refundexternaltransaction".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Refundexternaltransaction#execute()} method to invoke the
+       * remote operation. <p> {@link Refundexternaltransaction#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the external transaction that will be refunded. Format:
+     *        applications/{package_name}/externalTransactions/{external_transaction}
+       * @param content the {@link com.google.api.services.androidpublisher.model.RefundExternalTransactionRequest}
+       * @since 1.13
+       */
+      protected Refundexternaltransaction(java.lang.String name, com.google.api.services.androidpublisher.model.RefundExternalTransactionRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.ExternalTransaction.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^applications/[^/]+/externalTransactions/[^/]+$");
+        }
+      }
+
+      @Override
+      public Refundexternaltransaction set$Xgafv(java.lang.String $Xgafv) {
+        return (Refundexternaltransaction) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Refundexternaltransaction setAccessToken(java.lang.String accessToken) {
+        return (Refundexternaltransaction) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Refundexternaltransaction setAlt(java.lang.String alt) {
+        return (Refundexternaltransaction) super.setAlt(alt);
+      }
+
+      @Override
+      public Refundexternaltransaction setCallback(java.lang.String callback) {
+        return (Refundexternaltransaction) super.setCallback(callback);
+      }
+
+      @Override
+      public Refundexternaltransaction setFields(java.lang.String fields) {
+        return (Refundexternaltransaction) super.setFields(fields);
+      }
+
+      @Override
+      public Refundexternaltransaction setKey(java.lang.String key) {
+        return (Refundexternaltransaction) super.setKey(key);
+      }
+
+      @Override
+      public Refundexternaltransaction setOauthToken(java.lang.String oauthToken) {
+        return (Refundexternaltransaction) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Refundexternaltransaction setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Refundexternaltransaction) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Refundexternaltransaction setQuotaUser(java.lang.String quotaUser) {
+        return (Refundexternaltransaction) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Refundexternaltransaction setUploadType(java.lang.String uploadType) {
+        return (Refundexternaltransaction) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Refundexternaltransaction setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Refundexternaltransaction) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the external transaction that will be refunded. Format:
+       * applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the external transaction that will be refunded. Format:
+     applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the external transaction that will be refunded. Format:
+       * applications/{package_name}/externalTransactions/{external_transaction}
+       */
+      public Refundexternaltransaction setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^applications/[^/]+/externalTransactions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Refundexternaltransaction set(String parameterName, Object value) {
+        return (Refundexternaltransaction) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Generatedapks collection.
    *
    * <p>The typical use is:</p>

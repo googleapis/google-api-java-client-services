@@ -869,6 +869,34 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           }
 
           /**
+           * Optional. This field allows this pool to be deleted even if it's being depended on by
+           * another resource. However, doing so may result in unintended and unrecoverable effects
+           * on any dependent resource(s) since the pool will no longer be able to issue
+           * certificates.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreDependentResources;
+
+          /** Optional. This field allows this pool to be deleted even if it's being depended on by another
+         resource. However, doing so may result in unintended and unrecoverable effects on any dependent
+         resource(s) since the pool will no longer be able to issue certificates.
+           */
+          public java.lang.Boolean getIgnoreDependentResources() {
+            return ignoreDependentResources;
+          }
+
+          /**
+           * Optional. This field allows this pool to be deleted even if it's being depended on by
+           * another resource. However, doing so may result in unintended and unrecoverable effects
+           * on any dependent resource(s) since the pool will no longer be able to issue
+           * certificates.
+           */
+          public Delete setIgnoreDependentResources(java.lang.Boolean ignoreDependentResources) {
+            this.ignoreDependentResources = ignoreDependentResources;
+            return this;
+          }
+
+          /**
            * Optional. An ID to identify requests. Specify a unique request ID so that if you must
            * retry your request, the server will know to ignore the request if it has already been
            * completed. The server will guarantee that for at least 60 minutes since the first
@@ -2632,6 +2660,34 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              */
             public Delete setIgnoreActiveCertificates(java.lang.Boolean ignoreActiveCertificates) {
               this.ignoreActiveCertificates = ignoreActiveCertificates;
+              return this;
+            }
+
+            /**
+             * Optional. This field allows this ca to be deleted even if it's being depended on by
+             * another resource. However, doing so may result in unintended and unrecoverable
+             * effects on any dependent resource(s) since the CA will no longer be able to issue
+             * certificates.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean ignoreDependentResources;
+
+            /** Optional. This field allows this ca to be deleted even if it's being depended on by another
+           resource. However, doing so may result in unintended and unrecoverable effects on any dependent
+           resource(s) since the CA will no longer be able to issue certificates.
+             */
+            public java.lang.Boolean getIgnoreDependentResources() {
+              return ignoreDependentResources;
+            }
+
+            /**
+             * Optional. This field allows this ca to be deleted even if it's being depended on by
+             * another resource. However, doing so may result in unintended and unrecoverable
+             * effects on any dependent resource(s) since the CA will no longer be able to issue
+             * certificates.
+             */
+            public Delete setIgnoreDependentResources(java.lang.Boolean ignoreDependentResources) {
+              this.ignoreDependentResources = ignoreDependentResources;
               return this;
             }
 

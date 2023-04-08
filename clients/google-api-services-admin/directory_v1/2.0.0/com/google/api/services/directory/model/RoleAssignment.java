@@ -30,8 +30,9 @@ package com.google.api.services.directory.model;
 public final class RoleAssignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique ID of the entity this role is assigned to—either the `user_id` of a user or the
-   * `uniqueId` of a service account, as defined in [Identity and Access Management
+   * The unique ID of the entity this role is assigned to—either the `user_id` of a user, the
+   * `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and
+   * Access Management
    * (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
    * The value may be {@code null}.
    */
@@ -89,8 +90,9 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
   private java.lang.String scopeType;
 
   /**
-   * The unique ID of the entity this role is assigned to—either the `user_id` of a user or the
-   * `uniqueId` of a service account, as defined in [Identity and Access Management
+   * The unique ID of the entity this role is assigned to—either the `user_id` of a user, the
+   * `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and
+   * Access Management
    * (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
    * @return value or {@code null} for none
    */
@@ -99,8 +101,9 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The unique ID of the entity this role is assigned to—either the `user_id` of a user or the
-   * `uniqueId` of a service account, as defined in [Identity and Access Management
+   * The unique ID of the entity this role is assigned to—either the `user_id` of a user, the
+   * `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and
+   * Access Management
    * (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
    * @param assignedTo assignedTo or {@code null} for none
    */

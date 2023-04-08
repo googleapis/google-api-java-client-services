@@ -87,6 +87,13 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ruleVersions;
 
   /**
+   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schedule;
+
+  /**
    * Output only. [Output only] Update time stamp
    * The value may be {@code null}.
    */
@@ -228,6 +235,23 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   public Evaluation setRuleVersions(java.util.List<java.lang.String> ruleVersions) {
     this.ruleVersions = ruleVersions;
+    return this;
+  }
+
+  /**
+   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchedule() {
+    return schedule;
+  }
+
+  /**
+   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * @param schedule schedule or {@code null} for none
+   */
+  public Evaluation setSchedule(java.lang.String schedule) {
+    this.schedule = schedule;
     return this;
   }
 

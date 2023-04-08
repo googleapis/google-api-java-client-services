@@ -1081,6 +1081,989 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
         }
 
+        /**
+         * An accessor for creating requests from the Executions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+         *   {@code WorkloadManager.Executions.List request = workloadmanager.executions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Executions executions() {
+          return new Executions();
+        }
+
+        /**
+         * The "executions" collection of methods.
+         */
+        public class Executions {
+
+          /**
+           * Gets details of a single Execution.
+           *
+           * Create a request for the method "executions.get".
+           *
+           * This request holds the parameters needed by the workloadmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.Execution> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+
+            /**
+             * Gets details of a single Execution.
+             *
+             * Create a request for the method "executions.get".
+             *
+             * This request holds the parameters needed by the the workloadmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.Execution.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Executions in a given project and location.
+           *
+           * Create a request for the method "executions.list".
+           *
+           * This request holds the parameters needed by the workloadmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource prefix of the Execution using the form:
+           *        'projects/{project}/locations/{location}/evaluations/{evaluation}'
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.ListExecutionsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/executions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Lists Executions in a given project and location.
+             *
+             * Create a request for the method "executions.list".
+             *
+             * This request holds the parameters needed by the the workloadmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource prefix of the Execution using the form:
+           *        'projects/{project}/locations/{location}/evaluations/{evaluation}'
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.ListExecutionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource prefix of the Execution using the form:
+             * 'projects/{project}/locations/{location}/evaluations/{evaluation}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource prefix of the Execution using the form:
+           'projects/{project}/locations/{location}/evaluations/{evaluation}'
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource prefix of the Execution using the form:
+             * 'projects/{project}/locations/{location}/evaluations/{evaluation}'
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Filtering results */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Filtering results
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Filtering results */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field to sort by. See https://google.aip.dev/132#ordering for more details.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Requested page size. Server may return fewer items than requested. If unspecified,
+             * server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
+           an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. Server may return fewer items than requested. If unspecified,
+             * server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new Execution in a given project and location.
+           *
+           * Create a request for the method "executions.run".
+           *
+           * This request holds the parameters needed by the workloadmanager server.  After setting any
+           * optional parameters, call the {@link Run#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Execution using the form:
+           *        'projects/{project}/locations/{location}/evaluations/{evaluation}/executions/{execution}'
+           * @param content the {@link com.google.api.services.workloadmanager.v1.model.RunEvaluationRequest}
+           * @return the request
+           */
+          public Run run(java.lang.String name, com.google.api.services.workloadmanager.v1.model.RunEvaluationRequest content) throws java.io.IOException {
+            Run result = new Run(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Run extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}/executions:run";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Creates a new Execution in a given project and location.
+             *
+             * Create a request for the method "executions.run".
+             *
+             * This request holds the parameters needed by the the workloadmanager server.  After setting any
+             * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+             * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Execution using the form:
+           *        'projects/{project}/locations/{location}/evaluations/{evaluation}/executions/{execution}'
+             * @param content the {@link com.google.api.services.workloadmanager.v1.model.RunEvaluationRequest}
+             * @since 1.13
+             */
+            protected Run(java.lang.String name, com.google.api.services.workloadmanager.v1.model.RunEvaluationRequest content) {
+              super(WorkloadManager.this, "POST", REST_PATH, content, com.google.api.services.workloadmanager.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Run set$Xgafv(java.lang.String $Xgafv) {
+              return (Run) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Run setAccessToken(java.lang.String accessToken) {
+              return (Run) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Run setAlt(java.lang.String alt) {
+              return (Run) super.setAlt(alt);
+            }
+
+            @Override
+            public Run setCallback(java.lang.String callback) {
+              return (Run) super.setCallback(callback);
+            }
+
+            @Override
+            public Run setFields(java.lang.String fields) {
+              return (Run) super.setFields(fields);
+            }
+
+            @Override
+            public Run setKey(java.lang.String key) {
+              return (Run) super.setKey(key);
+            }
+
+            @Override
+            public Run setOauthToken(java.lang.String oauthToken) {
+              return (Run) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Run) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Run setQuotaUser(java.lang.String quotaUser) {
+              return (Run) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Run setUploadType(java.lang.String uploadType) {
+              return (Run) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Run setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Run) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Execution using the form: 'projects/{project}/loca
+             * tions/{location}/evaluations/{evaluation}/executions/{execution}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Execution using the form:
+           'projects/{project}/locations/{location}/evaluations/{evaluation}/executions/{execution}'
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Execution using the form: 'projects/{project}/loca
+             * tions/{location}/evaluations/{evaluation}/executions/{execution}'
+             */
+            public Run setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Run set(String parameterName, Object value) {
+              return (Run) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Results collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+           *   {@code WorkloadManager.Results.List request = workloadmanager.results().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Results results() {
+            return new Results();
+          }
+
+          /**
+           * The "results" collection of methods.
+           */
+          public class Results {
+
+            /**
+             * List the running result of a single Execution.
+             *
+             * Create a request for the method "results.list".
+             *
+             * This request holds the parameters needed by the workloadmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The execution results. Format: {parent}/evaluations/executions/results
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.ListExecutionResultsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/results";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+
+              /**
+               * List the running result of a single Execution.
+               *
+               * Create a request for the method "results.list".
+               *
+               * This request holds the parameters needed by the the workloadmanager server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The execution results. Format: {parent}/evaluations/executions/results
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.ListExecutionResultsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The execution results. Format: {parent}/evaluations/executions/results
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The execution results. Format: {parent}/evaluations/executions/results
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The execution results. Format: {parent}/evaluations/executions/results
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Filtering results */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Filtering results
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Filtering results */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Requested page size. Server may return fewer items than requested. If unspecified,
+               * server will pick an appropriate default.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
+             an appropriate default.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Requested page size. Server may return fewer items than requested. If unspecified,
+               * server will pick an appropriate default.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** A token identifying a page of results the server should return. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A token identifying a page of results the server should return.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** A token identifying a page of results the server should return. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the ScannedResources collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+           *   {@code WorkloadManager.ScannedResources.List request = workloadmanager.scannedResources().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ScannedResources scannedResources() {
+            return new ScannedResources();
+          }
+
+          /**
+           * The "scannedResources" collection of methods.
+           */
+          public class ScannedResources {
+
+            /**
+             * List all scanned resources for a single Execution.
+             *
+             * Create a request for the method "scannedResources.list".
+             *
+             * This request holds the parameters needed by the workloadmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. parent for ListScannedResourcesRequest
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.ListScannedResourcesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/scannedResources";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+
+              /**
+               * List all scanned resources for a single Execution.
+               *
+               * Create a request for the method "scannedResources.list".
+               *
+               * This request holds the parameters needed by the the workloadmanager server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. parent for ListScannedResourcesRequest
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.ListScannedResourcesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. parent for ListScannedResourcesRequest */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. parent for ListScannedResourcesRequest
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. parent for ListScannedResourcesRequest */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Filtering results */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Filtering results
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Filtering results */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Field to sort by. See https://google.aip.dev/132#ordering for more details.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Field to sort by. See https://google.aip.dev/132#ordering for more details. */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Requested page size. Server may return fewer items than requested. If unspecified,
+               * server will pick an appropriate default.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
+             an appropriate default.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Requested page size. Server may return fewer items than requested. If unspecified,
+               * server will pick an appropriate default.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** A token identifying a page of results the server should return. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A token identifying a page of results the server should return.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** A token identifying a page of results the server should return. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** rule name */
+              @com.google.api.client.util.Key
+              private java.lang.String rule;
+
+              /** rule name
+               */
+              public java.lang.String getRule() {
+                return rule;
+              }
+
+              /** rule name */
+              public List setRule(java.lang.String rule) {
+                this.rule = rule;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
       }
       /**
        * An accessor for creating requests from the Insights collection.
@@ -1854,6 +2837,235 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Rules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+       *   {@code WorkloadManager.Rules.List request = workloadmanager.rules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Rules rules() {
+        return new Rules();
+      }
+
+      /**
+       * The "rules" collection of methods.
+       */
+      public class Rules {
+
+        /**
+         * Lists rules in a given project.
+         *
+         * Create a request for the method "rules.list".
+         *
+         * This request holds the parameters needed by the workloadmanager server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The [project] on which to execute the request. The format is:
+         *        projects/{project_id}/locations/{location} Currently, the pre-defined rules are global
+         *        available to all projects and all regions
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.ListRulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/rules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists rules in a given project.
+           *
+           * Create a request for the method "rules.list".
+           *
+           * This request holds the parameters needed by the the workloadmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The [project] on which to execute the request. The format is:
+         *        projects/{project_id}/locations/{location} Currently, the pre-defined rules are global
+         *        available to all projects and all regions
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.ListRulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The [project] on which to execute the request. The format is:
+           * projects/{project_id}/locations/{location} Currently, the pre-defined rules are global
+           * available to all projects and all regions
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The [project] on which to execute the request. The format is:
+         projects/{project_id}/locations/{location} Currently, the pre-defined rules are global available to
+         all projects and all regions
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The [project] on which to execute the request. The format is:
+           * projects/{project_id}/locations/{location} Currently, the pre-defined rules are global
+           * available to all projects and all regions
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Filter based on primary_category, secondary_category */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filter based on primary_category, secondary_category
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Filter based on primary_category, secondary_category */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Requested page size. Server may return fewer items than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Server may return fewer items than requested. If unspecified, server will pick
+         an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Server may return fewer items than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

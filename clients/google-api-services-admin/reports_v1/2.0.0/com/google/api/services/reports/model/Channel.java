@@ -67,7 +67,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> params;
 
   /**
-   * A Boolean value to indicate whether payload is wanted. Optional.
+   * A Boolean value to indicate whether payload is wanted. A payload is data that is sent in the
+   * body of an HTTP POST, PUT, or PATCH message and contains important information about the
+   * request. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +195,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Boolean value to indicate whether payload is wanted. Optional.
+   * A Boolean value to indicate whether payload is wanted. A payload is data that is sent in the
+   * body of an HTTP POST, PUT, or PATCH message and contains important information about the
+   * request. Optional.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPayload() {
@@ -201,7 +205,9 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Boolean value to indicate whether payload is wanted. Optional.
+   * A Boolean value to indicate whether payload is wanted. A payload is data that is sent in the
+   * body of an HTTP POST, PUT, or PATCH message and contains important information about the
+   * request. Optional.
    * @param payload payload or {@code null} for none
    */
   public Channel setPayload(java.lang.Boolean payload) {

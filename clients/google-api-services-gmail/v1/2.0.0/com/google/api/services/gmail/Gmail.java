@@ -4226,17 +4226,30 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return includeSpamTrash;
         }
 
-        /** Only return messages with labels that match all of the specified label IDs. */
+        /**
+         * Only return messages with labels that match all of the specified label IDs. Messages in a
+         * thread might have labels that other messages in the same thread don't have. To learn
+         * more, see [Manage labels on messages and threads](https://developers.google.com/gmail/api
+         * /guides/labels#manage_labels_on_messages_threads).
+         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> labelIds;
 
-        /** Only return messages with labels that match all of the specified label IDs.
+        /** Only return messages with labels that match all of the specified label IDs. Messages in a thread
+       might have labels that other messages in the same thread don't have. To learn more, see [Manage
+       labels on messages and
+       threads](https://developers.google.com/gmail/api/guides/labels#manage_labels_on_messages_threads).
          */
         public java.util.List<java.lang.String> getLabelIds() {
           return labelIds;
         }
 
-        /** Only return messages with labels that match all of the specified label IDs. */
+        /**
+         * Only return messages with labels that match all of the specified label IDs. Messages in a
+         * thread might have labels that other messages in the same thread don't have. To learn
+         * more, see [Manage labels on messages and threads](https://developers.google.com/gmail/api
+         * /guides/labels#manage_labels_on_messages_threads).
+         */
         public List setLabelIds(java.util.List<java.lang.String> labelIds) {
           this.labelIds = labelIds;
           return this;

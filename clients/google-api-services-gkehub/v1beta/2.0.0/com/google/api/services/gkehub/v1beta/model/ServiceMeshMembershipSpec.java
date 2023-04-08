@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ServiceMeshMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables automatic control plane management.
+   * Deprecated: use `management` instead Enables automatic control plane management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   private java.lang.String management;
 
   /**
-   * Enables automatic control plane management.
+   * Deprecated: use `management` instead Enables automatic control plane management.
    * @return value or {@code null} for none
    */
   public java.lang.String getControlPlane() {
@@ -52,7 +52,7 @@ public final class ServiceMeshMembershipSpec extends com.google.api.client.json.
   }
 
   /**
-   * Enables automatic control plane management.
+   * Deprecated: use `management` instead Enables automatic control plane management.
    * @param controlPlane controlPlane or {@code null} for none
    */
   public ServiceMeshMembershipSpec setControlPlane(java.lang.String controlPlane) {

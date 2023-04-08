@@ -44,6 +44,13 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   private java.lang.String resourceKind;
 
   /**
+   * Indicates whether this is a new, updated, or missing resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceState;
+
+  /**
    * The type of this resource.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
    */
   public SapDiscoveryResource setResourceKind(java.lang.String resourceKind) {
     this.resourceKind = resourceKind;
+    return this;
+  }
+
+  /**
+   * Indicates whether this is a new, updated, or missing resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceState() {
+    return resourceState;
+  }
+
+  /**
+   * Indicates whether this is a new, updated, or missing resource.
+   * @param resourceState resourceState or {@code null} for none
+   */
+  public SapDiscoveryResource setResourceState(java.lang.String resourceState) {
+    this.resourceState = resourceState;
     return this;
   }
 

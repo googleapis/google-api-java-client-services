@@ -32,11 +32,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
-   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
-   * both required and must be greater than or equal to 0.
+   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
+   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,9 +55,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String appendedTag;
 
   /**
-   * Required. Assets associated to this creative. Assets can be associated to the creative in one
-   * of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` *
-   * `ASSET_ROLE_POLITE_LOAD`
+   * Required. Assets associated to this creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +78,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
    * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
-   * other cases.
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
+   * cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,9 +144,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * Required. Primary dimensions of the creative. Applicable to all creative types. The value of
    * width_pixels and height_pixels defaults to `0` when creative_type is one of: *
-   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL` *
-   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO` *
-   * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO`
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,9 +240,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in
+   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
    * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
@@ -416,9 +408,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
    * with https (except on inventory that doesn't require SSL compliance). If using macros in your
    * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -477,11 +468,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
-   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
-   * both required and must be greater than or equal to 0.
+   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
+   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Dimensions> getAdditionalDimensions() {
@@ -490,11 +479,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
-   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
-   * both required and must be greater than or equal to 0.
+   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
+   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
+   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
    * @param additionalDimensions additionalDimensions or {@code null} for none
    */
   public Creative setAdditionalDimensions(java.util.List<Dimensions> additionalDimensions) {
@@ -537,9 +524,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Assets associated to this creative. Assets can be associated to the creative in one
-   * of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` *
-   * `ASSET_ROLE_POLITE_LOAD`
+   * Required. Assets associated to this creative.
    * @return value or {@code null} for none
    */
   public java.util.List<AssetAssociation> getAssets() {
@@ -547,9 +532,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Assets associated to this creative. Assets can be associated to the creative in one
-   * of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` *
-   * `ASSET_ROLE_POLITE_LOAD`
+   * Required. Assets associated to this creative.
    * @param assets assets or {@code null} for none
    */
   public Creative setAssets(java.util.List<AssetAssociation> assets) {
@@ -579,9 +562,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
    * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
-   * other cases.
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
+   * cases.
    * @return value or {@code null} for none
    */
   public CmTrackingAd getCmTrackingAd() {
@@ -591,9 +573,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
    * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` Output only for
-   * other cases.
+   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
+   * cases.
    * @param cmTrackingAd cmTrackingAd or {@code null} for none
    */
   public Creative setCmTrackingAd(CmTrackingAd cmTrackingAd) {
@@ -722,9 +703,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * Required. Primary dimensions of the creative. Applicable to all creative types. The value of
    * width_pixels and height_pixels defaults to `0` when creative_type is one of: *
-   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL` *
-   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO` *
-   * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO`
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
   public Dimensions getDimensions() {
@@ -734,9 +713,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   /**
    * Required. Primary dimensions of the creative. Applicable to all creative types. The value of
    * width_pixels and height_pixels defaults to `0` when creative_type is one of: *
-   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL` *
-   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO` *
-   * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO`
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param dimensions dimensions or {@code null} for none
    */
   public Creative setDimensions(Dimensions dimensions) {
@@ -952,9 +929,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in
+   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
    * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
@@ -964,9 +940,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
    * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in
+   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
    * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` *
    * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param jsTrackerUrl jsTrackerUrl or {@code null} for none
    */
@@ -1342,9 +1317,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
    * with https (except on inventory that doesn't require SSL compliance). If using macros in your
    * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrackerUrls() {
@@ -1355,9 +1329,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
    * with https (except on inventory that doesn't require SSL compliance). If using macros in your
    * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` *
-   * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param trackerUrls trackerUrls or {@code null} for none
    */
   public Creative setTrackerUrls(java.util.List<java.lang.String> trackerUrls) {

@@ -51,7 +51,7 @@ public final class ReportConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Collection of combinations of groups and preference sets.
+   * Required. Collection of combinations of groups and preference sets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class ReportConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of combinations of groups and preference sets.
+   * Required. Collection of combinations of groups and preference sets.
    * @return value or {@code null} for none
    */
   public java.util.List<ReportConfigGroupPreferenceSetAssignment> getGroupPreferencesetAssignments() {
@@ -131,7 +131,7 @@ public final class ReportConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of combinations of groups and preference sets.
+   * Required. Collection of combinations of groups and preference sets.
    * @param groupPreferencesetAssignments groupPreferencesetAssignments or {@code null} for none
    */
   public ReportConfig setGroupPreferencesetAssignments(java.util.List<ReportConfigGroupPreferenceSetAssignment> groupPreferencesetAssignments) {

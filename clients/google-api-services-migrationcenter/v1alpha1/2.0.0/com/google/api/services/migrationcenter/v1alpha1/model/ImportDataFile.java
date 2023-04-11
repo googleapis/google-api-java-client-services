@@ -44,7 +44,7 @@ public final class ImportDataFile extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
-   * The payload format.
+   * Required. The payload format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class ImportDataFile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The payload format.
+   * Required. The payload format.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -114,7 +114,7 @@ public final class ImportDataFile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The payload format.
+   * Required. The payload format.
    * @param format format or {@code null} for none
    */
   public ImportDataFile setFormat(java.lang.String format) {

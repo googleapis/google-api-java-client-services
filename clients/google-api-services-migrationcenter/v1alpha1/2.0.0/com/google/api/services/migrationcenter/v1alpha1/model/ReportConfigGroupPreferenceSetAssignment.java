@@ -30,21 +30,21 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ReportConfigGroupPreferenceSetAssignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the group.
+   * Required. Name of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String group;
 
   /**
-   * Name of the Preference Set.
+   * Required. Name of the Preference Set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String preferenceSet;
 
   /**
-   * Name of the group.
+   * Required. Name of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -52,7 +52,7 @@ public final class ReportConfigGroupPreferenceSetAssignment extends com.google.a
   }
 
   /**
-   * Name of the group.
+   * Required. Name of the group.
    * @param group group or {@code null} for none
    */
   public ReportConfigGroupPreferenceSetAssignment setGroup(java.lang.String group) {
@@ -61,7 +61,7 @@ public final class ReportConfigGroupPreferenceSetAssignment extends com.google.a
   }
 
   /**
-   * Name of the Preference Set.
+   * Required. Name of the Preference Set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreferenceSet() {
@@ -69,7 +69,7 @@ public final class ReportConfigGroupPreferenceSetAssignment extends com.google.a
   }
 
   /**
-   * Name of the Preference Set.
+   * Required. Name of the Preference Set.
    * @param preferenceSet preferenceSet or {@code null} for none
    */
   public ReportConfigGroupPreferenceSetAssignment setPreferenceSet(java.lang.String preferenceSet) {

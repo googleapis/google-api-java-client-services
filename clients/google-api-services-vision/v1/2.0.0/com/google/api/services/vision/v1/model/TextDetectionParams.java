@@ -31,7 +31,10 @@ package com.google.api.services.vision.v1.model;
 public final class TextDetectionParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of advanced OCR options to fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +49,10 @@ public final class TextDetectionParams extends com.google.api.client.json.Generi
   private java.lang.Boolean enableTextDetectionConfidenceScore;
 
   /**
-   * A list of advanced OCR options to fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdvancedOcrOptions() {
@@ -54,7 +60,10 @@ public final class TextDetectionParams extends com.google.api.client.json.Generi
   }
 
   /**
-   * A list of advanced OCR options to fine-tune OCR behavior.
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: -
+   * `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the
+   * current ML-based layout detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
    * @param advancedOcrOptions advancedOcrOptions or {@code null} for none
    */
   public TextDetectionParams setAdvancedOcrOptions(java.util.List<java.lang.String> advancedOcrOptions) {

@@ -85,6 +85,13 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private java.util.Map<String, java.lang.String> pubsubNotificationSettings;
 
   /**
+   * Default DLP redaction resources to be applied while ingesting conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
+
+  /**
    * Output only. The time at which the settings were last updated.
    * The value may be {@code null}.
    */
@@ -214,6 +221,23 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Settings setPubsubNotificationSettings(java.util.Map<String, java.lang.String> pubsubNotificationSettings) {
     this.pubsubNotificationSettings = pubsubNotificationSettings;
+    return this;
+  }
+
+  /**
+   * Default DLP redaction resources to be applied while ingesting conversations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RedactionConfig getRedactionConfig() {
+    return redactionConfig;
+  }
+
+  /**
+   * Default DLP redaction resources to be applied while ingesting conversations.
+   * @param redactionConfig redactionConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Settings setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
+    this.redactionConfig = redactionConfig;
     return this;
   }
 

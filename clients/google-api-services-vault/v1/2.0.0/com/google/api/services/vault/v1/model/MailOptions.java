@@ -30,11 +30,38 @@ package com.google.api.services.vault.v1.model;
 public final class MailOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies whether the results should include encrypted content, unencrypted content, or both.
+   * Defaults to including both.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientSideEncryptedOption;
+
+  /**
    * Set to **true** to exclude drafts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean excludeDrafts;
+
+  /**
+   * Specifies whether the results should include encrypted content, unencrypted content, or both.
+   * Defaults to including both.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientSideEncryptedOption() {
+    return clientSideEncryptedOption;
+  }
+
+  /**
+   * Specifies whether the results should include encrypted content, unencrypted content, or both.
+   * Defaults to including both.
+   * @param clientSideEncryptedOption clientSideEncryptedOption or {@code null} for none
+   */
+  public MailOptions setClientSideEncryptedOption(java.lang.String clientSideEncryptedOption) {
+    this.clientSideEncryptedOption = clientSideEncryptedOption;
+    return this;
+  }
 
   /**
    * Set to **true** to exclude drafts.

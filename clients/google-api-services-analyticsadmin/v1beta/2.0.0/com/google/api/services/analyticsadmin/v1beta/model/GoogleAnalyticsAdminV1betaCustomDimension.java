@@ -66,9 +66,10 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   /**
    * Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped
    * dimension, then this is the user property name. If this is an event-scoped dimension, then this
-   * is the event parameter name. May only contain alphanumeric and underscore characters, starting
-   * with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-
-   * scoped dimensions.
+   * is the event parameter name. If this is an item-scoped dimension, then this is the parameter
+   * name found in the eCommerce items array. May only contain alphanumeric and underscore
+   * characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40
+   * characters for event-scoped dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,9 +163,10 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   /**
    * Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped
    * dimension, then this is the user property name. If this is an event-scoped dimension, then this
-   * is the event parameter name. May only contain alphanumeric and underscore characters, starting
-   * with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-
-   * scoped dimensions.
+   * is the event parameter name. If this is an item-scoped dimension, then this is the parameter
+   * name found in the eCommerce items array. May only contain alphanumeric and underscore
+   * characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40
+   * characters for event-scoped dimensions.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameterName() {
@@ -174,9 +176,10 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   /**
    * Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped
    * dimension, then this is the user property name. If this is an event-scoped dimension, then this
-   * is the event parameter name. May only contain alphanumeric and underscore characters, starting
-   * with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-
-   * scoped dimensions.
+   * is the event parameter name. If this is an item-scoped dimension, then this is the parameter
+   * name found in the eCommerce items array. May only contain alphanumeric and underscore
+   * characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40
+   * characters for event-scoped dimensions.
    * @param parameterName parameterName or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaCustomDimension setParameterName(java.lang.String parameterName) {

@@ -16679,7 +16679,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the Audience to get. Example format: properties/1234/expandedDataSets/5678
+       * @param name Required. The name of the ExpandedDataSet to get. Example format:
+       *        properties/1234/expandedDataSets/5678
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -16705,7 +16706,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the Audience to get. Example format: properties/1234/expandedDataSets/5678
+         * @param name Required. The name of the ExpandedDataSet to get. Example format:
+       *        properties/1234/expandedDataSets/5678
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -16784,20 +16786,21 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The name of the Audience to get. Example format:
+         * Required. The name of the ExpandedDataSet to get. Example format:
          * properties/1234/expandedDataSets/5678
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the Audience to get. Example format: properties/1234/expandedDataSets/5678
+        /** Required. The name of the ExpandedDataSet to get. Example format:
+       properties/1234/expandedDataSets/5678
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the Audience to get. Example format:
+         * Required. The name of the ExpandedDataSet to get. Example format:
          * properties/1234/expandedDataSets/5678
          */
         public Get setName(java.lang.String name) {

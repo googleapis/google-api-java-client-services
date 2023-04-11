@@ -556,8 +556,9 @@ class Resource(template_objects.CodeObject):
     """
     super(Resource, self).__init__(def_dict, api, parent=parent, wire_name=name)
     self.ValidateName(name)
-    class_name = api.ToClassName(name, self, element_type='resource')
-    class_name = self.ComputeNonDuplicatedName(class_name)
+    raw_class_name = api.ToClassName(name, self, element_type='resource')
+    self.SetTemplateValue('rawClassName', raw_class_name)
+    class_name = self.ComputeNonDuplicatedName(raw_class_name)
     self.SetTemplateValue('className', class_name)
     # Replace methods dict with Methods
     self._methods = []
@@ -667,9 +668,10 @@ class Method(template_objects.CodeObject):
     # then eliminate this line.
     self.SetTemplateValue('wireName', name)
     self.ValidateName(name)
-    class_name = api.ToClassName(name, self, element_type='method')
-    class_name = self.ComputeNonDuplicatedName(class_name)
-    if parent and class_name == parent.values['className']:
+    raw_class_name = api.ToClassName(name, self, element_type='method')
+    self.SetTemplateValue('rawClassName', raw_class_name)
+    class_name = self.ComputeNonDuplicatedName(raw_class_name)
+    if parent and raw_class_name == parent.values['rawClassName']:
       # Some languages complain when the collection name is the same as the
       # method name.
       class_name = '%sRequest' % class_name

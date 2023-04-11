@@ -147,7 +147,13 @@ class CodeObject(UseableInTemplates):
         if sibling.GetTemplateValue('className') == class_name:
           # Importing at the top of the file will cause an import error
           from googleapis.codegen.api import Resource
-          class_name = class_name + ('Resource' if isinstance(sibling, Resource) else 'Method')
+          from googleapis.codegen.api import Method
+          if isinstance(self, Resource):
+            class_name = class_name + 'Resource'
+          elif isinstance(self, Method):
+            class_name = class_name + 'Request'
+          else:
+            raise TypeError('Unexpected CodeObject type')
           self.SetTemplateValue('isDuplicate', True)
 
     return class_name

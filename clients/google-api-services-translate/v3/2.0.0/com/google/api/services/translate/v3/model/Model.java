@@ -47,13 +47,6 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.String dataset;
 
   /**
-   * Output only. Timestamp when the model training finished and ready to be used for translation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String deployTime;
-
-  /**
    * The name of the model to show in the interface. The name can be up to 32 characters long and
    * can consist only of ASCII Latin letters A-Z and a-z, underscores (_), and ASCII digits 0-9.
    * The value may be {@code null}.
@@ -146,23 +139,6 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setDataset(java.lang.String dataset) {
     this.dataset = dataset;
-    return this;
-  }
-
-  /**
-   * Output only. Timestamp when the model training finished and ready to be used for translation.
-   * @return value or {@code null} for none
-   */
-  public String getDeployTime() {
-    return deployTime;
-  }
-
-  /**
-   * Output only. Timestamp when the model training finished and ready to be used for translation.
-   * @param deployTime deployTime or {@code null} for none
-   */
-  public Model setDeployTime(String deployTime) {
-    this.deployTime = deployTime;
     return this;
   }
 

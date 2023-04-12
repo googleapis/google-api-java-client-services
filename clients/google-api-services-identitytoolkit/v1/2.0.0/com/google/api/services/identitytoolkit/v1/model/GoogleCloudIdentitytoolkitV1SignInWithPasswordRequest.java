@@ -44,6 +44,13 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest extends
   private java.lang.String captchaResponse;
 
   /**
+   * The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientType;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -82,6 +89,13 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest extends
    */
   @com.google.api.client.util.Key
   private java.lang.String pendingIdToken;
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recaptchaVersion;
 
   /**
    * Should always be true.
@@ -129,6 +143,23 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest extends
    */
   public GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest setCaptchaResponse(java.lang.String captchaResponse) {
     this.captchaResponse = captchaResponse;
+    return this;
+  }
+
+  /**
+   * The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientType() {
+    return clientType;
+  }
+
+  /**
+   * The client type, web, android or ios. Required when reCAPTCHA Enterprise is enabled.
+   * @param clientType clientType or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest setClientType(java.lang.String clientType) {
+    this.clientType = clientType;
     return this;
   }
 
@@ -227,6 +258,23 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest extends
    */
   public GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest setPendingIdToken(java.lang.String pendingIdToken) {
     this.pendingIdToken = pendingIdToken;
+    return this;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecaptchaVersion() {
+    return recaptchaVersion;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @param recaptchaVersion recaptchaVersion or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignInWithPasswordRequest setRecaptchaVersion(java.lang.String recaptchaVersion) {
+    this.recaptchaVersion = recaptchaVersion;
     return this;
   }
 

@@ -108,6 +108,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2QuotaConfig quota;
 
   /**
+   * The project-level reCAPTCHA config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig recaptchaConfig;
+
+  /**
    * Configuration related to local sign in methods.
    * The value may be {@code null}.
    */
@@ -314,6 +321,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Config setQuota(GoogleCloudIdentitytoolkitAdminV2QuotaConfig quota) {
     this.quota = quota;
+    return this;
+  }
+
+  /**
+   * The project-level reCAPTCHA config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig getRecaptchaConfig() {
+    return recaptchaConfig;
+  }
+
+  /**
+   * The project-level reCAPTCHA config.
+   * @param recaptchaConfig recaptchaConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setRecaptchaConfig(GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig recaptchaConfig) {
+    this.recaptchaConfig = recaptchaConfig;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of phase match rules that are included in this group.
+   * A list of phrase match rules that are included in this group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup extend
   private java.lang.String type;
 
   /**
-   * A list of phase match rules that are included in this group.
+   * A list of phrase match rules that are included in this group.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudContactcenterinsightsV1PhraseMatchRule> getPhraseMatchRules() {
@@ -59,7 +59,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup extend
   }
 
   /**
-   * A list of phase match rules that are included in this group.
+   * A list of phrase match rules that are included in this group.
    * @param phraseMatchRules phraseMatchRules or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup setPhraseMatchRules(java.util.List<GoogleCloudContactcenterinsightsV1PhraseMatchRule> phraseMatchRules) {

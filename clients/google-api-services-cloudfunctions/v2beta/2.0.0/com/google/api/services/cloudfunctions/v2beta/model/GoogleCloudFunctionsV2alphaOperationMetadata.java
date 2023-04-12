@@ -71,7 +71,7 @@ public final class GoogleCloudFunctionsV2alphaOperationMetadata extends com.goog
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudFunctionsV2alphaStage> stages;
+  private java.util.List<Stage> stages;
 
   /**
    * Human-readable status of the operation, if any.
@@ -187,7 +187,7 @@ public final class GoogleCloudFunctionsV2alphaOperationMetadata extends com.goog
    * Mechanism for reporting in-progress stages
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudFunctionsV2alphaStage> getStages() {
+  public java.util.List<Stage> getStages() {
     return stages;
   }
 
@@ -195,7 +195,7 @@ public final class GoogleCloudFunctionsV2alphaOperationMetadata extends com.goog
    * Mechanism for reporting in-progress stages
    * @param stages stages or {@code null} for none
    */
-  public GoogleCloudFunctionsV2alphaOperationMetadata setStages(java.util.List<GoogleCloudFunctionsV2alphaStage> stages) {
+  public GoogleCloudFunctionsV2alphaOperationMetadata setStages(java.util.List<Stage> stages) {
     this.stages = stages;
     return this;
   }

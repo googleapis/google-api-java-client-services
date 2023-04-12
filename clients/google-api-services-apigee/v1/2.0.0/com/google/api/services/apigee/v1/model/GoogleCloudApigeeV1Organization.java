@@ -46,6 +46,26 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String analyticsRegion;
 
   /**
+   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
+   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
+   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiConsumerDataEncryptionKeyName;
+
+  /**
+   * This field is needed only for customers with control plane in US or EU. Apigee stores some
+   * control plane data only in single region. This field determines which single region Apigee
+   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
+   * plane is in EU.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiConsumerDataLocation;
+
+  /**
    * Output only. Apigee Project ID associated with the organization. Use this project to allowlist
    * Apigee in the Service Attachment when using private service connect with Apigee.
    * The value may be {@code null}.
@@ -92,6 +112,16 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String caCertificate;
+
+  /**
+   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
+   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
+   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String controlPlaneEncryptionKeyName;
 
   /**
    * Output only. Time that the Apigee organization was created in milliseconds since epoch.
@@ -253,6 +283,52 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
+   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
+   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
+   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiConsumerDataEncryptionKeyName() {
+    return apiConsumerDataEncryptionKeyName;
+  }
+
+  /**
+   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
+   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
+   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * @param apiConsumerDataEncryptionKeyName apiConsumerDataEncryptionKeyName or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setApiConsumerDataEncryptionKeyName(java.lang.String apiConsumerDataEncryptionKeyName) {
+    this.apiConsumerDataEncryptionKeyName = apiConsumerDataEncryptionKeyName;
+    return this;
+  }
+
+  /**
+   * This field is needed only for customers with control plane in US or EU. Apigee stores some
+   * control plane data only in single region. This field determines which single region Apigee
+   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
+   * plane is in EU.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiConsumerDataLocation() {
+    return apiConsumerDataLocation;
+  }
+
+  /**
+   * This field is needed only for customers with control plane in US or EU. Apigee stores some
+   * control plane data only in single region. This field determines which single region Apigee
+   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
+   * plane is in EU.
+   * @param apiConsumerDataLocation apiConsumerDataLocation or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setApiConsumerDataLocation(java.lang.String apiConsumerDataLocation) {
+    this.apiConsumerDataLocation = apiConsumerDataLocation;
+    return this;
+  }
+
+  /**
    * Output only. Apigee Project ID associated with the organization. Use this project to allowlist
    * Apigee in the Service Attachment when using private service connect with Apigee.
    * @return value or {@code null} for none
@@ -390,6 +466,29 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization encodeCaCertificate(byte[] caCertificate) {
     this.caCertificate = com.google.api.client.util.Base64.encodeBase64URLSafeString(caCertificate);
+    return this;
+  }
+
+  /**
+   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
+   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
+   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getControlPlaneEncryptionKeyName() {
+    return controlPlaneEncryptionKeyName;
+  }
+
+  /**
+   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
+   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
+   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
+   * `projects/locations/keyRings/cryptoKeys`
+   * @param controlPlaneEncryptionKeyName controlPlaneEncryptionKeyName or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setControlPlaneEncryptionKeyName(java.lang.String controlPlaneEncryptionKeyName) {
+    this.controlPlaneEncryptionKeyName = controlPlaneEncryptionKeyName;
     return this;
   }
 

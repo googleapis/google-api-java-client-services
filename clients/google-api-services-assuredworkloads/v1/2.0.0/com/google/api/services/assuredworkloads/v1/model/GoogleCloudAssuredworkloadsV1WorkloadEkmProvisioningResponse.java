@@ -42,7 +42,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String ekmProvisioningErrorMessage;
+  private java.lang.String ekmProvisioningErrorMapping;
 
   /**
    * Indicates Ekm enrollment Provisioning of a given workload.
@@ -72,16 +72,16 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse 
    * Detailed error message if Ekm provisioning fails
    * @return value or {@code null} for none
    */
-  public java.lang.String getEkmProvisioningErrorMessage() {
-    return ekmProvisioningErrorMessage;
+  public java.lang.String getEkmProvisioningErrorMapping() {
+    return ekmProvisioningErrorMapping;
   }
 
   /**
    * Detailed error message if Ekm provisioning fails
-   * @param ekmProvisioningErrorMessage ekmProvisioningErrorMessage or {@code null} for none
+   * @param ekmProvisioningErrorMapping ekmProvisioningErrorMapping or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse setEkmProvisioningErrorMessage(java.lang.String ekmProvisioningErrorMessage) {
-    this.ekmProvisioningErrorMessage = ekmProvisioningErrorMessage;
+  public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse setEkmProvisioningErrorMapping(java.lang.String ekmProvisioningErrorMapping) {
+    this.ekmProvisioningErrorMapping = ekmProvisioningErrorMapping;
     return this;
   }
 

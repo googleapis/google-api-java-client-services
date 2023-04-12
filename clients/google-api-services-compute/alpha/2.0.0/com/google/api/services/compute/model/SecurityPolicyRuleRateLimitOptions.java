@@ -100,7 +100,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * Action to take for requests that are above the configured rate limit threshold, to either deny
    * with a specified HTTP response code, or redirect to a different endpoint. Valid options are
    * `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`,
-   * where the redirect parameters come from `exceedRedirectOptions` below.
+   * where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is
+   * only supported in Global Security Policies of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Parameters defining the redirect action that is used as the exceed action. Cannot be specified
-   * if the exceed action is not redirect.
+   * if the exceed action is not redirect. This field is only supported in Global Security Policies
+   * of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +287,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * Action to take for requests that are above the configured rate limit threshold, to either deny
    * with a specified HTTP response code, or redirect to a different endpoint. Valid options are
    * `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`,
-   * where the redirect parameters come from `exceedRedirectOptions` below.
+   * where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is
+   * only supported in Global Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public java.lang.String getExceedAction() {
@@ -296,7 +299,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
    * Action to take for requests that are above the configured rate limit threshold, to either deny
    * with a specified HTTP response code, or redirect to a different endpoint. Valid options are
    * `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`,
-   * where the redirect parameters come from `exceedRedirectOptions` below.
+   * where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is
+   * only supported in Global Security Policies of type CLOUD_ARMOR.
    * @param exceedAction exceedAction or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setExceedAction(java.lang.String exceedAction) {
@@ -325,7 +329,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Parameters defining the redirect action that is used as the exceed action. Cannot be specified
-   * if the exceed action is not redirect.
+   * if the exceed action is not redirect. This field is only supported in Global Security Policies
+   * of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleRedirectOptions getExceedRedirectOptions() {
@@ -334,7 +339,8 @@ public final class SecurityPolicyRuleRateLimitOptions extends com.google.api.cli
 
   /**
    * Parameters defining the redirect action that is used as the exceed action. Cannot be specified
-   * if the exceed action is not redirect.
+   * if the exceed action is not redirect. This field is only supported in Global Security Policies
+   * of type CLOUD_ARMOR.
    * @param exceedRedirectOptions exceedRedirectOptions or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions setExceedRedirectOptions(SecurityPolicyRuleRedirectOptions exceedRedirectOptions) {

@@ -238,7 +238,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * The value may be {@code null}.
    */
@@ -924,7 +925,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * @return value or {@code null} for none
    */
@@ -935,7 +937,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * @param network network or {@code null} for none
    */

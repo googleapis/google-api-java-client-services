@@ -38,13 +38,6 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
-   * DEPRECATED: Please use instance_properties instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Instance instance;
-
-  /**
    * The instance properties defining the VM instances to be created. Required if
    * sourceInstanceTemplate is not provided.
    * The value may be {@code null}.
@@ -119,23 +112,6 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setCount(java.lang.Long count) {
     this.count = count;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: Please use instance_properties instead.
-   * @return value or {@code null} for none
-   */
-  public Instance getInstance() {
-    return instance;
-  }
-
-  /**
-   * DEPRECATED: Please use instance_properties instead.
-   * @param instance instance or {@code null} for none
-   */
-  public BulkInsertInstanceResource setInstance(Instance instance) {
-    this.instance = instance;
     return this;
   }
 

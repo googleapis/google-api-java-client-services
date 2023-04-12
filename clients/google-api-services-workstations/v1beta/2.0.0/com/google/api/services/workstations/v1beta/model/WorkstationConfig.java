@@ -89,15 +89,25 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
-   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
-   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
-   * managed encryption key is rotated, when the workstation instance is stopped, the system
-   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
-   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
-   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
-   * be stopped within 7 hours.
+   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
+   * also be specified that has logging.buckets.write permission on the project. Operating system
+   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
+   * /audit-logging).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAuditAgent;
+
+  /**
+   * Immutable. Encrypts resources of this workstation configuration using a customer-managed
+   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
+   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
+   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
+   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
+   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
+   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
+   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
+   * automatically be stopped within 7 hours. Immutable after workstation config is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,15 +320,38 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
-   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
-   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
-   * managed encryption key is rotated, when the workstation instance is stopped, the system
-   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
-   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
-   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
-   * be stopped within 7 hours.
+   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
+   * also be specified that has logging.buckets.write permission on the project. Operating system
+   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
+   * /audit-logging).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAuditAgent() {
+    return enableAuditAgent;
+  }
+
+  /**
+   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
+   * also be specified that has logging.buckets.write permission on the project. Operating system
+   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
+   * /audit-logging).
+   * @param enableAuditAgent enableAuditAgent or {@code null} for none
+   */
+  public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {
+    this.enableAuditAgent = enableAuditAgent;
+    return this;
+  }
+
+  /**
+   * Immutable. Encrypts resources of this workstation configuration using a customer-managed
+   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
+   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
+   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
+   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
+   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
+   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
+   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
+   * automatically be stopped within 7 hours. Immutable after workstation config is created.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getEncryptionKey() {
@@ -326,15 +359,15 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Encrypts resources of this workstation configuration using a customer-managed encryption key.
-   * If specified, the boot disk of the Compute Engine instance and the persistent disk are
-   * encrypted using this encryption key. If this field is not set, the disks are encrypted using a
-   * generated key. Customer-managed encryption keys do not protect disk metadata. If the customer-
-   * managed encryption key is rotated, when the workstation instance is stopped, the system
-   * attempts to recreate the persistent disk with the new version of the key. Be sure to keep older
-   * versions of the key until the persistent disk is recreated. Otherwise, data on the persistent
-   * disk will be lost. If the encryption key is revoked, the workstation session will automatically
-   * be stopped within 7 hours.
+   * Immutable. Encrypts resources of this workstation configuration using a customer-managed
+   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
+   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
+   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
+   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
+   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
+   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
+   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
+   * automatically be stopped within 7 hours. Immutable after workstation config is created.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public WorkstationConfig setEncryptionKey(CustomerEncryptionKey encryptionKey) {

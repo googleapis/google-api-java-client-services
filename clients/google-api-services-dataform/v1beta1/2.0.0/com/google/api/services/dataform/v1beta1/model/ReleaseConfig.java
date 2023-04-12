@@ -61,8 +61,9 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Output only. Records of the 10 most recent scheduled release attempts. Updated whenever
-   * automatic creation of a compilation result is triggered by cron_schedule.
+   * Output only. Records of the 10 most recent scheduled release attempts, ordered in in descending
+   * order of `release_time`. Updated whenever automatic creation of a compilation result is
+   * triggered by cron_schedule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,8 +165,9 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Records of the 10 most recent scheduled release attempts. Updated whenever
-   * automatic creation of a compilation result is triggered by cron_schedule.
+   * Output only. Records of the 10 most recent scheduled release attempts, ordered in in descending
+   * order of `release_time`. Updated whenever automatic creation of a compilation result is
+   * triggered by cron_schedule.
    * @return value or {@code null} for none
    */
   public java.util.List<ScheduledReleaseRecord> getRecentScheduledReleaseRecords() {
@@ -173,8 +175,9 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Records of the 10 most recent scheduled release attempts. Updated whenever
-   * automatic creation of a compilation result is triggered by cron_schedule.
+   * Output only. Records of the 10 most recent scheduled release attempts, ordered in in descending
+   * order of `release_time`. Updated whenever automatic creation of a compilation result is
+   * triggered by cron_schedule.
    * @param recentScheduledReleaseRecords recentScheduledReleaseRecords or {@code null} for none
    */
   public ReleaseConfig setRecentScheduledReleaseRecords(java.util.List<ScheduledReleaseRecord> recentScheduledReleaseRecords) {

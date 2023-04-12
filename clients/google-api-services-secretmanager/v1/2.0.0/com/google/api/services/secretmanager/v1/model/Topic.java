@@ -32,8 +32,9 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource name of the Pub/Sub topic that will be published to, in the following
-   * format: `projects/topics`. For publication to succeed, the Secret Manager P4SA must have
-   * `pubsub.publisher` permissions on the topic.
+   * format: `projects/topics`. For publication to succeed, the Secret Manager service agent must
+   * have the `pubsub.topic.publish` permission on the topic. The Pub/Sub Publisher role
+   * (`roles/pubsub.publisher`) includes this permission.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +42,9 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource name of the Pub/Sub topic that will be published to, in the following
-   * format: `projects/topics`. For publication to succeed, the Secret Manager P4SA must have
-   * `pubsub.publisher` permissions on the topic.
+   * format: `projects/topics`. For publication to succeed, the Secret Manager service agent must
+   * have the `pubsub.topic.publish` permission on the topic. The Pub/Sub Publisher role
+   * (`roles/pubsub.publisher`) includes this permission.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -51,8 +53,9 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The resource name of the Pub/Sub topic that will be published to, in the following
-   * format: `projects/topics`. For publication to succeed, the Secret Manager P4SA must have
-   * `pubsub.publisher` permissions on the topic.
+   * format: `projects/topics`. For publication to succeed, the Secret Manager service agent must
+   * have the `pubsub.topic.publish` permission on the topic. The Pub/Sub Publisher role
+   * (`roles/pubsub.publisher`) includes this permission.
    * @param name name or {@code null} for none
    */
   public Topic setName(java.lang.String name) {

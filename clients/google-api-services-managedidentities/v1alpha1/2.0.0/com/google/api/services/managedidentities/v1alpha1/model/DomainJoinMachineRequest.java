@@ -31,6 +31,13 @@ package com.google.api.services.managedidentities.v1alpha1.model;
 public final class DomainJoinMachineRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. force if True, forces domain join even if the computer account already exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean force;
+
+  /**
    * Optional. OU name where the VM needs to be domain joined
    * The value may be {@code null}.
    */
@@ -45,6 +52,23 @@ public final class DomainJoinMachineRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String vmIdToken;
+
+  /**
+   * Optional. force if True, forces domain join even if the computer account already exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForce() {
+    return force;
+  }
+
+  /**
+   * Optional. force if True, forces domain join even if the computer account already exists.
+   * @param force force or {@code null} for none
+   */
+  public DomainJoinMachineRequest setForce(java.lang.Boolean force) {
+    this.force = force;
+    return this;
+  }
 
   /**
    * Optional. OU name where the VM needs to be domain joined

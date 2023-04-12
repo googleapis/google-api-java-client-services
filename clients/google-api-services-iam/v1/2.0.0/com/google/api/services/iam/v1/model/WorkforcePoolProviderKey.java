@@ -63,7 +63,7 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   private java.lang.String state;
 
   /**
-   * Immutable. The purpose of the key.
+   * Required. The purpose of the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   }
 
   /**
-   * Immutable. The purpose of the key.
+   * Required. The purpose of the key.
    * @return value or {@code null} for none
    */
   public java.lang.String getUse() {
@@ -150,7 +150,7 @@ public final class WorkforcePoolProviderKey extends com.google.api.client.json.G
   }
 
   /**
-   * Immutable. The purpose of the key.
+   * Required. The purpose of the key.
    * @param use use or {@code null} for none
    */
   public WorkforcePoolProviderKey setUse(java.lang.String use) {

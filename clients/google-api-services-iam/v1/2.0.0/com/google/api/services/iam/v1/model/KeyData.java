@@ -45,7 +45,7 @@ public final class KeyData extends com.google.api.client.json.GenericJson {
   private java.lang.String key;
 
   /**
-   * Immutable. The specifications for the key.
+   * Required. The specifications for the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class KeyData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The specifications for the key.
+   * Required. The specifications for the key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeySpec() {
@@ -110,7 +110,7 @@ public final class KeyData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The specifications for the key.
+   * Required. The specifications for the key.
    * @param keySpec keySpec or {@code null} for none
    */
   public KeyData setKeySpec(java.lang.String keySpec) {

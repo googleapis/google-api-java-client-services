@@ -4521,25 +4521,45 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
-       * Only the default value is available, unless you're enrolled in the Working Locations
-       * developer preview. Developer Preview.
+       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
+       * "outOfOffice"This parameter can be repeated multiple times to return events of different
+       * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
+       * "outOfOffice"] This value will be the default.
+       *
+       * If you're enrolled in the Working Location developer preview program, in addition to the
+       * default value above you can also set the "workingLocation" event type: - ["default",
+       * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
+       * combinations of these 4 event types will be made available in later releases. Developer
+       * Preview.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
-      /** Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. Only the
-     default value is available, unless you're enrolled in the Working Locations developer preview.
-     Developer Preview.
+      /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice"This
+     parameter can be repeated multiple times to return events of different types. Currently, this is
+     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value will be
+     the default.
+
+     If you're enrolled in the Working Location developer preview program, in addition to the default
+     value above you can also set the "workingLocation" event type: - ["default", "focusTime",
+     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these 4 event
+     types will be made available in later releases. Developer Preview.
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
       }
 
       /**
-       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
-       * Only the default value is available, unless you're enrolled in the Working Locations
-       * developer preview. Developer Preview.
+       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
+       * "outOfOffice"This parameter can be repeated multiple times to return events of different
+       * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
+       * "outOfOffice"] This value will be the default.
+       *
+       * If you're enrolled in the Working Location developer preview program, in addition to the
+       * default value above you can also set the "workingLocation" event type: - ["default",
+       * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
+       * combinations of these 4 event types will be made available in later releases. Developer
+       * Preview.
        */
       public List setEventTypes(java.util.List<java.lang.String> eventTypes) {
         this.eventTypes = eventTypes;
@@ -6023,25 +6043,45 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
-       * Only the default value is available, unless you're enrolled in the Working Locations
-       * developer preview. Developer Preview.
+       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
+       * "outOfOffice"This parameter can be repeated multiple times to return events of different
+       * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
+       * "outOfOffice"] This value will be the default.
+       *
+       * If you're enrolled in the Working Location developer preview program, in addition to the
+       * default value above you can also set the "workingLocation" event type: - ["default",
+       * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
+       * combinations of these 4 event types will be made available in later releases. Developer
+       * Preview.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
-      /** Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. Only the
-     default value is available, unless you're enrolled in the Working Locations developer preview.
-     Developer Preview.
+      /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice"This
+     parameter can be repeated multiple times to return events of different types. Currently, this is
+     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value will be
+     the default.
+
+     If you're enrolled in the Working Location developer preview program, in addition to the default
+     value above you can also set the "workingLocation" event type: - ["default", "focusTime",
+     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these 4 event
+     types will be made available in later releases. Developer Preview.
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
       }
 
       /**
-       * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"].
-       * Only the default value is available, unless you're enrolled in the Working Locations
-       * developer preview. Developer Preview.
+       * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
+       * "outOfOffice"This parameter can be repeated multiple times to return events of different
+       * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
+       * "outOfOffice"] This value will be the default.
+       *
+       * If you're enrolled in the Working Location developer preview program, in addition to the
+       * default value above you can also set the "workingLocation" event type: - ["default",
+       * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
+       * combinations of these 4 event types will be made available in later releases. Developer
+       * Preview.
        */
       public Watch setEventTypes(java.util.List<java.lang.String> eventTypes) {
         this.eventTypes = eventTypes;

@@ -68,7 +68,7 @@ class ApiTest(basetest.TestCase):
     f.close()
     return Api(discovery_doc)
 
-  def testDuplication(self):
+  def testDuplicatedNodesProduceDeduplicatedClassNames(self):
     api = self.ApiFromDiscoveryDoc('duplicated.v1.json')
     root = api.values.get('resources')[0]
     root_method = root.values.get('methods')[0]

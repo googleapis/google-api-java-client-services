@@ -93,6 +93,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowGlobalAccess;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPscGlobalAccess;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load
    * balancer types.
@@ -230,7 +238,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * The value may be {@code null}.
    */
@@ -505,6 +514,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setAllowGlobalAccess(java.lang.Boolean allowGlobalAccess) {
     this.allowGlobalAccess = allowGlobalAccess;
+    return this;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPscGlobalAccess() {
+    return allowPscGlobalAccess;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
+   * from another region.
+   * @param allowPscGlobalAccess allowPscGlobalAccess or {@code null} for none
+   */
+  public ForwardingRule setAllowPscGlobalAccess(java.lang.Boolean allowPscGlobalAccess) {
+    this.allowPscGlobalAccess = allowPscGlobalAccess;
     return this;
   }
 
@@ -897,7 +925,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * @return value or {@code null} for none
    */
@@ -908,7 +937,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this
    * field identifies the network that the load balanced IP should belong to for this Forwarding
-   * Rule. If this field is not specified, the default network will be used. For Private Service
+   * Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither
+   * subnetwork nor this field is specified, the default network will be used. For Private Service
    * Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
    * @param network network or {@code null} for none
    */

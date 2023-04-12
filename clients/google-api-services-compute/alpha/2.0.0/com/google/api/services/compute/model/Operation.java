@@ -106,6 +106,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String insertTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata;
+
+  /**
    * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * The value may be {@code null}.
    */
@@ -402,6 +408,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setInsertTime(java.lang.String insertTime) {
     this.insertTime = insertTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public InstancesBulkInsertOperationMetadata getInstancesBulkInsertOperationMetadata() {
+    return instancesBulkInsertOperationMetadata;
+  }
+
+  /**
+   * @param instancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata or {@code null} for none
+   */
+  public Operation setInstancesBulkInsertOperationMetadata(InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata) {
+    this.instancesBulkInsertOperationMetadata = instancesBulkInsertOperationMetadata;
     return this;
   }
 

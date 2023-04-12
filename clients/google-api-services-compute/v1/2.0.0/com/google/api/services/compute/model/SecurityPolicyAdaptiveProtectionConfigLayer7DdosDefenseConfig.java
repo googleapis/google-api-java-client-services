@@ -17,7 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Configuration options for L7 DDoS detection.
+ * Configuration options for L7 DDoS detection. This field is only supported in Global Security
+ * Policies of type CLOUD_ARMOR.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,7 +31,8 @@ package com.google.api.services.compute.model;
 public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, enables CAAP for L7 DDoS detection.
+   * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global
+   * Security Policies of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,14 +40,16 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
   /**
    * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM -
-   * transparent rules.
+   * transparent rules. This field is only supported in Global Security Policies of type
+   * CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ruleVisibility;
 
   /**
-   * If set to true, enables CAAP for L7 DDoS detection.
+   * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global
+   * Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -53,7 +57,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   }
 
   /**
-   * If set to true, enables CAAP for L7 DDoS detection.
+   * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global
+   * Security Policies of type CLOUD_ARMOR.
    * @param enable enable or {@code null} for none
    */
   public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig setEnable(java.lang.Boolean enable) {
@@ -63,7 +68,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
   /**
    * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM -
-   * transparent rules.
+   * transparent rules. This field is only supported in Global Security Policies of type
+   * CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleVisibility() {
@@ -72,7 +78,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
 
   /**
    * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM -
-   * transparent rules.
+   * transparent rules. This field is only supported in Global Security Policies of type
+   * CLOUD_ARMOR.
    * @param ruleVisibility ruleVisibility or {@code null} for none
    */
   public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig setRuleVisibility(java.lang.String ruleVisibility) {

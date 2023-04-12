@@ -114,6 +114,15 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.Long provisionedIops;
 
   /**
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> replicaZones;
+
+  /**
    * Resource manager tags to be bound to the disk. Tag keys and values have the same definition as
    * resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the
    * format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
@@ -359,6 +368,27 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setProvisionedIops(java.lang.Long provisionedIops) {
     this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReplicaZones() {
+    return replicaZones;
+  }
+
+  /**
+   * Required for each regional disk associated with the instance. Specify the URLs of the zones
+   * where the disk should be replicated to. You must provide exactly two replica zones, and one
+   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * @param replicaZones replicaZones or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setReplicaZones(java.util.List<java.lang.String> replicaZones) {
+    this.replicaZones = replicaZones;
     return this;
   }
 

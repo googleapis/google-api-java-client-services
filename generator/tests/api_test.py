@@ -68,31 +68,71 @@ class ApiTest(basetest.TestCase):
     f.close()
     return Api(discovery_doc)
 
+
   def testDuplicatedNodesProduceDeduplicatedClassNames(self):
+    # Load JSON with resources/methods with duplicated names
     api = self.ApiFromDiscoveryDoc('duplicated.v1.json')
+    def _assertClassNameEquals(node, expectedName):
+      """
+      Convenience method to abreviate asserting a node's class name equals
+      the expected value
+      """
+      self.assertTrue(node.values.get('className') == expectedName)
+
+    # given a loaded api, extract each of the nodes to be tested
     root = api.values.get('resources')[0]
     root_method = root.values.get('methods')[0]
     duplicated_child = root.values.get('resources')[0]
     duplicated_child_method = duplicated_child.values.get('methods')[0]
     nonduplicated_child = root.values.get('resources')[1]
-    nonduplicated_child_method_duplicated = nonduplicated_child.values.get('methods')[0]
-    nonduplicated_child_method_nonduplicated = nonduplicated_child.values.get('methods')[1]
+    nonduplicated_child_method_duplicated = \
+        nonduplicated_child.values.get('methods')[0]
+    nonduplicated_child_method_nonduplicated = \
+        nonduplicated_child.values.get('methods')[1]
     duplicated_grandchild = nonduplicated_child.values.get('resources')[0]
-    duplicated_grandchild_method = duplicated_grandchild.values.get('methods')[0]
+    duplicated_grandchild_method = \
+        duplicated_grandchild.values.get('methods')[0]
 
-    def fcn(node):
-      result = node.values.get('className')
-      print result
-      return result
-    self.assertTrue(fcn(root) == 'Duplicated')
-    self.assertTrue(fcn(root_method) == 'DuplicatedRequest')
-    self.assertTrue(fcn(duplicated_child) == 'Duplicated_Duplicated')
-    self.assertTrue(fcn(duplicated_child_method) == 'DuplicatedRequest')
-    self.assertTrue(fcn(nonduplicated_child) == 'Nonduplicated')
-    self.assertTrue(fcn(nonduplicated_child_method_duplicated) == 'Nonduplicated_Duplicated')
-    self.assertTrue(fcn(nonduplicated_child_method_nonduplicated) == 'NonduplicatedRequest')
-    self.assertTrue(fcn(duplicated_grandchild) == 'Nonduplicated_DuplicatedResource')
-    self.assertTrue(fcn(duplicated_grandchild_method) == 'DuplicatedRequest')
+    # confirm each of the CodeObject nodes have the expected class names
+
+    # the root node should not be altered as it does not have same-named
+    # siblings or ancestors
+    _assertClassNameEquals(root, 'Duplicated')
+
+    # the root node has two children with same name, one being a method and
+    # the other being a resource. The method should have the `Request` suffix
+    _assertClassNameEquals(root_method, 'DuplicatedRequest')
+
+    # The first child of root that is a resource shuold have it's first
+    # ancestor class name prepended
+    _assertClassNameEquals(duplicated_child, 'Duplicated_Duplicated')
+
+    # The child resource's method has the same name but there is no need to use
+    # the parent_child name fashion. The root's child method having the same
+    # name should not cause errors because duplication only matters with
+    # ancestors in the path from root to the node in question
+    _assertClassNameEquals(duplicated_child_method, 'DuplicatedRequest')
+
+    # The non-duplicated node should have its name intact
+    _assertClassNameEquals(nonduplicated_child, 'Nonduplicated')
+
+    # The non-duplicated node has a same-named method. It should append the
+    # 'Request' prefix
+    _assertClassNameEquals(nonduplicated_child_method_nonduplicated,
+                           'NonduplicatedRequest')
+
+    # The method node with a same-named sibling should have its name with a
+    # `Request` suffix. A prefix may apply if there is duplciation in
+    # the root-node path
+    _assertClassNameEquals(nonduplicated_child_method_duplicated,
+                           'Nonduplicated_DuplicatedRequest')
+
+    # The resource node with a same-named sibling should have its name without
+    # suffixes, but a prefix may apply if there is duplciation in the root-node
+    # path
+    _assertClassNameEquals(duplicated_grandchild,
+                           'Nonduplicated_Duplicated')
+    _assertClassNameEquals(duplicated_grandchild_method, 'DuplicatedRequest')
     pass
 
   def testLazySchemaForCreation(self):

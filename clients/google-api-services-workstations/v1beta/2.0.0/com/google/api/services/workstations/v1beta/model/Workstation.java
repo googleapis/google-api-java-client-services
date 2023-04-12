@@ -59,6 +59,13 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Environment variables passed to the workstation container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> env;
+
+  /**
    * Checksum computed by the server. May be sent on update and delete requests to ensure that the
    * client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -185,6 +192,23 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Environment variables passed to the workstation container.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getEnv() {
+    return env;
+  }
+
+  /**
+   * Environment variables passed to the workstation container.
+   * @param env env or {@code null} for none
+   */
+  public Workstation setEnv(java.util.Map<String, java.lang.String> env) {
+    this.env = env;
     return this;
   }
 

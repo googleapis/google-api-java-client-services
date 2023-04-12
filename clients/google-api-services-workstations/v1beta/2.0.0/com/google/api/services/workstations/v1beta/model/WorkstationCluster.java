@@ -51,6 +51,15 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
+   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
+   * access to this IP address to work with the service, so please ensure your firewall rules allow
+   * egress from the Workstation VMs to this address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String controlPlaneIp;
+
+  /**
    * Output only. Time when this resource was created.
    * The value may be {@code null}.
    */
@@ -178,6 +187,27 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setConditions(java.util.List<Status> conditions) {
     this.conditions = conditions;
+    return this;
+  }
+
+  /**
+   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
+   * access to this IP address to work with the service, so please ensure your firewall rules allow
+   * egress from the Workstation VMs to this address.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getControlPlaneIp() {
+    return controlPlaneIp;
+  }
+
+  /**
+   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
+   * access to this IP address to work with the service, so please ensure your firewall rules allow
+   * egress from the Workstation VMs to this address.
+   * @param controlPlaneIp controlPlaneIp or {@code null} for none
+   */
+  public WorkstationCluster setControlPlaneIp(java.lang.String controlPlaneIp) {
+    this.controlPlaneIp = controlPlaneIp;
     return this;
   }
 

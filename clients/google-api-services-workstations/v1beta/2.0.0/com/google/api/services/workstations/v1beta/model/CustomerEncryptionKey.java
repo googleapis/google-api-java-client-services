@@ -32,7 +32,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class CustomerEncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Google Cloud KMS encryption key. For example,
+   * Immutable. The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * The value may be {@code null}.
    */
@@ -40,18 +40,18 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String kmsKey;
 
   /**
-   * The service account to use with the specified KMS key. We recommend that you use a separate
-   * service account and follow KMS best practices. For more information, see [Separation of
-   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
-   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
-   * policy-binding#--member).
+   * Immutable. The service account to use with the specified KMS key. We recommend that you use a
+   * separate service account and follow KMS best practices. For more information, see [Separation
+   * of duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-
+   * iam-policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-
+   * iam-policy-binding#--member).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyServiceAccount;
 
   /**
-   * The name of the Google Cloud KMS encryption key. For example,
+   * Immutable. The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The name of the Google Cloud KMS encryption key. For example,
+   * Immutable. The name of the Google Cloud KMS encryption key. For example,
    * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`.
    * @param kmsKey kmsKey or {@code null} for none
    */
@@ -70,11 +70,11 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The service account to use with the specified KMS key. We recommend that you use a separate
-   * service account and follow KMS best practices. For more information, see [Separation of
-   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
-   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
-   * policy-binding#--member).
+   * Immutable. The service account to use with the specified KMS key. We recommend that you use a
+   * separate service account and follow KMS best practices. For more information, see [Separation
+   * of duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-
+   * iam-policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-
+   * iam-policy-binding#--member).
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyServiceAccount() {
@@ -82,11 +82,11 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * The service account to use with the specified KMS key. We recommend that you use a separate
-   * service account and follow KMS best practices. For more information, see [Separation of
-   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-iam-
-   * policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-iam-
-   * policy-binding#--member).
+   * Immutable. The service account to use with the specified KMS key. We recommend that you use a
+   * separate service account and follow KMS best practices. For more information, see [Separation
+   * of duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud kms keys add-
+   * iam-policy-binding` [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-
+   * iam-policy-binding#--member).
    * @param kmsKeyServiceAccount kmsKeyServiceAccount or {@code null} for none
    */
   public CustomerEncryptionKey setKmsKeyServiceAccount(java.lang.String kmsKeyServiceAccount) {

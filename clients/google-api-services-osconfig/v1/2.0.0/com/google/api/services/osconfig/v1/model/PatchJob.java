@@ -19,7 +19,7 @@ package com.google.api.services.osconfig.v1.model;
 /**
  * A high level representation of a patch job that is either in progress or has completed. Instance
  * details are not included in the job. To paginate through instance details, use
- * ListPatchJobInstanceDetails. For more information about patch jobs, see [Creating patch
+ * `ListPatchJobInstanceDetails`. For more information about patch jobs, see [Creating patch
  * jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

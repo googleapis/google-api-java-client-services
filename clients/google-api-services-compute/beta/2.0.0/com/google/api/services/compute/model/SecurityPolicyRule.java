@@ -38,9 +38,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
    * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
    * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. - throttle: limit client traffic to the configured
-   * threshold. Configure parameters for this action in rateLimitOptions. Requires
-   * rate_limit_options to be set for this.
+   * be configured via redirectOptions. This action is only supported in Global Security Policies of
+   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Boolean enableLogging;
 
   /**
-   * Optional, additional actions that are performed on headers.
+   * Optional, additional actions that are performed on headers. This field is only supported in
+   * Global Security Policies of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +128,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private SecurityPolicyRuleRateLimitOptions rateLimitOptions;
 
   /**
-   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * Parameters defining the redirect action. Cannot be specified for any other actions. This field
+   * is only supported in Global Security Policies of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,9 +174,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
    * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
    * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. - throttle: limit client traffic to the configured
-   * threshold. Configure parameters for this action in rateLimitOptions. Requires
-   * rate_limit_options to be set for this.
+   * be configured via redirectOptions. This action is only supported in Global Security Policies of
+   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -189,9 +191,9 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
    * Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be
    * set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA
    * redirect, or an external URL-based redirect via a 302 response. Parameters for this action can
-   * be configured via redirectOptions. - throttle: limit client traffic to the configured
-   * threshold. Configure parameters for this action in rateLimitOptions. Requires
-   * rate_limit_options to be set for this.
+   * be configured via redirectOptions. This action is only supported in Global Security Policies of
+   * type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure
+   * parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
    * @param action action or {@code null} for none
    */
   public SecurityPolicyRule setAction(java.lang.String action) {
@@ -259,7 +261,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional, additional actions that are performed on headers.
+   * Optional, additional actions that are performed on headers. This field is only supported in
+   * Global Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleHttpHeaderAction getHeaderAction() {
@@ -267,7 +270,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional, additional actions that are performed on headers.
+   * Optional, additional actions that are performed on headers. This field is only supported in
+   * Global Security Policies of type CLOUD_ARMOR.
    * @param headerAction headerAction or {@code null} for none
    */
   public SecurityPolicyRule setHeaderAction(SecurityPolicyRuleHttpHeaderAction headerAction) {
@@ -390,7 +394,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * Parameters defining the redirect action. Cannot be specified for any other actions. This field
+   * is only supported in Global Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleRedirectOptions getRedirectOptions() {
@@ -398,7 +403,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Parameters defining the redirect action. Cannot be specified for any other actions.
+   * Parameters defining the redirect action. Cannot be specified for any other actions. This field
+   * is only supported in Global Security Policies of type CLOUD_ARMOR.
    * @param redirectOptions redirectOptions or {@code null} for none
    */
   public SecurityPolicyRule setRedirectOptions(SecurityPolicyRuleRedirectOptions redirectOptions) {

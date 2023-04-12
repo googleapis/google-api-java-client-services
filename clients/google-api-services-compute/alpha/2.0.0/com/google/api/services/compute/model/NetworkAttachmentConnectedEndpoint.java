@@ -45,7 +45,7 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String projectIdOrNum;
 
   /**
-   * Alias IP ranges from the same subnetwork
+   * Alias IP ranges from the same subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   }
 
   /**
-   * Alias IP ranges from the same subnetwork
+   * Alias IP ranges from the same subnetwork.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSecondaryIpCidrRanges() {
@@ -110,7 +110,7 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   }
 
   /**
-   * Alias IP ranges from the same subnetwork
+   * Alias IP ranges from the same subnetwork.
    * @param secondaryIpCidrRanges secondaryIpCidrRanges or {@code null} for none
    */
   public NetworkAttachmentConnectedEndpoint setSecondaryIpCidrRanges(java.util.List<java.lang.String> secondaryIpCidrRanges) {

@@ -33,7 +33,8 @@ public final class SecurityPolicyRecaptchaOptionsConfig extends com.google.api.c
    * An optional field to supply a reCAPTCHA site key to be used for all the rules using the
    * redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site
    * key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the
-   * specified site key. If not specified, a Google-managed site key is used.
+   * specified site key. If not specified, a Google-managed site key is used. This field is only
+   * supported in Global Security Policies of type CLOUD_ARMOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class SecurityPolicyRecaptchaOptionsConfig extends com.google.api.c
    * An optional field to supply a reCAPTCHA site key to be used for all the rules using the
    * redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site
    * key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the
-   * specified site key. If not specified, a Google-managed site key is used.
+   * specified site key. If not specified, a Google-managed site key is used. This field is only
+   * supported in Global Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedirectSiteKey() {
@@ -54,7 +56,8 @@ public final class SecurityPolicyRecaptchaOptionsConfig extends com.google.api.c
    * An optional field to supply a reCAPTCHA site key to be used for all the rules using the
    * redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site
    * key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the
-   * specified site key. If not specified, a Google-managed site key is used.
+   * specified site key. If not specified, a Google-managed site key is used. This field is only
+   * supported in Global Security Policies of type CLOUD_ARMOR.
    * @param redirectSiteKey redirectSiteKey or {@code null} for none
    */
   public SecurityPolicyRecaptchaOptionsConfig setRedirectSiteKey(java.lang.String redirectSiteKey) {

@@ -33,6 +33,14 @@ package com.google.api.services.compute.model;
 public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
+   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, PREMIUM tier will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoNetworkTier;
+
+  /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs
    * that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
    * The value may be {@code null}.
@@ -181,6 +189,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer udpIdleTimeoutSec;
+
+  /**
+   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, PREMIUM tier will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoNetworkTier() {
+    return autoNetworkTier;
+  }
+
+  /**
+   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, PREMIUM tier will be used.
+   * @param autoNetworkTier autoNetworkTier or {@code null} for none
+   */
+  public RouterNat setAutoNetworkTier(java.lang.String autoNetworkTier) {
+    this.autoNetworkTier = autoNetworkTier;
+    return this;
+  }
 
   /**
    * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs

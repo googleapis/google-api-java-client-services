@@ -52,12 +52,6 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResourceStatusUpcomingMaintenance upcomingMaintenance;
-
-  /**
    * [Output Only] An opaque ID of the host on which the VM is running.
    * @return value or {@code null} for none
    */
@@ -105,21 +99,6 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setServiceIntegrationStatuses(java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses) {
     this.serviceIntegrationStatuses = serviceIntegrationStatuses;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ResourceStatusUpcomingMaintenance getUpcomingMaintenance() {
-    return upcomingMaintenance;
-  }
-
-  /**
-   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
-   */
-  public ResourceStatus setUpcomingMaintenance(ResourceStatusUpcomingMaintenance upcomingMaintenance) {
-    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

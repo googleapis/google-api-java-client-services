@@ -82,6 +82,13 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
   private java.lang.String challenge;
 
   /**
+   * The client type: web, Android or iOS. Required when reCAPTCHA Enterprise protection is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientType;
+
+  /**
    * The Url to continue after user clicks the link sent in email. This is the url that will allow
    * the web widget to handle the OOB code.
    * The value may be {@code null}.
@@ -140,6 +147,13 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String newEmail;
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recaptchaVersion;
 
   /**
    * Required. The type of out-of-band (OOB) code to send. Depending on this value, other fields in
@@ -307,6 +321,23 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
   }
 
   /**
+   * The client type: web, Android or iOS. Required when reCAPTCHA Enterprise protection is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientType() {
+    return clientType;
+  }
+
+  /**
+   * The client type: web, Android or iOS. Required when reCAPTCHA Enterprise protection is enabled.
+   * @param clientType clientType or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1GetOobCodeRequest setClientType(java.lang.String clientType) {
+    this.clientType = clientType;
+    return this;
+  }
+
+  /**
    * The Url to continue after user clicks the link sent in email. This is the url that will allow
    * the web widget to handle the OOB code.
    * @return value or {@code null} for none
@@ -444,6 +475,23 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
    */
   public GoogleCloudIdentitytoolkitV1GetOobCodeRequest setNewEmail(java.lang.String newEmail) {
     this.newEmail = newEmail;
+    return this;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecaptchaVersion() {
+    return recaptchaVersion;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @param recaptchaVersion recaptchaVersion or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1GetOobCodeRequest setRecaptchaVersion(java.lang.String recaptchaVersion) {
+    this.recaptchaVersion = recaptchaVersion;
     return this;
   }
 

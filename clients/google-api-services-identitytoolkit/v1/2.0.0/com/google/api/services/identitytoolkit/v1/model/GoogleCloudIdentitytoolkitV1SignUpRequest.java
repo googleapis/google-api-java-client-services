@@ -44,6 +44,13 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
   private java.lang.String captchaResponse;
 
   /**
+   * The client type: web, Android or iOS. Required when enabling reCAPTCHA enterprise protection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientType;
+
+  /**
    * Whether the user will be disabled upon creation. Disabled accounts are inaccessible except for
    * requests bearing a Google OAuth2 credential with proper [permissions](https://cloud.google.com
    * /identity-platform/docs/access-control).
@@ -141,6 +148,13 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
   private java.lang.String photoUrl;
 
   /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recaptchaVersion;
+
+  /**
    * The project ID of the project which the user should belong to. Specifying this field requires a
    * Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com/identity-
    * platform/docs/access-control). If this is not set, the target project is inferred from the
@@ -189,6 +203,23 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
    */
   public GoogleCloudIdentitytoolkitV1SignUpRequest setCaptchaResponse(java.lang.String captchaResponse) {
     this.captchaResponse = captchaResponse;
+    return this;
+  }
+
+  /**
+   * The client type: web, Android or iOS. Required when enabling reCAPTCHA enterprise protection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientType() {
+    return clientType;
+  }
+
+  /**
+   * The client type: web, Android or iOS. Required when enabling reCAPTCHA enterprise protection.
+   * @param clientType clientType or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignUpRequest setClientType(java.lang.String clientType) {
+    this.clientType = clientType;
     return this;
   }
 
@@ -404,6 +435,23 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
    */
   public GoogleCloudIdentitytoolkitV1SignUpRequest setPhotoUrl(java.lang.String photoUrl) {
     this.photoUrl = photoUrl;
+    return this;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecaptchaVersion() {
+    return recaptchaVersion;
+  }
+
+  /**
+   * The reCAPTCHA version of the reCAPTCHA token in the captcha_response.
+   * @param recaptchaVersion recaptchaVersion or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignUpRequest setRecaptchaVersion(java.lang.String recaptchaVersion) {
+    this.recaptchaVersion = recaptchaVersion;
     return this;
   }
 

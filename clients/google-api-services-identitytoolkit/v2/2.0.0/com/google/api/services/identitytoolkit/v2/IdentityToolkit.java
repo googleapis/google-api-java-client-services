@@ -154,6 +154,113 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
   public class Accounts {
 
     /**
+     * Revokes a user's token from an Identity Provider (IdP). This is done by manually providing an IdP
+     * credential, and the token types for revocation. An [API
+     * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
+     * to identify the Google Cloud project.
+     *
+     * Create a request for the method "accounts.revokeToken".
+     *
+     * This request holds the parameters needed by the identitytoolkit server.  After setting any
+     * optional parameters, call the {@link RevokeToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenRequest}
+     * @return the request
+     */
+    public RevokeToken revokeToken(com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenRequest content) throws java.io.IOException {
+      RevokeToken result = new RevokeToken(content);
+      initialize(result);
+      return result;
+    }
+
+    public class RevokeToken extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenResponse> {
+
+      private static final String REST_PATH = "v2/accounts:revokeToken";
+
+      /**
+       * Revokes a user's token from an Identity Provider (IdP). This is done by manually providing an
+       * IdP credential, and the token types for revocation. An [API
+       * key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order
+       * to identify the Google Cloud project.
+       *
+       * Create a request for the method "accounts.revokeToken".
+       *
+       * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link RevokeToken#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * RevokeToken#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenRequest}
+       * @since 1.13
+       */
+      protected RevokeToken(com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenRequest content) {
+        super(IdentityToolkit.this, "POST", REST_PATH, content, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RevokeTokenResponse.class);
+      }
+
+      @Override
+      public RevokeToken set$Xgafv(java.lang.String $Xgafv) {
+        return (RevokeToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RevokeToken setAccessToken(java.lang.String accessToken) {
+        return (RevokeToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RevokeToken setAlt(java.lang.String alt) {
+        return (RevokeToken) super.setAlt(alt);
+      }
+
+      @Override
+      public RevokeToken setCallback(java.lang.String callback) {
+        return (RevokeToken) super.setCallback(callback);
+      }
+
+      @Override
+      public RevokeToken setFields(java.lang.String fields) {
+        return (RevokeToken) super.setFields(fields);
+      }
+
+      @Override
+      public RevokeToken setKey(java.lang.String key) {
+        return (RevokeToken) super.setKey(key);
+      }
+
+      @Override
+      public RevokeToken setOauthToken(java.lang.String oauthToken) {
+        return (RevokeToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RevokeToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RevokeToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RevokeToken setQuotaUser(java.lang.String quotaUser) {
+        return (RevokeToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RevokeToken setUploadType(java.lang.String uploadType) {
+        return (RevokeToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RevokeToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RevokeToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public RevokeToken set(String parameterName, Object value) {
+        return (RevokeToken) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the MfaEnrollment collection.
      *
      * <p>The typical use is:</p>
@@ -7340,6 +7447,192 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
       }
     }
+  }
+
+  /**
+   * An accessor for creating requests from the V2 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code IdentityToolkit identitytoolkit = new IdentityToolkit(...);}
+   *   {@code IdentityToolkit.V2.List request = identitytoolkit.v2().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V2 v2() {
+    return new V2();
+  }
+
+  /**
+   * The "v2" collection of methods.
+   */
+  public class V2 {
+
+    /**
+     * Gets parameters needed for reCAPTCHA analysis.
+     *
+     * Create a request for the method "v2.getRecaptchaConfig".
+     *
+     * This request holds the parameters needed by the identitytoolkit server.  After setting any
+     * optional parameters, call the {@link GetRecaptchaConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GetRecaptchaConfig getRecaptchaConfig() throws java.io.IOException {
+      GetRecaptchaConfig result = new GetRecaptchaConfig();
+      initialize(result);
+      return result;
+    }
+
+    public class GetRecaptchaConfig extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RecaptchaConfig> {
+
+      private static final String REST_PATH = "v2/recaptchaConfig";
+
+      /**
+       * Gets parameters needed for reCAPTCHA analysis.
+       *
+       * Create a request for the method "v2.getRecaptchaConfig".
+       *
+       * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link GetRecaptchaConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetRecaptchaConfig#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetRecaptchaConfig() {
+        super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2RecaptchaConfig.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetRecaptchaConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetRecaptchaConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetRecaptchaConfig setAccessToken(java.lang.String accessToken) {
+        return (GetRecaptchaConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetRecaptchaConfig setAlt(java.lang.String alt) {
+        return (GetRecaptchaConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetRecaptchaConfig setCallback(java.lang.String callback) {
+        return (GetRecaptchaConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetRecaptchaConfig setFields(java.lang.String fields) {
+        return (GetRecaptchaConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetRecaptchaConfig setKey(java.lang.String key) {
+        return (GetRecaptchaConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetRecaptchaConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetRecaptchaConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetRecaptchaConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetRecaptchaConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetRecaptchaConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetRecaptchaConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetRecaptchaConfig setUploadType(java.lang.String uploadType) {
+        return (GetRecaptchaConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetRecaptchaConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetRecaptchaConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * reCAPTCHA Enterprise uses separate site keys for different client types. Specify the client
+       * type to get the corresponding key.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientType;
+
+      /** reCAPTCHA Enterprise uses separate site keys for different client types. Specify the client type to
+     get the corresponding key.
+       */
+      public java.lang.String getClientType() {
+        return clientType;
+      }
+
+      /**
+       * reCAPTCHA Enterprise uses separate site keys for different client types. Specify the client
+       * type to get the corresponding key.
+       */
+      public GetRecaptchaConfig setClientType(java.lang.String clientType) {
+        this.clientType = clientType;
+        return this;
+      }
+
+      /** The id of a tenant. */
+      @com.google.api.client.util.Key
+      private java.lang.String tenantId;
+
+      /** The id of a tenant.
+       */
+      public java.lang.String getTenantId() {
+        return tenantId;
+      }
+
+      /** The id of a tenant. */
+      public GetRecaptchaConfig setTenantId(java.lang.String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+      }
+
+      /** The reCAPTCHA version. */
+      @com.google.api.client.util.Key
+      private java.lang.String version;
+
+      /** The reCAPTCHA version.
+       */
+      public java.lang.String getVersion() {
+        return version;
+      }
+
+      /** The reCAPTCHA version. */
+      public GetRecaptchaConfig setVersion(java.lang.String version) {
+        this.version = version;
+        return this;
+      }
+
+      @Override
+      public GetRecaptchaConfig set(String parameterName, Object value) {
+        return (GetRecaptchaConfig) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

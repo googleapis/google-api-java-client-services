@@ -68,6 +68,33 @@ class ApiTest(basetest.TestCase):
     f.close()
     return Api(discovery_doc)
 
+  def testDuplication(self):
+    api = self.ApiFromDiscoveryDoc('duplicated.v1.json')
+    root = api.values.get('resources')[0]
+    root_method = root.values.get('methods')[0]
+    duplicated_child = root.values.get('resources')[0]
+    duplicated_child_method = duplicated_child.values.get('methods')[0]
+    nonduplicated_child = root.values.get('resources')[1]
+    nonduplicated_child_method_duplicated = nonduplicated_child.values.get('methods')[0]
+    nonduplicated_child_method_nonduplicated = nonduplicated_child.values.get('methods')[1]
+    duplicated_grandchild = nonduplicated_child.values.get('resources')[0]
+    duplicated_grandchild_method = duplicated_grandchild.values.get('methods')[0]
+
+    def fcn(node):
+      result = node.values.get('className')
+      print result
+      return result
+    self.assertTrue(fcn(root) == 'Duplicated')
+    self.assertTrue(fcn(root_method) == 'DuplicatedRequest')
+    self.assertTrue(fcn(duplicated_child) == 'Duplicated_Duplicated')
+    self.assertTrue(fcn(duplicated_child_method) == 'DuplicatedRequest')
+    self.assertTrue(fcn(nonduplicated_child) == 'Nonduplicated')
+    self.assertTrue(fcn(nonduplicated_child_method_duplicated) == 'Nonduplicated_Duplicated')
+    self.assertTrue(fcn(nonduplicated_child_method_nonduplicated) == 'NonduplicatedRequest')
+    self.assertTrue(fcn(duplicated_grandchild) == 'Nonduplicated_DuplicatedResource')
+    self.assertTrue(fcn(duplicated_grandchild_method) == 'DuplicatedRequest')
+    pass
+
   def testLazySchemaForCreation(self):
     """Check loading schemas which are known to have a forward reference.
 

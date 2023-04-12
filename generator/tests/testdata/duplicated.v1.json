@@ -1,0 +1,63 @@
+{
+  "name": "duplicatedApi",
+  "version": "v1",
+  "description": "Discovery used to test class names duplication in Java",
+  "restBasePath": "/duplicated/v1/",
+  "rpcPath": "/rpc",
+  "features": [
+    "dataWrapper"
+  ],
+  "schemas": {
+    "DuplicatedCurrentlocationGetResponseJson": "{\"id\":\"DuplicatedCurrentlocationGetResponseJson\",\"$ref\":\"DuplicatedLocationResourceJson\"}",
+    "DuplicatedCurrentlocationResourceJson": "{\"id\":\"DuplicatedCurrentlocationResourceJson\",\"$ref\":\"DuplicatedLocationResourceJson\"}",
+    "DuplicatedLocationListResponse": "{\"id\":\"DuplicatedLocationListResponse\",\"properties\":{\"items\":{\"items\":{\"$ref\":\"DuplicatedLocationResourceJson\"},\"type\":\"array\"},\"kind\":{\"default\":\"duplicated#locationFeed\",\"type\":\"string\"}},\"type\":\"object\"}",
+    "DuplicatedLocationResourceJson": "{\"id\":\"DuplicatedLocationResourceJson\",\"properties\":{\"placeid\":{\"type\":\"any\"},\"speed\":{\"type\":\"any\"},\"timestampMs\":{\"type\":\"any\"},\"altitude\":{\"type\":\"any\"},\"longitude\":{\"type\":\"any\"},\"foo\":{\"type\":\"any\"},\"accuracy\":{\"type\":\"any\"},\"altitudeAccuracy\":{\"type\":\"any\"},\"heading\":{\"type\":\"any\"},\"kind\":{\"default\":\"foo#location\",\"type\":\"string\"}},\"type\":\"object\"}"
+  },
+  "resources": {
+    "duplicated": {
+      "methods": {
+        "duplicated": {
+          "restPath": "duplicated",
+          "rpcMethod": "duplicated.duplicated.foo",
+          "httpMethod": "DELETE"
+        }
+      },
+      "resources": {
+        "duplicated": {
+          "methods": {
+            "duplicated": {
+              "restPath": "duplicated",
+              "rpcMethod": "duplicated.duplicated.foo",
+              "httpMethod": "DELETE"
+            }
+          }
+        },
+        "nonduplicated": {
+          "methods": {
+            "duplicated": {
+              "restPath": "duplicated",
+              "rpcMethod": "duplicated.duplicated.foo",
+              "httpMethod": "DELETE"
+            },
+            "nonduplicated": {
+              "restPath": "nonduplicated",
+              "rpcMethod": "nonduplicated.duplicated.foo",
+              "httpMethod": "DELETE"
+            }
+          },
+          "resources": {
+            "duplicated": {
+              "methods": {
+                "duplicated": {
+                  "restPath": "duplicated",
+                  "rpcMethod": "duplicated.duplicated.foo",
+                  "httpMethod": "DELETE"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

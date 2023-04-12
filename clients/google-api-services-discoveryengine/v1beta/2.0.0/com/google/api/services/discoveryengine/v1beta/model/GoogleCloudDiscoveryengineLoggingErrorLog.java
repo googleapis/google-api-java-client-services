@@ -51,6 +51,28 @@ public final class GoogleCloudDiscoveryengineLoggingErrorLog extends com.google.
   private java.lang.String message;
 
   /**
+   * The API request payload, represented as a protocol buffer. Most API request types are
+   * supported—for example: * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.DocumentServ
+   * ice.CreateDocumentRequest` * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.UserEven
+   * tService.WriteUserEventRequest`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> requestPayload;
+
+  /**
+   * The API response payload, represented as a protocol buffer. This is used to log some "soft
+   * errors", where the response is valid but we consider there are some quality issues like
+   * unjoined events. The following API responses are supported, and no PII is included: *
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.WriteUserEvent` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.CollectUserEvent`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> responsePayload;
+
+  /**
    * The service context in which this error has occurred.
    * The value may be {@code null}.
    */
@@ -112,6 +134,56 @@ public final class GoogleCloudDiscoveryengineLoggingErrorLog extends com.google.
    */
   public GoogleCloudDiscoveryengineLoggingErrorLog setMessage(java.lang.String message) {
     this.message = message;
+    return this;
+  }
+
+  /**
+   * The API request payload, represented as a protocol buffer. Most API request types are
+   * supported—for example: * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.DocumentServ
+   * ice.CreateDocumentRequest` * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.UserEven
+   * tService.WriteUserEventRequest`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getRequestPayload() {
+    return requestPayload;
+  }
+
+  /**
+   * The API request payload, represented as a protocol buffer. Most API request types are
+   * supported—for example: * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.DocumentServ
+   * ice.CreateDocumentRequest` * `type.googleapis.com/google.cloud.discoveryengine.v1alpha.UserEven
+   * tService.WriteUserEventRequest`
+   * @param requestPayload requestPayload or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineLoggingErrorLog setRequestPayload(java.util.Map<String, java.lang.Object> requestPayload) {
+    this.requestPayload = requestPayload;
+    return this;
+  }
+
+  /**
+   * The API response payload, represented as a protocol buffer. This is used to log some "soft
+   * errors", where the response is valid but we consider there are some quality issues like
+   * unjoined events. The following API responses are supported, and no PII is included: *
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.WriteUserEvent` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.CollectUserEvent`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getResponsePayload() {
+    return responsePayload;
+  }
+
+  /**
+   * The API response payload, represented as a protocol buffer. This is used to log some "soft
+   * errors", where the response is valid but we consider there are some quality issues like
+   * unjoined events. The following API responses are supported, and no PII is included: *
+   * `google.cloud.discoveryengine.v1alpha.RecommendationService.Recommend` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.WriteUserEvent` *
+   * `google.cloud.discoveryengine.v1alpha.UserEventService.CollectUserEvent`
+   * @param responsePayload responsePayload or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineLoggingErrorLog setResponsePayload(java.util.Map<String, java.lang.Object> responsePayload) {
+    this.responsePayload = responsePayload;
     return this;
   }
 

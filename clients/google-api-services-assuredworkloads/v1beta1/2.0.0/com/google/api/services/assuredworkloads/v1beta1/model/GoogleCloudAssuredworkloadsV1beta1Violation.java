@@ -38,8 +38,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private java.lang.Boolean acknowledged;
 
   /**
-   * Optional. Timestamp when this violation was acknowledged last. This will be absent when
-   * acknowledged field is marked as false.
+   * Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to
+   * find the last time the violation was acknowledged when there are more than one violations. This
+   * field will be absent when acknowledged field is marked as false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +159,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
-   * Optional. Timestamp when this violation was acknowledged last. This will be absent when
-   * acknowledged field is marked as false.
+   * Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to
+   * find the last time the violation was acknowledged when there are more than one violations. This
+   * field will be absent when acknowledged field is marked as false.
    * @return value or {@code null} for none
    */
   public String getAcknowledgementTime() {
@@ -167,8 +169,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
-   * Optional. Timestamp when this violation was acknowledged last. This will be absent when
-   * acknowledged field is marked as false.
+   * Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to
+   * find the last time the violation was acknowledged when there are more than one violations. This
+   * field will be absent when acknowledged field is marked as false.
    * @param acknowledgementTime acknowledgementTime or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setAcknowledgementTime(String acknowledgementTime) {

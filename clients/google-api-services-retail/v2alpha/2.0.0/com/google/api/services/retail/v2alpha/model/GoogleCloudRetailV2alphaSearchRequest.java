@@ -30,15 +30,6 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents the banner in request, for projects that combine banners. For example: a retailer
-   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
-   * etc. under one project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String banner;
-
-  /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
    * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
@@ -80,7 +71,17 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpec dynamicFacetSpec;
 
   /**
-   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * set, it should be exactly matched with UserEvent.entity to get search results boosted by
+   * entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entity;
+
+  /**
+   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 200
    * values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
@@ -263,27 +264,6 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String visitorId;
 
   /**
-   * Represents the banner in request, for projects that combine banners. For example: a retailer
-   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
-   * etc. under one project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBanner() {
-    return banner;
-  }
-
-  /**
-   * Represents the banner in request, for projects that combine banners. For example: a retailer
-   * can sell products under different banners like retailer-main, retailer-baby, retailer-meds,
-   * etc. under one project.
-   * @param banner banner or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaSearchRequest setBanner(java.lang.String banner) {
-    this.banner = banner;
-    return this;
-  }
-
-  /**
    * Boost specification to boost certain products. See more details at this [user
    * guide](https://cloud.google.com/retail/docs/boosting). Notice that if both
    * ServingConfig.boost_control_ids and SearchRequest.boost_spec are set, the boost conditions from
@@ -378,7 +358,30 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * set, it should be exactly matched with UserEvent.entity to get search results boosted by
+   * entity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntity() {
+    return entity;
+  }
+
+  /**
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * set, it should be exactly matched with UserEvent.entity to get search results boosted by
+   * entity.
+   * @param entity entity or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setEntity(java.lang.String entity) {
+    this.entity = entity;
+    return this;
+  }
+
+  /**
+   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 200
    * values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
@@ -387,7 +390,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100
+   * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 200
    * values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param facetSpecs facetSpecs or {@code null} for none
    */

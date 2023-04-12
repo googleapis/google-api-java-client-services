@@ -339,22 +339,6 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** The banner context for completion suggestions. */
-          @com.google.api.client.util.Key
-          private java.lang.String banner;
-
-          /** The banner context for completion suggestions.
-           */
-          public java.lang.String getBanner() {
-            return banner;
-          }
-
-          /** The banner context for completion suggestions. */
-          public CompleteQuery setBanner(java.lang.String banner) {
-            this.banner = banner;
-            return this;
-          }
-
           /**
            * Determines which dataset to use for fetching completion. "user-data" will use the
            * imported dataset through CompletionService.ImportCompletionData. "cloud-retail" will
@@ -443,6 +427,34 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            */
           public CompleteQuery setEnableAttributeSuggestions(java.lang.Boolean enableAttributeSuggestions) {
             this.enableAttributeSuggestions = enableAttributeSuggestions;
+            return this;
+          }
+
+          /**
+           * The entity for customers that may run multiple different entities, domains, sites or
+           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
+           * entity autocomplete results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String entity;
+
+          /** The entity for customers that may run multiple different entities, domains, sites or regions, for
+         example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it
+         should be exactly matched with UserEvent.entity to get per-entity autocomplete results.
+           */
+          public java.lang.String getEntity() {
+            return entity;
+          }
+
+          /**
+           * The entity for customers that may run multiple different entities, domains, sites or
+           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
+           * entity autocomplete results.
+           */
+          public CompleteQuery setEntity(java.lang.String entity) {
+            this.entity = entity;
             return this;
           }
 

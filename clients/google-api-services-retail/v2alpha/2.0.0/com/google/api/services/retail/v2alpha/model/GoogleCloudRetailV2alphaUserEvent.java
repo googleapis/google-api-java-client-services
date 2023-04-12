@@ -70,15 +70,6 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   private java.lang.String attributionToken;
 
   /**
-   * Represents the banner of the user event, for projects that combine banners. For example:
-   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String banner;
-
-  /**
    * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
@@ -94,6 +85,16 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private GoogleCloudRetailV2alphaCompletionDetail completionDetail;
+
+  /**
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * recommended to set this field to get better per-entity search, completion and prediction
+   * results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entity;
 
   /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
@@ -339,27 +340,6 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
   }
 
   /**
-   * Represents the banner of the user event, for projects that combine banners. For example:
-   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBanner() {
-    return banner;
-  }
-
-  /**
-   * Represents the banner of the user event, for projects that combine banners. For example:
-   * retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-
-   * meds, etc. under one project.
-   * @param banner banner or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaUserEvent setBanner(java.lang.String banner) {
-    this.banner = banner;
-    return this;
-  }
-
-  /**
    * The ID or name of the associated shopping cart. This ID is used to associate multiple items
    * added or present in the cart before purchase. This can only be set for `add-to-cart`,
    * `purchase-complete`, or `shopping-cart-page-view` events.
@@ -396,6 +376,29 @@ public final class GoogleCloudRetailV2alphaUserEvent extends com.google.api.clie
    */
   public GoogleCloudRetailV2alphaUserEvent setCompletionDetail(GoogleCloudRetailV2alphaCompletionDetail completionDetail) {
     this.completionDetail = completionDetail;
+    return this;
+  }
+
+  /**
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * recommended to set this field to get better per-entity search, completion and prediction
+   * results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntity() {
+    return entity;
+  }
+
+  /**
+   * The entity for customers that may run multiple different entities, domains, sites or regions,
+   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * recommended to set this field to get better per-entity search, completion and prediction
+   * results.
+   * @param entity entity or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaUserEvent setEntity(java.lang.String entity) {
+    this.entity = entity;
     return this;
   }
 

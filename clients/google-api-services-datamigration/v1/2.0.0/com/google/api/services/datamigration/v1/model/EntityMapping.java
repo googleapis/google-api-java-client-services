@@ -39,6 +39,13 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String draftEntity;
 
   /**
+   * Type of draft entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String draftType;
+
+  /**
    * Entity mapping log entries. Multiple rules can be effective and contribute changes to a
    * converted entity, such as a rule can handle the entity name, another rule can handle an entity
    * type. In addition, rules which did not change the entity are also logged along with the reason
@@ -57,6 +64,13 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
   private java.lang.String sourceEntity;
 
   /**
+   * Type of source entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceType;
+
+  /**
    * Target entity full name. The draft entity can also include a column, index or constraint using
    * the same naming notation schema.table.column.
    * @return value or {@code null} for none
@@ -72,6 +86,23 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
    */
   public EntityMapping setDraftEntity(java.lang.String draftEntity) {
     this.draftEntity = draftEntity;
+    return this;
+  }
+
+  /**
+   * Type of draft entity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDraftType() {
+    return draftType;
+  }
+
+  /**
+   * Type of draft entity.
+   * @param draftType draftType or {@code null} for none
+   */
+  public EntityMapping setDraftType(java.lang.String draftType) {
+    this.draftType = draftType;
     return this;
   }
 
@@ -114,6 +145,23 @@ public final class EntityMapping extends com.google.api.client.json.GenericJson 
    */
   public EntityMapping setSourceEntity(java.lang.String sourceEntity) {
     this.sourceEntity = sourceEntity;
+    return this;
+  }
+
+  /**
+   * Type of source entity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceType() {
+    return sourceType;
+  }
+
+  /**
+   * Type of source entity.
+   * @param sourceType sourceType or {@code null} for none
+   */
+  public EntityMapping setSourceType(java.lang.String sourceType) {
+    this.sourceType = sourceType;
     return this;
   }
 

@@ -560,12 +560,6 @@ class Resource(template_objects.CodeObject):
     self.SetTemplateValue('rawClassName', raw_class_name)
     class_name = self.ComputeNonDuplicatedName(raw_class_name)
     self.SetTemplateValue('className', class_name)
-    # Replace methods dict with Methods
-    self._methods = []
-    method_dict = self.values.get('methods') or {}
-    for name in sorted(method_dict):
-      self._methods.append(Method(api, name, method_dict[name], parent=self))
-    self.SetTemplateValue('methods', self._methods)
     # Get sub resources
     self._resources = []
     r_def_dict = self.values.get('resources') or {}
@@ -573,6 +567,12 @@ class Resource(template_objects.CodeObject):
       r = Resource(api, name, r_def_dict[name], parent=self)
       self._resources.append(r)
     self.SetTemplateValue('resources', self._resources)
+    # Replace methods dict with Methods
+    self._methods = []
+    method_dict = self.values.get('methods') or {}
+    for name in sorted(method_dict):
+      self._methods.append(Method(api, name, method_dict[name], parent=self))
+    self.SetTemplateValue('methods', self._methods)
 
 
   @property

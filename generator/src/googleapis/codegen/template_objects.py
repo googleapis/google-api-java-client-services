@@ -131,16 +131,16 @@ class CodeObject(UseableInTemplates):
   def ComputeNonDuplicatedName(self, original_class_name):
     class_name = original_class_name
     parent_path = self.parentPath()
-    occurrences = 0
 
-    # increase occurrences as they occur in the path
-    # from root class to current one
+    # Prepend the first ancestor's name with an underscore if there is any
+    # duplication from root to node (e.g. FirstAncestor_Node)
     for parent_class_name in parent_path:
       if class_name == parent_class_name:
         class_name = parent_path[-1] + '_' + class_name
         self.SetTemplateValue('isDuplicate', True)
 
-    # increase occurrences as they occur in sibling resources
+    # Append the `Request` suffix to methods which have a same-named resource
+    # sibling
     if self.parent is not None:
       siblings = self.parent.children
       for sibling in siblings:
@@ -148,11 +148,10 @@ class CodeObject(UseableInTemplates):
           # Importing at the top of the file will cause an import error
           from googleapis.codegen.api import Resource
           from googleapis.codegen.api import Method
-          if isinstance(self, Resource):
-            class_name = class_name + 'Resource'
-          elif isinstance(self, Method):
+          # Resources are left intact, but methods may have the `Request` suffix
+          if isinstance(self, Method):
             class_name = class_name + 'Request'
-          else:
+          elif not isinstance(self, Resource):
             raise TypeError('Unexpected CodeObject type')
           self.SetTemplateValue('isDuplicate', True)
 

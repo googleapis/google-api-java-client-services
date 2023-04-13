@@ -19,7 +19,10 @@ package com.google.api.services.networksecurity.v1.model;
 /**
  * ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests.
  * This resource itself does not affect configuration unless it is attached to a target HTTPS proxy
- * or endpoint config selector resource.
+ * or endpoint config selector resource. ServerTlsPolicy in the form accepted by External HTTPS Load
+ * Balancer can be attached only to TargetHttpsProxy with an `EXTERNAL` or `EXTERNAL_MANAGED` load
+ * balancing scheme. Traffic Director compatible ServerTlsPolicies can be attached to EndpointPolicy
+ * and TargetHttpsProxy with Traffic Director `INTERNAL_SELF_MANAGED` load balancing scheme.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -32,12 +35,13 @@ package com.google.api.services.networksecurity.v1.model;
 public final class ServerTlsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Determines if server allows plaintext connections. If set to true, server allows plain text
-   * connections. By default, it is set to false. This setting is not exclusive of other encryption
-   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
-   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
-   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
-   * and non-TLS traffic reaching port :80.
+   * Can be enabled only for Traffic Director policies, must be false for External HTTPS LB
+   * policies. Determines if server allows plaintext connections. If set to true, server allows
+   * plain text connections. By default, it is set to false. This setting is not exclusive of other
+   * encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections. See documentation of other encryption modes to confirm
+   * compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while
+   * having mixed TLS and non-TLS traffic reaching port :80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,10 +69,11 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
-   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
-   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
-   * plain text and mTLS connections.
+   * Required if policy is to be used with the External HTTPS LB, for Traffic Director allowed to be
+   * empty. Defines a mechanism to provision peer validation certificates for peer to peer
+   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
+   * The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set,
+   * server allows both plain text and mTLS connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +88,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Optional if policy is to be used with Traffic Director, for External HTTPS LB must be empty.
    * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
    * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * The value may be {@code null}.
@@ -98,12 +104,13 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
-   * Determines if server allows plaintext connections. If set to true, server allows plain text
-   * connections. By default, it is set to false. This setting is not exclusive of other encryption
-   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
-   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
-   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
-   * and non-TLS traffic reaching port :80.
+   * Can be enabled only for Traffic Director policies, must be false for External HTTPS LB
+   * policies. Determines if server allows plaintext connections. If set to true, server allows
+   * plain text connections. By default, it is set to false. This setting is not exclusive of other
+   * encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections. See documentation of other encryption modes to confirm
+   * compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while
+   * having mixed TLS and non-TLS traffic reaching port :80.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowOpen() {
@@ -111,12 +118,13 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Determines if server allows plaintext connections. If set to true, server allows plain text
-   * connections. By default, it is set to false. This setting is not exclusive of other encryption
-   * modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text
-   * and mTLS connections. See documentation of other encryption modes to confirm compatibility.
-   * Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS
-   * and non-TLS traffic reaching port :80.
+   * Can be enabled only for Traffic Director policies, must be false for External HTTPS LB
+   * policies. Determines if server allows plaintext connections. If set to true, server allows
+   * plain text connections. By default, it is set to false. This setting is not exclusive of other
+   * encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both
+   * plain text and mTLS connections. See documentation of other encryption modes to confirm
+   * compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while
+   * having mixed TLS and non-TLS traffic reaching port :80.
    * @param allowOpen allowOpen or {@code null} for none
    */
   public ServerTlsPolicy setAllowOpen(java.lang.Boolean allowOpen) {
@@ -176,10 +184,11 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
-   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
-   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
-   * plain text and mTLS connections.
+   * Required if policy is to be used with the External HTTPS LB, for Traffic Director allowed to be
+   * empty. Defines a mechanism to provision peer validation certificates for peer to peer
+   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
+   * The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set,
+   * server allows both plain text and mTLS connections.
    * @return value or {@code null} for none
    */
   public MTLSPolicy getMtlsPolicy() {
@@ -187,10 +196,11 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Defines a mechanism to provision peer validation certificates for peer to peer authentication
-   * (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection
-   * is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both
-   * plain text and mTLS connections.
+   * Required if policy is to be used with the External HTTPS LB, for Traffic Director allowed to be
+   * empty. Defines a mechanism to provision peer validation certificates for peer to peer
+   * authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested.
+   * The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set,
+   * server allows both plain text and mTLS connections.
    * @param mtlsPolicy mtlsPolicy or {@code null} for none
    */
   public ServerTlsPolicy setMtlsPolicy(MTLSPolicy mtlsPolicy) {
@@ -218,6 +228,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional if policy is to be used with Traffic Director, for External HTTPS LB must be empty.
    * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
    * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * @return value or {@code null} for none
@@ -227,6 +238,7 @@ public final class ServerTlsPolicy extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional if policy is to be used with Traffic Director, for External HTTPS LB must be empty.
    * Defines a mechanism to provision server identity (public and private keys). Cannot be combined
    * with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
    * @param serverCertificate serverCertificate or {@code null} for none

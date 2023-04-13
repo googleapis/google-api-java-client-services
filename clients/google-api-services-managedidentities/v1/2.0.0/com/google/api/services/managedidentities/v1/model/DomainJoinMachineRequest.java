@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.managedidentities.v1beta1.model;
+package com.google.api.services.managedidentities.v1.model;
 
 /**
  * DomainJoinMachineRequest is the request message for DomainJoinMachine method
@@ -38,13 +38,7 @@ public final class DomainJoinMachineRequest extends com.google.api.client.json.G
   private java.lang.Boolean force;
 
   /**
-   * Optional. OU name to which the VM needs to be domain joined. If the field is not provided, the
-   * VM is joined to the default OU which is created. The default OU for the domain join api is
-   * created as GCE Instances under the Cloud OU. Example - OU=GCE
-   * Instances,OU=Cloud,DC=ad,DC=test,DC=com If the field is provided, then the custom OU is
-   * searched for under GCE Instances OU. Example - if ou_name=test_ou then the VM is domain joined
-   * to the following OU: OU=test_ou,OU=GCE Instances,OU=Cloud,DC=ad,DC=test,DC=com if present. If
-   * OU is not present under GCE Instances, then error is returned.
+   * Optional. OU name where the VM needs to be domain joined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,13 +71,7 @@ public final class DomainJoinMachineRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. OU name to which the VM needs to be domain joined. If the field is not provided, the
-   * VM is joined to the default OU which is created. The default OU for the domain join api is
-   * created as GCE Instances under the Cloud OU. Example - OU=GCE
-   * Instances,OU=Cloud,DC=ad,DC=test,DC=com If the field is provided, then the custom OU is
-   * searched for under GCE Instances OU. Example - if ou_name=test_ou then the VM is domain joined
-   * to the following OU: OU=test_ou,OU=GCE Instances,OU=Cloud,DC=ad,DC=test,DC=com if present. If
-   * OU is not present under GCE Instances, then error is returned.
+   * Optional. OU name where the VM needs to be domain joined
    * @return value or {@code null} for none
    */
   public java.lang.String getOuName() {
@@ -91,13 +79,7 @@ public final class DomainJoinMachineRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. OU name to which the VM needs to be domain joined. If the field is not provided, the
-   * VM is joined to the default OU which is created. The default OU for the domain join api is
-   * created as GCE Instances under the Cloud OU. Example - OU=GCE
-   * Instances,OU=Cloud,DC=ad,DC=test,DC=com If the field is provided, then the custom OU is
-   * searched for under GCE Instances OU. Example - if ou_name=test_ou then the VM is domain joined
-   * to the following OU: OU=test_ou,OU=GCE Instances,OU=Cloud,DC=ad,DC=test,DC=com if present. If
-   * OU is not present under GCE Instances, then error is returned.
+   * Optional. OU name where the VM needs to be domain joined
    * @param ouName ouName or {@code null} for none
    */
   public DomainJoinMachineRequest setOuName(java.lang.String ouName) {

@@ -102,6 +102,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
   private AssistantDevicesPlatformProtoMediaStopCapability mediaStop;
 
   /**
+   * |provider_fulfill| specifies the support for provider.FULFILL client_op, and the corresponding
+   * provider_fulfill field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoProviderFulfillCapability providerFulfill;
+
+  /**
    * |provider_open| specifies the support for provider.OPEN client_op, and the corresponding
    * provider_open field in assistant.embedded.v1.DeviceOp.
    * The value may be {@code null}.
@@ -284,6 +292,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setMediaStop(AssistantDevicesPlatformProtoMediaStopCapability mediaStop) {
     this.mediaStop = mediaStop;
+    return this;
+  }
+
+  /**
+   * |provider_fulfill| specifies the support for provider.FULFILL client_op, and the corresponding
+   * provider_fulfill field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoProviderFulfillCapability getProviderFulfill() {
+    return providerFulfill;
+  }
+
+  /**
+   * |provider_fulfill| specifies the support for provider.FULFILL client_op, and the corresponding
+   * provider_fulfill field in assistant.embedded.v1.DeviceOp.
+   * @param providerFulfill providerFulfill or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setProviderFulfill(AssistantDevicesPlatformProtoProviderFulfillCapability providerFulfill) {
+    this.providerFulfill = providerFulfill;
     return this;
   }
 

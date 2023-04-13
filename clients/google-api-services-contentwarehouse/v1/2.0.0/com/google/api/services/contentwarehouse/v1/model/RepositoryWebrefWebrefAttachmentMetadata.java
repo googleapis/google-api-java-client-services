@@ -65,18 +65,6 @@ public final class RepositoryWebrefWebrefAttachmentMetadata extends com.google.a
   private GeostoreFeatureIdProto oysterId;
 
   /**
-   * This field is populated for at most one entity. If it is populated, it indicates how confident
-   * we are to claim that the page is only about this entity (either it's an official web presence
-   * of the entity, or something like a wikipedia page about the entity). For space reasons this is
-   * represented as a fixed-point integer with two decimal points precision. Convert it to the
-   * interval [0,1] using the following formula: float single_topicness = single_topicness_e2 /
-   * 100.f
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer singleTopicnessE2;
-
-  /**
    * Oyster Feature Type.
    * @return value or {@code null} for none
    */
@@ -156,33 +144,6 @@ public final class RepositoryWebrefWebrefAttachmentMetadata extends com.google.a
    */
   public RepositoryWebrefWebrefAttachmentMetadata setOysterId(GeostoreFeatureIdProto oysterId) {
     this.oysterId = oysterId;
-    return this;
-  }
-
-  /**
-   * This field is populated for at most one entity. If it is populated, it indicates how confident
-   * we are to claim that the page is only about this entity (either it's an official web presence
-   * of the entity, or something like a wikipedia page about the entity). For space reasons this is
-   * represented as a fixed-point integer with two decimal points precision. Convert it to the
-   * interval [0,1] using the following formula: float single_topicness = single_topicness_e2 /
-   * 100.f
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getSingleTopicnessE2() {
-    return singleTopicnessE2;
-  }
-
-  /**
-   * This field is populated for at most one entity. If it is populated, it indicates how confident
-   * we are to claim that the page is only about this entity (either it's an official web presence
-   * of the entity, or something like a wikipedia page about the entity). For space reasons this is
-   * represented as a fixed-point integer with two decimal points precision. Convert it to the
-   * interval [0,1] using the following formula: float single_topicness = single_topicness_e2 /
-   * 100.f
-   * @param singleTopicnessE2 singleTopicnessE2 or {@code null} for none
-   */
-  public RepositoryWebrefWebrefAttachmentMetadata setSingleTopicnessE2(java.lang.Integer singleTopicnessE2) {
-    this.singleTopicnessE2 = singleTopicnessE2;
     return this;
   }
 

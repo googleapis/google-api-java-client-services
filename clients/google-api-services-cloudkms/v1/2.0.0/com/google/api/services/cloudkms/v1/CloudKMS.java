@@ -2687,6 +2687,151 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             return (TestIamPermissions) super.set(parameterName, value);
           }
         }
+        /**
+         * Verifies that Cloud KMS can successfully connect to the external key manager specified by an
+         * EkmConnection. If there is an error connecting to the EKM, this method returns a
+         * FAILED_PRECONDITION status containing structured information as described at
+         * https://cloud.google.com/kms/docs/reference/ekm_errors.
+         *
+         * Create a request for the method "ekmConnections.verifyConnectivity".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link VerifyConnectivity#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the EkmConnection to verify.
+         * @return the request
+         */
+        public VerifyConnectivity verifyConnectivity(java.lang.String name) throws java.io.IOException {
+          VerifyConnectivity result = new VerifyConnectivity(name);
+          initialize(result);
+          return result;
+        }
+
+        public class VerifyConnectivity extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.VerifyConnectivityResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:verifyConnectivity";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/ekmConnections/[^/]+$");
+
+          /**
+           * Verifies that Cloud KMS can successfully connect to the external key manager specified by an
+           * EkmConnection. If there is an error connecting to the EKM, this method returns a
+           * FAILED_PRECONDITION status containing structured information as described at
+           * https://cloud.google.com/kms/docs/reference/ekm_errors.
+           *
+           * Create a request for the method "ekmConnections.verifyConnectivity".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link VerifyConnectivity#execute()} method to invoke the remote
+           * operation. <p> {@link VerifyConnectivity#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of the EkmConnection to verify.
+           * @since 1.13
+           */
+          protected VerifyConnectivity(java.lang.String name) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.VerifyConnectivityResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/ekmConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public VerifyConnectivity set$Xgafv(java.lang.String $Xgafv) {
+            return (VerifyConnectivity) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public VerifyConnectivity setAccessToken(java.lang.String accessToken) {
+            return (VerifyConnectivity) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public VerifyConnectivity setAlt(java.lang.String alt) {
+            return (VerifyConnectivity) super.setAlt(alt);
+          }
+
+          @Override
+          public VerifyConnectivity setCallback(java.lang.String callback) {
+            return (VerifyConnectivity) super.setCallback(callback);
+          }
+
+          @Override
+          public VerifyConnectivity setFields(java.lang.String fields) {
+            return (VerifyConnectivity) super.setFields(fields);
+          }
+
+          @Override
+          public VerifyConnectivity setKey(java.lang.String key) {
+            return (VerifyConnectivity) super.setKey(key);
+          }
+
+          @Override
+          public VerifyConnectivity setOauthToken(java.lang.String oauthToken) {
+            return (VerifyConnectivity) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public VerifyConnectivity setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (VerifyConnectivity) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public VerifyConnectivity setQuotaUser(java.lang.String quotaUser) {
+            return (VerifyConnectivity) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public VerifyConnectivity setUploadType(java.lang.String uploadType) {
+            return (VerifyConnectivity) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public VerifyConnectivity setUploadProtocol(java.lang.String uploadProtocol) {
+            return (VerifyConnectivity) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the EkmConnection to verify. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the EkmConnection to verify.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the EkmConnection to verify. */
+          public VerifyConnectivity setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/ekmConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public VerifyConnectivity set(String parameterName, Object value) {
+            return (VerifyConnectivity) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

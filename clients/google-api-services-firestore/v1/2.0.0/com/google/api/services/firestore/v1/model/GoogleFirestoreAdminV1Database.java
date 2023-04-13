@@ -52,6 +52,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private String createTime;
 
   /**
+   * State of delete protection for the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deleteProtectionState;
+
+  /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -155,6 +162,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * State of delete protection for the database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeleteProtectionState() {
+    return deleteProtectionState;
+  }
+
+  /**
+   * State of delete protection for the database.
+   * @param deleteProtectionState deleteProtectionState or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setDeleteProtectionState(java.lang.String deleteProtectionState) {
+    this.deleteProtectionState = deleteProtectionState;
     return this;
   }
 

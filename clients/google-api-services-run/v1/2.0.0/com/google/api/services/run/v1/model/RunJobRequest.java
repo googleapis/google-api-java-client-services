@@ -29,6 +29,33 @@ package com.google.api.services.run.v1.model;
 @SuppressWarnings("javadoc")
 public final class RunJobRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
+   * be applied to update the execution or task spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Overrides overrides;
+
+  /**
+   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
+   * be applied to update the execution or task spec.
+   * @return value or {@code null} for none
+   */
+  public Overrides getOverrides() {
+    return overrides;
+  }
+
+  /**
+   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
+   * be applied to update the execution or task spec.
+   * @param overrides overrides or {@code null} for none
+   */
+  public RunJobRequest setOverrides(Overrides overrides) {
+    this.overrides = overrides;
+    return this;
+  }
+
   @Override
   public RunJobRequest set(String fieldName, Object value) {
     return (RunJobRequest) super.set(fieldName, value);

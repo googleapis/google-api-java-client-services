@@ -1151,6 +1151,147 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * DomainJoinMachine API joins a Compute Engine VM to the domain
+           *
+           * Create a request for the method "domains.domainJoinMachine".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link DomainJoinMachine#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param domain Required. The domain resource name using the form:
+           *        projects/{project_id}/locations/global/domains/{domain_name}
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.DomainJoinMachineRequest}
+           * @return the request
+           */
+          public DomainJoinMachine domainJoinMachine(java.lang.String domain, com.google.api.services.managedidentities.v1.model.DomainJoinMachineRequest content) throws java.io.IOException {
+            DomainJoinMachine result = new DomainJoinMachine(domain, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DomainJoinMachine extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.DomainJoinMachineResponse> {
+
+            private static final String REST_PATH = "v1/{+domain}:domainJoinMachine";
+
+            private final java.util.regex.Pattern DOMAIN_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * DomainJoinMachine API joins a Compute Engine VM to the domain
+             *
+             * Create a request for the method "domains.domainJoinMachine".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link DomainJoinMachine#execute()} method to invoke the
+             * remote operation. <p> {@link DomainJoinMachine#initialize(com.google.api.client.googleapis.serv
+             * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param domain Required. The domain resource name using the form:
+           *        projects/{project_id}/locations/global/domains/{domain_name}
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.DomainJoinMachineRequest}
+             * @since 1.13
+             */
+            protected DomainJoinMachine(java.lang.String domain, com.google.api.services.managedidentities.v1.model.DomainJoinMachineRequest content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1.model.DomainJoinMachineResponse.class);
+              this.domain = com.google.api.client.util.Preconditions.checkNotNull(domain, "Required parameter domain must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public DomainJoinMachine set$Xgafv(java.lang.String $Xgafv) {
+              return (DomainJoinMachine) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DomainJoinMachine setAccessToken(java.lang.String accessToken) {
+              return (DomainJoinMachine) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DomainJoinMachine setAlt(java.lang.String alt) {
+              return (DomainJoinMachine) super.setAlt(alt);
+            }
+
+            @Override
+            public DomainJoinMachine setCallback(java.lang.String callback) {
+              return (DomainJoinMachine) super.setCallback(callback);
+            }
+
+            @Override
+            public DomainJoinMachine setFields(java.lang.String fields) {
+              return (DomainJoinMachine) super.setFields(fields);
+            }
+
+            @Override
+            public DomainJoinMachine setKey(java.lang.String key) {
+              return (DomainJoinMachine) super.setKey(key);
+            }
+
+            @Override
+            public DomainJoinMachine setOauthToken(java.lang.String oauthToken) {
+              return (DomainJoinMachine) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DomainJoinMachine setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DomainJoinMachine) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DomainJoinMachine setQuotaUser(java.lang.String quotaUser) {
+              return (DomainJoinMachine) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DomainJoinMachine setUploadType(java.lang.String uploadType) {
+              return (DomainJoinMachine) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DomainJoinMachine setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DomainJoinMachine) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * projects/{project_id}/locations/global/domains/{domain_name}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String domain;
+
+            /** Required. The domain resource name using the form:
+           projects/{project_id}/locations/global/domains/{domain_name}
+             */
+            public java.lang.String getDomain() {
+              return domain;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * projects/{project_id}/locations/global/domains/{domain_name}
+             */
+            public DomainJoinMachine setDomain(java.lang.String domain) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.domain = domain;
+              return this;
+            }
+
+            @Override
+            public DomainJoinMachine set(String parameterName, Object value) {
+              return (DomainJoinMachine) super.set(parameterName, value);
+            }
+          }
+          /**
            * Extend Schema for Domain
            *
            * Create a request for the method "domains.extendSchema".
@@ -5458,12 +5599,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-           * the binding to use different resource name schemes, such as `users/operations`. To override the
-           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-           * configuration. For backwards compatibility, the default name includes the operations collection
-           * id, however overriding users must ensure the name binding is the parent resource, without the
-           * operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *
@@ -5488,12 +5624,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-             * override the binding to use different resource name schemes, such as `users/operations`. To
-             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-             * their service configuration. For backwards compatibility, the default name includes the
-             * operations collection id, however overriding users must ensure the name binding is the parent
-             * resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`.
              *
              * Create a request for the method "operations.list".
              *

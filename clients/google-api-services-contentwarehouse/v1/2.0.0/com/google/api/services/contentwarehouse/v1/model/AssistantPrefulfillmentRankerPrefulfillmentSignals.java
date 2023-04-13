@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 47
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 48
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -313,6 +313,15 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String searchDispatch;
+
+  /**
+   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
+   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
+   * media_object argument within it must be of type "Media_unspecified".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subIntentType;
 
   /**
    * Average of per-word confidence for top speech recognition hypothesis. The value is from
@@ -1005,6 +1014,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setSearchDispatch(java.lang.String searchDispatch) {
     this.searchDispatch = searchDispatch;
+    return this;
+  }
+
+  /**
+   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
+   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
+   * media_object argument within it must be of type "Media_unspecified".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubIntentType() {
+    return subIntentType;
+  }
+
+  /**
+   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
+   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
+   * media_object argument within it must be of type "Media_unspecified".
+   * @param subIntentType subIntentType or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setSubIntentType(java.lang.String subIntentType) {
+    this.subIntentType = subIntentType;
     return this;
   }
 

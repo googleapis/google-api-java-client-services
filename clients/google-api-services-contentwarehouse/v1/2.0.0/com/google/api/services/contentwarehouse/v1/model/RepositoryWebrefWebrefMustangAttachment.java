@@ -159,14 +159,6 @@ public final class RepositoryWebrefWebrefMustangAttachment extends com.google.ap
   private java.util.List<java.lang.Integer> unboundIntentScoreE2;
 
   /**
-   * [Experimental code. Do not use ] Entities that webref identified as being the same concept
-   * (undermerged).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RepositoryWebrefWebrefMustangAttachmentUndermergedMembers> undermergedMembers;
-
-  /**
    * The confidence of the category. In the range [0, 100].
    * @return value or {@code null} for none
    */
@@ -423,25 +415,6 @@ public final class RepositoryWebrefWebrefMustangAttachment extends com.google.ap
    */
   public RepositoryWebrefWebrefMustangAttachment setUnboundIntentScoreE2(java.util.List<java.lang.Integer> unboundIntentScoreE2) {
     this.unboundIntentScoreE2 = unboundIntentScoreE2;
-    return this;
-  }
-
-  /**
-   * [Experimental code. Do not use ] Entities that webref identified as being the same concept
-   * (undermerged).
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RepositoryWebrefWebrefMustangAttachmentUndermergedMembers> getUndermergedMembers() {
-    return undermergedMembers;
-  }
-
-  /**
-   * [Experimental code. Do not use ] Entities that webref identified as being the same concept
-   * (undermerged).
-   * @param undermergedMembers undermergedMembers or {@code null} for none
-   */
-  public RepositoryWebrefWebrefMustangAttachment setUndermergedMembers(java.util.List<RepositoryWebrefWebrefMustangAttachmentUndermergedMembers> undermergedMembers) {
-    this.undermergedMembers = undermergedMembers;
     return this;
   }
 

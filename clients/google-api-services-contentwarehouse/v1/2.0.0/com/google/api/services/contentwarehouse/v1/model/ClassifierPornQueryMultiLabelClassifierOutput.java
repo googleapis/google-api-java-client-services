@@ -54,6 +54,12 @@ public final class ClassifierPornQueryMultiLabelClassifierOutput extends com.goo
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private ClassifierPornQueryClassifierOutput minor;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private ClassifierPornQueryClassifierOutput offensive;
 
   /**
@@ -122,6 +128,21 @@ public final class ClassifierPornQueryMultiLabelClassifierOutput extends com.goo
    */
   public ClassifierPornQueryMultiLabelClassifierOutput setMedical(ClassifierPornQueryClassifierOutput medical) {
     this.medical = medical;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ClassifierPornQueryClassifierOutput getMinor() {
+    return minor;
+  }
+
+  /**
+   * @param minor minor or {@code null} for none
+   */
+  public ClassifierPornQueryMultiLabelClassifierOutput setMinor(ClassifierPornQueryClassifierOutput minor) {
+    this.minor = minor;
     return this;
   }
 

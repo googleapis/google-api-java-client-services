@@ -50,6 +50,13 @@ public final class AssistantContextAppProviderId extends com.google.api.client.j
   private java.lang.String androidPackageName;
 
   /**
+   * Unique cast app id that identifies a Cast app of the provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String castAppId;
+
+  /**
    * Version code of the application.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class AssistantContextAppProviderId extends com.google.api.client.j
    */
   public AssistantContextAppProviderId setAndroidPackageName(java.lang.String androidPackageName) {
     this.androidPackageName = androidPackageName;
+    return this;
+  }
+
+  /**
+   * Unique cast app id that identifies a Cast app of the provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCastAppId() {
+    return castAppId;
+  }
+
+  /**
+   * Unique cast app id that identifies a Cast app of the provider.
+   * @param castAppId castAppId or {@code null} for none
+   */
+  public AssistantContextAppProviderId setCastAppId(java.lang.String castAppId) {
+    this.castAppId = castAppId;
     return this;
   }
 

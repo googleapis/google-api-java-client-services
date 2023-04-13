@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 5
+ * Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -47,6 +47,12 @@ public final class AssistantGroundingRankerGroundingProviderFeatures extends com
    */
   @com.google.api.client.util.Key
   private AssistantGroundingRankerMediaGroundingProviderFeatures mediaGroundingProviderFeatures;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantGroundingRankerPodcastGroundingProviderFeatures podcastGroundingProviderFeatures;
 
   /**
    * The value may be {@code null}.
@@ -96,6 +102,21 @@ public final class AssistantGroundingRankerGroundingProviderFeatures extends com
    */
   public AssistantGroundingRankerGroundingProviderFeatures setMediaGroundingProviderFeatures(AssistantGroundingRankerMediaGroundingProviderFeatures mediaGroundingProviderFeatures) {
     this.mediaGroundingProviderFeatures = mediaGroundingProviderFeatures;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures getPodcastGroundingProviderFeatures() {
+    return podcastGroundingProviderFeatures;
+  }
+
+  /**
+   * @param podcastGroundingProviderFeatures podcastGroundingProviderFeatures or {@code null} for none
+   */
+  public AssistantGroundingRankerGroundingProviderFeatures setPodcastGroundingProviderFeatures(AssistantGroundingRankerPodcastGroundingProviderFeatures podcastGroundingProviderFeatures) {
+    this.podcastGroundingProviderFeatures = podcastGroundingProviderFeatures;
     return this;
   }
 

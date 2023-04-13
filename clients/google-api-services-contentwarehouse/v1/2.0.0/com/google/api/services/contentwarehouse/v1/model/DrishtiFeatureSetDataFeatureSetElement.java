@@ -34,6 +34,12 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private DrishtiCompressedFeature compressed;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private DrishtiDenseFeatureData dense;
 
   /**
@@ -72,6 +78,21 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
    */
   @com.google.api.client.util.Key
   private DrishtiSparseFeatureData sparse;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public DrishtiCompressedFeature getCompressed() {
+    return compressed;
+  }
+
+  /**
+   * @param compressed compressed or {@code null} for none
+   */
+  public DrishtiFeatureSetDataFeatureSetElement setCompressed(DrishtiCompressedFeature compressed) {
+    this.compressed = compressed;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

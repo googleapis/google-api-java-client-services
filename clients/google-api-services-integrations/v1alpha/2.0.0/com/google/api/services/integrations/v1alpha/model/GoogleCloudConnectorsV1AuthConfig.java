@@ -45,6 +45,13 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   private java.lang.String authType;
 
   /**
+   * Oauth2AuthCodeFlow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow;
+
+  /**
    * Oauth2ClientCredentials.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1AuthConfig setAuthType(java.lang.String authType) {
     this.authType = authType;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow getOauth2AuthCodeFlow() {
+    return oauth2AuthCodeFlow;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @param oauth2AuthCodeFlow oauth2AuthCodeFlow or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlow(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow) {
+    this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
     return this;
   }
 

@@ -114,6 +114,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1LockConfig lockConfig;
 
   /**
+   * Optional. Log configuration for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1LogConfig logConfig;
+
+  /**
    * Output only. Resource name of the Connection. Format:
    * projects/{project}/locations/{location}/connections/{connection}
    * The value may be {@code null}.
@@ -353,6 +360,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setLockConfig(GoogleCloudConnectorsV1LockConfig lockConfig) {
     this.lockConfig = lockConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Log configuration for the connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1LogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * Optional. Log configuration for the connection.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setLogConfig(GoogleCloudConnectorsV1LogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

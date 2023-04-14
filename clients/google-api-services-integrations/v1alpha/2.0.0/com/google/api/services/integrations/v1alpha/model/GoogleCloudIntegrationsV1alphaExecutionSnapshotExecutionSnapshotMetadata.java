@@ -52,6 +52,13 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
   private java.lang.Integer taskAttempt;
 
   /**
+   * the task label associated with this snapshot. Could be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskLabel;
+
+  /**
    * The task number associated with this snapshot.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
    */
   public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setTaskAttempt(java.lang.Integer taskAttempt) {
     this.taskAttempt = taskAttempt;
+    return this;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskLabel() {
+    return taskLabel;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @param taskLabel taskLabel or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setTaskLabel(java.lang.String taskLabel) {
+    this.taskLabel = taskLabel;
     return this;
   }
 

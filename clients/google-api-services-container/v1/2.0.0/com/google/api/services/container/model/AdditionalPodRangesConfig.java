@@ -31,6 +31,30 @@ package com.google.api.services.container.model;
 @SuppressWarnings("javadoc")
 public final class AdditionalPodRangesConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> podRangeNames;
+
+  /**
+   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPodRangeNames() {
+    return podRangeNames;
+  }
+
+  /**
+   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * @param podRangeNames podRangeNames or {@code null} for none
+   */
+  public AdditionalPodRangesConfig setPodRangeNames(java.util.List<java.lang.String> podRangeNames) {
+    this.podRangeNames = podRangeNames;
+    return this;
+  }
+
   @Override
   public AdditionalPodRangesConfig set(String fieldName, Object value) {
     return (AdditionalPodRangesConfig) super.set(fieldName, value);

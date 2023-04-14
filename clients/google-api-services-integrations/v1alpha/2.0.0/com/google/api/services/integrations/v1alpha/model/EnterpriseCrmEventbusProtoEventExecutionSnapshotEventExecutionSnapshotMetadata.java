@@ -46,6 +46,13 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
   private java.lang.Integer taskAttemptNum;
 
   /**
+   * the task label associated with this snapshot. Could be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskLabel;
+
+  /**
    * the task name associated with this snapshot. Could be empty.
    * The value may be {@code null}.
    */
@@ -90,6 +97,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
    */
   public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setTaskAttemptNum(java.lang.Integer taskAttemptNum) {
     this.taskAttemptNum = taskAttemptNum;
+    return this;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskLabel() {
+    return taskLabel;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @param taskLabel taskLabel or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setTaskLabel(java.lang.String taskLabel) {
+    this.taskLabel = taskLabel;
     return this;
   }
 

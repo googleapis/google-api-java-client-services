@@ -59,8 +59,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. An automatically generated plain text version of body with all rich text syntax
-   * stripped.
+   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
+   * text syntax stripped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An automatically generated plain text version of body with all rich text syntax
-   * stripped.
+   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
+   * text syntax stripped.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlainTextBody() {
@@ -144,8 +144,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An automatically generated plain text version of body with all rich text syntax
-   * stripped.
+   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
+   * text syntax stripped.
    * @param plainTextBody plainTextBody or {@code null} for none
    */
   public Comment setPlainTextBody(java.lang.String plainTextBody) {

@@ -30,6 +30,15 @@ package com.google.api.services.file.v1beta1.model;
 public final class Share extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from,
+   * in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if
+   * the Share is created from scratch and not restored from a backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backup;
+
+  /**
    * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater
    * than 0.
    * The value may be {@code null}.
@@ -94,6 +103,27 @@ public final class Share extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from,
+   * in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if
+   * the Share is created from scratch and not restored from a backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackup() {
+    return backup;
+  }
+
+  /**
+   * Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from,
+   * in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if
+   * the Share is created from scratch and not restored from a backup.
+   * @param backup backup or {@code null} for none
+   */
+  public Share setBackup(java.lang.String backup) {
+    this.backup = backup;
+    return this;
+  }
 
   /**
    * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater

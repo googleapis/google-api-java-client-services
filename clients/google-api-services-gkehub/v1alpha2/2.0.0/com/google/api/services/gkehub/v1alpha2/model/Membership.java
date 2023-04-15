@@ -103,6 +103,13 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String lastConnectionTime;
 
   /**
+   * Optional. The monitoring config information for this membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MonitoringConfig monitoringConfig;
+
+  /**
    * Output only. The full, unique name of this Membership resource in the format
    * `projects/locations/memberships/{membership_id}`, set during creation. `membership_id` must be
    * a valid RFC 1123 compliant DNS label: 1. At most 63 characters in length 2. It must consist of
@@ -307,6 +314,23 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setLastConnectionTime(String lastConnectionTime) {
     this.lastConnectionTime = lastConnectionTime;
+    return this;
+  }
+
+  /**
+   * Optional. The monitoring config information for this membership.
+   * @return value or {@code null} for none
+   */
+  public MonitoringConfig getMonitoringConfig() {
+    return monitoringConfig;
+  }
+
+  /**
+   * Optional. The monitoring config information for this membership.
+   * @param monitoringConfig monitoringConfig or {@code null} for none
+   */
+  public Membership setMonitoringConfig(MonitoringConfig monitoringConfig) {
+    this.monitoringConfig = monitoringConfig;
     return this;
   }
 

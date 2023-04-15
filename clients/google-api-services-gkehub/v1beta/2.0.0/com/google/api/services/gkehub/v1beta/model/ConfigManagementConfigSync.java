@@ -55,6 +55,13 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private ConfigManagementGitConfig git;
 
   /**
+   * Configuration for Managed Config Sync.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigManagementManaged managed;
+
+  /**
    * OCI repo configuration for the cluster
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setGit(ConfigManagementGitConfig git) {
     this.git = git;
+    return this;
+  }
+
+  /**
+   * Configuration for Managed Config Sync.
+   * @return value or {@code null} for none
+   */
+  public ConfigManagementManaged getManaged() {
+    return managed;
+  }
+
+  /**
+   * Configuration for Managed Config Sync.
+   * @param managed managed or {@code null} for none
+   */
+  public ConfigManagementConfigSync setManaged(ConfigManagementManaged managed) {
+    this.managed = managed;
     return this;
   }
 

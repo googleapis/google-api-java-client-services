@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class ResizeNodeGroupRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-
    * clusters#graceful_decommissioning) allows the removal of nodes from the Compute Engine node
    * group without interrupting jobs in progress. This timeout specifies how long to wait for jobs
@@ -66,7 +66,7 @@ public final class ResizeNodeGroupRequest extends com.google.api.client.json.Gen
   private java.lang.Integer size;
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-
    * clusters#graceful_decommissioning) allows the removal of nodes from the Compute Engine node
    * group without interrupting jobs in progress. This timeout specifies how long to wait for jobs
@@ -81,7 +81,7 @@ public final class ResizeNodeGroupRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning
+   * Optional. Timeout for graceful YARN decommissioning. Graceful decommissioning
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/scaling-
    * clusters#graceful_decommissioning) allows the removal of nodes from the Compute Engine node
    * group without interrupting jobs in progress. This timeout specifies how long to wait for jobs

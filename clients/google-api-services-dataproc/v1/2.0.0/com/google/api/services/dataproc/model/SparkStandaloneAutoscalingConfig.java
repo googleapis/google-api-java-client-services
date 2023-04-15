@@ -31,7 +31,7 @@ public final class SparkStandaloneAutoscalingConfig extends com.google.api.clien
 
   /**
    * Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration
-   * to wait for spark worker to complete spark decomissioning tasks before forcefully removing
+   * to wait for spark worker to complete spark decommissioning tasks before forcefully removing
    * workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class SparkStandaloneAutoscalingConfig extends com.google.api.clien
 
   /**
    * Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration
-   * to wait for spark worker to complete spark decomissioning tasks before forcefully removing
+   * to wait for spark worker to complete spark decommissioning tasks before forcefully removing
    * workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class SparkStandaloneAutoscalingConfig extends com.google.api.clien
 
   /**
    * Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration
-   * to wait for spark worker to complete spark decomissioning tasks before forcefully removing
+   * to wait for spark worker to complete spark decommissioning tasks before forcefully removing
    * workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
    * @param gracefulDecommissionTimeout gracefulDecommissionTimeout or {@code null} for none
    */

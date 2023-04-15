@@ -46,6 +46,13 @@ public final class ListTlsInspectionPoliciesResponse extends com.google.api.clie
   private java.util.List<TlsInspectionPolicy> tlsInspectionPolicies;
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * If there might be more results than those appearing in this response, then 'next_page_token' is
    * included. To get the next set of results, call this method again using the value of
    * 'next_page_token' as 'page_token'.
@@ -80,6 +87,23 @@ public final class ListTlsInspectionPoliciesResponse extends com.google.api.clie
    */
   public ListTlsInspectionPoliciesResponse setTlsInspectionPolicies(java.util.List<TlsInspectionPolicy> tlsInspectionPolicies) {
     this.tlsInspectionPolicies = tlsInspectionPolicies;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListTlsInspectionPoliciesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

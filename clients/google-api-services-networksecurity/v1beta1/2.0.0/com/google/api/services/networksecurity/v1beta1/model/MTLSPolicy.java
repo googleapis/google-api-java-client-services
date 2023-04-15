@@ -30,16 +30,36 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
-   * certificate.
+   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
+   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
+   * client certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ValidationCA> clientValidationCa;
 
   /**
-   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
-   * certificate.
+   * Specifies whether client connections proceed when a client presents an invalid certificate or
+   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
+   * Director it must be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientValidationMode;
+
+  /**
+   * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
+   * the chain validation will be performed against certificates configured in the given
+   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientValidationTrustConfig;
+
+  /**
+   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
+   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
+   * client certificate.
    * @return value or {@code null} for none
    */
   public java.util.List<ValidationCA> getClientValidationCa() {
@@ -47,12 +67,55 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the mechanism to obtain the Certificate Authority certificate to validate the client
-   * certificate.
+   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
+   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
+   * client certificate.
    * @param clientValidationCa clientValidationCa or {@code null} for none
    */
   public MTLSPolicy setClientValidationCa(java.util.List<ValidationCA> clientValidationCa) {
     this.clientValidationCa = clientValidationCa;
+    return this;
+  }
+
+  /**
+   * Specifies whether client connections proceed when a client presents an invalid certificate or
+   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
+   * Director it must be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientValidationMode() {
+    return clientValidationMode;
+  }
+
+  /**
+   * Specifies whether client connections proceed when a client presents an invalid certificate or
+   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
+   * Director it must be empty.
+   * @param clientValidationMode clientValidationMode or {@code null} for none
+   */
+  public MTLSPolicy setClientValidationMode(java.lang.String clientValidationMode) {
+    this.clientValidationMode = clientValidationMode;
+    return this;
+  }
+
+  /**
+   * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
+   * the chain validation will be performed against certificates configured in the given
+   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientValidationTrustConfig() {
+    return clientValidationTrustConfig;
+  }
+
+  /**
+   * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
+   * the chain validation will be performed against certificates configured in the given
+   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * @param clientValidationTrustConfig clientValidationTrustConfig or {@code null} for none
+   */
+  public MTLSPolicy setClientValidationTrustConfig(java.lang.String clientValidationTrustConfig) {
+    this.clientValidationTrustConfig = clientValidationTrustConfig;
     return this;
   }
 

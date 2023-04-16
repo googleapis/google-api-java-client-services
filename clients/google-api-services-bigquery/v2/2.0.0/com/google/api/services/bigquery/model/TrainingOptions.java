@@ -44,11 +44,18 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean autoArima;
 
   /**
-   * The max value of non-seasonal p and q.
+   * The max value of the sum of non-seasonal p and q.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long autoArimaMaxOrder;
+
+  /**
+   * The min value of the sum of non-seasonal p and q.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long autoArimaMinOrder;
 
   /**
    * Batch size for dnn models.
@@ -555,7 +562,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The max value of non-seasonal p and q.
+   * The max value of the sum of non-seasonal p and q.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAutoArimaMaxOrder() {
@@ -563,11 +570,28 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The max value of non-seasonal p and q.
+   * The max value of the sum of non-seasonal p and q.
    * @param autoArimaMaxOrder autoArimaMaxOrder or {@code null} for none
    */
   public TrainingOptions setAutoArimaMaxOrder(java.lang.Long autoArimaMaxOrder) {
     this.autoArimaMaxOrder = autoArimaMaxOrder;
+    return this;
+  }
+
+  /**
+   * The min value of the sum of non-seasonal p and q.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAutoArimaMinOrder() {
+    return autoArimaMinOrder;
+  }
+
+  /**
+   * The min value of the sum of non-seasonal p and q.
+   * @param autoArimaMinOrder autoArimaMinOrder or {@code null} for none
+   */
+  public TrainingOptions setAutoArimaMinOrder(java.lang.Long autoArimaMinOrder) {
+    this.autoArimaMinOrder = autoArimaMinOrder;
     return this;
   }
 

@@ -62,9 +62,10 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Namespaced name of the TagValue. Now only supported in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
-   * add non-org parented tags.
+   * Output only. The namespaced name of the TagValue. Can be in the form
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,9 +169,10 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Namespaced name of the TagValue. Now only supported in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
-   * add non-org parented tags.
+   * Output only. The namespaced name of the TagValue. Can be in the form
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespacedName() {
@@ -178,9 +180,10 @@ public final class TagValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Namespaced name of the TagValue. Now only supported in the format
-   * `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we
-   * add non-org parented tags.
+   * Output only. The namespaced name of the TagValue. Can be in the form
+   * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or
+   * `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
    * @param namespacedName namespacedName or {@code null} for none
    */
   public TagValue setNamespacedName(java.lang.String namespacedName) {

@@ -52,6 +52,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
   private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact> mavenArtifacts;
 
   /**
+   * A list of npm packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Npm packages in the specified paths will be uploaded to the specified Artifact
+   * Registry repository using the builder service account's credentials. If any packages fail to be
+   * pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage> npmPackages;
+
+  /**
    * A list of objects to be uploaded to Cloud Storage upon successful completion of all build
    * steps. Files in the workspace matching specified paths globs will be uploaded to the specified
    * Cloud Storage location using the builder service account's credentials. The location and
@@ -114,6 +124,29 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setMavenArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact> mavenArtifacts) {
     this.mavenArtifacts = mavenArtifacts;
+    return this;
+  }
+
+  /**
+   * A list of npm packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Npm packages in the specified paths will be uploaded to the specified Artifact
+   * Registry repository using the builder service account's credentials. If any packages fail to be
+   * pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage> getNpmPackages() {
+    return npmPackages;
+  }
+
+  /**
+   * A list of npm packages to be uploaded to Artifact Registry upon successful completion of all
+   * build steps. Npm packages in the specified paths will be uploaded to the specified Artifact
+   * Registry repository using the builder service account's credentials. If any packages fail to be
+   * pushed, the build is marked FAILURE.
+   * @param npmPackages npmPackages or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setNpmPackages(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage> npmPackages) {
+    this.npmPackages = npmPackages;
     return this;
   }
 

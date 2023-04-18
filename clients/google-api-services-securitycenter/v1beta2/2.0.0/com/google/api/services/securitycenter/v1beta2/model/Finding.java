@@ -34,8 +34,8 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Access details associated to the Finding, such as more information on the caller, which method
-   * was accessed, from where, etc.
+   * Access details associated with the finding, such as more information on the caller, which
+   * method was accessed, and from where.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,14 +61,14 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
-   * Cloud DLP data profile associated with the finding.
+   * Cloud DLP data profile that is associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudDlpDataProfile cloudDlpDataProfile;
 
   /**
-   * Cloud DLP inspection associated with the finding.
+   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * Containers associated with the finding. This field provides information for both Kubernetes and
    * non-Kubernetes containers.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Database database;
 
   /**
-   * Contains more detail about the finding.
+   * Contains more details about the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String eventTime;
 
   /**
-   * Represents exfiltration associated with the Finding.
+   * Represents exfiltrations associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,24 +208,24 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String findingClass;
 
   /**
-   * Represents IAM bindings associated with the Finding.
+   * Represents IAM bindings associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<IamBinding> iamBindings;
 
   /**
-   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
    * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. Reference:
-   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * indicates a computer intrusion. For more information, see [Indicator of
+   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Indicator indicator;
 
   /**
-   * Kernel Rootkit signature.
+   * Signature of the kernel rootkit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,9 +262,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String mute;
 
   /**
-   * First known as mute_annotation. Records additional information about the mute operation e.g.
-   * mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of
-   * a finding, a finding provider shouldn't set the value of mute.
+   * Records additional information about the mute operation, for example, the [mute configuration
+   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
+   * muted the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,16 +278,18 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String muteUpdateTime;
 
   /**
-   * The relative resource name of this finding. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+   * The [relative resource
+   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Next steps associate to the finding.
+   * Steps to address the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -369,8 +371,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Vulnerability vulnerability;
 
   /**
-   * Access details associated to the Finding, such as more information on the caller, which method
-   * was accessed, from where, etc.
+   * Access details associated with the finding, such as more information on the caller, which
+   * method was accessed, and from where.
    * @return value or {@code null} for none
    */
   public Access getAccess() {
@@ -378,8 +380,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Access details associated to the Finding, such as more information on the caller, which method
-   * was accessed, from where, etc.
+   * Access details associated with the finding, such as more information on the caller, which
+   * method was accessed, and from where.
    * @param access access or {@code null} for none
    */
   public Finding setAccess(Access access) {
@@ -432,7 +434,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP data profile associated with the finding.
+   * Cloud DLP data profile that is associated with the finding.
    * @return value or {@code null} for none
    */
   public CloudDlpDataProfile getCloudDlpDataProfile() {
@@ -440,7 +442,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP data profile associated with the finding.
+   * Cloud DLP data profile that is associated with the finding.
    * @param cloudDlpDataProfile cloudDlpDataProfile or {@code null} for none
    */
   public Finding setCloudDlpDataProfile(CloudDlpDataProfile cloudDlpDataProfile) {
@@ -449,7 +451,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP inspection associated with the finding.
+   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @return value or {@code null} for none
    */
   public CloudDlpInspection getCloudDlpInspection() {
@@ -457,7 +459,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP inspection associated with the finding.
+   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @param cloudDlpInspection cloudDlpInspection or {@code null} for none
    */
   public Finding setCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
@@ -525,7 +527,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * Containers associated with the finding. This field provides information for both Kubernetes and
    * non-Kubernetes containers.
    * @return value or {@code null} for none
    */
@@ -534,7 +536,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. containers provides information for both Kubernetes and
+   * Containers associated with the finding. This field provides information for both Kubernetes and
    * non-Kubernetes containers.
    * @param containers containers or {@code null} for none
    */
@@ -578,7 +580,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains more detail about the finding.
+   * Contains more details about the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -586,7 +588,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains more detail about the finding.
+   * Contains more details about the finding.
    * @param description description or {@code null} for none
    */
   public Finding setDescription(java.lang.String description) {
@@ -620,7 +622,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltration associated with the Finding.
+   * Represents exfiltrations associated with the finding.
    * @return value or {@code null} for none
    */
   public Exfiltration getExfiltration() {
@@ -628,7 +630,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltration associated with the Finding.
+   * Represents exfiltrations associated with the finding.
    * @param exfiltration exfiltration or {@code null} for none
    */
   public Finding setExfiltration(Exfiltration exfiltration) {
@@ -711,7 +713,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents IAM bindings associated with the Finding.
+   * Represents IAM bindings associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<IamBinding> getIamBindings() {
@@ -719,7 +721,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents IAM bindings associated with the Finding.
+   * Represents IAM bindings associated with the finding.
    * @param iamBindings iamBindings or {@code null} for none
    */
   public Finding setIamBindings(java.util.List<IamBinding> iamBindings) {
@@ -728,10 +730,10 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
    * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. Reference:
-   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * indicates a computer intrusion. For more information, see [Indicator of
+   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @return value or {@code null} for none
    */
   public Indicator getIndicator() {
@@ -739,10 +741,10 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents what's commonly known as an Indicator of compromise (IoC) in computer forensics.
+   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
    * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. Reference:
-   * https://en.wikipedia.org/wiki/Indicator_of_compromise
+   * indicates a computer intrusion. For more information, see [Indicator of
+   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @param indicator indicator or {@code null} for none
    */
   public Finding setIndicator(Indicator indicator) {
@@ -751,7 +753,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kernel Rootkit signature.
+   * Signature of the kernel rootkit.
    * @return value or {@code null} for none
    */
   public KernelRootkit getKernelRootkit() {
@@ -759,7 +761,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kernel Rootkit signature.
+   * Signature of the kernel rootkit.
    * @param kernelRootkit kernelRootkit or {@code null} for none
    */
   public Finding setKernelRootkit(KernelRootkit kernelRootkit) {
@@ -840,9 +842,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * First known as mute_annotation. Records additional information about the mute operation e.g.
-   * mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of
-   * a finding, a finding provider shouldn't set the value of mute.
+   * Records additional information about the mute operation, for example, the [mute configuration
+   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
+   * muted the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteInitiator() {
@@ -850,9 +852,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * First known as mute_annotation. Records additional information about the mute operation e.g.
-   * mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of
-   * a finding, a finding provider shouldn't set the value of mute.
+   * Records additional information about the mute operation, for example, the [mute configuration
+   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
+   * muted the finding.
    * @param muteInitiator muteInitiator or {@code null} for none
    */
   public Finding setMuteInitiator(java.lang.String muteInitiator) {
@@ -878,9 +880,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this finding. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+   * The [relative resource
+   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -888,9 +892,11 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this finding. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+   * The [relative resource
+   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * @param name name or {@code null} for none
    */
   public Finding setName(java.lang.String name) {
@@ -899,7 +905,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Next steps associate to the finding.
+   * Steps to address the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextSteps() {
@@ -907,7 +913,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Next steps associate to the finding.
+   * Steps to address the finding.
    * @param nextSteps nextSteps or {@code null} for none
    */
   public Finding setNextSteps(java.lang.String nextSteps) {

@@ -52,8 +52,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String methodName;
 
   /**
-   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
-   * service account on behalf of third party principal) making the request. For third party
+   * Associated email, such as "foo@google.com". The email address of the authenticated user or a
+   * service account acting on behalf of a third party principal making the request. For third party
    * identity callers, the `principal_subject` field is populated instead of this field. For privacy
    * reasons, the principal email address is sometimes redacted. For more information, see [Caller
    * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
@@ -63,31 +63,33 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String principalEmail;
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
+   * A string that represents the principal_subject that is associated with the identity. Unlike
+   * `principal_email`, `principal_subject` supports principals that aren't associated with email
+   * addresses, such as third party principals. For most identities, the format is
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject}`. Some GKE identities,
+   * such as GKE_WORKLOAD, FREEFORM, and GKE_HUB_WORKLOAD, still use the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalSubject;
 
   /**
-   * Identity delegation history of an authenticated service account that makes the request. It
-   * contains information on the real authorities that try to access GCP resources by delegating on
-   * a service account. When multiple authorities are present, they are guaranteed to be sorted
-   * based on the original ordering of the identity delegation events.
+   * The identity delegation history of an authenticated service account that made the request. The
+   * `serviceAccountDelegationInfo[]` object contains information about the real authorities that
+   * try to access Google Cloud resources by delegating on a service account. When multiple
+   * authorities are present, they are guaranteed to be sorted based on the original ordering of the
+   * identity delegation events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo;
 
   /**
-   * The name of the service account key used to create or exchange credentials for authenticating
-   * the service account making the request. This is a scheme-less URI full resource name. For
-   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * The name of the service account key that was used to create or exchange credentials when
+   * authenticating the service account that made the request. This is a scheme-less URI full
+   * resource name. For example:
+   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,19 +103,17 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceName;
 
   /**
-   * What kind of user agent is associated, for example operating system shells, embedded or stand-
-   * alone applications, etc.
+   * Type of user agent associated with the finding. For example, an operating system shell or an
+   * embedded or standalone application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userAgentFamily;
 
   /**
-   * A string that represents the username of a user, user account, or other entity involved in the
-   * access event. What the entity is and what its role in the access event is depends on the
-   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
-   * user that is logged into an operating system, if the finding is VM-related, or a user that is
-   * logged into some type of application that is involved in the access event.
+   * A string that represents a username. The username provided depends on the type of the finding
+   * and is likely not an IAM principal. For example, this can be a system username if the finding
+   * is related to a virtual machine, or it can be an application login username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,8 +171,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
-   * service account on behalf of third party principal) making the request. For third party
+   * Associated email, such as "foo@google.com". The email address of the authenticated user or a
+   * service account acting on behalf of a third party principal making the request. For third party
    * identity callers, the `principal_subject` field is populated instead of this field. For privacy
    * reasons, the principal email address is sometimes redacted. For more information, see [Caller
    * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
@@ -183,8 +183,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associated email, such as "foo@google.com". The email address of the authenticated user (or
-   * service account on behalf of third party principal) making the request. For third party
+   * Associated email, such as "foo@google.com". The email address of the authenticated user or a
+   * service account acting on behalf of a third party principal making the request. For third party
    * identity callers, the `principal_subject` field is populated instead of this field. For privacy
    * reasons, the principal email address is sometimes redacted. For more information, see [Caller
    * identities in audit logs](https://cloud.google.com/logging/docs/audit#user-id).
@@ -196,12 +196,12 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
+   * A string that represents the principal_subject that is associated with the identity. Unlike
+   * `principal_email`, `principal_subject` supports principals that aren't associated with email
+   * addresses, such as third party principals. For most identities, the format is
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject}`. Some GKE identities,
+   * such as GKE_WORKLOAD, FREEFORM, and GKE_HUB_WORKLOAD, still use the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalSubject() {
@@ -209,12 +209,12 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
+   * A string that represents the principal_subject that is associated with the identity. Unlike
+   * `principal_email`, `principal_subject` supports principals that aren't associated with email
+   * addresses, such as third party principals. For most identities, the format is
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject}`. Some GKE identities,
+   * such as GKE_WORKLOAD, FREEFORM, and GKE_HUB_WORKLOAD, still use the legacy format
+   * `serviceAccount:{identity pool name}[{subject}]`.
    * @param principalSubject principalSubject or {@code null} for none
    */
   public Access setPrincipalSubject(java.lang.String principalSubject) {
@@ -223,10 +223,11 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identity delegation history of an authenticated service account that makes the request. It
-   * contains information on the real authorities that try to access GCP resources by delegating on
-   * a service account. When multiple authorities are present, they are guaranteed to be sorted
-   * based on the original ordering of the identity delegation events.
+   * The identity delegation history of an authenticated service account that made the request. The
+   * `serviceAccountDelegationInfo[]` object contains information about the real authorities that
+   * try to access Google Cloud resources by delegating on a service account. When multiple
+   * authorities are present, they are guaranteed to be sorted based on the original ordering of the
+   * identity delegation events.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAccountDelegationInfo> getServiceAccountDelegationInfo() {
@@ -234,10 +235,11 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identity delegation history of an authenticated service account that makes the request. It
-   * contains information on the real authorities that try to access GCP resources by delegating on
-   * a service account. When multiple authorities are present, they are guaranteed to be sorted
-   * based on the original ordering of the identity delegation events.
+   * The identity delegation history of an authenticated service account that made the request. The
+   * `serviceAccountDelegationInfo[]` object contains information about the real authorities that
+   * try to access Google Cloud resources by delegating on a service account. When multiple
+   * authorities are present, they are guaranteed to be sorted based on the original ordering of the
+   * identity delegation events.
    * @param serviceAccountDelegationInfo serviceAccountDelegationInfo or {@code null} for none
    */
   public Access setServiceAccountDelegationInfo(java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo) {
@@ -246,9 +248,10 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the service account key used to create or exchange credentials for authenticating
-   * the service account making the request. This is a scheme-less URI full resource name. For
-   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * The name of the service account key that was used to create or exchange credentials when
+   * authenticating the service account that made the request. This is a scheme-less URI full
+   * resource name. For example:
+   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}".
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyName() {
@@ -256,9 +259,10 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the service account key used to create or exchange credentials for authenticating
-   * the service account making the request. This is a scheme-less URI full resource name. For
-   * example: "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+   * The name of the service account key that was used to create or exchange credentials when
+   * authenticating the service account that made the request. This is a scheme-less URI full
+   * resource name. For example:
+   * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}".
    * @param serviceAccountKeyName serviceAccountKeyName or {@code null} for none
    */
   public Access setServiceAccountKeyName(java.lang.String serviceAccountKeyName) {
@@ -284,8 +288,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * What kind of user agent is associated, for example operating system shells, embedded or stand-
-   * alone applications, etc.
+   * Type of user agent associated with the finding. For example, an operating system shell or an
+   * embedded or standalone application.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserAgentFamily() {
@@ -293,8 +297,8 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * What kind of user agent is associated, for example operating system shells, embedded or stand-
-   * alone applications, etc.
+   * Type of user agent associated with the finding. For example, an operating system shell or an
+   * embedded or standalone application.
    * @param userAgentFamily userAgentFamily or {@code null} for none
    */
   public Access setUserAgentFamily(java.lang.String userAgentFamily) {
@@ -303,11 +307,9 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string that represents the username of a user, user account, or other entity involved in the
-   * access event. What the entity is and what its role in the access event is depends on the
-   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
-   * user that is logged into an operating system, if the finding is VM-related, or a user that is
-   * logged into some type of application that is involved in the access event.
+   * A string that represents a username. The username provided depends on the type of the finding
+   * and is likely not an IAM principal. For example, this can be a system username if the finding
+   * is related to a virtual machine, or it can be an application login username.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserName() {
@@ -315,11 +317,9 @@ public final class Access extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string that represents the username of a user, user account, or other entity involved in the
-   * access event. What the entity is and what its role in the access event is depends on the
-   * finding that this field appears in. The entity is likely not an IAM principal, but could be a
-   * user that is logged into an operating system, if the finding is VM-related, or a user that is
-   * logged into some type of application that is involved in the access event.
+   * A string that represents a username. The username provided depends on the type of the finding
+   * and is likely not an IAM principal. For example, this can be a system username if the finding
+   * is related to a virtual machine, or it can be an application login username.
    * @param userName userName or {@code null} for none
    */
   public Access setUserName(java.lang.String userName) {

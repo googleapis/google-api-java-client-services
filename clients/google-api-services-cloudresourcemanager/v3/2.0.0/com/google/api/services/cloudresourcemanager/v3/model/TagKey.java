@@ -68,8 +68,10 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
   private java.lang.String namespacedName;
 
   /**
-   * Immutable. The resource name of the new TagKey's parent. Must be of the form
-   * `organizations/{org_id}`.
+   * Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an
+   * Organization or a Project. For a TagKey parented by an Organization, its parent must be in the
+   * form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the
+   * form `projects/{project_id}` or `projects/{project_number}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,8 +203,10 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the new TagKey's parent. Must be of the form
-   * `organizations/{org_id}`.
+   * Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an
+   * Organization or a Project. For a TagKey parented by an Organization, its parent must be in the
+   * form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the
+   * form `projects/{project_id}` or `projects/{project_number}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -210,8 +214,10 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the new TagKey's parent. Must be of the form
-   * `organizations/{org_id}`.
+   * Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an
+   * Organization or a Project. For a TagKey parented by an Organization, its parent must be in the
+   * form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the
+   * form `projects/{project_id}` or `projects/{project_number}`.
    * @param parent parent or {@code null} for none
    */
   public TagKey setParent(java.lang.String parent) {

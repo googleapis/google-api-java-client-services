@@ -6876,22 +6876,22 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. The resource name of the new TagKey's parent. Must be of the form
-       * `folders/{folder_id}` or `organizations/{org_id}`.
+       * Required. The resource name of the TagKey's parent. Must be of the form
+       * `organizations/{org_id}` or `projects/{project_id}` or `projects/{project_number}`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name of the new TagKey's parent. Must be of the form `folders/{folder_id}`
-     or `organizations/{org_id}`.
+      /** Required. The resource name of the TagKey's parent. Must be of the form `organizations/{org_id}` or
+     `projects/{project_id}` or `projects/{project_number}`
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The resource name of the new TagKey's parent. Must be of the form
-       * `folders/{folder_id}` or `organizations/{org_id}`.
+       * Required. The resource name of the TagKey's parent. Must be of the form
+       * `organizations/{org_id}` or `projects/{project_id}` or `projects/{project_number}`
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;

@@ -714,17 +714,17 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
         return this;
       }
 
-      /** Represents the day of the week. Eg: MONDAY. */
+      /** Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE. */
       @com.google.api.client.util.Key("dailySubEntityType.dayOfWeek")
       private java.lang.String dailySubEntityTypeDayOfWeek;
 
-      /** Represents the day of the week. Eg: MONDAY.
+      /** Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
        */
       public java.lang.String getDailySubEntityTypeDayOfWeek() {
         return dailySubEntityTypeDayOfWeek;
       }
 
-      /** Represents the day of the week. Eg: MONDAY. */
+      /** Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE. */
       public GetDailyMetricsTimeSeries setDailySubEntityTypeDayOfWeek(java.lang.String dailySubEntityTypeDayOfWeek) {
         this.dailySubEntityTypeDayOfWeek = dailySubEntityTypeDayOfWeek;
         return this;

@@ -31,21 +31,22 @@ package com.google.api.services.businessprofileperformance.v1.model;
 public final class DailySubEntityType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents the day of the week. Eg: MONDAY.
+   * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dayOfWeek;
 
   /**
-   * Represents the time of the day in 24 hour format. Eg: 13:34:20
+   * Represents the time of the day in 24 hour format. Eg: 13:34:20 Currently supported DailyMetrics
+   * = NONE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeOfDay timeOfDay;
 
   /**
-   * Represents the day of the week. Eg: MONDAY.
+   * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
    * @return value or {@code null} for none
    */
   public java.lang.String getDayOfWeek() {
@@ -53,7 +54,7 @@ public final class DailySubEntityType extends com.google.api.client.json.Generic
   }
 
   /**
-   * Represents the day of the week. Eg: MONDAY.
+   * Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
    * @param dayOfWeek dayOfWeek or {@code null} for none
    */
   public DailySubEntityType setDayOfWeek(java.lang.String dayOfWeek) {
@@ -62,7 +63,8 @@ public final class DailySubEntityType extends com.google.api.client.json.Generic
   }
 
   /**
-   * Represents the time of the day in 24 hour format. Eg: 13:34:20
+   * Represents the time of the day in 24 hour format. Eg: 13:34:20 Currently supported DailyMetrics
+   * = NONE.
    * @return value or {@code null} for none
    */
   public TimeOfDay getTimeOfDay() {
@@ -70,7 +72,8 @@ public final class DailySubEntityType extends com.google.api.client.json.Generic
   }
 
   /**
-   * Represents the time of the day in 24 hour format. Eg: 13:34:20
+   * Represents the time of the day in 24 hour format. Eg: 13:34:20 Currently supported DailyMetrics
+   * = NONE.
    * @param timeOfDay timeOfDay or {@code null} for none
    */
   public DailySubEntityType setTimeOfDay(TimeOfDay timeOfDay) {

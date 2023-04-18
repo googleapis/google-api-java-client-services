@@ -4642,7 +4642,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
          * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
          * custom config of a module is supported on resident modules only.
          *
          * Create a request for the method "customModules.patch".
@@ -4675,7 +4675,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
            * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
            * custom config of a module is supported on resident modules only.
            *
            * Create a request for the method "customModules.patch".
@@ -6074,9 +6074,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -6105,9 +6108,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -6177,25 +6183,33 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of this finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+          /** The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12559,7 +12573,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
          * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
          * custom config of a module is supported on resident modules only.
          *
          * Create a request for the method "customModules.patch".
@@ -12592,7 +12606,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
            * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
            * custom config of a module is supported on resident modules only.
            *
            * Create a request for the method "customModules.patch".
@@ -15049,9 +15063,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -15080,9 +15097,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -15152,25 +15172,33 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of this finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+          /** The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -20446,7 +20474,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
          * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
          * custom config of a module is supported on resident modules only.
          *
          * Create a request for the method "customModules.patch".
@@ -20479,7 +20507,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
            * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of “inherited”). Updating the display name and
+           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
            * custom config of a module is supported on resident modules only.
            *
            * Create a request for the method "customModules.patch".
@@ -21878,9 +21906,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -21909,9 +21940,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param name The [relative resource
+         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
+         *        finding. Example:
+         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -21981,25 +22015,33 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of this finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+          /** The [relative resource
+         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
+         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * The [relative resource
+           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
+           * the finding. Example:
+           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
+           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
+           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -180,6 +180,16 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
   private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse saaEnrollmentResponse;
 
   /**
+   * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload.
+   * This value will be by default True, and if not present will be considered as true. This should
+   * only be updated via updateWorkload call. Any Changes to this field during the createWorkload
+   * call will not be honored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean violationNotificationsEnabled;
+
+  /**
    * Optional. The billing account used for the resources which are direct children of workload.
    * This billing account is initially associated with the resources created as part of Workload
    * creation. After the initial creation of these resources, the customer can change the assigned
@@ -528,6 +538,29 @@ public final class GoogleCloudAssuredworkloadsV1Workload extends com.google.api.
    */
   public GoogleCloudAssuredworkloadsV1Workload setSaaEnrollmentResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse saaEnrollmentResponse) {
     this.saaEnrollmentResponse = saaEnrollmentResponse;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload.
+   * This value will be by default True, and if not present will be considered as true. This should
+   * only be updated via updateWorkload call. Any Changes to this field during the createWorkload
+   * call will not be honored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getViolationNotificationsEnabled() {
+    return violationNotificationsEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload.
+   * This value will be by default True, and if not present will be considered as true. This should
+   * only be updated via updateWorkload call. Any Changes to this field during the createWorkload
+   * call will not be honored.
+   * @param violationNotificationsEnabled violationNotificationsEnabled or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Workload setViolationNotificationsEnabled(java.lang.Boolean violationNotificationsEnabled) {
+    this.violationNotificationsEnabled = violationNotificationsEnabled;
     return this;
   }
 

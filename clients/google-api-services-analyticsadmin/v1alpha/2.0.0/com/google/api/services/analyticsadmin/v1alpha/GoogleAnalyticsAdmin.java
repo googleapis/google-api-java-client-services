@@ -5156,6 +5156,142 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be
+     * used with GA4 properties.
+     *
+     * Create a request for the method "properties.fetchConnectedGa4Property".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link FetchConnectedGa4Property#execute()} method to invoke the
+     * remote operation.
+     *
+     * @return the request
+     */
+    public FetchConnectedGa4Property fetchConnectedGa4Property() throws java.io.IOException {
+      FetchConnectedGa4Property result = new FetchConnectedGa4Property();
+      initialize(result);
+      return result;
+    }
+
+    public class FetchConnectedGa4Property extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse> {
+
+      private static final String REST_PATH = "v1alpha/properties:fetchConnectedGa4Property";
+
+      /**
+       * Given a specified UA property, looks up the GA4 property connected to it. Note: this cannot be
+       * used with GA4 properties.
+       *
+       * Create a request for the method "properties.fetchConnectedGa4Property".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link FetchConnectedGa4Property#execute()} method to invoke the
+       * remote operation. <p> {@link FetchConnectedGa4Property#initialize(com.google.api.client.googlea
+       * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected FetchConnectedGa4Property() {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaFetchConnectedGa4PropertyResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FetchConnectedGa4Property set$Xgafv(java.lang.String $Xgafv) {
+        return (FetchConnectedGa4Property) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setAccessToken(java.lang.String accessToken) {
+        return (FetchConnectedGa4Property) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setAlt(java.lang.String alt) {
+        return (FetchConnectedGa4Property) super.setAlt(alt);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setCallback(java.lang.String callback) {
+        return (FetchConnectedGa4Property) super.setCallback(callback);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setFields(java.lang.String fields) {
+        return (FetchConnectedGa4Property) super.setFields(fields);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setKey(java.lang.String key) {
+        return (FetchConnectedGa4Property) super.setKey(key);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setOauthToken(java.lang.String oauthToken) {
+        return (FetchConnectedGa4Property) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FetchConnectedGa4Property) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setQuotaUser(java.lang.String quotaUser) {
+        return (FetchConnectedGa4Property) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setUploadType(java.lang.String uploadType) {
+        return (FetchConnectedGa4Property) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FetchConnectedGa4Property setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FetchConnectedGa4Property) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The UA property for which to look up the connected GA4 property. Note this
+       * request uses the internal property ID, not the tracking ID of the form UA-XXXXXX-YY.
+       * Format: properties/{internal_web_property_id} Example: properties/1234
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String property;
+
+      /** Required. The UA property for which to look up the connected GA4 property. Note this request uses
+     the internal property ID, not the tracking ID of the form UA-XXXXXX-YY. Format:
+     properties/{internal_web_property_id} Example: properties/1234
+       */
+      public java.lang.String getProperty() {
+        return property;
+      }
+
+      /**
+       * Required. The UA property for which to look up the connected GA4 property. Note this
+       * request uses the internal property ID, not the tracking ID of the form UA-XXXXXX-YY.
+       * Format: properties/{internal_web_property_id} Example: properties/1234
+       */
+      public FetchConnectedGa4Property setProperty(java.lang.String property) {
+        this.property = property;
+        return this;
+      }
+
+      @Override
+      public FetchConnectedGa4Property set(String parameterName, Object value) {
+        return (FetchConnectedGa4Property) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lookup for a single "GA4" Property.
      *
      * Create a request for the method "properties.get".

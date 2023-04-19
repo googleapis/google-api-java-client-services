@@ -17,7 +17,7 @@
 package com.google.api.services.transcoder.v1.model;
 
 /**
- * Overlaid jpeg image.
+ * Overlaid image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Transcoder API. For a detailed explanation see:
@@ -47,8 +47,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private NormalizedCoordinate resolution;
 
   /**
-   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
-   * JPEG is the only supported image type.
+   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.png`. Only
+   * PNG and JPEG images are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
-   * JPEG is the only supported image type.
+   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.png`. Only
+   * PNG and JPEG images are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -104,8 +104,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
-   * JPEG is the only supported image type.
+   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.png`. Only
+   * PNG and JPEG images are supported.
    * @param uri uri or {@code null} for none
    */
   public Image setUri(java.lang.String uri) {

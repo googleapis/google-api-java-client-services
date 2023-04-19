@@ -394,29 +394,34 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Fully qualified name (FQN) of the resource. FQNs take two forms: * For non-regionalized
-       * resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized
-       * resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}`
-       * Example for a DPMS table:
+       * [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-
+       * names) of the resource. FQNs take two forms: * For non-regionalized resources:
+       * `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources:
+       * `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a
+       * DPMS table:
        * `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
        */
       @com.google.api.client.util.Key
       private java.lang.String fullyQualifiedName;
 
-      /** Fully qualified name (FQN) of the resource. FQNs take two forms: * For non-regionalized resources:
-     `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources:
-     `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table:
-     `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+      /**[ Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-names) of
+    [ the resource. FQNs take two forms: * For non-regionalized resources:
+    [ `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources:
+    [ `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS
+    [ table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+    [
+
        */
       public java.lang.String getFullyQualifiedName() {
         return fullyQualifiedName;
       }
 
       /**
-       * Fully qualified name (FQN) of the resource. FQNs take two forms: * For non-regionalized
-       * resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized
-       * resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}`
-       * Example for a DPMS table:
+       * [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-
+       * names) of the resource. FQNs take two forms: * For non-regionalized resources:
+       * `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources:
+       * `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a
+       * DPMS table:
        * `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
        */
       public Lookup setFullyQualifiedName(java.lang.String fullyQualifiedName) {

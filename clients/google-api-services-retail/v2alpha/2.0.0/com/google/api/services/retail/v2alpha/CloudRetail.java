@@ -432,7 +432,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
            * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
            * entity autocomplete results.
            */
@@ -440,7 +440,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           private java.lang.String entity;
 
           /** The entity for customers that may run multiple different entities, domains, sites or regions, for
-         example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it
+         example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it
          should be exactly matched with UserEvent.entity to get per-entity autocomplete results.
            */
           public java.lang.String getEntity() {
@@ -449,7 +449,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
            * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
            * entity autocomplete results.
            */
@@ -3549,15 +3549,15 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * returned.
                */
               @com.google.api.client.util.Key
-              private java.lang.Boolean cascadeDelete;
+              private java.lang.Boolean force;
 
               /** This value only applies to the case when the target product is of type PRIMARY. When deleting a
              product of VARIANT/COLLECTION type, this value will be ignored. When set to true, the subsequent
              variant products will be deleted. When set to false, if the primary product has active variant
              products, an error will be returned.
                */
-              public java.lang.Boolean getCascadeDelete() {
-                return cascadeDelete;
+              public java.lang.Boolean getForce() {
+                return force;
               }
 
               /**
@@ -3567,8 +3567,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * false, if the primary product has active variant products, an error will be
                * returned.
                */
-              public Delete setCascadeDelete(java.lang.Boolean cascadeDelete) {
-                this.cascadeDelete = cascadeDelete;
+              public Delete setForce(java.lang.Boolean force) {
+                this.force = force;
                 return this;
               }
 

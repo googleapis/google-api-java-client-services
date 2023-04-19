@@ -88,7 +88,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. It is
    * recommended to set this field to get better per-entity search, completion and prediction
    * results.
    * The value may be {@code null}.
@@ -381,7 +381,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. It is
    * recommended to set this field to get better per-entity search, completion and prediction
    * results.
    * @return value or {@code null} for none
@@ -392,7 +392,7 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. It is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. It is
    * recommended to set this field to get better per-entity search, completion and prediction
    * results.
    * @param entity entity or {@code null} for none

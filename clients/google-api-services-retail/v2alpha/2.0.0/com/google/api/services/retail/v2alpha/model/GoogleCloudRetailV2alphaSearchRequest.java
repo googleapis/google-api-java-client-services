@@ -72,7 +72,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is
    * set, it should be exactly matched with UserEvent.entity to get search results boosted by
    * entity.
    * The value may be {@code null}.
@@ -134,7 +134,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String orderBy;
 
   /**
-   * The categories associated with a category page. Required for category navigation queries to
+   * The categories associated with a category page. Must be set for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
    * of the category name, replace it with other character(s). Category pages include special pages
@@ -359,7 +359,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is
    * set, it should be exactly matched with UserEvent.entity to get search results boosted by
    * entity.
    * @return value or {@code null} for none
@@ -370,7 +370,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
 
   /**
    * The entity for customers that may run multiple different entities, domains, sites or regions,
-   * for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is
+   * for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is
    * set, it should be exactly matched with UserEvent.entity to get search results boosted by
    * entity.
    * @param entity entity or {@code null} for none
@@ -502,7 +502,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * The categories associated with a category page. Required for category navigation queries to
+   * The categories associated with a category page. Must be set for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
    * of the category name, replace it with other character(s). Category pages include special pages
@@ -515,7 +515,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * The categories associated with a category page. Required for category navigation queries to
+   * The categories associated with a category page. Must be set for category navigation queries to
    * achieve good search quality. The format should be the same as UserEvent.page_categories; To
    * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
    * of the category name, replace it with other character(s). Category pages include special pages

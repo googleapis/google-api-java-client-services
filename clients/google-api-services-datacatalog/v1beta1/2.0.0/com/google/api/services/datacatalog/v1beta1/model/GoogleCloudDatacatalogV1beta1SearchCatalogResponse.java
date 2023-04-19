@@ -45,6 +45,13 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
   private java.util.List<GoogleCloudDatacatalogV1beta1SearchCatalogResult> results;
 
   /**
+   * The approximate total number of entries matched by the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * Unreachable locations. Search result does not include data from those locations. Users can get
    * additional information on the error by repeating the search request with a more restrictive
    * parameter -- setting the value for `SearchDataCatalogRequest.scope.restricted_locations`.
@@ -84,6 +91,23 @@ public final class GoogleCloudDatacatalogV1beta1SearchCatalogResponse extends co
    */
   public GoogleCloudDatacatalogV1beta1SearchCatalogResponse setResults(java.util.List<GoogleCloudDatacatalogV1beta1SearchCatalogResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * The approximate total number of entries matched by the query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The approximate total number of entries matched by the query.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1SearchCatalogResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

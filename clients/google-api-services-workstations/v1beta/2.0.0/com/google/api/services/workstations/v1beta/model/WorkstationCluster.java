@@ -52,8 +52,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so please ensure your firewall rules allow
-   * egress from the Workstation VMs to this address.
+   * access to this IP address to work with the service, so make sure that your firewall rules allow
+   * egress from the workstation VMs to this address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String displayName;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,8 +192,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so please ensure your firewall rules allow
-   * egress from the Workstation VMs to this address.
+   * access to this IP address to work with the service, so make sure that your firewall rules allow
+   * egress from the workstation VMs to this address.
    * @return value or {@code null} for none
    */
   public java.lang.String getControlPlaneIp() {
@@ -202,8 +202,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so please ensure your firewall rules allow
-   * egress from the Workstation VMs to this address.
+   * access to this IP address to work with the service, so make sure that your firewall rules allow
+   * egress from the workstation VMs to this address.
    * @param controlPlaneIp controlPlaneIp or {@code null} for none
    */
   public WorkstationCluster setControlPlaneIp(java.lang.String controlPlaneIp) {
@@ -282,8 +282,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -291,8 +291,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public WorkstationCluster setEtag(java.lang.String etag) {

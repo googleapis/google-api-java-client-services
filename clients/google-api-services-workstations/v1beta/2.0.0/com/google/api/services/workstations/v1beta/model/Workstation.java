@@ -66,8 +66,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> env;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,8 +213,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -222,8 +222,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public Workstation setEtag(java.lang.String etag) {

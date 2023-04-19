@@ -107,15 +107,16 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * system attempts to recreate the persistent disk with the new version of the key. Be sure to
    * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
    * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after workstation config is created.
+   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomerEncryptionKey encryptionKey;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,7 +352,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * system attempts to recreate the persistent disk with the new version of the key. Be sure to
    * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
    * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after workstation config is created.
+   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * created.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getEncryptionKey() {
@@ -367,7 +369,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * system attempts to recreate the persistent disk with the new version of the key. Be sure to
    * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
    * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after workstation config is created.
+   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * created.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public WorkstationConfig setEncryptionKey(CustomerEncryptionKey encryptionKey) {
@@ -376,8 +379,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -385,8 +388,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to ensure that the
-   * client has an up-to-date value before proceeding.
+   * Checksum computed by the server. May be sent on update and delete requests to make sure that
+   * the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public WorkstationConfig setEtag(java.lang.String etag) {

@@ -30,22 +30,16 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageV1EntityReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Fully Qualified Name of the entity. Useful for referencing entities that aren't
-   * represented as Google Cloud resources, for example, tables in Dataproc Metastore API. Examples:
-   * * `bigquery:dataset.project_id.dataset_id` * `bigquery:table.project_id.dataset_id.table_id` *
-   * `pubsub:project_id.topic_id` *
-   * `dataproc_metastore:projectId.locationId.instanceId.databaseId.tableId`
+   * Required. [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-
+   * qualified-names) of the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullyQualifiedName;
 
   /**
-   * Required. Fully Qualified Name of the entity. Useful for referencing entities that aren't
-   * represented as Google Cloud resources, for example, tables in Dataproc Metastore API. Examples:
-   * * `bigquery:dataset.project_id.dataset_id` * `bigquery:table.project_id.dataset_id.table_id` *
-   * `pubsub:project_id.topic_id` *
-   * `dataproc_metastore:projectId.locationId.instanceId.databaseId.tableId`
+   * Required. [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-
+   * qualified-names) of the entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullyQualifiedName() {
@@ -53,11 +47,8 @@ public final class GoogleCloudDatacatalogLineageV1EntityReference extends com.go
   }
 
   /**
-   * Required. Fully Qualified Name of the entity. Useful for referencing entities that aren't
-   * represented as Google Cloud resources, for example, tables in Dataproc Metastore API. Examples:
-   * * `bigquery:dataset.project_id.dataset_id` * `bigquery:table.project_id.dataset_id.table_id` *
-   * `pubsub:project_id.topic_id` *
-   * `dataproc_metastore:projectId.locationId.instanceId.databaseId.tableId`
+   * Required. [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-
+   * qualified-names) of the entity.
    * @param fullyQualifiedName fullyQualifiedName or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1EntityReference setFullyQualifiedName(java.lang.String fullyQualifiedName) {

@@ -30,31 +30,30 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the source_type isn't CUSTOM, the value of this field should be a Google Cloud resource name
-   * of the system, which reports lineage. The project and location parts of the resource name must
-   * match the project and location of the lineage resource being created. Examples: -
-   * `{source_type: COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type:
-   * BIGQUERY, name: "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name:
-   * "myCustomIntegration"}`
+   * If the source_type isn't CUSTOM, the value of this field should be a GCP resource name of the
+   * system, which reports lineage. The project and location parts of the resource name must match
+   * the project and location of the lineage resource being created. Examples: - `{source_type:
+   * COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type: BIGQUERY, name:
+   * "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name: "myCustomIntegration"}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Type of the source.
+   * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
+   * is highly discouraged, and may be restricted in the future without notice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceType;
 
   /**
-   * If the source_type isn't CUSTOM, the value of this field should be a Google Cloud resource name
-   * of the system, which reports lineage. The project and location parts of the resource name must
-   * match the project and location of the lineage resource being created. Examples: -
-   * `{source_type: COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type:
-   * BIGQUERY, name: "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name:
-   * "myCustomIntegration"}`
+   * If the source_type isn't CUSTOM, the value of this field should be a GCP resource name of the
+   * system, which reports lineage. The project and location parts of the resource name must match
+   * the project and location of the lineage resource being created. Examples: - `{source_type:
+   * COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type: BIGQUERY, name:
+   * "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name: "myCustomIntegration"}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,12 +61,11 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
   }
 
   /**
-   * If the source_type isn't CUSTOM, the value of this field should be a Google Cloud resource name
-   * of the system, which reports lineage. The project and location parts of the resource name must
-   * match the project and location of the lineage resource being created. Examples: -
-   * `{source_type: COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type:
-   * BIGQUERY, name: "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name:
-   * "myCustomIntegration"}`
+   * If the source_type isn't CUSTOM, the value of this field should be a GCP resource name of the
+   * system, which reports lineage. The project and location parts of the resource name must match
+   * the project and location of the lineage resource being created. Examples: - `{source_type:
+   * COMPOSER, name: "projects/foo/locations/us/environments/bar"}` - `{source_type: BIGQUERY, name:
+   * "projects/foo/locations/eu"}` - `{source_type: CUSTOM, name: "myCustomIntegration"}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1Origin setName(java.lang.String name) {
@@ -76,7 +74,8 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
   }
 
   /**
-   * Type of the source.
+   * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
+   * is highly discouraged, and may be restricted in the future without notice.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -84,7 +83,8 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
   }
 
   /**
-   * Type of the source.
+   * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
+   * is highly discouraged, and may be restricted in the future without notice.
    * @param sourceType sourceType or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1Origin setSourceType(java.lang.String sourceType) {

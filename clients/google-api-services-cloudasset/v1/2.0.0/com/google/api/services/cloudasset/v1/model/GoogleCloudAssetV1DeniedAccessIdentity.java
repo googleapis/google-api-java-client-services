@@ -27,14 +27,7 @@ package com.google.api.services.cloudasset.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAssetV1Identity extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The analysis state of this identity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IamPolicyAnalysisState analysisState;
+public final class GoogleCloudAssetV1DeniedAccessIdentity extends com.google.api.client.json.GenericJson {
 
   /**
    * The identity of members, formatted as appear in an [IAM policy
@@ -46,23 +39,6 @@ public final class GoogleCloudAssetV1Identity extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * The analysis state of this identity.
-   * @return value or {@code null} for none
-   */
-  public IamPolicyAnalysisState getAnalysisState() {
-    return analysisState;
-  }
-
-  /**
-   * The analysis state of this identity.
-   * @param analysisState analysisState or {@code null} for none
-   */
-  public GoogleCloudAssetV1Identity setAnalysisState(IamPolicyAnalysisState analysisState) {
-    this.analysisState = analysisState;
-    return this;
-  }
 
   /**
    * The identity of members, formatted as appear in an [IAM policy
@@ -84,19 +60,19 @@ public final class GoogleCloudAssetV1Identity extends com.google.api.client.json
    * domain:google.com - allUsers
    * @param name name or {@code null} for none
    */
-  public GoogleCloudAssetV1Identity setName(java.lang.String name) {
+  public GoogleCloudAssetV1DeniedAccessIdentity setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   @Override
-  public GoogleCloudAssetV1Identity set(String fieldName, Object value) {
-    return (GoogleCloudAssetV1Identity) super.set(fieldName, value);
+  public GoogleCloudAssetV1DeniedAccessIdentity set(String fieldName, Object value) {
+    return (GoogleCloudAssetV1DeniedAccessIdentity) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAssetV1Identity clone() {
-    return (GoogleCloudAssetV1Identity) super.clone();
+  public GoogleCloudAssetV1DeniedAccessIdentity clone() {
+    return (GoogleCloudAssetV1DeniedAccessIdentity) super.clone();
   }
 
 }

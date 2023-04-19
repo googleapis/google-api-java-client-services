@@ -3038,6 +3038,29 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
+       * Optional. If true, the response includes deny policy analysis results, and you can see
+       * which access tuples are denied. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.includeDenyPolicyAnalysis")
+      private java.lang.Boolean analysisQueryOptionsIncludeDenyPolicyAnalysis;
+
+      /** Optional. If true, the response includes deny policy analysis results, and you can see which access
+     tuples are denied. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsIncludeDenyPolicyAnalysis() {
+        return analysisQueryOptionsIncludeDenyPolicyAnalysis;
+      }
+
+      /**
+       * Optional. If true, the response includes deny policy analysis results, and you can see
+       * which access tuples are denied. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsIncludeDenyPolicyAnalysis(java.lang.Boolean analysisQueryOptionsIncludeDenyPolicyAnalysis) {
+        this.analysisQueryOptionsIncludeDenyPolicyAnalysis = analysisQueryOptionsIncludeDenyPolicyAnalysis;
+        return this;
+      }
+
+      /**
        * Optional. If true, the result will output the relevant membership relationships between
        * groups and other groups, and between groups and principals. Default is false.
        */

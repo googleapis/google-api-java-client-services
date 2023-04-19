@@ -17,8 +17,8 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * The explanation message associated with ApnsCertificationExpiring and ApnsCertificationExpired
- * alerts.
+ * The explanation message associated with "APNS certificate is expiring soon" and "APNS certificate
+ * has expired" alerts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
@@ -32,28 +32,28 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class ApnsCertificateExpirationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Apple ID used for the certificate may be blank if admins didn't enter it.
+   * The Apple ID used to create the certificate. It may be blank if admins didn't enter it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appleId;
 
   /**
-   * The expiration date of the APNS Certificate.
+   * The expiration date of the APNS certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expirationTime;
 
   /**
-   * The UID for the certificate.
+   * The UID of the certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * The Apple ID used for the certificate may be blank if admins didn't enter it.
+   * The Apple ID used to create the certificate. It may be blank if admins didn't enter it.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppleId() {
@@ -61,7 +61,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The Apple ID used for the certificate may be blank if admins didn't enter it.
+   * The Apple ID used to create the certificate. It may be blank if admins didn't enter it.
    * @param appleId appleId or {@code null} for none
    */
   public ApnsCertificateExpirationInfo setAppleId(java.lang.String appleId) {
@@ -70,7 +70,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The expiration date of the APNS Certificate.
+   * The expiration date of the APNS certificate.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -78,7 +78,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The expiration date of the APNS Certificate.
+   * The expiration date of the APNS certificate.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public ApnsCertificateExpirationInfo setExpirationTime(String expirationTime) {
@@ -87,7 +87,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The UID for the certificate.
+   * The UID of the certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -95,7 +95,7 @@ public final class ApnsCertificateExpirationInfo extends com.google.api.client.j
   }
 
   /**
-   * The UID for the certificate.
+   * The UID of the certificate.
    * @param uid uid or {@code null} for none
    */
   public ApnsCertificateExpirationInfo setUid(java.lang.String uid) {

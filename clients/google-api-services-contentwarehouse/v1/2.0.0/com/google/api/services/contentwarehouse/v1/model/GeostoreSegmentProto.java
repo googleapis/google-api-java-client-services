@@ -470,7 +470,10 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   private GeostoreFeatureIdProto sibling;
 
   /**
-   * RESERVED
+   * Each slope instance is tied to a point along the segment polyline (unrelated to the vertices in
+   * the segment's polyline) and represents the slope of the segment between that point and the
+   * point tied to the next slope istance, or the end of the segment if it's the last slope
+   * instance. A segment should have at least one slope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1412,7 +1415,10 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Each slope instance is tied to a point along the segment polyline (unrelated to the vertices in
+   * the segment's polyline) and represents the slope of the segment between that point and the
+   * point tied to the next slope istance, or the end of the segment if it's the last slope
+   * instance. A segment should have at least one slope.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreSlopeProto> getSlope() {
@@ -1420,7 +1426,10 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * Each slope instance is tied to a point along the segment polyline (unrelated to the vertices in
+   * the segment's polyline) and represents the slope of the segment between that point and the
+   * point tied to the next slope istance, or the end of the segment if it's the last slope
+   * instance. A segment should have at least one slope.
    * @param slope slope or {@code null} for none
    */
   public GeostoreSegmentProto setSlope(java.util.List<GeostoreSlopeProto> slope) {

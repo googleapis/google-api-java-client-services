@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Grounding-related signals to be propagated down stream. Next ID: 12
+ * Grounding-related signals to be propagated down stream. Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -101,6 +101,18 @@ public final class KnowledgeAnswersIntentQueryGroundingSignals extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String pgrpOutputFormat;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provenance;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sentiment;
 
   /**
    * If true, then GroundingBox and PGRP are used in AnswersRewriter to process the intent. Other
@@ -281,6 +293,36 @@ public final class KnowledgeAnswersIntentQueryGroundingSignals extends com.googl
    */
   public KnowledgeAnswersIntentQueryGroundingSignals setPgrpOutputFormat(java.lang.String pgrpOutputFormat) {
     this.pgrpOutputFormat = pgrpOutputFormat;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * @param provenance provenance or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryGroundingSignals setProvenance(java.lang.String provenance) {
+    this.provenance = provenance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSentiment() {
+    return sentiment;
+  }
+
+  /**
+   * @param sentiment sentiment or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryGroundingSignals setSentiment(java.lang.String sentiment) {
+    this.sentiment = sentiment;
     return this;
   }
 

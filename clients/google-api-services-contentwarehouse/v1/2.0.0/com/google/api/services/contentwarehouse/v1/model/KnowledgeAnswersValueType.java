@@ -139,12 +139,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pluralityType;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private KnowledgeAnswersPolarQuestionType polarQuestionType;
 
   /**
@@ -176,16 +170,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersTrackingNumberType trackingNumberType;
-
-  /**
-   * Extra trait information for compound value types. Note: currently the semantics of having both
-   * the data type (e.g. "entity_type") and "with_trait" is an OR operation. Eg.
-   * HorizontalDateRestrict has a SetToModify slot that accepts some collections like
-   * /collection/films. And also intent queries with_trait date, start_date, etc.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private KnowledgeAnswersTypeTrait withTrait;
 
   /**
    * This type is meant to accept "any" type and allow any and all composition. As such, it should
@@ -437,21 +421,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getPluralityType() {
-    return pluralityType;
-  }
-
-  /**
-   * @param pluralityType pluralityType or {@code null} for none
-   */
-  public KnowledgeAnswersValueType setPluralityType(java.lang.String pluralityType) {
-    this.pluralityType = pluralityType;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
   public KnowledgeAnswersPolarQuestionType getPolarQuestionType() {
     return polarQuestionType;
   }
@@ -536,29 +505,6 @@ public final class KnowledgeAnswersValueType extends com.google.api.client.json.
    */
   public KnowledgeAnswersValueType setTrackingNumberType(KnowledgeAnswersTrackingNumberType trackingNumberType) {
     this.trackingNumberType = trackingNumberType;
-    return this;
-  }
-
-  /**
-   * Extra trait information for compound value types. Note: currently the semantics of having both
-   * the data type (e.g. "entity_type") and "with_trait" is an OR operation. Eg.
-   * HorizontalDateRestrict has a SetToModify slot that accepts some collections like
-   * /collection/films. And also intent queries with_trait date, start_date, etc.
-   * @return value or {@code null} for none
-   */
-  public KnowledgeAnswersTypeTrait getWithTrait() {
-    return withTrait;
-  }
-
-  /**
-   * Extra trait information for compound value types. Note: currently the semantics of having both
-   * the data type (e.g. "entity_type") and "with_trait" is an OR operation. Eg.
-   * HorizontalDateRestrict has a SetToModify slot that accepts some collections like
-   * /collection/films. And also intent queries with_trait date, start_date, etc.
-   * @param withTrait withTrait or {@code null} for none
-   */
-  public KnowledgeAnswersValueType setWithTrait(KnowledgeAnswersTypeTrait withTrait) {
-    this.withTrait = withTrait;
     return this;
   }
 

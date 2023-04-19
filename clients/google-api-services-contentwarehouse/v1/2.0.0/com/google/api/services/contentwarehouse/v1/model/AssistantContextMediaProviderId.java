@@ -83,7 +83,7 @@ public final class AssistantContextMediaProviderId extends com.google.api.client
 
   /**
    * The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all
-   * entities contained in it's graph.
+   * entities contained in its graph.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +226,7 @@ public final class AssistantContextMediaProviderId extends com.google.api.client
 
   /**
    * The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all
-   * entities contained in it's graph.
+   * entities contained in its graph.
    * @return value or {@code null} for none
    */
   public java.lang.String getMid() {
@@ -235,7 +235,7 @@ public final class AssistantContextMediaProviderId extends com.google.api.client
 
   /**
    * The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all
-   * entities contained in it's graph.
+   * entities contained in its graph.
    * @param mid mid or {@code null} for none
    */
   public AssistantContextMediaProviderId setMid(java.lang.String mid) {

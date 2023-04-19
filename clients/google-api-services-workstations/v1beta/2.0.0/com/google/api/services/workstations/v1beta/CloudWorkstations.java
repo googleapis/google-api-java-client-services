@@ -1843,17 +1843,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return this;
             }
 
-            /** Required. ID to use for the config. */
+            /** Required. ID to use for the workstation configuration. */
             @com.google.api.client.util.Key
             private java.lang.String workstationConfigId;
 
-            /** Required. ID to use for the config.
+            /** Required. ID to use for the workstation configuration.
              */
             public java.lang.String getWorkstationConfigId() {
               return workstationConfigId;
             }
 
-            /** Required. ID to use for the config. */
+            /** Required. ID to use for the workstation configuration. */
             public Create setWorkstationConfigId(java.lang.String workstationConfigId) {
               this.workstationConfigId = workstationConfigId;
               return this;
@@ -1872,7 +1872,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the workstations server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the config to delete.
+           * @param name Required. Name of the workstation configuration to delete.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1899,7 +1899,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the config to delete.
+             * @param name Required. Name of the workstation configuration to delete.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -1967,17 +1967,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Name of the config to delete. */
+            /** Required. Name of the workstation configuration to delete. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the config to delete.
+            /** Required. Name of the workstation configuration to delete.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Name of the config to delete. */
+            /** Required. Name of the workstation configuration to delete. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1989,22 +1989,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, the request will be rejected if the latest version of the config on the
-             * server does not have this etag.
+             * If set, the request is rejected if the latest version of the workstation
+             * configuration on the server does not have this etag.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
-            /** If set, the request will be rejected if the latest version of the config on the server does not
-           have this etag.
+            /** If set, the request is rejected if the latest version of the workstation configuration on the
+           server does not have this etag.
              */
             public java.lang.String getEtag() {
               return etag;
             }
 
             /**
-             * If set, the request will be rejected if the latest version of the config on the
-             * server does not have this etag.
+             * If set, the request is rejected if the latest version of the workstation
+             * configuration on the server does not have this etag.
              */
             public Delete setEtag(java.lang.String etag) {
               this.etag = etag;
@@ -2012,22 +2012,24 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, any Workstations in the config will also be deleted. Otherwise, the request
-             * will work only if the config has no workstations.
+             * If set, any workstations in the workstation configuration are also deleted.
+             * Otherwise, the request works only if the workstation configuration has no
+             * workstations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** If set, any Workstations in the config will also be deleted. Otherwise, the request will work only
-           if the config has no workstations.
+            /** If set, any workstations in the workstation configuration are also deleted. Otherwise, the request
+           works only if the workstation configuration has no workstations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * If set, any Workstations in the config will also be deleted. Otherwise, the request
-             * will work only if the config has no workstations.
+             * If set, any workstations in the workstation configuration are also deleted.
+             * Otherwise, the request works only if the workstation configuration has no
+             * workstations.
              */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
@@ -2865,39 +2867,45 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, and the config is not found, a new config will be created. In this situation,
-             * update_mask is ignored.
+             * If set and the workstation configuration is not found, a new workstation
+             * configuration will be created. In this situation, update_mask is ignored.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** If set, and the config is not found, a new config will be created. In this situation, update_mask
-           is ignored.
+            /** If set and the workstation configuration is not found, a new workstation configuration will be
+           created. In this situation, update_mask is ignored.
              */
             public java.lang.Boolean getAllowMissing() {
               return allowMissing;
             }
 
             /**
-             * If set, and the config is not found, a new config will be created. In this situation,
-             * update_mask is ignored.
+             * If set and the workstation configuration is not found, a new workstation
+             * configuration will be created. In this situation, update_mask is ignored.
              */
             public Patch setAllowMissing(java.lang.Boolean allowMissing) {
               this.allowMissing = allowMissing;
               return this;
             }
 
-            /** Required. Mask specifying which fields in the config should be updated. */
+            /**
+             * Required. Mask specifying which fields in the workstation configuration should be
+             * updated.
+             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Required. Mask specifying which fields in the config should be updated.
+            /** Required. Mask specifying which fields in the workstation configuration should be updated.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Required. Mask specifying which fields in the config should be updated. */
+            /**
+             * Required. Mask specifying which fields in the workstation configuration should be
+             * updated.
+             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4062,7 +4070,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
-             * Returns all Workstations using the specified config.
+             * Returns all Workstations using the specified workstation configuration.
              *
              * Create a request for the method "workstations.list".
              *
@@ -4086,7 +4094,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
               /**
-               * Returns all Workstations using the specified config.
+               * Returns all Workstations using the specified workstation configuration.
                *
                * Create a request for the method "workstations.list".
                *
@@ -4232,8 +4240,8 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
-             * Returns all Workstations using the specified config on which the caller has the
-             * "workstations.workstations.use" permission.
+             * Returns all workstations using the specified workstation configuration on which the caller has
+             * the "workstations.workstations.use" permission.
              *
              * Create a request for the method "workstations.listUsable".
              *
@@ -4257,8 +4265,8 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
 
               /**
-               * Returns all Workstations using the specified config on which the caller has the
-               * "workstations.workstations.use" permission.
+               * Returns all workstations using the specified workstation configuration on which the caller has
+               * the "workstations.workstations.use" permission.
                *
                * Create a request for the method "workstations.listUsable".
                *
@@ -4531,39 +4539,45 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set, and the config is not found, a new config will be created. In this
-               * situation, update_mask is ignored.
+               * If set and the workstation configuration is not found, a new workstation
+               * configuration is created. In this situation, update_mask is ignored.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** If set, and the config is not found, a new config will be created. In this situation, update_mask
-             is ignored.
+              /** If set and the workstation configuration is not found, a new workstation configuration is created.
+             In this situation, update_mask is ignored.
                */
               public java.lang.Boolean getAllowMissing() {
                 return allowMissing;
               }
 
               /**
-               * If set, and the config is not found, a new config will be created. In this
-               * situation, update_mask is ignored.
+               * If set and the workstation configuration is not found, a new workstation
+               * configuration is created. In this situation, update_mask is ignored.
                */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                 this.allowMissing = allowMissing;
                 return this;
               }
 
-              /** Required. Mask specifying which fields in the config should be updated. */
+              /**
+               * Required. Mask specifying which fields in the workstation configuration should be
+               * updated.
+               */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required. Mask specifying which fields in the config should be updated.
+              /** Required. Mask specifying which fields in the workstation configuration should be updated.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Required. Mask specifying which fields in the config should be updated. */
+              /**
+               * Required. Mask specifying which fields in the workstation configuration should be
+               * updated.
+               */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;

@@ -52,8 +52,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> env;
 
   /**
-   * Docker image defining the container. This image must be accessible by the config's service
-   * account.
+   * Docker image defining the container. This image must be accessible by the service account
+   * specified in the workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image defining the container. This image must be accessible by the config's service
-   * account.
+   * Docker image defining the container. This image must be accessible by the service account
+   * specified in the workstation configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -134,8 +134,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image defining the container. This image must be accessible by the config's service
-   * account.
+   * Docker image defining the container. This image must be accessible by the service account
+   * specified in the workstation configuration.
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {

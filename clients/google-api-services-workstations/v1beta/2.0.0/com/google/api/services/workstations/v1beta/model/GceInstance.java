@@ -66,10 +66,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer poolSize;
 
   /**
-   * Email address of the service account that will be used on VM instances used to support this
-   * config. If not set, VMs will run with a Google-managed service account. This service account
-   * must have permission to pull the specified container image, otherwise the image must be
-   * publicly accessible.
+   * Email address of the service account used on VM instances used to support this configuration.
+   * If not set, VMs run with a Google-managed service account. This service account must have
+   * permission to pull the specified container image; otherwise, the image must be publicly
+   * accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,10 +175,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the service account that will be used on VM instances used to support this
-   * config. If not set, VMs will run with a Google-managed service account. This service account
-   * must have permission to pull the specified container image, otherwise the image must be
-   * publicly accessible.
+   * Email address of the service account used on VM instances used to support this configuration.
+   * If not set, VMs run with a Google-managed service account. This service account must have
+   * permission to pull the specified container image; otherwise, the image must be publicly
+   * accessible.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -186,10 +186,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the service account that will be used on VM instances used to support this
-   * config. If not set, VMs will run with a Google-managed service account. This service account
-   * must have permission to pull the specified container image, otherwise the image must be
-   * publicly accessible.
+   * Email address of the service account used on VM instances used to support this configuration.
+   * If not set, VMs run with a Google-managed service account. This service account must have
+   * permission to pull the specified container image; otherwise, the image must be publicly
+   * accessible.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GceInstance setServiceAccount(java.lang.String serviceAccount) {

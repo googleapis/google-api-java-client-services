@@ -65,6 +65,13 @@ public final class GoogleCloudDocumentaiV1DocumentPageToken extends com.google.a
   private GoogleCloudDocumentaiV1DocumentProvenance provenance;
 
   /**
+   * Text style attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo styleInfo;
+
+  /**
    * Detected break at the end of a Token.
    * @return value or {@code null} for none
    */
@@ -129,6 +136,23 @@ public final class GoogleCloudDocumentaiV1DocumentPageToken extends com.google.a
    */
   public GoogleCloudDocumentaiV1DocumentPageToken setProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
     this.provenance = provenance;
+    return this;
+  }
+
+  /**
+   * Text style attributes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo getStyleInfo() {
+    return styleInfo;
+  }
+
+  /**
+   * Text style attributes.
+   * @param styleInfo styleInfo or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentPageToken setStyleInfo(GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo styleInfo) {
+    this.styleInfo = styleInfo;
     return this;
   }
 

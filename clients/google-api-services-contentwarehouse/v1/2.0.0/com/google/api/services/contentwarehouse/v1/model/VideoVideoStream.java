@@ -78,7 +78,14 @@ public final class VideoVideoStream extends com.google.api.client.json.GenericJs
   private java.lang.Long streamIndex;
 
   /**
-   * video width and height.
+   * The video stream's width and height. Important notes: 1) These are the coded dimensions of the
+   * video stream and DO NOT take into account any rotation metadata that may be present in the
+   * video container. Prefer to use the MediaOverview::resolution and MediaOverview::orientation
+   * when possible. 2) In the case you want detailed displayed width/height information, you can use
+   * the MediaOverview::orientation to determine the displayed dimensions. E.g., in the case of
+   * PORTRAIT orientation: displayed_width = min(width, height) displayed_height = max(width,
+   * height) And for LANDSCAPE orientation: displayed_width = max(width, height) displayed_height =
+   * min(width, height)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +204,14 @@ public final class VideoVideoStream extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * video width and height.
+   * The video stream's width and height. Important notes: 1) These are the coded dimensions of the
+   * video stream and DO NOT take into account any rotation metadata that may be present in the
+   * video container. Prefer to use the MediaOverview::resolution and MediaOverview::orientation
+   * when possible. 2) In the case you want detailed displayed width/height information, you can use
+   * the MediaOverview::orientation to determine the displayed dimensions. E.g., in the case of
+   * PORTRAIT orientation: displayed_width = min(width, height) displayed_height = max(width,
+   * height) And for LANDSCAPE orientation: displayed_width = max(width, height) displayed_height =
+   * min(width, height)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWidth() {
@@ -205,7 +219,14 @@ public final class VideoVideoStream extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * video width and height.
+   * The video stream's width and height. Important notes: 1) These are the coded dimensions of the
+   * video stream and DO NOT take into account any rotation metadata that may be present in the
+   * video container. Prefer to use the MediaOverview::resolution and MediaOverview::orientation
+   * when possible. 2) In the case you want detailed displayed width/height information, you can use
+   * the MediaOverview::orientation to determine the displayed dimensions. E.g., in the case of
+   * PORTRAIT orientation: displayed_width = min(width, height) displayed_height = max(width,
+   * height) And for LANDSCAPE orientation: displayed_width = max(width, height) displayed_height =
+   * min(width, height)
    * @param width width or {@code null} for none
    */
   public VideoVideoStream setWidth(java.lang.Integer width) {

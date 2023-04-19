@@ -94,14 +94,6 @@ public final class KnowledgeAnswersEntityType extends com.google.api.client.json
   private NlpMeaningMeaningRemodelings remodelings;
 
   /**
-   * This field is deprecated. It is not removed completely since this proto was saved with this
-   * field in proto text files used by the Grammy tool.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> stbrDomain;
-
-  /**
    * This field specifies that containing entity must be: - in *any* 'collection' if
    * 'in_all_collections' is false (default) - in *every* 'collection' if 'in_all_collections' is
    * true. The collection field contains strings of the form '/collection/'. If no collections are
@@ -239,25 +231,6 @@ public final class KnowledgeAnswersEntityType extends com.google.api.client.json
    */
   public KnowledgeAnswersEntityType setRemodelings(NlpMeaningMeaningRemodelings remodelings) {
     this.remodelings = remodelings;
-    return this;
-  }
-
-  /**
-   * This field is deprecated. It is not removed completely since this proto was saved with this
-   * field in proto text files used by the Grammy tool.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getStbrDomain() {
-    return stbrDomain;
-  }
-
-  /**
-   * This field is deprecated. It is not removed completely since this proto was saved with this
-   * field in proto text files used by the Grammy tool.
-   * @param stbrDomain stbrDomain or {@code null} for none
-   */
-  public KnowledgeAnswersEntityType setStbrDomain(java.util.List<java.lang.String> stbrDomain) {
-    this.stbrDomain = stbrDomain;
     return this;
   }
 

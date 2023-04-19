@@ -34,12 +34,60 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreInternalSegmentProto extends com.google.api.client.json.GenericJson {
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedConnections;
+
+  /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedPrimaryConnection;
+
+  /**
    * The set of restrictions that apply to this segment; these are actually *POSITIVE* restrictions,
    * i.e. they are known to be allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GeostoreRestrictionProto> travelAllowance;
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> getDisallowedConnections() {
+    return disallowedConnections;
+  }
+
+  /**
+   * RESERVED
+   * @param disallowedConnections disallowedConnections or {@code null} for none
+   */
+  public GeostoreInternalSegmentProto setDisallowedConnections(java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedConnections) {
+    this.disallowedConnections = disallowedConnections;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> getDisallowedPrimaryConnection() {
+    return disallowedPrimaryConnection;
+  }
+
+  /**
+   * RESERVED
+   * @param disallowedPrimaryConnection disallowedPrimaryConnection or {@code null} for none
+   */
+  public GeostoreInternalSegmentProto setDisallowedPrimaryConnection(java.util.List<GeostoreInternalSegmentProtoLaneConnectionReference> disallowedPrimaryConnection) {
+    this.disallowedPrimaryConnection = disallowedPrimaryConnection;
+    return this;
+  }
 
   /**
    * The set of restrictions that apply to this segment; these are actually *POSITIVE* restrictions,

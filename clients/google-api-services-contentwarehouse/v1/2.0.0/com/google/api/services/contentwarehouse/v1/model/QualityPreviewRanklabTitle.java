@@ -63,9 +63,6 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   private java.lang.String docLang;
 
   /**
-   * Represents how relavant this title candidate is to the document. Ranged in [0, 1], and this
-   * signal is basically calculated as Cosine-similarity between salient term vector and pQ2T model
-   * of title candidate sentence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,9 +338,7 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   private java.lang.Float queryMatchFraction;
 
   /**
-   * Represents how relavant this title candidate is to the query. Ranged in [0, 1], and this signal
-   * is basically calculated as Cosine-similarity between QBST term vector and pQ2T model of title
-   * candidate sentence.
+   * Deprecated experimental features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -502,9 +497,6 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   }
 
   /**
-   * Represents how relavant this title candidate is to the document. Ranged in [0, 1], and this
-   * signal is basically calculated as Cosine-similarity between salient term vector and pQ2T model
-   * of title candidate sentence.
    * @return value or {@code null} for none
    */
   public java.lang.Float getDocRelevance() {
@@ -512,9 +504,6 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   }
 
   /**
-   * Represents how relavant this title candidate is to the document. Ranged in [0, 1], and this
-   * signal is basically calculated as Cosine-similarity between salient term vector and pQ2T model
-   * of title candidate sentence.
    * @param docRelevance docRelevance or {@code null} for none
    */
   public QualityPreviewRanklabTitle setDocRelevance(java.lang.Float docRelevance) {
@@ -1184,9 +1173,7 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   }
 
   /**
-   * Represents how relavant this title candidate is to the query. Ranged in [0, 1], and this signal
-   * is basically calculated as Cosine-similarity between QBST term vector and pQ2T model of title
-   * candidate sentence.
+   * Deprecated experimental features.
    * @return value or {@code null} for none
    */
   public java.lang.Float getQueryRelevance() {
@@ -1194,9 +1181,7 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
   }
 
   /**
-   * Represents how relavant this title candidate is to the query. Ranged in [0, 1], and this signal
-   * is basically calculated as Cosine-similarity between QBST term vector and pQ2T model of title
-   * candidate sentence.
+   * Deprecated experimental features.
    * @param queryRelevance queryRelevance or {@code null} for none
    */
   public QualityPreviewRanklabTitle setQueryRelevance(java.lang.Float queryRelevance) {

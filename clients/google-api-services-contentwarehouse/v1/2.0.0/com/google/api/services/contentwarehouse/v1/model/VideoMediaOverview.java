@@ -90,6 +90,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   private VideoMediaOverviewMediaClipInfoOverview mediaClipInfoOverview;
 
   /**
+   * The orientation is annotated based on the final displayed resolution of the video file. A video
+   * will be labelled PORTRAIT whenever the height is greater than the width. The orientation is
+   * only labelled UNKNOWN in the case that the video stream had some transformation that was not a
+   * rotation in the video stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,6 +112,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   private java.lang.String projection;
 
   /**
+   * The resolution for a video takes into account the displayed video size, and takes into account
+   * the orientation. For example: - A 1920x1080 video will have ORIENTATION_LANDSCAPE and
+   * RESOLUTION_1080P - A 1080x1920 video will have ORIENTATION_PORTRAIT and RESOLUTION_1080P - A
+   * 1080x1080 video will have ORIENTATION_LANDSCAPE and RESOLUTION_1080P
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,6 +292,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   }
 
   /**
+   * The orientation is annotated based on the final displayed resolution of the video file. A video
+   * will be labelled PORTRAIT whenever the height is greater than the width. The orientation is
+   * only labelled UNKNOWN in the case that the video stream had some transformation that was not a
+   * rotation in the video stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrientation() {
@@ -291,6 +303,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   }
 
   /**
+   * The orientation is annotated based on the final displayed resolution of the video file. A video
+   * will be labelled PORTRAIT whenever the height is greater than the width. The orientation is
+   * only labelled UNKNOWN in the case that the video stream had some transformation that was not a
+   * rotation in the video stream.
    * @param orientation orientation or {@code null} for none
    */
   public VideoMediaOverview setOrientation(java.lang.String orientation) {
@@ -329,6 +345,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   }
 
   /**
+   * The resolution for a video takes into account the displayed video size, and takes into account
+   * the orientation. For example: - A 1920x1080 video will have ORIENTATION_LANDSCAPE and
+   * RESOLUTION_1080P - A 1080x1920 video will have ORIENTATION_PORTRAIT and RESOLUTION_1080P - A
+   * 1080x1080 video will have ORIENTATION_LANDSCAPE and RESOLUTION_1080P
    * @return value or {@code null} for none
    */
   public java.lang.String getResolution() {
@@ -336,6 +356,10 @@ public final class VideoMediaOverview extends com.google.api.client.json.Generic
   }
 
   /**
+   * The resolution for a video takes into account the displayed video size, and takes into account
+   * the orientation. For example: - A 1920x1080 video will have ORIENTATION_LANDSCAPE and
+   * RESOLUTION_1080P - A 1080x1920 video will have ORIENTATION_PORTRAIT and RESOLUTION_1080P - A
+   * 1080x1080 video will have ORIENTATION_LANDSCAPE and RESOLUTION_1080P
    * @param resolution resolution or {@code null} for none
    */
   public VideoMediaOverview setResolution(java.lang.String resolution) {

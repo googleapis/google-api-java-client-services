@@ -40,6 +40,14 @@ public final class AssistantApiMessageCapabilities extends com.google.api.client
   private java.lang.Boolean fallbackToTetheredDeviceAppCapabilities;
 
   /**
+   * For chat_message.SEND targeting, when either the primary or secondary (tethered) device is
+   * capable of handling the chat_message.SEND action, prefer targeting it to the primary device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preferTargetingPrimaryDevice;
+
+  /**
    * Should only be checked if nonempty.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class AssistantApiMessageCapabilities extends com.google.api.client
    */
   public AssistantApiMessageCapabilities setFallbackToTetheredDeviceAppCapabilities(java.lang.Boolean fallbackToTetheredDeviceAppCapabilities) {
     this.fallbackToTetheredDeviceAppCapabilities = fallbackToTetheredDeviceAppCapabilities;
+    return this;
+  }
+
+  /**
+   * For chat_message.SEND targeting, when either the primary or secondary (tethered) device is
+   * capable of handling the chat_message.SEND action, prefer targeting it to the primary device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreferTargetingPrimaryDevice() {
+    return preferTargetingPrimaryDevice;
+  }
+
+  /**
+   * For chat_message.SEND targeting, when either the primary or secondary (tethered) device is
+   * capable of handling the chat_message.SEND action, prefer targeting it to the primary device.
+   * @param preferTargetingPrimaryDevice preferTargetingPrimaryDevice or {@code null} for none
+   */
+  public AssistantApiMessageCapabilities setPreferTargetingPrimaryDevice(java.lang.Boolean preferTargetingPrimaryDevice) {
+    this.preferTargetingPrimaryDevice = preferTargetingPrimaryDevice;
     return this;
   }
 

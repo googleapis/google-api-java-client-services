@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Type of the item issue.
+ * Distance represented by an integer and unit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductViewItemIssueItemIssueType extends com.google.api.client.json.GenericJson {
+public final class Distance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canonical attribute name for attribute-specific issues.
+   * The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String canonicalAttribute;
+  private java.lang.String unit;
 
   /**
-   * Error code of the issue.
+   * The distance represented as a number.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.String code;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long value;
 
   /**
-   * Canonical attribute name for attribute-specific issues.
+   * The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCanonicalAttribute() {
-    return canonicalAttribute;
+  public java.lang.String getUnit() {
+    return unit;
   }
 
   /**
-   * Canonical attribute name for attribute-specific issues.
-   * @param canonicalAttribute canonicalAttribute or {@code null} for none
+   * The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
+   * @param unit unit or {@code null} for none
    */
-  public ProductViewItemIssueItemIssueType setCanonicalAttribute(java.lang.String canonicalAttribute) {
-    this.canonicalAttribute = canonicalAttribute;
+  public Distance setUnit(java.lang.String unit) {
+    this.unit = unit;
     return this;
   }
 
   /**
-   * Error code of the issue.
+   * The distance represented as a number.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCode() {
-    return code;
+  public java.lang.Long getValue() {
+    return value;
   }
 
   /**
-   * Error code of the issue.
-   * @param code code or {@code null} for none
+   * The distance represented as a number.
+   * @param value value or {@code null} for none
    */
-  public ProductViewItemIssueItemIssueType setCode(java.lang.String code) {
-    this.code = code;
+  public Distance setValue(java.lang.Long value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public ProductViewItemIssueItemIssueType set(String fieldName, Object value) {
-    return (ProductViewItemIssueItemIssueType) super.set(fieldName, value);
+  public Distance set(String fieldName, Object value) {
+    return (Distance) super.set(fieldName, value);
   }
 
   @Override
-  public ProductViewItemIssueItemIssueType clone() {
-    return (ProductViewItemIssueItemIssueType) super.clone();
+  public Distance clone() {
+    return (Distance) super.clone();
   }
 
 }

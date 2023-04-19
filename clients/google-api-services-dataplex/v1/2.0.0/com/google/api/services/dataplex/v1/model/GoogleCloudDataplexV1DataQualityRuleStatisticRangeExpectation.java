@@ -46,6 +46,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   private java.lang.String minValue;
 
   /**
+   * The aggregate metric to evaluate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,6 +107,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
+   * The aggregate metric to evaluate.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatistic() {
@@ -113,6 +115,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
+   * The aggregate metric to evaluate.
    * @param statistic statistic or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setStatistic(java.lang.String statistic) {

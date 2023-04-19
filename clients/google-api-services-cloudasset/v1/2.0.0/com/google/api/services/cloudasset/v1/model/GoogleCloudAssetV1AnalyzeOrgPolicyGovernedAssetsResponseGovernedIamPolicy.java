@@ -31,7 +31,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * The full resource name of the resource on which this IAM policy is set. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.
@@ -74,7 +74,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   private java.lang.String project;
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * The full resource name of the resource on which this IAM policy is set. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.
@@ -85,7 +85,7 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   }
 
   /**
-   * The full resource name of the resource associated with this IAM policy. Example:
+   * The full resource name of the resource on which this IAM policy is set. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information.

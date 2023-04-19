@@ -45,6 +45,21 @@ public final class IamPolicyAnalysis extends com.google.api.client.json.GenericJ
   private java.util.List<IamPolicyAnalysisResult> analysisResults;
 
   /**
+   * A list of DeniedAccess, which contains all access tuples in the analysis_results that are
+   * denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only
+   * populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DeniedAccess> deniedAccesses;
+
+  static {
+    // hack to force ProGuard to consider DeniedAccess used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeniedAccess.class);
+  }
+
+  /**
    * Represents whether all entries in the analysis_results have been fully explored to answer the
    * query.
    * The value may be {@code null}.
@@ -92,6 +107,27 @@ public final class IamPolicyAnalysis extends com.google.api.client.json.GenericJ
    */
   public IamPolicyAnalysis setAnalysisResults(java.util.List<IamPolicyAnalysisResult> analysisResults) {
     this.analysisResults = analysisResults;
+    return this;
+  }
+
+  /**
+   * A list of DeniedAccess, which contains all access tuples in the analysis_results that are
+   * denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only
+   * populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DeniedAccess> getDeniedAccesses() {
+    return deniedAccesses;
+  }
+
+  /**
+   * A list of DeniedAccess, which contains all access tuples in the analysis_results that are
+   * denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only
+   * populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+   * @param deniedAccesses deniedAccesses or {@code null} for none
+   */
+  public IamPolicyAnalysis setDeniedAccesses(java.util.List<DeniedAccess> deniedAccesses) {
+    this.deniedAccesses = deniedAccesses;
     return this;
   }
 

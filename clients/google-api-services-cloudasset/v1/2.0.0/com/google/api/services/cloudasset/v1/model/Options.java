@@ -94,6 +94,14 @@ public final class Options extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean expandRoles;
 
   /**
+   * Optional. If true, the response includes deny policy analysis results, and you can see which
+   * access tuples are denied. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeDenyPolicyAnalysis;
+
+  /**
    * Optional. If true, the result will output the relevant membership relationships between groups
    * and other groups, and between groups and principals. Default is false.
    * The value may be {@code null}.
@@ -246,6 +254,25 @@ public final class Options extends com.google.api.client.json.GenericJson {
    */
   public Options setExpandRoles(java.lang.Boolean expandRoles) {
     this.expandRoles = expandRoles;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the response includes deny policy analysis results, and you can see which
+   * access tuples are denied. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeDenyPolicyAnalysis() {
+    return includeDenyPolicyAnalysis;
+  }
+
+  /**
+   * Optional. If true, the response includes deny policy analysis results, and you can see which
+   * access tuples are denied. Default is false.
+   * @param includeDenyPolicyAnalysis includeDenyPolicyAnalysis or {@code null} for none
+   */
+  public Options setIncludeDenyPolicyAnalysis(java.lang.Boolean includeDenyPolicyAnalysis) {
+    this.includeDenyPolicyAnalysis = includeDenyPolicyAnalysis;
     return this;
   }
 

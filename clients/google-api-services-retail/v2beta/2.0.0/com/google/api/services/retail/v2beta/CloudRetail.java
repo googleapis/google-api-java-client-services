@@ -409,7 +409,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
            * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
            * entity autocomplete results.
            */
@@ -417,7 +417,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           private java.lang.String entity;
 
           /** The entity for customers that may run multiple different entities, domains, sites or regions, for
-         example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If this is set, it
+         example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it
          should be exactly matched with UserEvent.entity to get per-entity autocomplete results.
            */
           public java.lang.String getEntity() {
@@ -426,7 +426,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
           /**
            * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com",
+           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
            * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
            * entity autocomplete results.
            */

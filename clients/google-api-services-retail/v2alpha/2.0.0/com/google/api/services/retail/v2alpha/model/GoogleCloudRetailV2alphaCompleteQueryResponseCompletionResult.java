@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
   /**
    * Facet information for the suggestion term. Gives the number of items resulting from a search
    * with this suggestion term for each facet. This is an experimental feature for limited
-   * customers. Please reach out to the support team if you would like to receive this information.
+   * customers. If you want to receive this facet information, reach out to the Retail support team.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
 
   /**
    * Total number of products associated with a search with this suggestion. This is an experimental
-   * feature for limited customers. Please reach out to the support team if you would like to
-   * receive this information.
+   * feature for limited customers. If you want to receive this product count information, reach out
+   * to the Retail support team.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
   /**
    * Facet information for the suggestion term. Gives the number of items resulting from a search
    * with this suggestion term for each facet. This is an experimental feature for limited
-   * customers. Please reach out to the support team if you would like to receive this information.
+   * customers. If you want to receive this facet information, reach out to the Retail support team.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaSearchResponseFacet> getFacets() {
@@ -100,7 +100,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
   /**
    * Facet information for the suggestion term. Gives the number of items resulting from a search
    * with this suggestion term for each facet. This is an experimental feature for limited
-   * customers. Please reach out to the support team if you would like to receive this information.
+   * customers. If you want to receive this facet information, reach out to the Retail support team.
    * @param facets facets or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult setFacets(java.util.List<GoogleCloudRetailV2alphaSearchResponseFacet> facets) {
@@ -127,8 +127,8 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
 
   /**
    * Total number of products associated with a search with this suggestion. This is an experimental
-   * feature for limited customers. Please reach out to the support team if you would like to
-   * receive this information.
+   * feature for limited customers. If you want to receive this product count information, reach out
+   * to the Retail support team.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalProductCount() {
@@ -137,8 +137,8 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
 
   /**
    * Total number of products associated with a search with this suggestion. This is an experimental
-   * feature for limited customers. Please reach out to the support team if you would like to
-   * receive this information.
+   * feature for limited customers. If you want to receive this product count information, reach out
+   * to the Retail support team.
    * @param totalProductCount totalProductCount or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult setTotalProductCount(java.lang.Integer totalProductCount) {

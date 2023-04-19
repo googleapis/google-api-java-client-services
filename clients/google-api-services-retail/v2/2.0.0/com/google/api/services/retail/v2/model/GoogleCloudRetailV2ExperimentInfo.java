@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2ExperimentInfo extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String experimentName;
+  private java.lang.String experiment;
 
   /**
    * A/B test between existing Cloud Retail Search ServingConfigs.
@@ -51,18 +51,18 @@ public final class GoogleCloudRetailV2ExperimentInfo extends com.google.api.clie
    * `projects/locations/global/catalogs/default_catalog/experiments/experiment_id`
    * @return value or {@code null} for none
    */
-  public java.lang.String getExperimentName() {
-    return experimentName;
+  public java.lang.String getExperiment() {
+    return experiment;
   }
 
   /**
    * The fully qualified resource name of the experiment that provides the serving config under
    * test, should an active experiment exist. For example:
    * `projects/locations/global/catalogs/default_catalog/experiments/experiment_id`
-   * @param experimentName experimentName or {@code null} for none
+   * @param experiment experiment or {@code null} for none
    */
-  public GoogleCloudRetailV2ExperimentInfo setExperimentName(java.lang.String experimentName) {
-    this.experimentName = experimentName;
+  public GoogleCloudRetailV2ExperimentInfo setExperiment(java.lang.String experiment) {
+    this.experiment = experiment;
     return this;
   }
 

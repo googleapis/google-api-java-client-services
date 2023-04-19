@@ -19,7 +19,6 @@ package com.google.api.services.retail.v2beta.model;
 /**
  * Represents a link between a Merchant Center account and a branch. Once a link is established,
  * products from the linked merchant center account will be streamed to the linked branch.
- * LINT.IfChange(MerchantCenterAccountLink)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -99,7 +98,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends com
   private java.lang.String name;
 
   /**
-   * Output only. GCP project ID.
+   * Output only. Google Cloud project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,7 +267,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends com
   }
 
   /**
-   * Output only. GCP project ID.
+   * Output only. Google Cloud project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -276,7 +275,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends com
   }
 
   /**
-   * Output only. GCP project ID.
+   * Output only. Google Cloud project ID.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaMerchantCenterAccountLink setProjectId(java.lang.String projectId) {

@@ -6034,7 +6034,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists the notification channels that have been created for the project.
+       * Lists the notification channels that have been created for the project. To list the types of
+       * notification channels that are supported, use the ListNotificationChannelDescriptors method.
        *
        * Create a request for the method "notificationChannels.list".
        *
@@ -6061,7 +6062,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the notification channels that have been created for the project.
+         * Lists the notification channels that have been created for the project. To list the types of
+         * notification channels that are supported, use the ListNotificationChannelDescriptors method.
          *
          * Create a request for the method "notificationChannels.list".
          *

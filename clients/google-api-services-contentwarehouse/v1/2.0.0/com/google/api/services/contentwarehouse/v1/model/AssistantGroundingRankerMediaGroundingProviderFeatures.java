@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 12
+ * Features to be passed from Media GP to HGR. Next ID: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -83,6 +83,16 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   private java.lang.Boolean isSeedRadioRequest;
 
   /**
+   * MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type
+   * ranking, for example, if a candidate's content type does not match this content type from
+   * interpretation, this candidate will be slightly demoted. Also, we might avoid fetching some
+   * signals when the content type is generic music, since some content types do not need ranking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaContentType;
+
+  /**
    * MSC(Media Short Click) rate. MSC rate = total number of MSC events / total number of MSC
    * candidates The event is considered as MSC candidate if the event is a media seeking
    * query(excluding follow-ons) and the media result is successfully fulfilled. The event is MSC
@@ -95,12 +105,20 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   private java.lang.Float mscRate;
 
   /**
-   * Scubed predicted SAI value (pSAI) for music populated by a regression model that incorporates a
-   * BERT model signal as well as other Scubed signals.
+   * Scubed predicted SAI value (pSAI - SCUBED_MUSIC_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double scubedPSaiMusic;
+
+  /**
+   * Scubed predicted SAI value (pSAI - SCUBED_TVM_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double scubedPSaiTvm;
 
   /**
    * Type of the media item.
@@ -241,6 +259,29 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   }
 
   /**
+   * MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type
+   * ranking, for example, if a candidate's content type does not match this content type from
+   * interpretation, this candidate will be slightly demoted. Also, we might avoid fetching some
+   * signals when the content type is generic music, since some content types do not need ranking.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaContentType() {
+    return mediaContentType;
+  }
+
+  /**
+   * MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type
+   * ranking, for example, if a candidate's content type does not match this content type from
+   * interpretation, this candidate will be slightly demoted. Also, we might avoid fetching some
+   * signals when the content type is generic music, since some content types do not need ranking.
+   * @param mediaContentType mediaContentType or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setMediaContentType(java.lang.String mediaContentType) {
+    this.mediaContentType = mediaContentType;
+    return this;
+  }
+
+  /**
    * MSC(Media Short Click) rate. MSC rate = total number of MSC events / total number of MSC
    * candidates The event is considered as MSC candidate if the event is a media seeking
    * query(excluding follow-ons) and the media result is successfully fulfilled. The event is MSC
@@ -268,8 +309,8 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   }
 
   /**
-   * Scubed predicted SAI value (pSAI) for music populated by a regression model that incorporates a
-   * BERT model signal as well as other Scubed signals.
+   * Scubed predicted SAI value (pSAI - SCUBED_MUSIC_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScubedPSaiMusic() {
@@ -277,12 +318,31 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   }
 
   /**
-   * Scubed predicted SAI value (pSAI) for music populated by a regression model that incorporates a
-   * BERT model signal as well as other Scubed signals.
+   * Scubed predicted SAI value (pSAI - SCUBED_MUSIC_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
    * @param scubedPSaiMusic scubedPSaiMusic or {@code null} for none
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setScubedPSaiMusic(java.lang.Double scubedPSaiMusic) {
     this.scubedPSaiMusic = scubedPSaiMusic;
+    return this;
+  }
+
+  /**
+   * Scubed predicted SAI value (pSAI - SCUBED_TVM_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScubedPSaiTvm() {
+    return scubedPSaiTvm;
+  }
+
+  /**
+   * Scubed predicted SAI value (pSAI - SCUBED_TVM_ACTIONS) for music populated by a regression
+   * model that incorporates a BERT model signal as well as other Scubed signals.
+   * @param scubedPSaiTvm scubedPSaiTvm or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setScubedPSaiTvm(java.lang.Double scubedPSaiTvm) {
+    this.scubedPSaiTvm = scubedPSaiTvm;
     return this;
   }
 

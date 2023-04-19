@@ -107,7 +107,7 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   private java.util.List<java.lang.String> deprecatedFreebaseType;
 
   /**
-   * A list of mids that "support" this argument in voting, i.e, results that support these mids
+   * A list of mids that "support" this argument in voting, i.e., results that support these mids
    * will be treated as if they support the argument. This field has been deprecated in favor of
    * related_entity. b/27363861
    * The value may be {@code null}.
@@ -607,7 +607,7 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   }
 
   /**
-   * A list of mids that "support" this argument in voting, i.e, results that support these mids
+   * A list of mids that "support" this argument in voting, i.e., results that support these mids
    * will be treated as if they support the argument. This field has been deprecated in favor of
    * related_entity. b/27363861
    * @return value or {@code null} for none
@@ -617,7 +617,7 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   }
 
   /**
-   * A list of mids that "support" this argument in voting, i.e, results that support these mids
+   * A list of mids that "support" this argument in voting, i.e., results that support these mids
    * will be treated as if they support the argument. This field has been deprecated in favor of
    * related_entity. b/27363861
    * @param deprecatedSupportingMid deprecatedSupportingMid or {@code null} for none

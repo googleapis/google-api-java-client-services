@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 70
+ * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 71
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -45,6 +45,14 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String authorList;
+
+  /**
+   * A hash of the fields copied by BasicMetadataExtender and the importers. See
+   * cs/research/science_search/backend/extender/basic_metadata_extender.h for the list of fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger basicFieldsHash;
 
   /**
    * Catalog that this dataset is a part of.
@@ -525,6 +533,25 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   public ResearchScienceSearchReconciledMetadata setAuthorList(java.lang.String authorList) {
     this.authorList = authorList;
+    return this;
+  }
+
+  /**
+   * A hash of the fields copied by BasicMetadataExtender and the importers. See
+   * cs/research/science_search/backend/extender/basic_metadata_extender.h for the list of fields.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getBasicFieldsHash() {
+    return basicFieldsHash;
+  }
+
+  /**
+   * A hash of the fields copied by BasicMetadataExtender and the importers. See
+   * cs/research/science_search/backend/extender/basic_metadata_extender.h for the list of fields.
+   * @param basicFieldsHash basicFieldsHash or {@code null} for none
+   */
+  public ResearchScienceSearchReconciledMetadata setBasicFieldsHash(java.math.BigInteger basicFieldsHash) {
+    this.basicFieldsHash = basicFieldsHash;
     return this;
   }
 

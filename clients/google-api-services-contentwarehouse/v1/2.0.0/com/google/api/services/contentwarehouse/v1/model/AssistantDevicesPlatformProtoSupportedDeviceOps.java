@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This message will specify supports for fields in |assistant.embedded.v1.DeviceOp|, for a device
- * model package. See go/easi-client-op2 for more info.
+ * model package. See go/easi-client-op2 for more info. Next ID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -48,6 +48,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   @com.google.api.client.util.Key
   private AssistantDevicesPlatformProtoClientReconnectCapability clientReconnect;
+
+  /**
+   * [core_dismiss_assistant] specifies the support for core.DISMISS_ASSISTANT client_op and the
+   * corresponding core_dismiss_assistant field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoCoreDismissAssistantCapability coreDismissAssistant;
 
   /**
    * |device_modify_setting| specifies the support for device.MODIFY_SETTING client_op, and the
@@ -94,6 +102,12 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   @com.google.api.client.util.Key
   private AssistantDevicesPlatformProtoMediaResumeCapability mediaResume;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoMediaShowControlsCapability mediaShowControls;
 
   /**
    * The value may be {@code null}.
@@ -164,6 +178,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setClientReconnect(AssistantDevicesPlatformProtoClientReconnectCapability clientReconnect) {
     this.clientReconnect = clientReconnect;
+    return this;
+  }
+
+  /**
+   * [core_dismiss_assistant] specifies the support for core.DISMISS_ASSISTANT client_op and the
+   * corresponding core_dismiss_assistant field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoCoreDismissAssistantCapability getCoreDismissAssistant() {
+    return coreDismissAssistant;
+  }
+
+  /**
+   * [core_dismiss_assistant] specifies the support for core.DISMISS_ASSISTANT client_op and the
+   * corresponding core_dismiss_assistant field in assistant.embedded.v1.DeviceOp.
+   * @param coreDismissAssistant coreDismissAssistant or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setCoreDismissAssistant(AssistantDevicesPlatformProtoCoreDismissAssistantCapability coreDismissAssistant) {
+    this.coreDismissAssistant = coreDismissAssistant;
     return this;
   }
 
@@ -277,6 +310,21 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setMediaResume(AssistantDevicesPlatformProtoMediaResumeCapability mediaResume) {
     this.mediaResume = mediaResume;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoMediaShowControlsCapability getMediaShowControls() {
+    return mediaShowControls;
+  }
+
+  /**
+   * @param mediaShowControls mediaShowControls or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setMediaShowControls(AssistantDevicesPlatformProtoMediaShowControlsCapability mediaShowControls) {
+    this.mediaShowControls = mediaShowControls;
     return this;
   }
 

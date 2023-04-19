@@ -66,6 +66,20 @@ public final class TrawlerHostBucketDataUrlList extends com.google.api.client.js
   private java.lang.Integer numUrls;
 
   /**
+   * Total qps for this partner dedicated hostload, for non partner it will be -1.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("PartnerTotalCapacityQps")
+  private java.lang.Float partnerTotalCapacityQps;
+
+  /**
+   * Currently used qps for this partner dedicated hostlaod, for non partner it will be -1.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("PartnerTotalUsedQps")
+  private java.lang.Float partnerTotalUsedQps;
+
+  /**
    * The type of the request (low latency vs. high throughput)
    * The value may be {@code null}.
    */
@@ -161,6 +175,40 @@ public final class TrawlerHostBucketDataUrlList extends com.google.api.client.js
    */
   public TrawlerHostBucketDataUrlList setNumUrls(java.lang.Integer numUrls) {
     this.numUrls = numUrls;
+    return this;
+  }
+
+  /**
+   * Total qps for this partner dedicated hostload, for non partner it will be -1.0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPartnerTotalCapacityQps() {
+    return partnerTotalCapacityQps;
+  }
+
+  /**
+   * Total qps for this partner dedicated hostload, for non partner it will be -1.0.
+   * @param partnerTotalCapacityQps partnerTotalCapacityQps or {@code null} for none
+   */
+  public TrawlerHostBucketDataUrlList setPartnerTotalCapacityQps(java.lang.Float partnerTotalCapacityQps) {
+    this.partnerTotalCapacityQps = partnerTotalCapacityQps;
+    return this;
+  }
+
+  /**
+   * Currently used qps for this partner dedicated hostlaod, for non partner it will be -1.0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPartnerTotalUsedQps() {
+    return partnerTotalUsedQps;
+  }
+
+  /**
+   * Currently used qps for this partner dedicated hostlaod, for non partner it will be -1.0.
+   * @param partnerTotalUsedQps partnerTotalUsedQps or {@code null} for none
+   */
+  public TrawlerHostBucketDataUrlList setPartnerTotalUsedQps(java.lang.Float partnerTotalUsedQps) {
+    this.partnerTotalUsedQps = partnerTotalUsedQps;
     return this;
   }
 

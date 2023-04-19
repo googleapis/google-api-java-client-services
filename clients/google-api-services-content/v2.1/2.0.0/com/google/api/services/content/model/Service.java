@@ -124,6 +124,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String shipmentType;
 
   /**
+   * A list of stores your products are delivered from. This is only available for the local
+   * delivery shipment type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceStoreConfig storeConfig;
+
+  /**
    * A boolean exposing the active status of the shipping service. Required.
    * @return value or {@code null} for none
    */
@@ -327,6 +335,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setShipmentType(java.lang.String shipmentType) {
     this.shipmentType = shipmentType;
+    return this;
+  }
+
+  /**
+   * A list of stores your products are delivered from. This is only available for the local
+   * delivery shipment type.
+   * @return value or {@code null} for none
+   */
+  public ServiceStoreConfig getStoreConfig() {
+    return storeConfig;
+  }
+
+  /**
+   * A list of stores your products are delivered from. This is only available for the local
+   * delivery shipment type.
+   * @param storeConfig storeConfig or {@code null} for none
+   */
+  public Service setStoreConfig(ServiceStoreConfig storeConfig) {
+    this.storeConfig = storeConfig;
     return this;
   }
 

@@ -45,7 +45,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String concurrencyMode;
 
   /**
-   * Output only. The timestamp at which this database was created.
+   * Output only. The timestamp at which this database was created. Databases created before 2016 do
+   * not populate create_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +150,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * Output only. The timestamp at which this database was created.
+   * Output only. The timestamp at which this database was created. Databases created before 2016 do
+   * not populate create_time.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -157,7 +159,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * Output only. The timestamp at which this database was created.
+   * Output only. The timestamp at which this database was created. Databases created before 2016 do
+   * not populate create_time.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setCreateTime(String createTime) {

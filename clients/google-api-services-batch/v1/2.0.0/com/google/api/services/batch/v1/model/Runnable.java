@@ -80,6 +80,13 @@ public final class Runnable extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ignoreExitStatus;
 
   /**
+   * Labels for this Runnable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Script runnable.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class Runnable extends com.google.api.client.json.GenericJson {
    */
   public Runnable setIgnoreExitStatus(java.lang.Boolean ignoreExitStatus) {
     this.ignoreExitStatus = ignoreExitStatus;
+    return this;
+  }
+
+  /**
+   * Labels for this Runnable.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels for this Runnable.
+   * @param labels labels or {@code null} for none
+   */
+  public Runnable setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

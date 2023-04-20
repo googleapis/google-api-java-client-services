@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com.google.api.client.json.GenericJson {
 
   /**
+   * If provided, get the source from this Git repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource gitSource;
+
+  /**
    * If provided, get the source from this location in a Cloud Source Repository.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
    */
   @com.google.api.client.util.Key
   private ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest storageSourceManifest;
+
+  /**
+   * If provided, get the source from this Git repository.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource getGitSource() {
+    return gitSource;
+  }
+
+  /**
+   * If provided, get the source from this Git repository.
+   * @param gitSource gitSource or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setGitSource(ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource gitSource) {
+    this.gitSource = gitSource;
+    return this;
+  }
 
   /**
    * If provided, get the source from this location in a Cloud Source Repository.

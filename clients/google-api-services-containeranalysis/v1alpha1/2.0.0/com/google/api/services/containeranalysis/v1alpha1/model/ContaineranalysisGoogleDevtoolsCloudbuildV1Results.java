@@ -83,6 +83,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact> mavenArtifacts;
 
   /**
+   * Npm packages uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage> npmPackages;
+
+  /**
    * Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are
    * uploaded to Cloud Storage.
    * The value may be {@code null}.
@@ -204,6 +211,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setMavenArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact> mavenArtifacts) {
     this.mavenArtifacts = mavenArtifacts;
+    return this;
+  }
+
+  /**
+   * Npm packages uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage> getNpmPackages() {
+    return npmPackages;
+  }
+
+  /**
+   * Npm packages uploaded to Artifact Registry at the end of the build.
+   * @param npmPackages npmPackages or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setNpmPackages(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage> npmPackages) {
+    this.npmPackages = npmPackages;
     return this;
   }
 

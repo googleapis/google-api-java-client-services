@@ -4686,6 +4686,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (EmptyTrash) super.setUserIp(userIp);
       }
 
+      /** If set, empties the trash of the provided shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** If set, empties the trash of the provided shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** If set, empties the trash of the provided shared drive. */
+      public EmptyTrash setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
       /**
        * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
        * itself is not, the item will be placed under its owner's root.
@@ -6573,8 +6589,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribes to changes to a file. While you can establish a channel for changes to a file on a
-     * shared drive, a change to a shared drive file won't create a notification.
+     * Subscribes to changes to a file.
      *
      * Create a request for the method "files.watch".
      *
@@ -6596,8 +6611,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/watch";
 
       /**
-       * Subscribes to changes to a file. While you can establish a channel for changes to a file on a
-       * shared drive, a change to a shared drive file won't create a notification.
+       * Subscribes to changes to a file.
        *
        * Create a request for the method "files.watch".
        *

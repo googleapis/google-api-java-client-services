@@ -39,7 +39,7 @@ public final class DatedValue extends com.google.api.client.json.GenericJson {
   private Date date;
 
   /**
-   * The value of the datapoint.
+   * The value of the datapoint. This will not be present when the value is zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -65,7 +65,7 @@ public final class DatedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the datapoint.
+   * The value of the datapoint. This will not be present when the value is zero.
    * @return value or {@code null} for none
    */
   public java.lang.Long getValue() {
@@ -73,7 +73,7 @@ public final class DatedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the datapoint.
+   * The value of the datapoint. This will not be present when the value is zero.
    * @param value value or {@code null} for none
    */
   public DatedValue setValue(java.lang.Long value) {

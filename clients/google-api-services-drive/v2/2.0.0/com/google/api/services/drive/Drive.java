@@ -5770,6 +5770,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (EmptyTrash) super.setUserIp(userIp);
       }
 
+      /** If set, empties the trash of the provided shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** If set, empties the trash of the provided shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** If set, empties the trash of the provided shared drive. */
+      public EmptyTrash setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
       /**
        * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
        * itself is not, the item will be placed under its owner's root.

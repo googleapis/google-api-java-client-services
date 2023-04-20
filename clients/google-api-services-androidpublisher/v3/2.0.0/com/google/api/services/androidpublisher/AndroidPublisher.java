@@ -8193,7 +8193,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Inappproducts {
 
     /**
-     * Deletes an in-app product (i.e. a managed product or a subscriptions).
+     * Deletes an in-app product (i.e. a managed product or a subscription).
      *
      * Create a request for the method "inappproducts.delete".
      *
@@ -8215,7 +8215,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Deletes an in-app product (i.e. a managed product or a subscriptions).
+       * Deletes an in-app product (i.e. a managed product or a subscription).
        *
        * Create a request for the method "inappproducts.delete".
        *
@@ -8472,7 +8472,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Creates an in-app product (i.e. a managed product or a subscriptions).
+     * Creates an in-app product (i.e. a managed product or a subscription).
      *
      * Create a request for the method "inappproducts.insert".
      *
@@ -8494,7 +8494,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * Creates an in-app product (i.e. a managed product or a subscriptions).
+       * Creates an in-app product (i.e. a managed product or a subscription).
        *
        * Create a request for the method "inappproducts.insert".
        *
@@ -8757,17 +8757,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page. */
+      /** Deprecated and ignored. Set the `token` parameter to retrieve the next page. */
       @com.google.api.client.util.Key
       private java.lang.Long startIndex;
 
-      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page.
+      /** Deprecated and ignored. Set the `token` parameter to retrieve the next page.
        */
       public java.lang.Long getStartIndex() {
         return startIndex;
       }
 
-      /** Deprecated and ignored. Set the `token` parameter to rertieve the next page. */
+      /** Deprecated and ignored. Set the `token` parameter to retrieve the next page. */
       public List setStartIndex(java.lang.Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -8795,7 +8795,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Patches an in-app product (i.e. a managed product or a subscriptions).
+     * Patches an in-app product (i.e. a managed product or a subscription).
      *
      * Create a request for the method "inappproducts.patch".
      *
@@ -8818,7 +8818,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Patches an in-app product (i.e. a managed product or a subscriptions).
+       * Patches an in-app product (i.e. a managed product or a subscription).
        *
        * Create a request for the method "inappproducts.patch".
        *
@@ -8958,7 +8958,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Updates an in-app product (i.e. a managed product or a subscriptions).
+     * Updates an in-app product (i.e. a managed product or a subscription).
      *
      * Create a request for the method "inappproducts.update".
      *
@@ -8981,7 +8981,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Updates an in-app product (i.e. a managed product or a subscriptions).
+       * Updates an in-app product (i.e. a managed product or a subscription).
        *
        * Create a request for the method "inappproducts.update".
        *

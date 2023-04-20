@@ -53,8 +53,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds
+   * Standard list metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +69,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   private java.lang.String reason;
 
   /**
-   * Status of the operation. One of: "Success" or "Failure". More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Status of the operation. One of: "Success" or "Failure".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +131,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds
+   * Standard list metadata.
    * @return value or {@code null} for none
    */
   public ListMeta getMetadata() {
@@ -143,8 +139,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-
-   * architecture/api-conventions.md#types-kinds
+   * Standard list metadata.
    * @param metadata metadata or {@code null} for none
    */
   public Status setMetadata(ListMeta metadata) {
@@ -174,9 +169,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation. One of: "Success" or "Failure". More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Status of the operation. One of: "Success" or "Failure".
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -184,9 +177,7 @@ public final class Status extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation. One of: "Success" or "Failure". More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Status of the operation. One of: "Success" or "Failure".
    * @param status status or {@code null} for none
    */
   public Status setStatus(java.lang.String status) {

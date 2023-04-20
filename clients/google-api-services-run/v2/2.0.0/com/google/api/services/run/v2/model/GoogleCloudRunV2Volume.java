@@ -46,8 +46,7 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Secret represents a secret that should populate this volume. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#secret
+   * Secret represents a secret that should populate this volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +91,7 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   }
 
   /**
-   * Secret represents a secret that should populate this volume. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#secret
+   * Secret represents a secret that should populate this volume.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2SecretVolumeSource getSecret() {
@@ -101,8 +99,7 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   }
 
   /**
-   * Secret represents a secret that should populate this volume. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#secret
+   * Secret represents a secret that should populate this volume.
    * @param secret secret or {@code null} for none
    */
   public GoogleCloudRunV2Volume setSecret(GoogleCloudRunV2SecretVolumeSource secret) {

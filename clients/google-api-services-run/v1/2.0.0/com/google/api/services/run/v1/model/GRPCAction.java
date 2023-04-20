@@ -37,9 +37,8 @@ public final class GRPCAction extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. If this is not
+   * specified, the default behavior is defined by gRPC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +62,8 @@ public final class GRPCAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. If this is not
+   * specified, the default behavior is defined by gRPC.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -73,9 +71,8 @@ public final class GRPCAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
-   * default behavior is defined by gRPC.
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. If this is not
+   * specified, the default behavior is defined by gRPC.
    * @param service service or {@code null} for none
    */
   public GRPCAction setService(java.lang.String service) {

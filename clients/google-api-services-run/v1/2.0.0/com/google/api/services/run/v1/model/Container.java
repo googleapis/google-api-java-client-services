@@ -65,8 +65,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,24 +73,21 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images
+   * specified, or IfNotPresent otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imagePullPolicy;
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Probe livenessProbe;
 
   /**
-   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +111,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private Probe readinessProbe;
 
   /**
-   * Compute Resources required by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resources required by this container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +127,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not receive traffic if the probe fails. If
-   * not provided, a default startup probe with TCP socket action is used. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * not provided, a default startup probe with TCP socket action is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,8 +249,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -265,8 +258,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {
@@ -276,8 +268,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images
+   * specified, or IfNotPresent otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getImagePullPolicy() {
@@ -286,8 +277,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is
-   * specified, or IfNotPresent otherwise. More info:
-   * https://kubernetes.io/docs/concepts/containers/images#updating-images
+   * specified, or IfNotPresent otherwise.
    * @param imagePullPolicy imagePullPolicy or {@code null} for none
    */
   public Container setImagePullPolicy(java.lang.String imagePullPolicy) {
@@ -296,8 +286,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * @return value or {@code null} for none
    */
   public Probe getLivenessProbe() {
@@ -305,8 +294,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public Container setLivenessProbe(Probe livenessProbe) {
@@ -315,8 +303,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -324,8 +311,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the container specified as a DNS_LABEL (RFC 1123). More info:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
+   * Name of the container specified as a DNS_LABEL (RFC 1123).
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -374,8 +360,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compute Resources required by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resources required by this container.
    * @return value or {@code null} for none
    */
   public ResourceRequirements getResources() {
@@ -383,8 +368,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Compute Resources required by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resources required by this container.
    * @param resources resources or {@code null} for none
    */
   public Container setResources(ResourceRequirements resources) {
@@ -412,8 +396,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not receive traffic if the probe fails. If
-   * not provided, a default startup probe with TCP socket action is used. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * not provided, a default startup probe with TCP socket action is used.
    * @return value or {@code null} for none
    */
   public Probe getStartupProbe() {
@@ -423,8 +406,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not receive traffic if the probe fails. If
-   * not provided, a default startup probe with TCP socket action is used. More info:
-   * https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * not provided, a default startup probe with TCP socket action is used.
    * @param startupProbe startupProbe or {@code null} for none
    */
   public Container setStartupProbe(Probe startupProbe) {

@@ -20,8 +20,7 @@ package com.google.api.services.run.v1.model;
  * Configuration represents the "floating HEAD" of a linear history of Revisions, and optionally how
  * the containers those revisions reference are built. Users create new Revisions by updating the
  * Configuration's spec. The "latest created" revision's name is available under status, as is the
- * "latest ready" revision's name. See also:
- * https://github.com/knative/specs/blob/main/specs/serving/overview.md#configuration
+ * "latest ready" revision's name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

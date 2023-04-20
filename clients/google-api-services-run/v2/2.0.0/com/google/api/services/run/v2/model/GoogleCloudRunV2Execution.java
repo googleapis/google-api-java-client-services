@@ -167,8 +167,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Output only. Specifies the maximum desired number of tasks the execution should run at any
    * given time. Must be <= task_count. The actual number of tasks running in steady state will be
    * less than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e.
-   * when the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * when the work left to do is less than max parallelism.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,8 +220,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   /**
    * Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-
-   * completion/
+   * execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -556,8 +554,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Output only. Specifies the maximum desired number of tasks the execution should run at any
    * given time. Must be <= task_count. The actual number of tasks running in steady state will be
    * less than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e.
-   * when the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * when the work left to do is less than max parallelism.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getParallelism() {
@@ -568,8 +565,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Output only. Specifies the maximum desired number of tasks the execution should run at any
    * given time. Must be <= task_count. The actual number of tasks running in steady state will be
    * less than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e.
-   * when the work left to do is less than max parallelism. More info:
-   * https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+   * when the work left to do is less than max parallelism.
    * @param parallelism parallelism or {@code null} for none
    */
   public GoogleCloudRunV2Execution setParallelism(java.lang.Integer parallelism) {
@@ -686,8 +682,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   /**
    * Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-
-   * completion/
+   * execution.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTaskCount() {
@@ -697,8 +692,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   /**
    * Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means
    * that parallelism is limited to 1 and the success of that task signals the success of the
-   * execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-
-   * completion/
+   * execution.
    * @param taskCount taskCount or {@code null} for none
    */
   public GoogleCloudRunV2Execution setTaskCount(java.lang.Integer taskCount) {

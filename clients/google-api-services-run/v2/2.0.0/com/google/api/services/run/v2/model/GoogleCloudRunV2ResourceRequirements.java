@@ -37,14 +37,22 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   private java.lang.Boolean cpuIdle;
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
-   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
-   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
-   * o/apimachinery/pkg/api/resource/quantity.go
+   * Only ´memory´ and 'cpu' are supported. Notes: * The only supported values for CPU are '1', '2',
+   * '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> limits;
+
+  /**
+   * Determines whether CPU should be boosted on startup of a new container instance above the
+   * requested CPU threshold, this can help reduce cold-start latency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean startupCpuBoost;
 
   /**
    * Determines whether CPU should be throttled or not outside of requests.
@@ -64,10 +72,10 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
-   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
-   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
-   * o/apimachinery/pkg/api/resource/quantity.go
+   * Only ´memory´ and 'cpu' are supported. Notes: * The only supported values for CPU are '1', '2',
+   * '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLimits() {
@@ -75,14 +83,33 @@ public final class GoogleCloudRunV2ResourceRequirements extends com.google.api.c
   }
 
   /**
-   * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', '4',
-   * and '8'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of
-   * the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.i
-   * o/apimachinery/pkg/api/resource/quantity.go
+   * Only ´memory´ and 'cpu' are supported. Notes: * The only supported values for CPU are '1', '2',
+   * '4', and '8'. Setting 4 CPU requires at least 2Gi of memory. For more information, go to
+   * https://cloud.google.com/run/docs/configuring/cpu. * For supported 'memory' values and syntax,
+   * go to https://cloud.google.com/run/docs/configuring/memory-limits
    * @param limits limits or {@code null} for none
    */
   public GoogleCloudRunV2ResourceRequirements setLimits(java.util.Map<String, java.lang.String> limits) {
     this.limits = limits;
+    return this;
+  }
+
+  /**
+   * Determines whether CPU should be boosted on startup of a new container instance above the
+   * requested CPU threshold, this can help reduce cold-start latency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStartupCpuBoost() {
+    return startupCpuBoost;
+  }
+
+  /**
+   * Determines whether CPU should be boosted on startup of a new container instance above the
+   * requested CPU threshold, this can help reduce cold-start latency.
+   * @param startupCpuBoost startupCpuBoost or {@code null} for none
+   */
+  public GoogleCloudRunV2ResourceRequirements setStartupCpuBoost(java.lang.Boolean startupCpuBoost) {
+    this.startupCpuBoost = startupCpuBoost;
     return this;
   }
 

@@ -32,12 +32,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Container extends com.google.api.client.json.GenericJson {
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +40,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,16 +55,14 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +86,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<GoogleCloudRunV2ContainerPort> ports;
 
   /**
-   * Compute Resource requirements by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resource requirements by this container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +95,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not be added to service endpoints if the
-   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * probe fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,12 +117,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.lang.String workingDir;
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -144,12 +125,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable
-   * references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be
-   * resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be
-   * escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-   * regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks
-   * /inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
+   * Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
    * @param args args or {@code null} for none
    */
   public GoogleCloudRunV2Container setArgs(java.util.List<java.lang.String> args) {
@@ -159,12 +135,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -173,12 +144,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
-   * not provided. Variable references $(VAR_NAME) are expanded using the container's environment.
-   * If a variable cannot be resolved, the reference in the input string will be unchanged. The
-   * $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will
-   * never be expanded, regardless of whether the variable exists or not. More info:
-   * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-
-   * container/#running-a-command-in-a-shell
+   * not provided.
    * @param command command or {@code null} for none
    */
   public GoogleCloudRunV2Container setCommand(java.util.List<java.lang.String> command) {
@@ -205,8 +171,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -215,8 +180,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
 
   /**
    * Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google
-   * Container Registry. If the host is not provided, Dockerhub is assumed. More info:
-   * https://kubernetes.io/docs/concepts/containers/images
+   * Container Registry. If the host is not provided, Dockerhub is assumed.
    * @param image image or {@code null} for none
    */
   public GoogleCloudRunV2Container setImage(java.lang.String image) {
@@ -225,8 +189,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2Probe getLivenessProbe() {
@@ -234,8 +197,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Periodic probe of container liveness. Container will be restarted if the probe fails. More
-   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+   * Periodic probe of container liveness. Container will be restarted if the probe fails.
    * @param livenessProbe livenessProbe or {@code null} for none
    */
   public GoogleCloudRunV2Container setLivenessProbe(GoogleCloudRunV2Probe livenessProbe) {
@@ -284,8 +246,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Compute Resource requirements by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resource requirements by this container.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2ResourceRequirements getResources() {
@@ -293,8 +254,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Compute Resource requirements by this container. More info:
-   * https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+   * Compute Resource requirements by this container.
    * @param resources resources or {@code null} for none
    */
   public GoogleCloudRunV2Container setResources(GoogleCloudRunV2ResourceRequirements resources) {
@@ -305,8 +265,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not be added to service endpoints if the
-   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * probe fails.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2Probe getStartupProbe() {
@@ -316,8 +275,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   /**
    * Startup probe of application within the container. All other probes are disabled if a startup
    * probe is provided, until it succeeds. Container will not be added to service endpoints if the
-   * probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle
-   * #container-probes
+   * probe fails.
    * @param startupProbe startupProbe or {@code null} for none
    */
   public GoogleCloudRunV2Container setStartupProbe(GoogleCloudRunV2Probe startupProbe) {

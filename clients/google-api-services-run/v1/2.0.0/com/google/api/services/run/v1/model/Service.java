@@ -23,8 +23,7 @@ package com.google.api.services.run.v1.model;
  * policy and team resource ownership. Service acts only as an orchestrator of the underlying Routes
  * and Configurations (much as a kubernetes Deployment orchestrates ReplicaSets). The Service's
  * controller will track the statuses of its owned Configuration and Route, reflecting their
- * statuses and conditions as its own. See also:
- * https://github.com/knative/serving/blob/main/docs/spec/overview.md#service
+ * statuses and conditions as its own.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

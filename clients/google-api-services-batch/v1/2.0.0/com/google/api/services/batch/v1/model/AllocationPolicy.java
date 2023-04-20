@@ -63,6 +63,13 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   private NetworkPolicy network;
 
   /**
+   * The placement policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlacementPolicy placement;
+
+  /**
    * Service account that VMs will run as.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
    */
   public AllocationPolicy setNetwork(NetworkPolicy network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The placement policy.
+   * @return value or {@code null} for none
+   */
+  public PlacementPolicy getPlacement() {
+    return placement;
+  }
+
+  /**
+   * The placement policy.
+   * @param placement placement or {@code null} for none
+   */
+  public AllocationPolicy setPlacement(PlacementPolicy placement) {
+    this.placement = placement;
     return this;
   }
 

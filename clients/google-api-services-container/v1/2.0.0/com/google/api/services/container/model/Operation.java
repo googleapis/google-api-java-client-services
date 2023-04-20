@@ -99,7 +99,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private OperationProgress progress;
 
   /**
-   * Server-defined URL for the resource.
+   * Server-defined URI for the operation. Example:
+   * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
+   * central1/operations/operation-123`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +131,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
-   * Server-defined URL for the target of the operation.
+   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
+   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
+   * multiple nodes being repaired, but only one will be the target. Examples: -
+   * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` -
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
+   * cluster/nodePools/my-np` - `https://container.googleapis.com/v1/projects/123/zones/us-
+   * central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +314,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URL for the resource.
+   * Server-defined URI for the operation. Example:
+   * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
+   * central1/operations/operation-123`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -314,7 +324,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URL for the resource.
+   * Server-defined URI for the operation. Example:
+   * `https://container.googleapis.com/v1alpha1/projects/123/locations/us-
+   * central1/operations/operation-123`.
    * @param selfLink selfLink or {@code null} for none
    */
   public Operation setSelfLink(java.lang.String selfLink) {
@@ -378,7 +390,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URL for the target of the operation.
+   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
+   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
+   * multiple nodes being repaired, but only one will be the target. Examples: -
+   * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` -
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
+   * cluster/nodePools/my-np` - `https://container.googleapis.com/v1/projects/123/zones/us-
+   * central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetLink() {
@@ -386,7 +404,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Server-defined URL for the target of the operation.
+   * Server-defined URI for the target of the operation. The format of this is a URI to the resource
+   * being modified (such as a cluster, node pool, or node). For node pool repairs, there may be
+   * multiple nodes being repaired, but only one will be the target. Examples: -
+   * `https://container.googleapis.com/v1/projects/123/locations/us-central1/clusters/my-cluster` -
+   * `https://container.googleapis.com/v1/projects/123/zones/us-central1-c/clusters/my-
+   * cluster/nodePools/my-np` - `https://container.googleapis.com/v1/projects/123/zones/us-
+   * central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
    * @param targetLink targetLink or {@code null} for none
    */
   public Operation setTargetLink(java.lang.String targetLink) {

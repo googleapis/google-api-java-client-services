@@ -71,10 +71,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   private java.lang.String status;
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
-   * ready.
+   * type is used to communicate the status of the reconciliation process. Types common to all
+   * resources include: * "Ready" or "Completed": True when the Resource is ready.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,10 +170,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
-   * ready.
+   * type is used to communicate the status of the reconciliation process. Types common to all
+   * resources include: * "Ready" or "Completed": True when the Resource is ready.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -183,10 +179,8 @@ public final class GoogleCloudRunV1Condition extends com.google.api.client.json.
   }
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
-   * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
-   * Types common to all resources include: * "Ready" or "Completed": True when the Resource is
-   * ready.
+   * type is used to communicate the status of the reconciliation process. Types common to all
+   * resources include: * "Ready" or "Completed": True when the Resource is ready.
    * @param type type or {@code null} for none
    */
   public GoogleCloudRunV1Condition setType(java.lang.String type) {

@@ -70,8 +70,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Long timeoutSeconds;
 
   /**
-   * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes
+   * Optional. List of volumes that can be mounted by containers belonging to the task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +157,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes
+   * Optional. List of volumes that can be mounted by containers belonging to the task.
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -167,8 +165,7 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. List of volumes that can be mounted by containers belonging to the task. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes
+   * Optional. List of volumes that can be mounted by containers belonging to the task.
    * @param volumes volumes or {@code null} for none
    */
   public TaskSpec setVolumes(java.util.List<Volume> volumes) {

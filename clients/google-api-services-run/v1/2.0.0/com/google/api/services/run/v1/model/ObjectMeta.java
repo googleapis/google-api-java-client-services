@@ -49,8 +49,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Revision. * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-
    * session-agent`: Revision. * `run.googleapis.com/sessionAffinity`: Revision. *
    * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-connector`:
-   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution. Execution.
-   * More info: https://kubernetes.io/docs/user-guide/annotations
+   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +63,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterName;
 
   /**
-   * UTC timestamp representing the server time when this object was created. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+   * UTC timestamp representing the server time when this object was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,17 +107,16 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * https://kubernetes.io/docs/user-guide/labels
+   * objects. May match selectors of replication controllers and routes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
-   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names
+   * Required. The name of the resource. Name is required when creating top-level resources
+   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
+   * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +142,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * used by clients to determine when objects have changed. May be used for optimistic concurrency,
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server or omit the value to disable
-   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
-   * /api-conventions.md#concurrency-control-and-consistency
+   * conflict-detection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +156,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Unique, system-generated identifier for this resource. More info: https://kubernetes.io/docs
-   * /user-guide/identifiers#uids
+   * Unique, system-generated identifier for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +181,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Revision. * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-
    * session-agent`: Revision. * `run.googleapis.com/sessionAffinity`: Revision. *
    * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-connector`:
-   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution. Execution.
-   * More info: https://kubernetes.io/docs/user-guide/annotations
+   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -213,8 +207,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Revision. * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-
    * session-agent`: Revision. * `run.googleapis.com/sessionAffinity`: Revision. *
    * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-connector`:
-   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution. Execution.
-   * More info: https://kubernetes.io/docs/user-guide/annotations
+   * Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -240,8 +233,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * UTC timestamp representing the server time when this object was created. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+   * UTC timestamp representing the server time when this object was created.
    * @return value or {@code null} for none
    */
   public String getCreationTimestamp() {
@@ -249,8 +241,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * UTC timestamp representing the server time when this object was created. More info:
-   * https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+   * UTC timestamp representing the server time when this object was created.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ObjectMeta setCreationTimestamp(String creationTimestamp) {
@@ -347,8 +338,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * https://kubernetes.io/docs/user-guide/labels
+   * objects. May match selectors of replication controllers and routes.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -357,8 +347,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of string keys and values that can be used to organize and categorize (scope and select)
-   * objects. May match selectors of replication controllers and routes. More info:
-   * https://kubernetes.io/docs/user-guide/labels
+   * objects. May match selectors of replication controllers and routes.
    * @param labels labels or {@code null} for none
    */
   public ObjectMeta setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -367,9 +356,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
-   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names
+   * Required. The name of the resource. Name is required when creating top-level resources
+   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
+   * created.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -377,9 +366,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the resource. In Cloud Run, name is required when creating top-level
-   * resources (Service, Job), must be unique within a Cloud Run project/region, and cannot be
-   * changed once created. More info: https://kubernetes.io/docs/user-guide/identifiers#names
+   * Required. The name of the resource. Name is required when creating top-level resources
+   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
+   * created.
    * @param name name or {@code null} for none
    */
   public ObjectMeta setName(java.lang.String name) {
@@ -428,8 +417,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * used by clients to determine when objects have changed. May be used for optimistic concurrency,
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server or omit the value to disable
-   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
-   * /api-conventions.md#concurrency-control-and-consistency
+   * conflict-detection.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -441,8 +429,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * used by clients to determine when objects have changed. May be used for optimistic concurrency,
    * change detection, and the watch operation on a resource or set of resources. Clients must treat
    * these values as opaque and passed unmodified back to the server or omit the value to disable
-   * conflict-detection. More info: https://git.k8s.io/community/contributors/devel/sig-architecture
-   * /api-conventions.md#concurrency-control-and-consistency
+   * conflict-detection.
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ObjectMeta setResourceVersion(java.lang.String resourceVersion) {
@@ -468,8 +455,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique, system-generated identifier for this resource. More info: https://kubernetes.io/docs
-   * /user-guide/identifiers#uids
+   * Unique, system-generated identifier for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -477,8 +463,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique, system-generated identifier for this resource. More info: https://kubernetes.io/docs
-   * /user-guide/identifiers#uids
+   * Unique, system-generated identifier for this resource.
    * @param uid uid or {@code null} for none
    */
   public ObjectMeta setUid(java.lang.String uid) {

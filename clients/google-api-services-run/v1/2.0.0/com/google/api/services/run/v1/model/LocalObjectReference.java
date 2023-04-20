@@ -31,16 +31,14 @@ package com.google.api.services.run.v1.model;
 public final class LocalObjectReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * Name of the referent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * Name of the referent.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +46,7 @@ public final class LocalObjectReference extends com.google.api.client.json.Gener
   }
 
   /**
-   * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-
-   * objects/names/#names
+   * Name of the referent.
    * @param name name or {@code null} for none
    */
   public LocalObjectReference setName(java.lang.String name) {

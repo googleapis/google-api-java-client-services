@@ -36,10 +36,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
    * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system annotations in v1 now have a corresponding field in v2 Service. This field follows
-   * Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs
-   * /user-guide/annotations
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Service. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,10 +293,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
    * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system annotations in v1 now have a corresponding field in v2 Service. This field follows
-   * Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs
-   * /user-guide/annotations
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Service. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -308,10 +306,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
    * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
    * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system annotations in v1 now have a corresponding field in v2 Service. This field follows
-   * Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs
-   * /user-guide/annotations
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Service. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2Service setAnnotations(java.util.Map<String, java.lang.String> annotations) {

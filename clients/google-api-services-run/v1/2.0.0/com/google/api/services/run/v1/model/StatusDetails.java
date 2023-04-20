@@ -55,8 +55,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
-   * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * may differ from the requested resource Kind.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   private java.lang.Integer retryAfterSeconds;
 
   /**
-   * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the resource. (when there is a single resource which can be described).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +123,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
-   * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * may differ from the requested resource Kind.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -135,8 +132,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
 
   /**
    * The kind attribute of the resource associated with the status StatusReason. On some operations
-   * may differ from the requested resource Kind. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+   * may differ from the requested resource Kind.
    * @param kind kind or {@code null} for none
    */
   public StatusDetails setKind(java.lang.String kind) {
@@ -185,8 +181,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the resource. (when there is a single resource which can be described).
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -194,8 +189,7 @@ public final class StatusDetails extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * UID of the resource. (when there is a single resource which can be described). More info:
-   * https://kubernetes.io/docs/user-guide/identifiers#uids
+   * UID of the resource. (when there is a single resource which can be described).
    * @param uid uid or {@code null} for none
    */
   public StatusDetails setUid(java.lang.String uid) {

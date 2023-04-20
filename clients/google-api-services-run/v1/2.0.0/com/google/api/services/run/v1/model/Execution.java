@@ -33,8 +33,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,34 +42,28 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Optional. Specification of the desired behavior of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of an execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecutionSpec spec;
 
   /**
-   * Output only. Current status of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of an execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +72,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -90,8 +82,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * @param apiVersion apiVersion or {@code null} for none
    */
   public Execution setApiVersion(java.lang.String apiVersion) {
@@ -102,8 +93,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -113,8 +103,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * @param kind kind or {@code null} for none
    */
   public Execution setKind(java.lang.String kind) {
@@ -123,8 +112,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -132,8 +120,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * @param metadata metadata or {@code null} for none
    */
   public Execution setMetadata(ObjectMeta metadata) {
@@ -142,9 +129,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of an execution.
    * @return value or {@code null} for none
    */
   public ExecutionSpec getSpec() {
@@ -152,9 +137,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of an execution.
    * @param spec spec or {@code null} for none
    */
   public Execution setSpec(ExecutionSpec spec) {
@@ -163,9 +146,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of an execution.
    * @return value or {@code null} for none
    */
   public ExecutionStatus getStatus() {
@@ -173,9 +154,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of an execution. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of an execution.
    * @param status status or {@code null} for none
    */
   public Execution setStatus(ExecutionStatus status) {

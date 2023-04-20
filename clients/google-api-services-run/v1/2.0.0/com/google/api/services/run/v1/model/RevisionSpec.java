@@ -40,8 +40,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+   * and lifecycle. In Cloud Run, only a single container may be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +118,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+   * and lifecycle. In Cloud Run, only a single container may be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -130,8 +128,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   /**
    * Containers holds the single container that defines the unit of execution for this Revision. In
    * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is
-   * documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+   * and lifecycle. In Cloud Run, only a single container may be provided.
    * @param containers containers or {@code null} for none
    */
   public RevisionSpec setContainers(java.util.List<Container> containers) {

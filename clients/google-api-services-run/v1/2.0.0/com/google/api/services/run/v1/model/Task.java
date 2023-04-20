@@ -32,8 +32,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,34 +41,28 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Optional. Specification of the desired behavior of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of a task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TaskSpec spec;
 
   /**
-   * Output only. Current status of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of a task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +71,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -89,8 +81,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
    * should convert recognized schemas to the latest internal value, and may reject unrecognized
-   * values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#resources
+   * values.
    * @param apiVersion apiVersion or {@code null} for none
    */
   public Task setApiVersion(java.lang.String apiVersion) {
@@ -101,8 +92,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -112,8 +102,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Kind is a string value representing the REST resource this object represents. Servers
    * may infer this from the endpoint the client submits requests to. Cannot be updated. In
-   * CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
-   * conventions.md#types-kinds
+   * CamelCase.
    * @param kind kind or {@code null} for none
    */
   public Task setKind(java.lang.String kind) {
@@ -122,8 +111,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -131,8 +119,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Standard object's metadata. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+   * Optional. Standard object's metadata.
    * @param metadata metadata or {@code null} for none
    */
   public Task setMetadata(ObjectMeta metadata) {
@@ -141,9 +128,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of a task.
    * @return value or {@code null} for none
    */
   public TaskSpec getSpec() {
@@ -151,9 +136,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Optional. Specification of the desired behavior of a task.
    * @param spec spec or {@code null} for none
    */
   public Task setSpec(TaskSpec spec) {
@@ -162,9 +145,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of a task.
    * @return value or {@code null} for none
    */
   public TaskStatus getStatus() {
@@ -172,9 +153,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of a task. More info:
-   * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-
-   * status
+   * Output only. Current status of a task.
    * @param status status or {@code null} for none
    */
   public Task setStatus(TaskStatus status) {

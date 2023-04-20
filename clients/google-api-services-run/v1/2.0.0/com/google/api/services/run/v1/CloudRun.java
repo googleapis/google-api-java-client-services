@@ -807,9 +807,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+       * @param parent Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+       *        managed), replace {namespace} with the project ID or number. It takes the form
+       *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
        * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
        * @return the request
        */
@@ -836,9 +836,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       *        example: namespaces/PROJECT_ID
+         * @param parent Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+       *        managed), replace {namespace} with the project ID or number. It takes the form
+       *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @since 1.13
          */
@@ -908,24 +908,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The namespace in which the domain mapping should be created. For Cloud Run (fully
-         * managed), replace {namespace} with the project ID or number. It takes the form
+         * Required. The namespace in which the domain mapping should be created. For Cloud Run
+         * (fully managed), replace {namespace} with the project ID or number. It takes the form
          * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-       {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-       namespaces/PROJECT_ID
+        /** Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+       managed), replace {namespace} with the project ID or number. It takes the form
+       namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The namespace in which the domain mapping should be created. For Cloud Run (fully
-         * managed), replace {namespace} with the project ID or number. It takes the form
+         * Required. The namespace in which the domain mapping should be created. For Cloud Run
+         * (fully managed), replace {namespace} with the project ID or number. It takes the form
          * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public Create setParent(java.lang.String parent) {
@@ -974,9 +974,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-       *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param name Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+       *        example: namespaces/PROJECT_ID
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1002,9 +1002,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-       *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param name Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+       *        example: namespaces/PROJECT_ID
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1073,15 +1073,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * Required. The name of the domain mapping to delete. For Cloud Run (fully managed),
+         * replace {namespace} with the project ID or number. It takes the form
+         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-       the project ID or number. It takes the form namespaces/{namespace}. For example:
+        /** Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+       {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
        namespaces/PROJECT_ID
          */
         public java.lang.String getName() {
@@ -1089,9 +1089,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * Required. The name of the domain mapping to delete. For Cloud Run (fully managed),
+         * replace {namespace} with the project ID or number. It takes the form
+         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1197,9 +1197,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-       *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param name Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+       *        example: namespaces/PROJECT_ID
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1225,9 +1225,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-       *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param name Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+       *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+       *        example: namespaces/PROJECT_ID
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1306,15 +1306,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed),
+         * replace {namespace} with the project ID or number. It takes the form
+         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-       the project ID or number. It takes the form namespaces/{namespace}. For example:
+        /** Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+       {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
        namespaces/PROJECT_ID
          */
         public java.lang.String getName() {
@@ -1322,9 +1322,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
-         * {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         * example: namespaces/PROJECT_ID
+         * Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed),
+         * replace {namespace} with the project ID or number. It takes the form
+         * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1349,8 +1349,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-       *        replace {namespace} with the project ID or number. It takes the form
+       * @param parent Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+       *        managed), replace {namespace} with the project ID or number. It takes the form
        *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
        * @return the request
        */
@@ -1377,8 +1377,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-       *        replace {namespace} with the project ID or number. It takes the form
+         * @param parent Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+       *        managed), replace {namespace} with the project ID or number. It takes the form
        *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
          * @since 1.13
          */
@@ -1458,24 +1458,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The namespace from which the domain mappings should be listed. For Cloud Run (fully
-         * managed), replace {namespace} with the project ID or number. It takes the form
+         * Required. The namespace from which the domain mappings should be listed. For Cloud Run
+         * (fully managed), replace {namespace} with the project ID or number. It takes the form
          * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-       replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-       example: namespaces/PROJECT_ID
+        /** Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+       managed), replace {namespace} with the project ID or number. It takes the form
+       namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The namespace from which the domain mappings should be listed. For Cloud Run (fully
-         * managed), replace {namespace} with the project ID or number. It takes the form
+         * Required. The namespace from which the domain mappings should be listed. For Cloud Run
+         * (fully managed), replace {namespace} with the project ID or number. It takes the form
          * namespaces/{namespace}. For example: namespaces/PROJECT_ID
          */
         public List setParent(java.lang.String parent) {
@@ -1959,16 +1959,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
-         * setting, and deletes in the background. Please see
-         * https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-         * information.
+         * setting.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
-        /** Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-       deletes in the background. Please see https://kubernetes.io/docs/concepts/workloads/controllers
-       /garbage-collection/ for more information.
+        /** Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this setting.
          */
         public java.lang.String getPropagationPolicy() {
           return propagationPolicy;
@@ -1976,9 +1972,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
-         * setting, and deletes in the background. Please see
-         * https://kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
-         * information.
+         * setting.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
           this.propagationPolicy = propagationPolicy;
@@ -3681,15 +3675,13 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see https://kubernetes.io/docs/concepts/architecture
-         * /garbage-collection/ for more information.
+         * deletes in the background.
          */
         @com.google.api.client.util.Key
         private java.lang.String propagationPolicy;
 
         /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-       in the background. Please see https://kubernetes.io/docs/concepts/architecture/garbage-collection/
-       for more information.
+       in the background.
          */
         public java.lang.String getPropagationPolicy() {
           return propagationPolicy;
@@ -3697,8 +3689,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
-         * deletes in the background. Please see https://kubernetes.io/docs/concepts/architecture
-         * /garbage-collection/ for more information.
+         * deletes in the background.
          */
         public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
           this.propagationPolicy = propagationPolicy;
@@ -7212,9 +7203,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+         * @param parent Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+         *        managed), replace {namespace} with the project ID or number. It takes the form
+         *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
          * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
          * @return the request
          */
@@ -7241,9 +7232,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         *        example: namespaces/PROJECT_ID
+           * @param parent Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+         *        managed), replace {namespace} with the project ID or number. It takes the form
+         *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
            * @param content the {@link com.google.api.services.run.v1.model.DomainMapping}
            * @since 1.13
            */
@@ -7313,24 +7304,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The namespace in which the domain mapping should be created. For Cloud Run (fully
-           * managed), replace {namespace} with the project ID or number. It takes the form
+           * Required. The namespace in which the domain mapping should be created. For Cloud Run
+           * (fully managed), replace {namespace} with the project ID or number. It takes the form
            * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The namespace in which the domain mapping should be created. For Cloud Run (fully managed), replace
-         {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         namespaces/PROJECT_ID
+          /** Required. The namespace in which the domain mapping should be created. For Cloud Run (fully
+         managed), replace {namespace} with the project ID or number. It takes the form
+         namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The namespace in which the domain mapping should be created. For Cloud Run (fully
-           * managed), replace {namespace} with the project ID or number. It takes the form
+           * Required. The namespace in which the domain mapping should be created. For Cloud Run
+           * (fully managed), replace {namespace} with the project ID or number. It takes the form
            * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public Create setParent(java.lang.String parent) {
@@ -7379,9 +7370,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-         *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+         * @param name Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+         *        example: namespaces/PROJECT_ID
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -7407,9 +7398,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-         *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+           * @param name Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+         *        example: namespaces/PROJECT_ID
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -7478,15 +7469,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * Required. The name of the domain mapping to delete. For Cloud Run (fully managed),
+           * replace {namespace} with the project ID or number. It takes the form
+           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with
-         the project ID or number. It takes the form namespaces/{namespace}. For example:
+          /** Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace
+         {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
          namespaces/PROJECT_ID
            */
           public java.lang.String getName() {
@@ -7494,9 +7485,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping to delete. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * Required. The name of the domain mapping to delete. For Cloud Run (fully managed),
+           * replace {namespace} with the project ID or number. It takes the form
+           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7602,9 +7593,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-         *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+         * @param name Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+         *        example: namespaces/PROJECT_ID
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7630,9 +7621,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-         *        the project ID or number. It takes the form namespaces/{namespace}. For example:
-         *        namespaces/PROJECT_ID
+           * @param name Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+         *        {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
+         *        example: namespaces/PROJECT_ID
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7711,15 +7702,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed),
+           * replace {namespace} with the project ID or number. It takes the form
+           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace {namespace} with
-         the project ID or number. It takes the form namespaces/{namespace}. For example:
+          /** Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
+         {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example:
          namespaces/PROJECT_ID
            */
           public java.lang.String getName() {
@@ -7727,9 +7718,9 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The name of the domain mapping to retrieve. For Cloud Run (fully managed), replace
-           * {namespace} with the project ID or number. It takes the form namespaces/{namespace}.
-           * For example: namespaces/PROJECT_ID
+           * Required. The name of the domain mapping to retrieve. For Cloud Run (fully managed),
+           * replace {namespace} with the project ID or number. It takes the form
+           * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7754,8 +7745,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-         *        replace {namespace} with the project ID or number. It takes the form
+         * @param parent Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+         *        managed), replace {namespace} with the project ID or number. It takes the form
          *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
          * @return the request
          */
@@ -7782,8 +7773,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-         *        replace {namespace} with the project ID or number. It takes the form
+           * @param parent Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+         *        managed), replace {namespace} with the project ID or number. It takes the form
          *        namespaces/{namespace}. For example: namespaces/PROJECT_ID
            * @since 1.13
            */
@@ -7863,24 +7854,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The namespace from which the domain mappings should be listed. For Cloud Run (fully
-           * managed), replace {namespace} with the project ID or number. It takes the form
+           * Required. The namespace from which the domain mappings should be listed. For Cloud Run
+           * (fully managed), replace {namespace} with the project ID or number. It takes the form
            * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The namespace from which the domain mappings should be listed. For Cloud Run (fully managed),
-         replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For
-         example: namespaces/PROJECT_ID
+          /** Required. The namespace from which the domain mappings should be listed. For Cloud Run (fully
+         managed), replace {namespace} with the project ID or number. It takes the form
+         namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The namespace from which the domain mappings should be listed. For Cloud Run (fully
-           * managed), replace {namespace} with the project ID or number. It takes the form
+           * Required. The namespace from which the domain mappings should be listed. For Cloud Run
+           * (fully managed), replace {namespace} with the project ID or number. It takes the form
            * namespaces/{namespace}. For example: namespaces/PROJECT_ID
            */
           public List setParent(java.lang.String parent) {
@@ -8764,16 +8755,13 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * https://kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
-           * information.
+           * and deletes in the background.
            */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
 
           /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
-         in the background. Please see https://kubernetes.io/docs/concepts/architecture/garbage-collection/
-         for more information.
+         in the background.
            */
           public java.lang.String getPropagationPolicy() {
             return propagationPolicy;
@@ -8781,9 +8769,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see
-           * https://kubernetes.io/docs/concepts/architecture/garbage-collection/ for more
-           * information.
+           * and deletes in the background.
            */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
             this.propagationPolicy = propagationPolicy;

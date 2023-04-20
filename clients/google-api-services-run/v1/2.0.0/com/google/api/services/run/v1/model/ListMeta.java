@@ -42,8 +42,7 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   /**
    * Opaque string that identifies the server's internal version of this object. It can be used by
    * clients to determine when objects have changed. If the message is passed back to the server, it
-   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
-   * #concurrency-control-and-consistency
+   * must be left unmodified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   /**
    * Opaque string that identifies the server's internal version of this object. It can be used by
    * clients to determine when objects have changed. If the message is passed back to the server, it
-   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
-   * #concurrency-control-and-consistency
+   * must be left unmodified.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceVersion() {
@@ -91,8 +89,7 @@ public final class ListMeta extends com.google.api.client.json.GenericJson {
   /**
    * Opaque string that identifies the server's internal version of this object. It can be used by
    * clients to determine when objects have changed. If the message is passed back to the server, it
-   * must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md
-   * #concurrency-control-and-consistency
+   * must be left unmodified.
    * @param resourceVersion resourceVersion or {@code null} for none
    */
   public ListMeta setResourceVersion(java.lang.String resourceVersion) {

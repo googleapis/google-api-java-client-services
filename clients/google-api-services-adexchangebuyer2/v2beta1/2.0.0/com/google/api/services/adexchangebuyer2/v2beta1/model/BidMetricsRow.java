@@ -46,7 +46,8 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   private MetricValue bidsInAuction;
 
   /**
-   * The number of bids for which the buyer was billed.
+   * The number of bids for which the buyer was billed. Also called valid impressions as invalid
+   * impressions are not billed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +125,8 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The number of bids for which the buyer was billed.
+   * The number of bids for which the buyer was billed. Also called valid impressions as invalid
+   * impressions are not billed.
    * @return value or {@code null} for none
    */
   public MetricValue getBilledImpressions() {
@@ -132,7 +134,8 @@ public final class BidMetricsRow extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The number of bids for which the buyer was billed.
+   * The number of bids for which the buyer was billed. Also called valid impressions as invalid
+   * impressions are not billed.
    * @param billedImpressions billedImpressions or {@code null} for none
    */
   public BidMetricsRow setBilledImpressions(MetricValue billedImpressions) {

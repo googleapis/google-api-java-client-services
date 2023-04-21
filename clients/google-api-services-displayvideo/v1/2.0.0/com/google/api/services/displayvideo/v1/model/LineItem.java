@@ -199,7 +199,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    * line item. This config is only applicable when eligible audience list targeting is assigned to
    * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
    * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by mid-April 2023.
+   * expansion. This feature will be rolled out to all partners by early May 2023.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -619,7 +619,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    * line item. This config is only applicable when eligible audience list targeting is assigned to
    * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
    * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by mid-April 2023.
+   * expansion. This feature will be rolled out to all partners by early May 2023.
    * @return value or {@code null} for none
    */
   public TargetingExpansionConfig getTargetingExpansion() {
@@ -631,7 +631,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    * line item. This config is only applicable when eligible audience list targeting is assigned to
    * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
    * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by mid-April 2023.
+   * expansion. This feature will be rolled out to all partners by early May 2023.
    * @param targetingExpansion targetingExpansion or {@code null} for none
    */
   public LineItem setTargetingExpansion(TargetingExpansionConfig targetingExpansion) {

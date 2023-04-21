@@ -21,7 +21,7 @@ package com.google.api.services.displayvideo.v1.model;
  * line item to reach a larger audience based on the original audience list and the targeting
  * expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized
  * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
- * expansion. This feature will be rolled out to all partners by mid-April 2023.
+ * expansion. This feature will be rolled out to all partners by early May 2023.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -44,7 +44,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
    * party audience targeting assigned to this line item will be replaced with negative targeting of
    * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by mid-April 2023.
+   * will be deprecated for all partners by early May 2023.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
    * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
    * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by mid-April 2023.
+   * partners by early May 2023.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
    * party audience targeting assigned to this line item will be replaced with negative targeting of
    * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by mid-April 2023.
+   * will be deprecated for all partners by early May 2023.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeFirstPartyAudience() {
@@ -93,7 +93,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
    * party audience targeting assigned to this line item will be replaced with negative targeting of
    * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by mid-April 2023.
+   * will be deprecated for all partners by early May 2023.
    * @param excludeFirstPartyAudience excludeFirstPartyAudience or {@code null} for none
    */
   public TargetingExpansionConfig setExcludeFirstPartyAudience(java.lang.Boolean excludeFirstPartyAudience) {
@@ -111,7 +111,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
    * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
    * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by mid-April 2023.
+   * partners by early May 2023.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingExpansionLevel() {
@@ -128,7 +128,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
    * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
    * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by mid-April 2023.
+   * partners by early May 2023.
    * @param targetingExpansionLevel targetingExpansionLevel or {@code null} for none
    */
   public TargetingExpansionConfig setTargetingExpansionLevel(java.lang.String targetingExpansionLevel) {

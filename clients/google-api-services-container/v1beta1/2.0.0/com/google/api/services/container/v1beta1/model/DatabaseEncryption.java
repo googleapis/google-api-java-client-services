@@ -39,7 +39,7 @@ public final class DatabaseEncryption extends com.google.api.client.json.Generic
   private java.lang.String keyName;
 
   /**
-   * Denotes the state of etcd encryption.
+   * The desired state of etcd encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class DatabaseEncryption extends com.google.api.client.json.Generic
   }
 
   /**
-   * Denotes the state of etcd encryption.
+   * The desired state of etcd encryption.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -73,7 +73,7 @@ public final class DatabaseEncryption extends com.google.api.client.json.Generic
   }
 
   /**
-   * Denotes the state of etcd encryption.
+   * The desired state of etcd encryption.
    * @param state state or {@code null} for none
    */
   public DatabaseEncryption setState(java.lang.String state) {

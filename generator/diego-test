@@ -1,0 +1,36 @@
+#!/bin/bash
+#OUTPUT_DIR=/usr/local/google/home/diegomarquezp/Desktop/google-api-java-client-services/generator/../clients/google-api-services-apigee/v1/2.0.0/
+#DISCOVERY=/usr/local/google/home/diegomarquezp/Desktop/discovery-artifact-manager/discoveries/apigee.v1.json
+OUTPUT_DIR=/usr/local/google/home/diegomarquezp/Desktop/google-api-java-client-services/generator/../clients/google-api-services-
+DISCOVERY_ROOT=/usr/local/google/home/diegomarquezp/Desktop/discovery-artifact-manager/discoveries/
+GENERATOR_DIR=/usr/local/google/home/diegomarquezp/Desktop/google-api-java-client-services/generator
+
+TO_GENERATE=(apigee assuredworkloads bigtableadmin identitytoolkit monitoring prod_tt_sasportal)
+VERSIONS=(   v1     v1beta1          v2            v1              v1         v1alpha1       )
+
+#python2 -m pip install --no-deps -e ${GENERATOR_DIR} --user -q
+#python2 -m pip install --require-hashes -r ${GENERATOR_DIR}/generator_requirements.txt --user
+
+discoveries=$(find ~/Desktop/discovery-artifact-manager/discoveries/ -printf "%f\n" | cut -d. -f1)
+versions=$(find ~/Desktop/discovery-artifact-manager/discoveries/ -printf "%f\n" | cut -d. -f2)
+IFS=$'\n'
+discoveries=($discoveries)
+versions=($versions)
+for i in "${!discoveries[@]}"; do
+  discovery=${discoveries[$i]}
+  version=${versions[$i]}
+  discovery_file="$DISCOVERY_ROOT$discovery.$version.json"
+  output="$OUTPUT_DIR$discovery/$version/2.0.0"
+  echo $discovery_file
+  echo $output
+  python2.7 -m googleapis.codegen \
+    --output_dir=${output} \
+    --input=${discovery_file} \
+    --language=java \
+    --language_variant=2.0.0 \
+    --package_path=api/services
+done
+
+
+#for i in "${!TO_GENERATE[@]}"; do
+#done

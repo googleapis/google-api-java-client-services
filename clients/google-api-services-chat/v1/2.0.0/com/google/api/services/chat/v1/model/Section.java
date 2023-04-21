@@ -32,7 +32,8 @@ package com.google.api.services.chat.v1.model;
 public final class Section extends com.google.api.client.json.GenericJson {
 
   /**
-   * The header of the section, text formatted supported.
+   * The header of the section. Formatted text is supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class Section extends com.google.api.client.json.GenericJson {
   private java.util.List<WidgetMarkup> widgets;
 
   /**
-   * The header of the section, text formatted supported.
+   * The header of the section. Formatted text is supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -54,7 +56,8 @@ public final class Section extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The header of the section, text formatted supported.
+   * The header of the section. Formatted text is supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @param header header or {@code null} for none
    */
   public Section setHeader(java.lang.String header) {

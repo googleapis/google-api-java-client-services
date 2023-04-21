@@ -41,8 +41,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   private java.lang.Boolean collapsible;
 
   /**
-   * Text that appears at the top of a section. Supports [simple HTML formatted
-   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * Text that appears at the top of a section. Supports simple HTML formatted text. For more
+   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
+   * in Google Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +90,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * Text that appears at the top of a section. Supports [simple HTML formatted
-   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * Text that appears at the top of a section. Supports simple HTML formatted text. For more
+   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
+   * in Google Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -98,8 +100,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * Text that appears at the top of a section. Supports [simple HTML formatted
-   * text](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * Text that appears at the top of a section. Supports simple HTML formatted text. For more
+   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
+   * in Google Workspace Add-ons.
    * @param header header or {@code null} for none
    */
   public GoogleAppsCardV1Section setHeader(java.lang.String header) {

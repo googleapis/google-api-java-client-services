@@ -17,7 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The timezone ID and offset from Coordinated Universal Time (UTC). Not supported by Chat apps.
+ * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
+ * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_VA
+ * LUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/rest/v1
+ * /DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

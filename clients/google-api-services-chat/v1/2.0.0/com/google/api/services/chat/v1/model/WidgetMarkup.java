@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class WidgetMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class WidgetMarkup extends com.google.api.client.json.GenericJson {
   private TextParagraph textParagraph;
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * @return value or {@code null} for none
    */
   public java.util.List<Button> getButtons() {
@@ -72,7 +72,7 @@ public final class WidgetMarkup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * @param buttons buttons or {@code null} for none
    */
   public WidgetMarkup setButtons(java.util.List<Button> buttons) {

@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A selectable item in a selection input, such as a check box or a switch.
+ * An item that users can select in a selection input, such as a checkbox or switch.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.Boolean selected;
 
   /**
-   * The text displayed to users.
+   * The text that identifies or describes the item to users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The text displayed to users.
+   * The text that identifies or describes the item to users.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -81,7 +81,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * The text displayed to users.
+   * The text that identifies or describes the item to users.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setText(java.lang.String text) {

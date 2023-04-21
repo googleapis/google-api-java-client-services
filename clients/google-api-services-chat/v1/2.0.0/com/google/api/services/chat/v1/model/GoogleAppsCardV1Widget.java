@@ -95,9 +95,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1Image image;
 
   /**
-   * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
-   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * Displays a selection control that lets users select items. Selection controls can be
+   * checkboxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates
+   * a dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
    * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
    * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
    * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
@@ -119,9 +119,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1TextInput textInput;
 
   /**
-   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
-   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
-   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports simple HTML formatted text. For more information about
+   * formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons. For example, the following JSON creates a bolded text: ``` "textParagraph":
+   * { "text": " *bold text*" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,9 +275,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
-   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * Displays a selection control that lets users select items. Selection controls can be
+   * checkboxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates
+   * a dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
    * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
    * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
    * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
@@ -287,9 +288,9 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection control that lets users select items. Selection controls can be check
-   * boxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates a
-   * dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
+   * Displays a selection control that lets users select items. Selection controls can be
+   * checkboxes, radio buttons, switches, or dropdown menus. For example, the following JSON creates
+   * a dropdown menu that lets users choose a size: ``` "selectionInput": { "name": "size", "label":
    * "Size" "type": "DROPDOWN", "items": [ { "text": "S", "value": "small", "selected": false }, {
    * "text": "M", "value": "medium", "selected": true }, { "text": "L", "value": "large",
    * "selected": false }, { "text": "XL", "value": "extra_large", "selected": false } ] } ```
@@ -328,9 +329,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
-   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
-   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports simple HTML formatted text. For more information about
+   * formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons. For example, the following JSON creates a bolded text: ``` "textParagraph":
+   * { "text": " *bold text*" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1TextParagraph getTextParagraph() {
@@ -338,9 +340,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a text paragraph. Supports [simple HTML formatted text](https://developers.google.com
-   * /apps-script/add-ons/concepts/widgets#text_formatting). For example, the following JSON creates
-   * a bolded text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * Displays a text paragraph. Supports simple HTML formatted text. For more information about
+   * formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons. For example, the following JSON creates a bolded text: ``` "textParagraph":
+   * { "text": " *bold text*" } ```
    * @param textParagraph textParagraph or {@code null} for none
    */
   public GoogleAppsCardV1Widget setTextParagraph(GoogleAppsCardV1TextParagraph textParagraph) {

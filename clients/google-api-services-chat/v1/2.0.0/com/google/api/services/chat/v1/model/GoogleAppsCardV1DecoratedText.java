@@ -83,8 +83,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1SwitchControl switchControl;
 
   /**
-   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
-   * details.
+   * Required. The primary text. Supports simple formatting. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,8 +231,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
-   * details.
+   * Required. The primary text. Supports simple formatting. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -240,8 +240,8 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * Required. The primary text. Supports simple formatting. See Text formatting for formatting
-   * details.
+   * Required. The primary text. Supports simple formatting. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setText(java.lang.String text) {

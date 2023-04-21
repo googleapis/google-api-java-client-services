@@ -30,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class Inputs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date input values. Not supported by Chat apps.
+   * Date input values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateInput dateInput;
 
   /**
-   * Date and time input values. Not supported by Chat apps.
+   * Date and time input values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,14 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   private StringInputs stringInputs;
 
   /**
-   * Time input values. Not supported by Chat apps.
+   * Time input values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeInput timeInput;
 
   /**
-   * Date input values. Not supported by Chat apps.
+   * Date input values.
    * @return value or {@code null} for none
    */
   public DateInput getDateInput() {
@@ -67,7 +67,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date input values. Not supported by Chat apps.
+   * Date input values.
    * @param dateInput dateInput or {@code null} for none
    */
   public Inputs setDateInput(DateInput dateInput) {
@@ -76,7 +76,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time input values. Not supported by Chat apps.
+   * Date and time input values.
    * @return value or {@code null} for none
    */
   public DateTimeInput getDateTimeInput() {
@@ -84,7 +84,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time input values. Not supported by Chat apps.
+   * Date and time input values.
    * @param dateTimeInput dateTimeInput or {@code null} for none
    */
   public Inputs setDateTimeInput(DateTimeInput dateTimeInput) {
@@ -112,7 +112,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time input values. Not supported by Chat apps.
+   * Time input values.
    * @return value or {@code null} for none
    */
   public TimeInput getTimeInput() {
@@ -120,7 +120,7 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time input values. Not supported by Chat apps.
+   * Time input values.
    * @param timeInput timeInput or {@code null} for none
    */
   public Inputs setTimeInput(TimeInput timeInput) {

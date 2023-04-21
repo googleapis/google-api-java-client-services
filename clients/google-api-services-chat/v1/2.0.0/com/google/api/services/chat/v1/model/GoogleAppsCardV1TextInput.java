@@ -20,8 +20,9 @@ package com.google.api.services.chat.v1.model;
  * A field in which users can enter text. Supports suggestions and on-change actions. Chat apps
  * receive and can process the value of entered text during form input events. For details about
  * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
- * tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users,
- * use a text input. To collect defined data from users, use the selection input widget instead.
+ * tos/dialogs#receive_form_data_from_dialogs). When you need to collect undefined or abstract data
+ * from users, use a text input. To collect defined or enumerated data from users, use the
+ * SelectionInput widget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -70,8 +70,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
+   * and Chat apps. For Chat apps, you can use fixed footers in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * The value may be {@code null}.
    */
@@ -161,8 +162,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
+   * and Chat apps. For Chat apps, you can use fixed footers in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * @return value or {@code null} for none
    */
@@ -172,8 +174,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
-   * `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card
+   * `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons
+   * and Chat apps. For Chat apps, you can use fixed footers in
+   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards).
    * @param fixedFooter fixedFooter or {@code null} for none
    */

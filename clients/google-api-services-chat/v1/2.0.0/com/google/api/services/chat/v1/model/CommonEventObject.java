@@ -76,7 +76,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private java.lang.String platform;
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC).
+   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
+   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
+   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
+   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +87,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US". Not supported by Chat apps.
+   * code] such as "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +197,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC).
+   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
+   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
+   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
+   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * @return value or {@code null} for none
    */
   public TimeZone getTimeZone() {
@@ -202,7 +208,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The timezone ID and offset from Coordinated Universal Time (UTC).
+   * The timezone ID and offset from Coordinated Universal Time (UTC). Only supported for the event
+   * types [`CARD_CLICKED`](https://developers.google.com/chat/api/reference/rest/v1/EventType#ENUM_
+   * VALUES.CARD_CLICKED) and [`SUBMIT_DIALOG`](https://developers.google.com/chat/api/reference/res
+   * t/v1/DialogEventType#ENUM_VALUES.SUBMIT_DIALOG).
    * @param timeZone timeZone or {@code null} for none
    */
   public CommonEventObject setTimeZone(TimeZone timeZone) {
@@ -212,7 +221,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US". Not supported by Chat apps.
+   * code] such as "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getUserLocale() {
@@ -221,7 +230,7 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * The full `locale.displayName` in the format of [ISO 639 language code]-[ISO 3166 country/region
-   * code] such as "en-US". Not supported by Chat apps.
+   * code] such as "en-US".
    * @param userLocale userLocale or {@code null} for none
    */
   public CommonEventObject setUserLocale(java.lang.String userLocale) {

@@ -254,6 +254,38 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> capability;
+
+      /** Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent.
+       */
+      public java.util.List<java.lang.String> getCapability() {
+        return capability;
+      }
+
+      /** Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent. */
+      public List setCapability(java.util.List<java.lang.String> capability) {
+        this.capability = capability;
+        return this;
+      }
+
+      /** Filters by Webfont.family, using literal match. If not set, returns all families */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> family;
+
+      /** Filters by Webfont.family, using literal match. If not set, returns all families
+       */
+      public java.util.List<java.lang.String> getFamily() {
+        return family;
+      }
+
+      /** Filters by Webfont.family, using literal match. If not set, returns all families */
+      public List setFamily(java.util.List<java.lang.String> family) {
+        this.family = family;
+        return this;
+      }
+
       /** Enables sorting of the list. */
       @com.google.api.client.util.Key
       private java.lang.String sort;
@@ -267,6 +299,28 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
       /** Enables sorting of the list. */
       public List setSort(java.lang.String sort) {
         this.sort = sort;
+        return this;
+      }
+
+      /**
+       * Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all
+       * families.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String subset;
+
+      /** Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all families.
+       */
+      public java.lang.String getSubset() {
+        return subset;
+      }
+
+      /**
+       * Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all
+       * families.
+       */
+      public List setSubset(java.lang.String subset) {
+        this.subset = subset;
         return this;
       }
 

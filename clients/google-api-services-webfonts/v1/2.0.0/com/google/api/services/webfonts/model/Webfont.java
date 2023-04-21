@@ -31,6 +31,19 @@ package com.google.api.services.webfonts.model;
 public final class Webfont extends com.google.api.client.json.GenericJson {
 
   /**
+   * Axis for variable fonts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Axis> axes;
+
+  static {
+    // hack to force ProGuard to consider Axis used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Axis.class);
+  }
+
+  /**
    * The category of the font.
    * The value may be {@code null}.
    */
@@ -67,6 +80,13 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
   private java.lang.String lastModified;
 
   /**
+   * Font URL for menu subset, a subset of the font that is enough to display the font name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String menu;
+
+  /**
    * The scripts supported by the font.
    * The value may be {@code null}.
    */
@@ -86,6 +106,23 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Axis for variable fonts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Axis> getAxes() {
+    return axes;
+  }
+
+  /**
+   * Axis for variable fonts.
+   * @param axes axes or {@code null} for none
+   */
+  public Webfont setAxes(java.util.List<Axis> axes) {
+    this.axes = axes;
+    return this;
+  }
 
   /**
    * The category of the font.
@@ -171,6 +208,23 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    */
   public Webfont setLastModified(java.lang.String lastModified) {
     this.lastModified = lastModified;
+    return this;
+  }
+
+  /**
+   * Font URL for menu subset, a subset of the font that is enough to display the font name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMenu() {
+    return menu;
+  }
+
+  /**
+   * Font URL for menu subset, a subset of the font that is enough to display the font name
+   * @param menu menu or {@code null} for none
+   */
+  public Webfont setMenu(java.lang.String menu) {
+    this.menu = menu;
     return this;
   }
 

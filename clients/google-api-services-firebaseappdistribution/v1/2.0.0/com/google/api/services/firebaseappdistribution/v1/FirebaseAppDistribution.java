@@ -3653,15 +3653,15 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Optional. The maximum number of groups to return. The service may return fewer than this
-         * value. The valid range is [1-100]; If unspecified (0), at most 25 groups are returned.
-         * Values above 100 are coerced to 100.
+         * value. The valid range is [1-1000]; If unspecified (0), at most 25 groups are returned.
+         * Values above 1000 are coerced to 1000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of groups to return. The service may return fewer than this value. The
-       valid range is [1-100]; If unspecified (0), at most 25 groups are returned. Values above 100 are
-       coerced to 100.
+       valid range is [1-1000]; If unspecified (0), at most 25 groups are returned. Values above 1000 are
+       coerced to 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -3669,8 +3669,8 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
 
         /**
          * Optional. The maximum number of groups to return. The service may return fewer than this
-         * value. The valid range is [1-100]; If unspecified (0), at most 25 groups are returned.
-         * Values above 100 are coerced to 100.
+         * value. The valid range is [1-1000]; If unspecified (0), at most 25 groups are returned.
+         * Values above 1000 are coerced to 1000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

@@ -30,6 +30,27 @@
               "rpcMethod": "duplicated.duplicated.foo",
               "httpMethod": "DELETE"
             }
+          },
+          "resources": {
+            "duplicated" : {
+              "methods": {
+                "duplicated": {
+                  "restPath": "duplicated",
+                  "rpcMethod": "duplicated.duplicated.foo",
+                  "httpMethod": "DELETE"
+                }
+              },
+              "resources": {
+                "duplicated":{
+                  "methods": {},
+                  "resources": {
+                    "duplicated": {
+                      "methods": {}
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "nonduplicated": {

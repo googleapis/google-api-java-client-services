@@ -669,12 +669,7 @@ class Method(template_objects.CodeObject):
     self.SetTemplateValue('wireName', name)
     self.ValidateName(name)
     raw_class_name = api.ToClassName(name, self, element_type='method')
-    self.SetTemplateValue('rawClassName', raw_class_name)
     class_name = self.ComputeNonDuplicatedName(raw_class_name)
-    if parent and raw_class_name == parent.values['rawClassName']:
-      # Some languages complain when the collection name is the same as the
-      # method name.
-      class_name = '%sRequest' % raw_class_name
     # The name is the key of the dict defining use. The id field is what you
     # have to use to call the method via RPC. That is unique, name might not be.
     self.SetTemplateValue('name', name)

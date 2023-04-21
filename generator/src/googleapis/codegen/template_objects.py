@@ -129,15 +129,39 @@ class CodeObject(UseableInTemplates):
                             self.ValidateAndSanitizeComment(self.StripHTML(d)))
 
   def ComputeNonDuplicatedName(self, original_class_name):
+    from googleapis.codegen.api import Resource
+    from googleapis.codegen.api import Method
+
     class_name = original_class_name
     parent_path = self.parentPath()
 
+    def getNonDuplicatedClassName(class_name):
+      if str(class_name).startswith('Child'):
+        return 'Grand' + class_name
+      elif str(class_name).startswith('GrandChild') or str(class_name).startswith('Great'):
+        return 'Great' + class_name
+      else:
+        return 'Child' + class_name
+
     # Prepend the first ancestor's name with an underscore if there is any
     # duplication from root to node (e.g. FirstAncestor_Node)
-    for parent_class_name in parent_path:
+    for parent_class_name in parent_path[:-1]:
+      # will append [Great][Grand][Child]ClassName depending on how
+      # deep the duplicated class is nested in the path
       if class_name == parent_class_name:
-        class_name = parent_path[-1] + '_' + class_name
         self.SetTemplateValue('isDuplicate', True)
+        class_name = getNonDuplicatedClassName(class_name)
+
+    # special case for last iteration. Append "Resource" if direct
+    # parent is same-named
+    if len(parent_path) > 0 and parent_path[-1] == class_name:
+      self.SetTemplateValue('isDuplicate', True)
+      if isinstance(self, Method):
+        class_name = class_name + 'Request'
+      elif isinstance(self, Resource):
+        class_name = getNonDuplicatedClassName(class_name)
+      else:
+        raise TypeError('Unexpected CodeObject type')
 
     # Append the `Request` suffix to methods which have a same-named resource
     # sibling
@@ -146,8 +170,6 @@ class CodeObject(UseableInTemplates):
       for sibling in siblings:
         if sibling.GetTemplateValue('className') == class_name:
           # Importing at the top of the file will cause an import error
-          from googleapis.codegen.api import Resource
-          from googleapis.codegen.api import Method
           # Resources are left intact, but methods may have the `Request` suffix
           if isinstance(self, Method):
             class_name = class_name + 'Request'

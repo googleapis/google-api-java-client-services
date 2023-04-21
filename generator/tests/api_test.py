@@ -73,7 +73,10 @@ class ApiTest(basetest.TestCase):
       Convenience method to abreviate asserting a node's class name equals
       the expected value
       """
-      self.assertTrue(node.values.get('className') == expected_name)
+      actual = node.values.get('className')
+      if actual != expected_name:
+        raise AssertionError('Expected class name "%s" had differing '
+                             'actual name "%s"' % (expected_name, actual))
 
   def testDuplicatedNodesProduceDeduplicatedClassNames(self):
 
@@ -81,18 +84,46 @@ class ApiTest(basetest.TestCase):
     api = self.ApiFromDiscoveryDoc('duplicated.v1.json')
 
     # given a loaded api, extract each of the nodes to be tested
+
+    # duplicated
     root = api.values.get('resources')[0]
+
+    # duplicated.methods.duplicated
     root_method = root.values.get('methods')[0]
+
+    # duplicated.resources.duplicated
     duplicated_child = root.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.methods.duplicated
     duplicated_child_method = duplicated_child.values.get('methods')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated
+    duplicated_grandchild = duplicated_child.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated.resources.duplicated
+    duplicated_greatgrandchild = duplicated_grandchild.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated.resources.duplicated
+    duplicated_greatgreatgrandchild = duplicated_greatgrandchild.values.get('resources')[0]
+
+    # duplicated.resources.nonduplicated
     nonduplicated_child = root.values.get('resources')[1]
+
+    # duplicated.resources.nonduplicated.methods.duplicated
     nonduplicated_child_method_duplicated = \
         nonduplicated_child.values.get('methods')[0]
+
+    # duplicated.resources.nonduplicated.methods.nonduplicated
     nonduplicated_child_method_nonduplicated = \
         nonduplicated_child.values.get('methods')[1]
-    duplicated_grandchild = nonduplicated_child.values.get('resources')[0]
-    duplicated_grandchild_method = \
-        duplicated_grandchild.values.get('methods')[0]
+
+    # duplicated.resources.nonduplicated.resources.duplicated
+    nonduplicated_duplicated_child = nonduplicated_child.values.get('resources')[0]
+
+    # duplicated.resources.nonduplicated.resources.duplicated.methods.duplicated
+    nonduplicated_duplicated_child_method = \
+        nonduplicated_duplicated_child.values.get('methods')[0]
+
 
     # confirm each of the CodeObject nodes have the expected class names
 
@@ -104,15 +135,24 @@ class ApiTest(basetest.TestCase):
     # the other being a resource. The method should have the `Request` suffix
     self._assertClassNameEquals(root_method, 'DuplicatedRequest')
 
-    # The first child of root that is a resource shuold have it's first
-    # ancestor class name prepended
-    self._assertClassNameEquals(duplicated_child, 'Duplicated_Duplicated')
+    # The first child of root that is a resource should have the `Child` prefix
+    self._assertClassNameEquals(duplicated_child, 'ChildDuplicated')
 
-    # The child resource's method has the same name but there is no need to use
-    # the parent_child name fashion. The root's child method having the same
-    # name should not cause errors because duplication only matters with
-    # ancestors in the path from root to the node in question
-    self._assertClassNameEquals(duplicated_child_method, 'DuplicatedRequest')
+    # The first duplicated child's same-named method should have the same
+    # name as its first parent with `Request` as suffix
+    self._assertClassNameEquals(duplicated_child_method, 'ChildDuplicatedRequest')
+
+    # A third occurrence in the path should use the `GrandChild` prefix
+    self._assertClassNameEquals(duplicated_grandchild, 'GrandChildDuplicated')
+
+    # A fourth occurrence in the path should use the `GreatGrandChild` prefix
+    self._assertClassNameEquals(duplicated_greatgrandchild,
+                                'GreatGrandChildDuplicated')
+
+    # A fifth occurrence in the path should use the `GreatGreatGrandChild`
+    # prefix (and so on)
+    self._assertClassNameEquals(duplicated_greatgreatgrandchild,
+                                'GreatGreatGrandChildDuplicated')
 
     # The non-duplicated node should have its name intact
     self._assertClassNameEquals(nonduplicated_child, 'Nonduplicated')
@@ -123,23 +163,22 @@ class ApiTest(basetest.TestCase):
                            'NonduplicatedRequest')
 
     # The method node with a same-named sibling should have its name with a
-    # `Request` suffix. A prefix may apply if there is duplication in
-    # the root-node path
+    # `Request` suffix. A prefix may also apply if there is duplication in
+    # the root-node path (which occurs in this duplicated.nonduplicated.duplicated case)
     self._assertClassNameEquals(nonduplicated_child_method_duplicated,
-                           'Nonduplicated_DuplicatedRequest')
+                           'ChildDuplicatedRequest')
 
     # The resource node with a same-named sibling should have its name without
-    # suffixes, but a prefix may apply if there is duplication in the root-node
+    # suffixes, but a prefix applies since there is duplication in the root-node
     # path
-    self._assertClassNameEquals(duplicated_grandchild,
-                           'Nonduplicated_Duplicated')
+    self._assertClassNameEquals(nonduplicated_duplicated_child,
+                           'ChildDuplicated')
 
     # This method has a parent res with the same name, but the previous logic to
     # hande duplication was intended to deal with this particular case by simply
     # adding `Request`, so we don't prepend the first ancestor to "respect" this
     # already existing logic
-    self._assertClassNameEquals(duplicated_grandchild_method, 'DuplicatedRequest')
-    pass
+    self._assertClassNameEquals(nonduplicated_duplicated_child_method, 'ChildDuplicatedRequest')
 
   def testLazySchemaForCreation(self):
     """Check loading schemas which are known to have a forward reference.

@@ -38,7 +38,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricValue extends com.g
   private GoogleTypeDecimal decimalValue;
 
   /**
-   * Confidence interval of a value that is of type type.Decimal.
+   * Confidence interval of a value that is of type `type.Decimal`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricValue extends com.g
   }
 
   /**
-   * Confidence interval of a value that is of type type.Decimal.
+   * Confidence interval of a value that is of type `type.Decimal`.
    * @return value or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval getDecimalValueConfidenceInterval() {
@@ -77,7 +77,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricValue extends com.g
   }
 
   /**
-   * Confidence interval of a value that is of type type.Decimal.
+   * Confidence interval of a value that is of type `type.Decimal`.
    * @param decimalValueConfidenceInterval decimalValueConfidenceInterval or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1MetricValue setDecimalValueConfidenceInterval(GooglePlayDeveloperReportingV1alpha1DecimalConfidenceInterval decimalValueConfidenceInterval) {

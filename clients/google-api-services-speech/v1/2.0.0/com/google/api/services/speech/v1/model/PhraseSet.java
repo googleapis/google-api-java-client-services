@@ -44,6 +44,25 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
   private java.lang.Float boost;
 
   /**
+   * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with
+   * which the content of the PhraseSet is encrypted. The expected format is
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
+   * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-
+   * hierarchy#key_versions) with which content of the PhraseSet is encrypted. The expected format
+   * is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoK
+   * eyVersions/{crypto_key_version}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyVersionName;
+
+  /**
    * The resource name of the phrase set.
    * The value may be {@code null}.
    */
@@ -89,6 +108,50 @@ public final class PhraseSet extends com.google.api.client.json.GenericJson {
    */
   public PhraseSet setBoost(java.lang.Float boost) {
     this.boost = boost;
+    return this;
+  }
+
+  /**
+   * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with
+   * which the content of the PhraseSet is encrypted. The expected format is
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with
+   * which the content of the PhraseSet is encrypted. The expected format is
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public PhraseSet setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-
+   * hierarchy#key_versions) with which content of the PhraseSet is encrypted. The expected format
+   * is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoK
+   * eyVersions/{crypto_key_version}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyVersionName() {
+    return kmsKeyVersionName;
+  }
+
+  /**
+   * Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-
+   * hierarchy#key_versions) with which content of the PhraseSet is encrypted. The expected format
+   * is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoK
+   * eyVersions/{crypto_key_version}`.
+   * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
+   */
+  public PhraseSet setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {
+    this.kmsKeyVersionName = kmsKeyVersionName;
     return this;
   }
 

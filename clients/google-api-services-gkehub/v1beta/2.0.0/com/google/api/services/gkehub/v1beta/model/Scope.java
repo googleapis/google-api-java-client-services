@@ -30,6 +30,13 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class Scope extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, all Memberships in the Fleet bind to this Scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allMemberships;
+
+  /**
    * Output only. When the scope was created.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class Scope extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * If true, all Memberships in the Fleet bind to this Scope.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllMemberships() {
+    return allMemberships;
+  }
+
+  /**
+   * If true, all Memberships in the Fleet bind to this Scope.
+   * @param allMemberships allMemberships or {@code null} for none
+   */
+  public Scope setAllMemberships(java.lang.Boolean allMemberships) {
+    this.allMemberships = allMemberships;
+    return this;
+  }
 
   /**
    * Output only. When the scope was created.

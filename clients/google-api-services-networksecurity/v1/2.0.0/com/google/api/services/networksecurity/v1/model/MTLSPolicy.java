@@ -30,18 +30,18 @@ package com.google.api.services.networksecurity.v1.model;
 public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
-   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
+   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * validate the client certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ValidationCA> clientValidationCa;
 
   /**
-   * Specifies whether client connections proceed when a client presents an invalid certificate or
-   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
-   * Director it must be empty.
+   * When the client presents an invalid certificate or no certificate to the load balancer, the
+   * `client_validation_mode` specifies how the client connection is handled. Required if the policy
+   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,16 +50,16 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientValidationTrustConfig;
 
   /**
-   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
-   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
+   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * validate the client certificate.
    * @return value or {@code null} for none
    */
   public java.util.List<ValidationCA> getClientValidationCa() {
@@ -67,9 +67,9 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required if the policy is to be used with Traffic Director. For External HTTPS LB it must be
-   * empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the
-   * client certificate.
+   * Required if the policy is to be used with Traffic Director. For external HTTPS load balancers
+   * it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to
+   * validate the client certificate.
    * @param clientValidationCa clientValidationCa or {@code null} for none
    */
   public MTLSPolicy setClientValidationCa(java.util.List<ValidationCA> clientValidationCa) {
@@ -78,9 +78,9 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether client connections proceed when a client presents an invalid certificate or
-   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
-   * Director it must be empty.
+   * When the client presents an invalid certificate or no certificate to the load balancer, the
+   * `client_validation_mode` specifies how the client connection is handled. Required if the policy
+   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientValidationMode() {
@@ -88,9 +88,9 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether client connections proceed when a client presents an invalid certificate or
-   * no certificate. Required if the policy is to be used with the External HTTPS LB. For Traffic
-   * Director it must be empty.
+   * When the client presents an invalid certificate or no certificate to the load balancer, the
+   * `client_validation_mode` specifies how the client connection is handled. Required if the policy
+   * is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
    * @param clientValidationMode clientValidationMode or {@code null} for none
    */
   public MTLSPolicy setClientValidationMode(java.lang.String clientValidationMode) {
@@ -101,7 +101,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientValidationTrustConfig() {
@@ -111,7 +111,7 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
-   * TrustConfig. Allowed only if the policy is to be used with External HTTPS LB.
+   * TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
    * @param clientValidationTrustConfig clientValidationTrustConfig or {@code null} for none
    */
   public MTLSPolicy setClientValidationTrustConfig(java.lang.String clientValidationTrustConfig) {

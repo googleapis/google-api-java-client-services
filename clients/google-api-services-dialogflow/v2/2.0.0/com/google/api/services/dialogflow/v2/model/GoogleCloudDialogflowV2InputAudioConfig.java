@@ -46,6 +46,13 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   private java.lang.Boolean disableNoSpeechRecognizedEvent;
 
   /**
+   * Enable automatic punctuation option at the speech backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAutomaticPunctuation;
+
+  /**
    * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
    * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
    * Speech doesn't return any word-level information.
@@ -162,6 +169,23 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    */
   public GoogleCloudDialogflowV2InputAudioConfig setDisableNoSpeechRecognizedEvent(java.lang.Boolean disableNoSpeechRecognizedEvent) {
     this.disableNoSpeechRecognizedEvent = disableNoSpeechRecognizedEvent;
+    return this;
+  }
+
+  /**
+   * Enable automatic punctuation option at the speech backend.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAutomaticPunctuation() {
+    return enableAutomaticPunctuation;
+  }
+
+  /**
+   * Enable automatic punctuation option at the speech backend.
+   * @param enableAutomaticPunctuation enableAutomaticPunctuation or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2InputAudioConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
+    this.enableAutomaticPunctuation = enableAutomaticPunctuation;
     return this;
   }
 

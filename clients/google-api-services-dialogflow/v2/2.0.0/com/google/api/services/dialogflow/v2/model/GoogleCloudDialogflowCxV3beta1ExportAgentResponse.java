@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentResponse extends com
   private java.lang.String agentContent;
 
   /**
-   * The URI to a file containing the exported agent. This field is populated only if `agent_uri` is
+   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
    * specified in ExportAgentRequest.
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentResponse extends com
   }
 
   /**
-   * The URI to a file containing the exported agent. This field is populated only if `agent_uri` is
+   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
    * specified in ExportAgentRequest.
    * @return value or {@code null} for none
    */
@@ -99,7 +99,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentResponse extends com
   }
 
   /**
-   * The URI to a file containing the exported agent. This field is populated only if `agent_uri` is
+   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
    * specified in ExportAgentRequest.
    * @param agentUri agentUri or {@code null} for none
    */

@@ -103,6 +103,22 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> notificationEmails;
 
   /**
+   * This preference is communicated to Google personnel when sending an approval request but can be
+   * overridden if necessary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preferNoBroadApprovalRequests;
+
+  /**
+   * This preference is shared with Google personnel, but can be overridden if said personnel deems
+   * necessary. The approver ultimately can set the expiration at approval time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer preferredRequestExpirationDays;
+
+  /**
    * The asymmetric crypto key version to use for signing approval requests. Empty
    * active_key_version indicates that a Google-managed key should be used for signing. This
    * property will be ignored if set by an ancestor of this resource, and new non-empty values may
@@ -266,6 +282,44 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setNotificationEmails(java.util.List<java.lang.String> notificationEmails) {
     this.notificationEmails = notificationEmails;
+    return this;
+  }
+
+  /**
+   * This preference is communicated to Google personnel when sending an approval request but can be
+   * overridden if necessary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreferNoBroadApprovalRequests() {
+    return preferNoBroadApprovalRequests;
+  }
+
+  /**
+   * This preference is communicated to Google personnel when sending an approval request but can be
+   * overridden if necessary.
+   * @param preferNoBroadApprovalRequests preferNoBroadApprovalRequests or {@code null} for none
+   */
+  public AccessApprovalSettings setPreferNoBroadApprovalRequests(java.lang.Boolean preferNoBroadApprovalRequests) {
+    this.preferNoBroadApprovalRequests = preferNoBroadApprovalRequests;
+    return this;
+  }
+
+  /**
+   * This preference is shared with Google personnel, but can be overridden if said personnel deems
+   * necessary. The approver ultimately can set the expiration at approval time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPreferredRequestExpirationDays() {
+    return preferredRequestExpirationDays;
+  }
+
+  /**
+   * This preference is shared with Google personnel, but can be overridden if said personnel deems
+   * necessary. The approver ultimately can set the expiration at approval time.
+   * @param preferredRequestExpirationDays preferredRequestExpirationDays or {@code null} for none
+   */
+  public AccessApprovalSettings setPreferredRequestExpirationDays(java.lang.Integer preferredRequestExpirationDays) {
+    this.preferredRequestExpirationDays = preferredRequestExpirationDays;
     return this;
   }
 

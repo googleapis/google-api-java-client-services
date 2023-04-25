@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * Workload monitoring Violation. Next Id: 22
+ * Workload monitoring Violation. Next Id: 27
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -85,13 +85,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String exceptionAuditLogLink;
-
-  /**
-   * Output only. List of all the exception detail added for the violation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> exceptionContexts;
 
   /**
    * Output only. Immutable. Name of the Violation. Format: organizations/{organization}/locations/{
@@ -278,23 +271,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setExceptionAuditLogLink(java.lang.String exceptionAuditLogLink) {
     this.exceptionAuditLogLink = exceptionAuditLogLink;
-    return this;
-  }
-
-  /**
-   * Output only. List of all the exception detail added for the violation.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> getExceptionContexts() {
-    return exceptionContexts;
-  }
-
-  /**
-   * Output only. List of all the exception detail added for the violation.
-   * @param exceptionContexts exceptionContexts or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1beta1Violation setExceptionContexts(java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> exceptionContexts) {
-    this.exceptionContexts = exceptionContexts;
     return this;
   }
 

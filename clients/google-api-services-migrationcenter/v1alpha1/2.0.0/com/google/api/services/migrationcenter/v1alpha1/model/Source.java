@@ -79,6 +79,13 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.Integer priority;
 
   /**
+   * Output only. The state of the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Data source type.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setPriority(java.lang.Integer priority) {
     this.priority = priority;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state of the source.
+   * @param state state or {@code null} for none
+   */
+  public Source setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

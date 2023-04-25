@@ -73,6 +73,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.util.List<java.lang.String> compliantButDisallowedServices;
 
   /**
+   * Output only. Controls associated with the customer workload
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls controls;
+
+  /**
    * Output only. Immutable. The Workload creation timestamp.
    * The value may be {@code null}.
    */
@@ -313,6 +320,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setCompliantButDisallowedServices(java.util.List<java.lang.String> compliantButDisallowedServices) {
     this.compliantButDisallowedServices = compliantButDisallowedServices;
+    return this;
+  }
+
+  /**
+   * Output only. Controls associated with the customer workload
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls getControls() {
+    return controls;
+  }
+
+  /**
+   * Output only. Controls associated with the customer workload
+   * @param controls controls or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setControls(GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls controls) {
+    this.controls = controls;
     return this;
   }
 

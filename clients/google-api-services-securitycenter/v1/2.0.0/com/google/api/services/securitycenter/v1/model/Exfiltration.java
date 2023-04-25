@@ -17,9 +17,9 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Exfiltration represents a data exfiltration attempt of one or more sources to one or more
- * targets. Sources represent the source of data that is exfiltrated, and Targets represents the
- * destination the data was copied to.
+ * Exfiltration represents a data exfiltration attempt from one or more sources to one or more
+ * targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets`
+ * attribute lists the destinations the data was copied to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

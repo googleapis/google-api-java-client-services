@@ -31,14 +31,14 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name for binding.
+   * Name for the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Namespace for binding.
+   * Namespace for the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   private java.util.List<Subject> subjects;
 
   /**
-   * Name for binding.
+   * Name for the binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -68,7 +68,7 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   }
 
   /**
-   * Name for binding.
+   * Name for the binding.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Binding setName(java.lang.String name) {
@@ -77,7 +77,7 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   }
 
   /**
-   * Namespace for binding.
+   * Namespace for the binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -85,7 +85,7 @@ public final class GoogleCloudSecuritycenterV1Binding extends com.google.api.cli
   }
 
   /**
-   * Namespace for binding.
+   * Namespace for the binding.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Binding setNs(java.lang.String ns) {

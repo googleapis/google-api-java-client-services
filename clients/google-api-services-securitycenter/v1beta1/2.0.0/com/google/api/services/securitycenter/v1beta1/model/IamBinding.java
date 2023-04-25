@@ -38,7 +38,8 @@ public final class IamBinding extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+   * A single identity requesting access for a Cloud Platform resource, for example,
+   * "foo@google.com".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class IamBinding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+   * A single identity requesting access for a Cloud Platform resource, for example,
+   * "foo@google.com".
    * @return value or {@code null} for none
    */
   public java.lang.String getMember() {
@@ -78,7 +80,8 @@ public final class IamBinding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+   * A single identity requesting access for a Cloud Platform resource, for example,
+   * "foo@google.com".
    * @param member member or {@code null} for none
    */
   public IamBinding setMember(java.lang.String member) {

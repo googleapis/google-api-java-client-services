@@ -17,9 +17,9 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * A clause for defining either a simple or sequence filter. A filter can be inclusive (i.e., users
- * satisfying the filter clause are included in the Audience) or exclusive (i.e., users satisfying
- * the filter clause are excluded from the Audience).
+ * A clause for defining either a simple or sequence filter. A filter can be inclusive (For example,
+ * users satisfying the filter clause are included in the Audience) or exclusive (For example, users
+ * satisfying the filter clause are excluded from the Audience).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed

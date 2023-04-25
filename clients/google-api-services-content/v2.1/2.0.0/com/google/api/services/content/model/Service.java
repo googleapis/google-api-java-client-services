@@ -117,7 +117,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
-   * "`pickup`"
+   * "`pickup`" - "`local_delivery`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +321,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
-   * "`pickup`"
+   * "`pickup`" - "`local_delivery`"
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentType() {
@@ -330,7 +330,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of locations this service ships orders to. Acceptable values are: - "`delivery`" -
-   * "`pickup`"
+   * "`pickup`" - "`local_delivery`"
    * @param shipmentType shipmentType or {@code null} for none
    */
   public Service setShipmentType(java.lang.String shipmentType) {

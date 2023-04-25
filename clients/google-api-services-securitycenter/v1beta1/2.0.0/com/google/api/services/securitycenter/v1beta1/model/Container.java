@@ -31,7 +31,7 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional container image id, when provided by the container runtime. Uniquely identifies the
+   * Optional container image ID, if provided by the container runtime. Uniquely identifies the
    * container image launched using a container image digest.
    * The value may be {@code null}.
    */
@@ -46,22 +46,22 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<Label> labels;
 
   /**
-   * Container name.
+   * Name of the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Container image URI provided when configuring a pod/container. May identify a container image
-   * version using mutable tags.
+   * Container image URI provided when configuring a pod or container. This string can identify a
+   * container image version using mutable tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Optional container image id, when provided by the container runtime. Uniquely identifies the
+   * Optional container image ID, if provided by the container runtime. Uniquely identifies the
    * container image launched using a container image digest.
    * @return value or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional container image id, when provided by the container runtime. Uniquely identifies the
+   * Optional container image ID, if provided by the container runtime. Uniquely identifies the
    * container image launched using a container image digest.
    * @param imageId imageId or {@code null} for none
    */
@@ -97,7 +97,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container name.
+   * Name of the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,7 +105,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container name.
+   * Name of the container.
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -114,8 +114,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container image URI provided when configuring a pod/container. May identify a container image
-   * version using mutable tags.
+   * Container image URI provided when configuring a pod or container. This string can identify a
+   * container image version using mutable tags.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -123,8 +123,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container image URI provided when configuring a pod/container. May identify a container image
-   * version using mutable tags.
+   * Container image URI provided when configuring a pod or container. This string can identify a
+   * container image version using mutable tags.
    * @param uri uri or {@code null} for none
    */
   public Container setUri(java.lang.String uri) {

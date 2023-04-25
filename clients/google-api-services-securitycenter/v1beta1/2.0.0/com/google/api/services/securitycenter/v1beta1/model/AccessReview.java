@@ -17,8 +17,9 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Conveys information about a Kubernetes access review (e.g. kubectl auth can-i ...) that was
- * involved in a finding.
+ * Conveys information about a Kubernetes access review (such as one returned by a [`kubectl auth
+ * can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-
+ * access) command) that was involved in a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,14 +33,14 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class AccessReview extends com.google.api.client.json.GenericJson {
 
   /**
-   * Group is the API Group of the Resource. "*" means all.
+   * The API group of the resource. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String group;
 
   /**
-   * Name is the name of the resource being requested. Empty means all.
+   * The name of the resource being requested. Empty means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,36 +55,36 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   private java.lang.String ns;
 
   /**
-   * Resource is the optional resource type requested. "*" means all.
+   * The optional resource type requested. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * Subresource is the optional subresource type.
+   * The optional subresource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subresource;
 
   /**
-   * Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.
-   * "*" means all.
+   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
+   * all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String verb;
 
   /**
-   * Version is the API Version of the Resource. "*" means all.
+   * The API version of the resource. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Group is the API Group of the Resource. "*" means all.
+   * The API group of the resource. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -91,7 +92,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Group is the API Group of the Resource. "*" means all.
+   * The API group of the resource. "*" means all.
    * @param group group or {@code null} for none
    */
   public AccessReview setGroup(java.lang.String group) {
@@ -100,7 +101,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name is the name of the resource being requested. Empty means all.
+   * The name of the resource being requested. Empty means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +109,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name is the name of the resource being requested. Empty means all.
+   * The name of the resource being requested. Empty means all.
    * @param name name or {@code null} for none
    */
   public AccessReview setName(java.lang.String name) {
@@ -136,7 +137,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource is the optional resource type requested. "*" means all.
+   * The optional resource type requested. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -144,7 +145,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource is the optional resource type requested. "*" means all.
+   * The optional resource type requested. "*" means all.
    * @param resource resource or {@code null} for none
    */
   public AccessReview setResource(java.lang.String resource) {
@@ -153,7 +154,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subresource is the optional subresource type.
+   * The optional subresource type.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubresource() {
@@ -161,7 +162,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subresource is the optional subresource type.
+   * The optional subresource type.
    * @param subresource subresource or {@code null} for none
    */
   public AccessReview setSubresource(java.lang.String subresource) {
@@ -170,8 +171,8 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.
-   * "*" means all.
+   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
+   * all.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerb() {
@@ -179,8 +180,8 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.
-   * "*" means all.
+   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
+   * all.
    * @param verb verb or {@code null} for none
    */
   public AccessReview setVerb(java.lang.String verb) {
@@ -189,7 +190,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version is the API Version of the Resource. "*" means all.
+   * The API version of the resource. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -197,7 +198,7 @@ public final class AccessReview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version is the API Version of the Resource. "*" means all.
+   * The API version of the resource. "*" means all.
    * @param version version or {@code null} for none
    */
   public AccessReview setVersion(java.lang.String version) {

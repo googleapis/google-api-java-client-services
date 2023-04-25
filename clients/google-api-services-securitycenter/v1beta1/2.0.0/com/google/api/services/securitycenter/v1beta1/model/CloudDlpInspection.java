@@ -39,8 +39,8 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   private java.lang.Boolean fullScan;
 
   /**
-   * The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for
-   * example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
+   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for
-   * example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
+   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInfoType() {
@@ -87,8 +87,8 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for
-   * example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
+   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * @param infoType infoType or {@code null} for none
    */
   public CloudDlpInspection setInfoType(java.lang.String infoType) {

@@ -85,22 +85,22 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The process name visible in utilities like `top` and `ps`; it can be accessed via
-   * `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
+   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The parent process id.
+   * The parent process ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long parentPid;
 
   /**
-   * The process id.
+   * The process ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -108,7 +108,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
 
   /**
    * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter while `script` provides information about the script file provided to the
+   * interpreter, while `script` provides information about the script file provided to the
    * interpreter.
    * The value may be {@code null}.
    */
@@ -218,8 +218,8 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The process name visible in utilities like `top` and `ps`; it can be accessed via
-   * `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
+   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,8 +227,8 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The process name visible in utilities like `top` and `ps`; it can be accessed via
-   * `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
+   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * @param name name or {@code null} for none
    */
   public Process setName(java.lang.String name) {
@@ -237,7 +237,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parent process id.
+   * The parent process ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getParentPid() {
@@ -245,7 +245,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parent process id.
+   * The parent process ID.
    * @param parentPid parentPid or {@code null} for none
    */
   public Process setParentPid(java.lang.Long parentPid) {
@@ -254,7 +254,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The process id.
+   * The process ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPid() {
@@ -262,7 +262,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The process id.
+   * The process ID.
    * @param pid pid or {@code null} for none
    */
   public Process setPid(java.lang.Long pid) {
@@ -272,7 +272,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
 
   /**
    * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter while `script` provides information about the script file provided to the
+   * interpreter, while `script` provides information about the script file provided to the
    * interpreter.
    * @return value or {@code null} for none
    */
@@ -282,7 +282,7 @@ public final class Process extends com.google.api.client.json.GenericJson {
 
   /**
    * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter while `script` provides information about the script file provided to the
+   * interpreter, while `script` provides information about the script file provided to the
    * interpreter.
    * @param script script or {@code null} for none
    */

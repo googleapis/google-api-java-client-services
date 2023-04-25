@@ -17,8 +17,10 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Label represents a generic name=value label. Label has separate name and value fields to support
- * filtering with contains().
+ * Represents a generic name-value label. A label has separate name and value fields to support
+ * filtering with the `contains()` function. For more information, see [Filtering on array-type
+ * fields](https://cloud.google.com/security-command-center/docs/how-to-api-list-findings#array-
+ * contains-filtering).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,21 +34,21 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
-   * Label name.
+   * Name of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Label value.
+   * Value that corresponds to the label's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Label name.
+   * Name of the label.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,7 +56,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Label name.
+   * Name of the label.
    * @param name name or {@code null} for none
    */
   public Label setName(java.lang.String name) {
@@ -63,7 +65,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Label value.
+   * Value that corresponds to the label's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -71,7 +73,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Label value.
+   * Value that corresponds to the label's name.
    * @param value value or {@code null} for none
    */
   public Label setValue(java.lang.String value) {

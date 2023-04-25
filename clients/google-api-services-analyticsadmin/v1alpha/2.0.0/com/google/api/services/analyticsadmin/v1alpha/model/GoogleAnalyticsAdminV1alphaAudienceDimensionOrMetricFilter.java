@@ -49,7 +49,12 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
   private GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterBetweenFilter betweenFilter;
 
   /**
-   * Required. Immutable. The dimension name or metric name to filter.
+   * Required. Immutable. The dimension name or metric name to filter. If the field name refers to a
+   * custom dimension or metric, a scope prefix will be added to the front of the custom dimensions
+   * or metric name. For more on scope prefixes or custom dimensions/metrics, reference the [Google
+   * Analytics Data API documentation]
+   * (https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#custom_dimensions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +62,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
 
   /**
    * Optional. If set, specifies the time window for which to evaluate data in number of days. If
-   * not set, then audience data is evaluated against lifetime data (i.e., infinite time window).
-   * For example, if set to 1 day, only the current day's data is evaluated. The reference point is
-   * the current day when at_any_point_in_time is unset or false. It can only be set when Audience
-   * scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+   * not set, then audience data is evaluated against lifetime data (For example, infinite time
+   * window). For example, if set to 1 day, only the current day's data is evaluated. The reference
+   * point is the current day when at_any_point_in_time is unset or false. It can only be set when
+   * Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +135,12 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
   }
 
   /**
-   * Required. Immutable. The dimension name or metric name to filter.
+   * Required. Immutable. The dimension name or metric name to filter. If the field name refers to a
+   * custom dimension or metric, a scope prefix will be added to the front of the custom dimensions
+   * or metric name. For more on scope prefixes or custom dimensions/metrics, reference the [Google
+   * Analytics Data API documentation]
+   * (https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#custom_dimensions).
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -138,7 +148,12 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
   }
 
   /**
-   * Required. Immutable. The dimension name or metric name to filter.
+   * Required. Immutable. The dimension name or metric name to filter. If the field name refers to a
+   * custom dimension or metric, a scope prefix will be added to the front of the custom dimensions
+   * or metric name. For more on scope prefixes or custom dimensions/metrics, reference the [Google
+   * Analytics Data API documentation]
+   * (https://developers.google.com/analytics/devguides/reporting/data/v1/api-
+   * schema#custom_dimensions).
    * @param fieldName fieldName or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter setFieldName(java.lang.String fieldName) {
@@ -148,10 +163,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
 
   /**
    * Optional. If set, specifies the time window for which to evaluate data in number of days. If
-   * not set, then audience data is evaluated against lifetime data (i.e., infinite time window).
-   * For example, if set to 1 day, only the current day's data is evaluated. The reference point is
-   * the current day when at_any_point_in_time is unset or false. It can only be set when Audience
-   * scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+   * not set, then audience data is evaluated against lifetime data (For example, infinite time
+   * window). For example, if set to 1 day, only the current day's data is evaluated. The reference
+   * point is the current day when at_any_point_in_time is unset or false. It can only be set when
+   * Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInAnyNDayPeriod() {
@@ -160,10 +175,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter ex
 
   /**
    * Optional. If set, specifies the time window for which to evaluate data in number of days. If
-   * not set, then audience data is evaluated against lifetime data (i.e., infinite time window).
-   * For example, if set to 1 day, only the current day's data is evaluated. The reference point is
-   * the current day when at_any_point_in_time is unset or false. It can only be set when Audience
-   * scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
+   * not set, then audience data is evaluated against lifetime data (For example, infinite time
+   * window). For example, if set to 1 day, only the current day's data is evaluated. The reference
+   * point is the current day when at_any_point_in_time is unset or false. It can only be set when
+   * Audience scope is ACROSS_ALL_SESSIONS and cannot be greater than 60 days.
    * @param inAnyNDayPeriod inAnyNDayPeriod or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilter setInAnyNDayPeriod(java.lang.Integer inAnyNDayPeriod) {

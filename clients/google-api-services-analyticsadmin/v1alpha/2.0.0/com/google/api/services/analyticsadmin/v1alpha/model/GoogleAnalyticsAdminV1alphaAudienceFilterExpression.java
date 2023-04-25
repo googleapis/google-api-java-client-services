@@ -55,7 +55,7 @@ public final class GoogleAnalyticsAdminV1alphaAudienceFilterExpression extends c
   private GoogleAnalyticsAdminV1alphaAudienceEventFilter eventFilter;
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It can only include a
+   * A filter expression to be NOT'ed (For example, inverted, complemented). It can only include a
    * dimension_or_metric_filter. This cannot be set on the top level AudienceFilterExpression.
    * The value may be {@code null}.
    */
@@ -128,7 +128,7 @@ public final class GoogleAnalyticsAdminV1alphaAudienceFilterExpression extends c
   }
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It can only include a
+   * A filter expression to be NOT'ed (For example, inverted, complemented). It can only include a
    * dimension_or_metric_filter. This cannot be set on the top level AudienceFilterExpression.
    * @return value or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class GoogleAnalyticsAdminV1alphaAudienceFilterExpression extends c
   }
 
   /**
-   * A filter expression to be NOT'ed (i.e., inverted, complemented). It can only include a
+   * A filter expression to be NOT'ed (For example, inverted, complemented). It can only include a
    * dimension_or_metric_filter. This cannot be set on the top level AudienceFilterExpression.
    * @param notExpression notExpression or {@code null} for none
    */

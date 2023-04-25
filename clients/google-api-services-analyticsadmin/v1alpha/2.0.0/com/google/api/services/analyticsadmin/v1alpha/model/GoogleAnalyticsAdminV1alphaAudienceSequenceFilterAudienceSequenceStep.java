@@ -32,8 +32,8 @@ public final class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequ
 
   /**
    * Optional. When set, this step must be satisfied within the constraint_duration of the previous
-   * step (i.e., t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement
-   * (the duration is effectively unlimited). It is ignored for the first step.
+   * step (For example, t[i] - t[i-1] <= constraint_duration). If not set, there is no duration
+   * requirement (the duration is effectively unlimited). It is ignored for the first step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequ
 
   /**
    * Optional. When set, this step must be satisfied within the constraint_duration of the previous
-   * step (i.e., t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement
-   * (the duration is effectively unlimited). It is ignored for the first step.
+   * step (For example, t[i] - t[i-1] <= constraint_duration). If not set, there is no duration
+   * requirement (the duration is effectively unlimited). It is ignored for the first step.
    * @return value or {@code null} for none
    */
   public String getConstraintDuration() {
@@ -76,8 +76,8 @@ public final class GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequ
 
   /**
    * Optional. When set, this step must be satisfied within the constraint_duration of the previous
-   * step (i.e., t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement
-   * (the duration is effectively unlimited). It is ignored for the first step.
+   * step (For example, t[i] - t[i-1] <= constraint_duration). If not set, there is no duration
+   * requirement (the duration is effectively unlimited). It is ignored for the first step.
    * @param constraintDuration constraintDuration or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep setConstraintDuration(String constraintDuration) {

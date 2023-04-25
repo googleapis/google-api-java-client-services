@@ -42,10 +42,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceEventFilter extends com.go
   /**
    * Optional. If specified, this filter matches events that match both the single event name and
    * the parameter filter expressions. AudienceEventFilter inside the parameter filter expression
-   * cannot be set (i.e., nested event filters are not supported). This should be a single and_group
-   * of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also, if it
-   * includes a filter for "eventCount", only that one will be considered; all the other filters
-   * will be ignored.
+   * cannot be set (For example, nested event filters are not supported). This should be a single
+   * and_group of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also,
+   * if it includes a filter for "eventCount", only that one will be considered; all the other
+   * filters will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +71,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceEventFilter extends com.go
   /**
    * Optional. If specified, this filter matches events that match both the single event name and
    * the parameter filter expressions. AudienceEventFilter inside the parameter filter expression
-   * cannot be set (i.e., nested event filters are not supported). This should be a single and_group
-   * of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also, if it
-   * includes a filter for "eventCount", only that one will be considered; all the other filters
-   * will be ignored.
+   * cannot be set (For example, nested event filters are not supported). This should be a single
+   * and_group of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also,
+   * if it includes a filter for "eventCount", only that one will be considered; all the other
+   * filters will be ignored.
    * @return value or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudienceFilterExpression getEventParameterFilterExpression() {
@@ -84,10 +84,10 @@ public final class GoogleAnalyticsAdminV1alphaAudienceEventFilter extends com.go
   /**
    * Optional. If specified, this filter matches events that match both the single event name and
    * the parameter filter expressions. AudienceEventFilter inside the parameter filter expression
-   * cannot be set (i.e., nested event filters are not supported). This should be a single and_group
-   * of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also, if it
-   * includes a filter for "eventCount", only that one will be considered; all the other filters
-   * will be ignored.
+   * cannot be set (For example, nested event filters are not supported). This should be a single
+   * and_group of dimension_or_metric_filter or not_expression; ANDs of ORs are not supported. Also,
+   * if it includes a filter for "eventCount", only that one will be considered; all the other
+   * filters will be ignored.
    * @param eventParameterFilterExpression eventParameterFilterExpression or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaAudienceEventFilter setEventParameterFilterExpression(GoogleAnalyticsAdminV1alphaAudienceFilterExpression eventParameterFilterExpression) {

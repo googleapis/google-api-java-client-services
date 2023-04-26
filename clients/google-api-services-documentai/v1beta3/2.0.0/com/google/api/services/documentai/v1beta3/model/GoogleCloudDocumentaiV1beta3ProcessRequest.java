@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
-   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
    * document and pages field so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * The value may be {@code null}.
@@ -92,7 +92,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   }
 
   /**
-   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
    * document and pages field so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @return value or {@code null} for none
@@ -102,7 +102,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   }
 
   /**
-   * Specifies which fields to include in ProcessResponse's document. Only supports top level
+   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
    * document and pages field so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @param fieldMask fieldMask or {@code null} for none

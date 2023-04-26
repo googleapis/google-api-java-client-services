@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata e
   private GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation trainingDatasetValidation;
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata getCommonMetadata() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata e
   }
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @param commonMetadata commonMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {

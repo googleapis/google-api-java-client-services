@@ -41,6 +41,13 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   private java.util.List<java.lang.String> advancedOcrOptions;
 
   /**
+   * Turn on font id model and returns font style information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean computeStyleInfo;
+
+  /**
    * Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR
    * responses are of poor quality for a given input. Adds additional latency comparable to regular
    * OCR to the process call.
@@ -91,6 +98,23 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig setAdvancedOcrOptions(java.util.List<java.lang.String> advancedOcrOptions) {
     this.advancedOcrOptions = advancedOcrOptions;
+    return this;
+  }
+
+  /**
+   * Turn on font id model and returns font style information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getComputeStyleInfo() {
+    return computeStyleInfo;
+  }
+
+  /**
+   * Turn on font id model and returns font style information.
+   * @param computeStyleInfo computeStyleInfo or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3OcrConfig setComputeStyleInfo(java.lang.Boolean computeStyleInfo) {
+    this.computeStyleInfo = computeStyleInfo;
     return this;
   }
 

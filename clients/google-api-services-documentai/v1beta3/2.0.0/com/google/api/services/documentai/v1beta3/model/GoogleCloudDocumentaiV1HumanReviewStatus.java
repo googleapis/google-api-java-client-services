@@ -32,8 +32,8 @@ public final class GoogleCloudDocumentaiV1HumanReviewStatus extends com.google.a
 
   /**
    * The name of the operation triggered by the processed document. This field is populated only
-   * when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as
-   * the long running operation returned by [ReviewDocument] method.
+   * when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the
+   * long-running operation returned by ReviewDocument.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class GoogleCloudDocumentaiV1HumanReviewStatus extends com.google.a
 
   /**
    * The name of the operation triggered by the processed document. This field is populated only
-   * when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as
-   * the long running operation returned by [ReviewDocument] method.
+   * when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the
+   * long-running operation returned by ReviewDocument.
    * @return value or {@code null} for none
    */
   public java.lang.String getHumanReviewOperation() {
@@ -65,8 +65,8 @@ public final class GoogleCloudDocumentaiV1HumanReviewStatus extends com.google.a
 
   /**
    * The name of the operation triggered by the processed document. This field is populated only
-   * when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as
-   * the long running operation returned by [ReviewDocument] method.
+   * when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the
+   * long-running operation returned by ReviewDocument.
    * @param humanReviewOperation humanReviewOperation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1HumanReviewStatus setHumanReviewOperation(java.lang.String humanReviewOperation) {

@@ -21922,7 +21922,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * affected traffic is ready to receive it. This should only be necessary if the new
              * deployment will be capturing traffic from another environment under a shared
              * environment group or if traffic will be rerouted to a different environment due to a
-             * base path removal. The [GenerateDeployChangeReport API](GenerateDeployChangeReport)
+             * base path removal. The [generateDeployChangeReport API](generateDeployChangeReport)
              * may be used to examine routing changes before issuing the deployment request, and its
              * response will indicate if a sequenced rollout is recommended for the deployment.
              */
@@ -21935,7 +21935,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            routing before the new destination for the affected traffic is ready to receive it. This should
            only be necessary if the new deployment will be capturing traffic from another environment under a
            shared environment group or if traffic will be rerouted to a different environment due to a base
-           path removal. The [GenerateDeployChangeReport API](GenerateDeployChangeReport) may be used to
+           path removal. The [generateDeployChangeReport API](generateDeployChangeReport) may be used to
            examine routing changes before issuing the deployment request, and its response will indicate if a
            sequenced rollout is recommended for the deployment.
              */
@@ -21951,7 +21951,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * affected traffic is ready to receive it. This should only be necessary if the new
              * deployment will be capturing traffic from another environment under a shared
              * environment group or if traffic will be rerouted to a different environment due to a
-             * base path removal. The [GenerateDeployChangeReport API](GenerateDeployChangeReport)
+             * base path removal. The [generateDeployChangeReport API](generateDeployChangeReport)
              * may be used to examine routing changes before issuing the deployment request, and its
              * response will indicate if a sequenced rollout is recommended for the deployment.
              */

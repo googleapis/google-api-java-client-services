@@ -1468,7 +1468,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Inserts a resource containing information about a database inside a Cloud SQL instance.
+     * Inserts a resource containing information about a database inside a Cloud SQL instance. **Note:**
+     * You can't modify the default character set and collation.
      *
      * Create a request for the method "databases.insert".
      *
@@ -1492,6 +1493,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Inserts a resource containing information about a database inside a Cloud SQL instance.
+       * **Note:** You can't modify the default character set and collation.
        *
        * Create a request for the method "databases.insert".
        *

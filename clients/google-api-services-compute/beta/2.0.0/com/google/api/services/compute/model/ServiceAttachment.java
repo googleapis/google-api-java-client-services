@@ -155,6 +155,19 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private Uint128 pscServiceAttachmentId;
 
   /**
+   * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
+   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
+   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
+   * untouched regardless how the connection policy is modified . - If true, update will affect both
+   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
+   * moved to REJECTED if its project is added to the reject list. For newly created service
+   * attachment, this boolean defaults to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reconcileConnections;
+
+  /**
    * [Output Only] URL of the region where the service attachment resides. This field applies only
    * to the region resource. You must specify this field as part of the HTTP request URL. It is not
    * settable as a field in the request body.
@@ -501,6 +514,35 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setPscServiceAttachmentId(Uint128 pscServiceAttachmentId) {
     this.pscServiceAttachmentId = pscServiceAttachmentId;
+    return this;
+  }
+
+  /**
+   * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
+   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
+   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
+   * untouched regardless how the connection policy is modified . - If true, update will affect both
+   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
+   * moved to REJECTED if its project is added to the reject list. For newly created service
+   * attachment, this boolean defaults to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReconcileConnections() {
+    return reconcileConnections;
+  }
+
+  /**
+   * This flag determines whether a consumer accept/reject list change can reconcile the statuses of
+   * existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only
+   * affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain
+   * untouched regardless how the connection policy is modified . - If true, update will affect both
+   * PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be
+   * moved to REJECTED if its project is added to the reject list. For newly created service
+   * attachment, this boolean defaults to true.
+   * @param reconcileConnections reconcileConnections or {@code null} for none
+   */
+  public ServiceAttachment setReconcileConnections(java.lang.Boolean reconcileConnections) {
+    this.reconcileConnections = reconcileConnections;
     return this;
   }
 

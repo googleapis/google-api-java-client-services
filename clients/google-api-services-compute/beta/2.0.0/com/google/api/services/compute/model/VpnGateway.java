@@ -47,6 +47,14 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewayIpVersion;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -159,6 +167,25 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
    */
   public VpnGateway setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewayIpVersion() {
+    return gatewayIpVersion;
+  }
+
+  /**
+   * The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will
+   * be used.
+   * @param gatewayIpVersion gatewayIpVersion or {@code null} for none
+   */
+  public VpnGateway setGatewayIpVersion(java.lang.String gatewayIpVersion) {
+    this.gatewayIpVersion = gatewayIpVersion;
     return this;
   }
 

@@ -48,12 +48,12 @@ public final class GoogleCloudRetailV2CompleteQueryResponse extends com.google.a
 
   /**
    * Matched recent searches of this user. The maximum number of recent searches is 10. This field
-   * is a restricted feature. Contact Retail Search support team if you are interested in enabling
-   * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
-   * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
-   * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
-   * recent searches will be reserved when duplication happens.
+   * is a restricted feature. If you want to enable it, contact Retail Search support. This feature
+   * is only available when CompleteQueryRequest.visitor_id field is set and UserEvent is imported.
+   * The recent searches satisfy the follow rules: * They are ordered from latest to oldest. * They
+   * are matched with CompleteQueryRequest.query case insensitively. * They are transformed to lower
+   * case. * They are UTF-8 safe. Recent searches are deduplicated. More recent searches will be
+   * reserved when duplication happens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,12 +101,12 @@ public final class GoogleCloudRetailV2CompleteQueryResponse extends com.google.a
 
   /**
    * Matched recent searches of this user. The maximum number of recent searches is 10. This field
-   * is a restricted feature. Contact Retail Search support team if you are interested in enabling
-   * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
-   * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
-   * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
-   * recent searches will be reserved when duplication happens.
+   * is a restricted feature. If you want to enable it, contact Retail Search support. This feature
+   * is only available when CompleteQueryRequest.visitor_id field is set and UserEvent is imported.
+   * The recent searches satisfy the follow rules: * They are ordered from latest to oldest. * They
+   * are matched with CompleteQueryRequest.query case insensitively. * They are transformed to lower
+   * case. * They are UTF-8 safe. Recent searches are deduplicated. More recent searches will be
+   * reserved when duplication happens.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult> getRecentSearchResults() {
@@ -115,12 +115,12 @@ public final class GoogleCloudRetailV2CompleteQueryResponse extends com.google.a
 
   /**
    * Matched recent searches of this user. The maximum number of recent searches is 10. This field
-   * is a restricted feature. Contact Retail Search support team if you are interested in enabling
-   * it. This feature is only available when CompleteQueryRequest.visitor_id field is set and
-   * UserEvent is imported. The recent searches satisfy the follow rules: * They are ordered from
-   * latest to oldest. * They are matched with CompleteQueryRequest.query case insensitively. * They
-   * are transformed to lower case. * They are UTF-8 safe. Recent searches are deduplicated. More
-   * recent searches will be reserved when duplication happens.
+   * is a restricted feature. If you want to enable it, contact Retail Search support. This feature
+   * is only available when CompleteQueryRequest.visitor_id field is set and UserEvent is imported.
+   * The recent searches satisfy the follow rules: * They are ordered from latest to oldest. * They
+   * are matched with CompleteQueryRequest.query case insensitively. * They are transformed to lower
+   * case. * They are UTF-8 safe. Recent searches are deduplicated. More recent searches will be
+   * reserved when duplication happens.
    * @param recentSearchResults recentSearchResults or {@code null} for none
    */
   public GoogleCloudRetailV2CompleteQueryResponse setRecentSearchResults(java.util.List<GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult> recentSearchResults) {

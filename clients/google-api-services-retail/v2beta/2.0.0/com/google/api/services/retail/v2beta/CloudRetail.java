@@ -408,27 +408,27 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
-           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
-           * entity autocomplete results.
+           * The entity for customers who run multiple entities, domains, sites, or regions, for
+           * example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this
+           * is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete
+           * results.
            */
           @com.google.api.client.util.Key
           private java.lang.String entity;
 
-          /** The entity for customers that may run multiple different entities, domains, sites or regions, for
-         example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it
-         should be exactly matched with UserEvent.entity to get per-entity autocomplete results.
+          /** The entity for customers who run multiple entities, domains, sites, or regions, for example,
+         `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it must be an
+         exact match with UserEvent.entity to get per-entity autocomplete results.
            */
           public java.lang.String getEntity() {
             return entity;
           }
 
           /**
-           * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
-           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
-           * entity autocomplete results.
+           * The entity for customers who run multiple entities, domains, sites, or regions, for
+           * example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this
+           * is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete
+           * results.
            */
           public CompleteQuery setEntity(java.lang.String entity) {
             this.entity = entity;
@@ -2667,10 +2667,10 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           public class Products {
 
             /**
-             * It is recommended to use the ProductService.AddLocalInventories method instead of
-             * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results
-             * but provides more fine-grained control over ingesting local inventory data. Incrementally adds
-             * place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not
+             * We recommend that you use the ProductService.AddLocalInventories method instead of the
+             * ProductService.AddFulfillmentPlaces method. ProductService.AddLocalInventories achieves the same
+             * results but provides more fine-grained control over ingesting local inventory data. Incrementally
+             * adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not
              * require the Product to exist before updating fulfillment information. If the request is valid,
              * the update will be enqueued and processed downstream. As a consequence, when a response is
              * returned, the added place IDs are not immediately manifested in the Product queried by
@@ -2706,9 +2706,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
-               * It is recommended to use the ProductService.AddLocalInventories method instead of
-               * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same
-               * results but provides more fine-grained control over ingesting local inventory data.
+               * We recommend that you use the ProductService.AddLocalInventories method instead of the
+               * ProductService.AddFulfillmentPlaces method. ProductService.AddLocalInventories achieves the
+               * same results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -4146,15 +4146,15 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * It is recommended to use the ProductService.RemoveLocalInventories method instead of
-             * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
-             * results but provides more fine-grained control over ingesting local inventory data. Incrementally
-             * removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and
-             * does not require the Product to exist before updating fulfillment information. If the request is
-             * valid, the update will be enqueued and processed downstream. As a consequence, when a response is
-             * returned, the removed place IDs are not immediately manifested in the Product queried by
-             * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
-             * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
+             * We recommend that you use the ProductService.RemoveLocalInventories method instead of the
+             * ProductService.RemoveFulfillmentPlaces method. ProductService.RemoveLocalInventories achieves the
+             * same results but provides more fine-grained control over ingesting local inventory data.
+             * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
+             * asynchronous and does not require the Product to exist before updating fulfillment information.
+             * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
+             * when a response is returned, the removed place IDs are not immediately manifested in the Product
+             * queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will
+             * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete.
              *
@@ -4185,9 +4185,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
-               * It is recommended to use the ProductService.RemoveLocalInventories method instead of
-               * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
-               * results but provides more fine-grained control over ingesting local inventory data.
+               * We recommend that you use the ProductService.RemoveLocalInventories method instead of the
+               * ProductService.RemoveFulfillmentPlaces method. ProductService.RemoveLocalInventories achieves
+               * the same results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -7490,8 +7490,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
            * @return the request
            */
@@ -7523,8 +7523,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
              * @since 1.13
              */
@@ -7598,8 +7598,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -7608,7 +7608,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving config name and the set of models that will be used to make the search.
+           to identify the serving config name and the set of models that are used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -7619,8 +7619,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {
@@ -8943,8 +8943,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
            * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
            * @return the request
            */
@@ -8976,8 +8976,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
              * @param content the {@link com.google.api.services.retail.v2beta.model.GoogleCloudRetailV2betaSearchRequest}
              * @since 1.13
              */
@@ -9051,8 +9051,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -9061,7 +9061,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving config name and the set of models that will be used to make the search.
+           to identify the serving config name and the set of models that are used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -9072,8 +9072,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {

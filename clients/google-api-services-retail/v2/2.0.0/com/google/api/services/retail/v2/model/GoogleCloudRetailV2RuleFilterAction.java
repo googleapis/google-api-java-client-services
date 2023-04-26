@@ -36,8 +36,8 @@ public final class GoogleCloudRetailV2RuleFilterAction extends com.google.api.cl
 
   /**
    * A filter to apply on the matching condition results. Supported features: * filter must be set.
-   * * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search
-   * [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID
+   * * Filter syntax is identical to SearchRequest.filter. For more information, see
+   * [Filter](/retail/docs/filter-and-order#filter). * To filter products with product ID
    * "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) *
    * *AND * *(colorFamilies: ANY("Red", "Blue")) *
    * The value may be {@code null}.
@@ -47,8 +47,8 @@ public final class GoogleCloudRetailV2RuleFilterAction extends com.google.api.cl
 
   /**
    * A filter to apply on the matching condition results. Supported features: * filter must be set.
-   * * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search
-   * [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID
+   * * Filter syntax is identical to SearchRequest.filter. For more information, see
+   * [Filter](/retail/docs/filter-and-order#filter). * To filter products with product ID
    * "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) *
    * *AND * *(colorFamilies: ANY("Red", "Blue")) *
    * @return value or {@code null} for none
@@ -59,8 +59,8 @@ public final class GoogleCloudRetailV2RuleFilterAction extends com.google.api.cl
 
   /**
    * A filter to apply on the matching condition results. Supported features: * filter must be set.
-   * * Filter syntax is identical to SearchRequest.filter. See more details at the Retail Search
-   * [user guide](/retail/search/docs/filter-and-order#filter). * To filter products with product ID
+   * * Filter syntax is identical to SearchRequest.filter. For more information, see
+   * [Filter](/retail/docs/filter-and-order#filter). * To filter products with product ID
    * "product_1" or "product_2", and color "Red" or "Blue": *(id: ANY("product_1", "product_2")) *
    * *AND * *(colorFamilies: ANY("Red", "Blue")) *
    * @param filter filter or {@code null} for none

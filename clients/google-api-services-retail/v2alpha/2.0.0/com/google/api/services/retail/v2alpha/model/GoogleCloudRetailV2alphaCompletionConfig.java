@@ -70,7 +70,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * Output only. Name of the LRO corresponding to the latest suggestion terms list import. Can use
-   * GetOperation API to retrieve the latest state of the Long Running Operation.
+   * GetOperation API method to retrieve the latest state of the Long Running Operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * Output only. Name of the LRO corresponding to the latest suggestion terms list import. Can use
-   * GetOperation API to retrieve the latest state of the Long Running Operation.
+   * GetOperation API method to retrieve the latest state of the Long Running Operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastSuggestionsImportOperation() {
@@ -220,7 +220,7 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
 
   /**
    * Output only. Name of the LRO corresponding to the latest suggestion terms list import. Can use
-   * GetOperation API to retrieve the latest state of the Long Running Operation.
+   * GetOperation API method to retrieve the latest state of the Long Running Operation.
    * @param lastSuggestionsImportOperation lastSuggestionsImportOperation or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCompletionConfig setLastSuggestionsImportOperation(java.lang.String lastSuggestionsImportOperation) {

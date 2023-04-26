@@ -37,6 +37,13 @@ public final class GoogleCloudIdentitytoolkitV1MfaEnrollment extends com.google.
   private java.lang.String displayName;
 
   /**
+   * Contains information specific to email MFA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitV1EmailInfo emailInfo;
+
+  /**
    * Timestamp when the account enrolled this second factor.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class GoogleCloudIdentitytoolkitV1MfaEnrollment extends com.google.
    */
   public GoogleCloudIdentitytoolkitV1MfaEnrollment setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Contains information specific to email MFA.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1EmailInfo getEmailInfo() {
+    return emailInfo;
+  }
+
+  /**
+   * Contains information specific to email MFA.
+   * @param emailInfo emailInfo or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1MfaEnrollment setEmailInfo(GoogleCloudIdentitytoolkitV1EmailInfo emailInfo) {
+    this.emailInfo = emailInfo;
     return this;
   }
 

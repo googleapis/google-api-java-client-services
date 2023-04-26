@@ -31,7 +31,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeploymentJobs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   private Job verifyJob;
 
   /**
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * @return value or {@code null} for none
    */
   public Job getDeployJob() {
@@ -53,7 +53,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The deploy Job. This is the first job run in the phase.
+   * Output only. The deploy Job. This is the deploy job in the phase.
    * @param deployJob deployJob or {@code null} for none
    */
   public DeploymentJobs setDeployJob(Job deployJob) {

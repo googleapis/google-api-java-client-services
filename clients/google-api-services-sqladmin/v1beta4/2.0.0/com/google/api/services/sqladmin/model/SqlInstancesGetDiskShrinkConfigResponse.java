@@ -37,6 +37,13 @@ public final class SqlInstancesGetDiskShrinkConfigResponse extends com.google.ap
   private java.lang.String kind;
 
   /**
+   * Additional message to customers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String message;
+
+  /**
    * The minimum size to which a disk can be shrunk in GigaBytes.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class SqlInstancesGetDiskShrinkConfigResponse extends com.google.ap
    */
   public SqlInstancesGetDiskShrinkConfigResponse setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Additional message to customers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMessage() {
+    return message;
+  }
+
+  /**
+   * Additional message to customers.
+   * @param message message or {@code null} for none
+   */
+  public SqlInstancesGetDiskShrinkConfigResponse setMessage(java.lang.String message) {
+    this.message = message;
     return this;
   }
 

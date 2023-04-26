@@ -30,14 +30,18 @@ package com.google.api.services.compute.model;
 public final class TargetSslProxiesSetCertificateMapRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL of the Certificate Map to associate with this TargetSslProxy.
+   * URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is
+   * //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certificateMap;
 
   /**
-   * URL of the Certificate Map to associate with this TargetSslProxy.
+   * URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is
+   * //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateMap() {
@@ -45,7 +49,9 @@ public final class TargetSslProxiesSetCertificateMapRequest extends com.google.a
   }
 
   /**
-   * URL of the Certificate Map to associate with this TargetSslProxy.
+   * URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is
+   * //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * @param certificateMap certificateMap or {@code null} for none
    */
   public TargetSslProxiesSetCertificateMapRequest setCertificateMap(java.lang.String certificateMap) {

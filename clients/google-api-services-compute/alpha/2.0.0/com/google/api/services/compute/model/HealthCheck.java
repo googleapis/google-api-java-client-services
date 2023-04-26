@@ -21,10 +21,10 @@ package com.google.api.services.compute.model;
  * [Global](/compute/docs/reference/rest/alpha/healthChecks) *
  * [Regional](/compute/docs/reference/rest/alpha/regionHealthChecks) Internal HTTP(S) load balancers
  * must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use
- * global health checks (`compute.v1.HealthChecks`). Internal TCP/UDP load balancers can use either
- * regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`).
+ * global health checks (`compute.v1.healthChecks`). Internal TCP/UDP load balancers can use either
+ * regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.healthChecks`).
  * External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-
- * healing must use global health checks (`compute.v1.HealthChecks`). Backend service-based network
+ * healing must use global health checks (`compute.v1.healthChecks`). Backend service-based network
  * load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-
  * based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`).
  * For more information, see Health checks overview.

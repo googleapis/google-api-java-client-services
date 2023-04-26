@@ -34,7 +34,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URL of a certificate map that identifies a certificate map associated with the given target
    * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
-   * ignored.
+   * ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +123,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URL of a certificate map that identifies a certificate map associated with the given target
    * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
-   * ignored.
+   * ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateMap() {
@@ -132,7 +134,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   /**
    * URL of a certificate map that identifies a certificate map associated with the given target
    * proxy. This field can only be set for global target proxies. If set, sslCertificates will be
-   * ignored.
+   * ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project
+   * }/locations/{location}/certificateMaps/{resourceName}.
    * @param certificateMap certificateMap or {@code null} for none
    */
   public TargetSslProxy setCertificateMap(java.lang.String certificateMap) {

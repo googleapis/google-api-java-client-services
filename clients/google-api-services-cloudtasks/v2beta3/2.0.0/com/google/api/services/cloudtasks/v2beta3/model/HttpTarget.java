@@ -65,6 +65,26 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String httpMethod;
 
   /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as the `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OAuthToken oauthToken;
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OidcToken oidcToken;
+
+  /**
    * URI override. When specified, overrides the execution URI for all the tasks in the queue.
    * The value may be {@code null}.
    */
@@ -130,6 +150,52 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    */
   public HttpTarget setHttpMethod(java.lang.String httpMethod) {
     this.httpMethod = httpMethod;
+    return this;
+  }
+
+  /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as the `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
+   * @return value or {@code null} for none
+   */
+  public OAuthToken getOauthToken() {
+    return oauthToken;
+  }
+
+  /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as the `Authorization` header in the HTTP request. This type of
+   * authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
+   * @param oauthToken oauthToken or {@code null} for none
+   */
+  public HttpTarget setOauthToken(OAuthToken oauthToken) {
+    this.oauthToken = oauthToken;
+    return this;
+  }
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
+   * @return value or {@code null} for none
+   */
+  public OidcToken getOidcToken() {
+    return oidcToken;
+  }
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request. This type of
+   * authorization can be used for many scenarios, including calling Cloud Run, or endpoints where
+   * you intend to validate the token yourself.
+   * @param oidcToken oidcToken or {@code null} for none
+   */
+  public HttpTarget setOidcToken(OidcToken oidcToken) {
+    this.oidcToken = oidcToken;
     return this;
   }
 

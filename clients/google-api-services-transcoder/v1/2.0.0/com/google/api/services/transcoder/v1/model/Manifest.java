@@ -47,7 +47,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> muxStreams;
 
   /**
-   * Required. Type of the manifest, can be `HLS` or `DASH`.
+   * Required. Type of the manifest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Type of the manifest, can be `HLS` or `DASH`.
+   * Required. Type of the manifest.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -102,7 +102,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Type of the manifest, can be `HLS` or `DASH`.
+   * Required. Type of the manifest.
    * @param type type or {@code null} for none
    */
   public Manifest setType(java.lang.String type) {

@@ -38,22 +38,6 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   private EntityList additionalDetails;
 
   /**
-   * Displayed after Customer abuse detected - {alert_descriptor}. If missing, alert name will be
-   * displayed as Customer abuse detected.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String alertDescriptor;
-
-  /**
-   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String nextSteps;
-
-  /**
    * Product that the abuse is originating from.
    * The value may be {@code null}.
    */
@@ -61,19 +45,20 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   private java.lang.String product;
 
   /**
-   * Unique identifier of each alert that is onboarded.
+   * Unique identifier of each sub alert that is onboarded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subAlertId;
 
   /**
-   * Customizable text to display in the summary section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
+   * Variation of AbuseDetected alerts. The variation_type determines the texts displayed the alert
+   * details. This differs from sub_alert_id because each sub alert can have multiple
+   * variation_types, representing different stages of the alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String summary;
+  private java.lang.String variationType;
 
   /**
    * List of abusive users/entities to be displayed in a table in the alert.
@@ -89,44 +74,6 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
    */
   public AbuseDetected setAdditionalDetails(EntityList additionalDetails) {
     this.additionalDetails = additionalDetails;
-    return this;
-  }
-
-  /**
-   * Displayed after Customer abuse detected - {alert_descriptor}. If missing, alert name will be
-   * displayed as Customer abuse detected.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAlertDescriptor() {
-    return alertDescriptor;
-  }
-
-  /**
-   * Displayed after Customer abuse detected - {alert_descriptor}. If missing, alert name will be
-   * displayed as Customer abuse detected.
-   * @param alertDescriptor alertDescriptor or {@code null} for none
-   */
-  public AbuseDetected setAlertDescriptor(java.lang.String alertDescriptor) {
-    this.alertDescriptor = alertDescriptor;
-    return this;
-  }
-
-  /**
-   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNextSteps() {
-    return nextSteps;
-  }
-
-  /**
-   * Customizable text to display in the next steps section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
-   * @param nextSteps nextSteps or {@code null} for none
-   */
-  public AbuseDetected setNextSteps(java.lang.String nextSteps) {
-    this.nextSteps = nextSteps;
     return this;
   }
 
@@ -148,7 +95,7 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unique identifier of each alert that is onboarded.
+   * Unique identifier of each sub alert that is onboarded.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubAlertId() {
@@ -156,7 +103,7 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unique identifier of each alert that is onboarded.
+   * Unique identifier of each sub alert that is onboarded.
    * @param subAlertId subAlertId or {@code null} for none
    */
   public AbuseDetected setSubAlertId(java.lang.String subAlertId) {
@@ -165,21 +112,23 @@ public final class AbuseDetected extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Customizable text to display in the summary section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
+   * Variation of AbuseDetected alerts. The variation_type determines the texts displayed the alert
+   * details. This differs from sub_alert_id because each sub alert can have multiple
+   * variation_types, representing different stages of the alert.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSummary() {
-    return summary;
+  public java.lang.String getVariationType() {
+    return variationType;
   }
 
   /**
-   * Customizable text to display in the summary section of the alert. Will be parsed as HTML to
-   * allow new paragraphs and hyperlinks.
-   * @param summary summary or {@code null} for none
+   * Variation of AbuseDetected alerts. The variation_type determines the texts displayed the alert
+   * details. This differs from sub_alert_id because each sub alert can have multiple
+   * variation_types, representing different stages of the alert.
+   * @param variationType variationType or {@code null} for none
    */
-  public AbuseDetected setSummary(java.lang.String summary) {
-    this.summary = summary;
+  public AbuseDetected setVariationType(java.lang.String variationType) {
+    this.variationType = variationType;
     return this;
   }
 

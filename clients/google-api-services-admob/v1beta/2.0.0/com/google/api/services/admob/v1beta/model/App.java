@@ -30,7 +30,7 @@ package com.google.api.services.admob.v1beta.model;
 public final class App extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The approval state for the app.
+   * Output only. The approval state for the app. The field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.String platform;
 
   /**
-   * Output only. The approval state for the app.
+   * Output only. The approval state for the app. The field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppApprovalState() {
@@ -85,7 +85,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The approval state for the app.
+   * Output only. The approval state for the app. The field is read-only.
    * @param appApprovalState appApprovalState or {@code null} for none
    */
   public App setAppApprovalState(java.lang.String appApprovalState) {

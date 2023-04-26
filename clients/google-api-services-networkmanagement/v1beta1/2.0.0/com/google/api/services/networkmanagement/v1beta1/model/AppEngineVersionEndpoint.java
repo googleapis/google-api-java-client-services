@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
- * Wrapper for app engine service version attributes.
+ * Wrapper for the App Engine service version attributes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation

@@ -73,6 +73,13 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
   private String lastTuneTime;
 
   /**
+   * Optional. Additional model features config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaModelModelFeaturesConfig modelFeaturesConfig;
+
+  /**
    * Required. The fully qualified resource name of the model. Format:
    * `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}`
    * catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
@@ -262,6 +269,23 @@ public final class GoogleCloudRetailV2alphaModel extends com.google.api.client.j
    */
   public GoogleCloudRetailV2alphaModel setLastTuneTime(String lastTuneTime) {
     this.lastTuneTime = lastTuneTime;
+    return this;
+  }
+
+  /**
+   * Optional. Additional model features config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaModelModelFeaturesConfig getModelFeaturesConfig() {
+    return modelFeaturesConfig;
+  }
+
+  /**
+   * Optional. Additional model features config.
+   * @param modelFeaturesConfig modelFeaturesConfig or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaModel setModelFeaturesConfig(GoogleCloudRetailV2alphaModelModelFeaturesConfig modelFeaturesConfig) {
+    this.modelFeaturesConfig = modelFeaturesConfig;
     return this;
   }
 

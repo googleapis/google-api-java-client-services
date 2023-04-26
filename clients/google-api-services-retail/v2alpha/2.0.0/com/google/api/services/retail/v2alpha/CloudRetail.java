@@ -431,27 +431,27 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
-           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
-           * entity autocomplete results.
+           * The entity for customers who run multiple entities, domains, sites, or regions, for
+           * example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this
+           * is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete
+           * results.
            */
           @com.google.api.client.util.Key
           private java.lang.String entity;
 
-          /** The entity for customers that may run multiple different entities, domains, sites or regions, for
-         example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it
-         should be exactly matched with UserEvent.entity to get per-entity autocomplete results.
+          /** The entity for customers who run multiple entities, domains, sites, or regions, for example,
+         `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it must be an
+         exact match with UserEvent.entity to get per-entity autocomplete results.
            */
           public java.lang.String getEntity() {
             return entity;
           }
 
           /**
-           * The entity for customers that may run multiple different entities, domains, sites or
-           * regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`,
-           * etc. If this is set, it should be exactly matched with UserEvent.entity to get per-
-           * entity autocomplete results.
+           * The entity for customers who run multiple entities, domains, sites, or regions, for
+           * example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this
+           * is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete
+           * results.
            */
           public CompleteQuery setEntity(java.lang.String entity) {
             this.entity = entity;
@@ -2873,10 +2873,10 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           public class Products {
 
             /**
-             * It is recommended to use the ProductService.AddLocalInventories method instead of
-             * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results
-             * but provides more fine-grained control over ingesting local inventory data. Incrementally adds
-             * place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not
+             * We recommend that you use the ProductService.AddLocalInventories method instead of the
+             * ProductService.AddFulfillmentPlaces method. ProductService.AddLocalInventories achieves the same
+             * results but provides more fine-grained control over ingesting local inventory data. Incrementally
+             * adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not
              * require the Product to exist before updating fulfillment information. If the request is valid,
              * the update will be enqueued and processed downstream. As a consequence, when a response is
              * returned, the added place IDs are not immediately manifested in the Product queried by
@@ -2912,9 +2912,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
-               * It is recommended to use the ProductService.AddLocalInventories method instead of
-               * ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same
-               * results but provides more fine-grained control over ingesting local inventory data.
+               * We recommend that you use the ProductService.AddLocalInventories method instead of the
+               * ProductService.AddFulfillmentPlaces method. ProductService.AddLocalInventories achieves the
+               * same results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -4560,15 +4560,15 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
               }
             }
             /**
-             * It is recommended to use the ProductService.RemoveLocalInventories method instead of
-             * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
-             * results but provides more fine-grained control over ingesting local inventory data. Incrementally
-             * removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and
-             * does not require the Product to exist before updating fulfillment information. If the request is
-             * valid, the update will be enqueued and processed downstream. As a consequence, when a response is
-             * returned, the removed place IDs are not immediately manifested in the Product queried by
-             * ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be
-             * obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
+             * We recommend that you use the ProductService.RemoveLocalInventories method instead of the
+             * ProductService.RemoveFulfillmentPlaces method. ProductService.RemoveLocalInventories achieves the
+             * same results but provides more fine-grained control over ingesting local inventory data.
+             * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
+             * asynchronous and does not require the Product to exist before updating fulfillment information.
+             * If the request is valid, the update will be enqueued and processed downstream. As a consequence,
+             * when a response is returned, the removed place IDs are not immediately manifested in the Product
+             * queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will
+             * be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting
              * updates are issued, the Operations associated with the stale updates will not be marked as done
              * until being obsolete.
              *
@@ -4599,9 +4599,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+/products/.*$");
 
               /**
-               * It is recommended to use the ProductService.RemoveLocalInventories method instead of
-               * ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same
-               * results but provides more fine-grained control over ingesting local inventory data.
+               * We recommend that you use the ProductService.RemoveLocalInventories method instead of the
+               * ProductService.RemoveFulfillmentPlaces method. ProductService.RemoveLocalInventories achieves
+               * the same results but provides more fine-grained control over ingesting local inventory data.
                * Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is
                * asynchronous and does not require the Product to exist before updating fulfillment information.
                * If the request is valid, the update will be enqueued and processed downstream. As a
@@ -6112,145 +6112,109 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         public class MerchantCenterAccountLinks {
 
           /**
-           * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different oneof
-           * field, if so an INVALID_ARGUMENT is returned.
+           * Creates a MerchantCenterAccountLink.
            *
-           * Create a request for the method "merchantCenterAccountLinks.createMerchantCenterAccountLink".
+           * Create a request for the method "merchantCenterAccountLinks.create".
            *
            * This request holds the parameters needed by the retail server.  After setting any optional
-           * parameters, call the {@link CreateMerchantCenterAccountLink#execute()} method to invoke the
-           * remote operation.
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/lo
-           *        cations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account
-           *        _link`.
+           * @param parent Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
+           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
            * @return the request
            */
-          public CreateMerchantCenterAccountLink createMerchantCenterAccountLink(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) throws java.io.IOException {
-            CreateMerchantCenterAccountLink result = new CreateMerchantCenterAccountLink(name, content);
+          public Create create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) throws java.io.IOException {
+            Create result = new Create(parent, content);
             initialize(result);
             return result;
           }
 
-          public class CreateMerchantCenterAccountLink extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+          public class Create extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
 
-            private static final String REST_PATH = "v2alpha/{+name}";
+            private static final String REST_PATH = "v2alpha/{+parent}/merchantCenterAccountLinks";
 
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different
-             * oneof field, if so an INVALID_ARGUMENT is returned.
+             * Creates a MerchantCenterAccountLink.
              *
-             * Create a request for the method "merchantCenterAccountLinks.createMerchantCenterAccountLink".
+             * Create a request for the method "merchantCenterAccountLinks.create".
              *
              * This request holds the parameters needed by the the retail server.  After setting any optional
-             * parameters, call the {@link CreateMerchantCenterAccountLink#execute()} method to invoke the
-             * remote operation. <p> {@link CreateMerchantCenterAccountLink#initialize(com.google.api.client.g
-             * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-             * immediately after invoking the constructor. </p>
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/lo
-           *        cations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account
-           *        _link`.
+             * @param parent Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
+           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
              * @since 1.13
              */
-            protected CreateMerchantCenterAccountLink(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) {
+            protected Create(java.lang.String parent, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink content) {
               super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
               }
             }
 
             @Override
-            public CreateMerchantCenterAccountLink set$Xgafv(java.lang.String $Xgafv) {
-              return (CreateMerchantCenterAccountLink) super.set$Xgafv($Xgafv);
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setAccessToken(java.lang.String accessToken) {
-              return (CreateMerchantCenterAccountLink) super.setAccessToken(accessToken);
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setAlt(java.lang.String alt) {
-              return (CreateMerchantCenterAccountLink) super.setAlt(alt);
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setCallback(java.lang.String callback) {
-              return (CreateMerchantCenterAccountLink) super.setCallback(callback);
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setFields(java.lang.String fields) {
-              return (CreateMerchantCenterAccountLink) super.setFields(fields);
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setKey(java.lang.String key) {
-              return (CreateMerchantCenterAccountLink) super.setKey(key);
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setOauthToken(java.lang.String oauthToken) {
-              return (CreateMerchantCenterAccountLink) super.setOauthToken(oauthToken);
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (CreateMerchantCenterAccountLink) super.setPrettyPrint(prettyPrint);
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setQuotaUser(java.lang.String quotaUser) {
-              return (CreateMerchantCenterAccountLink) super.setQuotaUser(quotaUser);
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setUploadType(java.lang.String uploadType) {
-              return (CreateMerchantCenterAccountLink) super.setUploadType(uploadType);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
             }
 
             @Override
-            public CreateMerchantCenterAccountLink setUploadProtocol(java.lang.String uploadProtocol) {
-              return (CreateMerchantCenterAccountLink) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Output only. Immutable. Full resource name of the Merchant Center Account Link, such
-             * as `projects/locations/global/catalogs/default_catalog/merchantCenterAccountLinks/mer
-             * chant_center_account_link`.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/l
-           ocations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account_link`.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Output only. Immutable. Full resource name of the Merchant Center Account Link, such
-             * as `projects/locations/global/catalogs/default_catalog/merchantCenterAccountLinks/mer
-             * chant_center_account_link`.
-             */
-            public CreateMerchantCenterAccountLink setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/merchantCenterAccountLinks/[^/]+$");
-              }
-              this.name = name;
-              return this;
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6271,14 +6235,19 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Required. The branch resource where this MerchantCenterAccountLink will be created.
              * Format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
              */
-            public CreateMerchantCenterAccountLink setParent(java.lang.String parent) {
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
 
             @Override
-            public CreateMerchantCenterAccountLink set(String parameterName, Object value) {
-              return (CreateMerchantCenterAccountLink) super.set(parameterName, value);
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
             }
           }
           /**
@@ -8382,8 +8351,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
            * @return the request
            */
@@ -8415,8 +8384,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
              * @since 1.13
              */
@@ -8490,8 +8459,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -8500,7 +8469,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving config name and the set of models that will be used to make the search.
+           to identify the serving config name and the set of models that are used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -8511,8 +8480,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {
@@ -9835,8 +9804,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
            * @return the request
            */
@@ -9868,8 +9837,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            *        `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config`
            *        or the name of the legacy placement resource, such as
            *        `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field
-           *        is used to identify the serving config name and the set of models that will be used to
-           *        make the search.
+           *        is used to identify the serving config name and the set of models that are used to make
+           *        the search.
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaSearchRequest}
              * @since 1.13
              */
@@ -9943,8 +9912,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String placement;
@@ -9953,7 +9922,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            `projects/locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
            name of the legacy placement resource, such as
            `projects/locations/global/catalogs/default_catalog/placements/default_search`. This field is used
-           to identify the serving config name and the set of models that will be used to make the search.
+           to identify the serving config name and the set of models that are used to make the search.
              */
             public java.lang.String getPlacement() {
               return placement;
@@ -9964,8 +9933,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * cations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the
              * name of the legacy placement resource, such as
              * `projects/locations/global/catalogs/default_catalog/placements/default_search`. This
-             * field is used to identify the serving config name and the set of models that will be
-             * used to make the search.
+             * field is used to identify the serving config name and the set of models that are used
+             * to make the search.
              */
             public Search setPlacement(java.lang.String placement) {
               if (!getSuppressPatternChecks()) {

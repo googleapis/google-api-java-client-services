@@ -195,6 +195,13 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String notificationPriority;
 
   /**
+   * Setting to control when a notification may be proxied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String proxy;
+
+  /**
    * The sound to play when the device receives the notification. Supports "default" or the filename
    * of a sound resource bundled in the app. Sound files must reside in /res/raw/.
    * The value may be {@code null}.
@@ -652,6 +659,23 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setNotificationPriority(java.lang.String notificationPriority) {
     this.notificationPriority = notificationPriority;
+    return this;
+  }
+
+  /**
+   * Setting to control when a notification may be proxied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProxy() {
+    return proxy;
+  }
+
+  /**
+   * Setting to control when a notification may be proxied.
+   * @param proxy proxy or {@code null} for none
+   */
+  public AndroidNotification setProxy(java.lang.String proxy) {
+    this.proxy = proxy;
     return this;
   }
 

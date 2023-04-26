@@ -76,7 +76,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   private java.util.List<java.lang.String> sampleDocumentUris;
 
   /**
-   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+   * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +189,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   }
 
   /**
-   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+   * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -197,7 +197,7 @@ public final class GoogleCloudDocumentaiV1ProcessorType extends com.google.api.c
   }
 
   /**
-   * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+   * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorType setType(java.lang.String type) {

@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The long running operation metadata for enable processor method.
+ * The long-running operation metadata for enable processor method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3EnableProcessorMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3CommonOperationMetadata getCommonMetadata() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3EnableProcessorMetadata extends c
   }
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @param commonMetadata commonMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3EnableProcessorMetadata setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata) {

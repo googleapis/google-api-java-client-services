@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
 
   /**
    * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a [Document] proto, the type should
+   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
    * be application/json.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
 
   /**
    * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a [Document] proto, the type should
+   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
    * be application/json.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
 
   /**
    * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a [Document] proto, the type should
+   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
    * be application/json.
    * @param mimeType mimeType or {@code null} for none
    */

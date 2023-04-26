@@ -330,7 +330,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
-       * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not
+       * Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't
        * paginated.
        *
        * Create a request for the method "locations.fetchProcessorTypes".
@@ -356,7 +356,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not
+         * Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't
          * paginated.
          *
          * Create a request for the method "locations.fetchProcessorTypes".
@@ -4781,22 +4781,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The standard list page size. If unspecified, at most 5 evaluations will be
-               * returned. The maximum value is 100; values above 100 will be coerced to 100.
+               * The standard list page size. If unspecified, at most `5` evaluations will be
+               * returned. The maximum value is `100`; values above `100` will be coerced to `100`.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The standard list page size. If unspecified, at most 5 evaluations will be returned. The maximum
-             value is 100; values above 100 will be coerced to 100.
+              /** The standard list page size. If unspecified, at most `5` evaluations will be returned. The maximum
+             value is `100`; values above `100` will be coerced to `100`.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The standard list page size. If unspecified, at most 5 evaluations will be
-               * returned. The maximum value is 100; values above 100 will be coerced to 100.
+               * The standard list page size. If unspecified, at most `5` evaluations will be
+               * returned. The maximum value is `100`; values above `100` will be coerced to `100`.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;

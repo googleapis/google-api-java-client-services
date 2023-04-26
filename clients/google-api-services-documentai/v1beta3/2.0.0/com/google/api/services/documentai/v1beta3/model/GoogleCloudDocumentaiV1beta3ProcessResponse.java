@@ -38,9 +38,9 @@ public final class GoogleCloudDocumentaiV1beta3ProcessResponse extends com.googl
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
-   * The name of the operation triggered by the processed document. If the human review process is
-   * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * The name of the operation triggered by the processed document. If the human review process
+   * isn't triggered, this field is empty. It has the same response type and metadata as the long-
+   * running operation returned by ReviewDocument.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +71,9 @@ public final class GoogleCloudDocumentaiV1beta3ProcessResponse extends com.googl
   }
 
   /**
-   * The name of the operation triggered by the processed document. If the human review process is
-   * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * The name of the operation triggered by the processed document. If the human review process
+   * isn't triggered, this field is empty. It has the same response type and metadata as the long-
+   * running operation returned by ReviewDocument.
    * @return value or {@code null} for none
    */
   public java.lang.String getHumanReviewOperation() {
@@ -81,9 +81,9 @@ public final class GoogleCloudDocumentaiV1beta3ProcessResponse extends com.googl
   }
 
   /**
-   * The name of the operation triggered by the processed document. If the human review process is
-   * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * The name of the operation triggered by the processed document. If the human review process
+   * isn't triggered, this field is empty. It has the same response type and metadata as the long-
+   * running operation returned by ReviewDocument.
    * @param humanReviewOperation humanReviewOperation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessResponse setHumanReviewOperation(java.lang.String humanReviewOperation) {

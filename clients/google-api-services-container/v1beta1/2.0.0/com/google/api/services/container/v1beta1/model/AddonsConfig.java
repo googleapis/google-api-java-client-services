@@ -69,6 +69,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
 
   /**
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig;
+
+  /**
    * Configuration for the Backup for GKE agent addon.
    * The value may be {@code null}.
    */
@@ -210,6 +217,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
     this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * @return value or {@code null} for none
+   */
+  public GcsFuseCsiDriverConfig getGcsFuseCsiDriverConfig() {
+    return gcsFuseCsiDriverConfig;
+  }
+
+  /**
+   * Configuration for the Cloud Storage Fuse CSI driver.
+   * @param gcsFuseCsiDriverConfig gcsFuseCsiDriverConfig or {@code null} for none
+   */
+  public AddonsConfig setGcsFuseCsiDriverConfig(GcsFuseCsiDriverConfig gcsFuseCsiDriverConfig) {
+    this.gcsFuseCsiDriverConfig = gcsFuseCsiDriverConfig;
     return this;
   }
 

@@ -40,7 +40,7 @@ public final class GoogleCloudDiscoveryengineV1alphaMediaInfo extends com.google
 
   /**
    * Media progress should be computed using only the media_progress_duration relative to the media
-   * total length. This value must be between [0, 1.0] inclusive. If this is not a playback or the
+   * total length. This value must be between `[0, 1.0]` inclusive. If this is not a playback or the
    * progress cannot be computed (e.g. ongoing livestream), this field should be unset.
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class GoogleCloudDiscoveryengineV1alphaMediaInfo extends com.google
 
   /**
    * Media progress should be computed using only the media_progress_duration relative to the media
-   * total length. This value must be between [0, 1.0] inclusive. If this is not a playback or the
+   * total length. This value must be between `[0, 1.0]` inclusive. If this is not a playback or the
    * progress cannot be computed (e.g. ongoing livestream), this field should be unset.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class GoogleCloudDiscoveryengineV1alphaMediaInfo extends com.google
 
   /**
    * Media progress should be computed using only the media_progress_duration relative to the media
-   * total length. This value must be between [0, 1.0] inclusive. If this is not a playback or the
+   * total length. This value must be between `[0, 1.0]` inclusive. If this is not a playback or the
    * progress cannot be computed (e.g. ongoing livestream), this field should be unset.
    * @param mediaProgressPercentage mediaProgressPercentage or {@code null} for none
    */

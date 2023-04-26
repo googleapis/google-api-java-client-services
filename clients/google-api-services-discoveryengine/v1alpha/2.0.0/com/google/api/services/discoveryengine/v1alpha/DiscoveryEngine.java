@@ -391,21 +391,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Required. The ID to use for the Document, which will become the final component
                  * of the Document.name. If the caller does not have permission to create the
-                 * Document, regardless of whether or not it exists, a PERMISSION_DENIED error is
+                 * Document, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
                  * returned. This field must be unique among all Documents with the same parent.
-                 * Otherwise, an ALREADY_EXISTS error is returned. This field must conform to
+                 * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
                  * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
-                 * 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+                 * 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String documentId;
 
                 /** Required. The ID to use for the Document, which will become the final component of the
                Document.name. If the caller does not have permission to create the Document, regardless of whether
-               or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all
-               Documents with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must
+               or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all
+               Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must
                conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-               characters. Otherwise, an INVALID_ARGUMENT error is returned.
+               characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 public java.lang.String getDocumentId() {
                   return documentId;
@@ -414,11 +414,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Required. The ID to use for the Document, which will become the final component
                  * of the Document.name. If the caller does not have permission to create the
-                 * Document, regardless of whether or not it exists, a PERMISSION_DENIED error is
+                 * Document, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
                  * returned. This field must be unique among all Documents with the same parent.
-                 * Otherwise, an ALREADY_EXISTS error is returned. This field must conform to
+                 * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
                  * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
-                 * 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+                 * 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 public Create setDocumentId(java.lang.String documentId) {
                   this.documentId = documentId;
@@ -441,8 +441,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
                *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to delete the Document, regardless of whether or not it
-               *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
-               *        NOT_FOUND error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned. If the Document to delete does not exist,
+               *        a `NOT_FOUND` error is returned.
                * @return the request
                */
               public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -472,8 +472,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
                *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to delete the Document, regardless of whether or not it
-               *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
-               *        NOT_FOUND error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned. If the Document to delete does not exist,
+               *        a `NOT_FOUND` error is returned.
                  * @since 1.13
                  */
                 protected Delete(java.lang.String name) {
@@ -545,8 +545,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * Required. Full resource name of Document, such as `projects/{project}/locations/{
                  * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
                  * ments/{document}`. If the caller does not have permission to delete the Document,
-                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-                 * the Document to delete does not exist, a NOT_FOUND error is returned.
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the Document to delete does not exist, a `NOT_FOUND` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
@@ -554,8 +554,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
                ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
                does not have permission to delete the Document, regardless of whether or not it exists, a
-               PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND error is
-               returned.
+               `PERMISSION_DENIED` error is returned. If the Document to delete does not exist, a `NOT_FOUND`
+               error is returned.
                  */
                 public java.lang.String getName() {
                   return name;
@@ -565,8 +565,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * Required. Full resource name of Document, such as `projects/{project}/locations/{
                  * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
                  * ments/{document}`. If the caller does not have permission to delete the Document,
-                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-                 * the Document to delete does not exist, a NOT_FOUND error is returned.
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the Document to delete does not exist, a `NOT_FOUND` error is returned.
                  */
                 public Delete setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -594,8 +594,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
                *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to access the Document, regardless of whether or not it
-               *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
-               *        NOT_FOUND error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+               *        a `NOT_FOUND` error is returned.
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -624,8 +624,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
                *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to access the Document, regardless of whether or not it
-               *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
-               *        NOT_FOUND error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+               *        a `NOT_FOUND` error is returned.
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -707,8 +707,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * Required. Full resource name of Document, such as `projects/{project}/locations/{
                  * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
                  * ments/{document}`. If the caller does not have permission to access the Document,
-                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-                 * the requested Document does not exist, a NOT_FOUND error is returned.
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the requested Document does not exist, a `NOT_FOUND` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
@@ -716,8 +716,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
                ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
                does not have permission to access the Document, regardless of whether or not it exists, a
-               PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND error is
-               returned.
+               `PERMISSION_DENIED` error is returned. If the requested Document does not exist, a `NOT_FOUND`
+               error is returned.
                  */
                 public java.lang.String getName() {
                   return name;
@@ -727,8 +727,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * Required. Full resource name of Document, such as `projects/{project}/locations/{
                  * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
                  * ments/{document}`. If the caller does not have permission to access the Document,
-                 * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-                 * the requested Document does not exist, a NOT_FOUND error is returned.
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the requested Document does not exist, a `NOT_FOUND` error is returned.
                  */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -904,7 +904,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
                *        branch ID, to list documents under the default branch. If the caller does not have
                *        permission to list Documentss under this branch, regardless of whether or not this branch
-               *        exists, a PERMISSION_DENIED error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned.
                * @return the request
                */
               public List list(java.lang.String parent) throws java.io.IOException {
@@ -934,7 +934,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
                *        branch ID, to list documents under the default branch. If the caller does not have
                *        permission to list Documentss under this branch, regardless of whether or not this branch
-               *        exists, a PERMISSION_DENIED error is returned.
+               *        exists, a `PERMISSION_DENIED` error is returned.
                  * @since 1.13
                  */
                 protected List(java.lang.String parent) {
@@ -1017,7 +1017,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
                  * Use `default_branch` as the branch ID, to list documents under the default
                  * branch. If the caller does not have permission to list Documentss under this
-                 * branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+                 * branch, regardless of whether or not this branch exists, a `PERMISSION_DENIED`
                  * error is returned.
                  */
                 @com.google.api.client.util.Key
@@ -1026,8 +1026,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
                ions/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch
                ID, to list documents under the default branch. If the caller does not have permission to list
-               Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
-               error is returned.
+               Documentss under this branch, regardless of whether or not this branch exists, a
+               `PERMISSION_DENIED` error is returned.
                  */
                 public java.lang.String getParent() {
                   return parent;
@@ -1038,7 +1038,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * {location}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
                  * Use `default_branch` as the branch ID, to list documents under the default
                  * branch. If the caller does not have permission to list Documentss under this
-                 * branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
+                 * branch, regardless of whether or not this branch exists, a `PERMISSION_DENIED`
                  * error is returned.
                  */
                 public List setParent(java.lang.String parent) {
@@ -1054,14 +1054,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Maximum number of Documents to return. If unspecified, defaults to 100. The
                  * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
-                 * field is negative, an INVALID_ARGUMENT error is returned.
+                 * field is negative, an `INVALID_ARGUMENT` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Integer pageSize;
 
                 /** Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value
-               is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT
-               error is returned.
+               is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+               `INVALID_ARGUMENT` error is returned.
                  */
                 public java.lang.Integer getPageSize() {
                   return pageSize;
@@ -1070,7 +1070,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Maximum number of Documents to return. If unspecified, defaults to 100. The
                  * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
-                 * field is negative, an INVALID_ARGUMENT error is returned.
+                 * field is negative, an `INVALID_ARGUMENT` error is returned.
                  */
                 public List setPageSize(java.lang.Integer pageSize) {
                   this.pageSize = pageSize;
@@ -1081,8 +1081,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * A page token ListDocumentsResponse.next_page_token, received from a previous
                  * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
                  * When paginating, all other parameters provided to DocumentService.ListDocuments
-                 * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
-                 * error is returned.
+                 * must match the call that provided the page token. Otherwise, an
+                 * `INVALID_ARGUMENT` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String pageToken;
@@ -1090,7 +1090,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /** A page token ListDocumentsResponse.next_page_token, received from a previous
                DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating,
                all other parameters provided to DocumentService.ListDocuments must match the call that provided
-               the page token. Otherwise, an INVALID_ARGUMENT error is returned.
+               the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 public java.lang.String getPageToken() {
                   return pageToken;
@@ -1100,8 +1100,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  * A page token ListDocumentsResponse.next_page_token, received from a previous
                  * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
                  * When paginating, all other parameters provided to DocumentService.ListDocuments
-                 * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
-                 * error is returned.
+                 * must match the call that provided the page token. Otherwise, an
+                 * `INVALID_ARGUMENT` error is returned.
                  */
                 public List setPageToken(java.lang.String pageToken) {
                   this.pageToken = pageToken;
@@ -2383,7 +2383,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
              *
              * @param servingConfig Required. Full resource name of the format:
-             *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
              *        recommendations from your model, you must create at least one serving config for it.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @return the request
@@ -2413,7 +2413,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param servingConfig Required. Full resource name of the format:
-             *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
              *        recommendations from your model, you must create at least one serving config for it.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
                * @since 1.13
@@ -2485,7 +2485,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of the format:
-               * projects/locations/global/collections/dataStores/servingConfigs Before you can
+               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
                * request recommendations from your model, you must create at least one serving
                * config for it.
                */
@@ -2493,7 +2493,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               private java.lang.String servingConfig;
 
               /** Required. Full resource name of the format:
-             projects/locations/global/collections/dataStores/servingConfigs Before you can request
+             `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
              recommendations from your model, you must create at least one serving config for it.
                */
               public java.lang.String getServingConfig() {
@@ -2502,7 +2502,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. Full resource name of the format:
-               * projects/locations/global/collections/dataStores/servingConfigs Before you can
+               * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
                * request recommendations from your model, you must create at least one serving
                * config for it.
                */
@@ -3059,6 +3059,189 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * An accessor for creating requests from the Engines collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.Engines.List request = discoveryengine.engines().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Engines engines() {
+          return new Engines();
+        }
+
+        /**
+         * The "engines" collection of methods.
+         */
+        public class Engines {
+
+          /**
+           * An accessor for creating requests from the Operations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Operations operations() {
+            return new Operations();
+          }
+
+          /**
+           * The "operations" collection of methods.
+           */
+          public class Operations {
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the operation resource.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/operations/[^/]+$");
+
+              /**
+               * Gets the latest state of a long-running operation. Clients can use this method to poll the
+               * operation result at intervals as recommended by the API service.
+               *
+               * Create a request for the method "operations.get".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the operation resource.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/operations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the operation resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the operation resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the operation resource. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/operations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -3607,21 +3790,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Required. The ID to use for the Document, which will become the final component of
                * the Document.name. If the caller does not have permission to create the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This
-               * field must be unique among all Documents with the same parent. Otherwise, an
-               * ALREADY_EXISTS error is returned. This field must conform to
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+               * This field must be unique among all Documents with the same parent. Otherwise, an
+               * `ALREADY_EXISTS` error is returned. This field must conform to
                * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-               * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+               * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String documentId;
 
               /** Required. The ID to use for the Document, which will become the final component of the
              Document.name. If the caller does not have permission to create the Document, regardless of whether
-             or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all
-             Documents with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must
+             or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all
+             Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must
              conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-             characters. Otherwise, an INVALID_ARGUMENT error is returned.
+             characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                */
               public java.lang.String getDocumentId() {
                 return documentId;
@@ -3630,11 +3813,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Required. The ID to use for the Document, which will become the final component of
                * the Document.name. If the caller does not have permission to create the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This
-               * field must be unique among all Documents with the same parent. Otherwise, an
-               * ALREADY_EXISTS error is returned. This field must conform to
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+               * This field must be unique among all Documents with the same parent. Otherwise, an
+               * `ALREADY_EXISTS` error is returned. This field must conform to
                * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-               * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+               * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                */
               public Create setDocumentId(java.lang.String documentId) {
                 this.documentId = documentId;
@@ -3657,8 +3840,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
              *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
              *        caller does not have permission to delete the Document, regardless of whether or not it
-             *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
-             *        NOT_FOUND error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned. If the Document to delete does not exist,
+             *        a `NOT_FOUND` error is returned.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3688,8 +3871,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
              *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
              *        caller does not have permission to delete the Document, regardless of whether or not it
-             *        exists, a PERMISSION_DENIED error is returned. If the Document to delete does not exist, a
-             *        NOT_FOUND error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned. If the Document to delete does not exist,
+             *        a `NOT_FOUND` error is returned.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -3761,8 +3944,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
                * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
                * s/{document}`. If the caller does not have permission to delete the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-               * the Document to delete does not exist, a NOT_FOUND error is returned.
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the Document to delete does not exist, a `NOT_FOUND` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
@@ -3770,8 +3953,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
              ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
              does not have permission to delete the Document, regardless of whether or not it exists, a
-             PERMISSION_DENIED error is returned. If the Document to delete does not exist, a NOT_FOUND error is
-             returned.
+             `PERMISSION_DENIED` error is returned. If the Document to delete does not exist, a `NOT_FOUND`
+             error is returned.
                */
               public java.lang.String getName() {
                 return name;
@@ -3781,8 +3964,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
                * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
                * s/{document}`. If the caller does not have permission to delete the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-               * the Document to delete does not exist, a NOT_FOUND error is returned.
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the Document to delete does not exist, a `NOT_FOUND` error is returned.
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -3810,8 +3993,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
              *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
              *        caller does not have permission to access the Document, regardless of whether or not it
-             *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
-             *        NOT_FOUND error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+             *        a `NOT_FOUND` error is returned.
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -3840,8 +4023,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
              *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
              *        caller does not have permission to access the Document, regardless of whether or not it
-             *        exists, a PERMISSION_DENIED error is returned. If the requested Document does not exist, a
-             *        NOT_FOUND error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+             *        a `NOT_FOUND` error is returned.
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -3923,8 +4106,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
                * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
                * s/{document}`. If the caller does not have permission to access the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-               * the requested Document does not exist, a NOT_FOUND error is returned.
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the requested Document does not exist, a `NOT_FOUND` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
@@ -3932,8 +4115,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
              ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
              does not have permission to access the Document, regardless of whether or not it exists, a
-             PERMISSION_DENIED error is returned. If the requested Document does not exist, a NOT_FOUND error is
-             returned.
+             `PERMISSION_DENIED` error is returned. If the requested Document does not exist, a `NOT_FOUND`
+             error is returned.
                */
               public java.lang.String getName() {
                 return name;
@@ -3943,8 +4126,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
                * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
                * s/{document}`. If the caller does not have permission to access the Document,
-               * regardless of whether or not it exists, a PERMISSION_DENIED error is returned. If
-               * the requested Document does not exist, a NOT_FOUND error is returned.
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the requested Document does not exist, a `NOT_FOUND` error is returned.
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -4120,7 +4303,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
              *        branch ID, to list documents under the default branch. If the caller does not have
              *        permission to list Documentss under this branch, regardless of whether or not this branch
-             *        exists, a PERMISSION_DENIED error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -4150,7 +4333,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              *        ons/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the
              *        branch ID, to list documents under the default branch. If the caller does not have
              *        permission to list Documentss under this branch, regardless of whether or not this branch
-             *        exists, a PERMISSION_DENIED error is returned.
+             *        exists, a `PERMISSION_DENIED` error is returned.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -4233,7 +4416,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use
                * `default_branch` as the branch ID, to list documents under the default branch. If
                * the caller does not have permission to list Documentss under this branch,
-               * regardless of whether or not this branch exists, a PERMISSION_DENIED error is
+               * regardless of whether or not this branch exists, a `PERMISSION_DENIED` error is
                * returned.
                */
               @com.google.api.client.util.Key
@@ -4242,8 +4425,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}/collect
              ions/{collection}/dataStores/{data_store}/branches/{branch}`. Use `default_branch` as the branch
              ID, to list documents under the default branch. If the caller does not have permission to list
-             Documentss under this branch, regardless of whether or not this branch exists, a PERMISSION_DENIED
-             error is returned.
+             Documentss under this branch, regardless of whether or not this branch exists, a
+             `PERMISSION_DENIED` error is returned.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -4254,7 +4437,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}`. Use
                * `default_branch` as the branch ID, to list documents under the default branch. If
                * the caller does not have permission to list Documentss under this branch,
-               * regardless of whether or not this branch exists, a PERMISSION_DENIED error is
+               * regardless of whether or not this branch exists, a `PERMISSION_DENIED` error is
                * returned.
                */
               public List setParent(java.lang.String parent) {
@@ -4270,14 +4453,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum
                * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-               * negative, an INVALID_ARGUMENT error is returned.
+               * negative, an `INVALID_ARGUMENT` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
               /** Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value
-             is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an INVALID_ARGUMENT
-             error is returned.
+             is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
+             `INVALID_ARGUMENT` error is returned.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
@@ -4286,7 +4469,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum
                * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
-               * negative, an INVALID_ARGUMENT error is returned.
+               * negative, an `INVALID_ARGUMENT` error is returned.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -4297,7 +4480,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * A page token ListDocumentsResponse.next_page_token, received from a previous
                * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
                * When paginating, all other parameters provided to DocumentService.ListDocuments
-               * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
+               * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
                * error is returned.
                */
               @com.google.api.client.util.Key
@@ -4306,7 +4489,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** A page token ListDocumentsResponse.next_page_token, received from a previous
              DocumentService.ListDocuments call. Provide this to retrieve the subsequent page. When paginating,
              all other parameters provided to DocumentService.ListDocuments must match the call that provided
-             the page token. Otherwise, an INVALID_ARGUMENT error is returned.
+             the page token. Otherwise, an `INVALID_ARGUMENT` error is returned.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -4316,7 +4499,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * A page token ListDocumentsResponse.next_page_token, received from a previous
                * DocumentService.ListDocuments call. Provide this to retrieve the subsequent page.
                * When paginating, all other parameters provided to DocumentService.ListDocuments
-               * must match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
+               * must match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
                * error is returned.
                */
               public List setPageToken(java.lang.String pageToken) {
@@ -5595,7 +5778,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Recommend#execute()} method to invoke the remote operation.
            *
            * @param servingConfig Required. Full resource name of the format:
-           *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
            *        recommendations from your model, you must create at least one serving config for it.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
            * @return the request
@@ -5625,7 +5808,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param servingConfig Required. Full resource name of the format:
-           *        projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           *        `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
            *        recommendations from your model, you must create at least one serving config for it.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRecommendRequest}
              * @since 1.13
@@ -5697,7 +5880,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of the format:
-             * projects/locations/global/collections/dataStores/servingConfigs Before you can
+             * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
              * request recommendations from your model, you must create at least one serving config
              * for it.
              */
@@ -5705,7 +5888,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             private java.lang.String servingConfig;
 
             /** Required. Full resource name of the format:
-           projects/locations/global/collections/dataStores/servingConfigs Before you can request
+           `projects/locations/global/collections/dataStores/servingConfigs` Before you can request
            recommendations from your model, you must create at least one serving config for it.
              */
             public java.lang.String getServingConfig() {
@@ -5714,7 +5897,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Full resource name of the format:
-             * projects/locations/global/collections/dataStores/servingConfigs Before you can
+             * `projects/locations/global/collections/dataStores/servingConfigs` Before you can
              * request recommendations from your model, you must create at least one serving config
              * for it.
              */

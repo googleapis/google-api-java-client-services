@@ -38,8 +38,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private java.lang.String id;
 
   /**
-   * The JSON string representation of the document. It should conform to the registered schema or
-   * an INVALID_ARGUMENT error is thrown.
+   * The JSON string representation of the document. It should conform to the registered
+   * Schema.schema or an `INVALID_ARGUMENT` error is thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private java.lang.String schemaId;
 
   /**
-   * The structured JSON data for the document. It should conform to the registered schema or an
-   * INVALID_ARGUMENT error is thrown.
+   * The structured JSON data for the document. It should conform to the registered Schema.schema or
+   * an `INVALID_ARGUMENT` error is thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * The JSON string representation of the document. It should conform to the registered schema or
-   * an INVALID_ARGUMENT error is thrown.
+   * The JSON string representation of the document. It should conform to the registered
+   * Schema.schema or an `INVALID_ARGUMENT` error is thrown.
    * @return value or {@code null} for none
    */
   public java.lang.String getJsonData() {
@@ -107,8 +107,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * The JSON string representation of the document. It should conform to the registered schema or
-   * an INVALID_ARGUMENT error is thrown.
+   * The JSON string representation of the document. It should conform to the registered
+   * Schema.schema or an `INVALID_ARGUMENT` error is thrown.
    * @param jsonData jsonData or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setJsonData(java.lang.String jsonData) {
@@ -176,8 +176,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * The structured JSON data for the document. It should conform to the registered schema or an
-   * INVALID_ARGUMENT error is thrown.
+   * The structured JSON data for the document. It should conform to the registered Schema.schema or
+   * an `INVALID_ARGUMENT` error is thrown.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getStructData() {
@@ -185,8 +185,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * The structured JSON data for the document. It should conform to the registered schema or an
-   * INVALID_ARGUMENT error is thrown.
+   * The structured JSON data for the document. It should conform to the registered Schema.schema or
+   * an `INVALID_ARGUMENT` error is thrown.
    * @param structData structData or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setStructData(java.util.Map<String, java.lang.Object> structData) {

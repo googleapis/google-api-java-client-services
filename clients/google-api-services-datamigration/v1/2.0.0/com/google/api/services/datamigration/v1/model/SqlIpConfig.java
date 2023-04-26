@@ -31,6 +31,17 @@ package com.google.api.services.datamigration.v1.model;
 public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the allocated IP address range for the private IP Cloud SQL instance.
+   * This name refers to an already allocated IP range address. If set, the instance IP address will
+   * be created in the allocated range. Note that this IP address range can't be modified after the
+   * instance is created. If you change the VPC when configuring connectivity settings for the
+   * migration job, this field is not relevant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allocatedIpRange;
+
+  /**
    * The list of external networks that are allowed to connect to the instance using the IP. See
    * https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g.
    * `192.168.100.0/24`).
@@ -67,6 +78,31 @@ public final class SqlIpConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireSsl;
+
+  /**
+   * Optional. The name of the allocated IP address range for the private IP Cloud SQL instance.
+   * This name refers to an already allocated IP range address. If set, the instance IP address will
+   * be created in the allocated range. Note that this IP address range can't be modified after the
+   * instance is created. If you change the VPC when configuring connectivity settings for the
+   * migration job, this field is not relevant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllocatedIpRange() {
+    return allocatedIpRange;
+  }
+
+  /**
+   * Optional. The name of the allocated IP address range for the private IP Cloud SQL instance.
+   * This name refers to an already allocated IP range address. If set, the instance IP address will
+   * be created in the allocated range. Note that this IP address range can't be modified after the
+   * instance is created. If you change the VPC when configuring connectivity settings for the
+   * migration job, this field is not relevant.
+   * @param allocatedIpRange allocatedIpRange or {@code null} for none
+   */
+  public SqlIpConfig setAllocatedIpRange(java.lang.String allocatedIpRange) {
+    this.allocatedIpRange = allocatedIpRange;
+    return this;
+  }
 
   /**
    * The list of external networks that are allowed to connect to the instance using the IP. See

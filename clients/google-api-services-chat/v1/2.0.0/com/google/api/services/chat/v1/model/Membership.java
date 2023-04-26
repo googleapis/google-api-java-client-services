@@ -39,7 +39,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The Google Chat user or app the membership corresponds to.
+   * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +90,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Chat user or app the membership corresponds to.
+   * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -96,7 +100,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google Chat user or app the membership corresponds to.
+   * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
+   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {

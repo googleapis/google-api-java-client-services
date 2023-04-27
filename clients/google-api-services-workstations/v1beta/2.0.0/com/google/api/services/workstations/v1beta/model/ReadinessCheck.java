@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * Request message for StopWorkstation.
+ * A readiness check to be performed on a workstation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -28,67 +28,64 @@ package com.google.api.services.workstations.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StopWorkstationRequest extends com.google.api.client.json.GenericJson {
+public final class ReadinessCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
+   * Path to which the request should be sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String etag;
+  private java.lang.String path;
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
+   * Port to which the request should be sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean validateOnly;
+  private java.lang.Integer port;
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
+   * Path to which the request should be sent.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEtag() {
-    return etag;
+  public java.lang.String getPath() {
+    return path;
   }
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
-   * @param etag etag or {@code null} for none
+   * Path to which the request should be sent.
+   * @param path path or {@code null} for none
    */
-  public StopWorkstationRequest setEtag(java.lang.String etag) {
-    this.etag = etag;
+  public ReadinessCheck setPath(java.lang.String path) {
+    this.path = path;
     return this;
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
+   * Port to which the request should be sent.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getValidateOnly() {
-    return validateOnly;
+  public java.lang.Integer getPort() {
+    return port;
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
-   * @param validateOnly validateOnly or {@code null} for none
+   * Port to which the request should be sent.
+   * @param port port or {@code null} for none
    */
-  public StopWorkstationRequest setValidateOnly(java.lang.Boolean validateOnly) {
-    this.validateOnly = validateOnly;
+  public ReadinessCheck setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 
   @Override
-  public StopWorkstationRequest set(String fieldName, Object value) {
-    return (StopWorkstationRequest) super.set(fieldName, value);
+  public ReadinessCheck set(String fieldName, Object value) {
+    return (ReadinessCheck) super.set(fieldName, value);
   }
 
   @Override
-  public StopWorkstationRequest clone() {
-    return (StopWorkstationRequest) super.clone();
+  public ReadinessCheck clone() {
+    return (ReadinessCheck) super.clone();
   }
 
 }

@@ -53,6 +53,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
   private GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData articleSuggestion;
 
   /**
+   * Conversation summarization suggestion data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData conversationSummarizationSuggestion;
+
+  /**
    * The time at which this annotation was created.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
    */
   public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setArticleSuggestion(GoogleCloudContactcenterinsightsV1alpha1ArticleSuggestionData articleSuggestion) {
     this.articleSuggestion = articleSuggestion;
+    return this;
+  }
+
+  /**
+   * Conversation summarization suggestion data.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData getConversationSummarizationSuggestion() {
+    return conversationSummarizationSuggestion;
+  }
+
+  /**
+   * Conversation summarization suggestion data.
+   * @param conversationSummarizationSuggestion conversationSummarizationSuggestion or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setConversationSummarizationSuggestion(GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData conversationSummarizationSuggestion) {
+    this.conversationSummarizationSuggestion = conversationSummarizationSuggestion;
     return this;
   }
 

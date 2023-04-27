@@ -101,6 +101,20 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
   private java.lang.Boolean runSilenceAnnotator;
 
   /**
+   * Whether to run the summarization annotator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean runSummarizationAnnotator;
+
+  /**
+   * Configuration for the summarization annotator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig summarizationConfig;
+
+  /**
    * The issue model to run. If not provided, the most recently deployed topic model will be used.
    * The provided issue model will only be used for inference if the issue model is deployed and if
    * run_issue_model_annotator is set to true. If more than one issue model is provided, only the
@@ -264,6 +278,40 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
    */
   public GoogleCloudContactcenterinsightsV1AnnotatorSelector setRunSilenceAnnotator(java.lang.Boolean runSilenceAnnotator) {
     this.runSilenceAnnotator = runSilenceAnnotator;
+    return this;
+  }
+
+  /**
+   * Whether to run the summarization annotator.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunSummarizationAnnotator() {
+    return runSummarizationAnnotator;
+  }
+
+  /**
+   * Whether to run the summarization annotator.
+   * @param runSummarizationAnnotator runSummarizationAnnotator or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector setRunSummarizationAnnotator(java.lang.Boolean runSummarizationAnnotator) {
+    this.runSummarizationAnnotator = runSummarizationAnnotator;
+    return this;
+  }
+
+  /**
+   * Configuration for the summarization annotator.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig getSummarizationConfig() {
+    return summarizationConfig;
+  }
+
+  /**
+   * Configuration for the summarization annotator.
+   * @param summarizationConfig summarizationConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector setSummarizationConfig(GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig summarizationConfig) {
+    this.summarizationConfig = summarizationConfig;
     return this;
   }
 

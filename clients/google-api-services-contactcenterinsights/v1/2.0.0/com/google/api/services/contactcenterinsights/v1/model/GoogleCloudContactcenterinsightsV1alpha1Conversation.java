@@ -104,6 +104,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Conversation extends 
   private GoogleCloudContactcenterinsightsV1alpha1Analysis latestAnalysis;
 
   /**
+   * Output only. Latest summary of the conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData latestSummary;
+
+  /**
    * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
    * The value may be {@code null}.
    */
@@ -341,6 +348,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1Conversation extends 
    */
   public GoogleCloudContactcenterinsightsV1alpha1Conversation setLatestAnalysis(GoogleCloudContactcenterinsightsV1alpha1Analysis latestAnalysis) {
     this.latestAnalysis = latestAnalysis;
+    return this;
+  }
+
+  /**
+   * Output only. Latest summary of the conversation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData getLatestSummary() {
+    return latestSummary;
+  }
+
+  /**
+   * Output only. Latest summary of the conversation.
+   * @param latestSummary latestSummary or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1Conversation setLatestSummary(GoogleCloudContactcenterinsightsV1alpha1ConversationSummarizationSuggestionData latestSummary) {
+    this.latestSummary = latestSummary;
     return this;
   }
 

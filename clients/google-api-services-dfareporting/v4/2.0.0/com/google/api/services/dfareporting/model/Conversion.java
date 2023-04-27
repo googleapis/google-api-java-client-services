@@ -186,6 +186,14 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean treatmentForUnderage;
 
   /**
+   * The user identifiers to enhance the conversion. The maximum number of user identifiers for each
+   * conversion is 5.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UserIdentifier> userIdentifiers;
+
+  /**
    * The value of the conversion.
    * The value may be {@code null}.
    */
@@ -553,6 +561,25 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    */
   public Conversion setTreatmentForUnderage(java.lang.Boolean treatmentForUnderage) {
     this.treatmentForUnderage = treatmentForUnderage;
+    return this;
+  }
+
+  /**
+   * The user identifiers to enhance the conversion. The maximum number of user identifiers for each
+   * conversion is 5.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UserIdentifier> getUserIdentifiers() {
+    return userIdentifiers;
+  }
+
+  /**
+   * The user identifiers to enhance the conversion. The maximum number of user identifiers for each
+   * conversion is 5.
+   * @param userIdentifiers userIdentifiers or {@code null} for none
+   */
+  public Conversion setUserIdentifiers(java.util.List<UserIdentifier> userIdentifiers) {
+    this.userIdentifiers = userIdentifiers;
     return this;
   }
 

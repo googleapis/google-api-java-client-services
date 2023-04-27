@@ -43,6 +43,15 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   }
 
   /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float samplingPercent;
+
+  /**
    * The list of rules to evaluate against a data source. At least one rule is required.
    * @return value or {@code null} for none
    */
@@ -56,6 +65,27 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataQualitySpec setRules(java.util.List<GoogleCloudDataplexV1DataQualityRule> rules) {
     this.rules = rules;
+    return this;
+  }
+
+  /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSamplingPercent() {
+    return samplingPercent;
+  }
+
+  /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * @param samplingPercent samplingPercent or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpec setSamplingPercent(java.lang.Float samplingPercent) {
+    this.samplingPercent = samplingPercent;
     return this;
   }
 

@@ -29,6 +29,36 @@ package com.google.api.services.dataplex.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float samplingPercent;
+
+  /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSamplingPercent() {
+    return samplingPercent;
+  }
+
+  /**
+   * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
+   * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
+   * sampling_percent is not specified, 0 or 100.
+   * @param samplingPercent samplingPercent or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setSamplingPercent(java.lang.Float samplingPercent) {
+    this.samplingPercent = samplingPercent;
+    return this;
+  }
+
   @Override
   public GoogleCloudDataplexV1DataProfileSpec set(String fieldName, Object value) {
     return (GoogleCloudDataplexV1DataProfileSpec) super.set(fieldName, value);

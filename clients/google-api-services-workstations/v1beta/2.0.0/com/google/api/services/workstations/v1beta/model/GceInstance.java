@@ -59,11 +59,19 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
-   * Number of instances to pool for faster workstation starup.
+   * Number of instances to pool for faster workstation startup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer poolSize;
+
+  /**
+   * Output only. Number of instances currently available in the pool for faster workstation
+   * startup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pooledInstances;
 
   /**
    * Email address of the service account used on VM instances used to support this configuration.
@@ -158,7 +166,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster workstation starup.
+   * Number of instances to pool for faster workstation startup.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPoolSize() {
@@ -166,11 +174,30 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster workstation starup.
+   * Number of instances to pool for faster workstation startup.
    * @param poolSize poolSize or {@code null} for none
    */
   public GceInstance setPoolSize(java.lang.Integer poolSize) {
     this.poolSize = poolSize;
+    return this;
+  }
+
+  /**
+   * Output only. Number of instances currently available in the pool for faster workstation
+   * startup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPooledInstances() {
+    return pooledInstances;
+  }
+
+  /**
+   * Output only. Number of instances currently available in the pool for faster workstation
+   * startup.
+   * @param pooledInstances pooledInstances or {@code null} for none
+   */
+  public GceInstance setPooledInstances(java.lang.Integer pooledInstances) {
+    this.pooledInstances = pooledInstances;
     return this;
   }
 

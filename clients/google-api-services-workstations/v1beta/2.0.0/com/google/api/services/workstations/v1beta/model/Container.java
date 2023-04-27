@@ -45,7 +45,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> command;
 
   /**
-   * Environment variables passed to the container.
+   * Environment variables passed to the container's entrypoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the container.
+   * Environment variables passed to the container's entrypoint.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnv() {
@@ -116,7 +116,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the container.
+   * Environment variables passed to the container's entrypoint.
    * @param env env or {@code null} for none
    */
   public Container setEnv(java.util.Map<String, java.lang.String> env) {

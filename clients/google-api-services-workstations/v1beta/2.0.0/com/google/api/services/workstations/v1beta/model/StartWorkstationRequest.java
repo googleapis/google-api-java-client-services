@@ -32,7 +32,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
 
   /**
    * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this etag.
+   * does not have this ETag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
 
   /**
    * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this etag.
+   * does not have this ETag.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -56,7 +56,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
 
   /**
    * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this etag.
+   * does not have this ETag.
    * @param etag etag or {@code null} for none
    */
   public StartWorkstationRequest setEtag(java.lang.String etag) {

@@ -167,6 +167,21 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Readiness checks to perform when starting a workstation using this workstation configuration.
+   * Mark a workstation as running only after all specified readiness checks return 200 status
+   * codes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ReadinessCheck> readinessChecks;
+
+  static {
+    // hack to force ProGuard to consider ReadinessCheck used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ReadinessCheck.class);
+  }
+
+  /**
    * Output only. Indicates whether this resource is currently being updated to match its intended
    * state.
    * The value may be {@code null}.
@@ -485,6 +500,27 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setPersistentDirectories(java.util.List<PersistentDirectory> persistentDirectories) {
     this.persistentDirectories = persistentDirectories;
+    return this;
+  }
+
+  /**
+   * Readiness checks to perform when starting a workstation using this workstation configuration.
+   * Mark a workstation as running only after all specified readiness checks return 200 status
+   * codes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ReadinessCheck> getReadinessChecks() {
+    return readinessChecks;
+  }
+
+  /**
+   * Readiness checks to perform when starting a workstation using this workstation configuration.
+   * Mark a workstation as running only after all specified readiness checks return 200 status
+   * codes.
+   * @param readinessChecks readinessChecks or {@code null} for none
+   */
+  public WorkstationConfig setReadinessChecks(java.util.List<ReadinessCheck> readinessChecks) {
+    this.readinessChecks = readinessChecks;
     return this;
   }
 

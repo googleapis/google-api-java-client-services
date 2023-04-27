@@ -1108,13 +1108,13 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
           /**
            * If set, the request will be rejected if the latest version of the workstation cluster
-           * on the server does not have this etag.
+           * on the server does not have this ETag.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
           /** If set, the request will be rejected if the latest version of the workstation cluster on the server
-         does not have this etag.
+         does not have this ETag.
            */
           public java.lang.String getEtag() {
             return etag;
@@ -1122,7 +1122,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
           /**
            * If set, the request will be rejected if the latest version of the workstation cluster
-           * on the server does not have this etag.
+           * on the server does not have this ETag.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -1990,13 +1990,13 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
             /**
              * If set, the request is rejected if the latest version of the workstation
-             * configuration on the server does not have this etag.
+             * configuration on the server does not have this ETag.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
             /** If set, the request is rejected if the latest version of the workstation configuration on the
-           server does not have this etag.
+           server does not have this ETag.
              */
             public java.lang.String getEtag() {
               return etag;
@@ -2004,7 +2004,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
             /**
              * If set, the request is rejected if the latest version of the workstation
-             * configuration on the server does not have this etag.
+             * configuration on the server does not have this ETag.
              */
             public Delete setEtag(java.lang.String etag) {
               this.etag = etag;
@@ -3548,13 +3548,13 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
               /**
                * If set, the request will be rejected if the latest version of the workstation on
-               * the server does not have this etag.
+               * the server does not have this ETag.
                */
               @com.google.api.client.util.Key
               private java.lang.String etag;
 
               /** If set, the request will be rejected if the latest version of the workstation on the server does
-             not have this etag.
+             not have this ETag.
                */
               public java.lang.String getEtag() {
                 return etag;
@@ -3562,7 +3562,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
 
               /**
                * If set, the request will be rejected if the latest version of the workstation on
-               * the server does not have this etag.
+               * the server does not have this ETag.
                */
               public Delete setEtag(java.lang.String etag) {
                 this.etag = etag;

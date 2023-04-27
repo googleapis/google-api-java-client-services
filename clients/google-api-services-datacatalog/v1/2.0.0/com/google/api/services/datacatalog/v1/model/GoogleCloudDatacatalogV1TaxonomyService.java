@@ -31,7 +31,7 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.api.client.json.GenericJson {
 
   /**
-   * P4SA Identity of the service.
+   * The service agent for the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.ap
   private java.lang.String name;
 
   /**
-   * P4SA Identity of the service.
+   * The service agent for the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getIdentity() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDatacatalogV1TaxonomyService extends com.google.ap
   }
 
   /**
-   * P4SA Identity of the service.
+   * The service agent for the service.
    * @param identity identity or {@code null} for none
    */
   public GoogleCloudDatacatalogV1TaxonomyService setIdentity(java.lang.String identity) {

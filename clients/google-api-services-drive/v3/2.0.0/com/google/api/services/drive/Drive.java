@@ -4615,7 +4615,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Permanently deletes all of the user's trashed files.
+     * Permanently deletes all trashed files of a user or shared drive.
      *
      * Create a request for the method "files.emptyTrash".
      *
@@ -4635,7 +4635,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/trash";
 
       /**
-       * Permanently deletes all of the user's trashed files.
+       * Permanently deletes all trashed files of a user or shared drive.
        *
        * Create a request for the method "files.emptyTrash".
        *
@@ -6589,7 +6589,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribes to changes to a file.
+     * Subscribe to changes on a file.
      *
      * Create a request for the method "files.watch".
      *
@@ -6611,7 +6611,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/watch";
 
       /**
-       * Subscribes to changes to a file.
+       * Subscribe to changes on a file.
        *
        * Create a request for the method "files.watch".
        *

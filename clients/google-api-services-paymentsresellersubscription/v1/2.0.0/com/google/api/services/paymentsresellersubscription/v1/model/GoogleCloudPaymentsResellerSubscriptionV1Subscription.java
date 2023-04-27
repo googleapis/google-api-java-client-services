@@ -104,7 +104,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.lang.String processingState;
 
   /**
-   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that
    * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
@@ -358,7 +358,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that
    * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
@@ -368,7 +368,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Required. Deprecated: consider using `line_items` as the input. Required. Resource name that
+   * Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that
    * identifies the purchased products. The format will be
    * 'partners/{partner_id}/products/{product_id}'.
    * @param products products or {@code null} for none

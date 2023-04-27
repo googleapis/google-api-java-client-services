@@ -70,23 +70,24 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
-   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
-   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
-   * aggregation period that experienced at least one crash while they were actively using your app
-   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
-   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
-   * The daily values are weighted by the count of distinct users for the day. *
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. Not
+   * supported in HOURLY granularity. * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage
+   * of distinct users in the aggregation period that experienced at least one crash while they were
+   * actively using your app (a user-perceived crash). An app is considered to be in active use if
+   * it is displaying any activity or executing any foreground service. *
+   * `userPerceivedCrashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 7 days. The daily values are weighted by the count of
+   * distinct users for the day. Not supported in HOURLY granularity. *
    * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `crashRate` and
-   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
-   * actively during the aggregation period. An app is considered to be in active use if it is
-   * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times. The value
-   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
-   * of the value.
+   * distinct users for the day. Not supported in HOURLY granularity. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
+   * normalization value for the `crashRate` and `userPerceivedCrashRate` metrics. A user is counted
+   * in this metric if they used the app actively during the aggregation period. An app is
+   * considered to be in active use if it is displaying any activity or executing any foreground
+   * service. Care must be taken not to aggregate this count further, as it may result in users
+   * being counted multiple times. The value is rounded to the nearest multiple of 10, 100, 1,000 or
+   * 1,000,000, depending on the magnitude of the value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
   /**
    * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
    * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`.
+   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
+   * in hourly intervals. The default and only supported timezone is `UTC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,23 +213,24 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
-   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
-   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
-   * aggregation period that experienced at least one crash while they were actively using your app
-   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
-   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
-   * The daily values are weighted by the count of distinct users for the day. *
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. Not
+   * supported in HOURLY granularity. * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage
+   * of distinct users in the aggregation period that experienced at least one crash while they were
+   * actively using your app (a user-perceived crash). An app is considered to be in active use if
+   * it is displaying any activity or executing any foreground service. *
+   * `userPerceivedCrashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 7 days. The daily values are weighted by the count of
+   * distinct users for the day. Not supported in HOURLY granularity. *
    * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `crashRate` and
-   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
-   * actively during the aggregation period. An app is considered to be in active use if it is
-   * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times. The value
-   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
-   * of the value.
+   * distinct users for the day. Not supported in HOURLY granularity. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
+   * normalization value for the `crashRate` and `userPerceivedCrashRate` metrics. A user is counted
+   * in this metric if they used the app actively during the aggregation period. An app is
+   * considered to be in active use if it is displaying any activity or executing any foreground
+   * service. Care must be taken not to aggregate this count further, as it may result in users
+   * being counted multiple times. The value is rounded to the nearest multiple of 10, 100, 1,000 or
+   * 1,000,000, depending on the magnitude of the value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -240,23 +243,24 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
-   * last 28 days. The daily values are weighted by the count of distinct users for the day. *
-   * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage of distinct users in the
-   * aggregation period that experienced at least one crash while they were actively using your app
-   * (a user-perceived crash). An app is considered to be in active use if it is displaying any
-   * activity or executing any foreground service. * `userPerceivedCrashRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `userPerceivedCrashRate` in the last 7 days.
-   * The daily values are weighted by the count of distinct users for the day. *
+   * last 28 days. The daily values are weighted by the count of distinct users for the day. Not
+   * supported in HOURLY granularity. * `userPerceivedCrashRate` (`google.type.Decimal`): Percentage
+   * of distinct users in the aggregation period that experienced at least one crash while they were
+   * actively using your app (a user-perceived crash). An app is considered to be in active use if
+   * it is displaying any activity or executing any foreground service. *
+   * `userPerceivedCrashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of
+   * `userPerceivedCrashRate` in the last 7 days. The daily values are weighted by the count of
+   * distinct users for the day. Not supported in HOURLY granularity. *
    * `userPerceivedCrashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
    * `userPerceivedCrashRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `crashRate` and
-   * `userPerceivedCrashRate` metrics. A user is counted in this metric if they used the app
-   * actively during the aggregation period. An app is considered to be in active use if it is
-   * displaying any activity or executing any foreground service. Care must be taken not to
-   * aggregate this count further, as it may result in users being counted multiple times. The value
-   * is rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude
-   * of the value.
+   * distinct users for the day. Not supported in HOURLY granularity. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users in the aggregation period that were used as
+   * normalization value for the `crashRate` and `userPerceivedCrashRate` metrics. A user is counted
+   * in this metric if they used the app actively during the aggregation period. An app is
+   * considered to be in active use if it is displaying any activity or executing any foreground
+   * service. Care must be taken not to aggregate this count further, as it may result in users
+   * being counted multiple times. The value is rounded to the nearest multiple of 10, 100, 1,000 or
+   * 1,000,000, depending on the magnitude of the value.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {
@@ -307,7 +311,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
   /**
    * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
    * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`.
+   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
+   * in hourly intervals. The default and only supported timezone is `UTC`.
    * @return value or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1TimelineSpec getTimelineSpec() {
@@ -317,7 +322,8 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRe
   /**
    * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
    * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`.
+   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
+   * in hourly intervals. The default and only supported timezone is `UTC`.
    * @param timelineSpec timelineSpec or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryCrashRateMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec) {

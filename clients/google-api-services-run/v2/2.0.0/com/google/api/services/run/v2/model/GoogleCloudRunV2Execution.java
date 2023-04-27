@@ -31,7 +31,8 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Execution extends com.google.api.client.json.GenericJson {
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,10 +122,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.lang.String job;
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +251,8 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private String updateTime;
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -257,7 +260,8 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2Execution setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -450,10 +454,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -461,10 +466,11 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2Execution setLabels(java.util.Map<String, java.lang.String> labels) {

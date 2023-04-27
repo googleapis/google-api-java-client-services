@@ -4424,19 +4424,24 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * This field is currently not used by Cloud Run; setting it does not have any effect.
+           * If set to true, and if the Service does not exist, it will create a new one. The caller
+           * must have 'run.services.create' permissions if this is set to true and the Service does
+           * not exist.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** This field is currently not used by Cloud Run; setting it does not have any effect.
+          /** If set to true, and if the Service does not exist, it will create a new one. The caller must have
+         'run.services.create' permissions if this is set to true and the Service does not exist.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * This field is currently not used by Cloud Run; setting it does not have any effect.
+           * If set to true, and if the Service does not exist, it will create a new one. The caller
+           * must have 'run.services.create' permissions if this is set to true and the Service does
+           * not exist.
            */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;

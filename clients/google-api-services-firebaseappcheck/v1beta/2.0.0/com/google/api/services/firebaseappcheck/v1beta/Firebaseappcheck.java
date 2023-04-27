@@ -328,6 +328,182 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
   public class Projects {
 
     /**
+     * Verifies the given App Check token and returns token usage signals that callers may act upon.
+     * This method currently only supports App Check tokens exchanged from the following attestation
+     * providers: * Play Integrity API * App Attest * DeviceCheck (`DCDevice` tokens) * reCAPTCHA
+     * Enterprise * reCAPTCHA v3 * Custom providers App Check tokens exchanged from debug secrets are
+     * also supported. Calling this method on an otherwise valid App Check token with an unsupported
+     * provider will cause an HTTP 400 error to be returned. Returns whether this token was already
+     * consumed before this call. If this is the first time this method has seen the given App Check
+     * token, the field `already_consumed` will contain the value `false`. The given token will then be
+     * marked as `already_consumed` for all future invocations of this method for that token. Note that
+     * if the given App Check token is invalid, an HTTP 403 error is returned instead of a response
+     * object, regardless whether the token was already consumed. Currently, when evaluating whether an
+     * App Check token was already consumed, only calls to this exact method are counted. Use of the App
+     * Check token elsewhere will not mark the token as being already consumed.
+     *
+     * Create a request for the method "projects.verifyAppCheckToken".
+     *
+     * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+     * optional parameters, call the {@link VerifyAppCheckToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. The relative resource name of the project for which the token was minted, in the format:
+     *        ``` projects/{project_number} ``` If necessary, the `project_number` element can be
+     *        replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest}
+     * @return the request
+     */
+    public VerifyAppCheckToken verifyAppCheckToken(java.lang.String project, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest content) throws java.io.IOException {
+      VerifyAppCheckToken result = new VerifyAppCheckToken(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class VerifyAppCheckToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse> {
+
+      private static final String REST_PATH = "v1beta/{+project}:verifyAppCheckToken";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Verifies the given App Check token and returns token usage signals that callers may act upon.
+       * This method currently only supports App Check tokens exchanged from the following attestation
+       * providers: * Play Integrity API * App Attest * DeviceCheck (`DCDevice` tokens) * reCAPTCHA
+       * Enterprise * reCAPTCHA v3 * Custom providers App Check tokens exchanged from debug secrets are
+       * also supported. Calling this method on an otherwise valid App Check token with an unsupported
+       * provider will cause an HTTP 400 error to be returned. Returns whether this token was already
+       * consumed before this call. If this is the first time this method has seen the given App Check
+       * token, the field `already_consumed` will contain the value `false`. The given token will then
+       * be marked as `already_consumed` for all future invocations of this method for that token. Note
+       * that if the given App Check token is invalid, an HTTP 403 error is returned instead of a
+       * response object, regardless whether the token was already consumed. Currently, when evaluating
+       * whether an App Check token was already consumed, only calls to this exact method are counted.
+       * Use of the App Check token elsewhere will not mark the token as being already consumed.
+       *
+       * Create a request for the method "projects.verifyAppCheckToken".
+       *
+       * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link VerifyAppCheckToken#execute()} method to invoke the remote
+       * operation. <p> {@link VerifyAppCheckToken#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Required. The relative resource name of the project for which the token was minted, in the format:
+     *        ``` projects/{project_number} ``` If necessary, the `project_number` element can be
+     *        replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest}
+       * @since 1.13
+       */
+      protected VerifyAppCheckToken(java.lang.String project, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest content) {
+        super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public VerifyAppCheckToken set$Xgafv(java.lang.String $Xgafv) {
+        return (VerifyAppCheckToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public VerifyAppCheckToken setAccessToken(java.lang.String accessToken) {
+        return (VerifyAppCheckToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public VerifyAppCheckToken setAlt(java.lang.String alt) {
+        return (VerifyAppCheckToken) super.setAlt(alt);
+      }
+
+      @Override
+      public VerifyAppCheckToken setCallback(java.lang.String callback) {
+        return (VerifyAppCheckToken) super.setCallback(callback);
+      }
+
+      @Override
+      public VerifyAppCheckToken setFields(java.lang.String fields) {
+        return (VerifyAppCheckToken) super.setFields(fields);
+      }
+
+      @Override
+      public VerifyAppCheckToken setKey(java.lang.String key) {
+        return (VerifyAppCheckToken) super.setKey(key);
+      }
+
+      @Override
+      public VerifyAppCheckToken setOauthToken(java.lang.String oauthToken) {
+        return (VerifyAppCheckToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public VerifyAppCheckToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (VerifyAppCheckToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public VerifyAppCheckToken setQuotaUser(java.lang.String quotaUser) {
+        return (VerifyAppCheckToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public VerifyAppCheckToken setUploadType(java.lang.String uploadType) {
+        return (VerifyAppCheckToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public VerifyAppCheckToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (VerifyAppCheckToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative resource name of the project for which the token was minted, in the
+       * format: ``` projects/{project_number} ``` If necessary, the `project_number` element can be
+       * replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. The relative resource name of the project for which the token was minted, in the format:
+     ``` projects/{project_number} ``` If necessary, the `project_number` element can be replaced with
+     the project ID of the Firebase project. Learn more about using project identifiers in Google's [AIP
+     2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /**
+       * Required. The relative resource name of the project for which the token was minted, in the
+       * format: ``` projects/{project_number} ``` If necessary, the `project_number` element can be
+       * replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public VerifyAppCheckToken setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public VerifyAppCheckToken set(String parameterName, Object value) {
+        return (VerifyAppCheckToken) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Apps collection.
      *
      * <p>The typical use is:</p>

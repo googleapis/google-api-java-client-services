@@ -31,7 +31,8 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Revision extends com.google.api.client.json.GenericJson {
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,10 +135,11 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private java.lang.Long generation;
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,6 +224,13 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private java.lang.String serviceAccount;
 
   /**
+   * Enable session affinity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sessionAffinity;
+
+  /**
    * Max allowed time for an instance to respond to a request.
    * The value may be {@code null}.
    */
@@ -259,7 +268,8 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private GoogleCloudRunV2VpcAccess vpcAccess;
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -267,7 +277,8 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   }
 
   /**
-   * KRM-style annotations for the resource.
+   * Output only. Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2Revision setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -477,10 +488,11 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -488,10 +500,11 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+   * Output only. Unstructured key value map that can be used to organize and categorize objects.
+   * User-provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2Revision setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -682,6 +695,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Enable session affinity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSessionAffinity() {
+    return sessionAffinity;
+  }
+
+  /**
+   * Enable session affinity.
+   * @param sessionAffinity sessionAffinity or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setSessionAffinity(java.lang.Boolean sessionAffinity) {
+    this.sessionAffinity = sessionAffinity;
     return this;
   }
 

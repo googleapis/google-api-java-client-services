@@ -31,12 +31,12 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Job extends com.google.api.client.json.GenericJson {
 
   /**
-   * KRM-style annotations for the resource. Unstructured key value map that may be set by external
-   * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
-   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
-   * they will be rejected on new resources. All system annotations in v1 now have a corresponding
-   * field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
+   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
+   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
+   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Job. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,13 +130,14 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private java.lang.Long generation;
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system labels in v1 now have a corresponding field in v2 Job.
+   * Unstructured key value map that can be used to organize and categorize objects. User-provided
+   * labels are shared with Google's billing system, so they can be used to filter, or break down
+   * billing charges by team, component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
+   * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 Job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,12 +242,12 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private String updateTime;
 
   /**
-   * KRM-style annotations for the resource. Unstructured key value map that may be set by external
-   * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
-   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
-   * they will be rejected on new resources. All system annotations in v1 now have a corresponding
-   * field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
+   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
+   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
+   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Job. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -254,12 +255,12 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * KRM-style annotations for the resource. Unstructured key value map that may be set by external
-   * tools to store and arbitrary metadata. They are not queryable and should be preserved when
-   * modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`,
-   * `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and
-   * they will be rejected on new resources. All system annotations in v1 now have a corresponding
-   * field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
+   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
+   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
+   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on
+   * new resources. All system annotations in v1 now have a corresponding field in v2 Job. This
+   * field follows Kubernetes annotations' namespacing, limits, and rules.
    * @param annotations annotations or {@code null} for none
    */
   public GoogleCloudRunV2Job setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -463,13 +464,14 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system labels in v1 now have a corresponding field in v2 Job.
+   * Unstructured key value map that can be used to organize and categorize objects. User-provided
+   * labels are shared with Google's billing system, so they can be used to filter, or break down
+   * billing charges by team, component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
+   * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 Job.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -477,13 +479,14 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * KRM-style labels for the resource. User-provided labels are shared with Google's billing
-   * system, so they can be used to filter, or break down billing charges by team, component,
-   * environment, state, etc. For more information, visit https://cloud.google.com/resource-
-   * manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
-   * Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
-   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
-   * system labels in v1 now have a corresponding field in v2 Job.
+   * Unstructured key value map that can be used to organize and categorize objects. User-provided
+   * labels are shared with Google's billing system, so they can be used to filter, or break down
+   * billing charges by team, component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
+   * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
+   * have a corresponding field in v2 Job.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudRunV2Job setLabels(java.util.Map<String, java.lang.String> labels) {

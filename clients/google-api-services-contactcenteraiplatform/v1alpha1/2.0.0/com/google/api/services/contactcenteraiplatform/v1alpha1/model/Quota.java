@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Represents a quota for contact centers.
+ * Quota details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -28,34 +28,31 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ContactCenterQuota extends com.google.api.client.json.GenericJson {
+public final class Quota extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a
-   * billing account.
+   * Reflects the count limit of contact centers on a billing account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contactCenterCountLimit;
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a
-   * billing account.
+   * Reflects the count sum of contact centers on a billing account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contactCenterCountSum;
 
   /**
-   * Quota details per contact center instance type.
+   * Contact center instance type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Quota> quotas;
+  private java.lang.String contactCenterInstanceSize;
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a
-   * billing account.
+   * Reflects the count limit of contact centers on a billing account.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContactCenterCountLimit() {
@@ -63,18 +60,16 @@ public final class ContactCenterQuota extends com.google.api.client.json.Generic
   }
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a
-   * billing account.
+   * Reflects the count limit of contact centers on a billing account.
    * @param contactCenterCountLimit contactCenterCountLimit or {@code null} for none
    */
-  public ContactCenterQuota setContactCenterCountLimit(java.lang.Integer contactCenterCountLimit) {
+  public Quota setContactCenterCountLimit(java.lang.Integer contactCenterCountLimit) {
     this.contactCenterCountLimit = contactCenterCountLimit;
     return this;
   }
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a
-   * billing account.
+   * Reflects the count sum of contact centers on a billing account.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContactCenterCountSum() {
@@ -82,40 +77,39 @@ public final class ContactCenterQuota extends com.google.api.client.json.Generic
   }
 
   /**
-   * Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a
-   * billing account.
+   * Reflects the count sum of contact centers on a billing account.
    * @param contactCenterCountSum contactCenterCountSum or {@code null} for none
    */
-  public ContactCenterQuota setContactCenterCountSum(java.lang.Integer contactCenterCountSum) {
+  public Quota setContactCenterCountSum(java.lang.Integer contactCenterCountSum) {
     this.contactCenterCountSum = contactCenterCountSum;
     return this;
   }
 
   /**
-   * Quota details per contact center instance type.
+   * Contact center instance type.
    * @return value or {@code null} for none
    */
-  public java.util.List<Quota> getQuotas() {
-    return quotas;
+  public java.lang.String getContactCenterInstanceSize() {
+    return contactCenterInstanceSize;
   }
 
   /**
-   * Quota details per contact center instance type.
-   * @param quotas quotas or {@code null} for none
+   * Contact center instance type.
+   * @param contactCenterInstanceSize contactCenterInstanceSize or {@code null} for none
    */
-  public ContactCenterQuota setQuotas(java.util.List<Quota> quotas) {
-    this.quotas = quotas;
+  public Quota setContactCenterInstanceSize(java.lang.String contactCenterInstanceSize) {
+    this.contactCenterInstanceSize = contactCenterInstanceSize;
     return this;
   }
 
   @Override
-  public ContactCenterQuota set(String fieldName, Object value) {
-    return (ContactCenterQuota) super.set(fieldName, value);
+  public Quota set(String fieldName, Object value) {
+    return (Quota) super.set(fieldName, value);
   }
 
   @Override
-  public ContactCenterQuota clone() {
-    return (ContactCenterQuota) super.clone();
+  public Quota clone() {
+    return (Quota) super.clone();
   }
 
 }

@@ -17,7 +17,9 @@
 package com.google.api.services.displayvideo.v2.model;
 
 /**
- * A single manual trigger in Display & Video 360.
+ * A single manual trigger in Display & Video 360. **Warning:** Line Items using manual triggers
+ * will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation
+ * announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

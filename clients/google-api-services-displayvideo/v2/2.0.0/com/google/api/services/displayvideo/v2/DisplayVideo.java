@@ -13460,7 +13460,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes
-       * apart, otherwise an error will be returned.
+       * apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will
+       * stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation
+       * announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
        *
        * Create a request for the method "manualTriggers.activate".
        *
@@ -13490,7 +13492,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes
-         * apart, otherwise an error will be returned.
+         * apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will
+         * stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation
+         * announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.activate".
          *
@@ -13605,6 +13609,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+       * **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May
+       * 17, 2023**. Read our [feature deprecation announcement](/display-
+       * video/api/deprecations#features.manual_triggers) for more information.
        *
        * Create a request for the method "manualTriggers.create".
        *
@@ -13630,6 +13637,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Creates a new manual trigger. Returns the newly created manual trigger if successful.
+         * **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May
+         * 17, 2023**. Read our [feature deprecation announcement](/display-
+         * video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.create".
          *
@@ -13729,7 +13739,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deactivates a manual trigger.
+       * Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving in
+       * Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-
+       * video/api/deprecations#features.manual_triggers) for more information.
        *
        * Create a request for the method "manualTriggers.deactivate".
        *
@@ -13758,7 +13770,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Deactivates a manual trigger.
+         * Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving
+         * in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement
+         * ](/display-video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.deactivate".
          *
@@ -13872,7 +13886,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Gets a manual trigger.
+       * Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display
+       * & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-
+       * video/api/deprecations#features.manual_triggers) for more information.
        *
        * Create a request for the method "manualTriggers.get".
        *
@@ -13900,7 +13916,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Gets a manual trigger.
+         * Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in
+         * Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-
+         * video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.get".
          *
@@ -14023,7 +14041,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Lists manual triggers that are accessible to the current user for a given advertiser ID. The
-       * order is defined by the order_by parameter. A single advertiser_id is required.
+       * order is defined by the order_by parameter. A single advertiser_id is required. **Warning:** Line
+       * Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read
+       * our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers)
+       * for more information.
        *
        * Create a request for the method "manualTriggers.list".
        *
@@ -14048,7 +14069,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Lists manual triggers that are accessible to the current user for a given advertiser ID. The
-         * order is defined by the order_by parameter. A single advertiser_id is required.
+         * order is defined by the order_by parameter. A single advertiser_id is required. **Warning:**
+         * Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**.
+         * Read our [feature deprecation announcement](/display-
+         * video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.list".
          *
@@ -14261,7 +14285,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates a manual trigger. Returns the updated manual trigger if successful.
+       * Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line
+       * Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read
+       * our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers)
+       * for more information.
        *
        * Create a request for the method "manualTriggers.patch".
        *
@@ -14290,7 +14317,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates a manual trigger. Returns the updated manual trigger if successful.
+         * Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line
+         * Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read
+         * our [feature deprecation announcement](/display-
+         * video/api/deprecations#features.manual_triggers) for more information.
          *
          * Create a request for the method "manualTriggers.patch".
          *

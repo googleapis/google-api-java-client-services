@@ -31,7 +31,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. The destination services to which traffic should be forwarded. At least one
-   * destination service is required.
+   * destination service is required. Only one of route destination or original destination can be
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. If true, Router will use the destination IP and port of the original connection as
-   * the destination of the request. Default is false.
+   * the destination of the request. Default is false. Only one of route destinations or original
+   * destination can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +49,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. The destination services to which traffic should be forwarded. At least one
-   * destination service is required.
+   * destination service is required. Only one of route destination or original destination can be
+   * set.
    * @return value or {@code null} for none
    */
   public java.util.List<TcpRouteRouteDestination> getDestinations() {
@@ -56,7 +59,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. The destination services to which traffic should be forwarded. At least one
-   * destination service is required.
+   * destination service is required. Only one of route destination or original destination can be
+   * set.
    * @param destinations destinations or {@code null} for none
    */
   public TcpRouteRouteAction setDestinations(java.util.List<TcpRouteRouteDestination> destinations) {
@@ -66,7 +70,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. If true, Router will use the destination IP and port of the original connection as
-   * the destination of the request. Default is false.
+   * the destination of the request. Default is false. Only one of route destinations or original
+   * destination can be set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOriginalDestination() {
@@ -75,7 +80,8 @@ public final class TcpRouteRouteAction extends com.google.api.client.json.Generi
 
   /**
    * Optional. If true, Router will use the destination IP and port of the original connection as
-   * the destination of the request. Default is false.
+   * the destination of the request. Default is false. Only one of route destinations or original
+   * destination can be set.
    * @param originalDestination originalDestination or {@code null} for none
    */
   public TcpRouteRouteAction setOriginalDestination(java.lang.Boolean originalDestination) {

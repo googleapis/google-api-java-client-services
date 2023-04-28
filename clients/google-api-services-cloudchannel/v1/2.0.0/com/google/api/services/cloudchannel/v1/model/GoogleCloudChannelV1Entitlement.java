@@ -37,6 +37,13 @@ public final class GoogleCloudChannelV1Entitlement extends com.google.api.client
   private GoogleCloudChannelV1AssociationInfo associationInfo;
 
   /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Commitment settings for a commitment-based Offer. Required for commitment based offers.
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class GoogleCloudChannelV1Entitlement extends com.google.api.client
    */
   public GoogleCloudChannelV1Entitlement setAssociationInfo(GoogleCloudChannelV1AssociationInfo associationInfo) {
     this.associationInfo = associationInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudChannelV1Entitlement setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
     return this;
   }
 

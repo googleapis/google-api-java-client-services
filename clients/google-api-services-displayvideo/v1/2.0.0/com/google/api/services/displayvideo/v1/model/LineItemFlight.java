@@ -54,6 +54,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
    * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
    * flight dates are inherited from its parent insertion order. * Active line items will spend when
    * the selected trigger is activated within the parent insertion order's flight dates.
+   * **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May
+   * 17, 2023**. Read our [feature deprecation announcement](/display-
+   * video/api/deprecations#features.manual_triggers) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -108,6 +111,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
    * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
    * flight dates are inherited from its parent insertion order. * Active line items will spend when
    * the selected trigger is activated within the parent insertion order's flight dates.
+   * **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May
+   * 17, 2023**. Read our [feature deprecation announcement](/display-
+   * video/api/deprecations#features.manual_triggers) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTriggerId() {
@@ -119,6 +125,9 @@ public final class LineItemFlight extends com.google.api.client.json.GenericJson
    * `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's
    * flight dates are inherited from its parent insertion order. * Active line items will spend when
    * the selected trigger is activated within the parent insertion order's flight dates.
+   * **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May
+   * 17, 2023**. Read our [feature deprecation announcement](/display-
+   * video/api/deprecations#features.manual_triggers) for more information.
    * @param triggerId triggerId or {@code null} for none
    */
   public LineItemFlight setTriggerId(java.lang.Long triggerId) {

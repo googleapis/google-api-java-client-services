@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * A resource that represents Google Cloud location.
+ * A resource that represents a Google Cloud location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed

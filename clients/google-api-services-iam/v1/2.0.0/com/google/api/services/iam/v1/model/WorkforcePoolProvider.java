@@ -93,7 +93,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.String description;
 
   /**
-   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
+   * Disables the workforce pool provider. You cannot use a disabled provider to exchange tokens.
    * However, existing tokens still grant access.
    * The value may be {@code null}.
    */
@@ -270,7 +270,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
+   * Disables the workforce pool provider. You cannot use a disabled provider to exchange tokens.
    * However, existing tokens still grant access.
    * @return value or {@code null} for none
    */
@@ -279,7 +279,7 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
+   * Disables the workforce pool provider. You cannot use a disabled provider to exchange tokens.
    * However, existing tokens still grant access.
    * @param disabled disabled or {@code null} for none
    */

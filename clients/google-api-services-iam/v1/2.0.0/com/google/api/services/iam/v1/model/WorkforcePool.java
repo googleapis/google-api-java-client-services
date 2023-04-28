@@ -39,9 +39,8 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
+   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +104,8 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
+   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -115,9 +113,8 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use
-   * existing tokens to access resources. If the pool is re-enabled, existing tokens grant access
-   * again.
+   * Disables the workforce pool. You cannot use a disabled pool to exchange tokens, or use existing
+   * tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
    * @param disabled disabled or {@code null} for none
    */
   public WorkforcePool setDisabled(java.lang.Boolean disabled) {

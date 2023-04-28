@@ -46,6 +46,14 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private java.lang.String issuerUri;
 
   /**
+   * Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers
+   * to console sign-in and gcloud sign-in through the browser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig webSsoConfig;
+
+  /**
    * Required. The client ID. Must match the audience claim of the JWT issued by the identity
    * provider.
    * @return value or {@code null} for none
@@ -78,6 +86,25 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc setIssuerUri(java.lang.String issuerUri) {
     this.issuerUri = issuerUri;
+    return this;
+  }
+
+  /**
+   * Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers
+   * to console sign-in and gcloud sign-in through the browser.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig getWebSsoConfig() {
+    return webSsoConfig;
+  }
+
+  /**
+   * Required. Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers
+   * to console sign-in and gcloud sign-in through the browser.
+   * @param webSsoConfig webSsoConfig or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidc setWebSsoConfig(GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig webSsoConfig) {
+    this.webSsoConfig = webSsoConfig;
     return this;
   }
 

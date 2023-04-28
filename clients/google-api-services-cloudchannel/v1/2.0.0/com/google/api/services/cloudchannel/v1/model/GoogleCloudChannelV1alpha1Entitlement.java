@@ -45,6 +45,13 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
   private GoogleCloudChannelV1alpha1AssociationInfo associationInfo;
 
   /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Cloud Identity ID of a channel partner who will be the direct reseller for the customer's
    * order. This field is generally used in 2-tier ordering, where the order is placed by a top-
    * level distributor on behalf of their channel partner or reseller. Required for distributors.
@@ -193,6 +200,23 @@ public final class GoogleCloudChannelV1alpha1Entitlement extends com.google.api.
    */
   public GoogleCloudChannelV1alpha1Entitlement setAssociationInfo(GoogleCloudChannelV1alpha1AssociationInfo associationInfo) {
     this.associationInfo = associationInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1Entitlement setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
     return this;
   }
 

@@ -45,6 +45,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings;
 
   /**
+   * A snapshot of an Audience resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaAudience audience;
+
+  /**
    * A snapshot of a BigQuery link resource in change history.
    * The value may be {@code null}.
    */
@@ -194,6 +201,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAttributionSettings(GoogleAnalyticsAdminV1alphaAttributionSettings attributionSettings) {
     this.attributionSettings = attributionSettings;
+    return this;
+  }
+
+  /**
+   * A snapshot of an Audience resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAudience getAudience() {
+    return audience;
+  }
+
+  /**
+   * A snapshot of an Audience resource in change history.
+   * @param audience audience or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAudience(GoogleAnalyticsAdminV1alphaAudience audience) {
+    this.audience = audience;
     return this;
   }
 

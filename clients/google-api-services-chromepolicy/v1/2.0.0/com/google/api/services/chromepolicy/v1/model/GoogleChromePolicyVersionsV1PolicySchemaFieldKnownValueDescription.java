@@ -38,6 +38,19 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescri
   private java.lang.String description;
 
   /**
+   * Output only. Field conditions required for this value to be valid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies> fieldDependencies;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies.class);
+  }
+
+  /**
    * Output only. The string represenstation of the value that can be set for the field.
    * The value may be {@code null}.
    */
@@ -58,6 +71,23 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescri
    */
   public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. Field conditions required for this value to be valid.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies> getFieldDependencies() {
+    return fieldDependencies;
+  }
+
+  /**
+   * Output only. Field conditions required for this value to be valid.
+   * @param fieldDependencies fieldDependencies or {@code null} for none
+   */
+  public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription setFieldDependencies(java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies> fieldDependencies) {
+    this.fieldDependencies = fieldDependencies;
     return this;
   }
 

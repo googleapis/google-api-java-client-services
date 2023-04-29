@@ -54,8 +54,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchInfo extends com.google
   /**
    * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
    * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. At least one of search_query or page_categories is required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * returned. At least one of search_query or PageInfo.page_category is required for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +115,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchInfo extends com.google
   /**
    * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
    * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. At least one of search_query or page_categories is required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * returned. At least one of search_query or PageInfo.page_category is required for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchQuery() {
@@ -125,8 +127,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchInfo extends com.google
   /**
    * The user's search query. See SearchRequest.query for definition. The value must be a UTF-8
    * encoded string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. At least one of search_query or page_categories is required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * returned. At least one of search_query or PageInfo.page_category is required for `search`
+   * events. Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is
+   * returned.
    * @param searchQuery searchQuery or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchInfo setSearchQuery(java.lang.String searchQuery) {

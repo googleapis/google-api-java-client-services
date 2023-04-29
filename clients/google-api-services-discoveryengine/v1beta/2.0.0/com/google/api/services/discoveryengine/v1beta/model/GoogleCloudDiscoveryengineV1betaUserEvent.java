@@ -58,16 +58,16 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
 
   /**
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
-   * for user events that are the result of PredictionService.Predict. This field enables accurate
-   * attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of PredictionService.Predict.
-   * * SearchResponse.attribution_token for events that are the result of SearchService.Search. *
-   * CompleteQueryResponse.attribution_token for events that are the result of
-   * SearchService.CompleteQuery. This token enables us to accurately attribute page view or
-   * conversion completion back to the event and the particular predict response containing this
-   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * for user events that are the result of RecommendationService.Recommend. This field enables
+   * accurate attribution of recommendation model performance. The value must be one of: *
+   * PredictResponse.attribution_token for events that are the result of
+   * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
+   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
+   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
+   * page view or conversion completion back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,13 +134,12 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchService.SearchRequest may contain a filter expression in
-   * SearchService.SearchRequest.filter conforming to https://google.aip.dev/160#filtering.
-   * Similarly, for `view-item-list` events that are generated from a
-   * PredictionService.PredictRequest, this field may be populated directly from
-   * PredictionService.PredictRequest.filter conforming to https://google.aip.dev/160#filtering. The
-   * value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
+   * from a RecommendationService.RecommendRequest, this field may be populated directly from
+   * RecommendationService.RecommendRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
+   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,16 +276,16 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
 
   /**
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
-   * for user events that are the result of PredictionService.Predict. This field enables accurate
-   * attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of PredictionService.Predict.
-   * * SearchResponse.attribution_token for events that are the result of SearchService.Search. *
-   * CompleteQueryResponse.attribution_token for events that are the result of
-   * SearchService.CompleteQuery. This token enables us to accurately attribute page view or
-   * conversion completion back to the event and the particular predict response containing this
-   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * for user events that are the result of RecommendationService.Recommend. This field enables
+   * accurate attribution of recommendation model performance. The value must be one of: *
+   * PredictResponse.attribution_token for events that are the result of
+   * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
+   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
+   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
+   * page view or conversion completion back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionToken() {
@@ -295,16 +294,16 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
 
   /**
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
-   * for user events that are the result of PredictionService.Predict. This field enables accurate
-   * attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of PredictionService.Predict.
-   * * SearchResponse.attribution_token for events that are the result of SearchService.Search. *
-   * CompleteQueryResponse.attribution_token for events that are the result of
-   * SearchService.CompleteQuery. This token enables us to accurately attribute page view or
-   * conversion completion back to the event and the particular predict response containing this
-   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
-   * PredictResponse.attribution_token as a URL parameter to product K's page. When recording events
-   * on product K's page, log the PredictResponse.attribution_token to this field.
+   * for user events that are the result of RecommendationService.Recommend. This field enables
+   * accurate attribution of recommendation model performance. The value must be one of: *
+   * PredictResponse.attribution_token for events that are the result of
+   * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
+   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
+   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
+   * page view or conversion completion back to the event and the particular predict response
+   * containing this clicked/purchased product. If user clicks on product K in the recommendation
+   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
+   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
    * @param attributionToken attributionToken or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaUserEvent setAttributionToken(java.lang.String attributionToken) {
@@ -434,13 +433,12 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchService.SearchRequest may contain a filter expression in
-   * SearchService.SearchRequest.filter conforming to https://google.aip.dev/160#filtering.
-   * Similarly, for `view-item-list` events that are generated from a
-   * PredictionService.PredictRequest, this field may be populated directly from
-   * PredictionService.PredictRequest.filter conforming to https://google.aip.dev/160#filtering. The
-   * value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
+   * from a RecommendationService.RecommendRequest, this field may be populated directly from
+   * RecommendationService.RecommendRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
+   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -450,13 +448,12 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. One example is for `search` events, the associated
-   * SearchService.SearchRequest may contain a filter expression in
-   * SearchService.SearchRequest.filter conforming to https://google.aip.dev/160#filtering.
-   * Similarly, for `view-item-list` events that are generated from a
-   * PredictionService.PredictRequest, this field may be populated directly from
-   * PredictionService.PredictRequest.filter conforming to https://google.aip.dev/160#filtering. The
-   * value must be a UTF-8 encoded string with a length limit of 1,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned.
+   * SearchRequest may contain a filter expression in SearchRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. Similarly, for `view-item-list` events that are generated
+   * from a RecommendationService.RecommendRequest, this field may be populated directly from
+   * RecommendationService.RecommendRequest.filter conforming to
+   * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
+   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaUserEvent setFilter(java.lang.String filter) {

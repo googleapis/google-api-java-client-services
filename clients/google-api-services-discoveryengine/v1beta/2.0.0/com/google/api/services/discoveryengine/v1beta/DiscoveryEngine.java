@@ -1280,6 +1280,155 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   return (Patch) super.set(parameterName, value);
                 }
               }
+              /**
+               * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
+               * request is valid, the removal will be enquired and processed offlines. Depending on the number of
+               * Documents, this operation could take hours to complete. Before the operation completes, some
+               * Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments.
+               * To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+               *
+               * Create a request for the method "documents.purge".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+               *        llection}/dataStores/{data_store}/branches/{branch}`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest}
+               * @return the request
+               */
+              public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest content) throws java.io.IOException {
+                Purge result = new Purge(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1beta/{+parent}/documents:purge";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
+                 * request is valid, the removal will be enquired and processed offlines. Depending on the number
+                 * of Documents, this operation could take hours to complete. Before the operation completes, some
+                 * Documents may still be returned by DocumentService.GetDocument or
+                 * DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set
+                 * PurgeDocumentsRequest.force to false.
+                 *
+                 * Create a request for the method "documents.purge".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+               *        llection}/dataStores/{data_store}/branches/{branch}`.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest}
+                 * @since 1.13
+                 */
+                protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Purge set$Xgafv(java.lang.String $Xgafv) {
+                  return (Purge) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Purge setAccessToken(java.lang.String accessToken) {
+                  return (Purge) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Purge setAlt(java.lang.String alt) {
+                  return (Purge) super.setAlt(alt);
+                }
+
+                @Override
+                public Purge setCallback(java.lang.String callback) {
+                  return (Purge) super.setCallback(callback);
+                }
+
+                @Override
+                public Purge setFields(java.lang.String fields) {
+                  return (Purge) super.setFields(fields);
+                }
+
+                @Override
+                public Purge setKey(java.lang.String key) {
+                  return (Purge) super.setKey(key);
+                }
+
+                @Override
+                public Purge setOauthToken(java.lang.String oauthToken) {
+                  return (Purge) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Purge) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Purge setQuotaUser(java.lang.String quotaUser) {
+                  return (Purge) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Purge setUploadType(java.lang.String uploadType) {
+                  return (Purge) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Purge) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name, such as `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{c
+               ollection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name, such as `projects/{project}/locations/{locati
+                 * on}/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+                 */
+                public Purge setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public Purge set(String parameterName, Object value) {
+                  return (Purge) super.set(parameterName, value);
+                }
+              }
 
             }
             /**
@@ -3238,6 +3387,194 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return (Get) super.set(parameterName, value);
               }
             }
+            /**
+             * Lists operations that match the specified filter in the request. If the server doesn't support
+             * this method, it returns `UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the operation's parent resource.
+             * @return the request
+             */
+            public List list(java.lang.String name) throws java.io.IOException {
+              List result = new List(name);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningListOperationsResponse> {
+
+              private static final String REST_PATH = "v1beta/{+name}/operations";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+              /**
+               * Lists operations that match the specified filter in the request. If the server doesn't support
+               * this method, it returns `UNIMPLEMENTED`.
+               *
+               * Create a request for the method "operations.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the operation's parent resource.
+               * @since 1.13
+               */
+              protected List(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningListOperationsResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the operation's parent resource. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the operation's parent resource.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the operation's parent resource. */
+              public List setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The standard list filter. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** The standard list filter.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** The standard list filter. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** The standard list page size. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The standard list page size.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** The standard list page size. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The standard list page token. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The standard list page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The standard list page token. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
 
           }
         }
@@ -4673,6 +5010,155 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
+             * request is valid, the removal will be enquired and processed offlines. Depending on the number of
+             * Documents, this operation could take hours to complete. Before the operation completes, some
+             * Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments.
+             * To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+             *
+             * Create a request for the method "documents.purge".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+             *        llection}/dataStores/{data_store}/branches/{branch}`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest}
+             * @return the request
+             */
+            public Purge purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest content) throws java.io.IOException {
+              Purge result = new Purge(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Purge extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1beta/{+parent}/documents:purge";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+              /**
+               * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
+               * request is valid, the removal will be enquired and processed offlines. Depending on the number
+               * of Documents, this operation could take hours to complete. Before the operation completes, some
+               * Documents may still be returned by DocumentService.GetDocument or
+               * DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set
+               * PurgeDocumentsRequest.force to false.
+               *
+               * Create a request for the method "documents.purge".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Purge#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{co
+             *        llection}/dataStores/{data_store}/branches/{branch}`.
+               * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest}
+               * @since 1.13
+               */
+              protected Purge(java.lang.String parent, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                }
+              }
+
+              @Override
+              public Purge set$Xgafv(java.lang.String $Xgafv) {
+                return (Purge) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Purge setAccessToken(java.lang.String accessToken) {
+                return (Purge) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Purge setAlt(java.lang.String alt) {
+                return (Purge) super.setAlt(alt);
+              }
+
+              @Override
+              public Purge setCallback(java.lang.String callback) {
+                return (Purge) super.setCallback(callback);
+              }
+
+              @Override
+              public Purge setFields(java.lang.String fields) {
+                return (Purge) super.setFields(fields);
+              }
+
+              @Override
+              public Purge setKey(java.lang.String key) {
+                return (Purge) super.setKey(key);
+              }
+
+              @Override
+              public Purge setOauthToken(java.lang.String oauthToken) {
+                return (Purge) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Purge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Purge) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Purge setQuotaUser(java.lang.String quotaUser) {
+                return (Purge) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Purge setUploadType(java.lang.String uploadType) {
+                return (Purge) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Purge setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Purge) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource name, such as `projects/{project}/locations/{location
+               * }/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource name, such as `projects/{project}/locations/{location}/collections/{c
+             ollection}/dataStores/{data_store}/branches/{branch}`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource name, such as `projects/{project}/locations/{location
+               * }/collections/{collection}/dataStores/{data_store}/branches/{branch}`.
+               */
+              public Purge setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Purge set(String parameterName, Object value) {
+                return (Purge) super.set(parameterName, value);
               }
             }
 

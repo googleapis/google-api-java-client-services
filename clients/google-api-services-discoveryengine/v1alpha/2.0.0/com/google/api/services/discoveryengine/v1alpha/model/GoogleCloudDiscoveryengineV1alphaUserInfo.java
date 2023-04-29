@@ -34,7 +34,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
    * of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. This should not be set
    * when using the client side event reporting with GTM or JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * UserEventService.CollectUserEvent or if UserEvent.direct_user_request is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
    * of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. This should not be set
    * when using the client side event reporting with GTM or JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * UserEventService.CollectUserEvent or if UserEvent.direct_user_request is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserAgent() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * SearchResponse.sponsored_results. The field must be a UTF-8 encoded string with a length limit
    * of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. This should not be set
    * when using the client side event reporting with GTM or JavaScript tag in
-   * UserEventService.CollectUserEvent or if direct_user_request is set.
+   * UserEventService.CollectUserEvent or if UserEvent.direct_user_request is set.
    * @param userAgent userAgent or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserInfo setUserAgent(java.lang.String userAgent) {

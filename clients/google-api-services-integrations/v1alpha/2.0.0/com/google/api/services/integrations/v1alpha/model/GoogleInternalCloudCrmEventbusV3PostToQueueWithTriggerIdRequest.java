@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1alpha.model;
 
 /**
- * Use this request to post all workflows associated with a given trigger id. Next available id: 10
+ * Use this request to post all workflows associated with a given trigger id. Next available id: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -72,6 +72,14 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
 
   /**
    * Optional. Time in milliseconds since epoch when the given event would be scheduled.
@@ -202,6 +210,25 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 

@@ -166,6 +166,14 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1ConnectionStatus status;
 
   /**
+   * Output only. This subscription type enum value states if the metrics should be sent for billing
+   * or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriptionType;
+
+  /**
    * Optional. Suspended indicates if a user has suspended a connection or not.
    * The value may be {@code null}.
    */
@@ -485,6 +493,25 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setStatus(GoogleCloudConnectorsV1ConnectionStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. This subscription type enum value states if the metrics should be sent for billing
+   * or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriptionType() {
+    return subscriptionType;
+  }
+
+  /**
+   * Output only. This subscription type enum value states if the metrics should be sent for billing
+   * or not.
+   * @param subscriptionType subscriptionType or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setSubscriptionType(java.lang.String subscriptionType) {
+    this.subscriptionType = subscriptionType;
     return this;
   }
 

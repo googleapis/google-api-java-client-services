@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class EdgeCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
    * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class EdgeCluster extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceLink;
 
   /**
-   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
    * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class EdgeCluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the Edge Cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
    * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
    * @param resourceLink resourceLink or {@code null} for none
    */

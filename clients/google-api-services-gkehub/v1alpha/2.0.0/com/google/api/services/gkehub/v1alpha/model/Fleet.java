@@ -54,8 +54,8 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique resource name of this fleet in the format of
-   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
-   * fleet resource, named "default".
+   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at
+   * most one fleet resource, named "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +141,8 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique resource name of this fleet in the format of
-   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
-   * fleet resource, named "default".
+   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at
+   * most one fleet resource, named "default".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -151,8 +151,8 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The full, unique resource name of this fleet in the format of
-   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
-   * fleet resource, named "default".
+   * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at
+   * most one fleet resource, named "default".
    * @param name name or {@code null} for none
    */
   public Fleet setName(java.lang.String name) {

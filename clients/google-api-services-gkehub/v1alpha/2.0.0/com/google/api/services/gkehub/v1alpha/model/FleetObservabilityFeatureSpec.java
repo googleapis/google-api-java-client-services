@@ -29,6 +29,33 @@ package com.google.api.services.gkehub.v1alpha.model;
 @SuppressWarnings("javadoc")
 public final class FleetObservabilityFeatureSpec extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Specified if fleet logging feature is enabled for the entire fleet. If UNSPECIFIED, fleet
+   * logging feature is disabled for the entire fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityLoggingConfig loggingConfig;
+
+  /**
+   * Specified if fleet logging feature is enabled for the entire fleet. If UNSPECIFIED, fleet
+   * logging feature is disabled for the entire fleet.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityLoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Specified if fleet logging feature is enabled for the entire fleet. If UNSPECIFIED, fleet
+   * logging feature is disabled for the entire fleet.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public FleetObservabilityFeatureSpec setLoggingConfig(FleetObservabilityLoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
+    return this;
+  }
+
   @Override
   public FleetObservabilityFeatureSpec set(String fieldName, Object value) {
     return (FleetObservabilityFeatureSpec) super.set(fieldName, value);

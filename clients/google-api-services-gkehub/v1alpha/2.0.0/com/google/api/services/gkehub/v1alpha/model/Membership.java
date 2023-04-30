@@ -78,7 +78,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String externalId;
 
   /**
-   * Optional. GCP labels for this membership.
+   * Optional. Labels for this membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +251,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. GCP labels for this membership.
+   * Optional. Labels for this membership.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -259,7 +259,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. GCP labels for this membership.
+   * Optional. Labels for this membership.
    * @param labels labels or {@code null} for none
    */
   public Membership setLabels(java.util.Map<String, java.lang.String> labels) {

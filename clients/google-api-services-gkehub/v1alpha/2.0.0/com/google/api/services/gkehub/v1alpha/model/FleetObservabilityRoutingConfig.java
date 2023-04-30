@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha2.model;
+package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * EdgeCluster contains information specific to Google Edge Clusters.
+ * RoutingConfig configures the behaviour of fleet logging feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.gkehub.v1alpha2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EdgeCluster extends com.google.api.client.json.GenericJson {
+public final class FleetObservabilityRoutingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
-   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+   * mode configures the logs routing mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String resourceLink;
+  private java.lang.String mode;
 
   /**
-   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
-   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+   * mode configures the logs routing mode.
    * @return value or {@code null} for none
    */
-  public java.lang.String getResourceLink() {
-    return resourceLink;
+  public java.lang.String getMode() {
+    return mode;
   }
 
   /**
-   * Immutable. Self-link of the Google Cloud resource for the Edge Cluster. For example:
-   * //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
-   * @param resourceLink resourceLink or {@code null} for none
+   * mode configures the logs routing mode.
+   * @param mode mode or {@code null} for none
    */
-  public EdgeCluster setResourceLink(java.lang.String resourceLink) {
-    this.resourceLink = resourceLink;
+  public FleetObservabilityRoutingConfig setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 
   @Override
-  public EdgeCluster set(String fieldName, Object value) {
-    return (EdgeCluster) super.set(fieldName, value);
+  public FleetObservabilityRoutingConfig set(String fieldName, Object value) {
+    return (FleetObservabilityRoutingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public EdgeCluster clone() {
-    return (EdgeCluster) super.clone();
+  public FleetObservabilityRoutingConfig clone() {
+    return (FleetObservabilityRoutingConfig) super.clone();
   }
 
 }

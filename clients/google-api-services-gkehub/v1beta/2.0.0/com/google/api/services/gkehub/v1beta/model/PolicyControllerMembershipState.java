@@ -38,15 +38,14 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest TODO (b/271878194): Remove this
+   * manifest
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, PolicyControllerOnClusterState> contentStates;
 
   /**
-   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
-   * this
+   * The overall content state observed by the Hub Feature controller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +77,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest TODO (b/271878194): Remove this
+   * manifest
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PolicyControllerOnClusterState> getContentStates() {
@@ -87,7 +86,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
 
   /**
    * The state of the template library and any bundles included in the chosen version of the
-   * manifest TODO (b/271878194): Remove this
+   * manifest
    * @param contentStates contentStates or {@code null} for none
    */
   public PolicyControllerMembershipState setContentStates(java.util.Map<String, PolicyControllerOnClusterState> contentStates) {
@@ -96,8 +95,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   }
 
   /**
-   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
-   * this
+   * The overall content state observed by the Hub Feature controller.
    * @return value or {@code null} for none
    */
   public PolicyControllerPolicyContentState getPolicyContentState() {
@@ -105,8 +103,7 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   }
 
   /**
-   * The overall content state observed by the Hub Feature controller. TODO (b/271878194): Decrement
-   * this
+   * The overall content state observed by the Hub Feature controller.
    * @param policyContentState policyContentState or {@code null} for none
    */
   public PolicyControllerMembershipState setPolicyContentState(PolicyControllerPolicyContentState policyContentState) {

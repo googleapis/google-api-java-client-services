@@ -52,7 +52,7 @@ public final class OnPremCluster extends com.google.api.client.json.GenericJson 
   private java.lang.String clusterType;
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example:
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-
    * cluster
@@ -115,7 +115,7 @@ public final class OnPremCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example:
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-
    * cluster
@@ -126,7 +126,7 @@ public final class OnPremCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example:
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster
    * //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-
    * cluster

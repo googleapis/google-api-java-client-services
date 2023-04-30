@@ -252,6 +252,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> inputLabelColumns;
 
   /**
+   * Name of the instance weight column for training data. This column isn't be used as a feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceWeightColumn;
+
+  /**
    * Number of integral steps for the integrated gradients explain method.
    * The value may be {@code null}.
    */
@@ -458,6 +465,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double subsample;
 
   /**
+   * Based on the selected TF version, the corresponding docker image is used to train external
+   * models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tfVersion;
+
+  /**
    * Column to be designated as time series data for ARIMA model.
    * The value may be {@code null}.
    */
@@ -526,6 +541,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean warmStart;
+
+  /**
+   * User-selected XGBoost versions for training of XGBoost models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String xgboostVersion;
 
   /**
    * If true, detect step changes and make data adjustment in the input time series.
@@ -1062,6 +1084,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Name of the instance weight column for training data. This column isn't be used as a feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceWeightColumn() {
+    return instanceWeightColumn;
+  }
+
+  /**
+   * Name of the instance weight column for training data. This column isn't be used as a feature.
+   * @param instanceWeightColumn instanceWeightColumn or {@code null} for none
+   */
+  public TrainingOptions setInstanceWeightColumn(java.lang.String instanceWeightColumn) {
+    this.instanceWeightColumn = instanceWeightColumn;
+    return this;
+  }
+
+  /**
    * Number of integral steps for the integrated gradients explain method.
    * @return value or {@code null} for none
    */
@@ -1558,6 +1597,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Based on the selected TF version, the corresponding docker image is used to train external
+   * models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTfVersion() {
+    return tfVersion;
+  }
+
+  /**
+   * Based on the selected TF version, the corresponding docker image is used to train external
+   * models.
+   * @param tfVersion tfVersion or {@code null} for none
+   */
+  public TrainingOptions setTfVersion(java.lang.String tfVersion) {
+    this.tfVersion = tfVersion;
+    return this;
+  }
+
+  /**
    * Column to be designated as time series data for ARIMA model.
    * @return value or {@code null} for none
    */
@@ -1724,6 +1782,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setWarmStart(java.lang.Boolean warmStart) {
     this.warmStart = warmStart;
+    return this;
+  }
+
+  /**
+   * User-selected XGBoost versions for training of XGBoost models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getXgboostVersion() {
+    return xgboostVersion;
+  }
+
+  /**
+   * User-selected XGBoost versions for training of XGBoost models.
+   * @param xgboostVersion xgboostVersion or {@code null} for none
+   */
+  public TrainingOptions setXgboostVersion(java.lang.String xgboostVersion) {
+    this.xgboostVersion = xgboostVersion;
     return this;
   }
 

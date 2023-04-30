@@ -181,6 +181,13 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> optimalTrialIds;
 
   /**
+   * Output only. Remote model info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoteModelInfo remoteModelInfo;
+
+  /**
    * Information for all training runs in increasing order of start_time.
    * The value may be {@code null}.
    */
@@ -528,6 +535,23 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setOptimalTrialIds(java.util.List<java.lang.Long> optimalTrialIds) {
     this.optimalTrialIds = optimalTrialIds;
+    return this;
+  }
+
+  /**
+   * Output only. Remote model info
+   * @return value or {@code null} for none
+   */
+  public RemoteModelInfo getRemoteModelInfo() {
+    return remoteModelInfo;
+  }
+
+  /**
+   * Output only. Remote model info
+   * @param remoteModelInfo remoteModelInfo or {@code null} for none
+   */
+  public Model setRemoteModelInfo(RemoteModelInfo remoteModelInfo) {
+    this.remoteModelInfo = remoteModelInfo;
     return this;
   }
 

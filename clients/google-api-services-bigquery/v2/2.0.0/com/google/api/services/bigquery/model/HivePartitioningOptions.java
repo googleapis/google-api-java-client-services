@@ -30,6 +30,17 @@ package com.google.api.services.bigquery.model;
 public final class HivePartitioningOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * keys in the order they were inferred. The types of the partition keys can be deduced by
+   * checking the table schema (which will include the partition keys). Not every API will populate
+   * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
+   * contain this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> fields;
+
+  /**
    * [Optional] When set, what mode of hive partitioning to use when reading data. The following
    * modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2)
    * STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3)
@@ -63,6 +74,31 @@ public final class HivePartitioningOptions extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceUriPrefix;
+
+  /**
+   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * keys in the order they were inferred. The types of the partition keys can be deduced by
+   * checking the table schema (which will include the partition keys). Not every API will populate
+   * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
+   * contain this field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFields() {
+    return fields;
+  }
+
+  /**
+   * [Output-only] For permanent external tables, this field is populated with the hive partition
+   * keys in the order they were inferred. The types of the partition keys can be deduced by
+   * checking the table schema (which will include the partition keys). Not every API will populate
+   * this field in the output. For example, Tables.Get will populate it, but Tables.List will not
+   * contain this field.
+   * @param fields fields or {@code null} for none
+   */
+  public HivePartitioningOptions setFields(java.util.List<java.lang.String> fields) {
+    this.fields = fields;
+    return this;
+  }
 
   /**
    * [Optional] When set, what mode of hive partitioning to use when reading data. The following

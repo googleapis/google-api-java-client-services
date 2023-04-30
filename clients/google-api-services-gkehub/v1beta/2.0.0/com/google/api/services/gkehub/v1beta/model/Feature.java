@@ -51,7 +51,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   private CommonFleetDefaultMemberConfigSpec fleetDefaultMemberConfig;
 
   /**
-   * GCP labels for this Feature.
+   * Labels for this Feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCP labels for this Feature.
+   * Labels for this Feature.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -204,7 +204,7 @@ public final class Feature extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCP labels for this Feature.
+   * Labels for this Feature.
    * @param labels labels or {@code null} for none
    */
   public Feature setLabels(java.util.Map<String, java.lang.String> labels) {

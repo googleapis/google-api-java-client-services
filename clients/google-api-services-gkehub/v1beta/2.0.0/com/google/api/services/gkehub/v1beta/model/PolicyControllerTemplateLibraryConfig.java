@@ -30,24 +30,21 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class PolicyControllerTemplateLibraryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the standard template library should be installed or not. TODO (b/271878194): Remove
-   * this
+   * Whether the standard template library should be installed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean included;
 
   /**
-   * Configures the manner in which the template library is installed on the cluster. TODO
-   * (b/271878194): Decrement this
+   * Configures the manner in which the template library is installed on the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String installation;
 
   /**
-   * Whether the standard template library should be installed or not. TODO (b/271878194): Remove
-   * this
+   * Whether the standard template library should be installed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncluded() {
@@ -55,8 +52,7 @@ public final class PolicyControllerTemplateLibraryConfig extends com.google.api.
   }
 
   /**
-   * Whether the standard template library should be installed or not. TODO (b/271878194): Remove
-   * this
+   * Whether the standard template library should be installed or not.
    * @param included included or {@code null} for none
    */
   public PolicyControllerTemplateLibraryConfig setIncluded(java.lang.Boolean included) {
@@ -65,8 +61,7 @@ public final class PolicyControllerTemplateLibraryConfig extends com.google.api.
   }
 
   /**
-   * Configures the manner in which the template library is installed on the cluster. TODO
-   * (b/271878194): Decrement this
+   * Configures the manner in which the template library is installed on the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstallation() {
@@ -74,8 +69,7 @@ public final class PolicyControllerTemplateLibraryConfig extends com.google.api.
   }
 
   /**
-   * Configures the manner in which the template library is installed on the cluster. TODO
-   * (b/271878194): Decrement this
+   * Configures the manner in which the template library is installed on the cluster.
    * @param installation installation or {@code null} for none
    */
   public PolicyControllerTemplateLibraryConfig setInstallation(java.lang.String installation) {

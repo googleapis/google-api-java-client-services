@@ -38,7 +38,7 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
   private java.lang.Boolean clusterMissing;
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
    * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-
@@ -68,7 +68,7 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
    * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-
@@ -80,7 +80,7 @@ public final class MultiCloudCluster extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE Multi-Cloud cluster. For example:
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster
    * //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-
    * cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-

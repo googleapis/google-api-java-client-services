@@ -2898,8 +2898,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The full, unique resource name of this fleet in the format of
-         *        `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at
-         *        most one fleet resource, named "default".
+         *        `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can
+         *        have at most one fleet resource, named "default".
          * @param content the {@link com.google.api.services.gkehub.v1alpha.model.Fleet}
          * @return the request
          */
@@ -2927,8 +2927,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The full, unique resource name of this fleet in the format of
-         *        `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at
-         *        most one fleet resource, named "default".
+         *        `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can
+         *        have at most one fleet resource, named "default".
            * @param content the {@link com.google.api.services.gkehub.v1alpha.model.Fleet}
            * @since 1.13
            */
@@ -2999,15 +2999,15 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Output only. The full, unique resource name of this fleet in the format of
-           * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at
-           * most one fleet resource, named "default".
+           * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can
+           * have at most one fleet resource, named "default".
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. The full, unique resource name of this fleet in the format of
-         `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one
-         fleet resource, named "default".
+         `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at
+         most one fleet resource, named "default".
            */
           public java.lang.String getName() {
             return name;
@@ -3015,8 +3015,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Output only. The full, unique resource name of this fleet in the format of
-           * `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at
-           * most one fleet resource, named "default".
+           * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can
+           * have at most one fleet resource, named "default".
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

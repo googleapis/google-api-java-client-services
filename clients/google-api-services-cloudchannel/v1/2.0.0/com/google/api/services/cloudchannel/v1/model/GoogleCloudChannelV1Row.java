@@ -30,6 +30,14 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1Row extends com.google.api.client.json.GenericJson {
 
   /**
+   * The key for the partition this row belongs to. This field is empty if the report is not
+   * partitioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partitionKey;
+
+  /**
    * The list of values in the row.
    * The value may be {@code null}.
    */
@@ -40,6 +48,25 @@ public final class GoogleCloudChannelV1Row extends com.google.api.client.json.Ge
     // hack to force ProGuard to consider GoogleCloudChannelV1ReportValue used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudChannelV1ReportValue.class);
+  }
+
+  /**
+   * The key for the partition this row belongs to. This field is empty if the report is not
+   * partitioned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartitionKey() {
+    return partitionKey;
+  }
+
+  /**
+   * The key for the partition this row belongs to. This field is empty if the report is not
+   * partitioned.
+   * @param partitionKey partitionKey or {@code null} for none
+   */
+  public GoogleCloudChannelV1Row setPartitionKey(java.lang.String partitionKey) {
+    this.partitionKey = partitionKey;
+    return this;
   }
 
   /**

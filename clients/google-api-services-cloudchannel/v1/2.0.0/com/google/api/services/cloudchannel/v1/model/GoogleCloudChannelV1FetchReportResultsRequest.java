@@ -48,6 +48,14 @@ public final class GoogleCloudChannelV1FetchReportResultsRequest extends com.goo
   private java.lang.String pageToken;
 
   /**
+   * Optional. List of keys specifying which report partitions to return. If empty, returns all
+   * partitions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> partitionKeys;
+
+  /**
    * Optional. Requested page size of the report. The server may return fewer results than
    * requested. If you don't specify a page size, the server uses a sensible default (may change
    * over time). The maximum value is 30,000; the server will change larger values to 30,000.
@@ -86,6 +94,25 @@ public final class GoogleCloudChannelV1FetchReportResultsRequest extends com.goo
    */
   public GoogleCloudChannelV1FetchReportResultsRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * Optional. List of keys specifying which report partitions to return. If empty, returns all
+   * partitions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPartitionKeys() {
+    return partitionKeys;
+  }
+
+  /**
+   * Optional. List of keys specifying which report partitions to return. If empty, returns all
+   * partitions.
+   * @param partitionKeys partitionKeys or {@code null} for none
+   */
+  public GoogleCloudChannelV1FetchReportResultsRequest setPartitionKeys(java.util.List<java.lang.String> partitionKeys) {
+    this.partitionKeys = partitionKeys;
     return this;
   }
 

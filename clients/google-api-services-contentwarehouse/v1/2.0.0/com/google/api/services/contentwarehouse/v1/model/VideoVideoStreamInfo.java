@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * Note that when a VSI is from a user video, the information reflects the info in that source.
  * Fields like lengths, fps, etc. are not guaranteed to be the same as those of transcodes. If the
  * relevant info in source is too broken, the corresponding fields (e.g., lengths) could be unset or
- * with the default value, meaning VSI cannot compute them from the given info. Next id: 82
+ * with the default value, meaning VSI cannot compute them from the given info. Next id: 83
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -125,8 +125,8 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    * Audio-Video interleaving distance between packets (in bytes)
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.Integer avDistance;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long avDistance;
 
   /**
    * Audio and video length in seconds. It's the max of the audio and video length. Note that when
@@ -237,6 +237,13 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer fileType;
+
+  /**
+   * YT app created video information,
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VideoGoogleVideoClipInfo googleVideoClipInfo;
 
   /**
    * The value may be {@code null}.
@@ -764,7 +771,7 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    * Audio-Video interleaving distance between packets (in bytes)
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getAvDistance() {
+  public java.lang.Long getAvDistance() {
     return avDistance;
   }
 
@@ -772,7 +779,7 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    * Audio-Video interleaving distance between packets (in bytes)
    * @param avDistance avDistance or {@code null} for none
    */
-  public VideoVideoStreamInfo setAvDistance(java.lang.Integer avDistance) {
+  public VideoVideoStreamInfo setAvDistance(java.lang.Long avDistance) {
     this.avDistance = avDistance;
     return this;
   }
@@ -1039,6 +1046,23 @@ public final class VideoVideoStreamInfo extends com.google.api.client.json.Gener
    */
   public VideoVideoStreamInfo setFileType(java.lang.Integer fileType) {
     this.fileType = fileType;
+    return this;
+  }
+
+  /**
+   * YT app created video information,
+   * @return value or {@code null} for none
+   */
+  public VideoGoogleVideoClipInfo getGoogleVideoClipInfo() {
+    return googleVideoClipInfo;
+  }
+
+  /**
+   * YT app created video information,
+   * @param googleVideoClipInfo googleVideoClipInfo or {@code null} for none
+   */
+  public VideoVideoStreamInfo setGoogleVideoClipInfo(VideoGoogleVideoClipInfo googleVideoClipInfo) {
+    this.googleVideoClipInfo = googleVideoClipInfo;
     return this;
   }
 

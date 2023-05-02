@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 48
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 51
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -139,6 +139,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double intentNameAuisScoreExp;
 
   /**
+   * Intent level Pauis User Interaction Score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float intentNamePauis;
+
+  /**
    * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
    * playability. More details: go/hgr-feasibility-feature.
    * The value may be {@code null}.
@@ -173,6 +180,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPodcastIntent;
+
+  /**
+   * Whether the intent is a media object video intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isVideoIntent;
 
   /**
    * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
@@ -274,6 +288,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Integer parsingScoreMse8BucketId;
+
+  /**
+   * Query understanding phase the intent was produced in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phase;
 
   /**
    * Cosine similarity between predicted query-to-term model and assistant intent-type-based salient
@@ -597,6 +618,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Intent level Pauis User Interaction Score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getIntentNamePauis() {
+    return intentNamePauis;
+  }
+
+  /**
+   * Intent level Pauis User Interaction Score.
+   * @param intentNamePauis intentNamePauis or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentNamePauis(java.lang.Float intentNamePauis) {
+    this.intentNamePauis = intentNamePauis;
+    return this;
+  }
+
+  /**
    * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
    * playability. More details: go/hgr-feasibility-feature.
    * @return value or {@code null} for none
@@ -680,6 +718,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsPodcastIntent(java.lang.Boolean isPodcastIntent) {
     this.isPodcastIntent = isPodcastIntent;
+    return this;
+  }
+
+  /**
+   * Whether the intent is a media object video intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsVideoIntent() {
+    return isVideoIntent;
+  }
+
+  /**
+   * Whether the intent is a media object video intent.
+   * @param isVideoIntent isVideoIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsVideoIntent(java.lang.Boolean isVideoIntent) {
+    this.isVideoIntent = isVideoIntent;
     return this;
   }
 
@@ -921,6 +976,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setParsingScoreMse8BucketId(java.lang.Integer parsingScoreMse8BucketId) {
     this.parsingScoreMse8BucketId = parsingScoreMse8BucketId;
+    return this;
+  }
+
+  /**
+   * Query understanding phase the intent was produced in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhase() {
+    return phase;
+  }
+
+  /**
+   * Query understanding phase the intent was produced in.
+   * @param phase phase or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setPhase(java.lang.String phase) {
+    this.phase = phase;
     return this;
   }
 

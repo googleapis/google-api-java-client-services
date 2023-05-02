@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 52
+ * Next ID: 53
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -83,6 +83,13 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<ClassifierPornSiteDataVersionedScore> versionedscore;
+
+  /**
+   * The cubic mean aggregation of violence page scores in the site.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float violenceScore;
 
   /**
    * The value may be {@code null}.
@@ -219,6 +226,23 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
    */
   public ClassifierPornSiteData setVersionedscore(java.util.List<ClassifierPornSiteDataVersionedScore> versionedscore) {
     this.versionedscore = versionedscore;
+    return this;
+  }
+
+  /**
+   * The cubic mean aggregation of violence page scores in the site.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getViolenceScore() {
+    return violenceScore;
+  }
+
+  /**
+   * The cubic mean aggregation of violence page scores in the site.
+   * @param violenceScore violenceScore or {@code null} for none
+   */
+  public ClassifierPornSiteData setViolenceScore(java.lang.Float violenceScore) {
+    this.violenceScore = violenceScore;
     return this;
   }
 

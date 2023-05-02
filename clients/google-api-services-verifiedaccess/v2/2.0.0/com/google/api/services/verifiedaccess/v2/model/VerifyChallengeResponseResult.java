@@ -46,11 +46,18 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   private java.lang.String devicePermanentId;
 
   /**
-   * Device signal in json string representation.
+   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceSignal;
+
+  /**
+   * Device signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceSignals deviceSignals;
 
   /**
    * Device attested key trust level.
@@ -112,7 +119,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device signal in json string representation.
+   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceSignal() {
@@ -120,11 +127,28 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device signal in json string representation.
+   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
    * @param deviceSignal deviceSignal or {@code null} for none
    */
   public VerifyChallengeResponseResult setDeviceSignal(java.lang.String deviceSignal) {
     this.deviceSignal = deviceSignal;
+    return this;
+  }
+
+  /**
+   * Device signals.
+   * @return value or {@code null} for none
+   */
+  public DeviceSignals getDeviceSignals() {
+    return deviceSignals;
+  }
+
+  /**
+   * Device signals.
+   * @param deviceSignals deviceSignals or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setDeviceSignals(DeviceSignals deviceSignals) {
+    this.deviceSignals = deviceSignals;
     return this;
   }
 

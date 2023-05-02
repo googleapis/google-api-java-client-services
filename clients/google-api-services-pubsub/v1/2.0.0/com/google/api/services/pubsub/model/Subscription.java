@@ -17,8 +17,9 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * A subscription resource. If none of `push_config` or `bigquery_config` is set, then the
- * subscriber will pull and ack messages using API methods. At most one of these fields may be set.
+ * A subscription resource. If none of `push_config`, `bigquery_config`, or `cloud_storage_config`
+ * is set, then the subscriber will pull and ack messages using API methods. At most one of these
+ * fields may be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:
@@ -54,6 +55,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private BigQueryConfig bigqueryConfig;
+
+  /**
+   * If delivery to Google Cloud Storage is used with this subscription, this field is used to
+   * configure it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudStorageConfig cloudStorageConfig;
 
   /**
    * A policy that specifies the conditions for dead lettering messages in this subscription. If
@@ -257,6 +266,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setBigqueryConfig(BigQueryConfig bigqueryConfig) {
     this.bigqueryConfig = bigqueryConfig;
+    return this;
+  }
+
+  /**
+   * If delivery to Google Cloud Storage is used with this subscription, this field is used to
+   * configure it.
+   * @return value or {@code null} for none
+   */
+  public CloudStorageConfig getCloudStorageConfig() {
+    return cloudStorageConfig;
+  }
+
+  /**
+   * If delivery to Google Cloud Storage is used with this subscription, this field is used to
+   * configure it.
+   * @param cloudStorageConfig cloudStorageConfig or {@code null} for none
+   */
+  public Subscription setCloudStorageConfig(CloudStorageConfig cloudStorageConfig) {
+    this.cloudStorageConfig = cloudStorageConfig;
     return this;
   }
 

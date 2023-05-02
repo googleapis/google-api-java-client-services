@@ -163,8 +163,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * operation.
      *
      * @param billingAccount Resource name of the billing account for the cost estimate. The resource name has the form
-     *        `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
-     *        is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
+     *        `billingAccounts/{billing_account_id}`. For example,
+     *        `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account
+     *        `012345-567890-ABCDEF`. Must be specified.
      * @param content the {@link com.google.api.services.cloudbilling.v1beta.model.EstimateCostScenarioForBillingAccountRequest}
      * @return the request
      */
@@ -193,8 +194,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * after invoking the constructor. </p>
        *
        * @param billingAccount Resource name of the billing account for the cost estimate. The resource name has the form
-     *        `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
-     *        is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
+     *        `billingAccounts/{billing_account_id}`. For example,
+     *        `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account
+     *        `012345-567890-ABCDEF`. Must be specified.
        * @param content the {@link com.google.api.services.cloudbilling.v1beta.model.EstimateCostScenarioForBillingAccountRequest}
        * @since 1.13
        */
@@ -265,14 +267,14 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Resource name of the billing account for the cost estimate. The resource name has the form
-       * `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
+       * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
        * is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
        */
       @com.google.api.client.util.Key
       private java.lang.String billingAccount;
 
       /** Resource name of the billing account for the cost estimate. The resource name has the form
-     `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the
+     `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the
      resource name for billing account `012345-567890-ABCDEF`. Must be specified.
        */
       public java.lang.String getBillingAccount() {
@@ -281,7 +283,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
 
       /**
        * Resource name of the billing account for the cost estimate. The resource name has the form
-       * `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
+       * `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`
        * is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
        */
       public EstimateCostScenario setBillingAccount(java.lang.String billingAccount) {

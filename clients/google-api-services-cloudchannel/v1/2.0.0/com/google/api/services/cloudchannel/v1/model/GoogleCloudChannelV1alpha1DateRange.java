@@ -30,17 +30,16 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1alpha1DateRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The latest invoice date (exclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the following
-   * month.
+   * The latest invoice date (inclusive). If this value is not the last day of a month, this will
+   * move it forward to the last day of the given month.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate invoiceEndDate;
 
   /**
-   * The earliest invoice date (inclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the given month.
+   * The earliest invoice date (inclusive). If this value is not the first day of a month, this will
+   * move it back to the first day of the given month.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +66,8 @@ public final class GoogleCloudChannelV1alpha1DateRange extends com.google.api.cl
   private GoogleTypeDateTime usageStartDateTime;
 
   /**
-   * The latest invoice date (exclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the following
-   * month.
+   * The latest invoice date (inclusive). If this value is not the last day of a month, this will
+   * move it forward to the last day of the given month.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getInvoiceEndDate() {
@@ -77,9 +75,8 @@ public final class GoogleCloudChannelV1alpha1DateRange extends com.google.api.cl
   }
 
   /**
-   * The latest invoice date (exclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the following
-   * month.
+   * The latest invoice date (inclusive). If this value is not the last day of a month, this will
+   * move it forward to the last day of the given month.
    * @param invoiceEndDate invoiceEndDate or {@code null} for none
    */
   public GoogleCloudChannelV1alpha1DateRange setInvoiceEndDate(GoogleTypeDate invoiceEndDate) {
@@ -88,8 +85,8 @@ public final class GoogleCloudChannelV1alpha1DateRange extends com.google.api.cl
   }
 
   /**
-   * The earliest invoice date (inclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the given month.
+   * The earliest invoice date (inclusive). If this value is not the first day of a month, this will
+   * move it back to the first day of the given month.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getInvoiceStartDate() {
@@ -97,8 +94,8 @@ public final class GoogleCloudChannelV1alpha1DateRange extends com.google.api.cl
   }
 
   /**
-   * The earliest invoice date (inclusive). If your product uses monthly invoices, and this value is
-   * not the beginning of a month, this will adjust the date to the first day of the given month.
+   * The earliest invoice date (inclusive). If this value is not the first day of a month, this will
+   * move it back to the first day of the given month.
    * @param invoiceStartDate invoiceStartDate or {@code null} for none
    */
   public GoogleCloudChannelV1alpha1DateRange setInvoiceStartDate(GoogleTypeDate invoiceStartDate) {

@@ -1140,15 +1140,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
@@ -1156,8 +1156,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
@@ -2178,15 +2178,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
@@ -2194,8 +2194,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;
@@ -8447,15 +8447,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
@@ -8463,8 +8463,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
@@ -9485,15 +9485,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
@@ -9501,8 +9501,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;
@@ -16972,15 +16972,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
@@ -16988,8 +16988,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
@@ -18010,15 +18010,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of
-       lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a
-       number, and a 63 character maximum.
+        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+       a number, and must be 63 characters or less.
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
@@ -18026,8 +18026,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of lower case letters, numbers, and hyphen, with the first character a letter,
-         * the last a letter or a number, and a 63 character maximum.
+         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+         * end with either a letter or a number, and must be 63 characters or less.
          */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;

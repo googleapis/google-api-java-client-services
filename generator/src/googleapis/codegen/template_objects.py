@@ -133,7 +133,7 @@ class CodeObject(UseableInTemplates):
     from googleapis.codegen.api import Method
 
     class_name = original_class_name
-    parent_path = self.parentPath()
+    parent_path = self.parentPath
 
     def getNonDuplicatedClassName(class_name):
       if str(class_name).startswith('Child'):
@@ -143,11 +143,9 @@ class CodeObject(UseableInTemplates):
       else:
         return 'Child' + class_name
 
-    # Prepend the first ancestor's name with an underscore if there is any
-    # duplication from root to node (e.g. FirstAncestor_Node)
+    # will append [Great][Grand][Child]ClassName depending on how
+    # deep the duplicated class is nested in the path
     for parent_class_name in parent_path[:-1]:
-      # will append [Great][Grand][Child]ClassName depending on how
-      # deep the duplicated class is nested in the path
       if class_name == parent_class_name:
         self.SetTemplateValue('isDuplicate', True)
         class_name = getNonDuplicatedClassName(class_name)
@@ -291,9 +289,6 @@ class CodeObject(UseableInTemplates):
       if is_duplicate:
         lower_class_name = self.values['className']
         lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
-        # Used to remove underscores from de-duplicated class names
-        # (e.g. Nodes_Nodes -> nodesNodes)
-        lower_class_name = lower_class_name.replace('_', '')
       else:
         lower_class_name = self.codeName
     lower_class_name = MarkSafe(lower_class_name)
@@ -335,7 +330,7 @@ class CodeObject(UseableInTemplates):
                   or self.values.get('name', ''))
     return full_name
 
-
+  @property
   def parentPath(self):  # pylint: disable=g-bad-name
     """Returns the classNames from my ultimate parent to my immediate parent.
 

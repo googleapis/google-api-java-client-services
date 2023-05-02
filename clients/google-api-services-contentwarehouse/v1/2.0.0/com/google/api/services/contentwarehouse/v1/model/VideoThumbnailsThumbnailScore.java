@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * LINT.IfChange Score calculated from a thumbnail. NextID: 15
+ * LINT.IfChange Score calculated from a thumbnail. NextID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -59,6 +59,20 @@ public final class VideoThumbnailsThumbnailScore extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private DrishtiFeatureExtra denseGeneralExtraFeatures;
+
+  /**
+   * A unique identifier for the image that is independent of the resolution. The Image ID
+   * accompanies the image bytes through its lifecycle, from creation till vanishing. Image ID is
+   * not based on image content; it is different than checksum (e.g. two different images with the
+   * same bytes may not have the same image ID). This ID is used as a unique identifier for clients
+   * such as T and classifiers. For more info refer to go/thumbnail-id-ts-ab-testing Note: Image
+   * ID's are still in development and are currently not exposed externally (may be done in the
+   * future). Please contact yt-thumbnails-core@ before using it. Do not use externally or in logs
+   * before contacting yt-thumbnails-core@
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalImageId;
 
   /**
    * If true, score is manually assigned.
@@ -195,6 +209,37 @@ public final class VideoThumbnailsThumbnailScore extends com.google.api.client.j
    */
   public VideoThumbnailsThumbnailScore setDenseGeneralExtraFeatures(DrishtiFeatureExtra denseGeneralExtraFeatures) {
     this.denseGeneralExtraFeatures = denseGeneralExtraFeatures;
+    return this;
+  }
+
+  /**
+   * A unique identifier for the image that is independent of the resolution. The Image ID
+   * accompanies the image bytes through its lifecycle, from creation till vanishing. Image ID is
+   * not based on image content; it is different than checksum (e.g. two different images with the
+   * same bytes may not have the same image ID). This ID is used as a unique identifier for clients
+   * such as T and classifiers. For more info refer to go/thumbnail-id-ts-ab-testing Note: Image
+   * ID's are still in development and are currently not exposed externally (may be done in the
+   * future). Please contact yt-thumbnails-core@ before using it. Do not use externally or in logs
+   * before contacting yt-thumbnails-core@
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalImageId() {
+    return externalImageId;
+  }
+
+  /**
+   * A unique identifier for the image that is independent of the resolution. The Image ID
+   * accompanies the image bytes through its lifecycle, from creation till vanishing. Image ID is
+   * not based on image content; it is different than checksum (e.g. two different images with the
+   * same bytes may not have the same image ID). This ID is used as a unique identifier for clients
+   * such as T and classifiers. For more info refer to go/thumbnail-id-ts-ab-testing Note: Image
+   * ID's are still in development and are currently not exposed externally (may be done in the
+   * future). Please contact yt-thumbnails-core@ before using it. Do not use externally or in logs
+   * before contacting yt-thumbnails-core@
+   * @param externalImageId externalImageId or {@code null} for none
+   */
+  public VideoThumbnailsThumbnailScore setExternalImageId(java.lang.String externalImageId) {
+    this.externalImageId = externalImageId;
     return this;
   }
 

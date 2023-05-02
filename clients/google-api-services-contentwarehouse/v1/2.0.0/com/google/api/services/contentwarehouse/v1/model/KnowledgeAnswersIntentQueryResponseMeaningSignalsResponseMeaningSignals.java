@@ -32,6 +32,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals extends com.google.api.client.json.GenericJson {
 
   /**
+   * Signals that are used to generate answers header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals answersHeaderSignals;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +48,31 @@ public final class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMean
     // hack to force ProGuard to consider FreebasePropertyValue used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(FreebasePropertyValue.class);
+  }
+
+  /**
+   * The intended application this response meaning is used for. It is intended for downstream
+   * dispatching.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseMeaningApplication;
+
+  /**
+   * Signals that are used to generate answers header.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals getAnswersHeaderSignals() {
+    return answersHeaderSignals;
+  }
+
+  /**
+   * Signals that are used to generate answers header.
+   * @param answersHeaderSignals answersHeaderSignals or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals setAnswersHeaderSignals(KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals answersHeaderSignals) {
+    this.answersHeaderSignals = answersHeaderSignals;
+    return this;
   }
 
   /**
@@ -55,6 +87,25 @@ public final class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMean
    */
   public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals setPropertyValue(java.util.List<FreebasePropertyValue> propertyValue) {
     this.propertyValue = propertyValue;
+    return this;
+  }
+
+  /**
+   * The intended application this response meaning is used for. It is intended for downstream
+   * dispatching.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseMeaningApplication() {
+    return responseMeaningApplication;
+  }
+
+  /**
+   * The intended application this response meaning is used for. It is intended for downstream
+   * dispatching.
+   * @param responseMeaningApplication responseMeaningApplication or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals setResponseMeaningApplication(java.lang.String responseMeaningApplication) {
+    this.responseMeaningApplication = responseMeaningApplication;
     return this;
   }
 

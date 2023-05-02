@@ -17,9 +17,9 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This is deprecated in PEOPLE_API/SHARPEN, and should only be used for PROFILES. Which apps the
- * person has indicated they are reachable at for the requester. See go/d13y and
- * com.google.focus.proto.InAppReachability.
+ * This is deprecated in PEOPLE_API/SHARPEN, and should only be used for PROFILES. Clients should
+ * use InAppNotificationTarget field instead. Which apps the person has indicated they are reachable
+ * at for the requester. See go/d13y and com.google.focus.proto.InAppReachability.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

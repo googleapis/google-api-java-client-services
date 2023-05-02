@@ -54,6 +54,13 @@ public final class SocialCommonSegment extends com.google.api.client.json.Generi
   private SocialCommonLinkData linkData;
 
   /**
+   * For SEARCH_LINK type:
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SocialCommonSearchLinkData searchLinkData;
+
+  /**
    * Text content of the Segment. As a general rule, this field should contain the actual text that
    * should be rendered in the UI. Thus, for a hashtag, it should be "#Foo", and for a link, it
    * should be the display text. Clients that do not understand a particular segment type may use
@@ -135,6 +142,23 @@ public final class SocialCommonSegment extends com.google.api.client.json.Generi
    */
   public SocialCommonSegment setLinkData(SocialCommonLinkData linkData) {
     this.linkData = linkData;
+    return this;
+  }
+
+  /**
+   * For SEARCH_LINK type:
+   * @return value or {@code null} for none
+   */
+  public SocialCommonSearchLinkData getSearchLinkData() {
+    return searchLinkData;
+  }
+
+  /**
+   * For SEARCH_LINK type:
+   * @param searchLinkData searchLinkData or {@code null} for none
+   */
+  public SocialCommonSegment setSearchLinkData(SocialCommonSearchLinkData searchLinkData) {
+    this.searchLinkData = searchLinkData;
     return this;
   }
 

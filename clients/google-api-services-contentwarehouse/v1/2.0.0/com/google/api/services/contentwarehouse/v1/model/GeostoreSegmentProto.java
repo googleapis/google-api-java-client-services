@@ -260,11 +260,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
 
   /**
    * Detailed information about each lane in this direction, if available. Lanes are numbered from
-   * inside of the road outward, i.e. the lane next to the center line is lane 0. Note that lanes
-   * that are valid for travel in both directions appear in both segments of a segment pair (left
-   * turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be usable
-   * by cars, such as bike lanes. Also, some lanes may not exist along the entire segment, e.g.
-   * left- or right-turn lanes that appear just before the intersection.
+   * inside of the road outward, i.e. the lane next to the center line has lane_number 0. Note that
+   * lanes that are valid for travel in both directions appear in both segments of a segment pair
+   * (left turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be
+   * usable by cars, such as bike lanes. Also, some lanes may not exist along the entire segment,
+   * e.g. left- or right-turn lanes that appear just before the intersection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1036,11 +1036,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
 
   /**
    * Detailed information about each lane in this direction, if available. Lanes are numbered from
-   * inside of the road outward, i.e. the lane next to the center line is lane 0. Note that lanes
-   * that are valid for travel in both directions appear in both segments of a segment pair (left
-   * turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be usable
-   * by cars, such as bike lanes. Also, some lanes may not exist along the entire segment, e.g.
-   * left- or right-turn lanes that appear just before the intersection.
+   * inside of the road outward, i.e. the lane next to the center line has lane_number 0. Note that
+   * lanes that are valid for travel in both directions appear in both segments of a segment pair
+   * (left turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be
+   * usable by cars, such as bike lanes. Also, some lanes may not exist along the entire segment,
+   * e.g. left- or right-turn lanes that appear just before the intersection.
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreLaneProto> getLane() {
@@ -1049,11 +1049,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
 
   /**
    * Detailed information about each lane in this direction, if available. Lanes are numbered from
-   * inside of the road outward, i.e. the lane next to the center line is lane 0. Note that lanes
-   * that are valid for travel in both directions appear in both segments of a segment pair (left
-   * turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be usable
-   * by cars, such as bike lanes. Also, some lanes may not exist along the entire segment, e.g.
-   * left- or right-turn lanes that appear just before the intersection.
+   * inside of the road outward, i.e. the lane next to the center line has lane_number 0. Note that
+   * lanes that are valid for travel in both directions appear in both segments of a segment pair
+   * (left turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be
+   * usable by cars, such as bike lanes. Also, some lanes may not exist along the entire segment,
+   * e.g. left- or right-turn lanes that appear just before the intersection.
    * @param lane lane or {@code null} for none
    */
   public GeostoreSegmentProto setLane(java.util.List<GeostoreLaneProto> lane) {

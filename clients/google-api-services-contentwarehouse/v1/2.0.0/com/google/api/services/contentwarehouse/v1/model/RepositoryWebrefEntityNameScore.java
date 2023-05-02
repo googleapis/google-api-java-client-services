@@ -71,14 +71,6 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   private java.util.List<RepositoryWebrefPreprocessingNameVariantSignals> debugVariantSignals;
 
   /**
-   * Sparse metadata about the entity, usage should be moved back to individual fields, this avoids
-   * having cyclic dependencies.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RepositoryWebrefEntityJoin entity;
-
-  /**
    * Stores region specific score ratios for the entity when it is significantly different from the
    * language version above.
    * The value may be {@code null}.
@@ -267,25 +259,6 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
    */
   public RepositoryWebrefEntityNameScore setDebugVariantSignals(java.util.List<RepositoryWebrefPreprocessingNameVariantSignals> debugVariantSignals) {
     this.debugVariantSignals = debugVariantSignals;
-    return this;
-  }
-
-  /**
-   * Sparse metadata about the entity, usage should be moved back to individual fields, this avoids
-   * having cyclic dependencies.
-   * @return value or {@code null} for none
-   */
-  public RepositoryWebrefEntityJoin getEntity() {
-    return entity;
-  }
-
-  /**
-   * Sparse metadata about the entity, usage should be moved back to individual fields, this avoids
-   * having cyclic dependencies.
-   * @param entity entity or {@code null} for none
-   */
-  public RepositoryWebrefEntityNameScore setEntity(RepositoryWebrefEntityJoin entity) {
-    this.entity = entity;
     return this;
   }
 

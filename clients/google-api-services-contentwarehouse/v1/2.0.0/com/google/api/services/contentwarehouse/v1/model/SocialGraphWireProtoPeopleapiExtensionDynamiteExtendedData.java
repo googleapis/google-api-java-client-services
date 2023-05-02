@@ -64,15 +64,21 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
   private java.lang.String entityType;
 
   /**
-   * Number of members (direct or indirect) in a Google Group. Only an estimate for large groups
-   * (currently > 1K direct / indirect members).
+   * Whether caller has visibility into the direct members of the roster. NEXT TAG: 11
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMembershipVisibleToCaller;
+
+  /**
+   * DEPRECATED: use segmented_membership_counts instead. Number of members (direct or indirect) in
+   * a Google Group. Only an estimate for large groups (currently > 1K direct / indirect members).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long memberCount;
 
   /**
-   * NEXT TAG: 9
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +89,14 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
    */
   @com.google.api.client.util.Key
   private java.lang.String presence;
+
+  /**
+   * Represents the direct membership counts of a Google Group. May contain counts based on member
+   * type and membership state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts;
 
   /**
    * Avatar image URL for a Google Group, based on the member count.
@@ -166,8 +180,25 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
   }
 
   /**
-   * Number of members (direct or indirect) in a Google Group. Only an estimate for large groups
-   * (currently > 1K direct / indirect members).
+   * Whether caller has visibility into the direct members of the roster. NEXT TAG: 11
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMembershipVisibleToCaller() {
+    return isMembershipVisibleToCaller;
+  }
+
+  /**
+   * Whether caller has visibility into the direct members of the roster. NEXT TAG: 11
+   * @param isMembershipVisibleToCaller isMembershipVisibleToCaller or {@code null} for none
+   */
+  public SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData setIsMembershipVisibleToCaller(java.lang.Boolean isMembershipVisibleToCaller) {
+    this.isMembershipVisibleToCaller = isMembershipVisibleToCaller;
+    return this;
+  }
+
+  /**
+   * DEPRECATED: use segmented_membership_counts instead. Number of members (direct or indirect) in
+   * a Google Group. Only an estimate for large groups (currently > 1K direct / indirect members).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMemberCount() {
@@ -175,8 +206,8 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
   }
 
   /**
-   * Number of members (direct or indirect) in a Google Group. Only an estimate for large groups
-   * (currently > 1K direct / indirect members).
+   * DEPRECATED: use segmented_membership_counts instead. Number of members (direct or indirect) in
+   * a Google Group. Only an estimate for large groups (currently > 1K direct / indirect members).
    * @param memberCount memberCount or {@code null} for none
    */
   public SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData setMemberCount(java.lang.Long memberCount) {
@@ -185,7 +216,6 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
   }
 
   /**
-   * NEXT TAG: 9
    * @return value or {@code null} for none
    */
   public AppsDynamiteSharedOrganizationInfo getOrganizationInfo() {
@@ -193,7 +223,6 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
   }
 
   /**
-   * NEXT TAG: 9
    * @param organizationInfo organizationInfo or {@code null} for none
    */
   public SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData setOrganizationInfo(AppsDynamiteSharedOrganizationInfo organizationInfo) {
@@ -213,6 +242,25 @@ public final class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData ex
    */
   public SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData setPresence(java.lang.String presence) {
     this.presence = presence;
+    return this;
+  }
+
+  /**
+   * Represents the direct membership counts of a Google Group. May contain counts based on member
+   * type and membership state.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedSegmentedMembershipCounts getSegmentedMembershipCounts() {
+    return segmentedMembershipCounts;
+  }
+
+  /**
+   * Represents the direct membership counts of a Google Group. May contain counts based on member
+   * type and membership state.
+   * @param segmentedMembershipCounts segmentedMembershipCounts or {@code null} for none
+   */
+  public SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData setSegmentedMembershipCounts(AppsDynamiteSharedSegmentedMembershipCounts segmentedMembershipCounts) {
+    this.segmentedMembershipCounts = segmentedMembershipCounts;
     return this;
   }
 

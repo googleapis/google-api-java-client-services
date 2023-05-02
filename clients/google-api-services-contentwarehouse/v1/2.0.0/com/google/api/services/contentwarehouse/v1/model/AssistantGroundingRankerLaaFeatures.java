@@ -52,6 +52,18 @@ public final class AssistantGroundingRankerLaaFeatures extends com.google.api.cl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<AssistantGroundingRankerLaaFeature> features;
+
+  static {
+    // hack to force ProGuard to consider AssistantGroundingRankerLaaFeature used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AssistantGroundingRankerLaaFeature.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private AssistantGroundingRankerLaaFeaturesProvider provider;
 
   /**
@@ -96,6 +108,21 @@ public final class AssistantGroundingRankerLaaFeatures extends com.google.api.cl
    */
   public AssistantGroundingRankerLaaFeatures setContact(AssistantGroundingRankerLaaFeaturesContact contact) {
     this.contact = contact;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssistantGroundingRankerLaaFeature> getFeatures() {
+    return features;
+  }
+
+  /**
+   * @param features features or {@code null} for none
+   */
+  public AssistantGroundingRankerLaaFeatures setFeatures(java.util.List<AssistantGroundingRankerLaaFeature> features) {
+    this.features = features;
     return this;
   }
 

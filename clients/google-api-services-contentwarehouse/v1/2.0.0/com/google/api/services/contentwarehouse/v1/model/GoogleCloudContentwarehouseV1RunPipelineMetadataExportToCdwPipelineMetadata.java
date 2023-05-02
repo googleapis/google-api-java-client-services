@@ -45,6 +45,13 @@ public final class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPi
   private java.util.List<java.lang.String> documents;
 
   /**
+   * The output Cloud Storage folder in this pipeline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputPath;
+
+  /**
    * The output CDW dataset resource name.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPi
    */
   public GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata setDocuments(java.util.List<java.lang.String> documents) {
     this.documents = documents;
+    return this;
+  }
+
+  /**
+   * The output Cloud Storage folder in this pipeline.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputPath() {
+    return outputPath;
+  }
+
+  /**
+   * The output Cloud Storage folder in this pipeline.
+   * @param outputPath outputPath or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata setOutputPath(java.lang.String outputPath) {
+    this.outputPath = outputPath;
     return this;
   }
 

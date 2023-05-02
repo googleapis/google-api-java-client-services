@@ -61,6 +61,15 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
   private java.lang.String repoType;
 
   /**
+   * The fully qualified resource name of the Repo API repository. Either uri or repository can be
+   * specified. If unspecified, the repo from which the trigger invocation originated is assumed to
+   * be the repo from which to read the specified path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String repository;
+
+  /**
    * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename
    * (optional). This field respects the same syntax/resolution as described here: https://git-
    * scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation
@@ -150,6 +159,27 @@ public final class GitFileSource extends com.google.api.client.json.GenericJson 
    */
   public GitFileSource setRepoType(java.lang.String repoType) {
     this.repoType = repoType;
+    return this;
+  }
+
+  /**
+   * The fully qualified resource name of the Repo API repository. Either uri or repository can be
+   * specified. If unspecified, the repo from which the trigger invocation originated is assumed to
+   * be the repo from which to read the specified path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRepository() {
+    return repository;
+  }
+
+  /**
+   * The fully qualified resource name of the Repo API repository. Either uri or repository can be
+   * specified. If unspecified, the repo from which the trigger invocation originated is assumed to
+   * be the repo from which to read the specified path.
+   * @param repository repository or {@code null} for none
+   */
+  public GitFileSource setRepository(java.lang.String repository) {
+    this.repository = repository;
     return this;
   }
 

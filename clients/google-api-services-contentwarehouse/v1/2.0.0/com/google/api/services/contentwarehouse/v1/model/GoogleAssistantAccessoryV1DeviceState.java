@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Information about the state of the device. This contains any state that Assistant may need to
- * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 9
+ * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

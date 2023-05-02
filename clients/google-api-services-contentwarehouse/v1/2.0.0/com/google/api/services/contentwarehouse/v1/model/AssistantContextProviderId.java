@@ -73,15 +73,6 @@ public final class AssistantContextProviderId extends com.google.api.client.json
   private java.lang.String mid;
 
   /**
-   * Natural Provider Id returned from Provider Corpus. Note that feature teams should almost always
-   * use provider_corpus_id which is the canonical representation for provider. Surface-specific
-   * identiers should only be used in final surface rendering.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AssistantContextProviderIdNaturalProviderId naturalProviderId;
-
-  /**
    * ID issued by the Provider Corpus to uniquely identify a provider entity e.g. an Android app, a
    * Cast app or a Cloud provider. In practice, a single partner can have multiple providers
    * entities. For more detail, see go/se-storage-provider-id. This is the preferred/ standardized
@@ -168,27 +159,6 @@ public final class AssistantContextProviderId extends com.google.api.client.json
    */
   public AssistantContextProviderId setMid(java.lang.String mid) {
     this.mid = mid;
-    return this;
-  }
-
-  /**
-   * Natural Provider Id returned from Provider Corpus. Note that feature teams should almost always
-   * use provider_corpus_id which is the canonical representation for provider. Surface-specific
-   * identiers should only be used in final surface rendering.
-   * @return value or {@code null} for none
-   */
-  public AssistantContextProviderIdNaturalProviderId getNaturalProviderId() {
-    return naturalProviderId;
-  }
-
-  /**
-   * Natural Provider Id returned from Provider Corpus. Note that feature teams should almost always
-   * use provider_corpus_id which is the canonical representation for provider. Surface-specific
-   * identiers should only be used in final surface rendering.
-   * @param naturalProviderId naturalProviderId or {@code null} for none
-   */
-  public AssistantContextProviderId setNaturalProviderId(AssistantContextProviderIdNaturalProviderId naturalProviderId) {
-    this.naturalProviderId = naturalProviderId;
     return this;
   }
 

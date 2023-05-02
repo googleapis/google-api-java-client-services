@@ -52,7 +52,9 @@ public final class RepositoryWebrefWebrefEntity extends com.google.api.client.js
   private RepositoryWebrefWebrefEntityCollections collections;
 
   /**
-   * Metadata and raw signals used by the annotator.
+   * Metadata and raw signals used by the annotator. Intended for internal use. Steer clear of
+   * adding new dependencies on fields in this proto, especially external dependencies. If you are a
+   * Refx client and would like to consume entity metadata, consider querying TopicServer instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +152,9 @@ public final class RepositoryWebrefWebrefEntity extends com.google.api.client.js
   }
 
   /**
-   * Metadata and raw signals used by the annotator.
+   * Metadata and raw signals used by the annotator. Intended for internal use. Steer clear of
+   * adding new dependencies on fields in this proto, especially external dependencies. If you are a
+   * Refx client and would like to consume entity metadata, consider querying TopicServer instead.
    * @return value or {@code null} for none
    */
   public RepositoryWebrefEntityJoin getEntityJoin() {
@@ -158,7 +162,9 @@ public final class RepositoryWebrefWebrefEntity extends com.google.api.client.js
   }
 
   /**
-   * Metadata and raw signals used by the annotator.
+   * Metadata and raw signals used by the annotator. Intended for internal use. Steer clear of
+   * adding new dependencies on fields in this proto, especially external dependencies. If you are a
+   * Refx client and would like to consume entity metadata, consider querying TopicServer instead.
    * @param entityJoin entityJoin or {@code null} for none
    */
   public RepositoryWebrefWebrefEntity setEntityJoin(RepositoryWebrefEntityJoin entityJoin) {

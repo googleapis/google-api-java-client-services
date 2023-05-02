@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 2
+ * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -38,6 +38,20 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
   private java.lang.Boolean isExclusive;
 
   /**
+   * The relevance score from Scubed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float scubedNg3ModelScore;
+
+  /**
+   * Tstar score is a signal that indicates the quality of the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double scubedTstarScore;
+
+  /**
    * Whether the podcast is exclusive to a provider a not.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
    */
   public AssistantGroundingRankerPodcastGroundingProviderFeatures setIsExclusive(java.lang.Boolean isExclusive) {
     this.isExclusive = isExclusive;
+    return this;
+  }
+
+  /**
+   * The relevance score from Scubed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getScubedNg3ModelScore() {
+    return scubedNg3ModelScore;
+  }
+
+  /**
+   * The relevance score from Scubed.
+   * @param scubedNg3ModelScore scubedNg3ModelScore or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures setScubedNg3ModelScore(java.lang.Float scubedNg3ModelScore) {
+    this.scubedNg3ModelScore = scubedNg3ModelScore;
+    return this;
+  }
+
+  /**
+   * Tstar score is a signal that indicates the quality of the entity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScubedTstarScore() {
+    return scubedTstarScore;
+  }
+
+  /**
+   * Tstar score is a signal that indicates the quality of the entity.
+   * @param scubedTstarScore scubedTstarScore or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures setScubedTstarScore(java.lang.Double scubedTstarScore) {
+    this.scubedTstarScore = scubedTstarScore;
     return this;
   }
 

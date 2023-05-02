@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A message representing the signals associated with an argument. NEXT ID TO USE: 57 For
+ * A message representing the signals associated with an argument. NEXT ID TO USE: 58 For
  * //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange",
  * fields under Argument.signals in the serving proto are stored directly under Argument on the
  * logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/
@@ -377,6 +377,12 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean resolvedFromPronoun;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals responseMeaningSignals;
 
   /**
    * The list of result supports for this Argument.
@@ -1237,6 +1243,21 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setResolvedFromPronoun(java.lang.Boolean resolvedFromPronoun) {
     this.resolvedFromPronoun = resolvedFromPronoun;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals getResponseMeaningSignals() {
+    return responseMeaningSignals;
+  }
+
+  /**
+   * @param responseMeaningSignals responseMeaningSignals or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setResponseMeaningSignals(KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals responseMeaningSignals) {
+    this.responseMeaningSignals = responseMeaningSignals;
     return this;
   }
 

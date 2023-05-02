@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * PerDocData for fringe-query-prior (built into the shards for eventual consumption at Fringe
- * classification time). Not stored in DocJoins. NEXT ID: 11
+ * classification time). Not stored in DocJoins. NEXT ID: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -119,6 +119,14 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Long encodedProximityScore;
+
+  /**
+   * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
+   * person or a group of people (aka sensitive entities).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> sensitiveEntitiesIndices;
 
   /**
    * @return value or {@code null} for none
@@ -325,6 +333,25 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   public QualityFringeFringeQueryPriorPerDocData setEncodedProximityScore(java.lang.Long encodedProximityScore) {
     this.encodedProximityScore = encodedProximityScore;
+    return this;
+  }
+
+  /**
+   * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
+   * person or a group of people (aka sensitive entities).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getSensitiveEntitiesIndices() {
+    return sensitiveEntitiesIndices;
+  }
+
+  /**
+   * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
+   * person or a group of people (aka sensitive entities).
+   * @param sensitiveEntitiesIndices sensitiveEntitiesIndices or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setSensitiveEntitiesIndices(java.util.List<java.lang.Integer> sensitiveEntitiesIndices) {
+    this.sensitiveEntitiesIndices = sensitiveEntitiesIndices;
     return this;
   }
 

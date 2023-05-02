@@ -75,6 +75,14 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   private java.lang.String displayUri;
 
   /**
+   * Output only. If linked to a Collection with RetentionPolicy, the date when the document becomes
+   * mutable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dispositionTime;
+
+  /**
    * The Document schema name. Format:
    * projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}.
    * The value may be {@code null}.
@@ -274,6 +282,25 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   public GoogleCloudContentwarehouseV1Document setDisplayUri(java.lang.String displayUri) {
     this.displayUri = displayUri;
+    return this;
+  }
+
+  /**
+   * Output only. If linked to a Collection with RetentionPolicy, the date when the document becomes
+   * mutable.
+   * @return value or {@code null} for none
+   */
+  public String getDispositionTime() {
+    return dispositionTime;
+  }
+
+  /**
+   * Output only. If linked to a Collection with RetentionPolicy, the date when the document becomes
+   * mutable.
+   * @param dispositionTime dispositionTime or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1Document setDispositionTime(String dispositionTime) {
+    this.dispositionTime = dispositionTime;
     return this;
   }
 

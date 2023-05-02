@@ -326,13 +326,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   private java.lang.String url;
 
   /**
-   * Versioned map of ASR (authenticity) values.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<QualityNsrVersionedFloatSignal> versionedAsrData;
-
-  /**
    * Versioned map of NSR values for experimenting with the next release.
    * The value may be {@code null}.
    */
@@ -1082,23 +1075,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setUrl(java.lang.String url) {
     this.url = url;
-    return this;
-  }
-
-  /**
-   * Versioned map of ASR (authenticity) values.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<QualityNsrVersionedFloatSignal> getVersionedAsrData() {
-    return versionedAsrData;
-  }
-
-  /**
-   * Versioned map of ASR (authenticity) values.
-   * @param versionedAsrData versionedAsrData or {@code null} for none
-   */
-  public QualityNsrNsrData setVersionedAsrData(java.util.List<QualityNsrVersionedFloatSignal> versionedAsrData) {
-    this.versionedAsrData = versionedAsrData;
     return this;
   }
 

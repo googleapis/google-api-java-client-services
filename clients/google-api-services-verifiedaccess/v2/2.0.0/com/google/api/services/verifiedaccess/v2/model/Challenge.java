@@ -31,68 +31,11 @@ package com.google.api.services.verifiedaccess.v2.model;
 public final class Challenge extends com.google.api.client.json.GenericJson {
 
   /**
-   * Challenge generated with the old signing key, the bytes representation of SignedData (this will
-   * only be present during key rotation).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String alternativeChallenge;
-
-  /**
    * Generated challenge, the bytes representation of SignedData.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String challenge;
-
-  /**
-   * Challenge generated with the old signing key, the bytes representation of SignedData (this will
-   * only be present during key rotation).
-   * @see #decodeAlternativeChallenge()
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAlternativeChallenge() {
-    return alternativeChallenge;
-  }
-
-  /**
-   * Challenge generated with the old signing key, the bytes representation of SignedData (this will
-   * only be present during key rotation).
-   * @see #getAlternativeChallenge()
-   * @return Base64 decoded value or {@code null} for none
-   *
-   * @since 1.14
-   */
-  public byte[] decodeAlternativeChallenge() {
-    return com.google.api.client.util.Base64.decodeBase64(alternativeChallenge);
-  }
-
-  /**
-   * Challenge generated with the old signing key, the bytes representation of SignedData (this will
-   * only be present during key rotation).
-   * @see #encodeAlternativeChallenge()
-   * @param alternativeChallenge alternativeChallenge or {@code null} for none
-   */
-  public Challenge setAlternativeChallenge(java.lang.String alternativeChallenge) {
-    this.alternativeChallenge = alternativeChallenge;
-    return this;
-  }
-
-  /**
-   * Challenge generated with the old signing key, the bytes representation of SignedData (this will
-   * only be present during key rotation).
-   * @see #setAlternativeChallenge()
-   *
-   * <p>
-   * The value is encoded Base64 or {@code null} for none.
-   * </p>
-   *
-   * @since 1.14
-   */
-  public Challenge encodeAlternativeChallenge(byte[] alternativeChallenge) {
-    this.alternativeChallenge = com.google.api.client.util.Base64.encodeBase64URLSafeString(alternativeChallenge);
-    return this;
-  }
 
   /**
    * Generated challenge, the bytes representation of SignedData.

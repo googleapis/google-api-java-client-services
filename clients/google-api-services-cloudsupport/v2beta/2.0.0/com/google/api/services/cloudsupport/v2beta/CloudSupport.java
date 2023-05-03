@@ -298,22 +298,22 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * An expression written in the Cloud filter language. If non-empty, then only cases whose
-       * fields match the filter are returned. If empty, then no messages are filtered out.
+       * An expression written in the Google Cloud filter language. If non-empty, then only cases
+       * whose fields match the filter are returned. If empty, then no messages are filtered out.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** An expression written in the Cloud filter language. If non-empty, then only cases whose fields
-     match the filter are returned. If empty, then no messages are filtered out.
+      /** An expression written in the Google Cloud filter language. If non-empty, then only cases whose
+     fields match the filter are returned. If empty, then no messages are filtered out.
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * An expression written in the Cloud filter language. If non-empty, then only cases whose
-       * fields match the filter are returned. If empty, then no messages are filtered out.
+       * An expression written in the Google Cloud filter language. If non-empty, then only cases
+       * whose fields match the filter are returned. If empty, then no messages are filtered out.
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -480,15 +480,15 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a new case and associate it with the given Cloud resource. The case object must have the
-     * following fields set: display_name, description, classification, and severity.
+     * Create a new case and associate it with the given Google Cloud Resource. The case object must
+     * have the following fields set: `display_name`, `description`, `classification`, and `priority`.
      *
      * Create a request for the method "cases.create".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The name of the Cloud resource under which the case should be created.
+     * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
      * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
      * @return the request
      */
@@ -506,8 +506,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Create a new case and associate it with the given Cloud resource. The case object must have the
-       * following fields set: display_name, description, classification, and severity.
+       * Create a new case and associate it with the given Google Cloud Resource. The case object must
+       * have the following fields set: `display_name`, `description`, `classification`, and `priority`.
        *
        * Create a request for the method "cases.create".
        *
@@ -517,7 +517,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The name of the Cloud resource under which the case should be created.
+       * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
        * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
        * @since 1.13
        */
@@ -586,17 +586,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The name of the Cloud resource under which the case should be created. */
+      /**
+       * Required. The name of the Google Cloud Resource under which the case should be created.
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The name of the Cloud resource under which the case should be created.
+      /** Required. The name of the Google Cloud Resource under which the case should be created.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. The name of the Cloud resource under which the case should be created. */
+      /**
+       * Required. The name of the Google Cloud Resource under which the case should be created.
+       */
       public Create setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -613,8 +617,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Escalate a case. Escalating a case will initiate the Cloud Support escalation management process.
-     * This operation is only available to certain Customer Care tiers. Go to
+     * Escalate a case. Escalating a case will initiate the Google Cloud Support escalation management
+     * process. This operation is only available to certain Customer Care tiers. Go to
      * https://cloud.google.com/support and look for 'Technical support escalations' in the feature list
      * to find out which tiers are able to perform escalations.
      *
@@ -641,7 +645,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Escalate a case. Escalating a case will initiate the Cloud Support escalation management
+       * Escalate a case. Escalating a case will initiate the Google Cloud Support escalation management
        * process. This operation is only available to certain Customer Care tiers. Go to
        * https://cloud.google.com/support and look for 'Technical support escalations' in the feature
        * list to find out which tiers are able to perform escalations.
@@ -1030,8 +1034,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
        * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
        * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
-       * `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are `S0`,
-       * `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case creator.
+       * `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case creator.
        * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
        * `state=OPEN AND (priority=P0 OR priority=P1)`
        */
@@ -1043,7 +1046,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      the operators equals (`=`) and `AND`: - `state`: The accepted values are `OPEN` or `CLOSED`. -
      `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify multiple
      values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-     [DEPRECATED] `severity`: The accepted values are `S0`, `S1`, `S2`, `S3`, or `S4`. -
      `creator.email`: The email address of the case creator. Examples: - `state=CLOSED` - `state=OPEN
      AND creator.email="tester@example.com"` - `state=OPEN AND (priority=P0 OR priority=P1)`
        */
@@ -1057,8 +1059,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * following fields with the operators equals (`=`) and `AND`: - `state`: The accepted values
        * are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or
        * `P4`. You can specify multiple values for priority using the `OR` operator. For example,
-       * `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values are `S0`,
-       * `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case creator.
+       * `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case creator.
        * Examples: - `state=CLOSED` - `state=OPEN AND creator.email="tester@example.com"` -
        * `state=OPEN AND (priority=P0 OR priority=P1)`
        */
@@ -1238,20 +1239,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
       /**
        * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
+       * Supported values are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+       * fields are specified, all supported fields are updated. WARNING: If you do not provide a
+       * field mask, then you might accidentally clear some fields. For example, if you leave the
+       * field mask empty and do not provide a value for `subscriber_email_addresses`, then
+       * `subscriber_email_addresses` is updated to empty.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** A list of attributes of the case object that should be updated as part of this request. Supported
-     values are severity, display_name, and subscriber_email_addresses. If no fields are specified, all
-     supported fields are updated. WARNING: If you do not provide a field mask, then you may
-     accidentally clear some fields. For example, if you leave field mask empty and do not provide a
-     value for subscriber_email_addresses, then subscriber_email_addresses is updated to empty.
+     values are `priority`, `display_name`, and `subscriber_email_addresses`. If no fields are
+     specified, all supported fields are updated. WARNING: If you do not provide a field mask, then you
+     might accidentally clear some fields. For example, if you leave the field mask empty and do not
+     provide a value for `subscriber_email_addresses`, then `subscriber_email_addresses` is updated to
+     empty.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1259,11 +1261,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
       /**
        * A list of attributes of the case object that should be updated as part of this request.
-       * Supported values are severity, display_name, and subscriber_email_addresses. If no fields
-       * are specified, all supported fields are updated. WARNING: If you do not provide a field
-       * mask, then you may accidentally clear some fields. For example, if you leave field mask
-       * empty and do not provide a value for subscriber_email_addresses, then
-       * subscriber_email_addresses is updated to empty.
+       * Supported values are `priority`, `display_name`, and `subscriber_email_addresses`. If no
+       * fields are specified, all supported fields are updated. WARNING: If you do not provide a
+       * field mask, then you might accidentally clear some fields. For example, if you leave the
+       * field mask empty and do not provide a value for `subscriber_email_addresses`, then
+       * `subscriber_email_addresses` is updated to empty.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1421,12 +1423,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: The
        * accepted values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`,
        * `P2`, `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator.
-       * For example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values
-       * are `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
+       * For example, `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case
        * creator. - `billingAccount`: A billing account in the form `billingAccounts/` You must
-       * specify eitehr `organization` or `project`. To search across `displayName`, `description`,
+       * specify either `organization` or `project`. To search across `displayName`, `description`,
        * and comments, use a global restriction with no keyword or operator. For example, `"my
-       * search"`. To search only cases updated after a certain date, use `update_time` retricted
+       * search"`. To search only cases updated after a certain date, use `update_time` restricted
        * with that particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
        * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
@@ -1444,12 +1445,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      `project`: A project name in the form `projects/`. - `state`: The accepted values are `OPEN` or
      `CLOSED`. - `priority`: The accepted values are `P0`, `P1`, `P2`, `P3`, or `P4`. You can specify
      multiple values for priority using the `OR` operator. For example, `priority=P1 OR priority=P2`. -
-     [DEPRECATED] `severity`: The accepted values are `S0`, `S1`, `S2`, `S3`, or `S4`. -
      `creator.email`: The email address of the case creator. - `billingAccount`: A billing account in
-     the form `billingAccounts/` You must specify eitehr `organization` or `project`. To search across
+     the form `billingAccounts/` You must specify either `organization` or `project`. To search across
      `displayName`, `description`, and comments, use a global restriction with no keyword or operator.
      For example, `"my search"`. To search only cases updated after a certain date, use `update_time`
-     retricted with that particular date, time, and timezone in ISO datetime format. For example,
+     restricted with that particular date, time, and timezone in ISO datetime format. For example,
      `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than operator
      (`>`). Examples: - `organization="organizations/123456789"` - `project="projects/my-project-id"` -
      `project="projects/123456789"` - `billing_account="billingAccounts/123456-A0B0C0-CUZ789"` -
@@ -1467,12 +1467,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * `organizations/`. - `project`: A project name in the form `projects/`. - `state`: The
        * accepted values are `OPEN` or `CLOSED`. - `priority`: The accepted values are `P0`, `P1`,
        * `P2`, `P3`, or `P4`. You can specify multiple values for priority using the `OR` operator.
-       * For example, `priority=P1 OR priority=P2`. - [DEPRECATED] `severity`: The accepted values
-       * are `S0`, `S1`, `S2`, `S3`, or `S4`. - `creator.email`: The email address of the case
+       * For example, `priority=P1 OR priority=P2`. - `creator.email`: The email address of the case
        * creator. - `billingAccount`: A billing account in the form `billingAccounts/` You must
-       * specify eitehr `organization` or `project`. To search across `displayName`, `description`,
+       * specify either `organization` or `project`. To search across `displayName`, `description`,
        * and comments, use a global restriction with no keyword or operator. For example, `"my
-       * search"`. To search only cases updated after a certain date, use `update_time` retricted
+       * search"`. To search only cases updated after a certain date, use `update_time` restricted
        * with that particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
        * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects

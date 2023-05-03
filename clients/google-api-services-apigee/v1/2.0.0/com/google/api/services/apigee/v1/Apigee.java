@@ -45409,7 +45409,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return result;
         }
 
-        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiResponseWrapper> {
+        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeleteResponse> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -45431,7 +45431,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiResponseWrapper.class);
+            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeleteResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

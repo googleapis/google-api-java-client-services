@@ -93,7 +93,10 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * [Output Only] The URL of the network which the Network Attachment belongs to.
+   * [Output Only] The URL of the network which the Network Attachment belongs to. Practically it is
+   * inferred by fetching the network of the first subnetwork associated. Because it is required
+   * that all the subnetworks must be from the same network, it is assured that the Network
+   * Attachment belongs to the same network as all the subnetworks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,7 +332,10 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The URL of the network which the Network Attachment belongs to.
+   * [Output Only] The URL of the network which the Network Attachment belongs to. Practically it is
+   * inferred by fetching the network of the first subnetwork associated. Because it is required
+   * that all the subnetworks must be from the same network, it is assured that the Network
+   * Attachment belongs to the same network as all the subnetworks.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -337,7 +343,10 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The URL of the network which the Network Attachment belongs to.
+   * [Output Only] The URL of the network which the Network Attachment belongs to. Practically it is
+   * inferred by fetching the network of the first subnetwork associated. Because it is required
+   * that all the subnetworks must be from the same network, it is assured that the Network
+   * Attachment belongs to the same network as all the subnetworks.
    * @param network network or {@code null} for none
    */
   public NetworkAttachment setNetwork(java.lang.String network) {

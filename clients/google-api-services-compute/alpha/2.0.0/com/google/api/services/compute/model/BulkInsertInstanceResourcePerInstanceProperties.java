@@ -31,8 +31,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
 
   /**
    * Specifies the hostname of the instance. More details in:
-   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention hostname
-   * must be uniqe in per_instance_properties map.
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
 
   /**
    * Specifies the hostname of the instance. More details in:
-   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention hostname
-   * must be uniqe in per_instance_properties map.
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -57,8 +55,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
 
   /**
    * Specifies the hostname of the instance. More details in:
-   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention hostname
-   * must be uniqe in per_instance_properties map.
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
    * @param hostname hostname or {@code null} for none
    */
   public BulkInsertInstanceResourcePerInstanceProperties setHostname(java.lang.String hostname) {

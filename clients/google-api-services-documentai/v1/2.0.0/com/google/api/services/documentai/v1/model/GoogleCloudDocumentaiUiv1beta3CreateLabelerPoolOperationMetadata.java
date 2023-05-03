@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * The long-running operation metadata for CreateLabelerPool.
+ * The long-running operation metadata for the CreateLabelerPool method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

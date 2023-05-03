@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Request message for the process document method.
+ * Request message for the ProcessDocument method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,8 +31,8 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * The value may be {@code null}.
    */
@@ -61,8 +61,8 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   private java.lang.Boolean skipHumanReview;
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @return value or {@code null} for none
    */
@@ -71,8 +71,8 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   }
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @param fieldMask fieldMask or {@code null} for none
    */

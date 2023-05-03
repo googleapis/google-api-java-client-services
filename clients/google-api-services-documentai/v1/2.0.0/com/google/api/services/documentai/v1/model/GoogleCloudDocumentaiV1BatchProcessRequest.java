@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The overall output config for batch process.
+   * The output configuration for the BatchProcessDocuments method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1DocumentOutputConfig documentOutputConfig;
 
   /**
-   * The input documents for batch process.
+   * The input documents for the BatchProcessDocuments method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
   private java.lang.Boolean skipHumanReview;
 
   /**
-   * The overall output config for batch process.
+   * The output configuration for the BatchProcessDocuments method.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentOutputConfig getDocumentOutputConfig() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
   }
 
   /**
-   * The overall output config for batch process.
+   * The output configuration for the BatchProcessDocuments method.
    * @param documentOutputConfig documentOutputConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1BatchProcessRequest setDocumentOutputConfig(GoogleCloudDocumentaiV1DocumentOutputConfig documentOutputConfig) {
@@ -69,7 +69,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
   }
 
   /**
-   * The input documents for batch process.
+   * The input documents for the BatchProcessDocuments method.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1BatchDocumentsInputConfig getInputDocuments() {
@@ -77,7 +77,7 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
   }
 
   /**
-   * The input documents for batch process.
+   * The input documents for the BatchProcessDocuments method.
    * @param inputDocuments inputDocuments or {@code null} for none
    */
   public GoogleCloudDocumentaiV1BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig inputDocuments) {

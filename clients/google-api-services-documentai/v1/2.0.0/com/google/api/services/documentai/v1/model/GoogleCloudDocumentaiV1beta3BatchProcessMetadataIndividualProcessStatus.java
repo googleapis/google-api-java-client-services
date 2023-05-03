@@ -33,7 +33,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process
    * isn't triggered, this field will be empty. It has the same response type and metadata as the
-   * long-running operation returned by ReviewDocument method.
+   * long-running operation returned by the ReviewDocument method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,17 +47,17 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   private GoogleCloudDocumentaiV1beta3HumanReviewStatus humanReviewStatus;
 
   /**
-   * The source of the document, same as the [input_gcs_source] field in the request when the batch
-   * process started. The batch process is started by take snapshot of that document, since a user
-   * can move or change that document during the process.
+   * The source of the document, same as the input_gcs_source field in the request when the batch
+   * process started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputGcsSource;
 
   /**
-   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
-   * document if it was successful, otherwise empty.
+   * The Cloud Storage output destination (in the request as
+   * DocumentOutputConfig.GcsOutputConfig.gcs_uri) of the processed document if it was successful,
+   * otherwise empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process
    * isn't triggered, this field will be empty. It has the same response type and metadata as the
-   * long-running operation returned by ReviewDocument method.
+   * long-running operation returned by the ReviewDocument method.
    * @return value or {@code null} for none
    */
   public java.lang.String getHumanReviewOperation() {
@@ -83,7 +83,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process
    * isn't triggered, this field will be empty. It has the same response type and metadata as the
-   * long-running operation returned by ReviewDocument method.
+   * long-running operation returned by the ReviewDocument method.
    * @param humanReviewOperation humanReviewOperation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setHumanReviewOperation(java.lang.String humanReviewOperation) {
@@ -109,9 +109,8 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The source of the document, same as the [input_gcs_source] field in the request when the batch
-   * process started. The batch process is started by take snapshot of that document, since a user
-   * can move or change that document during the process.
+   * The source of the document, same as the input_gcs_source field in the request when the batch
+   * process started.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputGcsSource() {
@@ -119,9 +118,8 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The source of the document, same as the [input_gcs_source] field in the request when the batch
-   * process started. The batch process is started by take snapshot of that document, since a user
-   * can move or change that document during the process.
+   * The source of the document, same as the input_gcs_source field in the request when the batch
+   * process started.
    * @param inputGcsSource inputGcsSource or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setInputGcsSource(java.lang.String inputGcsSource) {
@@ -130,8 +128,9 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
-   * document if it was successful, otherwise empty.
+   * The Cloud Storage output destination (in the request as
+   * DocumentOutputConfig.GcsOutputConfig.gcs_uri) of the processed document if it was successful,
+   * otherwise empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputGcsDestination() {
@@ -139,8 +138,9 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   }
 
   /**
-   * The output_gcs_destination (in the request as `output_gcs_destination`) of the processed
-   * document if it was successful, otherwise empty.
+   * The Cloud Storage output destination (in the request as
+   * DocumentOutputConfig.GcsOutputConfig.gcs_uri) of the processed document if it was successful,
+   * otherwise empty.
    * @param outputGcsDestination outputGcsDestination or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setOutputGcsDestination(java.lang.String outputGcsDestination) {

@@ -17,13 +17,12 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The request message for the `ImportProcessorVersion` method. This method requires the source
- * processor version and destination processor to be in the same location. This method requires the
- * Document AI Service Agent of the destination project to have [Document AI Editor
- * role](https://cloud.google.com/document-ai/docs/access-control/iam-roles) on the source project.
- * The destination project is specified as part of the `parent` field. The source project is
- * specified as part of `source` field. The Service Agent for Document AI can be found in
- * https://cloud.google.com/iam/docs/service-agents.
+ * The request message for the ImportProcessorVersion method. Requirements: - The source processor
+ * version and destination processor must be in the same location. - The Document AI [Service
+ * Agent](https://cloud.google.com/iam/docs/service-agents) of the destination project must have
+ * [Document AI Editor role](https://cloud.google.com/document-ai/docs/access-control/iam-roles) on
+ * the source project. The destination project is specified as part of the parent field. The source
+ * project is specified as part of the source field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

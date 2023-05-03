@@ -182,8 +182,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the documentai server.  After setting any optional
        * parameters, call the {@link FetchProcessorTypes#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The project of processor type to list. The available processor types may depend on the
-       *        allow-listing on projects. Format: `projects/{project}/locations/{location}`
+       * @param parent Required. The location of processor types to list. Format:
+       *        `projects/{project}/locations/{location}`.
        * @return the request
        */
       public FetchProcessorTypes fetchProcessorTypes(java.lang.String parent) throws java.io.IOException {
@@ -211,8 +211,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Required. The project of processor type to list. The available processor types may depend on the
-       *        allow-listing on projects. Format: `projects/{project}/locations/{location}`
+         * @param parent Required. The location of processor types to list. Format:
+       *        `projects/{project}/locations/{location}`.
          * @since 1.13
          */
         protected FetchProcessorTypes(java.lang.String parent) {
@@ -291,22 +291,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The project of processor type to list. The available processor types may depend
-         * on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
+         * Required. The location of processor types to list. Format:
+         * `projects/{project}/locations/{location}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The project of processor type to list. The available processor types may depend on the
-       allow-listing on projects. Format: `projects/{project}/locations/{location}`
+        /** Required. The location of processor types to list. Format:
+       `projects/{project}/locations/{location}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The project of processor type to list. The available processor types may depend
-         * on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
+         * Required. The location of processor types to list. Format:
+         * `projects/{project}/locations/{location}`.
          */
         public FetchProcessorTypes setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1321,8 +1321,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the documentai server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location of processor type to list. The available processor types may depend on the
-         *        allow-listing on projects. Format: `projects/{project}/locations/{location}`
+         * @param parent Required. The location of processor types to list. Format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1348,8 +1348,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location of processor type to list. The available processor types may depend on the
-         *        allow-listing on projects. Format: `projects/{project}/locations/{location}`
+           * @param parent Required. The location of processor types to list. Format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1428,24 +1428,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The location of processor type to list. The available processor types may
-           * depend on the allow-listing on projects. Format:
-           * `projects/{project}/locations/{location}`
+           * Required. The location of processor types to list. Format:
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location of processor type to list. The available processor types may depend on the
-         allow-listing on projects. Format: `projects/{project}/locations/{location}`
+          /** Required. The location of processor types to list. Format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The location of processor type to list. The available processor types may
-           * depend on the allow-listing on projects. Format:
-           * `projects/{project}/locations/{location}`
+           * Required. The location of processor types to list. Format:
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1458,24 +1456,24 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The maximum number of processor types to return. If unspecified, at most 100 processor
-           * types will be returned. The maximum value is 500; values above 500 will be coerced to
-           * 500.
+           * The maximum number of processor types to return. If unspecified, at most `100`
+           * processor types will be returned. The maximum value is `500`. Values above `500` will
+           * be coerced to `500`.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of processor types to return. If unspecified, at most 100 processor types will
-         be returned. The maximum value is 500; values above 500 will be coerced to 500.
+          /** The maximum number of processor types to return. If unspecified, at most `100` processor types will
+         be returned. The maximum value is `500`. Values above `500` will be coerced to `500`.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of processor types to return. If unspecified, at most 100 processor
-           * types will be returned. The maximum value is 500; values above 500 will be coerced to
-           * 500.
+           * The maximum number of processor types to return. If unspecified, at most `100`
+           * processor types will be returned. The maximum value is `500`. Values above `500` will
+           * be coerced to `500`.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1673,8 +1671,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Creates a processor from the type processor that the user chose. The processor will be at
-         * "ENABLED" state by default after its creation.
+         * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by
+         * default after its creation.
          *
          * Create a request for the method "processors.create".
          *
@@ -1700,8 +1698,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a processor from the type processor that the user chose. The processor will be at
-           * "ENABLED" state by default after its creation.
+           * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state
+           * by default after its creation.
            *
            * Create a request for the method "processors.create".
            *
@@ -2488,22 +2486,24 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The maximum number of processors to return. If unspecified, at most 50 processors will
-           * be returned. The maximum value is 100; values above 100 will be coerced to 100.
+           * The maximum number of processors to return. If unspecified, at most `50` processors
+           * will be returned. The maximum value is `100`. Values above `100` will be coerced to
+           * `100`.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of processors to return. If unspecified, at most 50 processors will be returned.
-         The maximum value is 100; values above 100 will be coerced to 100.
+          /** The maximum number of processors to return. If unspecified, at most `50` processors will be
+         returned. The maximum value is `100`. Values above `100` will be coerced to `100`.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of processors to return. If unspecified, at most 50 processors will
-           * be returned. The maximum value is 100; values above 100 will be coerced to 100.
+           * The maximum number of processors to return. If unspecified, at most `50` processors
+           * will be returned. The maximum value is `100`. Values above `100` will be coerced to
+           * `100`.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3974,24 +3974,24 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The maximum number of processor versions to return. If unspecified, at most 10
-             * processor versions will be returned. The maximum value is 20; values above 20 will be
-             * coerced to 20.
+             * The maximum number of processor versions to return. If unspecified, at most `10`
+             * processor versions will be returned. The maximum value is `20`. Values above `20`
+             * will be coerced to `20`.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of processor versions to return. If unspecified, at most 10 processor versions
-           will be returned. The maximum value is 20; values above 20 will be coerced to 20.
+            /** The maximum number of processor versions to return. If unspecified, at most `10` processor versions
+           will be returned. The maximum value is `20`. Values above `20` will be coerced to `20`.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of processor versions to return. If unspecified, at most 10
-             * processor versions will be returned. The maximum value is 20; values above 20 will be
-             * coerced to 20.
+             * The maximum number of processor versions to return. If unspecified, at most `10`
+             * processor versions will be returned. The maximum value is `20`. Values above `20`
+             * will be coerced to `20`.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4179,8 +4179,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Trains a new processor version. Operation metadata is returned as
-           * cloud_documentai_core.TrainProcessorVersionMetadata.
+           * Trains a new processor version. Operation metadata is returned as TrainProcessorVersionMetadata.
            *
            * Create a request for the method "processorVersions.train".
            *
@@ -4207,7 +4206,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Trains a new processor version. Operation metadata is returned as
-             * cloud_documentai_core.TrainProcessorVersionMetadata.
+             * TrainProcessorVersionMetadata.
              *
              * Create a request for the method "processorVersions.train".
              *
@@ -4766,22 +4765,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The standard list page size. If unspecified, at most `5` evaluations will be
-               * returned. The maximum value is `100`; values above `100` will be coerced to `100`.
+               * The standard list page size. If unspecified, at most `5` evaluations are returned.
+               * The maximum value is `100`. Values above `100` are coerced to `100`.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The standard list page size. If unspecified, at most `5` evaluations will be returned. The maximum
-             value is `100`; values above `100` will be coerced to `100`.
+              /** The standard list page size. If unspecified, at most `5` evaluations are returned. The maximum
+             value is `100`. Values above `100` are coerced to `100`.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The standard list page size. If unspecified, at most `5` evaluations will be
-               * returned. The maximum value is `100`; values above `100` will be coerced to `100`.
+               * The standard list page size. If unspecified, at most `5` evaluations are returned.
+               * The maximum value is `100`. Values above `100` are coerced to `100`.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;

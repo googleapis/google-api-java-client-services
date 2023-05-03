@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Request message for the set default processor version method.
+ * Request message for the SetDefaultProcessorVersion method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

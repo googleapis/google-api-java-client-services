@@ -38,14 +38,14 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   private GoogleTypeColor backgroundColor;
 
   /**
-   * Whether the text is bold (equivalent to font weight >= 700).
+   * Whether the text is bold (equivalent to font_weight is at least `700`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean bold;
 
   /**
-   * Font size in points (1 point is 1/72").
+   * Font size in points (`1` point is `¹⁄₇₂` inches).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   private java.lang.String fontType;
 
   /**
-   * TrueType weight on a scale 100 (Thin) to 1000 (Ultra-heavy). Normal is 400, Bold is 700.
+   * TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is `400`, bold is
+   * `700`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,14 +88,14 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   private java.lang.Double letterSpacing;
 
   /**
-   * Font size in pixels, equal to unrounded_fontsize * resolution / 72.0.
+   * Font size in pixels, equal to _unrounded font_size_ * _resolution_ ÷ `72.0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double pixelFontSize;
 
   /**
-   * Whether the text are small caps.
+   * Whether the text is in small caps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +154,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Whether the text is bold (equivalent to font weight >= 700).
+   * Whether the text is bold (equivalent to font_weight is at least `700`).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBold() {
@@ -161,7 +162,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Whether the text is bold (equivalent to font weight >= 700).
+   * Whether the text is bold (equivalent to font_weight is at least `700`).
    * @param bold bold or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo setBold(java.lang.Boolean bold) {
@@ -170,7 +171,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Font size in points (1 point is 1/72").
+   * Font size in points (`1` point is `¹⁄₇₂` inches).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFontSize() {
@@ -178,7 +179,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Font size in points (1 point is 1/72").
+   * Font size in points (`1` point is `¹⁄₇₂` inches).
    * @param fontSize fontSize or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo setFontSize(java.lang.Integer fontSize) {
@@ -204,7 +205,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * TrueType weight on a scale 100 (Thin) to 1000 (Ultra-heavy). Normal is 400, Bold is 700.
+   * TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is `400`, bold is
+   * `700`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFontWeight() {
@@ -212,7 +214,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * TrueType weight on a scale 100 (Thin) to 1000 (Ultra-heavy). Normal is 400, Bold is 700.
+   * TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is `400`, bold is
+   * `700`.
    * @param fontWeight fontWeight or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo setFontWeight(java.lang.Integer fontWeight) {
@@ -272,7 +275,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Font size in pixels, equal to unrounded_fontsize * resolution / 72.0.
+   * Font size in pixels, equal to _unrounded font_size_ * _resolution_ ÷ `72.0`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPixelFontSize() {
@@ -280,7 +283,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Font size in pixels, equal to unrounded_fontsize * resolution / 72.0.
+   * Font size in pixels, equal to _unrounded font_size_ * _resolution_ ÷ `72.0`.
    * @param pixelFontSize pixelFontSize or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo setPixelFontSize(java.lang.Double pixelFontSize) {
@@ -289,7 +292,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Whether the text are small caps.
+   * Whether the text is in small caps.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSmallcaps() {
@@ -297,7 +300,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends com
   }
 
   /**
-   * Whether the text are small caps.
+   * Whether the text is in small caps.
    * @param smallcaps smallcaps or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo setSmallcaps(java.lang.Boolean smallcaps) {

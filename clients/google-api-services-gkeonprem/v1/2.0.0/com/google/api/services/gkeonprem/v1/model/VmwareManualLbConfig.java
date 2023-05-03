@@ -17,7 +17,10 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * Model definition for VmwareManualLbConfig.
+ * Represents configuration parameters for an already existing manual load balancer. Given the
+ * nature of manual load balancers it is expected that said load balancer will be fully managed by
+ * users. IMPORTANT: Please note that the Anthos On-Prem API will not generate or update ManualLB
+ * configurations it can only bind a pre-existing configuration to a new VMware user cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:

@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * Resource that represents a bare metal admin cluster.
+ * ## Resource that represents a bare metal admin cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:
@@ -41,6 +41,7 @@ public final class BareMetalAdminCluster extends com.google.api.client.json.Gene
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * The Anthos clusters on bare metal version for the bare metal admin cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,6 +264,7 @@ public final class BareMetalAdminCluster extends com.google.api.client.json.Gene
   }
 
   /**
+   * The Anthos clusters on bare metal version for the bare metal admin cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getBareMetalVersion() {
@@ -270,6 +272,7 @@ public final class BareMetalAdminCluster extends com.google.api.client.json.Gene
   }
 
   /**
+   * The Anthos clusters on bare metal version for the bare metal admin cluster.
    * @param bareMetalVersion bareMetalVersion or {@code null} for none
    */
   public BareMetalAdminCluster setBareMetalVersion(java.lang.String bareMetalVersion) {

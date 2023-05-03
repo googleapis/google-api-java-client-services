@@ -30,12 +30,14 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalAdminPortConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The port that control plane hosted load balancers will listen on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer controlPlaneLoadBalancerPort;
 
   /**
+   * The port that control plane hosted load balancers will listen on.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getControlPlaneLoadBalancerPort() {
@@ -43,6 +45,7 @@ public final class BareMetalAdminPortConfig extends com.google.api.client.json.G
   }
 
   /**
+   * The port that control plane hosted load balancers will listen on.
    * @param controlPlaneLoadBalancerPort controlPlaneLoadBalancerPort or {@code null} for none
    */
   public BareMetalAdminPortConfig setControlPlaneLoadBalancerPort(java.lang.Integer controlPlaneLoadBalancerPort) {

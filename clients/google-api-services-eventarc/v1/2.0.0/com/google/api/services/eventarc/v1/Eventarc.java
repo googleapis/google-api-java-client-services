@@ -2104,17 +2104,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -2249,17 +2249,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -2981,17 +2981,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -4474,17 +4474,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -4664,17 +4664,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -5445,17 +5445,17 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Required. If set, validate the request and preview the review, but do not post it.
+          /** Optional. If set, validate the request and preview the review, but do not post it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** Required. If set, validate the request and preview the review, but do not post it. */
+          /** Optional. If set, validate the request and preview the review, but do not post it. */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;

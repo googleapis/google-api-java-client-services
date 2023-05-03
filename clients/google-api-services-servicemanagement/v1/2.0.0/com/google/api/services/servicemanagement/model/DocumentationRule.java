@@ -48,6 +48,14 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
+   * String of comma or space separated case-sensitive words for which method/field name replacement
+   * will be disabled by go/api-docgen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String disableReplacementWords;
+
+  /**
    * The selector is a comma-separated list of patterns for any element such as a method, a field,
    * an enum value. Each pattern is a qualified name of the element which may end in "*", indicating
    * a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified
@@ -95,6 +103,25 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
    */
   public DocumentationRule setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * String of comma or space separated case-sensitive words for which method/field name replacement
+   * will be disabled by go/api-docgen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisableReplacementWords() {
+    return disableReplacementWords;
+  }
+
+  /**
+   * String of comma or space separated case-sensitive words for which method/field name replacement
+   * will be disabled by go/api-docgen.
+   * @param disableReplacementWords disableReplacementWords or {@code null} for none
+   */
+  public DocumentationRule setDisableReplacementWords(java.lang.String disableReplacementWords) {
+    this.disableReplacementWords = disableReplacementWords;
     return this;
   }
 

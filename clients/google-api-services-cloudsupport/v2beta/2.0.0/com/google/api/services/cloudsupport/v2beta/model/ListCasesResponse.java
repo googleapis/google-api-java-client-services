@@ -31,7 +31,8 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class ListCasesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of cases associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +46,16 @@ public final class ListCasesResponse extends com.google.api.client.json.GenericJ
 
   /**
    * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results
-   * to retrieve.
+   * the subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more
+   * results to retrieve.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of cases associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * @return value or {@code null} for none
    */
   public java.util.List<CloudSupportCase> getCases() {
@@ -61,7 +63,8 @@ public final class ListCasesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The list of cases associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * @param cases cases or {@code null} for none
    */
   public ListCasesResponse setCases(java.util.List<CloudSupportCase> cases) {
@@ -71,8 +74,8 @@ public final class ListCasesResponse extends com.google.api.client.json.GenericJ
 
   /**
    * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results
-   * to retrieve.
+   * the subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more
+   * results to retrieve.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -81,8 +84,8 @@ public final class ListCasesResponse extends com.google.api.client.json.GenericJ
 
   /**
    * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results
-   * to retrieve.
+   * the subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more
+   * results to retrieve.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListCasesResponse setNextPageToken(java.lang.String nextPageToken) {

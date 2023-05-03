@@ -31,7 +31,8 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class SearchCasesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Case associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class SearchCasesResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Case associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * @return value or {@code null} for none
    */
   public java.util.List<CloudSupportCase> getCases() {
@@ -61,7 +63,8 @@ public final class SearchCasesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of Case associated with the cloud resource, after any filters have been applied.
+   * The list of cases associated with the Google Cloud Resource, after any filters have been
+   * applied.
    * @param cases cases or {@code null} for none
    */
   public SearchCasesResponse setCases(java.util.List<CloudSupportCase> cases) {

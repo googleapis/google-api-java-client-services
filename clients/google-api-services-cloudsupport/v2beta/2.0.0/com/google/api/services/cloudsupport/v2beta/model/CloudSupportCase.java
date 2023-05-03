@@ -100,7 +100,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The priority of this case. If this is set, do not set severity.
+   * The priority of this case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,7 +316,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The priority of this case. If this is set, do not set severity.
+   * The priority of this case.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriority() {
@@ -324,7 +324,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The priority of this case. If this is set, do not set severity.
+   * The priority of this case.
    * @param priority priority or {@code null} for none
    */
   public CloudSupportCase setPriority(java.lang.String priority) {

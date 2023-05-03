@@ -148,7 +148,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup;
 
   /**
-   * Immutable. Location.
+   * Output only. Location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -502,7 +502,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
-   * Immutable. Location.
+   * Output only. Location.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonLocationInfo getLocation() {
@@ -510,7 +510,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
-   * Immutable. Location.
+   * Output only. Location.
    * @param location location or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setLocation(GoogleAdsSearchads360V0CommonLocationInfo location) {

@@ -66,16 +66,15 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long numberOfDisks;
 
   /**
-   * [Output Only] Sum of all the disks' local used bytes. This specifically refers to the amount of
-   * bytes used on the disk without any encryption or compression.
+   * [Output Only] Space used by data stored in disks within the storage pool (in bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long usedBytes;
 
   /**
-   * [Output Only] Sum of all the disks' used reduced bytes. This is the actual storage capacity
-   * consumed by all of the disks.
+   * [Output Only] Space used by compressed and deduped data stored in disks within the storage pool
+   * (in bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -169,8 +168,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' local used bytes. This specifically refers to the amount of
-   * bytes used on the disk without any encryption or compression.
+   * [Output Only] Space used by data stored in disks within the storage pool (in bytes).
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedBytes() {
@@ -178,8 +176,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' local used bytes. This specifically refers to the amount of
-   * bytes used on the disk without any encryption or compression.
+   * [Output Only] Space used by data stored in disks within the storage pool (in bytes).
    * @param usedBytes usedBytes or {@code null} for none
    */
   public StoragePoolResourceStatus setUsedBytes(java.lang.Long usedBytes) {
@@ -188,8 +185,8 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' used reduced bytes. This is the actual storage capacity
-   * consumed by all of the disks.
+   * [Output Only] Space used by compressed and deduped data stored in disks within the storage pool
+   * (in bytes).
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedReducedBytes() {
@@ -197,8 +194,8 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disks' used reduced bytes. This is the actual storage capacity
-   * consumed by all of the disks.
+   * [Output Only] Space used by compressed and deduped data stored in disks within the storage pool
+   * (in bytes).
    * @param usedReducedBytes usedReducedBytes or {@code null} for none
    */
   public StoragePoolResourceStatus setUsedReducedBytes(java.lang.Long usedReducedBytes) {

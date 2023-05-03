@@ -112,6 +112,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.math.BigInteger id;
 
   /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy;
+
+  /**
    * [Output Only] The URL of the Instance Group resource.
    * The value may be {@code null}.
    */
@@ -234,6 +242,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetSize;
+
+  /**
+   * The unit of measure for the target size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetSizeUnit;
 
   /**
    * The target number of stopped instances for this managed instance group. This number changes
@@ -501,6 +516,25 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
+    return instanceFlexibilityPolicy;
+  }
+
+  /**
+   * Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance
+   * flexibility configuration on MIG overrides instance template configuration.
+   * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
+   */
+  public InstanceGroupManager setInstanceFlexibilityPolicy(InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy) {
+    this.instanceFlexibilityPolicy = instanceFlexibilityPolicy;
     return this;
   }
 
@@ -797,6 +831,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {
     this.targetSize = targetSize;
+    return this;
+  }
+
+  /**
+   * The unit of measure for the target size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetSizeUnit() {
+    return targetSizeUnit;
+  }
+
+  /**
+   * The unit of measure for the target size.
+   * @param targetSizeUnit targetSizeUnit or {@code null} for none
+   */
+  public InstanceGroupManager setTargetSizeUnit(java.lang.String targetSizeUnit) {
+    this.targetSizeUnit = targetSizeUnit;
     return this;
   }
 

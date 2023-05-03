@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer
- * gateway. The peer gateway could either be a external VPN gateway or GCP VPN gateway.
+ * gateway. The peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

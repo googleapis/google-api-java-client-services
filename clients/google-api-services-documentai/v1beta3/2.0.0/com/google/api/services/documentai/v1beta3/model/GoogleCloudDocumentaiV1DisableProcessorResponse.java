@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Response message for the disable processor method. Intentionally empty proto for adding fields in
+ * Response message for the DisableProcessor method. Intentionally empty proto for adding fields in
  * future.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

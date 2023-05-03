@@ -38,9 +38,9 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   private java.lang.String gcsSource;
 
   /**
-   * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
-   * be application/json.
+   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
+   * the input is a Document, the type should be `application/json`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +64,9 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   }
 
   /**
-   * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
-   * be application/json.
+   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
+   * the input is a Document, the type should be `application/json`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -74,9 +74,9 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   }
 
   /**
-   * Mimetype of the input. If the input is a raw document, the supported mimetypes are
-   * application/pdf, image/tiff, and image/gif. If the input is a Document proto, the type should
-   * be application/json.
+   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
+   * the input is a Document, the type should be `application/json`.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig setMimeType(java.lang.String mimeType) {

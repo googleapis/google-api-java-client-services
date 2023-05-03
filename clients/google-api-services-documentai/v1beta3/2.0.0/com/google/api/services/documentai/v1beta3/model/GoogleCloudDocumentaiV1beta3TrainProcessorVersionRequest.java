@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Request message for the create processor version method.
+ * Request message for the TrainProcessorVersion method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -47,7 +47,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest exte
   private GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
 
   /**
-   * Optional. The input data used to train the `ProcessorVersion`.
+   * Optional. The input data used to train the ProcessorVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest exte
   }
 
   /**
-   * Optional. The input data used to train the `ProcessorVersion`.
+   * Optional. The input data used to train the ProcessorVersion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData getInputData() {
@@ -107,7 +107,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest exte
   }
 
   /**
-   * Optional. The input data used to train the `ProcessorVersion`.
+   * Optional. The input data used to train the ProcessorVersion.
    * @param inputData inputData or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest setInputData(GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData inputData) {

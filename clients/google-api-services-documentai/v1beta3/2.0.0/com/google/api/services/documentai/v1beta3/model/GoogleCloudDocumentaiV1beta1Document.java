@@ -117,8 +117,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
 
   /**
    * Optional. Currently supports Google Cloud Storage URI of the form
-   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
-   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer
+   * to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,8 +355,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
 
   /**
    * Optional. Currently supports Google Cloud Storage URI of the form
-   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
-   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer
+   * to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -365,8 +365,8 @@ public final class GoogleCloudDocumentaiV1beta1Document extends com.google.api.c
 
   /**
    * Optional. Currently supports Google Cloud Storage URI of the form
-   * `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage
-   * Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+   * `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer
+   * to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta1Document setUri(java.lang.String uri) {

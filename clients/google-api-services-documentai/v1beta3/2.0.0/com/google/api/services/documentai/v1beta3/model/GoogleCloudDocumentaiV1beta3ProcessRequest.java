@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Request message for the process document method.
+ * Request message for the ProcessDocument method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,15 +31,15 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document payload, the [content] and [mime_type] fields must be set.
+   * The document payload, the content and mime_type fields must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private java.lang.Boolean skipHumanReview;
 
   /**
-   * The document payload, the [content] and [mime_type] fields must be set.
+   * The document payload, the content and mime_type fields must be set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Document getDocument() {
@@ -83,7 +83,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   }
 
   /**
-   * The document payload, the [content] and [mime_type] fields must be set.
+   * The document payload, the content and mime_type fields must be set.
    * @param document document or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setDocument(GoogleCloudDocumentaiV1beta3Document document) {
@@ -92,8 +92,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   }
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @return value or {@code null} for none
    */
@@ -102,8 +102,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   }
 
   /**
-   * Specifies which fields to include in the `ProcessResponse` Document. Only supports top level
-   * document and pages field so it must be in the form of `{document_field_name}` or
+   * Specifies which fields to include in the ProcessResponse.document output. Only supports top-
+   * level document and pages field, so it must be in the form of `{document_field_name}` or
    * `pages.{page_field_name}`.
    * @param fieldMask fieldMask or {@code null} for none
    */

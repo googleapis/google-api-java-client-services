@@ -31,6 +31,19 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of the type and count of accelerator cards attached to the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Accelerator> accelerators;
+
+  static {
+    // hack to force ProGuard to consider Accelerator used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Accelerator.class);
+  }
+
+  /**
    * Size of the boot disk in GB. Defaults to 50.
    * The value may be {@code null}.
    */
@@ -96,6 +109,23 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
+
+  /**
+   * A list of the type and count of accelerator cards attached to the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Accelerator> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * A list of the type and count of accelerator cards attached to the instance.
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public GceInstance setAccelerators(java.util.List<Accelerator> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
 
   /**
    * Size of the boot disk in GB. Defaults to 50.

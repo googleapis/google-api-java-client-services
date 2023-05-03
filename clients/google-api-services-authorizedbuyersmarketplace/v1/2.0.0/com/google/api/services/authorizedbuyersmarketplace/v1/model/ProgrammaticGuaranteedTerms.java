@@ -38,7 +38,7 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   private Price fixedPrice;
 
   /**
-   * Count of guaranteed looks.
+   * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -53,7 +53,8 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   private java.lang.Long impressionCap;
 
   /**
-   * Daily minimum looks for CPD deal types.
+   * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field
+   * instead of guaranteed_looks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -94,7 +95,7 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   }
 
   /**
-   * Count of guaranteed looks.
+   * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGuaranteedLooks() {
@@ -102,7 +103,7 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   }
 
   /**
-   * Count of guaranteed looks.
+   * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks will be ignored.
    * @param guaranteedLooks guaranteedLooks or {@code null} for none
    */
   public ProgrammaticGuaranteedTerms setGuaranteedLooks(java.lang.Long guaranteedLooks) {
@@ -130,7 +131,8 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   }
 
   /**
-   * Daily minimum looks for CPD deal types.
+   * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field
+   * instead of guaranteed_looks.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinimumDailyLooks() {
@@ -138,7 +140,8 @@ public final class ProgrammaticGuaranteedTerms extends com.google.api.client.jso
   }
 
   /**
-   * Daily minimum looks for CPD deal types.
+   * Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field
+   * instead of guaranteed_looks.
    * @param minimumDailyLooks minimumDailyLooks or {@code null} for none
    */
   public ProgrammaticGuaranteedTerms setMinimumDailyLooks(java.lang.Long minimumDailyLooks) {

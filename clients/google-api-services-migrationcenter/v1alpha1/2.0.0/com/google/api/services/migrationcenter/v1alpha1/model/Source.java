@@ -51,6 +51,13 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Output only. The number of frames that were reported by the source and contained errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer errorFrameCount;
+
+  /**
    * If `true`, the source is managed by other service(s).
    * The value may be {@code null}.
    */
@@ -147,6 +154,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The number of frames that were reported by the source and contained errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getErrorFrameCount() {
+    return errorFrameCount;
+  }
+
+  /**
+   * Output only. The number of frames that were reported by the source and contained errors.
+   * @param errorFrameCount errorFrameCount or {@code null} for none
+   */
+  public Source setErrorFrameCount(java.lang.Integer errorFrameCount) {
+    this.errorFrameCount = errorFrameCount;
     return this;
   }
 

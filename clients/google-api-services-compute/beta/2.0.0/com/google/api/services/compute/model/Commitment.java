@@ -150,7 +150,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Source commitment to be splitted into a new commitment.
+   * Source commitment to be split into a new commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -468,7 +468,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source commitment to be splitted into a new commitment.
+   * Source commitment to be split into a new commitment.
    * @return value or {@code null} for none
    */
   public java.lang.String getSplitSourceCommitment() {
@@ -476,7 +476,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source commitment to be splitted into a new commitment.
+   * Source commitment to be split into a new commitment.
    * @param splitSourceCommitment splitSourceCommitment or {@code null} for none
    */
   public Commitment setSplitSourceCommitment(java.lang.String splitSourceCommitment) {

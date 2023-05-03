@@ -114,6 +114,14 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.Long provisionedIops;
 
   /**
+   * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
+   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedThroughput;
+
+  /**
    * Required for each regional disk associated with the instance. Specify the URLs of the zones
    * where the disk should be replicated to. You must provide exactly two replica zones, and one
    * zone must be the same as the instance zone. You can't use this option with boot disks.
@@ -368,6 +376,25 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setProvisionedIops(java.lang.Long provisionedIops) {
     this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
+   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
+   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * @param provisionedThroughput provisionedThroughput or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setProvisionedThroughput(java.lang.Long provisionedThroughput) {
+    this.provisionedThroughput = provisionedThroughput;
     return this;
   }
 

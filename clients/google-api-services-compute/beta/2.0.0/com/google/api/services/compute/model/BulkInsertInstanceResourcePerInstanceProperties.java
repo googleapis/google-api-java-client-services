@@ -30,11 +30,38 @@ package com.google.api.services.compute.model;
 public final class BulkInsertInstanceResourcePerInstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the hostname of the instance. More details in:
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostname;
+
+  /**
    * This field is only temporary. It will be removed. Do not use it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Specifies the hostname of the instance. More details in:
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostname() {
+    return hostname;
+  }
+
+  /**
+   * Specifies the hostname of the instance. More details in:
+   * https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+   * @param hostname hostname or {@code null} for none
+   */
+  public BulkInsertInstanceResourcePerInstanceProperties setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
+    return this;
+  }
 
   /**
    * This field is only temporary. It will be removed. Do not use it.

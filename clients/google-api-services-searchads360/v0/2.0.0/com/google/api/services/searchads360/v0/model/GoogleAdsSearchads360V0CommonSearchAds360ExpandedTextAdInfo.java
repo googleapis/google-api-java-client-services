@@ -17,7 +17,7 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * A Search Ads 360 text ad.
+ * A Search Ads 360 expanded text ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed
@@ -28,7 +28,7 @@ package com.google.api.services.searchads360.v0.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends com.google.api.client.json.GenericJson {
+public final class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The tracking id of the ad.
@@ -52,25 +52,39 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends c
   private java.lang.String description2;
 
   /**
-   * The displayed mobile URL of the ad.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String displayMobileUrl;
-
-  /**
-   * The displayed URL of the ad.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String displayUrl;
-
-  /**
    * The headline of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String headline;
+
+  /**
+   * The second headline of the ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String headline2;
+
+  /**
+   * The third headline of the ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String headline3;
+
+  /**
+   * Text appended to the auto-generated visible URL with a delimiter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String path1;
+
+  /**
+   * Text appended to path1 with a delimiter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String path2;
 
   /**
    * The tracking id of the ad.
@@ -84,7 +98,7 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends c
    * The tracking id of the ad.
    * @param adTrackingId adTrackingId or {@code null} for none
    */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setAdTrackingId(java.lang.Long adTrackingId) {
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setAdTrackingId(java.lang.Long adTrackingId) {
     this.adTrackingId = adTrackingId;
     return this;
   }
@@ -101,7 +115,7 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends c
    * The first line of the ad's description.
    * @param description1 description1 or {@code null} for none
    */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setDescription1(java.lang.String description1) {
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setDescription1(java.lang.String description1) {
     this.description1 = description1;
     return this;
   }
@@ -118,42 +132,8 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends c
    * The second line of the ad's description.
    * @param description2 description2 or {@code null} for none
    */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setDescription2(java.lang.String description2) {
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setDescription2(java.lang.String description2) {
     this.description2 = description2;
-    return this;
-  }
-
-  /**
-   * The displayed mobile URL of the ad.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisplayMobileUrl() {
-    return displayMobileUrl;
-  }
-
-  /**
-   * The displayed mobile URL of the ad.
-   * @param displayMobileUrl displayMobileUrl or {@code null} for none
-   */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setDisplayMobileUrl(java.lang.String displayMobileUrl) {
-    this.displayMobileUrl = displayMobileUrl;
-    return this;
-  }
-
-  /**
-   * The displayed URL of the ad.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisplayUrl() {
-    return displayUrl;
-  }
-
-  /**
-   * The displayed URL of the ad.
-   * @param displayUrl displayUrl or {@code null} for none
-   */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setDisplayUrl(java.lang.String displayUrl) {
-    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -169,19 +149,87 @@ public final class GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo extends c
    * The headline of the ad.
    * @param headline headline or {@code null} for none
    */
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo setHeadline(java.lang.String headline) {
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setHeadline(java.lang.String headline) {
     this.headline = headline;
     return this;
   }
 
-  @Override
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo set(String fieldName, Object value) {
-    return (GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo) super.set(fieldName, value);
+  /**
+   * The second headline of the ad.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHeadline2() {
+    return headline2;
+  }
+
+  /**
+   * The second headline of the ad.
+   * @param headline2 headline2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setHeadline2(java.lang.String headline2) {
+    this.headline2 = headline2;
+    return this;
+  }
+
+  /**
+   * The third headline of the ad.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHeadline3() {
+    return headline3;
+  }
+
+  /**
+   * The third headline of the ad.
+   * @param headline3 headline3 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setHeadline3(java.lang.String headline3) {
+    this.headline3 = headline3;
+    return this;
+  }
+
+  /**
+   * Text appended to the auto-generated visible URL with a delimiter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPath1() {
+    return path1;
+  }
+
+  /**
+   * Text appended to the auto-generated visible URL with a delimiter.
+   * @param path1 path1 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setPath1(java.lang.String path1) {
+    this.path1 = path1;
+    return this;
+  }
+
+  /**
+   * Text appended to path1 with a delimiter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPath2() {
+    return path2;
+  }
+
+  /**
+   * Text appended to path1 with a delimiter.
+   * @param path2 path2 or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo setPath2(java.lang.String path2) {
+    this.path2 = path2;
+    return this;
   }
 
   @Override
-  public GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo clone() {
-    return (GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo) super.clone();
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo set(String fieldName, Object value) {
+    return (GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo clone() {
+    return (GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo) super.clone();
   }
 
 }

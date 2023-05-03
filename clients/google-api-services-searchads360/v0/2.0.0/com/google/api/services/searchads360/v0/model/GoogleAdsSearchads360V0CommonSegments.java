@@ -73,6 +73,13 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String device;
 
   /**
+   * Keyword criterion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonKeyword keyword;
+
+  /**
    * Month as represented by the date of the first day of a month. Formatted as yyyy-MM-dd.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setDevice(java.lang.String device) {
     this.device = device;
+    return this;
+  }
+
+  /**
+   * Keyword criterion.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonKeyword getKeyword() {
+    return keyword;
+  }
+
+  /**
+   * Keyword criterion.
+   * @param keyword keyword or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setKeyword(GoogleAdsSearchads360V0CommonKeyword keyword) {
+    this.keyword = keyword;
     return this;
   }
 

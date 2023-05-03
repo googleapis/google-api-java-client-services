@@ -38,6 +38,20 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
   private java.lang.String displayUrl;
 
   /**
+   * Immutable. Details pertaining to an expanded dynamic search ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo expandedDynamicSearchAd;
+
+  /**
+   * Immutable. Details pertaining to an expanded text ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo expandedTextAd;
+
+  /**
    * The list of possible final URLs after all cross-domain redirects for the ad.
    * The value may be {@code null}.
    */
@@ -61,12 +75,26 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Immutable. Details pertaining to a product ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo productAd;
+
+  /**
    * Immutable. The resource name of the ad. Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
+
+  /**
+   * Immutable. Details pertaining to a responsive search ad.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo responsiveSearchAd;
 
   /**
    * Immutable. Details pertaining to a text ad.
@@ -96,6 +124,40 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   public GoogleAdsSearchads360V0ResourcesAd setDisplayUrl(java.lang.String displayUrl) {
     this.displayUrl = displayUrl;
+    return this;
+  }
+
+  /**
+   * Immutable. Details pertaining to an expanded dynamic search ad.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo getExpandedDynamicSearchAd() {
+    return expandedDynamicSearchAd;
+  }
+
+  /**
+   * Immutable. Details pertaining to an expanded dynamic search ad.
+   * @param expandedDynamicSearchAd expandedDynamicSearchAd or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setExpandedDynamicSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo expandedDynamicSearchAd) {
+    this.expandedDynamicSearchAd = expandedDynamicSearchAd;
+    return this;
+  }
+
+  /**
+   * Immutable. Details pertaining to an expanded text ad.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo getExpandedTextAd() {
+    return expandedTextAd;
+  }
+
+  /**
+   * Immutable. Details pertaining to an expanded text ad.
+   * @param expandedTextAd expandedTextAd or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setExpandedTextAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo expandedTextAd) {
+    this.expandedTextAd = expandedTextAd;
     return this;
   }
 
@@ -155,6 +217,23 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
   }
 
   /**
+   * Immutable. Details pertaining to a product ad.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo getProductAd() {
+    return productAd;
+  }
+
+  /**
+   * Immutable. Details pertaining to a product ad.
+   * @param productAd productAd or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setProductAd(GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo productAd) {
+    this.productAd = productAd;
+    return this;
+  }
+
+  /**
    * Immutable. The resource name of the ad. Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * @return value or {@code null} for none
@@ -170,6 +249,23 @@ public final class GoogleAdsSearchads360V0ResourcesAd extends com.google.api.cli
    */
   public GoogleAdsSearchads360V0ResourcesAd setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Immutable. Details pertaining to a responsive search ad.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo getResponsiveSearchAd() {
+    return responsiveSearchAd;
+  }
+
+  /**
+   * Immutable. Details pertaining to a responsive search ad.
+   * @param responsiveSearchAd responsiveSearchAd or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAd setResponsiveSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo responsiveSearchAd) {
+    this.responsiveSearchAd = responsiveSearchAd;
     return this;
   }
 

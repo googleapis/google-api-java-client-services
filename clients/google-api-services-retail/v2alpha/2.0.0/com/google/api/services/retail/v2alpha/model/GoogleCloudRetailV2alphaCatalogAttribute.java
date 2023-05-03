@@ -50,13 +50,12 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String exactSearchableOption;
 
   /**
-   * Set manually for numerical attributes only. If the facet SearchResponse.FacetSpec.intervals are
-   * not set by the customer for a numerical attribute, then a weekly pipeline will calculate some
-   * intervals using some percentiles on the distribution of all its product numerical attribute
-   * values. The latter computed intervals might not be ideal for the use case of that attribute.
-   * For this reason, the customer can set them manually. As another option, for any numerical
-   * attribute that is passed as a facet key in the request along with some given intervals, then
-   * these given intervals will be the facet intervals returned in the response.
+   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
+   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
+   * its product numerical attribute values. The calculated intervals might not be ideal for some
+   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
+   * that is passed as a facet key in the request along with given intervals, the given intervals
+   * are the facet intervals returned in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,13 +187,12 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   }
 
   /**
-   * Set manually for numerical attributes only. If the facet SearchResponse.FacetSpec.intervals are
-   * not set by the customer for a numerical attribute, then a weekly pipeline will calculate some
-   * intervals using some percentiles on the distribution of all its product numerical attribute
-   * values. The latter computed intervals might not be ideal for the use case of that attribute.
-   * For this reason, the customer can set them manually. As another option, for any numerical
-   * attribute that is passed as a facet key in the request along with some given intervals, then
-   * these given intervals will be the facet intervals returned in the response.
+   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
+   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
+   * its product numerical attribute values. The calculated intervals might not be ideal for some
+   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
+   * that is passed as a facet key in the request along with given intervals, the given intervals
+   * are the facet intervals returned in the response.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaInterval> getFacetIntervals() {
@@ -202,13 +200,12 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   }
 
   /**
-   * Set manually for numerical attributes only. If the facet SearchResponse.FacetSpec.intervals are
-   * not set by the customer for a numerical attribute, then a weekly pipeline will calculate some
-   * intervals using some percentiles on the distribution of all its product numerical attribute
-   * values. The latter computed intervals might not be ideal for the use case of that attribute.
-   * For this reason, the customer can set them manually. As another option, for any numerical
-   * attribute that is passed as a facet key in the request along with some given intervals, then
-   * these given intervals will be the facet intervals returned in the response.
+   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
+   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
+   * its product numerical attribute values. The calculated intervals might not be ideal for some
+   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
+   * that is passed as a facet key in the request along with given intervals, the given intervals
+   * are the facet intervals returned in the response.
    * @param facetIntervals facetIntervals or {@code null} for none
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setFacetIntervals(java.util.List<GoogleCloudRetailV2alphaInterval> facetIntervals) {

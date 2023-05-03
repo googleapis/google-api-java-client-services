@@ -30,6 +30,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ApiCategoryData extends com.google.api.client.json.GenericJson {
 
   /**
+   * GCP name of api category resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcpResource;
+
+  /**
    * ID of the category (a UUID).
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class GoogleCloudApigeeV1ApiCategoryData extends com.google.api.cli
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long updateTime;
+
+  /**
+   * GCP name of api category resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcpResource() {
+    return gcpResource;
+  }
+
+  /**
+   * GCP name of api category resource.
+   * @param gcpResource gcpResource or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiCategoryData setGcpResource(java.lang.String gcpResource) {
+    this.gcpResource = gcpResource;
+    return this;
+  }
 
   /**
    * ID of the category (a UUID).

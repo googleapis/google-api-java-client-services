@@ -5257,17 +5257,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
-       * larger value is given. If set to zero, server will pick an appropriate default. Returned
-       * results may be fewer than requested. When this happens, there could be more results as long
-       * as `next_page_token` is returned.
+       * larger value is given. If set to zero or a negative value, server will pick an appropriate
+       * default. Returned results may be fewer than requested. When this happens, there could be
+       * more results as long as `next_page_token` is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
-     value is given. If set to zero, server will pick an appropriate default. Returned results may be
-     fewer than requested. When this happens, there could be more results as long as `next_page_token`
-     is returned.
+     value is given. If set to zero or a negative value, server will pick an appropriate default.
+     Returned results may be fewer than requested. When this happens, there could be more results as
+     long as `next_page_token` is returned.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -5275,9 +5275,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
-       * larger value is given. If set to zero, server will pick an appropriate default. Returned
-       * results may be fewer than requested. When this happens, there could be more results as long
-       * as `next_page_token` is returned.
+       * larger value is given. If set to zero or a negative value, server will pick an appropriate
+       * default. Returned results may be fewer than requested. When this happens, there could be
+       * more results as long as `next_page_token` is returned.
        */
       public SearchAllIamPolicies setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -5671,17 +5671,17 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
-       * larger value is given. If set to zero, server will pick an appropriate default. Returned
-       * results may be fewer than requested. When this happens, there could be more results as long
-       * as `next_page_token` is returned.
+       * larger value is given. If set to zero or a negative value, server will pick an appropriate
+       * default. Returned results may be fewer than requested. When this happens, there could be
+       * more results as long as `next_page_token` is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
-     value is given. If set to zero, server will pick an appropriate default. Returned results may be
-     fewer than requested. When this happens, there could be more results as long as `next_page_token`
-     is returned.
+     value is given. If set to zero or a negative value, server will pick an appropriate default.
+     Returned results may be fewer than requested. When this happens, there could be more results as
+     long as `next_page_token` is returned.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -5689,9 +5689,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
-       * larger value is given. If set to zero, server will pick an appropriate default. Returned
-       * results may be fewer than requested. When this happens, there could be more results as long
-       * as `next_page_token` is returned.
+       * larger value is given. If set to zero or a negative value, server will pick an appropriate
+       * default. Returned results may be fewer than requested. When this happens, there could be
+       * more results as long as `next_page_token` is returned.
        */
       public SearchAllResources setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

@@ -6120,7 +6120,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
-           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+           *        `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
            * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
            * @return the request
            */
@@ -6148,7 +6148,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
-           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+           *        `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaMerchantCenterAccountLink}
              * @since 1.13
              */
@@ -6219,13 +6219,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The branch resource where this MerchantCenterAccountLink will be created.
-             * Format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+             * Format: `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The branch resource where this MerchantCenterAccountLink will be created. Format:
-           projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+           `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6233,7 +6233,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The branch resource where this MerchantCenterAccountLink will be created.
-             * Format: projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}}
+             * Format: `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6259,8 +6259,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the retail server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{ca
-           *        talog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+           * @param name Required. Full resource name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{c
+           *        atalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6287,8 +6287,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{ca
-           *        talog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             * @param name Required. Full resource name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{c
+           *        atalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6357,22 +6357,24 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. Full resource name. Format: projects/{project_number}/locations/{location_i
-             * d}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             * Required. Full resource name. Format: `projects/{project_number}/locations/{location_
+             * id}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id
+             * }`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Full resource name. Format: projects/{project_number}/locations/{location_id}/catalogs/{c
-           atalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+            /** Required. Full resource name. Format: `projects/{project_number}/locations/{location_id}/catalogs/{
+           catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Full resource name. Format: projects/{project_number}/locations/{location_i
-             * d}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id}
+             * Required. Full resource name. Format: `projects/{project_number}/locations/{location_
+             * id}/catalogs/{catalog_id}/merchantCenterAccountLinks/{merchant_center_account_link_id
+             * }`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -6398,7 +6400,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent Catalog of the resource. It must match this format:
-           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+           *        `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6425,7 +6427,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent Catalog of the resource. It must match this format:
-           *        projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+           *        `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -6505,13 +6507,13 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent Catalog of the resource. It must match this format:
-             * projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             * `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent Catalog of the resource. It must match this format:
-           projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+           `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6519,7 +6521,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
             /**
              * Required. The parent Catalog of the resource. It must match this format:
-             * projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}
+             * `projects/{PROJECT_NUMBER}/locations/global/catalogs/{CATALOG_ID}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

@@ -110,6 +110,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean desiredEnablePrivateEndpoint;
 
   /**
+   * The desired fleet configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Fleet desiredFleet;
+
+  /**
    * The desired config of Gateway API on this cluster.
    * The value may be {@code null}.
    */
@@ -544,6 +551,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredEnablePrivateEndpoint(java.lang.Boolean desiredEnablePrivateEndpoint) {
     this.desiredEnablePrivateEndpoint = desiredEnablePrivateEndpoint;
+    return this;
+  }
+
+  /**
+   * The desired fleet configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public Fleet getDesiredFleet() {
+    return desiredFleet;
+  }
+
+  /**
+   * The desired fleet configuration for the cluster.
+   * @param desiredFleet desiredFleet or {@code null} for none
+   */
+  public ClusterUpdate setDesiredFleet(Fleet desiredFleet) {
+    this.desiredFleet = desiredFleet;
     return this;
   }
 

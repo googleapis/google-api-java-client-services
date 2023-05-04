@@ -38,22 +38,23 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   private AudioConfig audioConfig;
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input.
+   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
+   * preview, SSML is temporarily unsupported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SynthesisInput input;
 
   /**
-   * Specifies a Cloud Storage URI for the synthesis results. Must be specified in the format:
-   * `gs://bucket_name/object_name`, and the bucket must already exist.
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be specified in the
+   * format: `gs://bucket_name/object_name`, and the bucket must already exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputGcsUri;
 
   /**
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,8 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input.
+   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
+   * preview, SSML is temporarily unsupported.
    * @return value or {@code null} for none
    */
   public SynthesisInput getInput() {
@@ -85,7 +87,8 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The Synthesizer requires either plain text or SSML as input.
+   * Required. The Synthesizer requires either plain text or SSML as input. While Long Audio is in
+   * preview, SSML is temporarily unsupported.
    * @param input input or {@code null} for none
    */
   public SynthesizeLongAudioRequest setInput(SynthesisInput input) {
@@ -94,8 +97,8 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Specifies a Cloud Storage URI for the synthesis results. Must be specified in the format:
-   * `gs://bucket_name/object_name`, and the bucket must already exist.
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be specified in the
+   * format: `gs://bucket_name/object_name`, and the bucket must already exist.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputGcsUri() {
@@ -103,8 +106,8 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * Specifies a Cloud Storage URI for the synthesis results. Must be specified in the format:
-   * `gs://bucket_name/object_name`, and the bucket must already exist.
+   * Required. Specifies a Cloud Storage URI for the synthesis results. Must be specified in the
+   * format: `gs://bucket_name/object_name`, and the bucket must already exist.
    * @param outputGcsUri outputGcsUri or {@code null} for none
    */
   public SynthesizeLongAudioRequest setOutputGcsUri(java.lang.String outputGcsUri) {
@@ -113,7 +116,7 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * @return value or {@code null} for none
    */
   public VoiceSelectionParams getVoice() {
@@ -121,7 +124,7 @@ public final class SynthesizeLongAudioRequest extends com.google.api.client.json
   }
 
   /**
-   * The desired voice of the synthesized audio.
+   * Required. The desired voice of the synthesized audio.
    * @param voice voice or {@code null} for none
    */
   public SynthesizeLongAudioRequest setVoice(VoiceSelectionParams voice) {

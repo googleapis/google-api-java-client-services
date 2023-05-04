@@ -122,6 +122,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings;
 
   /**
+   * A snapshot of an EventCreateRule resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaEventCreateRule eventCreateRule;
+
+  /**
    * A snapshot of an ExpandedDataSet resource in change history.
    * The value may be {@code null}.
    */
@@ -388,6 +395,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setEnhancedMeasurementSettings(GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings enhancedMeasurementSettings) {
     this.enhancedMeasurementSettings = enhancedMeasurementSettings;
+    return this;
+  }
+
+  /**
+   * A snapshot of an EventCreateRule resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaEventCreateRule getEventCreateRule() {
+    return eventCreateRule;
+  }
+
+  /**
+   * A snapshot of an EventCreateRule resource in change history.
+   * @param eventCreateRule eventCreateRule or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setEventCreateRule(GoogleAnalyticsAdminV1alphaEventCreateRule eventCreateRule) {
+    this.eventCreateRule = eventCreateRule;
     return this;
   }
 

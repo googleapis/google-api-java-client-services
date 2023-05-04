@@ -140,6 +140,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceUri;
 
   /**
+   * Describes a specific SBOM reference occurrences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SBOMReferenceOccurrence sbomReference;
+
+  /**
    * Output only. The time this occurrence was last updated.
    * The value may be {@code null}.
    */
@@ -420,6 +427,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setResourceUri(java.lang.String resourceUri) {
     this.resourceUri = resourceUri;
+    return this;
+  }
+
+  /**
+   * Describes a specific SBOM reference occurrences.
+   * @return value or {@code null} for none
+   */
+  public SBOMReferenceOccurrence getSbomReference() {
+    return sbomReference;
+  }
+
+  /**
+   * Describes a specific SBOM reference occurrences.
+   * @param sbomReference sbomReference or {@code null} for none
+   */
+  public Occurrence setSbomReference(SBOMReferenceOccurrence sbomReference) {
+    this.sbomReference = sbomReference;
     return this;
   }
 

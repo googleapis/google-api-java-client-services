@@ -31,7 +31,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * The per-package log levels for the driver. This may include "root" package name to configure
-   * rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+   * rootLogger. Examples: - 'com.google = FATAL' - 'root = INFO' - 'org.apache = DEBUG'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * The per-package log levels for the driver. This may include "root" package name to configure
-   * rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+   * rootLogger. Examples: - 'com.google = FATAL' - 'root = INFO' - 'org.apache = DEBUG'
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDriverLogLevels() {
@@ -48,7 +48,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * The per-package log levels for the driver. This may include "root" package name to configure
-   * rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+   * rootLogger. Examples: - 'com.google = FATAL' - 'root = INFO' - 'org.apache = DEBUG'
    * @param driverLogLevels driverLogLevels or {@code null} for none
    */
   public LoggingConfig setDriverLogLevels(java.util.Map<String, java.lang.String> driverLogLevels) {

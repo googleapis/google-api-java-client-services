@@ -45,7 +45,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Binary binary;
+  private PackageVersion binaryVersion;
 
   /**
    * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability
@@ -134,6 +134,16 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> patchedCve;
 
   /**
+   * The source package. Similar to the above, this is significant when the source is different than
+   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
+   * a separate field for both binary and source if we want to know definitively where the data is
+   * coming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PackageVersion sourceVersion;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,8 +180,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    * actually installed. See b/175908657#comment15.
    * @return value or {@code null} for none
    */
-  public Binary getBinary() {
-    return binary;
+  public PackageVersion getBinaryVersion() {
+    return binaryVersion;
   }
 
   /**
@@ -179,10 +189,10 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    * Historically if they've differed, we've stored the name of the source and its version in the
    * package/version fields, but we should also store the binary package info, as that's what's
    * actually installed. See b/175908657#comment15.
-   * @param binary binary or {@code null} for none
+   * @param binaryVersion binaryVersion or {@code null} for none
    */
-  public PackageData setBinary(Binary binary) {
-    this.binary = binary;
+  public PackageData setBinaryVersion(PackageVersion binaryVersion) {
+    this.binaryVersion = binaryVersion;
     return this;
   }
 
@@ -361,6 +371,29 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setPatchedCve(java.util.List<java.lang.String> patchedCve) {
     this.patchedCve = patchedCve;
+    return this;
+  }
+
+  /**
+   * The source package. Similar to the above, this is significant when the source is different than
+   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
+   * a separate field for both binary and source if we want to know definitively where the data is
+   * coming from.
+   * @return value or {@code null} for none
+   */
+  public PackageVersion getSourceVersion() {
+    return sourceVersion;
+  }
+
+  /**
+   * The source package. Similar to the above, this is significant when the source is different than
+   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
+   * a separate field for both binary and source if we want to know definitively where the data is
+   * coming from.
+   * @param sourceVersion sourceVersion or {@code null} for none
+   */
+  public PackageData setSourceVersion(PackageVersion sourceVersion) {
+    this.sourceVersion = sourceVersion;
     return this;
   }
 

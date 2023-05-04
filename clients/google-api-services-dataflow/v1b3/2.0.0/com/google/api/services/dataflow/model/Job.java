@@ -177,6 +177,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String requestedState;
 
   /**
+   * This field may ONLY be modified at runtime using the projects.jobs.update method to adjust job
+   * behavior. This field has no effect when specified at job creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RuntimeUpdatableParams runtimeUpdatableParams;
+
+  /**
    * Reserved for future use. This field is set only in responses from the server; it is ignored if
    * it is set in any requests.
    * The value may be {@code null}.
@@ -587,6 +595,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setRequestedState(java.lang.String requestedState) {
     this.requestedState = requestedState;
+    return this;
+  }
+
+  /**
+   * This field may ONLY be modified at runtime using the projects.jobs.update method to adjust job
+   * behavior. This field has no effect when specified at job creation.
+   * @return value or {@code null} for none
+   */
+  public RuntimeUpdatableParams getRuntimeUpdatableParams() {
+    return runtimeUpdatableParams;
+  }
+
+  /**
+   * This field may ONLY be modified at runtime using the projects.jobs.update method to adjust job
+   * behavior. This field has no effect when specified at job creation.
+   * @param runtimeUpdatableParams runtimeUpdatableParams or {@code null} for none
+   */
+  public Job setRuntimeUpdatableParams(RuntimeUpdatableParams runtimeUpdatableParams) {
+    this.runtimeUpdatableParams = runtimeUpdatableParams;
     return this;
   }
 

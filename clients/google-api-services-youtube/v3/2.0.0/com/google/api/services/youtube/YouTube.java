@@ -4622,8 +4622,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      * @param id Modifies the moderation status of the comments with the given IDs
      * @param moderationStatus Specifies the requested moderation status. Note, comments can be in statuses, which are not
      *        available through this call. For example, this call does not allow to mark a comment as
-     *        'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED,
-     *        MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+     *        'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
      * @return the request
      */
     public SetModerationStatus setModerationStatus(java.util.List<java.lang.String> id, java.lang.String moderationStatus) throws java.io.IOException {
@@ -4650,8 +4649,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * @param id Modifies the moderation status of the comments with the given IDs
        * @param moderationStatus Specifies the requested moderation status. Note, comments can be in statuses, which are not
      *        available through this call. For example, this call does not allow to mark a comment as
-     *        'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED,
-     *        MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+     *        'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
        * @since 1.13
        */
       protected SetModerationStatus(java.util.List<java.lang.String> id, java.lang.String moderationStatus) {
@@ -4734,16 +4732,14 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Specifies the requested moderation status. Note, comments can be in statuses, which are not
        * available through this call. For example, this call does not allow to mark a comment as
-       * 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED,
-       * MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+       * 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
        */
       @com.google.api.client.util.Key
       private java.lang.String moderationStatus;
 
       /** Specifies the requested moderation status. Note, comments can be in statuses, which are not
      available through this call. For example, this call does not allow to mark a comment as 'likely
-     spam'. Valid values: MODERATION_STATUS_PUBLISHED, MODERATION_STATUS_HELD_FOR_REVIEW,
-     MODERATION_STATUS_REJECTED.
+     spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
        */
       public java.lang.String getModerationStatus() {
         return moderationStatus;
@@ -4752,8 +4748,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Specifies the requested moderation status. Note, comments can be in statuses, which are not
        * available through this call. For example, this call does not allow to mark a comment as
-       * 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED,
-       * MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+       * 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
        */
       public SetModerationStatus setModerationStatus(java.lang.String moderationStatus) {
         this.moderationStatus = moderationStatus;

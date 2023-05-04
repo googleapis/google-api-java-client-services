@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1IntentCoverageIntent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether or not the intent is covered by at least one of the agent's test cases.
+   * Whether the intent is covered by at least one of the agent's test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentCoverageIntent extends co
   private java.lang.String intent;
 
   /**
-   * Whether or not the intent is covered by at least one of the agent's test cases.
+   * Whether the intent is covered by at least one of the agent's test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCovered() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentCoverageIntent extends co
   }
 
   /**
-   * Whether or not the intent is covered by at least one of the agent's test cases.
+   * Whether the intent is covered by at least one of the agent's test cases.
    * @param covered covered or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1IntentCoverageIntent setCovered(java.lang.Boolean covered) {

@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether or not the transition route is covered by at least one of the agent's test cases.
+   * Whether the transition route is covered by at least one of the agent's test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage
   private GoogleCloudDialogflowCxV3TransitionRoute transitionRoute;
 
   /**
-   * Whether or not the transition route is covered by at least one of the agent's test cases.
+   * Whether the transition route is covered by at least one of the agent's test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCovered() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage
   }
 
   /**
-   * Whether or not the transition route is covered by at least one of the agent's test cases.
+   * Whether the transition route is covered by at least one of the agent's test cases.
    * @param covered covered or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition setCovered(java.lang.Boolean covered) {

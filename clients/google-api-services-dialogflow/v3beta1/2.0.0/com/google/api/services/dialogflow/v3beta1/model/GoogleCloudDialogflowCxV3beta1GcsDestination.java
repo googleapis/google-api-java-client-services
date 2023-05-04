@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1GcsDestination extends com.goog
 
   /**
    * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * gs://bucket/object-name-or-prefix Whether a full object name, or just a prefix, its usage
+   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
    * depends on the Dialogflow operation.
    * The value may be {@code null}.
    */
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3beta1GcsDestination extends com.goog
 
   /**
    * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * gs://bucket/object-name-or-prefix Whether a full object name, or just a prefix, its usage
+   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
    * depends on the Dialogflow operation.
    * @return value or {@code null} for none
    */
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1GcsDestination extends com.goog
 
   /**
    * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * gs://bucket/object-name-or-prefix Whether a full object name, or just a prefix, its usage
+   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
    * depends on the Dialogflow operation.
    * @param uri uri or {@code null} for none
    */

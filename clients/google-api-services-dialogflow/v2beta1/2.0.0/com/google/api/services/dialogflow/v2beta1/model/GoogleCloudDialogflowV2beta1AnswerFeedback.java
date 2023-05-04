@@ -45,7 +45,9 @@ public final class GoogleCloudDialogflowV2beta1AnswerFeedback extends com.google
   private String clickTime;
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
+   * knowledge search, the answer record is considered to be clicked if the answer was copied or any
+   * URI was clicked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +110,9 @@ public final class GoogleCloudDialogflowV2beta1AnswerFeedback extends com.google
   }
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
+   * knowledge search, the answer record is considered to be clicked if the answer was copied or any
+   * URI was clicked.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClicked() {
@@ -116,7 +120,9 @@ public final class GoogleCloudDialogflowV2beta1AnswerFeedback extends com.google
   }
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
+   * knowledge search, the answer record is considered to be clicked if the answer was copied or any
+   * URI was clicked.
    * @param clicked clicked or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnswerFeedback setClicked(java.lang.Boolean clicked) {

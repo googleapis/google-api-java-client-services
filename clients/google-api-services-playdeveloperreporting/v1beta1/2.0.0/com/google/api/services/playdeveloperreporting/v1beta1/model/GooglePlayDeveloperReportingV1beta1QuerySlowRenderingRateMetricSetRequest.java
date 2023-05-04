@@ -34,11 +34,12 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
    * of Android that was running on the user's device. * `versionCode` (int64): version of the app
    * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): the type (also known as form factor) of the
-   * user's device. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * user's device model. * `deviceBrand` (string): unique identifier of the user's device brand. *
+   * `deviceType` (string): the type (also known as form factor) of the user's device. *
+   * `countryCode` (string): the country or region of the user's device based on their IP address,
+   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -132,11 +133,12 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
    * of Android that was running on the user's device. * `versionCode` (int64): version of the app
    * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): the type (also known as form factor) of the
-   * user's device. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * user's device model. * `deviceBrand` (string): unique identifier of the user's device brand. *
+   * `deviceType` (string): the type (also known as form factor) of the user's device. *
+   * `countryCode` (string): the country or region of the user's device based on their IP address,
+   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -158,11 +160,12 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
    * of Android that was running on the user's device. * `versionCode` (int64): version of the app
    * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): the type (also known as form factor) of the
-   * user's device. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * user's device model. * `deviceBrand` (string): unique identifier of the user's device brand. *
+   * `deviceType` (string): the type (also known as form factor) of the user's device. *
+   * `countryCode` (string): the country or region of the user's device based on their IP address,
+   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *

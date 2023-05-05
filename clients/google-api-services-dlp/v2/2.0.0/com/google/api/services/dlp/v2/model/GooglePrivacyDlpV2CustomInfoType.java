@@ -82,6 +82,15 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private GooglePrivacyDlpV2Regex regex;
 
   /**
+   * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
+   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * CustomInfoType, it will default to HIGH. This only applies to data profiling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
+
+  /**
    * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently
    * supported in `InspectContent`.
    * The value may be {@code null}.
@@ -211,6 +220,27 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
    */
   public GooglePrivacyDlpV2CustomInfoType setRegex(GooglePrivacyDlpV2Regex regex) {
     this.regex = regex;
+    return this;
+  }
+
+  /**
+   * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
+   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * CustomInfoType, it will default to HIGH. This only applies to data profiling.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2SensitivityScore getSensitivityScore() {
+    return sensitivityScore;
+  }
+
+  /**
+   * Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the
+   * sensitivity here will take precedent over that of the original InfoType. If unset for a
+   * CustomInfoType, it will default to HIGH. This only applies to data profiling.
+   * @param sensitivityScore sensitivityScore or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CustomInfoType setSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
+    this.sensitivityScore = sensitivityScore;
     return this;
   }
 

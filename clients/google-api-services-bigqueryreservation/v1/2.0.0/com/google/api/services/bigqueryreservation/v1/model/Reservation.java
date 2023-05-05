@@ -31,7 +31,7 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * The configuration parameters for the auto scaling feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * The configuration parameters for the auto scaling feature.
    * @return value or {@code null} for none
    */
   public Autoscale getAutoscale() {
@@ -127,7 +127,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration parameters for the auto scaling feature. Note this is an alpha feature.
+   * The configuration parameters for the auto scaling feature.
    * @param autoscale autoscale or {@code null} for none
    */
   public Reservation setAutoscale(Autoscale autoscale) {

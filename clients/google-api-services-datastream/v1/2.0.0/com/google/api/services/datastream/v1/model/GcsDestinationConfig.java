@@ -38,7 +38,7 @@ public final class GcsDestinationConfig extends com.google.api.client.json.Gener
 
   /**
    * The maximum duration for which new events are added before a file is closed and a new file is
-   * created.
+   * created. Values within the range of 15-60 seconds are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GcsDestinationConfig extends com.google.api.client.json.Gener
 
   /**
    * The maximum duration for which new events are added before a file is closed and a new file is
-   * created.
+   * created. Values within the range of 15-60 seconds are allowed.
    * @return value or {@code null} for none
    */
   public String getFileRotationInterval() {
@@ -93,7 +93,7 @@ public final class GcsDestinationConfig extends com.google.api.client.json.Gener
 
   /**
    * The maximum duration for which new events are added before a file is closed and a new file is
-   * created.
+   * created. Values within the range of 15-60 seconds are allowed.
    * @param fileRotationInterval fileRotationInterval or {@code null} for none
    */
   public GcsDestinationConfig setFileRotationInterval(String fileRotationInterval) {

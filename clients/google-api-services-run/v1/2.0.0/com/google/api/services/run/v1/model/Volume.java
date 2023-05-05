@@ -37,6 +37,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private ConfigMapVolumeSource configMap;
 
   /**
+   * Ephemeral storage used as a shared volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EmptyDirVolumeSource emptyDir;
+
+  /**
    * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setConfigMap(ConfigMapVolumeSource configMap) {
     this.configMap = configMap;
+    return this;
+  }
+
+  /**
+   * Ephemeral storage used as a shared volume.
+   * @return value or {@code null} for none
+   */
+  public EmptyDirVolumeSource getEmptyDir() {
+    return emptyDir;
+  }
+
+  /**
+   * Ephemeral storage used as a shared volume.
+   * @param emptyDir emptyDir or {@code null} for none
+   */
+  public Volume setEmptyDir(EmptyDirVolumeSource emptyDir) {
+    this.emptyDir = emptyDir;
     return this;
   }
 

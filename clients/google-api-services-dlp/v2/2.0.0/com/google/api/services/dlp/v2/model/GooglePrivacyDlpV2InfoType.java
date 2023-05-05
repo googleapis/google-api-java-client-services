@@ -41,6 +41,13 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
   private java.lang.String name;
 
   /**
+   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
+
+  /**
    * Optional version name for this InfoType.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
    */
   public GooglePrivacyDlpV2InfoType setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2SensitivityScore getSensitivityScore() {
+    return sensitivityScore;
+  }
+
+  /**
+   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
+   * @param sensitivityScore sensitivityScore or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoType setSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
+    this.sensitivityScore = sensitivityScore;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class ShardingOption extends com.google.api.client.json.GenericJson
   private ManualSharding manualSharding;
 
   /**
+   * Shards test based on previous test case timing records.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SmartSharding smartSharding;
+
+  /**
    * Uniformly shards test cases given a total number of shards.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ShardingOption extends com.google.api.client.json.GenericJson
    */
   public ShardingOption setManualSharding(ManualSharding manualSharding) {
     this.manualSharding = manualSharding;
+    return this;
+  }
+
+  /**
+   * Shards test based on previous test case timing records.
+   * @return value or {@code null} for none
+   */
+  public SmartSharding getSmartSharding() {
+    return smartSharding;
+  }
+
+  /**
+   * Shards test based on previous test case timing records.
+   * @param smartSharding smartSharding or {@code null} for none
+   */
+  public ShardingOption setSmartSharding(SmartSharding smartSharding) {
+    this.smartSharding = smartSharding;
     return this;
   }
 

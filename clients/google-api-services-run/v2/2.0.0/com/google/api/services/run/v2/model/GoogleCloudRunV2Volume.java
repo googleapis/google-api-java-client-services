@@ -39,6 +39,13 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   private GoogleCloudRunV2CloudSqlInstance cloudSqlInstance;
 
   /**
+   * Ephemeral storage used as a shared volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2EmptyDirVolumeSource emptyDir;
+
+  /**
    * Required. Volume's name.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
    */
   public GoogleCloudRunV2Volume setCloudSqlInstance(GoogleCloudRunV2CloudSqlInstance cloudSqlInstance) {
     this.cloudSqlInstance = cloudSqlInstance;
+    return this;
+  }
+
+  /**
+   * Ephemeral storage used as a shared volume.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2EmptyDirVolumeSource getEmptyDir() {
+    return emptyDir;
+  }
+
+  /**
+   * Ephemeral storage used as a shared volume.
+   * @param emptyDir emptyDir or {@code null} for none
+   */
+  public GoogleCloudRunV2Volume setEmptyDir(GoogleCloudRunV2EmptyDirVolumeSource emptyDir) {
+    this.emptyDir = emptyDir;
     return this;
   }
 

@@ -38,11 +38,25 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
   private GoogleCloudDataplexV1DataScanEventDataProfileResult dataProfile;
 
   /**
+   * Applied configs for data profile type data scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs dataProfileConfigs;
+
+  /**
    * Data quality result for data quality type data scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataScanEventDataQualityResult dataQuality;
+
+  /**
+   * Applied configs for data quality type data scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs dataQualityConfigs;
 
   /**
    * The data source of the data scan
@@ -132,6 +146,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
   }
 
   /**
+   * Applied configs for data profile type data scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs getDataProfileConfigs() {
+    return dataProfileConfigs;
+  }
+
+  /**
+   * Applied configs for data profile type data scan.
+   * @param dataProfileConfigs dataProfileConfigs or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setDataProfileConfigs(GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs dataProfileConfigs) {
+    this.dataProfileConfigs = dataProfileConfigs;
+    return this;
+  }
+
+  /**
    * Data quality result for data quality type data scan.
    * @return value or {@code null} for none
    */
@@ -145,6 +176,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
    */
   public GoogleCloudDataplexV1DataScanEvent setDataQuality(GoogleCloudDataplexV1DataScanEventDataQualityResult dataQuality) {
     this.dataQuality = dataQuality;
+    return this;
+  }
+
+  /**
+   * Applied configs for data quality type data scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs getDataQualityConfigs() {
+    return dataQualityConfigs;
+  }
+
+  /**
+   * Applied configs for data quality type data scan.
+   * @param dataQualityConfigs dataQualityConfigs or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setDataQualityConfigs(GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs dataQualityConfigs) {
+    this.dataQualityConfigs = dataQualityConfigs;
     return this;
   }
 

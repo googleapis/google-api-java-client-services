@@ -30,6 +30,15 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rowFilter;
+
+  /**
    * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can
    * range between 0.0 and 100.0 with up to 3 significant decimal digits. Sampling is not applied if
    * sampling_percent is not specified, 0 or 100.
@@ -37,6 +46,27 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRowFilter() {
+    return rowFilter;
+  }
+
+  /**
+   * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
+   * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
+   * < 10
+   * @param rowFilter rowFilter or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setRowFilter(java.lang.String rowFilter) {
+    this.rowFilter = rowFilter;
+    return this;
+  }
 
   /**
    * Optional. The percentage of the records to be selected from the dataset for DataScan. Value can

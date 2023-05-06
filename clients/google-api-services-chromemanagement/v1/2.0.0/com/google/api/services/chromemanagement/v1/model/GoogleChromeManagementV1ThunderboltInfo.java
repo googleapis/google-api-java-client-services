@@ -22,7 +22,8 @@ package com.google.api.services.chromemanagement.v1.model;
  * tps://chromeenterprise.google/policies/#ReportDeviceSecurityStatus) * Data Collection Frequency:
  * At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: No *
  * Cache: If the device is offline, the collected data is stored locally, and will be reported when
- * the device is next online: Yes * Reported for affiliated users only: N/A
+ * the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission
+ * needed: TELEMETRY_API_BUS_DEVICE_INFO
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

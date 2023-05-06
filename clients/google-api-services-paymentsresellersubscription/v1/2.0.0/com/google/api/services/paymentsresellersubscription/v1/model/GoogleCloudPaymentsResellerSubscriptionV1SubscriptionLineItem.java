@@ -56,6 +56,13 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private String lineItemFreeTrialEndTime;
 
   /**
+   * Output only. A unique index of the subscription line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer lineItemIndex;
+
+  /**
    * Optional. The promotions applied on the line item. It can be: - a free trial promotion, which
    * overrides the subscription-level free trial promotion. - an introductory pricing promotion.
    * When used as input in Create or Provision API, specify its resource name only.
@@ -156,6 +163,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setLineItemFreeTrialEndTime(String lineItemFreeTrialEndTime) {
     this.lineItemFreeTrialEndTime = lineItemFreeTrialEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. A unique index of the subscription line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLineItemIndex() {
+    return lineItemIndex;
+  }
+
+  /**
+   * Output only. A unique index of the subscription line item.
+   * @param lineItemIndex lineItemIndex or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setLineItemIndex(java.lang.Integer lineItemIndex) {
+    this.lineItemIndex = lineItemIndex;
     return this;
   }
 

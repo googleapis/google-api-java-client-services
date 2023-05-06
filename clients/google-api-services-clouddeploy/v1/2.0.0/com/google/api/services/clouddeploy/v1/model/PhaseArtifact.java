@@ -31,6 +31,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class PhaseArtifact extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. File path of the directory of rendered job manifests relative to the URI. This is
+   * only set if it is applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobManifestsPath;
+
+  /**
    * Output only. File path of the rendered manifest relative to the URI.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class PhaseArtifact extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String skaffoldConfigPath;
+
+  /**
+   * Output only. File path of the directory of rendered job manifests relative to the URI. This is
+   * only set if it is applicable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobManifestsPath() {
+    return jobManifestsPath;
+  }
+
+  /**
+   * Output only. File path of the directory of rendered job manifests relative to the URI. This is
+   * only set if it is applicable.
+   * @param jobManifestsPath jobManifestsPath or {@code null} for none
+   */
+  public PhaseArtifact setJobManifestsPath(java.lang.String jobManifestsPath) {
+    this.jobManifestsPath = jobManifestsPath;
+    return this;
+  }
 
   /**
    * Output only. File path of the rendered manifest relative to the URI.

@@ -72,6 +72,14 @@ public final class EnterpriseCrmEventbusProtoCloudKmsConfig extends com.google.a
   private java.lang.String locationName;
 
   /**
+   * Optional. The service account used for authentication of this KMS key. If this is not provided,
+   * the service account in Client.clientSource will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. The id of GCP project where the KMS key is stored. If not provided, assume the key is
    * stored in the same GCP project defined in Client (tag 14).
    * @return value or {@code null} for none
@@ -165,6 +173,25 @@ public final class EnterpriseCrmEventbusProtoCloudKmsConfig extends com.google.a
    */
   public EnterpriseCrmEventbusProtoCloudKmsConfig setLocationName(java.lang.String locationName) {
     this.locationName = locationName;
+    return this;
+  }
+
+  /**
+   * Optional. The service account used for authentication of this KMS key. If this is not provided,
+   * the service account in Client.clientSource will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account used for authentication of this KMS key. If this is not provided,
+   * the service account in Client.clientSource will be used.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoCloudKmsConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

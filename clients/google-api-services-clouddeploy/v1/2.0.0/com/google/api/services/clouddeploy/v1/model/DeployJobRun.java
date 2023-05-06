@@ -31,6 +31,13 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeployJobRun extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The artifact of a deploy job run, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeployArtifact artifact;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format
    * is projects/{project}/locations/{location}/builds/{build}.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class DeployJobRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeployJobRunMetadata metadata;
+
+  /**
+   * Output only. The artifact of a deploy job run, if available.
+   * @return value or {@code null} for none
+   */
+  public DeployArtifact getArtifact() {
+    return artifact;
+  }
+
+  /**
+   * Output only. The artifact of a deploy job run, if available.
+   * @param artifact artifact or {@code null} for none
+   */
+  public DeployJobRun setArtifact(DeployArtifact artifact) {
+    this.artifact = artifact;
+    return this;
+  }
 
   /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format

@@ -18,7 +18,7 @@ package com.google.api.services.chromemanagement.v1.model;
 
 /**
  * `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for
- * more than 5 seconds.
+ * more than 5 seconds. * Granular permission needed: TELEMETRY_API_AUDIO_REPORT
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

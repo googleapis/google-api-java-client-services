@@ -23,7 +23,7 @@ package com.google.api.services.chromemanagement.v1.model;
  * Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup -
  * Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally,
  * and will be reported when the device is next online: Yes * Reported for affiliated users only:
- * N/A
+ * N/A * Granular permission needed: TELEMETRY_API_NETWORK_INFO
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

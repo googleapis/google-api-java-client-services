@@ -26,7 +26,7 @@ package com.google.api.services.chromemanagement.v1.model;
  * `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device
  * startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored
  * locally, and will be reported when the device is next online: only for `totalMemoryEncryption` *
- * Reported for affiliated users only: N/A
+ * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_INFO
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

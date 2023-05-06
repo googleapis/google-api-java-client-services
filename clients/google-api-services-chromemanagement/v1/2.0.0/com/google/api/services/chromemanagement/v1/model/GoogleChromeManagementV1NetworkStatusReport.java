@@ -22,7 +22,8 @@ package com.google.api.services.chromemanagement.v1.model;
  * [ReportNetworkStatus](https://chromeenterprise.google/policies/#ReportNetworkStatus) * Data
  * Collection Frequency: 60 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled:
  * Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported
- * when the device is next online: Yes * Reported for affiliated users only: Yes
+ * when the device is next online: Yes * Reported for affiliated users only: Yes * Granular
+ * permission needed: TELEMETRY_API_NETWORK_REPORT
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

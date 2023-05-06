@@ -17,7 +17,8 @@
 package com.google.api.services.chromemanagement.v1.model;
 
 /**
- * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+ * `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular
+ * permission needed: TELEMETRY_API_PERIPHERALS_REPORT
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

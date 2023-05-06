@@ -18,7 +18,8 @@ package com.google.api.services.chromemanagement.v1.model;
 
 /**
  * Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if
- * a latency problem was detected or if the device has recovered from a latency problem..
+ * a latency problem was detected or if the device has recovered from a latency problem. * Granular
+ * permission needed: TELEMETRY_API_NETWORK_REPORT
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Management API. For a detailed explanation

@@ -90,6 +90,19 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private TextConfig text;
 
   /**
+   * Ensures in-flight data remains in the region of origin during de-identification. Using this
+   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
+   * or `ORGANIZATION_NAME` infoTypes. If the deprecated
+   * [`DicomConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.dicom_config) or
+   * [`FhirConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.fhir_config) are
+   * used, then `LOCATION` must be excluded within `TextConfig`, and must also be excluded within
+   * `ImageConfig` if image redaction is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useRegionalDataProcessing;
+
+  /**
    * Configures how annotations, meaning that the location and infoType of sensitive information
    * findings, are created during de-identification. If unspecified, no annotations are created.
    * @return value or {@code null} for none
@@ -226,6 +239,35 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
    */
   public DeidentifyConfig setText(TextConfig text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Ensures in-flight data remains in the region of origin during de-identification. Using this
+   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
+   * or `ORGANIZATION_NAME` infoTypes. If the deprecated
+   * [`DicomConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.dicom_config) or
+   * [`FhirConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.fhir_config) are
+   * used, then `LOCATION` must be excluded within `TextConfig`, and must also be excluded within
+   * `ImageConfig` if image redaction is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseRegionalDataProcessing() {
+    return useRegionalDataProcessing;
+  }
+
+  /**
+   * Ensures in-flight data remains in the region of origin during de-identification. Using this
+   * option results in a significant reduction of throughput, and is not compatible with `LOCATION`
+   * or `ORGANIZATION_NAME` infoTypes. If the deprecated
+   * [`DicomConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.dicom_config) or
+   * [`FhirConfig`](google.cloud.healthcare.v1beta1.deidentify.DeidentifyConfig.fhir_config) are
+   * used, then `LOCATION` must be excluded within `TextConfig`, and must also be excluded within
+   * `ImageConfig` if image redaction is required.
+   * @param useRegionalDataProcessing useRegionalDataProcessing or {@code null} for none
+   */
+  public DeidentifyConfig setUseRegionalDataProcessing(java.lang.Boolean useRegionalDataProcessing) {
+    this.useRegionalDataProcessing = useRegionalDataProcessing;
     return this;
   }
 

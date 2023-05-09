@@ -150,8 +150,8 @@ class CodeObject(UseableInTemplates):
         self.SetTemplateValue('isDuplicate', True)
         class_name = getNonDuplicatedClassName(class_name)
 
-    # special case for last iteration. Append "Resource" if direct
-    # parent is same-named
+    # special case for last iteration. Append "Request" if direct
+    # parent is same-named and the current node is a method
     if len(parent_path) > 0 and parent_path[-1] == class_name:
       self.SetTemplateValue('isDuplicate', True)
       if isinstance(self, Method):

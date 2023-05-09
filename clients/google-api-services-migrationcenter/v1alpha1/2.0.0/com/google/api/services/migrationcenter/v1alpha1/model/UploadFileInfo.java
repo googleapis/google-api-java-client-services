@@ -44,13 +44,6 @@ public final class UploadFileInfo extends com.google.api.client.json.GenericJson
   private java.lang.String signedUri;
 
   /**
-   * Output only. Upload URI for the file.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String uri;
-
-  /**
    * Output only. Expiration time of the upload URI.
    * The value may be {@code null}.
    */
@@ -88,23 +81,6 @@ public final class UploadFileInfo extends com.google.api.client.json.GenericJson
    */
   public UploadFileInfo setSignedUri(java.lang.String signedUri) {
     this.signedUri = signedUri;
-    return this;
-  }
-
-  /**
-   * Output only. Upload URI for the file.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUri() {
-    return uri;
-  }
-
-  /**
-   * Output only. Upload URI for the file.
-   * @param uri uri or {@code null} for none
-   */
-  public UploadFileInfo setUri(java.lang.String uri) {
-    this.uri = uri;
     return this;
   }
 

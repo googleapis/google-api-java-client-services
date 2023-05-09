@@ -77,7 +77,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The referer URL of the request, as defined in HTTP/1.1 Header Field Definitions
-   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * (https://datatracker.ietf.org/doc/html/rfc2616#section-14.36).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +255,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The referer URL of the request, as defined in HTTP/1.1 Header Field Definitions
-   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * (https://datatracker.ietf.org/doc/html/rfc2616#section-14.36).
    * @return value or {@code null} for none
    */
   public java.lang.String getReferer() {
@@ -264,7 +264,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * The referer URL of the request, as defined in HTTP/1.1 Header Field Definitions
-   * (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   * (https://datatracker.ietf.org/doc/html/rfc2616#section-14.36).
    * @param referer referer or {@code null} for none
    */
   public HttpRequest setReferer(java.lang.String referer) {

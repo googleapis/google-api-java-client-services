@@ -17,8 +17,8 @@
 package com.google.api.services.cloudchannel.v1.model;
 
 /**
- * The ID and description of a report that was used to generate report data. For example, "GCP Daily
- * Spend", "Google Workspace License Activity", etc.
+ * The ID and description of a report that was used to generate report data. For example, "Google
+ * Cloud Daily Spend", "Google Workspace License Activity", etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Channel API. For a detailed explanation see:

@@ -38,6 +38,13 @@ public final class VmwareSourceDetails extends com.google.api.client.json.Generi
   private java.lang.String password;
 
   /**
+   * The hostname of the vcenter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolvedVcenterHost;
+
+  /**
    * The thumbprint representing the certificate for the vcenter.
    * The value may be {@code null}.
    */
@@ -74,6 +81,23 @@ public final class VmwareSourceDetails extends com.google.api.client.json.Generi
    */
   public VmwareSourceDetails setPassword(java.lang.String password) {
     this.password = password;
+    return this;
+  }
+
+  /**
+   * The hostname of the vcenter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedVcenterHost() {
+    return resolvedVcenterHost;
+  }
+
+  /**
+   * The hostname of the vcenter.
+   * @param resolvedVcenterHost resolvedVcenterHost or {@code null} for none
+   */
+  public VmwareSourceDetails setResolvedVcenterHost(java.lang.String resolvedVcenterHost) {
+    this.resolvedVcenterHost = resolvedVcenterHost;
     return this;
   }
 

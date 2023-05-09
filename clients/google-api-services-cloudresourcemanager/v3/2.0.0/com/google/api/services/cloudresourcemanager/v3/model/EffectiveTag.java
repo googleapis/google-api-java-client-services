@@ -68,7 +68,8 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   private java.lang.String tagKey;
 
   /**
-   * The parent name of the tag key. Must be in the format `organizations/{organization_id}`.
+   * The parent name of the tag key. Must be in the format `organizations/{organization_id}` or
+   * `projects/{project_number}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +163,8 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parent name of the tag key. Must be in the format `organizations/{organization_id}`.
+   * The parent name of the tag key. Must be in the format `organizations/{organization_id}` or
+   * `projects/{project_number}`
    * @return value or {@code null} for none
    */
   public java.lang.String getTagKeyParentName() {
@@ -170,7 +172,8 @@ public final class EffectiveTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parent name of the tag key. Must be in the format `organizations/{organization_id}`.
+   * The parent name of the tag key. Must be in the format `organizations/{organization_id}` or
+   * `projects/{project_number}`
    * @param tagKeyParentName tagKeyParentName or {@code null} for none
    */
   public EffectiveTag setTagKeyParentName(java.lang.String tagKeyParentName) {

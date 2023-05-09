@@ -571,34 +571,37 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+       * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
        * expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       * logical operator `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: *
+       * `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`. * All
+       * fields must use the `EQUALS (=) operator`. Supported fields: * `targetingType` Examples: *
        * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
-       * The length of this field should be no more than 500 characters.
+       * The length of this field should be no more than 500 characters. Reference our [filter
+       * `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-     are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-     `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-     (=)`. * Supported fields: - `targetingType` Examples: * targetingType with value
+      /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+     made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+     A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)
+     operator`. Supported fields: * `targetingType` Examples: * targetingType with value
      TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"` The length of this field should be
-     no more than 500 characters.
+     no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+     tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+       * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
        * expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       * logical operator `OR`.. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `EQUALS (=)`. * Supported fields: - `targetingType` Examples: *
+       * `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`. * All
+       * fields must use the `EQUALS (=) operator`. Supported fields: * `targetingType` Examples: *
        * targetingType with value TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_CHANNEL"`
-       * The length of this field should be no more than 500 characters.
+       * The length of this field should be no more than 500 characters. Reference our [filter
+       * `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public BulkListAdvertiserAssignedTargetingOptions setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1143,51 +1146,54 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
-       * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
-       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER THAN
-       * OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS (=)`. *
-       * Supported fields: - `advertiserId` - `displayName` - `entityStatus` - `updateTime` (input
-       * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All active advertisers under a
-       * partner: `entityStatus="ENTITY_STATUS_ACTIVE"` * All advertisers with an update time less
-       * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
-       * `updateTime<="2020-11-04T18:54:47Z"` * All advertisers with an update time greater than or
-       * equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"`
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by advertiser fields. Supported syntax: * Filter expressions are made up
+       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. * A restriction has the form of `{field} {operator} {value}`. * The `updateTime`
+       * field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
+       * operators. * All other fields must use the `EQUALS (=)` operator. Supported fields: *
+       * `advertiserId` * `displayName` * `entityStatus` * `updateTime` (input in ISO 8601 format,
+       * or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All active advertisers under a partner:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` * All advertisers with an update time less than or
+       * equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` *
+       * All advertisers with an update time greater than or equal to 2020-11-04T18:54:47Z (format
+       * of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
+       * more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+       * /how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made up of
-     one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
-     sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-     {value}`. * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN
-     OR EQUAL TO (<=)`. * The operator must be `EQUALS (=)`. * Supported fields: - `advertiserId` -
-     `displayName` - `entityStatus` - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ)
-     Examples: * All active advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"` * All
-     advertisers with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+      /** Allows filtering by advertiser fields. Supported syntax: * Filter expressions are made up of one or
+     more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. * A
+     restriction has the form of `{field} {operator} {value}`. * The `updateTime` field must use the
+     `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other fields must
+     use the `EQUALS (=)` operator. Supported fields: * `advertiserId` * `displayName` * `entityStatus`
+     * `updateTime` (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All active
+     advertisers under a partner: `entityStatus="ENTITY_STATUS_ACTIVE"` * All advertisers with an update
+     time less than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
      `updateTime<="2020-11-04T18:54:47Z"` * All advertisers with an update time greater than or equal to
-     `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The length of
-     this field should be no more than 500 characters.
+     2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this
+     field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+     video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by advertiser properties. Supported syntax: * Filter expressions are made
-       * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
-       * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER THAN
-       * OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS (=)`. *
-       * Supported fields: - `advertiserId` - `displayName` - `entityStatus` - `updateTime` (input
-       * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All active advertisers under a
-       * partner: `entityStatus="ENTITY_STATUS_ACTIVE"` * All advertisers with an update time less
-       * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
-       * `updateTime<="2020-11-04T18:54:47Z"` * All advertisers with an update time greater than or
-       * equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"`
-       * The length of this field should be no more than 500 characters.
+       * Allows filtering by advertiser fields. Supported syntax: * Filter expressions are made up
+       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * operators. * A restriction has the form of `{field} {operator} {value}`. * The `updateTime`
+       * field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
+       * operators. * All other fields must use the `EQUALS (=)` operator. Supported fields: *
+       * `advertiserId` * `displayName` * `entityStatus` * `updateTime` (input in ISO 8601 format,
+       * or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All active advertisers under a partner:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` * All advertisers with an update time less than or
+       * equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` *
+       * All advertisers with an update time greater than or equal to 2020-11-04T18:54:47Z (format
+       * of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
+       * more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+       * /how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1811,45 +1817,50 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER `targetingType="TARGETING_TYPE_LANGUAGE"
-         * OR targetingType="TARGETING_TYPE_GENDER"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * the `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_LANGUAGE` or `TARGETING_TYPE_GENDER`:
+         * `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` *
+         * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
+         * `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR
          * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
-       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
-       AssignedTargetingOptions of targeting type TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER
+        /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+       made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+       A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+       operator. Supported fields: * `targetingType` * `inheritance` Examples: * `AssignedTargetingOption`
+       resources of targeting type `TARGETING_TYPE_LANGUAGE` or `TARGETING_TYPE_GENDER`:
        `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` *
-       AssignedTargetingOptions with inheritance status of NOT_INHERITED or INHERITED_FROM_PARTNER
-       `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this field
-       should be no more than 500 characters.
+       `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
+       `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+       length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_LANGUAGE or TARGETING_TYPE_GENDER `targetingType="TARGETING_TYPE_LANGUAGE"
-         * OR targetingType="TARGETING_TYPE_GENDER"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * the `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_LANGUAGE` or `TARGETING_TYPE_GENDER`:
+         * `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` *
+         * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
+         * `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR
          * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         public BulkListCampaignAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2482,56 +2493,59 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * Allows filtering by campaign fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER
-         * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS
-         * (=)`. * Supported fields: - `campaignId` - `displayName` - `entityStatus` - `updateTime`
-         * (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All
+         * of `{field} {operator} {value}`. * The `updateTime` field must use the `GREATER THAN OR
+         * EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other fields must use the
+         * `EQUALS (=)` operator. Supported fields: * `campaignId` * `displayName` * `entityStatus`
+         * * `updateTime` (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
-         * campaigns with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
-         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
-         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * campaigns with an update time less than or equal to 2020-11-04T18:54:47Z (format of ISO
+         * 8601): `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by campaign properties. Supported syntax: * Filter expressions are made up of one
-       or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
-       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN
-       OR EQUAL TO (<=)`. * The operator must be `EQUALS (=)`. * Supported fields: - `campaignId` -
-       `displayName` - `entityStatus` - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ)
-       Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
-       `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All campaigns with
-       an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+        /** Allows filtering by campaign fields. Supported syntax: * Filter expressions are made up of one or
+       more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+       restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+       The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
+       operators. * All other fields must use the `EQUALS (=)` operator. Supported fields: * `campaignId`
+       * `displayName` * `entityStatus` * `updateTime` (input in ISO 8601 format, or `YYYY-MM-
+       DDTHH:MM:SSZ`) Examples: * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an
+       advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
+       campaigns with an update time less than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
        `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater than or equal to
-       `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The length of
-       this field should be no more than 500 characters.
+       2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this
+       field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by campaign properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * Allows filtering by campaign fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator used on `updateTime` must be `GREATER
-         * THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator must be `EQUALS
-         * (=)`. * Supported fields: - `campaignId` - `displayName` - `entityStatus` - `updateTime`
-         * (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All
+         * of `{field} {operator} {value}`. * The `updateTime` field must use the `GREATER THAN OR
+         * EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other fields must use the
+         * `EQUALS (=)` operator. Supported fields: * `campaignId` * `displayName` * `entityStatus`
+         * * `updateTime` (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All
          * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` campaigns under an advertiser:
          * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")` * All
-         * campaigns with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO
-         * 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
-         * than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * campaigns with an update time less than or equal to 2020-11-04T18:54:47Z (format of ISO
+         * 8601): `updateTime<="2020-11-04T18:54:47Z"` * All campaigns with an update time greater
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -3322,44 +3336,48 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
-             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * by the `OR` logical operator. * A restriction has the form of `{field} {operator}
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2 `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER` `inheritance="NOT_INHERITED" OR
              * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+             * tos/filters) guide for more information.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
-           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
-           assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
-           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
-           length of this field should be no more than 500 characters.
+            /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+           made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+           A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+           operator. Supported fields: * `assignedTargetingOptionId` * `inheritance` Examples: *
+           `AssignedTargetingOption` resources with ID 1 or 2 `assignedTargetingOptionId="1" OR
+           assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance status of
+           `NOT_INHERITED` or `INHERITED_FROM_PARTNER` `inheritance="NOT_INHERITED" OR
+           inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+           characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+           for more information.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
-             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * by the `OR` logical operator. * A restriction has the form of `{field} {operator}
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2 `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER` `inheritance="NOT_INHERITED" OR
              * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+             * tos/filters) guide for more information.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -3902,19 +3920,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
-         * currently can only contain at most one * restriction. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
-         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * can only contain at most one restriction. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
+         * `displayName` Examples: * All channels for which the display name contains "google":
          * `displayName : "google"`. The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel currently
-       can only contain at most one * restriction. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: *
-       All channels for which the display name contains "google": `displayName : "google"`. The length of
-       this field should be no more than 500 characters.
+        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel can only
+       contain at most one restriction. * A restriction has the form of `{field} {operator} {value}`. *
+       All fields must use the `HAS (:)` operator. Supported fields: * `displayName` Examples: * All
+       channels for which the display name contains "google": `displayName : "google"`. The length of this
+       field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -3922,10 +3943,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
-         * currently can only contain at most one * restriction. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
-         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * can only contain at most one restriction. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
+         * `displayName` Examples: * All channels for which the display name contains "google":
          * `displayName : "google"`. The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4854,18 +4877,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by site fields. Supported syntax: * Filter expressions for site
-           * currently can only contain at most one * restriction. * A restriction has the form of
-           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
-           * "google": `urlOrAppId : "google"`
+           * retrieval can only contain at most one restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+           * fields: * `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"` The length of this field should be no more than 500
+           * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only
-         contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. *
-         The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for
-         which the URL or app ID contains "google": `urlOrAppId : "google"`
+          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site retrieval can only
+         contain at most one restriction. * A restriction has the form of `{field} {operator} {value}`. *
+         All fields must use the `HAS (:)` operator. Supported fields: * `urlOrAppId` Examples: * All sites
+         for which the URL or app ID contains "google": `urlOrAppId : "google"` The length of this field
+         should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         video/api/guides/how-tos/filters) guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -4873,10 +4900,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by site fields. Supported syntax: * Filter expressions for site
-           * currently can only contain at most one * restriction. * A restriction has the form of
-           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
-           * "google": `urlOrAppId : "google"`
+           * retrieval can only contain at most one restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+           * fields: * `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"` The length of this field should be no more than 500
+           * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -5688,106 +5717,97 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by creative properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restriction for the same field must be combined by
-         * `OR`. * Restriction for different fields must be combined by `AND`. * Between `(` and `)`
-         * there can only be restrictions combined by `OR` for the same field. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
-         * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
-         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
-         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * The operator
-         * must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the following
-         * fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be
-         * at most one restriction. * For `dimensions`, the value is in the form of
-         * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
-         * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the
-         * form of `"{duration}s"`. Only seconds are supported with millisecond granularity. * For
-         * `updateTime`, a creative resource's field value reflects the last time that a creative
-         * has been updated, which includes updates made by the system (e.g. creative review
-         * updates). * There may be multiple `lineItemIds` restrictions in order to search against
-         * multiple possible line item IDs. * There may be multiple `creativeId` restrictions in
-         * order to search against multiple possible creative IDs. Examples: * All native creatives:
+         * Allows filtering by creative fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The `lineItemIds` field must use the `HAS (:)`
+         * operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
+         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * * For `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic` fields,
+         * there may be at most one restriction. Supported Fields: * `approvalStatus` * `creativeId`
+         * * `creativeType` * `dimensions` (input in the form of `{width}x{height}`) * `dynamic` *
+         * `entityStatus` * `exchangeReviewStatus` (input in the form of
+         * `{exchange}-{reviewStatus}`) * `lineItemIds` * `maxDuration` (input in the form of
+         * `{duration}s`. Only seconds are supported) * `minDuration` (input in the form of
+         * `{duration}s`. Only seconds are supported) * `updateTime` (input in ISO 8601 format, or
+         * `YYYY-MM-DDTHH:MM:SSZ`) Notes: * For `updateTime`, a creative resource's field value
+         * reflects the last time that a creative has been updated, which includes updates made by
+         * the system (e.g. creative review updates). Examples: * All native creatives:
          * `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100
          * dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR
          * dimensions="50x100")` * All dynamic creatives that are approved by AdX or AppNexus, with
-         * a minimum duration of 5 seconds and 200ms. `dynamic="true" AND minDuration="5.2s" AND
+         * a minimum duration of 5 seconds and 200ms: `dynamic="true" AND minDuration="5.2s" AND
          * (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR
          * exchangeReviewStatus="EXCHANGE_APPNEXUS-REVIEW_STATUS_APPROVED")` * All video creatives
          * that are associated with line item ID 1 or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND
          * (lineItemIds:1 OR lineItemIds:2)` * Find creatives by multiple creative IDs:
          * `creativeId=1 OR creativeId=2` * All creatives with an update time greater than or equal
-         * to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The
-         * length of this field should be no more than 500 characters.
+         * to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The
+         * length of this field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by creative properties. Supported syntax: * Filter expressions are made up of one
-       or more restrictions. * Restriction for the same field must be combined by `OR`. * Restriction for
-       different fields must be combined by `AND`. * Between `(` and `)` there can only be restrictions
-       combined by `OR` for the same field. * A restriction has the form of `{field} {operator} {value}`.
-       * The operator must be `EQUALS (=)` for the following fields: - `entityStatus` - `creativeType`. -
-       `dimensions` - `minDuration` - `maxDuration` - `approvalStatus` - `exchangeReviewStatus` -
-       `dynamic` - `creativeId` * The operator must be `HAS (:)` for the following fields: - `lineItemIds`
-       * The operator must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the
-       following fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-       `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be at most one
-       restriction. * For `dimensions`, the value is in the form of `"{width}x{height}"`. * For
-       `exchangeReviewStatus`, the value is in the form of `{exchange}-{reviewStatus}`. * For
-       `minDuration` and `maxDuration`, the value is in the form of `"{duration}s"`. Only seconds are
-       supported with millisecond granularity. * For `updateTime`, a creative resource's field value
-       reflects the last time that a creative has been updated, which includes updates made by the system
-       (e.g. creative review updates). * There may be multiple `lineItemIds` restrictions in order to
-       search against multiple possible line item IDs. * There may be multiple `creativeId` restrictions
-       in order to search against multiple possible creative IDs. Examples: * All native creatives:
+        /** Allows filtering by creative fields. Supported syntax: * Filter expressions are made up of one or
+       more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+       restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+       The `lineItemIds` field must use the `HAS (:)` operator. * The `updateTime` field must use the
+       `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * All other fields must
+       use the `EQUALS (=)` operator. * For `entityStatus`, `minDuration`, `maxDuration`, `updateTime`,
+       and `dynamic` fields, there may be at most one restriction. Supported Fields: * `approvalStatus` *
+       `creativeId` * `creativeType` * `dimensions` (input in the form of `{width}x{height}`) * `dynamic`
+       * `entityStatus` * `exchangeReviewStatus` (input in the form of `{exchange}-{reviewStatus}`) *
+       `lineItemIds` * `maxDuration` (input in the form of `{duration}s`. Only seconds are supported) *
+       `minDuration` (input in the form of `{duration}s`. Only seconds are supported) * `updateTime`
+       (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Notes: * For `updateTime`, a creative
+       resource's field value reflects the last time that a creative has been updated, which includes
+       updates made by the system (e.g. creative review updates). Examples: * All native creatives:
        `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100 dimensions:
        `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR dimensions="50x100")` * All
        dynamic creatives that are approved by AdX or AppNexus, with a minimum duration of 5 seconds and
-       200ms. `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
+       200ms: `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
        ="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR exchangeReviewStatus="EXCHANGE_APPNEXUS-
        REVIEW_STATUS_APPROVED")` * All video creatives that are associated with line item ID 1 or 2:
        `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` * Find creatives by
        multiple creative IDs: `creativeId=1 OR creativeId=2` * All creatives with an update time greater
-       than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"`
-       The length of this field should be no more than 500 characters.
+       than or equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"`
+       The length of this field should be no more than 500 characters. Reference our [filter `LIST`
+       requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by creative properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restriction for the same field must be combined by
-         * `OR`. * Restriction for different fields must be combined by `AND`. * Between `(` and `)`
-         * there can only be restrictions combined by `OR` for the same field. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)` for the
-         * following fields: - `entityStatus` - `creativeType`. - `dimensions` - `minDuration` -
-         * `maxDuration` - `approvalStatus` - `exchangeReviewStatus` - `dynamic` - `creativeId` *
-         * The operator must be `HAS (:)` for the following fields: - `lineItemIds` * The operator
-         * must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` for the following
-         * fields: - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) * For
-         * `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic`, there may be
-         * at most one restriction. * For `dimensions`, the value is in the form of
-         * `"{width}x{height}"`. * For `exchangeReviewStatus`, the value is in the form of
-         * `{exchange}-{reviewStatus}`. * For `minDuration` and `maxDuration`, the value is in the
-         * form of `"{duration}s"`. Only seconds are supported with millisecond granularity. * For
-         * `updateTime`, a creative resource's field value reflects the last time that a creative
-         * has been updated, which includes updates made by the system (e.g. creative review
-         * updates). * There may be multiple `lineItemIds` restrictions in order to search against
-         * multiple possible line item IDs. * There may be multiple `creativeId` restrictions in
-         * order to search against multiple possible creative IDs. Examples: * All native creatives:
+         * Allows filtering by creative fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
+         * of `{field} {operator} {value}`. * The `lineItemIds` field must use the `HAS (:)`
+         * operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
+         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * * For `entityStatus`, `minDuration`, `maxDuration`, `updateTime`, and `dynamic` fields,
+         * there may be at most one restriction. Supported Fields: * `approvalStatus` * `creativeId`
+         * * `creativeType` * `dimensions` (input in the form of `{width}x{height}`) * `dynamic` *
+         * `entityStatus` * `exchangeReviewStatus` (input in the form of
+         * `{exchange}-{reviewStatus}`) * `lineItemIds` * `maxDuration` (input in the form of
+         * `{duration}s`. Only seconds are supported) * `minDuration` (input in the form of
+         * `{duration}s`. Only seconds are supported) * `updateTime` (input in ISO 8601 format, or
+         * `YYYY-MM-DDTHH:MM:SSZ`) Notes: * For `updateTime`, a creative resource's field value
+         * reflects the last time that a creative has been updated, which includes updates made by
+         * the system (e.g. creative review updates). Examples: * All native creatives:
          * `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100
          * dimensions: `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR
          * dimensions="50x100")` * All dynamic creatives that are approved by AdX or AppNexus, with
-         * a minimum duration of 5 seconds and 200ms. `dynamic="true" AND minDuration="5.2s" AND
+         * a minimum duration of 5 seconds and 200ms: `dynamic="true" AND minDuration="5.2s" AND
          * (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR
          * exchangeReviewStatus="EXCHANGE_APPNEXUS-REVIEW_STATUS_APPROVED")` * All video creatives
          * that are associated with line item ID 1 or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND
          * (lineItemIds:1 OR lineItemIds:2)` * Find creatives by multiple creative IDs:
          * `creativeId=1 OR creativeId=2` * All creatives with an update time greater than or equal
-         * to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The
-         * length of this field should be no more than 500 characters.
+         * to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The
+         * length of this field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -6207,48 +6227,50 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
+         * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
+         * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
+         * field should be no more than 500 characters. Reference our [filter `LIST` requests
+         * ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
-       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
-       AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
-       TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-       targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of
-       NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-       inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-       characters.
+        /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+       made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+       A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+       operator. Supported fields: * `targetingType` * `inheritance` Examples: * `AssignedTargetingOption`
+       resources of targeting type `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
+       `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"`
+       * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
+       `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+       length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
+         * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
+         * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
+         * field should be no more than 500 characters. Reference our [filter `LIST` requests
+         * ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public BulkListInsertionOrderAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -6883,70 +6905,73 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by insertion order properties. Supported syntax: * Filter expressions
-         * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * Allows filtering by insertion order fields. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator used on
-         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operator used
-         * on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`.
-         * * The operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
-         * `campaignId` - `displayName` - `entityStatus` -
-         * `budget.budget_segments.date_range.end_date` (input as YYYY-MM-DD) - `updateTime` (input
-         * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All insertion orders under a
-         * campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
-         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates
-         * end before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` *
-         * All insertion orders with an update time less than or equal to `2020-11-04T18:54:47Z
-         * (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with
-         * an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * the form of `{field} {operator} {value}`. * The
+         * `budget.budget_segments.date_range.end_date` field must use the `LESS THAN (<)` operator.
+         * * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR
+         * EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `campaignId` * `displayName` * `entityStatus` *
+         * `budget.budget_segments.date_range.end_date` (input in the form of `YYYY-MM-DD`)
+         * **Deprecated. Not available after June 8, 2023** * `updateTime` (input in ISO 8601
+         * format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All insertion orders under a campaign:
+         * `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion
+         * orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders with an update time less
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
+         * `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update time greater
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by insertion order properties. Supported syntax: * Filter expressions are made up
-       of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+        /** Allows filtering by insertion order fields. Supported syntax: * Filter expressions are made up of
+       one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
        sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator used on `budget.budget_segments.date_range.end_date` must be LESS THAN
-       (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR
-       EQUAL TO (<=)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported fields:
-       - `campaignId` - `displayName` - `entityStatus` - `budget.budget_segments.date_range.end_date`
-       (input as YYYY-MM-DD) - `updateTime` (input in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples:
-       * All insertion orders under a campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or
-       `ENTITY_STATUS_PAUSED` insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE"
-       OR entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates end
-       before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` * All insertion
-       orders with an update time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
-       `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update time greater than or
-       equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime>="2020-11-04T18:54:47Z"` The
-       length of this field should be no more than 500 characters.
+       {value}`. * The `budget.budget_segments.date_range.end_date` field must use the `LESS THAN (<)`
+       operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR
+       EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator. Supported fields:
+       * `campaignId` * `displayName` * `entityStatus` * `budget.budget_segments.date_range.end_date`
+       (input in the form of `YYYY-MM-DD`) **Deprecated. Not available after June 8, 2023** * `updateTime`
+       (input in ISO 8601 format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All insertion orders under a
+       campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion
+       orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+       entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders with an update time less than or equal
+       to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` * All insertion
+       orders with an update time greater than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
+       `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+       characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+       for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by insertion order properties. Supported syntax: * Filter expressions
-         * are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
+         * Allows filtering by insertion order fields. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator used on
-         * `budget.budget_segments.date_range.end_date` must be LESS THAN (<). * The operator used
-         * on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`.
-         * * The operators used on all other fields must be `EQUALS (=)`. * Supported fields: -
-         * `campaignId` - `displayName` - `entityStatus` -
-         * `budget.budget_segments.date_range.end_date` (input as YYYY-MM-DD) - `updateTime` (input
-         * in ISO 8601 format, or YYYY-MM-DDTHH:MM:SSZ) Examples: * All insertion orders under a
-         * campaign: `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`
-         * insertion orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders whose budget segments' dates
-         * end before March 28, 2019: `budget.budget_segments.date_range.end_date<"2019-03-28"` *
-         * All insertion orders with an update time less than or equal to `2020-11-04T18:54:47Z
-         * (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with
-         * an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * the form of `{field} {operator} {value}`. * The
+         * `budget.budget_segments.date_range.end_date` field must use the `LESS THAN (<)` operator.
+         * * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR
+         * EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `campaignId` * `displayName` * `entityStatus` *
+         * `budget.budget_segments.date_range.end_date` (input in the form of `YYYY-MM-DD`)
+         * **Deprecated. Not available after June 8, 2023** * `updateTime` (input in ISO 8601
+         * format, or `YYYY-MM-DDTHH:MM:SSZ`) Examples: * All insertion orders under a campaign:
+         * `campaignId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` insertion
+         * orders under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+         * entityStatus="ENTITY_STATUS_PAUSED")` * All insertion orders with an update time less
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
+         * `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update time greater
+         * than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
-         * characters.
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -7864,44 +7889,48 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
              * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
+             * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
+             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+             * /how-tos/filters) guide for more information.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
-           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
-           assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
-           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
-           length of this field should be no more than 500 characters.
+            /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+           made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+           A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+           operator. Supported fields: * `assignedTargetingOptionId` * `inheritance` Examples: *
+           `AssignedTargetingOption` resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+           assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance status of
+           `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR
+           inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+           characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+           for more information.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
              * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
+             * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
+             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+             * /how-tos/filters) guide for more information.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -8718,48 +8747,50 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
+         * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
+         * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
+         * field should be no more than 500 characters. Reference our [filter `LIST` requests
+         * ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
-       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
-       AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
-       TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-       targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of
-       NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-       inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-       characters.
+        /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+       made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+       A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+       operator. Supported fields: * `targetingType` * `inheritance` Examples: * `AssignedTargetingOption`
+       resources of targeting type `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
+       `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"`
+       * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
+       `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+       length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
-         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
-         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType` *
+         * `inheritance` Examples: * `AssignedTargetingOption` resources of targeting type
+         * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST` or `TARGETING_TYPE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
-         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
-         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
-         * characters.
+         * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
+         * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
+         * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
+         * field should be no more than 500 characters. Reference our [filter `LIST` requests
+         * ](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public BulkListLineItemAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -9521,87 +9552,92 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * Allows filtering by line item fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
-         * be LESS THAN (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO
-         * (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator used on `warningMessages` must be
-         * `HAS (:)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported
-         * properties: - `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` -
-         * `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-
-         * DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
-         * YYYY-MM-DDTHH:MM:SSZ) - `targetedChannelId` - `targetedNegativeKeywordListId` Examples: *
-         * All line items under an insertion order: `insertionOrderId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` *
-         * All line items whose flight dates end before March 28, 2019:
-         * `flight.dateRange.endDate<"2019-03-28"` * All line items that have `NO_VALID_CREATIVE` in
-         * `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All line items with an update
-         * time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
-         * `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time greater than or
-         * equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * of `{field} {operator} {value}`. * The `flight.dateRange.endDate` field must use the
+         * `LESS THAN (<)` operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO
+         * (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * The `warningMessages` field must use
+         * the `HAS (:)` operator. * All other fields must use the `EQUALS (=)` operator. Supported
+         * fields: * `campaignId` * `displayName` * `entityStatus` * `flight.dateRange.endDate`
+         * (input formatted as `YYYY-MM-DD`) **Deprecated. Not available after June 8, 2023** *
+         * `flight.triggerId` * `insertionOrderId` * `lineItemId` * `lineItemType` *
+         * `targetedChannelId` * `targetedNegativeKeywordListId` * `updateTime` (input in ISO 8601
+         * format, or `YYYY-MM-DDTHH:MM:SSZ`) * `warningMessages` Examples: * All line items under
+         * an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+         * `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an
+         * advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")
+         * AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates
+         * end before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that
+         * have `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` *
+         * All line items with an update time less than or equal to 2020-11-04T18:54:47Z (format of
+         * ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time
+         * greater than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` * All line items that are using both the specified
          * channel and specified negative keyword list in their targeting:
          * `targetedNegativeKeywordListId=789 AND targetedChannelId=12345` The length of this field
-         * should be no more than 500 characters.
+         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by line item properties. Supported syntax: * Filter expressions are made up of one
-       or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
-       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator used on `flight.dateRange.endDate` must be LESS THAN (<). * The operator
-       used on `updateTime` must be `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The
-       operator used on `warningMessages` must be `HAS (:)`. * The operators used on all other fields must
-       be `EQUALS (=)`. * Supported properties: - `campaignId` - `displayName` - `insertionOrderId` -
-       `entityStatus` - `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as
-       YYYY-MM-DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
-       YYYY-MM-DDTHH:MM:SSZ) - `targetedChannelId` - `targetedNegativeKeywordListId` Examples: * All line
-       items under an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
-       `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
+        /** Allows filtering by line item fields. Supported syntax: * Filter expressions are made up of one or
+       more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+       restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+       The `flight.dateRange.endDate` field must use the `LESS THAN (<)` operator. * The `updateTime`
+       field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * The
+       `warningMessages` field must use the `HAS (:)` operator. * All other fields must use the `EQUALS
+       (=)` operator. Supported fields: * `campaignId` * `displayName` * `entityStatus` *
+       `flight.dateRange.endDate` (input formatted as `YYYY-MM-DD`) **Deprecated. Not available after June
+       8, 2023** * `flight.triggerId` * `insertionOrderId` * `lineItemId` * `lineItemType` *
+       `targetedChannelId` * `targetedNegativeKeywordListId` * `updateTime` (input in ISO 8601 format, or
+       `YYYY-MM-DDTHH:MM:SSZ`) * `warningMessages` Examples: * All line items under an insertion order:
+       `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and
+       `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an advertiser:
        `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
        lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates end before March
        28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that have `NO_VALID_CREATIVE` in
        `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All line items with an update time less
-       than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`: `updateTime<="2020-11-04T18:54:47Z"`
-       * All line items with an update time greater than or equal to `2020-11-04T18:54:47Z (format of ISO
-       8601)`: `updateTime>="2020-11-04T18:54:47Z"` * All line items that are using both the specified
+       than or equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` *
+       All line items with an update time greater than or equal to 2020-11-04T18:54:47Z (format of ISO
+       8601): `updateTime>="2020-11-04T18:54:47Z"` * All line items that are using both the specified
        channel and specified negative keyword list in their targeting: `targetedNegativeKeywordListId=789
        AND targetedChannelId=12345` The length of this field should be no more than 500 characters.
+       Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more
+       information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by line item properties. Supported syntax: * Filter expressions are made
-         * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+         * Allows filtering by line item fields. Supported syntax: * Filter expressions are made up
+         * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator used on `flight.dateRange.endDate` must
-         * be LESS THAN (<). * The operator used on `updateTime` must be `GREATER THAN OR EQUAL TO
-         * (>=)` or `LESS THAN OR EQUAL TO (<=)`. * The operator used on `warningMessages` must be
-         * `HAS (:)`. * The operators used on all other fields must be `EQUALS (=)`. * Supported
-         * properties: - `campaignId` - `displayName` - `insertionOrderId` - `entityStatus` -
-         * `lineItemId` - `lineItemType` - `flight.dateRange.endDate` (input formatted as YYYY-MM-
-         * DD) - `warningMessages` - `flight.triggerId` - `updateTime` (input in ISO 8601 format, or
-         * YYYY-MM-DDTHH:MM:SSZ) - `targetedChannelId` - `targetedNegativeKeywordListId` Examples: *
-         * All line items under an insertion order: `insertionOrderId="1234"` * All
-         * `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT`
-         * line items under an advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` *
-         * All line items whose flight dates end before March 28, 2019:
-         * `flight.dateRange.endDate<"2019-03-28"` * All line items that have `NO_VALID_CREATIVE` in
-         * `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` * All line items with an update
-         * time less than or equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
-         * `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time greater than or
-         * equal to `2020-11-04T18:54:47Z (format of ISO 8601)`:
+         * of `{field} {operator} {value}`. * The `flight.dateRange.endDate` field must use the
+         * `LESS THAN (<)` operator. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO
+         * (>=)` or `LESS THAN OR EQUAL TO (<=)` operators. * The `warningMessages` field must use
+         * the `HAS (:)` operator. * All other fields must use the `EQUALS (=)` operator. Supported
+         * fields: * `campaignId` * `displayName` * `entityStatus` * `flight.dateRange.endDate`
+         * (input formatted as `YYYY-MM-DD`) **Deprecated. Not available after June 8, 2023** *
+         * `flight.triggerId` * `insertionOrderId` * `lineItemId` * `lineItemType` *
+         * `targetedChannelId` * `targetedNegativeKeywordListId` * `updateTime` (input in ISO 8601
+         * format, or `YYYY-MM-DDTHH:MM:SSZ`) * `warningMessages` Examples: * All line items under
+         * an insertion order: `insertionOrderId="1234"` * All `ENTITY_STATUS_ACTIVE` or
+         * `ENTITY_STATUS_PAUSED` and `LINE_ITEM_TYPE_DISPLAY_DEFAULT` line items under an
+         * advertiser: `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED")
+         * AND lineItemType="LINE_ITEM_TYPE_DISPLAY_DEFAULT"` * All line items whose flight dates
+         * end before March 28, 2019: `flight.dateRange.endDate<"2019-03-28"` * All line items that
+         * have `NO_VALID_CREATIVE` in `warningMessages`: `warningMessages:"NO_VALID_CREATIVE"` *
+         * All line items with an update time less than or equal to 2020-11-04T18:54:47Z (format of
+         * ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` * All line items with an update time
+         * greater than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
          * `updateTime>="2020-11-04T18:54:47Z"` * All line items that are using both the specified
          * channel and specified negative keyword list in their targeting:
          * `targetedNegativeKeywordListId=789 AND targetedChannelId=12345` The length of this field
-         * should be no more than 500 characters.
+         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -9610,17 +9646,18 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-         * `entityStatus` * `flight.dateRange.endDate` * `updateTime` The default sorting order is
-         * ascending. To specify descending order for a field, a suffix "desc" should be added to
-         * the field name. Example: `displayName desc`.
+         * `entityStatus` * `flight.dateRange.endDate` **Deprecated. Not available after June 8,
+         * 2023** * `updateTime` The default sorting order is ascending. To specify descending order
+         * for a field, a suffix "desc" should be added to the field name. Example: `displayName
+         * desc`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
-       * `flight.dateRange.endDate` * `updateTime` The default sorting order is ascending. To specify
-       descending order for a field, a suffix "desc" should be added to the field name. Example:
-       `displayName desc`.
+       * `flight.dateRange.endDate` **Deprecated. Not available after June 8, 2023** * `updateTime` The
+       default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+       be added to the field name. Example: `displayName desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -9628,9 +9665,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-         * `entityStatus` * `flight.dateRange.endDate` * `updateTime` The default sorting order is
-         * ascending. To specify descending order for a field, a suffix "desc" should be added to
-         * the field name. Example: `displayName desc`.
+         * `entityStatus` * `flight.dateRange.endDate` **Deprecated. Not available after June 8,
+         * 2023** * `updateTime` The default sorting order is ascending. To specify descending order
+         * for a field, a suffix "desc" should be added to the field name. Example: `displayName
+         * desc`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -11166,44 +11204,48 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
              * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
+             * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
+             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+             * /how-tos/filters) guide for more information.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
-           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
-           assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
-           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
-           length of this field should be no more than 500 characters.
+            /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+           made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+           A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+           operator. Supported fields: * `assignedTargetingOptionId` * `inheritance` Examples: *
+           `AssignedTargetingOption` resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+           assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance status of
+           `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR
+           inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+           characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+           for more information.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
              * expressions are made up of one or more restrictions. * Restrictions can be combined
              * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
-             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
-             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
-             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
-             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
-             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
-             * 500 characters.
+             * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+             * `assignedTargetingOptionId` * `inheritance` Examples: * `AssignedTargetingOption`
+             * resources with ID 1 or 2: `assignedTargetingOptionId="1" OR
+             * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
+             * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
+             * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
+             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+             * /how-tos/filters) guide for more information.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -11716,10 +11758,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by location list fields. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `locationType` Examples: * All regional location list:
+         * of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `locationType` Examples: * All regional location list:
          * `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location list:
-         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"` The length of this field should be no
+         * more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -11727,9 +11771,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /** Allows filtering by location list fields. Supported syntax: * Filter expressions are made up of one
        or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
        of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `locationType` Examples: * All
-       regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location
-       list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+       {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `locationType`
+       Examples: * All regional location list: `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All
+       proximity location list: `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"` The length of this
+       field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -11739,10 +11785,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Allows filtering by location list fields. Supported syntax: * Filter expressions are made
          * up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
          * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-         * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields:
-         * - `locationType` Examples: * All regional location list:
+         * of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `locationType` Examples: * All regional location list:
          * `locationType="TARGETING_LOCATION_TYPE_REGIONAL"` * All proximity location list:
-         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"`
+         * `locationType="TARGETING_LOCATION_TYPE_PROXIMITY"` The length of this field should be no
+         * more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -12588,18 +12636,21 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Allows filtering by location list assignment fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
-           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * the `OR` logical operator. * A restriction has the form of `{field} {operator}
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
            * `assignedLocationId` The length of this field should be no more than 500 characters.
+           * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+           * for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Allows filtering by location list assignment fields. Supported syntax: * Filter expressions are
-         made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
-         A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
-         Supported fields: - `assignedLocationId` The length of this field should be no more than 500
-         characters.
+         made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+         A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+         operator. Supported fields: * `assignedLocationId` The length of this field should be no more than
+         500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters)
+         guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -12608,9 +12659,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Allows filtering by location list assignment fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
-           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+           * the `OR` logical operator. * A restriction has the form of `{field} {operator}
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
            * `assignedLocationId` The length of this field should be no more than 500 characters.
+           * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+           * for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -13435,36 +13488,39 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are
+         * Allows filtering by manual trigger fields. Supported syntax: * Filter expressions are
          * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
-         * Supported fields: - `displayName` - `state` Examples: * All active manual triggers under
-         * an advertiser: `state="ACTIVE"` The length of this field should be no more than 500
-         * characters.
+         * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+         * operator. Supported fields: * `displayName` * `state` Examples: * All active manual
+         * triggers under an advertiser: `state="ACTIVE"` The length of this field should be no more
+         * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+         * /how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are made up
-       of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+        /** Allows filtering by manual trigger fields. Supported syntax: * Filter expressions are made up of
+       one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
        sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `displayName` - `state`
-       Examples: * All active manual triggers under an advertiser: `state="ACTIVE"` The length of this
-       field should be no more than 500 characters.
+       {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `displayName` *
+       `state` Examples: * All active manual triggers under an advertiser: `state="ACTIVE"` The length of
+       this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by manual trigger properties. Supported syntax: * Filter expressions are
+         * Allows filtering by manual trigger fields. Supported syntax: * Filter expressions are
          * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
          * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-         * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
-         * Supported fields: - `displayName` - `state` Examples: * All active manual triggers under
-         * an advertiser: `state="ACTIVE"` The length of this field should be no more than 500
-         * characters.
+         * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+         * operator. Supported fields: * `displayName` * `state` Examples: * All active manual
+         * triggers under an advertiser: `state="ACTIVE"` The length of this field should be no more
+         * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+         * /how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -15179,19 +15235,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for
-           * negative keyword currently can only contain at most one * restriction. * A restriction
-           * has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-           * Supported fields: - `keywordValue` Examples: * All negative keywords for which the
-           * keyword value contains "google": `keywordValue : "google"`
+           * negative keywords can only contain at most one restriction. * A restriction has the
+           * form of `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator.
+           * Supported fields: * `keywordValue` Examples: * All negative keywords for which the
+           * keyword value contains "google": `keywordValue : "google"` The length of this field
+           * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+           * video/api/guides/how-tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for negative
-         keyword currently can only contain at most one * restriction. * A restriction has the form of
-         `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+         keywords can only contain at most one restriction. * A restriction has the form of `{field}
+         {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
          `keywordValue` Examples: * All negative keywords for which the keyword value contains "google":
-         `keywordValue : "google"`
+         `keywordValue : "google"` The length of this field should be no more than 500 characters. Reference
+         our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -15199,10 +15258,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by negative keyword fields. Supported syntax: * Filter expressions for
-           * negative keyword currently can only contain at most one * restriction. * A restriction
-           * has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-           * Supported fields: - `keywordValue` Examples: * All negative keywords for which the
-           * keyword value contains "google": `keywordValue : "google"`
+           * negative keywords can only contain at most one restriction. * A restriction has the
+           * form of `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator.
+           * Supported fields: * `keywordValue` Examples: * All negative keywords for which the
+           * keyword value contains "google": `keywordValue : "google"` The length of this field
+           * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+           * video/api/guides/how-tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -16250,36 +16311,39 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
-           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * the `OR` logical operator. * A restriction has the form of `{field} {operator}
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+           * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` with ID 123456:
            * `assignedTargetingOptionId="123456"` The length of this field should be no more than
-           * 500 characters.
+           * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-         are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-         `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-         (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID
-         123456 `assignedTargetingOptionId="123456"` The length of this field should be no more than 500
-         characters.
+          /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+         made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+         A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+         operator. Supported fields: * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption`
+         with ID 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more
+         than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         tos/filters) guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
-           * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
+           * the `OR` logical operator. * A restriction has the form of `{field} {operator}
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+           * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` with ID 123456:
            * `assignedTargetingOptionId="123456"` The length of this field should be no more than
-           * 500 characters.
+           * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -16674,20 +16738,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by combined audience fields. Supported syntax: * Filter expressions for
-       * combined audiences currently can only contain at most one restriction. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       * Supported fields: - `displayName` Examples: * All combined audiences for which the display
-       * name contains "Google": `displayName : "Google"`. The length of this field should be no
-       * more than 500 characters.
+       * combined audiences can only contain at most one restriction. * A restriction has the form
+       * of `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+       * fields: * `displayName` Examples: * All combined audiences for which the display name
+       * contains "Google": `displayName : "Google"`. The length of this field should be no more
+       * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Allows filtering by combined audience fields. Supported syntax: * Filter expressions for combined
-     audiences currently can only contain at most one restriction. * A restriction has the form of
-     `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+     audiences can only contain at most one restriction. * A restriction has the form of `{field}
+     {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
      `displayName` Examples: * All combined audiences for which the display name contains "Google":
-     `displayName : "Google"`. The length of this field should be no more than 500 characters.
+     `displayName : "Google"`. The length of this field should be no more than 500 characters. Reference
+     our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -16695,11 +16761,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by combined audience fields. Supported syntax: * Filter expressions for
-       * combined audiences currently can only contain at most one restriction. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       * Supported fields: - `displayName` Examples: * All combined audiences for which the display
-       * name contains "Google": `displayName : "Google"`. The length of this field should be no
-       * more than 500 characters.
+       * combined audiences can only contain at most one restriction. * A restriction has the form
+       * of `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+       * fields: * `displayName` Examples: * All combined audiences for which the display name
+       * contains "Google": `displayName : "Google"`. The length of this field should be no more
+       * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -17208,33 +17275,28 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions
        * are made up of one or more restrictions. * Restrictions can be combined by `AND`. A
-       * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
-       * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
-       * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
-       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
-       * the value is a string. We return all custom bidding algorithms whose display_name contains
-       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
-       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
-       * custom bidding algorithms for which the display name contains "politics":
-       * `displayName:politics`. * All custom bidding algorithms for which the type is
-       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
-       * be no more than 500 characters.
+       * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The `customBiddingAlgorithmType` field must use the `EQUALS (=)`
+       * operator. * The `displayName` field must use the `HAS (:)` operator. Supported fields: *
+       * `customBiddingAlgorithmType` * `displayName` Examples: * All custom bidding algorithms for
+       * which the display name contains "politics": `displayName:"politics"`. * All custom bidding
+       * algorithms for which the type is "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED`
+       * The length of this field should be no more than 500 characters. Reference our [filter
+       * `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions are
      made up of one or more restrictions. * Restrictions can be combined by `AND`. A sequence of
-     restrictions * implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`.
-     * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for
-     the following field: - `displayName` * The operator must be `EQUALS (=)` for the following field: -
-     `customBiddingAlgorithmType` * For `displayName`, the value is a string. We return all custom
-     bidding algorithms whose display_name contains such string. * For `customBiddingAlgorithmType`, the
-     value is a string. We return all algorithms whose custom_bidding_algorithm_type is equal to the
-     given type. Examples: * All custom bidding algorithms for which the display name contains
-     "politics": `displayName:politics`. * All custom bidding algorithms for which the type is
+     restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+     The `customBiddingAlgorithmType` field must use the `EQUALS (=)` operator. * The `displayName`
+     field must use the `HAS (:)` operator. Supported fields: * `customBiddingAlgorithmType` *
+     `displayName` Examples: * All custom bidding algorithms for which the display name contains
+     "politics": `displayName:"politics"`. * All custom bidding algorithms for which the type is
      "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should be no
-     more than 500 characters.
+     more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+     tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -17243,17 +17305,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Allows filtering by custom bidding algorithm fields. Supported syntax: * Filter expressions
        * are made up of one or more restrictions. * Restrictions can be combined by `AND`. A
-       * sequence of restrictions * implicitly uses `AND`. * A restriction has the form of `{field}
-       * {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS (=)`. * The operator
-       * must be `CONTAINS (:)` for the following field: - `displayName` * The operator must be
-       * `EQUALS (=)` for the following field: - `customBiddingAlgorithmType` * For `displayName`,
-       * the value is a string. We return all custom bidding algorithms whose display_name contains
-       * such string. * For `customBiddingAlgorithmType`, the value is a string. We return all
-       * algorithms whose custom_bidding_algorithm_type is equal to the given type. Examples: * All
-       * custom bidding algorithms for which the display name contains "politics":
-       * `displayName:politics`. * All custom bidding algorithms for which the type is
-       * "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED` The length of this field should
-       * be no more than 500 characters.
+       * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+       * {operator} {value}`. * The `customBiddingAlgorithmType` field must use the `EQUALS (=)`
+       * operator. * The `displayName` field must use the `HAS (:)` operator. Supported fields: *
+       * `customBiddingAlgorithmType` * `displayName` Examples: * All custom bidding algorithms for
+       * which the display name contains "politics": `displayName:"politics"`. * All custom bidding
+       * algorithms for which the type is "SCRIPT_BASED": `customBiddingAlgorithmType=SCRIPT_BASED`
+       * The length of this field should be no more than 500 characters. Reference our [filter
+       * `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -18568,19 +18627,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom
-       * lists currently can only contain at most one restriction. * A restriction has the form of
-       * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+       * lists can only contain at most one restriction. * A restriction has the form of `{field}
+       * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
        * `displayName` Examples: * All custom lists for which the display name contains "Google":
-       * `displayName : "Google"`. The length of this field should be no more than 500 characters.
+       * `displayName:"Google"`. The length of this field should be no more than 500 characters.
+       * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for
+       * more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom lists
-     currently can only contain at most one restriction. * A restriction has the form of `{field}
-     {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName`
-     Examples: * All custom lists for which the display name contains "Google": `displayName :
-     "Google"`. The length of this field should be no more than 500 characters.
+      /** Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom lists can
+     only contain at most one restriction. * A restriction has the form of `{field} {operator} {value}`.
+     * All fields must use the `HAS (:)` operator. Supported fields: * `displayName` Examples: * All
+     custom lists for which the display name contains "Google": `displayName:"Google"`. The length of
+     this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+     video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -18588,10 +18650,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by custom list fields. Supported syntax: * Filter expressions for custom
-       * lists currently can only contain at most one restriction. * A restriction has the form of
-       * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+       * lists can only contain at most one restriction. * A restriction has the form of `{field}
+       * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
        * `displayName` Examples: * All custom lists for which the display name contains "Google":
-       * `displayName : "Google"`. The length of this field should be no more than 500 characters.
+       * `displayName:"Google"`. The length of this field should be no more than 500 characters.
+       * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for
+       * more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -19241,21 +19305,23 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by first and third party audience fields. Supported syntax: * Filter
-       * expressions for first and third party audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: * All first and third
-       * party audiences for which the display name contains "Google": `displayName : "Google"`. The
-       * length of this field should be no more than 500 characters.
+       * expressions for first and third party audiences can only contain at most one restriction. *
+       * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `HAS
+       * (:)` operator. Supported fields: * `displayName` Examples: * All first and third party
+       * audiences for which the display name contains "Google": `displayName:"Google"`. The length
+       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       * ](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Allows filtering by first and third party audience fields. Supported syntax: * Filter expressions
-     for first and third party audiences currently can only contain at most one restriction. * A
-     restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-     Supported fields: - `displayName` Examples: * All first and third party audiences for which the
-     display name contains "Google": `displayName : "Google"`. The length of this field should be no
-     more than 500 characters.
+     for first and third party audiences can only contain at most one restriction. * A restriction has
+     the form of `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+     fields: * `displayName` Examples: * All first and third party audiences for which the display name
+     contains "Google": `displayName:"Google"`. The length of this field should be no more than 500
+     characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+     for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -19263,11 +19329,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by first and third party audience fields. Supported syntax: * Filter
-       * expressions for first and third party audiences currently can only contain at most one
-       * restriction. * A restriction has the form of `{field} {operator} {value}`. * The operator
-       * must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: * All first and third
-       * party audiences for which the display name contains "Google": `displayName : "Google"`. The
-       * length of this field should be no more than 500 characters.
+       * expressions for first and third party audiences can only contain at most one restriction. *
+       * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `HAS
+       * (:)` operator. Supported fields: * `displayName` Examples: * All first and third party
+       * audiences for which the display name contains "Google": `displayName:"Google"`. The length
+       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       * ](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -20159,20 +20226,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by Google audience fields. Supported syntax: * Filter expressions for
-       * Google audiences currently can only contain at most one restriction. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       * Supported fields: - `displayName` Examples: * All Google audiences for which the display
-       * name contains "Google": `displayName : "Google"`. The length of this field should be no
-       * more than 500 characters.
+       * Google audiences can only contain at most one restriction. * A restriction has the form of
+       * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+       * fields: * `displayName` Examples: * All Google audiences for which the display name
+       * contains "Google": `displayName:"Google"`. The length of this field should be no more than
+       * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Allows filtering by Google audience fields. Supported syntax: * Filter expressions for Google
-     audiences currently can only contain at most one restriction. * A restriction has the form of
-     `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: -
+     audiences can only contain at most one restriction. * A restriction has the form of `{field}
+     {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
      `displayName` Examples: * All Google audiences for which the display name contains "Google":
-     `displayName : "Google"`. The length of this field should be no more than 500 characters.
+     `displayName:"Google"`. The length of this field should be no more than 500 characters. Reference
+     our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -20180,11 +20249,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Allows filtering by Google audience fields. Supported syntax: * Filter expressions for
-       * Google audiences currently can only contain at most one restriction. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. *
-       * Supported fields: - `displayName` Examples: * All Google audiences for which the display
-       * name contains "Google": `displayName : "Google"`. The length of this field should be no
-       * more than 500 characters.
+       * Google audiences can only contain at most one restriction. * A restriction has the form of
+       * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+       * fields: * `displayName` Examples: * All Google audiences for which the display name
+       * contains "Google": `displayName:"Google"`. The length of this field should be no more than
+       * 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -20883,42 +20953,45 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by guaranteed order properties. * Filter expressions are made up of one or
+       * Allows filtering by guaranteed order fields. * Filter expressions are made up of one or
        * more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
        * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
-       * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `guaranteed_order_id` - `exchange` - `display_name` - `status.entityStatus` Examples: * All
+       * {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+       * `guaranteed_order_id` * `exchange` * `display_name` * `status.entityStatus` Examples: * All
        * active guaranteed orders: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders
        * belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER"
        * OR exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by guaranteed order properties. * Filter expressions are made up of one or more
+      /** Allows filtering by guaranteed order fields. * Filter expressions are made up of one or more
      restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
      restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
-     The operator must be `EQUALS (=)`. * Supported fields: - `guaranteed_order_id` - `exchange` -
-     `display_name` - `status.entityStatus` Examples: * All active guaranteed orders:
+     All fields must use the `EQUALS (=)` operator. Supported fields: * `guaranteed_order_id` *
+     `exchange` * `display_name` * `status.entityStatus` Examples: * All active guaranteed orders:
      `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders belonging to Google Ad Manager or
      Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR exchange="EXCHANGE_RUBICON"` The
-     length of this field should be no more than 500 characters.
+     length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+     ](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by guaranteed order properties. * Filter expressions are made up of one or
+       * Allows filtering by guaranteed order fields. * Filter expressions are made up of one or
        * more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
        * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
-       * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `guaranteed_order_id` - `exchange` - `display_name` - `status.entityStatus` Examples: * All
+       * {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+       * `guaranteed_order_id` * `exchange` * `display_name` * `status.entityStatus` Examples: * All
        * active guaranteed orders: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders
        * belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER"
        * OR exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -21851,31 +21924,34 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by inventory source group properties. Supported syntax: * Filter
-       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       * logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `EQUALS (=)`. * Supported fields: - `inventorySourceGroupId` The length of
-       * this field should be no more than 500 characters.
+       * Allows filtering by inventory source group fields. Supported syntax: * Filter expressions
+       * are made up of one or more restrictions. * Restrictions can be combined by the logical
+       * operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields
+       * must use the `EQUALS (=)` operator. Supported fields: * `inventorySourceGroupId` The length
+       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       * ](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by inventory source group properties. Supported syntax: * Filter expressions are
-     made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
-     A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
-     Supported fields: - `inventorySourceGroupId` The length of this field should be no more than 500
-     characters.
+      /** Allows filtering by inventory source group fields. Supported syntax: * Filter expressions are made
+     up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A
+     restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+     operator. Supported fields: * `inventorySourceGroupId` The length of this field should be no more
+     than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+     tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by inventory source group properties. Supported syntax: * Filter
-       * expressions are made up of one or more restrictions. * Restrictions can be combined by the
-       * logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The
-       * operator must be `EQUALS (=)`. * Supported fields: - `inventorySourceGroupId` The length of
-       * this field should be no more than 500 characters.
+       * Allows filtering by inventory source group fields. Supported syntax: * Filter expressions
+       * are made up of one or more restrictions. * Restrictions can be combined by the logical
+       * operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields
+       * must use the `EQUALS (=)` operator. Supported fields: * `inventorySourceGroupId` The length
+       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
+       * ](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -22832,18 +22908,21 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Allows filtering by assigned inventory source fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
-         * * The operator must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
-         * The length of this field should be no more than 500 characters.
+         * the `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: *
+         * `assignedInventorySourceId` The length of this field should be no more than 500
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Allows filtering by assigned inventory source fields. Supported syntax: * Filter expressions are
-       made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
-       A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. *
-       Supported fields: - `assignedInventorySourceId` The length of this field should be no more than 500
-       characters.
+       made up of one or more restrictions. * Restrictions can be combined by the `OR` logical operator. *
+       A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+       operator. Supported fields: * `assignedInventorySourceId` The length of this field should be no
+       more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -22852,9 +22931,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Allows filtering by assigned inventory source fields. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
-         * * The operator must be `EQUALS (=)`. * Supported fields: - `assignedInventorySourceId`
-         * The length of this field should be no more than 500 characters.
+         * the `OR` logical operator. * A restriction has the form of `{field} {operator} {value}`.
+         * * All fields must use the `EQUALS (=)` operator. Supported fields: *
+         * `assignedInventorySourceId` The length of this field should be no more than 500
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -23519,44 +23600,48 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by inventory source properties. Supported syntax: * Filter expressions are
+       * Allows filtering by inventory source fields. Supported syntax: * Filter expressions are
        * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
        * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       * fields: - `status.entityStatus` - `commitment` - `deliveryMethod` - `rateDetails.rateType`
-       * - `exchange` Examples: * All active inventory sources:
+       * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+       * Supported fields: * `status.entityStatus` * `commitment` * `deliveryMethod` *
+       * `rateDetails.rateType` * `exchange` Examples: * All active inventory sources:
        * `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to Google Ad
        * Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
        * exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by inventory source properties. Supported syntax: * Filter expressions are made up
-     of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+      /** Allows filtering by inventory source fields. Supported syntax: * Filter expressions are made up of
+     one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
      sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `status.entityStatus` -
-     `commitment` - `deliveryMethod` - `rateDetails.rateType` - `exchange` Examples: * All active
-     inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to
-     Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
-     exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500 characters.
+     {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+     `status.entityStatus` * `commitment` * `deliveryMethod` * `rateDetails.rateType` * `exchange`
+     Examples: * All active inventory sources: `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory
+     sources belonging to Google Ad Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER"
+     OR exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500 characters.
+     Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more
+     information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by inventory source properties. Supported syntax: * Filter expressions are
+       * Allows filtering by inventory source fields. Supported syntax: * Filter expressions are
        * made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR`
        * logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has
-       * the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported
-       * fields: - `status.entityStatus` - `commitment` - `deliveryMethod` - `rateDetails.rateType`
-       * - `exchange` Examples: * All active inventory sources:
+       * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+       * Supported fields: * `status.entityStatus` * `commitment` * `deliveryMethod` *
+       * `rateDetails.rateType` * `exchange` Examples: * All active inventory sources:
        * `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Inventory sources belonging to Google Ad
        * Manager or Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR
        * exchange="EXCHANGE_RUBICON"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -24577,34 +24662,39 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by partner properties. Supported syntax: * Filter expressions are made up
-       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * Allows filtering by partner fields. Supported syntax: * Filter expressions are made up of
+       * one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
        * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `entityStatus` Examples: * All active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The
-       * length of this field should be no more than 500 characters.
+       * of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported
+       * fields: * `entityStatus` Examples: * All active partners:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more than 500
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by partner properties. Supported syntax: * Filter expressions are made up of one
-     or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence
-     of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-     {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `entityStatus` Examples: * All
+      /** Allows filtering by partner fields. Supported syntax: * Filter expressions are made up of one or
+     more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of
+     restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+     All fields must use the `EQUALS (=)` operator. Supported fields: * `entityStatus` Examples: * All
      active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more
-     than 500 characters.
+     than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+     tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by partner properties. Supported syntax: * Filter expressions are made up
-       * of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
+       * Allows filtering by partner fields. Supported syntax: * Filter expressions are made up of
+       * one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical
        * operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form
-       * of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-       * `entityStatus` Examples: * All active partners: `entityStatus="ENTITY_STATUS_ACTIVE"` The
-       * length of this field should be no more than 500 characters.
+       * of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported
+       * fields: * `entityStatus` Examples: * All active partners:
+       * `entityStatus="ENTITY_STATUS_ACTIVE"` The length of this field should be no more than 500
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -25153,19 +25243,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
-         * currently can only contain at most one * restriction. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
-         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * can only contain at most one restriction. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
+         * `displayName` Examples: * All channels for which the display name contains "google":
          * `displayName : "google"`. The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel currently
-       can only contain at most one * restriction. * A restriction has the form of `{field} {operator}
-       {value}`. * The operator must be `CONTAINS (:)`. * Supported fields: - `displayName` Examples: *
-       All channels for which the display name contains "google": `displayName : "google"`. The length of
-       this field should be no more than 500 characters.
+        /** Allows filtering by channel fields. Supported syntax: * Filter expressions for channel can only
+       contain at most one restriction. * A restriction has the form of `{field} {operator} {value}`. *
+       All fields must use the `HAS (:)` operator. Supported fields: * `displayName` Examples: * All
+       channels for which the display name contains "google": `displayName : "google"`. The length of this
+       field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -25173,10 +25266,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Allows filtering by channel fields. Supported syntax: * Filter expressions for channel
-         * currently can only contain at most one * restriction. * A restriction has the form of
-         * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported fields:
-         * - `displayName` Examples: * All channels for which the display name contains "google":
+         * can only contain at most one restriction. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported fields: *
+         * `displayName` Examples: * All channels for which the display name contains "google":
          * `displayName : "google"`. The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -26105,18 +26200,22 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by site fields. Supported syntax: * Filter expressions for site
-           * currently can only contain at most one * restriction. * A restriction has the form of
-           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
-           * "google": `urlOrAppId : "google"`
+           * retrieval can only contain at most one restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+           * fields: * `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"` The length of this field should be no more than 500
+           * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site currently can only
-         contain at most one * restriction. * A restriction has the form of `{field} {operator} {value}`. *
-         The operator must be `CONTAINS (:)`. * Supported fields: - `urlOrAppId` Examples: * All sites for
-         which the URL or app ID contains "google": `urlOrAppId : "google"`
+          /** Allows filtering by site fields. Supported syntax: * Filter expressions for site retrieval can only
+         contain at most one restriction. * A restriction has the form of `{field} {operator} {value}`. *
+         All fields must use the `HAS (:)` operator. Supported fields: * `urlOrAppId` Examples: * All sites
+         for which the URL or app ID contains "google": `urlOrAppId : "google"` The length of this field
+         should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         video/api/guides/how-tos/filters) guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -26124,10 +26223,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Allows filtering by site fields. Supported syntax: * Filter expressions for site
-           * currently can only contain at most one * restriction. * A restriction has the form of
-           * `{field} {operator} {value}`. * The operator must be `CONTAINS (:)`. * Supported
-           * fields: - `urlOrAppId` Examples: * All sites for which the URL or app ID contains
-           * "google": `urlOrAppId : "google"`
+           * retrieval can only contain at most one restriction. * A restriction has the form of
+           * `{field} {operator} {value}`. * All fields must use the `HAS (:)` operator. Supported
+           * fields: * `urlOrAppId` Examples: * All sites for which the URL or app ID contains
+           * "google": `urlOrAppId : "google"` The length of this field should be no more than 500
+           * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+           * tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -27128,36 +27229,39 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
            * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
-           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
-           * 500 characters.
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+           * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` resource with ID
+           * 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more
+           * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+           * /how-tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
-         are made up of one or more restrictions. * Restrictions can be combined by the logical operator
-         `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
-         (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID
-         123456 `assignedTargetingOptionId="123456"` The length of this field should be no more than 500
-         characters.
+          /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
+         made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
+         A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
+         operator. Supported fields: * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption`
+         resource with ID 123456: `assignedTargetingOptionId="123456"` The length of this field should be no
+         more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         tos/filters) guide for more information.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+           * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
            * expressions are made up of one or more restrictions. * Restrictions can be combined by
            * the logical operator `OR`. * A restriction has the form of `{field} {operator}
-           * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
-           * `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456
-           * `assignedTargetingOptionId="123456"` The length of this field should be no more than
-           * 500 characters.
+           * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+           * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` resource with ID
+           * 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more
+           * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
+           * /how-tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -28059,49 +28163,52 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
-         * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
-         * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         * must be "=" (equal sign). * Supported fields: - `carrierAndIspDetails.type` -
-         * `geoRegionDetails.geoRegionType` - `targetingOptionId` Examples: * All `GEO REGION`
+         * Allows filtering by targeting option fields. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `OR` logical
+         * operators. * A restriction has the form of `{field} {operator} {value}`. * All fields
+         * must use the `EQUALS (=)` operator. Supported fields: * `carrierAndIspDetails.type` *
+         * `geoRegionDetails.geoRegionType` * `targetingOptionId` Examples: * All `GEO REGION`
          * targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or
          * `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
          * geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting
          * options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
-         * should be no more than 500 characters.
+         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"` The length of this field
+         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by targeting option properties. Supported syntax: * Filter expressions are made up
-       of one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A
-       restriction has the form of `{field} {operator} {value}`. * The operator must be "=" (equal sign).
-       * Supported fields: - `carrierAndIspDetails.type` - `geoRegionDetails.geoRegionType` -
+        /** Allows filtering by targeting option fields. Supported syntax: * Filter expressions are made up of
+       one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A restriction
+       has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+       Supported fields: * `carrierAndIspDetails.type` * `geoRegionDetails.geoRegionType` *
        `targetingOptionId` Examples: * All `GEO REGION` targeting options that belong to sub type
        `GEO_REGION_TYPE_COUNTRY` or `GEO_REGION_TYPE_STATE`:
        `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
        geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting options
        that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-       `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field should be no
-       more than 500 characters.
+       `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"` The length of this field should be no
+       more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by targeting option properties. Supported syntax: * Filter expressions
-         * are made up of one or more restrictions. * Restrictions can be combined by `OR` logical
-         * operators. * A restriction has the form of `{field} {operator} {value}`. * The operator
-         * must be "=" (equal sign). * Supported fields: - `carrierAndIspDetails.type` -
-         * `geoRegionDetails.geoRegionType` - `targetingOptionId` Examples: * All `GEO REGION`
+         * Allows filtering by targeting option fields. Supported syntax: * Filter expressions are
+         * made up of one or more restrictions. * Restrictions can be combined by `OR` logical
+         * operators. * A restriction has the form of `{field} {operator} {value}`. * All fields
+         * must use the `EQUALS (=)` operator. Supported fields: * `carrierAndIspDetails.type` *
+         * `geoRegionDetails.geoRegionType` * `targetingOptionId` Examples: * All `GEO REGION`
          * targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or
          * `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR
          * geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting
          * options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`:
-         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field
-         * should be no more than 500 characters.
+         * `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"` The length of this field
+         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -28355,7 +28462,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     /**
      * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
      * BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided
-     * in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
+     * in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique
+     * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+     * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+     * feature does not work for this method.
      *
      * Create a request for the method "users.bulkEditAssignedUserRoles".
      *
@@ -28383,7 +28493,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Bulk edits user roles for a user. The operation will delete the assigned user roles provided in
        * BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles
-       * provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
+       * provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique
+       * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+       * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+       * feature does not work for this method.
        *
        * Create a request for the method "users.bulkEditAssignedUserRoles".
        *
@@ -28479,7 +28592,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Creates a new user. Returns the newly created user if successful.
+     * Creates a new user. Returns the newly created user if successful. This method has unique
+     * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+     * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+     * feature does not work for this method.
      *
      * Create a request for the method "users.create".
      *
@@ -28500,7 +28616,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/users";
 
       /**
-       * Creates a new user. Returns the newly created user if successful.
+       * Creates a new user. Returns the newly created user if successful. This method has unique
+       * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+       * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+       * feature does not work for this method.
        *
        * Create a request for the method "users.create".
        *
@@ -28578,7 +28697,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Deletes a user.
+     * Deletes a user. This method has unique authentication requirements. Read the prerequisites in our
+     * [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this
+     * method. The "Try this method" feature does not work for this method.
      *
      * Create a request for the method "users.delete".
      *
@@ -28602,7 +28723,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Deletes a user.
+       * Deletes a user. This method has unique authentication requirements. Read the prerequisites in
+       * our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using
+       * this method. The "Try this method" feature does not work for this method.
        *
        * Create a request for the method "users.delete".
        *
@@ -28697,7 +28820,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Gets a user.
+     * Gets a user. This method has unique authentication requirements. Read the prerequisites in our
+     * [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this
+     * method. The "Try this method" feature does not work for this method.
      *
      * Create a request for the method "users.get".
      *
@@ -28721,7 +28846,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Gets a user.
+       * Gets a user. This method has unique authentication requirements. Read the prerequisites in our
+       * [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using
+       * this method. The "Try this method" feature does not work for this method.
        *
        * Create a request for the method "users.get".
        *
@@ -28826,7 +28953,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     }
     /**
      * Lists users that are accessible to the current user. If two users have user roles on the same
-     * partner or advertiser, they can access each other.
+     * partner or advertiser, they can access each other. This method has unique authentication
+     * requirements. Read the prerequisites in our [Managing Users guide](/display-
+     * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+     * feature does not work for this method.
      *
      * Create a request for the method "users.list".
      *
@@ -28847,7 +28977,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Lists users that are accessible to the current user. If two users have user roles on the same
-       * partner or advertiser, they can access each other.
+       * partner or advertiser, they can access each other. This method has unique authentication
+       * requirements. Read the prerequisites in our [Managing Users guide](/display-
+       * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+       * feature does not work for this method.
        *
        * Create a request for the method "users.list".
        *
@@ -28928,71 +29061,77 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Allows filtering by user properties. Supported syntax: * Filter expressions are made up of
-       * one or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
-       * restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS
-       * (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for the following fields: -
-       * `displayName` - `email` * The operator must be `EQUALS (=)` for the following fields: -
-       * `assignedUserRole.userRole` - `assignedUserRole.partnerId` -
-       * `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A synthetic field of
-       * AssignedUserRole used for filtering. Identifies the type of entity to which the user role
-       * is assigned. Valid values are `Partner` and `Advertiser`. -
-       * `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for
-       * filtering. Identifies the parent partner of the entity to which the user role is assigned."
-       * Examples: * The user with displayName containing `foo`: `displayName:"foo"` * The user with
-       * email containing `bar`: `email:"bar"` * All users with standard user roles:
+       * Allows filtering by user fields. Supported syntax: * Filter expressions are made up of one
+       * or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
+       * restriction has the form of `{field} {operator} {value}`. * The
+       * `budget.budget_segments.date_range.end_date` field must use the `LESS THAN (<)` operator. *
+       * The `displayName and `email` field must use the `HAS (:)` operator. * All other fields must
+       * use the `EQUALS (=)` operator. Supported fields: * `assignedUserRole.advertiserId` *
+       * `assignedUserRole.entityType` * This is synthetic field of `AssignedUserRole` used for
+       * filtering. Identifies the type of entity to which the user role is assigned. Valid values
+       * are `Partner` and `Advertiser`. * `assignedUserRole.parentPartnerId` * This is a synthetic
+       * field of `AssignedUserRole` used for filtering. Identifies the parent partner of the entity
+       * to which the user role is assigned. * `assignedUserRole.partnerId` *
+       * `assignedUserRole.userRole` * `displayName` * `email` Examples: * The user with
+       * `displayName` containing "foo": `displayName:"foo"` * The user with `email` containing
+       * "bar": `email:"bar"` * All users with standard user roles:
        * `assignedUserRole.userRole="STANDARD"` * All users with user roles for partner 123:
        * `assignedUserRole.partnerId="123"` * All users with user roles for advertiser 123:
        * `assignedUserRole.advertiserId="123"` * All users with partner level user roles:
        * `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
        * partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Allows filtering by user properties. Supported syntax: * Filter expressions are made up of one or
-     more restrictions. * Restrictions can be combined by the logical operator `AND`. * A restriction
-     has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS (:)` or `EQUALS
-     (=)`. * The operator must be `CONTAINS (:)` for the following fields: - `displayName` - `email` *
-     The operator must be `EQUALS (=)` for the following fields: - `assignedUserRole.userRole` -
-     `assignedUserRole.partnerId` - `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A
-     synthetic field of AssignedUserRole used for filtering. Identifies the type of entity to which the
-     user role is assigned. Valid values are `Partner` and `Advertiser`. -
-     `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for filtering.
-     Identifies the parent partner of the entity to which the user role is assigned." Examples: * The
-     user with displayName containing `foo`: `displayName:"foo"` * The user with email containing `bar`:
-     `email:"bar"` * All users with standard user roles: `assignedUserRole.userRole="STANDARD"` * All
-     users with user roles for partner 123: `assignedUserRole.partnerId="123"` * All users with user
-     roles for advertiser 123: `assignedUserRole.advertiserId="123"` * All users with partner level user
-     roles: `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
-     partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
-     characters.
+      /** Allows filtering by user fields. Supported syntax: * Filter expressions are made up of one or more
+     restrictions. * Restrictions can be combined by the logical operator `AND`. * A restriction has the
+     form of `{field} {operator} {value}`. * The `budget.budget_segments.date_range.end_date` field must
+     use the `LESS THAN (<)` operator. * The `displayName and `email` field must use the `HAS (:)`
+     operator. * All other fields must use the `EQUALS (=)` operator. Supported fields: *
+     `assignedUserRole.advertiserId` * `assignedUserRole.entityType` * This is synthetic field of
+     `AssignedUserRole` used for filtering. Identifies the type of entity to which the user role is
+     assigned. Valid values are `Partner` and `Advertiser`. * `assignedUserRole.parentPartnerId` * This
+     is a synthetic field of `AssignedUserRole` used for filtering. Identifies the parent partner of the
+     entity to which the user role is assigned. * `assignedUserRole.partnerId` *
+     `assignedUserRole.userRole` * `displayName` * `email` Examples: * The user with `displayName`
+     containing "foo": `displayName:"foo"` * The user with `email` containing "bar": `email:"bar"` * All
+     users with standard user roles: `assignedUserRole.userRole="STANDARD"` * All users with user roles
+     for partner 123: `assignedUserRole.partnerId="123"` * All users with user roles for advertiser 123:
+     `assignedUserRole.advertiserId="123"` * All users with partner level user roles:
+     `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under partner
+     123: `parentPartnerId="123"` The length of this field should be no more than 500 characters.
+     Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more
+     information.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Allows filtering by user properties. Supported syntax: * Filter expressions are made up of
-       * one or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
-       * restriction has the form of `{field} {operator} {value}`. * The operator must be `CONTAINS
-       * (:)` or `EQUALS (=)`. * The operator must be `CONTAINS (:)` for the following fields: -
-       * `displayName` - `email` * The operator must be `EQUALS (=)` for the following fields: -
-       * `assignedUserRole.userRole` - `assignedUserRole.partnerId` -
-       * `assignedUserRole.advertiserId` - `assignedUserRole.entityType`: A synthetic field of
-       * AssignedUserRole used for filtering. Identifies the type of entity to which the user role
-       * is assigned. Valid values are `Partner` and `Advertiser`. -
-       * `assignedUserRole.parentPartnerId`: A synthetic field of AssignedUserRole used for
-       * filtering. Identifies the parent partner of the entity to which the user role is assigned."
-       * Examples: * The user with displayName containing `foo`: `displayName:"foo"` * The user with
-       * email containing `bar`: `email:"bar"` * All users with standard user roles:
+       * Allows filtering by user fields. Supported syntax: * Filter expressions are made up of one
+       * or more restrictions. * Restrictions can be combined by the logical operator `AND`. * A
+       * restriction has the form of `{field} {operator} {value}`. * The
+       * `budget.budget_segments.date_range.end_date` field must use the `LESS THAN (<)` operator. *
+       * The `displayName and `email` field must use the `HAS (:)` operator. * All other fields must
+       * use the `EQUALS (=)` operator. Supported fields: * `assignedUserRole.advertiserId` *
+       * `assignedUserRole.entityType` * This is synthetic field of `AssignedUserRole` used for
+       * filtering. Identifies the type of entity to which the user role is assigned. Valid values
+       * are `Partner` and `Advertiser`. * `assignedUserRole.parentPartnerId` * This is a synthetic
+       * field of `AssignedUserRole` used for filtering. Identifies the parent partner of the entity
+       * to which the user role is assigned. * `assignedUserRole.partnerId` *
+       * `assignedUserRole.userRole` * `displayName` * `email` Examples: * The user with
+       * `displayName` containing "foo": `displayName:"foo"` * The user with `email` containing
+       * "bar": `email:"bar"` * All users with standard user roles:
        * `assignedUserRole.userRole="STANDARD"` * All users with user roles for partner 123:
        * `assignedUserRole.partnerId="123"` * All users with user roles for advertiser 123:
        * `assignedUserRole.advertiserId="123"` * All users with partner level user roles:
        * `entityType="PARTNER"` * All users with user roles for partner 123 and advertisers under
        * partner 123: `parentPartnerId="123"` The length of this field should be no more than 500
-       * characters.
+       * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+       * tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -29077,7 +29216,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing user. Returns the updated user if successful.
+     * Updates an existing user. Returns the updated user if successful. This method has unique
+     * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+     * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+     * feature does not work for this method.
      *
      * Create a request for the method "users.patch".
      *
@@ -29102,7 +29244,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing user. Returns the updated user if successful.
+       * Updates an existing user. Returns the updated user if successful. This method has unique
+       * authentication requirements. Read the prerequisites in our [Managing Users guide](/display-
+       * video/api/guides/users/overview#prerequisites) before using this method. The "Try this method"
+       * feature does not work for this method.
        *
        * Create a request for the method "users.patch".
        *

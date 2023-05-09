@@ -18,7 +18,9 @@ package com.google.api.services.displayvideo.v2.model;
 
 /**
  * Represents an assigned authorized seller status. This will be populated in the details field of
- * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+ * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a
+ * resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it
+ * is using the "Authorized Direct Sellers and Resellers" option.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

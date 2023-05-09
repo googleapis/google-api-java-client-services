@@ -30,6 +30,26 @@ package com.google.api.services.healthcare.v1.model;
 public final class TextConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InfoTypeTransformation> additionalTransformations;
+
+  static {
+    // hack to force ProGuard to consider InfoTypeTransformation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InfoTypeTransformation.class);
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeInfoTypes;
+
+  /**
    * The transformations to apply to the detected data. Deprecated. Use `additional_transformations`
    * instead.
    * The value may be {@code null}.
@@ -41,6 +61,40 @@ public final class TextConfig extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider InfoTypeTransformation used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(InfoTypeTransformation.class);
+  }
+
+  /**
+   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InfoTypeTransformation> getAdditionalTransformations() {
+    return additionalTransformations;
+  }
+
+  /**
+   * Transformations to apply to the detected data, overridden by `exclude_info_types`.
+   * @param additionalTransformations additionalTransformations or {@code null} for none
+   */
+  public TextConfig setAdditionalTransformations(java.util.List<InfoTypeTransformation> additionalTransformations) {
+    this.additionalTransformations = additionalTransformations;
+    return this;
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeInfoTypes() {
+    return excludeInfoTypes;
+  }
+
+  /**
+   * InfoTypes to skip transforming, overriding `additional_transformations`.
+   * @param excludeInfoTypes excludeInfoTypes or {@code null} for none
+   */
+  public TextConfig setExcludeInfoTypes(java.util.List<java.lang.String> excludeInfoTypes) {
+    this.excludeInfoTypes = excludeInfoTypes;
+    return this;
   }
 
   /**

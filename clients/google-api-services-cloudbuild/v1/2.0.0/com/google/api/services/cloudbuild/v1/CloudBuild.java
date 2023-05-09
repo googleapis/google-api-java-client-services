@@ -8383,6 +8383,31 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Update mask for the resource. If this is set, the server will only update the fields specified in
+         the field mask. Otherwise, a full update of the mutable resource fields will be performed.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Update mask for the resource. If this is set, the server will only update the fields
+           * specified in the field mask. Otherwise, a full update of the mutable resource fields
+           * will be performed.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
@@ -10458,6 +10483,31 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         /** Required. ID of the `BuildTrigger` to update. */
         public Patch setTriggerId(java.lang.String triggerId) {
           this.triggerId = triggerId;
+          return this;
+        }
+
+        /**
+         * Update mask for the resource. If this is set, the server will only update the fields
+         * specified in the field mask. Otherwise, a full update of the mutable resource fields will
+         * be performed.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Update mask for the resource. If this is set, the server will only update the fields specified in
+       the field mask. Otherwise, a full update of the mutable resource fields will be performed.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Update mask for the resource. If this is set, the server will only update the fields
+         * specified in the field mask. Otherwise, a full update of the mutable resource fields will
+         * be performed.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
           return this;
         }
 

@@ -165,8 +165,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private ConnectionStatus status;
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -496,8 +495,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscriptionType() {
@@ -505,8 +503,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * @param subscriptionType subscriptionType or {@code null} for none
    */
   public Connection setSubscriptionType(java.lang.String subscriptionType) {

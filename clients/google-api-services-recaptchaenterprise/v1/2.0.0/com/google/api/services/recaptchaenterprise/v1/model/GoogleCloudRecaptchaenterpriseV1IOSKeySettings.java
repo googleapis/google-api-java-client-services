@@ -45,6 +45,16 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   private java.util.List<java.lang.String> allowedBundleIds;
 
   /**
+   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
+   * assessment of the integrity of your app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1AppleDeveloperId appleDeveloperId;
+
+  /**
    * If set to true, allowed_bundle_ids are not enforced.
    * @return value or {@code null} for none
    */
@@ -75,6 +85,29 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
    */
   public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAllowedBundleIds(java.util.List<java.lang.String> allowedBundleIds) {
     this.allowedBundleIds = allowedBundleIds;
+    return this;
+  }
+
+  /**
+   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
+   * assessment of the integrity of your app.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1AppleDeveloperId getAppleDeveloperId() {
+    return appleDeveloperId;
+  }
+
+  /**
+   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
+   * assessment of the integrity of your app.
+   * @param appleDeveloperId appleDeveloperId or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1IOSKeySettings setAppleDeveloperId(GoogleCloudRecaptchaenterpriseV1AppleDeveloperId appleDeveloperId) {
+    this.appleDeveloperId = appleDeveloperId;
     return this;
   }
 

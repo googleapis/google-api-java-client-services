@@ -1281,11 +1281,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
-               * request is valid, the removal will be enquired and processed offlines. Depending on the number of
-               * Documents, this operation could take hours to complete. Before the operation completes, some
-               * Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments.
-               * To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+               * Permanently deletes all selected Documents in a branch. This process is asynchronous. Depending
+               * on the number of Documents to be deleted, this operation can take hours to complete. Before the
+               * delete operation completes, some Documents might still be returned by DocumentService.GetDocument
+               * or DocumentService.ListDocuments. To get a list of the Documents to be deleted, set
+               * PurgeDocumentsRequest.force to false.
                *
                * Create a request for the method "documents.purge".
                *
@@ -1311,12 +1311,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
 
                 /**
-                 * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
-                 * request is valid, the removal will be enquired and processed offlines. Depending on the number
-                 * of Documents, this operation could take hours to complete. Before the operation completes, some
-                 * Documents may still be returned by DocumentService.GetDocument or
-                 * DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set
-                 * PurgeDocumentsRequest.force to false.
+                 * Permanently deletes all selected Documents in a branch. This process is asynchronous. Depending
+                 * on the number of Documents to be deleted, this operation can take hours to complete. Before the
+                 * delete operation completes, some Documents might still be returned by
+                 * DocumentService.GetDocument or DocumentService.ListDocuments. To get a list of the Documents to
+                 * be deleted, set PurgeDocumentsRequest.force to false.
                  *
                  * Create a request for the method "documents.purge".
                  *
@@ -5013,11 +5012,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
-             * request is valid, the removal will be enquired and processed offlines. Depending on the number of
-             * Documents, this operation could take hours to complete. Before the operation completes, some
-             * Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments.
-             * To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+             * Permanently deletes all selected Documents in a branch. This process is asynchronous. Depending
+             * on the number of Documents to be deleted, this operation can take hours to complete. Before the
+             * delete operation completes, some Documents might still be returned by DocumentService.GetDocument
+             * or DocumentService.ListDocuments. To get a list of the Documents to be deleted, set
+             * PurgeDocumentsRequest.force to false.
              *
              * Create a request for the method "documents.purge".
              *
@@ -5043,12 +5042,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
 
               /**
-               * Permanently deletes all selected Documents under a branch. This process is asynchronous. If the
-               * request is valid, the removal will be enquired and processed offlines. Depending on the number
-               * of Documents, this operation could take hours to complete. Before the operation completes, some
-               * Documents may still be returned by DocumentService.GetDocument or
-               * DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set
-               * PurgeDocumentsRequest.force to false.
+               * Permanently deletes all selected Documents in a branch. This process is asynchronous. Depending
+               * on the number of Documents to be deleted, this operation can take hours to complete. Before the
+               * delete operation completes, some Documents might still be returned by
+               * DocumentService.GetDocument or DocumentService.ListDocuments. To get a list of the Documents to
+               * be deleted, set PurgeDocumentsRequest.force to false.
                *
                * Create a request for the method "documents.purge".
                *

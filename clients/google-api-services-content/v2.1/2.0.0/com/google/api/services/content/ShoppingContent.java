@@ -20839,16 +20839,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Optional. List of allowed tags. Tags are a set of predefined strings that describe the
-       * category that individual recommendation types. User can specify zero or more tags in this
-       * field to indicate what group of recommendations they want to receive. Current list of
-       * supported tags: - TREND
+       * category that individual recommendation types belong to. User can specify zero or more tags
+       * in this field to indicate what categories of recommendations they want to receive. Current
+       * list of supported tags: - TREND
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> allowedTag;
 
       /** Optional. List of allowed tags. Tags are a set of predefined strings that describe the category
-     that individual recommendation types. User can specify zero or more tags in this field to indicate
-     what group of recommendations they want to receive. Current list of supported tags: - TREND
+     that individual recommendation types belong to. User can specify zero or more tags in this field to
+     indicate what categories of recommendations they want to receive. Current list of supported tags: -
+     TREND
        */
       public java.util.List<java.lang.String> getAllowedTag() {
         return allowedTag;
@@ -20856,9 +20857,9 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Optional. List of allowed tags. Tags are a set of predefined strings that describe the
-       * category that individual recommendation types. User can specify zero or more tags in this
-       * field to indicate what group of recommendations they want to receive. Current list of
-       * supported tags: - TREND
+       * category that individual recommendation types belong to. User can specify zero or more tags
+       * in this field to indicate what categories of recommendations they want to receive. Current
+       * list of supported tags: - TREND
        */
       public Generate setAllowedTag(java.util.List<java.lang.String> allowedTag) {
         this.allowedTag = allowedTag;

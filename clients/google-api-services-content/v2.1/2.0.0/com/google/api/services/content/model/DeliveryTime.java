@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
-   * Business days cutoff time definition. If not configured the cutoff time will be defaulted to
+   * Business days cutoff time definition. If not configured, the cutoff time will be defaulted to
    * 8AM PST. If local delivery, use Service.StoreConfig.CutoffConfig.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   private java.util.List<WarehouseBasedDeliveryTime> warehouseBasedDeliveryTimes;
 
   /**
-   * Business days cutoff time definition. If not configured the cutoff time will be defaulted to
+   * Business days cutoff time definition. If not configured, the cutoff time will be defaulted to
    * 8AM PST. If local delivery, use Service.StoreConfig.CutoffConfig.
    * @return value or {@code null} for none
    */
@@ -122,7 +122,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Business days cutoff time definition. If not configured the cutoff time will be defaulted to
+   * Business days cutoff time definition. If not configured, the cutoff time will be defaulted to
    * 8AM PST. If local delivery, use Service.StoreConfig.CutoffConfig.
    * @param cutoffTime cutoffTime or {@code null} for none
    */

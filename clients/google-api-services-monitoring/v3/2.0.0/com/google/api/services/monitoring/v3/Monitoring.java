@@ -4537,17 +4537,27 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** A positive number that is the maximum number of results to return. */
+        /**
+         * A positive number that is the maximum number of results to return. The default and
+         * maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
+         * return a maximum of 10,000 results.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** A positive number that is the maximum number of results to return.
+        /** A positive number that is the maximum number of results to return. The default and maximum value is
+       10,000. If a page_size <= 0 or > 10,000 is submitted, will instead return a maximum of 10,000
+       results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** A positive number that is the maximum number of results to return. */
+        /**
+         * A positive number that is the maximum number of results to return. The default and
+         * maximum value is 10,000. If a page_size <= 0 or > 10,000 is submitted, will instead
+         * return a maximum of 10,000 results.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

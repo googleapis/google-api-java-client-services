@@ -39,8 +39,8 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
   private java.lang.String path;
 
   /**
-   * Version of the secret (version number or the string 'latest'). It is preferrable to use
-   * `latest` version with secret volumes as secret value changes are reflected immediately.
+   * Version of the secret (version number or the string 'latest'). It is preferable to use `latest`
+   * version with secret volumes as secret value changes are reflected immediately.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Version of the secret (version number or the string 'latest'). It is preferrable to use
-   * `latest` version with secret volumes as secret value changes are reflected immediately.
+   * Version of the secret (version number or the string 'latest'). It is preferable to use `latest`
+   * version with secret volumes as secret value changes are reflected immediately.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -77,8 +77,8 @@ public final class SecretVersion extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Version of the secret (version number or the string 'latest'). It is preferrable to use
-   * `latest` version with secret volumes as secret value changes are reflected immediately.
+   * Version of the secret (version number or the string 'latest'). It is preferable to use `latest`
+   * version with secret volumes as secret value changes are reflected immediately.
    * @param version version or {@code null} for none
    */
   public SecretVersion setVersion(java.lang.String version) {

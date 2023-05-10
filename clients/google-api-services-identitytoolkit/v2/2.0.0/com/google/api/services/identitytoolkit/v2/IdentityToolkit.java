@@ -7912,6 +7912,130 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
   public class V2 {
 
     /**
+     * Gets password policy config set on the project or tenant.
+     *
+     * Create a request for the method "v2.getPasswordPolicy".
+     *
+     * This request holds the parameters needed by the identitytoolkit server.  After setting any
+     * optional parameters, call the {@link GetPasswordPolicy#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GetPasswordPolicy getPasswordPolicy() throws java.io.IOException {
+      GetPasswordPolicy result = new GetPasswordPolicy();
+      initialize(result);
+      return result;
+    }
+
+    public class GetPasswordPolicy extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2PasswordPolicy> {
+
+      private static final String REST_PATH = "v2/passwordPolicy";
+
+      /**
+       * Gets password policy config set on the project or tenant.
+       *
+       * Create a request for the method "v2.getPasswordPolicy".
+       *
+       * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link GetPasswordPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link GetPasswordPolicy#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetPasswordPolicy() {
+        super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitV2PasswordPolicy.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetPasswordPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetPasswordPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetPasswordPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetPasswordPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetPasswordPolicy setAlt(java.lang.String alt) {
+        return (GetPasswordPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetPasswordPolicy setCallback(java.lang.String callback) {
+        return (GetPasswordPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetPasswordPolicy setFields(java.lang.String fields) {
+        return (GetPasswordPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetPasswordPolicy setKey(java.lang.String key) {
+        return (GetPasswordPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetPasswordPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetPasswordPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetPasswordPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetPasswordPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetPasswordPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetPasswordPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetPasswordPolicy setUploadType(java.lang.String uploadType) {
+        return (GetPasswordPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetPasswordPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetPasswordPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The id of a tenant. */
+      @com.google.api.client.util.Key
+      private java.lang.String tenantId;
+
+      /** The id of a tenant.
+       */
+      public java.lang.String getTenantId() {
+        return tenantId;
+      }
+
+      /** The id of a tenant. */
+      public GetPasswordPolicy setTenantId(java.lang.String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+      }
+
+      @Override
+      public GetPasswordPolicy set(String parameterName, Object value) {
+        return (GetPasswordPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets parameters needed for reCAPTCHA analysis.
      *
      * Create a request for the method "v2.getRecaptchaConfig".

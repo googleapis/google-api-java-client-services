@@ -101,6 +101,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2NotificationConfig notification;
 
   /**
+   * The project level password policy configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig passwordPolicyConfig;
+
+  /**
    * Configuration related to quotas.
    * The value may be {@code null}.
    */
@@ -304,6 +311,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Config setNotification(GoogleCloudIdentitytoolkitAdminV2NotificationConfig notification) {
     this.notification = notification;
+    return this;
+  }
+
+  /**
+   * The project level password policy configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig getPasswordPolicyConfig() {
+    return passwordPolicyConfig;
+  }
+
+  /**
+   * The project level password policy configuration.
+   * @param passwordPolicyConfig passwordPolicyConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setPasswordPolicyConfig(GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig passwordPolicyConfig) {
+    this.passwordPolicyConfig = passwordPolicyConfig;
     return this;
   }
 

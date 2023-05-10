@@ -264,6 +264,29 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   public static final class BakExportOptions extends com.google.api.client.json.GenericJson {
 
     /**
+     * Type of this bak file will be export, FULL or DIFF, SQL Server only
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String bakType;
+
+    /**
+     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
+     * behavior should default to copy_only = true use differential_base instead
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean copyOnly;
+
+    /**
+     * Whether or not the backup can be use as differential base only non copy only backup can be
+     * served as differential base
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean differentialBase;
+
+    /**
      * Option for specifying how many stripes to use for the export. If blank, and the value of the
      * striped field is true, the number of stripes is automatically chosen.
      * The value may be {@code null}.
@@ -277,6 +300,61 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean striped;
+
+    /**
+     * Type of this bak file will be export, FULL or DIFF, SQL Server only
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getBakType() {
+      return bakType;
+    }
+
+    /**
+     * Type of this bak file will be export, FULL or DIFF, SQL Server only
+     * @param bakType bakType or {@code null} for none
+     */
+    public BakExportOptions setBakType(java.lang.String bakType) {
+      this.bakType = bakType;
+      return this;
+    }
+
+    /**
+     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
+     * behavior should default to copy_only = true use differential_base instead
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCopyOnly() {
+      return copyOnly;
+    }
+
+    /**
+     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
+     * behavior should default to copy_only = true use differential_base instead
+     * @param copyOnly copyOnly or {@code null} for none
+     */
+    public BakExportOptions setCopyOnly(java.lang.Boolean copyOnly) {
+      this.copyOnly = copyOnly;
+      return this;
+    }
+
+    /**
+     * Whether or not the backup can be use as differential base only non copy only backup can be
+     * served as differential base
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getDifferentialBase() {
+      return differentialBase;
+    }
+
+    /**
+     * Whether or not the backup can be use as differential base only non copy only backup can be
+     * served as differential base
+     * @param differentialBase differentialBase or {@code null} for none
+     */
+    public BakExportOptions setDifferentialBase(java.lang.Boolean differentialBase) {
+      this.differentialBase = differentialBase;
+      return this;
+    }
 
     /**
      * Option for specifying how many stripes to use for the export. If blank, and the value of the

@@ -228,10 +228,34 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   public static final class BakImportOptions extends com.google.api.client.json.GenericJson {
 
     /**
+     * Type of the bak content, FULL or DIFF.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String bakType;
+
+    /**
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private EncryptionOptions encryptionOptions;
+
+    /**
+     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * to Cloud SQL for SQL Server.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean noRecovery;
+
+    /**
+     * Whether or not the backup importing request will just bring database online without downloading
+     * Bak content only one of "no_recovery" and "recovery_only" can be true otherwise error will
+     * return. Applies only to Cloud SQL for SQL Server.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean recoveryOnly;
 
     /**
      * Whether or not the backup set being restored is striped. Applies only to Cloud SQL for SQL
@@ -240,6 +264,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean striped;
+
+    /**
+     * Type of the bak content, FULL or DIFF.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getBakType() {
+      return bakType;
+    }
+
+    /**
+     * Type of the bak content, FULL or DIFF.
+     * @param bakType bakType or {@code null} for none
+     */
+    public BakImportOptions setBakType(java.lang.String bakType) {
+      this.bakType = bakType;
+      return this;
+    }
 
     /**
      * @return value or {@code null} for none
@@ -253,6 +294,46 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     public BakImportOptions setEncryptionOptions(EncryptionOptions encryptionOptions) {
       this.encryptionOptions = encryptionOptions;
+      return this;
+    }
+
+    /**
+     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * to Cloud SQL for SQL Server.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getNoRecovery() {
+      return noRecovery;
+    }
+
+    /**
+     * Whether or not the backup importing will restore database with NORECOVERY option Applies only
+     * to Cloud SQL for SQL Server.
+     * @param noRecovery noRecovery or {@code null} for none
+     */
+    public BakImportOptions setNoRecovery(java.lang.Boolean noRecovery) {
+      this.noRecovery = noRecovery;
+      return this;
+    }
+
+    /**
+     * Whether or not the backup importing request will just bring database online without downloading
+     * Bak content only one of "no_recovery" and "recovery_only" can be true otherwise error will
+     * return. Applies only to Cloud SQL for SQL Server.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getRecoveryOnly() {
+      return recoveryOnly;
+    }
+
+    /**
+     * Whether or not the backup importing request will just bring database online without downloading
+     * Bak content only one of "no_recovery" and "recovery_only" can be true otherwise error will
+     * return. Applies only to Cloud SQL for SQL Server.
+     * @param recoveryOnly recoveryOnly or {@code null} for none
+     */
+    public BakImportOptions setRecoveryOnly(java.lang.Boolean recoveryOnly) {
+      this.recoveryOnly = recoveryOnly;
       return this;
     }
 

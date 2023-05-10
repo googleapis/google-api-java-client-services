@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2beta.model;
 
 /**
- * More configs of the frequently-bought-together model type.
+ * Additional configs for the frequently-bought-together model type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Retail API. For a detailed explanation see:
@@ -30,16 +30,18 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2ModelFrequentlyBoughtTogetherFeaturesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the context of the model when used in predict requests. Only settable for
-   * the `frequently-bought-together` type. Will default to MULTI_CONTEXT if not specified.
+   * Optional. Specifies the context of the model when it is used in predict requests. Can only be
+   * set for the `frequently-bought-together` type. If it isn't specified, it defaults to
+   * MULTIPLE_CONTEXT_PRODUCTS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contextProductsType;
 
   /**
-   * Optional. Specifies the context of the model when used in predict requests. Only settable for
-   * the `frequently-bought-together` type. Will default to MULTI_CONTEXT if not specified.
+   * Optional. Specifies the context of the model when it is used in predict requests. Can only be
+   * set for the `frequently-bought-together` type. If it isn't specified, it defaults to
+   * MULTIPLE_CONTEXT_PRODUCTS.
    * @return value or {@code null} for none
    */
   public java.lang.String getContextProductsType() {
@@ -47,8 +49,9 @@ public final class GoogleCloudRetailV2ModelFrequentlyBoughtTogetherFeaturesConfi
   }
 
   /**
-   * Optional. Specifies the context of the model when used in predict requests. Only settable for
-   * the `frequently-bought-together` type. Will default to MULTI_CONTEXT if not specified.
+   * Optional. Specifies the context of the model when it is used in predict requests. Can only be
+   * set for the `frequently-bought-together` type. If it isn't specified, it defaults to
+   * MULTIPLE_CONTEXT_PRODUCTS.
    * @param contextProductsType contextProductsType or {@code null} for none
    */
   public GoogleCloudRetailV2ModelFrequentlyBoughtTogetherFeaturesConfig setContextProductsType(java.lang.String contextProductsType) {

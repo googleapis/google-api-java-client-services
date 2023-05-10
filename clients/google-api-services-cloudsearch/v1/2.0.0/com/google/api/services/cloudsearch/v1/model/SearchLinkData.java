@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * The style options for the border of a card or widget, including the border type and color.
+ * SearchLink metadata, for SEARCH_LINK segments. For a search link, the "text" field should contain
+ * the display text. This is currently not indexed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,88 +28,85 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AppsDynamiteStorageBorderStyle extends com.google.api.client.json.GenericJson {
+public final class SearchLinkData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The corner radius for the border.
+   * For lightweight scoring in serving time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer cornerRadius;
+  private java.lang.Float kgEntityConfidence;
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
+   * MID of the KG entity being linked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Color strokeColor;
+  private java.lang.String mid;
 
   /**
-   * The border type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.Float queryBroadnessScore;
 
   /**
-   * The corner radius for the border.
+   * For lightweight scoring in serving time.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getCornerRadius() {
-    return cornerRadius;
+  public java.lang.Float getKgEntityConfidence() {
+    return kgEntityConfidence;
   }
 
   /**
-   * The corner radius for the border.
-   * @param cornerRadius cornerRadius or {@code null} for none
+   * For lightweight scoring in serving time.
+   * @param kgEntityConfidence kgEntityConfidence or {@code null} for none
    */
-  public AppsDynamiteStorageBorderStyle setCornerRadius(java.lang.Integer cornerRadius) {
-    this.cornerRadius = cornerRadius;
+  public SearchLinkData setKgEntityConfidence(java.lang.Float kgEntityConfidence) {
+    this.kgEntityConfidence = kgEntityConfidence;
     return this;
   }
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
+   * MID of the KG entity being linked.
    * @return value or {@code null} for none
    */
-  public Color getStrokeColor() {
-    return strokeColor;
+  public java.lang.String getMid() {
+    return mid;
   }
 
   /**
-   * The colors to use when the type is `BORDER_TYPE_STROKE`.
-   * @param strokeColor strokeColor or {@code null} for none
+   * MID of the KG entity being linked.
+   * @param mid mid or {@code null} for none
    */
-  public AppsDynamiteStorageBorderStyle setStrokeColor(Color strokeColor) {
-    this.strokeColor = strokeColor;
+  public SearchLinkData setMid(java.lang.String mid) {
+    this.mid = mid;
     return this;
   }
 
   /**
-   * The border type.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.Float getQueryBroadnessScore() {
+    return queryBroadnessScore;
   }
 
   /**
-   * The border type.
-   * @param type type or {@code null} for none
+   * @param queryBroadnessScore queryBroadnessScore or {@code null} for none
    */
-  public AppsDynamiteStorageBorderStyle setType(java.lang.String type) {
-    this.type = type;
+  public SearchLinkData setQueryBroadnessScore(java.lang.Float queryBroadnessScore) {
+    this.queryBroadnessScore = queryBroadnessScore;
     return this;
   }
 
   @Override
-  public AppsDynamiteStorageBorderStyle set(String fieldName, Object value) {
-    return (AppsDynamiteStorageBorderStyle) super.set(fieldName, value);
+  public SearchLinkData set(String fieldName, Object value) {
+    return (SearchLinkData) super.set(fieldName, value);
   }
 
   @Override
-  public AppsDynamiteStorageBorderStyle clone() {
-    return (AppsDynamiteStorageBorderStyle) super.clone();
+  public SearchLinkData clone() {
+    return (SearchLinkData) super.clone();
   }
 
 }

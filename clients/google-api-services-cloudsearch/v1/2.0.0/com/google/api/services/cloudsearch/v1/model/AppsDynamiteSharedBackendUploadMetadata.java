@@ -76,6 +76,13 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   private DlpScanSummary dlpScanSummary;
 
   /**
+   * The list of experiments this video is enabled for Next tag: 19
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> experiment;
+
+  /**
    * GroupId to which this attachment is uploaded.
    * The value may be {@code null}.
    */
@@ -83,7 +90,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   private GroupId groupId;
 
   /**
-   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * If the uploaded file is a video that has been transcoded on the client side
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,6 +269,23 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   }
 
   /**
+   * The list of experiments this video is enabled for Next tag: 19
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExperiment() {
+    return experiment;
+  }
+
+  /**
+   * The list of experiments this video is enabled for Next tag: 19
+   * @param experiment experiment or {@code null} for none
+   */
+  public AppsDynamiteSharedBackendUploadMetadata setExperiment(java.util.List<java.lang.String> experiment) {
+    this.experiment = experiment;
+    return this;
+  }
+
+  /**
    * GroupId to which this attachment is uploaded.
    * @return value or {@code null} for none
    */
@@ -279,7 +303,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   }
 
   /**
-   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * If the uploaded file is a video that has been transcoded on the client side
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsClientSideTranscodedVideo() {
@@ -287,7 +311,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   }
 
   /**
-   * If the uploaded file is a video that has been transcoded on the client side Next tag: 18
+   * If the uploaded file is a video that has been transcoded on the client side
    * @param isClientSideTranscodedVideo isClientSideTranscodedVideo or {@code null} for none
    */
   public AppsDynamiteSharedBackendUploadMetadata setIsClientSideTranscodedVideo(java.lang.Boolean isClientSideTranscodedVideo) {

@@ -17,8 +17,13 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A paragraph of text. Formatted text supported. For more information about formatting text, see
- * Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+ * Contains reference to another message. It is used in shortcuts which are used to collect messages
+ * from different spaces with a certain common property into another space. For example, all
+ * @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-design
+ * for more details). Clients can use this reference to enable navigation to the source message when
+ * the shortcut message is clicked and also to identify a few other details about the source
+ * message. Other fields (like text) from the source message are copied on to the top-level fields
+ * in the Message proto by the server (More details in go/chat-shortcuts-client-server-design).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,37 +33,37 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChatV1WidgetMarkupTextParagraph extends com.google.api.client.json.GenericJson {
+public final class MessageReference extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String text;
+  private SourceMessageInfo sourceInfo;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getText() {
-    return text;
+  public SourceMessageInfo getSourceInfo() {
+    return sourceInfo;
   }
 
   /**
-   * @param text text or {@code null} for none
+   * @param sourceInfo sourceInfo or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupTextParagraph setText(java.lang.String text) {
-    this.text = text;
+  public MessageReference setSourceInfo(SourceMessageInfo sourceInfo) {
+    this.sourceInfo = sourceInfo;
     return this;
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextParagraph set(String fieldName, Object value) {
-    return (GoogleChatV1WidgetMarkupTextParagraph) super.set(fieldName, value);
+  public MessageReference set(String fieldName, Object value) {
+    return (MessageReference) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextParagraph clone() {
-    return (GoogleChatV1WidgetMarkupTextParagraph) super.clone();
+  public MessageReference clone() {
+    return (MessageReference) super.clone();
   }
 
 }

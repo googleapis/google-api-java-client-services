@@ -30,21 +30,16 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class AppsDynamiteStorageColumns extends com.google.api.client.json.GenericJson {
 
   /**
-   * Each card supports up to 2 columns.
+   * Each card supports up to 2 columns. If the user's screen width is less than or equal to 480
+   * pixels, the second column wraps below the first column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AppsDynamiteStorageColumnsColumn> columnItems;
 
   /**
-   * Controls how the column resizes based on screen width.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String wrapStyle;
-
-  /**
-   * Each card supports up to 2 columns.
+   * Each card supports up to 2 columns. If the user's screen width is less than or equal to 480
+   * pixels, the second column wraps below the first column.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsDynamiteStorageColumnsColumn> getColumnItems() {
@@ -52,28 +47,12 @@ public final class AppsDynamiteStorageColumns extends com.google.api.client.json
   }
 
   /**
-   * Each card supports up to 2 columns.
+   * Each card supports up to 2 columns. If the user's screen width is less than or equal to 480
+   * pixels, the second column wraps below the first column.
    * @param columnItems columnItems or {@code null} for none
    */
   public AppsDynamiteStorageColumns setColumnItems(java.util.List<AppsDynamiteStorageColumnsColumn> columnItems) {
     this.columnItems = columnItems;
-    return this;
-  }
-
-  /**
-   * Controls how the column resizes based on screen width.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getWrapStyle() {
-    return wrapStyle;
-  }
-
-  /**
-   * Controls how the column resizes based on screen width.
-   * @param wrapStyle wrapStyle or {@code null} for none
-   */
-  public AppsDynamiteStorageColumns setWrapStyle(java.lang.String wrapStyle) {
-    this.wrapStyle = wrapStyle;
     return this;
   }
 

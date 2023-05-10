@@ -59,6 +59,17 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private AppsDynamiteStorageCard cardAddOnData;
 
   /**
+   * Contains additional metadata that further enhance the annotation when it is returned as part of
+   * search response. For example, this can be used to define how the attachment matches the search.
+   * Information can be used to highlight in rendering search results. The following are the
+   * different attachment text fields that are covered by this field: 1.
+   * ContextualAddOn.Card.CardHeader.title 2. CardItem.CardItemHeader.title
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedMessageComponentSearchInfo componentSearchInfo;
+
+  /**
    * Deprecated version of Gmail AddOn attachment.
    * The value may be {@code null}.
    */
@@ -146,6 +157,31 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
    */
   public Attachment setCardAddOnData(AppsDynamiteStorageCard cardAddOnData) {
     this.cardAddOnData = cardAddOnData;
+    return this;
+  }
+
+  /**
+   * Contains additional metadata that further enhance the annotation when it is returned as part of
+   * search response. For example, this can be used to define how the attachment matches the search.
+   * Information can be used to highlight in rendering search results. The following are the
+   * different attachment text fields that are covered by this field: 1.
+   * ContextualAddOn.Card.CardHeader.title 2. CardItem.CardItemHeader.title
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedMessageComponentSearchInfo getComponentSearchInfo() {
+    return componentSearchInfo;
+  }
+
+  /**
+   * Contains additional metadata that further enhance the annotation when it is returned as part of
+   * search response. For example, this can be used to define how the attachment matches the search.
+   * Information can be used to highlight in rendering search results. The following are the
+   * different attachment text fields that are covered by this field: 1.
+   * ContextualAddOn.Card.CardHeader.title 2. CardItem.CardItemHeader.title
+   * @param componentSearchInfo componentSearchInfo or {@code null} for none
+   */
+  public Attachment setComponentSearchInfo(AppsDynamiteSharedMessageComponentSearchInfo componentSearchInfo) {
+    this.componentSearchInfo = componentSearchInfo;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 52
+ * be updated. Next ID: 53
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -219,6 +219,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float pnav;
+
+  /**
+   * denominator for the pnav computation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float pnavClicks;
 
   /**
    * NSR - prior. Estimate of whether the site is above/below average NSR in its slice.
@@ -820,6 +827,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setPnav(java.lang.Float pnav) {
     this.pnav = pnav;
+    return this;
+  }
+
+  /**
+   * denominator for the pnav computation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPnavClicks() {
+    return pnavClicks;
+  }
+
+  /**
+   * denominator for the pnav computation
+   * @param pnavClicks pnavClicks or {@code null} for none
+   */
+  public QualityNsrNsrData setPnavClicks(java.lang.Float pnavClicks) {
+    this.pnavClicks = pnavClicks;
     return this;
   }
 

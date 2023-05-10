@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These are the set of features that are supported by the device. It's a part of the
- * SoftwareCapabilities of the device. Next ID: 63
+ * SoftwareCapabilities of the device. Next ID: 64
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -241,6 +241,14 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPairedPhoneNeededForComms;
+
+  /**
+   * Whether the client supports confirmation flow when a permission is missing. If set to true, the
+   * user will be prompted and on confirmation the original flow will continue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean justInTimeSupported;
 
   /**
    * Which way of launching the keyboard the client supports.
@@ -1031,6 +1039,25 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   public AssistantApiSupportedFeatures setIsPairedPhoneNeededForComms(java.lang.Boolean isPairedPhoneNeededForComms) {
     this.isPairedPhoneNeededForComms = isPairedPhoneNeededForComms;
+    return this;
+  }
+
+  /**
+   * Whether the client supports confirmation flow when a permission is missing. If set to true, the
+   * user will be prompted and on confirmation the original flow will continue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getJustInTimeSupported() {
+    return justInTimeSupported;
+  }
+
+  /**
+   * Whether the client supports confirmation flow when a permission is missing. If set to true, the
+   * user will be prompted and on confirmation the original flow will continue.
+   * @param justInTimeSupported justInTimeSupported or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setJustInTimeSupported(java.lang.Boolean justInTimeSupported) {
+    this.justInTimeSupported = justInTimeSupported;
     return this;
   }
 

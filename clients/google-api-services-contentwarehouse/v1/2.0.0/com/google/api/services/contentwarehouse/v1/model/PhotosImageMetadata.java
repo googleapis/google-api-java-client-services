@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next tag value: 381.
+ * Next tag value: 382.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -1095,6 +1095,13 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   private java.lang.Boolean hasAlpha;
 
   /**
+   * Indicates that the image has some form of HDR present or available to it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PhotosHdrMetadata hdrMetadata;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1646,9 +1653,10 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   private java.lang.Integer resolutionunit;
 
   /**
-   * being returned to caller Use values defined in "MIME_TYPE" This field is deprecated. Rotation
-   * is now accomplished via ImageInfo.exif_orientation and ImageInfo.edit_list. Number of degrees
-   * (0, 90, 180,
+   * This field is deprecated. Rotation is now accomplished via ImageInfo.exif_orientation and
+   * ImageInfo.edit_list. WARNING: the presence of rotate is used by FIFE to identify older images.
+   * Setting this (even to the correct number of degrees) on newer images can cause incorrectly
+   * rotated thumbnails. This was the cause of omg/58543 Number of degrees (0, 90, 180, 270)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -4618,6 +4626,23 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   }
 
   /**
+   * Indicates that the image has some form of HDR present or available to it.
+   * @return value or {@code null} for none
+   */
+  public PhotosHdrMetadata getHdrMetadata() {
+    return hdrMetadata;
+  }
+
+  /**
+   * Indicates that the image has some form of HDR present or available to it.
+   * @param hdrMetadata hdrMetadata or {@code null} for none
+   */
+  public PhotosImageMetadata setHdrMetadata(PhotosHdrMetadata hdrMetadata) {
+    this.hdrMetadata = hdrMetadata;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadline() {
@@ -6022,9 +6047,10 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * being returned to caller Use values defined in "MIME_TYPE" This field is deprecated. Rotation
-   * is now accomplished via ImageInfo.exif_orientation and ImageInfo.edit_list. Number of degrees
-   * (0, 90, 180,
+   * This field is deprecated. Rotation is now accomplished via ImageInfo.exif_orientation and
+   * ImageInfo.edit_list. WARNING: the presence of rotate is used by FIFE to identify older images.
+   * Setting this (even to the correct number of degrees) on newer images can cause incorrectly
+   * rotated thumbnails. This was the cause of omg/58543 Number of degrees (0, 90, 180, 270)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRotate() {
@@ -6032,9 +6058,10 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * being returned to caller Use values defined in "MIME_TYPE" This field is deprecated. Rotation
-   * is now accomplished via ImageInfo.exif_orientation and ImageInfo.edit_list. Number of degrees
-   * (0, 90, 180,
+   * This field is deprecated. Rotation is now accomplished via ImageInfo.exif_orientation and
+   * ImageInfo.edit_list. WARNING: the presence of rotate is used by FIFE to identify older images.
+   * Setting this (even to the correct number of degrees) on newer images can cause incorrectly
+   * rotated thumbnails. This was the cause of omg/58543 Number of degrees (0, 90, 180, 270)
    * @param rotate rotate or {@code null} for none
    */
   public PhotosImageMetadata setRotate(java.lang.Integer rotate) {

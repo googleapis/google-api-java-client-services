@@ -18,7 +18,7 @@ package com.google.api.services.datamigration.v1.model;
 
 /**
  * Private Service Connect connectivity (https://cloud.google.com/vpc/docs/private-service-connect
- * #benefits-services)
+ * #service-attachments)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation

@@ -50,26 +50,6 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String exactSearchableOption;
 
   /**
-   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
-   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
-   * its product numerical attribute values. The calculated intervals might not be ideal for some
-   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
-   * that is passed as a facet key in the request along with given intervals, the given intervals
-   * are the facet intervals returned in the response.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRetailV2alphaInterval> facetIntervals;
-
-  /**
-   * Each instance represents a list of attribute values to ignore as facet values for a specific
-   * time range.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues> ignoredFacetValues;
-
-  /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
    * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
@@ -183,52 +163,6 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setExactSearchableOption(java.lang.String exactSearchableOption) {
     this.exactSearchableOption = exactSearchableOption;
-    return this;
-  }
-
-  /**
-   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
-   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
-   * its product numerical attribute values. The calculated intervals might not be ideal for some
-   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
-   * that is passed as a facet key in the request along with given intervals, the given intervals
-   * are the facet intervals returned in the response.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRetailV2alphaInterval> getFacetIntervals() {
-    return facetIntervals;
-  }
-
-  /**
-   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute,
-   * then a weekly pipeline calculates intervals using some percentiles on the distribution of all
-   * its product numerical attribute values. The calculated intervals might not be ideal for some
-   * attributes. Therefore, we give you the option the overwrite them. For any numerical attribute
-   * that is passed as a facet key in the request along with given intervals, the given intervals
-   * are the facet intervals returned in the response.
-   * @param facetIntervals facetIntervals or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaCatalogAttribute setFacetIntervals(java.util.List<GoogleCloudRetailV2alphaInterval> facetIntervals) {
-    this.facetIntervals = facetIntervals;
-    return this;
-  }
-
-  /**
-   * Each instance represents a list of attribute values to ignore as facet values for a specific
-   * time range.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues> getIgnoredFacetValues() {
-    return ignoredFacetValues;
-  }
-
-  /**
-   * Each instance represents a list of attribute values to ignore as facet values for a specific
-   * time range.
-   * @param ignoredFacetValues ignoredFacetValues or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaCatalogAttribute setIgnoredFacetValues(java.util.List<GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues> ignoredFacetValues) {
-    this.ignoredFacetValues = ignoredFacetValues;
     return this;
   }
 

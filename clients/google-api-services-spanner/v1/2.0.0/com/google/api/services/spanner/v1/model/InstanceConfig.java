@@ -135,7 +135,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.util.List<ReplicaInfo> replicas;
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance config state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -383,7 +383,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance config state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -391,7 +391,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current instance config state. Applicable only for USER_MANAGED configs.
+   * Output only. The current instance config state.
    * @param state state or {@code null} for none
    */
   public InstanceConfig setState(java.lang.String state) {

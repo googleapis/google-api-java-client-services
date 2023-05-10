@@ -134,6 +134,13 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordResponse extend
   private java.lang.Boolean registered;
 
   /**
+   * Warning notifications for the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIdentitytoolkitV1UserNotification> userNotifications;
+
+  /**
    * The user's display name stored in the account's attributes.
    * @return value or {@code null} for none
    */
@@ -368,6 +375,23 @@ public final class GoogleCloudIdentitytoolkitV1SignInWithPasswordResponse extend
    */
   public GoogleCloudIdentitytoolkitV1SignInWithPasswordResponse setRegistered(java.lang.Boolean registered) {
     this.registered = registered;
+    return this;
+  }
+
+  /**
+   * Warning notifications for the user.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIdentitytoolkitV1UserNotification> getUserNotifications() {
+    return userNotifications;
+  }
+
+  /**
+   * Warning notifications for the user.
+   * @param userNotifications userNotifications or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1SignInWithPasswordResponse setUserNotifications(java.util.List<GoogleCloudIdentitytoolkitV1UserNotification> userNotifications) {
+    this.userNotifications = userNotifications;
     return this;
   }
 

@@ -126,6 +126,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private java.lang.String name;
 
   /**
+   * The tenant-level password policy config
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig passwordPolicyConfig;
+
+  /**
    * The tenant-level reCAPTCHA config.
    * The value may be {@code null}.
    */
@@ -376,6 +383,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The tenant-level password policy config
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig getPasswordPolicyConfig() {
+    return passwordPolicyConfig;
+  }
+
+  /**
+   * The tenant-level password policy config
+   * @param passwordPolicyConfig passwordPolicyConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setPasswordPolicyConfig(GoogleCloudIdentitytoolkitAdminV2PasswordPolicyConfig passwordPolicyConfig) {
+    this.passwordPolicyConfig = passwordPolicyConfig;
     return this;
   }
 

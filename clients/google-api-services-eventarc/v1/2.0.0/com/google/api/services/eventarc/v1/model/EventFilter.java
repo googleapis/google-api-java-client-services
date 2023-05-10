@@ -31,7 +31,9 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are
-   * supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+   * supported for filtering. You can [retrieve a specific provider's supported event
+   * types](/eventarc/docs/list-providers#describe-provider). All triggers MUST provide a filter for
+   * the 'type' attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +57,9 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are
-   * supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+   * supported for filtering. You can [retrieve a specific provider's supported event
+   * types](/eventarc/docs/list-providers#describe-provider). All triggers MUST provide a filter for
+   * the 'type' attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttribute() {
@@ -64,7 +68,9 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are
-   * supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
+   * supported for filtering. You can [retrieve a specific provider's supported event
+   * types](/eventarc/docs/list-providers#describe-provider). All triggers MUST provide a filter for
+   * the 'type' attribute.
    * @param attribute attribute or {@code null} for none
    */
   public EventFilter setAttribute(java.lang.String attribute) {

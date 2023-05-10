@@ -53,6 +53,13 @@ public final class Segment extends com.google.api.client.json.GenericJson {
   private LinkData linkData;
 
   /**
+   * For SEARCH_LINK type:
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SearchLinkData searchLinkData;
+
+  /**
    * Text content of the Segment. As a general rule, this field should contain the actual text that
    * should be rendered in the UI. Thus, for a hashtag, it should be "#Foo", and for a link, it
    * should be the display text. Clients that do not understand a particular segment type may use
@@ -134,6 +141,23 @@ public final class Segment extends com.google.api.client.json.GenericJson {
    */
   public Segment setLinkData(LinkData linkData) {
     this.linkData = linkData;
+    return this;
+  }
+
+  /**
+   * For SEARCH_LINK type:
+   * @return value or {@code null} for none
+   */
+  public SearchLinkData getSearchLinkData() {
+    return searchLinkData;
+  }
+
+  /**
+   * For SEARCH_LINK type:
+   * @param searchLinkData searchLinkData or {@code null} for none
+   */
+  public Segment setSearchLinkData(SearchLinkData searchLinkData) {
+    this.searchLinkData = searchLinkData;
     return this;
   }
 

@@ -32,7 +32,16 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DataLossPreventionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The DLP scan summary that should only be set after the message is scanned in the Chat backend.
+   * The scan record contains the action taken on the message send as well as scan the summary for
+   * the message contents and the attachment, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DlpMessageScanRecord dlpMessageScanRecord;
+
+  /**
+   * Deprecated. To be replaced by DLP scan record. The DLP scan summary that should only be set
+   * after the message is scanned in the Chat backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +55,27 @@ public final class DataLossPreventionMetadata extends com.google.api.client.json
   private java.lang.Boolean warnAcknowledged;
 
   /**
-   * The DLP scan summary that should only be set after the message is scanned in the Chat backend.
+   * The scan record contains the action taken on the message send as well as scan the summary for
+   * the message contents and the attachment, if applicable.
+   * @return value or {@code null} for none
+   */
+  public DlpMessageScanRecord getDlpMessageScanRecord() {
+    return dlpMessageScanRecord;
+  }
+
+  /**
+   * The scan record contains the action taken on the message send as well as scan the summary for
+   * the message contents and the attachment, if applicable.
+   * @param dlpMessageScanRecord dlpMessageScanRecord or {@code null} for none
+   */
+  public DataLossPreventionMetadata setDlpMessageScanRecord(DlpMessageScanRecord dlpMessageScanRecord) {
+    this.dlpMessageScanRecord = dlpMessageScanRecord;
+    return this;
+  }
+
+  /**
+   * Deprecated. To be replaced by DLP scan record. The DLP scan summary that should only be set
+   * after the message is scanned in the Chat backend.
    * @return value or {@code null} for none
    */
   public DlpScanSummary getDlpScanSummary() {
@@ -54,7 +83,8 @@ public final class DataLossPreventionMetadata extends com.google.api.client.json
   }
 
   /**
-   * The DLP scan summary that should only be set after the message is scanned in the Chat backend.
+   * Deprecated. To be replaced by DLP scan record. The DLP scan summary that should only be set
+   * after the message is scanned in the Chat backend.
    * @param dlpScanSummary dlpScanSummary or {@code null} for none
    */
   public DataLossPreventionMetadata setDlpScanSummary(DlpScanSummary dlpScanSummary) {

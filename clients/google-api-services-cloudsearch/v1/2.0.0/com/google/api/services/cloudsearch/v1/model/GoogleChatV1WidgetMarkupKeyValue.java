@@ -31,7 +31,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text of the bottom label. Formatted text supported.
+   * The text of the bottom label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,9 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   private GoogleChatV1WidgetMarkupButton button;
 
   /**
-   * The text of the content. Formatted text supported and always required.
+   * The text of the content. Formatted text supported and always required. For more information
+   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,14 +83,16 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   private GoogleChatV1WidgetMarkupOnClick onClick;
 
   /**
-   * The text of the top label. Formatted text supported.
+   * The text of the top label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topLabel;
 
   /**
-   * The text of the bottom label. Formatted text supported.
+   * The text of the bottom label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getBottomLabel() {
@@ -95,7 +100,8 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   }
 
   /**
-   * The text of the bottom label. Formatted text supported.
+   * The text of the bottom label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @param bottomLabel bottomLabel or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupKeyValue setBottomLabel(java.lang.String bottomLabel) {
@@ -121,7 +127,9 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   }
 
   /**
-   * The text of the content. Formatted text supported and always required.
+   * The text of the content. Formatted text supported and always required. For more information
+   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -129,7 +137,9 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   }
 
   /**
-   * The text of the content. Formatted text supported and always required.
+   * The text of the content. Formatted text supported and always required. For more information
+   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
+   * Workspace Add-ons.
    * @param content content or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupKeyValue setContent(java.lang.String content) {
@@ -206,7 +216,8 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   }
 
   /**
-   * The text of the top label. Formatted text supported.
+   * The text of the top label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopLabel() {
@@ -214,7 +225,8 @@ public final class GoogleChatV1WidgetMarkupKeyValue extends com.google.api.clien
   }
 
   /**
-   * The text of the top label. Formatted text supported.
+   * The text of the top label. Formatted text supported. For more information about formatting
+   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
    * @param topLabel topLabel or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupKeyValue setTopLabel(java.lang.String topLabel) {

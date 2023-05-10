@@ -72,6 +72,13 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean chatLock;
 
   /**
+   * Indicates whether the co-activity lock is currently on or off.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean coActivityLock;
+
+  /**
    * Whether Client-side Encryption is enabled for this conference.
    * The value may be {@code null}.
    */
@@ -205,6 +212,23 @@ public final class CallSettings extends com.google.api.client.json.GenericJson {
    */
   public CallSettings setChatLock(java.lang.Boolean chatLock) {
     this.chatLock = chatLock;
+    return this;
+  }
+
+  /**
+   * Indicates whether the co-activity lock is currently on or off.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCoActivityLock() {
+    return coActivityLock;
+  }
+
+  /**
+   * Indicates whether the co-activity lock is currently on or off.
+   * @param coActivityLock coActivityLock or {@code null} for none
+   */
+  public CallSettings setCoActivityLock(java.lang.Boolean coActivityLock) {
+    this.coActivityLock = coActivityLock;
     return this;
   }
 

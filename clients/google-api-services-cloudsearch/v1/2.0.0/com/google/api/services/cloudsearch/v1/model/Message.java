@@ -239,6 +239,28 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String messageOrigin;
 
   /**
+   * Contains reference to another message. It is used in shortcuts which are used to collect
+   * messages from different spaces with a certain common property into another space. For example,
+   * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
+   * design for more details). Most information from the source message (like text) are copied onto
+   * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
+   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MessageReference messageReference;
+
+  /**
+   * Contains additional metadata that further annotates this message when returned as a search
+   * response. For example, this field can be used to highlight messages during search results
+   * rendering. In this case, clients can use this field to highlight matched segments in the
+   * message text_body (defined with tag 6).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedMessageSearchInfo messageSearchInfo;
+
+  /**
    * State of the message, indicating whether the message is visible to all members in the group or
    * is only visible to the sender only, or the private_message_viewer if it is set.
    * The value may be {@code null}.
@@ -829,6 +851,56 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setMessageOrigin(java.lang.String messageOrigin) {
     this.messageOrigin = messageOrigin;
+    return this;
+  }
+
+  /**
+   * Contains reference to another message. It is used in shortcuts which are used to collect
+   * messages from different spaces with a certain common property into another space. For example,
+   * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
+   * design for more details). Most information from the source message (like text) are copied onto
+   * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
+   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * @return value or {@code null} for none
+   */
+  public MessageReference getMessageReference() {
+    return messageReference;
+  }
+
+  /**
+   * Contains reference to another message. It is used in shortcuts which are used to collect
+   * messages from different spaces with a certain common property into another space. For example,
+   * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
+   * design for more details). Most information from the source message (like text) are copied onto
+   * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
+   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * @param messageReference messageReference or {@code null} for none
+   */
+  public Message setMessageReference(MessageReference messageReference) {
+    this.messageReference = messageReference;
+    return this;
+  }
+
+  /**
+   * Contains additional metadata that further annotates this message when returned as a search
+   * response. For example, this field can be used to highlight messages during search results
+   * rendering. In this case, clients can use this field to highlight matched segments in the
+   * message text_body (defined with tag 6).
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedMessageSearchInfo getMessageSearchInfo() {
+    return messageSearchInfo;
+  }
+
+  /**
+   * Contains additional metadata that further annotates this message when returned as a search
+   * response. For example, this field can be used to highlight messages during search results
+   * rendering. In this case, clients can use this field to highlight matched segments in the
+   * message text_body (defined with tag 6).
+   * @param messageSearchInfo messageSearchInfo or {@code null} for none
+   */
+  public Message setMessageSearchInfo(AppsDynamiteSharedMessageSearchInfo messageSearchInfo) {
+    this.messageSearchInfo = messageSearchInfo;
     return this;
   }
 

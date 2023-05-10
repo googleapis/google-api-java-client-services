@@ -31,6 +31,13 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class Presenter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Screen annotation information associated with this presentation session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnnotationInfo annotationInfo;
+
+  /**
    * The device resource name of the device which requested the current presenter to be set. This
    * field can not be modified by clients.
    * The value may be {@code null}.
@@ -51,6 +58,23 @@ public final class Presenter extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String presenterDeviceId;
+
+  /**
+   * Screen annotation information associated with this presentation session.
+   * @return value or {@code null} for none
+   */
+  public AnnotationInfo getAnnotationInfo() {
+    return annotationInfo;
+  }
+
+  /**
+   * Screen annotation information associated with this presentation session.
+   * @param annotationInfo annotationInfo or {@code null} for none
+   */
+  public Presenter setAnnotationInfo(AnnotationInfo annotationInfo) {
+    this.annotationInfo = annotationInfo;
+    return this;
+  }
 
   /**
    * The device resource name of the device which requested the current presenter to be set. This

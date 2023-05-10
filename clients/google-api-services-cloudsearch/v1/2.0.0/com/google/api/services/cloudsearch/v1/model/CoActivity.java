@@ -38,11 +38,46 @@ public final class CoActivity extends com.google.api.client.json.GenericJson {
   private java.lang.String activityTitle;
 
   /**
+   * The add-on id of the current add-on being used for co-activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String addOnId;
+
+  /**
+   * The starting state of the add-on frames for co-activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddOnStartingState addOnStartingState;
+
+  /**
    * Identifies the app handling this co-activity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String coActivityApp;
+
+  /**
+   * The resource name of the device that initiated the co-activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String initiatorDeviceId;
+
+  /**
+   * The resource name of the device that is presenting the add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String presentationDeviceId;
+
+  /**
+   * The project number of the add-on to determine version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long projectNumber;
 
   /**
    * The title of the activity in this co-activity session. For example, this might be the title of
@@ -64,6 +99,40 @@ public final class CoActivity extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The add-on id of the current add-on being used for co-activity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAddOnId() {
+    return addOnId;
+  }
+
+  /**
+   * The add-on id of the current add-on being used for co-activity.
+   * @param addOnId addOnId or {@code null} for none
+   */
+  public CoActivity setAddOnId(java.lang.String addOnId) {
+    this.addOnId = addOnId;
+    return this;
+  }
+
+  /**
+   * The starting state of the add-on frames for co-activity.
+   * @return value or {@code null} for none
+   */
+  public AddOnStartingState getAddOnStartingState() {
+    return addOnStartingState;
+  }
+
+  /**
+   * The starting state of the add-on frames for co-activity.
+   * @param addOnStartingState addOnStartingState or {@code null} for none
+   */
+  public CoActivity setAddOnStartingState(AddOnStartingState addOnStartingState) {
+    this.addOnStartingState = addOnStartingState;
+    return this;
+  }
+
+  /**
    * Identifies the app handling this co-activity.
    * @return value or {@code null} for none
    */
@@ -77,6 +146,57 @@ public final class CoActivity extends com.google.api.client.json.GenericJson {
    */
   public CoActivity setCoActivityApp(java.lang.String coActivityApp) {
     this.coActivityApp = coActivityApp;
+    return this;
+  }
+
+  /**
+   * The resource name of the device that initiated the co-activity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInitiatorDeviceId() {
+    return initiatorDeviceId;
+  }
+
+  /**
+   * The resource name of the device that initiated the co-activity.
+   * @param initiatorDeviceId initiatorDeviceId or {@code null} for none
+   */
+  public CoActivity setInitiatorDeviceId(java.lang.String initiatorDeviceId) {
+    this.initiatorDeviceId = initiatorDeviceId;
+    return this;
+  }
+
+  /**
+   * The resource name of the device that is presenting the add-on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPresentationDeviceId() {
+    return presentationDeviceId;
+  }
+
+  /**
+   * The resource name of the device that is presenting the add-on.
+   * @param presentationDeviceId presentationDeviceId or {@code null} for none
+   */
+  public CoActivity setPresentationDeviceId(java.lang.String presentationDeviceId) {
+    this.presentationDeviceId = presentationDeviceId;
+    return this;
+  }
+
+  /**
+   * The project number of the add-on to determine version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * The project number of the add-on to determine version.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public CoActivity setProjectNumber(java.lang.Long projectNumber) {
+    this.projectNumber = projectNumber;
     return this;
   }
 

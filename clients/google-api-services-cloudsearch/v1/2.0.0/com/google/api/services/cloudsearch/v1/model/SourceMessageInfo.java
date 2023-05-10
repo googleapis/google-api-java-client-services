@@ -17,8 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A paragraph of text. Formatted text supported. For more information about formatting text, see
- * Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+ * Model definition for SourceMessageInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -28,37 +27,61 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChatV1WidgetMarkupTextParagraph extends com.google.api.client.json.GenericJson {
+public final class SourceMessageInfo extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Source message ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MessageId messageId;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String text;
+  private java.lang.String messageType;
+
+  /**
+   * Source message ID
+   * @return value or {@code null} for none
+   */
+  public MessageId getMessageId() {
+    return messageId;
+  }
+
+  /**
+   * Source message ID
+   * @param messageId messageId or {@code null} for none
+   */
+  public SourceMessageInfo setMessageId(MessageId messageId) {
+    this.messageId = messageId;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getText() {
-    return text;
+  public java.lang.String getMessageType() {
+    return messageType;
   }
 
   /**
-   * @param text text or {@code null} for none
+   * @param messageType messageType or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupTextParagraph setText(java.lang.String text) {
-    this.text = text;
+  public SourceMessageInfo setMessageType(java.lang.String messageType) {
+    this.messageType = messageType;
     return this;
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextParagraph set(String fieldName, Object value) {
-    return (GoogleChatV1WidgetMarkupTextParagraph) super.set(fieldName, value);
+  public SourceMessageInfo set(String fieldName, Object value) {
+    return (SourceMessageInfo) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextParagraph clone() {
-    return (GoogleChatV1WidgetMarkupTextParagraph) super.clone();
+  public SourceMessageInfo clone() {
+    return (SourceMessageInfo) super.clone();
   }
 
 }

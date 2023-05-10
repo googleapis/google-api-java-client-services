@@ -66,6 +66,14 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
   private java.lang.String scanOutcome;
 
   /**
+   * The event that triggered the scan. This corresponds to the rule trigger configured in admin
+   * console and maps to the different things that can be scanned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scanTrigger;
+
+  /**
    * @return value or {@code null} for none
    */
   public DlpAction getDlpAction() {
@@ -142,6 +150,25 @@ public final class DlpScanSummary extends com.google.api.client.json.GenericJson
    */
   public DlpScanSummary setScanOutcome(java.lang.String scanOutcome) {
     this.scanOutcome = scanOutcome;
+    return this;
+  }
+
+  /**
+   * The event that triggered the scan. This corresponds to the rule trigger configured in admin
+   * console and maps to the different things that can be scanned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScanTrigger() {
+    return scanTrigger;
+  }
+
+  /**
+   * The event that triggered the scan. This corresponds to the rule trigger configured in admin
+   * console and maps to the different things that can be scanned.
+   * @param scanTrigger scanTrigger or {@code null} for none
+   */
+  public DlpScanSummary setScanTrigger(java.lang.String scanTrigger) {
+    this.scanTrigger = scanTrigger;
     return this;
   }
 

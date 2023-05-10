@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GoogleChatV1WidgetMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleChatV1WidgetMarkup extends com.google.api.client.json.G
   private GoogleChatV1WidgetMarkupTextParagraph textParagraph;
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChatV1WidgetMarkupButton> getButtons() {
@@ -66,7 +66,7 @@ public final class GoogleChatV1WidgetMarkup extends com.google.api.client.json.G
   }
 
   /**
-   * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+   * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
    * @param buttons buttons or {@code null} for none
    */
   public GoogleChatV1WidgetMarkup setButtons(java.util.List<GoogleChatV1WidgetMarkupButton> buttons) {

@@ -67,6 +67,14 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean chatLock;
 
   /**
+   * The co-activity lock of the meeting space that lets owner control whether the participants can
+   * start/stop or update the state of co-activity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean coActivityLock;
+
+  /**
    * Whether meeting artifacts will be shared with cohosts.
    * The value may be {@code null}.
    */
@@ -194,6 +202,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setChatLock(java.lang.Boolean chatLock) {
     this.chatLock = chatLock;
+    return this;
+  }
+
+  /**
+   * The co-activity lock of the meeting space that lets owner control whether the participants can
+   * start/stop or update the state of co-activity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCoActivityLock() {
+    return coActivityLock;
+  }
+
+  /**
+   * The co-activity lock of the meeting space that lets owner control whether the participants can
+   * start/stop or update the state of co-activity.
+   * @param coActivityLock coActivityLock or {@code null} for none
+   */
+  public Settings setCoActivityLock(java.lang.Boolean coActivityLock) {
+    this.coActivityLock = coActivityLock;
     return this;
   }
 

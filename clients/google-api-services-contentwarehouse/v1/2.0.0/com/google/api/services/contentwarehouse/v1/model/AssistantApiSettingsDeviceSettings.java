@@ -222,20 +222,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
   private java.lang.Boolean faceMatchEnabled;
 
   /**
-   * When true, allow data collection of audio on this device for Federated Learning.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean flAudioCacheEnabled;
-
-  /**
-   * When true, allow data collection of frames on this device.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean flVisualFramesCacheEnabled;
-
-  /**
    * Stores GCM info associated with a device. See go/quartz-design-doc for more info.
    * The value may be {@code null}.
    */
@@ -1035,40 +1021,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
    */
   public AssistantApiSettingsDeviceSettings setFaceMatchEnabled(java.lang.Boolean faceMatchEnabled) {
     this.faceMatchEnabled = faceMatchEnabled;
-    return this;
-  }
-
-  /**
-   * When true, allow data collection of audio on this device for Federated Learning.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFlAudioCacheEnabled() {
-    return flAudioCacheEnabled;
-  }
-
-  /**
-   * When true, allow data collection of audio on this device for Federated Learning.
-   * @param flAudioCacheEnabled flAudioCacheEnabled or {@code null} for none
-   */
-  public AssistantApiSettingsDeviceSettings setFlAudioCacheEnabled(java.lang.Boolean flAudioCacheEnabled) {
-    this.flAudioCacheEnabled = flAudioCacheEnabled;
-    return this;
-  }
-
-  /**
-   * When true, allow data collection of frames on this device.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFlVisualFramesCacheEnabled() {
-    return flVisualFramesCacheEnabled;
-  }
-
-  /**
-   * When true, allow data collection of frames on this device.
-   * @param flVisualFramesCacheEnabled flVisualFramesCacheEnabled or {@code null} for none
-   */
-  public AssistantApiSettingsDeviceSettings setFlVisualFramesCacheEnabled(java.lang.Boolean flVisualFramesCacheEnabled) {
-    this.flVisualFramesCacheEnabled = flVisualFramesCacheEnabled;
     return this;
   }
 

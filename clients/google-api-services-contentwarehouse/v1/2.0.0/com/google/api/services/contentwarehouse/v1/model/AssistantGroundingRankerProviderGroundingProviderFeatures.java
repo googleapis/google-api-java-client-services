@@ -43,7 +43,7 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> providerClusterId;
+  private java.util.List<java.lang.String> providerClusterIdDeprecated;
 
   /**
    * ProviderId for the provider in the binding set. PRR specific feature.
@@ -82,17 +82,17 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
    * with multiple clusters. PRR specific feature.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getProviderClusterId() {
-    return providerClusterId;
+  public java.util.List<java.lang.String> getProviderClusterIdDeprecated() {
+    return providerClusterIdDeprecated;
   }
 
   /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated
    * with multiple clusters. PRR specific feature.
-   * @param providerClusterId providerClusterId or {@code null} for none
+   * @param providerClusterIdDeprecated providerClusterIdDeprecated or {@code null} for none
    */
-  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterId(java.util.List<java.lang.String> providerClusterId) {
-    this.providerClusterId = providerClusterId;
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterIdDeprecated(java.util.List<java.lang.String> providerClusterIdDeprecated) {
+    this.providerClusterIdDeprecated = providerClusterIdDeprecated;
     return this;
   }
 

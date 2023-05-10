@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for
  * protocols used during search and/or docinfo. Next available tag deprecated, use this (and look
  * for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \
- * indexer/perdocdata/perdocdata.proto Next tag: 221
+ * indexer/perdocdata/perdocdata.proto Next tag: 222
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -548,6 +548,15 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private IndexingDupsLocalizedLocalizedCluster localizedCluster;
+
+  /**
+   * Contains the mids of the 5 most topical entities annotated with selected KG collections. This
+   * information is currently used on Image Search to detect cases where results converged to mostly
+   * a single person or media entity. More details: go/result-set-convergence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageQualitySensitiveMediaOrPeopleEntities mediaOrPeopleEntities;
 
   /**
    * If not 0, we should not show the image in overlay mode in image snippets
@@ -2268,6 +2277,27 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    */
   public PerDocData setLocalizedCluster(IndexingDupsLocalizedLocalizedCluster localizedCluster) {
     this.localizedCluster = localizedCluster;
+    return this;
+  }
+
+  /**
+   * Contains the mids of the 5 most topical entities annotated with selected KG collections. This
+   * information is currently used on Image Search to detect cases where results converged to mostly
+   * a single person or media entity. More details: go/result-set-convergence.
+   * @return value or {@code null} for none
+   */
+  public ImageQualitySensitiveMediaOrPeopleEntities getMediaOrPeopleEntities() {
+    return mediaOrPeopleEntities;
+  }
+
+  /**
+   * Contains the mids of the 5 most topical entities annotated with selected KG collections. This
+   * information is currently used on Image Search to detect cases where results converged to mostly
+   * a single person or media entity. More details: go/result-set-convergence.
+   * @param mediaOrPeopleEntities mediaOrPeopleEntities or {@code null} for none
+   */
+  public PerDocData setMediaOrPeopleEntities(ImageQualitySensitiveMediaOrPeopleEntities mediaOrPeopleEntities) {
+    this.mediaOrPeopleEntities = mediaOrPeopleEntities;
     return this;
   }
 

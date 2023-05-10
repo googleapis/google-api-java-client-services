@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 77
+ * rces.md#ministanza Next available: 78
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -202,6 +202,13 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasCreatorReply;
+
+  /**
+   * Impersonation scores map. Keyed by secondary key (score type).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Double> impersonationScores;
 
   /**
    * If the author is a channel member (sponsor).
@@ -939,6 +946,23 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setHasCreatorReply(java.lang.Boolean hasCreatorReply) {
     this.hasCreatorReply = hasCreatorReply;
+    return this;
+  }
+
+  /**
+   * Impersonation scores map. Keyed by secondary key (score type).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Double> getImpersonationScores() {
+    return impersonationScores;
+  }
+
+  /**
+   * Impersonation scores map. Keyed by secondary key (score type).
+   * @param impersonationScores impersonationScores or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setImpersonationScores(java.util.Map<String, java.lang.Double> impersonationScores) {
+    this.impersonationScores = impersonationScores;
     return this;
   }
 

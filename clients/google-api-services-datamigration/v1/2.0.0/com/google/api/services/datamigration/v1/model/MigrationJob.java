@@ -31,6 +31,18 @@ package com.google.api.services.datamigration.v1.model;
 public final class MigrationJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * The CMEK (customer-managed encryption key) fully qualified key name used for the migration job.
+   * This field supports all migration jobs types except for: * Mysql to Mysql (use the cmek field
+   * in the cloudsql connection profile instead). * PostrgeSQL to PostgreSQL (use the cmek field in
+   * the cloudsql connection profile instead). * PostgreSQL to AlloyDB (use the kms_key_name field
+   * in the alloydb connection profile instead). Each Cloud CMEK key has the following format:
+   * projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cmekKeyName;
+
+  /**
    * The conversion workspace used by the migration.
    * The value may be {@code null}.
    */
@@ -194,6 +206,33 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VpcPeeringConnectivity vpcPeeringConnectivity;
+
+  /**
+   * The CMEK (customer-managed encryption key) fully qualified key name used for the migration job.
+   * This field supports all migration jobs types except for: * Mysql to Mysql (use the cmek field
+   * in the cloudsql connection profile instead). * PostrgeSQL to PostgreSQL (use the cmek field in
+   * the cloudsql connection profile instead). * PostgreSQL to AlloyDB (use the kms_key_name field
+   * in the alloydb connection profile instead). Each Cloud CMEK key has the following format:
+   * projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCmekKeyName() {
+    return cmekKeyName;
+  }
+
+  /**
+   * The CMEK (customer-managed encryption key) fully qualified key name used for the migration job.
+   * This field supports all migration jobs types except for: * Mysql to Mysql (use the cmek field
+   * in the cloudsql connection profile instead). * PostrgeSQL to PostgreSQL (use the cmek field in
+   * the cloudsql connection profile instead). * PostgreSQL to AlloyDB (use the kms_key_name field
+   * in the alloydb connection profile instead). Each Cloud CMEK key has the following format:
+   * projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]
+   * @param cmekKeyName cmekKeyName or {@code null} for none
+   */
+  public MigrationJob setCmekKeyName(java.lang.String cmekKeyName) {
+    this.cmekKeyName = cmekKeyName;
+    return this;
+  }
 
   /**
    * The conversion workspace used by the migration.

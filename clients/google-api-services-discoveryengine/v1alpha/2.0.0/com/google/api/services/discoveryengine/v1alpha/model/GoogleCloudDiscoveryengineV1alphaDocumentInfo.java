@@ -63,6 +63,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
   private java.lang.Integer quantity;
 
   /**
+   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
    * Required. The Document resource ID.
    * @return value or {@code null} for none
    */
@@ -137,6 +144,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentInfo extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentInfo setQuantity(java.lang.Integer quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * @param uri uri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentInfo setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 

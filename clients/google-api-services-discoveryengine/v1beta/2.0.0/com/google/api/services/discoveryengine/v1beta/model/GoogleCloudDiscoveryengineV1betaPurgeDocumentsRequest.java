@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Filter matching documents to purge. Only currently supported value is “*” (all
+   * Required. Filter matching documents to purge. Only currently supported value is `*` (all
    * items).
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest extends
   private java.lang.Boolean force;
 
   /**
-   * Required. Filter matching documents to purge. Only currently supported value is “*” (all
+   * Required. Filter matching documents to purge. Only currently supported value is `*` (all
    * items).
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest extends
   }
 
   /**
-   * Required. Filter matching documents to purge. Only currently supported value is “*” (all
+   * Required. Filter matching documents to purge. Only currently supported value is `*` (all
    * items).
    * @param filter filter or {@code null} for none
    */

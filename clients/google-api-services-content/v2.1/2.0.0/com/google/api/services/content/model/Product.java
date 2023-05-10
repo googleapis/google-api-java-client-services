@@ -119,6 +119,19 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String channel;
 
   /**
+   * Extra fields to export to the Cloud Retail program.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudExportAdditionalProperties> cloudExportAdditionalProperties;
+
+  static {
+    // hack to force ProGuard to consider CloudExportAdditionalProperties used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CloudExportAdditionalProperties.class);
+  }
+
+  /**
    * Color of the item.
    * The value may be {@code null}.
    */
@@ -941,6 +954,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setChannel(java.lang.String channel) {
     this.channel = channel;
+    return this;
+  }
+
+  /**
+   * Extra fields to export to the Cloud Retail program.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudExportAdditionalProperties> getCloudExportAdditionalProperties() {
+    return cloudExportAdditionalProperties;
+  }
+
+  /**
+   * Extra fields to export to the Cloud Retail program.
+   * @param cloudExportAdditionalProperties cloudExportAdditionalProperties or {@code null} for none
+   */
+  public Product setCloudExportAdditionalProperties(java.util.List<CloudExportAdditionalProperties> cloudExportAdditionalProperties) {
+    this.cloudExportAdditionalProperties = cloudExportAdditionalProperties;
     return this;
   }
 

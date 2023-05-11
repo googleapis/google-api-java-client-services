@@ -30,12 +30,36 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs extends com.google.api.client.json.GenericJson {
 
   /**
+   * Boolean indicating whether a row filter was applied in the DataScan job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean rowFilterApplied;
+
+  /**
    * The percentage of the records selected from the dataset for DataScan. Value ranges between 0.0
    * and 100.0. Value 0.0 or 100.0 imply that sampling was not applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Boolean indicating whether a row filter was applied in the DataScan job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRowFilterApplied() {
+    return rowFilterApplied;
+  }
+
+  /**
+   * Boolean indicating whether a row filter was applied in the DataScan job.
+   * @param rowFilterApplied rowFilterApplied or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs setRowFilterApplied(java.lang.Boolean rowFilterApplied) {
+    this.rowFilterApplied = rowFilterApplied;
+    return this;
+  }
 
   /**
    * The percentage of the records selected from the dataset for DataScan. Value ranges between 0.0

@@ -101,6 +101,15 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
   private java.lang.String dpcResourcePath;
 
   /**
+   * Optional. The timeout before forcing factory reset the device if the device doesn't go through
+   * provisioning in the setup wizard, usually due to lack of network connectivity during setup
+   * wizard. Ranges from 0-6 hours, with 2 hours being the default if unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String forcedResetTime;
+
+  /**
    * Required. Whether this is the default configuration that zero-touch enrollment applies to any
    * new devices the organization purchases in the future. Only one customer configuration can be
    * the default. Setting this value to `true`, changes the previous default configuration's
@@ -269,6 +278,27 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
    */
   public Configuration setDpcResourcePath(java.lang.String dpcResourcePath) {
     this.dpcResourcePath = dpcResourcePath;
+    return this;
+  }
+
+  /**
+   * Optional. The timeout before forcing factory reset the device if the device doesn't go through
+   * provisioning in the setup wizard, usually due to lack of network connectivity during setup
+   * wizard. Ranges from 0-6 hours, with 2 hours being the default if unset.
+   * @return value or {@code null} for none
+   */
+  public String getForcedResetTime() {
+    return forcedResetTime;
+  }
+
+  /**
+   * Optional. The timeout before forcing factory reset the device if the device doesn't go through
+   * provisioning in the setup wizard, usually due to lack of network connectivity during setup
+   * wizard. Ranges from 0-6 hours, with 2 hours being the default if unset.
+   * @param forcedResetTime forcedResetTime or {@code null} for none
+   */
+  public Configuration setForcedResetTime(String forcedResetTime) {
+    this.forcedResetTime = forcedResetTime;
     return this;
   }
 

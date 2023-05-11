@@ -38,6 +38,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaAccount account;
 
   /**
+   * A snapshot of an AdSenseLink resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaAdSenseLink adsenseLink;
+
+  /**
    * A snapshot of AttributionSettings resource in change history.
    * The value may be {@code null}.
    */
@@ -191,6 +198,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAccount(GoogleAnalyticsAdminV1alphaAccount account) {
     this.account = account;
+    return this;
+  }
+
+  /**
+   * A snapshot of an AdSenseLink resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAdSenseLink getAdsenseLink() {
+    return adsenseLink;
+  }
+
+  /**
+   * A snapshot of an AdSenseLink resource in change history.
+   * @param adsenseLink adsenseLink or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setAdsenseLink(GoogleAnalyticsAdminV1alphaAdSenseLink adsenseLink) {
+    this.adsenseLink = adsenseLink;
     return this;
   }
 

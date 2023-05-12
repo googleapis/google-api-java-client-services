@@ -1246,7 +1246,899 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           return (Patch) super.set(parameterName, value);
         }
       }
+      /**
+       * Create a new database by restore from an existing backup. The new database must be in the same
+       * cloud region or multi-region location as the existing backup. This behaves similar to
+       * FirestoreAdmin.CreateDatabase except instead of creating a new empty database, a new database is
+       * created with the database type, index configuration, and documents from an existing backup. The
+       * long-running operation can be used to track the progress of the restore, with the Operation's
+       * metadata field type being the RestoreDatabaseMetadata. The response type is the Database if the
+       * restore was successful. The new database is not readable or writeable until the LRO has
+       * completed. Cancelling the returned operation will stop the restore and delete the in-progress
+       * database, if the restore is still active.
+       *
+       * Create a request for the method "databases.restore".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to restore the database in. Format is `projects/{project_id}`.
+       * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1RestoreDatabaseRequest}
+       * @return the request
+       */
+      public Restore restore(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1RestoreDatabaseRequest content) throws java.io.IOException {
+        Restore result = new Restore(parent, content);
+        initialize(result);
+        return result;
+      }
 
+      public class Restore extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/databases:restore";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Create a new database by restore from an existing backup. The new database must be in the same
+         * cloud region or multi-region location as the existing backup. This behaves similar to
+         * FirestoreAdmin.CreateDatabase except instead of creating a new empty database, a new database
+         * is created with the database type, index configuration, and documents from an existing backup.
+         * The long-running operation can be used to track the progress of the restore, with the
+         * Operation's metadata field type being the RestoreDatabaseMetadata. The response type is the
+         * Database if the restore was successful. The new database is not readable or writeable until the
+         * LRO has completed. Cancelling the returned operation will stop the restore and delete the in-
+         * progress database, if the restore is still active.
+         *
+         * Create a request for the method "databases.restore".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to restore the database in. Format is `projects/{project_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1RestoreDatabaseRequest}
+         * @since 1.13
+         */
+        protected Restore(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1RestoreDatabaseRequest content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Restore set$Xgafv(java.lang.String $Xgafv) {
+          return (Restore) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Restore setAccessToken(java.lang.String accessToken) {
+          return (Restore) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Restore setAlt(java.lang.String alt) {
+          return (Restore) super.setAlt(alt);
+        }
+
+        @Override
+        public Restore setCallback(java.lang.String callback) {
+          return (Restore) super.setCallback(callback);
+        }
+
+        @Override
+        public Restore setFields(java.lang.String fields) {
+          return (Restore) super.setFields(fields);
+        }
+
+        @Override
+        public Restore setKey(java.lang.String key) {
+          return (Restore) super.setKey(key);
+        }
+
+        @Override
+        public Restore setOauthToken(java.lang.String oauthToken) {
+          return (Restore) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Restore) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Restore setQuotaUser(java.lang.String quotaUser) {
+          return (Restore) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Restore setUploadType(java.lang.String uploadType) {
+          return (Restore) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Restore) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project to restore the database in. Format is `projects/{project_id}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to restore the database in. Format is `projects/{project_id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project to restore the database in. Format is `projects/{project_id}`. */
+        public Restore setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Restore set(String parameterName, Object value) {
+          return (Restore) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the BackupSchedules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firestore firestore = new Firestore(...);}
+       *   {@code Firestore.BackupSchedules.List request = firestore.backupSchedules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackupSchedules backupSchedules() {
+        return new BackupSchedules();
+      }
+
+      /**
+       * The "backupSchedules" collection of methods.
+       */
+      public class BackupSchedules {
+
+        /**
+         * Creates a backup schedule on a database. At most two backup schedules can be configured on a
+         * database, one daily backup schedule with retention up to 7 days and one weekly backup schedule
+         * with retention up to 14 weeks.
+         *
+         * Create a request for the method "backupSchedules.create".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent database. Format `projects/{project}/databases/{database}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Creates a backup schedule on a database. At most two backup schedules can be configured on a
+           * database, one daily backup schedule with retention up to 7 days and one weekly backup schedule
+           * with retention up to 14 weeks.
+           *
+           * Create a request for the method "backupSchedules.create".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent database. Format `projects/{project}/databases/{database}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent database. Format `projects/{project}/databases/{database}` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent database. Format `projects/{project}/databases/{database}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent database. Format `projects/{project}/databases/{database}` */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a backup schedule.
+         *
+         * Create a request for the method "backupSchedules.delete".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of backup schedule. Format
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+          /**
+           * Deletes a backup schedule.
+           *
+           * Create a request for the method "backupSchedules.delete".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of backup schedule. Format
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firestore.this, "DELETE", REST_PATH, null, com.google.api.services.firestore.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of backup schedule. Format
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of backup schedule. Format
+         `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of backup schedule. Format
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a backup schedule.
+         *
+         * Create a request for the method "backupSchedules.get".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the backup schedule. Format
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+          /**
+           * Gets information about a backup schedule.
+           *
+           * Create a request for the method "backupSchedules.get".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the backup schedule. Format
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the backup schedule. Format
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the backup schedule. Format
+         `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the backup schedule. Format
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List backup schedules.
+         *
+         * Create a request for the method "backupSchedules.list".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent database. Format is `projects/{project}/databases/{database}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListBackupSchedulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * List backup schedules.
+           *
+           * Create a request for the method "backupSchedules.list".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent database. Format is `projects/{project}/databases/{database}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListBackupSchedulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent database. Format is `projects/{project}/databases/{database}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent database. Format is `projects/{project}/databases/{database}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent database. Format is `projects/{project}/databases/{database}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a backup schedule.
+         *
+         * Create a request for the method "backupSchedules.patch".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The unique backup schedule identifier across all locations and databases for the given
+         *        project. This will be auto-assigned. Format is
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+
+          /**
+           * Updates a backup schedule.
+           *
+           * Create a request for the method "backupSchedules.patch".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The unique backup schedule identifier across all locations and databases for the given
+         *        project. This will be auto-assigned. Format is
+         *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule content) {
+            super(Firestore.this, "PATCH", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1BackupSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The unique backup schedule identifier across all locations and databases
+           * for the given project. This will be auto-assigned. Format is
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The unique backup schedule identifier across all locations and databases for the given
+         project. This will be auto-assigned. Format is
+         `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The unique backup schedule identifier across all locations and databases
+           * for the given project. This will be auto-assigned. Format is
+           * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/backupSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the CollectionGroups collection.
        *
@@ -6701,6 +7593,467 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
       }
 
+      /**
+       * An accessor for creating requests from the Backups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firestore firestore = new Firestore(...);}
+       *   {@code Firestore.Backups.List request = firestore.backups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Backups backups() {
+        return new Backups();
+      }
+
+      /**
+       * The "backups" collection of methods.
+       */
+      public class Backups {
+
+        /**
+         * Deletes a backup.
+         *
+         * Create a request for the method "backups.delete".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup to delete. format is
+         *        `projects/{project}/locations/{location}/backups/{backup}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+
+          /**
+           * Deletes a backup.
+           *
+           * Create a request for the method "backups.delete".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup to delete. format is
+         *        `projects/{project}/locations/{location}/backups/{backup}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firestore.this, "DELETE", REST_PATH, null, com.google.api.services.firestore.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup to delete. format is
+           * `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup to delete. format is
+         `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup to delete. format is
+           * `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a backup.
+         *
+         * Create a request for the method "backups.get".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the backup to fetch. Format is
+         *        `projects/{project}/locations/{location}/backups/{backup}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Backup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+
+          /**
+           * Gets information about a backup.
+           *
+           * Create a request for the method "backups.get".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the backup to fetch. Format is
+         *        `projects/{project}/locations/{location}/backups/{backup}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Backup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the backup to fetch. Format is
+           * `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the backup to fetch. Format is
+         `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the backup to fetch. Format is
+           * `projects/{project}/locations/{location}/backups/{backup}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the backups.
+         *
+         * Create a request for the method "backups.list".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location to list backups from. Format is `projects/{project}/locations/{location}`.
+         *        Use `{location} = '-'` to list backups from all locations for the given project. This
+         *        allows listing backups from a single location or from all locations.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListBackupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the backups.
+           *
+           * Create a request for the method "backups.list".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location to list backups from. Format is `projects/{project}/locations/{location}`.
+         *        Use `{location} = '-'` to list backups from all locations for the given project. This
+         *        allows listing backups from a single location or from all locations.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListBackupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location to list backups from. Format is
+           * `projects/{project}/locations/{location}`. Use `{location} = '-'` to list backups from
+           * all locations for the given project. This allows listing backups from a single location
+           * or from all locations.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location to list backups from. Format is `projects/{project}/locations/{location}`.
+         Use `{location} = '-'` to list backups from all locations for the given project. This allows
+         listing backups from a single location or from all locations.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location to list backups from. Format is
+           * `projects/{project}/locations/{location}`. Use `{location} = '-'` to list backups from
+           * all locations for the given project. This allows listing backups from a single location
+           * or from all locations.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

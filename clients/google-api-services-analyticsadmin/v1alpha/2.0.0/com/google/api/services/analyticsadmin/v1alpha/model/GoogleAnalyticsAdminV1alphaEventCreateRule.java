@@ -52,7 +52,7 @@ public final class GoogleAnalyticsAdminV1alphaEventCreateRule extends com.google
 
   /**
    * Output only. Resource name for this EventCreateRule resource. Format:
-   * properties/{property}/dataStreams/{data_stream}/eventCreateRules
+   * properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleAnalyticsAdminV1alphaEventCreateRule extends com.google
 
   /**
    * Output only. Resource name for this EventCreateRule resource. Format:
-   * properties/{property}/dataStreams/{data_stream}/eventCreateRules
+   * properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -124,7 +124,7 @@ public final class GoogleAnalyticsAdminV1alphaEventCreateRule extends com.google
 
   /**
    * Output only. Resource name for this EventCreateRule resource. Format:
-   * properties/{property}/dataStreams/{data_stream}/eventCreateRules
+   * properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaEventCreateRule setName(java.lang.String name) {

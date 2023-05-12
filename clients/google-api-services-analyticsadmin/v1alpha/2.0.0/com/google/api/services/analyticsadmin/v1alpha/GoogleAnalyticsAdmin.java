@@ -15274,7 +15274,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. Resource name for this EventCreateRule resource. Format:
-         *        properties/{property}/dataStreams/{data_stream}/eventCreateRules
+         *        properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
          * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEventCreateRule}
          * @return the request
          */
@@ -15303,7 +15303,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. Resource name for this EventCreateRule resource. Format:
-         *        properties/{property}/dataStreams/{data_stream}/eventCreateRules
+         *        properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
            * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaEventCreateRule}
            * @since 1.13
            */
@@ -15374,13 +15374,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
           /**
            * Output only. Resource name for this EventCreateRule resource. Format:
-           * properties/{property}/dataStreams/{data_stream}/eventCreateRules
+           * properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. Resource name for this EventCreateRule resource. Format:
-         properties/{property}/dataStreams/{data_stream}/eventCreateRules
+         properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
            */
           public java.lang.String getName() {
             return name;
@@ -15388,7 +15388,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
 
           /**
            * Output only. Resource name for this EventCreateRule resource. Format:
-           * properties/{property}/dataStreams/{data_stream}/eventCreateRules
+           * properties/{property}/dataStreams/{data_stream}/eventCreateRules/{event_create_rule}
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

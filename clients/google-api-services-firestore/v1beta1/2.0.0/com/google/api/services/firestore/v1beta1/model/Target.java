@@ -37,6 +37,16 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private DocumentsTarget documents;
 
   /**
+   * The number of documents that last matched the query at the resume token or read time. This
+   * value is only relevant when a `resume_type` is provided. This value being present and greater
+   * than zero signals that the client wants `ExistenceFilter.unchanged_names` to be included in the
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer expectedCount;
+
+  /**
    * If the target should be removed once it is current and consistent.
    * The value may be {@code null}.
    */
@@ -87,6 +97,29 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setDocuments(DocumentsTarget documents) {
     this.documents = documents;
+    return this;
+  }
+
+  /**
+   * The number of documents that last matched the query at the resume token or read time. This
+   * value is only relevant when a `resume_type` is provided. This value being present and greater
+   * than zero signals that the client wants `ExistenceFilter.unchanged_names` to be included in the
+   * response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getExpectedCount() {
+    return expectedCount;
+  }
+
+  /**
+   * The number of documents that last matched the query at the resume token or read time. This
+   * value is only relevant when a `resume_type` is provided. This value being present and greater
+   * than zero signals that the client wants `ExistenceFilter.unchanged_names` to be included in the
+   * response.
+   * @param expectedCount expectedCount or {@code null} for none
+   */
+  public Target setExpectedCount(java.lang.Integer expectedCount) {
+    this.expectedCount = expectedCount;
     return this;
   }
 

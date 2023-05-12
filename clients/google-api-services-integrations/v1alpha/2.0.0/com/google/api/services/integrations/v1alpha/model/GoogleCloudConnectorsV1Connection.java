@@ -61,6 +61,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String connectorVersion;
 
   /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorVersionLaunchStage;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -166,8 +173,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1ConnectionStatus status;
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,6 +247,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setConnectorVersion(java.lang.String connectorVersion) {
     this.connectorVersion = connectorVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorVersionLaunchStage() {
+    return connectorVersionLaunchStage;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @param connectorVersionLaunchStage connectorVersionLaunchStage or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setConnectorVersionLaunchStage(java.lang.String connectorVersionLaunchStage) {
+    this.connectorVersionLaunchStage = connectorVersionLaunchStage;
     return this;
   }
 
@@ -497,8 +520,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscriptionType() {
@@ -506,8 +528,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. This subscription type enum value states if the metrics should be sent for billing
-   * or not.
+   * Output only. This subscription type enum states the subscription type of the project.
    * @param subscriptionType subscriptionType or {@code null} for none
    */
   public GoogleCloudConnectorsV1Connection setSubscriptionType(java.lang.String subscriptionType) {

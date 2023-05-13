@@ -109,6 +109,16 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer ruleTupleCount;
 
   /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_security_profile_group' and cannot be
+   * specified for other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityProfileGroup;
+
+  /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
@@ -136,6 +146,14 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetServiceAccounts;
+
+  /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean tlsInspect;
 
   /**
    * The Action to perform when the client connection triggers the rule. Valid actions are "allow",
@@ -324,6 +342,29 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_security_profile_group' and cannot be
+   * specified for other actions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityProfileGroup() {
+    return securityProfileGroup;
+  }
+
+  /**
+   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
+   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
+   * profile-group Must be specified if action = 'apply_security_profile_group' and cannot be
+   * specified for other actions.
+   * @param securityProfileGroup securityProfileGroup or {@code null} for none
+   */
+  public FirewallPolicyRule setSecurityProfileGroup(java.lang.String securityProfileGroup) {
+    this.securityProfileGroup = securityProfileGroup;
+    return this;
+  }
+
+  /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
    * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
@@ -387,6 +428,25 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setTargetServiceAccounts(java.util.List<java.lang.String> targetServiceAccounts) {
     this.targetServiceAccounts = targetServiceAccounts;
+    return this;
+  }
+
+  /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTlsInspect() {
+    return tlsInspect;
+  }
+
+  /**
+   * Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action =
+   * 'apply_security_profile_group' and cannot be set for other actions.
+   * @param tlsInspect tlsInspect or {@code null} for none
+   */
+  public FirewallPolicyRule setTlsInspect(java.lang.Boolean tlsInspect) {
+    this.tlsInspect = tlsInspect;
     return this;
   }
 

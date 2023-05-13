@@ -213,6 +213,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.Integer provisionedLinkCount;
 
   /**
+   * Indicates that this is a Cross-Cloud Interconnect. This field specifies the location outside of
+   * Google's network that the interconnect is connected to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remoteLocation;
+
+  /**
    * Target number of physical links in the link bundle, as requested by the customer.
    * The value may be {@code null}.
    */
@@ -705,6 +713,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setProvisionedLinkCount(java.lang.Integer provisionedLinkCount) {
     this.provisionedLinkCount = provisionedLinkCount;
+    return this;
+  }
+
+  /**
+   * Indicates that this is a Cross-Cloud Interconnect. This field specifies the location outside of
+   * Google's network that the interconnect is connected to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemoteLocation() {
+    return remoteLocation;
+  }
+
+  /**
+   * Indicates that this is a Cross-Cloud Interconnect. This field specifies the location outside of
+   * Google's network that the interconnect is connected to.
+   * @param remoteLocation remoteLocation or {@code null} for none
+   */
+  public Interconnect setRemoteLocation(java.lang.String remoteLocation) {
+    this.remoteLocation = remoteLocation;
     return this;
   }
 

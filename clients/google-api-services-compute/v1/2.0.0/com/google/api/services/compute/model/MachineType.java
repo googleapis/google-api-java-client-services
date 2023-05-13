@@ -455,7 +455,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     private java.lang.Integer guestAcceleratorCount;
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -479,7 +479,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
      * @return value or {@code null} for none
      */
     public java.lang.String getGuestAcceleratorType() {
@@ -487,7 +487,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The accelerator type resource name, not a full URL, e.g. 'nvidia-tesla-k80'.
+     * The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
      * @param guestAcceleratorType guestAcceleratorType or {@code null} for none
      */
     public Accelerators setGuestAcceleratorType(java.lang.String guestAcceleratorType) {

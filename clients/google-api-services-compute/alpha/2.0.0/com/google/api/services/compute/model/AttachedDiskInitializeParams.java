@@ -82,6 +82,14 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskType;
 
   /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read Enabling guest operating system features to see a list of available options. Guest
    * OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
@@ -353,6 +361,25 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
+   * details.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

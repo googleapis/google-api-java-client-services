@@ -92,6 +92,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * Whether this snapshot is created from a confidential compute mode disk. see go/confidential-
+   * mode-in-arcus for details. [Output Only]: This field is not set by user, but from source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
    * prepare for the snapshot process.
    * The value may be {@code null}.
@@ -482,6 +490,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setDownloadBytes(java.lang.Long downloadBytes) {
     this.downloadBytes = downloadBytes;
+    return this;
+  }
+
+  /**
+   * Whether this snapshot is created from a confidential compute mode disk. see go/confidential-
+   * mode-in-arcus for details. [Output Only]: This field is not set by user, but from source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this snapshot is created from a confidential compute mode disk. see go/confidential-
+   * mode-in-arcus for details. [Output Only]: This field is not set by user, but from source disk.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public Snapshot setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

@@ -42,7 +42,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
-   * policy, if there is no org policy specified, then it will default to disabled.
+   * policy, if there is no org policy specified, then it will default to disabled. Flow logging
+   * isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +110,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
-   * policy, if there is no org policy specified, then it will default to disabled.
+   * policy, if there is no org policy specified, then it will default to disabled. Flow logging
+   * isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -119,7 +121,8 @@ public final class SubnetworkLogConfig extends com.google.api.client.json.Generi
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
-   * policy, if there is no org policy specified, then it will default to disabled.
+   * policy, if there is no org policy specified, then it will default to disabled. Flow logging
+   * isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
    * @param enable enable or {@code null} for none
    */
   public SubnetworkLogConfig setEnable(java.lang.Boolean enable) {

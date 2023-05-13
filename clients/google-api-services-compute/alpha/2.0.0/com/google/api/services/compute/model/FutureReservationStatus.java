@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The current status of the requested amendment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String amendmentStatus;
+
+  /**
    * Fully qualified urls of the automatically created reservations at start_time.
    * The value may be {@code null}.
    */
@@ -43,6 +50,16 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fulfilledCount;
+
+  /**
+   * This field represents the future reservation before an amendment was requested. If the
+   * amendment is declined, the Future Reservation will be reverted to the last known good state.
+   * The last known good state is not set when updating a future reservation whose Procurement
+   * Status is DRAFTING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationStatusLastKnownGoodState lastKnownGoodState;
 
   /**
    * Time when Future Reservation would become LOCKED, after which no modifications to Future
@@ -66,6 +83,23 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private FutureReservationStatusSpecificSKUProperties specificSkuProperties;
+
+  /**
+   * The current status of the requested amendment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAmendmentStatus() {
+    return amendmentStatus;
+  }
+
+  /**
+   * The current status of the requested amendment.
+   * @param amendmentStatus amendmentStatus or {@code null} for none
+   */
+  public FutureReservationStatus setAmendmentStatus(java.lang.String amendmentStatus) {
+    this.amendmentStatus = amendmentStatus;
+    return this;
+  }
 
   /**
    * Fully qualified urls of the automatically created reservations at start_time.
@@ -100,6 +134,29 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   public FutureReservationStatus setFulfilledCount(java.lang.Long fulfilledCount) {
     this.fulfilledCount = fulfilledCount;
+    return this;
+  }
+
+  /**
+   * This field represents the future reservation before an amendment was requested. If the
+   * amendment is declined, the Future Reservation will be reverted to the last known good state.
+   * The last known good state is not set when updating a future reservation whose Procurement
+   * Status is DRAFTING.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationStatusLastKnownGoodState getLastKnownGoodState() {
+    return lastKnownGoodState;
+  }
+
+  /**
+   * This field represents the future reservation before an amendment was requested. If the
+   * amendment is declined, the Future Reservation will be reverted to the last known good state.
+   * The last known good state is not set when updating a future reservation whose Procurement
+   * Status is DRAFTING.
+   * @param lastKnownGoodState lastKnownGoodState or {@code null} for none
+   */
+  public FutureReservationStatus setLastKnownGoodState(FutureReservationStatusLastKnownGoodState lastKnownGoodState) {
+    this.lastKnownGoodState = lastKnownGoodState;
     return this;
   }
 

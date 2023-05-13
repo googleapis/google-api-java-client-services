@@ -94,6 +94,14 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String cloudRouterIpv6InterfaceId;
 
   /**
+   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
+   * constraints are not met.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentConfigurationConstraints configurationConstraints;
+
+  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -304,6 +312,16 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String region;
 
   /**
+   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
+   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
+   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remoteService;
+
+  /**
    * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region
    * as this InterconnectAttachment. The InterconnectAttachment will automatically connect the
    * Interconnect to the network & region within which the Cloud Router is configured.
@@ -353,6 +371,18 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default value is 29,
+   * except for Cross-Cloud Interconnect connections that use an InterconnectRemoteLocation with a
+   * constraints.subnetLengthRange.min equal to 30. For example, connections that use an Azure
+   * remote location fall into this category. In these cases, the default value is 30, and
+   * requesting 29 returns an error. Where both 29 and 30 are allowed, 29 is preferred, because it
+   * gives Google Cloud Support more debugging visibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer subnetLength;
 
   /**
    * The type of interconnect attachment this is, which can take one of the following values: -
@@ -514,6 +544,25 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setCloudRouterIpv6InterfaceId(java.lang.String cloudRouterIpv6InterfaceId) {
     this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
+    return this;
+  }
+
+  /**
+   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
+   * constraints are not met.
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentConfigurationConstraints getConfigurationConstraints() {
+    return configurationConstraints;
+  }
+
+  /**
+   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
+   * constraints are not met.
+   * @param configurationConstraints configurationConstraints or {@code null} for none
+   */
+  public InterconnectAttachment setConfigurationConstraints(InterconnectAttachmentConfigurationConstraints configurationConstraints) {
+    this.configurationConstraints = configurationConstraints;
     return this;
   }
 
@@ -1045,6 +1094,29 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
+   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
+   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemoteService() {
+    return remoteService;
+  }
+
+  /**
+   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
+   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Services" "Microsoft Azure". The field is set only for attachments on Cross-Cloud Interconnect
+   * connections. Its value is copied from the InterconnectRemoteLocation remoteService field.
+   * @param remoteService remoteService or {@code null} for none
+   */
+  public InterconnectAttachment setRemoteService(java.lang.String remoteService) {
+    this.remoteService = remoteService;
+    return this;
+  }
+
+  /**
    * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region
    * as this InterconnectAttachment. The InterconnectAttachment will automatically connect the
    * Interconnect to the network & region within which the Cloud Router is configured.
@@ -1158,6 +1230,33 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default value is 29,
+   * except for Cross-Cloud Interconnect connections that use an InterconnectRemoteLocation with a
+   * constraints.subnetLengthRange.min equal to 30. For example, connections that use an Azure
+   * remote location fall into this category. In these cases, the default value is 30, and
+   * requesting 29 returns an error. Where both 29 and 30 are allowed, 29 is preferred, because it
+   * gives Google Cloud Support more debugging visibility.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSubnetLength() {
+    return subnetLength;
+  }
+
+  /**
+   * Length of the IPv4 subnet mask. Allowed values: - 29 (default) - 30 The default value is 29,
+   * except for Cross-Cloud Interconnect connections that use an InterconnectRemoteLocation with a
+   * constraints.subnetLengthRange.min equal to 30. For example, connections that use an Azure
+   * remote location fall into this category. In these cases, the default value is 30, and
+   * requesting 29 returns an error. Where both 29 and 30 are allowed, 29 is preferred, because it
+   * gives Google Cloud Support more debugging visibility.
+   * @param subnetLength subnetLength or {@code null} for none
+   */
+  public InterconnectAttachment setSubnetLength(java.lang.Integer subnetLength) {
+    this.subnetLength = subnetLength;
     return this;
   }
 

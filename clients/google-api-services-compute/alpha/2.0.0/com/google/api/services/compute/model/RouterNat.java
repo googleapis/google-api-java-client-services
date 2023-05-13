@@ -145,9 +145,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
    * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
-   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-   * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in
-   * any Router for this network in this region.
+   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES then there should not be any other
+   * Router.Nat section in any Router for this network in this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,9 +456,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
    * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
-   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-   * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in
-   * any Router for this network in this region.
+   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES then there should not be any other
+   * Router.Nat section in any Router for this network in this region.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSubnetworkIpRangesToNat() {
@@ -472,9 +470,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are
    * allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in
    * the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note
-   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or
-   * ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in
-   * any Router for this network in this region.
+   * that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES then there should not be any other
+   * Router.Nat section in any Router for this network in this region.
    * @param sourceSubnetworkIpRangesToNat sourceSubnetworkIpRangesToNat or {@code null} for none
    */
   public RouterNat setSourceSubnetworkIpRangesToNat(java.lang.String sourceSubnetworkIpRangesToNat) {

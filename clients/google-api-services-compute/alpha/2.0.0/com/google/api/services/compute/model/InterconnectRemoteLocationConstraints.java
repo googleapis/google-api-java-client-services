@@ -36,7 +36,7 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
    * prevent users from accidentally ordering something that is incompatible with their cloud
    * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
    * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * will require that both ports use the same remote location.
+   * requires that both ports use the same remote location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
    * prevent users from accidentally ordering something that is incompatible with their cloud
    * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
    * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * will require that both ports use the same remote location.
+   * requires that both ports use the same remote location.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortPairRemoteLocation() {
@@ -82,7 +82,7 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
    * prevent users from accidentally ordering something that is incompatible with their cloud
    * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
    * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * will require that both ports use the same remote location.
+   * requires that both ports use the same remote location.
    * @param portPairRemoteLocation portPairRemoteLocation or {@code null} for none
    */
   public InterconnectRemoteLocationConstraints setPortPairRemoteLocation(java.lang.String portPairRemoteLocation) {

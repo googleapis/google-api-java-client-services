@@ -58,9 +58,8 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
-   * field is used in optimistic locking. An up-to-date fingerprint must be provided in order to
-   * patch.
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. An up-to-date fingerprint must be provided in order to patch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,9 +217,8 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
-   * field is used in optimistic locking. An up-to-date fingerprint must be provided in order to
-   * patch.
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. An up-to-date fingerprint must be provided in order to patch.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -229,9 +227,8 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
-   * field is used in optimistic locking. An up-to-date fingerprint must be provided in order to
-   * patch.
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. An up-to-date fingerprint must be provided in order to patch.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -242,9 +239,8 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
-   * field is used in optimistic locking. An up-to-date fingerprint must be provided in order to
-   * patch.
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. An up-to-date fingerprint must be provided in order to patch.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -254,9 +250,8 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
-   * field is used in optimistic locking. An up-to-date fingerprint must be provided in order to
-   * patch.
+   * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
+   * in optimistic locking. An up-to-date fingerprint must be provided in order to patch.
    * @see #setFingerprint()
    *
    * <p>

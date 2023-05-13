@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Cross-Cloud Interconnect Remote Location resource. You can use this resource to
- * find remote location details about an Interconnect attachment (VLAN).
+ * Represents a Cross-Cloud Interconnect Remote Location resource. You can use this resource to find
+ * remote location details about an Interconnect attachment (VLAN).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

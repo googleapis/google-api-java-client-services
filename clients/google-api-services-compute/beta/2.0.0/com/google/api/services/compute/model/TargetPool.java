@@ -125,6 +125,13 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * [Output Only] The resource URL for the security policy associated with this target pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityPolicy;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -355,6 +362,23 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
    */
   public TargetPool setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * [Output Only] The resource URL for the security policy associated with this target pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityPolicy() {
+    return securityPolicy;
+  }
+
+  /**
+   * [Output Only] The resource URL for the security policy associated with this target pool.
+   * @param securityPolicy securityPolicy or {@code null} for none
+   */
+  public TargetPool setSecurityPolicy(java.lang.String securityPolicy) {
+    this.securityPolicy = securityPolicy;
     return this;
   }
 

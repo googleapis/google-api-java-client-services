@@ -17,8 +17,7 @@
 package com.google.api.services.datastore.v1.model;
 
 /**
- * A Datastore data object. An entity is limited to 1 megabyte when stored. That _roughly_
- * corresponds to a limit of 1 megabyte for the serialized form of this message.
+ * A Datastore data object. Must not exceed 1 MiB - 4 bytes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

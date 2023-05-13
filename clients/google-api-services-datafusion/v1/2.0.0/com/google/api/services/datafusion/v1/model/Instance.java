@@ -192,6 +192,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean privateInstance;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
    * The value may be {@code null}.
    */
@@ -626,6 +633,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPrivateInstance(java.lang.Boolean privateInstance) {
     this.privateInstance = privateInstance;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

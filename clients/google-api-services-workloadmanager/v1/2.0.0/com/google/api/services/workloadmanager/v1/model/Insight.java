@@ -52,6 +52,13 @@ public final class Insight extends com.google.api.client.json.GenericJson {
   private String sentTime;
 
   /**
+   * The insights data for the sqlserver workload validation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlserverValidation sqlserverValidation;
+
+  /**
    * The insights data for sap system discovery. This is a copy of SAP System proto and should get
    * updated whenever that one changes.
    * @return value or {@code null} for none
@@ -101,6 +108,23 @@ public final class Insight extends com.google.api.client.json.GenericJson {
    */
   public Insight setSentTime(String sentTime) {
     this.sentTime = sentTime;
+    return this;
+  }
+
+  /**
+   * The insights data for the sqlserver workload validation.
+   * @return value or {@code null} for none
+   */
+  public SqlserverValidation getSqlserverValidation() {
+    return sqlserverValidation;
+  }
+
+  /**
+   * The insights data for the sqlserver workload validation.
+   * @param sqlserverValidation sqlserverValidation or {@code null} for none
+   */
+  public Insight setSqlserverValidation(SqlserverValidation sqlserverValidation) {
+    this.sqlserverValidation = sqlserverValidation;
     return this;
   }
 

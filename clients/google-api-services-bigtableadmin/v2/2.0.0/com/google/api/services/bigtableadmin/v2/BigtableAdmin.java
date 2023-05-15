@@ -589,24 +589,24 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
     public class Projects {
 
       /**
-       * An accessor for creating requests from the Operations collection.
+       * An accessor for creating requests from the ChildOperations collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code BigtableAdmin bigtableadmin = new BigtableAdmin(...);}
-       *   {@code BigtableAdmin.Operations.List request = bigtableadmin.operations().list(parameters ...)}
+       *   {@code BigtableAdmin.ChildOperations.List request = bigtableadmin.childOperations().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Operations operations() {
-        return new Operations();
+      public ChildOperations childOperations() {
+        return new ChildOperations();
       }
 
       /**
        * The "operations" collection of methods.
        */
-      public class Operations {
+      public class ChildOperations {
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support

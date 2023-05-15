@@ -1897,7 +1897,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
      * Create a request for the method "projects.accounts".
      *
      * This request holds the parameters needed by the identitytoolkit server.  After setting any
-     * optional parameters, call the {@link Accounts#execute()} method to invoke the remote operation.
+     * optional parameters, call the {@link AccountsRequest#execute()} method to invoke the remote
+     * operation.
      *
      * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
      *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
@@ -1906,13 +1907,13 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
      * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
      * @return the request
      */
-    public Accounts accounts(java.lang.String targetProjectId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) throws java.io.IOException {
-      Accounts result = new Accounts(targetProjectId, content);
+    public AccountsRequest accounts(java.lang.String targetProjectId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) throws java.io.IOException {
+      AccountsRequest result = new AccountsRequest(targetProjectId, content);
       initialize(result);
       return result;
     }
 
-    public class Accounts extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse> {
+    public class AccountsRequest extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse> {
 
       private static final String REST_PATH = "v1/projects/{+targetProjectId}/accounts";
 
@@ -1930,10 +1931,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * Create a request for the method "projects.accounts".
        *
        * This request holds the parameters needed by the the identitytoolkit server.  After setting any
-       * optional parameters, call the {@link Accounts#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Accounts#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * optional parameters, call the {@link AccountsRequest#execute()} method to invoke the remote
+       * operation. <p> {@link AccountsRequest#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
        *
        * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
      *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
@@ -1942,7 +1943,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
        * @since 1.13
        */
-      protected Accounts(java.lang.String targetProjectId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) {
+      protected AccountsRequest(java.lang.String targetProjectId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) {
         super(IdentityToolkit.this, "POST", REST_PATH, content, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse.class);
         this.targetProjectId = com.google.api.client.util.Preconditions.checkNotNull(targetProjectId, "Required parameter targetProjectId must be specified.");
         if (!getSuppressPatternChecks()) {
@@ -1953,58 +1954,58 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Accounts set$Xgafv(java.lang.String $Xgafv) {
-        return (Accounts) super.set$Xgafv($Xgafv);
+      public AccountsRequest set$Xgafv(java.lang.String $Xgafv) {
+        return (AccountsRequest) super.set$Xgafv($Xgafv);
       }
 
       @Override
-      public Accounts setAccessToken(java.lang.String accessToken) {
-        return (Accounts) super.setAccessToken(accessToken);
+      public AccountsRequest setAccessToken(java.lang.String accessToken) {
+        return (AccountsRequest) super.setAccessToken(accessToken);
       }
 
       @Override
-      public Accounts setAlt(java.lang.String alt) {
-        return (Accounts) super.setAlt(alt);
+      public AccountsRequest setAlt(java.lang.String alt) {
+        return (AccountsRequest) super.setAlt(alt);
       }
 
       @Override
-      public Accounts setCallback(java.lang.String callback) {
-        return (Accounts) super.setCallback(callback);
+      public AccountsRequest setCallback(java.lang.String callback) {
+        return (AccountsRequest) super.setCallback(callback);
       }
 
       @Override
-      public Accounts setFields(java.lang.String fields) {
-        return (Accounts) super.setFields(fields);
+      public AccountsRequest setFields(java.lang.String fields) {
+        return (AccountsRequest) super.setFields(fields);
       }
 
       @Override
-      public Accounts setKey(java.lang.String key) {
-        return (Accounts) super.setKey(key);
+      public AccountsRequest setKey(java.lang.String key) {
+        return (AccountsRequest) super.setKey(key);
       }
 
       @Override
-      public Accounts setOauthToken(java.lang.String oauthToken) {
-        return (Accounts) super.setOauthToken(oauthToken);
+      public AccountsRequest setOauthToken(java.lang.String oauthToken) {
+        return (AccountsRequest) super.setOauthToken(oauthToken);
       }
 
       @Override
-      public Accounts setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Accounts) super.setPrettyPrint(prettyPrint);
+      public AccountsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AccountsRequest) super.setPrettyPrint(prettyPrint);
       }
 
       @Override
-      public Accounts setQuotaUser(java.lang.String quotaUser) {
-        return (Accounts) super.setQuotaUser(quotaUser);
+      public AccountsRequest setQuotaUser(java.lang.String quotaUser) {
+        return (AccountsRequest) super.setQuotaUser(quotaUser);
       }
 
       @Override
-      public Accounts setUploadType(java.lang.String uploadType) {
-        return (Accounts) super.setUploadType(uploadType);
+      public AccountsRequest setUploadType(java.lang.String uploadType) {
+        return (AccountsRequest) super.setUploadType(uploadType);
       }
 
       @Override
-      public Accounts setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Accounts) super.setUploadProtocol(uploadProtocol);
+      public AccountsRequest setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AccountsRequest) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2033,7 +2034,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * not set, the target project is inferred from the scope associated to the Bearer access
        * token.
        */
-      public Accounts setTargetProjectId(java.lang.String targetProjectId) {
+      public AccountsRequest setTargetProjectId(java.lang.String targetProjectId) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(TARGET_PROJECT_ID_PATTERN.matcher(targetProjectId).matches(),
               "Parameter targetProjectId must conform to the pattern " +
@@ -2044,8 +2045,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Accounts set(String parameterName, Object value) {
-        return (Accounts) super.set(parameterName, value);
+      public AccountsRequest set(String parameterName, Object value) {
+        return (AccountsRequest) super.set(parameterName, value);
       }
     }
     /**
@@ -3614,7 +3615,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * Create a request for the method "tenants.accounts".
        *
        * This request holds the parameters needed by the identitytoolkit server.  After setting any
-       * optional parameters, call the {@link Accounts#execute()} method to invoke the remote operation.
+       * optional parameters, call the {@link AccountsRequest#execute()} method to invoke the remote
+       * operation.
        *
        * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
        *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
@@ -3625,13 +3627,13 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
        * @return the request
        */
-      public Accounts accounts(java.lang.String targetProjectId, java.lang.String tenantId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) throws java.io.IOException {
-        Accounts result = new Accounts(targetProjectId, tenantId, content);
+      public AccountsRequest accounts(java.lang.String targetProjectId, java.lang.String tenantId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) throws java.io.IOException {
+        AccountsRequest result = new AccountsRequest(targetProjectId, tenantId, content);
         initialize(result);
         return result;
       }
 
-      public class Accounts extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse> {
+      public class AccountsRequest extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse> {
 
         private static final String REST_PATH = "v1/projects/{+targetProjectId}/tenants/{+tenantId}/accounts";
 
@@ -3652,10 +3654,10 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * Create a request for the method "tenants.accounts".
          *
          * This request holds the parameters needed by the the identitytoolkit server.  After setting any
-         * optional parameters, call the {@link Accounts#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Accounts#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         * optional parameters, call the {@link AccountsRequest#execute()} method to invoke the remote
+         * operation. <p> {@link AccountsRequest#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
          *
          * @param targetProjectId The project ID of the project which the user should belong to. Specifying this field requires a
        *        Google OAuth 2.0 credential with the proper [permissions](https://cloud.google.com
@@ -3666,7 +3668,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest}
          * @since 1.13
          */
-        protected Accounts(java.lang.String targetProjectId, java.lang.String tenantId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) {
+        protected AccountsRequest(java.lang.String targetProjectId, java.lang.String tenantId, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpRequest content) {
           super(IdentityToolkit.this, "POST", REST_PATH, content, com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1SignUpResponse.class);
           this.targetProjectId = com.google.api.client.util.Preconditions.checkNotNull(targetProjectId, "Required parameter targetProjectId must be specified.");
           if (!getSuppressPatternChecks()) {
@@ -3683,58 +3685,58 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
 
         @Override
-        public Accounts set$Xgafv(java.lang.String $Xgafv) {
-          return (Accounts) super.set$Xgafv($Xgafv);
+        public AccountsRequest set$Xgafv(java.lang.String $Xgafv) {
+          return (AccountsRequest) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public Accounts setAccessToken(java.lang.String accessToken) {
-          return (Accounts) super.setAccessToken(accessToken);
+        public AccountsRequest setAccessToken(java.lang.String accessToken) {
+          return (AccountsRequest) super.setAccessToken(accessToken);
         }
 
         @Override
-        public Accounts setAlt(java.lang.String alt) {
-          return (Accounts) super.setAlt(alt);
+        public AccountsRequest setAlt(java.lang.String alt) {
+          return (AccountsRequest) super.setAlt(alt);
         }
 
         @Override
-        public Accounts setCallback(java.lang.String callback) {
-          return (Accounts) super.setCallback(callback);
+        public AccountsRequest setCallback(java.lang.String callback) {
+          return (AccountsRequest) super.setCallback(callback);
         }
 
         @Override
-        public Accounts setFields(java.lang.String fields) {
-          return (Accounts) super.setFields(fields);
+        public AccountsRequest setFields(java.lang.String fields) {
+          return (AccountsRequest) super.setFields(fields);
         }
 
         @Override
-        public Accounts setKey(java.lang.String key) {
-          return (Accounts) super.setKey(key);
+        public AccountsRequest setKey(java.lang.String key) {
+          return (AccountsRequest) super.setKey(key);
         }
 
         @Override
-        public Accounts setOauthToken(java.lang.String oauthToken) {
-          return (Accounts) super.setOauthToken(oauthToken);
+        public AccountsRequest setOauthToken(java.lang.String oauthToken) {
+          return (AccountsRequest) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public Accounts setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Accounts) super.setPrettyPrint(prettyPrint);
+        public AccountsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AccountsRequest) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public Accounts setQuotaUser(java.lang.String quotaUser) {
-          return (Accounts) super.setQuotaUser(quotaUser);
+        public AccountsRequest setQuotaUser(java.lang.String quotaUser) {
+          return (AccountsRequest) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public Accounts setUploadType(java.lang.String uploadType) {
-          return (Accounts) super.setUploadType(uploadType);
+        public AccountsRequest setUploadType(java.lang.String uploadType) {
+          return (AccountsRequest) super.setUploadType(uploadType);
         }
 
         @Override
-        public Accounts setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Accounts) super.setUploadProtocol(uploadProtocol);
+        public AccountsRequest setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AccountsRequest) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -3763,7 +3765,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * not set, the target project is inferred from the scope associated to the Bearer access
          * token.
          */
-        public Accounts setTargetProjectId(java.lang.String targetProjectId) {
+        public AccountsRequest setTargetProjectId(java.lang.String targetProjectId) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(TARGET_PROJECT_ID_PATTERN.matcher(targetProjectId).matches(),
                 "Parameter targetProjectId must conform to the pattern " +
@@ -3791,7 +3793,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * The ID of the Identity Platform tenant to create a user under. If not set, the user will
          * be created under the default Identity Platform project.
          */
-        public Accounts setTenantId(java.lang.String tenantId) {
+        public AccountsRequest setTenantId(java.lang.String tenantId) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(TENANT_ID_PATTERN.matcher(tenantId).matches(),
                 "Parameter tenantId must conform to the pattern " +
@@ -3802,8 +3804,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
 
         @Override
-        public Accounts set(String parameterName, Object value) {
-          return (Accounts) super.set(parameterName, value);
+        public AccountsRequest set(String parameterName, Object value) {
+          return (AccountsRequest) super.set(parameterName, value);
         }
       }
       /**

@@ -5126,24 +5126,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the ChildNodes collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Sasportal sasportal = new Sasportal(...);}
-       *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+       *   {@code Sasportal.ChildNodes.List request = sasportal.childNodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public ChildNodes childNodes() {
+        return new ChildNodes();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class ChildNodes {
 
         /**
          * Creates a new node.
@@ -9415,24 +9415,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
     }
     /**
-     * An accessor for creating requests from the Nodes collection.
+     * An accessor for creating requests from the ChildNodes collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code Sasportal sasportal = new Sasportal(...);}
-     *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+     *   {@code Sasportal.ChildNodes.List request = sasportal.childNodes().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public Nodes nodes() {
-      return new Nodes();
+    public ChildNodes childNodes() {
+      return new ChildNodes();
     }
 
     /**
      * The "nodes" collection of methods.
      */
-    public class Nodes {
+    public class ChildNodes {
 
       /**
        * Creates a new node.
@@ -11162,24 +11162,24 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
 
       }
       /**
-       * An accessor for creating requests from the Nodes collection.
+       * An accessor for creating requests from the GrandChildNodes collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Sasportal sasportal = new Sasportal(...);}
-       *   {@code Sasportal.Nodes.List request = sasportal.nodes().list(parameters ...)}
+       *   {@code Sasportal.GrandChildNodes.List request = sasportal.grandChildNodes().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Nodes nodes() {
-        return new Nodes();
+      public GrandChildNodes grandChildNodes() {
+        return new GrandChildNodes();
       }
 
       /**
        * The "nodes" collection of methods.
        */
-      public class Nodes {
+      public class GrandChildNodes {
 
         /**
          * Creates a new node.

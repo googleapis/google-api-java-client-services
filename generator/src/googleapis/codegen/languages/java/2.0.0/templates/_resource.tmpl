@@ -4,12 +4,12 @@
  * <p>The typical use is:</p>
  * <pre>
  *   {@code {{ api.className }} {{ api.name }} = new {{ api.className }}(...);}
- *   {@code {{ api.className }}.{{ resource.className }}.List request = {{ api.name }}.{{ resource.codeName }}().list(parameters ...)}
+ *   {@code {{ api.className }}.{{ resource.className }}.List request = {{ api.name }}.{{ resource.lowerClassName }}().list(parameters ...)}
  * </pre>
  *
  * @return the resource collection
  */
-public {{ resource.className }} {{ resource.codeName }}() {
+public {{ resource.className }} {{ resource.lowerClassName }}() {
   return new {{ resource.className }}();
 }
 

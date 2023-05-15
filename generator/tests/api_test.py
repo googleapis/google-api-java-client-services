@@ -68,6 +68,118 @@ class ApiTest(basetest.TestCase):
     f.close()
     return Api(discovery_doc)
 
+  def _assertClassNameEquals(self, node, expected_name):
+      """
+      Convenience method to abreviate asserting a node's class name equals
+      the expected value
+      """
+      actual = node.values.get('className')
+      if actual != expected_name:
+        raise AssertionError('Expected class name "%s" had differing '
+                             'actual name "%s"' % (expected_name, actual))
+
+  def testDuplicatedNodesProduceDeduplicatedClassNames(self):
+
+    # Setup - load JSON with resources/methods with duplicated names
+    api = self.ApiFromDiscoveryDoc('duplicated.v1.json')
+
+    # given a loaded api, extract each of the nodes to be tested
+
+    # duplicated
+    root = api.values.get('resources')[0]
+
+    # duplicated.methods.duplicated
+    root_method = root.values.get('methods')[0]
+
+    # duplicated.resources.duplicated
+    duplicated_child = root.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.methods.duplicated
+    duplicated_child_method = duplicated_child.values.get('methods')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated
+    duplicated_grandchild = duplicated_child.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated.resources.duplicated
+    duplicated_greatgrandchild = duplicated_grandchild.values.get('resources')[0]
+
+    # duplicated.resources.duplicated.resources.duplicated.resources.duplicated
+    duplicated_greatgreatgrandchild = duplicated_greatgrandchild.values.get('resources')[0]
+
+    # duplicated.resources.nonduplicated
+    nonduplicated_child = root.values.get('resources')[1]
+
+    # duplicated.resources.nonduplicated.methods.duplicated
+    nonduplicated_child_method_duplicated = \
+        nonduplicated_child.values.get('methods')[0]
+
+    # duplicated.resources.nonduplicated.methods.nonduplicated
+    nonduplicated_child_method_nonduplicated = \
+        nonduplicated_child.values.get('methods')[1]
+
+    # duplicated.resources.nonduplicated.resources.duplicated
+    nonduplicated_duplicated_child = nonduplicated_child.values.get('resources')[0]
+
+    # duplicated.resources.nonduplicated.resources.duplicated.methods.duplicated
+    nonduplicated_duplicated_child_method = \
+        nonduplicated_duplicated_child.values.get('methods')[0]
+
+
+    # confirm each of the CodeObject nodes have the expected class names
+
+    # the root node should not be altered as it does not have same-named
+    # siblings or ancestors
+    self._assertClassNameEquals(root, 'Duplicated')
+
+    # the root node has two children with same name, one being a method and
+    # the other being a resource. The method should have the `Request` suffix
+    self._assertClassNameEquals(root_method, 'DuplicatedRequest')
+
+    # The first child of root that is a resource should have the `Child` prefix
+    self._assertClassNameEquals(duplicated_child, 'ChildDuplicated')
+
+    # The first duplicated child's same-named method should have the same
+    # name as its first parent with `Request` as suffix
+    self._assertClassNameEquals(duplicated_child_method, 'ChildDuplicatedRequest')
+
+    # A third occurrence in the path should use the `GrandChild` prefix
+    self._assertClassNameEquals(duplicated_grandchild, 'GrandChildDuplicated')
+
+    # A fourth occurrence in the path should use the `GreatGrandChild` prefix
+    self._assertClassNameEquals(duplicated_greatgrandchild,
+                                'GreatGrandChildDuplicated')
+
+    # A fifth occurrence in the path should use the `GreatGreatGrandChild`
+    # prefix (and so on)
+    self._assertClassNameEquals(duplicated_greatgreatgrandchild,
+                                'GreatGreatGrandChildDuplicated')
+
+    # The non-duplicated node should have its name intact
+    self._assertClassNameEquals(nonduplicated_child, 'Nonduplicated')
+
+    # The non-duplicated node has a same-named method. It should append the
+    # 'Request' prefix
+    self._assertClassNameEquals(nonduplicated_child_method_nonduplicated,
+                           'NonduplicatedRequest')
+
+    # The method node with a same-named sibling should have its name with a
+    # `Request` suffix. A prefix may also apply if there is duplication in
+    # the root-node path (which occurs in this duplicated.nonduplicated.duplicated case)
+    self._assertClassNameEquals(nonduplicated_child_method_duplicated,
+                           'ChildDuplicatedRequest')
+
+    # The resource node with a same-named sibling should have its name without
+    # suffixes, but a prefix applies since there is duplication in the root-node
+    # path
+    self._assertClassNameEquals(nonduplicated_duplicated_child,
+                           'ChildDuplicated')
+
+    # This method has a parent res with the same name, but the previous logic to
+    # hande duplication was intended to deal with this particular case by simply
+    # adding `Request`, so we don't prepend the first ancestor to "respect" this
+    # already existing logic
+    self._assertClassNameEquals(nonduplicated_duplicated_child_method, 'ChildDuplicatedRequest')
+
   def testLazySchemaForCreation(self):
     """Check loading schemas which are known to have a forward reference.
 

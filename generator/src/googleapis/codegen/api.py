@@ -35,7 +35,6 @@ import logging
 import operator
 import urlparse
 
-
 from googleapis.codegen import data_types
 from googleapis.codegen import template_objects
 from googleapis.codegen import utilities
@@ -330,7 +329,7 @@ class Api(template_objects.CodeObject):
       self._api.SetTemplateValue('rootUrl', '%s://%s/' % (scheme, service_host))
     if service_path is None:
       self._api.SetTemplateValue('servicePath', base_path[1:])
-    
+
     # TODO(sijunliu): remove this once mtlsRootUrl is available in all services.
     if not self.values.get('mtlsRootUrl') and root_url:
       mtls_root_url = root_url.replace('googleapis.com', 'mtls.googleapis.com')
@@ -353,7 +352,7 @@ class Api(template_objects.CodeObject):
     return [m for m in self.ModelClasses() if not m.parent]
 
   def DataTypeFromJson(self, type_dict, default_name, parent=None,
-                       wire_name=None):
+      wire_name=None):
     """Returns a schema object represented by a JSON Schema dictionary.
 
     Evaluate a JSON schema dictionary and return an appropriate schema object.
@@ -557,14 +556,10 @@ class Resource(template_objects.CodeObject):
     """
     super(Resource, self).__init__(def_dict, api, parent=parent, wire_name=name)
     self.ValidateName(name)
-    class_name = api.ToClassName(name, self, element_type='resource')
+    raw_class_name = api.ToClassName(name, self, element_type='resource')
+    self.SetTemplateValue('rawClassName', raw_class_name)
+    class_name = self.ComputeNonDuplicatedName(raw_class_name)
     self.SetTemplateValue('className', class_name)
-    # Replace methods dict with Methods
-    self._methods = []
-    method_dict = self.values.get('methods') or {}
-    for name in sorted(method_dict):
-      self._methods.append(Method(api, name, method_dict[name], parent=self))
-    self.SetTemplateValue('methods', self._methods)
     # Get sub resources
     self._resources = []
     r_def_dict = self.values.get('resources') or {}
@@ -572,6 +567,13 @@ class Resource(template_objects.CodeObject):
       r = Resource(api, name, r_def_dict[name], parent=self)
       self._resources.append(r)
     self.SetTemplateValue('resources', self._resources)
+    # Replace methods dict with Methods
+    self._methods = []
+    method_dict = self.values.get('methods') or {}
+    for name in sorted(method_dict):
+      self._methods.append(Method(api, name, method_dict[name], parent=self))
+    self.SetTemplateValue('methods', self._methods)
+
 
   @property
   def methods(self):
@@ -666,11 +668,8 @@ class Method(template_objects.CodeObject):
     # then eliminate this line.
     self.SetTemplateValue('wireName', name)
     self.ValidateName(name)
-    class_name = api.ToClassName(name, self, element_type='method')
-    if parent and class_name == parent.values['className']:
-      # Some languages complain when the collection name is the same as the
-      # method name.
-      class_name = '%sRequest' % class_name
+    raw_class_name = api.ToClassName(name, self, element_type='method')
+    class_name = self.ComputeNonDuplicatedName(raw_class_name)
     # The name is the key of the dict defining use. The id field is what you
     # have to use to call the method via RPC. That is unique, name might not be.
     self.SetTemplateValue('name', name)
@@ -740,7 +739,8 @@ class Method(template_objects.CodeObject):
     req_parameters.sort(lambda x, y: cmp(order.index(x.values['wireName']),
                                          order.index(y.values['wireName'])))
     # sort optional parameters by name to avoid code churn
-    opt_parameters.sort(lambda x, y: cmp(x.values['wireName'], y.values['wireName']))
+    opt_parameters.sort(
+      lambda x, y: cmp(x.values['wireName'], y.values['wireName']))
     req_parameters.extend(opt_parameters)
     self.SetTemplateValue('parameters', req_parameters)
 

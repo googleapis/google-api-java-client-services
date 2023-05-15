@@ -128,6 +128,55 @@ class CodeObject(UseableInTemplates):
       self.SetTemplateValue('description',
                             self.ValidateAndSanitizeComment(self.StripHTML(d)))
 
+  def ComputeNonDuplicatedName(self, original_class_name):
+    from googleapis.codegen.api import Resource
+    from googleapis.codegen.api import Method
+
+    class_name = original_class_name
+    parent_path = self.parentPath
+
+    def getNonDuplicatedClassName(class_name):
+      if str(class_name).startswith('Child'):
+        return 'Grand' + class_name
+      elif str(class_name).startswith('GrandChild') or str(class_name).startswith('Great'):
+        return 'Great' + class_name
+      else:
+        return 'Child' + class_name
+
+    # will append [Great][Grand][Child]ClassName depending on how
+    # deep the duplicated class is nested in the path
+    for parent_class_name in parent_path[:-1]:
+      if class_name == parent_class_name:
+        self.SetTemplateValue('isDuplicate', True)
+        class_name = getNonDuplicatedClassName(class_name)
+
+    # special case for last iteration. Append "Request" if direct
+    # parent is same-named and the current node is a method
+    if len(parent_path) > 0 and parent_path[-1] == class_name:
+      self.SetTemplateValue('isDuplicate', True)
+      if isinstance(self, Method):
+        class_name = class_name + 'Request'
+      elif isinstance(self, Resource):
+        class_name = getNonDuplicatedClassName(class_name)
+      else:
+        raise TypeError('Unexpected CodeObject type')
+
+    # Append the `Request` suffix to methods which have a same-named resource
+    # sibling
+    if self.parent is not None:
+      siblings = self.parent.children
+      for sibling in siblings:
+        if sibling.GetTemplateValue('className') == class_name:
+          # Importing at the top of the file will cause an import error
+          # Resources are left intact, but methods may have the `Request` suffix
+          if isinstance(self, Method):
+            class_name = class_name + 'Request'
+          elif not isinstance(self, Resource):
+            raise TypeError('Unexpected CodeObject type')
+          self.SetTemplateValue('isDuplicate', True)
+
+    return class_name
+
   @classmethod
   def ValidateName(cls, name):
     """Validate that the name is safe to use in generated code."""
@@ -233,6 +282,19 @@ class CodeObject(UseableInTemplates):
     return MarkSafe(self.RelativeClassName(None))
 
   @property
+  def lowerClassName(self):  # pylint: disable=g-bad-name
+    lower_class_name = self.GetTemplateValue('lowerClassName')
+    is_duplicate = self.GetTemplateValue('isDuplicate')
+    if not lower_class_name:
+      if is_duplicate:
+        lower_class_name = self.values['className']
+        lower_class_name = lower_class_name[0].lower() + lower_class_name[1:]
+      else:
+        lower_class_name = self.codeName
+    lower_class_name = MarkSafe(lower_class_name)
+    self.SetTemplateValue('lowerClassName', lower_class_name)
+    return lower_class_name
+  @property
   def packageRelativeClassName(self):  # pylint: disable=g-bad-name
     """Returns the class name for this object relative to its package.
 
@@ -282,6 +344,7 @@ class CodeObject(UseableInTemplates):
     """
     parent_list = self.ancestors
     return [p.values.get('className') for p in parent_list]
+
 
   @property
   def ancestors(self):

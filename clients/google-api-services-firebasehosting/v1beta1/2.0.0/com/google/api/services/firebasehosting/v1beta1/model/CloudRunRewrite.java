@@ -48,6 +48,14 @@ public final class CloudRunRewrite extends com.google.api.client.json.GenericJso
   private java.lang.String serviceId;
 
   /**
+   * Optional. User-provided TrafficConfig tag to send traffic to. When omitted, traffic is sent to
+   * the service-wide URI
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
+
+  /**
    * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1`
    * if not supplied.
    * @return value or {@code null} for none
@@ -80,6 +88,25 @@ public final class CloudRunRewrite extends com.google.api.client.json.GenericJso
    */
   public CloudRunRewrite setServiceId(java.lang.String serviceId) {
     this.serviceId = serviceId;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided TrafficConfig tag to send traffic to. When omitted, traffic is sent to
+   * the service-wide URI
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * Optional. User-provided TrafficConfig tag to send traffic to. When omitted, traffic is sent to
+   * the service-wide URI
+   * @param tag tag or {@code null} for none
+   */
+  public CloudRunRewrite setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 

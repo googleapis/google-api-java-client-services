@@ -38,6 +38,13 @@ public final class CloudDlpDataProfile extends com.google.api.client.json.Generi
   private java.lang.String dataProfile;
 
   /**
+   * The resource hierarchy level at which the data profile was generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentType;
+
+  /**
    * Name of the data profile, for example, `projects/123/locations/europe/tableProfiles/8383929`.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class CloudDlpDataProfile extends com.google.api.client.json.Generi
    */
   public CloudDlpDataProfile setDataProfile(java.lang.String dataProfile) {
     this.dataProfile = dataProfile;
+    return this;
+  }
+
+  /**
+   * The resource hierarchy level at which the data profile was generated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentType() {
+    return parentType;
+  }
+
+  /**
+   * The resource hierarchy level at which the data profile was generated.
+   * @param parentType parentType or {@code null} for none
+   */
+  public CloudDlpDataProfile setParentType(java.lang.String parentType) {
+    this.parentType = parentType;
     return this;
   }
 

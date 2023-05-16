@@ -2880,20 +2880,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * Create a request for the method "apiproducts.attributes".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
-       * parameters, call the {@link Attributes#execute()} method to invoke the remote operation.
+       * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the API product. Use the following structure in your request:
        *        `organizations/{org}/apiproducts/{apiproduct}`
        * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
        * @return the request
        */
-      public Attributes attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
-        Attributes result = new Attributes(name, content);
+      public AttributesRequest attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
+        AttributesRequest result = new AttributesRequest(name, content);
         initialize(result);
         return result;
       }
 
-      public class Attributes extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
+      public class AttributesRequest extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
 
         private static final String REST_PATH = "v1/{+name}/attributes";
 
@@ -2913,17 +2913,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create a request for the method "apiproducts.attributes".
          *
          * This request holds the parameters needed by the the apigee server.  After setting any optional
-         * parameters, call the {@link Attributes#execute()} method to invoke the remote operation. <p>
-         * {@link
-         * Attributes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
+         * <p> {@link AttributesRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
          *
          * @param name Required. Name of the API product. Use the following structure in your request:
        *        `organizations/{org}/apiproducts/{apiproduct}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
          * @since 1.13
          */
-        protected Attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
+        protected AttributesRequest(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
           super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
@@ -2934,58 +2934,58 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         @Override
-        public Attributes set$Xgafv(java.lang.String $Xgafv) {
-          return (Attributes) super.set$Xgafv($Xgafv);
+        public AttributesRequest set$Xgafv(java.lang.String $Xgafv) {
+          return (AttributesRequest) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public Attributes setAccessToken(java.lang.String accessToken) {
-          return (Attributes) super.setAccessToken(accessToken);
+        public AttributesRequest setAccessToken(java.lang.String accessToken) {
+          return (AttributesRequest) super.setAccessToken(accessToken);
         }
 
         @Override
-        public Attributes setAlt(java.lang.String alt) {
-          return (Attributes) super.setAlt(alt);
+        public AttributesRequest setAlt(java.lang.String alt) {
+          return (AttributesRequest) super.setAlt(alt);
         }
 
         @Override
-        public Attributes setCallback(java.lang.String callback) {
-          return (Attributes) super.setCallback(callback);
+        public AttributesRequest setCallback(java.lang.String callback) {
+          return (AttributesRequest) super.setCallback(callback);
         }
 
         @Override
-        public Attributes setFields(java.lang.String fields) {
-          return (Attributes) super.setFields(fields);
+        public AttributesRequest setFields(java.lang.String fields) {
+          return (AttributesRequest) super.setFields(fields);
         }
 
         @Override
-        public Attributes setKey(java.lang.String key) {
-          return (Attributes) super.setKey(key);
+        public AttributesRequest setKey(java.lang.String key) {
+          return (AttributesRequest) super.setKey(key);
         }
 
         @Override
-        public Attributes setOauthToken(java.lang.String oauthToken) {
-          return (Attributes) super.setOauthToken(oauthToken);
+        public AttributesRequest setOauthToken(java.lang.String oauthToken) {
+          return (AttributesRequest) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public Attributes setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Attributes) super.setPrettyPrint(prettyPrint);
+        public AttributesRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AttributesRequest) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public Attributes setQuotaUser(java.lang.String quotaUser) {
-          return (Attributes) super.setQuotaUser(quotaUser);
+        public AttributesRequest setQuotaUser(java.lang.String quotaUser) {
+          return (AttributesRequest) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public Attributes setUploadType(java.lang.String uploadType) {
-          return (Attributes) super.setUploadType(uploadType);
+        public AttributesRequest setUploadType(java.lang.String uploadType) {
+          return (AttributesRequest) super.setUploadType(uploadType);
         }
 
         @Override
-        public Attributes setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Attributes) super.setUploadProtocol(uploadProtocol);
+        public AttributesRequest setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AttributesRequest) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -3006,7 +3006,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Required. Name of the API product. Use the following structure in your request:
          * `organizations/{org}/apiproducts/{apiproduct}`
          */
-        public Attributes setName(java.lang.String name) {
+        public AttributesRequest setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
@@ -3017,8 +3017,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         @Override
-        public Attributes set(String parameterName, Object value) {
-          return (Attributes) super.set(parameterName, value);
+        public AttributesRequest set(String parameterName, Object value) {
+          return (AttributesRequest) super.set(parameterName, value);
         }
       }
       /**
@@ -9561,20 +9561,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * Create a request for the method "developers.attributes".
        *
        * This request holds the parameters needed by the apigee server.  After setting any optional
-       * parameters, call the {@link Attributes#execute()} method to invoke the remote operation.
+       * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Email address of the developer for which attributes are being updated. Use the following
        *        structure in your request: `organizations/{org}/developers/{developer_email}`
        * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
        * @return the request
        */
-      public Attributes attributes(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
-        Attributes result = new Attributes(parent, content);
+      public AttributesRequest attributes(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
+        AttributesRequest result = new AttributesRequest(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Attributes extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
+      public class AttributesRequest extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
 
         private static final String REST_PATH = "v1/{+parent}/attributes";
 
@@ -9594,17 +9594,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create a request for the method "developers.attributes".
          *
          * This request holds the parameters needed by the the apigee server.  After setting any optional
-         * parameters, call the {@link Attributes#execute()} method to invoke the remote operation. <p>
-         * {@link
-         * Attributes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
+         * <p> {@link AttributesRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
          *
          * @param parent Required. Email address of the developer for which attributes are being updated. Use the following
        *        structure in your request: `organizations/{org}/developers/{developer_email}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
          * @since 1.13
          */
-        protected Attributes(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
+        protected AttributesRequest(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
           super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
@@ -9615,58 +9615,58 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         @Override
-        public Attributes set$Xgafv(java.lang.String $Xgafv) {
-          return (Attributes) super.set$Xgafv($Xgafv);
+        public AttributesRequest set$Xgafv(java.lang.String $Xgafv) {
+          return (AttributesRequest) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public Attributes setAccessToken(java.lang.String accessToken) {
-          return (Attributes) super.setAccessToken(accessToken);
+        public AttributesRequest setAccessToken(java.lang.String accessToken) {
+          return (AttributesRequest) super.setAccessToken(accessToken);
         }
 
         @Override
-        public Attributes setAlt(java.lang.String alt) {
-          return (Attributes) super.setAlt(alt);
+        public AttributesRequest setAlt(java.lang.String alt) {
+          return (AttributesRequest) super.setAlt(alt);
         }
 
         @Override
-        public Attributes setCallback(java.lang.String callback) {
-          return (Attributes) super.setCallback(callback);
+        public AttributesRequest setCallback(java.lang.String callback) {
+          return (AttributesRequest) super.setCallback(callback);
         }
 
         @Override
-        public Attributes setFields(java.lang.String fields) {
-          return (Attributes) super.setFields(fields);
+        public AttributesRequest setFields(java.lang.String fields) {
+          return (AttributesRequest) super.setFields(fields);
         }
 
         @Override
-        public Attributes setKey(java.lang.String key) {
-          return (Attributes) super.setKey(key);
+        public AttributesRequest setKey(java.lang.String key) {
+          return (AttributesRequest) super.setKey(key);
         }
 
         @Override
-        public Attributes setOauthToken(java.lang.String oauthToken) {
-          return (Attributes) super.setOauthToken(oauthToken);
+        public AttributesRequest setOauthToken(java.lang.String oauthToken) {
+          return (AttributesRequest) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public Attributes setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Attributes) super.setPrettyPrint(prettyPrint);
+        public AttributesRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AttributesRequest) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public Attributes setQuotaUser(java.lang.String quotaUser) {
-          return (Attributes) super.setQuotaUser(quotaUser);
+        public AttributesRequest setQuotaUser(java.lang.String quotaUser) {
+          return (AttributesRequest) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public Attributes setUploadType(java.lang.String uploadType) {
-          return (Attributes) super.setUploadType(uploadType);
+        public AttributesRequest setUploadType(java.lang.String uploadType) {
+          return (AttributesRequest) super.setUploadType(uploadType);
         }
 
         @Override
-        public Attributes setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Attributes) super.setUploadProtocol(uploadProtocol);
+        public AttributesRequest setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AttributesRequest) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -9687,7 +9687,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Required. Email address of the developer for which attributes are being updated. Use the
          * following structure in your request: `organizations/{org}/developers/{developer_email}`
          */
-        public Attributes setParent(java.lang.String parent) {
+        public AttributesRequest setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
@@ -9698,8 +9698,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         @Override
-        public Attributes set(String parameterName, Object value) {
-          return (Attributes) super.set(parameterName, value);
+        public AttributesRequest set(String parameterName, Object value) {
+          return (AttributesRequest) super.set(parameterName, value);
         }
       }
       /**
@@ -11228,20 +11228,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Create a request for the method "apps.attributes".
          *
          * This request holds the parameters needed by the apigee server.  After setting any optional
-         * parameters, call the {@link Attributes#execute()} method to invoke the remote operation.
+         * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the developer app. Use the following structure in your request:
          *        `organizations/{org}/developers/{developer_email}/apps/{app}`
          * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
          * @return the request
          */
-        public Attributes attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
-          Attributes result = new Attributes(name, content);
+        public AttributesRequest attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) throws java.io.IOException {
+          AttributesRequest result = new AttributesRequest(name, content);
           initialize(result);
           return result;
         }
 
-        public class Attributes extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
+        public class AttributesRequest extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes> {
 
           private static final String REST_PATH = "v1/{+name}/attributes";
 
@@ -11255,17 +11255,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Create a request for the method "apps.attributes".
            *
            * This request holds the parameters needed by the the apigee server.  After setting any optional
-           * parameters, call the {@link Attributes#execute()} method to invoke the remote operation. <p>
-           * {@link
-           * Attributes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           * parameters, call the {@link AttributesRequest#execute()} method to invoke the remote operation.
+           * <p> {@link AttributesRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+           * eClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
            *
            * @param name Required. Name of the developer app. Use the following structure in your request:
          *        `organizations/{org}/developers/{developer_email}/apps/{app}`
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes}
            * @since 1.13
            */
-          protected Attributes(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
+          protected AttributesRequest(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes content) {
             super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1Attributes.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -11276,58 +11276,58 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           @Override
-          public Attributes set$Xgafv(java.lang.String $Xgafv) {
-            return (Attributes) super.set$Xgafv($Xgafv);
+          public AttributesRequest set$Xgafv(java.lang.String $Xgafv) {
+            return (AttributesRequest) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public Attributes setAccessToken(java.lang.String accessToken) {
-            return (Attributes) super.setAccessToken(accessToken);
+          public AttributesRequest setAccessToken(java.lang.String accessToken) {
+            return (AttributesRequest) super.setAccessToken(accessToken);
           }
 
           @Override
-          public Attributes setAlt(java.lang.String alt) {
-            return (Attributes) super.setAlt(alt);
+          public AttributesRequest setAlt(java.lang.String alt) {
+            return (AttributesRequest) super.setAlt(alt);
           }
 
           @Override
-          public Attributes setCallback(java.lang.String callback) {
-            return (Attributes) super.setCallback(callback);
+          public AttributesRequest setCallback(java.lang.String callback) {
+            return (AttributesRequest) super.setCallback(callback);
           }
 
           @Override
-          public Attributes setFields(java.lang.String fields) {
-            return (Attributes) super.setFields(fields);
+          public AttributesRequest setFields(java.lang.String fields) {
+            return (AttributesRequest) super.setFields(fields);
           }
 
           @Override
-          public Attributes setKey(java.lang.String key) {
-            return (Attributes) super.setKey(key);
+          public AttributesRequest setKey(java.lang.String key) {
+            return (AttributesRequest) super.setKey(key);
           }
 
           @Override
-          public Attributes setOauthToken(java.lang.String oauthToken) {
-            return (Attributes) super.setOauthToken(oauthToken);
+          public AttributesRequest setOauthToken(java.lang.String oauthToken) {
+            return (AttributesRequest) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public Attributes setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Attributes) super.setPrettyPrint(prettyPrint);
+          public AttributesRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AttributesRequest) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public Attributes setQuotaUser(java.lang.String quotaUser) {
-            return (Attributes) super.setQuotaUser(quotaUser);
+          public AttributesRequest setQuotaUser(java.lang.String quotaUser) {
+            return (AttributesRequest) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public Attributes setUploadType(java.lang.String uploadType) {
-            return (Attributes) super.setUploadType(uploadType);
+          public AttributesRequest setUploadType(java.lang.String uploadType) {
+            return (AttributesRequest) super.setUploadType(uploadType);
           }
 
           @Override
-          public Attributes setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Attributes) super.setUploadProtocol(uploadProtocol);
+          public AttributesRequest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AttributesRequest) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -11348,7 +11348,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Required. Name of the developer app. Use the following structure in your request:
            * `organizations/{org}/developers/{developer_email}/apps/{app}`
            */
-          public Attributes setName(java.lang.String name) {
+          public AttributesRequest setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
@@ -11359,8 +11359,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           @Override
-          public Attributes set(String parameterName, Object value) {
-            return (Attributes) super.set(parameterName, value);
+          public AttributesRequest set(String parameterName, Object value) {
+            return (AttributesRequest) super.set(parameterName, value);
           }
         }
         /**
@@ -13099,20 +13099,20 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * Create a request for the method "keys.create".
            *
            * This request holds the parameters needed by the apigee server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation.
            *
            * @param parent Parent of the developer app key. Use the following structure in your request:
            *        `organizations/{org}/developers/{developer_email}/apps`
            * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
            * @return the request
            */
-          public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) throws java.io.IOException {
-            Create result = new Create(parent, content);
+          public CreateRequest create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) throws java.io.IOException {
+            CreateRequest result = new CreateRequest(parent, content);
             initialize(result);
             return result;
           }
 
-          public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey> {
+          public class CreateRequest extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey> {
 
             private static final String REST_PATH = "v1/{+parent}/keys";
 
@@ -13133,16 +13133,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Create a request for the method "keys.create".
              *
              * This request holds the parameters needed by the the apigee server.  After setting any optional
-             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
+             * parameters, call the {@link CreateRequest#execute()} method to invoke the remote operation. <p>
+             * {@link CreateRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+             * equest)} must be called to initialize this instance immediately after invoking the constructor.
+             * </p>
              *
              * @param parent Parent of the developer app key. Use the following structure in your request:
            *        `organizations/{org}/developers/{developer_email}/apps`
              * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey}
              * @since 1.13
              */
-            protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) {
+            protected CreateRequest(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey content) {
               super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeveloperAppKey.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -13153,58 +13154,58 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             @Override
-            public Create set$Xgafv(java.lang.String $Xgafv) {
-              return (Create) super.set$Xgafv($Xgafv);
+            public CreateRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (CreateRequest) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public Create setAccessToken(java.lang.String accessToken) {
-              return (Create) super.setAccessToken(accessToken);
+            public CreateRequest setAccessToken(java.lang.String accessToken) {
+              return (CreateRequest) super.setAccessToken(accessToken);
             }
 
             @Override
-            public Create setAlt(java.lang.String alt) {
-              return (Create) super.setAlt(alt);
+            public CreateRequest setAlt(java.lang.String alt) {
+              return (CreateRequest) super.setAlt(alt);
             }
 
             @Override
-            public Create setCallback(java.lang.String callback) {
-              return (Create) super.setCallback(callback);
+            public CreateRequest setCallback(java.lang.String callback) {
+              return (CreateRequest) super.setCallback(callback);
             }
 
             @Override
-            public Create setFields(java.lang.String fields) {
-              return (Create) super.setFields(fields);
+            public CreateRequest setFields(java.lang.String fields) {
+              return (CreateRequest) super.setFields(fields);
             }
 
             @Override
-            public Create setKey(java.lang.String key) {
-              return (Create) super.setKey(key);
+            public CreateRequest setKey(java.lang.String key) {
+              return (CreateRequest) super.setKey(key);
             }
 
             @Override
-            public Create setOauthToken(java.lang.String oauthToken) {
-              return (Create) super.setOauthToken(oauthToken);
+            public CreateRequest setOauthToken(java.lang.String oauthToken) {
+              return (CreateRequest) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Create) super.setPrettyPrint(prettyPrint);
+            public CreateRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CreateRequest) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public Create setQuotaUser(java.lang.String quotaUser) {
-              return (Create) super.setQuotaUser(quotaUser);
+            public CreateRequest setQuotaUser(java.lang.String quotaUser) {
+              return (CreateRequest) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public Create setUploadType(java.lang.String uploadType) {
-              return (Create) super.setUploadType(uploadType);
+            public CreateRequest setUploadType(java.lang.String uploadType) {
+              return (CreateRequest) super.setUploadType(uploadType);
             }
 
             @Override
-            public Create setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Create) super.setUploadProtocol(uploadProtocol);
+            public CreateRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CreateRequest) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -13225,7 +13226,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * Parent of the developer app key. Use the following structure in your request:
              * `organizations/{org}/developers/{developer_email}/apps`
              */
-            public Create setParent(java.lang.String parent) {
+            public CreateRequest setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                     "Parameter parent must conform to the pattern " +
@@ -13236,8 +13237,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             @Override
-            public Create set(String parameterName, Object value) {
-              return (Create) super.set(parameterName, value);
+            public CreateRequest set(String parameterName, Object value) {
+              return (CreateRequest) super.set(parameterName, value);
             }
           }
           /**

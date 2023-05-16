@@ -20,7 +20,7 @@ package com.google.api.services.workstations.v1beta;
  * Service definition for CloudWorkstations (v1beta).
  *
  * <p>
- * 
+ * Allows administrators to create managed developer environments in the cloud. 
  * </p>
  *
  * <p>

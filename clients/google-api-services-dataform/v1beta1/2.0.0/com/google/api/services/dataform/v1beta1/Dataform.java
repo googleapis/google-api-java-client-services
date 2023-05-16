@@ -535,6 +535,146 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
       public class Repositories {
 
         /**
+         * Computes a Repository's Git access token status.
+         *
+         * Create a request for the method "repositories.computeAccessTokenStatus".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link ComputeAccessTokenStatus#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The repository's name.
+         * @return the request
+         */
+        public ComputeAccessTokenStatus computeAccessTokenStatus(java.lang.String name) throws java.io.IOException {
+          ComputeAccessTokenStatus result = new ComputeAccessTokenStatus(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ComputeAccessTokenStatus extends DataformRequest<com.google.api.services.dataform.v1beta1.model.ComputeRepositoryAccessTokenStatusResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:computeAccessTokenStatus";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Computes a Repository's Git access token status.
+           *
+           * Create a request for the method "repositories.computeAccessTokenStatus".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link ComputeAccessTokenStatus#execute()} method to invoke the
+           * remote operation. <p> {@link ComputeAccessTokenStatus#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @since 1.13
+           */
+          protected ComputeAccessTokenStatus(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.ComputeRepositoryAccessTokenStatusResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ComputeAccessTokenStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (ComputeAccessTokenStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setAccessToken(java.lang.String accessToken) {
+            return (ComputeAccessTokenStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setAlt(java.lang.String alt) {
+            return (ComputeAccessTokenStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setCallback(java.lang.String callback) {
+            return (ComputeAccessTokenStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setFields(java.lang.String fields) {
+            return (ComputeAccessTokenStatus) super.setFields(fields);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setKey(java.lang.String key) {
+            return (ComputeAccessTokenStatus) super.setKey(key);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setOauthToken(java.lang.String oauthToken) {
+            return (ComputeAccessTokenStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ComputeAccessTokenStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setQuotaUser(java.lang.String quotaUser) {
+            return (ComputeAccessTokenStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setUploadType(java.lang.String uploadType) {
+            return (ComputeAccessTokenStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ComputeAccessTokenStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ComputeAccessTokenStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public ComputeAccessTokenStatus setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ComputeAccessTokenStatus set(String parameterName, Object value) {
+            return (ComputeAccessTokenStatus) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new Repository in a given project and location.
          *
          * Create a request for the method "repositories.create".

@@ -1561,64 +1561,64 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * An accessor for creating requests from the Organizations collection.
+         * An accessor for creating requests from the ChildOrganizations collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-         *   {@code Assuredworkloads.Organizations.List request = assuredworkloads.organizations().list(parameters ...)}
+         *   {@code Assuredworkloads.ChildOrganizations.List request = assuredworkloads.childOrganizations().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Organizations organizations() {
-          return new Organizations();
+        public ChildOrganizations childOrganizations() {
+          return new ChildOrganizations();
         }
 
         /**
          * The "organizations" collection of methods.
          */
-        public class Organizations {
+        public class ChildOrganizations {
 
           /**
-           * An accessor for creating requests from the Locations collection.
+           * An accessor for creating requests from the ChildLocations collection.
            *
            * <p>The typical use is:</p>
            * <pre>
            *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-           *   {@code Assuredworkloads.Locations.List request = assuredworkloads.locations().list(parameters ...)}
+           *   {@code Assuredworkloads.ChildLocations.List request = assuredworkloads.childLocations().list(parameters ...)}
            * </pre>
            *
            * @return the resource collection
            */
-          public Locations locations() {
-            return new Locations();
+          public ChildLocations childLocations() {
+            return new ChildLocations();
           }
 
           /**
            * The "locations" collection of methods.
            */
-          public class Locations {
+          public class ChildLocations {
 
             /**
-             * An accessor for creating requests from the Workloads collection.
+             * An accessor for creating requests from the ChildWorkloads collection.
              *
              * <p>The typical use is:</p>
              * <pre>
              *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-             *   {@code Assuredworkloads.Workloads.List request = assuredworkloads.workloads().list(parameters ...)}
+             *   {@code Assuredworkloads.ChildWorkloads.List request = assuredworkloads.childWorkloads().list(parameters ...)}
              * </pre>
              *
              * @return the resource collection
              */
-            public Workloads workloads() {
-              return new Workloads();
+            public ChildWorkloads childWorkloads() {
+              return new ChildWorkloads();
             }
 
             /**
              * The "workloads" collection of methods.
              */
-            public class Workloads {
+            public class ChildWorkloads {
 
               /**
                * Analyzes a hypothetical move of a source project or project-based workload to a target

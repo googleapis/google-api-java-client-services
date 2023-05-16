@@ -67,6 +67,13 @@ public final class GoogleAppsScriptTypeProcess extends com.google.api.client.jso
   private java.lang.String projectName;
 
   /**
+   * Which version of maestro to use to execute the script.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeVersion;
+
+  /**
    * Time the execution started.
    * The value may be {@code null}.
    */
@@ -162,6 +169,23 @@ public final class GoogleAppsScriptTypeProcess extends com.google.api.client.jso
    */
   public GoogleAppsScriptTypeProcess setProjectName(java.lang.String projectName) {
     this.projectName = projectName;
+    return this;
+  }
+
+  /**
+   * Which version of maestro to use to execute the script.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeVersion() {
+    return runtimeVersion;
+  }
+
+  /**
+   * Which version of maestro to use to execute the script.
+   * @param runtimeVersion runtimeVersion or {@code null} for none
+   */
+  public GoogleAppsScriptTypeProcess setRuntimeVersion(java.lang.String runtimeVersion) {
+    this.runtimeVersion = runtimeVersion;
     return this;
   }
 

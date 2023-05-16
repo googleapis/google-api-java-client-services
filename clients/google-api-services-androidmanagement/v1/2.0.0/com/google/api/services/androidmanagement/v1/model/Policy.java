@@ -244,6 +244,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultPermissionPolicy;
 
   /**
+   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
+   * connections, and more.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceConnectivityManagement deviceConnectivityManagement;
+
+  /**
    * The device owner information to be shown on the lock screen.
    * The value may be {@code null}.
    */
@@ -749,9 +757,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vpnConfigDisabled;
 
   /**
-   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
-   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
-   * order to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi networks is disabled. Supported on fully managed devices and work
+   * profiles on company-owned devices. For fully managed devices, setting this to true removes all
+   * configured networks and retains only the networks configured using openNetworkConfiguration.
+   * For work profiles on company-owned devices, existing configured networks are not affected and
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
+   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
+   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1224,6 +1236,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDefaultPermissionPolicy(java.lang.String defaultPermissionPolicy) {
     this.defaultPermissionPolicy = defaultPermissionPolicy;
+    return this;
+  }
+
+  /**
+   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
+   * connections, and more.
+   * @return value or {@code null} for none
+   */
+  public DeviceConnectivityManagement getDeviceConnectivityManagement() {
+    return deviceConnectivityManagement;
+  }
+
+  /**
+   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
+   * connections, and more.
+   * @param deviceConnectivityManagement deviceConnectivityManagement or {@code null} for none
+   */
+  public Policy setDeviceConnectivityManagement(DeviceConnectivityManagement deviceConnectivityManagement) {
+    this.deviceConnectivityManagement = deviceConnectivityManagement;
     return this;
   }
 
@@ -2373,9 +2404,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
-   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
-   * order to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi networks is disabled. Supported on fully managed devices and work
+   * profiles on company-owned devices. For fully managed devices, setting this to true removes all
+   * configured networks and retains only the networks configured using openNetworkConfiguration.
+   * For work profiles on company-owned devices, existing configured networks are not affected and
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
+   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
+   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigDisabled() {
@@ -2383,9 +2418,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring Wi-Fi access points is disabled. Note: If a network connection can't be
-   * made at boot time and configuring Wi-Fi is disabled then network escape hatch will be shown in
-   * order to refresh the device policy (see networkEscapeHatchEnabled).
+   * Whether configuring Wi-Fi networks is disabled. Supported on fully managed devices and work
+   * profiles on company-owned devices. For fully managed devices, setting this to true removes all
+   * configured networks and retains only the networks configured using openNetworkConfiguration.
+   * For work profiles on company-owned devices, existing configured networks are not affected and
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
+   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
+   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * @param wifiConfigDisabled wifiConfigDisabled or {@code null} for none
    */
   public Policy setWifiConfigDisabled(java.lang.Boolean wifiConfigDisabled) {

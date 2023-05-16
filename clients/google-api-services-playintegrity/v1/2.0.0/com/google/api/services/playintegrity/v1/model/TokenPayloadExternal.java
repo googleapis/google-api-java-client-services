@@ -53,6 +53,13 @@ public final class TokenPayloadExternal extends com.google.api.client.json.Gener
   private DeviceIntegrity deviceIntegrity;
 
   /**
+   * Additional guidance related to the integrity API response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GuidanceDetails guidanceDetails;
+
+  /**
    * Required. Details about the integrity request.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class TokenPayloadExternal extends com.google.api.client.json.Gener
    */
   public TokenPayloadExternal setDeviceIntegrity(DeviceIntegrity deviceIntegrity) {
     this.deviceIntegrity = deviceIntegrity;
+    return this;
+  }
+
+  /**
+   * Additional guidance related to the integrity API response.
+   * @return value or {@code null} for none
+   */
+  public GuidanceDetails getGuidanceDetails() {
+    return guidanceDetails;
+  }
+
+  /**
+   * Additional guidance related to the integrity API response.
+   * @param guidanceDetails guidanceDetails or {@code null} for none
+   */
+  public TokenPayloadExternal setGuidanceDetails(GuidanceDetails guidanceDetails) {
+    this.guidanceDetails = guidanceDetails;
     return this;
   }
 

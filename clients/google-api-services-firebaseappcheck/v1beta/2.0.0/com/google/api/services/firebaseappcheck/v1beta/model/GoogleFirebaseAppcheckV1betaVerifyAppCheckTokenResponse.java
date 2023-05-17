@@ -32,10 +32,10 @@ public final class GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse exten
 
   /**
    * Whether this token was already consumed. If this is the first time this method has seen the
-   * given App Check token, this field will contain the value `false`. The given token will then be
-   * marked as `already_consumed` for all future invocations of this method for that token. Note
-   * that if the given App Check token is invalid, an HTTP 403 error is returned instead of a
-   * response containing this field, regardless whether the token was already consumed.
+   * given App Check token, this field will be omitted from the response. The given token will then
+   * be marked as `already_consumed` (set to `true`) for all future invocations of this method for
+   * that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned
+   * instead of a response containing this field, regardless whether the token was already consumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,10 +43,10 @@ public final class GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse exten
 
   /**
    * Whether this token was already consumed. If this is the first time this method has seen the
-   * given App Check token, this field will contain the value `false`. The given token will then be
-   * marked as `already_consumed` for all future invocations of this method for that token. Note
-   * that if the given App Check token is invalid, an HTTP 403 error is returned instead of a
-   * response containing this field, regardless whether the token was already consumed.
+   * given App Check token, this field will be omitted from the response. The given token will then
+   * be marked as `already_consumed` (set to `true`) for all future invocations of this method for
+   * that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned
+   * instead of a response containing this field, regardless whether the token was already consumed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAlreadyConsumed() {
@@ -55,10 +55,10 @@ public final class GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse exten
 
   /**
    * Whether this token was already consumed. If this is the first time this method has seen the
-   * given App Check token, this field will contain the value `false`. The given token will then be
-   * marked as `already_consumed` for all future invocations of this method for that token. Note
-   * that if the given App Check token is invalid, an HTTP 403 error is returned instead of a
-   * response containing this field, regardless whether the token was already consumed.
+   * given App Check token, this field will be omitted from the response. The given token will then
+   * be marked as `already_consumed` (set to `true`) for all future invocations of this method for
+   * that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned
+   * instead of a response containing this field, regardless whether the token was already consumed.
    * @param alreadyConsumed alreadyConsumed or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse setAlreadyConsumed(java.lang.Boolean alreadyConsumed) {

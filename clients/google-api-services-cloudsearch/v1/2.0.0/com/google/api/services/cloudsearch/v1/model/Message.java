@@ -244,7 +244,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
    * design for more details). Most information from the source message (like text) are copied onto
    * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
-   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * for clients to enable things like click navigation to source message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,6 +267,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String messageState;
+
+  /**
+   * Indicates the number of unicode emojis in the message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numberOfUnicodeEmojis;
 
   /**
    * Indicates if this message contains any suggestions that were provided by any Apps.
@@ -860,7 +867,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
    * design for more details). Most information from the source message (like text) are copied onto
    * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
-   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * for clients to enable things like click navigation to source message.
    * @return value or {@code null} for none
    */
   public MessageReference getMessageReference() {
@@ -873,7 +880,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * all @mentions of a user are collected into a mention shortcut space (go/chat-shortcuts-backend-
    * design for more details). Most information from the source message (like text) are copied onto
    * top-level Message fields of shortcut messages by the server. The MessageReference is helpful
-   * for clients to enable things like click navigation to source message. NEXT TAG: 50
+   * for clients to enable things like click navigation to source message.
    * @param messageReference messageReference or {@code null} for none
    */
   public Message setMessageReference(MessageReference messageReference) {
@@ -920,6 +927,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setMessageState(java.lang.String messageState) {
     this.messageState = messageState;
+    return this;
+  }
+
+  /**
+   * Indicates the number of unicode emojis in the message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumberOfUnicodeEmojis() {
+    return numberOfUnicodeEmojis;
+  }
+
+  /**
+   * Indicates the number of unicode emojis in the message.
+   * @param numberOfUnicodeEmojis numberOfUnicodeEmojis or {@code null} for none
+   */
+  public Message setNumberOfUnicodeEmojis(java.lang.Integer numberOfUnicodeEmojis) {
+    this.numberOfUnicodeEmojis = numberOfUnicodeEmojis;
     return this;
   }
 

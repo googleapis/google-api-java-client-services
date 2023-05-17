@@ -1151,6 +1151,147 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * Disable Domain Migration
+           *
+           * Create a request for the method "domains.disableMigration".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link DisableMigration#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.DisableMigrationRequest}
+           * @return the request
+           */
+          public DisableMigration disableMigration(java.lang.String domain, com.google.api.services.managedidentities.v1.model.DisableMigrationRequest content) throws java.io.IOException {
+            DisableMigration result = new DisableMigration(domain, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DisableMigration extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+domain}:disableMigration";
+
+            private final java.util.regex.Pattern DOMAIN_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Disable Domain Migration
+             *
+             * Create a request for the method "domains.disableMigration".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link DisableMigration#execute()} method to invoke the
+             * remote operation. <p> {@link DisableMigration#initialize(com.google.api.client.googleapis.servi
+             * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.DisableMigrationRequest}
+             * @since 1.13
+             */
+            protected DisableMigration(java.lang.String domain, com.google.api.services.managedidentities.v1.model.DisableMigrationRequest content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1.model.Operation.class);
+              this.domain = com.google.api.client.util.Preconditions.checkNotNull(domain, "Required parameter domain must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public DisableMigration set$Xgafv(java.lang.String $Xgafv) {
+              return (DisableMigration) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DisableMigration setAccessToken(java.lang.String accessToken) {
+              return (DisableMigration) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DisableMigration setAlt(java.lang.String alt) {
+              return (DisableMigration) super.setAlt(alt);
+            }
+
+            @Override
+            public DisableMigration setCallback(java.lang.String callback) {
+              return (DisableMigration) super.setCallback(callback);
+            }
+
+            @Override
+            public DisableMigration setFields(java.lang.String fields) {
+              return (DisableMigration) super.setFields(fields);
+            }
+
+            @Override
+            public DisableMigration setKey(java.lang.String key) {
+              return (DisableMigration) super.setKey(key);
+            }
+
+            @Override
+            public DisableMigration setOauthToken(java.lang.String oauthToken) {
+              return (DisableMigration) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DisableMigration setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DisableMigration) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DisableMigration setQuotaUser(java.lang.String quotaUser) {
+              return (DisableMigration) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DisableMigration setUploadType(java.lang.String uploadType) {
+              return (DisableMigration) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DisableMigration setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DisableMigration) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String domain;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getDomain() {
+              return domain;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public DisableMigration setDomain(java.lang.String domain) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.domain = domain;
+              return this;
+            }
+
+            @Override
+            public DisableMigration set(String parameterName, Object value) {
+              return (DisableMigration) super.set(parameterName, value);
+            }
+          }
+          /**
            * DomainJoinMachine API joins a Compute Engine VM to the domain
            *
            * Create a request for the method "domains.domainJoinMachine".
@@ -1289,6 +1430,147 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             @Override
             public DomainJoinMachine set(String parameterName, Object value) {
               return (DomainJoinMachine) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Enable Domain Migration
+           *
+           * Create a request for the method "domains.enableMigration".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link EnableMigration#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.EnableMigrationRequest}
+           * @return the request
+           */
+          public EnableMigration enableMigration(java.lang.String domain, com.google.api.services.managedidentities.v1.model.EnableMigrationRequest content) throws java.io.IOException {
+            EnableMigration result = new EnableMigration(domain, content);
+            initialize(result);
+            return result;
+          }
+
+          public class EnableMigration extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+domain}:enableMigration";
+
+            private final java.util.regex.Pattern DOMAIN_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * Enable Domain Migration
+             *
+             * Create a request for the method "domains.enableMigration".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link EnableMigration#execute()} method to invoke the remote
+             * operation. <p> {@link EnableMigration#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.EnableMigrationRequest}
+             * @since 1.13
+             */
+            protected EnableMigration(java.lang.String domain, com.google.api.services.managedidentities.v1.model.EnableMigrationRequest content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1.model.Operation.class);
+              this.domain = com.google.api.client.util.Preconditions.checkNotNull(domain, "Required parameter domain must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public EnableMigration set$Xgafv(java.lang.String $Xgafv) {
+              return (EnableMigration) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public EnableMigration setAccessToken(java.lang.String accessToken) {
+              return (EnableMigration) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public EnableMigration setAlt(java.lang.String alt) {
+              return (EnableMigration) super.setAlt(alt);
+            }
+
+            @Override
+            public EnableMigration setCallback(java.lang.String callback) {
+              return (EnableMigration) super.setCallback(callback);
+            }
+
+            @Override
+            public EnableMigration setFields(java.lang.String fields) {
+              return (EnableMigration) super.setFields(fields);
+            }
+
+            @Override
+            public EnableMigration setKey(java.lang.String key) {
+              return (EnableMigration) super.setKey(key);
+            }
+
+            @Override
+            public EnableMigration setOauthToken(java.lang.String oauthToken) {
+              return (EnableMigration) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public EnableMigration setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (EnableMigration) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public EnableMigration setQuotaUser(java.lang.String quotaUser) {
+              return (EnableMigration) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public EnableMigration setUploadType(java.lang.String uploadType) {
+              return (EnableMigration) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public EnableMigration setUploadProtocol(java.lang.String uploadProtocol) {
+              return (EnableMigration) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String domain;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getDomain() {
+              return domain;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public EnableMigration setDomain(java.lang.String domain) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.domain = domain;
+              return this;
+            }
+
+            @Override
+            public EnableMigration set(String parameterName, Object value) {
+              return (EnableMigration) super.set(parameterName, value);
             }
           }
           /**

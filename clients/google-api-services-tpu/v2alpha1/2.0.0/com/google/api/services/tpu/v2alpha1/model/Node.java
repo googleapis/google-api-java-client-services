@@ -126,6 +126,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multisliceNode;
+
+  /**
    * Output only. Immutable. The name of the TPU.
    * The value may be {@code null}.
    */
@@ -424,6 +431,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultisliceNode() {
+    return multisliceNode;
+  }
+
+  /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * @param multisliceNode multisliceNode or {@code null} for none
+   */
+  public Node setMultisliceNode(java.lang.Boolean multisliceNode) {
+    this.multisliceNode = multisliceNode;
     return this;
   }
 

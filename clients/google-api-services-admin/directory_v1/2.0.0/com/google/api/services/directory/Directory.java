@@ -17270,7 +17270,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Creates a user.
+     * Creates a user. Mutate calls immediately following user creation might sometimes fail as the user
+     * isn't fully created due to propagation delay in our backends. Check the error details for the
+     * "User creation is not complete" message to see if this is the case. Retrying the calls after some
+     * time can help in this case.
      *
      * Create a request for the method "users.insert".
      *
@@ -17291,7 +17294,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/users";
 
       /**
-       * Creates a user.
+       * Creates a user. Mutate calls immediately following user creation might sometimes fail as the
+       * user isn't fully created due to propagation delay in our backends. Check the error details for
+       * the "User creation is not complete" message to see if this is the case. Retrying the calls
+       * after some time can help in this case.
        *
        * Create a request for the method "users.insert".
        *

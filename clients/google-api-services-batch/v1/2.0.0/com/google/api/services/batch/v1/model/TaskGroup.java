@@ -17,8 +17,7 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * A TaskGroup contains one or multiple Tasks that share the same Runnable but with different
- * runtime parameters.
+ * A TaskGroup defines one or more Tasks that all share the same TaskSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -63,6 +62,13 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requireHostsFile;
 
   /**
+   * Scheduling policy for Tasks in the TaskGroup. The default value is AS_SOON_AS_POSSIBLE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schedulingPolicy;
+
+  /**
    * Number of Tasks in the TaskGroup. Default is 1.
    * The value may be {@code null}.
    */
@@ -83,8 +89,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
    * ignored). Task count will be the length of task_environments. Tasks get a BATCH_TASK_INDEX and
    * BATCH_TASK_COUNT environment variable, in addition to any environment variables set in
    * task_environments, specifying the number of Tasks in the Task's parent TaskGroup, and the
-   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1). task_environments
-   * supports up to 200 entries.
+   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,6 +185,23 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Scheduling policy for Tasks in the TaskGroup. The default value is AS_SOON_AS_POSSIBLE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchedulingPolicy() {
+    return schedulingPolicy;
+  }
+
+  /**
+   * Scheduling policy for Tasks in the TaskGroup. The default value is AS_SOON_AS_POSSIBLE.
+   * @param schedulingPolicy schedulingPolicy or {@code null} for none
+   */
+  public TaskGroup setSchedulingPolicy(java.lang.String schedulingPolicy) {
+    this.schedulingPolicy = schedulingPolicy;
+    return this;
+  }
+
+  /**
    * Number of Tasks in the TaskGroup. Default is 1.
    * @return value or {@code null} for none
    */
@@ -221,8 +243,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
    * ignored). Task count will be the length of task_environments. Tasks get a BATCH_TASK_INDEX and
    * BATCH_TASK_COUNT environment variable, in addition to any environment variables set in
    * task_environments, specifying the number of Tasks in the Task's parent TaskGroup, and the
-   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1). task_environments
-   * supports up to 200 entries.
+   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
    * @return value or {@code null} for none
    */
   public java.util.List<Environment> getTaskEnvironments() {
@@ -235,8 +256,7 @@ public final class TaskGroup extends com.google.api.client.json.GenericJson {
    * ignored). Task count will be the length of task_environments. Tasks get a BATCH_TASK_INDEX and
    * BATCH_TASK_COUNT environment variable, in addition to any environment variables set in
    * task_environments, specifying the number of Tasks in the Task's parent TaskGroup, and the
-   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1). task_environments
-   * supports up to 200 entries.
+   * specific Task's index in the TaskGroup (0 through BATCH_TASK_COUNT - 1).
    * @param taskEnvironments taskEnvironments or {@code null} for none
    */
   public TaskGroup setTaskEnvironments(java.util.List<Environment> taskEnvironments) {

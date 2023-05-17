@@ -3251,6 +3251,35 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
+          /**
+           * If set to true, all running nodes belonging to this queued resource will be deleted
+           * first and then the queued resource will be deleted. Otherwise (i.e. force=false), the
+           * queued resource will only be deleted if its nodes have already been deleted or the
+           * queued resource is in the ACCEPTED, FAILED, or SUSPENDED state.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** If set to true, all running nodes belonging to this queued resource will be deleted first and then
+         the queued resource will be deleted. Otherwise (i.e. force=false), the queued resource will only be
+         deleted if its nodes have already been deleted or the queued resource is in the ACCEPTED, FAILED,
+         or SUSPENDED state.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * If set to true, all running nodes belonging to this queued resource will be deleted
+           * first and then the queued resource will be deleted. Otherwise (i.e. force=false), the
+           * queued resource will only be deleted if its nodes have already been deleted or the
+           * queued resource is in the ACCEPTED, FAILED, or SUSPENDED state.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           /** Idempotent request UUID. */
           @com.google.api.client.util.Key
           private java.lang.String requestId;

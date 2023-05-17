@@ -35,7 +35,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class TargetingExpansionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
+   * Whether to exclude first-party audiences from use in targeting expansion or optimized
    * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
    * applicable when a first-party audience is positively targeted (directly or included in a
    * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,
@@ -67,7 +67,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   private java.lang.String targetingExpansionLevel;
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
+   * Whether to exclude first-party audiences from use in targeting expansion or optimized
    * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
    * applicable when a first-party audience is positively targeted (directly or included in a
    * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,
@@ -84,7 +84,7 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
+   * Whether to exclude first-party audiences from use in targeting expansion or optimized
    * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
    * applicable when a first-party audience is positively targeted (directly or included in a
    * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,

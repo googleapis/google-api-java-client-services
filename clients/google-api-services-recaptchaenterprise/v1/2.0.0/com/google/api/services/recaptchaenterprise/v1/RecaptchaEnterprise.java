@@ -2024,8 +2024,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
       /**
        * Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise. Once a key is migrated, it can
        * be used from either product. SiteVerify requests are billed as CreateAssessment calls. You must
-       * be authenticated as one of the current owners of the reCAPTCHA Site Key, and your user must have
-       * the reCAPTCHA Enterprise Admin IAM role in the destination project.
+       * be authenticated as one of the current owners of the reCAPTCHA Key, and your user must have the
+       * reCAPTCHA Enterprise Admin IAM role in the destination project.
        *
        * Create a request for the method "keys.migrate".
        *
@@ -2052,8 +2052,8 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         /**
          * Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise. Once a key is migrated, it can
          * be used from either product. SiteVerify requests are billed as CreateAssessment calls. You must
-         * be authenticated as one of the current owners of the reCAPTCHA Site Key, and your user must
-         * have the reCAPTCHA Enterprise Admin IAM role in the destination project.
+         * be authenticated as one of the current owners of the reCAPTCHA Key, and your user must have the
+         * reCAPTCHA Enterprise Admin IAM role in the destination project.
          *
          * Create a request for the method "keys.migrate".
          *

@@ -45,7 +45,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   private java.util.List<java.lang.String> allowedBundleIds;
 
   /**
-   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
    * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.
@@ -89,7 +89,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
    * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.
@@ -100,7 +100,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
   }
 
   /**
-   * Apple Developer account details for the app the reCAPTCHA key will protect. reCAPTCHA
+   * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
    * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.

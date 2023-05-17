@@ -31,9 +31,9 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
-   * or `AnnotateAssessment` call.
+   * Optional. The unique stable hashed user identifier used to search connections. The identifier
+   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,9 +58,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   private java.lang.String pageToken;
 
   /**
-   * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
-   * or `AnnotateAssessment` call.
+   * Optional. The unique stable hashed user identifier used to search connections. The identifier
+   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -69,9 +69,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
-   * or `AnnotateAssessment` call.
+   * Optional. The unique stable hashed user identifier used to search connections. The identifier
+   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -82,9 +82,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
-   * or `AnnotateAssessment` call.
+   * Optional. The unique stable hashed user identifier used to search connections. The identifier
+   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -94,9 +94,9 @@ public final class GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMemb
   }
 
   /**
-   * Optional. The unique stable hashed user identifier we should search connections to. The
-   * identifier should correspond to a `hashed_account_id` provided in a previous `CreateAssessment`
-   * or `AnnotateAssessment` call.
+   * Optional. The unique stable hashed user identifier used to search connections. The identifier
+   * should correspond to a `hashed_account_id` provided in a previous `CreateAssessment` or
+   * `AnnotateAssessment` call.
    * @see #setHashedAccountId()
    *
    * <p>

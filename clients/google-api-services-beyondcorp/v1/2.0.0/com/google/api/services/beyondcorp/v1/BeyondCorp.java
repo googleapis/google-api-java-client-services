@@ -194,30 +194,30 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
       public class Global {
 
         /**
-         * An accessor for creating requests from the Tenants collection.
+         * An accessor for creating requests from the PartnerTenants collection.
          *
          * <p>The typical use is:</p>
          * <pre>
          *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
-         *   {@code BeyondCorp.Tenants.List request = beyondcorp.tenants().list(parameters ...)}
+         *   {@code BeyondCorp.PartnerTenants.List request = beyondcorp.partnerTenants().list(parameters ...)}
          * </pre>
          *
          * @return the resource collection
          */
-        public Tenants tenants() {
-          return new Tenants();
+        public PartnerTenants partnerTenants() {
+          return new PartnerTenants();
         }
 
         /**
-         * The "tenants" collection of methods.
+         * The "partnerTenants" collection of methods.
          */
-        public class Tenants {
+        public class PartnerTenants {
 
           /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
-           * Create a request for the method "tenants.getIamPolicy".
+           * Create a request for the method "partnerTenants.getIamPolicy".
            *
            * This request holds the parameters needed by the beyondcorp server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
@@ -238,13 +238,13 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
 
             private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
 
             /**
              * Gets the access control policy for a resource. Returns an empty policy if the resource exists
              * and does not have a policy set.
              *
-             * Create a request for the method "tenants.getIamPolicy".
+             * Create a request for the method "partnerTenants.getIamPolicy".
              *
              * This request holds the parameters needed by the the beyondcorp server.  After setting any
              * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
@@ -263,7 +263,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
             }
 
@@ -357,7 +357,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
               this.resource = resource;
               return this;
@@ -415,7 +415,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * Sets the access control policy on the specified resource. Replaces any existing policy. Can
            * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
-           * Create a request for the method "tenants.setIamPolicy".
+           * Create a request for the method "partnerTenants.setIamPolicy".
            *
            * This request holds the parameters needed by the beyondcorp server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
@@ -437,13 +437,13 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
 
             private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
 
             /**
              * Sets the access control policy on the specified resource. Replaces any existing policy. Can
              * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
-             * Create a request for the method "tenants.setIamPolicy".
+             * Create a request for the method "partnerTenants.setIamPolicy".
              *
              * This request holds the parameters needed by the the beyondcorp server.  After setting any
              * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
@@ -463,7 +463,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
             }
 
@@ -547,7 +547,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
               this.resource = resource;
               return this;
@@ -564,7 +564,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * designed to be used for building permission-aware UIs and command-line tools, not for
            * authorization checking. This operation may "fail open" without warning.
            *
-           * Create a request for the method "tenants.testIamPermissions".
+           * Create a request for the method "partnerTenants.testIamPermissions".
            *
            * This request holds the parameters needed by the beyondcorp server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
@@ -586,7 +586,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
 
             private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -594,7 +594,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
              * operation is designed to be used for building permission-aware UIs and command-line tools, not
              * for authorization checking. This operation may "fail open" without warning.
              *
-             * Create a request for the method "tenants.testIamPermissions".
+             * Create a request for the method "partnerTenants.testIamPermissions".
              *
              * This request holds the parameters needed by the the beyondcorp server.  After setting any
              * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
@@ -614,7 +614,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
             }
 
@@ -698,7 +698,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^organizations/[^/]+/locations/global/tenants/[^/]+$");
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
               }
               this.resource = resource;
               return this;
@@ -755,7 +755,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
 
               private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
 
               /**
                * Gets the access control policy for a resource. Returns an empty policy if the resource exists
@@ -780,7 +780,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
               }
 
@@ -874,7 +874,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
                 this.resource = resource;
                 return this;
@@ -956,7 +956,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
 
               private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
 
               /**
                * Sets the access control policy on the specified resource. Replaces any existing policy. Can
@@ -982,7 +982,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
               }
 
@@ -1066,7 +1066,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
                 this.resource = resource;
                 return this;
@@ -1105,7 +1105,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
 
               private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
 
               /**
                * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -1133,7 +1133,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
               }
 
@@ -1217,7 +1217,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                       "Parameter resource must conform to the pattern " +
-                      "^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
                 }
                 this.resource = resource;
                 return this;

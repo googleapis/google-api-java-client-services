@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Provider GP for ranking in HGR. Next ID: 5
+ * Features to be extracted from Provider GP for ranking in HGR. Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -38,12 +38,19 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
   private java.lang.Boolean isInAppProvider;
 
   /**
-   * Cluster IDs for the provider. This field is repeated because some providers can be associated
-   * with multiple clusters. PRR specific feature.
+   * This field is deprecated in favor of the integer field below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> providerClusterIdDeprecated;
+
+  /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> providerClusterIds;
 
   /**
    * ProviderId for the provider in the binding set. PRR specific feature.
@@ -78,8 +85,7 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
   }
 
   /**
-   * Cluster IDs for the provider. This field is repeated because some providers can be associated
-   * with multiple clusters. PRR specific feature.
+   * This field is deprecated in favor of the integer field below.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProviderClusterIdDeprecated() {
@@ -87,12 +93,30 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
   }
 
   /**
-   * Cluster IDs for the provider. This field is repeated because some providers can be associated
-   * with multiple clusters. PRR specific feature.
+   * This field is deprecated in favor of the integer field below.
    * @param providerClusterIdDeprecated providerClusterIdDeprecated or {@code null} for none
    */
   public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterIdDeprecated(java.util.List<java.lang.String> providerClusterIdDeprecated) {
     this.providerClusterIdDeprecated = providerClusterIdDeprecated;
+    return this;
+  }
+
+  /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getProviderClusterIds() {
+    return providerClusterIds;
+  }
+
+  /**
+   * Cluster IDs for the provider. This field is repeated because some providers can be associated
+   * with multiple clusters. PRR specific feature.
+   * @param providerClusterIds providerClusterIds or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterIds(java.util.List<java.lang.Long> providerClusterIds) {
+    this.providerClusterIds = providerClusterIds;
     return this;
   }
 

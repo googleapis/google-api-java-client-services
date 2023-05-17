@@ -107,7 +107,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   private java.lang.Boolean isClusterGlobal;
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   private java.lang.Boolean isMatchlessResultContext;
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,7 +350,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   }
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDropped() {
@@ -358,7 +358,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   }
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * @param isDropped isDropped or {@code null} for none
    */
   public RepositoryWebrefEntityNameScore setIsDropped(java.lang.Boolean isDropped) {
@@ -390,7 +390,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   }
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPruned() {
@@ -398,7 +398,7 @@ public final class RepositoryWebrefEntityNameScore extends com.google.api.client
   }
 
   /**
-   * Documened at: repository/webref/universal/webref_data/enricher/entity-data.h
+   * Documented at: google3/repository/webref/enricher/core/data/scored_entity_name.h
    * @param isPruned isPruned or {@code null} for none
    */
   public RepositoryWebrefEntityNameScore setIsPruned(java.lang.Boolean isPruned) {

@@ -40,14 +40,6 @@ public final class RepositoryWebrefLatentEntities extends com.google.api.client.
   private java.util.List<RepositoryWebrefLatentEntity> latentEntity;
 
   /**
-   * List of broader MIDs from the Sports Hierarchy. Named incorrectly, it does not contain all
-   * latent mids.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> latentMid;
-
-  /**
    * Latent entities with associated metadata including source of the relationship. This is pruned
    * ("compacted") from the concept table and will never reach the annotator.
    * @return value or {@code null} for none
@@ -63,25 +55,6 @@ public final class RepositoryWebrefLatentEntities extends com.google.api.client.
    */
   public RepositoryWebrefLatentEntities setLatentEntity(java.util.List<RepositoryWebrefLatentEntity> latentEntity) {
     this.latentEntity = latentEntity;
-    return this;
-  }
-
-  /**
-   * List of broader MIDs from the Sports Hierarchy. Named incorrectly, it does not contain all
-   * latent mids.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getLatentMid() {
-    return latentMid;
-  }
-
-  /**
-   * List of broader MIDs from the Sports Hierarchy. Named incorrectly, it does not contain all
-   * latent mids.
-   * @param latentMid latentMid or {@code null} for none
-   */
-  public RepositoryWebrefLatentEntities setLatentMid(java.util.List<java.lang.String> latentMid) {
-    this.latentMid = latentMid;
     return this;
   }
 

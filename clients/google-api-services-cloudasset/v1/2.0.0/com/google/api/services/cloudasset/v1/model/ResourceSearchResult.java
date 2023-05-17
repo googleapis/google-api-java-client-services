@@ -267,8 +267,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * Use a free
-   * text query. Example: - `456`
+   * Use a field query. Example: - `tagValueIds="tagValues/456"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -817,8 +816,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * Use a free
-   * text query. Example: - `456`
+   * Use a field query. Example: - `tagValueIds="tagValues/456"`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagValueIds() {
@@ -827,8 +825,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * TagValue IDs, in the format of tagValues/{TAG_VALUE_ID}. To search against the `tagValueIds`: *
-   * Use a field query. Example: - `tagValueIds:"456"` - `tagValueIds="tagValues/456"` * Use a free
-   * text query. Example: - `456`
+   * Use a field query. Example: - `tagValueIds="tagValues/456"`
    * @param tagValueIds tagValueIds or {@code null} for none
    */
   public ResourceSearchResult setTagValueIds(java.util.List<java.lang.String> tagValueIds) {

@@ -33,6 +33,14 @@ package com.google.api.services.privateca.v1.model;
 public final class PublishingOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
+   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encodingFormat;
+
+  /**
    * Optional. When true, publishes each CertificateAuthority's CA certificate and includes its URL
    * in the "Authority Information Access" X.509 extension in all issued Certificates. If this is
    * false, the CA certificate will not be published and the corresponding X.509 extension will not
@@ -52,6 +60,25 @@ public final class PublishingOptions extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean publishCrl;
+
+  /**
+   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
+   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncodingFormat() {
+    return encodingFormat;
+  }
+
+  /**
+   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
+   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * @param encodingFormat encodingFormat or {@code null} for none
+   */
+  public PublishingOptions setEncodingFormat(java.lang.String encodingFormat) {
+    this.encodingFormat = encodingFormat;
+    return this;
+  }
 
   /**
    * Optional. When true, publishes each CertificateAuthority's CA certificate and includes its URL

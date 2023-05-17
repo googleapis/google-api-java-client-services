@@ -72,6 +72,13 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.lang.String packageName;
 
   /**
+   * Services contained in the tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Service> services;
+
+  /**
    * Specifies the API Level on which the application is designed to run.
    * The value may be {@code null}.
    */
@@ -203,6 +210,23 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   public ApkManifest setPackageName(java.lang.String packageName) {
     this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * Services contained in the tag.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Service> getServices() {
+    return services;
+  }
+
+  /**
+   * Services contained in the tag.
+   * @param services services or {@code null} for none
+   */
+  public ApkManifest setServices(java.util.List<Service> services) {
+    this.services = services;
     return this;
   }
 

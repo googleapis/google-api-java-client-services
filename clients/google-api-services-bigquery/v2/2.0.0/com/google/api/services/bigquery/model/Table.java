@@ -178,6 +178,21 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private ModelDefinition model;
 
   /**
+   * [Output-only] Number of logical bytes that are less than 90 days old.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numActiveLogicalBytes;
+
+  /**
+   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numActivePhysicalBytes;
+
+  /**
    * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
    * The value may be {@code null}.
    */
@@ -190,6 +205,29 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numLongTermBytes;
+
+  /**
+   * [Output-only] Number of logical bytes that are more than 90 days old.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numLongTermLogicalBytes;
+
+  /**
+   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
+   * time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numLongTermPhysicalBytes;
+
+  /**
+   * [Output-only] The number of partitions present in the table or materialized view. This data is
+   * not kept in real time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numPartitions;
 
   /**
    * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
@@ -208,56 +246,18 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger numRows;
 
   /**
-   * [Output-only] Number of logical bytes that are less than 90 days old.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("num_active_logical_bytes") @com.google.api.client.json.JsonString
-  private java.lang.Long numActiveLogicalBytes;
-
-  /**
-   * [Output-only] Number of physical bytes less than 90 days old. This data is not kept in real
-   * time, and might be delayed by a few seconds to a few minutes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("num_active_physical_bytes") @com.google.api.client.json.JsonString
-  private java.lang.Long numActivePhysicalBytes;
-
-  /**
-   * [Output-only] Number of logical bytes that are more than 90 days old.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("num_long_term_logical_bytes") @com.google.api.client.json.JsonString
-  private java.lang.Long numLongTermLogicalBytes;
-
-  /**
-   * [Output-only] Number of physical bytes more than 90 days old. This data is not kept in real
-   * time, and might be delayed by a few seconds to a few minutes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("num_long_term_physical_bytes") @com.google.api.client.json.JsonString
-  private java.lang.Long numLongTermPhysicalBytes;
-
-  /**
-   * [Output-only] The number of partitions present in the table or materialized view. This data is
-   * not kept in real time, and might be delayed by a few seconds to a few minutes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("num_partitions") @com.google.api.client.json.JsonString
-  private java.lang.Long numPartitions;
-
-  /**
    * [Output-only] Number of physical bytes used by time travel storage (deleted or changed data).
    * This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("num_time_travel_physical_bytes") @com.google.api.client.json.JsonString
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numTimeTravelPhysicalBytes;
 
   /**
    * [Output-only] Total number of logical bytes in the table or materialized view.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("num_total_logical_bytes") @com.google.api.client.json.JsonString
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numTotalLogicalBytes;
 
   /**
@@ -266,7 +266,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * minutes.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("num_total_physical_bytes") @com.google.api.client.json.JsonString
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numTotalPhysicalBytes;
 
   /**
@@ -314,6 +314,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Streamingbuffer streamingBuffer;
+
+  /**
+   * [Optional] The table constraints on the table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TableConstraints tableConstraints;
 
   /**
    * [Required] Reference describing the ID of this table.
@@ -732,78 +739,6 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getNumBytes() {
-    return numBytes;
-  }
-
-  /**
-   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
-   * @param numBytes numBytes or {@code null} for none
-   */
-  public Table setNumBytes(java.lang.Long numBytes) {
-    this.numBytes = numBytes;
-    return this;
-  }
-
-  /**
-   * [Output-only] The number of bytes in the table that are considered "long-term storage".
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getNumLongTermBytes() {
-    return numLongTermBytes;
-  }
-
-  /**
-   * [Output-only] The number of bytes in the table that are considered "long-term storage".
-   * @param numLongTermBytes numLongTermBytes or {@code null} for none
-   */
-  public Table setNumLongTermBytes(java.lang.Long numLongTermBytes) {
-    this.numLongTermBytes = numLongTermBytes;
-    return this;
-  }
-
-  /**
-   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
-   * the streaming buffer. This includes compression and storage used for time travel.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getNumPhysicalBytes() {
-    return numPhysicalBytes;
-  }
-
-  /**
-   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
-   * the streaming buffer. This includes compression and storage used for time travel.
-   * @param numPhysicalBytes numPhysicalBytes or {@code null} for none
-   */
-  public Table setNumPhysicalBytes(java.lang.Long numPhysicalBytes) {
-    this.numPhysicalBytes = numPhysicalBytes;
-    return this;
-  }
-
-  /**
-   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
-   * buffer.
-   * @return value or {@code null} for none
-   */
-  public java.math.BigInteger getNumRows() {
-    return numRows;
-  }
-
-  /**
-   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
-   * buffer.
-   * @param numRows numRows or {@code null} for none
-   */
-  public Table setNumRows(java.math.BigInteger numRows) {
-    this.numRows = numRows;
-    return this;
-  }
-
-  /**
    * [Output-only] Number of logical bytes that are less than 90 days old.
    * @return value or {@code null} for none
    */
@@ -836,6 +771,40 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumActivePhysicalBytes(java.lang.Long numActivePhysicalBytes) {
     this.numActivePhysicalBytes = numActivePhysicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumBytes() {
+    return numBytes;
+  }
+
+  /**
+   * [Output-only] The size of this table in bytes, excluding any data in the streaming buffer.
+   * @param numBytes numBytes or {@code null} for none
+   */
+  public Table setNumBytes(java.lang.Long numBytes) {
+    this.numBytes = numBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] The number of bytes in the table that are considered "long-term storage".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumLongTermBytes() {
+    return numLongTermBytes;
+  }
+
+  /**
+   * [Output-only] The number of bytes in the table that are considered "long-term storage".
+   * @param numLongTermBytes numLongTermBytes or {@code null} for none
+   */
+  public Table setNumLongTermBytes(java.lang.Long numLongTermBytes) {
+    this.numLongTermBytes = numLongTermBytes;
     return this;
   }
 
@@ -891,6 +860,44 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumPartitions(java.lang.Long numPartitions) {
     this.numPartitions = numPartitions;
+    return this;
+  }
+
+  /**
+   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
+   * the streaming buffer. This includes compression and storage used for time travel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumPhysicalBytes() {
+    return numPhysicalBytes;
+  }
+
+  /**
+   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
+   * the streaming buffer. This includes compression and storage used for time travel.
+   * @param numPhysicalBytes numPhysicalBytes or {@code null} for none
+   */
+  public Table setNumPhysicalBytes(java.lang.Long numPhysicalBytes) {
+    this.numPhysicalBytes = numPhysicalBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
+   * buffer.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getNumRows() {
+    return numRows;
+  }
+
+  /**
+   * [Output-only] The number of rows of data in this table, excluding any data in the streaming
+   * buffer.
+   * @param numRows numRows or {@code null} for none
+   */
+  public Table setNumRows(java.math.BigInteger numRows) {
+    this.numRows = numRows;
     return this;
   }
 
@@ -1086,6 +1093,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setStreamingBuffer(Streamingbuffer streamingBuffer) {
     this.streamingBuffer = streamingBuffer;
+    return this;
+  }
+
+  /**
+   * [Optional] The table constraints on the table.
+   * @return value or {@code null} for none
+   */
+  public TableConstraints getTableConstraints() {
+    return tableConstraints;
+  }
+
+  /**
+   * [Optional] The table constraints on the table.
+   * @param tableConstraints tableConstraints or {@code null} for none
+   */
+  public Table setTableConstraints(TableConstraints tableConstraints) {
+    this.tableConstraints = tableConstraints;
     return this;
   }
 

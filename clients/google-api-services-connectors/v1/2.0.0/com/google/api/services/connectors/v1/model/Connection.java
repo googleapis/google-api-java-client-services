@@ -60,6 +60,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String connectorVersion;
 
   /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorVersionLaunchStage;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -239,6 +246,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setConnectorVersion(java.lang.String connectorVersion) {
     this.connectorVersion = connectorVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorVersionLaunchStage() {
+    return connectorVersionLaunchStage;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @param connectorVersionLaunchStage connectorVersionLaunchStage or {@code null} for none
+   */
+  public Connection setConnectorVersionLaunchStage(java.lang.String connectorVersionLaunchStage) {
+    this.connectorVersionLaunchStage = connectorVersionLaunchStage;
     return this;
   }
 

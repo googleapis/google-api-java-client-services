@@ -31,11 +31,38 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baselineModelVersion;
+
+  /**
    * Conversation model resource name. Format: `projects//conversationModels/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
+
+  /**
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaselineModelVersion() {
+    return baselineModelVersion;
+  }
+
+  /**
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * @param baselineModelVersion baselineModelVersion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig setBaselineModelVersion(java.lang.String baselineModelVersion) {
+    this.baselineModelVersion = baselineModelVersion;
+    return this;
+  }
 
   /**
    * Conversation model resource name. Format: `projects//conversationModels/`.

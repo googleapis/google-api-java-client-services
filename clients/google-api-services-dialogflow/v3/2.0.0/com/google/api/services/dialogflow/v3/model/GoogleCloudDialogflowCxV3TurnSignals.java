@@ -72,6 +72,22 @@ public final class GoogleCloudDialogflowCxV3TurnSignals extends com.google.api.c
   private java.lang.Boolean reachedEndPage;
 
   /**
+   * Sentiment magnitude of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float sentimentMagnitude;
+
+  /**
+   * Sentiment score of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float sentimentScore;
+
+  /**
    * Whether user was specifically asking for a live agent.
    * The value may be {@code null}.
    */
@@ -184,6 +200,44 @@ public final class GoogleCloudDialogflowCxV3TurnSignals extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3TurnSignals setReachedEndPage(java.lang.Boolean reachedEndPage) {
     this.reachedEndPage = reachedEndPage;
+    return this;
+  }
+
+  /**
+   * Sentiment magnitude of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSentimentMagnitude() {
+    return sentimentMagnitude;
+  }
+
+  /**
+   * Sentiment magnitude of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * @param sentimentMagnitude sentimentMagnitude or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3TurnSignals setSentimentMagnitude(java.lang.Float sentimentMagnitude) {
+    this.sentimentMagnitude = sentimentMagnitude;
+    return this;
+  }
+
+  /**
+   * Sentiment score of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSentimentScore() {
+    return sentimentScore;
+  }
+
+  /**
+   * Sentiment score of the user utterance if
+   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
+   * @param sentimentScore sentimentScore or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3TurnSignals setSentimentScore(java.lang.Float sentimentScore) {
+    this.sentimentScore = sentimentScore;
     return this;
   }
 

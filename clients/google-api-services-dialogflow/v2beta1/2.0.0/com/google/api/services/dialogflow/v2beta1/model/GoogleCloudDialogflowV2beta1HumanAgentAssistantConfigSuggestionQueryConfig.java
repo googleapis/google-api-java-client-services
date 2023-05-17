@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it is default to
    * 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION,
-   * FAQ, SMART_REPLY, SMART_COMPOSE.
+   * FAQ, SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it is default to
    * 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION,
-   * FAQ, SMART_REPLY, SMART_COMPOSE.
+   * FAQ, SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidenceThreshold() {
@@ -106,7 +106,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * model, there is no recommended value. Tune this value by starting from a very low value and
    * slowly increasing until you have desired results. If this field is not set, it is default to
    * 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION,
-   * FAQ, SMART_REPLY, SMART_COMPOSE.
+   * FAQ, SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST.
    * @param confidenceThreshold confidenceThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig setConfidenceThreshold(java.lang.Float confidenceThreshold) {

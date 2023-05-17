@@ -31,14 +31,16 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The App Check token to verify.
+   * Required. The App Check token to verify. App Check tokens exchanged from the SafetyNet provider
+   * are not supported; an HTTP 400 error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appCheckToken;
 
   /**
-   * Required. The App Check token to verify.
+   * Required. The App Check token to verify. App Check tokens exchanged from the SafetyNet provider
+   * are not supported; an HTTP 400 error will be returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppCheckToken() {
@@ -46,7 +48,8 @@ public final class GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest extend
   }
 
   /**
-   * Required. The App Check token to verify.
+   * Required. The App Check token to verify. App Check tokens exchanged from the SafetyNet provider
+   * are not supported; an HTTP 400 error will be returned.
    * @param appCheckToken appCheckToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest setAppCheckToken(java.lang.String appCheckToken) {

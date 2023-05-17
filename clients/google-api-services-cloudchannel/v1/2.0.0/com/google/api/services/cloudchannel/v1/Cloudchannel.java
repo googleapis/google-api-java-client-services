@@ -5484,6 +5484,186 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Lists the billing accounts that are eligible to purchase particular SKUs for a given customer.
+       * Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. *
+       * INVALID_ARGUMENT: Required request parameters are missing or invalid. Return value: Based on the
+       * provided list of SKUs, returns a list of SKU groups that must be purchased using the same billing
+       * account and the billing accounts eligible to purchase each SKU group.
+       *
+       * Create a request for the method "customers.queryEligibleBillingAccounts".
+       *
+       * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+       * parameters, call the {@link QueryEligibleBillingAccounts#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param customer Required. The resource name of the customer to list eligible billing accounts for. Format:
+       *        accounts/{account_id}/customers/{customer_id}.
+       * @return the request
+       */
+      public QueryEligibleBillingAccounts queryEligibleBillingAccounts(java.lang.String customer) throws java.io.IOException {
+        QueryEligibleBillingAccounts result = new QueryEligibleBillingAccounts(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class QueryEligibleBillingAccounts extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1QueryEligibleBillingAccountsResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}:queryEligibleBillingAccounts";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/customers/[^/]+$");
+
+        /**
+         * Lists the billing accounts that are eligible to purchase particular SKUs for a given customer.
+         * Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. *
+         * INVALID_ARGUMENT: Required request parameters are missing or invalid. Return value: Based on
+         * the provided list of SKUs, returns a list of SKU groups that must be purchased using the same
+         * billing account and the billing accounts eligible to purchase each SKU group.
+         *
+         * Create a request for the method "customers.queryEligibleBillingAccounts".
+         *
+         * This request holds the parameters needed by the the cloudchannel server.  After setting any
+         * optional parameters, call the {@link QueryEligibleBillingAccounts#execute()} method to invoke
+         * the remote operation. <p> {@link QueryEligibleBillingAccounts#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The resource name of the customer to list eligible billing accounts for. Format:
+       *        accounts/{account_id}/customers/{customer_id}.
+         * @since 1.13
+         */
+        protected QueryEligibleBillingAccounts(java.lang.String customer) {
+          super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1QueryEligibleBillingAccountsResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^accounts/[^/]+/customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts set$Xgafv(java.lang.String $Xgafv) {
+          return (QueryEligibleBillingAccounts) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setAccessToken(java.lang.String accessToken) {
+          return (QueryEligibleBillingAccounts) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setAlt(java.lang.String alt) {
+          return (QueryEligibleBillingAccounts) super.setAlt(alt);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setCallback(java.lang.String callback) {
+          return (QueryEligibleBillingAccounts) super.setCallback(callback);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setFields(java.lang.String fields) {
+          return (QueryEligibleBillingAccounts) super.setFields(fields);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setKey(java.lang.String key) {
+          return (QueryEligibleBillingAccounts) super.setKey(key);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setOauthToken(java.lang.String oauthToken) {
+          return (QueryEligibleBillingAccounts) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (QueryEligibleBillingAccounts) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setQuotaUser(java.lang.String quotaUser) {
+          return (QueryEligibleBillingAccounts) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setUploadType(java.lang.String uploadType) {
+          return (QueryEligibleBillingAccounts) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts setUploadProtocol(java.lang.String uploadProtocol) {
+          return (QueryEligibleBillingAccounts) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the customer to list eligible billing accounts for.
+         * Format: accounts/{account_id}/customers/{customer_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The resource name of the customer to list eligible billing accounts for. Format:
+       accounts/{account_id}/customers/{customer_id}.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. The resource name of the customer to list eligible billing accounts for.
+         * Format: accounts/{account_id}/customers/{customer_id}.
+         */
+        public QueryEligibleBillingAccounts setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^accounts/[^/]+/customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Required. List of SKUs to list eligible billing accounts for. At least one SKU is
+         * required. Format: products/{product_id}/skus/{sku_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> skus;
+
+        /** Required. List of SKUs to list eligible billing accounts for. At least one SKU is required. Format:
+       products/{product_id}/skus/{sku_id}.
+         */
+        public java.util.List<java.lang.String> getSkus() {
+          return skus;
+        }
+
+        /**
+         * Required. List of SKUs to list eligible billing accounts for. At least one SKU is
+         * required. Format: products/{product_id}/skus/{sku_id}.
+         */
+        public QueryEligibleBillingAccounts setSkus(java.util.List<java.lang.String> skus) {
+          this.skus = skus;
+          return this;
+        }
+
+        @Override
+        public QueryEligibleBillingAccounts set(String parameterName, Object value) {
+          return (QueryEligibleBillingAccounts) super.set(parameterName, value);
+        }
+      }
+      /**
        * Transfers customer entitlements to new reseller. Possible error codes: * PERMISSION_DENIED: The
        * customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are
        * missing or invalid. * NOT_FOUND: The customer or offer resource was not found. * ALREADY_EXISTS:

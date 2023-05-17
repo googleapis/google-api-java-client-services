@@ -38,6 +38,13 @@ public final class AppsDynamiteSharedMeetMetadata extends com.google.api.client.
   private java.lang.String meetingCode;
 
   /**
+   * Required. Type of the meeting. This controls the chat client UX.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String meetingType;
+
+  /**
    * Required. A URL, in the format "https://meet.google.com" (e.g. https://meet.google.com/cxv-
    * zbgj-wzw), to identify and access the meeting space.
    * The value may be {@code null}.
@@ -61,6 +68,23 @@ public final class AppsDynamiteSharedMeetMetadata extends com.google.api.client.
    */
   public AppsDynamiteSharedMeetMetadata setMeetingCode(java.lang.String meetingCode) {
     this.meetingCode = meetingCode;
+    return this;
+  }
+
+  /**
+   * Required. Type of the meeting. This controls the chat client UX.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeetingType() {
+    return meetingType;
+  }
+
+  /**
+   * Required. Type of the meeting. This controls the chat client UX.
+   * @param meetingType meetingType or {@code null} for none
+   */
+  public AppsDynamiteSharedMeetMetadata setMeetingType(java.lang.String meetingType) {
+    this.meetingType = meetingType;
     return this;
   }
 

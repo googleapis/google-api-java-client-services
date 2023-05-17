@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Annotation metadata to display system messages for membership changes. Next Tag: 8
+ * Annotation metadata to display system messages for membership changes. Next Tag: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

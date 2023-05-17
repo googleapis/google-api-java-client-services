@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Metadata associated with Tenant and is provided by the Partner.
+ * Metadata associated with PartnerTenant and is provided by the Partner.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. UUID used by the Partner to refer to the Tenant in their internal systems.
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partnerTenantId;
 
   /**
-   * Optional. UUID used by the Partner to refer to the Tenant in their internal systems.
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerTenantId() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerMetadata ex
   }
 
   /**
-   * Optional. UUID used by the Partner to refer to the Tenant in their internal systems.
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
    * @param partnerTenantId partnerTenantId or {@code null} for none
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerMetadata setPartnerTenantId(java.lang.String partnerTenantId) {

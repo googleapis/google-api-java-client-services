@@ -194,6 +194,360 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
       public class Global {
 
         /**
+         * An accessor for creating requests from the PartnerTenants collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BeyondCorp beyondcorp = new BeyondCorp(...);}
+         *   {@code BeyondCorp.PartnerTenants.List request = beyondcorp.partnerTenants().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PartnerTenants partnerTenants() {
+          return new PartnerTenants();
+        }
+
+        /**
+         * The "partnerTenants" collection of methods.
+         */
+        public class PartnerTenants {
+
+          /**
+           * Creates a new BeyondCorp Enterprise partnerTenant in a given organization and can only be called
+           * by onboarded BeyondCorp Enterprise partner.
+           *
+           * Create a request for the method "partnerTenants.create".
+           *
+           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the PartnerTenant using the form:
+           *        `organizations/{organization_id}/locations/global`
+           * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/partnerTenants";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global$");
+
+            /**
+             * Creates a new BeyondCorp Enterprise partnerTenant in a given organization and can only be
+             * called by onboarded BeyondCorp Enterprise partner.
+             *
+             * Create a request for the method "partnerTenants.create".
+             *
+             * This request holds the parameters needed by the the beyondcorp server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the PartnerTenant using the form:
+           *        `organizations/{organization_id}/locations/global`
+             * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant content) {
+              super(BeyondCorp.this, "POST", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the PartnerTenant using the form:
+             * `organizations/{organization_id}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the PartnerTenant using the form:
+           `organizations/{organization_id}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the PartnerTenant using the form:
+             * `organizations/{organization_id}/locations/global`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single PartnerTenant.
+           *
+           * Create a request for the method "partnerTenants.get".
+           *
+           * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the PartnerTenant using the form:
+           *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+
+            /**
+             * Gets details of a single PartnerTenant.
+             *
+             * Create a request for the method "partnerTenants.get".
+             *
+             * This request holds the parameters needed by the the beyondcorp server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the PartnerTenant using the form:
+           *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the PartnerTenant using the form:
+             * `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the PartnerTenant using the form:
+           `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the PartnerTenant using the form:
+             * `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Tenants collection.
          *
          * <p>The typical use is:</p>
@@ -567,8 +921,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           public class ProxyConfigs {
 
             /**
-             * Creates a new BeyondCorp Enterprise ProxyConfiguration in a given organization and tenant. Can
-             * only be called by on onboarded Beyondcorp Enterprise partner.
+             * Creates a new BeyondCorp Enterprise ProxyConfiguration in a given organization and PartnerTenant.
+             * Can only be called by on onboarded Beyondcorp Enterprise partner.
              *
              * Create a request for the method "proxyConfigs.create".
              *
@@ -594,8 +948,8 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+$");
 
               /**
-               * Creates a new BeyondCorp Enterprise ProxyConfiguration in a given organization and tenant. Can
-               * only be called by on onboarded Beyondcorp Enterprise partner.
+               * Creates a new BeyondCorp Enterprise ProxyConfiguration in a given organization and
+               * PartnerTenant. Can only be called by on onboarded Beyondcorp Enterprise partner.
                *
                * Create a request for the method "proxyConfigs.create".
                *
@@ -754,7 +1108,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Gets details of a single Tenant.
+             * Gets details of a single ProxyConfig.
              *
              * Create a request for the method "proxyConfigs.get".
              *
@@ -779,7 +1133,7 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/tenants/[^/]+/proxyConfigs/[^/]+$");
 
               /**
-               * Gets details of a single Tenant.
+               * Gets details of a single ProxyConfig.
                *
                * Create a request for the method "proxyConfigs.get".
                *

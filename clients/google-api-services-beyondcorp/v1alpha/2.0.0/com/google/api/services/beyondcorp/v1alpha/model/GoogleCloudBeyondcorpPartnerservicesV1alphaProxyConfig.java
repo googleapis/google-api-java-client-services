@@ -30,13 +30,6 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Information to facilitate Authentication against the proxy server.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudBeyondcorpPartnerservicesV1alphaAuthenticationInfo authenticationInfo;
-
-  /**
    * Output only. Timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -49,6 +42,13 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Optional. Information to encrypt JWT for the proxy server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpPartnerservicesV1alphaEncryptionInfo encryptionInfo;
 
   /**
    * Output only. ProxyConfig resource name.
@@ -86,23 +86,6 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
   private String updateTime;
 
   /**
-   * Optional. Information to facilitate Authentication against the proxy server.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaAuthenticationInfo getAuthenticationInfo() {
-    return authenticationInfo;
-  }
-
-  /**
-   * Optional. Information to facilitate Authentication against the proxy server.
-   * @param authenticationInfo authenticationInfo or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setAuthenticationInfo(GoogleCloudBeyondcorpPartnerservicesV1alphaAuthenticationInfo authenticationInfo) {
-    this.authenticationInfo = authenticationInfo;
-    return this;
-  }
-
-  /**
    * Output only. Timestamp when the resource was created.
    * @return value or {@code null} for none
    */
@@ -133,6 +116,23 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Information to encrypt JWT for the proxy server.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaEncryptionInfo getEncryptionInfo() {
+    return encryptionInfo;
+  }
+
+  /**
+   * Optional. Information to encrypt JWT for the proxy server.
+   * @param encryptionInfo encryptionInfo or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setEncryptionInfo(GoogleCloudBeyondcorpPartnerservicesV1alphaEncryptionInfo encryptionInfo) {
+    this.encryptionInfo = encryptionInfo;
     return this;
   }
 

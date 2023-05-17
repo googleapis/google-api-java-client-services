@@ -43,11 +43,33 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   private java.util.List<java.lang.String> allowedCaCerts;
 
   /**
+   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String httpMethod;
+
+  /**
+   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
+   * session parameters. - Key: session parameter name - Value: field path in the webhook response
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> parameterMapping;
+
+  /**
    * The password for HTTP Basic authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
+
+  /**
+   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestBody;
 
   /**
    * The HTTP request headers to send together with webhook requests.
@@ -69,6 +91,13 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
+
+  /**
+   * Optional. Type of the webhook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webhookType;
 
   /**
    * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS
@@ -100,6 +129,42 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
+   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHttpMethod() {
+    return httpMethod;
+  }
+
+  /**
+   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
+   * @param httpMethod httpMethod or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setHttpMethod(java.lang.String httpMethod) {
+    this.httpMethod = httpMethod;
+    return this;
+  }
+
+  /**
+   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
+   * session parameters. - Key: session parameter name - Value: field path in the webhook response
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getParameterMapping() {
+    return parameterMapping;
+  }
+
+  /**
+   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
+   * session parameters. - Key: session parameter name - Value: field path in the webhook response
+   * @param parameterMapping parameterMapping or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setParameterMapping(java.util.Map<String, java.lang.String> parameterMapping) {
+    this.parameterMapping = parameterMapping;
+    return this;
+  }
+
+  /**
    * The password for HTTP Basic authentication.
    * @return value or {@code null} for none
    */
@@ -113,6 +178,23 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setPassword(java.lang.String password) {
     this.password = password;
+    return this;
+  }
+
+  /**
+   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestBody() {
+    return requestBody;
+  }
+
+  /**
+   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
+   * @param requestBody requestBody or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setRequestBody(java.lang.String requestBody) {
+    this.requestBody = requestBody;
     return this;
   }
 
@@ -164,6 +246,23 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setUsername(java.lang.String username) {
     this.username = username;
+    return this;
+  }
+
+  /**
+   * Optional. Type of the webhook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebhookType() {
+    return webhookType;
+  }
+
+  /**
+   * Optional. Type of the webhook.
+   * @param webhookType webhookType or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setWebhookType(java.lang.String webhookType) {
+    this.webhookType = webhookType;
     return this;
   }
 

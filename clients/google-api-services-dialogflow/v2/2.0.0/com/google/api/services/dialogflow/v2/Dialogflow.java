@@ -40740,6 +40740,170 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
       }
+      /**
+       * An accessor for creating requests from the Suggestions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Suggestions.List request = dialogflow.suggestions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Suggestions suggestions() {
+        return new Suggestions();
+      }
+
+      /**
+       * The "suggestions" collection of methods.
+       */
+      public class Suggestions {
+
+        /**
+         * Generates and returns a summary for a conversation that does not have a resource created for it.
+         *
+         * Create a request for the method "suggestions.generateStatelessSummary".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link GenerateStatelessSummary#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource to charge for the Summary's generation. Format:
+         *        `projects//locations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest}
+         * @return the request
+         */
+        public GenerateStatelessSummary generateStatelessSummary(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest content) throws java.io.IOException {
+          GenerateStatelessSummary result = new GenerateStatelessSummary(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateStatelessSummary extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/suggestions:generateStatelessSummary";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Generates and returns a summary for a conversation that does not have a resource created for
+           * it.
+           *
+           * Create a request for the method "suggestions.generateStatelessSummary".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link GenerateStatelessSummary#execute()} method to invoke the
+           * remote operation. <p> {@link GenerateStatelessSummary#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to charge for the Summary's generation. Format:
+         *        `projects//locations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest}
+           * @since 1.13
+           */
+          protected GenerateStatelessSummary(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateStatelessSummary set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateStatelessSummary) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateStatelessSummary setAccessToken(java.lang.String accessToken) {
+            return (GenerateStatelessSummary) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateStatelessSummary setAlt(java.lang.String alt) {
+            return (GenerateStatelessSummary) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateStatelessSummary setCallback(java.lang.String callback) {
+            return (GenerateStatelessSummary) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateStatelessSummary setFields(java.lang.String fields) {
+            return (GenerateStatelessSummary) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateStatelessSummary setKey(java.lang.String key) {
+            return (GenerateStatelessSummary) super.setKey(key);
+          }
+
+          @Override
+          public GenerateStatelessSummary setOauthToken(java.lang.String oauthToken) {
+            return (GenerateStatelessSummary) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateStatelessSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateStatelessSummary) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateStatelessSummary setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateStatelessSummary) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateStatelessSummary setUploadType(java.lang.String uploadType) {
+            return (GenerateStatelessSummary) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateStatelessSummary setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateStatelessSummary) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource to charge for the Summary's generation. Format:
+           * `projects//locations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to charge for the Summary's generation. Format:
+         `projects//locations/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource to charge for the Summary's generation. Format:
+           * `projects//locations/`.
+           */
+          public GenerateStatelessSummary setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public GenerateStatelessSummary set(String parameterName, Object value) {
+            return (GenerateStatelessSummary) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Operations collection.
@@ -41228,6 +41392,170 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Suggestions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.Suggestions.List request = dialogflow.suggestions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Suggestions suggestions() {
+      return new Suggestions();
+    }
+
+    /**
+     * The "suggestions" collection of methods.
+     */
+    public class Suggestions {
+
+      /**
+       * Generates and returns a summary for a conversation that does not have a resource created for it.
+       *
+       * Create a request for the method "suggestions.generateStatelessSummary".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link GenerateStatelessSummary#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The parent resource to charge for the Summary's generation. Format:
+       *        `projects//locations/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest}
+       * @return the request
+       */
+      public GenerateStatelessSummary generateStatelessSummary(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest content) throws java.io.IOException {
+        GenerateStatelessSummary result = new GenerateStatelessSummary(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateStatelessSummary extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/suggestions:generateStatelessSummary";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Generates and returns a summary for a conversation that does not have a resource created for
+         * it.
+         *
+         * Create a request for the method "suggestions.generateStatelessSummary".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link GenerateStatelessSummary#execute()} method to invoke the
+         * remote operation. <p> {@link GenerateStatelessSummary#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource to charge for the Summary's generation. Format:
+       *        `projects//locations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest}
+         * @since 1.13
+         */
+        protected GenerateStatelessSummary(java.lang.String parent, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateStatelessSummaryResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateStatelessSummary set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateStatelessSummary) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateStatelessSummary setAccessToken(java.lang.String accessToken) {
+          return (GenerateStatelessSummary) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateStatelessSummary setAlt(java.lang.String alt) {
+          return (GenerateStatelessSummary) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateStatelessSummary setCallback(java.lang.String callback) {
+          return (GenerateStatelessSummary) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateStatelessSummary setFields(java.lang.String fields) {
+          return (GenerateStatelessSummary) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateStatelessSummary setKey(java.lang.String key) {
+          return (GenerateStatelessSummary) super.setKey(key);
+        }
+
+        @Override
+        public GenerateStatelessSummary setOauthToken(java.lang.String oauthToken) {
+          return (GenerateStatelessSummary) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateStatelessSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateStatelessSummary) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateStatelessSummary setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateStatelessSummary) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateStatelessSummary setUploadType(java.lang.String uploadType) {
+          return (GenerateStatelessSummary) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateStatelessSummary setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateStatelessSummary) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource to charge for the Summary's generation. Format:
+         * `projects//locations/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource to charge for the Summary's generation. Format:
+       `projects//locations/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource to charge for the Summary's generation. Format:
+         * `projects//locations/`.
+         */
+        public GenerateStatelessSummary setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public GenerateStatelessSummary set(String parameterName, Object value) {
+          return (GenerateStatelessSummary) super.set(parameterName, value);
         }
       }
 

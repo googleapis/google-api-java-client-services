@@ -37,7 +37,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private ActionResponse actionResponse;
 
   /**
-   * Output only. Annotations associated with the text in this message.
+   * Output only. Annotations associated with the `text` in this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,6 +122,37 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. The time at which the message was deleted in Google Chat server. If the message is
+   * never deleted, this field is empty. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
+   * Output only. Information about a deleted message. A message is deleted when `delete_time` is
+   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeletionMetadata deletionMetadata;
+
+  /**
+   * Output only. The list of emoji reaction summaries on the message. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EmojiReactionSummary> emojiReactionSummaries;
+
+  static {
+    // hack to force ProGuard to consider EmojiReactionSummary used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EmojiReactionSummary.class);
+  }
 
   /**
    * A plain-text description of the message's cards, used when the actual cards cannot be displayed
@@ -226,7 +257,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Annotations associated with the text in this message.
+   * Output only. Annotations associated with the `text` in this message.
    * @return value or {@code null} for none
    */
   public java.util.List<Annotation> getAnnotations() {
@@ -234,7 +265,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Annotations associated with the text in this message.
+   * Output only. Annotations associated with the `text` in this message.
    * @param annotations annotations or {@code null} for none
    */
   public Message setAnnotations(java.util.List<Annotation> annotations) {
@@ -369,6 +400,65 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the message was deleted in Google Chat server. If the message is
+   * never deleted, this field is empty. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The time at which the message was deleted in Google Chat server. If the message is
+   * never deleted, this field is empty. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public Message setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
+   * Output only. Information about a deleted message. A message is deleted when `delete_time` is
+   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public DeletionMetadata getDeletionMetadata() {
+    return deletionMetadata;
+  }
+
+  /**
+   * Output only. Information about a deleted message. A message is deleted when `delete_time` is
+   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param deletionMetadata deletionMetadata or {@code null} for none
+   */
+  public Message setDeletionMetadata(DeletionMetadata deletionMetadata) {
+    this.deletionMetadata = deletionMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. The list of emoji reaction summaries on the message. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EmojiReactionSummary> getEmojiReactionSummaries() {
+    return emojiReactionSummaries;
+  }
+
+  /**
+   * Output only. The list of emoji reaction summaries on the message. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param emojiReactionSummaries emojiReactionSummaries or {@code null} for none
+   */
+  public Message setEmojiReactionSummaries(java.util.List<EmojiReactionSummary> emojiReactionSummaries) {
+    this.emojiReactionSummaries = emojiReactionSummaries;
     return this;
   }
 

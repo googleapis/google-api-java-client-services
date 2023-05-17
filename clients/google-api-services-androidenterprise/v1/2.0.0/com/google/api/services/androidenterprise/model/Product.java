@@ -128,6 +128,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> features;
 
   /**
+   * The localized full app store description, if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fullDescription;
+
+  /**
    * A link to an image that can be used as an icon for the product. This image is suitable for use
    * at up to 512px x 512px.
    * The value may be {@code null}.
@@ -432,6 +439,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setFeatures(java.util.List<java.lang.String> features) {
     this.features = features;
+    return this;
+  }
+
+  /**
+   * The localized full app store description, if available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFullDescription() {
+    return fullDescription;
+  }
+
+  /**
+   * The localized full app store description, if available.
+   * @param fullDescription fullDescription or {@code null} for none
+   */
+  public Product setFullDescription(java.lang.String fullDescription) {
+    this.fullDescription = fullDescription;
     return this;
   }
 

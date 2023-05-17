@@ -37,6 +37,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean adjustStepChanges;
 
   /**
+   * Whether to use approximate feature contribution method in XGBoost model explanation for global
+   * explain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean approxGlobalFeatureContrib;
+
+  /**
    * Whether to enable auto ARIMA or not.
    * The value may be {@code null}.
    */
@@ -563,6 +571,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setAdjustStepChanges(java.lang.Boolean adjustStepChanges) {
     this.adjustStepChanges = adjustStepChanges;
+    return this;
+  }
+
+  /**
+   * Whether to use approximate feature contribution method in XGBoost model explanation for global
+   * explain.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getApproxGlobalFeatureContrib() {
+    return approxGlobalFeatureContrib;
+  }
+
+  /**
+   * Whether to use approximate feature contribution method in XGBoost model explanation for global
+   * explain.
+   * @param approxGlobalFeatureContrib approxGlobalFeatureContrib or {@code null} for none
+   */
+  public TrainingOptions setApproxGlobalFeatureContrib(java.lang.Boolean approxGlobalFeatureContrib) {
+    this.approxGlobalFeatureContrib = approxGlobalFeatureContrib;
     return this;
   }
 

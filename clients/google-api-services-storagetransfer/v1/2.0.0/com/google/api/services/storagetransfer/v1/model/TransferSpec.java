@@ -65,7 +65,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   private GcsData gcsDataSource;
 
   /**
-   * Cloud Storage intermediate data location.
+   * For transfers between file systems, specifies a Cloud Storage bucket to be used as an
+   * intermediate location through which to transfer data. See [Transfer data between file
+   * systems](https://cloud.google.com/storage-transfer/docs/file-to-file) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +222,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Storage intermediate data location.
+   * For transfers between file systems, specifies a Cloud Storage bucket to be used as an
+   * intermediate location through which to transfer data. See [Transfer data between file
+   * systems](https://cloud.google.com/storage-transfer/docs/file-to-file) for more information.
    * @return value or {@code null} for none
    */
   public GcsData getGcsIntermediateDataLocation() {
@@ -228,7 +232,9 @@ public final class TransferSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Storage intermediate data location.
+   * For transfers between file systems, specifies a Cloud Storage bucket to be used as an
+   * intermediate location through which to transfer data. See [Transfer data between file
+   * systems](https://cloud.google.com/storage-transfer/docs/file-to-file) for more information.
    * @param gcsIntermediateDataLocation gcsIntermediateDataLocation or {@code null} for none
    */
   public TransferSpec setGcsIntermediateDataLocation(GcsData gcsIntermediateDataLocation) {

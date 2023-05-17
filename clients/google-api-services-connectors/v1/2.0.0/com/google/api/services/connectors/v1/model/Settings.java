@@ -45,6 +45,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean payg;
 
   /**
+   * Output only. Tenant project id of the consumer project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tenantProjectId;
+
+  /**
    * Optional. Flag indicates whether vpc-sc is enabled.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setPayg(java.lang.Boolean payg) {
     this.payg = payg;
+    return this;
+  }
+
+  /**
+   * Output only. Tenant project id of the consumer project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTenantProjectId() {
+    return tenantProjectId;
+  }
+
+  /**
+   * Output only. Tenant project id of the consumer project.
+   * @param tenantProjectId tenantProjectId or {@code null} for none
+   */
+  public Settings setTenantProjectId(java.lang.String tenantProjectId) {
+    this.tenantProjectId = tenantProjectId;
     return this;
   }
 

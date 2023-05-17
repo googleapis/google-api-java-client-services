@@ -1012,6 +1012,32 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * View for bare metal admin cluster. When `BASIC` is specified, only the cluster resource
+           * name and membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is
+           * the same as `FULL', which returns the complete cluster configuration details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** View for bare metal admin cluster. When `BASIC` is specified, only the cluster resource name and
+         membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL',
+         which returns the complete cluster configuration details.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * View for bare metal admin cluster. When `BASIC` is specified, only the cluster resource
+           * name and membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is
+           * the same as `FULL', which returns the complete cluster configuration details.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -3372,6 +3398,34 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+/bareMetalClusters/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * View for bare metal user cluster. When `BASIC` is specified, only the cluster resource
+           * name and admin cluster membership are returned. The default/unset value
+           * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
+           * configuration details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** View for bare metal user cluster. When `BASIC` is specified, only the cluster resource name and
+         admin cluster membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is the
+         same as `FULL', which returns the complete cluster configuration details.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * View for bare metal user cluster. When `BASIC` is specified, only the cluster resource
+           * name and admin cluster membership are returned. The default/unset value
+           * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
+           * configuration details.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 
@@ -10412,6 +10466,34 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
                   "^projects/[^/]+/locations/[^/]+/vmwareClusters/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * View for VMware user cluster. When `BASIC` is specified, only the cluster resource name
+           * and admin cluster membership are returned. The default/unset value
+           * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
+           * configuration details.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** View for VMware user cluster. When `BASIC` is specified, only the cluster resource name and admin
+         cluster membership are returned. The default/unset value `CLUSTER_VIEW_UNSPECIFIED` is the same as
+         `FULL', which returns the complete cluster configuration details.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * View for VMware user cluster. When `BASIC` is specified, only the cluster resource name
+           * and admin cluster membership are returned. The default/unset value
+           * `CLUSTER_VIEW_UNSPECIFIED` is the same as `FULL', which returns the complete cluster
+           * configuration details.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 

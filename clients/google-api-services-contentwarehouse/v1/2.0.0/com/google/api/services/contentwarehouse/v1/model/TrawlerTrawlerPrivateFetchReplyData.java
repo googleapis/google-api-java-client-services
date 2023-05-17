@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This is an optional container of arbitrary data that can be added to a FetchReplyData. This data
  * is meant to be logged, but not sent back in a fetch reply (it should be added *after* the reply
  * is prepared). Use FetchResponsePreparatorImpl::AddTrawlerPrivateDataToFetchReplyData to add. See
- * also the comment in fetch_response_preparator_impl.cc. Next Tag: 44
+ * also the comment in fetch_response_preparator_impl.cc. Next Tag: 45
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -275,6 +275,12 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isBidiStreamingFetch;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDedicatedHostload;
 
   /**
    * Whether or not this is a Floonet fetch request. Floonet requests have inherent lower
@@ -970,6 +976,21 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   public TrawlerTrawlerPrivateFetchReplyData setIsBidiStreamingFetch(java.lang.Boolean isBidiStreamingFetch) {
     this.isBidiStreamingFetch = isBidiStreamingFetch;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDedicatedHostload() {
+    return isDedicatedHostload;
+  }
+
+  /**
+   * @param isDedicatedHostload isDedicatedHostload or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setIsDedicatedHostload(java.lang.Boolean isDedicatedHostload) {
+    this.isDedicatedHostload = isDedicatedHostload;
     return this;
   }
 

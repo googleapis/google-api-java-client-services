@@ -32,7 +32,8 @@ package com.google.api.services.directory.model;
 public final class Member extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines mail delivery preferences of member. This is only supported by create/update/get.
+   * Defines mail delivery preferences of member. This field is only supported by `insert`,
+   * `update`, and `get` methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("delivery_settings")
@@ -95,7 +96,8 @@ public final class Member extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Defines mail delivery preferences of member. This is only supported by create/update/get.
+   * Defines mail delivery preferences of member. This field is only supported by `insert`,
+   * `update`, and `get` methods.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliverySettings() {
@@ -103,7 +105,8 @@ public final class Member extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines mail delivery preferences of member. This is only supported by create/update/get.
+   * Defines mail delivery preferences of member. This field is only supported by `insert`,
+   * `update`, and `get` methods.
    * @param deliverySettings deliverySettings or {@code null} for none
    */
   public Member setDeliverySettings(java.lang.String deliverySettings) {

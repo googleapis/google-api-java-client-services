@@ -17,10 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Lets users specify a date, a time, or both a date and a time. Accepts text input from users, but
- * features an interactive date and time selector that helps users enter correctly-formatted dates
- * and times. If users enter a date or time incorrectly, the widget shows an error that prompts
- * users to enter the correct format. Not supported by Chat apps. Support by Chat apps coming soon.
+ * Lets users input a date, a time, or both a date and a time. Users can input text or use the
+ * picker to select dates and times. If users input an invalid date or time, the picker shows an
+ * error that prompts users to input the information correctly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -33,16 +32,16 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
-   * user enter the information your app needs. For example, if users are setting an appointment,
-   * then a label like "Appointment date" or "Appointment date and time" might work well.
+   * The text that prompts users to input a date, a time, or a date and time. For example, if users
+   * are scheduling an appointment, use a label such as `Appointment date` or `Appointment date and
+   * time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * The name by which the datetime picker is identified in a form input event. For details about
+   * The name by which the `DateTimePicker` is identified in a form input event. For details about
    * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
    * tos/dialogs#receive_form_data_from_dialogs).
    * The value may be {@code null}.
@@ -51,7 +50,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   private java.lang.String name;
 
   /**
-   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
+   * Triggered when the user clicks **Save** or **Clear** from the `DateTimePicker` interface.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,35 +58,36 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
-   * is displayed in the specified time zone. If not set, it uses the user's time zone setting on
-   * the client side.
+   * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
+   * setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timezoneOffsetDate;
 
   /**
-   * What kind of date and time input the datetime picker supports.
+   * Whether the widget supports inputting a date, a time, or the date and time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The value displayed as the default value before user input or previous user input, represented
-   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
-   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
-   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
-   * set epoch time to `3 * 60 * 60 * 1000`.
+   * The default value displayed in the widget, in milliseconds since [Unix epoch
+   * time](https://en.wikipedia.org/wiki/Unix_time). Specify the value based on the type of picker
+   * (`DateTimePickerType`): * `DATE_AND_TIME`: a calendar date and time in UTC. For example, to
+   * represent January 1, 2023 at 12:00 PM UTC, use `1672574400000`. * `DATE_ONLY`: a calendar date
+   * at 00:00:00 UTC. For example, to represent January 1, 2023, use `1672531200000`. * `TIME_ONLY`:
+   * a time in UTC. For example, to represent 12:00 PM, use `43200000` (or `12 * 60 * 60 * 1000`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long valueMsEpoch;
 
   /**
-   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
-   * user enter the information your app needs. For example, if users are setting an appointment,
-   * then a label like "Appointment date" or "Appointment date and time" might work well.
+   * The text that prompts users to input a date, a time, or a date and time. For example, if users
+   * are scheduling an appointment, use a label such as `Appointment date` or `Appointment date and
+   * time`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -95,9 +95,9 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The text that prompts users to enter a date, time, or datetime. Specify text that helps the
-   * user enter the information your app needs. For example, if users are setting an appointment,
-   * then a label like "Appointment date" or "Appointment date and time" might work well.
+   * The text that prompts users to input a date, a time, or a date and time. For example, if users
+   * are scheduling an appointment, use a label such as `Appointment date` or `Appointment date and
+   * time`.
    * @param label label or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setLabel(java.lang.String label) {
@@ -106,7 +106,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name by which the datetime picker is identified in a form input event. For details about
+   * The name by which the `DateTimePicker` is identified in a form input event. For details about
    * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
    * tos/dialogs#receive_form_data_from_dialogs).
    * @return value or {@code null} for none
@@ -116,7 +116,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The name by which the datetime picker is identified in a form input event. For details about
+   * The name by which the `DateTimePicker` is identified in a form input event. For details about
    * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
    * tos/dialogs#receive_form_data_from_dialogs).
    * @param name name or {@code null} for none
@@ -127,7 +127,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
+   * Triggered when the user clicks **Save** or **Clear** from the `DateTimePicker` interface.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -135,7 +135,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * Triggered when the user clicks **Save** or **Clear** from the datetime picker interface.
+   * Triggered when the user clicks **Save** or **Clear** from the `DateTimePicker` interface.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -145,8 +145,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
-   * is displayed in the specified time zone. If not set, it uses the user's time zone setting on
-   * the client side.
+   * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
+   * setting.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimezoneOffsetDate() {
@@ -155,8 +155,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
-   * is displayed in the specified time zone. If not set, it uses the user's time zone setting on
-   * the client side.
+   * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
+   * setting.
    * @param timezoneOffsetDate timezoneOffsetDate or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setTimezoneOffsetDate(java.lang.Integer timezoneOffsetDate) {
@@ -165,7 +165,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * What kind of date and time input the datetime picker supports.
+   * Whether the widget supports inputting a date, a time, or the date and time.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -173,7 +173,7 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * What kind of date and time input the datetime picker supports.
+   * Whether the widget supports inputting a date, a time, or the date and time.
    * @param type type or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setType(java.lang.String type) {
@@ -182,11 +182,12 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The value displayed as the default value before user input or previous user input, represented
-   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
-   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
-   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
-   * set epoch time to `3 * 60 * 60 * 1000`.
+   * The default value displayed in the widget, in milliseconds since [Unix epoch
+   * time](https://en.wikipedia.org/wiki/Unix_time). Specify the value based on the type of picker
+   * (`DateTimePickerType`): * `DATE_AND_TIME`: a calendar date and time in UTC. For example, to
+   * represent January 1, 2023 at 12:00 PM UTC, use `1672574400000`. * `DATE_ONLY`: a calendar date
+   * at 00:00:00 UTC. For example, to represent January 1, 2023, use `1672531200000`. * `TIME_ONLY`:
+   * a time in UTC. For example, to represent 12:00 PM, use `43200000` (or `12 * 60 * 60 * 1000`).
    * @return value or {@code null} for none
    */
   public java.lang.Long getValueMsEpoch() {
@@ -194,11 +195,12 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   }
 
   /**
-   * The value displayed as the default value before user input or previous user input, represented
-   * in milliseconds ([Epoch time](https://en.wikipedia.org/wiki/Unix_time)). For `DATE_AND_TIME`
-   * type, the full epoch value is used. For `DATE_ONLY` type, only date of the epoch time is used.
-   * For `TIME_ONLY` type, only time of the epoch time is used. For example, to represent 3:00 AM,
-   * set epoch time to `3 * 60 * 60 * 1000`.
+   * The default value displayed in the widget, in milliseconds since [Unix epoch
+   * time](https://en.wikipedia.org/wiki/Unix_time). Specify the value based on the type of picker
+   * (`DateTimePickerType`): * `DATE_AND_TIME`: a calendar date and time in UTC. For example, to
+   * represent January 1, 2023 at 12:00 PM UTC, use `1672574400000`. * `DATE_ONLY`: a calendar date
+   * at 00:00:00 UTC. For example, to represent January 1, 2023, use `1672531200000`. * `TIME_ONLY`:
+   * a time in UTC. For example, to represent 12:00 PM, use `43200000` (or `12 * 60 * 60 * 1000`).
    * @param valueMsEpoch valueMsEpoch or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setValueMsEpoch(java.lang.Long valueMsEpoch) {

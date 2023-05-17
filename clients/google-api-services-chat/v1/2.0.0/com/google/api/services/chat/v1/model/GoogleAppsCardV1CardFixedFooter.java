@@ -50,6 +50,14 @@ public final class GoogleAppsCardV1CardFixedFooter extends com.google.api.client
   private GoogleAppsCardV1Button secondaryButton;
 
   /**
+   * A list of widgets included in the card footer. Primary button and secondary button are rendered
+   * below these widgets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleAppsCardV1FooterWidget> widgets;
+
+  /**
    * The primary button of the fixed footer. The button must be a text button with text and color
    * set.
    * @return value or {@code null} for none
@@ -84,6 +92,25 @@ public final class GoogleAppsCardV1CardFixedFooter extends com.google.api.client
    */
   public GoogleAppsCardV1CardFixedFooter setSecondaryButton(GoogleAppsCardV1Button secondaryButton) {
     this.secondaryButton = secondaryButton;
+    return this;
+  }
+
+  /**
+   * A list of widgets included in the card footer. Primary button and secondary button are rendered
+   * below these widgets.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleAppsCardV1FooterWidget> getWidgets() {
+    return widgets;
+  }
+
+  /**
+   * A list of widgets included in the card footer. Primary button and secondary button are rendered
+   * below these widgets.
+   * @param widgets widgets or {@code null} for none
+   */
+  public GoogleAppsCardV1CardFixedFooter setWidgets(java.util.List<GoogleAppsCardV1FooterWidget> widgets) {
+    this.widgets = widgets;
     return this;
   }
 

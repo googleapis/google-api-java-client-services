@@ -42,10 +42,23 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   private GoogleAppsCardV1ButtonList buttonList;
 
   /**
-   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
-   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
-   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
+   * Displays up to 2 columns. To include more than 2 columns, or to use rows, use the `Grid`
+   * widget. For example, the following JSON creates 2 columns that each contain text paragraphs:
+   * ``` "columns": { "columnItems": [ { "horizontalSizeStyle": "FILL_AVAILABLE_SPACE",
+   * "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER", "widgets": [ { "textParagraph":
+   * { "text": "First column text paragraph" } } ] }, { "horizontalSizeStyle":
+   * "FILL_AVAILABLE_SPACE", "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER",
+   * "widgets": [ { "textParagraph": { "text": "Second column text paragraph" } } ] } ] } ```
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1Columns columns;
+
+  /**
+   * Displays a widget that lets users input a date, time, or date and time. For example, the
+   * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
+   * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
+   * "valueMsEpoch": "796435200000" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,6 +97,13 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Grid grid;
+
+  /**
+   * Specifies whether widgets align to the left, right, or center of a column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String horizontalAlignment;
 
   /**
    * Displays an image. For example, the following JSON creates an image with alternative text: ```
@@ -154,10 +174,39 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
-   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
-   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
+   * Displays up to 2 columns. To include more than 2 columns, or to use rows, use the `Grid`
+   * widget. For example, the following JSON creates 2 columns that each contain text paragraphs:
+   * ``` "columns": { "columnItems": [ { "horizontalSizeStyle": "FILL_AVAILABLE_SPACE",
+   * "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER", "widgets": [ { "textParagraph":
+   * { "text": "First column text paragraph" } } ] }, { "horizontalSizeStyle":
+   * "FILL_AVAILABLE_SPACE", "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER",
+   * "widgets": [ { "textParagraph": { "text": "Second column text paragraph" } } ] } ] } ```
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1Columns getColumns() {
+    return columns;
+  }
+
+  /**
+   * Displays up to 2 columns. To include more than 2 columns, or to use rows, use the `Grid`
+   * widget. For example, the following JSON creates 2 columns that each contain text paragraphs:
+   * ``` "columns": { "columnItems": [ { "horizontalSizeStyle": "FILL_AVAILABLE_SPACE",
+   * "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER", "widgets": [ { "textParagraph":
+   * { "text": "First column text paragraph" } } ] }, { "horizontalSizeStyle":
+   * "FILL_AVAILABLE_SPACE", "horizontalAlignment": "CENTER", "verticalAlignment": "CENTER",
+   * "widgets": [ { "textParagraph": { "text": "Second column text paragraph" } } ] } ] } ```
+   * @param columns columns or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setColumns(GoogleAppsCardV1Columns columns) {
+    this.columns = columns;
+    return this;
+  }
+
+  /**
+   * Displays a widget that lets users input a date, time, or date and time. For example, the
+   * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
+   * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
+   * "valueMsEpoch": "796435200000" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker getDateTimePicker() {
@@ -165,10 +214,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Displays a selection/input widget for date, time, or date and time. Not supported by Chat apps.
-   * Support by Chat apps is coming soon. For example, the following JSON creates a datetime picker
-   * to schedule an appointment: ``` "dateTimePicker": { "name": "appointment_time", "label": "Book
-   * your appointment at:", "type": "DATE_AND_TIME", "valueMsEpoch": "796435200000" } ```
+   * Displays a widget that lets users input a date, time, or date and time. For example, the
+   * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
+   * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
+   * "valueMsEpoch": "796435200000" } ```
    * @param dateTimePicker dateTimePicker or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDateTimePicker(GoogleAppsCardV1DateTimePicker dateTimePicker) {
@@ -250,6 +299,23 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    */
   public GoogleAppsCardV1Widget setGrid(GoogleAppsCardV1Grid grid) {
     this.grid = grid;
+    return this;
+  }
+
+  /**
+   * Specifies whether widgets align to the left, right, or center of a column.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHorizontalAlignment() {
+    return horizontalAlignment;
+  }
+
+  /**
+   * Specifies whether widgets align to the left, right, or center of a column.
+   * @param horizontalAlignment horizontalAlignment or {@code null} for none
+   */
+  public GoogleAppsCardV1Widget setHorizontalAlignment(java.lang.String horizontalAlignment) {
+    this.horizontalAlignment = horizontalAlignment;
     return this;
   }
 

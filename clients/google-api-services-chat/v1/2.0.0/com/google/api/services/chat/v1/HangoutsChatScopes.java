@@ -26,8 +26,14 @@ public class HangoutsChatScopes {
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
 
+  /** Delete conversations and spaces & remove access to associated files in Google Chat. */
+  public static final String CHAT_DELETE = "https://www.googleapis.com/auth/chat.delete";
+
   /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
+
+  /** Add and remove itself from conversations in Google Chat. */
+  public static final String CHAT_MEMBERSHIPS_APP = "https://www.googleapis.com/auth/chat.memberships.app";
 
   /** View members in Google Chat conversations.. */
   public static final String CHAT_MEMBERSHIPS_READONLY = "https://www.googleapis.com/auth/chat.memberships.readonly";
@@ -38,11 +44,23 @@ public class HangoutsChatScopes {
   /** Compose and send messages in Google Chat. */
   public static final String CHAT_MESSAGES_CREATE = "https://www.googleapis.com/auth/chat.messages.create";
 
+  /** View, add, and delete reactions to messages in Google Chat. */
+  public static final String CHAT_MESSAGES_REACTIONS = "https://www.googleapis.com/auth/chat.messages.reactions";
+
+  /** Add reactions to messages in Google Chat. */
+  public static final String CHAT_MESSAGES_REACTIONS_CREATE = "https://www.googleapis.com/auth/chat.messages.reactions.create";
+
+  /** View reactions to messages in Google Chat. */
+  public static final String CHAT_MESSAGES_REACTIONS_READONLY = "https://www.googleapis.com/auth/chat.messages.reactions.readonly";
+
   /** View messages and reactions in Google Chat. */
   public static final String CHAT_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.messages.readonly";
 
   /** Create conversations and spaces and view or update metadata (including history settings) in Google Chat. */
   public static final String CHAT_SPACES = "https://www.googleapis.com/auth/chat.spaces";
+
+  /** Create new conversations in Google Chat. */
+  public static final String CHAT_SPACES_CREATE = "https://www.googleapis.com/auth/chat.spaces.create";
 
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
@@ -55,12 +73,18 @@ public class HangoutsChatScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHAT_BOT);
+    set.add(CHAT_DELETE);
     set.add(CHAT_MEMBERSHIPS);
+    set.add(CHAT_MEMBERSHIPS_APP);
     set.add(CHAT_MEMBERSHIPS_READONLY);
     set.add(CHAT_MESSAGES);
     set.add(CHAT_MESSAGES_CREATE);
+    set.add(CHAT_MESSAGES_REACTIONS);
+    set.add(CHAT_MESSAGES_REACTIONS_CREATE);
+    set.add(CHAT_MESSAGES_REACTIONS_READONLY);
     set.add(CHAT_MESSAGES_READONLY);
     set.add(CHAT_SPACES);
+    set.add(CHAT_SPACES_CREATE);
     set.add(CHAT_SPACES_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }

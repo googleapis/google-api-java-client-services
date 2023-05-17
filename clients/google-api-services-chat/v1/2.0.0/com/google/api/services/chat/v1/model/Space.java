@@ -71,11 +71,27 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceDetails spaceDetails;
 
   /**
+   * The message history state for messages and threads in this space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spaceHistoryState;
+
+  /**
    * Output only. The threading state in the Chat space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String spaceThreadingState;
+
+  /**
+   * The type of space. Required when creating or updating a space. Output only for other usage.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spaceType;
 
   /**
    * Output only. Deprecated: Use `spaceThreadingState` instead. Whether messages are threaded in
@@ -189,6 +205,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The message history state for messages and threads in this space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpaceHistoryState() {
+    return spaceHistoryState;
+  }
+
+  /**
+   * The message history state for messages and threads in this space. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param spaceHistoryState spaceHistoryState or {@code null} for none
+   */
+  public Space setSpaceHistoryState(java.lang.String spaceHistoryState) {
+    this.spaceHistoryState = spaceHistoryState;
+    return this;
+  }
+
+  /**
    * Output only. The threading state in the Chat space.
    * @return value or {@code null} for none
    */
@@ -202,6 +237,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setSpaceThreadingState(java.lang.String spaceThreadingState) {
     this.spaceThreadingState = spaceThreadingState;
+    return this;
+  }
+
+  /**
+   * The type of space. Required when creating or updating a space. Output only for other usage.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpaceType() {
+    return spaceType;
+  }
+
+  /**
+   * The type of space. Required when creating or updating a space. Output only for other usage.
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param spaceType spaceType or {@code null} for none
+   */
+  public Space setSpaceType(java.lang.String spaceType) {
+    this.spaceType = spaceType;
     return this;
   }
 

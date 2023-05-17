@@ -308,6 +308,212 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Download) super.set(parameterName, value);
       }
     }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Uploads an attachment.
+     * Requires user [authentication](https://developers.google.com/chat/api/guides/auth/users). You can
+     * upload attachments up to 200 MB. Certain file types aren't supported. For details, see [File
+     * types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platform%3DDe
+     * sktop#File%20types%20blocked%20in%20Google%20Chat).
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Resource name of the Chat space in which the attachment is uploaded. Format
+     *        "spaces/{space}".
+     * @param content the {@link com.google.api.services.chat.v1.model.UploadAttachmentRequest}
+     * @return the request
+     */
+    public Upload upload(java.lang.String parent, com.google.api.services.chat.v1.model.UploadAttachmentRequest content) throws java.io.IOException {
+      Upload result = new Upload(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Uploads an attachment.
+     * Requires user [authentication](https://developers.google.com/chat/api/guides/auth/users). You can
+     * upload attachments up to 200 MB. Certain file types aren't supported. For details, see [File
+     * types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platform%3DDe
+     * sktop#File%20types%20blocked%20in%20Google%20Chat).
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the chat server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param parent Required. Resource name of the Chat space in which the attachment is uploaded. Format
+     *        "spaces/{space}".
+     * @param content the {@link com.google.api.services.chat.v1.model.UploadAttachmentRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(java.lang.String parent, com.google.api.services.chat.v1.model.UploadAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(parent, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends HangoutsChatRequest<com.google.api.services.chat.v1.model.UploadAttachmentResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}/attachments:upload";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Uploads an attachment.
+       * Requires user [authentication](https://developers.google.com/chat/api/guides/auth/users). You
+       * can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
+       * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platf
+       * orm%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Resource name of the Chat space in which the attachment is uploaded. Format
+     *        "spaces/{space}".
+       * @param content the {@link com.google.api.services.chat.v1.model.UploadAttachmentRequest}
+       * @since 1.13
+       */
+      protected Upload(java.lang.String parent, com.google.api.services.chat.v1.model.UploadAttachmentRequest content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.UploadAttachmentResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+      }
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Uploads an attachment.
+       * Requires user [authentication](https://developers.google.com/chat/api/guides/auth/users). You
+       * can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
+       * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platf
+       * orm%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param parent Required. Resource name of the Chat space in which the attachment is uploaded. Format
+     *        "spaces/{space}".
+       * @param content the {@link com.google.api.services.chat.v1.model.UploadAttachmentRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Upload(java.lang.String parent, com.google.api.services.chat.v1.model.UploadAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(HangoutsChat.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.chat.v1.model.UploadAttachmentResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the Chat space in which the attachment is uploaded. Format
+       * "spaces/{space}".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Resource name of the Chat space in which the attachment is uploaded. Format
+     "spaces/{space}".
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. Resource name of the Chat space in which the attachment is uploaded. Format
+       * "spaces/{space}".
+       */
+      public Upload setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -331,6 +537,436 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
    */
   public class Spaces {
 
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Creates a named space.
+     * Spaces grouped by topics or that have guest access are not supported. Requires [user
+     * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+     * `chat.spaces.create` or `chat.spaces` scope.
+     *
+     * Create a request for the method "spaces.create".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.chat.v1.model.Space}
+     * @return the request
+     */
+    public Create create(com.google.api.services.chat.v1.model.Space content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Space> {
+
+      private static final String REST_PATH = "v1/spaces";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a named space.
+       * Spaces grouped by topics or that have guest access are not supported. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.spaces.create` or `chat.spaces` scope.
+       *
+       * Create a request for the method "spaces.create".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.chat.v1.model.Space}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.chat.v1.model.Space content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Space.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. A unique identifier for this request. A random UUID is recommended. Specifying an
+       * existing request ID returns the space created with that ID instead of creating a new space.
+       * Specifying an existing request ID from the same Chat app with a different authenticated
+       * user returns an error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. A unique identifier for this request. A random UUID is recommended. Specifying an
+     existing request ID returns the space created with that ID instead of creating a new space.
+     Specifying an existing request ID from the same Chat app with a different authenticated user
+     returns an error.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * Optional. A unique identifier for this request. A random UUID is recommended. Specifying an
+       * existing request ID returns the space created with that ID instead of creating a new space.
+       * Specifying an existing request ID from the same Chat app with a different authenticated
+       * user returns an error.
+       */
+      public Create setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a named space.
+     * Always performs a cascading delete, which means that the space's child resources - like messages
+     * posted in the space and memberships in the space - are also deleted. Requires [user
+     * authentication](https://developers.google.com/chat/api/guides/auth/users) from a user who has
+     * permission to delete the space, and the `chat.delete` scope.
+     *
+     * Create a request for the method "spaces.delete".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the space to delete. Format: spaces/{space}
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a named space.
+       * Always performs a cascading delete, which means that the space's child resources - like
+       * messages posted in the space and memberships in the space - are also deleted. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) from a user who has
+       * permission to delete the space, and the `chat.delete` scope.
+       *
+       * Create a request for the method "spaces.delete".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the space to delete. Format: spaces/{space}
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Resource name of the space to delete. Format: spaces/{space} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the space to delete. Format: spaces/{space}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Resource name of the space to delete. Format: spaces/{space} */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Returns the existing direct
+     * message with the specified user. With [user
+     * authentication](https://developers.google.com/chat/api/guides/auth/users), returns the direct
+     * message space between the specified user and the authenticated user. With [service account
+     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), returns the
+     * direct message space between the specified user and the calling Chat app. If no direct message
+     * space is found, returns a `404 NOT_FOUND` error. Requires [user
+     * authentication](https://developers.google.com/chat/api/guides/auth/users) or [service account
+     * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+     *
+     * Create a request for the method "spaces.findDirectMessage".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link FindDirectMessage#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public FindDirectMessage findDirectMessage() throws java.io.IOException {
+      FindDirectMessage result = new FindDirectMessage();
+      initialize(result);
+      return result;
+    }
+
+    public class FindDirectMessage extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Space> {
+
+      private static final String REST_PATH = "v1/spaces:findDirectMessage";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Returns the existing
+       * direct message with the specified user. With [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users), returns the direct
+       * message space between the specified user and the authenticated user. With [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), returns
+       * the direct message space between the specified user and the calling Chat app. If no direct
+       * message space is found, returns a `404 NOT_FOUND` error. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) or [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts).
+       *
+       * Create a request for the method "spaces.findDirectMessage".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link FindDirectMessage#execute()} method to invoke the remote operation.
+       * <p> {@link FindDirectMessage#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected FindDirectMessage() {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Space.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FindDirectMessage set$Xgafv(java.lang.String $Xgafv) {
+        return (FindDirectMessage) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FindDirectMessage setAccessToken(java.lang.String accessToken) {
+        return (FindDirectMessage) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FindDirectMessage setAlt(java.lang.String alt) {
+        return (FindDirectMessage) super.setAlt(alt);
+      }
+
+      @Override
+      public FindDirectMessage setCallback(java.lang.String callback) {
+        return (FindDirectMessage) super.setCallback(callback);
+      }
+
+      @Override
+      public FindDirectMessage setFields(java.lang.String fields) {
+        return (FindDirectMessage) super.setFields(fields);
+      }
+
+      @Override
+      public FindDirectMessage setKey(java.lang.String key) {
+        return (FindDirectMessage) super.setKey(key);
+      }
+
+      @Override
+      public FindDirectMessage setOauthToken(java.lang.String oauthToken) {
+        return (FindDirectMessage) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FindDirectMessage setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FindDirectMessage) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FindDirectMessage setQuotaUser(java.lang.String quotaUser) {
+        return (FindDirectMessage) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FindDirectMessage setUploadType(java.lang.String uploadType) {
+        return (FindDirectMessage) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FindDirectMessage setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FindDirectMessage) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the user to find direct message with. Format: users/{user},
+       * where `{user}` is either the `{person_id}` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
+       * the `id` for the [user](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/users) in the Admin SDK Directory API. For example, if the
+       * People API `Person.resourceName` is `people/123456789`, you can find a direct message with
+       * that person by using `users/123456789` as the `name`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the user to find direct message with. Format: users/{user}, where
+     `{user}` is either the `{person_id}` for the
+     [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the `id`
+     for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the
+     Admin SDK Directory API. For example, if the People API `Person.resourceName` is
+     `people/123456789`, you can find a direct message with that person by using `users/123456789` as
+     the `name`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Resource name of the user to find direct message with. Format: users/{user},
+       * where `{user}` is either the `{person_id}` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
+       * the `id` for the [user](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/users) in the Admin SDK Directory API. For example, if the
+       * People API `Person.resourceName` is `people/123456789`, you can find a direct message with
+       * that person by using `users/123456789` as the `name`.
+       */
+      public FindDirectMessage setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public FindDirectMessage set(String parameterName, Object value) {
+        return (FindDirectMessage) super.set(parameterName, value);
+      }
+    }
     /**
      * Returns a space. Requires [authentication](https://developers.google.com/chat/api/guides/auth).
      * Fully supports [service account
@@ -603,6 +1239,62 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Optional. A query filter. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
+       * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
+       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid `enum` value,
+       * such as `SPACE` or `GROUP_CHAT` (the `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To
+       * query for multiple space types, use the `OR` operator. For example, the following queries
+       * are valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
+       * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+       * error. With [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
+       * field is ignored and the query always returns all spaces. But Chat API still validates the
+       * query syntax with service accounts, so invalid queries are still rejected. [Developer
+       * Preview](https://developers.google.com/workspace/preview).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. A query filter. Requires [user
+     authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter spaces by
+     the space type
+     ([`space_type`](https://developers.google.com/chat/api/reference/rest/v1/spaces#spacetype)). To
+     filter by space type, you must specify valid `enum` value, such as `SPACE` or `GROUP_CHAT` (the
+     `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
+     operator. For example, the following queries are valid: ``` space_type = "SPACE" spaceType =
+     "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an
+     `INVALID_ARGUMENT` error. With [service account
+     authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this field is
+     ignored and the query always returns all spaces. But Chat API still validates the query syntax with
+     service accounts, so invalid queries are still rejected. [Developer
+     Preview](https://developers.google.com/workspace/preview).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. A query filter. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
+       * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
+       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid `enum` value,
+       * such as `SPACE` or `GROUP_CHAT` (the `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To
+       * query for multiple space types, use the `OR` operator. For example, the following queries
+       * are valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
+       * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+       * error. With [service account
+       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
+       * field is ignored and the query always returns all spaces. But Chat API still validates the
+       * query syntax with service accounts, so invalid queries are still rejected. [Developer
+       * Preview](https://developers.google.com/workspace/preview).
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
        * Optional. The maximum number of spaces to return. The service may return fewer than this
        * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
        * above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
@@ -659,6 +1351,339 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Updates a space. Requires
+     * [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+     * `chat.spaces` scope.
+     *
+     * Create a request for the method "spaces.patch".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Resource name of the space. Format: spaces/{space}
+     * @param content the {@link com.google.api.services.chat.v1.model.Space}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.chat.v1.model.Space content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Space> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Updates a space. Requires
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.spaces` scope.
+       *
+       * Create a request for the method "spaces.patch".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Resource name of the space. Format: spaces/{space}
+       * @param content the {@link com.google.api.services.chat.v1.model.Space}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.chat.v1.model.Space content) {
+        super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.Space.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Resource name of the space. Format: spaces/{space} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Resource name of the space. Format: spaces/{space}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Resource name of the space. Format: spaces/{space} */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^spaces/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. The field paths to be updated, comma separated if there are multiple. Currently
+       * supported field paths: - display_name (Only supports changing the display name of a space
+       * with the SPACE type, or when also including the `space_type` mask to change a GROUP_CHAT
+       * space type to SPACE. Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE
+       * space results in an invalid argument error.) - space_type (Only supports changing a
+       * GROUP_CHAT space type to SPACE. Include `display_name` together with `space_type` in the
+       * update mask and ensure that the specified space has a non-empty display name and the SPACE
+       * space type. Including the `space_type` mask and the SPACE type in the specified space when
+       * updating the display name is optional if the existing space already has the SPACE type.
+       * Trying to update the space type in other ways results in an invalid argument error). -
+       * space_details - space_history_state (Supports [turning history on or off for the
+       * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
+       * change their history setting](https://support.google.com/a/answer/7664184). Warning:
+       * mutually exclusive with all other field paths.)
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The field paths to be updated, comma separated if there are multiple. Currently supported
+     field paths: - display_name (Only supports changing the display name of a space with the SPACE
+     type, or when also including the `space_type` mask to change a GROUP_CHAT space type to SPACE.
+     Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE space results in an invalid
+     argument error.) - space_type (Only supports changing a GROUP_CHAT space type to SPACE. Include
+     `display_name` together with `space_type` in the update mask and ensure that the specified space
+     has a non-empty display name and the SPACE space type. Including the `space_type` mask and the
+     SPACE type in the specified space when updating the display name is optional if the existing space
+     already has the SPACE type. Trying to update the space type in other ways results in an invalid
+     argument error). - space_details - space_history_state (Supports [turning history on or off for the
+     space](https://support.google.com/chat/answer/7664687) if [the organization allows users to change
+     their history setting](https://support.google.com/a/answer/7664184). Warning: mutually exclusive
+     with all other field paths.)
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Required. The field paths to be updated, comma separated if there are multiple. Currently
+       * supported field paths: - display_name (Only supports changing the display name of a space
+       * with the SPACE type, or when also including the `space_type` mask to change a GROUP_CHAT
+       * space type to SPACE. Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE
+       * space results in an invalid argument error.) - space_type (Only supports changing a
+       * GROUP_CHAT space type to SPACE. Include `display_name` together with `space_type` in the
+       * update mask and ensure that the specified space has a non-empty display name and the SPACE
+       * space type. Including the `space_type` mask and the SPACE type in the specified space when
+       * updating the display name is optional if the existing space already has the SPACE type.
+       * Trying to update the space type in other ways results in an invalid argument error). -
+       * space_details - space_history_state (Supports [turning history on or off for the
+       * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
+       * change their history setting](https://support.google.com/a/answer/7664184). Warning:
+       * mutually exclusive with all other field paths.)
+       */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Creates a space and adds
+     * specified users to it. The calling user is automatically added to the space, and shouldn't be
+     * specified as a membership in the request. To specify the human members to add, add memberships
+     * with the appropriate `member.name` in the `SetUpSpaceRequest`. To add a human user, use
+     * `users/{user}`, where `{user}` is either the `{person_id}` for the
+     * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
+     * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
+     * the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
+     * `people/123456789`, you can add the user to the space by including a membership with
+     * `users/123456789` as the `member.name`. For a space or group chat, if the caller blocks or is
+     * blocked by some members, then those members aren't added to the created space. To create a direct
+     * message (DM) between the calling user and another human user, specify exactly one membership to
+     * represent the human user. If one user blocks the other, the request fails and the DM isn't
+     * created. To create a DM between the calling user and the calling app, set `Space.singleUserBotDm`
+     * to true and don't specify any memberships. You can only use this method to add app memberships to
+     * DMs. To add the calling app as a member of other space types, use [create
+     * membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create) If a
+     * DM already exists between two users, even when one user blocks the other at the time a request is
+     * made, then the existing DM is returned. Spaces with threaded replies or guest access are not
+     * supported. Requires [user
+     * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+     * `chat.spaces.create` or `chat.spaces` scope.
+     *
+     * Create a request for the method "spaces.setup".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Setup#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.chat.v1.model.SetUpSpaceRequest}
+     * @return the request
+     */
+    public Setup setup(com.google.api.services.chat.v1.model.SetUpSpaceRequest content) throws java.io.IOException {
+      Setup result = new Setup(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Setup extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Space> {
+
+      private static final String REST_PATH = "v1/spaces:setup";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a space and adds
+       * specified users to it. The calling user is automatically added to the space, and shouldn't be
+       * specified as a membership in the request. To specify the human members to add, add memberships
+       * with the appropriate `member.name` in the `SetUpSpaceRequest`. To add a human user, use
+       * `users/{user}`, where `{user}` is either the `{person_id}` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
+       * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users)
+       * in the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
+       * `people/123456789`, you can add the user to the space by including a membership with
+       * `users/123456789` as the `member.name`. For a space or group chat, if the caller blocks or is
+       * blocked by some members, then those members aren't added to the created space. To create a
+       * direct message (DM) between the calling user and another human user, specify exactly one
+       * membership to represent the human user. If one user blocks the other, the request fails and the
+       * DM isn't created. To create a DM between the calling user and the calling app, set
+       * `Space.singleUserBotDm` to true and don't specify any memberships. You can only use this method
+       * to add app memberships to DMs. To add the calling app as a member of other space types, use
+       * [create
+       * membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create) If
+       * a DM already exists between two users, even when one user blocks the other at the time a
+       * request is made, then the existing DM is returned. Spaces with threaded replies or guest access
+       * are not supported. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.spaces.create` or `chat.spaces` scope.
+       *
+       * Create a request for the method "spaces.setup".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Setup#execute()} method to invoke the remote operation. <p> {@link
+       * Setup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.chat.v1.model.SetUpSpaceRequest}
+       * @since 1.13
+       */
+      protected Setup(com.google.api.services.chat.v1.model.SetUpSpaceRequest content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Space.class);
+      }
+
+      @Override
+      public Setup set$Xgafv(java.lang.String $Xgafv) {
+        return (Setup) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Setup setAccessToken(java.lang.String accessToken) {
+        return (Setup) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Setup setAlt(java.lang.String alt) {
+        return (Setup) super.setAlt(alt);
+      }
+
+      @Override
+      public Setup setCallback(java.lang.String callback) {
+        return (Setup) super.setCallback(callback);
+      }
+
+      @Override
+      public Setup setFields(java.lang.String fields) {
+        return (Setup) super.setFields(fields);
+      }
+
+      @Override
+      public Setup setKey(java.lang.String key) {
+        return (Setup) super.setKey(key);
+      }
+
+      @Override
+      public Setup setOauthToken(java.lang.String oauthToken) {
+        return (Setup) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Setup setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Setup) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Setup setQuotaUser(java.lang.String quotaUser) {
+        return (Setup) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Setup setUploadType(java.lang.String uploadType) {
+        return (Setup) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Setup setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Setup) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Setup set(String parameterName, Object value) {
+        return (Setup) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Members collection.
@@ -680,6 +1705,325 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      */
     public class Members {
 
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a human membership
+       * or app membership for the calling app. Creating memberships for other apps is not supported.
+       * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.memberships` (for human membership) or `chat.memberships.app` (for app membership) scope.
+       * To specify the member to add, set the `membership.member.name` in the `CreateMembershipRequest`:
+       * - To add the calling app to the space, use `users/app`. - To add a human user, use
+       * `users/{user}`, where `{user}` is either the `{person_id}` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
+       * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
+       * the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
+       * `people/123456789`, the user can be added to the space by setting the `membership.member.name` to
+       * `users/123456789`.
+       *
+       * Create a request for the method "members.create".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the space for which to create the membership. Format: spaces/{space}
+       * @param content the {@link com.google.api.services.chat.v1.model.Membership}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.chat.v1.model.Membership content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Membership> {
+
+        private static final String REST_PATH = "v1/{+parent}/members";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a human
+         * membership or app membership for the calling app. Creating memberships for other apps is not
+         * supported. Requires [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+         * `chat.memberships` (for human membership) or `chat.memberships.app` (for app membership) scope.
+         * To specify the member to add, set the `membership.member.name` in the
+         * `CreateMembershipRequest`: - To add the calling app to the space, use `users/app`. - To add a
+         * human user, use `users/{user}`, where `{user}` is either the `{person_id}` for the
+         * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
+         * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users)
+         * in the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
+         * `people/123456789`, the user can be added to the space by setting the `membership.member.name`
+         * to `users/123456789`.
+         *
+         * Create a request for the method "members.create".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the space for which to create the membership. Format: spaces/{space}
+         * @param content the {@link com.google.api.services.chat.v1.model.Membership}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.chat.v1.model.Membership content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Membership.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the space for which to create the membership. Format:
+         * spaces/{space}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the space for which to create the membership. Format: spaces/{space}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the space for which to create the membership. Format:
+         * spaces/{space}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a membership.
+       * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.memberships` or `chat.memberships.app` authorization scope.
+       *
+       * Create a request for the method "members.delete".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
+       *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
+       *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
+       *        format. When deleting an app membership, requires the `chat.memberships.app` scope and
+       *        `spaces/{space}/members/app` format. Format: spaces/{space}/members/{member} or
+       *        spaces/{space}/members/app
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Membership> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+/members/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a membership.
+         * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and
+         * the `chat.memberships` or `chat.memberships.app` authorization scope.
+         *
+         * Create a request for the method "members.delete".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
+       *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
+       *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
+       *        format. When deleting an app membership, requires the `chat.memberships.app` scope and
+       *        `spaces/{space}/members/app` format. Format: spaces/{space}/members/{member} or
+       *        spaces/{space}/members/app
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Membership.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/members/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the membership to delete. Chat apps can delete human users' or
+         * their own memberships. Chat apps can't delete other apps' memberships. When deleting a
+         * human membership, requires the `chat.memberships` scope and
+         * `spaces/{space}/members/{member}` format. When deleting an app membership, requires the
+         * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
+         * spaces/{space}/members/{member} or spaces/{space}/members/app
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
+       memberships. Chat apps can't delete other apps' memberships. When deleting a human membership,
+       requires the `chat.memberships` scope and `spaces/{space}/members/{member}` format. When deleting
+       an app membership, requires the `chat.memberships.app` scope and `spaces/{space}/members/app`
+       format. Format: spaces/{space}/members/{member} or spaces/{space}/members/app
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the membership to delete. Chat apps can delete human users' or
+         * their own memberships. Chat apps can't delete other apps' memberships. When deleting a
+         * human membership, requires the `chat.memberships` scope and
+         * `spaces/{space}/members/{member}` format. When deleting an app membership, requires the
+         * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
+         * spaces/{space}/members/{member} or spaces/{space}/members/app
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/members/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
       /**
        * Returns a membership. Requires
        * [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service
@@ -995,6 +2339,57 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. A query filter. You can filter memberships by a member's role ([`role`](https:/
+         * /developers.google.com/chat/api/reference/rest/v1/spaces.members#membershiprole)) and
+         * type
+         * ([`member.type`](https://developers.google.com/chat/api/reference/rest/v1/User#type)). To
+         * filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set
+         * `member.type` to `HUMAN` or `BOT`. To filter by both role and type, use the `AND`
+         * operator. To filter by either role or type, use the `OR` operator. For example, the
+         * following queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER"
+         * member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The following queries are invalid:
+         * ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role =
+         * "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A query filter. You can filter memberships by a member's role
+       ([`role`](https://developers.google.com/chat/api/reference/rest/v1/spaces.members#membershiprole))
+       and type ([`member.type`](https://developers.google.com/chat/api/reference/rest/v1/User#type)). To
+       filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set `member.type`
+       to `HUMAN` or `BOT`. To filter by both role and type, use the `AND` operator. To filter by either
+       role or type, use the `OR` operator. For example, the following queries are valid: ``` role =
+       "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The
+       following queries are invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role =
+       "ROLE_MANAGER" AND role = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an
+       `INVALID_ARGUMENT` error.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A query filter. You can filter memberships by a member's role ([`role`](https:/
+         * /developers.google.com/chat/api/reference/rest/v1/spaces.members#membershiprole)) and
+         * type
+         * ([`member.type`](https://developers.google.com/chat/api/reference/rest/v1/User#type)). To
+         * filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set
+         * `member.type` to `HUMAN` or `BOT`. To filter by both role and type, use the `AND`
+         * operator. To filter by either role or type, use the `OR` operator. For example, the
+         * following queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER"
+         * member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The following queries are invalid:
+         * ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role =
+         * "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * error.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * The maximum number of memberships to return. The service may return fewer than this
          * value. If unspecified, at most 100 memberships are returned. The maximum value is 1000;
          * values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
@@ -1045,6 +2440,35 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. When `true`, also returns memberships associated with invited members, in
+         * addition to other types of memberships. If a filter is set, invited memberships that
+         * don't match the filter criteria aren't returned. Currently requires [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showInvited;
+
+        /** Optional. When `true`, also returns memberships associated with invited members, in addition to
+       other types of memberships. If a filter is set, invited memberships that don't match the filter
+       criteria aren't returned. Currently requires [user
+       authentication](https://developers.google.com/chat/api/guides/auth/users).
+         */
+        public java.lang.Boolean getShowInvited() {
+          return showInvited;
+        }
+
+        /**
+         * Optional. When `true`, also returns memberships associated with invited members, in
+         * addition to other types of memberships. If a filter is set, invited memberships that
+         * don't match the filter criteria aren't returned. Currently requires [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users).
+         */
+        public List setShowInvited(java.lang.Boolean showInvited) {
+          this.showInvited = showInvited;
           return this;
         }
 
@@ -1490,6 +2914,37 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * When `true`, deleting a message also deletes its threaded replies. When `false`, if a
+         * message has threaded replies, deletion fails. Only applies when [authenticating as a
+         * user](https://developers.google.com/chat/api/guides/auth/users). Has no effect when
+         * [authenticating with a service account]
+         * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean force;
+
+        /** When `true`, deleting a message also deletes its threaded replies. When `false`, if a message has
+       threaded replies, deletion fails. Only applies when [authenticating as a
+       user](https://developers.google.com/chat/api/guides/auth/users). Has no effect when [authenticating
+       with a service account] (https://developers.google.com/chat/api/guides/auth/service-accounts).
+         */
+        public java.lang.Boolean getForce() {
+          return force;
+        }
+
+        /**
+         * When `true`, deleting a message also deletes its threaded replies. When `false`, if a
+         * message has threaded replies, deletion fails. Only applies when [authenticating as a
+         * user](https://developers.google.com/chat/api/guides/auth/users). Has no effect when
+         * [authenticating with a service account]
+         * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+         */
+        public Delete setForce(java.lang.Boolean force) {
+          this.force = force;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -1675,6 +3130,321 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Lists messages in a space
+       * that the caller is a member of, including messages from blocked members and spaces. Requires
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+       * `chat.messages` or `chat.messages.readonly` authorization scope. This method is only supported in
+       * spaces that don't allow users from outside the Workspace organization to join.
+       *
+       * Create a request for the method "messages.list".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the space to list messages from. Format: spaces/{space}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListMessagesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/messages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists messages in a space
+         * that the caller is a member of, including messages from blocked members and spaces. Requires
+         * [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+         * `chat.messages` or `chat.messages.readonly` authorization scope. This method is only supported
+         * in spaces that don't allow users from outside the Workspace organization to join.
+         *
+         * Create a request for the method "messages.list".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the space to list messages from. Format: spaces/{space}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListMessagesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the space to list messages from. Format: spaces/{space}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the space to list messages from. Format: spaces/{space}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the space to list messages from. Format: spaces/{space}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * A query filter. You can filter messages by date (`create_time`) and thread
+         * (`thread.name`). To filter messages by the date they were created, specify the
+         * `create_time` with a timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339)
+         * format and double quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can
+         * use the greater than operator `>` to list messages that were created after a timestamp,
+         * or the less than operator `<` to list messages that were created before a timestamp. To
+         * filter messages within a time interval, use the `AND` operator between two timestamps. To
+         * filter by thread, specify the `thread.name`, formatted as
+         * `spaces/{space}/threads/{thread}`. You can only specify one `thread.name` per query. To
+         * filter by both thread and date, use the `AND` operator in your query. For example, the
+         * following queries are valid: ``` create_time > "2012-04-21T11:30:00-04:00" create_time >
+         * "2012-04-21T11:30:00-04:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123 create_time
+         * > "2012-04-21T11:30:00+00:00" AND create_time < "2013-01-01T00:00:00+00:00" AND
+         * thread.name = spaces/AAAAAAAAAAA/threads/123 thread.name = spaces/AAAAAAAAAAA/threads/123
+         * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A query filter. You can filter messages by date (`create_time`) and thread (`thread.name`). To
+       filter messages by the date they were created, specify the `create_time` with a timestamp in
+       [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and double quotation marks. For example,
+       `"2023-04-21T11:30:00-04:00"`. You can use the greater than operator `>` to list messages that were
+       created after a timestamp, or the less than operator `<` to list messages that were created before
+       a timestamp. To filter messages within a time interval, use the `AND` operator between two
+       timestamps. To filter by thread, specify the `thread.name`, formatted as
+       `spaces/{space}/threads/{thread}`. You can only specify one `thread.name` per query. To filter by
+       both thread and date, use the `AND` operator in your query. For example, the following queries are
+       valid: ``` create_time > "2012-04-21T11:30:00-04:00" create_time > "2012-04-21T11:30:00-04:00" AND
+       thread.name = spaces/AAAAAAAAAAA/threads/123 create_time > "2012-04-21T11:30:00+00:00" AND
+       create_time < "2013-01-01T00:00:00+00:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123
+       thread.name = spaces/AAAAAAAAAAA/threads/123 ``` Invalid queries are rejected by the server with an
+       `INVALID_ARGUMENT` error.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A query filter. You can filter messages by date (`create_time`) and thread
+         * (`thread.name`). To filter messages by the date they were created, specify the
+         * `create_time` with a timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339)
+         * format and double quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can
+         * use the greater than operator `>` to list messages that were created after a timestamp,
+         * or the less than operator `<` to list messages that were created before a timestamp. To
+         * filter messages within a time interval, use the `AND` operator between two timestamps. To
+         * filter by thread, specify the `thread.name`, formatted as
+         * `spaces/{space}/threads/{thread}`. You can only specify one `thread.name` per query. To
+         * filter by both thread and date, use the `AND` operator in your query. For example, the
+         * following queries are valid: ``` create_time > "2012-04-21T11:30:00-04:00" create_time >
+         * "2012-04-21T11:30:00-04:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123 create_time
+         * > "2012-04-21T11:30:00+00:00" AND create_time < "2013-01-01T00:00:00+00:00" AND
+         * thread.name = spaces/AAAAAAAAAAA/threads/123 thread.name = spaces/AAAAAAAAAAA/threads/123
+         * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
+         * a value to order by and an ordering operation. Valid ordering operation values are: -
+         * `ASC` for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional, if resuming from a previous query. How the list of messages is ordered. Specify a value
+       to order by and an ordering operation. Valid ordering operation values are: - `ASC` for ascending.
+       - `DESC` for descending. The default ordering is `create_time ASC`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
+         * a value to order by and an ordering operation. Valid ordering operation values are: -
+         * `ASC` for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * The maximum number of messages returned. The service may return fewer messages than this
+         * value. If unspecified, at most 25 are returned. The maximum value is 1000; values above
+         * 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of messages returned. The service may return fewer messages than this value. If
+       unspecified, at most 25 are returned. The maximum value is 1000; values above 1000 are coerced to
+       1000. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of messages returned. The service may return fewer messages than this
+         * value. If unspecified, at most 25 are returned. The maximum value is 1000; values above
+         * 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional, if resuming from a previous query. A page token received from a previous list
+         * messages call. Provide this to retrieve the subsequent page. When paginating, all other
+         * parameters provided should match the call that provided the page token. Passing different
+         * values to the other parameters may lead to unexpected results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional, if resuming from a previous query. A page token received from a previous list messages
+       call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided
+       should match the call that provided the page token. Passing different values to the other
+       parameters may lead to unexpected results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional, if resuming from a previous query. A page token received from a previous list
+         * messages call. Provide this to retrieve the subsequent page. When paginating, all other
+         * parameters provided should match the call that provided the page token. Passing different
+         * values to the other parameters may lead to unexpected results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Whether to include deleted messages. Deleted messages include deleted time and metadata
+         * about their deletion, but message content is unavailable.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Whether to include deleted messages. Deleted messages include deleted time and metadata about their
+       deletion, but message content is unavailable.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /**
+         * Whether to include deleted messages. Deleted messages include deleted time and metadata
+         * about their deletion, but message content is unavailable.
+         */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
       /**
@@ -2273,6 +4043,584 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Reactions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code HangoutsChat chat = new HangoutsChat(...);}
+       *   {@code HangoutsChat.Reactions.List request = chat.reactions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Reactions reactions() {
+        return new Reactions();
+      }
+
+      /**
+       * The "reactions" collection of methods.
+       */
+      public class Reactions {
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a reaction and adds
+         * it to a message. Requires [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+         * `chat.messages`, `chat.messages.reactions`, or `chat.messages.reactions.create` scope. Only
+         * unicode emoji are supported.
+         *
+         * Create a request for the method "reactions.create".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+         * @param content the {@link com.google.api.services.chat.v1.model.Reaction}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.chat.v1.model.Reaction content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Reaction> {
+
+          private static final String REST_PATH = "v1/{+parent}/reactions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
+
+          /**
+           * [Developer Preview](https://developers.google.com/workspace/preview): Creates a reaction and
+           * adds it to a message. Requires [user
+           * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+           * `chat.messages`, `chat.messages.reactions`, or `chat.messages.reactions.create` scope. Only
+           * unicode emoji are supported.
+           *
+           * Create a request for the method "reactions.create".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+           * @param content the {@link com.google.api.services.chat.v1.model.Reaction}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.chat.v1.model.Reaction content) {
+            super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Reaction.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The message where the reaction is created. Format:
+           * spaces/{space}/messages/{message}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The message where the reaction is created. Format:
+           * spaces/{space}/messages/{message}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a reaction to a
+         * message. Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users)
+         * and the `chat.messages` or `chat.messages.reactions` scope.
+         *
+         * Create a request for the method "reactions.delete".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the reaction to delete. Format:
+         *        spaces/{space}/messages/{message}/reactions/{reaction}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+/reactions/[^/]+$");
+
+          /**
+           * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a reaction to a
+           * message. Requires [user
+           * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
+           * `chat.messages` or `chat.messages.reactions` scope.
+           *
+           * Create a request for the method "reactions.delete".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the reaction to delete. Format:
+         *        spaces/{space}/messages/{message}/reactions/{reaction}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+/reactions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the reaction to delete. Format:
+           * spaces/{space}/messages/{message}/reactions/{reaction}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the reaction to delete. Format:
+         spaces/{space}/messages/{message}/reactions/{reaction}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the reaction to delete. Format:
+           * spaces/{space}/messages/{message}/reactions/{reaction}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+/reactions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists reactions to a
+         * message. Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users)
+         * and `chat.messages`, `chat.messages.readonly`, `chat.messages.reactions`, or
+         * `chat.messages.reactions.readonly` scope.
+         *
+         * Create a request for the method "reactions.list".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListReactionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/reactions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
+
+          /**
+           * [Developer Preview](https://developers.google.com/workspace/preview): Lists reactions to a
+           * message. Requires [user
+           * authentication](https://developers.google.com/chat/api/guides/auth/users) and `chat.messages`,
+           * `chat.messages.readonly`, `chat.messages.reactions`, or `chat.messages.reactions.readonly`
+           * scope.
+           *
+           * Create a request for the method "reactions.list".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListReactionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message} */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A query filter. You can filter reactions by
+           * [emoji](https://developers.google.com/chat/api/reference/rest/v1/Emoji) (either
+           * `emoji.unicode` or `emoji.custom_emoji.uid`) and
+           * [user](https://developers.google.com/chat/api/reference/rest/v1/User) (`user.name`). To
+           * filter reactions for multiple emojis or users, join similar fields with the `OR`
+           * operator, such as `emoji.unicode = "🙂" OR emoji.unicode = "👍"` and `user.name =
+           * "users/AAAAAA" OR user.name = "users/BBBBBB"`. To filter reactions by emoji and user,
+           * use the `AND` operator, such as `emoji.unicode = "🙂" AND user.name = "users/AAAAAA"`.
+           * If your query uses both `AND` and `OR`, group them with parentheses. For example, the
+           * following queries are valid: ``` user.name = "users/{user}" emoji.unicode = "🙂"
+           * emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR emoji.unicode = "👍"
+           * emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" AND
+           * user.name = "users/{user}" (emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}")
+           * AND user.name = "users/{user}" ``` The following queries are invalid: ``` emoji.unicode
+           * = "🙂" AND emoji.unicode = "👍" emoji.unicode = "🙂" AND emoji.custom_emoji.uid = "{uid}"
+           * emoji.unicode = "🙂" OR user.name = "users/{user}" emoji.unicode = "🙂" OR
+           * emoji.custom_emoji.uid = "{uid}" OR user.name = "users/{user}" emoji.unicode = "🙂" OR
+           * emoji.custom_emoji.uid = "{uid}" AND user.name = "users/{user}" ``` Invalid queries are
+           * rejected by the server with an `INVALID_ARGUMENT` error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A query filter. You can filter reactions by
+         [emoji](https://developers.google.com/chat/api/reference/rest/v1/Emoji) (either `emoji.unicode` or
+         `emoji.custom_emoji.uid`) and [user](https://developers.google.com/chat/api/reference/rest/v1/User)
+         (`user.name`). To filter reactions for multiple emojis or users, join similar fields with the `OR`
+         operator, such as `emoji.unicode = "🙂" OR emoji.unicode = "👍"` and `user.name = "users/AAAAAA" OR
+         user.name = "users/BBBBBB"`. To filter reactions by emoji and user, use the `AND` operator, such as
+         `emoji.unicode = "🙂" AND user.name = "users/AAAAAA"`. If your query uses both `AND` and `OR`, group
+         them with parentheses. For example, the following queries are valid: ``` user.name = "users/{user}"
+         emoji.unicode = "🙂" emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR emoji.unicode = "👍"
+         emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" AND user.name =
+         "users/{user}" (emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}") AND user.name =
+         "users/{user}" ``` The following queries are invalid: ``` emoji.unicode = "🙂" AND emoji.unicode =
+         "👍" emoji.unicode = "🙂" AND emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR user.name =
+         "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" OR user.name =
+         "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" AND user.name =
+         "users/{user}" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A query filter. You can filter reactions by
+           * [emoji](https://developers.google.com/chat/api/reference/rest/v1/Emoji) (either
+           * `emoji.unicode` or `emoji.custom_emoji.uid`) and
+           * [user](https://developers.google.com/chat/api/reference/rest/v1/User) (`user.name`). To
+           * filter reactions for multiple emojis or users, join similar fields with the `OR`
+           * operator, such as `emoji.unicode = "🙂" OR emoji.unicode = "👍"` and `user.name =
+           * "users/AAAAAA" OR user.name = "users/BBBBBB"`. To filter reactions by emoji and user,
+           * use the `AND` operator, such as `emoji.unicode = "🙂" AND user.name = "users/AAAAAA"`.
+           * If your query uses both `AND` and `OR`, group them with parentheses. For example, the
+           * following queries are valid: ``` user.name = "users/{user}" emoji.unicode = "🙂"
+           * emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR emoji.unicode = "👍"
+           * emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" AND
+           * user.name = "users/{user}" (emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}")
+           * AND user.name = "users/{user}" ``` The following queries are invalid: ``` emoji.unicode
+           * = "🙂" AND emoji.unicode = "👍" emoji.unicode = "🙂" AND emoji.custom_emoji.uid = "{uid}"
+           * emoji.unicode = "🙂" OR user.name = "users/{user}" emoji.unicode = "🙂" OR
+           * emoji.custom_emoji.uid = "{uid}" OR user.name = "users/{user}" emoji.unicode = "🙂" OR
+           * emoji.custom_emoji.uid = "{uid}" AND user.name = "users/{user}" ``` Invalid queries are
+           * rejected by the server with an `INVALID_ARGUMENT` error.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of reactions returned. The service may return fewer
+           * reactions than this value. If unspecified, the default value is 25. The maximum value
+           * is 200; values above 200 are changed to 200.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of reactions returned. The service may return fewer reactions than
+         this value. If unspecified, the default value is 25. The maximum value is 200; values above 200 are
+         changed to 200.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of reactions returned. The service may return fewer
+           * reactions than this value. If unspecified, the default value is 25. The maximum value
+           * is 200; values above 200 are changed to 200.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. (If resuming from a previous query.) A page token received from a previous
+           * list reactions call. Provide this to retrieve the subsequent page. When paginating, the
+           * filter value should match the call that provided the page token. Passing a different
+           * value may lead to unexpected results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. (If resuming from a previous query.) A page token received from a previous list reactions
+         call. Provide this to retrieve the subsequent page. When paginating, the filter value should match
+         the call that provided the page token. Passing a different value may lead to unexpected results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. (If resuming from a previous query.) A page token received from a previous
+           * list reactions call. Provide this to retrieve the subsequent page. When paginating, the
+           * filter value should match the call that provided the page token. Passing a different
+           * value may lead to unexpected results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

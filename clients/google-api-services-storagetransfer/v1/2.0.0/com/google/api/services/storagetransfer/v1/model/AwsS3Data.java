@@ -50,6 +50,19 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
+   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
+   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
+   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
+   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
+   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
+   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
+   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialsSecret;
+
+  /**
    * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
    * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
    * The value may be {@code null}.
@@ -110,6 +123,35 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setBucketName(java.lang.String bucketName) {
     this.bucketName = bucketName;
+    return this;
+  }
+
+  /**
+   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
+   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
+   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
+   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
+   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
+   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
+   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialsSecret() {
+    return credentialsSecret;
+  }
+
+  /**
+   * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
+   * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
+   * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
+   * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
+   * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
+   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
+   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * @param credentialsSecret credentialsSecret or {@code null} for none
+   */
+  public AwsS3Data setCredentialsSecret(java.lang.String credentialsSecret) {
+    this.credentialsSecret = credentialsSecret;
     return this;
   }
 

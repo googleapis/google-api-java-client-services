@@ -37,6 +37,14 @@ public final class AssistantApiSurfaceProperties extends com.google.api.client.j
   private AssistantApiSurfacePropertiesExecutionCapabilities executionCapabilities;
 
   /**
+   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
+   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean prefersGlanceableUi;
+
+  /**
    * If this field is unset, the response format is unknown
    * The value may be {@code null}.
    */
@@ -63,6 +71,25 @@ public final class AssistantApiSurfaceProperties extends com.google.api.client.j
    */
   public AssistantApiSurfaceProperties setExecutionCapabilities(AssistantApiSurfacePropertiesExecutionCapabilities executionCapabilities) {
     this.executionCapabilities = executionCapabilities;
+    return this;
+  }
+
+  /**
+   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
+   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrefersGlanceableUi() {
+    return prefersGlanceableUi;
+  }
+
+  /**
+   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
+   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * @param prefersGlanceableUi prefersGlanceableUi or {@code null} for none
+   */
+  public AssistantApiSurfaceProperties setPrefersGlanceableUi(java.lang.Boolean prefersGlanceableUi) {
+    this.prefersGlanceableUi = prefersGlanceableUi;
     return this;
   }
 

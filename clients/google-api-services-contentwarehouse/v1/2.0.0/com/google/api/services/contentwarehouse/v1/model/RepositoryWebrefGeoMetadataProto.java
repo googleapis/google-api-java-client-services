@@ -44,7 +44,7 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   private java.util.List<RepositoryWebrefGeoMetadataProtoAddressSynonym> addressSynonyms;
 
   /**
-   * Area in km^2 of the feature if the feature has polygon.
+   * Area in km^2 of the feature if the feature has polygon. Only set by qrefmetadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   }
 
   /**
-   * Area in km^2 of the feature if the feature has polygon.
+   * Area in km^2 of the feature if the feature has polygon. Only set by qrefmetadata.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAreaKm2() {
@@ -151,7 +151,7 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   }
 
   /**
-   * Area in km^2 of the feature if the feature has polygon.
+   * Area in km^2 of the feature if the feature has polygon. Only set by qrefmetadata.
    * @param areaKm2 areaKm2 or {@code null} for none
    */
   public RepositoryWebrefGeoMetadataProto setAreaKm2(java.lang.Double areaKm2) {

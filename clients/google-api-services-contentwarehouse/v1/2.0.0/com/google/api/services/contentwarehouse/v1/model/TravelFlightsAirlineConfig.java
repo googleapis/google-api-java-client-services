@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 27
+ * Next ID: 29
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -88,6 +88,12 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
   private java.util.List<java.lang.String> fqtvPartnerCode;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> greenFaresInfo;
+
+  /**
    * Note that some iata_codes are reused (`dup_flag` field). For details, including how to resolve
    * collisions for airlines shown in Google Flights, see: go/controlled-duplicate go/flights-
    * data/airlines#resolving-iata-code-collisions cs/go/controlled-duplicate U2 - some have no IATA
@@ -152,6 +158,13 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private TravelFlightsNameCatalogProto shortNames;
+
+  /**
+   * URLs for airlines' sustainability programs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TravelFlightsNameCatalogProto sustainabilityProgramUrls;
 
   /**
    * The value may be {@code null}.
@@ -312,6 +325,21 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> getGreenFaresInfo() {
+    return greenFaresInfo;
+  }
+
+  /**
+   * @param greenFaresInfo greenFaresInfo or {@code null} for none
+   */
+  public TravelFlightsAirlineConfig setGreenFaresInfo(java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> greenFaresInfo) {
+    this.greenFaresInfo = greenFaresInfo;
+    return this;
+  }
+
+  /**
    * Note that some iata_codes are reused (`dup_flag` field). For details, including how to resolve
    * collisions for airlines shown in Google Flights, see: go/controlled-duplicate go/flights-
    * data/airlines#resolving-iata-code-collisions cs/go/controlled-duplicate U2 - some have no IATA
@@ -467,6 +495,23 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    */
   public TravelFlightsAirlineConfig setShortNames(TravelFlightsNameCatalogProto shortNames) {
     this.shortNames = shortNames;
+    return this;
+  }
+
+  /**
+   * URLs for airlines' sustainability programs.
+   * @return value or {@code null} for none
+   */
+  public TravelFlightsNameCatalogProto getSustainabilityProgramUrls() {
+    return sustainabilityProgramUrls;
+  }
+
+  /**
+   * URLs for airlines' sustainability programs.
+   * @param sustainabilityProgramUrls sustainabilityProgramUrls or {@code null} for none
+   */
+  public TravelFlightsAirlineConfig setSustainabilityProgramUrls(TravelFlightsNameCatalogProto sustainabilityProgramUrls) {
+    this.sustainabilityProgramUrls = sustainabilityProgramUrls;
     return this;
   }
 

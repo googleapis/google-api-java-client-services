@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 9
+ * Next Tag: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -36,6 +36,12 @@ public final class ImageRepositoryS3LangIdSignals extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean containsSpeech;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryS3LangIdDebuggingInfo debuggingInfo;
 
   /**
    * The value may be {@code null}.
@@ -99,6 +105,21 @@ public final class ImageRepositoryS3LangIdSignals extends com.google.api.client.
    */
   public ImageRepositoryS3LangIdSignals setContainsSpeech(java.lang.Boolean containsSpeech) {
     this.containsSpeech = containsSpeech;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryS3LangIdDebuggingInfo getDebuggingInfo() {
+    return debuggingInfo;
+  }
+
+  /**
+   * @param debuggingInfo debuggingInfo or {@code null} for none
+   */
+  public ImageRepositoryS3LangIdSignals setDebuggingInfo(ImageRepositoryS3LangIdDebuggingInfo debuggingInfo) {
+    this.debuggingInfo = debuggingInfo;
     return this;
   }
 

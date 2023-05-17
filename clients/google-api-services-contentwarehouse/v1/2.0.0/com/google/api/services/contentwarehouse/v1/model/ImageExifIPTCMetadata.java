@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This proto holds IPTC metadata. http://www.iptc.org/cms/site/index.html?channel=CH0099 Proto
- * field name is same with IPTC property name except which is clearly stated. Next Id: 63
+ * field name is same with IPTC property name except which is clearly stated. Next Id: 64
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -93,6 +93,13 @@ public final class ImageExifIPTCMetadata extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * See go/gi-annotations-indexing for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String digitalSourceType;
 
   /**
    * The value may be {@code null}.
@@ -342,6 +349,23 @@ public final class ImageExifIPTCMetadata extends com.google.api.client.json.Gene
    */
   public ImageExifIPTCMetadata setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * See go/gi-annotations-indexing for more information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDigitalSourceType() {
+    return digitalSourceType;
+  }
+
+  /**
+   * See go/gi-annotations-indexing for more information.
+   * @param digitalSourceType digitalSourceType or {@code null} for none
+   */
+  public ImageExifIPTCMetadata setDigitalSourceType(java.lang.String digitalSourceType) {
+    this.digitalSourceType = digitalSourceType;
     return this;
   }
 

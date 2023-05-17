@@ -418,14 +418,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
   private AssistantApiSettingsDeviceLogsOptIn optInStatus;
 
   /**
-   * DEPRECATED: Use DeviceCapabilities.OutputRestrictions.personal_data instead. Whether the user
-   * has enabled payments for this device.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean paymentsEnabled;
-
-  /**
    * Metadata about how personalization settings were configured.
    * The value may be {@code null}.
    */
@@ -1473,25 +1465,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
    */
   public AssistantApiSettingsDeviceSettings setOptInStatus(AssistantApiSettingsDeviceLogsOptIn optInStatus) {
     this.optInStatus = optInStatus;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: Use DeviceCapabilities.OutputRestrictions.personal_data instead. Whether the user
-   * has enabled payments for this device.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPaymentsEnabled() {
-    return paymentsEnabled;
-  }
-
-  /**
-   * DEPRECATED: Use DeviceCapabilities.OutputRestrictions.personal_data instead. Whether the user
-   * has enabled payments for this device.
-   * @param paymentsEnabled paymentsEnabled or {@code null} for none
-   */
-  public AssistantApiSettingsDeviceSettings setPaymentsEnabled(java.lang.Boolean paymentsEnabled) {
-    this.paymentsEnabled = paymentsEnabled;
     return this;
   }
 

@@ -40,7 +40,7 @@ public final class CseIdentity extends com.google.api.client.json.GenericJson {
   private java.lang.String emailAddress;
 
   /**
-   * If a key pair is associated, the identifier of the key pair, CseKeyPair.
+   * If a key pair is associated, the ID of the key pair, CseKeyPair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CseIdentity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If a key pair is associated, the identifier of the key pair, CseKeyPair.
+   * If a key pair is associated, the ID of the key pair, CseKeyPair.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryKeyPairId() {
@@ -74,7 +74,7 @@ public final class CseIdentity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If a key pair is associated, the identifier of the key pair, CseKeyPair.
+   * If a key pair is associated, the ID of the key pair, CseKeyPair.
    * @param primaryKeyPairId primaryKeyPairId or {@code null} for none
    */
   public CseIdentity setPrimaryKeyPairId(java.lang.String primaryKeyPairId) {

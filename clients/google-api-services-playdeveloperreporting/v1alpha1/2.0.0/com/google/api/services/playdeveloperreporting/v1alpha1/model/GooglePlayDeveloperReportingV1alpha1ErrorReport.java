@@ -34,6 +34,20 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 public final class GooglePlayDeveloperReportingV1alpha1ErrorReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * A device model on which an event in this error report occurred on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1DeviceModelSummary deviceModel;
+
+  /**
+   * Start of the hour during which the latest event in this error report occurred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String eventTime;
+
+  /**
    * The issue this report was associated with. **Please note:** this resource is currently in
    * Alpha. There could be changes to the issue grouping that would result in similar but more
    * recent error reports being assigned to a different issue.
@@ -48,6 +62,13 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorReport extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The OS version on which an event in this error report occurred on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1OsVersion osVersion;
 
   /**
    * Textual representation of the error report. These textual reports are produced by the platform.
@@ -66,6 +87,40 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorReport extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * A device model on which an event in this error report occurred on.
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1DeviceModelSummary getDeviceModel() {
+    return deviceModel;
+  }
+
+  /**
+   * A device model on which an event in this error report occurred on.
+   * @param deviceModel deviceModel or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorReport setDeviceModel(GooglePlayDeveloperReportingV1alpha1DeviceModelSummary deviceModel) {
+    this.deviceModel = deviceModel;
+    return this;
+  }
+
+  /**
+   * Start of the hour during which the latest event in this error report occurred.
+   * @return value or {@code null} for none
+   */
+  public String getEventTime() {
+    return eventTime;
+  }
+
+  /**
+   * Start of the hour during which the latest event in this error report occurred.
+   * @param eventTime eventTime or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorReport setEventTime(String eventTime) {
+    this.eventTime = eventTime;
+    return this;
+  }
 
   /**
    * The issue this report was associated with. **Please note:** this resource is currently in
@@ -102,6 +157,23 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorReport extends com.g
    */
   public GooglePlayDeveloperReportingV1alpha1ErrorReport setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The OS version on which an event in this error report occurred on.
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1OsVersion getOsVersion() {
+    return osVersion;
+  }
+
+  /**
+   * The OS version on which an event in this error report occurred on.
+   * @param osVersion osVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorReport setOsVersion(GooglePlayDeveloperReportingV1alpha1OsVersion osVersion) {
+    this.osVersion = osVersion;
     return this;
   }
 

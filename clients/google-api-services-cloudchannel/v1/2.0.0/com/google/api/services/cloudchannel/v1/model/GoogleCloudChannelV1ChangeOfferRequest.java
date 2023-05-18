@@ -30,6 +30,15 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The billing account resource name that is used to pay for this entitlement when
+   * setting up billing on a trial subscription. This field is only relevant for multi-currency
+   * accounts. It should be left empty for single currency accounts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Required. New Offer. Format: accounts/{account_id}/offers/{offer_id}.
    * The value may be {@code null}.
    */
@@ -63,6 +72,27 @@ public final class GoogleCloudChannelV1ChangeOfferRequest extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement when
+   * setting up billing on a trial subscription. This field is only relevant for multi-currency
+   * accounts. It should be left empty for single currency accounts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Optional. The billing account resource name that is used to pay for this entitlement when
+   * setting up billing on a trial subscription. This field is only relevant for multi-currency
+   * accounts. It should be left empty for single currency accounts.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudChannelV1ChangeOfferRequest setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
+    return this;
+  }
 
   /**
    * Required. New Offer. Format: accounts/{account_id}/offers/{offer_id}.

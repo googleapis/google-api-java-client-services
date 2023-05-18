@@ -4752,6 +4752,35 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. Resource name of the new target Billing Account. Provide this Billing Account
+         * when setting up billing for a trial subscription. Format:
+         * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant
+         * for multi-currency accounts. It should be left empty for single currency accounts.
+         */
+        @com.google.api.client.util.Key("changeOfferPurchase.billingAccount")
+        private java.lang.String changeOfferPurchaseBillingAccount;
+
+        /** Optional. Resource name of the new target Billing Account. Provide this Billing Account when
+       setting up billing for a trial subscription. Format:
+       accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for multi-
+       currency accounts. It should be left empty for single currency accounts.
+         */
+        public java.lang.String getChangeOfferPurchaseBillingAccount() {
+          return changeOfferPurchaseBillingAccount;
+        }
+
+        /**
+         * Optional. Resource name of the new target Billing Account. Provide this Billing Account
+         * when setting up billing for a trial subscription. Format:
+         * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant
+         * for multi-currency accounts. It should be left empty for single currency accounts.
+         */
+        public ListPurchasableOffers setChangeOfferPurchaseBillingAccount(java.lang.String changeOfferPurchaseBillingAccount) {
+          this.changeOfferPurchaseBillingAccount = changeOfferPurchaseBillingAccount;
+          return this;
+        }
+
+        /**
          * Required. Resource name of the entitlement. Format:
          * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
          */
@@ -4794,6 +4823,29 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
          */
         public ListPurchasableOffers setChangeOfferPurchaseNewSku(java.lang.String changeOfferPurchaseNewSku) {
           this.changeOfferPurchaseNewSku = changeOfferPurchaseNewSku;
+          return this;
+        }
+
+        /**
+         * Optional. Billing account that the result should be restricted to. Format:
+         * accounts/{account_id}/billing_accounts/{billing_account_id}.
+         */
+        @com.google.api.client.util.Key("createEntitlementPurchase.billingAccount")
+        private java.lang.String createEntitlementPurchaseBillingAccount;
+
+        /** Optional. Billing account that the result should be restricted to. Format:
+       accounts/{account_id}/billing_accounts/{billing_account_id}.
+         */
+        public java.lang.String getCreateEntitlementPurchaseBillingAccount() {
+          return createEntitlementPurchaseBillingAccount;
+        }
+
+        /**
+         * Optional. Billing account that the result should be restricted to. Format:
+         * accounts/{account_id}/billing_accounts/{billing_account_id}.
+         */
+        public ListPurchasableOffers setCreateEntitlementPurchaseBillingAccount(java.lang.String createEntitlementPurchaseBillingAccount) {
+          this.createEntitlementPurchaseBillingAccount = createEntitlementPurchaseBillingAccount;
           return this;
         }
 

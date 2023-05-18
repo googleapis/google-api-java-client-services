@@ -179,6 +179,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.lang.String partner;
 
   /**
+   * Optional. Permissions granted to the AW Partner SA account for the customer workload
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions partnerPermissions;
+
+  /**
    * Input only. The parent resource for the resources managed by this Assured Workload. May be
    * either empty or a folder resource which is a child of the Workload parent. If not specified all
    * resources are created under the parent organization. Format: folders/{folder_id}
@@ -574,6 +581,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setPartner(java.lang.String partner) {
     this.partner = partner;
+    return this;
+  }
+
+  /**
+   * Optional. Permissions granted to the AW Partner SA account for the customer workload
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions getPartnerPermissions() {
+    return partnerPermissions;
+  }
+
+  /**
+   * Optional. Permissions granted to the AW Partner SA account for the customer workload
+   * @param partnerPermissions partnerPermissions or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setPartnerPermissions(GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions partnerPermissions) {
+    this.partnerPermissions = partnerPermissions;
     return this;
   }
 

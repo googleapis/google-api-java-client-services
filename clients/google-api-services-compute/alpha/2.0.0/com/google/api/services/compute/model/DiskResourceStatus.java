@@ -43,6 +43,14 @@ public final class DiskResourceStatus extends com.google.api.client.json.Generic
   private java.util.Map<String, DiskResourceStatusAsyncReplicationStatus> asyncSecondaryDisks;
 
   /**
+   * [Output Only] Space used by data stored in the disk (in bytes). Note that this field is set
+   * only when the disk is in a storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long usedBytes;
+
+  /**
    * @return value or {@code null} for none
    */
   public DiskResourceStatusAsyncReplicationStatus getAsyncPrimaryDisk() {
@@ -71,6 +79,25 @@ public final class DiskResourceStatus extends com.google.api.client.json.Generic
    */
   public DiskResourceStatus setAsyncSecondaryDisks(java.util.Map<String, DiskResourceStatusAsyncReplicationStatus> asyncSecondaryDisks) {
     this.asyncSecondaryDisks = asyncSecondaryDisks;
+    return this;
+  }
+
+  /**
+   * [Output Only] Space used by data stored in the disk (in bytes). Note that this field is set
+   * only when the disk is in a storage pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUsedBytes() {
+    return usedBytes;
+  }
+
+  /**
+   * [Output Only] Space used by data stored in the disk (in bytes). Note that this field is set
+   * only when the disk is in a storage pool.
+   * @param usedBytes usedBytes or {@code null} for none
+   */
+  public DiskResourceStatus setUsedBytes(java.lang.Long usedBytes) {
+    this.usedBytes = usedBytes;
     return this;
   }
 

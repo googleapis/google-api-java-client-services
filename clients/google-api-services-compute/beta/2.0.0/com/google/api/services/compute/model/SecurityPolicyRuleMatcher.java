@@ -52,6 +52,14 @@ public final class SecurityPolicyRuleMatcher extends com.google.api.client.json.
   private Expr expr;
 
   /**
+   * The configuration options available when specifying a user defined CEVAL expression (i.e.,
+   * 'expr').
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyRuleMatcherExprOptions exprOptions;
+
+  /**
    * Preconfigured versioned expression. If this field is specified, config must also be specified.
    * Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must
    * specify the corresponding src_ip_range field in config.
@@ -105,6 +113,25 @@ public final class SecurityPolicyRuleMatcher extends com.google.api.client.json.
    */
   public SecurityPolicyRuleMatcher setExpr(Expr expr) {
     this.expr = expr;
+    return this;
+  }
+
+  /**
+   * The configuration options available when specifying a user defined CEVAL expression (i.e.,
+   * 'expr').
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcherExprOptions getExprOptions() {
+    return exprOptions;
+  }
+
+  /**
+   * The configuration options available when specifying a user defined CEVAL expression (i.e.,
+   * 'expr').
+   * @param exprOptions exprOptions or {@code null} for none
+   */
+  public SecurityPolicyRuleMatcher setExprOptions(SecurityPolicyRuleMatcherExprOptions exprOptions) {
+    this.exprOptions = exprOptions;
     return this;
   }
 

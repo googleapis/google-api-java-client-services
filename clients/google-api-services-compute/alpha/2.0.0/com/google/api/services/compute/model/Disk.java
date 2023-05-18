@@ -90,8 +90,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey diskEncryptionKey;
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -646,8 +645,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -655,8 +653,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public Disk setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {

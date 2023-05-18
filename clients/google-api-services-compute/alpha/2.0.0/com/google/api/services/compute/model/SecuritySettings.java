@@ -66,7 +66,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
    * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
    * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
-   * communications are not encrypted. Note: This field currently has no impact.
+   * communications are not encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,6 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * are configured by the Public Key Infrastructure which provisions server identities. Only
    * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
    * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
-   * Note: This field currently has no impact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +176,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
    * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
    * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
-   * communications are not encrypted. Note: This field currently has no impact.
+   * communications are not encrypted.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientTlsPolicy() {
@@ -188,7 +187,7 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
    * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
    * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
-   * communications are not encrypted. Note: This field currently has no impact.
+   * communications are not encrypted.
    * @param clientTlsPolicy clientTlsPolicy or {@code null} for none
    */
   public SecuritySettings setClientTlsPolicy(java.lang.String clientTlsPolicy) {
@@ -223,7 +222,6 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * are configured by the Public Key Infrastructure which provisions server identities. Only
    * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
    * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
-   * Note: This field currently has no impact.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubjectAltNames() {
@@ -240,7 +238,6 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    * are configured by the Public Key Infrastructure which provisions server identities. Only
    * applies to a global BackendService with loadBalancingScheme set to INTERNAL_SELF_MANAGED. Only
    * applies when BackendService has an attached clientTlsPolicy with clientCertificate (mTLS mode).
-   * Note: This field currently has no impact.
    * @param subjectAltNames subjectAltNames or {@code null} for none
    */
   public SecuritySettings setSubjectAltNames(java.util.List<java.lang.String> subjectAltNames) {

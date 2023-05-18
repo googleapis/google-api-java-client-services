@@ -30,6 +30,15 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The Billing Account to look up Offers for. Format:
+   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * multi-currency accounts. It should be left empty for single currency accounts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Customer's Cloud Identity ID
    * The value may be {@code null}.
    */
@@ -74,6 +83,27 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String sku;
+
+  /**
+   * Optional. The Billing Account to look up Offers for. Format:
+   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * multi-currency accounts. It should be left empty for single currency accounts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Optional. The Billing Account to look up Offers for. Format:
+   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * multi-currency accounts. It should be left empty for single currency accounts.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudChannelV1ListTransferableOffersRequest setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
+    return this;
+  }
 
   /**
    * Customer's Cloud Identity ID

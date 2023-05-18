@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.assuredworkloads.v1.model;
+package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
  * Permissions granted to the AW Partner SA account for the customer workload
@@ -28,7 +28,7 @@ package com.google.api.services.assuredworkloads.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions extends com.google.api.client.json.GenericJson {
 
   /**
    * Allow the partner to view inspectability logs and monitoring violations.
@@ -56,7 +56,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
    * Allow the partner to view inspectability logs and monitoring violations.
    * @param dataLogsViewer dataLogsViewer or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setDataLogsViewer(java.lang.Boolean dataLogsViewer) {
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions setDataLogsViewer(java.lang.Boolean dataLogsViewer) {
     this.dataLogsViewer = dataLogsViewer;
     return this;
   }
@@ -73,19 +73,19 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
    * Allow partner to monitor folder and remediate violations
    * @param remediateFolderViolations remediateFolderViolations or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setRemediateFolderViolations(java.lang.Boolean remediateFolderViolations) {
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions setRemediateFolderViolations(java.lang.Boolean remediateFolderViolations) {
     this.remediateFolderViolations = remediateFolderViolations;
     return this;
   }
 
   @Override
-  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions set(String fieldName, Object value) {
-    return (GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions) super.set(fieldName, value);
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions set(String fieldName, Object value) {
+    return (GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions clone() {
-    return (GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions) super.clone();
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions clone() {
+    return (GoogleCloudAssuredworkloadsV1beta1WorkloadPartnerPermissions) super.clone();
   }
 
 }

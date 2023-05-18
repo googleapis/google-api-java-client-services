@@ -46,6 +46,76 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorIssue extends com.go
   private java.lang.String cause;
 
   /**
+   * An estimate of the number of unique users who have experienced this issue (only considering
+   * occurrences matching the filters and within the requested time period).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long distinctUsers;
+
+  /**
+   * An estimated percentage of users affected by any issue that are affected by this issue (only
+   * considering occurrences matching the filters and within the requested time period).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDecimal distinctUsersPercent;
+
+  /**
+   * The total number of error reports in this issue (only considering occurrences matching the
+   * filters and within the requested time period).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long errorReportCount;
+
+  /**
+   * The earliest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1AppVersion firstAppVersion;
+
+  /**
+   * The smallest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1OsVersion firstOsVersion;
+
+  /**
+   * Link to the issue in Android vitals in the Play Console.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String issueUri;
+
+  /**
+   * The latest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1AppVersion lastAppVersion;
+
+  /**
+   * Start of the hour during which the last error report in this issue occurred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastErrorReportTime;
+
+  /**
+   * The latest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePlayDeveloperReportingV1alpha1OsVersion lastOsVersion;
+
+  /**
    * Location where the issue happened. Depending on the type this can be either: *
    * APPLICATION_NOT_RESPONDING: the name of the activity or service that stopped responding. *
    * CRASH: the likely method name that caused the error.
@@ -88,6 +158,173 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorIssue extends com.go
    */
   public GooglePlayDeveloperReportingV1alpha1ErrorIssue setCause(java.lang.String cause) {
     this.cause = cause;
+    return this;
+  }
+
+  /**
+   * An estimate of the number of unique users who have experienced this issue (only considering
+   * occurrences matching the filters and within the requested time period).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDistinctUsers() {
+    return distinctUsers;
+  }
+
+  /**
+   * An estimate of the number of unique users who have experienced this issue (only considering
+   * occurrences matching the filters and within the requested time period).
+   * @param distinctUsers distinctUsers or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setDistinctUsers(java.lang.Long distinctUsers) {
+    this.distinctUsers = distinctUsers;
+    return this;
+  }
+
+  /**
+   * An estimated percentage of users affected by any issue that are affected by this issue (only
+   * considering occurrences matching the filters and within the requested time period).
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDecimal getDistinctUsersPercent() {
+    return distinctUsersPercent;
+  }
+
+  /**
+   * An estimated percentage of users affected by any issue that are affected by this issue (only
+   * considering occurrences matching the filters and within the requested time period).
+   * @param distinctUsersPercent distinctUsersPercent or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setDistinctUsersPercent(GoogleTypeDecimal distinctUsersPercent) {
+    this.distinctUsersPercent = distinctUsersPercent;
+    return this;
+  }
+
+  /**
+   * The total number of error reports in this issue (only considering occurrences matching the
+   * filters and within the requested time period).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getErrorReportCount() {
+    return errorReportCount;
+  }
+
+  /**
+   * The total number of error reports in this issue (only considering occurrences matching the
+   * filters and within the requested time period).
+   * @param errorReportCount errorReportCount or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setErrorReportCount(java.lang.Long errorReportCount) {
+    this.errorReportCount = errorReportCount;
+    return this;
+  }
+
+  /**
+   * The earliest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1AppVersion getFirstAppVersion() {
+    return firstAppVersion;
+  }
+
+  /**
+   * The earliest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * @param firstAppVersion firstAppVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setFirstAppVersion(GooglePlayDeveloperReportingV1alpha1AppVersion firstAppVersion) {
+    this.firstAppVersion = firstAppVersion;
+    return this;
+  }
+
+  /**
+   * The smallest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1OsVersion getFirstOsVersion() {
+    return firstOsVersion;
+  }
+
+  /**
+   * The smallest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * @param firstOsVersion firstOsVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setFirstOsVersion(GooglePlayDeveloperReportingV1alpha1OsVersion firstOsVersion) {
+    this.firstOsVersion = firstOsVersion;
+    return this;
+  }
+
+  /**
+   * Link to the issue in Android vitals in the Play Console.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIssueUri() {
+    return issueUri;
+  }
+
+  /**
+   * Link to the issue in Android vitals in the Play Console.
+   * @param issueUri issueUri or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setIssueUri(java.lang.String issueUri) {
+    this.issueUri = issueUri;
+    return this;
+  }
+
+  /**
+   * The latest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1AppVersion getLastAppVersion() {
+    return lastAppVersion;
+  }
+
+  /**
+   * The latest (inclusive) app version appearing in this ErrorIssue in the requested time period
+   * (only considering occurrences matching the filters).
+   * @param lastAppVersion lastAppVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setLastAppVersion(GooglePlayDeveloperReportingV1alpha1AppVersion lastAppVersion) {
+    this.lastAppVersion = lastAppVersion;
+    return this;
+  }
+
+  /**
+   * Start of the hour during which the last error report in this issue occurred.
+   * @return value or {@code null} for none
+   */
+  public String getLastErrorReportTime() {
+    return lastErrorReportTime;
+  }
+
+  /**
+   * Start of the hour during which the last error report in this issue occurred.
+   * @param lastErrorReportTime lastErrorReportTime or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setLastErrorReportTime(String lastErrorReportTime) {
+    this.lastErrorReportTime = lastErrorReportTime;
+    return this;
+  }
+
+  /**
+   * The latest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * @return value or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1OsVersion getLastOsVersion() {
+    return lastOsVersion;
+  }
+
+  /**
+   * The latest OS version in which this error cluster has occurred in the requested time period
+   * (only considering occurrences matching the filters and within the requested time period).
+   * @param lastOsVersion lastOsVersion or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setLastOsVersion(GooglePlayDeveloperReportingV1alpha1OsVersion lastOsVersion) {
+    this.lastOsVersion = lastOsVersion;
     return this;
   }
 

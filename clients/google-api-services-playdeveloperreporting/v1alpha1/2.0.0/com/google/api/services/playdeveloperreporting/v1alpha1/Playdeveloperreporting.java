@@ -389,6 +389,332 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
   }
 
   /**
+   * An accessor for creating requests from the Apps collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+   *   {@code Playdeveloperreporting.Apps.List request = playdeveloperreporting.apps().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Apps apps() {
+    return new Apps();
+  }
+
+  /**
+   * The "apps" collection of methods.
+   */
+  public class Apps {
+
+    /**
+     * Describes filtering options for releases.
+     *
+     * Create a request for the method "apps.fetchReleaseFilterOptions".
+     *
+     * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+     * optional parameters, call the {@link FetchReleaseFilterOptions#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. Name of the resource, i.e. app the filtering options are for. Format: apps/{app}
+     * @return the request
+     */
+    public FetchReleaseFilterOptions fetchReleaseFilterOptions(java.lang.String name) throws java.io.IOException {
+      FetchReleaseFilterOptions result = new FetchReleaseFilterOptions(name);
+      initialize(result);
+      return result;
+    }
+
+    public class FetchReleaseFilterOptions extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1ReleaseFilterOptions> {
+
+      private static final String REST_PATH = "v1alpha1/{+name}:fetchReleaseFilterOptions";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^apps/[^/]+$");
+
+      /**
+       * Describes filtering options for releases.
+       *
+       * Create a request for the method "apps.fetchReleaseFilterOptions".
+       *
+       * This request holds the parameters needed by the the playdeveloperreporting server.  After
+       * setting any optional parameters, call the {@link FetchReleaseFilterOptions#execute()} method to
+       * invoke the remote operation. <p> {@link FetchReleaseFilterOptions#initialize(com.google.api.cli
+       * ent.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Name of the resource, i.e. app the filtering options are for. Format: apps/{app}
+       * @since 1.13
+       */
+      protected FetchReleaseFilterOptions(java.lang.String name) {
+        super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1ReleaseFilterOptions.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^apps/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FetchReleaseFilterOptions set$Xgafv(java.lang.String $Xgafv) {
+        return (FetchReleaseFilterOptions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setAccessToken(java.lang.String accessToken) {
+        return (FetchReleaseFilterOptions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setAlt(java.lang.String alt) {
+        return (FetchReleaseFilterOptions) super.setAlt(alt);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setCallback(java.lang.String callback) {
+        return (FetchReleaseFilterOptions) super.setCallback(callback);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setFields(java.lang.String fields) {
+        return (FetchReleaseFilterOptions) super.setFields(fields);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setKey(java.lang.String key) {
+        return (FetchReleaseFilterOptions) super.setKey(key);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setOauthToken(java.lang.String oauthToken) {
+        return (FetchReleaseFilterOptions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FetchReleaseFilterOptions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setQuotaUser(java.lang.String quotaUser) {
+        return (FetchReleaseFilterOptions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setUploadType(java.lang.String uploadType) {
+        return (FetchReleaseFilterOptions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FetchReleaseFilterOptions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FetchReleaseFilterOptions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the resource, i.e. app the filtering options are for. Format: apps/{app}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the resource, i.e. app the filtering options are for. Format: apps/{app}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the resource, i.e. app the filtering options are for. Format: apps/{app}
+       */
+      public FetchReleaseFilterOptions setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^apps/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public FetchReleaseFilterOptions set(String parameterName, Object value) {
+        return (FetchReleaseFilterOptions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Searches for Apps accessible by the user.
+     *
+     * Create a request for the method "apps.search".
+     *
+     * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+     * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SearchAccessibleAppsResponse> {
+
+      private static final String REST_PATH = "v1alpha1/apps:search";
+
+      /**
+       * Searches for Apps accessible by the user.
+       *
+       * Create a request for the method "apps.search".
+       *
+       * This request holds the parameters needed by the the playdeveloperreporting server.  After
+       * setting any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1SearchAccessibleAppsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The maximum number of apps to return. The service may return fewer than this value. If
+       * unspecified, at most 50 apps will be returned. The maximum value is 1000; values above 1000
+       * will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of apps to return. The service may return fewer than this value. If unspecified,
+     at most 50 apps will be returned. The maximum value is 1000; values above 1000 will be coerced to
+     1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of apps to return. The service may return fewer than this value. If
+       * unspecified, at most 50 apps will be returned. The maximum value is 1000; values above 1000
+       * will be coerced to 1000.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `SearchAccessibleApps` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `SearchAccessibleApps` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `SearchAccessibleApps` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `SearchAccessibleApps` must
+     match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `SearchAccessibleApps` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `SearchAccessibleApps` must match the call that provided the page token.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Vitals collection.
    *
    * <p>The typical use is:</p>
@@ -1978,6 +2304,38 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
            */
           public Search setIntervalStartTimeYear(java.lang.Integer intervalStartTimeYear) {
             this.intervalStartTimeYear = intervalStartTimeYear;
+            return this;
+          }
+
+          /**
+           * Specifies a field that will be used to order the results. ** Supported dimensions:** *
+           * `errorReportCount`: Orders issues by number of error reports. * `distinctUsers`: Orders
+           * issues by number of unique affected users. ** Supported operations:** * `asc` for
+           * ascending order. * `desc` for descending order. Format: A field and an operation, e.g.,
+           * `errorReportCount desc` *Note:* currently only one field is supported at a time.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Specifies a field that will be used to order the results. ** Supported dimensions:** *
+         `errorReportCount`: Orders issues by number of error reports. * `distinctUsers`: Orders issues by
+         number of unique affected users. ** Supported operations:** * `asc` for ascending order. * `desc`
+         for descending order. Format: A field and an operation, e.g., `errorReportCount desc` *Note:*
+         currently only one field is supported at a time.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Specifies a field that will be used to order the results. ** Supported dimensions:** *
+           * `errorReportCount`: Orders issues by number of error reports. * `distinctUsers`: Orders
+           * issues by number of unique affected users. ** Supported operations:** * `asc` for
+           * ascending order. * `desc` for descending order. Format: A field and an operation, e.g.,
+           * `errorReportCount desc` *Note:* currently only one field is supported at a time.
+           */
+          public Search setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
             return this;
           }
 

@@ -28,13 +28,15 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
  * This dimension must be always specified in all requests in the `dimensions` field in query
  * requests. * `reportType` (string): the type of error. The value should correspond to one of the
  * possible values in ErrorType. **Supported dimensions:** * `apiLevel` (string): the API level of
- * Android that was running on the user's device. * `versionCode` (int64): version of the app that
- * was running on the user's device. * `deviceModel` (string): unique identifier of the user's
- * device model. * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. *
- * `issueId` (string): the id an error was assigned to. The value should correspond to the `{issue}`
- * component of the issue name. * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets
- * (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g.,
- * Samsung. [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
+ * Android that was running on the user's device, e.g., 26. * `versionCode` (int64): version of the
+ * app that was running on the user's device. * `deviceModel` (string): unique identifier of the
+ * user's device model. The form of the identifier is 'deviceBrand/device', where deviceBrand
+ * corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g., google/coral. *
+ * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `issueId` (string):
+ * the id an error was assigned to. The value should correspond to the `{issue}` component of the
+ * issue name. * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+ * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+ * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
  * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) * `deviceCpuMake`
  * (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel` (string): Model of the

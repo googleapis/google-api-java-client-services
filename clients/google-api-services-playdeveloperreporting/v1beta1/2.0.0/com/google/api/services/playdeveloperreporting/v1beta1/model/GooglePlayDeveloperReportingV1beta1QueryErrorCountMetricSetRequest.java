@@ -32,15 +32,17 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
 
   /**
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device. * `versionCode` (int64): version of the app
-   * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
-   * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
-   * possible values in ErrorType. * `isUserPerceived` (string): denotes whether error is user
-   * perceived or not, USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error
-   * was assigned to. The value should correspond to the `{issue}` component of the issue name. *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
+   * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
+   * (string): the type of error. The value should correspond to one of the possible values in
+   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
+   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
+   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -105,15 +107,17 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
 
   /**
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device. * `versionCode` (int64): version of the app
-   * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
-   * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
-   * possible values in ErrorType. * `isUserPerceived` (string): denotes whether error is user
-   * perceived or not, USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error
-   * was assigned to. The value should correspond to the `{issue}` component of the issue name. *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
+   * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
+   * (string): the type of error. The value should correspond to one of the possible values in
+   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
+   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
+   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -133,15 +137,17 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
 
   /**
    * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device. * `versionCode` (int64): version of the app
-   * that was running on the user's device. * `deviceModel` (string): unique identifier of the
-   * user's device model. * `deviceType` (string): identifier of the device's form factor, e.g.,
-   * PHONE. * `reportType` (string): the type of error. The value should correspond to one of the
-   * possible values in ErrorType. * `isUserPerceived` (string): denotes whether error is user
-   * perceived or not, USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error
-   * was assigned to. The value should correspond to the `{issue}` component of the issue name. *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceModel` (string): unique identifier of the user's device model. *
+   * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `reportType`
+   * (string): the type of error. The value should correspond to one of the possible values in
+   * ErrorType. * `isUserPerceived` (string): denotes whether error is user perceived or not,
+   * USER_PERCEIVED or NOT_USER_PERCEIVED. * `issueId` (string): the id an error was assigned to.
+   * The value should correspond to the `{issue}` component of the issue name. * `deviceRamBucket`
+   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
+   * Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *

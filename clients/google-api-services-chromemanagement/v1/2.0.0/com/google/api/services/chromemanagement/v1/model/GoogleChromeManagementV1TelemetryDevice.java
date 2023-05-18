@@ -146,6 +146,33 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
+   * Output only. Heartbeat status report containing timestamps periodically sorted in decreasing
+   * order of report_time
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1HeartbeatStatusReport> heartbeatStatusReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1HeartbeatStatusReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1HeartbeatStatusReport.class);
+  }
+
+  /**
+   * Output only. Kiosk app status report for the kiosk device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1KioskAppStatusReport> kioskAppStatusReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1KioskAppStatusReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1KioskAppStatusReport.class);
+  }
+
+  /**
    * Output only. Information regarding memory specs for the device.
    * The value may be {@code null}.
    */
@@ -445,6 +472,42 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
    */
   public GoogleChromeManagementV1TelemetryDevice setGraphicsStatusReport(java.util.List<GoogleChromeManagementV1GraphicsStatusReport> graphicsStatusReport) {
     this.graphicsStatusReport = graphicsStatusReport;
+    return this;
+  }
+
+  /**
+   * Output only. Heartbeat status report containing timestamps periodically sorted in decreasing
+   * order of report_time
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1HeartbeatStatusReport> getHeartbeatStatusReport() {
+    return heartbeatStatusReport;
+  }
+
+  /**
+   * Output only. Heartbeat status report containing timestamps periodically sorted in decreasing
+   * order of report_time
+   * @param heartbeatStatusReport heartbeatStatusReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setHeartbeatStatusReport(java.util.List<GoogleChromeManagementV1HeartbeatStatusReport> heartbeatStatusReport) {
+    this.heartbeatStatusReport = heartbeatStatusReport;
+    return this;
+  }
+
+  /**
+   * Output only. Kiosk app status report for the kiosk device
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1KioskAppStatusReport> getKioskAppStatusReport() {
+    return kioskAppStatusReport;
+  }
+
+  /**
+   * Output only. Kiosk app status report for the kiosk device
+   * @param kioskAppStatusReport kioskAppStatusReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setKioskAppStatusReport(java.util.List<GoogleChromeManagementV1KioskAppStatusReport> kioskAppStatusReport) {
+    this.kioskAppStatusReport = kioskAppStatusReport;
     return this;
   }
 

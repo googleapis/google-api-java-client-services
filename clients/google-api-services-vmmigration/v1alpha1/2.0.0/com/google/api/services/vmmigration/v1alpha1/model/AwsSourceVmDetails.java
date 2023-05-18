@@ -37,6 +37,19 @@ public final class AwsSourceVmDetails extends com.google.api.client.json.Generic
   private java.lang.Long committedStorageBytes;
 
   /**
+   * The disks attached to the source VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AwsDiskDetails> disks;
+
+  static {
+    // hack to force ProGuard to consider AwsDiskDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AwsDiskDetails.class);
+  }
+
+  /**
    * The firmware type of the source VM.
    * The value may be {@code null}.
    */
@@ -57,6 +70,23 @@ public final class AwsSourceVmDetails extends com.google.api.client.json.Generic
    */
   public AwsSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
     this.committedStorageBytes = committedStorageBytes;
+    return this;
+  }
+
+  /**
+   * The disks attached to the source VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AwsDiskDetails> getDisks() {
+    return disks;
+  }
+
+  /**
+   * The disks attached to the source VM.
+   * @param disks disks or {@code null} for none
+   */
+  public AwsSourceVmDetails setDisks(java.util.List<AwsDiskDetails> disks) {
+    this.disks = disks;
     return this;
   }
 

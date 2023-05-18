@@ -37,11 +37,12 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   private java.lang.String healthCheck;
 
   /**
-   * The number of seconds that the managed instance group waits before it applies autohealing
-   * policies to new instances or recently recreated instances. This initial delay allows instances
-   * to initialize and run their startup scripts before the instance group determines that they are
-   * UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely.
-   * This value must be from range [0, 3600].
+   * The initial delay is the number of seconds that a new VM takes to initialize and run its
+   * startup script. During a VM's initial delay period, the MIG ignores unsuccessful health checks
+   * because the VM might be in the startup process. This prevents the MIG from prematurely
+   * recreating a VM. If the health check receives a healthy response during the initial delay, it
+   * indicates that the startup process is complete and the VM is ready. The value of initial delay
+   * must be between 0 and 3600 seconds. The default value is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,11 +66,12 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   }
 
   /**
-   * The number of seconds that the managed instance group waits before it applies autohealing
-   * policies to new instances or recently recreated instances. This initial delay allows instances
-   * to initialize and run their startup scripts before the instance group determines that they are
-   * UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely.
-   * This value must be from range [0, 3600].
+   * The initial delay is the number of seconds that a new VM takes to initialize and run its
+   * startup script. During a VM's initial delay period, the MIG ignores unsuccessful health checks
+   * because the VM might be in the startup process. This prevents the MIG from prematurely
+   * recreating a VM. If the health check receives a healthy response during the initial delay, it
+   * indicates that the startup process is complete and the VM is ready. The value of initial delay
+   * must be between 0 and 3600 seconds. The default value is 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySec() {
@@ -77,11 +79,12 @@ public final class InstanceGroupManagerAutoHealingPolicy extends com.google.api.
   }
 
   /**
-   * The number of seconds that the managed instance group waits before it applies autohealing
-   * policies to new instances or recently recreated instances. This initial delay allows instances
-   * to initialize and run their startup scripts before the instance group determines that they are
-   * UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely.
-   * This value must be from range [0, 3600].
+   * The initial delay is the number of seconds that a new VM takes to initialize and run its
+   * startup script. During a VM's initial delay period, the MIG ignores unsuccessful health checks
+   * because the VM might be in the startup process. This prevents the MIG from prematurely
+   * recreating a VM. If the health check receives a healthy response during the initial delay, it
+   * indicates that the startup process is complete and the VM is ready. The value of initial delay
+   * must be between 0 and 3600 seconds. The default value is 0.
    * @param initialDelaySec initialDelaySec or {@code null} for none
    */
   public InstanceGroupManagerAutoHealingPolicy setInitialDelaySec(java.lang.Integer initialDelaySec) {

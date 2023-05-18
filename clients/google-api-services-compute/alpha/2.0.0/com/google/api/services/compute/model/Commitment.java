@@ -135,6 +135,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.util.List<Reservation> reservations;
 
   /**
+   * [Output Only] Status information for Commitment resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommitmentResourceStatus resourceStatus;
+
+  /**
    * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
    * commitments must occur together.
    * The value may be {@code null}.
@@ -435,6 +442,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setReservations(java.util.List<Reservation> reservations) {
     this.reservations = reservations;
+    return this;
+  }
+
+  /**
+   * [Output Only] Status information for Commitment resource.
+   * @return value or {@code null} for none
+   */
+  public CommitmentResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] Status information for Commitment resource.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Commitment setResourceStatus(CommitmentResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

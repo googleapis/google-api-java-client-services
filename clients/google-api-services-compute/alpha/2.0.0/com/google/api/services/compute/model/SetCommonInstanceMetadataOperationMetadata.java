@@ -18,8 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * Encapsulates partial completion metadata for SetCommonInstanceMetadata. Will be propagated on
- * Operation.metadata as per go/partial-completion-api-clean. See go/gce-aips/2822 for API council
- * results.
+ * Operation.metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

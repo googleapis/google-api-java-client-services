@@ -82,8 +82,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskType;
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -365,8 +364,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -374,8 +372,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * Whether this disk is using confidential compute mode. see go/confidential-mode-in-arcus for
-   * details.
+   * Whether this disk is using confidential compute mode.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public AttachedDiskInitializeParams setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {

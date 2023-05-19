@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class Dialog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps do not support
+   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps don't support
    * the following card entities: `DateTimePicker`, `OnChangeAction`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class Dialog extends com.google.api.client.json.GenericJson {
   private GoogleAppsCardV1Card body;
 
   /**
-   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps do not support
+   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps don't support
    * the following card entities: `DateTimePicker`, `OnChangeAction`.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class Dialog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps do not support
+   * Input only. Body of the dialog, which is rendered in a modal. Google Chat apps don't support
    * the following card entities: `DateTimePicker`, `OnChangeAction`.
    * @param body body or {@code null} for none
    */

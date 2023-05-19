@@ -31,7 +31,7 @@ public final class GoogleAppsCardV1GridItem extends com.google.api.client.json.G
 
   /**
    * A user-specified identifier for this grid item. This identifier is returned in the parent
-   * Grid's onClick callback parameters.
+   * grid's `onClick` callback parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleAppsCardV1GridItem extends com.google.api.client.json.G
 
   /**
    * A user-specified identifier for this grid item. This identifier is returned in the parent
-   * Grid's onClick callback parameters.
+   * grid's `onClick` callback parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -76,7 +76,7 @@ public final class GoogleAppsCardV1GridItem extends com.google.api.client.json.G
 
   /**
    * A user-specified identifier for this grid item. This identifier is returned in the parent
-   * Grid's onClick callback parameters.
+   * grid's `onClick` callback parameters.
    * @param id id or {@code null} for none
    */
   public GoogleAppsCardV1GridItem setId(java.lang.String id) {

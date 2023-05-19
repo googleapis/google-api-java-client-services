@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A UI element contains a key (label) and a value (content). And this element may also contain some
- * actions such as onclick button.
+ * A UI element contains a key (label) and a value (content). This element can also contain some
+ * actions such as `onclick` button.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,7 +32,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the bottom label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +49,10 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the content. Formatted text supported and always required. For more information
-   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
-   * Workspace Add-ons.
+   * about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +66,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean contentMultiline;
 
   /**
-   * An enum value that will be replaced by the Chat API with the corresponding icon image.
+   * An enum value that's replaced by the Chat API with the corresponding icon image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +80,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   private java.lang.String iconUrl;
 
   /**
-   * The onclick action. Only the top label, bottom label and content region are clickable.
+   * The `onclick` action. Only the top label, bottom label, and content region are clickable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +88,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the top label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +98,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the bottom label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getBottomLabel() {
@@ -101,7 +109,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the bottom label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param bottomLabel bottomLabel or {@code null} for none
    */
   public KeyValue setBottomLabel(java.lang.String bottomLabel) {
@@ -128,8 +138,10 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the content. Formatted text supported and always required. For more information
-   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
-   * Workspace Add-ons.
+   * about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -138,8 +150,10 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the content. Formatted text supported and always required. For more information
-   * about formatting text, see Formatting text in Google Chat apps and Formatting text in Google
-   * Workspace Add-ons.
+   * about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * @param content content or {@code null} for none
    */
   public KeyValue setContent(java.lang.String content) {
@@ -165,7 +179,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An enum value that will be replaced by the Chat API with the corresponding icon image.
+   * An enum value that's replaced by the Chat API with the corresponding icon image.
    * @return value or {@code null} for none
    */
   public java.lang.String getIcon() {
@@ -173,7 +187,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An enum value that will be replaced by the Chat API with the corresponding icon image.
+   * An enum value that's replaced by the Chat API with the corresponding icon image.
    * @param icon icon or {@code null} for none
    */
   public KeyValue setIcon(java.lang.String icon) {
@@ -199,7 +213,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The onclick action. Only the top label, bottom label and content region are clickable.
+   * The `onclick` action. Only the top label, bottom label, and content region are clickable.
    * @return value or {@code null} for none
    */
   public OnClick getOnClick() {
@@ -207,7 +221,7 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The onclick action. Only the top label, bottom label and content region are clickable.
+   * The `onclick` action. Only the top label, bottom label, and content region are clickable.
    * @param onClick onClick or {@code null} for none
    */
   public KeyValue setOnClick(OnClick onClick) {
@@ -217,7 +231,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the top label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getTopLabel() {
@@ -226,7 +242,9 @@ public final class KeyValue extends com.google.api.client.json.GenericJson {
 
   /**
    * The text of the top label. Formatted text supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param topLabel topLabel or {@code null} for none
    */
   public KeyValue setTopLabel(java.lang.String topLabel) {

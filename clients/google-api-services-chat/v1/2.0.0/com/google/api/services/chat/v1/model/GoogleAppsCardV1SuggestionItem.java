@@ -30,16 +30,16 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SuggestionItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value of a suggested input to a text input field. This is equivalent to what users would
-   * enter themselves.
+   * The value of a suggested input to a text input field. This is equivalent to what users enter
+   * themselves.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The value of a suggested input to a text input field. This is equivalent to what users would
-   * enter themselves.
+   * The value of a suggested input to a text input field. This is equivalent to what users enter
+   * themselves.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -47,8 +47,8 @@ public final class GoogleAppsCardV1SuggestionItem extends com.google.api.client.
   }
 
   /**
-   * The value of a suggested input to a text input field. This is equivalent to what users would
-   * enter themselves.
+   * The value of a suggested input to a text input field. This is equivalent to what users enter
+   * themselves.
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1SuggestionItem setText(java.lang.String text) {

@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A widget that displays text with optional decorations such as a label above or below the text, an
- * icon in front of the text, a selection widget or a button after the text.
+ * icon in front of the text, a selection widget, or a button after the text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private java.lang.String bottomLabel;
 
   /**
-   * A button that can be clicked to trigger an action.
+   * A button that a user can click to trigger an action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon icon;
 
   /**
-   * When users click on `topLabel` or `bottomLabel`, this action triggers.
+   * This action is triggered when users click `topLabel` or `bottomLabel`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon startIcon;
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action.
+   * A switch widget that a user can click to change its state and trigger an action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +125,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A button that can be clicked to trigger an action.
+   * A button that a user can click to trigger an action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Button getButton() {
@@ -131,7 +133,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A button that can be clicked to trigger an action.
+   * A button that a user can click to trigger an action.
    * @param button button or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setButton(GoogleAppsCardV1Button button) {
@@ -180,7 +182,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * When users click on `topLabel` or `bottomLabel`, this action triggers.
+   * This action is triggered when users click `topLabel` or `bottomLabel`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -188,7 +190,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * When users click on `topLabel` or `bottomLabel`, this action triggers.
+   * This action is triggered when users click `topLabel` or `bottomLabel`.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setOnClick(GoogleAppsCardV1OnClick onClick) {
@@ -214,7 +216,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action.
+   * A switch widget that a user can click to change its state and trigger an action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl getSwitchControl() {
@@ -222,7 +224,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * A switch widget can be clicked to change its state and trigger an action.
+   * A switch widget that a user can click to change its state and trigger an action.
    * @param switchControl switchControl or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setSwitchControl(GoogleAppsCardV1SwitchControl switchControl) {
@@ -232,7 +234,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -241,7 +245,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setText(java.lang.String text) {

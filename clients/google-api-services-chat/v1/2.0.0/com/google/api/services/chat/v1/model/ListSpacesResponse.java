@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class ListSpacesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   private java.util.List<Space> spaces;
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListSpacesResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSpacesResponse setNextPageToken(java.lang.String nextPageToken) {

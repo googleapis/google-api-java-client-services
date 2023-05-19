@@ -30,21 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class Button extends com.google.api.client.json.GenericJson {
 
   /**
-   * A button with image and onclick action.
+   * A button with image and `onclick` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ImageButton imageButton;
 
   /**
-   * A button with text and onclick action.
+   * A button with text and `onclick` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextButton textButton;
 
   /**
-   * A button with image and onclick action.
+   * A button with image and `onclick` action.
    * @return value or {@code null} for none
    */
   public ImageButton getImageButton() {
@@ -52,7 +52,7 @@ public final class Button extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A button with image and onclick action.
+   * A button with image and `onclick` action.
    * @param imageButton imageButton or {@code null} for none
    */
   public Button setImageButton(ImageButton imageButton) {
@@ -61,7 +61,7 @@ public final class Button extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A button with text and onclick action.
+   * A button with text and `onclick` action.
    * @return value or {@code null} for none
    */
   public TextButton getTextButton() {
@@ -69,7 +69,7 @@ public final class Button extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A button with text and onclick action.
+   * A button with text and `onclick` action.
    * @param textButton textButton or {@code null} for none
    */
   public Button setTextButton(TextButton textButton) {

@@ -39,7 +39,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   private java.lang.String attachmentUploadToken;
 
   /**
-   * The resource name of the attachment data. This is used with the media API to download the
+   * The resource name of the attachment data. This field is used with the media API to download the
    * attachment data.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource name of the attachment data. This is used with the media API to download the
+   * The resource name of the attachment data. This field is used with the media API to download the
    * attachment data.
    * @return value or {@code null} for none
    */
@@ -77,7 +77,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource name of the attachment data. This is used with the media API to download the
+   * The resource name of the attachment data. This field is used with the media API to download the
    * attachment data.
    * @param resourceName resourceName or {@code null} for none
    */

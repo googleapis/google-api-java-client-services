@@ -37,8 +37,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   private java.util.List<Message> messages;
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -71,8 +71,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
-   * are no subsequent pages.
+   * You can send a token as `pageToken` to retrieve the next page of results. If empty, there are
+   * no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListMessagesResponse setNextPageToken(java.lang.String nextPageToken) {

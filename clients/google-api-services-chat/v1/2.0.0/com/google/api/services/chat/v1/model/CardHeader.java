@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class CardHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * The image's type (e.g. square border or circular border).
+   * The image's type (for example, square border or circular border).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +52,14 @@ public final class CardHeader extends com.google.api.client.json.GenericJson {
 
   /**
    * The title must be specified. The header has a fixed height: if both a title and subtitle is
-   * specified, each will take up 1 line. If only the title is specified, it will take up both
-   * lines.
+   * specified, each takes up one line. If only the title is specified, it takes up both lines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The image's type (e.g. square border or circular border).
+   * The image's type (for example, square border or circular border).
    * @return value or {@code null} for none
    */
   public java.lang.String getImageStyle() {
@@ -68,7 +67,7 @@ public final class CardHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The image's type (e.g. square border or circular border).
+   * The image's type (for example, square border or circular border).
    * @param imageStyle imageStyle or {@code null} for none
    */
   public CardHeader setImageStyle(java.lang.String imageStyle) {
@@ -112,8 +111,7 @@ public final class CardHeader extends com.google.api.client.json.GenericJson {
 
   /**
    * The title must be specified. The header has a fixed height: if both a title and subtitle is
-   * specified, each will take up 1 line. If only the title is specified, it will take up both
-   * lines.
+   * specified, each takes up one line. If only the title is specified, it takes up both lines.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -122,8 +120,7 @@ public final class CardHeader extends com.google.api.client.json.GenericJson {
 
   /**
    * The title must be specified. The header has a fixed height: if both a title and subtitle is
-   * specified, each will take up 1 line. If only the title is specified, it will take up both
-   * lines.
+   * specified, each takes up one line. If only the title is specified, it takes up both lines.
    * @param title title or {@code null} for none
    */
   public CardHeader setTitle(java.lang.String title) {

@@ -30,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class DriveDataRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id for the drive file, for use with the Drive API.
+   * The ID for the drive file. Use with the Drive API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String driveFileId;
 
   /**
-   * The id for the drive file, for use with the Drive API.
+   * The ID for the drive file. Use with the Drive API.
    * @return value or {@code null} for none
    */
   public java.lang.String getDriveFileId() {
@@ -45,7 +45,7 @@ public final class DriveDataRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The id for the drive file, for use with the Drive API.
+   * The ID for the drive file. Use with the Drive API.
    * @param driveFileId driveFileId or {@code null} for none
    */
   public DriveDataRef setDriveFileId(java.lang.String driveFileId) {

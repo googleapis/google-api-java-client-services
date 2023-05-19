@@ -22,9 +22,9 @@ package com.google.api.services.chat.v1.model;
  * a next step. In Google Chat, cards appear in several places: - As stand-alone messages. -
  * Accompanying a text message, just beneath the text message. - As a
  * [dialog](https://developers.google.com/chat/how-tos/dialogs). The following example JSON creates
- * a "contact card" that features: - A header with the contact's name, job title, avatar picture. -
- * A section with the contact information, including formatted text. - Buttons that users can click
- * to share the contact or see more or less info. ![Example contact
+ * a "contact card" that features: - A header with the contact's name, job title, and avatar
+ * picture. - A section with the contact information, including formatted text. - Buttons that users
+ * can click to share the contact, or see more or less information. ![Example contact
  * card](https://developers.google.com/chat/images/card_api_reference.png) ``` { "cardsV2": [ {
  * "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software
  * Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
@@ -49,12 +49,12 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
-   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
-   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
-   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
-   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
-   * "https://example.com/feedback" } } } ] ```
+   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
+   * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
+   * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
+   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,12 +114,12 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
-   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
-   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
-   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
-   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
-   * "https://example.com/feedback" } } } ] ```
+   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
+   * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
+   * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
+   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1CardAction> getCardActions() {
@@ -128,12 +128,12 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * The card's actions. Actions are added to the card's toolbar menu. Because Chat app cards have
-   * no toolbar, `cardActions[]` is not supported by Chat apps. For example, the following JSON
-   * constructs a card action menu with Settings and Send Feedback options: ``` "card_actions": [ {
-   * "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView", "parameters": [
-   * { "key": "viewType", "value": "SETTING" } ], "loadIndicator": "LoadIndicator.SPINNER" } } }, {
-   * "actionLabel": "Send Feedback", "onClick": { "openLink": { "url":
-   * "https://example.com/feedback" } } } ] ```
+   * no toolbar, `cardActions[]` isn't supported by Chat apps. For example, the following JSON
+   * constructs a card action menu with `Settings` and `Send Feedback` options: ``` "card_actions":
+   * [ { "actionLabel": "Settings", "onClick": { "action": { "functionName": "goToView",
+   * "parameters": [ { "key": "viewType", "value": "SETTING" } ], "loadIndicator":
+   * "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * @param cardActions cardActions or {@code null} for none
    */
   public GoogleAppsCardV1Card setCardActions(java.util.List<GoogleAppsCardV1CardAction> cardActions) {

@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the crop style applied to an image. For example, here's how to apply a 16 by 9 aspect
+ * Represents the crop style applied to an image. For example, here's how to apply a 16:9 aspect
  * ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,7 @@ public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.
 
   /**
    * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
-   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * apply a 16:9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
    * ```
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.
 
   /**
    * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
-   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * apply a 16:9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
    * ```
    * @return value or {@code null} for none
    */
@@ -58,7 +58,7 @@ public final class GoogleAppsCardV1ImageCropStyle extends com.google.api.client.
 
   /**
    * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For example, here's how to
-   * apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
+   * apply a 16:9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 }
    * ```
    * @param aspectRatio aspectRatio or {@code null} for none
    */

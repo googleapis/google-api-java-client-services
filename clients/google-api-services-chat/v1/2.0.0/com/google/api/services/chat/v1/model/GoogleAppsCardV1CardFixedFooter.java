@@ -43,7 +43,7 @@ public final class GoogleAppsCardV1CardFixedFooter extends com.google.api.client
 
   /**
    * The secondary button of the fixed footer. The button must be a text button with text and color
-   * set. `primaryButton` must be set if `secondaryButton` is set.
+   * set. If `secondaryButton` is set, you must also set `primaryButton`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class GoogleAppsCardV1CardFixedFooter extends com.google.api.client
 
   /**
    * The secondary button of the fixed footer. The button must be a text button with text and color
-   * set. `primaryButton` must be set if `secondaryButton` is set.
+   * set. If `secondaryButton` is set, you must also set `primaryButton`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Button getSecondaryButton() {
@@ -87,7 +87,7 @@ public final class GoogleAppsCardV1CardFixedFooter extends com.google.api.client
 
   /**
    * The secondary button of the fixed footer. The button must be a text button with text and color
-   * set. `primaryButton` must be set if `secondaryButton` is set.
+   * set. If `secondaryButton` is set, you must also set `primaryButton`.
    * @param secondaryButton secondaryButton or {@code null} for none
    */
   public GoogleAppsCardV1CardFixedFooter setSecondaryButton(GoogleAppsCardV1Button secondaryButton) {

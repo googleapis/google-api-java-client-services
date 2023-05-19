@@ -37,7 +37,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   private java.util.List<Membership> memberships;
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
    * are no subsequent pages.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
    * are no subsequent pages.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token that can be sent as `pageToken` to retrieve the next page of results. If empty, there
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
    * are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

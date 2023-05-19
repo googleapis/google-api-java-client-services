@@ -33,10 +33,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Optional. A description of the icon used for accessibility. If unspecified, the default value
-   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
    * helper text when the user hovers over the button. However, if the button also sets `text`, the
    * icon's `altText` is ignored.
    * The value may be {@code null}.
@@ -73,10 +73,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Optional. A description of the icon used for accessibility. If unspecified, the default value
-   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
    * helper text when the user hovers over the button. However, if the button also sets `text`, the
    * icon's `altText` is ignored.
    * @return value or {@code null} for none
@@ -87,10 +87,10 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Optional. A description of the icon used for accessibility. If unspecified, the default value
-   * "Button" is provided. As a best practice, you should set a helpful description for what the
+   * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a Button, the `altText` appears as
+   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
    * helper text when the user hovers over the button. However, if the button also sets `text`, the
    * icon's `altText` is ignored.
    * @param altText altText or {@code null} for none

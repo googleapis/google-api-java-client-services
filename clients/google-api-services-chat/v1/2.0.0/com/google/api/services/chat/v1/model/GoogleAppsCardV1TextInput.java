@@ -57,11 +57,11 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Suggested values that users can enter. These values appear when users click inside the text
    * input field. As users type, the suggested values dynamically filter to match what the users
    * have typed. For example, a text input field for programming language might suggest Java,
-   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
-   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
-   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
-   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
-   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
+   * JavaScript, Python, and C++. When users start typing `Jav`, the list of suggestions filters to
+   * show just `Java` and `JavaScript`. Suggested values help guide users to enter values that your
+   * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
+   * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
+   * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * The text that appears above the text input field in the user interface. Specify text that helps
    * the user enter the information your app needs. For example, if you are asking someone's name,
-   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * but specifically need their surname, write `surname` instead of `name`. Required if `hintText`
    * is unspecified. Otherwise, optional.
    * The value may be {@code null}.
    */
@@ -87,10 +87,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
-   * What to do when a change occurs in the text input field. Examples of changes include a user
-   * adding to the field, or deleting text. Examples of actions to take include running a custom
-   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
-   * Chat.
+   * What to do when a change occurs in the text input field. For example, a user adding to the
+   * field or deleting text. Examples of actions to take include running a custom function or
+   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,11 +160,11 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Suggested values that users can enter. These values appear when users click inside the text
    * input field. As users type, the suggested values dynamically filter to match what the users
    * have typed. For example, a text input field for programming language might suggest Java,
-   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
-   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
-   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
-   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
-   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
+   * JavaScript, Python, and C++. When users start typing `Jav`, the list of suggestions filters to
+   * show just `Java` and `JavaScript`. Suggested values help guide users to enter values that your
+   * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
+   * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
+   * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Suggestions getInitialSuggestions() {
@@ -176,11 +175,11 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Suggested values that users can enter. These values appear when users click inside the text
    * input field. As users type, the suggested values dynamically filter to match what the users
    * have typed. For example, a text input field for programming language might suggest Java,
-   * JavaScript, Python, and C++. When users start typing "Jav", the list of suggestions filters to
-   * show just Java and JavaScript. Suggested values help guide users to enter values that your app
-   * can make sense of. When referring to JavaScript, some users might enter "javascript" and others
-   * "java script". Suggesting "JavaScript" can standardize how users interact with your app. When
-   * specified, `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
+   * JavaScript, Python, and C++. When users start typing `Jav`, the list of suggestions filters to
+   * show just `Java` and `JavaScript`. Suggested values help guide users to enter values that your
+   * app can make sense of. When referring to JavaScript, some users might enter `javascript` and
+   * others `java script`. Suggesting `JavaScript` can standardize how users interact with your app.
+   * When specified, `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
    * @param initialSuggestions initialSuggestions or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setInitialSuggestions(GoogleAppsCardV1Suggestions initialSuggestions) {
@@ -191,7 +190,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * The text that appears above the text input field in the user interface. Specify text that helps
    * the user enter the information your app needs. For example, if you are asking someone's name,
-   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * but specifically need their surname, write `surname` instead of `name`. Required if `hintText`
    * is unspecified. Otherwise, optional.
    * @return value or {@code null} for none
    */
@@ -202,7 +201,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * The text that appears above the text input field in the user interface. Specify text that helps
    * the user enter the information your app needs. For example, if you are asking someone's name,
-   * but specifically need their surname, write "surname" instead of "name". Required if `hintText`
+   * but specifically need their surname, write `surname` instead of `name`. Required if `hintText`
    * is unspecified. Otherwise, optional.
    * @param label label or {@code null} for none
    */
@@ -233,10 +232,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * What to do when a change occurs in the text input field. Examples of changes include a user
-   * adding to the field, or deleting text. Examples of actions to take include running a custom
-   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
-   * Chat.
+   * What to do when a change occurs in the text input field. For example, a user adding to the
+   * field or deleting text. Examples of actions to take include running a custom function or
+   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -244,10 +242,9 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   }
 
   /**
-   * What to do when a change occurs in the text input field. Examples of changes include a user
-   * adding to the field, or deleting text. Examples of actions to take include running a custom
-   * function or opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google
-   * Chat.
+   * What to do when a change occurs in the text input field. For example, a user adding to the
+   * field or deleting text. Examples of actions to take include running a custom function or
+   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {

@@ -20,11 +20,11 @@ package com.google.api.services.chat.v1.model;
  * Suggested values that users can enter. These values appear when users click inside the text input
  * field. As users type, the suggested values dynamically filter to match what the users have typed.
  * For example, a text input field for programming language might suggest Java, JavaScript, Python,
- * and C++. When users start typing "Jav", the list of suggestions filters to show just Java and
- * JavaScript. Suggested values help guide users to enter values that your app can make sense of.
- * When referring to JavaScript, some users might enter "javascript" and others "java script".
- * Suggesting "JavaScript" can standardize how users interact with your app. When specified,
- * `TextInput.type` is always `SINGLE_LINE`, even if it is set to `MULTIPLE_LINE`.
+ * and C++. When users start typing `Jav`, the list of suggestions filters to show `Java` and
+ * `JavaScript`. Suggested values help guide users to enter values that your app can make sense of.
+ * When referring to JavaScript, some users might enter `javascript` and others `java script`.
+ * Suggesting `JavaScript` can standardize how users interact with your app. When specified,
+ * `TextInput.type` is always `SINGLE_LINE`, even if it's set to `MULTIPLE_LINE`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

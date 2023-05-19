@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A description of the space. It could describe the space's discussion topic,
+   * Optional. A description of the space. For example, describe the space's discussion topic,
    * functional purpose, or participants. Supports up to 150 characters.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String guidelines;
 
   /**
-   * Optional. A description of the space. It could describe the space's discussion topic,
+   * Optional. A description of the space. For example, describe the space's discussion topic,
    * functional purpose, or participants. Supports up to 150 characters.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of the space. It could describe the space's discussion topic,
+   * Optional. A description of the space. For example, describe the space's discussion topic,
    * functional purpose, or participants. Supports up to 150 characters.
    * @param description description or {@code null} for none
    */

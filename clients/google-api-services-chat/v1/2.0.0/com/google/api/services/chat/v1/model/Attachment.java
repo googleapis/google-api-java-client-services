@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reference to the attachment data. This is used with the media API to download the attachment
-   * data.
+   * A reference to the attachment data. This field is used with the media API to download the
+   * attachment data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,21 +53,21 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Chat apps should not use this URL to download attachment content.
+   * attachment. Chat apps shouldn't use this URL to download attachment content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String downloadUri;
 
   /**
-   * A reference to the drive attachment. This is used with the Drive API.
+   * A reference to the drive attachment. This field is used with the Drive API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveDataRef driveDataRef;
 
   /**
-   * Resource name of the attachment, in the form "spaces/messages/attachments".
+   * Resource name of the attachment, in the form `spaces/messages/attachments`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,15 +82,15 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Chat apps should not use this URL to download attachment content.
+   * Chat apps shouldn't use this URL to download attachment content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUri;
 
   /**
-   * A reference to the attachment data. This is used with the media API to download the attachment
-   * data.
+   * A reference to the attachment data. This field is used with the media API to download the
+   * attachment data.
    * @return value or {@code null} for none
    */
   public AttachmentDataRef getAttachmentDataRef() {
@@ -98,8 +98,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the attachment data. This is used with the media API to download the attachment
-   * data.
+   * A reference to the attachment data. This field is used with the media API to download the
+   * attachment data.
    * @param attachmentDataRef attachmentDataRef or {@code null} for none
    */
   public Attachment setAttachmentDataRef(AttachmentDataRef attachmentDataRef) {
@@ -143,7 +143,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Chat apps should not use this URL to download attachment content.
+   * attachment. Chat apps shouldn't use this URL to download attachment content.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUri() {
@@ -152,7 +152,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The download URL which should be used to allow a human user to download the
-   * attachment. Chat apps should not use this URL to download attachment content.
+   * attachment. Chat apps shouldn't use this URL to download attachment content.
    * @param downloadUri downloadUri or {@code null} for none
    */
   public Attachment setDownloadUri(java.lang.String downloadUri) {
@@ -161,7 +161,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the drive attachment. This is used with the Drive API.
+   * A reference to the drive attachment. This field is used with the Drive API.
    * @return value or {@code null} for none
    */
   public DriveDataRef getDriveDataRef() {
@@ -169,7 +169,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the drive attachment. This is used with the Drive API.
+   * A reference to the drive attachment. This field is used with the Drive API.
    * @param driveDataRef driveDataRef or {@code null} for none
    */
   public Attachment setDriveDataRef(DriveDataRef driveDataRef) {
@@ -178,7 +178,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form "spaces/messages/attachments".
+   * Resource name of the attachment, in the form `spaces/messages/attachments`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -186,7 +186,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form "spaces/messages/attachments".
+   * Resource name of the attachment, in the form `spaces/messages/attachments`.
    * @param name name or {@code null} for none
    */
   public Attachment setName(java.lang.String name) {
@@ -213,7 +213,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Chat apps should not use this URL to download attachment content.
+   * Chat apps shouldn't use this URL to download attachment content.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUri() {
@@ -222,7 +222,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The thumbnail URL which should be used to preview the attachment to a human user.
-   * Chat apps should not use this URL to download attachment content.
+   * Chat apps shouldn't use this URL to download attachment content.
    * @param thumbnailUri thumbnailUri or {@code null} for none
    */
   public Attachment setThumbnailUri(java.lang.String thumbnailUri) {

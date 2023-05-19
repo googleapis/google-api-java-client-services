@@ -30,7 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * List all maintenance versions applicable on the instance
+   * Output only. List all maintenance versions applicable on the instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,7 +303,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
-   * List all maintenance versions applicable on the instance
+   * Output only. List all maintenance versions applicable on the instance
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
@@ -311,7 +311,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * List all maintenance versions applicable on the instance
+   * Output only. List all maintenance versions applicable on the instance
    * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
    */
   public DatabaseInstance setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {

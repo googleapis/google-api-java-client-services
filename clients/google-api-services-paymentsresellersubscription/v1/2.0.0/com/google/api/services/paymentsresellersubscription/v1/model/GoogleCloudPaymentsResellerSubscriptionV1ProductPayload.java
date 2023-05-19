@@ -31,7 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Payload specific to Google One products.
+   * Product-specific payloads. Payload specific to Google One products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload exten
   private GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload youtubePayload;
 
   /**
-   * Payload specific to Google One products.
+   * Product-specific payloads. Payload specific to Google One products.
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload getGoogleOnePayload() {
@@ -53,7 +53,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload exten
   }
 
   /**
-   * Payload specific to Google One products.
+   * Product-specific payloads. Payload specific to Google One products.
    * @param googleOnePayload googleOnePayload or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload setGoogleOnePayload(GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload googleOnePayload) {

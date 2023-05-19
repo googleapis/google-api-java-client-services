@@ -82,6 +82,14 @@ public final class OracleConnectionProfile extends com.google.api.client.json.Ge
   private PrivateConnectivity privateConnectivity;
 
   /**
+   * SSL configuration for the destination to connect to the source database. The supported
+   * configuration for Oracle SSL is of SERVER_ONLY type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslConfig ssl;
+
+  /**
    * Static Service IP connectivity.
    * The value may be {@code null}.
    */
@@ -216,6 +224,25 @@ public final class OracleConnectionProfile extends com.google.api.client.json.Ge
    */
   public OracleConnectionProfile setPrivateConnectivity(PrivateConnectivity privateConnectivity) {
     this.privateConnectivity = privateConnectivity;
+    return this;
+  }
+
+  /**
+   * SSL configuration for the destination to connect to the source database. The supported
+   * configuration for Oracle SSL is of SERVER_ONLY type.
+   * @return value or {@code null} for none
+   */
+  public SslConfig getSsl() {
+    return ssl;
+  }
+
+  /**
+   * SSL configuration for the destination to connect to the source database. The supported
+   * configuration for Oracle SSL is of SERVER_ONLY type.
+   * @param ssl ssl or {@code null} for none
+   */
+  public OracleConnectionProfile setSsl(SslConfig ssl) {
+    this.ssl = ssl;
     return this;
   }
 

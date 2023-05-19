@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * The results of a Deidentify action from an Inspect job.
+ * The results of a Deidentify action from an inspect job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Stats about de-identification.
+   * Stats about the de-identification operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends com.goo
   private GooglePrivacyDlpV2RequestedDeidentifyOptions requestedOptions;
 
   /**
-   * Stats about de-identification.
+   * Stats about the de-identification operation.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyDataSourceStats getDeidentifyStats() {
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends com.goo
   }
 
   /**
-   * Stats about de-identification.
+   * Stats about the de-identification operation.
    * @param deidentifyStats deidentifyStats or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyDataSourceDetails setDeidentifyStats(GooglePrivacyDlpV2DeidentifyDataSourceStats deidentifyStats) {

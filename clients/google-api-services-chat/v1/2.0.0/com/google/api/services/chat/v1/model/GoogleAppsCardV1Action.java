@@ -17,9 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An action that describes the behavior when the form is submitted. For example, an Apps Script can
- * be invoked to handle the form. If the action is triggered, the form values are sent to the
- * server.
+ * An action that describes the behavior when the form is submitted. For example, you can invoke an
+ * Apps Script script to handle the form. If the action is triggered, the form values are sent to
+ * the server.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -42,12 +42,12 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
-   * What to do in response to an interaction with a user, such as a user clicking button on a card
-   * message. If unspecified, the app responds by executing an `action` - like opening a link or
-   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * What to do in response to an interaction with a user, such as a user clicking a button in a
+   * card message. If unspecified, the app responds by executing an `action`—like opening a link or
+   * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
    * for an add-on, the entire card is stripped and nothing is shown in the client.
    * The value may be {@code null}.
    */
@@ -71,15 +71,15 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
+   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
-   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
-   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
-   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
-   * contained the action. If `false`, the form values are cleared when the action is triggered. To
-   * prevent the user from making changes while the action is being processed, set
-   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * you must also set the action's [`ResponseType`](https://developers.google.com/chat/api/referenc
+   * e/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https:
+   * //developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card
+   * that contained the action. If `false`, the form values are cleared when the action is
+   * triggered. To prevent the user from making changes while the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
    * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * The value may be {@code null}.
    */
@@ -109,12 +109,12 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
-   * What to do in response to an interaction with a user, such as a user clicking button on a card
-   * message. If unspecified, the app responds by executing an `action` - like opening a link or
-   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * What to do in response to an interaction with a user, such as a user clicking a button in a
+   * card message. If unspecified, the app responds by executing an `action`—like opening a link or
+   * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
    * for an add-on, the entire card is stripped and nothing is shown in the client.
    * @return value or {@code null} for none
    */
@@ -124,12 +124,12 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. Required when opening a [dialog](https://developers.google.com/chat/how-tos/dialogs).
-   * What to do in response to an interaction with a user, such as a user clicking button on a card
-   * message. If unspecified, the app responds by executing an `action` - like opening a link or
-   * running a function - as normal. By specifying an `interaction`, the app can respond in special
+   * What to do in response to an interaction with a user, such as a user clicking a button in a
+   * card message. If unspecified, the app responds by executing an `action`—like opening a link or
+   * running a function—as normal. By specifying an `interaction`, the app can respond in special
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
-   * indicator is not shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
+   * indicator isn't shown. Supported by Chat apps, but not Google Workspace Add-ons. If specified
    * for an add-on, the entire card is stripped and nothing is shown in the client.
    * @param interaction interaction or {@code null} for none
    */
@@ -175,15 +175,15 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
+   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
-   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
-   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
-   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
-   * contained the action. If `false`, the form values are cleared when the action is triggered. To
-   * prevent the user from making changes while the action is being processed, set
-   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * you must also set the action's [`ResponseType`](https://developers.google.com/chat/api/referenc
+   * e/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https:
+   * //developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card
+   * that contained the action. If `false`, the form values are cleared when the action is
+   * triggered. To prevent the user from making changes while the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
    * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * @return value or {@code null} for none
    */
@@ -194,15 +194,15 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [LoadIndicator](https://developers.google.com/workspace/add-
-   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
+   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/chat/api/guides/message-formats/cards) in Chat apps,
-   * you must also set the action's [ResponseType](https://developers.google.com/chat/api/reference/
-   * rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https://
-   * developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card that
-   * contained the action. If `false`, the form values are cleared when the action is triggered. To
-   * prevent the user from making changes while the action is being processed, set
-   * [LoadIndicator](https://developers.google.com/workspace/add-
+   * you must also set the action's [`ResponseType`](https://developers.google.com/chat/api/referenc
+   * e/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the same [`card_id`](https:
+   * //developers.google.com/chat/api/reference/rest/v1/spaces.messages#CardWithId) from the card
+   * that contained the action. If `false`, the form values are cleared when the action is
+   * triggered. To prevent the user from making changes while the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
    * ons/reference/rpc/google.apps.card.v1#loadindicator) to `SPINNER`.
    * @param persistValues persistValues or {@code null} for none
    */

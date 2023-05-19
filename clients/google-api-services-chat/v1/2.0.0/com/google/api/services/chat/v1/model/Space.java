@@ -43,14 +43,14 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty. Supports up to 128 characters.
+   * messages, this field might be empty. Supports up to 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Resource name of the space. Format: spaces/{space}
+   * Resource name of the space. Format: `spaces/{space}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty. Supports up to 128 characters.
+   * messages, this field might be empty. Supports up to 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -145,7 +145,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * The space's display name. Required when [creating a
    * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field may be empty. Supports up to 128 characters.
+   * messages, this field might be empty. Supports up to 128 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {
@@ -154,7 +154,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: spaces/{space}
+   * Resource name of the space. Format: `spaces/{space}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -162,7 +162,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the space. Format: spaces/{space}
+   * Resource name of the space. Format: `spaces/{space}`
    * @param name name or {@code null} for none
    */
   public Space setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A button with text and onclick action.
+ * A button with text and `onclick` action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class TextButton extends com.google.api.client.json.GenericJson {
 
   /**
-   * The onclick action of the button.
+   * The `onclick` action of the button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class TextButton extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * The onclick action of the button.
+   * The `onclick` action of the button.
    * @return value or {@code null} for none
    */
   public OnClick getOnClick() {
@@ -52,7 +52,7 @@ public final class TextButton extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The onclick action of the button.
+   * The `onclick` action of the button.
    * @param onClick onClick or {@code null} for none
    */
   public TextButton setOnClick(OnClick onClick) {

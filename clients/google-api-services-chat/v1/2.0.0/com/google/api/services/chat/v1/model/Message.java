@@ -70,8 +70,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
-   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * Deprecated: Use `cards_v2` instead. Rich, formatted, and interactive cards that you can use to
+   * display UI elements such as: formatted texts, buttons, and clickable images. Cards are normally
    * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
    * size of 32 KB.
    * The value may be {@code null}.
@@ -117,7 +117,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String clientAssignedMessageId;
 
   /**
-   * Output only. The time at which the message was created in Google Chat server.
+   * Output only. The time at which the message was created in Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +155,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A plain-text description of the message's cards, used when the actual cards cannot be displayed
-   * (e.g. mobile notifications).
+   * A plain-text description of the message's cards, used when the actual cards can't be
+   * displayed—for example, mobile notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +172,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, refer to [Preview links](https://developers.google.com/chat/how-tos/preview-
-   * links).
+   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,8 +307,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
-   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * Deprecated: Use `cards_v2` instead. Rich, formatted, and interactive cards that you can use to
+   * display UI elements such as: formatted texts, buttons, and clickable images. Cards are normally
    * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
    * size of 32 KB.
    * @return value or {@code null} for none
@@ -319,8 +318,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated: Use `cards_v2` instead. Rich, formatted and interactive cards that can be used to
-   * display UI elements such as: formatted texts, buttons, clickable images. Cards are normally
+   * Deprecated: Use `cards_v2` instead. Rich, formatted, and interactive cards that you can use to
+   * display UI elements such as: formatted texts, buttons, and clickable images. Cards are normally
    * displayed below the plain-text body of the message. `cards` and `cards_v2` can have a maximum
    * size of 32 KB.
    * @param cards cards or {@code null} for none
@@ -387,7 +386,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was created in Google Chat server.
+   * Output only. The time at which the message was created in Google Chat.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -395,7 +394,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was created in Google Chat server.
+   * Output only. The time at which the message was created in Google Chat.
    * @param createTime createTime or {@code null} for none
    */
   public Message setCreateTime(String createTime) {
@@ -463,8 +462,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A plain-text description of the message's cards, used when the actual cards cannot be displayed
-   * (e.g. mobile notifications).
+   * A plain-text description of the message's cards, used when the actual cards can't be
+   * displayed—for example, mobile notifications.
    * @return value or {@code null} for none
    */
   public java.lang.String getFallbackText() {
@@ -472,8 +471,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A plain-text description of the message's cards, used when the actual cards cannot be displayed
-   * (e.g. mobile notifications).
+   * A plain-text description of the message's cards, used when the actual cards can't be
+   * displayed—for example, mobile notifications.
    * @param fallbackText fallbackText or {@code null} for none
    */
   public Message setFallbackText(java.lang.String fallbackText) {
@@ -502,8 +501,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, refer to [Preview links](https://developers.google.com/chat/how-tos/preview-
-   * links).
+   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
    * @return value or {@code null} for none
    */
   public MatchedUrl getMatchedUrl() {
@@ -512,8 +510,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, refer to [Preview links](https://developers.google.com/chat/how-tos/preview-
-   * links).
+   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
    * @param matchedUrl matchedUrl or {@code null} for none
    */
   public Message setMatchedUrl(MatchedUrl matchedUrl) {

@@ -45,7 +45,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
-   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to authenticate or configure. (Only for `REQUEST_CONFIG` response
+   * types.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to authenticate or configure. (Only for `REQUEST_CONFIG` response
+   * types.)
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -96,7 +98,8 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. URL for users to auth or config. (Only for REQUEST_CONFIG response types.)
+   * Input only. URL for users to authenticate or configure. (Only for `REQUEST_CONFIG` response
+   * types.)
    * @param url url or {@code null} for none
    */
   public ActionResponse setUrl(java.lang.String url) {

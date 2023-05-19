@@ -38,7 +38,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the reaction. Format:
-   * spaces/{space}/messages/{message}/reactions/{reaction}
+   * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the reaction. Format:
-   * spaces/{space}/messages/{message}/reactions/{reaction}
+   * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -79,7 +79,7 @@ public final class Reaction extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the reaction. Format:
-   * spaces/{space}/messages/{message}/reactions/{reaction}
+   * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * @param name name or {@code null} for none
    */
   public Reaction setName(java.lang.String name) {

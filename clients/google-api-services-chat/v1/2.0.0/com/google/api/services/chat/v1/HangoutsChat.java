@@ -539,7 +539,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
     /**
      * [Developer Preview](https://developers.google.com/workspace/preview): Creates a named space.
-     * Spaces grouped by topics or that have guest access are not supported. Requires [user
+     * Spaces grouped by topics or that have guest access aren't supported. Requires [user
      * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
      * `chat.spaces.create` or `chat.spaces` scope.
      *
@@ -563,7 +563,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * [Developer Preview](https://developers.google.com/workspace/preview): Creates a named space.
-       * Spaces grouped by topics or that have guest access are not supported. Requires [user
+       * Spaces grouped by topics or that have guest access aren't supported. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
        * `chat.spaces.create` or `chat.spaces` scope.
        *
@@ -672,8 +672,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     }
     /**
      * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a named space.
-     * Always performs a cascading delete, which means that the space's child resources - like messages
-     * posted in the space and memberships in the space - are also deleted. Requires [user
+     * Always performs a cascading delete, which means that the space's child resources—like messages
+     * posted in the space and memberships in the space—are also deleted. Requires [user
      * authentication](https://developers.google.com/chat/api/guides/auth/users) from a user who has
      * permission to delete the space, and the `chat.delete` scope.
      *
@@ -682,7 +682,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space to delete. Format: spaces/{space}
+     * @param name Required. Resource name of the space to delete. Format: `spaces/{space}`
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -700,8 +700,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a named space.
-       * Always performs a cascading delete, which means that the space's child resources - like
-       * messages posted in the space and memberships in the space - are also deleted. Requires [user
+       * Always performs a cascading delete, which means that the space's child resources—like messages
+       * posted in the space and memberships in the space—are also deleted. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users) from a user who has
        * permission to delete the space, and the `chat.delete` scope.
        *
@@ -712,7 +712,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space to delete. Format: spaces/{space}
+       * @param name Required. Resource name of the space to delete. Format: `spaces/{space}`
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -780,17 +780,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the space to delete. Format: spaces/{space} */
+      /** Required. Resource name of the space to delete. Format: `spaces/{space}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space to delete. Format: spaces/{space}
+      /** Required. Resource name of the space to delete. Format: `spaces/{space}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Resource name of the space to delete. Format: spaces/{space} */
+      /** Required. Resource name of the space to delete. Format: `spaces/{space}` */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -925,37 +925,36 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. Resource name of the user to find direct message with. Format: users/{user},
+       * Required. Resource name of the user to find direct message with. Format: `users/{user}`,
        * where `{user}` is either the `{person_id}` for the
        * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
        * the `id` for the [user](https://developers.google.com/admin-
-       * sdk/directory/reference/rest/v1/users) in the Admin SDK Directory API. For example, if the
-       * People API `Person.resourceName` is `people/123456789`, you can find a direct message with
-       * that person by using `users/123456789` as the `name`.
+       * sdk/directory/reference/rest/v1/users) in the Directory API. For example, if the People API
+       * `Person.resourceName` is `people/123456789`, you can find a direct message with that person
+       * by using `users/123456789` as the `name`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the user to find direct message with. Format: users/{user}, where
+      /** Required. Resource name of the user to find direct message with. Format: `users/{user}`, where
      `{user}` is either the `{person_id}` for the
      [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the `id`
      for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the
-     Admin SDK Directory API. For example, if the People API `Person.resourceName` is
-     `people/123456789`, you can find a direct message with that person by using `users/123456789` as
-     the `name`.
+     Directory API. For example, if the People API `Person.resourceName` is `people/123456789`, you can
+     find a direct message with that person by using `users/123456789` as the `name`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name of the user to find direct message with. Format: users/{user},
+       * Required. Resource name of the user to find direct message with. Format: `users/{user}`,
        * where `{user}` is either the `{person_id}` for the
        * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
        * the `id` for the [user](https://developers.google.com/admin-
-       * sdk/directory/reference/rest/v1/users) in the Admin SDK Directory API. For example, if the
-       * People API `Person.resourceName` is `people/123456789`, you can find a direct message with
-       * that person by using `users/123456789` as the `name`.
+       * sdk/directory/reference/rest/v1/users) in the Directory API. For example, if the People API
+       * `Person.resourceName` is `people/123456789`, you can find a direct message with that person
+       * by using `users/123456789` as the `name`.
        */
       public FindDirectMessage setName(java.lang.String name) {
         this.name = name;
@@ -982,7 +981,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
+     * @param name Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1015,7 +1014,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
+       * @param name Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1093,17 +1092,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space} */
+      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space}
+      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Resource name of the space, in the form "spaces". Format: spaces/{space} */
+      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}` */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1242,16 +1241,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. A query filter. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
        * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
-       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid `enum` value,
-       * such as `SPACE` or `GROUP_CHAT` (the `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To
-       * query for multiple space types, use the `OR` operator. For example, the following queries
-       * are valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
-       * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
-       * error. With [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
-       * field is ignored and the query always returns all spaces. But Chat API still validates the
-       * query syntax with service accounts, so invalid queries are still rejected. [Developer
-       * Preview](https://developers.google.com/workspace/preview).
+       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid enum value, such
+       * as `SPACE` or `GROUP_CHAT` (the `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query
+       * for multiple space types, use the `OR` operator. For example, the following queries are
+       * valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE"
+       * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error. With
+       * [service account authentication](https://developers.google.com/chat/api/guides/auth
+       * /service-accounts), this field is ignored and the query always returns all spaces. But the
+       * Chat API still validates the query syntax with service accounts, so invalid queries are
+       * still rejected. [Developer Preview](https://developers.google.com/workspace/preview).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -1260,14 +1258,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter spaces by
      the space type
      ([`space_type`](https://developers.google.com/chat/api/reference/rest/v1/spaces#spacetype)). To
-     filter by space type, you must specify valid `enum` value, such as `SPACE` or `GROUP_CHAT` (the
-     `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
+     filter by space type, you must specify valid enum value, such as `SPACE` or `GROUP_CHAT` (the
+     `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
      operator. For example, the following queries are valid: ``` space_type = "SPACE" spaceType =
      "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an
      `INVALID_ARGUMENT` error. With [service account
      authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this field is
-     ignored and the query always returns all spaces. But Chat API still validates the query syntax with
-     service accounts, so invalid queries are still rejected. [Developer
+     ignored and the query always returns all spaces. But the Chat API still validates the query syntax
+     with service accounts, so invalid queries are still rejected. [Developer
      Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.String getFilter() {
@@ -1278,16 +1276,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Optional. A query filter. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users). You can filter
        * spaces by the space type ([`space_type`](https://developers.google.com/chat/api/reference/r
-       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid `enum` value,
-       * such as `SPACE` or `GROUP_CHAT` (the `space_type` cannot be `SPACE_TYPE_UNSPECIFIED`). To
-       * query for multiple space types, use the `OR` operator. For example, the following queries
-       * are valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
-       * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
-       * error. With [service account
-       * authentication](https://developers.google.com/chat/api/guides/auth/service-accounts), this
-       * field is ignored and the query always returns all spaces. But Chat API still validates the
-       * query syntax with service accounts, so invalid queries are still rejected. [Developer
-       * Preview](https://developers.google.com/workspace/preview).
+       * est/v1/spaces#spacetype)). To filter by space type, you must specify valid enum value, such
+       * as `SPACE` or `GROUP_CHAT` (the `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query
+       * for multiple space types, use the `OR` operator. For example, the following queries are
+       * valid: ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE"
+       * ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error. With
+       * [service account authentication](https://developers.google.com/chat/api/guides/auth
+       * /service-accounts), this field is ignored and the query always returns all spaces. But the
+       * Chat API still validates the query syntax with service accounts, so invalid queries are
+       * still rejected. [Developer Preview](https://developers.google.com/workspace/preview).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1295,25 +1292,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. The maximum number of spaces to return. The service may return fewer than this
-       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
-       * above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+       * Optional. The maximum number of spaces to return. The service might return fewer than this
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you
+       * use a value more than 1,000, it's automatically changed to 1,000. Negative values return an
+       * `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of spaces to return. The service may return fewer than this value. If
-     unspecified, at most 100 spaces are returned. The maximum value is 1000; values above 1000 are
-     coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+      /** Optional. The maximum number of spaces to return. The service might return fewer than this value.
+     If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you use a value
+     more than 1,000, it's automatically changed to 1,000. Negative values return an `INVALID_ARGUMENT`
+     error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of spaces to return. The service may return fewer than this
-       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values
-       * above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+       * Optional. The maximum number of spaces to return. The service might return fewer than this
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you
+       * use a value more than 1,000, it's automatically changed to 1,000. Negative values return an
+       * `INVALID_ARGUMENT` error.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1321,25 +1321,25 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
-       * the subsequent page. When paginating, the filter value should match the call that provided
-       * the page token. Passing a different value may lead to unexpected results.
+       * Optional. A page token, received from a previous list spaces call. Provide this parameter
+       * to retrieve the subsequent page. When paginating, the filter value should match the call
+       * that provided the page token. Passing a different value may lead to unexpected results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous list spaces call. Provide this to retrieve the
-     subsequent page. When paginating, the filter value should match the call that provided the page
-     token. Passing a different value may lead to unexpected results.
+      /** Optional. A page token, received from a previous list spaces call. Provide this parameter to
+     retrieve the subsequent page. When paginating, the filter value should match the call that provided
+     the page token. Passing a different value may lead to unexpected results.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous list spaces call. Provide this to retrieve
-       * the subsequent page. When paginating, the filter value should match the call that provided
-       * the page token. Passing a different value may lead to unexpected results.
+       * Optional. A page token, received from a previous list spaces call. Provide this parameter
+       * to retrieve the subsequent page. When paginating, the filter value should match the call
+       * that provided the page token. Passing a different value may lead to unexpected results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -1361,7 +1361,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the space. Format: spaces/{space}
+     * @param name Resource name of the space. Format: `spaces/{space}`
      * @param content the {@link com.google.api.services.chat.v1.model.Space}
      * @return the request
      */
@@ -1390,7 +1390,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the space. Format: spaces/{space}
+       * @param name Resource name of the space. Format: `spaces/{space}`
        * @param content the {@link com.google.api.services.chat.v1.model.Space}
        * @since 1.13
        */
@@ -1459,17 +1459,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Resource name of the space. Format: spaces/{space} */
+      /** Resource name of the space. Format: `spaces/{space}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name of the space. Format: spaces/{space}
+      /** Resource name of the space. Format: `spaces/{space}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Resource name of the space. Format: spaces/{space} */
+      /** Resource name of the space. Format: `spaces/{space}` */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1481,57 +1481,59 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. The field paths to be updated, comma separated if there are multiple. Currently
-       * supported field paths: - display_name (Only supports changing the display name of a space
-       * with the SPACE type, or when also including the `space_type` mask to change a GROUP_CHAT
-       * space type to SPACE. Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE
-       * space results in an invalid argument error.) - space_type (Only supports changing a
-       * GROUP_CHAT space type to SPACE. Include `display_name` together with `space_type` in the
-       * update mask and ensure that the specified space has a non-empty display name and the SPACE
-       * space type. Including the `space_type` mask and the SPACE type in the specified space when
-       * updating the display name is optional if the existing space already has the SPACE type.
-       * Trying to update the space type in other ways results in an invalid argument error). -
-       * space_details - space_history_state (Supports [turning history on or off for the
-       * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
-       * change their history setting](https://support.google.com/a/answer/7664184). Warning:
-       * mutually exclusive with all other field paths.)
+       * Required. The updated field paths, comma separated if there are multiple. Currently
+       * supported field paths: - `display_name` (Only supports changing the display name of a space
+       * with the `SPACE` type, or when also including the `space_type` mask to change a
+       * `GROUP_CHAT` space type to `SPACE`. Trying to update the display name of a `GROUP_CHAT` or
+       * a `DIRECT_MESSAGE` space results in an invalid argument error.) - `space_type` (Only
+       * supports changing a `GROUP_CHAT` space type to `SPACE`. Include `display_name` together
+       * with `space_type` in the update mask and ensure that the specified space has a non-empty
+       * display name and the `SPACE` space type. Including the `space_type` mask and the `SPACE`
+       * type in the specified space when updating the display name is optional if the existing
+       * space already has the `SPACE` type. Trying to update the space type in other ways results
+       * in an invalid argument error). - `space_details` - `space_history_state` (Supports [turning
+       * history on or off for the space](https://support.google.com/chat/answer/7664687) if [the
+       * organization allows users to change their history
+       * setting](https://support.google.com/a/answer/7664184). Warning: mutually exclusive with all
+       * other field paths.)
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. The field paths to be updated, comma separated if there are multiple. Currently supported
-     field paths: - display_name (Only supports changing the display name of a space with the SPACE
-     type, or when also including the `space_type` mask to change a GROUP_CHAT space type to SPACE.
-     Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE space results in an invalid
-     argument error.) - space_type (Only supports changing a GROUP_CHAT space type to SPACE. Include
-     `display_name` together with `space_type` in the update mask and ensure that the specified space
-     has a non-empty display name and the SPACE space type. Including the `space_type` mask and the
-     SPACE type in the specified space when updating the display name is optional if the existing space
-     already has the SPACE type. Trying to update the space type in other ways results in an invalid
-     argument error). - space_details - space_history_state (Supports [turning history on or off for the
-     space](https://support.google.com/chat/answer/7664687) if [the organization allows users to change
-     their history setting](https://support.google.com/a/answer/7664184). Warning: mutually exclusive
-     with all other field paths.)
+      /** Required. The updated field paths, comma separated if there are multiple. Currently supported field
+     paths: - `display_name` (Only supports changing the display name of a space with the `SPACE` type,
+     or when also including the `space_type` mask to change a `GROUP_CHAT` space type to `SPACE`. Trying
+     to update the display name of a `GROUP_CHAT` or a `DIRECT_MESSAGE` space results in an invalid
+     argument error.) - `space_type` (Only supports changing a `GROUP_CHAT` space type to `SPACE`.
+     Include `display_name` together with `space_type` in the update mask and ensure that the specified
+     space has a non-empty display name and the `SPACE` space type. Including the `space_type` mask and
+     the `SPACE` type in the specified space when updating the display name is optional if the existing
+     space already has the `SPACE` type. Trying to update the space type in other ways results in an
+     invalid argument error). - `space_details` - `space_history_state` (Supports [turning history on or
+     off for the space](https://support.google.com/chat/answer/7664687) if [the organization allows
+     users to change their history setting](https://support.google.com/a/answer/7664184). Warning:
+     mutually exclusive with all other field paths.)
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * Required. The field paths to be updated, comma separated if there are multiple. Currently
-       * supported field paths: - display_name (Only supports changing the display name of a space
-       * with the SPACE type, or when also including the `space_type` mask to change a GROUP_CHAT
-       * space type to SPACE. Trying to update the display name of a GROUP_CHAT or a DIRECT_MESSAGE
-       * space results in an invalid argument error.) - space_type (Only supports changing a
-       * GROUP_CHAT space type to SPACE. Include `display_name` together with `space_type` in the
-       * update mask and ensure that the specified space has a non-empty display name and the SPACE
-       * space type. Including the `space_type` mask and the SPACE type in the specified space when
-       * updating the display name is optional if the existing space already has the SPACE type.
-       * Trying to update the space type in other ways results in an invalid argument error). -
-       * space_details - space_history_state (Supports [turning history on or off for the
-       * space](https://support.google.com/chat/answer/7664687) if [the organization allows users to
-       * change their history setting](https://support.google.com/a/answer/7664184). Warning:
-       * mutually exclusive with all other field paths.)
+       * Required. The updated field paths, comma separated if there are multiple. Currently
+       * supported field paths: - `display_name` (Only supports changing the display name of a space
+       * with the `SPACE` type, or when also including the `space_type` mask to change a
+       * `GROUP_CHAT` space type to `SPACE`. Trying to update the display name of a `GROUP_CHAT` or
+       * a `DIRECT_MESSAGE` space results in an invalid argument error.) - `space_type` (Only
+       * supports changing a `GROUP_CHAT` space type to `SPACE`. Include `display_name` together
+       * with `space_type` in the update mask and ensure that the specified space has a non-empty
+       * display name and the `SPACE` space type. Including the `space_type` mask and the `SPACE`
+       * type in the specified space when updating the display name is optional if the existing
+       * space already has the `SPACE` type. Trying to update the space type in other ways results
+       * in an invalid argument error). - `space_details` - `space_history_state` (Supports [turning
+       * history on or off for the space](https://support.google.com/chat/answer/7664687) if [the
+       * organization allows users to change their history
+       * setting](https://support.google.com/a/answer/7664184). Warning: mutually exclusive with all
+       * other field paths.)
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1562,7 +1564,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * DMs. To add the calling app as a member of other space types, use [create
      * membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create) If a
      * DM already exists between two users, even when one user blocks the other at the time a request is
-     * made, then the existing DM is returned. Spaces with threaded replies or guest access are not
+     * made, then the existing DM is returned. Spaces with threaded replies or guest access aren't
      * supported. Requires [user
      * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
      * `chat.spaces.create` or `chat.spaces` scope.
@@ -1606,7 +1608,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * membership](https://developers.google.com/chat/api/reference/rest/v1/spaces.members/create) If
        * a DM already exists between two users, even when one user blocks the other at the time a
        * request is made, then the existing DM is returned. Spaces with threaded replies or guest access
-       * are not supported. Requires [user
+       * aren't supported. Requires [user
        * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
        * `chat.spaces.create` or `chat.spaces` scope.
        *
@@ -1707,7 +1709,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * [Developer Preview](https://developers.google.com/workspace/preview): Creates a human membership
-       * or app membership for the calling app. Creating memberships for other apps is not supported.
+       * or app membership for the calling app. Creating memberships for other apps isn't supported.
        * Requires [user authentication](https://developers.google.com/chat/api/guides/auth/users) and the
        * `chat.memberships` (for human membership) or `chat.memberships.app` (for app membership) scope.
        * To specify the member to add, set the `membership.member.name` in the `CreateMembershipRequest`:
@@ -1715,9 +1717,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `users/{user}`, where `{user}` is either the `{person_id}` for the
        * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
        * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in
-       * the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
-       * `people/123456789`, the user can be added to the space by setting the `membership.member.name` to
-       * `users/123456789`.
+       * the Directory API. For example, if the People API `Person` `resourceName` is `people/123456789`,
+       * you can add the user to the space by setting the `membership.member.name` to `users/123456789`.
        *
        * Create a request for the method "members.create".
        *
@@ -1743,7 +1744,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * [Developer Preview](https://developers.google.com/workspace/preview): Creates a human
-         * membership or app membership for the calling app. Creating memberships for other apps is not
+         * membership or app membership for the calling app. Creating memberships for other apps isn't
          * supported. Requires [user
          * authentication](https://developers.google.com/chat/api/guides/auth/users) and the
          * `chat.memberships` (for human membership) or `chat.memberships.app` (for app membership) scope.
@@ -1752,8 +1753,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * human user, use `users/{user}`, where `{user}` is either the `{person_id}` for the
          * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the
          * `id` for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users)
-         * in the Admin SDK Directory API. For example, if the People API `Person` `resourceName` is
-         * `people/123456789`, the user can be added to the space by setting the `membership.member.name`
+         * in the Directory API. For example, if the People API `Person` `resourceName` is
+         * `people/123456789`, you can add the user to the space by setting the `membership.member.name`
          * to `users/123456789`.
          *
          * Create a request for the method "members.create".
@@ -1878,8 +1879,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
        *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
        *        format. When deleting an app membership, requires the `chat.memberships.app` scope and
-       *        `spaces/{space}/members/app` format. Format: spaces/{space}/members/{member} or
-       *        spaces/{space}/members/app
+       *        `spaces/{space}/members/app` format. Format: `spaces/{space}/members/{member}` or
+       *        `spaces/{space}/members/app`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1911,8 +1912,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
        *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
        *        format. When deleting an app membership, requires the `chat.memberships.app` scope and
-       *        `spaces/{space}/members/app` format. Format: spaces/{space}/members/{member} or
-       *        spaces/{space}/members/app
+       *        `spaces/{space}/members/app` format. Format: `spaces/{space}/members/{member}` or
+       *        `spaces/{space}/members/app`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1986,7 +1987,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * human membership, requires the `chat.memberships` scope and
          * `spaces/{space}/members/{member}` format. When deleting an app membership, requires the
          * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
-         * spaces/{space}/members/{member} or spaces/{space}/members/app
+         * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -1995,7 +1996,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        memberships. Chat apps can't delete other apps' memberships. When deleting a human membership,
        requires the `chat.memberships` scope and `spaces/{space}/members/{member}` format. When deleting
        an app membership, requires the `chat.memberships.app` scope and `spaces/{space}/members/app`
-       format. Format: spaces/{space}/members/{member} or spaces/{space}/members/app
+       format. Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
          */
         public java.lang.String getName() {
           return name;
@@ -2007,7 +2008,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * human membership, requires the `chat.memberships` scope and
          * `spaces/{space}/members/{member}` format. When deleting an app membership, requires the
          * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
-         * spaces/{space}/members/{member} or spaces/{space}/members/app
+         * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2039,7 +2040,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
+       * @param name Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2072,7 +2073,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
+         * @param name Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2152,12 +2153,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to retrieve. Format:
-         * spaces/{space}/members/{member}
+         * `spaces/{space}/members/{member}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the membership to retrieve. Format: spaces/{space}/members/{member}
+        /** Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
          */
         public java.lang.String getName() {
           return name;
@@ -2165,7 +2166,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to retrieve. Format:
-         * spaces/{space}/members/{member}
+         * `spaces/{space}/members/{member}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2390,25 +2391,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The maximum number of memberships to return. The service may return fewer than this
-         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1000;
-         * values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+         * The maximum number of memberships to return. The service might return fewer than this
+         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1,000.
+         * If you use a value more than 1,000, it's automatically changed to 1,000. Negative values
+         * return an `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of memberships to return. The service may return fewer than this value. If
-       unspecified, at most 100 memberships are returned. The maximum value is 1000; values above 1000 are
-       coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+        /** The maximum number of memberships to return. The service might return fewer than this value. If
+       unspecified, at most 100 memberships are returned. The maximum value is 1,000. If you use a value
+       more than 1,000, it's automatically changed to 1,000. Negative values return an `INVALID_ARGUMENT`
+       error.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of memberships to return. The service may return fewer than this
-         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1000;
-         * values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+         * The maximum number of memberships to return. The service might return fewer than this
+         * value. If unspecified, at most 100 memberships are returned. The maximum value is 1,000.
+         * If you use a value more than 1,000, it's automatically changed to 1,000. Negative values
+         * return an `INVALID_ARGUMENT` error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2416,27 +2420,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A page token, received from a previous call to list memberships. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided should match the call
-         * that provided the page token. Passing different values to the other parameters may lead
-         * to unexpected results.
+         * A page token, received from a previous call to list memberships. Provide this parameter
+         * to retrieve the subsequent page. When paginating, all other parameters provided should
+         * match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous call to list memberships. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided should match the call that provided
-       the page token. Passing different values to the other parameters may lead to unexpected results.
+        /** A page token, received from a previous call to list memberships. Provide this parameter to retrieve
+       the subsequent page. When paginating, all other parameters provided should match the call that
+       provided the page token. Passing different values to the other parameters might lead to unexpected
+       results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous call to list memberships. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided should match the call
-         * that provided the page token. Passing different values to the other parameters may lead
-         * to unexpected results.
+         * A page token, received from a previous call to list memberships. Provide this parameter
+         * to retrieve the subsequent page. When paginating, all other parameters provided should
+         * match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2518,7 +2523,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
+       * @param parent Required. The resource name of the space in which to create a message. Format: `spaces/{space}`
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -2557,7 +2562,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the space in which to create a message. Format: spaces/{space}
+         * @param parent Required. The resource name of the space in which to create a message. Format: `spaces/{space}`
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -2628,12 +2633,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space in which to create a message. Format:
-         * spaces/{space}
+         * `spaces/{space}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the space in which to create a message. Format: spaces/{space}
+        /** Required. The resource name of the space in which to create a message. Format: `spaces/{space}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -2641,7 +2646,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space in which to create a message. Format:
-         * spaces/{space}
+         * `spaces/{space}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2781,8 +2786,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+       * @param name Required. Resource name of the message that you want to delete, in the form `spaces/messages`
+       *        Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2817,8 +2822,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       *        spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * @param name Required. Resource name of the message that you want to delete, in the form `spaces/messages`
+       *        Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2887,22 +2892,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * Required. Resource name of the message that you want to delete, in the form
+         * `spaces/messages` Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
-       spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+        /** Required. Resource name of the message that you want to delete, in the form `spaces/messages`
+       Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         * Example: spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB
+         * Required. Resource name of the message that you want to delete, in the form
+         * `spaces/messages` Example: `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2967,8 +2972,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If the
-       *        message begins with `client-`, then it has a custom name assigned by a Chat app that
+       * @param name Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
+       *        the message begins with `client-`, then it has a custom name assigned by a Chat app that
        *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
        *        to get, update, or delete the message. To learn more, see [create and name a message]
        *        (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
@@ -3006,8 +3011,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If the
-       *        message begins with `client-`, then it has a custom name assigned by a Chat app that
+         * @param name Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
+       *        the message begins with `client-`, then it has a custom name assigned by a Chat app that
        *        created it with the Chat REST API. That Chat app (but not others) can pass the custom name
        *        to get, update, or delete the message. To learn more, see [create and name a message]
        *        (https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
@@ -3090,7 +3095,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to retrieve. Format:
-         * spaces/{space}/messages/{message} If the message begins with `client-`, then it has a
+         * `spaces/{space}/messages/{message}` If the message begins with `client-`, then it has a
          * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
          * (but not others) can pass the custom name to get, update, or delete the message. To learn
          * more, see [create and name a message]
@@ -3099,7 +3104,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to retrieve. Format: spaces/{space}/messages/{message} If
+        /** Required. Resource name of the message to retrieve. Format: `spaces/{space}/messages/{message}` If
        the message begins with `client-`, then it has a custom name assigned by a Chat app that created it
        with the Chat REST API. That Chat app (but not others) can pass the custom name to get, update, or
        delete the message. To learn more, see [create and name a message]
@@ -3111,7 +3116,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to retrieve. Format:
-         * spaces/{space}/messages/{message} If the message begins with `client-`, then it has a
+         * `spaces/{space}/messages/{message}` If the message begins with `client-`, then it has a
          * custom name assigned by a Chat app that created it with the Chat REST API. That Chat app
          * (but not others) can pass the custom name to get, update, or delete the message. To learn
          * more, see [create and name a message]
@@ -3144,7 +3149,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the space to list messages from. Format: spaces/{space}
+       * @param parent Required. The resource name of the space to list messages from. Format: `spaces/{space}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3174,7 +3179,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the space to list messages from. Format: spaces/{space}
+         * @param parent Required. The resource name of the space to list messages from. Format: `spaces/{space}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3253,19 +3258,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The resource name of the space to list messages from. Format: spaces/{space}
+         * Required. The resource name of the space to list messages from. Format: `spaces/{space}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the space to list messages from. Format: spaces/{space}
+        /** Required. The resource name of the space to list messages from. Format: `spaces/{space}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the space to list messages from. Format: spaces/{space}
+         * Required. The resource name of the space to list messages from. Format: `spaces/{space}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3340,15 +3345,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
-         * a value to order by and an ordering operation. Valid ordering operation values are: -
-         * `ASC` for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+         * a value to order by an ordering operation. Valid ordering operation values are as
+         * follows: - `ASC` for ascending. - `DESC` for descending. The default ordering is
+         * `create_time ASC`.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Optional, if resuming from a previous query. How the list of messages is ordered. Specify a value
-       to order by and an ordering operation. Valid ordering operation values are: - `ASC` for ascending.
-       - `DESC` for descending. The default ordering is `create_time ASC`.
+       to order by an ordering operation. Valid ordering operation values are as follows: - `ASC` for
+       ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -3356,8 +3362,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional, if resuming from a previous query. How the list of messages is ordered. Specify
-         * a value to order by and an ordering operation. Valid ordering operation values are: -
-         * `ASC` for ascending. - `DESC` for descending. The default ordering is `create_time ASC`.
+         * a value to order by an ordering operation. Valid ordering operation values are as
+         * follows: - `ASC` for ascending. - `DESC` for descending. The default ordering is
+         * `create_time ASC`.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -3365,25 +3372,27 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The maximum number of messages returned. The service may return fewer messages than this
-         * value. If unspecified, at most 25 are returned. The maximum value is 1000; values above
-         * 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+         * The maximum number of messages returned. The service might return fewer messages than
+         * this value. If unspecified, at most 25 are returned. The maximum value is 1,000. If you
+         * use a value more than 1,000, it's automatically changed to 1,000. Negative values return
+         * an `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of messages returned. The service may return fewer messages than this value. If
-       unspecified, at most 25 are returned. The maximum value is 1000; values above 1000 are coerced to
-       1000. Negative values return an `INVALID_ARGUMENT` error.
+        /** The maximum number of messages returned. The service might return fewer messages than this value.
+       If unspecified, at most 25 are returned. The maximum value is 1,000. If you use a value more than
+       1,000, it's automatically changed to 1,000. Negative values return an `INVALID_ARGUMENT` error.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of messages returned. The service may return fewer messages than this
-         * value. If unspecified, at most 25 are returned. The maximum value is 1000; values above
-         * 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
+         * The maximum number of messages returned. The service might return fewer messages than
+         * this value. If unspecified, at most 25 are returned. The maximum value is 1,000. If you
+         * use a value more than 1,000, it's automatically changed to 1,000. Negative values return
+         * an `INVALID_ARGUMENT` error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -3392,17 +3401,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional, if resuming from a previous query. A page token received from a previous list
-         * messages call. Provide this to retrieve the subsequent page. When paginating, all other
-         * parameters provided should match the call that provided the page token. Passing different
-         * values to the other parameters may lead to unexpected results.
+         * messages call. Provide this parameter to retrieve the subsequent page. When paginating,
+         * all other parameters provided should match the call that provided the page token. Passing
+         * different values to the other parameters might lead to unexpected results.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** Optional, if resuming from a previous query. A page token received from a previous list messages
-       call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided
-       should match the call that provided the page token. Passing different values to the other
-       parameters may lead to unexpected results.
+       call. Provide this parameter to retrieve the subsequent page. When paginating, all other parameters
+       provided should match the call that provided the page token. Passing different values to the other
+       parameters might lead to unexpected results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -3410,9 +3419,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional, if resuming from a previous query. A page token received from a previous list
-         * messages call. Provide this to retrieve the subsequent page. When paginating, all other
-         * parameters provided should match the call that provided the page token. Passing different
-         * values to the other parameters may lead to unexpected results.
+         * messages call. Provide this parameter to retrieve the subsequent page. When paginating,
+         * all other parameters provided should match the call that provided the page token. Passing
+         * different values to the other parameters might lead to unexpected results.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -3603,7 +3612,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. If `true` and the message is not found, a new message is created and
+         * Optional. If `true` and the message isn't found, a new message is created and
          * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
          * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
          * fails.
@@ -3611,7 +3620,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.Boolean allowMissing;
 
-        /** Optional. If `true` and the message is not found, a new message is created and `updateMask` is
+        /** Optional. If `true` and the message isn't found, a new message is created and `updateMask` is
        ignored. The specified message ID must be [client-
        assigned](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or
        the request fails.
@@ -3621,7 +3630,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. If `true` and the message is not found, a new message is created and
+         * Optional. If `true` and the message isn't found, a new message is created and
          * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
          * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
          * fails.
@@ -3633,15 +3642,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - text - cards (Requires [service account
-         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         * supported field paths: - `text` - `cards` (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. The field paths to update. Separate multiple values with commas. Currently supported
-       field paths: - text - cards (Requires [service account authentication](/chat/api/guides/auth
-       /service-accounts).) - cards_v2
+       field paths: - `text` - `cards` (Requires [service account authentication](/chat/api/guides/auth
+       /service-accounts).) - `cards_v2`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -3649,8 +3658,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - text - cards (Requires [service account
-         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         * supported field paths: - `text` - `cards` (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -3818,7 +3827,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. If `true` and the message is not found, a new message is created and
+         * Optional. If `true` and the message isn't found, a new message is created and
          * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
          * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
          * fails.
@@ -3826,7 +3835,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.Boolean allowMissing;
 
-        /** Optional. If `true` and the message is not found, a new message is created and `updateMask` is
+        /** Optional. If `true` and the message isn't found, a new message is created and `updateMask` is
        ignored. The specified message ID must be [client-
        assigned](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or
        the request fails.
@@ -3836,7 +3845,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. If `true` and the message is not found, a new message is created and
+         * Optional. If `true` and the message isn't found, a new message is created and
          * `updateMask` is ignored. The specified message ID must be [client-assigned](https://devel
          * opers.google.com/chat/api/guides/crudl/messages#name_a_created_message) or the request
          * fails.
@@ -3848,15 +3857,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - text - cards (Requires [service account
-         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         * supported field paths: - `text` - `cards` (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. The field paths to update. Separate multiple values with commas. Currently supported
-       field paths: - text - cards (Requires [service account authentication](/chat/api/guides/auth
-       /service-accounts).) - cards_v2
+       field paths: - `text` - `cards` (Requires [service account authentication](/chat/api/guides/auth
+       /service-accounts).) - `cards_v2`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -3864,8 +3873,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The field paths to update. Separate multiple values with commas. Currently
-         * supported field paths: - text - cards (Requires [service account
-         * authentication](/chat/api/guides/auth/service-accounts).) - cards_v2
+         * supported field paths: - `text` - `cards` (Requires [service account
+         * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -3908,7 +3917,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the chat server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+         * @param name Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3937,7 +3946,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+           * @param name Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4016,19 +4025,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+           * Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+          /** Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of the attachment, in the form "spaces/messages/attachments".
+           * Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4079,7 +4088,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the chat server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+         * @param parent Required. The message where the reaction is created. Format: `spaces/{space}/messages/{message}`
          * @param content the {@link com.google.api.services.chat.v1.model.Reaction}
          * @return the request
          */
@@ -4110,7 +4119,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+           * @param parent Required. The message where the reaction is created. Format: `spaces/{space}/messages/{message}`
            * @param content the {@link com.google.api.services.chat.v1.model.Reaction}
            * @since 1.13
            */
@@ -4181,12 +4190,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The message where the reaction is created. Format:
-           * spaces/{space}/messages/{message}
+           * `spaces/{space}/messages/{message}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The message where the reaction is created. Format: spaces/{space}/messages/{message}
+          /** Required. The message where the reaction is created. Format: `spaces/{space}/messages/{message}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -4194,7 +4203,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The message where the reaction is created. Format:
-           * spaces/{space}/messages/{message}
+           * `spaces/{space}/messages/{message}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4222,7 +4231,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the reaction to delete. Format:
-         *        spaces/{space}/messages/{message}/reactions/{reaction}
+         *        `spaces/{space}/messages/{message}/reactions/{reaction}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4252,7 +4261,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the reaction to delete. Format:
-         *        spaces/{space}/messages/{message}/reactions/{reaction}
+         *        `spaces/{space}/messages/{message}/reactions/{reaction}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4322,13 +4331,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Name of the reaction to delete. Format:
-           * spaces/{space}/messages/{message}/reactions/{reaction}
+           * `spaces/{space}/messages/{message}/reactions/{reaction}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the reaction to delete. Format:
-         spaces/{space}/messages/{message}/reactions/{reaction}
+         `spaces/{space}/messages/{message}/reactions/{reaction}`
            */
           public java.lang.String getName() {
             return name;
@@ -4336,7 +4345,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. Name of the reaction to delete. Format:
-           * spaces/{space}/messages/{message}/reactions/{reaction}
+           * `spaces/{space}/messages/{message}/reactions/{reaction}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4364,7 +4373,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the chat server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+         * @param parent Required. The message users reacted to. Format: `spaces/{space}/messages/{message}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4394,7 +4403,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+           * @param parent Required. The message users reacted to. Format: `spaces/{space}/messages/{message}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4472,17 +4481,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message} */
+          /**
+           * Required. The message users reacted to. Format: `spaces/{space}/messages/{message}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message}
+          /** Required. The message users reacted to. Format: `spaces/{space}/messages/{message}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The message users reacted to. Format: spaces/{space}/messages/{message} */
+          /**
+           * Required. The message users reacted to. Format: `spaces/{space}/messages/{message}`
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4565,14 +4578,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of reactions returned. The service may return fewer
+           * Optional. The maximum number of reactions returned. The service can return fewer
            * reactions than this value. If unspecified, the default value is 25. The maximum value
            * is 200; values above 200 are changed to 200.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of reactions returned. The service may return fewer reactions than
+          /** Optional. The maximum number of reactions returned. The service can return fewer reactions than
          this value. If unspecified, the default value is 25. The maximum value is 200; values above 200 are
          changed to 200.
            */
@@ -4581,7 +4594,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. The maximum number of reactions returned. The service may return fewer
+           * Optional. The maximum number of reactions returned. The service can return fewer
            * reactions than this value. If unspecified, the default value is 25. The maximum value
            * is 200; values above 200 are changed to 200.
            */
@@ -4594,14 +4607,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Optional. (If resuming from a previous query.) A page token received from a previous
            * list reactions call. Provide this to retrieve the subsequent page. When paginating, the
            * filter value should match the call that provided the page token. Passing a different
-           * value may lead to unexpected results.
+           * value might lead to unexpected results.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. (If resuming from a previous query.) A page token received from a previous list reactions
          call. Provide this to retrieve the subsequent page. When paginating, the filter value should match
-         the call that provided the page token. Passing a different value may lead to unexpected results.
+         the call that provided the page token. Passing a different value might lead to unexpected results.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -4611,7 +4624,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Optional. (If resuming from a previous query.) A page token received from a previous
            * list reactions call. Provide this to retrieve the subsequent page. When paginating, the
            * filter value should match the call that provided the page token. Passing a different
-           * value may lead to unexpected results.
+           * value might lead to unexpected results.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

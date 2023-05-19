@@ -30,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class SlashCommand extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the slash command invoked.
+   * The ID of the slash command invoked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long commandId;
 
   /**
-   * The id of the slash command invoked.
+   * The ID of the slash command invoked.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCommandId() {
@@ -45,7 +45,7 @@ public final class SlashCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The id of the slash command invoked.
+   * The ID of the slash command invoked.
    * @param commandId commandId or {@code null} for none
    */
   public SlashCommand setCommandId(java.lang.Long commandId) {

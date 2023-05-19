@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An image that is specified by a URL and can have an onclick action.
+ * An image that's specified by a URL and can have an `onclick` action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aspect ratio of this image (width/height). This field allows clients to reserve the right
-   * height for the image while waiting for it to load. It's not meant to override the native aspect
+   * The aspect ratio of this image (width and height). This field lets you reserve the right height
+   * for the image while waiting for it to load. It's not meant to override the built-in aspect
    * ratio of the image. If unset, the server fills it by prefetching the image.
    * The value may be {@code null}.
    */
@@ -46,15 +46,15 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String imageUrl;
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OnClick onClick;
 
   /**
-   * The aspect ratio of this image (width/height). This field allows clients to reserve the right
-   * height for the image while waiting for it to load. It's not meant to override the native aspect
+   * The aspect ratio of this image (width and height). This field lets you reserve the right height
+   * for the image while waiting for it to load. It's not meant to override the built-in aspect
    * ratio of the image. If unset, the server fills it by prefetching the image.
    * @return value or {@code null} for none
    */
@@ -63,8 +63,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The aspect ratio of this image (width/height). This field allows clients to reserve the right
-   * height for the image while waiting for it to load. It's not meant to override the native aspect
+   * The aspect ratio of this image (width and height). This field lets you reserve the right height
+   * for the image while waiting for it to load. It's not meant to override the built-in aspect
    * ratio of the image. If unset, the server fills it by prefetching the image.
    * @param aspectRatio aspectRatio or {@code null} for none
    */
@@ -91,7 +91,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * @return value or {@code null} for none
    */
   public OnClick getOnClick() {
@@ -99,7 +99,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * @param onClick onClick or {@code null} for none
    */
   public Image setOnClick(OnClick onClick) {

@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Either a toggle-style switch or a checkbox inside a `decoratedText` widget. Only supported on the
+ * Either a toggle-style switch or a checkbox inside a `decoratedText` widget. Only supported in the
  * `decoratedText` widget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

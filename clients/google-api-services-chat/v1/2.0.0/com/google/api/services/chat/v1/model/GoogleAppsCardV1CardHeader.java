@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * The alternative text of this image which is used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   private java.lang.String title;
 
   /**
-   * The alternative text of this image which is used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageAltText() {
@@ -75,7 +75,7 @@ public final class GoogleAppsCardV1CardHeader extends com.google.api.client.json
   }
 
   /**
-   * The alternative text of this image which is used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * @param imageAltText imageAltText or {@code null} for none
    */
   public GoogleAppsCardV1CardHeader setImageAltText(java.lang.String imageAltText) {

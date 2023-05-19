@@ -37,7 +37,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   private User bot;
 
   /**
-   * The command id of the invoked slash command.
+   * The command ID of the invoked slash command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,7 +51,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   private java.lang.String commandName;
 
   /**
-   * Indicating whether the slash command is for a dialog.
+   * Indicates whether the slash command is for a dialog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The command id of the invoked slash command.
+   * The command ID of the invoked slash command.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCommandId() {
@@ -90,7 +90,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * The command id of the invoked slash command.
+   * The command ID of the invoked slash command.
    * @param commandId commandId or {@code null} for none
    */
   public SlashCommandMetadata setCommandId(java.lang.Long commandId) {
@@ -116,7 +116,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicating whether the slash command is for a dialog.
+   * Indicates whether the slash command is for a dialog.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTriggersDialog() {
@@ -124,7 +124,7 @@ public final class SlashCommandMetadata extends com.google.api.client.json.Gener
   }
 
   /**
-   * Indicating whether the slash command is for a dialog.
+   * Indicates whether the slash command is for a dialog.
    * @param triggersDialog triggersDialog or {@code null} for none
    */
   public SlashCommandMetadata setTriggersDialog(java.lang.Boolean triggersDialog) {

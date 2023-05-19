@@ -30,29 +30,29 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Image extends com.google.api.client.json.GenericJson {
 
   /**
-   * The alternative text of this image, used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String altText;
 
   /**
-   * The `https` URL that hosts the image. For example: ```
-   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
+   * /quickstart-app-avatar.png ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUrl;
 
   /**
-   * When a user clicks on the image, the click triggers this action.
+   * When a user clicks the image, the click triggers this action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1OnClick onClick;
 
   /**
-   * The alternative text of this image, used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -60,7 +60,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The alternative text of this image, used for accessibility.
+   * The alternative text of this image that's used for accessibility.
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Image setAltText(java.lang.String altText) {
@@ -69,8 +69,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The `https` URL that hosts the image. For example: ```
-   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
+   * /quickstart-app-avatar.png ```
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -78,8 +78,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The `https` URL that hosts the image. For example: ```
-   * https://developers.google.com/chat/images/quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
+   * /quickstart-app-avatar.png ```
    * @param imageUrl imageUrl or {@code null} for none
    */
   public GoogleAppsCardV1Image setImageUrl(java.lang.String imageUrl) {
@@ -88,7 +88,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * When a user clicks on the image, the click triggers this action.
+   * When a user clicks the image, the click triggers this action.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -96,7 +96,7 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * When a user clicks on the image, the click triggers this action.
+   * When a user clicks the image, the click triggers this action.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Image setOnClick(GoogleAppsCardV1OnClick onClick) {

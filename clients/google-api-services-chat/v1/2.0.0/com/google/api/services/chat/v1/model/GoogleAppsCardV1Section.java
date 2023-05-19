@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A section contains a collection of widgets that are rendered vertically in the order that they
- * are specified.
+ * A section contains a collection of widgets that are rendered vertically in the order that they're
+ * specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -42,8 +42,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
-   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
-   * in Google Workspace Add-ons.
+   * information about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +62,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   private java.lang.Integer uncollapsibleWidgetsCount;
 
   /**
-   * All the widgets in the section. Must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least one widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +93,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
-   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
-   * in Google Workspace Add-ons.
+   * information about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -101,8 +105,10 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
 
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
-   * information about formatting text, see Formatting text in Google Chat apps and Formatting text
-   * in Google Workspace Add-ons.
+   * information about formatting text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
+   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
+   * /add-ons/concepts/widgets#text_formatting).
    * @param header header or {@code null} for none
    */
   public GoogleAppsCardV1Section setHeader(java.lang.String header) {
@@ -134,7 +140,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * All the widgets in the section. Must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least one widget.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Widget> getWidgets() {
@@ -142,7 +148,7 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * All the widgets in the section. Must contain at least 1 widget.
+   * All the widgets in the section. Must contain at least one widget.
    * @param widgets widgets or {@code null} for none
    */
   public GoogleAppsCardV1Section setWidgets(java.util.List<GoogleAppsCardV1Widget> widgets) {

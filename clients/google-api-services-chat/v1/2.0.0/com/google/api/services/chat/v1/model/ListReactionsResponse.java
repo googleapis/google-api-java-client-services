@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
 public final class ListReactionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
+   * Continuation token to retrieve the next page of results. It's empty for the last page of
    * results.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class ListReactionsResponse extends com.google.api.client.json.Gene
   private java.util.List<Reaction> reactions;
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
+   * Continuation token to retrieve the next page of results. It's empty for the last page of
    * results.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class ListReactionsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Continuation token to retrieve the next page of results. It will be empty for the last page of
+   * Continuation token to retrieve the next page of results. It's empty for the last page of
    * results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */

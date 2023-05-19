@@ -8005,11 +8005,12 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Database instance ID. This does not include the project ID.
+     * @param name Name of the user in the instance.
      * @param content the {@link com.google.api.services.sqladmin.model.User}
      * @return the request
      */
-    public Update update(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.User content) throws java.io.IOException {
-      Update result = new Update(project, instance, content);
+    public Update update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.api.services.sqladmin.model.User content) throws java.io.IOException {
+      Update result = new Update(project, instance, name, content);
       initialize(result);
       return result;
     }
@@ -8031,13 +8032,15 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Database instance ID. This does not include the project ID.
+       * @param name Name of the user in the instance.
        * @param content the {@link com.google.api.services.sqladmin.model.User}
        * @since 1.13
        */
-      protected Update(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.User content) {
+      protected Update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.api.services.sqladmin.model.User content) {
         super(SQLAdmin.this, "PUT", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
       }
 
       @Override

@@ -17,7 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Score is a summary of all elements in the data profile. A higher number means more sensitive.
+ * Score is calculated from of all elements in the data profile. A higher level means the data is
+ * more sensitive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
@@ -31,14 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2SensitivityScore extends com.google.api.client.json.GenericJson {
 
   /**
-   * The score applied to the resource.
+   * The sensitivity score applied to the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String score;
 
   /**
-   * The score applied to the resource.
+   * The sensitivity score applied to the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getScore() {
@@ -46,7 +47,7 @@ public final class GooglePrivacyDlpV2SensitivityScore extends com.google.api.cli
   }
 
   /**
-   * The score applied to the resource.
+   * The sensitivity score applied to the resource.
    * @param score score or {@code null} for none
    */
   public GooglePrivacyDlpV2SensitivityScore setScore(java.lang.String score) {

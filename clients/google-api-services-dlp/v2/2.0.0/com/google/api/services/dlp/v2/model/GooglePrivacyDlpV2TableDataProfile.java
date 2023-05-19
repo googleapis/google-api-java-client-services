@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String datasetLocation;
 
   /**
-   * The GCP project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the BigQuery dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,7 +309,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The GCP project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the BigQuery dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetProjectId() {
@@ -317,7 +317,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The GCP project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the BigQuery dataset.
    * @param datasetProjectId datasetProjectId or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setDatasetProjectId(java.lang.String datasetProjectId) {

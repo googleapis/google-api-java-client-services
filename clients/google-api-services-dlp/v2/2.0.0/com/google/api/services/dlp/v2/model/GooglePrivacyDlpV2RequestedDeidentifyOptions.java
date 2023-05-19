@@ -31,32 +31,32 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Snapshot of the state of the DeidentifyTemplate from the Deidentify action at the time this job
-   * was run.
+   * Snapshot of the state of the `DeidentifyTemplate` from the Deidentify action at the time this
+   * job was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DeidentifyTemplate snapshotDeidentifyTemplate;
 
   /**
-   * Snapshot of the state of the image redact DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the image transformation `DeidentifyTemplate` from the `Deidentify`
+   * action at the time this job was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DeidentifyTemplate snapshotImageRedactTemplate;
 
   /**
-   * Snapshot of the state of the structured DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the structured `DeidentifyTemplate` from the `Deidentify` action at
+   * the time this job was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DeidentifyTemplate snapshotStructuredDeidentifyTemplate;
 
   /**
-   * Snapshot of the state of the DeidentifyTemplate from the Deidentify action at the time this job
-   * was run.
+   * Snapshot of the state of the `DeidentifyTemplate` from the Deidentify action at the time this
+   * job was run.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate getSnapshotDeidentifyTemplate() {
@@ -64,8 +64,8 @@ public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.goog
   }
 
   /**
-   * Snapshot of the state of the DeidentifyTemplate from the Deidentify action at the time this job
-   * was run.
+   * Snapshot of the state of the `DeidentifyTemplate` from the Deidentify action at the time this
+   * job was run.
    * @param snapshotDeidentifyTemplate snapshotDeidentifyTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2RequestedDeidentifyOptions setSnapshotDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotDeidentifyTemplate) {
@@ -74,8 +74,8 @@ public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.goog
   }
 
   /**
-   * Snapshot of the state of the image redact DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the image transformation `DeidentifyTemplate` from the `Deidentify`
+   * action at the time this job was run.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate getSnapshotImageRedactTemplate() {
@@ -83,8 +83,8 @@ public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.goog
   }
 
   /**
-   * Snapshot of the state of the image redact DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the image transformation `DeidentifyTemplate` from the `Deidentify`
+   * action at the time this job was run.
    * @param snapshotImageRedactTemplate snapshotImageRedactTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2RequestedDeidentifyOptions setSnapshotImageRedactTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotImageRedactTemplate) {
@@ -93,8 +93,8 @@ public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.goog
   }
 
   /**
-   * Snapshot of the state of the structured DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the structured `DeidentifyTemplate` from the `Deidentify` action at
+   * the time this job was run.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate getSnapshotStructuredDeidentifyTemplate() {
@@ -102,8 +102,8 @@ public final class GooglePrivacyDlpV2RequestedDeidentifyOptions extends com.goog
   }
 
   /**
-   * Snapshot of the state of the structured DeidentifyTemplate from the Deidentify action at the
-   * time this job was run.
+   * Snapshot of the state of the structured `DeidentifyTemplate` from the `Deidentify` action at
+   * the time this job was run.
    * @param snapshotStructuredDeidentifyTemplate snapshotStructuredDeidentifyTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2RequestedDeidentifyOptions setSnapshotStructuredDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotStructuredDeidentifyTemplate) {

@@ -17,11 +17,8 @@
 package com.google.api.services.displayvideo.v1.model;
 
 /**
- * Settings that control the targeting expansion of the line item. Targeting expansion allows the
- * line item to reach a larger audience based on the original audience list and the targeting
- * expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized
- * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
- * expansion. This feature will be rolled out to all partners by early May 2023.
+ * Settings that control the [optimized
+ * targeting](//support.google.com/displayvideo/answer/12060859) settings of the line item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -35,48 +32,35 @@ package com.google.api.services.displayvideo.v1.model;
 public final class TargetingExpansionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
-   * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
-   * applicable when a first-party audience is positively targeted (directly or included in a
-   * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,
-   * this field may be deprecated with the replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859). Upon deprecation, this field
-   * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
-   * party audience targeting assigned to this line item will be replaced with negative targeting of
-   * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by early May 2023.
+   * Whether to exclude first-party audiences from use in targeting expansion. This field was
+   * deprecated with the launch of [optimized
+   * targeting](//support.google.com/displayvideo/answer/12060859). This field will be set to
+   * `false`. If this field is set to `true` when deprecated, all positive first-party audience
+   * targeting assigned to this line item will be replaced with negative targeting of the same
+   * first-party audiences to ensure the continued exclusion of those audiences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean excludeFirstPartyAudience;
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * **March 25, 2023**, the behavior of this field may change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by early May 2023.
+   * Required. Whether optimized targeting is turned on. This field supports the following values: *
+   * `NO_EXPANSION`: optimized targeting is turned off * `LEAST_EXPANSION`: optimized targeting is
+   * turned on If this field is set to any other value, it will automatically be set to
+   * `LEAST_EXPANSION`. `NO_EXPANSION` will be the default value for the field and will be
+   * automatically assigned if you do not set the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetingExpansionLevel;
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
-   * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
-   * applicable when a first-party audience is positively targeted (directly or included in a
-   * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,
-   * this field may be deprecated with the replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859). Upon deprecation, this field
-   * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
-   * party audience targeting assigned to this line item will be replaced with negative targeting of
-   * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by early May 2023.
+   * Whether to exclude first-party audiences from use in targeting expansion. This field was
+   * deprecated with the launch of [optimized
+   * targeting](//support.google.com/displayvideo/answer/12060859). This field will be set to
+   * `false`. If this field is set to `true` when deprecated, all positive first-party audience
+   * targeting assigned to this line item will be replaced with negative targeting of the same
+   * first-party audiences to ensure the continued exclusion of those audiences.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeFirstPartyAudience() {
@@ -84,16 +68,12 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Whether to exclude first-party audiences from use in targeting expansion or optimized
-   * targeting. Similar audiences of the excluded first-party lists will not be excluded. Only
-   * applicable when a first-party audience is positively targeted (directly or included in a
-   * combined audience), otherwise this selection will be ignored. Beginning **March 25, 2023**,
-   * this field may be deprecated with the replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859). Upon deprecation, this field
-   * will be set to `false`. If this field is set to `true` when deprecated, all positive first-
-   * party audience targeting assigned to this line item will be replaced with negative targeting of
-   * the same first-party audiences to ensure the continued exclusion of those audiences. This field
-   * will be deprecated for all partners by early May 2023.
+   * Whether to exclude first-party audiences from use in targeting expansion. This field was
+   * deprecated with the launch of [optimized
+   * targeting](//support.google.com/displayvideo/answer/12060859). This field will be set to
+   * `false`. If this field is set to `true` when deprecated, all positive first-party audience
+   * targeting assigned to this line item will be replaced with negative targeting of the same
+   * first-party audiences to ensure the continued exclusion of those audiences.
    * @param excludeFirstPartyAudience excludeFirstPartyAudience or {@code null} for none
    */
   public TargetingExpansionConfig setExcludeFirstPartyAudience(java.lang.Boolean excludeFirstPartyAudience) {
@@ -102,16 +82,11 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * **March 25, 2023**, the behavior of this field may change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by early May 2023.
+   * Required. Whether optimized targeting is turned on. This field supports the following values: *
+   * `NO_EXPANSION`: optimized targeting is turned off * `LEAST_EXPANSION`: optimized targeting is
+   * turned on If this field is set to any other value, it will automatically be set to
+   * `LEAST_EXPANSION`. `NO_EXPANSION` will be the default value for the field and will be
+   * automatically assigned if you do not set the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingExpansionLevel() {
@@ -119,16 +94,11 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Magnitude of expansion for applicable targeting under this line item. Beginning
-   * **March 25, 2023**, the behavior of this field may change in the following ways with the
-   * replacement of targeting expansion with [optimized
-   * targeting](//support.google.com/displayvideo/answer/12060859): * This field will represent the
-   * optimized targeting checkbox, with a `NO_EXPANSION` value representing optimized targeting
-   * turned off and a `LEAST_EXPANSION` value representing optimized targeting turned on. *
-   * `NO_EXPANSION` will be the default value for the field and will be automatically assigned if
-   * you do not set the field. * If you set the field to any value other than `NO_EXPANSION`, it
-   * will automatically be set to `LEAST_EXPANSION`. This behavior will be rolled out to all
-   * partners by early May 2023.
+   * Required. Whether optimized targeting is turned on. This field supports the following values: *
+   * `NO_EXPANSION`: optimized targeting is turned off * `LEAST_EXPANSION`: optimized targeting is
+   * turned on If this field is set to any other value, it will automatically be set to
+   * `LEAST_EXPANSION`. `NO_EXPANSION` will be the default value for the field and will be
+   * automatically assigned if you do not set the field.
    * @param targetingExpansionLevel targetingExpansionLevel or {@code null} for none
    */
   public TargetingExpansionConfig setTargetingExpansionLevel(java.lang.String targetingExpansionLevel) {

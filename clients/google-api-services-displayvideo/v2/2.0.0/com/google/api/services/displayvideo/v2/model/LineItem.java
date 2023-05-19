@@ -188,11 +188,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.String reservationType;
 
   /**
-   * The [targeting expansion](//support.google.com/displayvideo/answer/10191558) settings of the
-   * line item. This config is only applicable when eligible audience list targeting is assigned to
-   * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
-   * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by early May 2023.
+   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the
+   * line item. This config is only applicable for display, video, or audio line items that use
+   * automated bidding and positively target eligible audience lists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -598,11 +596,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [targeting expansion](//support.google.com/displayvideo/answer/10191558) settings of the
-   * line item. This config is only applicable when eligible audience list targeting is assigned to
-   * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
-   * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by early May 2023.
+   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the
+   * line item. This config is only applicable for display, video, or audio line items that use
+   * automated bidding and positively target eligible audience lists.
    * @return value or {@code null} for none
    */
   public TargetingExpansionConfig getTargetingExpansion() {
@@ -610,11 +606,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [targeting expansion](//support.google.com/displayvideo/answer/10191558) settings of the
-   * line item. This config is only applicable when eligible audience list targeting is assigned to
-   * the line item. Beginning **March 25, 2023**, these settings may represent the [optimized
-   * targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting
-   * expansion. This feature will be rolled out to all partners by early May 2023.
+   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the
+   * line item. This config is only applicable for display, video, or audio line items that use
+   * automated bidding and positively target eligible audience lists.
    * @param targetingExpansion targetingExpansion or {@code null} for none
    */
   public LineItem setTargetingExpansion(TargetingExpansionConfig targetingExpansion) {

@@ -134,6 +134,2248 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+   *   {@code NetworkSecurity.Organizations.List request = networksecurity.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+     *   {@code NetworkSecurity.Locations.List request = networksecurity.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the AddressGroups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+       *   {@code NetworkSecurity.AddressGroups.List request = networksecurity.addressGroups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddressGroups addressGroups() {
+        return new AddressGroups();
+      }
+
+      /**
+       * The "addressGroups" collection of methods.
+       */
+      public class AddressGroups {
+
+        /**
+         * Adds items to an address group.
+         *
+         * Create a request for the method "addressGroups.addItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link AddItems#execute()} method to invoke the remote operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to add items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest}
+         * @return the request
+         */
+        public AddItems addItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest content) throws java.io.IOException {
+          AddItems result = new AddItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:addItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Adds items to an address group.
+           *
+           * Create a request for the method "addressGroups.addItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link AddItems#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * AddItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to add items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected AddItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddItems set$Xgafv(java.lang.String $Xgafv) {
+            return (AddItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddItems setAccessToken(java.lang.String accessToken) {
+            return (AddItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddItems setAlt(java.lang.String alt) {
+            return (AddItems) super.setAlt(alt);
+          }
+
+          @Override
+          public AddItems setCallback(java.lang.String callback) {
+            return (AddItems) super.setCallback(callback);
+          }
+
+          @Override
+          public AddItems setFields(java.lang.String fields) {
+            return (AddItems) super.setFields(fields);
+          }
+
+          @Override
+          public AddItems setKey(java.lang.String key) {
+            return (AddItems) super.setKey(key);
+          }
+
+          @Override
+          public AddItems setOauthToken(java.lang.String oauthToken) {
+            return (AddItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddItems setQuotaUser(java.lang.String quotaUser) {
+            return (AddItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddItems setUploadType(java.lang.String uploadType) {
+            return (AddItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to add items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to add items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to add items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public AddItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public AddItems set(String parameterName, Object value) {
+            return (AddItems) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Clones items from one address group to another.
+         *
+         * Create a request for the method "addressGroups.cloneItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link CloneItems#execute()} method to invoke the remote operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest}
+         * @return the request
+         */
+        public CloneItems cloneItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest content) throws java.io.IOException {
+          CloneItems result = new CloneItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloneItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:cloneItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Clones items from one address group to another.
+           *
+           * Create a request for the method "addressGroups.cloneItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link CloneItems#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CloneItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected CloneItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloneItems set$Xgafv(java.lang.String $Xgafv) {
+            return (CloneItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloneItems setAccessToken(java.lang.String accessToken) {
+            return (CloneItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloneItems setAlt(java.lang.String alt) {
+            return (CloneItems) super.setAlt(alt);
+          }
+
+          @Override
+          public CloneItems setCallback(java.lang.String callback) {
+            return (CloneItems) super.setCallback(callback);
+          }
+
+          @Override
+          public CloneItems setFields(java.lang.String fields) {
+            return (CloneItems) super.setFields(fields);
+          }
+
+          @Override
+          public CloneItems setKey(java.lang.String key) {
+            return (CloneItems) super.setKey(key);
+          }
+
+          @Override
+          public CloneItems setOauthToken(java.lang.String oauthToken) {
+            return (CloneItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloneItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloneItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloneItems setQuotaUser(java.lang.String quotaUser) {
+            return (CloneItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloneItems setUploadType(java.lang.String uploadType) {
+            return (CloneItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloneItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloneItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to clone items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public CloneItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public CloneItems set(String parameterName, Object value) {
+            return (CloneItems) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new address group in a given project and location.
+         *
+         * Create a request for the method "addressGroups.create".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the AddressGroup. Must be in the format
+         *        `projects/locations/{location}`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networksecurity.v1.model.AddressGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/addressGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new address group in a given project and location.
+           *
+           * Create a request for the method "addressGroups.create".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the AddressGroup. Must be in the format
+         *        `projects/locations/{location}`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networksecurity.v1.model.AddressGroup content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the AddressGroup. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the AddressGroup. Must be in the format
+         `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the AddressGroup. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Short name of the AddressGroup resource to be created. This value should be
+           * 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and
+           * should not start with a number. E.g. "authz_policy".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroupId;
+
+          /** Required. Short name of the AddressGroup resource to be created. This value should be 1-63
+         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
+         with a number. E.g. "authz_policy".
+           */
+          public java.lang.String getAddressGroupId() {
+            return addressGroupId;
+          }
+
+          /**
+           * Required. Short name of the AddressGroup resource to be created. This value should be
+           * 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and
+           * should not start with a number. E.g. "authz_policy".
+           */
+          public Create setAddressGroupId(java.lang.String addressGroupId) {
+            this.addressGroupId = addressGroupId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an address group.
+         *
+         * Create a request for the method "addressGroups.delete".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the AddressGroup to delete. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Deletes an address group.
+           *
+           * Create a request for the method "addressGroups.delete".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the AddressGroup to delete. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkSecurity.this, "DELETE", REST_PATH, null, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to delete. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the AddressGroup to delete. Must be in the format
+         `projects/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to delete. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single address group.
+         *
+         * Create a request for the method "addressGroups.get".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the AddressGroup to get. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.AddressGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Gets details of a single address group.
+           *
+           * Create a request for the method "addressGroups.get".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the AddressGroup to get. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.AddressGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to get. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the AddressGroup to get. Must be in the format
+         `projects/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to get. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists address groups in a given project and location.
+         *
+         * Create a request for the method "addressGroups.list".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the AddressGroups should be listed, specified in the
+         *        format `projects/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.ListAddressGroupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/addressGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists address groups in a given project and location.
+           *
+           * Create a request for the method "addressGroups.list".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the AddressGroups should be listed, specified in the
+         *        format `projects/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.ListAddressGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the AddressGroups should be listed,
+           * specified in the format `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the AddressGroups should be listed, specified in the
+         format `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the AddressGroups should be listed,
+           * specified in the format `projects/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Maximum number of AddressGroups to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of AddressGroups to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of AddressGroups to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListAddressGroupsResponse` Indicates that this is a
+           * continuation of a prior `ListAddressGroups` call, and that the system should return the
+           * next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListAddressGroupsResponse` Indicates that this is a continuation of
+         a prior `ListAddressGroups` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListAddressGroupsResponse` Indicates that this is a
+           * continuation of a prior `ListAddressGroups` call, and that the system should return the
+           * next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists references of an address group.
+         *
+         * Create a request for the method "addressGroups.listReferences".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link ListReferences#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public ListReferences listReferences(java.lang.String addressGroup) throws java.io.IOException {
+          ListReferences result = new ListReferences(addressGroup);
+          initialize(result);
+          return result;
+        }
+
+        public class ListReferences extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.ListAddressGroupReferencesResponse> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:listReferences";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Lists references of an address group.
+           *
+           * Create a request for the method "addressGroups.listReferences".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link ListReferences#execute()} method to invoke the remote
+           * operation. <p> {@link ListReferences#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected ListReferences(java.lang.String addressGroup) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.ListAddressGroupReferencesResponse.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListReferences set$Xgafv(java.lang.String $Xgafv) {
+            return (ListReferences) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListReferences setAccessToken(java.lang.String accessToken) {
+            return (ListReferences) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListReferences setAlt(java.lang.String alt) {
+            return (ListReferences) super.setAlt(alt);
+          }
+
+          @Override
+          public ListReferences setCallback(java.lang.String callback) {
+            return (ListReferences) super.setCallback(callback);
+          }
+
+          @Override
+          public ListReferences setFields(java.lang.String fields) {
+            return (ListReferences) super.setFields(fields);
+          }
+
+          @Override
+          public ListReferences setKey(java.lang.String key) {
+            return (ListReferences) super.setKey(key);
+          }
+
+          @Override
+          public ListReferences setOauthToken(java.lang.String oauthToken) {
+            return (ListReferences) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListReferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListReferences) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListReferences setQuotaUser(java.lang.String quotaUser) {
+            return (ListReferences) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListReferences setUploadType(java.lang.String uploadType) {
+            return (ListReferences) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListReferences setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListReferences) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to clone items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public ListReferences setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          /**
+           * The maximum number of references to return. If unspecified, server will pick an
+           * appropriate default. Server may return fewer items than requested. A caller should only
+           * rely on response's next_page_token to determine if there are more AddressGroupUsers
+           * left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of references to return. If unspecified, server will pick an appropriate
+         default. Server may return fewer items than requested. A caller should only rely on response's
+         next_page_token to determine if there are more AddressGroupUsers left to be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of references to return. If unspecified, server will pick an
+           * appropriate default. Server may return fewer items than requested. A caller should only
+           * rely on response's next_page_token to determine if there are more AddressGroupUsers
+           * left to be queried.
+           */
+          public ListReferences setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          public ListReferences setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListReferences set(String parameterName, Object value) {
+            return (ListReferences) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates parameters of an address group.
+         *
+         * Create a request for the method "addressGroups.patch".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the AddressGroup resource. It matches pattern
+         *        `projects/locations/{location}/addressGroups/`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networksecurity.v1.model.AddressGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Updates parameters of an address group.
+           *
+           * Create a request for the method "addressGroups.patch".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the AddressGroup resource. It matches pattern
+         *        `projects/locations/{location}/addressGroups/`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networksecurity.v1.model.AddressGroup content) {
+            super(NetworkSecurity.this, "PATCH", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AddressGroup resource. It matches pattern
+           * `projects/locations/{location}/addressGroups/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the AddressGroup resource. It matches pattern
+         `projects/locations/{location}/addressGroups/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the AddressGroup resource. It matches pattern
+           * `projects/locations/{location}/addressGroups/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AddressGroup resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the AddressGroup resource
+         by the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AddressGroup resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes items from an address group.
+         *
+         * Create a request for the method "addressGroups.removeItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link RemoveItems#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to remove items from. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest}
+         * @return the request
+         */
+        public RemoveItems removeItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest content) throws java.io.IOException {
+          RemoveItems result = new RemoveItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:removeItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Removes items from an address group.
+           *
+           * Create a request for the method "addressGroups.removeItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link RemoveItems#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * RemoveItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to remove items from. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected RemoveItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveItems set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveItems setAccessToken(java.lang.String accessToken) {
+            return (RemoveItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveItems setAlt(java.lang.String alt) {
+            return (RemoveItems) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveItems setCallback(java.lang.String callback) {
+            return (RemoveItems) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveItems setFields(java.lang.String fields) {
+            return (RemoveItems) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveItems setKey(java.lang.String key) {
+            return (RemoveItems) super.setKey(key);
+          }
+
+          @Override
+          public RemoveItems setOauthToken(java.lang.String oauthToken) {
+            return (RemoveItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveItems setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveItems setUploadType(java.lang.String uploadType) {
+            return (RemoveItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to remove items from. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to remove items from. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to remove items from. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public RemoveItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public RemoveItems set(String parameterName, Object value) {
+            return (RemoveItems) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+       *   {@code NetworkSecurity.Operations.List request = networksecurity.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.networksecurity.v1.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.networksecurity.v1.model.CancelOperationRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a long-running operation. This method indicates that the client is no longer interested
+         * in the operation result. It does not cancel the operation. If the server doesn't support this
+         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.delete".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be deleted.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Deletes a long-running operation. This method indicates that the client is no longer interested
+           * in the operation result. It does not cancel the operation. If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkSecurity.this, "DELETE", REST_PATH, null, com.google.api.services.networksecurity.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be deleted. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be deleted.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be deleted. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation's parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.ListOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}/operations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation's parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String name) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.ListOperationsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation's parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation's parent resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation's parent resource. */
+          public List setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The standard list filter. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The standard list filter.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -514,6 +2756,2078 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
         }
       }
 
+      /**
+       * An accessor for creating requests from the AddressGroups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+       *   {@code NetworkSecurity.AddressGroups.List request = networksecurity.addressGroups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddressGroups addressGroups() {
+        return new AddressGroups();
+      }
+
+      /**
+       * The "addressGroups" collection of methods.
+       */
+      public class AddressGroups {
+
+        /**
+         * Adds items to an address group.
+         *
+         * Create a request for the method "addressGroups.addItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link AddItems#execute()} method to invoke the remote operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to add items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest}
+         * @return the request
+         */
+        public AddItems addItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest content) throws java.io.IOException {
+          AddItems result = new AddItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:addItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Adds items to an address group.
+           *
+           * Create a request for the method "addressGroups.addItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link AddItems#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * AddItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to add items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected AddItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.AddAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddItems set$Xgafv(java.lang.String $Xgafv) {
+            return (AddItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddItems setAccessToken(java.lang.String accessToken) {
+            return (AddItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddItems setAlt(java.lang.String alt) {
+            return (AddItems) super.setAlt(alt);
+          }
+
+          @Override
+          public AddItems setCallback(java.lang.String callback) {
+            return (AddItems) super.setCallback(callback);
+          }
+
+          @Override
+          public AddItems setFields(java.lang.String fields) {
+            return (AddItems) super.setFields(fields);
+          }
+
+          @Override
+          public AddItems setKey(java.lang.String key) {
+            return (AddItems) super.setKey(key);
+          }
+
+          @Override
+          public AddItems setOauthToken(java.lang.String oauthToken) {
+            return (AddItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddItems setQuotaUser(java.lang.String quotaUser) {
+            return (AddItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddItems setUploadType(java.lang.String uploadType) {
+            return (AddItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to add items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to add items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to add items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public AddItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public AddItems set(String parameterName, Object value) {
+            return (AddItems) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Clones items from one address group to another.
+         *
+         * Create a request for the method "addressGroups.cloneItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link CloneItems#execute()} method to invoke the remote operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest}
+         * @return the request
+         */
+        public CloneItems cloneItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest content) throws java.io.IOException {
+          CloneItems result = new CloneItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloneItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:cloneItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Clones items from one address group to another.
+           *
+           * Create a request for the method "addressGroups.cloneItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link CloneItems#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CloneItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected CloneItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.CloneAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloneItems set$Xgafv(java.lang.String $Xgafv) {
+            return (CloneItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloneItems setAccessToken(java.lang.String accessToken) {
+            return (CloneItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloneItems setAlt(java.lang.String alt) {
+            return (CloneItems) super.setAlt(alt);
+          }
+
+          @Override
+          public CloneItems setCallback(java.lang.String callback) {
+            return (CloneItems) super.setCallback(callback);
+          }
+
+          @Override
+          public CloneItems setFields(java.lang.String fields) {
+            return (CloneItems) super.setFields(fields);
+          }
+
+          @Override
+          public CloneItems setKey(java.lang.String key) {
+            return (CloneItems) super.setKey(key);
+          }
+
+          @Override
+          public CloneItems setOauthToken(java.lang.String oauthToken) {
+            return (CloneItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloneItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloneItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloneItems setQuotaUser(java.lang.String quotaUser) {
+            return (CloneItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloneItems setUploadType(java.lang.String uploadType) {
+            return (CloneItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloneItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloneItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to clone items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public CloneItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public CloneItems set(String parameterName, Object value) {
+            return (CloneItems) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new address group in a given project and location.
+         *
+         * Create a request for the method "addressGroups.create".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the AddressGroup. Must be in the format
+         *        `projects/locations/{location}`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networksecurity.v1.model.AddressGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/addressGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new address group in a given project and location.
+           *
+           * Create a request for the method "addressGroups.create".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the AddressGroup. Must be in the format
+         *        `projects/locations/{location}`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networksecurity.v1.model.AddressGroup content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the AddressGroup. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the AddressGroup. Must be in the format
+         `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the AddressGroup. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Short name of the AddressGroup resource to be created. This value should be
+           * 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and
+           * should not start with a number. E.g. "authz_policy".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroupId;
+
+          /** Required. Short name of the AddressGroup resource to be created. This value should be 1-63
+         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
+         with a number. E.g. "authz_policy".
+           */
+          public java.lang.String getAddressGroupId() {
+            return addressGroupId;
+          }
+
+          /**
+           * Required. Short name of the AddressGroup resource to be created. This value should be
+           * 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and
+           * should not start with a number. E.g. "authz_policy".
+           */
+          public Create setAddressGroupId(java.lang.String addressGroupId) {
+            this.addressGroupId = addressGroupId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single address group.
+         *
+         * Create a request for the method "addressGroups.delete".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the AddressGroup to delete. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Deletes a single address group.
+           *
+           * Create a request for the method "addressGroups.delete".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the AddressGroup to delete. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkSecurity.this, "DELETE", REST_PATH, null, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to delete. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the AddressGroup to delete. Must be in the format
+         `projects/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to delete. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single address group.
+         *
+         * Create a request for the method "addressGroups.get".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the AddressGroup to get. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.AddressGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Gets details of a single address group.
+           *
+           * Create a request for the method "addressGroups.get".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the AddressGroup to get. Must be in the format
+         *        `projects/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.AddressGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to get. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the AddressGroup to get. Must be in the format
+         `projects/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to get. Must be in the format
+           * `projects/locations/{location}/addressGroups`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "addressGroups.getIamPolicy".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "addressGroups.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists address groups in a given project and location.
+         *
+         * Create a request for the method "addressGroups.list".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the AddressGroups should be listed, specified in the
+         *        format `projects/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.ListAddressGroupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/addressGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists address groups in a given project and location.
+           *
+           * Create a request for the method "addressGroups.list".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the AddressGroups should be listed, specified in the
+         *        format `projects/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.ListAddressGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the AddressGroups should be listed,
+           * specified in the format `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the AddressGroups should be listed, specified in the
+         format `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the AddressGroups should be listed,
+           * specified in the format `projects/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Maximum number of AddressGroups to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of AddressGroups to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of AddressGroups to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListAddressGroupsResponse` Indicates that this is a
+           * continuation of a prior `ListAddressGroups` call, and that the system should return the
+           * next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListAddressGroupsResponse` Indicates that this is a continuation of
+         a prior `ListAddressGroups` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListAddressGroupsResponse` Indicates that this is a
+           * continuation of a prior `ListAddressGroups` call, and that the system should return the
+           * next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists references of an address group.
+         *
+         * Create a request for the method "addressGroups.listReferences".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link ListReferences#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @return the request
+         */
+        public ListReferences listReferences(java.lang.String addressGroup) throws java.io.IOException {
+          ListReferences result = new ListReferences(addressGroup);
+          initialize(result);
+          return result;
+        }
+
+        public class ListReferences extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.ListAddressGroupReferencesResponse> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:listReferences";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Lists references of an address group.
+           *
+           * Create a request for the method "addressGroups.listReferences".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link ListReferences#execute()} method to invoke the remote
+           * operation. <p> {@link ListReferences#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to clone items to. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @since 1.13
+           */
+          protected ListReferences(java.lang.String addressGroup) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1.model.ListAddressGroupReferencesResponse.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListReferences set$Xgafv(java.lang.String $Xgafv) {
+            return (ListReferences) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListReferences setAccessToken(java.lang.String accessToken) {
+            return (ListReferences) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListReferences setAlt(java.lang.String alt) {
+            return (ListReferences) super.setAlt(alt);
+          }
+
+          @Override
+          public ListReferences setCallback(java.lang.String callback) {
+            return (ListReferences) super.setCallback(callback);
+          }
+
+          @Override
+          public ListReferences setFields(java.lang.String fields) {
+            return (ListReferences) super.setFields(fields);
+          }
+
+          @Override
+          public ListReferences setKey(java.lang.String key) {
+            return (ListReferences) super.setKey(key);
+          }
+
+          @Override
+          public ListReferences setOauthToken(java.lang.String oauthToken) {
+            return (ListReferences) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListReferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListReferences) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListReferences setQuotaUser(java.lang.String quotaUser) {
+            return (ListReferences) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListReferences setUploadType(java.lang.String uploadType) {
+            return (ListReferences) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListReferences setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListReferences) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to clone items to. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to clone items to. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public ListReferences setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          /**
+           * The maximum number of references to return. If unspecified, server will pick an
+           * appropriate default. Server may return fewer items than requested. A caller should only
+           * rely on response's next_page_token to determine if there are more AddressGroupUsers
+           * left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of references to return. If unspecified, server will pick an appropriate
+         default. Server may return fewer items than requested. A caller should only rely on response's
+         next_page_token to determine if there are more AddressGroupUsers left to be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of references to return. If unspecified, server will pick an
+           * appropriate default. Server may return fewer items than requested. A caller should only
+           * rely on response's next_page_token to determine if there are more AddressGroupUsers
+           * left to be queried.
+           */
+          public ListReferences setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          public ListReferences setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListReferences set(String parameterName, Object value) {
+            return (ListReferences) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single address group.
+         *
+         * Create a request for the method "addressGroups.patch".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the AddressGroup resource. It matches pattern
+         *        `projects/locations/{location}/addressGroups/`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networksecurity.v1.model.AddressGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Updates the parameters of a single address group.
+           *
+           * Create a request for the method "addressGroups.patch".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the AddressGroup resource. It matches pattern
+         *        `projects/locations/{location}/addressGroups/`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.AddressGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networksecurity.v1.model.AddressGroup content) {
+            super(NetworkSecurity.this, "PATCH", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AddressGroup resource. It matches pattern
+           * `projects/locations/{location}/addressGroups/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the AddressGroup resource. It matches pattern
+         `projects/locations/{location}/addressGroups/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the AddressGroup resource. It matches pattern
+           * `projects/locations/{location}/addressGroups/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AddressGroup resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the AddressGroup resource
+         by the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AddressGroup resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes items from an address group.
+         *
+         * Create a request for the method "addressGroups.removeItems".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link RemoveItems#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param addressGroup Required. A name of the AddressGroup to remove items from. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest}
+         * @return the request
+         */
+        public RemoveItems removeItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest content) throws java.io.IOException {
+          RemoveItems result = new RemoveItems(addressGroup, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveItems extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+addressGroup}:removeItems";
+
+          private final java.util.regex.Pattern ADDRESS_GROUP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Removes items from an address group.
+           *
+           * Create a request for the method "addressGroups.removeItems".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link RemoveItems#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * RemoveItems#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param addressGroup Required. A name of the AddressGroup to remove items from. Must be in the format
+         *        `projects|organization/locations/{location}/addressGroups`.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest}
+           * @since 1.13
+           */
+          protected RemoveItems(java.lang.String addressGroup, com.google.api.services.networksecurity.v1.model.RemoveAddressGroupItemsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.Operation.class);
+            this.addressGroup = com.google.api.client.util.Preconditions.checkNotNull(addressGroup, "Required parameter addressGroup must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveItems set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveItems) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveItems setAccessToken(java.lang.String accessToken) {
+            return (RemoveItems) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveItems setAlt(java.lang.String alt) {
+            return (RemoveItems) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveItems setCallback(java.lang.String callback) {
+            return (RemoveItems) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveItems setFields(java.lang.String fields) {
+            return (RemoveItems) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveItems setKey(java.lang.String key) {
+            return (RemoveItems) super.setKey(key);
+          }
+
+          @Override
+          public RemoveItems setOauthToken(java.lang.String oauthToken) {
+            return (RemoveItems) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveItems setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveItems) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveItems setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveItems) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveItems setUploadType(java.lang.String uploadType) {
+            return (RemoveItems) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveItems setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveItems) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the AddressGroup to remove items from. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addressGroup;
+
+          /** Required. A name of the AddressGroup to remove items from. Must be in the format
+         `projects|organization/locations/{location}/addressGroups`.
+           */
+          public java.lang.String getAddressGroup() {
+            return addressGroup;
+          }
+
+          /**
+           * Required. A name of the AddressGroup to remove items from. Must be in the format
+           * `projects|organization/locations/{location}/addressGroups`.
+           */
+          public RemoveItems setAddressGroup(java.lang.String addressGroup) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ADDRESS_GROUP_PATTERN.matcher(addressGroup).matches(),
+                  "Parameter addressGroup must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.addressGroup = addressGroup;
+            return this;
+          }
+
+          @Override
+          public RemoveItems set(String parameterName, Object value) {
+            return (RemoveItems) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         *
+         * Create a request for the method "addressGroups.setIamPolicy".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.networksecurity.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "addressGroups.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.networksecurity.v1.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "addressGroups.testIamPermissions".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "addressGroups.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/addressGroups/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the AuthorizationPolicies collection.
        *

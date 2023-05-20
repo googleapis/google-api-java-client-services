@@ -50,7 +50,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
    * policy can have from one to six conditions. If condition_time_series_query_language is present,
-   * it must be the only condition.
+   * it must be the only condition. If condition_monitoring_query_language is present, it must be
+   * the only condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +181,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
    * policy can have from one to six conditions. If condition_time_series_query_language is present,
-   * it must be the only condition.
+   * it must be the only condition. If condition_monitoring_query_language is present, it must be
+   * the only condition.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getConditions() {
@@ -191,7 +193,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A list of conditions for the policy. The conditions are combined by AND or OR according to the
    * combiner field. If the combined conditions evaluate to true, then an incident is created. A
    * policy can have from one to six conditions. If condition_time_series_query_language is present,
-   * it must be the only condition.
+   * it must be the only condition. If condition_monitoring_query_language is present, it must be
+   * the only condition.
    * @param conditions conditions or {@code null} for none
    */
   public AlertPolicy setConditions(java.util.List<Condition> conditions) {

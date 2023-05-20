@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantRecord extends com.
   private GoogleCloudDialogflowV2beta1ArticleAnswer articleSuggestionAnswer;
 
   /**
+   * Output only. The Dialogflow assist answer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1DialogflowAssistAnswer dialogflowAssistAnswer;
+
+  /**
    * Output only. The FAQ answer.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantRecord extends com.
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantRecord setArticleSuggestionAnswer(GoogleCloudDialogflowV2beta1ArticleAnswer articleSuggestionAnswer) {
     this.articleSuggestionAnswer = articleSuggestionAnswer;
+    return this;
+  }
+
+  /**
+   * Output only. The Dialogflow assist answer.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1DialogflowAssistAnswer getDialogflowAssistAnswer() {
+    return dialogflowAssistAnswer;
+  }
+
+  /**
+   * Output only. The Dialogflow assist answer.
+   * @param dialogflowAssistAnswer dialogflowAssistAnswer or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantRecord setDialogflowAssistAnswer(GoogleCloudDialogflowV2beta1DialogflowAssistAnswer dialogflowAssistAnswer) {
+    this.dialogflowAssistAnswer = dialogflowAssistAnswer;
     return this;
   }
 

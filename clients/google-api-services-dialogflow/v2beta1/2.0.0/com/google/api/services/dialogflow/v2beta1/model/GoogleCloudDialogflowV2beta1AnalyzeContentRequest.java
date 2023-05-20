@@ -110,6 +110,13 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   private java.lang.String requestId;
 
   /**
+   * An input representing the selection of a suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SuggestionInput suggestionInput;
+
+  /**
    * The natural language text to be processed.
    * The value may be {@code null}.
    */
@@ -300,6 +307,23 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * An input representing the selection of a suggestion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionInput getSuggestionInput() {
+    return suggestionInput;
+  }
+
+  /**
+   * An input representing the selection of a suggestion.
+   * @param suggestionInput suggestionInput or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setSuggestionInput(GoogleCloudDialogflowV2beta1SuggestionInput suggestionInput) {
+    this.suggestionInput = suggestionInput;
     return this;
   }
 

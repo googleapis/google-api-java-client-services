@@ -465,6 +465,56 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
       }
 
       /**
+       * Location where the lookup should be performed. Required to lookup entry that is not a part
+       * of `DPMS` or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in
+       * other cases.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Location where the lookup should be performed. Required to lookup entry that is not a part of
+     `DPMS` or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in other cases.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /**
+       * Location where the lookup should be performed. Required to lookup entry that is not a part
+       * of `DPMS` or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in
+       * other cases.
+       */
+      public Lookup setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
+      /**
+       * Project where the lookup should be performed. Required to lookup entry that is not a part
+       * of `DPMS` or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in
+       * other cases.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project where the lookup should be performed. Required to lookup entry that is not a part of `DPMS`
+     or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in other cases.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /**
+       * Project where the lookup should be performed. Required to lookup entry that is not a part
+       * of `DPMS` or `DATAPLEX` `integrated_system` using its `fully_qualified_name`. Ignored in
+       * other cases.
+       */
+      public Lookup setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
        * The SQL name of the entry. SQL names are case-sensitive. Examples: *
        * `pubsub.topic.{PROJECT_ID}.{TOPIC_ID}` *
        * `pubsub.topic.{PROJECT_ID}.`\``{TOPIC.ID.SEPARATED.WITH.DOTS}`\` *

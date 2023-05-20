@@ -45,6 +45,13 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   private GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse;
 
   /**
+   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse;
+
+  /**
    * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestArticlesResponse(GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse) {
     this.suggestArticlesResponse = suggestArticlesResponse;
+    return this;
+  }
+
+  /**
+   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse getSuggestDialogflowAssistsResponse() {
+    return suggestDialogflowAssistsResponse;
+  }
+
+  /**
+   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
+   * @param suggestDialogflowAssistsResponse suggestDialogflowAssistsResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestDialogflowAssistsResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse) {
+    this.suggestDialogflowAssistsResponse = suggestDialogflowAssistsResponse;
     return this;
   }
 

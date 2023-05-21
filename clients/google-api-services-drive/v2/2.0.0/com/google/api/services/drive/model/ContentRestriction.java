@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A restriction for accessing the content of the file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,14 +40,14 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
 
   /**
    * Reason for why the content of the file is restricted. This is only mutable on requests that
-   * also set readOnly=true.
+   * also set `readOnly=true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The user who set the content restriction. Only populated if readOnly is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   private com.google.api.client.util.DateTime restrictionDate;
 
   /**
-   * The type of the content restriction. Currently the only possible value is
-   * globalContentRestriction.
+   * Output only. The type of the content restriction. Currently the only possible value is
+   * `globalContentRestriction`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
 
   /**
    * Reason for why the content of the file is restricted. This is only mutable on requests that
-   * also set readOnly=true.
+   * also set `readOnly=true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -101,7 +101,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
 
   /**
    * Reason for why the content of the file is restricted. This is only mutable on requests that
-   * also set readOnly=true.
+   * also set `readOnly=true`.
    * @param reason reason or {@code null} for none
    */
   public ContentRestriction setReason(java.lang.String reason) {
@@ -110,7 +110,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The user who set the content restriction. Only populated if readOnly is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
    * @return value or {@code null} for none
    */
   public User getRestrictingUser() {
@@ -118,7 +118,7 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The user who set the content restriction. Only populated if readOnly is true.
+   * Output only. The user who set the content restriction. Only populated if `readOnly` is true.
    * @param restrictingUser restrictingUser or {@code null} for none
    */
   public ContentRestriction setRestrictingUser(User restrictingUser) {
@@ -146,8 +146,8 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of the content restriction. Currently the only possible value is
-   * globalContentRestriction.
+   * Output only. The type of the content restriction. Currently the only possible value is
+   * `globalContentRestriction`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -155,8 +155,8 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of the content restriction. Currently the only possible value is
-   * globalContentRestriction.
+   * Output only. The type of the content restriction. Currently the only possible value is
+   * `globalContentRestriction`.
    * @param type type or {@code null} for none
    */
   public ContentRestriction setType(java.lang.String type) {

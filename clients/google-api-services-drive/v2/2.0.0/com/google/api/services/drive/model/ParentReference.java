@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A reference to a file's parent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,28 +37,28 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   private java.lang.String id;
 
   /**
-   * Whether or not the parent is the root folder.
+   * Output only. Whether or not the parent is the root folder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isRoot;
 
   /**
-   * This is always drive#parentReference.
+   * Output only. This is always `drive#parentReference`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * A link to the parent.
+   * Output only. A link to the parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentLink;
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether or not the parent is the root folder.
+   * Output only. Whether or not the parent is the root folder.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsRoot() {
@@ -90,7 +90,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether or not the parent is the root folder.
+   * Output only. Whether or not the parent is the root folder.
    * @param isRoot isRoot or {@code null} for none
    */
   public ParentReference setIsRoot(java.lang.Boolean isRoot) {
@@ -99,7 +99,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always drive#parentReference.
+   * Output only. This is always `drive#parentReference`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -107,7 +107,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This is always drive#parentReference.
+   * Output only. This is always `drive#parentReference`.
    * @param kind kind or {@code null} for none
    */
   public ParentReference setKind(java.lang.String kind) {
@@ -116,7 +116,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to the parent.
+   * Output only. A link to the parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentLink() {
@@ -124,7 +124,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to the parent.
+   * Output only. A link to the parent.
    * @param parentLink parentLink or {@code null} for none
    */
   public ParentReference setParentLink(java.lang.String parentLink) {
@@ -133,7 +133,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -141,7 +141,7 @@ public final class ParentReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * @param selfLink selfLink or {@code null} for none
    */
   public ParentReference setSelfLink(java.lang.String selfLink) {

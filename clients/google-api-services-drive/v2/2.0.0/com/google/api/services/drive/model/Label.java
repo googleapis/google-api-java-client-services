@@ -17,10 +17,10 @@
 package com.google.api.services.drive.model;
 
 /**
- * Representation of a label and its fields.
+ * Representation of a label and label fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class Label extends com.google.api.client.json.GenericJson {
 
   /**
-   * A map of the label's fields keyed by the field ID.
+   * A map of the fields on the label, keyed by the field's ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * This is always drive#label
+   * This is always `drive#label`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   private java.lang.String revisionId;
 
   /**
-   * A map of the label's fields keyed by the field ID.
+   * A map of the fields on the label, keyed by the field's ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, LabelField> getFields() {
@@ -66,7 +66,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A map of the label's fields keyed by the field ID.
+   * A map of the fields on the label, keyed by the field's ID.
    * @param fields fields or {@code null} for none
    */
   public Label setFields(java.util.Map<String, LabelField> fields) {
@@ -92,7 +92,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#label
+   * This is always `drive#label`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -100,7 +100,7 @@ public final class Label extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#label
+   * This is always `drive#label`
    * @param kind kind or {@code null} for none
    */
   public Label setKind(java.lang.String kind) {

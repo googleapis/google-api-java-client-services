@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * An item with user information and settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -51,15 +51,15 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canCreateDrives;
 
   /**
-   * Deprecated - use canCreateDrives instead.
+   * Deprecated: Use `canCreateDrives` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canCreateTeamDrives;
 
   /**
-   * The domain sharing policy for the current user. Possible values are: - allowed  -
-   * allowedWithWarning  - incomingOnly  - disallowed
+   * The domain sharing policy for the current user. Possible values are: * `allowed` *
+   * `allowedWithWarning` * `incomingOnly` * `disallowed`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isCurrentAppInstalled;
 
   /**
-   * This is always drive#about.
+   * This is always `drive#about`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +229,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.Long quotaBytesUsedInTrash;
 
   /**
-   * The type of the user's storage quota. Possible values are: - LIMITED  - UNLIMITED
+   * The type of the user's storage quota. Possible values are: * `LIMITED` * `UNLIMITED`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +257,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Deprecated - use driveThemes instead.
+   * Deprecated: Use `driveThemes` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +313,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use canCreateDrives instead.
+   * Deprecated: Use `canCreateDrives` instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanCreateTeamDrives() {
@@ -321,7 +321,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use canCreateDrives instead.
+   * Deprecated: Use `canCreateDrives` instead.
    * @param canCreateTeamDrives canCreateTeamDrives or {@code null} for none
    */
   public About setCanCreateTeamDrives(java.lang.Boolean canCreateTeamDrives) {
@@ -330,8 +330,8 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain sharing policy for the current user. Possible values are: - allowed  -
-   * allowedWithWarning  - incomingOnly  - disallowed
+   * The domain sharing policy for the current user. Possible values are: * `allowed` *
+   * `allowedWithWarning` * `incomingOnly` * `disallowed`
    * @return value or {@code null} for none
    */
   public java.lang.String getDomainSharingPolicy() {
@@ -339,8 +339,8 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain sharing policy for the current user. Possible values are: - allowed  -
-   * allowedWithWarning  - incomingOnly  - disallowed
+   * The domain sharing policy for the current user. Possible values are: * `allowed` *
+   * `allowedWithWarning` * `incomingOnly` * `disallowed`
    * @param domainSharingPolicy domainSharingPolicy or {@code null} for none
    */
   public About setDomainSharingPolicy(java.lang.String domainSharingPolicy) {
@@ -468,7 +468,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#about.
+   * This is always `drive#about`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -476,7 +476,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#about.
+   * This is always `drive#about`.
    * @param kind kind or {@code null} for none
    */
   public About setKind(java.lang.String kind) {
@@ -657,7 +657,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the user's storage quota. Possible values are: - LIMITED  - UNLIMITED
+   * The type of the user's storage quota. Possible values are: * `LIMITED` * `UNLIMITED`
    * @return value or {@code null} for none
    */
   public java.lang.String getQuotaType() {
@@ -665,7 +665,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the user's storage quota. Possible values are: - LIMITED  - UNLIMITED
+   * The type of the user's storage quota. Possible values are: * `LIMITED` * `UNLIMITED`
    * @param quotaType quotaType or {@code null} for none
    */
   public About setQuotaType(java.lang.String quotaType) {
@@ -725,7 +725,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use driveThemes instead.
+   * Deprecated: Use `driveThemes` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<TeamDriveThemes> getTeamDriveThemes() {
@@ -733,7 +733,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use driveThemes instead.
+   * Deprecated: Use `driveThemes` instead.
    * @param teamDriveThemes teamDriveThemes or {@code null} for none
    */
   public About setTeamDriveThemes(java.util.List<TeamDriveThemes> teamDriveThemes) {
@@ -1323,28 +1323,28 @@ public final class About extends com.google.api.client.json.GenericJson {
   public static final class TeamDriveThemes extends com.google.api.client.json.GenericJson {
 
     /**
-     * Deprecated - use driveThemes/backgroundImageLink instead.
+     * Deprecated: Use `driveThemes/backgroundImageLink` instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String backgroundImageLink;
 
     /**
-     * Deprecated - use driveThemes/colorRgb instead.
+     * Deprecated: Use `driveThemes/colorRgb` instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String colorRgb;
 
     /**
-     * Deprecated - use driveThemes/id instead.
+     * Deprecated: Use `driveThemes/id` instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String id;
 
     /**
-     * Deprecated - use driveThemes/backgroundImageLink instead.
+     * Deprecated: Use `driveThemes/backgroundImageLink` instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getBackgroundImageLink() {
@@ -1352,7 +1352,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use driveThemes/backgroundImageLink instead.
+     * Deprecated: Use `driveThemes/backgroundImageLink` instead.
      * @param backgroundImageLink backgroundImageLink or {@code null} for none
      */
     public TeamDriveThemes setBackgroundImageLink(java.lang.String backgroundImageLink) {
@@ -1361,7 +1361,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use driveThemes/colorRgb instead.
+     * Deprecated: Use `driveThemes/colorRgb` instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getColorRgb() {
@@ -1369,7 +1369,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use driveThemes/colorRgb instead.
+     * Deprecated: Use `driveThemes/colorRgb` instead.
      * @param colorRgb colorRgb or {@code null} for none
      */
     public TeamDriveThemes setColorRgb(java.lang.String colorRgb) {
@@ -1378,7 +1378,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use driveThemes/id instead.
+     * Deprecated: Use `driveThemes/id` instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -1386,7 +1386,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use driveThemes/id instead.
+     * Deprecated: Use `driveThemes/id` instead.
      * @param id id or {@code null} for none
      */
     public TeamDriveThemes setId(java.lang.String id) {

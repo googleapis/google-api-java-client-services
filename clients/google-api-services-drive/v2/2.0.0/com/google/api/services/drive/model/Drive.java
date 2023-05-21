@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * Representation of a shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,22 +31,22 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * set. This is a write only field; it can only be set on `drive.drives.update` requests that
+   * don't set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackgroundImageFile backgroundImageFile;
 
   /**
-   * A short-lived link to this shared drive's background image.
+   * Output only. A short-lived link to this shared drive's background image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backgroundImageLink;
 
   /**
-   * Capabilities the current user has on this shared drive.
+   * Output only. Capabilities the current user has on this shared drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * `drive.drives.update` request that does not set `themeId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,14 +75,15 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hidden;
 
   /**
-   * The ID of this shared drive which is also the ID of the top level folder of this shared drive.
+   * Output only. The ID of this shared drive which is also the ID of the top level folder of this
+   * shared drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * This is always drive#drive
+   * Output only. This is always `drive#drive`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +97,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * Output only. The organizational unit of this shared drive. This field is only populated on
+   * `drives.list` responses when the `useDomainAdminAccess` parameter is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,10 +113,10 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * driveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.drives.insert request, a random theme is chosen from which the background image and color
-   * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
-   * backgroundImageFile.
+   * `driveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.drives.insert` request, a random theme is chosen from which the background image and
+   * color are set. This is a write-only field; it can only be set on requests that don't set
+   * `colorRgb` or `backgroundImageFile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +124,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * set. This is a write only field; it can only be set on `drive.drives.update` requests that
+   * don't set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * @return value or {@code null} for none
    */
   public BackgroundImageFile getBackgroundImageFile() {
@@ -133,8 +134,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is
-   * set. This is a write only field; it can only be set on drive.drives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * set. This is a write only field; it can only be set on `drive.drives.update` requests that
+   * don't set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * @param backgroundImageFile backgroundImageFile or {@code null} for none
    */
   public Drive setBackgroundImageFile(BackgroundImageFile backgroundImageFile) {
@@ -143,7 +144,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short-lived link to this shared drive's background image.
+   * Output only. A short-lived link to this shared drive's background image.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackgroundImageLink() {
@@ -151,7 +152,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A short-lived link to this shared drive's background image.
+   * Output only. A short-lived link to this shared drive's background image.
    * @param backgroundImageLink backgroundImageLink or {@code null} for none
    */
   public Drive setBackgroundImageLink(java.lang.String backgroundImageLink) {
@@ -160,7 +161,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Capabilities the current user has on this shared drive.
+   * Output only. Capabilities the current user has on this shared drive.
    * @return value or {@code null} for none
    */
   public Capabilities getCapabilities() {
@@ -168,7 +169,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Capabilities the current user has on this shared drive.
+   * Output only. Capabilities the current user has on this shared drive.
    * @param capabilities capabilities or {@code null} for none
    */
   public Drive setCapabilities(Capabilities capabilities) {
@@ -178,7 +179,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * `drive.drives.update` request that does not set `themeId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getColorRgb() {
@@ -187,7 +188,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this shared drive as an RGB hex string. It can only be set on a
-   * drive.drives.update request that does not set themeId.
+   * `drive.drives.update` request that does not set `themeId`.
    * @param colorRgb colorRgb or {@code null} for none
    */
   public Drive setColorRgb(java.lang.String colorRgb) {
@@ -230,7 +231,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of this shared drive which is also the ID of the top level folder of this shared drive.
+   * Output only. The ID of this shared drive which is also the ID of the top level folder of this
+   * shared drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -238,7 +240,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of this shared drive which is also the ID of the top level folder of this shared drive.
+   * Output only. The ID of this shared drive which is also the ID of the top level folder of this
+   * shared drive.
    * @param id id or {@code null} for none
    */
   public Drive setId(java.lang.String id) {
@@ -247,7 +250,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#drive
+   * Output only. This is always `drive#drive`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -255,7 +258,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#drive
+   * Output only. This is always `drive#drive`
    * @param kind kind or {@code null} for none
    */
   public Drive setKind(java.lang.String kind) {
@@ -281,8 +284,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * Output only. The organizational unit of this shared drive. This field is only populated on
+   * `drives.list` responses when the `useDomainAdminAccess` parameter is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -290,8 +293,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * Output only. The organizational unit of this shared drive. This field is only populated on
+   * `drives.list` responses when the `useDomainAdminAccess` parameter is set to `true`.
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public Drive setOrgUnitId(java.lang.String orgUnitId) {
@@ -318,10 +321,10 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * driveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.drives.insert request, a random theme is chosen from which the background image and color
-   * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
-   * backgroundImageFile.
+   * `driveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.drives.insert` request, a random theme is chosen from which the background image and
+   * color are set. This is a write-only field; it can only be set on requests that don't set
+   * `colorRgb` or `backgroundImageFile`.
    * @return value or {@code null} for none
    */
   public java.lang.String getThemeId() {
@@ -330,10 +333,10 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * driveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.drives.insert request, a random theme is chosen from which the background image and color
-   * are set. This is a write-only field; it can only be set on requests that don't set colorRgb or
-   * backgroundImageFile.
+   * `driveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.drives.insert` request, a random theme is chosen from which the background image and
+   * color are set. This is a write-only field; it can only be set on requests that don't set
+   * `colorRgb` or `backgroundImageFile`.
    * @param themeId themeId or {@code null} for none
    */
   public Drive setThemeId(java.lang.String themeId) {
@@ -353,8 +356,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this shared drive is set.
-   * This is a write only field; it can only be set on drive.drives.update requests that don't set
-   * themeId. When specified, all fields of the backgroundImageFile must be set.
+   * This is a write only field; it can only be set on `drive.drives.update` requests that don't set
+   * `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    */
   public static final class BackgroundImageFile extends com.google.api.client.json.GenericJson {
 
@@ -494,156 +497,159 @@ public final class Drive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Capabilities the current user has on this shared drive.
+   * Output only. Capabilities the current user has on this shared drive.
    */
   public static final class Capabilities extends com.google.api.client.json.GenericJson {
 
     /**
-     * Whether the current user can add children to folders in this shared drive.
+     * Output only. Whether the current user can add children to folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canAddChildren;
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this shared
-     * drive.
+     * Output only. Whether the current user can change the `copyRequiresWriterPermission` restriction
+     * of this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeCopyRequiresWriterPermissionRestriction;
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `domainUsersOnly` restriction of this
+     * shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeDomainUsersOnlyRestriction;
 
     /**
-     * Whether the current user can change the background of this shared drive.
+     * Output only. Whether the current user can change the background of this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeDriveBackground;
 
     /**
-     * Whether the current user can change the driveMembersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `driveMembersOnly` restriction of this
+     * shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeDriveMembersOnlyRestriction;
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
-     * of this shared drive.
+     * Output only. Whether the current user can change the
+     * `sharingFoldersRequiresOrganizerPermission` restriction of this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction;
 
     /**
-     * Whether the current user can comment on files in this shared drive.
+     * Output only. Whether the current user can comment on files in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canComment;
 
     /**
-     * Whether the current user can copy files in this shared drive.
+     * Output only. Whether the current user can copy files in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canCopy;
 
     /**
-     * Whether the current user can delete children from folders in this shared drive.
+     * Output only. Whether the current user can delete children from folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canDeleteChildren;
 
     /**
-     * Whether the current user can delete this shared drive. Attempting to delete the shared drive
-     * may still fail if there are untrashed items inside the shared drive.
+     * Output only. Whether the current user can delete this shared drive. Attempting to delete the
+     * shared drive may still fail if there are untrashed items inside the shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canDeleteDrive;
 
     /**
-     * Whether the current user can download files in this shared drive.
+     * Output only. Whether the current user can download files in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canDownload;
 
     /**
-     * Whether the current user can edit files in this shared drive
+     * Output only. Whether the current user can edit files in this shared drive
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canEdit;
 
     /**
-     * Whether the current user can list the children of folders in this shared drive.
+     * Output only. Whether the current user can list the children of folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canListChildren;
 
     /**
-     * Whether the current user can add members to this shared drive or remove them or change their
-     * role.
+     * Output only. Whether the current user can add members to this shared drive or remove them or
+     * change their role.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canManageMembers;
 
     /**
-     * Whether the current user can read the revisions resource of files in this shared drive.
+     * Output only. Whether the current user can read the revisions resource of files in this shared
+     * drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canReadRevisions;
 
     /**
-     * Whether the current user can rename files or folders in this shared drive.
+     * Output only. Whether the current user can rename files or folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canRename;
 
     /**
-     * Whether the current user can rename this shared drive.
+     * Output only. Whether the current user can rename this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canRenameDrive;
 
     /**
-     * Whether the current user can reset the shared drive restrictions to defaults.
+     * Output only. Whether the current user can reset the shared drive restrictions to defaults.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canResetDriveRestrictions;
 
     /**
-     * Whether the current user can share files or folders in this shared drive.
+     * Output only. Whether the current user can share files or folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canShare;
 
     /**
-     * Whether the current user can trash children from folders in this shared drive.
+     * Output only. Whether the current user can trash children from folders in this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canTrashChildren;
 
     /**
-     * Whether the current user can add children to folders in this shared drive.
+     * Output only. Whether the current user can add children to folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanAddChildren() {
@@ -651,7 +657,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can add children to folders in this shared drive.
+     * Output only. Whether the current user can add children to folders in this shared drive.
      * @param canAddChildren canAddChildren or {@code null} for none
      */
     public Capabilities setCanAddChildren(java.lang.Boolean canAddChildren) {
@@ -660,8 +666,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this shared
-     * drive.
+     * Output only. Whether the current user can change the `copyRequiresWriterPermission` restriction
+     * of this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeCopyRequiresWriterPermissionRestriction() {
@@ -669,8 +675,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this shared
-     * drive.
+     * Output only. Whether the current user can change the `copyRequiresWriterPermission` restriction
+     * of this shared drive.
      * @param canChangeCopyRequiresWriterPermissionRestriction canChangeCopyRequiresWriterPermissionRestriction or {@code null} for none
      */
     public Capabilities setCanChangeCopyRequiresWriterPermissionRestriction(java.lang.Boolean canChangeCopyRequiresWriterPermissionRestriction) {
@@ -679,7 +685,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `domainUsersOnly` restriction of this
+     * shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeDomainUsersOnlyRestriction() {
@@ -687,7 +694,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `domainUsersOnly` restriction of this
+     * shared drive.
      * @param canChangeDomainUsersOnlyRestriction canChangeDomainUsersOnlyRestriction or {@code null} for none
      */
     public Capabilities setCanChangeDomainUsersOnlyRestriction(java.lang.Boolean canChangeDomainUsersOnlyRestriction) {
@@ -696,7 +704,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the background of this shared drive.
+     * Output only. Whether the current user can change the background of this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeDriveBackground() {
@@ -704,7 +712,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the background of this shared drive.
+     * Output only. Whether the current user can change the background of this shared drive.
      * @param canChangeDriveBackground canChangeDriveBackground or {@code null} for none
      */
     public Capabilities setCanChangeDriveBackground(java.lang.Boolean canChangeDriveBackground) {
@@ -713,7 +721,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the driveMembersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `driveMembersOnly` restriction of this
+     * shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeDriveMembersOnlyRestriction() {
@@ -721,7 +730,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the driveMembersOnly restriction of this shared drive.
+     * Output only. Whether the current user can change the `driveMembersOnly` restriction of this
+     * shared drive.
      * @param canChangeDriveMembersOnlyRestriction canChangeDriveMembersOnlyRestriction or {@code null} for none
      */
     public Capabilities setCanChangeDriveMembersOnlyRestriction(java.lang.Boolean canChangeDriveMembersOnlyRestriction) {
@@ -730,8 +740,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
-     * of this shared drive.
+     * Output only. Whether the current user can change the
+     * `sharingFoldersRequiresOrganizerPermission` restriction of this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeSharingFoldersRequiresOrganizerPermissionRestriction() {
@@ -739,8 +749,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
-     * of this shared drive.
+     * Output only. Whether the current user can change the
+     * `sharingFoldersRequiresOrganizerPermission` restriction of this shared drive.
      * @param canChangeSharingFoldersRequiresOrganizerPermissionRestriction canChangeSharingFoldersRequiresOrganizerPermissionRestriction or {@code null} for none
      */
     public Capabilities setCanChangeSharingFoldersRequiresOrganizerPermissionRestriction(java.lang.Boolean canChangeSharingFoldersRequiresOrganizerPermissionRestriction) {
@@ -749,7 +759,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can comment on files in this shared drive.
+     * Output only. Whether the current user can comment on files in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanComment() {
@@ -757,7 +767,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can comment on files in this shared drive.
+     * Output only. Whether the current user can comment on files in this shared drive.
      * @param canComment canComment or {@code null} for none
      */
     public Capabilities setCanComment(java.lang.Boolean canComment) {
@@ -766,7 +776,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can copy files in this shared drive.
+     * Output only. Whether the current user can copy files in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanCopy() {
@@ -774,7 +784,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can copy files in this shared drive.
+     * Output only. Whether the current user can copy files in this shared drive.
      * @param canCopy canCopy or {@code null} for none
      */
     public Capabilities setCanCopy(java.lang.Boolean canCopy) {
@@ -783,7 +793,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can delete children from folders in this shared drive.
+     * Output only. Whether the current user can delete children from folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanDeleteChildren() {
@@ -791,7 +801,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can delete children from folders in this shared drive.
+     * Output only. Whether the current user can delete children from folders in this shared drive.
      * @param canDeleteChildren canDeleteChildren or {@code null} for none
      */
     public Capabilities setCanDeleteChildren(java.lang.Boolean canDeleteChildren) {
@@ -800,8 +810,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can delete this shared drive. Attempting to delete the shared drive
-     * may still fail if there are untrashed items inside the shared drive.
+     * Output only. Whether the current user can delete this shared drive. Attempting to delete the
+     * shared drive may still fail if there are untrashed items inside the shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanDeleteDrive() {
@@ -809,8 +819,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can delete this shared drive. Attempting to delete the shared drive
-     * may still fail if there are untrashed items inside the shared drive.
+     * Output only. Whether the current user can delete this shared drive. Attempting to delete the
+     * shared drive may still fail if there are untrashed items inside the shared drive.
      * @param canDeleteDrive canDeleteDrive or {@code null} for none
      */
     public Capabilities setCanDeleteDrive(java.lang.Boolean canDeleteDrive) {
@@ -819,7 +829,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can download files in this shared drive.
+     * Output only. Whether the current user can download files in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanDownload() {
@@ -827,7 +837,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can download files in this shared drive.
+     * Output only. Whether the current user can download files in this shared drive.
      * @param canDownload canDownload or {@code null} for none
      */
     public Capabilities setCanDownload(java.lang.Boolean canDownload) {
@@ -836,7 +846,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can edit files in this shared drive
+     * Output only. Whether the current user can edit files in this shared drive
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanEdit() {
@@ -844,7 +854,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can edit files in this shared drive
+     * Output only. Whether the current user can edit files in this shared drive
      * @param canEdit canEdit or {@code null} for none
      */
     public Capabilities setCanEdit(java.lang.Boolean canEdit) {
@@ -853,7 +863,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can list the children of folders in this shared drive.
+     * Output only. Whether the current user can list the children of folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanListChildren() {
@@ -861,7 +871,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can list the children of folders in this shared drive.
+     * Output only. Whether the current user can list the children of folders in this shared drive.
      * @param canListChildren canListChildren or {@code null} for none
      */
     public Capabilities setCanListChildren(java.lang.Boolean canListChildren) {
@@ -870,8 +880,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can add members to this shared drive or remove them or change their
-     * role.
+     * Output only. Whether the current user can add members to this shared drive or remove them or
+     * change their role.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanManageMembers() {
@@ -879,8 +889,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can add members to this shared drive or remove them or change their
-     * role.
+     * Output only. Whether the current user can add members to this shared drive or remove them or
+     * change their role.
      * @param canManageMembers canManageMembers or {@code null} for none
      */
     public Capabilities setCanManageMembers(java.lang.Boolean canManageMembers) {
@@ -889,7 +899,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the revisions resource of files in this shared drive.
+     * Output only. Whether the current user can read the revisions resource of files in this shared
+     * drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanReadRevisions() {
@@ -897,7 +908,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the revisions resource of files in this shared drive.
+     * Output only. Whether the current user can read the revisions resource of files in this shared
+     * drive.
      * @param canReadRevisions canReadRevisions or {@code null} for none
      */
     public Capabilities setCanReadRevisions(java.lang.Boolean canReadRevisions) {
@@ -906,7 +918,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can rename files or folders in this shared drive.
+     * Output only. Whether the current user can rename files or folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanRename() {
@@ -914,7 +926,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can rename files or folders in this shared drive.
+     * Output only. Whether the current user can rename files or folders in this shared drive.
      * @param canRename canRename or {@code null} for none
      */
     public Capabilities setCanRename(java.lang.Boolean canRename) {
@@ -923,7 +935,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can rename this shared drive.
+     * Output only. Whether the current user can rename this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanRenameDrive() {
@@ -931,7 +943,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can rename this shared drive.
+     * Output only. Whether the current user can rename this shared drive.
      * @param canRenameDrive canRenameDrive or {@code null} for none
      */
     public Capabilities setCanRenameDrive(java.lang.Boolean canRenameDrive) {
@@ -940,7 +952,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can reset the shared drive restrictions to defaults.
+     * Output only. Whether the current user can reset the shared drive restrictions to defaults.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanResetDriveRestrictions() {
@@ -948,7 +960,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can reset the shared drive restrictions to defaults.
+     * Output only. Whether the current user can reset the shared drive restrictions to defaults.
      * @param canResetDriveRestrictions canResetDriveRestrictions or {@code null} for none
      */
     public Capabilities setCanResetDriveRestrictions(java.lang.Boolean canResetDriveRestrictions) {
@@ -957,7 +969,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can share files or folders in this shared drive.
+     * Output only. Whether the current user can share files or folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanShare() {
@@ -965,7 +977,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can share files or folders in this shared drive.
+     * Output only. Whether the current user can share files or folders in this shared drive.
      * @param canShare canShare or {@code null} for none
      */
     public Capabilities setCanShare(java.lang.Boolean canShare) {
@@ -974,7 +986,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can trash children from folders in this shared drive.
+     * Output only. Whether the current user can trash children from folders in this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanTrashChildren() {
@@ -982,7 +994,7 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can trash children from folders in this shared drive.
+     * Output only. Whether the current user can trash children from folders in this shared drive.
      * @param canTrashChildren canTrashChildren or {@code null} for none
      */
     public Capabilities setCanTrashChildren(java.lang.Boolean canTrashChildren) {
@@ -1016,8 +1028,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this shared drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this shared drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1066,8 +1078,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this shared drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this shared drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCopyRequiresWriterPermission() {
@@ -1076,8 +1088,8 @@ public final class Drive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this shared drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this shared drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this shared drive.
      * @param copyRequiresWriterPermission copyRequiresWriterPermission or {@code null} for none
      */
     public Restrictions setCopyRequiresWriterPermission(java.lang.Boolean copyRequiresWriterPermission) {

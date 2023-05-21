@@ -20,7 +20,7 @@ package com.google.api.services.drive;
  * Service definition for Drive (v2).
  *
  * <p>
- * Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
+ * The Google Drive API allows clients to access resources from Google Drive.
  * </p>
  *
  * <p>
@@ -49,7 +49,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Drive API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Google Drive API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -200,8 +200,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -230,21 +245,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
        * Whether to count changes outside the My Drive hierarchy. When set to false, changes to
        * files such as those in the Application Data folder or shared files which have not been
-       * added to My Drive will be omitted from the maxChangeIdCount.
+       * added to My Drive will be omitted from the `maxChangeIdCount`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSubscribed;
 
       /** Whether to count changes outside the My Drive hierarchy. When set to false, changes to files such
      as those in the Application Data folder or shared files which have not been added to My Drive will
-     be omitted from the maxChangeIdCount. [default: true]
+     be omitted from the `maxChangeIdCount`. [default: true]
        */
       public java.lang.Boolean getIncludeSubscribed() {
         return includeSubscribed;
@@ -253,7 +273,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to count changes outside the My Drive hierarchy. When set to false, changes to
        * files such as those in the Application Data folder or shared files which have not been
-       * added to My Drive will be omitted from the maxChangeIdCount.
+       * added to My Drive will be omitted from the `maxChangeIdCount`.
        */
       public Get setIncludeSubscribed(java.lang.Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
@@ -279,7 +299,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * <p>
        * Whether to count changes outside the My Drive hierarchy. When set to false, changes to files such
      as those in the Application Data folder or shared files which have not been added to My Drive will
-     be omitted from the maxChangeIdCount.
+     be omitted from the `maxChangeIdCount`.
        * </p>
        */
       public boolean isIncludeSubscribed() {
@@ -399,8 +419,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -429,8 +464,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the app. */
@@ -501,8 +541,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -531,22 +586,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
        * A comma-separated list of file extensions for open with filtering. All apps within the
        * given app query scope which can open any of the given file extensions will be included in
-       * the response. If appFilterMimeTypes are provided as well, the result is a union of the two
-       * resulting app lists.
+       * the response. If `appFilterMimeTypes` are provided as well, the result is a union of the
+       * two resulting app lists.
        */
       @com.google.api.client.util.Key
       private java.lang.String appFilterExtensions;
 
       /** A comma-separated list of file extensions for open with filtering. All apps within the given app
      query scope which can open any of the given file extensions will be included in the response. If
-     appFilterMimeTypes are provided as well, the result is a union of the two resulting app lists.
+     `appFilterMimeTypes` are provided as well, the result is a union of the two resulting app lists.
        */
       public java.lang.String getAppFilterExtensions() {
         return appFilterExtensions;
@@ -555,8 +615,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * A comma-separated list of file extensions for open with filtering. All apps within the
        * given app query scope which can open any of the given file extensions will be included in
-       * the response. If appFilterMimeTypes are provided as well, the result is a union of the two
-       * resulting app lists.
+       * the response. If `appFilterMimeTypes` are provided as well, the result is a union of the
+       * two resulting app lists.
        */
       public List setAppFilterExtensions(java.lang.String appFilterExtensions) {
         this.appFilterExtensions = appFilterExtensions;
@@ -566,7 +626,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * A comma-separated list of MIME types for open with filtering. All apps within the given app
        * query scope which can open any of the given MIME types will be included in the response. If
-       * appFilterExtensions are provided as well, the result is a union of the two resulting app
+       * `appFilterExtensions` are provided as well, the result is a union of the two resulting app
        * lists.
        */
       @com.google.api.client.util.Key
@@ -574,7 +634,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /** A comma-separated list of MIME types for open with filtering. All apps within the given app query
      scope which can open any of the given MIME types will be included in the response. If
-     appFilterExtensions are provided as well, the result is a union of the two resulting app lists.
+     `appFilterExtensions` are provided as well, the result is a union of the two resulting app lists.
        */
       public java.lang.String getAppFilterMimeTypes() {
         return appFilterMimeTypes;
@@ -583,7 +643,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * A comma-separated list of MIME types for open with filtering. All apps within the given app
        * query scope which can open any of the given MIME types will be included in the response. If
-       * appFilterExtensions are provided as well, the result is a union of the two resulting app
+       * `appFilterExtensions` are provided as well, the result is a union of the two resulting app
        * lists.
        */
       public List setAppFilterMimeTypes(java.lang.String appFilterMimeTypes) {
@@ -643,7 +703,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Changes {
 
     /**
-     * Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
+     * Deprecated: Use `changes.getStartPageToken` and `changes.list` to retrieve recent changes.
      *
      * Create a request for the method "changes.get".
      *
@@ -664,7 +724,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "changes/{changeId}";
 
       /**
-       * Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
+       * Deprecated: Use `changes.getStartPageToken` and `changes.list` to retrieve recent changes.
        *
        * Create a request for the method "changes.get".
        *
@@ -692,8 +752,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -722,8 +797,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the change. */
@@ -742,17 +822,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The shared drive from which the change is returned. */
+      /** The shared drive from which the change will be returned. */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which the change is returned.
+      /** The shared drive from which the change will be returned.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
-      /** The shared drive from which the change is returned. */
+      /** The shared drive from which the change will be returned. */
       public Get setDriveId(java.lang.String driveId) {
         this.driveId = driveId;
         return this;
@@ -801,17 +881,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Get setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -834,7 +914,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -844,17 +924,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** Deprecated use driveId instead.
+      /** Deprecated: Use `driveId` instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       public Get setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -913,8 +993,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public GetStartPageToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GetStartPageToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetStartPageToken setAccessToken(java.lang.String accessToken) {
+        return (GetStartPageToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetStartPageToken setAlt(java.lang.String alt) {
         return (GetStartPageToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GetStartPageToken setCallback(java.lang.String callback) {
+        return (GetStartPageToken) super.setCallback(callback);
       }
 
       @Override
@@ -943,19 +1038,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GetStartPageToken setUserIp(java.lang.String userIp) {
-        return (GetStartPageToken) super.setUserIp(userIp);
+      public GetStartPageToken setUploadType(java.lang.String uploadType) {
+        return (GetStartPageToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetStartPageToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetStartPageToken) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
        * The ID of the shared drive for which the starting pageToken for listing future changes from
-       * that shared drive is returned.
+       * that shared drive will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
       /** The ID of the shared drive for which the starting pageToken for listing future changes from that
-     shared drive is returned.
+     shared drive will be returned.
        */
       public java.lang.String getDriveId() {
         return driveId;
@@ -963,7 +1063,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The ID of the shared drive for which the starting pageToken for listing future changes from
-       * that shared drive is returned.
+       * that shared drive will be returned.
        */
       public GetStartPageToken setDriveId(java.lang.String driveId) {
         this.driveId = driveId;
@@ -1013,17 +1113,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public GetStartPageToken setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -1046,7 +1146,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -1056,17 +1156,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** Deprecated use driveId instead.
+      /** Deprecated: Use `driveId` instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       public GetStartPageToken setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -1124,8 +1224,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1154,26 +1269,31 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * The shared drive from which changes are returned. If specified the change IDs will be
+       * The shared drive from which changes will be returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which changes are returned. If specified the change IDs will be reflective of
-     the shared drive; use the combined drive ID and change ID as an identifier.
+      /** The shared drive from which changes will be returned. If specified the change IDs will be
+     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
       /**
-       * The shared drive from which changes are returned. If specified the change IDs will be
+       * The shared drive from which changes will be returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public List setDriveId(java.lang.String driveId) {
@@ -1331,19 +1451,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public List setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -1351,13 +1471,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -1365,7 +1485,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -1376,14 +1496,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive are omitted from the result.
+       * not been added to My Drive will be omitted from the result.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSubscribed;
 
       /** Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive are omitted from the result. [default: true]
+     My Drive will be omitted from the result. [default: true]
        */
       public java.lang.Boolean getIncludeSubscribed() {
         return includeSubscribed;
@@ -1392,7 +1512,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive are omitted from the result.
+       * not been added to My Drive will be omitted from the result.
        */
       public List setIncludeSubscribed(java.lang.Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
@@ -1418,7 +1538,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * <p>
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive are omitted from the result.
+     My Drive will be omitted from the result.
        * </p>
        */
       public boolean isIncludeSubscribed() {
@@ -1428,17 +1548,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeSubscribed;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       public List setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -1461,7 +1581,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use includeItemsFromAllDrives instead.
+       * Deprecated: Use `includeItemsFromAllDrives` instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -1489,14 +1609,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response or to the response from the
+       * the value of `nextPageToken` from the previous response or to the response from the
        * getStartPageToken method.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response or to the response from the getStartPageToken method.
+     of `nextPageToken` from the previous response or to the response from the getStartPageToken method.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -1504,7 +1624,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response or to the response from the
+       * the value of `nextPageToken` from the previous response or to the response from the
        * getStartPageToken method.
        */
       public List setPageToken(java.lang.String pageToken) {
@@ -1513,39 +1633,39 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder'
-       * and 'photos'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder`
+       * and `photos`.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder' and
-     'photos'.
+      /** A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder` and
+     `photos`.
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder'
-       * and 'photos'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder`
+       * and `photos`.
        */
       public List setSpaces(java.lang.String spaces) {
         this.spaces = spaces;
         return this;
       }
 
-      /** Deprecated - use pageToken instead. */
+      /** Deprecated: Use `pageToken` instead. */
       @com.google.api.client.util.Key
       private java.lang.Long startChangeId;
 
-      /** Deprecated - use pageToken instead.
+      /** Deprecated: Use `pageToken` instead.
        */
       public java.lang.Long getStartChangeId() {
         return startChangeId;
       }
 
-      /** Deprecated - use pageToken instead. */
+      /** Deprecated: Use `pageToken` instead. */
       public List setStartChangeId(java.lang.Long startChangeId) {
         this.startChangeId = startChangeId;
         return this;
@@ -1594,17 +1714,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -1627,7 +1747,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -1637,17 +1757,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** Deprecated use driveId instead.
+      /** Deprecated: Use `driveId` instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       public List setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -1697,8 +1817,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Watch set$Xgafv(java.lang.String $Xgafv) {
+        return (Watch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Watch setAccessToken(java.lang.String accessToken) {
+        return (Watch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Watch setAlt(java.lang.String alt) {
         return (Watch) super.setAlt(alt);
+      }
+
+      @Override
+      public Watch setCallback(java.lang.String callback) {
+        return (Watch) super.setCallback(callback);
       }
 
       @Override
@@ -1727,26 +1862,31 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Watch setUserIp(java.lang.String userIp) {
-        return (Watch) super.setUserIp(userIp);
+      public Watch setUploadType(java.lang.String uploadType) {
+        return (Watch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Watch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Watch) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * The shared drive from which changes are returned. If specified the change IDs will be
+       * The shared drive from which changes will be returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       @com.google.api.client.util.Key
       private java.lang.String driveId;
 
-      /** The shared drive from which changes are returned. If specified the change IDs will be reflective of
-     the shared drive; use the combined drive ID and change ID as an identifier.
+      /** The shared drive from which changes will be returned. If specified the change IDs will be
+     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public java.lang.String getDriveId() {
         return driveId;
       }
 
       /**
-       * The shared drive from which changes are returned. If specified the change IDs will be
+       * The shared drive from which changes will be returned. If specified the change IDs will be
        * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
        */
       public Watch setDriveId(java.lang.String driveId) {
@@ -1904,19 +2044,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Watch setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -1924,13 +2064,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -1938,7 +2078,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Watch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -1949,14 +2089,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive are omitted from the result.
+       * not been added to My Drive will be omitted from the result.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSubscribed;
 
       /** Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive are omitted from the result. [default: true]
+     My Drive will be omitted from the result. [default: true]
        */
       public java.lang.Boolean getIncludeSubscribed() {
         return includeSubscribed;
@@ -1965,7 +2105,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false,
        * changes to files such as those in the Application Data folder or shared files which have
-       * not been added to My Drive are omitted from the result.
+       * not been added to My Drive will be omitted from the result.
        */
       public Watch setIncludeSubscribed(java.lang.Boolean includeSubscribed) {
         this.includeSubscribed = includeSubscribed;
@@ -1991,7 +2131,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * <p>
        * Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes
      to files such as those in the Application Data folder or shared files which have not been added to
-     My Drive are omitted from the result.
+     My Drive will be omitted from the result.
        * </p>
        */
       public boolean isIncludeSubscribed() {
@@ -2001,17 +2141,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeSubscribed;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       public Watch setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -2034,7 +2174,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use includeItemsFromAllDrives instead.
+       * Deprecated: Use `includeItemsFromAllDrives` instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -2062,14 +2202,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response or to the response from the
+       * the value of `nextPageToken` from the previous response or to the response from the
        * getStartPageToken method.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response or to the response from the getStartPageToken method.
+     of `nextPageToken` from the previous response or to the response from the getStartPageToken method.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -2077,7 +2217,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response or to the response from the
+       * the value of `nextPageToken` from the previous response or to the response from the
        * getStartPageToken method.
        */
       public Watch setPageToken(java.lang.String pageToken) {
@@ -2086,39 +2226,39 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder'
-       * and 'photos'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder`
+       * and `photos`.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder' and
-     'photos'.
+      /** A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder` and
+     `photos`.
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder'
-       * and 'photos'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, `appDataFolder`
+       * and `photos`.
        */
       public Watch setSpaces(java.lang.String spaces) {
         this.spaces = spaces;
         return this;
       }
 
-      /** Deprecated - use pageToken instead. */
+      /** Deprecated: Use `pageToken` instead. */
       @com.google.api.client.util.Key
       private java.lang.Long startChangeId;
 
-      /** Deprecated - use pageToken instead.
+      /** Deprecated: Use `pageToken` instead.
        */
       public java.lang.Long getStartChangeId() {
         return startChangeId;
       }
 
-      /** Deprecated - use pageToken instead. */
+      /** Deprecated: Use `pageToken` instead. */
       public Watch setStartChangeId(java.lang.Long startChangeId) {
         this.startChangeId = startChangeId;
         return this;
@@ -2167,17 +2307,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Watch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -2200,7 +2340,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -2210,17 +2350,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** Deprecated use driveId instead.
+      /** Deprecated: Use `driveId` instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       public Watch setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -2255,7 +2395,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Channels {
 
     /**
-     * Stop watching resources through this channel
+     * Stops watching resources through this channel.
      *
      * Create a request for the method "channels.stop".
      *
@@ -2276,7 +2416,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "channels/stop";
 
       /**
-       * Stop watching resources through this channel
+       * Stops watching resources through this channel.
        *
        * Create a request for the method "channels.stop".
        *
@@ -2293,8 +2433,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Stop set$Xgafv(java.lang.String $Xgafv) {
+        return (Stop) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Stop setAccessToken(java.lang.String accessToken) {
+        return (Stop) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Stop setAlt(java.lang.String alt) {
         return (Stop) super.setAlt(alt);
+      }
+
+      @Override
+      public Stop setCallback(java.lang.String callback) {
+        return (Stop) super.setCallback(callback);
       }
 
       @Override
@@ -2323,8 +2478,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Stop setUserIp(java.lang.String userIp) {
-        return (Stop) super.setUserIp(userIp);
+      public Stop setUploadType(java.lang.String uploadType) {
+        return (Stop) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Stop) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -2398,8 +2558,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -2428,8 +2603,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the folder. */
@@ -2465,22 +2645,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is
+       * placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root. [default: false]
+      /** Deprecated: If an item is not in a shared drive and its last parent is removed, the item is placed
+     under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is
+       * placed under its owner's root.
        */
       public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -2504,8 +2684,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is placed
+     under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -2573,8 +2753,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2603,8 +2798,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the folder. */
@@ -2688,8 +2888,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -2718,8 +2933,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the folder. */
@@ -2739,12 +2959,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+      /** Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
      [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -2752,7 +2973,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -2776,7 +2998,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -2829,17 +3051,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Insert setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -2862,7 +3084,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -2927,8 +3149,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2957,8 +3194,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the folder. */
@@ -2994,19 +3236,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder',
-       * 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency',
-       * 'sharedWithMeDate', 'starred', and 'title'. Each key sorts ascending by default, but may be
-       * reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedDate desc,title.
+       * A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`,
+       * `lastViewedByMeDate`, `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`,
+       * `sharedWithMeDate`, `starred`, and `title`. Each key sorts ascending by default, but may be
+       * reversed with the `desc` modifier. Example usage: ?orderBy=folder,modifiedDate desc,title.
        * Please note that there is a current limitation for users with approximately one million
        * files in which the requested sort order is ignored.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder', 'lastViewedByMeDate',
-     'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency', 'sharedWithMeDate', 'starred', and
-     'title'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example
+      /** A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`, `lastViewedByMeDate`,
+     `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`, `sharedWithMeDate`, `starred`, and
+     `title`. Each key sorts ascending by default, but may be reversed with the `desc` modifier. Example
      usage: ?orderBy=folder,modifiedDate desc,title. Please note that there is a current limitation for
      users with approximately one million files in which the requested sort order is ignored.
        */
@@ -3015,10 +3257,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder',
-       * 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency',
-       * 'sharedWithMeDate', 'starred', and 'title'. Each key sorts ascending by default, but may be
-       * reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedDate desc,title.
+       * A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`,
+       * `lastViewedByMeDate`, `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`,
+       * `sharedWithMeDate`, `starred`, and `title`. Each key sorts ascending by default, but may be
+       * reversed with the `desc` modifier. Example usage: ?orderBy=folder,modifiedDate desc,title.
        * Please note that there is a current limitation for users with approximately one million
        * files in which the requested sort order is ignored.
        */
@@ -3130,8 +3372,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -3160,8 +3417,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3254,8 +3516,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3284,8 +3561,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3419,8 +3701,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -3449,8 +3746,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3524,8 +3826,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3554,8 +3871,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3740,8 +4062,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -3770,8 +4107,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3858,8 +4200,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3888,8 +4245,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -3994,8 +4356,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -4024,8 +4401,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the shared drive. */
@@ -4046,13 +4428,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether any items inside the shared drive should also be deleted. This option is only
-       * supported when useDomainAdminAccess is also set to true.
+       * supported when `useDomainAdminAccess` is also set to `true`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean allowItemDeletion;
 
       /** Whether any items inside the shared drive should also be deleted. This option is only supported
-     when useDomainAdminAccess is also set to true. [default: false]
+     when `useDomainAdminAccess` is also set to `true`. [default: false]
        */
       public java.lang.Boolean getAllowItemDeletion() {
         return allowItemDeletion;
@@ -4060,7 +4442,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether any items inside the shared drive should also be deleted. This option is only
-       * supported when useDomainAdminAccess is also set to true.
+       * supported when `useDomainAdminAccess` is also set to `true`.
        */
       public Delete setAllowItemDeletion(java.lang.Boolean allowItemDeletion) {
         this.allowItemDeletion = allowItemDeletion;
@@ -4085,7 +4467,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether any items inside the shared drive should also be deleted. This option is only supported
-     when useDomainAdminAccess is also set to true.
+     when `useDomainAdminAccess` is also set to `true`.
        * </p>
        */
       public boolean isAllowItemDeletion() {
@@ -4204,8 +4586,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4234,8 +4631,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the shared drive. */
@@ -4353,8 +4755,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Hide set$Xgafv(java.lang.String $Xgafv) {
+        return (Hide) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Hide setAccessToken(java.lang.String accessToken) {
+        return (Hide) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Hide setAlt(java.lang.String alt) {
         return (Hide) super.setAlt(alt);
+      }
+
+      @Override
+      public Hide setCallback(java.lang.String callback) {
+        return (Hide) super.setCallback(callback);
       }
 
       @Override
@@ -4383,8 +4800,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Hide setUserIp(java.lang.String userIp) {
-        return (Hide) super.setUserIp(userIp);
+      public Hide setUploadType(java.lang.String uploadType) {
+        return (Hide) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Hide setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Hide) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the shared drive. */
@@ -4416,10 +4838,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     *        of a shared drive. A repeated request by the same user and with the same request ID will
-     *        avoid creating duplicates by attempting to create the same shared drive. If the shared
-     *        drive already exists a 409 error will be returned.
+     * @param requestId Required. An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+     *        creation of a shared drive. A repeated request by the same user and with the same request
+     *        ID will avoid creating duplicates by attempting to create the same shared drive. If the
+     *        shared drive already exists a 409 error will be returned.
      * @param content the {@link com.google.api.services.drive.model.Drive}
      * @return the request
      */
@@ -4443,10 +4865,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     *        of a shared drive. A repeated request by the same user and with the same request ID will
-     *        avoid creating duplicates by attempting to create the same shared drive. If the shared
-     *        drive already exists a 409 error will be returned.
+       * @param requestId Required. An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+     *        creation of a shared drive. A repeated request by the same user and with the same request
+     *        ID will avoid creating duplicates by attempting to create the same shared drive. If the
+     *        shared drive already exists a 409 error will be returned.
        * @param content the {@link com.google.api.services.drive.model.Drive}
        * @since 1.13
        */
@@ -4458,8 +4880,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -4488,33 +4925,38 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
-       * creation of a shared drive. A repeated request by the same user and with the same request
-       * ID will avoid creating duplicates by attempting to create the same shared drive. If the
-       * shared drive already exists a 409 error will be returned.
+       * Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+       * idempotent creation of a shared drive. A repeated request by the same user and with the
+       * same request ID will avoid creating duplicates by attempting to create the same shared
+       * drive. If the shared drive already exists a 409 error will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     of a shared drive. A repeated request by the same user and with the same request ID will avoid
-     creating duplicates by attempting to create the same shared drive. If the shared drive already
-     exists a 409 error will be returned.
+      /** Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+     idempotent creation of a shared drive. A repeated request by the same user and with the same
+     request ID will avoid creating duplicates by attempting to create the same shared drive. If the
+     shared drive already exists a 409 error will be returned.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
-       * creation of a shared drive. A repeated request by the same user and with the same request
-       * ID will avoid creating duplicates by attempting to create the same shared drive. If the
-       * shared drive already exists a 409 error will be returned.
+       * Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+       * idempotent creation of a shared drive. A repeated request by the same user and with the
+       * same request ID will avoid creating duplicates by attempting to create the same shared
+       * drive. If the shared drive already exists a 409 error will be returned.
        */
       public Insert setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -4527,7 +4969,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the user's shared drives.
+     * Lists the user's shared drives. This method accepts the `q` parameter, which is a search query
+     * combining one or more search terms. For more information, see the [Search for shared
+     * drives](/drive/api/guides/search-shareddrives) guide.
      *
      * Create a request for the method "drives.list".
      *
@@ -4547,7 +4991,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives";
 
       /**
-       * Lists the user's shared drives.
+       * Lists the user's shared drives. This method accepts the `q` parameter, which is a search query
+       * combining one or more search terms. For more information, see the [Search for shared
+       * drives](/drive/api/guides/search-shareddrives) guide.
        *
        * Create a request for the method "drives.list".
        *
@@ -4573,8 +5019,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4603,8 +5064,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Maximum number of shared drives to return per page. */
@@ -4751,8 +5217,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Unhide set$Xgafv(java.lang.String $Xgafv) {
+        return (Unhide) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unhide setAccessToken(java.lang.String accessToken) {
+        return (Unhide) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Unhide setAlt(java.lang.String alt) {
         return (Unhide) super.setAlt(alt);
+      }
+
+      @Override
+      public Unhide setCallback(java.lang.String callback) {
+        return (Unhide) super.setCallback(callback);
       }
 
       @Override
@@ -4781,8 +5262,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Unhide setUserIp(java.lang.String userIp) {
-        return (Unhide) super.setUserIp(userIp);
+      public Unhide setUploadType(java.lang.String uploadType) {
+        return (Unhide) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unhide setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unhide) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the shared drive. */
@@ -4848,8 +5334,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4878,8 +5379,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the shared drive. */
@@ -4981,7 +5487,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Files {
 
     /**
-     * Creates a copy of the specified file. Folders cannot be copied.
+     * Creates a copy of the specified file.
      *
      * Create a request for the method "files.copy".
      *
@@ -5003,7 +5509,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/copy";
 
       /**
-       * Creates a copy of the specified file. Folders cannot be copied.
+       * Creates a copy of the specified file.
        *
        * Create a request for the method "files.copy".
        *
@@ -5022,8 +5528,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Copy set$Xgafv(java.lang.String $Xgafv) {
+        return (Copy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Copy setAccessToken(java.lang.String accessToken) {
+        return (Copy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Copy setAlt(java.lang.String alt) {
         return (Copy) super.setAlt(alt);
+      }
+
+      @Override
+      public Copy setCallback(java.lang.String callback) {
+        return (Copy) super.setCallback(callback);
       }
 
       @Override
@@ -5052,8 +5573,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Copy setUserIp(java.lang.String userIp) {
-        return (Copy) super.setUserIp(userIp);
+      public Copy setUploadType(java.lang.String uploadType) {
+        return (Copy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Copy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Copy) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to copy. */
@@ -5116,13 +5642,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts
+       * Deprecated: Copying files into multiple folders is no longer supported. Use shortcuts
        * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts instead.
+      /** Deprecated: Copying files into multiple folders is no longer supported. Use shortcuts instead.
      [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -5130,7 +5656,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts
+       * Deprecated: Copying files into multiple folders is no longer supported. Use shortcuts
        * instead.
        */
       public Copy setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
@@ -5155,7 +5681,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Copying files into multiple folders is no longer supported. Use shortcuts instead.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -5166,19 +5692,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Copy setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -5186,13 +5712,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -5200,7 +5726,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Copy setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -5251,17 +5777,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return ocr;
       }
 
-      /** If ocr is true, hints at the language to use. Valid values are BCP 47 codes. */
+      /** If `ocr` is true, hints at the language to use. Valid values are BCP 47 codes. */
       @com.google.api.client.util.Key
       private java.lang.String ocrLanguage;
 
-      /** If ocr is true, hints at the language to use. Valid values are BCP 47 codes.
+      /** If `ocr` is true, hints at the language to use. Valid values are BCP 47 codes.
        */
       public java.lang.String getOcrLanguage() {
         return ocrLanguage;
       }
 
-      /** If ocr is true, hints at the language to use. Valid values are BCP 47 codes. */
+      /** If `ocr` is true, hints at the language to use. Valid values are BCP 47 codes. */
       public Copy setOcrLanguage(java.lang.String ocrLanguage) {
         this.ocrLanguage = ocrLanguage;
         return this;
@@ -5361,17 +5887,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Copy setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -5394,7 +5920,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -5506,8 +6032,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -5536,8 +6077,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to delete. */
@@ -5557,22 +6103,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item
+       * itself is not, the item is placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root. [default: false]
+      /** Deprecated: If an item is not in a shared drive and its last parent is deleted but the item itself
+     is not, the item is placed under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item
+       * itself is not, the item is placed under its owner's root.
        */
       public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -5596,8 +6142,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item itself
+     is not, the item is placed under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -5650,17 +6196,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Delete setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -5683,7 +6229,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -5699,7 +6245,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Permanently deletes all trashed files of a user or shared drive.
+     * Permanently deletes all of the user's trashed files.
      *
      * Create a request for the method "files.emptyTrash".
      *
@@ -5719,7 +6265,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/trash";
 
       /**
-       * Permanently deletes all trashed files of a user or shared drive.
+       * Permanently deletes all of the user's trashed files.
        *
        * Create a request for the method "files.emptyTrash".
        *
@@ -5736,8 +6282,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public EmptyTrash set$Xgafv(java.lang.String $Xgafv) {
+        return (EmptyTrash) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EmptyTrash setAccessToken(java.lang.String accessToken) {
+        return (EmptyTrash) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public EmptyTrash setAlt(java.lang.String alt) {
         return (EmptyTrash) super.setAlt(alt);
+      }
+
+      @Override
+      public EmptyTrash setCallback(java.lang.String callback) {
+        return (EmptyTrash) super.setCallback(callback);
       }
 
       @Override
@@ -5766,8 +6327,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public EmptyTrash setUserIp(java.lang.String userIp) {
-        return (EmptyTrash) super.setUserIp(userIp);
+      public EmptyTrash setUploadType(java.lang.String uploadType) {
+        return (EmptyTrash) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EmptyTrash setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EmptyTrash) super.setUploadProtocol(uploadProtocol);
       }
 
       /** If set, empties the trash of the provided shared drive. */
@@ -5787,22 +6353,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item
+       * itself is not, the item is placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root. [default: false]
+      /** Deprecated: If an item is not in a shared drive and its last parent is deleted but the item itself
+     is not, the item is placed under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item
+       * itself is not, the item is placed under its owner's root.
        */
       public EmptyTrash setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -5826,8 +6392,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is deleted but the item itself
+     is not, the item is placed under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -5852,7 +6418,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Export#execute()} method to invoke the remote operation.
      *
      * @param fileId The ID of the file.
-     * @param mimeType The MIME type of the format requested for this export.
+     * @param mimeType Required. The MIME type of the format requested for this export.
      * @return the request
      */
     public Export export(java.lang.String fileId, java.lang.String mimeType) throws java.io.IOException {
@@ -5877,7 +6443,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param fileId The ID of the file.
-       * @param mimeType The MIME type of the format requested for this export.
+       * @param mimeType Required. The MIME type of the format requested for this export.
        * @since 1.13
        */
       protected Export(java.lang.String fileId, java.lang.String mimeType) {
@@ -5903,6 +6469,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
       public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
         return super.executeUsingHead();
       }
@@ -5913,8 +6487,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Export set$Xgafv(java.lang.String $Xgafv) {
+        return (Export) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Export setAccessToken(java.lang.String accessToken) {
+        return (Export) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Export setAlt(java.lang.String alt) {
         return (Export) super.setAlt(alt);
+      }
+
+      @Override
+      public Export setCallback(java.lang.String callback) {
+        return (Export) super.setCallback(callback);
       }
 
       @Override
@@ -5943,8 +6532,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Export setUserIp(java.lang.String userIp) {
-        return (Export) super.setUserIp(userIp);
+      public Export setUploadType(java.lang.String uploadType) {
+        return (Export) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Export setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Export) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -5963,17 +6557,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The MIME type of the format requested for this export. */
+      /** Required. The MIME type of the format requested for this export. */
       @com.google.api.client.util.Key
       private java.lang.String mimeType;
 
-      /** The MIME type of the format requested for this export.
+      /** Required. The MIME type of the format requested for this export.
        */
       public java.lang.String getMimeType() {
         return mimeType;
       }
 
-      /** The MIME type of the format requested for this export. */
+      /** Required. The MIME type of the format requested for this export. */
       public Export setMimeType(java.lang.String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -6032,8 +6626,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public GenerateIds set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateIds) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateIds setAccessToken(java.lang.String accessToken) {
+        return (GenerateIds) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GenerateIds setAlt(java.lang.String alt) {
         return (GenerateIds) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateIds setCallback(java.lang.String callback) {
+        return (GenerateIds) super.setCallback(callback);
       }
 
       @Override
@@ -6062,8 +6671,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GenerateIds setUserIp(java.lang.String userIp) {
-        return (GenerateIds) super.setUserIp(userIp);
+      public GenerateIds setUploadType(java.lang.String uploadType) {
+        return (GenerateIds) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateIds setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateIds) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Maximum number of IDs to return. */
@@ -6083,22 +6697,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The space in which the IDs can be used to create new files. Supported values are 'drive'
-       * and 'appDataFolder'. (Default: 'drive')
+       * The space in which the IDs can be used to create new files. Supported values are `drive`
+       * and `appDataFolder`. (Default: `drive`)
        */
       @com.google.api.client.util.Key
       private java.lang.String space;
 
-      /** The space in which the IDs can be used to create new files. Supported values are 'drive' and
-     'appDataFolder'. (Default: 'drive') [default: drive]
+      /** The space in which the IDs can be used to create new files. Supported values are `drive` and
+     `appDataFolder`. (Default: `drive`) [default: drive]
        */
       public java.lang.String getSpace() {
         return space;
       }
 
       /**
-       * The space in which the IDs can be used to create new files. Supported values are 'drive'
-       * and 'appDataFolder'. (Default: 'drive')
+       * The space in which the IDs can be used to create new files. Supported values are `drive`
+       * and `appDataFolder`. (Default: `drive`)
        */
       public GenerateIds setSpace(java.lang.String space) {
         this.space = space;
@@ -6106,24 +6720,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The type of items which the IDs can be used for. Supported values are 'files' and
-       * 'shortcuts'. Note that 'shortcuts' are only supported in the drive 'space'. (Default:
-       * 'files')
+       * The type of items which the IDs can be used for. Supported values are `files` and
+       * `shortcuts`. Note that `shortcuts` are only supported in the `drive` `space`. (Default:
+       * `files`)
        */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
-      /** The type of items which the IDs can be used for. Supported values are 'files' and 'shortcuts'. Note
-     that 'shortcuts' are only supported in the drive 'space'. (Default: 'files') [default: files]
+      /** The type of items which the IDs can be used for. Supported values are `files` and `shortcuts`. Note
+     that `shortcuts` are only supported in the `drive` `space`. (Default: `files`) [default: files]
        */
       public java.lang.String getType() {
         return type;
       }
 
       /**
-       * The type of items which the IDs can be used for. Supported values are 'files' and
-       * 'shortcuts'. Note that 'shortcuts' are only supported in the drive 'space'. (Default:
-       * 'files')
+       * The type of items which the IDs can be used for. Supported values are `files` and
+       * `shortcuts`. Note that `shortcuts` are only supported in the `drive` `space`. (Default:
+       * `files`)
        */
       public GenerateIds setType(java.lang.String type) {
         this.type = type;
@@ -6136,7 +6750,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a file's metadata or content by ID.
+     * Gets a file's metadata or content by ID. If you provide the URL parameter `alt=media`, then the
+     * response includes the file contents in the response body. Downloading content with `alt=media`
+     * only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use
+     * [`files.export`](/drive/api/reference/rest/v2/files/export) instead. For more information, see
+     * [Download & export files](/drive/api/guides/manage-downloads).
      *
      * Create a request for the method "files.get".
      *
@@ -6157,7 +6775,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}";
 
       /**
-       * Gets a file's metadata or content by ID.
+       * Gets a file's metadata or content by ID. If you provide the URL parameter `alt=media`, then the
+       * response includes the file contents in the response body. Downloading content with `alt=media`
+       * only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use
+       * [`files.export`](/drive/api/reference/rest/v2/files/export) instead. For more information, see
+       * [Download & export files](/drive/api/guides/manage-downloads).
        *
        * Create a request for the method "files.get".
        *
@@ -6209,8 +6831,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -6239,8 +6876,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file in question. */
@@ -6310,19 +6952,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Get setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -6330,13 +6972,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -6344,7 +6986,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Get setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -6352,17 +6994,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** This parameter is deprecated and has no function.
+      /** Deprecated: This parameter has no function.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       public Get setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;
@@ -6431,17 +7073,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Get setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -6464,7 +7106,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -6475,22 +7117,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated: Use files.update with modifiedDateBehavior=noChange, updateViewedDate=true and
-       * an empty request body.
+       * Deprecated: Use `files.update` with `modifiedDateBehavior=noChange, updateViewedDate=true`
+       * and an empty request body.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean updateViewedDate;
 
-      /** Deprecated: Use files.update with modifiedDateBehavior=noChange, updateViewedDate=true and an empty
-     request body. [default: false]
+      /** Deprecated: Use `files.update` with `modifiedDateBehavior=noChange, updateViewedDate=true` and an
+     empty request body. [default: false]
        */
       public java.lang.Boolean getUpdateViewedDate() {
         return updateViewedDate;
       }
 
       /**
-       * Deprecated: Use files.update with modifiedDateBehavior=noChange, updateViewedDate=true and
-       * an empty request body.
+       * Deprecated: Use `files.update` with `modifiedDateBehavior=noChange, updateViewedDate=true`
+       * and an empty request body.
        */
       public Get setUpdateViewedDate(java.lang.Boolean updateViewedDate) {
         this.updateViewedDate = updateViewedDate;
@@ -6514,8 +7156,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated: Use files.update with modifiedDateBehavior=noChange, updateViewedDate=true and an empty
-     request body.
+       * Deprecated: Use `files.update` with `modifiedDateBehavior=noChange, updateViewedDate=true` and an
+     empty request body.
        * </p>
        */
       public boolean isUpdateViewedDate() {
@@ -6531,7 +7173,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Insert a new file.
+     * Inserts a new file. This method supports an upload* URI and accepts uploaded media with the
+     * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
+     * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only used
+     * to indicate that any valid MIME type can be uploaded. For more information on uploading files,
+     * see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+     * `files.insert` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
+     * specify a file extension in the `title` property when inserting files with the API. For example,
+     * an operation to insert a JPEG file should specify something like `"title": "cat.jpg"` in the
+     * metadata. Subsequent `GET` requests include the read-only `fileExtension` property populated with
+     * the extension originally specified in the `title` property. When a Google Drive user requests to
+     * download a file, or when the file is downloaded through the sync client, Drive builds a full
+     * filename (with extension) based on the title. In cases where the extension is missing, Drive
+     * attempts to determine the extension based on the file's MIME type.
      *
      * Create a request for the method "files.insert".
      *
@@ -6548,7 +7202,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
 
     /**
-     * Insert a new file.
+     * Inserts a new file. This method supports an upload* URI and accepts uploaded media with the
+     * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
+     * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only used
+     * to indicate that any valid MIME type can be uploaded. For more information on uploading files,
+     * see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+     * `files.insert` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
+     * specify a file extension in the `title` property when inserting files with the API. For example,
+     * an operation to insert a JPEG file should specify something like `"title": "cat.jpg"` in the
+     * metadata. Subsequent `GET` requests include the read-only `fileExtension` property populated with
+     * the extension originally specified in the `title` property. When a Google Drive user requests to
+     * download a file, or when the file is downloaded through the sync client, Drive builds a full
+     * filename (with extension) based on the title. In cases where the extension is missing, Drive
+     * attempts to determine the extension based on the file's MIME type.
      *
      * Create a request for the method "files.insert".
      *
@@ -6576,7 +7242,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files";
 
       /**
-       * Insert a new file.
+       * Inserts a new file. This method supports an upload* URI and accepts uploaded media with the
+       * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
+       * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only
+       * used to indicate that any valid MIME type can be uploaded. For more information on uploading
+       * files, see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+       * `files.insert` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
+       * specify a file extension in the `title` property when inserting files with the API. For
+       * example, an operation to insert a JPEG file should specify something like `"title": "cat.jpg"`
+       * in the metadata. Subsequent `GET` requests include the read-only `fileExtension` property
+       * populated with the extension originally specified in the `title` property. When a Google Drive
+       * user requests to download a file, or when the file is downloaded through the sync client, Drive
+       * builds a full filename (with extension) based on the title. In cases where the extension is
+       * missing, Drive attempts to determine the extension based on the file's MIME type.
        *
        * Create a request for the method "files.insert".
        *
@@ -6593,7 +7271,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Insert a new file.
+       * Inserts a new file. This method supports an upload* URI and accepts uploaded media with the
+       * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
+       * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only
+       * used to indicate that any valid MIME type can be uploaded. For more information on uploading
+       * files, see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+       * `files.insert` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
+       * specify a file extension in the `title` property when inserting files with the API. For
+       * example, an operation to insert a JPEG file should specify something like `"title": "cat.jpg"`
+       * in the metadata. Subsequent `GET` requests include the read-only `fileExtension` property
+       * populated with the extension originally specified in the `title` property. When a Google Drive
+       * user requests to download a file, or when the file is downloaded through the sync client, Drive
+       * builds a full filename (with extension) based on the title. In cases where the extension is
+       * missing, Drive attempts to determine the extension based on the file's MIME type.
        *
        * Create a request for the method "files.insert".
        *
@@ -6617,8 +7307,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -6647,8 +7352,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Whether to convert this file to the corresponding Docs Editors format. */
@@ -6694,17 +7404,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return convert;
       }
 
-      /** Deprecated. Creating files in multiple folders is no longer supported. */
+      /** Deprecated: Creating files in multiple folders is no longer supported. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Creating files in multiple folders is no longer supported. [default: false]
+      /** Deprecated: Creating files in multiple folders is no longer supported. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
-      /** Deprecated. Creating files in multiple folders is no longer supported. */
+      /** Deprecated: Creating files in multiple folders is no longer supported. */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -6727,7 +7437,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Creating files in multiple folders is no longer supported.
+       * Deprecated: Creating files in multiple folders is no longer supported.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -6738,19 +7448,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Insert setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -6758,13 +7468,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -6772,7 +7482,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Insert setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -6933,17 +7643,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Insert setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -6966,7 +7676,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -7074,7 +7784,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the user's files.
+     * Lists the user's files. This method accepts the `q` parameter, which is a search query combining
+     * one or more search terms. For more information, see the [Search for files &
+     * folders](/drive/api/guides/search-files) guide. *Note:* This method returns *all* files by
+     * default, including trashed files. If you don't want trashed files to appear in the list, use the
+     * `trashed=false` query parameter to remove trashed files from the results.
      *
      * Create a request for the method "files.list".
      *
@@ -7094,7 +7808,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files";
 
       /**
-       * Lists the user's files.
+       * Lists the user's files. This method accepts the `q` parameter, which is a search query
+       * combining one or more search terms. For more information, see the [Search for files &
+       * folders](/drive/api/guides/search-files) guide. *Note:* This method returns *all* files by
+       * default, including trashed files. If you don't want trashed files to appear in the list, use
+       * the `trashed=false` query parameter to remove trashed files from the results.
        *
        * Create a request for the method "files.list".
        *
@@ -7120,8 +7838,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -7150,36 +7883,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
-       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
-       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
-       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
-       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
+       * Bodies of items (files/documents) to which the query applies. Supported bodies are
+       * `default`, `domain`, `drive` and `allDrives`. Prefer `default` or `drive` to `allDrives`
+       * for efficiency.
        */
       @com.google.api.client.util.Key
       private java.lang.String corpora;
 
-      /** Groupings of files to which the query applies. Supported groupings are: 'user' (files created by,
-     opened by, or shared directly with the user), 'drive' (files in the specified shared drive as
-     indicated by the 'driveId'), 'domain' (files shared to the user's domain), and 'allDrives' (A
-     combination of 'user' and 'drive' for all drives where the user is a member). When able, use 'user'
-     or 'drive', instead of 'allDrives', for efficiency.
+      /** Bodies of items (files/documents) to which the query applies. Supported bodies are `default`,
+     `domain`, `drive` and `allDrives`. Prefer `default` or `drive` to `allDrives` for efficiency.
        */
       public java.lang.String getCorpora() {
         return corpora;
       }
 
       /**
-       * Groupings of files to which the query applies. Supported groupings are: 'user' (files
-       * created by, opened by, or shared directly with the user), 'drive' (files in the specified
-       * shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain),
-       * and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a
-       * member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
+       * Bodies of items (files/documents) to which the query applies. Supported bodies are
+       * `default`, `domain`, `drive` and `allDrives`. Prefer `default` or `drive` to `allDrives`
+       * for efficiency.
        */
       public List setCorpora(java.lang.String corpora) {
         this.corpora = corpora;
@@ -7187,20 +7918,20 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The body of items (files/documents) to which the query applies. Deprecated: use 'corpora'
+       * Deprecated: The body of items (files/documents) to which the query applies. Use `corpora`
        * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.String corpus;
 
-      /** The body of items (files/documents) to which the query applies. Deprecated: use 'corpora' instead.
+      /** Deprecated: The body of items (files/documents) to which the query applies. Use `corpora` instead.
        */
       public java.lang.String getCorpus() {
         return corpus;
       }
 
       /**
-       * The body of items (files/documents) to which the query applies. Deprecated: use 'corpora'
+       * Deprecated: The body of items (files/documents) to which the query applies. Use `corpora`
        * instead.
        */
       public List setCorpus(java.lang.String corpus) {
@@ -7268,19 +7999,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public List setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -7288,13 +8019,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -7302,7 +8033,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -7310,17 +8041,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Deprecated use includeItemsFromAllDrives instead. */
+      /** Deprecated: Use `includeItemsFromAllDrives` instead. */
       public List setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -7343,7 +8074,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use includeItemsFromAllDrives instead.
+       * Deprecated: Use `includeItemsFromAllDrives` instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -7377,20 +8108,20 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder',
-       * 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency',
-       * 'sharedWithMeDate', 'starred', 'title', and 'title_natural'. Each key sorts ascending by
-       * default, but may be reversed with the 'desc' modifier. Example usage:
+       * A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`,
+       * `lastViewedByMeDate`, `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`,
+       * `sharedWithMeDate`, `starred`, `title`, and `title_natural`. Each key sorts ascending by
+       * default, but may be reversed with the `desc` modifier. Example usage:
        * ?orderBy=folder,modifiedDate desc,title. Please note that there is a current limitation for
        * users with approximately one million files in which the requested sort order is ignored.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder', 'lastViewedByMeDate',
-     'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency', 'sharedWithMeDate', 'starred',
-     'title', and 'title_natural'. Each key sorts ascending by default, but may be reversed with the
-     'desc' modifier. Example usage: ?orderBy=folder,modifiedDate desc,title. Please note that there is
+      /** A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`, `lastViewedByMeDate`,
+     `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`, `sharedWithMeDate`, `starred`,
+     `title`, and `title_natural`. Each key sorts ascending by default, but may be reversed with the
+     `desc` modifier. Example usage: ?orderBy=folder,modifiedDate desc,title. Please note that there is
      a current limitation for users with approximately one million files in which the requested sort
      order is ignored.
        */
@@ -7399,10 +8130,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder',
-       * 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency',
-       * 'sharedWithMeDate', 'starred', 'title', and 'title_natural'. Each key sorts ascending by
-       * default, but may be reversed with the 'desc' modifier. Example usage:
+       * A comma-separated list of sort keys. Valid keys are `createdDate`, `folder`,
+       * `lastViewedByMeDate`, `modifiedByMeDate`, `modifiedDate`, `quotaBytesUsed`, `recency`,
+       * `sharedWithMeDate`, `starred`, `title`, and `title_natural`. Each key sorts ascending by
+       * default, but may be reversed with the `desc` modifier. Example usage:
        * ?orderBy=folder,modifiedDate desc,title. Please note that there is a current limitation for
        * users with approximately one million files in which the requested sort order is ignored.
        */
@@ -7427,17 +8158,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** This parameter is deprecated and has no function.
+      /** Deprecated: This parameter has no function.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       public List setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;
@@ -7460,21 +8191,21 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive' and
-       * 'appDataFolder'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, and
+       * `appDataFolder`.
        */
       @com.google.api.client.util.Key
       private java.lang.String spaces;
 
-      /** A comma-separated list of spaces to query. Supported values are 'drive' and 'appDataFolder'.
+      /** A comma-separated list of spaces to query. Supported values are `drive`, and `appDataFolder`.
        */
       public java.lang.String getSpaces() {
         return spaces;
       }
 
       /**
-       * A comma-separated list of spaces to query. Supported values are 'drive' and
-       * 'appDataFolder'.
+       * A comma-separated list of spaces to query. Supported values are `drive`, and
+       * `appDataFolder`.
        */
       public List setSpaces(java.lang.String spaces) {
         this.spaces = spaces;
@@ -7524,17 +8255,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -7557,7 +8288,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -7567,17 +8298,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** Deprecated use driveId instead.
+      /** Deprecated: Use `driveId` instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** Deprecated use driveId instead. */
+      /** Deprecated: Use `driveId` instead. */
       public List setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -7596,7 +8327,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link ListLabels#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file.
+     * @param fileId The ID for the file or shared drive.
      * @return the request
      */
     public ListLabels listLabels(java.lang.String fileId) throws java.io.IOException {
@@ -7620,7 +8351,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * ListLabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file.
+       * @param fileId The ID for the file or shared drive.
        * @since 1.13
        */
       protected ListLabels(java.lang.String fileId) {
@@ -7639,8 +8370,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ListLabels set$Xgafv(java.lang.String $Xgafv) {
+        return (ListLabels) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListLabels setAccessToken(java.lang.String accessToken) {
+        return (ListLabels) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListLabels setAlt(java.lang.String alt) {
         return (ListLabels) super.setAlt(alt);
+      }
+
+      @Override
+      public ListLabels setCallback(java.lang.String callback) {
+        return (ListLabels) super.setCallback(callback);
       }
 
       @Override
@@ -7669,38 +8415,43 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ListLabels setUserIp(java.lang.String userIp) {
-        return (ListLabels) super.setUserIp(userIp);
+      public ListLabels setUploadType(java.lang.String uploadType) {
+        return (ListLabels) super.setUploadType(uploadType);
       }
 
-      /** The ID of the file. */
+      @Override
+      public ListLabels setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListLabels) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID for the file or shared drive. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file.
+      /** The ID for the file or shared drive.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file. */
+      /** The ID for the file or shared drive. */
       public ListLabels setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
-      /** The maximum number of labels to return per page. When not set, this defaults to 100. */
+      /** The maximum number of labels to return per page. When not set, defaults to 100. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** The maximum number of labels to return per page. When not set, this defaults to 100. [default: 100]
+      /** The maximum number of labels to return per page. When not set, defaults to 100. [default: 100]
      [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of labels to return per page. When not set, this defaults to 100. */
+      /** The maximum number of labels to return per page. When not set, defaults to 100. */
       public ListLabels setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -7708,13 +8459,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response.
+     of `nextPageToken` from the previous response.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -7722,7 +8473,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       public ListLabels setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -7735,14 +8486,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Modifies the set of labels on a file.
+     * Modifies the set of labels applied to a file. Returns a list of the labels that were added or
+     * modified.
      *
      * Create a request for the method "files.modifyLabels".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link ModifyLabels#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file for which the labels are modified.
+     * @param fileId The ID of the file to which the labels belong.
      * @param content the {@link com.google.api.services.drive.model.ModifyLabelsRequest}
      * @return the request
      */
@@ -7757,7 +8509,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/modifyLabels";
 
       /**
-       * Modifies the set of labels on a file.
+       * Modifies the set of labels applied to a file. Returns a list of the labels that were added or
+       * modified.
        *
        * Create a request for the method "files.modifyLabels".
        *
@@ -7767,7 +8520,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * ModifyLabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file for which the labels are modified.
+       * @param fileId The ID of the file to which the labels belong.
        * @param content the {@link com.google.api.services.drive.model.ModifyLabelsRequest}
        * @since 1.13
        */
@@ -7777,8 +8530,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public ModifyLabels set$Xgafv(java.lang.String $Xgafv) {
+        return (ModifyLabels) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ModifyLabels setAccessToken(java.lang.String accessToken) {
+        return (ModifyLabels) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ModifyLabels setAlt(java.lang.String alt) {
         return (ModifyLabels) super.setAlt(alt);
+      }
+
+      @Override
+      public ModifyLabels setCallback(java.lang.String callback) {
+        return (ModifyLabels) super.setCallback(callback);
       }
 
       @Override
@@ -7807,21 +8575,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public ModifyLabels setUserIp(java.lang.String userIp) {
-        return (ModifyLabels) super.setUserIp(userIp);
+      public ModifyLabels setUploadType(java.lang.String uploadType) {
+        return (ModifyLabels) super.setUploadType(uploadType);
       }
 
-      /** The ID of the file for which the labels are modified. */
+      @Override
+      public ModifyLabels setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ModifyLabels) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the file to which the labels belong. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file for which the labels are modified.
+      /** The ID of the file to which the labels belong.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file for which the labels are modified. */
+      /** The ID of the file to which the labels belong. */
       public ModifyLabels setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
@@ -7878,8 +8651,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -7908,8 +8696,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to update. */
@@ -7944,17 +8737,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       @com.google.api.client.util.Key
       private java.lang.Boolean convert;
 
-      /** This parameter is deprecated and has no function. [default: false]
+      /** Deprecated: This parameter has no function. [default: false]
        */
       public java.lang.Boolean getConvert() {
         return convert;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       public Patch setConvert(java.lang.Boolean convert) {
         this.convert = convert;
         return this;
@@ -7977,7 +8770,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * This parameter is deprecated and has no function.
+       * Deprecated: This parameter has no function.
        * </p>
        */
       public boolean isConvert() {
@@ -7988,12 +8781,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+      /** Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
      [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -8001,7 +8795,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       public Patch setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -8025,7 +8820,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -8036,19 +8831,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Patch setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -8056,13 +8851,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -8070,7 +8865,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Patch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -8079,19 +8874,21 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+       * Determines the behavior in which `modifiedDate` is updated. This overrides
+       * `setModifiedDate`.
        */
       @com.google.api.client.util.Key
       private java.lang.String modifiedDateBehavior;
 
-      /** Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+      /** Determines the behavior in which `modifiedDate` is updated. This overrides `setModifiedDate`.
        */
       public java.lang.String getModifiedDateBehavior() {
         return modifiedDateBehavior;
       }
 
       /**
-       * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+       * Determines the behavior in which `modifiedDate` is updated. This overrides
+       * `setModifiedDate`.
        */
       public Patch setModifiedDateBehavior(java.lang.String modifiedDateBehavior) {
         this.modifiedDateBehavior = modifiedDateBehavior;
@@ -8103,8 +8900,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center. Note that this field is
-       * ignored if there is no payload in the request.
+       * details on how revisions are retained, see the [Drive Help
+       * Center](https://support.google.com/drive/answer/2409045). Note that this field is ignored
+       * if there is no payload in the request.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean newRevision;
@@ -8113,8 +8911,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
-     payload in the request. [default: true]
+     revisions are retained, see the [Drive Help
+     Center](https://support.google.com/drive/answer/2409045). Note that this field is ignored if there
+     is no payload in the request. [default: true]
        */
       public java.lang.Boolean getNewRevision() {
         return newRevision;
@@ -8125,8 +8924,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center. Note that this field is
-       * ignored if there is no payload in the request.
+       * details on how revisions are retained, see the [Drive Help
+       * Center](https://support.google.com/drive/answer/2409045). Note that this field is ignored
+       * if there is no payload in the request.
        */
       public Patch setNewRevision(java.lang.Boolean newRevision) {
         this.newRevision = newRevision;
@@ -8154,8 +8954,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
-     payload in the request.
+     revisions are retained, see the [Drive Help
+     Center](https://support.google.com/drive/answer/2409045). Note that this field is ignored if there
+     is no payload in the request.
        * </p>
        */
       public boolean isNewRevision() {
@@ -8293,17 +9094,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the modified date using the value supplied in the request body. Setting this
-       * field to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent
-       * to modifiedDateBehavior=now. To prevent any changes to the modified date set
-       * modifiedDateBehavior=noChange.
+       * field to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is
+       * equivalent to `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+       * `modifiedDateBehavior=noChange`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean setModifiedDate;
 
       /** Whether to set the modified date using the value supplied in the request body. Setting this field
-     to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent to
-     modifiedDateBehavior=now. To prevent any changes to the modified date set
-     modifiedDateBehavior=noChange. [default: false]
+     to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is equivalent to
+     `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+     `modifiedDateBehavior=noChange`. [default: false]
        */
       public java.lang.Boolean getSetModifiedDate() {
         return setModifiedDate;
@@ -8311,9 +9112,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the modified date using the value supplied in the request body. Setting this
-       * field to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent
-       * to modifiedDateBehavior=now. To prevent any changes to the modified date set
-       * modifiedDateBehavior=noChange.
+       * field to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is
+       * equivalent to `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+       * `modifiedDateBehavior=noChange`.
        */
       public Patch setSetModifiedDate(java.lang.Boolean setModifiedDate) {
         this.setModifiedDate = setModifiedDate;
@@ -8338,9 +9139,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the modified date using the value supplied in the request body. Setting this field
-     to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent to
-     modifiedDateBehavior=now. To prevent any changes to the modified date set
-     modifiedDateBehavior=noChange.
+     to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is equivalent to
+     `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+     `modifiedDateBehavior=noChange`.
        * </p>
        */
       public boolean isSetModifiedDate() {
@@ -8393,17 +9194,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Patch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -8426,7 +9227,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -8599,8 +9400,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Touch set$Xgafv(java.lang.String $Xgafv) {
+        return (Touch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Touch setAccessToken(java.lang.String accessToken) {
+        return (Touch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Touch setAlt(java.lang.String alt) {
         return (Touch) super.setAlt(alt);
+      }
+
+      @Override
+      public Touch setCallback(java.lang.String callback) {
+        return (Touch) super.setCallback(callback);
       }
 
       @Override
@@ -8629,8 +9445,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Touch setUserIp(java.lang.String userIp) {
-        return (Touch) super.setUserIp(userIp);
+      public Touch setUploadType(java.lang.String uploadType) {
+        return (Touch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Touch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Touch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to update. */
@@ -8650,19 +9471,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Touch setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -8670,13 +9491,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -8684,7 +9505,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Touch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -8735,17 +9556,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Touch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -8768,7 +9589,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -8785,10 +9606,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-     * fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The trashed
-     * item is excluded from all files.list responses returned for any user who does not own the file.
-     * However, all users with access to the file can see the trashed item metadata in an API response.
-     * All users with access can copy, download, export, and share the file.
+     * `fileOrganizer` on the parent for shared drive files. Only the owner may trash a file. The
+     * trashed item is excluded from all `files.list` responses returned for any user who doesn't own
+     * the file. However, all users with access to the file can see the trashed item metadata in an API
+     * response. All users with access can copy, download, export, and share the file. *Note:* Files
+     * moved to the trash still appear by default in results from the `files.list` method. To
+     * permanently remove a file, use `files.delete`.
      *
      * Create a request for the method "files.trash".
      *
@@ -8810,10 +9633,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-       * fileOrganizer on the parent for shared drive files. Only the owner may trash a file. The
-       * trashed item is excluded from all files.list responses returned for any user who does not own
+       * `fileOrganizer` on the parent for shared drive files. Only the owner may trash a file. The
+       * trashed item is excluded from all `files.list` responses returned for any user who doesn't own
        * the file. However, all users with access to the file can see the trashed item metadata in an
-       * API response. All users with access can copy, download, export, and share the file.
+       * API response. All users with access can copy, download, export, and share the file. *Note:*
+       * Files moved to the trash still appear by default in results from the `files.list` method. To
+       * permanently remove a file, use `files.delete`.
        *
        * Create a request for the method "files.trash".
        *
@@ -8831,8 +9656,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Trash set$Xgafv(java.lang.String $Xgafv) {
+        return (Trash) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Trash setAccessToken(java.lang.String accessToken) {
+        return (Trash) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Trash setAlt(java.lang.String alt) {
         return (Trash) super.setAlt(alt);
+      }
+
+      @Override
+      public Trash setCallback(java.lang.String callback) {
+        return (Trash) super.setCallback(callback);
       }
 
       @Override
@@ -8861,8 +9701,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Trash setUserIp(java.lang.String userIp) {
-        return (Trash) super.setUserIp(userIp);
+      public Trash setUploadType(java.lang.String uploadType) {
+        return (Trash) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Trash setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Trash) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to trash. */
@@ -8882,19 +9727,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Trash setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -8902,13 +9747,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -8916,7 +9761,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Trash setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -8967,17 +9812,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Trash setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -9000,7 +9845,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -9017,7 +9862,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Restores a file from the trash. The currently authenticated user must own the file or be at least
-     * a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
+     * a `fileOrganizer` on the parent for shared drive files. Only the owner may untrash a file.
      *
      * Create a request for the method "files.untrash".
      *
@@ -9039,7 +9884,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Restores a file from the trash. The currently authenticated user must own the file or be at
-       * least a fileOrganizer on the parent for shared drive files. Only the owner may untrash a file.
+       * least a `fileOrganizer` on the parent for shared drive files. Only the owner may untrash a
+       * file.
        *
        * Create a request for the method "files.untrash".
        *
@@ -9058,8 +9904,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Untrash set$Xgafv(java.lang.String $Xgafv) {
+        return (Untrash) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Untrash setAccessToken(java.lang.String accessToken) {
+        return (Untrash) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Untrash setAlt(java.lang.String alt) {
         return (Untrash) super.setAlt(alt);
+      }
+
+      @Override
+      public Untrash setCallback(java.lang.String callback) {
+        return (Untrash) super.setCallback(callback);
       }
 
       @Override
@@ -9088,8 +9949,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Untrash setUserIp(java.lang.String userIp) {
-        return (Untrash) super.setUserIp(userIp);
+      public Untrash setUploadType(java.lang.String uploadType) {
+        return (Untrash) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Untrash setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Untrash) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to untrash. */
@@ -9109,19 +9975,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Untrash setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -9129,13 +9995,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -9143,7 +10009,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Untrash setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -9194,17 +10060,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Untrash setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -9227,7 +10093,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -9245,7 +10111,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Updates a file's metadata and/or content. When calling this method, only populate fields in the
      * request that you want to modify. When updating fields, some fields might be changed
-     * automatically, such as modifiedDate. This method supports patch semantics.
+     * automatically, such as `modifiedDate`. This method supports patch semantics. This method supports
+     * an upload* URI and accepts uploaded media with the following characteristics: - *Maximum file
+     * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
+     * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
+     * uploaded. For more information on uploading files, see [Upload file data](/drive/api/guides
+     * /manage-uploads).
      *
      * Create a request for the method "files.update".
      *
@@ -9265,7 +10136,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Updates a file's metadata and/or content. When calling this method, only populate fields in the
      * request that you want to modify. When updating fields, some fields might be changed
-     * automatically, such as modifiedDate. This method supports patch semantics.
+     * automatically, such as `modifiedDate`. This method supports patch semantics. This method supports
+     * an upload* URI and accepts uploaded media with the following characteristics: - *Maximum file
+     * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
+     * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
+     * uploaded. For more information on uploading files, see [Upload file data](/drive/api/guides
+     * /manage-uploads).
      *
      * Create a request for the method "files.update".
      *
@@ -9295,7 +10171,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Updates a file's metadata and/or content. When calling this method, only populate fields in the
        * request that you want to modify. When updating fields, some fields might be changed
-       * automatically, such as modifiedDate. This method supports patch semantics.
+       * automatically, such as `modifiedDate`. This method supports patch semantics. This method
+       * supports an upload* URI and accepts uploaded media with the following characteristics: -
+       * *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME
+       * type, rather than the literal `*` value. The literal `*` is only used to indicate that any
+       * valid MIME type can be uploaded. For more information on uploading files, see [Upload file
+       * data](/drive/api/guides/manage-uploads).
        *
        * Create a request for the method "files.update".
        *
@@ -9316,7 +10197,12 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Updates a file's metadata and/or content. When calling this method, only populate fields in the
        * request that you want to modify. When updating fields, some fields might be changed
-       * automatically, such as modifiedDate. This method supports patch semantics.
+       * automatically, such as `modifiedDate`. This method supports patch semantics. This method
+       * supports an upload* URI and accepts uploaded media with the following characteristics: -
+       * *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME
+       * type, rather than the literal `*` value. The literal `*` is only used to indicate that any
+       * valid MIME type can be uploaded. For more information on uploading files, see [Upload file
+       * data](/drive/api/guides/manage-uploads).
        *
        * Create a request for the method "files.update".
        *
@@ -9341,8 +10227,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -9371,8 +10272,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file to update. */
@@ -9407,17 +10313,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       @com.google.api.client.util.Key
       private java.lang.Boolean convert;
 
-      /** This parameter is deprecated and has no function. [default: false]
+      /** Deprecated: This parameter has no function. [default: false]
        */
       public java.lang.Boolean getConvert() {
         return convert;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       public Update setConvert(java.lang.Boolean convert) {
         this.convert = convert;
         return this;
@@ -9440,7 +10346,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * This parameter is deprecated and has no function.
+       * Deprecated: This parameter has no function.
        * </p>
        */
       public boolean isConvert() {
@@ -9451,12 +10357,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+      /** Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
      [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -9464,7 +10371,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       public Update setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -9488,7 +10396,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -9499,19 +10407,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Update setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -9519,13 +10427,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -9533,7 +10441,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Update setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -9542,19 +10450,21 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+       * Determines the behavior in which `modifiedDate` is updated. This overrides
+       * `setModifiedDate`.
        */
       @com.google.api.client.util.Key
       private java.lang.String modifiedDateBehavior;
 
-      /** Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+      /** Determines the behavior in which `modifiedDate` is updated. This overrides `setModifiedDate`.
        */
       public java.lang.String getModifiedDateBehavior() {
         return modifiedDateBehavior;
       }
 
       /**
-       * Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+       * Determines the behavior in which `modifiedDate` is updated. This overrides
+       * `setModifiedDate`.
        */
       public Update setModifiedDateBehavior(java.lang.String modifiedDateBehavior) {
         this.modifiedDateBehavior = modifiedDateBehavior;
@@ -9566,8 +10476,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center. Note that this field is
-       * ignored if there is no payload in the request.
+       * details on how revisions are retained, see the [Drive Help
+       * Center](https://support.google.com/drive/answer/2409045).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean newRevision;
@@ -9576,8 +10486,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
-     payload in the request. [default: true]
+     revisions are retained, see the [Drive Help
+     Center](https://support.google.com/drive/answer/2409045). [default: true]
        */
       public java.lang.Boolean getNewRevision() {
         return newRevision;
@@ -9588,8 +10498,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * head revision is replaced. If true or not set, a new blob is created as head revision, and
        * previous unpinned revisions are preserved for a short period of time. Pinned revisions are
        * stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For
-       * details on how revisions are retained, see the Drive Help Center. Note that this field is
-       * ignored if there is no payload in the request.
+       * details on how revisions are retained, see the [Drive Help
+       * Center](https://support.google.com/drive/answer/2409045).
        */
       public Update setNewRevision(java.lang.Boolean newRevision) {
         this.newRevision = newRevision;
@@ -9617,8 +10527,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      revision is replaced. If true or not set, a new blob is created as head revision, and previous
      unpinned revisions are preserved for a short period of time. Pinned revisions are stored
      indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how
-     revisions are retained, see the Drive Help Center. Note that this field is ignored if there is no
-     payload in the request.
+     revisions are retained, see the [Drive Help
+     Center](https://support.google.com/drive/answer/2409045).
        * </p>
        */
       public boolean isNewRevision() {
@@ -9687,24 +10597,18 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /**
-       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
-       * that this field is ignored if there is no payload in the request.
-       */
+      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
       @com.google.api.client.util.Key
       private java.lang.Boolean pinned;
 
-      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
-     field is ignored if there is no payload in the request. [default: false]
+      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. [default:
+     false]
        */
       public java.lang.Boolean getPinned() {
         return pinned;
       }
 
-      /**
-       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note
-       * that this field is ignored if there is no payload in the request.
-       */
+      /** Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. */
       public Update setPinned(java.lang.Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -9727,8 +10631,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions. Note that this
-     field is ignored if there is no payload in the request.
+       * Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.
        * </p>
        */
       public boolean isPinned() {
@@ -9756,17 +10659,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the modified date using the value supplied in the request body. Setting this
-       * field to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent
-       * to modifiedDateBehavior=now. To prevent any changes to the modified date set
-       * modifiedDateBehavior=noChange.
+       * field to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is
+       * equivalent to `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+       * `modifiedDateBehavior=noChange`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean setModifiedDate;
 
       /** Whether to set the modified date using the value supplied in the request body. Setting this field
-     to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent to
-     modifiedDateBehavior=now. To prevent any changes to the modified date set
-     modifiedDateBehavior=noChange. [default: false]
+     to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is equivalent to
+     `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+     `modifiedDateBehavior=noChange`. [default: false]
        */
       public java.lang.Boolean getSetModifiedDate() {
         return setModifiedDate;
@@ -9774,9 +10677,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the modified date using the value supplied in the request body. Setting this
-       * field to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent
-       * to modifiedDateBehavior=now. To prevent any changes to the modified date set
-       * modifiedDateBehavior=noChange.
+       * field to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is
+       * equivalent to `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+       * `modifiedDateBehavior=noChange`.
        */
       public Update setSetModifiedDate(java.lang.Boolean setModifiedDate) {
         this.setModifiedDate = setModifiedDate;
@@ -9801,9 +10704,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the modified date using the value supplied in the request body. Setting this field
-     to true is equivalent to modifiedDateBehavior=fromBodyOrNow, and false is equivalent to
-     modifiedDateBehavior=now. To prevent any changes to the modified date set
-     modifiedDateBehavior=noChange.
+     to `true` is equivalent to `modifiedDateBehavior=fromBodyOrNow`, and `false` is equivalent to
+     `modifiedDateBehavior=now`. To prevent any changes to the modified date set
+     `modifiedDateBehavior=noChange`.
        * </p>
        */
       public boolean isSetModifiedDate() {
@@ -9856,17 +10759,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Update setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -9889,7 +10792,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -10023,7 +10926,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Subscribe to changes on a file.
+     * Subscribes to changes to a file.
      *
      * Create a request for the method "files.watch".
      *
@@ -10045,7 +10948,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/watch";
 
       /**
-       * Subscribe to changes on a file.
+       * Subscribes to changes to a file.
        *
        * Create a request for the method "files.watch".
        *
@@ -10061,35 +10964,26 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       protected Watch(java.lang.String fileId, com.google.api.services.drive.model.Channel content) {
         super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Channel.class);
         this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
-        initializeMediaDownload();
       }
 
       @Override
-      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
-        super.executeMediaAndDownloadTo(outputStream);
+      public Watch set$Xgafv(java.lang.String $Xgafv) {
+        return (Watch) super.set$Xgafv($Xgafv);
       }
 
       @Override
-      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
-        return super.executeMediaAsInputStream();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
-        return super.executeMedia();
-      }
-
-      @Override
-      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
-        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
-            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
-        return new com.google.api.client.http.GenericUrl(
-            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      public Watch setAccessToken(java.lang.String accessToken) {
+        return (Watch) super.setAccessToken(accessToken);
       }
 
       @Override
       public Watch setAlt(java.lang.String alt) {
         return (Watch) super.setAlt(alt);
+      }
+
+      @Override
+      public Watch setCallback(java.lang.String callback) {
+        return (Watch) super.setCallback(callback);
       }
 
       @Override
@@ -10118,8 +11012,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Watch setUserIp(java.lang.String userIp) {
-        return (Watch) super.setUserIp(userIp);
+      public Watch setUploadType(java.lang.String uploadType) {
+        return (Watch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Watch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Watch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file in question. */
@@ -10189,19 +11088,19 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       @com.google.api.client.util.Key
       private java.lang.String includeLabels;
 
-      /** A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+      /** A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public java.lang.String getIncludeLabels() {
         return includeLabels;
       }
 
       /**
-       * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+       * A comma-separated list of IDs of labels to include in the `labelInfo` part of the response.
        */
       public Watch setIncludeLabels(java.lang.String includeLabels) {
         this.includeLabels = includeLabels;
@@ -10209,13 +11108,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -10223,7 +11122,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public Watch setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -10231,17 +11130,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** This parameter is deprecated and has no function.
+      /** Deprecated: This parameter has no function.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** This parameter is deprecated and has no function. */
+      /** Deprecated: This parameter has no function. */
       public Watch setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;
@@ -10310,17 +11209,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Watch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -10343,7 +11242,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -10475,8 +11374,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -10505,8 +11419,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -10542,22 +11461,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is
+       * placed under its owner's root.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root. [default: false]
+      /** Deprecated: If an item is not in a shared drive and its last parent is removed, the item is placed
+     under its owner's root. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
       /**
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item
-       * itself is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is
+       * placed under its owner's root.
        */
       public Delete setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -10581,8 +11500,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself
-     is not, the item will be placed under its owner's root.
+       * Deprecated: If an item is not in a shared drive and its last parent is removed, the item is placed
+     under its owner's root.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -10650,8 +11569,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -10680,8 +11614,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -10765,8 +11704,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -10795,8 +11749,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -10816,12 +11775,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+      /** Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
      [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
@@ -10829,7 +11789,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts`
+       * instead.
        */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
@@ -10853,7 +11814,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+       * Deprecated: Adding files to multiple folders is no longer supported. Use `shortcuts` instead.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -10906,17 +11867,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Insert setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -10939,7 +11900,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -11004,8 +11965,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -11034,8 +12010,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -11083,7 +12064,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Permissions {
 
     /**
-     * Deletes a permission from a file or shared drive.
+     * Deletes a permission from a file or shared drive. **Warning:** Concurrent permissions operations
+     * on the same file are not supported; only the last update is applied.
      *
      * Create a request for the method "permissions.delete".
      *
@@ -11105,7 +12087,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Deletes a permission from a file or shared drive.
+       * Deletes a permission from a file or shared drive. **Warning:** Concurrent permissions
+       * operations on the same file are not supported; only the last update is applied.
        *
        * Create a request for the method "permissions.delete".
        *
@@ -11125,8 +12108,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -11155,8 +12153,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -11234,17 +12237,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Delete setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -11267,7 +12270,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -11390,8 +12393,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -11420,8 +12438,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -11499,17 +12522,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Get setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -11532,7 +12555,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -11653,8 +12676,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public GetIdForEmail set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIdForEmail) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIdForEmail setAccessToken(java.lang.String accessToken) {
+        return (GetIdForEmail) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetIdForEmail setAlt(java.lang.String alt) {
         return (GetIdForEmail) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIdForEmail setCallback(java.lang.String callback) {
+        return (GetIdForEmail) super.setCallback(callback);
       }
 
       @Override
@@ -11683,8 +12721,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public GetIdForEmail setUserIp(java.lang.String userIp) {
-        return (GetIdForEmail) super.setUserIp(userIp);
+      public GetIdForEmail setUploadType(java.lang.String uploadType) {
+        return (GetIdForEmail) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIdForEmail setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIdForEmail) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The email address for which to return a permission ID */
@@ -11709,7 +12752,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Inserts a permission for a file or shared drive.
+     * Inserts a permission for a file or shared drive. **Warning:** Concurrent permissions operations
+     * on the same file are not supported; only the last update is applied.
      *
      * Create a request for the method "permissions.insert".
      *
@@ -11731,7 +12775,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Inserts a permission for a file or shared drive.
+       * Inserts a permission for a file or shared drive. **Warning:** Concurrent permissions operations
+       * on the same file are not supported; only the last update is applied.
        *
        * Create a request for the method "permissions.insert".
        *
@@ -11754,8 +12799,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -11784,8 +12844,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -11820,17 +12885,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Deprecated. See moveToNewOwnersRoot for details. */
+      /** Deprecated: See `moveToNewOwnersRoot` for details. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;
 
-      /** Deprecated. See moveToNewOwnersRoot for details. [default: false]
+      /** Deprecated: See `moveToNewOwnersRoot` for details. [default: false]
        */
       public java.lang.Boolean getEnforceSingleParent() {
         return enforceSingleParent;
       }
 
-      /** Deprecated. See moveToNewOwnersRoot for details. */
+      /** Deprecated: See `moveToNewOwnersRoot` for details. */
       public Insert setEnforceSingleParent(java.lang.Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -11853,7 +12918,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated. See moveToNewOwnersRoot for details.
+       * Deprecated: See `moveToNewOwnersRoot` for details.
        * </p>
        */
       public boolean isEnforceSingleParent() {
@@ -11865,16 +12930,16 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. If set to true, the item will be moved
-       * to the new owner's My Drive root folder and all prior parents removed. If set to false,
-       * parents are not changed.
+       * is attempting to transfer the ownership of the item. If set to `true`, the item will be
+       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
+       * `false`, parents are not changed.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean moveToNewOwnersRoot;
 
       /** This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. If set to true, the item will be moved to the new
-     owner's My Drive root folder and all prior parents removed. If set to false, parents are not
+     attempting to transfer the ownership of the item. If set to `true`, the item will be moved to the
+     new owner's My Drive root folder and all prior parents removed. If set to `false`, parents are not
      changed. [default: false]
        */
       public java.lang.Boolean getMoveToNewOwnersRoot() {
@@ -11883,9 +12948,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * This parameter will only take effect if the item is not in a shared drive and the request
-       * is attempting to transfer the ownership of the item. If set to true, the item will be moved
-       * to the new owner's My Drive root folder and all prior parents removed. If set to false,
-       * parents are not changed.
+       * is attempting to transfer the ownership of the item. If set to `true`, the item will be
+       * moved to the new owner's My Drive root folder and all prior parents removed. If set to
+       * `false`, parents are not changed.
        */
       public Insert setMoveToNewOwnersRoot(java.lang.Boolean moveToNewOwnersRoot) {
         this.moveToNewOwnersRoot = moveToNewOwnersRoot;
@@ -11910,8 +12975,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * This parameter will only take effect if the item is not in a shared drive and the request is
-     attempting to transfer the ownership of the item. If set to true, the item will be moved to the new
-     owner's My Drive root folder and all prior parents removed. If set to false, parents are not
+     attempting to transfer the ownership of the item. If set to `true`, the item will be moved to the
+     new owner's My Drive root folder and all prior parents removed. If set to `false`, parents are not
      changed.
        * </p>
        */
@@ -11924,13 +12989,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to send notification emails when sharing to users or groups. This parameter is
-       * ignored and an email is sent if the role is owner.
+       * ignored and an email is sent if the `role` is `owner`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotificationEmails;
 
       /** Whether to send notification emails when sharing to users or groups. This parameter is ignored and
-     an email is sent if the role is owner. [default: true]
+     an email is sent if the `role` is `owner`. [default: true]
        */
       public java.lang.Boolean getSendNotificationEmails() {
         return sendNotificationEmails;
@@ -11938,7 +13003,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to send notification emails when sharing to users or groups. This parameter is
-       * ignored and an email is sent if the role is owner.
+       * ignored and an email is sent if the `role` is `owner`.
        */
       public Insert setSendNotificationEmails(java.lang.Boolean sendNotificationEmails) {
         this.sendNotificationEmails = sendNotificationEmails;
@@ -11963,7 +13028,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to send notification emails when sharing to users or groups. This parameter is ignored and
-     an email is sent if the role is owner.
+     an email is sent if the `role` is `owner`.
        * </p>
        */
       public boolean isSendNotificationEmails() {
@@ -12016,17 +13081,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Insert setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -12049,7 +13114,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -12169,8 +13234,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -12199,8 +13279,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -12220,13 +13305,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String includePermissionsForView;
 
-      /** Specifies which additional view's permissions to include in the response. Only 'published' is
+      /** Specifies which additional view's permissions to include in the response. Only `published` is
      supported.
        */
       public java.lang.String getIncludePermissionsForView() {
@@ -12234,7 +13319,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Specifies which additional view's permissions to include in the response. Only 'published'
+       * Specifies which additional view's permissions to include in the response. Only `published`
        * is supported.
        */
       public List setIncludePermissionsForView(java.lang.String includePermissionsForView) {
@@ -12272,13 +13357,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of 'nextPageToken' from the previous response.
+     of `nextPageToken` from the previous response.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -12286,7 +13371,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of 'nextPageToken' from the previous response.
+       * the value of `nextPageToken` from the previous response.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -12336,17 +13421,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -12369,7 +13454,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -12440,7 +13525,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a permission using patch semantics.
+     * Updates a permission using patch semantics. **Warning:** Concurrent permissions operations on the
+     * same file are not supported; only the last update is applied.
      *
      * Create a request for the method "permissions.patch".
      *
@@ -12463,7 +13549,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Updates a permission using patch semantics.
+       * Updates a permission using patch semantics. **Warning:** Concurrent permissions operations on
+       * the same file are not supported; only the last update is applied.
        *
        * Create a request for the method "permissions.patch".
        *
@@ -12484,8 +13571,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -12514,8 +13616,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -12636,17 +13743,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Patch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -12669,7 +13776,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -12680,22 +13787,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing
-       * if the specified role is not 'owner'.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing
+       * if the specified role is not `owner`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean transferOwnership;
 
-      /** Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing if the
-     specified role is not 'owner'. [default: false]
+      /** Whether changing a role to `owner` downgrades the current owners to writers. Does nothing if the
+     specified role is not `owner`. [default: false]
        */
       public java.lang.Boolean getTransferOwnership() {
         return transferOwnership;
       }
 
       /**
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing
-       * if the specified role is not 'owner'.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing
+       * if the specified role is not `owner`.
        */
       public Patch setTransferOwnership(java.lang.Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
@@ -12719,8 +13826,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing if the
-     specified role is not 'owner'.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing if the
+     specified role is not `owner`.
        * </p>
        */
       public boolean isTransferOwnership() {
@@ -12791,7 +13898,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a permission.
+     * Updates a permission. **Warning:** Concurrent permissions operations on the same file are not
+     * supported; only the last update is applied.
      *
      * Create a request for the method "permissions.update".
      *
@@ -12814,7 +13922,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Updates a permission.
+       * Updates a permission. **Warning:** Concurrent permissions operations on the same file are not
+       * supported; only the last update is applied.
        *
        * Create a request for the method "permissions.update".
        *
@@ -12835,8 +13944,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -12865,8 +13989,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file or shared drive. */
@@ -12987,17 +14116,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsAllDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Deprecated use supportsAllDrives instead. [default: false]
+      /** Deprecated: Use `supportsAllDrives` instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Deprecated use supportsAllDrives instead. */
+      /** Deprecated: Use `supportsAllDrives` instead. */
       public Update setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -13020,7 +14149,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Deprecated use supportsAllDrives instead.
+       * Deprecated: Use `supportsAllDrives` instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -13031,34 +14160,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect. File owners
-       * can only transfer ownership of files existing on My Drive. Files existing in a shared drive
-       * are owned by the organization that owns that shared drive. Ownership transfers are not
-       * supported for files and folders in shared drives. Organizers of a shared drive can move
-       * items from that shared drive into their My Drive which transfers the ownership to them.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing
+       * if the specified role is not `owner`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean transferOwnership;
 
-      /** Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect. File owners can only transfer
-     ownership of files existing on My Drive. Files existing in a shared drive are owned by the
-     organization that owns that shared drive. Ownership transfers are not supported for files and
-     folders in shared drives. Organizers of a shared drive can move items from that shared drive into
-     their My Drive which transfers the ownership to them. [default: false]
+      /** Whether changing a role to `owner` downgrades the current owners to writers. Does nothing if the
+     specified role is not `owner`. [default: false]
        */
       public java.lang.Boolean getTransferOwnership() {
         return transferOwnership;
       }
 
       /**
-       * Whether to transfer ownership to the specified user and downgrade the current owner to a
-       * writer. This parameter is required as an acknowledgement of the side effect. File owners
-       * can only transfer ownership of files existing on My Drive. Files existing in a shared drive
-       * are owned by the organization that owns that shared drive. Ownership transfers are not
-       * supported for files and folders in shared drives. Organizers of a shared drive can move
-       * items from that shared drive into their My Drive which transfers the ownership to them.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing
+       * if the specified role is not `owner`.
        */
       public Update setTransferOwnership(java.lang.Boolean transferOwnership) {
         this.transferOwnership = transferOwnership;
@@ -13082,12 +14199,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to transfer ownership to the specified user and downgrade the current owner to a writer.
-     This parameter is required as an acknowledgement of the side effect. File owners can only transfer
-     ownership of files existing on My Drive. Files existing in a shared drive are owned by the
-     organization that owns that shared drive. Ownership transfers are not supported for files and
-     folders in shared drives. Organizers of a shared drive can move items from that shared drive into
-     their My Drive which transfers the ownership to them.
+       * Whether changing a role to `owner` downgrades the current owners to writers. Does nothing if the
+     specified role is not `owner`.
        * </p>
        */
       public boolean isTransferOwnership() {
@@ -13223,8 +14336,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -13253,8 +14381,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13363,8 +14496,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -13393,8 +14541,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13494,8 +14647,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -13524,8 +14692,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13599,8 +14772,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -13629,8 +14817,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13699,8 +14892,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -13729,8 +14937,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13836,8 +15049,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -13866,8 +15094,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -13997,8 +15230,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -14027,8 +15275,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14140,8 +15393,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -14170,8 +15438,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14315,8 +15588,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -14345,8 +15633,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14439,8 +15732,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -14469,8 +15777,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14648,8 +15961,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -14678,8 +16006,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14785,8 +16118,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -14815,8 +16163,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -14942,8 +16295,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -14972,8 +16340,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -15066,8 +16439,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -15096,8 +16484,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -15187,8 +16580,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -15217,8 +16625,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the file. */
@@ -15326,8 +16739,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -15356,8 +16784,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file. */
@@ -15442,8 +16875,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -15472,8 +16920,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID for the file. */
@@ -15537,7 +16990,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Teamdrives {
 
     /**
-     * Deprecated use drives.delete instead.
+     * Deprecated: Use `drives.delete` instead.
      *
      * Create a request for the method "teamdrives.delete".
      *
@@ -15558,7 +17011,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Deprecated use drives.delete instead.
+       * Deprecated: Use `drives.delete` instead.
        *
        * Create a request for the method "teamdrives.delete".
        *
@@ -15576,8 +17029,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -15606,8 +17074,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the Team Drive */
@@ -15632,7 +17105,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deprecated use drives.get instead.
+     * Deprecated: Use `drives.get` instead.
      *
      * Create a request for the method "teamdrives.get".
      *
@@ -15653,7 +17126,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Deprecated use drives.get instead.
+       * Deprecated: Use `drives.get` instead.
        *
        * Create a request for the method "teamdrives.get".
        *
@@ -15681,8 +17154,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -15711,8 +17199,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the Team Drive */
@@ -15788,17 +17281,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deprecated use drives.insert instead.
+     * Deprecated: Use `drives.insert` instead.
      *
      * Create a request for the method "teamdrives.insert".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     *        of a Team Drive. A repeated request by the same user and with the same request ID will
-     *        avoid creating duplicates by attempting to create the same Team Drive. If the Team Drive
-     *        already exists a 409 error will be returned.
+     * @param requestId Required. An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+     *        creation of a Team Drive. A repeated request by the same user and with the same request ID
+     *        will avoid creating duplicates by attempting to create the same Team Drive. If the Team
+     *        Drive already exists a 409 error will be returned.
      * @param content the {@link com.google.api.services.drive.model.TeamDrive}
      * @return the request
      */
@@ -15813,7 +17306,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives";
 
       /**
-       * Deprecated use drives.insert instead.
+       * Deprecated: Use `drives.insert` instead.
        *
        * Create a request for the method "teamdrives.insert".
        *
@@ -15822,10 +17315,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     *        of a Team Drive. A repeated request by the same user and with the same request ID will
-     *        avoid creating duplicates by attempting to create the same Team Drive. If the Team Drive
-     *        already exists a 409 error will be returned.
+       * @param requestId Required. An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+     *        creation of a Team Drive. A repeated request by the same user and with the same request ID
+     *        will avoid creating duplicates by attempting to create the same Team Drive. If the Team
+     *        Drive already exists a 409 error will be returned.
        * @param content the {@link com.google.api.services.drive.model.TeamDrive}
        * @since 1.13
        */
@@ -15837,8 +17330,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -15867,33 +17375,38 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
-       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
-       * creation of a Team Drive. A repeated request by the same user and with the same request ID
-       * will avoid creating duplicates by attempting to create the same Team Drive. If the Team
-       * Drive already exists a 409 error will be returned.
+       * Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+       * idempotent creation of a Team Drive. A repeated request by the same user and with the same
+       * request ID will avoid creating duplicates by attempting to create the same Team Drive. If
+       * the Team Drive already exists a 409 error will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /** An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
-     of a Team Drive. A repeated request by the same user and with the same request ID will avoid
-     creating duplicates by attempting to create the same Team Drive. If the Team Drive already exists a
-     409 error will be returned.
+      /** Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+     idempotent creation of a Team Drive. A repeated request by the same user and with the same request
+     ID will avoid creating duplicates by attempting to create the same Team Drive. If the Team Drive
+     already exists a 409 error will be returned.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
       /**
-       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
-       * creation of a Team Drive. A repeated request by the same user and with the same request ID
-       * will avoid creating duplicates by attempting to create the same Team Drive. If the Team
-       * Drive already exists a 409 error will be returned.
+       * Required. An ID, such as a random UUID, which uniquely identifies this user's request for
+       * idempotent creation of a Team Drive. A repeated request by the same user and with the same
+       * request ID will avoid creating duplicates by attempting to create the same Team Drive. If
+       * the Team Drive already exists a 409 error will be returned.
        */
       public Insert setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
@@ -15906,7 +17419,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deprecated use drives.list instead.
+     * Deprecated: Use `drives.list` instead.
      *
      * Create a request for the method "teamdrives.list".
      *
@@ -15926,7 +17439,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives";
 
       /**
-       * Deprecated use drives.list instead.
+       * Deprecated: Use `drives.list` instead.
        *
        * Create a request for the method "teamdrives.list".
        *
@@ -15952,8 +17465,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -15982,8 +17510,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Maximum number of Team Drives to return. */
@@ -16091,7 +17624,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Deprecated use drives.update instead.
+     * Deprecated: Use `drives.update` instead.
      *
      * Create a request for the method "teamdrives.update".
      *
@@ -16113,7 +17646,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Deprecated use drives.update instead.
+       * Deprecated: Use `drives.update` instead.
        *
        * Create a request for the method "teamdrives.update".
        *
@@ -16132,8 +17665,23 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -16162,8 +17710,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the Team Drive */

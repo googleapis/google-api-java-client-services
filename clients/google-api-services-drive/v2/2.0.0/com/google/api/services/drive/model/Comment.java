@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A comment on a file in Google Drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,21 +31,23 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to  Add comments and replies.
+   * properties, refer to [Add comments and replies](https://developers.google.com/drive/api/v2
+   * /manage-comments).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String anchor;
 
   /**
-   * The author of the comment. The author's email address and permission ID will not be populated.
+   * Output only. The author of the comment. The author's email address and permission ID will not
+   * be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private User author;
 
   /**
-   * The ID of the comment.
+   * Output only. The ID of the comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,36 +76,36 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime createdDate;
 
   /**
-   * Whether this comment has been deleted. If a comment has been deleted the content will be
-   * cleared and this will only represent a comment that once existed.
+   * Output only. Whether this comment has been deleted. If a comment has been deleted the content
+   * will be cleared and this will only represent a comment that once existed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleted;
 
   /**
-   * The file which this comment is addressing.
+   * Output only. The file which this comment is addressing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileId;
 
   /**
-   * The title of the file which this comment is addressing.
+   * Output only. The title of the file which this comment is addressing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileTitle;
 
   /**
-   * HTML formatted content for this comment.
+   * Output only. HTML formatted content for this comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String htmlContent;
 
   /**
-   * This is always drive#comment.
+   * Output only. This is always `drive#comment`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,23 +119,23 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedDate;
 
   /**
-   * Replies to this post.
+   * Output only. Replies to this post.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CommentReply> replies;
 
   /**
-   * A link back to this comment.
+   * Output only. A link back to this comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * The status of this comment. Status can be changed by posting a reply to a comment with the
-   * desired status. - "open" - The comment is still open.  - "resolved" - The comment has been
-   * resolved by one of its replies.
+   * Output only. The status of this comment. Status can be changed by posting a reply to a comment
+   * with the desired status. * `open` - The comment is still open. * `resolved` - The comment has
+   * been resolved by one of its replies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +143,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to  Add comments and replies.
+   * properties, refer to [Add comments and replies](https://developers.google.com/drive/api/v2
+   * /manage-comments).
    * @return value or {@code null} for none
    */
   public java.lang.String getAnchor() {
@@ -150,7 +153,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to  Add comments and replies.
+   * properties, refer to [Add comments and replies](https://developers.google.com/drive/api/v2
+   * /manage-comments).
    * @param anchor anchor or {@code null} for none
    */
   public Comment setAnchor(java.lang.String anchor) {
@@ -159,7 +163,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The author of the comment. The author's email address and permission ID will not be populated.
+   * Output only. The author of the comment. The author's email address and permission ID will not
+   * be populated.
    * @return value or {@code null} for none
    */
   public User getAuthor() {
@@ -167,7 +172,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The author of the comment. The author's email address and permission ID will not be populated.
+   * Output only. The author of the comment. The author's email address and permission ID will not
+   * be populated.
    * @param author author or {@code null} for none
    */
   public Comment setAuthor(User author) {
@@ -176,7 +182,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the comment.
+   * Output only. The ID of the comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentId() {
@@ -184,7 +190,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the comment.
+   * Output only. The ID of the comment.
    * @param commentId commentId or {@code null} for none
    */
   public Comment setCommentId(java.lang.String commentId) {
@@ -246,8 +252,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this comment has been deleted. If a comment has been deleted the content will be
-   * cleared and this will only represent a comment that once existed.
+   * Output only. Whether this comment has been deleted. If a comment has been deleted the content
+   * will be cleared and this will only represent a comment that once existed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -255,8 +261,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this comment has been deleted. If a comment has been deleted the content will be
-   * cleared and this will only represent a comment that once existed.
+   * Output only. Whether this comment has been deleted. If a comment has been deleted the content
+   * will be cleared and this will only represent a comment that once existed.
    * @param deleted deleted or {@code null} for none
    */
   public Comment setDeleted(java.lang.Boolean deleted) {
@@ -265,7 +271,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file which this comment is addressing.
+   * Output only. The file which this comment is addressing.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileId() {
@@ -273,7 +279,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file which this comment is addressing.
+   * Output only. The file which this comment is addressing.
    * @param fileId fileId or {@code null} for none
    */
   public Comment setFileId(java.lang.String fileId) {
@@ -282,7 +288,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the file which this comment is addressing.
+   * Output only. The title of the file which this comment is addressing.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileTitle() {
@@ -290,7 +296,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the file which this comment is addressing.
+   * Output only. The title of the file which this comment is addressing.
    * @param fileTitle fileTitle or {@code null} for none
    */
   public Comment setFileTitle(java.lang.String fileTitle) {
@@ -299,7 +305,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTML formatted content for this comment.
+   * Output only. HTML formatted content for this comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getHtmlContent() {
@@ -307,7 +313,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTML formatted content for this comment.
+   * Output only. HTML formatted content for this comment.
    * @param htmlContent htmlContent or {@code null} for none
    */
   public Comment setHtmlContent(java.lang.String htmlContent) {
@@ -316,7 +322,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#comment.
+   * Output only. This is always `drive#comment`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -324,7 +330,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#comment.
+   * Output only. This is always `drive#comment`.
    * @param kind kind or {@code null} for none
    */
   public Comment setKind(java.lang.String kind) {
@@ -350,7 +356,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Replies to this post.
+   * Output only. Replies to this post.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentReply> getReplies() {
@@ -358,7 +364,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Replies to this post.
+   * Output only. Replies to this post.
    * @param replies replies or {@code null} for none
    */
   public Comment setReplies(java.util.List<CommentReply> replies) {
@@ -367,7 +373,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link back to this comment.
+   * Output only. A link back to this comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -375,7 +381,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link back to this comment.
+   * Output only. A link back to this comment.
    * @param selfLink selfLink or {@code null} for none
    */
   public Comment setSelfLink(java.lang.String selfLink) {
@@ -384,9 +390,9 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of this comment. Status can be changed by posting a reply to a comment with the
-   * desired status. - "open" - The comment is still open.  - "resolved" - The comment has been
-   * resolved by one of its replies.
+   * Output only. The status of this comment. Status can be changed by posting a reply to a comment
+   * with the desired status. * `open` - The comment is still open. * `resolved` - The comment has
+   * been resolved by one of its replies.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -394,9 +400,9 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of this comment. Status can be changed by posting a reply to a comment with the
-   * desired status. - "open" - The comment is still open.  - "resolved" - The comment has been
-   * resolved by one of its replies.
+   * Output only. The status of this comment. Status can be changed by posting a reply to a comment
+   * with the desired status. * `open` - The comment is still open. * `resolved` - The comment has
+   * been resolved by one of its replies.
    * @param status status or {@code null} for none
    */
   public Comment setStatus(java.lang.String status) {

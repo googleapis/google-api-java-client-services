@@ -17,10 +17,10 @@
 package com.google.api.services.drive.model;
 
 /**
- * An notification channel used to watch for resource changes.
+ * A notification channel used to watch for resource changes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -53,7 +53,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * `api#channel`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String token;
 
   /**
-   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
-   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
+   * The type of delivery mechanism used for this channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +158,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * `api#channel`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -168,7 +167,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * `api#channel`.
    * @param kind kind or {@code null} for none
    */
   public Channel setKind(java.lang.String kind) {
@@ -266,8 +265,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
-   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
+   * The type of delivery mechanism used for this channel.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -275,8 +273,7 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
-   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
+   * The type of delivery mechanism used for this channel.
    * @param type type or {@code null} for none
    */
   public Channel setType(java.lang.String type) {

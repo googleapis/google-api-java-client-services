@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A list of children of a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,7 @@ public final class ChildList extends com.google.api.client.json.GenericJson {
   private java.util.List<ChildReference> items;
 
   /**
-   * This is always drive#childList.
+   * This is always `drive#childList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class ChildList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#childList.
+   * This is always `drive#childList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -119,7 +119,7 @@ public final class ChildList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#childList.
+   * This is always `drive#childList`.
    * @param kind kind or {@code null} for none
    */
   public ChildList setKind(java.lang.String kind) {

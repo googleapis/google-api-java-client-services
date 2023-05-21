@@ -38,6 +38,13 @@ public final class PubsubLocation extends com.google.api.client.json.GenericJson
   private java.lang.Boolean dropLateData;
 
   /**
+   * If true, then this location represents dynamic topics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dynamicDestinations;
+
+  /**
    * If set, contains a pubsub label from which to extract record ids. If left empty, record
    * deduplication will be strictly best effort.
    * The value may be {@code null}.
@@ -96,6 +103,23 @@ public final class PubsubLocation extends com.google.api.client.json.GenericJson
    */
   public PubsubLocation setDropLateData(java.lang.Boolean dropLateData) {
     this.dropLateData = dropLateData;
+    return this;
+  }
+
+  /**
+   * If true, then this location represents dynamic topics.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDynamicDestinations() {
+    return dynamicDestinations;
+  }
+
+  /**
+   * If true, then this location represents dynamic topics.
+   * @param dynamicDestinations dynamicDestinations or {@code null} for none
+   */
+  public PubsubLocation setDynamicDestinations(java.lang.Boolean dynamicDestinations) {
+    this.dynamicDestinations = dynamicDestinations;
     return this;
   }
 

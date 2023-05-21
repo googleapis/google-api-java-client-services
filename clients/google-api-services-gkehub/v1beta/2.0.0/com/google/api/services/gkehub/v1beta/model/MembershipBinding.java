@@ -61,7 +61,7 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * A Workspace resource name in the format `projects/locations/scopes`.
+   * A Scope resource name in the format `projects/locations/scopes`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +163,7 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A Workspace resource name in the format `projects/locations/scopes`.
+   * A Scope resource name in the format `projects/locations/scopes`.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -171,7 +171,7 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A Workspace resource name in the format `projects/locations/scopes`.
+   * A Scope resource name in the format `projects/locations/scopes`.
    * @param scope scope or {@code null} for none
    */
   public MembershipBinding setScope(java.lang.String scope) {

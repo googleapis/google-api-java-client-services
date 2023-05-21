@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * **FleetObservability**: An empty state left as an example membership-specific Feature state.
+ * **FleetObservability**: Membership-specific Feature state for fleetobservability.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:

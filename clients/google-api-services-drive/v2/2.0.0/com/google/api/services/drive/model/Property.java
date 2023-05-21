@@ -18,12 +18,12 @@ package com.google.api.services.drive.model;
 
 /**
  * A key-value pair attached to a file that is either public or private to an application. The
- * following limits apply to file properties:   - Maximum of 100 properties total per file - Maximum
- * of 30 private properties per app - Maximum of 30 public properties - Maximum of 124 bytes size
- * limit on (key + value) string in UTF-8 encoding for a single property.
+ * following limits apply to file properties: * Maximum of 100 properties total per file * Maximum
+ * of 30 private properties per app * Maximum of 30 public properties * Maximum of 124 bytes size
+ * limit on (key + value) string in UTF-8 encoding for a single property
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -33,7 +33,7 @@ package com.google.api.services.drive.model;
 public final class Property extends com.google.api.client.json.GenericJson {
 
   /**
-   * ETag of the property.
+   * Output only. ETag of the property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,14 +47,14 @@ public final class Property extends com.google.api.client.json.GenericJson {
   private java.lang.String key;
 
   /**
-   * This is always drive#property.
+   * Output only. This is always `drive#property`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The link back to this property.
+   * Output only. The link back to this property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,17 +68,17 @@ public final class Property extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
-   * Private properties can only be retrieved using an authenticated request. An authenticated
-   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
-   * retrieve private properties.
+   * The visibility of this property. Allowed values are PRIVATE (default) and PUBLIC. Private
+   * properties can only be retrieved using an authenticated request. An authenticated request uses
+   * an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve
+   * private properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String visibility;
 
   /**
-   * ETag of the property.
+   * Output only. ETag of the property.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -86,7 +86,7 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ETag of the property.
+   * Output only. ETag of the property.
    * @param etag etag or {@code null} for none
    */
   public Property setEtag(java.lang.String etag) {
@@ -112,7 +112,7 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#property.
+   * Output only. This is always `drive#property`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -120,7 +120,7 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#property.
+   * Output only. This is always `drive#property`.
    * @param kind kind or {@code null} for none
    */
   public Property setKind(java.lang.String kind) {
@@ -129,7 +129,7 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The link back to this property.
+   * Output only. The link back to this property.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -137,7 +137,7 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The link back to this property.
+   * Output only. The link back to this property.
    * @param selfLink selfLink or {@code null} for none
    */
   public Property setSelfLink(java.lang.String selfLink) {
@@ -163,10 +163,10 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
-   * Private properties can only be retrieved using an authenticated request. An authenticated
-   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
-   * retrieve private properties.
+   * The visibility of this property. Allowed values are PRIVATE (default) and PUBLIC. Private
+   * properties can only be retrieved using an authenticated request. An authenticated request uses
+   * an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve
+   * private properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -174,10 +174,10 @@ public final class Property extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The visibility of this property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE).
-   * Private properties can only be retrieved using an authenticated request. An authenticated
-   * request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to
-   * retrieve private properties.
+   * The visibility of this property. Allowed values are PRIVATE (default) and PUBLIC. Private
+   * properties can only be retrieved using an authenticated request. An authenticated request uses
+   * an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve
+   * private properties.
    * @param visibility visibility or {@code null} for none
    */
   public Property setVisibility(java.lang.String visibility) {

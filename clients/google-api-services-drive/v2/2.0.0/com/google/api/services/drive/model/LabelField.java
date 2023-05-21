@@ -17,10 +17,10 @@
 package com.google.api.services.drive.model;
 
 /**
- * Representation of a label field.
+ * Representation of field, which is a typed key-value pair.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,42 +37,42 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   private java.util.List<com.google.api.client.util.DateTime> dateString;
 
   /**
-   * The identifier of this field.
+   * The identifier of this label field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Only present if valueType is integer.
+   * Only present if `valueType` is `integer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("integer") @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> integer__;
 
   /**
-   * This is always drive#labelField.
+   * This is always `drive#labelField`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Only present if valueType is selection.
+   * Only present if `valueType` is `selection`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> selection;
 
   /**
-   * Only present if valueType is text.
+   * Only present if `valueType` is `text`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> text;
 
   /**
-   * Only present if valueType is user.
+   * Only present if `valueType` is `user`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
 
   /**
    * The field type. While new values may be supported in the future, the following are currently
-   * allowed: - dateString  - integer  - selection  - text  - user
+   * allowed: * `dateString` * `integer` * `selection` * `text` * `user`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier of this field.
+   * The identifier of this label field.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -112,7 +112,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier of this field.
+   * The identifier of this label field.
    * @param id id or {@code null} for none
    */
   public LabelField setId(java.lang.String id) {
@@ -121,7 +121,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is integer.
+   * Only present if `valueType` is `integer`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getInteger() {
@@ -129,7 +129,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is integer.
+   * Only present if `valueType` is `integer`.
    * @param integer__ integer__ or {@code null} for none
    */
   public LabelField setInteger(java.util.List<java.lang.Long> integer__) {
@@ -138,7 +138,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#labelField.
+   * This is always `drive#labelField`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -146,7 +146,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#labelField.
+   * This is always `drive#labelField`.
    * @param kind kind or {@code null} for none
    */
   public LabelField setKind(java.lang.String kind) {
@@ -155,7 +155,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is selection.
+   * Only present if `valueType` is `selection`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSelection() {
@@ -163,7 +163,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is selection.
+   * Only present if `valueType` is `selection`
    * @param selection selection or {@code null} for none
    */
   public LabelField setSelection(java.util.List<java.lang.String> selection) {
@@ -172,7 +172,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is text.
+   * Only present if `valueType` is `text`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -180,7 +180,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is text.
+   * Only present if `valueType` is `text`.
    * @param text text or {@code null} for none
    */
   public LabelField setText(java.util.List<java.lang.String> text) {
@@ -189,7 +189,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is user.
+   * Only present if `valueType` is `user`.
    * @return value or {@code null} for none
    */
   public java.util.List<User> getUser() {
@@ -197,7 +197,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only present if valueType is user.
+   * Only present if `valueType` is `user`.
    * @param user user or {@code null} for none
    */
   public LabelField setUser(java.util.List<User> user) {
@@ -207,7 +207,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
 
   /**
    * The field type. While new values may be supported in the future, the following are currently
-   * allowed: - dateString  - integer  - selection  - text  - user
+   * allowed: * `dateString` * `integer` * `selection` * `text` * `user`
    * @return value or {@code null} for none
    */
   public java.lang.String getValueType() {
@@ -216,7 +216,7 @@ public final class LabelField extends com.google.api.client.json.GenericJson {
 
   /**
    * The field type. While new values may be supported in the future, the following are currently
-   * allowed: - dateString  - integer  - selection  - text  - user
+   * allowed: * `dateString` * `integer` * `selection` * `text` * `user`
    * @param valueType valueType or {@code null} for none
    */
   public LabelField setValueType(java.lang.String valueType) {

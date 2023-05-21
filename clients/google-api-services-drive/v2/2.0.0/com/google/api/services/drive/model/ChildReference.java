@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A reference to a folder's child.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class ChildReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * A link to the child.
+   * Output only. A link to the child.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,21 +44,21 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
-   * This is always drive#childReference.
+   * Output only. This is always `drive#childReference`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * A link to the child.
+   * Output only. A link to the child.
    * @return value or {@code null} for none
    */
   public java.lang.String getChildLink() {
@@ -66,7 +66,7 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A link to the child.
+   * Output only. A link to the child.
    * @param childLink childLink or {@code null} for none
    */
   public ChildReference setChildLink(java.lang.String childLink) {
@@ -92,7 +92,7 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is always drive#childReference.
+   * Output only. This is always `drive#childReference`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -100,7 +100,7 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is always drive#childReference.
+   * Output only. This is always `drive#childReference`.
    * @param kind kind or {@code null} for none
    */
   public ChildReference setKind(java.lang.String kind) {
@@ -109,7 +109,7 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -117,7 +117,7 @@ public final class ChildReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A link back to this reference.
+   * Output only. A link back to this reference.
    * @param selfLink selfLink or {@code null} for none
    */
   public ChildReference setSelfLink(java.lang.String selfLink) {

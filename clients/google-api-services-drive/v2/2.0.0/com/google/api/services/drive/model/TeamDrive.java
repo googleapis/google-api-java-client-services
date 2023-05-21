@@ -17,10 +17,10 @@
 package com.google.api.services.drive.model;
 
 /**
- * Deprecated: use the drive collection instead.
+ * Deprecated: Use the `drive` collection instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,8 +31,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on drive.teamdrives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
+   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this Team Drive as an RGB hex string. It can only be set on a
-   * drive.teamdrives.update request that does not set themeId.
+   * `drive.teamdrives.update` request that does not set `themeId`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * This is always drive#teamDrive
+   * This is always `drive#teamDrive`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * The organizational unit of this shared drive. This field is only populated on `drives.list`
+   * responses when the `useDomainAdminAccess` parameter is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,10 +105,10 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * teamDriveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.teamdrives.insert request, a random theme is chosen from which the background image and
+   * `teamDriveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.teamdrives.insert` request, a random theme is chosen from which the background image and
    * color are set. This is a write-only field; it can only be set on requests that don't set
-   * colorRgb or backgroundImageFile.
+   * `colorRgb` or `backgroundImageFile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on drive.teamdrives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
+   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * @return value or {@code null} for none
    */
   public BackgroundImageFile getBackgroundImageFile() {
@@ -126,8 +126,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on drive.teamdrives.update requests that don't
-   * set themeId. When specified, all fields of the backgroundImageFile must be set.
+   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
+   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    * @param backgroundImageFile backgroundImageFile or {@code null} for none
    */
   public TeamDrive setBackgroundImageFile(BackgroundImageFile backgroundImageFile) {
@@ -171,7 +171,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this Team Drive as an RGB hex string. It can only be set on a
-   * drive.teamdrives.update request that does not set themeId.
+   * `drive.teamdrives.update` request that does not set `themeId`.
    * @return value or {@code null} for none
    */
   public java.lang.String getColorRgb() {
@@ -180,7 +180,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The color of this Team Drive as an RGB hex string. It can only be set on a
-   * drive.teamdrives.update request that does not set themeId.
+   * `drive.teamdrives.update` request that does not set `themeId`.
    * @param colorRgb colorRgb or {@code null} for none
    */
   public TeamDrive setColorRgb(java.lang.String colorRgb) {
@@ -223,7 +223,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#teamDrive
+   * This is always `drive#teamDrive`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -231,7 +231,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#teamDrive
+   * This is always `drive#teamDrive`
    * @param kind kind or {@code null} for none
    */
   public TeamDrive setKind(java.lang.String kind) {
@@ -257,8 +257,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * The organizational unit of this shared drive. This field is only populated on `drives.list`
+   * responses when the `useDomainAdminAccess` parameter is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -266,8 +266,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The organizational unit of this shared drive. This field is only populated on drives.list
-   * responses when the useDomainAdminAccess parameter is set to true.
+   * The organizational unit of this shared drive. This field is only populated on `drives.list`
+   * responses when the `useDomainAdminAccess` parameter is set to `true`.
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public TeamDrive setOrgUnitId(java.lang.String orgUnitId) {
@@ -294,10 +294,10 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * teamDriveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.teamdrives.insert request, a random theme is chosen from which the background image and
+   * `teamDriveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.teamdrives.insert` request, a random theme is chosen from which the background image and
    * color are set. This is a write-only field; it can only be set on requests that don't set
-   * colorRgb or backgroundImageFile.
+   * `colorRgb` or `backgroundImageFile`.
    * @return value or {@code null} for none
    */
   public java.lang.String getThemeId() {
@@ -306,10 +306,10 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the theme from which the background image and color will be set. The set of possible
-   * teamDriveThemes can be retrieved from a drive.about.get response. When not specified on a
-   * drive.teamdrives.insert request, a random theme is chosen from which the background image and
+   * `teamDriveThemes` can be retrieved from a `drive.about.get` response. When not specified on a
+   * `drive.teamdrives.insert` request, a random theme is chosen from which the background image and
    * color are set. This is a write-only field; it can only be set on requests that don't set
-   * colorRgb or backgroundImageFile.
+   * `colorRgb` or `backgroundImageFile`.
    * @param themeId themeId or {@code null} for none
    */
   public TeamDrive setThemeId(java.lang.String themeId) {
@@ -329,8 +329,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
    * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on drive.teamdrives.update requests that don't set
-   * themeId. When specified, all fields of the backgroundImageFile must be set.
+   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
+   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
    */
   public static final class BackgroundImageFile extends com.google.api.client.json.GenericJson {
 
@@ -482,7 +482,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAddChildren;
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this Team
+     * Whether the current user can change the `copyRequiresWriterPermission` restriction of this Team
      * Drive.
      * The value may be {@code null}.
      */
@@ -490,14 +490,14 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeCopyRequiresWriterPermissionRestriction;
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this Team Drive.
+     * Whether the current user can change the `domainUsersOnly` restriction of this Team Drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canChangeDomainUsersOnlyRestriction;
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * Whether the current user can change the `sharingFoldersRequiresOrganizerPermission` restriction
      * of this Team Drive.
      * The value may be {@code null}.
      */
@@ -512,7 +512,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeTeamDriveBackground;
 
     /**
-     * Whether the current user can change the teamMembersOnly restriction of this Team Drive.
+     * Whether the current user can change the `teamMembersOnly` restriction of this Team Drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -584,7 +584,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canReadRevisions;
 
     /**
-     * Deprecated - use canDeleteChildren or canTrashChildren instead.
+     * Deprecated: Use `canDeleteChildren` or `canTrashChildren` instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -643,7 +643,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this Team
+     * Whether the current user can change the `copyRequiresWriterPermission` restriction of this Team
      * Drive.
      * @return value or {@code null} for none
      */
@@ -652,7 +652,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the copyRequiresWriterPermission restriction of this Team
+     * Whether the current user can change the `copyRequiresWriterPermission` restriction of this Team
      * Drive.
      * @param canChangeCopyRequiresWriterPermissionRestriction canChangeCopyRequiresWriterPermissionRestriction or {@code null} for none
      */
@@ -662,7 +662,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this Team Drive.
+     * Whether the current user can change the `domainUsersOnly` restriction of this Team Drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeDomainUsersOnlyRestriction() {
@@ -670,7 +670,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the domainUsersOnly restriction of this Team Drive.
+     * Whether the current user can change the `domainUsersOnly` restriction of this Team Drive.
      * @param canChangeDomainUsersOnlyRestriction canChangeDomainUsersOnlyRestriction or {@code null} for none
      */
     public Capabilities setCanChangeDomainUsersOnlyRestriction(java.lang.Boolean canChangeDomainUsersOnlyRestriction) {
@@ -679,7 +679,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * Whether the current user can change the `sharingFoldersRequiresOrganizerPermission` restriction
      * of this Team Drive.
      * @return value or {@code null} for none
      */
@@ -688,7 +688,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the sharingFoldersRequiresOrganizerPermission restriction
+     * Whether the current user can change the `sharingFoldersRequiresOrganizerPermission` restriction
      * of this Team Drive.
      * @param canChangeSharingFoldersRequiresOrganizerPermissionRestriction canChangeSharingFoldersRequiresOrganizerPermissionRestriction or {@code null} for none
      */
@@ -715,7 +715,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the teamMembersOnly restriction of this Team Drive.
+     * Whether the current user can change the `teamMembersOnly` restriction of this Team Drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeTeamMembersOnlyRestriction() {
@@ -723,7 +723,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change the teamMembersOnly restriction of this Team Drive.
+     * Whether the current user can change the `teamMembersOnly` restriction of this Team Drive.
      * @param canChangeTeamMembersOnlyRestriction canChangeTeamMembersOnlyRestriction or {@code null} for none
      */
     public Capabilities setCanChangeTeamMembersOnlyRestriction(java.lang.Boolean canChangeTeamMembersOnlyRestriction) {
@@ -889,7 +889,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use canDeleteChildren or canTrashChildren instead.
+     * Deprecated: Use `canDeleteChildren` or `canTrashChildren` instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanRemoveChildren() {
@@ -897,7 +897,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use canDeleteChildren or canTrashChildren instead.
+     * Deprecated: Use `canDeleteChildren` or `canTrashChildren` instead.
      * @param canRemoveChildren canRemoveChildren or {@code null} for none
      */
     public Capabilities setCanRemoveChildren(java.lang.Boolean canRemoveChildren) {
@@ -1016,8 +1016,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this Team Drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this Team Drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this Team Drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1066,8 +1066,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this Team Drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this Team Drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this Team Drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCopyRequiresWriterPermission() {
@@ -1076,8 +1076,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the options to copy, print, or download files inside this Team Drive, should be
-     * disabled for readers and commenters. When this restriction is set to true, it will override the
-     * similarly named field to true for any file inside this Team Drive.
+     * disabled for readers and commenters. When this restriction is set to `true`, it will override
+     * the similarly named field to `true` for any file inside this Team Drive.
      * @param copyRequiresWriterPermission copyRequiresWriterPermission or {@code null} for none
      */
     public Restrictions setCopyRequiresWriterPermission(java.lang.Boolean copyRequiresWriterPermission) {

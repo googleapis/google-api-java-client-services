@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A revision of a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,71 +30,73 @@ package com.google.api.services.drive.model;
 public final class Revision extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Short term download URL for the file. This will only be populated on files with
+   * content stored in Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String downloadUrl;
 
   /**
-   * The ETag of the revision.
+   * Output only. The ETag of the revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Links for exporting Docs Editors files to specific formats.
+   * Output only. Links for exporting Docs Editors files to specific formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> exportLinks;
 
   /**
-   * The size of the revision in bytes. This will only be populated on files with content stored in
-   * Drive.
+   * Output only. The size of the revision in bytes. This will only be populated on files with
+   * content stored in Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fileSize;
 
   /**
-   * The ID of the revision.
+   * Output only. The ID of the revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * This is always drive#revision.
+   * Output only. This is always `drive#revision`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The last user to modify this revision.
+   * Output only. The last user to modify this revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private User lastModifyingUser;
 
   /**
-   * Name of the last user to modify this revision.
+   * Output only. Name of the last user to modify this revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastModifyingUserName;
 
   /**
-   * An MD5 checksum for the content of this revision. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. An MD5 checksum for the content of this revision. This will only be populated on
+   * files with content stored in Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String md5Checksum;
 
   /**
-   * The MIME type of the revision.
+   * Output only. The MIME type of the revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +110,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedDate;
 
   /**
-   * The original filename when this revision was created. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. The original filename when this revision was created. This will only be populated
+   * on files with content stored in Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +146,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean published;
 
   /**
-   * A link to the published revision. This is only populated for Google Sites files.
+   * Output only. A link to the published revision. This is only populated for Google Sites files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,13 +161,15 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean publishedOutsideDomain;
 
   /**
-   * A link back to this revision.
+   * Output only. A link back to this revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
+   * Output only. Short term download URL for the file. This will only be populated on files with
+   * content stored in Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUrl() {
@@ -173,6 +177,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Short term download URL for the file. This will only be populated on files with
+   * content stored in Drive.
    * @param downloadUrl downloadUrl or {@code null} for none
    */
   public Revision setDownloadUrl(java.lang.String downloadUrl) {
@@ -181,7 +187,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ETag of the revision.
+   * Output only. The ETag of the revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -189,7 +195,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ETag of the revision.
+   * Output only. The ETag of the revision.
    * @param etag etag or {@code null} for none
    */
   public Revision setEtag(java.lang.String etag) {
@@ -198,7 +204,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Docs Editors files to specific formats.
+   * Output only. Links for exporting Docs Editors files to specific formats.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExportLinks() {
@@ -206,7 +212,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Docs Editors files to specific formats.
+   * Output only. Links for exporting Docs Editors files to specific formats.
    * @param exportLinks exportLinks or {@code null} for none
    */
   public Revision setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {
@@ -215,8 +221,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the revision in bytes. This will only be populated on files with content stored in
-   * Drive.
+   * Output only. The size of the revision in bytes. This will only be populated on files with
+   * content stored in Drive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSize() {
@@ -224,8 +230,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the revision in bytes. This will only be populated on files with content stored in
-   * Drive.
+   * Output only. The size of the revision in bytes. This will only be populated on files with
+   * content stored in Drive.
    * @param fileSize fileSize or {@code null} for none
    */
   public Revision setFileSize(java.lang.Long fileSize) {
@@ -234,7 +240,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the revision.
+   * Output only. The ID of the revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -242,7 +248,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the revision.
+   * Output only. The ID of the revision.
    * @param id id or {@code null} for none
    */
   public Revision setId(java.lang.String id) {
@@ -251,7 +257,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#revision.
+   * Output only. This is always `drive#revision`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -259,7 +265,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#revision.
+   * Output only. This is always `drive#revision`.
    * @param kind kind or {@code null} for none
    */
   public Revision setKind(java.lang.String kind) {
@@ -268,7 +274,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last user to modify this revision.
+   * Output only. The last user to modify this revision.
    * @return value or {@code null} for none
    */
   public User getLastModifyingUser() {
@@ -276,7 +282,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last user to modify this revision.
+   * Output only. The last user to modify this revision.
    * @param lastModifyingUser lastModifyingUser or {@code null} for none
    */
   public Revision setLastModifyingUser(User lastModifyingUser) {
@@ -285,7 +291,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the last user to modify this revision.
+   * Output only. Name of the last user to modify this revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastModifyingUserName() {
@@ -293,7 +299,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the last user to modify this revision.
+   * Output only. Name of the last user to modify this revision.
    * @param lastModifyingUserName lastModifyingUserName or {@code null} for none
    */
   public Revision setLastModifyingUserName(java.lang.String lastModifyingUserName) {
@@ -302,8 +308,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An MD5 checksum for the content of this revision. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. An MD5 checksum for the content of this revision. This will only be populated on
+   * files with content stored in Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5Checksum() {
@@ -311,8 +317,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An MD5 checksum for the content of this revision. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. An MD5 checksum for the content of this revision. This will only be populated on
+   * files with content stored in Drive.
    * @param md5Checksum md5Checksum or {@code null} for none
    */
   public Revision setMd5Checksum(java.lang.String md5Checksum) {
@@ -321,7 +327,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the revision.
+   * Output only. The MIME type of the revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -329,7 +335,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the revision.
+   * Output only. The MIME type of the revision.
    * @param mimeType mimeType or {@code null} for none
    */
   public Revision setMimeType(java.lang.String mimeType) {
@@ -355,8 +361,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The original filename when this revision was created. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. The original filename when this revision was created. This will only be populated
+   * on files with content stored in Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalFilename() {
@@ -364,8 +370,8 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The original filename when this revision was created. This will only be populated on files with
-   * content stored in Drive.
+   * Output only. The original filename when this revision was created. This will only be populated
+   * on files with content stored in Drive.
    * @param originalFilename originalFilename or {@code null} for none
    */
   public Revision setOriginalFilename(java.lang.String originalFilename) {
@@ -439,7 +445,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the published revision. This is only populated for Google Sites files.
+   * Output only. A link to the published revision. This is only populated for Google Sites files.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedLink() {
@@ -447,7 +453,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the published revision. This is only populated for Google Sites files.
+   * Output only. A link to the published revision. This is only populated for Google Sites files.
    * @param publishedLink publishedLink or {@code null} for none
    */
   public Revision setPublishedLink(java.lang.String publishedLink) {
@@ -475,7 +481,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link back to this revision.
+   * Output only. A link back to this revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -483,7 +489,7 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link back to this revision.
+   * Output only. A link back to this revision.
    * @param selfLink selfLink or {@code null} for none
    */
   public Revision setSelfLink(java.lang.String selfLink) {

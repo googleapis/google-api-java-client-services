@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * Information about a Drive user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,49 +30,50 @@ package com.google.api.services.drive.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The email address of the user.
+   * Output only. The email address of the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emailAddress;
 
   /**
-   * Whether this user is the same as the authenticated user for whom the request was made.
+   * Output only. Whether this user is the same as the authenticated user for whom the request was
+   * made.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAuthenticatedUser;
 
   /**
-   * This is always drive#user.
+   * Output only. This is always `drive#user`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in the permissions collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permissionId;
 
   /**
-   * The user's profile picture.
+   * Output only. The user's profile picture.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Picture picture;
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -80,7 +81,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * @param displayName displayName or {@code null} for none
    */
   public User setDisplayName(java.lang.String displayName) {
@@ -89,7 +90,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user.
+   * Output only. The email address of the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -97,7 +98,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user.
+   * Output only. The email address of the user.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public User setEmailAddress(java.lang.String emailAddress) {
@@ -106,7 +107,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this user is the same as the authenticated user for whom the request was made.
+   * Output only. Whether this user is the same as the authenticated user for whom the request was
+   * made.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAuthenticatedUser() {
@@ -114,7 +116,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this user is the same as the authenticated user for whom the request was made.
+   * Output only. Whether this user is the same as the authenticated user for whom the request was
+   * made.
    * @param isAuthenticatedUser isAuthenticatedUser or {@code null} for none
    */
   public User setIsAuthenticatedUser(java.lang.Boolean isAuthenticatedUser) {
@@ -123,7 +126,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#user.
+   * Output only. This is always `drive#user`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -131,7 +134,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#user.
+   * Output only. This is always `drive#user`.
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {
@@ -140,7 +143,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in the permissions collection.
    * @return value or {@code null} for none
    */
   public java.lang.String getPermissionId() {
@@ -148,7 +151,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in the permissions collection.
    * @param permissionId permissionId or {@code null} for none
    */
   public User setPermissionId(java.lang.String permissionId) {
@@ -157,7 +160,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's profile picture.
+   * Output only. The user's profile picture.
    * @return value or {@code null} for none
    */
   public Picture getPicture() {
@@ -165,7 +168,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's profile picture.
+   * Output only. The user's profile picture.
    * @param picture picture or {@code null} for none
    */
   public User setPicture(Picture picture) {
@@ -184,19 +187,19 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's profile picture.
+   * Output only. The user's profile picture.
    */
   public static final class Picture extends com.google.api.client.json.GenericJson {
 
     /**
-     * A URL that points to a profile picture of this user.
+     * Output Only. A URL that points to a profile picture of this user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String url;
 
     /**
-     * A URL that points to a profile picture of this user.
+     * Output Only. A URL that points to a profile picture of this user.
      * @return value or {@code null} for none
      */
     public java.lang.String getUrl() {
@@ -204,7 +207,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A URL that points to a profile picture of this user.
+     * Output Only. A URL that points to a profile picture of this user.
      * @param url url or {@code null} for none
      */
     public Picture setUrl(java.lang.String url) {

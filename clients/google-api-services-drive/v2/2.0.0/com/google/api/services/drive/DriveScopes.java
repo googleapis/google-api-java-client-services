@@ -17,7 +17,7 @@
 package com.google.api.services.drive;
 
 /**
- * Available OAuth 2.0 scopes for use with the Drive API.
+ * Available OAuth 2.0 scopes for use with the Google Drive API.
  *
  * @since 1.4
  */

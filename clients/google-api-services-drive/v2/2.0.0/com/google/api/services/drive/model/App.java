@@ -21,7 +21,7 @@ package com.google.api.services.drive.model;
  * each app's supported MIME types, file extensions, and other details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -88,7 +88,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean installed;
 
   /**
-   * This is always drive#app.
+   * This is always `drive#app`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.String objectType;
 
   /**
-   * The template url for opening files with this app. The template will contain {ids} and/or
-   * {exportIds} to be replaced by the actual file ids. See  Open Files  for the full documentation.
+   * The template url for opening files with this app. The template will contain `{ids}` and/or
+   * `{exportIds}` to be replaced by the actual file ids. See Open Files for the full documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,7 +332,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#app.
+   * This is always `drive#app`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -340,7 +340,7 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always drive#app.
+   * This is always `drive#app`.
    * @param kind kind or {@code null} for none
    */
   public App setKind(java.lang.String kind) {
@@ -402,8 +402,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The template url for opening files with this app. The template will contain {ids} and/or
-   * {exportIds} to be replaced by the actual file ids. See  Open Files  for the full documentation.
+   * The template url for opening files with this app. The template will contain `{ids}` and/or
+   * `{exportIds}` to be replaced by the actual file ids. See Open Files for the full documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getOpenUrlTemplate() {
@@ -411,8 +411,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The template url for opening files with this app. The template will contain {ids} and/or
-   * {exportIds} to be replaced by the actual file ids. See  Open Files  for the full documentation.
+   * The template url for opening files with this app. The template will contain `{ids}` and/or
+   * `{exportIds}` to be replaced by the actual file ids. See Open Files for the full documentation.
    * @param openUrlTemplate openUrlTemplate or {@code null} for none
    */
   public App setOpenUrlTemplate(java.lang.String openUrlTemplate) {
@@ -640,9 +640,9 @@ public final class App extends com.google.api.client.json.GenericJson {
   public static final class Icons extends com.google.api.client.json.GenericJson {
 
     /**
-     * Category of the icon. Allowed values are: - application - icon for the application  - document
-     * - icon for a file associated with the app  - documentShared - icon for a shared file associated
-     * with the app
+     * Category of the icon. Allowed values are: * `application` - icon for the application *
+     * `document` - icon for a file associated with the app * `documentShared` - icon for a shared
+     * file associated with the app
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -663,9 +663,9 @@ public final class App extends com.google.api.client.json.GenericJson {
     private java.lang.Integer size;
 
     /**
-     * Category of the icon. Allowed values are: - application - icon for the application  - document
-     * - icon for a file associated with the app  - documentShared - icon for a shared file associated
-     * with the app
+     * Category of the icon. Allowed values are: * `application` - icon for the application *
+     * `document` - icon for a file associated with the app * `documentShared` - icon for a shared
+     * file associated with the app
      * @return value or {@code null} for none
      */
     public java.lang.String getCategory() {
@@ -673,9 +673,9 @@ public final class App extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Category of the icon. Allowed values are: - application - icon for the application  - document
-     * - icon for a file associated with the app  - documentShared - icon for a shared file associated
-     * with the app
+     * Category of the icon. Allowed values are: * `application` - icon for the application *
+     * `document` - icon for a file associated with the app * `documentShared` - icon for a shared
+     * file associated with the app
      * @param category category or {@code null} for none
      */
     public Icons setCategory(java.lang.String category) {

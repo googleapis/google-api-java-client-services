@@ -113,7 +113,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Error regarding the state of the Execution resource. For example, this field will
-   * have error details if the Execution data is unavailable due to revoked KMS key permissions.
+   * have error details if the execution data is unavailable due to revoked KMS key permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,7 +325,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Error regarding the state of the Execution resource. For example, this field will
-   * have error details if the Execution data is unavailable due to revoked KMS key permissions.
+   * have error details if the execution data is unavailable due to revoked KMS key permissions.
    * @return value or {@code null} for none
    */
   public StateError getStateError() {
@@ -334,7 +334,7 @@ public final class Execution extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Error regarding the state of the Execution resource. For example, this field will
-   * have error details if the Execution data is unavailable due to revoked KMS key permissions.
+   * have error details if the execution data is unavailable due to revoked KMS key permissions.
    * @param stateError stateError or {@code null} for none
    */
   public Execution setStateError(StateError stateError) {

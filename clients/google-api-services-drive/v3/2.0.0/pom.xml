@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-drive</artifactId>
-  <version>v3-rev20230514-2.0.0</version>
-  <name>Drive API v3-rev20230514-2.0.0</name>
+  <version>v3-rev20230517-2.0.0</version>
+  <name>Google Drive API v3-rev20230517-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Drive API ${project.version}</doctitle>
-          <windowtitle>Drive API ${project.version}</windowtitle>
+          <doctitle>Google Drive API ${project.version}</doctitle>
+          <windowtitle>Google Drive API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.43.2/</link>

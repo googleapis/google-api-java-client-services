@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A list of files.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,17 +44,17 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple drives with the
-   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
-   * that clients narrow their query by choosing a different corpus such as "user" or "drive".
+   * Whether the search process was incomplete. If true, then some search results might be missing,
+   * since all documents were not searched. This can occur when searching multiple drives with the
+   * 'allDrives' corpora, but all corpora couldn't be searched. When this happens, it's suggested
+   * that clients narrow their query by choosing a different corpus such as 'user' or 'drive'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean incompleteSearch;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#fileList".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#fileList"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,10 +89,10 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple drives with the
-   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
-   * that clients narrow their query by choosing a different corpus such as "user" or "drive".
+   * Whether the search process was incomplete. If true, then some search results might be missing,
+   * since all documents were not searched. This can occur when searching multiple drives with the
+   * 'allDrives' corpora, but all corpora couldn't be searched. When this happens, it's suggested
+   * that clients narrow their query by choosing a different corpus such as 'user' or 'drive'.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncompleteSearch() {
@@ -100,10 +100,10 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple drives with the
-   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
-   * that clients narrow their query by choosing a different corpus such as "user" or "drive".
+   * Whether the search process was incomplete. If true, then some search results might be missing,
+   * since all documents were not searched. This can occur when searching multiple drives with the
+   * 'allDrives' corpora, but all corpora couldn't be searched. When this happens, it's suggested
+   * that clients narrow their query by choosing a different corpus such as 'user' or 'drive'.
    * @param incompleteSearch incompleteSearch or {@code null} for none
    */
   public FileList setIncompleteSearch(java.lang.Boolean incompleteSearch) {
@@ -112,7 +112,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#fileList".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#fileList"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -120,7 +120,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#fileList".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#fileList"`.
    * @param kind kind or {@code null} for none
    */
   public FileList setKind(java.lang.String kind) {

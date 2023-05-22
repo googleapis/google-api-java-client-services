@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A change to a file or shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the change. Possible values are file and drive.
+   * The type of the change. Possible values are `file` and `drive`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.String fileId;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#change".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#change"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,14 +82,14 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean removed;
 
   /**
-   * Deprecated - use drive instead.
+   * Deprecated: Use `drive` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TeamDrive teamDrive;
 
   /**
-   * Deprecated - use driveId instead.
+   * Deprecated: Use `driveId` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,14 +103,14 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime time;
 
   /**
-   * Deprecated - use changeType instead.
+   * Deprecated: Use `changeType` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The type of the change. Possible values are file and drive.
+   * The type of the change. Possible values are `file` and `drive`.
    * @return value or {@code null} for none
    */
   public java.lang.String getChangeType() {
@@ -118,7 +118,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the change. Possible values are file and drive.
+   * The type of the change. Possible values are `file` and `drive`.
    * @param changeType changeType or {@code null} for none
    */
   public Change setChangeType(java.lang.String changeType) {
@@ -199,7 +199,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#change".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#change"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -207,7 +207,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#change".
+   * Identifies what kind of resource this is. Value: the fixed string `"drive#change"`.
    * @param kind kind or {@code null} for none
    */
   public Change setKind(java.lang.String kind) {
@@ -235,7 +235,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use drive instead.
+   * Deprecated: Use `drive` instead.
    * @return value or {@code null} for none
    */
   public TeamDrive getTeamDrive() {
@@ -243,7 +243,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use drive instead.
+   * Deprecated: Use `drive` instead.
    * @param teamDrive teamDrive or {@code null} for none
    */
   public Change setTeamDrive(TeamDrive teamDrive) {
@@ -252,7 +252,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use driveId instead.
+   * Deprecated: Use `driveId` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeamDriveId() {
@@ -260,7 +260,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use driveId instead.
+   * Deprecated: Use `driveId` instead.
    * @param teamDriveId teamDriveId or {@code null} for none
    */
   public Change setTeamDriveId(java.lang.String teamDriveId) {
@@ -286,7 +286,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use changeType instead.
+   * Deprecated: Use `changeType` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -294,7 +294,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated - use changeType instead.
+   * Deprecated: Use `changeType` instead.
    * @param type type or {@code null} for none
    */
   public Change setType(java.lang.String type) {

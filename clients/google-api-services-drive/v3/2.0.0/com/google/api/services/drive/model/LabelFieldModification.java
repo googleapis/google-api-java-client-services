@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A modification to a label's field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class LabelFieldModification extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Field to be modified.
+   * The ID of the field to be modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,36 +44,36 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   private java.lang.String kind;
 
   /**
-   * Replaces a dateString field with these new values. The values must be strings in the RFC 3339
-   * full-date format: YYYY-MM-DD.
+   * Replaces the value of a dateString Field with these new values. The string must be in the RFC
+   * 3339 full-date format: YYYY-MM-DD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<com.google.api.client.util.DateTime> setDateValues;
 
   /**
-   * Replaces an integer field with these new values.
+   * Replaces the value of an `integer` field with these new values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> setIntegerValues;
 
   /**
-   * Replaces a selection field with these new values.
+   * Replaces a `selection` field with these new values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> setSelectionValues;
 
   /**
-   * Replaces a text field with these new values.
+   * Sets the value of a `text` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> setTextValues;
 
   /**
-   * Replaces a user field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be valid email addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   private java.lang.Boolean unsetValues;
 
   /**
-   * The ID of the Field to be modified.
+   * The ID of the field to be modified.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -95,7 +95,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * The ID of the Field to be modified.
+   * The ID of the field to be modified.
    * @param fieldId fieldId or {@code null} for none
    */
   public LabelFieldModification setFieldId(java.lang.String fieldId) {
@@ -121,8 +121,8 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a dateString field with these new values. The values must be strings in the RFC 3339
-   * full-date format: YYYY-MM-DD.
+   * Replaces the value of a dateString Field with these new values. The string must be in the RFC
+   * 3339 full-date format: YYYY-MM-DD.
    * @return value or {@code null} for none
    */
   public java.util.List<com.google.api.client.util.DateTime> getSetDateValues() {
@@ -130,8 +130,8 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a dateString field with these new values. The values must be strings in the RFC 3339
-   * full-date format: YYYY-MM-DD.
+   * Replaces the value of a dateString Field with these new values. The string must be in the RFC
+   * 3339 full-date format: YYYY-MM-DD.
    * @param setDateValues setDateValues or {@code null} for none
    */
   public LabelFieldModification setSetDateValues(java.util.List<com.google.api.client.util.DateTime> setDateValues) {
@@ -140,7 +140,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces an integer field with these new values.
+   * Replaces the value of an `integer` field with these new values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getSetIntegerValues() {
@@ -148,7 +148,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces an integer field with these new values.
+   * Replaces the value of an `integer` field with these new values.
    * @param setIntegerValues setIntegerValues or {@code null} for none
    */
   public LabelFieldModification setSetIntegerValues(java.util.List<java.lang.Long> setIntegerValues) {
@@ -157,7 +157,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a selection field with these new values.
+   * Replaces a `selection` field with these new values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSetSelectionValues() {
@@ -165,7 +165,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a selection field with these new values.
+   * Replaces a `selection` field with these new values.
    * @param setSelectionValues setSelectionValues or {@code null} for none
    */
   public LabelFieldModification setSetSelectionValues(java.util.List<java.lang.String> setSelectionValues) {
@@ -174,7 +174,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a text field with these new values.
+   * Sets the value of a `text` field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSetTextValues() {
@@ -182,7 +182,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a text field with these new values.
+   * Sets the value of a `text` field.
    * @param setTextValues setTextValues or {@code null} for none
    */
   public LabelFieldModification setSetTextValues(java.util.List<java.lang.String> setTextValues) {
@@ -191,7 +191,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a user field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be valid email addresses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSetUserValues() {
@@ -199,7 +199,7 @@ public final class LabelFieldModification extends com.google.api.client.json.Gen
   }
 
   /**
-   * Replaces a user field with these new values. The values must be valid email addresses.
+   * Replaces a `user` field with these new values. The values must be valid email addresses.
    * @param setUserValues setUserValues or {@code null} for none
    */
   public LabelFieldModification setSetUserValues(java.util.List<java.lang.String> setUserValues) {

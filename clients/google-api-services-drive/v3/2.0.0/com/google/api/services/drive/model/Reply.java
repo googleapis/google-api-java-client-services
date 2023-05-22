@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * A reply to a comment on a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,14 +30,15 @@ package com.google.api.services.drive.model;
 public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: - resolve  - reopen
+   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * The author of the reply. The author's email address and permission ID will not be populated.
+   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * htmlContent should be displayed. This is required on creates if no action is specified.
+   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,28 +60,28 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime createdTime;
 
   /**
-   * Whether the reply has been deleted. A deleted reply has no content.
+   * Output only. Whether the reply has been deleted. A deleted reply has no content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleted;
 
   /**
-   * The content of the reply with HTML formatting.
+   * Output only. The content of the reply with HTML formatting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String htmlContent;
 
   /**
-   * The ID of the reply.
+   * Output only. The ID of the reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#reply".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#reply"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime modifiedTime;
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: - resolve  - reopen
+   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -102,7 +103,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action the reply performed to the parent comment. Valid values are: - resolve  - reopen
+   * The action the reply performed to the parent comment. Valid values are: * `resolve` * `reopen`
    * @param action action or {@code null} for none
    */
   public Reply setAction(java.lang.String action) {
@@ -111,7 +112,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The author of the reply. The author's email address and permission ID will not be populated.
+   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * populated.
    * @return value or {@code null} for none
    */
   public User getAuthor() {
@@ -119,7 +121,8 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The author of the reply. The author's email address and permission ID will not be populated.
+   * Output only. The author of the reply. The author's email address and permission ID will not be
+   * populated.
    * @param author author or {@code null} for none
    */
   public Reply setAuthor(User author) {
@@ -129,7 +132,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * htmlContent should be displayed. This is required on creates if no action is specified.
+   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -138,7 +141,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
 
   /**
    * The plain text content of the reply. This field is used for setting the content, while
-   * htmlContent should be displayed. This is required on creates if no action is specified.
+   * `htmlContent` should be displayed. This is required on creates if no `action` is specified.
    * @param content content or {@code null} for none
    */
   public Reply setContent(java.lang.String content) {
@@ -164,7 +167,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the reply has been deleted. A deleted reply has no content.
+   * Output only. Whether the reply has been deleted. A deleted reply has no content.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -172,7 +175,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the reply has been deleted. A deleted reply has no content.
+   * Output only. Whether the reply has been deleted. A deleted reply has no content.
    * @param deleted deleted or {@code null} for none
    */
   public Reply setDeleted(java.lang.Boolean deleted) {
@@ -181,7 +184,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the reply with HTML formatting.
+   * Output only. The content of the reply with HTML formatting.
    * @return value or {@code null} for none
    */
   public java.lang.String getHtmlContent() {
@@ -189,7 +192,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the reply with HTML formatting.
+   * Output only. The content of the reply with HTML formatting.
    * @param htmlContent htmlContent or {@code null} for none
    */
   public Reply setHtmlContent(java.lang.String htmlContent) {
@@ -198,7 +201,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the reply.
+   * Output only. The ID of the reply.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -206,7 +209,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the reply.
+   * Output only. The ID of the reply.
    * @param id id or {@code null} for none
    */
   public Reply setId(java.lang.String id) {
@@ -215,7 +218,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#reply".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#reply"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -223,7 +226,7 @@ public final class Reply extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#reply".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#reply"`.
    * @param kind kind or {@code null} for none
    */
   public Reply setKind(java.lang.String kind) {

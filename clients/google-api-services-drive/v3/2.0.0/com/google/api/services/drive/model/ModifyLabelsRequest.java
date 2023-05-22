@@ -18,10 +18,10 @@ package com.google.api.services.drive.model;
 
 /**
  * A request to modify the set of labels on a file. This request may contain many modifications that
- * will either all succeed or all fail transactionally.
+ * will either all succeed or all fail atomically.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,7 +31,7 @@ package com.google.api.services.drive.model;
 public final class ModifyLabelsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is always drive#modifyLabelsRequest
+   * This is always drive#modifyLabelsRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ModifyLabelsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always drive#modifyLabelsRequest
+   * This is always drive#modifyLabelsRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -59,7 +59,7 @@ public final class ModifyLabelsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * This is always drive#modifyLabelsRequest
+   * This is always drive#modifyLabelsRequest.
    * @param kind kind or {@code null} for none
    */
   public ModifyLabelsRequest setKind(java.lang.String kind) {

@@ -20,7 +20,7 @@ package com.google.api.services.drive.model;
  * Information about a Drive user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,50 +30,50 @@ package com.google.api.services.drive.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The email address of the user. This may not be present in certain contexts if the user has not
-   * made their email address visible to the requester.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emailAddress;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#user".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#user"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Whether this user is the requesting user.
+   * Output only. Whether this user is the requesting user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean me;
 
   /**
-   * The user's ID as visible in Permission resources.
+   * Output only. The user's ID as visible in Permission resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permissionId;
 
   /**
-   * A link to the user's profile photo, if available.
+   * Output only. A link to the user's profile photo, if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String photoLink;
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -81,7 +81,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A plain text displayable name for this user.
+   * Output only. A plain text displayable name for this user.
    * @param displayName displayName or {@code null} for none
    */
   public User setDisplayName(java.lang.String displayName) {
@@ -90,8 +90,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user. This may not be present in certain contexts if the user has not
-   * made their email address visible to the requester.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -99,8 +99,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user. This may not be present in certain contexts if the user has not
-   * made their email address visible to the requester.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public User setEmailAddress(java.lang.String emailAddress) {
@@ -109,7 +109,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#user".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#user"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -117,7 +117,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "drive#user".
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `"drive#user"`.
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {
@@ -126,7 +126,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this user is the requesting user.
+   * Output only. Whether this user is the requesting user.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMe() {
@@ -134,7 +134,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this user is the requesting user.
+   * Output only. Whether this user is the requesting user.
    * @param me me or {@code null} for none
    */
   public User setMe(java.lang.Boolean me) {
@@ -143,7 +143,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's ID as visible in Permission resources.
+   * Output only. The user's ID as visible in Permission resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getPermissionId() {
@@ -151,7 +151,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's ID as visible in Permission resources.
+   * Output only. The user's ID as visible in Permission resources.
    * @param permissionId permissionId or {@code null} for none
    */
   public User setPermissionId(java.lang.String permissionId) {
@@ -160,7 +160,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the user's profile photo, if available.
+   * Output only. A link to the user's profile photo, if available.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotoLink() {
@@ -168,7 +168,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A link to the user's profile photo, if available.
+   * Output only. A link to the user's profile photo, if available.
    * @param photoLink photoLink or {@code null} for none
    */
   public User setPhotoLink(java.lang.String photoLink) {

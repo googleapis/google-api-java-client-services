@@ -49,7 +49,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
    * Optional. If set to a valid TCP port (1-65535), instructs the SIDECAR proxy to listen on the
    * specified port of localhost (127.0.0.1) address. The SIDECAR proxy will expect all traffic to
    * be redirected to this port regardless of its actual ip:port destination. If unset, a port
-   * '15001' is used as the interception port. This will is applicable only for sidecar proxy
+   * '15001' is used as the interception port. This is applicable only for sidecar proxy
    * deployments.
    * The value may be {@code null}.
    */
@@ -122,7 +122,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
    * Optional. If set to a valid TCP port (1-65535), instructs the SIDECAR proxy to listen on the
    * specified port of localhost (127.0.0.1) address. The SIDECAR proxy will expect all traffic to
    * be redirected to this port regardless of its actual ip:port destination. If unset, a port
-   * '15001' is used as the interception port. This will is applicable only for sidecar proxy
+   * '15001' is used as the interception port. This is applicable only for sidecar proxy
    * deployments.
    * @return value or {@code null} for none
    */
@@ -134,7 +134,7 @@ public final class Mesh extends com.google.api.client.json.GenericJson {
    * Optional. If set to a valid TCP port (1-65535), instructs the SIDECAR proxy to listen on the
    * specified port of localhost (127.0.0.1) address. The SIDECAR proxy will expect all traffic to
    * be redirected to this port regardless of its actual ip:port destination. If unset, a port
-   * '15001' is used as the interception port. This will is applicable only for sidecar proxy
+   * '15001' is used as the interception port. This is applicable only for sidecar proxy
    * deployments.
    * @param interceptionPort interceptionPort or {@code null} for none
    */

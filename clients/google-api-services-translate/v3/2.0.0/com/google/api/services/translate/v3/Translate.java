@@ -532,6 +532,155 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * Romanize input text written in non-Latin scripts to Latin text.
+     *
+     * Create a request for the method "projects.romanizeText".
+     *
+     * This request holds the parameters needed by the translate server.  After setting any optional
+     * parameters, call the {@link RomanizeText#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`.
+     * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
+     * @return the request
+     */
+    public RomanizeText romanizeText(java.lang.String parent, com.google.api.services.translate.v3.model.RomanizeTextRequest content) throws java.io.IOException {
+      RomanizeText result = new RomanizeText(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RomanizeText extends TranslateRequest<com.google.api.services.translate.v3.model.RomanizeTextResponse> {
+
+      private static final String REST_PATH = "v3/{+parent}:romanizeText";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Romanize input text written in non-Latin scripts to Latin text.
+       *
+       * Create a request for the method "projects.romanizeText".
+       *
+       * This request holds the parameters needed by the the translate server.  After setting any
+       * optional parameters, call the {@link RomanizeText#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * RomanizeText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`.
+       * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
+       * @since 1.13
+       */
+      protected RomanizeText(java.lang.String parent, com.google.api.services.translate.v3.model.RomanizeTextRequest content) {
+        super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.RomanizeTextResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public RomanizeText set$Xgafv(java.lang.String $Xgafv) {
+        return (RomanizeText) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RomanizeText setAccessToken(java.lang.String accessToken) {
+        return (RomanizeText) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RomanizeText setAlt(java.lang.String alt) {
+        return (RomanizeText) super.setAlt(alt);
+      }
+
+      @Override
+      public RomanizeText setCallback(java.lang.String callback) {
+        return (RomanizeText) super.setCallback(callback);
+      }
+
+      @Override
+      public RomanizeText setFields(java.lang.String fields) {
+        return (RomanizeText) super.setFields(fields);
+      }
+
+      @Override
+      public RomanizeText setKey(java.lang.String key) {
+        return (RomanizeText) super.setKey(key);
+      }
+
+      @Override
+      public RomanizeText setOauthToken(java.lang.String oauthToken) {
+        return (RomanizeText) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RomanizeText setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RomanizeText) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RomanizeText setQuotaUser(java.lang.String quotaUser) {
+        return (RomanizeText) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RomanizeText setUploadType(java.lang.String uploadType) {
+        return (RomanizeText) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RomanizeText setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RomanizeText) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Project or location to make a call. Must refer to a caller's project. Format:
+       * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+     calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. Project or location to make a call. Must refer to a caller's project. Format:
+       * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`.
+       */
+      public RomanizeText setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public RomanizeText set(String parameterName, Object value) {
+        return (RomanizeText) super.set(parameterName, value);
+      }
+    }
+    /**
      * Translates input text and returns translated text.
      *
      * Create a request for the method "projects.translateText".
@@ -1747,6 +1896,155 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Romanize input text written in non-Latin scripts to Latin text.
+       *
+       * Create a request for the method "locations.romanizeText".
+       *
+       * This request holds the parameters needed by the translate server.  After setting any optional
+       * parameters, call the {@link RomanizeText#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`.
+       * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
+       * @return the request
+       */
+      public RomanizeText romanizeText(java.lang.String parent, com.google.api.services.translate.v3.model.RomanizeTextRequest content) throws java.io.IOException {
+        RomanizeText result = new RomanizeText(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RomanizeText extends TranslateRequest<com.google.api.services.translate.v3.model.RomanizeTextResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}:romanizeText";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Romanize input text written in non-Latin scripts to Latin text.
+         *
+         * Create a request for the method "locations.romanizeText".
+         *
+         * This request holds the parameters needed by the the translate server.  After setting any
+         * optional parameters, call the {@link RomanizeText#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * RomanizeText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`.
+         * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
+         * @since 1.13
+         */
+        protected RomanizeText(java.lang.String parent, com.google.api.services.translate.v3.model.RomanizeTextRequest content) {
+          super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.RomanizeTextResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public RomanizeText set$Xgafv(java.lang.String $Xgafv) {
+          return (RomanizeText) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RomanizeText setAccessToken(java.lang.String accessToken) {
+          return (RomanizeText) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RomanizeText setAlt(java.lang.String alt) {
+          return (RomanizeText) super.setAlt(alt);
+        }
+
+        @Override
+        public RomanizeText setCallback(java.lang.String callback) {
+          return (RomanizeText) super.setCallback(callback);
+        }
+
+        @Override
+        public RomanizeText setFields(java.lang.String fields) {
+          return (RomanizeText) super.setFields(fields);
+        }
+
+        @Override
+        public RomanizeText setKey(java.lang.String key) {
+          return (RomanizeText) super.setKey(key);
+        }
+
+        @Override
+        public RomanizeText setOauthToken(java.lang.String oauthToken) {
+          return (RomanizeText) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RomanizeText setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RomanizeText) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RomanizeText setQuotaUser(java.lang.String quotaUser) {
+          return (RomanizeText) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RomanizeText setUploadType(java.lang.String uploadType) {
+          return (RomanizeText) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RomanizeText setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RomanizeText) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Project or location to make a call. Must refer to a caller's project. Format:
+         * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-
+         * or-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
+         * `projects/{project-number-or-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+       calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Project or location to make a call. Must refer to a caller's project. Format:
+         * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-
+         * or-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
+         * `projects/{project-number-or-id}`.
+         */
+        public RomanizeText setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public RomanizeText set(String parameterName, Object value) {
+          return (RomanizeText) super.set(parameterName, value);
         }
       }
       /**

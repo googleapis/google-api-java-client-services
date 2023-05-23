@@ -97,6 +97,13 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
   private java.lang.String targetLanguageCode;
 
   /**
+   * Optional. Transliteration to be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransliterationConfig transliterationConfig;
+
+  /**
    * Required. The content of the input in string format. We recommend the total content be less
    * than 30,000 codepoints. The max length of this field is 1024. Use BatchTranslateText for larger
    * text.
@@ -246,6 +253,23 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
    */
   public TranslateTextRequest setTargetLanguageCode(java.lang.String targetLanguageCode) {
     this.targetLanguageCode = targetLanguageCode;
+    return this;
+  }
+
+  /**
+   * Optional. Transliteration to be applied.
+   * @return value or {@code null} for none
+   */
+  public TransliterationConfig getTransliterationConfig() {
+    return transliterationConfig;
+  }
+
+  /**
+   * Optional. Transliteration to be applied.
+   * @param transliterationConfig transliterationConfig or {@code null} for none
+   */
+  public TranslateTextRequest setTransliterationConfig(TransliterationConfig transliterationConfig) {
+    this.transliterationConfig = transliterationConfig;
     return this;
   }
 

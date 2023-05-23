@@ -17,7 +17,8 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Identifies a document uniquely within the scope of a dataset in the Cloud Storage option.
+ * Identifies a document uniquely within the scope of a dataset in user managed Cloud Storage
+ * option.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

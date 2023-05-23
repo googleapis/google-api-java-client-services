@@ -467,6 +467,143 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Triggers database failover (only for highly resilient environments).
+         *
+         * Create a request for the method "environments.databaseFailover".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link DatabaseFailover#execute()} method to invoke the remote operation.
+         *
+         * @param environment Target environment: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.DatabaseFailoverRequest}
+         * @return the request
+         */
+        public DatabaseFailover databaseFailover(java.lang.String environment, com.google.api.services.composer.v1beta1.model.DatabaseFailoverRequest content) throws java.io.IOException {
+          DatabaseFailover result = new DatabaseFailover(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DatabaseFailover extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:databaseFailover";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Triggers database failover (only for highly resilient environments).
+           *
+           * Create a request for the method "environments.databaseFailover".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link DatabaseFailover#execute()} method to invoke the remote
+           * operation. <p> {@link DatabaseFailover#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param environment Target environment: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.DatabaseFailoverRequest}
+           * @since 1.13
+           */
+          protected DatabaseFailover(java.lang.String environment, com.google.api.services.composer.v1beta1.model.DatabaseFailoverRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public DatabaseFailover set$Xgafv(java.lang.String $Xgafv) {
+            return (DatabaseFailover) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DatabaseFailover setAccessToken(java.lang.String accessToken) {
+            return (DatabaseFailover) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DatabaseFailover setAlt(java.lang.String alt) {
+            return (DatabaseFailover) super.setAlt(alt);
+          }
+
+          @Override
+          public DatabaseFailover setCallback(java.lang.String callback) {
+            return (DatabaseFailover) super.setCallback(callback);
+          }
+
+          @Override
+          public DatabaseFailover setFields(java.lang.String fields) {
+            return (DatabaseFailover) super.setFields(fields);
+          }
+
+          @Override
+          public DatabaseFailover setKey(java.lang.String key) {
+            return (DatabaseFailover) super.setKey(key);
+          }
+
+          @Override
+          public DatabaseFailover setOauthToken(java.lang.String oauthToken) {
+            return (DatabaseFailover) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DatabaseFailover setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DatabaseFailover) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DatabaseFailover setQuotaUser(java.lang.String quotaUser) {
+            return (DatabaseFailover) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DatabaseFailover setUploadType(java.lang.String uploadType) {
+            return (DatabaseFailover) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DatabaseFailover setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DatabaseFailover) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Target environment:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** Target environment: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * Target environment:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public DatabaseFailover setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public DatabaseFailover set(String parameterName, Object value) {
+            return (DatabaseFailover) super.set(parameterName, value);
+          }
+        }
+        /**
          * Delete an environment.
          *
          * Create a request for the method "environments.delete".
@@ -602,6 +739,296 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Executes Airflow CLI command.
+         *
+         * Create a request for the method "environments.executeAirflowCommand".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link ExecuteAirflowCommand#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandRequest}
+         * @return the request
+         */
+        public ExecuteAirflowCommand executeAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandRequest content) throws java.io.IOException {
+          ExecuteAirflowCommand result = new ExecuteAirflowCommand(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExecuteAirflowCommand extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:executeAirflowCommand";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Executes Airflow CLI command.
+           *
+           * Create a request for the method "environments.executeAirflowCommand".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link ExecuteAirflowCommand#execute()} method to invoke the
+           * remote operation. <p> {@link ExecuteAirflowCommand#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandRequest}
+           * @since 1.13
+           */
+          protected ExecuteAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.ExecuteAirflowCommandResponse.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExecuteAirflowCommand set$Xgafv(java.lang.String $Xgafv) {
+            return (ExecuteAirflowCommand) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setAccessToken(java.lang.String accessToken) {
+            return (ExecuteAirflowCommand) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setAlt(java.lang.String alt) {
+            return (ExecuteAirflowCommand) super.setAlt(alt);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setCallback(java.lang.String callback) {
+            return (ExecuteAirflowCommand) super.setCallback(callback);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setFields(java.lang.String fields) {
+            return (ExecuteAirflowCommand) super.setFields(fields);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setKey(java.lang.String key) {
+            return (ExecuteAirflowCommand) super.setKey(key);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setOauthToken(java.lang.String oauthToken) {
+            return (ExecuteAirflowCommand) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExecuteAirflowCommand) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setQuotaUser(java.lang.String quotaUser) {
+            return (ExecuteAirflowCommand) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setUploadType(java.lang.String uploadType) {
+            return (ExecuteAirflowCommand) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExecuteAirflowCommand setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExecuteAirflowCommand) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the environment in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          public ExecuteAirflowCommand setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public ExecuteAirflowCommand set(String parameterName, Object value) {
+            return (ExecuteAirflowCommand) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetches database properties.
+         *
+         * Create a request for the method "environments.fetchDatabaseProperties".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link FetchDatabaseProperties#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param environment Required. The resource name of the environment, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @return the request
+         */
+        public FetchDatabaseProperties fetchDatabaseProperties(java.lang.String environment) throws java.io.IOException {
+          FetchDatabaseProperties result = new FetchDatabaseProperties(environment);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchDatabaseProperties extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.FetchDatabasePropertiesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:fetchDatabaseProperties";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Fetches database properties.
+           *
+           * Create a request for the method "environments.fetchDatabaseProperties".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link FetchDatabaseProperties#execute()} method to invoke the
+           * remote operation. <p> {@link FetchDatabaseProperties#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param environment Required. The resource name of the environment, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @since 1.13
+           */
+          protected FetchDatabaseProperties(java.lang.String environment) {
+            super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.FetchDatabasePropertiesResponse.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchDatabaseProperties set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchDatabaseProperties) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchDatabaseProperties setAccessToken(java.lang.String accessToken) {
+            return (FetchDatabaseProperties) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchDatabaseProperties setAlt(java.lang.String alt) {
+            return (FetchDatabaseProperties) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchDatabaseProperties setCallback(java.lang.String callback) {
+            return (FetchDatabaseProperties) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchDatabaseProperties setFields(java.lang.String fields) {
+            return (FetchDatabaseProperties) super.setFields(fields);
+          }
+
+          @Override
+          public FetchDatabaseProperties setKey(java.lang.String key) {
+            return (FetchDatabaseProperties) super.setKey(key);
+          }
+
+          @Override
+          public FetchDatabaseProperties setOauthToken(java.lang.String oauthToken) {
+            return (FetchDatabaseProperties) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchDatabaseProperties setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchDatabaseProperties) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchDatabaseProperties setQuotaUser(java.lang.String quotaUser) {
+            return (FetchDatabaseProperties) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchDatabaseProperties setUploadType(java.lang.String uploadType) {
+            return (FetchDatabaseProperties) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchDatabaseProperties setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchDatabaseProperties) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the environment, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** Required. The resource name of the environment, in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * Required. The resource name of the environment, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public FetchDatabaseProperties setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public FetchDatabaseProperties set(String parameterName, Object value) {
+            return (FetchDatabaseProperties) super.set(parameterName, value);
           }
         }
         /**
@@ -1453,6 +1880,146 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Polls Airflow CLI command execution and fetches logs.
+         *
+         * Create a request for the method "environments.pollAirflowCommand".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link PollAirflowCommand#execute()} method to invoke the remote operation.
+         *
+         * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.PollAirflowCommandRequest}
+         * @return the request
+         */
+        public PollAirflowCommand pollAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.PollAirflowCommandRequest content) throws java.io.IOException {
+          PollAirflowCommand result = new PollAirflowCommand(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PollAirflowCommand extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.PollAirflowCommandResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:pollAirflowCommand";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Polls Airflow CLI command execution and fetches logs.
+           *
+           * Create a request for the method "environments.pollAirflowCommand".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link PollAirflowCommand#execute()} method to invoke the remote
+           * operation. <p> {@link PollAirflowCommand#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.PollAirflowCommandRequest}
+           * @since 1.13
+           */
+          protected PollAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.PollAirflowCommandRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.PollAirflowCommandResponse.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public PollAirflowCommand set$Xgafv(java.lang.String $Xgafv) {
+            return (PollAirflowCommand) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PollAirflowCommand setAccessToken(java.lang.String accessToken) {
+            return (PollAirflowCommand) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PollAirflowCommand setAlt(java.lang.String alt) {
+            return (PollAirflowCommand) super.setAlt(alt);
+          }
+
+          @Override
+          public PollAirflowCommand setCallback(java.lang.String callback) {
+            return (PollAirflowCommand) super.setCallback(callback);
+          }
+
+          @Override
+          public PollAirflowCommand setFields(java.lang.String fields) {
+            return (PollAirflowCommand) super.setFields(fields);
+          }
+
+          @Override
+          public PollAirflowCommand setKey(java.lang.String key) {
+            return (PollAirflowCommand) super.setKey(key);
+          }
+
+          @Override
+          public PollAirflowCommand setOauthToken(java.lang.String oauthToken) {
+            return (PollAirflowCommand) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PollAirflowCommand setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PollAirflowCommand) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PollAirflowCommand setQuotaUser(java.lang.String quotaUser) {
+            return (PollAirflowCommand) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PollAirflowCommand setUploadType(java.lang.String uploadType) {
+            return (PollAirflowCommand) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PollAirflowCommand setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PollAirflowCommand) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the environment in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public PollAirflowCommand setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public PollAirflowCommand set(String parameterName, Object value) {
+            return (PollAirflowCommand) super.set(parameterName, value);
+          }
+        }
+        /**
          * Restart Airflow web server.
          *
          * Create a request for the method "environments.restartWebServer".
@@ -1732,6 +2299,146 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           @Override
           public SaveSnapshot set(String parameterName, Object value) {
             return (SaveSnapshot) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops Airflow CLI command execution.
+         *
+         * Create a request for the method "environments.stopAirflowCommand".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link StopAirflowCommand#execute()} method to invoke the remote operation.
+         *
+         * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.StopAirflowCommandRequest}
+         * @return the request
+         */
+        public StopAirflowCommand stopAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.StopAirflowCommandRequest content) throws java.io.IOException {
+          StopAirflowCommand result = new StopAirflowCommand(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StopAirflowCommand extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.StopAirflowCommandResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+environment}:stopAirflowCommand";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Stops Airflow CLI command execution.
+           *
+           * Create a request for the method "environments.stopAirflowCommand".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link StopAirflowCommand#execute()} method to invoke the remote
+           * operation. <p> {@link StopAirflowCommand#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param environment The resource name of the environment in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.StopAirflowCommandRequest}
+           * @since 1.13
+           */
+          protected StopAirflowCommand(java.lang.String environment, com.google.api.services.composer.v1beta1.model.StopAirflowCommandRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.StopAirflowCommandResponse.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public StopAirflowCommand set$Xgafv(java.lang.String $Xgafv) {
+            return (StopAirflowCommand) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StopAirflowCommand setAccessToken(java.lang.String accessToken) {
+            return (StopAirflowCommand) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StopAirflowCommand setAlt(java.lang.String alt) {
+            return (StopAirflowCommand) super.setAlt(alt);
+          }
+
+          @Override
+          public StopAirflowCommand setCallback(java.lang.String callback) {
+            return (StopAirflowCommand) super.setCallback(callback);
+          }
+
+          @Override
+          public StopAirflowCommand setFields(java.lang.String fields) {
+            return (StopAirflowCommand) super.setFields(fields);
+          }
+
+          @Override
+          public StopAirflowCommand setKey(java.lang.String key) {
+            return (StopAirflowCommand) super.setKey(key);
+          }
+
+          @Override
+          public StopAirflowCommand setOauthToken(java.lang.String oauthToken) {
+            return (StopAirflowCommand) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StopAirflowCommand setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StopAirflowCommand) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StopAirflowCommand setQuotaUser(java.lang.String quotaUser) {
+            return (StopAirflowCommand) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StopAirflowCommand setUploadType(java.lang.String uploadType) {
+            return (StopAirflowCommand) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StopAirflowCommand setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StopAirflowCommand) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** The resource name of the environment in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * The resource name of the environment in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}".
+           */
+          public StopAirflowCommand setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public StopAirflowCommand set(String parameterName, Object value) {
+            return (StopAirflowCommand) super.set(parameterName, value);
           }
         }
 

@@ -142,6 +142,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private RecoveryConfig recoveryConfig;
 
   /**
+   * Optional. Resilience mode of the Cloud Composer Environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.2.0-airflow-*.*.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resilienceMode;
+
+  /**
    * The configuration settings for software inside the environment.
    * The value may be {@code null}.
    */
@@ -434,6 +442,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setRecoveryConfig(RecoveryConfig recoveryConfig) {
     this.recoveryConfig = recoveryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Resilience mode of the Cloud Composer Environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.2.0-airflow-*.*.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResilienceMode() {
+    return resilienceMode;
+  }
+
+  /**
+   * Optional. Resilience mode of the Cloud Composer Environment. This field is supported for Cloud
+   * Composer environments in versions composer-2.2.0-airflow-*.*.* and newer.
+   * @param resilienceMode resilienceMode or {@code null} for none
+   */
+  public EnvironmentConfig setResilienceMode(java.lang.String resilienceMode) {
+    this.resilienceMode = resilienceMode;
     return this;
   }
 

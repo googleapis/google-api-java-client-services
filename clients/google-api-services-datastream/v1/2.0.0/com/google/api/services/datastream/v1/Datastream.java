@@ -4932,6 +4932,38 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /** The binary log file name. */
+          @com.google.api.client.util.Key("cdcStrategy.specificStartPosition.mysqlLogPosition.logFile")
+          private java.lang.String cdcStrategySpecificStartPositionMysqlLogPositionLogFile;
+
+          /** The binary log file name.
+           */
+          public java.lang.String getCdcStrategySpecificStartPositionMysqlLogPositionLogFile() {
+            return cdcStrategySpecificStartPositionMysqlLogPositionLogFile;
+          }
+
+          /** The binary log file name. */
+          public Patch setCdcStrategySpecificStartPositionMysqlLogPositionLogFile(java.lang.String cdcStrategySpecificStartPositionMysqlLogPositionLogFile) {
+            this.cdcStrategySpecificStartPositionMysqlLogPositionLogFile = cdcStrategySpecificStartPositionMysqlLogPositionLogFile;
+            return this;
+          }
+
+          /** The position within the binary log file. Default is head of file. */
+          @com.google.api.client.util.Key("cdcStrategy.specificStartPosition.mysqlLogPosition.logPosition")
+          private java.lang.Integer cdcStrategySpecificStartPositionMysqlLogPositionLogPosition;
+
+          /** The position within the binary log file. Default is head of file.
+           */
+          public java.lang.Integer getCdcStrategySpecificStartPositionMysqlLogPositionLogPosition() {
+            return cdcStrategySpecificStartPositionMysqlLogPositionLogPosition;
+          }
+
+          /** The position within the binary log file. Default is head of file. */
+          public Patch setCdcStrategySpecificStartPositionMysqlLogPositionLogPosition(java.lang.Integer cdcStrategySpecificStartPositionMysqlLogPositionLogPosition) {
+            this.cdcStrategySpecificStartPositionMysqlLogPositionLogPosition = cdcStrategySpecificStartPositionMysqlLogPositionLogPosition;
+            return this;
+          }
+
           /** Optional. Update the stream without validating it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;

@@ -70,6 +70,14 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsServiceAccountId;
 
   /**
+   * Output only. The service account for the given container. Sinks use this service account as
+   * their writer_identity if no custom service account is provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loggingServiceAccountId;
+
+  /**
    * Output only. The resource name of the settings.
    * The value may be {@code null}.
    */
@@ -169,6 +177,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setKmsServiceAccountId(java.lang.String kmsServiceAccountId) {
     this.kmsServiceAccountId = kmsServiceAccountId;
+    return this;
+  }
+
+  /**
+   * Output only. The service account for the given container. Sinks use this service account as
+   * their writer_identity if no custom service account is provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoggingServiceAccountId() {
+    return loggingServiceAccountId;
+  }
+
+  /**
+   * Output only. The service account for the given container. Sinks use this service account as
+   * their writer_identity if no custom service account is provided.
+   * @param loggingServiceAccountId loggingServiceAccountId or {@code null} for none
+   */
+  public Settings setLoggingServiceAccountId(java.lang.String loggingServiceAccountId) {
+    this.loggingServiceAccountId = loggingServiceAccountId;
     return this;
   }
 

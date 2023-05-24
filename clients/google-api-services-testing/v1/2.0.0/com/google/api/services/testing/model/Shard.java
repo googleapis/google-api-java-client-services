@@ -30,6 +30,14 @@ package com.google.api.services.testing.model;
 public final class Shard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The estimated shard duration based on previous test case timing records, if
+   * available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String estimatedShardDuration;
+
+  /**
    * Output only. The total number of shards.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class Shard extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TestTargetsForShard testTargetsForShard;
+
+  /**
+   * Output only. The estimated shard duration based on previous test case timing records, if
+   * available.
+   * @return value or {@code null} for none
+   */
+  public String getEstimatedShardDuration() {
+    return estimatedShardDuration;
+  }
+
+  /**
+   * Output only. The estimated shard duration based on previous test case timing records, if
+   * available.
+   * @param estimatedShardDuration estimatedShardDuration or {@code null} for none
+   */
+  public Shard setEstimatedShardDuration(String estimatedShardDuration) {
+    this.estimatedShardDuration = estimatedShardDuration;
+    return this;
+  }
 
   /**
    * Output only. The total number of shards.

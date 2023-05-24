@@ -30,29 +30,29 @@ package com.google.api.services.bigquery.model;
 public final class RoutineReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The ID of the dataset containing this routine.
+   * Required. The ID of the dataset containing this routine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * [Required] The ID of the project containing this routine.
+   * Required. The ID of the project containing this routine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9),
-   * or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * underscores (_). The maximum length is 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String routineId;
 
   /**
-   * [Required] The ID of the dataset containing this routine.
+   * Required. The ID of the dataset containing this routine.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -60,7 +60,7 @@ public final class RoutineReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The ID of the dataset containing this routine.
+   * Required. The ID of the dataset containing this routine.
    * @param datasetId datasetId or {@code null} for none
    */
   public RoutineReference setDatasetId(java.lang.String datasetId) {
@@ -69,7 +69,7 @@ public final class RoutineReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The ID of the project containing this routine.
+   * Required. The ID of the project containing this routine.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -77,7 +77,7 @@ public final class RoutineReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The ID of the project containing this routine.
+   * Required. The ID of the project containing this routine.
    * @param projectId projectId or {@code null} for none
    */
   public RoutineReference setProjectId(java.lang.String projectId) {
@@ -86,8 +86,8 @@ public final class RoutineReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9),
-   * or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * underscores (_). The maximum length is 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoutineId() {
@@ -95,8 +95,8 @@ public final class RoutineReference extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Required] The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9),
-   * or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * underscores (_). The maximum length is 256 characters.
    * @param routineId routineId or {@code null} for none
    */
   public RoutineReference setRoutineId(java.lang.String routineId) {

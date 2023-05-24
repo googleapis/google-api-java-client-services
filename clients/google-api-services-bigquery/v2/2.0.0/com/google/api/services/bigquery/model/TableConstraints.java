@@ -33,7 +33,7 @@ public final class TableConstraints extends com.google.api.client.json.GenericJs
    * [Optional] The foreign keys of the tables.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("foreign_keys")
+  @com.google.api.client.util.Key
   private java.util.List<ForeignKeys> foreignKeys;
 
   static {
@@ -46,7 +46,7 @@ public final class TableConstraints extends com.google.api.client.json.GenericJs
    * [Optional] The primary key of the table.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("primary_key")
+  @com.google.api.client.util.Key
   private PrimaryKey primaryKey;
 
   /**
@@ -101,7 +101,7 @@ public final class TableConstraints extends com.google.api.client.json.GenericJs
     /**
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key("column_references")
+    @com.google.api.client.util.Key
     private java.util.List<ColumnReferences> columnReferences;
 
     static {
@@ -119,7 +119,7 @@ public final class TableConstraints extends com.google.api.client.json.GenericJs
     /**
      * The value may be {@code null}.
      */
-    @com.google.api.client.util.Key("referenced_table")
+    @com.google.api.client.util.Key
     private ReferencedTable referencedTable;
 
     /**
@@ -185,13 +185,13 @@ public final class TableConstraints extends com.google.api.client.json.GenericJs
       /**
        * The value may be {@code null}.
        */
-      @com.google.api.client.util.Key("referenced_column")
+      @com.google.api.client.util.Key
       private java.lang.String referencedColumn;
 
       /**
        * The value may be {@code null}.
        */
-      @com.google.api.client.util.Key("referencing_column")
+      @com.google.api.client.util.Key
       private java.lang.String referencingColumn;
 
       /**

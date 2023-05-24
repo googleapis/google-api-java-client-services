@@ -178,8 +178,7 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   private VmwareNetworkConfig networkConfig;
 
   /**
-   * The Anthos clusters on the VMware version for your user cluster. Defaults to the admin cluster
-   * version.
+   * Required. The Anthos clusters on the VMware version for your user cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -603,8 +602,7 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Anthos clusters on the VMware version for your user cluster. Defaults to the admin cluster
-   * version.
+   * Required. The Anthos clusters on the VMware version for your user cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getOnPremVersion() {
@@ -612,8 +610,7 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Anthos clusters on the VMware version for your user cluster. Defaults to the admin cluster
-   * version.
+   * Required. The Anthos clusters on the VMware version for your user cluster.
    * @param onPremVersion onPremVersion or {@code null} for none
    */
   public VmwareCluster setOnPremVersion(java.lang.String onPremVersion) {

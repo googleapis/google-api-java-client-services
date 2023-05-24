@@ -37,6 +37,14 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiVersion;
 
   /**
+   * Output only. Denotes if the local managing cluster's control plane is currently disconnected.
+   * This is expected to occur temporarily during self-managed cluster upgrades.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean controlPlaneDisconnected;
+
+  /**
    * Output only. The time the operation was created.
    * The value may be {@code null}.
    */
@@ -101,6 +109,25 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Denotes if the local managing cluster's control plane is currently disconnected.
+   * This is expected to occur temporarily during self-managed cluster upgrades.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getControlPlaneDisconnected() {
+    return controlPlaneDisconnected;
+  }
+
+  /**
+   * Output only. Denotes if the local managing cluster's control plane is currently disconnected.
+   * This is expected to occur temporarily during self-managed cluster upgrades.
+   * @param controlPlaneDisconnected controlPlaneDisconnected or {@code null} for none
+   */
+  public OperationMetadata setControlPlaneDisconnected(java.lang.Boolean controlPlaneDisconnected) {
+    this.controlPlaneDisconnected = controlPlaneDisconnected;
     return this;
   }
 

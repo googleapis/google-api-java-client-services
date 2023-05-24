@@ -30,17 +30,6 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class EnrollVmwareAdminClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The object name of the VMware OnPremAdminCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
-   * clusters to the API. When not provided, this field will resolve to the vmware_admin_cluster_id.
-   * Otherwise, it must match the object name of the VMware OnPremAdminCluster custom resource. It
-   * is not modifiable outside / beyond the enrollment operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String localName;
-
-  /**
    * Required. This is the full resource name of this admin cluster's fleet membership.
    * The value may be {@code null}.
    */
@@ -56,31 +45,6 @@ public final class EnrollVmwareAdminClusterRequest extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String vmwareAdminClusterId;
-
-  /**
-   * The object name of the VMware OnPremAdminCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
-   * clusters to the API. When not provided, this field will resolve to the vmware_admin_cluster_id.
-   * Otherwise, it must match the object name of the VMware OnPremAdminCluster custom resource. It
-   * is not modifiable outside / beyond the enrollment operation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocalName() {
-    return localName;
-  }
-
-  /**
-   * The object name of the VMware OnPremAdminCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
-   * clusters to the API. When not provided, this field will resolve to the vmware_admin_cluster_id.
-   * Otherwise, it must match the object name of the VMware OnPremAdminCluster custom resource. It
-   * is not modifiable outside / beyond the enrollment operation.
-   * @param localName localName or {@code null} for none
-   */
-  public EnrollVmwareAdminClusterRequest setLocalName(java.lang.String localName) {
-    this.localName = localName;
-    return this;
-  }
 
   /**
    * Required. This is the full resource name of this admin cluster's fleet membership.

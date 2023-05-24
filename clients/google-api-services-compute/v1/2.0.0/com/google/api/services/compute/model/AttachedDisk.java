@@ -155,6 +155,15 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String mode;
 
   /**
+   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
+   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
+   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String savedState;
+
+  /**
    * [Output Only] shielded vm initial state stored on disk
    * The value may be {@code null}.
    */
@@ -470,6 +479,27 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
+   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
+   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSavedState() {
+    return savedState;
+  }
+
+  /**
+   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
+   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
+   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * @param savedState savedState or {@code null} for none
+   */
+  public AttachedDisk setSavedState(java.lang.String savedState) {
+    this.savedState = savedState;
     return this;
   }
 

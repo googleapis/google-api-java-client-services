@@ -53,6 +53,13 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   private java.lang.String vmFamily;
 
   /**
+   * The workload type of the instances that will target this reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadType;
+
+  /**
    * [Output only] List of resources currently in use.
    * @return value or {@code null} for none
    */
@@ -100,6 +107,23 @@ public final class AllocationAggregateReservation extends com.google.api.client.
    */
   public AllocationAggregateReservation setVmFamily(java.lang.String vmFamily) {
     this.vmFamily = vmFamily;
+    return this;
+  }
+
+  /**
+   * The workload type of the instances that will target this reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadType() {
+    return workloadType;
+  }
+
+  /**
+   * The workload type of the instances that will target this reservation.
+   * @param workloadType workloadType or {@code null} for none
+   */
+  public AllocationAggregateReservation setWorkloadType(java.lang.String workloadType) {
+    this.workloadType = workloadType;
     return this;
   }
 

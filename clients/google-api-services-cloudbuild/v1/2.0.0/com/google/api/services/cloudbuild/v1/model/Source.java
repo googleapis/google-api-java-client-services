@@ -44,16 +44,16 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private RepoSource repoSource;
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageSource storageSource;
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * @return value or {@code null} for none
    */
   public StorageSource getStorageSource() {
@@ -102,7 +102,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * @param storageSource storageSource or {@code null} for none
    */
   public Source setStorageSource(StorageSource storageSource) {
@@ -111,9 +111,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * @return value or {@code null} for none
    */
   public StorageSourceManifest getStorageSourceManifest() {
@@ -121,9 +121,9 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * @param storageSourceManifest storageSourceManifest or {@code null} for none
    */
   public Source setStorageSourceManifest(StorageSourceManifest storageSourceManifest) {

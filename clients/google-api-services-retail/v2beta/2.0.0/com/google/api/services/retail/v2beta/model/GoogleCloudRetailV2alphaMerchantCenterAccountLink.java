@@ -105,6 +105,13 @@ public final class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends com
   private java.lang.String projectId;
 
   /**
+   * Optional. An optional arbitrary string that could be used as a tag for tracking link source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
    * Output only. Represents the state of the link.
    * The value may be {@code null}.
    */
@@ -280,6 +287,23 @@ public final class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends com
    */
   public GoogleCloudRetailV2alphaMerchantCenterAccountLink setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Optional. An optional arbitrary string that could be used as a tag for tracking link source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * Optional. An optional arbitrary string that could be used as a tag for tracking link source.
+   * @param source source or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaMerchantCenterAccountLink setSource(java.lang.String source) {
+    this.source = source;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TestRunDifference extends com.google.api.client.json.GenericJson {
 
   /**
-   * A description of the diff, showing the actual output vs expected output.
+   * A human readable description of the diff, showing the actual output vs expected output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifference extends com.g
   private java.lang.String type;
 
   /**
-   * A description of the diff, showing the actual output vs expected output.
+   * A human readable description of the diff, showing the actual output vs expected output.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifference extends com.g
   }
 
   /**
-   * A description of the diff, showing the actual output vs expected output.
+   * A human readable description of the diff, showing the actual output vs expected output.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestRunDifference setDescription(java.lang.String description) {

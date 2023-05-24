@@ -39,7 +39,7 @@ public final class BatchDeleteAssetsRequest extends com.google.api.client.json.G
 
   /**
    * Required. The IDs of the assets to delete. A maximum of 1000 assets can be deleted in a batch.
-   * format: projects/{project}/locations/{location}/asset/{name}.
+   * Format: projects/{project}/locations/{location}/assets/{name}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class BatchDeleteAssetsRequest extends com.google.api.client.json.G
 
   /**
    * Required. The IDs of the assets to delete. A maximum of 1000 assets can be deleted in a batch.
-   * format: projects/{project}/locations/{location}/asset/{name}.
+   * Format: projects/{project}/locations/{location}/assets/{name}.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNames() {
@@ -75,7 +75,7 @@ public final class BatchDeleteAssetsRequest extends com.google.api.client.json.G
 
   /**
    * Required. The IDs of the assets to delete. A maximum of 1000 assets can be deleted in a batch.
-   * format: projects/{project}/locations/{location}/asset/{name}.
+   * Format: projects/{project}/locations/{location}/assets/{name}.
    * @param names names or {@code null} for none
    */
   public BatchDeleteAssetsRequest setNames(java.util.List<java.lang.String> names) {

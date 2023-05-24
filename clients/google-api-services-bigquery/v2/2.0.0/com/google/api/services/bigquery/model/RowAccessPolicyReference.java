@@ -30,36 +30,36 @@ package com.google.api.services.bigquery.model;
 public final class RowAccessPolicyReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The ID of the dataset containing this row access policy.
+   * Required. The ID of the dataset containing this row access policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z),
-   * numbers (0-9), or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers
+   * (0-9), or underscores (_). The maximum length is 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyId;
 
   /**
-   * [Required] The ID of the project containing this row access policy.
+   * Required. The ID of the project containing this row access policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] The ID of the table containing this row access policy.
+   * Required. The ID of the table containing this row access policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tableId;
 
   /**
-   * [Required] The ID of the dataset containing this row access policy.
+   * Required. The ID of the dataset containing this row access policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -67,7 +67,7 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the dataset containing this row access policy.
+   * Required. The ID of the dataset containing this row access policy.
    * @param datasetId datasetId or {@code null} for none
    */
   public RowAccessPolicyReference setDatasetId(java.lang.String datasetId) {
@@ -76,8 +76,8 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z),
-   * numbers (0-9), or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers
+   * (0-9), or underscores (_). The maximum length is 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyId() {
@@ -85,8 +85,8 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the row access policy. The ID must contain only letters (a-z, A-Z),
-   * numbers (0-9), or underscores (_). The maximum length is 256 characters.
+   * Required. The ID of the row access policy. The ID must contain only letters (a-z, A-Z), numbers
+   * (0-9), or underscores (_). The maximum length is 256 characters.
    * @param policyId policyId or {@code null} for none
    */
   public RowAccessPolicyReference setPolicyId(java.lang.String policyId) {
@@ -95,7 +95,7 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the project containing this row access policy.
+   * Required. The ID of the project containing this row access policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -103,7 +103,7 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the project containing this row access policy.
+   * Required. The ID of the project containing this row access policy.
    * @param projectId projectId or {@code null} for none
    */
   public RowAccessPolicyReference setProjectId(java.lang.String projectId) {
@@ -112,7 +112,7 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the table containing this row access policy.
+   * Required. The ID of the table containing this row access policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -120,7 +120,7 @@ public final class RowAccessPolicyReference extends com.google.api.client.json.G
   }
 
   /**
-   * [Required] The ID of the table containing this row access policy.
+   * Required. The ID of the table containing this row access policy.
    * @param tableId tableId or {@code null} for none
    */
   public RowAccessPolicyReference setTableId(java.lang.String tableId) {

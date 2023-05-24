@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for EncryptionConfiguration.
+ * Model definition for JsonOptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -27,46 +27,43 @@ package com.google.api.services.bigquery.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EncryptionConfiguration extends com.google.api.client.json.GenericJson {
+public final class JsonOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Describes the Cloud KMS encryption key that will be used to protect destination
-   * BigQuery table. The BigQuery Service Account associated with your project requires access to
-   * this encryption key.
+   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String kmsKeyName;
+  private java.lang.String encoding;
 
   /**
-   * Optional. Describes the Cloud KMS encryption key that will be used to protect destination
-   * BigQuery table. The BigQuery Service Account associated with your project requires access to
-   * this encryption key.
+   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKmsKeyName() {
-    return kmsKeyName;
+  public java.lang.String getEncoding() {
+    return encoding;
   }
 
   /**
-   * Optional. Describes the Cloud KMS encryption key that will be used to protect destination
-   * BigQuery table. The BigQuery Service Account associated with your project requires access to
-   * this encryption key.
-   * @param kmsKeyName kmsKeyName or {@code null} for none
+   * [Optional] The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
+   * @param encoding encoding or {@code null} for none
    */
-  public EncryptionConfiguration setKmsKeyName(java.lang.String kmsKeyName) {
-    this.kmsKeyName = kmsKeyName;
+  public JsonOptions setEncoding(java.lang.String encoding) {
+    this.encoding = encoding;
     return this;
   }
 
   @Override
-  public EncryptionConfiguration set(String fieldName, Object value) {
-    return (EncryptionConfiguration) super.set(fieldName, value);
+  public JsonOptions set(String fieldName, Object value) {
+    return (JsonOptions) super.set(fieldName, value);
   }
 
   @Override
-  public EncryptionConfiguration clone() {
-    return (EncryptionConfiguration) super.clone();
+  public JsonOptions clone() {
+    return (JsonOptions) super.clone();
   }
 
 }

@@ -3865,25 +3865,25 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * If set, then only the Routines matching this filter are returned. The current supported
-       * form is either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
-       * "routineType:SCALAR_FUNCTION".
+       * If set, then only the Routines matching this filter are returned. The supported format is
+       * `routineType:{RoutineType}`, where `{RoutineType}` is a RoutineType enum. For example:
+       * `routineType:SCALAR_FUNCTION`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** If set, then only the Routines matching this filter are returned. The current supported form is
-     either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
-     "routineType:SCALAR_FUNCTION".
+      /** If set, then only the Routines matching this filter are returned. The supported format is
+     `routineType:{RoutineType}`, where `{RoutineType}` is a RoutineType enum. For example:
+     `routineType:SCALAR_FUNCTION`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * If set, then only the Routines matching this filter are returned. The current supported
-       * form is either "routine_type:" or "routineType:", where is a RoutineType enum. Example:
-       * "routineType:SCALAR_FUNCTION".
+       * If set, then only the Routines matching this filter are returned. The supported format is
+       * `routineType:{RoutineType}`, where `{RoutineType}` is a RoutineType enum. For example:
+       * `routineType:SCALAR_FUNCTION`.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

@@ -2172,15 +2172,17 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
-       * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, and
-       * `max_longitude`. See https://google.aip.dev/160 for more information.
+       * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`,
+       * `max_longitude`, 'min_capture_time_seconds', and 'max_capture_time_seconds'. See
+       * https://google.aip.dev/160 for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The filters
-     supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, and `max_longitude`. See
-     https://google.aip.dev/160 for more information.
+     supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`,
+     'min_capture_time_seconds', and 'max_capture_time_seconds'. See https://google.aip.dev/160 for more
+     information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -2188,8 +2190,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
-       * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, and
-       * `max_longitude`. See https://google.aip.dev/160 for more information.
+       * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`,
+       * `max_longitude`, 'min_capture_time_seconds', and 'max_capture_time_seconds'. See
+       * https://google.aip.dev/160 for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

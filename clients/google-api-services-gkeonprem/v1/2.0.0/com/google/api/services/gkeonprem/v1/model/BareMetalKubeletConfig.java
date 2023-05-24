@@ -17,7 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * KubeletConfig defines the modifiable kubelet configurations for baremetal machines. Note: this
+ * KubeletConfig defines the modifiable kubelet configurations for bare metal machines. Note: this
  * list includes fields supported in GKE (see https://cloud.google.com/kubernetes-engine/docs/how-to
  * /node-system-config#kubelet-options).
  *

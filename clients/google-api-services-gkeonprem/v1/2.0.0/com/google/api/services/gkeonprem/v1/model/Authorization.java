@@ -31,18 +31,18 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class Authorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. For VMware user, bare metal user and standalone clusters, users that will be granted
-   * the cluster-admin role on the cluster, providing full access to the cluster. For bare metal
-   * Admin cluster, users will be granted the view role, which is a view only access.
+   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
+   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ClusterUser> adminUsers;
 
   /**
-   * Required. For VMware user, bare metal user and standalone clusters, users that will be granted
-   * the cluster-admin role on the cluster, providing full access to the cluster. For bare metal
-   * Admin cluster, users will be granted the view role, which is a view only access.
+   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
+   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * @return value or {@code null} for none
    */
   public java.util.List<ClusterUser> getAdminUsers() {
@@ -50,9 +50,9 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. For VMware user, bare metal user and standalone clusters, users that will be granted
-   * the cluster-admin role on the cluster, providing full access to the cluster. For bare metal
-   * Admin cluster, users will be granted the view role, which is a view only access.
+   * Required. For VMware and bare metal user clusters, users will be granted the cluster-admin role
+   * on the cluster, which provides full administrative access to the cluster. For bare metal admin
+   * clusters, users will be granted the cluster-view role, which limits users to read-only access.
    * @param adminUsers adminUsers or {@code null} for none
    */
   public Authorization setAdminUsers(java.util.List<ClusterUser> adminUsers) {

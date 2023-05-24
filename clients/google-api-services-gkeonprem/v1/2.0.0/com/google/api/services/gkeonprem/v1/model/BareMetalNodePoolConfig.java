@@ -31,7 +31,7 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalNodePoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The modifiable kubelet configurations for the baremetal machines.
+   * The modifiable kubelet configurations for the bare metal machines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class BareMetalNodePoolConfig extends com.google.api.client.json.Ge
   private java.util.List<NodeTaint> taints;
 
   /**
-   * The modifiable kubelet configurations for the baremetal machines.
+   * The modifiable kubelet configurations for the bare metal machines.
    * @return value or {@code null} for none
    */
   public BareMetalKubeletConfig getKubeletConfig() {
@@ -81,7 +81,7 @@ public final class BareMetalNodePoolConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The modifiable kubelet configurations for the baremetal machines.
+   * The modifiable kubelet configurations for the bare metal machines.
    * @param kubeletConfig kubeletConfig or {@code null} for none
    */
   public BareMetalNodePoolConfig setKubeletConfig(BareMetalKubeletConfig kubeletConfig) {

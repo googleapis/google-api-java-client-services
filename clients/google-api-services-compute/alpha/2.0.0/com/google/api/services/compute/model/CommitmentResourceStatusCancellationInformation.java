@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class CommitmentResourceStatusCancellationInformation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] An optional, the amount of CUDs canceled so far in the last 365 days.
+   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   private java.lang.String cancellationFeeExpirationTimestamp;
 
   /**
-   * [Output Only] An optional, the amount of CUDs canceled so far in the last 365 days.
+   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * @return value or {@code null} for none
    */
   public Money getCanceledCommitment() {
@@ -74,7 +74,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, the amount of CUDs canceled so far in the last 365 days.
+   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * @param canceledCommitment canceledCommitment or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCanceledCommitment(Money canceledCommitment) {

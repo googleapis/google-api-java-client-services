@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class NetworkAttachmentConnectedEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IP address assigned to the producer instance network interface. This value will be a range
-   * in case of Serverless.
+   * The IPv4 address assigned to the producer instance network interface. This value will be a
+   * range in case of Serverless.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String subnetwork;
 
   /**
-   * The IP address assigned to the producer instance network interface. This value will be a range
-   * in case of Serverless.
+   * The IPv4 address assigned to the producer instance network interface. This value will be a
+   * range in case of Serverless.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -75,8 +75,8 @@ public final class NetworkAttachmentConnectedEndpoint extends com.google.api.cli
   }
 
   /**
-   * The IP address assigned to the producer instance network interface. This value will be a range
-   * in case of Serverless.
+   * The IPv4 address assigned to the producer instance network interface. This value will be a
+   * range in case of Serverless.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public NetworkAttachmentConnectedEndpoint setIpAddress(java.lang.String ipAddress) {

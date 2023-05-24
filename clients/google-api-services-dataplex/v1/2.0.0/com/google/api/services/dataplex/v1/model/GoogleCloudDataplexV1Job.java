@@ -37,6 +37,20 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   private String endTime;
 
   /**
+   * Output only. Spec related to how a task is executed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1TaskExecutionSpec executionSpec;
+
+  /**
+   * Output only. User-defined labels for the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. Additional information about the current state.
    * The value may be {@code null}.
    */
@@ -87,6 +101,13 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
   private java.lang.String state;
 
   /**
+   * Output only. Job execution trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trigger;
+
+  /**
    * Output only. System generated globally unique ID for the job.
    * The value may be {@code null}.
    */
@@ -107,6 +128,40 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
    */
   public GoogleCloudDataplexV1Job setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. Spec related to how a task is executed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1TaskExecutionSpec getExecutionSpec() {
+    return executionSpec;
+  }
+
+  /**
+   * Output only. Spec related to how a task is executed.
+   * @param executionSpec executionSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Job setExecutionSpec(GoogleCloudDataplexV1TaskExecutionSpec executionSpec) {
+    this.executionSpec = executionSpec;
+    return this;
+  }
+
+  /**
+   * Output only. User-defined labels for the task.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Output only. User-defined labels for the task.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Job setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -228,6 +283,23 @@ public final class GoogleCloudDataplexV1Job extends com.google.api.client.json.G
    */
   public GoogleCloudDataplexV1Job setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Job execution trigger.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrigger() {
+    return trigger;
+  }
+
+  /**
+   * Output only. Job execution trigger.
+   * @param trigger trigger or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Job setTrigger(java.lang.String trigger) {
+    this.trigger = trigger;
     return this;
   }
 

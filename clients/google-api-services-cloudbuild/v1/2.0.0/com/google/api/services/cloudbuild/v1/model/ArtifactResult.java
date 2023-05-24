@@ -38,8 +38,8 @@ public final class ArtifactResult extends com.google.api.client.json.GenericJson
   private java.util.List<FileHashes> fileHash;
 
   /**
-   * The path of an artifact in a Google Cloud Storage bucket, with the generation number. For
-   * example, `gs://mybucket/path/to/output.jar#generation`.
+   * The path of an artifact in a Cloud Storage bucket, with the generation number. For example,
+   * `gs://mybucket/path/to/output.jar#generation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class ArtifactResult extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The path of an artifact in a Google Cloud Storage bucket, with the generation number. For
-   * example, `gs://mybucket/path/to/output.jar#generation`.
+   * The path of an artifact in a Cloud Storage bucket, with the generation number. For example,
+   * `gs://mybucket/path/to/output.jar#generation`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -72,8 +72,8 @@ public final class ArtifactResult extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The path of an artifact in a Google Cloud Storage bucket, with the generation number. For
-   * example, `gs://mybucket/path/to/output.jar#generation`.
+   * The path of an artifact in a Cloud Storage bucket, with the generation number. For example,
+   * `gs://mybucket/path/to/output.jar#generation`.
    * @param location location or {@code null} for none
    */
   public ArtifactResult setLocation(java.lang.String location) {

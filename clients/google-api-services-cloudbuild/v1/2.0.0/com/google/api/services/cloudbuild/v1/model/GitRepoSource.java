@@ -61,15 +61,17 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   private java.lang.String repoType;
 
   /**
-   * The qualified resource name of the Repo API repository Either uri or repository can be
-   * specified and is required.
+   * The connected repository resource name, in the format
+   * `projects/locations/connections/repositories`. Either `uri` or `repository` can be specified
+   * and is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repository;
 
   /**
-   * The URI of the repo. Either uri or repository can be specified and is required.
+   * The URI of the repo (e.g. https://github.com/user/repo.git). Either `uri` or `repository` can
+   * be specified and is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +152,9 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The qualified resource name of the Repo API repository Either uri or repository can be
-   * specified and is required.
+   * The connected repository resource name, in the format
+   * `projects/locations/connections/repositories`. Either `uri` or `repository` can be specified
+   * and is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepository() {
@@ -159,8 +162,9 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The qualified resource name of the Repo API repository Either uri or repository can be
-   * specified and is required.
+   * The connected repository resource name, in the format
+   * `projects/locations/connections/repositories`. Either `uri` or `repository` can be specified
+   * and is required.
    * @param repository repository or {@code null} for none
    */
   public GitRepoSource setRepository(java.lang.String repository) {
@@ -169,7 +173,8 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo. Either uri or repository can be specified and is required.
+   * The URI of the repo (e.g. https://github.com/user/repo.git). Either `uri` or `repository` can
+   * be specified and is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -177,7 +182,8 @@ public final class GitRepoSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URI of the repo. Either uri or repository can be specified and is required.
+   * The URI of the repo (e.g. https://github.com/user/repo.git). Either `uri` or `repository` can
+   * be specified and is required.
    * @param uri uri or {@code null} for none
    */
   public GitRepoSource setUri(java.lang.String uri) {

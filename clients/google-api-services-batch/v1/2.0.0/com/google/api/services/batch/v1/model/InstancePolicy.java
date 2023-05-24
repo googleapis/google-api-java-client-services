@@ -74,7 +74,7 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform. Not yet implemented.
+   * platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform. Not yet implemented.
+   * platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -170,7 +170,7 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-
-   * platform. Not yet implemented.
+   * platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstancePolicy setMinCpuPlatform(java.lang.String minCpuPlatform) {

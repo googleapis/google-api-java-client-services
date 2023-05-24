@@ -51,6 +51,18 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   private java.lang.String issuerUri;
 
   /**
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jwksJson;
+
+  /**
    * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are
    * rejected if the token audience does not match one of the configured values. Each audience may
    * be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty,
@@ -93,6 +105,33 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
    */
   public Oidc setIssuerUri(java.lang.String issuerUri) {
     this.issuerUri = issuerUri;
+    return this;
+  }
+
+  /**
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJwksJson() {
+    return jwksJson;
+  }
+
+  /**
+   * Optional. OIDC JWKs in JSON String format. For details on the definition of a JWK, see
+   * https://tools.ietf.org/html/rfc7517. If not set, the `jwks_uri` from the discovery
+   * document(fetched from the .well-known path of the `issuer_uri`) will be used. Currently, RSA
+   * and EC asymmetric keys are supported. The JWK must use following format and include only the
+   * following fields: { "keys": [ { "kty": "RSA/EC", "alg": "", "use": "sig", "kid": "", "n": "",
+   * "e": "", "x": "", "y": "", "crv": "" } ] }
+   * @param jwksJson jwksJson or {@code null} for none
+   */
+  public Oidc setJwksJson(java.lang.String jwksJson) {
+    this.jwksJson = jwksJson;
     return this;
   }
 

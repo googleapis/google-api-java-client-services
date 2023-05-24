@@ -30,14 +30,14 @@ package com.google.api.services.bigquery.model;
 public final class ModelReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Required] The ID of the dataset containing this model.
+   * Required. The ID of the dataset containing this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_). The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -45,14 +45,14 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   private java.lang.String modelId;
 
   /**
-   * [Required] The ID of the project containing this model.
+   * Required. The ID of the project containing this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * [Required] The ID of the dataset containing this model.
+   * Required. The ID of the dataset containing this model.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -60,7 +60,7 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the dataset containing this model.
+   * Required. The ID of the dataset containing this model.
    * @param datasetId datasetId or {@code null} for none
    */
   public ModelReference setDatasetId(java.lang.String datasetId) {
@@ -69,7 +69,7 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_). The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
+   * Required. The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or
    * underscores (_). The maximum length is 1,024 characters.
    * @param modelId modelId or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the project containing this model.
+   * Required. The ID of the project containing this model.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -96,7 +96,7 @@ public final class ModelReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Required] The ID of the project containing this model.
+   * Required. The ID of the project containing this model.
    * @param projectId projectId or {@code null} for none
    */
   public ModelReference setProjectId(java.lang.String projectId) {

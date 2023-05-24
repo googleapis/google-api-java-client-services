@@ -122,6 +122,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.Boolean ignoreUnknownValues;
 
   /**
+   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonOptions jsonOptions;
+
+  /**
    * [Optional] The maximum number of bad records that BigQuery can ignore when reading data. If the
    * number of bad records exceeds this value, an invalid error is returned in the job result. This
    * is only valid for CSV, JSON, and Google Sheets. The default value is 0, which requires that all
@@ -405,6 +412,23 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setIgnoreUnknownValues(java.lang.Boolean ignoreUnknownValues) {
     this.ignoreUnknownValues = ignoreUnknownValues;
+    return this;
+  }
+
+  /**
+   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * @return value or {@code null} for none
+   */
+  public JsonOptions getJsonOptions() {
+    return jsonOptions;
+  }
+
+  /**
+   * Additional properties to set if `sourceFormat` is set to `NEWLINE_DELIMITED_JSON`.
+   * @param jsonOptions jsonOptions or {@code null} for none
+   */
+  public ExternalDataConfiguration setJsonOptions(JsonOptions jsonOptions) {
+    this.jsonOptions = jsonOptions;
     return this;
   }
 

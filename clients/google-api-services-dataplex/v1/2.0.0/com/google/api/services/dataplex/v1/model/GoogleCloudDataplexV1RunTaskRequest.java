@@ -29,6 +29,81 @@ package com.google.api.services.dataplex.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDataplexV1RunTaskRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Execution spec arguments. If the map is left empty, the task will run with existing
+   * execution spec args from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of args. If the map contains an entry with an existing arg key in
+   * task definition, the task will run with new arg value for that entry. Clearing an existing arg
+   * will require arg value to be explicitly set to a hyphen "-". The arg value cannot be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> args;
+
+  /**
+   * Optional. User-defined labels for the task. If the map is left empty, the task will run with
+   * existing labels from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of labels. If the map contains an entry with an existing label
+   * key in task definition, the task will run with new label value for that entry. Clearing an
+   * existing label will require label value to be explicitly set to a hyphen "-". The label value
+   * cannot be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Optional. Execution spec arguments. If the map is left empty, the task will run with existing
+   * execution spec args from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of args. If the map contains an entry with an existing arg key in
+   * task definition, the task will run with new arg value for that entry. Clearing an existing arg
+   * will require arg value to be explicitly set to a hyphen "-". The arg value cannot be empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getArgs() {
+    return args;
+  }
+
+  /**
+   * Optional. Execution spec arguments. If the map is left empty, the task will run with existing
+   * execution spec args from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of args. If the map contains an entry with an existing arg key in
+   * task definition, the task will run with new arg value for that entry. Clearing an existing arg
+   * will require arg value to be explicitly set to a hyphen "-". The arg value cannot be empty.
+   * @param args args or {@code null} for none
+   */
+  public GoogleCloudDataplexV1RunTaskRequest setArgs(java.util.Map<String, java.lang.String> args) {
+    this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. User-defined labels for the task. If the map is left empty, the task will run with
+   * existing labels from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of labels. If the map contains an entry with an existing label
+   * key in task definition, the task will run with new label value for that entry. Clearing an
+   * existing label will require label value to be explicitly set to a hyphen "-". The label value
+   * cannot be empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. User-defined labels for the task. If the map is left empty, the task will run with
+   * existing labels from task definition. If the map contains an entry with a new key, the same
+   * will be added to existing set of labels. If the map contains an entry with an existing label
+   * key in task definition, the task will run with new label value for that entry. Clearing an
+   * existing label will require label value to be explicitly set to a hyphen "-". The label value
+   * cannot be empty.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudDataplexV1RunTaskRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
   @Override
   public GoogleCloudDataplexV1RunTaskRequest set(String fieldName, Object value) {
     return (GoogleCloudDataplexV1RunTaskRequest) super.set(fieldName, value);

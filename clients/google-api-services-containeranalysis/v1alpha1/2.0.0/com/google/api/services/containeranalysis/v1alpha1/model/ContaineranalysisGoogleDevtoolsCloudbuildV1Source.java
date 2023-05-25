@@ -45,16 +45,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   private ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource repoSource;
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource storageSource;
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   }
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * @return value or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource getStorageSource() {
@@ -103,7 +103,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   }
 
   /**
-   * If provided, get the source from this location in Google Cloud Storage.
+   * If provided, get the source from this location in Cloud Storage.
    * @param storageSource storageSource or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setStorageSource(ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource storageSource) {
@@ -112,9 +112,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   }
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * @return value or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest getStorageSourceManifest() {
@@ -122,9 +122,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   }
 
   /**
-   * If provided, get the source from this manifest in Google Cloud Storage. This feature is in
-   * Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-
-   * builders/tree/master/gcs-fetcher).
+   * If provided, get the source from this manifest in Cloud Storage. This feature is in Preview;
+   * see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
+   * fetcher).
    * @param storageSourceManifest storageSourceManifest or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setStorageSourceManifest(ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest storageSourceManifest) {

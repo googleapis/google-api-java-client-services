@@ -116,7 +116,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   private java.lang.String logUrl;
 
   /**
-   * Google Cloud Storage bucket where logs should be written (see [Bucket Name
+   * Cloud Storage bucket where logs should be written (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file
    * names will be of the format `${logs_bucket}/log-${build_id}.txt`.
    * The value may be {@code null}.
@@ -447,7 +447,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   }
 
   /**
-   * Google Cloud Storage bucket where logs should be written (see [Bucket Name
+   * Cloud Storage bucket where logs should be written (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file
    * names will be of the format `${logs_bucket}/log-${build_id}.txt`.
    * @return value or {@code null} for none
@@ -457,7 +457,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   }
 
   /**
-   * Google Cloud Storage bucket where logs should be written (see [Bucket Name
+   * Cloud Storage bucket where logs should be written (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file
    * names will be of the format `${logs_bucket}/log-${build_id}.txt`.
    * @param logsBucket logsBucket or {@code null} for none

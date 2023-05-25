@@ -17,9 +17,8 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * Location of the source manifest in Google Cloud Storage. This feature is in Preview; see
- * description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-
- * fetcher).
+ * Location of the source manifest in Cloud Storage. This feature is in Preview; see description
+ * [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -33,7 +32,7 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * The value may be {@code null}.
    */
@@ -41,22 +40,22 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   private java.lang.String bucket;
 
   /**
-   * Google Cloud Storage generation for the object. If the generation is omitted, the latest
-   * generation will be used.
+   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
+   * will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long generation;
 
   /**
-   * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object containing the source manifest. This object must be a JSON file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
   private java.lang.String object__;
 
   /**
-   * Google Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @return value or {@code null} for none
    */
@@ -65,7 +64,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Google Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @param bucket bucket or {@code null} for none
    */
@@ -75,8 +74,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Google Cloud Storage generation for the object. If the generation is omitted, the latest
-   * generation will be used.
+   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
+   * will be used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGeneration() {
@@ -84,8 +83,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Google Cloud Storage generation for the object. If the generation is omitted, the latest
-   * generation will be used.
+   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
+   * will be used.
    * @param generation generation or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest setGeneration(java.lang.Long generation) {
@@ -94,7 +93,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object containing the source manifest. This object must be a JSON file.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -102,7 +101,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Google Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object containing the source manifest. This object must be a JSON file.
    * @param object__ object__ or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest setObject(java.lang.String object__) {

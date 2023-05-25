@@ -68,7 +68,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions exten
   private java.util.List<java.lang.String> env;
 
   /**
-   * Option to define build log streaming behavior to Google Cloud Storage.
+   * Option to define build log streaming behavior to Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +234,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions exten
   }
 
   /**
-   * Option to define build log streaming behavior to Google Cloud Storage.
+   * Option to define build log streaming behavior to Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogStreamingOption() {
@@ -242,7 +242,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions exten
   }
 
   /**
-   * Option to define build log streaming behavior to Google Cloud Storage.
+   * Option to define build log streaming behavior to Cloud Storage.
    * @param logStreamingOption logStreamingOption or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions setLogStreamingOption(java.lang.String logStreamingOption) {

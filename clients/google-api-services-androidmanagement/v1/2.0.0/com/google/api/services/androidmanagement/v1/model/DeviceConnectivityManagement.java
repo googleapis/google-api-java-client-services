@@ -32,16 +32,16 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class DeviceConnectivityManagement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls what can be transferred via USB, files and/or data. This is supported only on company-
-   * owned devices.
+   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
+   * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String usbDataAccess;
 
   /**
-   * Controls what can be transferred via USB, files and/or data. This is supported only on company-
-   * owned devices.
+   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
+   * devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsbDataAccess() {
@@ -49,8 +49,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls what can be transferred via USB, files and/or data. This is supported only on company-
-   * owned devices.
+   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
+   * devices.
    * @param usbDataAccess usbDataAccess or {@code null} for none
    */
   public DeviceConnectivityManagement setUsbDataAccess(java.lang.String usbDataAccess) {

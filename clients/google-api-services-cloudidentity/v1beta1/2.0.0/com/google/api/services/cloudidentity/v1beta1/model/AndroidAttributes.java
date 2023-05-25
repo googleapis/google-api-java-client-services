@@ -30,11 +30,25 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class AndroidAttributes extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the device passes Android CTS compliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ctsProfileMatch;
+
+  /**
    * Whether applications from unknown sources can be installed on device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabledUnknownSources;
+
+  /**
+   * Whether any potentially harmful apps were detected on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasPotentiallyHarmfulApps;
 
   /**
    * Whether this account is on an owner/primary profile. For phones, only true for owner profiles.
@@ -60,6 +74,37 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Boolean supportsWorkProfile;
 
   /**
+   * Whether Android verified boot status is GREEN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifiedBoot;
+
+  /**
+   * Whether Google Play Protect Verify Apps is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verifyAppsEnabled;
+
+  /**
+   * Whether the device passes Android CTS compliance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCtsProfileMatch() {
+    return ctsProfileMatch;
+  }
+
+  /**
+   * Whether the device passes Android CTS compliance.
+   * @param ctsProfileMatch ctsProfileMatch or {@code null} for none
+   */
+  public AndroidAttributes setCtsProfileMatch(java.lang.Boolean ctsProfileMatch) {
+    this.ctsProfileMatch = ctsProfileMatch;
+    return this;
+  }
+
+  /**
    * Whether applications from unknown sources can be installed on device.
    * @return value or {@code null} for none
    */
@@ -73,6 +118,23 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
    */
   public AndroidAttributes setEnabledUnknownSources(java.lang.Boolean enabledUnknownSources) {
     this.enabledUnknownSources = enabledUnknownSources;
+    return this;
+  }
+
+  /**
+   * Whether any potentially harmful apps were detected on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasPotentiallyHarmfulApps() {
+    return hasPotentiallyHarmfulApps;
+  }
+
+  /**
+   * Whether any potentially harmful apps were detected on the device.
+   * @param hasPotentiallyHarmfulApps hasPotentiallyHarmfulApps or {@code null} for none
+   */
+  public AndroidAttributes setHasPotentiallyHarmfulApps(java.lang.Boolean hasPotentiallyHarmfulApps) {
+    this.hasPotentiallyHarmfulApps = hasPotentiallyHarmfulApps;
     return this;
   }
 
@@ -128,6 +190,40 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
    */
   public AndroidAttributes setSupportsWorkProfile(java.lang.Boolean supportsWorkProfile) {
     this.supportsWorkProfile = supportsWorkProfile;
+    return this;
+  }
+
+  /**
+   * Whether Android verified boot status is GREEN.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifiedBoot() {
+    return verifiedBoot;
+  }
+
+  /**
+   * Whether Android verified boot status is GREEN.
+   * @param verifiedBoot verifiedBoot or {@code null} for none
+   */
+  public AndroidAttributes setVerifiedBoot(java.lang.Boolean verifiedBoot) {
+    this.verifiedBoot = verifiedBoot;
+    return this;
+  }
+
+  /**
+   * Whether Google Play Protect Verify Apps is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerifyAppsEnabled() {
+    return verifyAppsEnabled;
+  }
+
+  /**
+   * Whether Google Play Protect Verify Apps is enabled.
+   * @param verifyAppsEnabled verifyAppsEnabled or {@code null} for none
+   */
+  public AndroidAttributes setVerifyAppsEnabled(java.lang.Boolean verifyAppsEnabled) {
+    this.verifyAppsEnabled = verifyAppsEnabled;
     return this;
   }
 

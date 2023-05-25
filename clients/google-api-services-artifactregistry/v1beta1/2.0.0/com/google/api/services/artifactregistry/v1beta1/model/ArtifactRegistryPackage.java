@@ -45,8 +45,8 @@ public final class ArtifactRegistryPackage extends com.google.api.client.json.Ge
   private java.lang.String displayName;
 
   /**
-   * The name of the package, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1". If the package ID part contains slashes, the
+   * The name of the package, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1`. If the package ID part contains slashes, the
    * slashes are escaped.
    * The value may be {@code null}.
    */
@@ -96,8 +96,8 @@ public final class ArtifactRegistryPackage extends com.google.api.client.json.Ge
   }
 
   /**
-   * The name of the package, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1". If the package ID part contains slashes, the
+   * The name of the package, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1`. If the package ID part contains slashes, the
    * slashes are escaped.
    * @return value or {@code null} for none
    */
@@ -106,8 +106,8 @@ public final class ArtifactRegistryPackage extends com.google.api.client.json.Ge
   }
 
   /**
-   * The name of the package, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/packages/pkg1". If the package ID part contains slashes, the
+   * The name of the package, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/packages/pkg1`. If the package ID part contains slashes, the
    * slashes are escaped.
    * @param name name or {@code null} for none
    */

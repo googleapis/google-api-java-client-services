@@ -61,7 +61,7 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean sendFullResource;
 
   /**
-   * Whether to send full FHIR resource to this pubsub topic for deleting FHIR resource. Note that
+   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. Note that
    * setting this to true does not guarantee that all previous resources will be sent in the format
    * of full FHIR resource. When a resource change is too large or during heavy traffic, only the
    * resource name will be sent. Clients should always check the "payloadType" label from a Pub/Sub
@@ -141,7 +141,7 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this pubsub topic for deleting FHIR resource. Note that
+   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. Note that
    * setting this to true does not guarantee that all previous resources will be sent in the format
    * of full FHIR resource. When a resource change is too large or during heavy traffic, only the
    * resource name will be sent. Clients should always check the "payloadType" label from a Pub/Sub
@@ -154,7 +154,7 @@ public final class FhirNotificationConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Whether to send full FHIR resource to this pubsub topic for deleting FHIR resource. Note that
+   * Whether to send full FHIR resource to this Pub/Sub topic for deleting FHIR resource. Note that
    * setting this to true does not guarantee that all previous resources will be sent in the format
    * of full FHIR resource. When a resource change is too large or during heavy traffic, only the
    * resource name will be sent. Clients should always check the "payloadType" label from a Pub/Sub

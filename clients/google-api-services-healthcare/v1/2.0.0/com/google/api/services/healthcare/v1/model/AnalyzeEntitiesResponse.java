@@ -38,8 +38,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
   private java.util.List<Entity> entities;
 
   /**
-   * entity_mentions contains all the annotated medical entities that were mentioned in the provided
-   * document.
+   * The `entity_mentions` field contains all the annotated medical entities that were mentioned in
+   * the provided document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * entity_mentions contains all the annotated medical entities that were mentioned in the provided
-   * document.
+   * The `entity_mentions` field contains all the annotated medical entities that were mentioned in
+   * the provided document.
    * @return value or {@code null} for none
    */
   public java.util.List<EntityMention> getEntityMentions() {
@@ -82,8 +82,8 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * entity_mentions contains all the annotated medical entities that were mentioned in the provided
-   * document.
+   * The `entity_mentions` field contains all the annotated medical entities that were mentioned in
+   * the provided document.
    * @param entityMentions entityMentions or {@code null} for none
    */
   public AnalyzeEntitiesResponse setEntityMentions(java.util.List<EntityMention> entityMentions) {

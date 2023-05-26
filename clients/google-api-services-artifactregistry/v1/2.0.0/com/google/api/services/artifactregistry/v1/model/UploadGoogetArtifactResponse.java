@@ -32,7 +32,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class UploadGoogetArtifactResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Apt artifacts updated.
+   * The GooGet artifacts updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class UploadGoogetArtifactResponse extends com.google.api.client.js
   }
 
   /**
-   * The Apt artifacts updated.
+   * The GooGet artifacts updated.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogetArtifact> getGoogetArtifacts() {
@@ -53,7 +53,7 @@ public final class UploadGoogetArtifactResponse extends com.google.api.client.js
   }
 
   /**
-   * The Apt artifacts updated.
+   * The GooGet artifacts updated.
    * @param googetArtifacts googetArtifacts or {@code null} for none
    */
   public UploadGoogetArtifactResponse setGoogetArtifacts(java.util.List<GoogetArtifact> googetArtifacts) {

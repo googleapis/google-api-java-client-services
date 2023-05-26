@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Data Loss Prevention (DLP) API.
+ * Available OAuth 2.0 scopes for use with the Cloud Data Loss Prevention (DLP).
  *
  * @since 1.4
  */

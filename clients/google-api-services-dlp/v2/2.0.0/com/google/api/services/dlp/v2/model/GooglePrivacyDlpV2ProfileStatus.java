@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * Model definition for GooglePrivacyDlpV2ProfileStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
+ * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ProfileStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Profiling status code and optional message
+   * Profiling status code and optional message. status.code will be 0 (default value) for OK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2ProfileStatus extends com.google.api.client
   private String timestamp;
 
   /**
-   * Profiling status code and optional message
+   * Profiling status code and optional message. status.code will be 0 (default value) for OK.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -53,7 +53,7 @@ public final class GooglePrivacyDlpV2ProfileStatus extends com.google.api.client
   }
 
   /**
-   * Profiling status code and optional message
+   * Profiling status code and optional message. status.code will be 0 (default value) for OK.
    * @param status status or {@code null} for none
    */
   public GooglePrivacyDlpV2ProfileStatus setStatus(GoogleRpcStatus status) {

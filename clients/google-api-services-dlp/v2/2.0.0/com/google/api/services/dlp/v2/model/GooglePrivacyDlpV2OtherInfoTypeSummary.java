@@ -20,7 +20,7 @@ package com.google.api.services.dlp.v2.model;
  * Infotype details for other infoTypes found within a column.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
+ * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -36,6 +36,14 @@ public final class GooglePrivacyDlpV2OtherInfoTypeSummary extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.Integer estimatedPrevalence;
+
+  /**
+   * Whether this infoType was excluded from sensitivity and risk analysis due to factors such as
+   * low prevalence (subject to change).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludedFromAnalysis;
 
   /**
    * The other infoType.
@@ -58,6 +66,25 @@ public final class GooglePrivacyDlpV2OtherInfoTypeSummary extends com.google.api
    */
   public GooglePrivacyDlpV2OtherInfoTypeSummary setEstimatedPrevalence(java.lang.Integer estimatedPrevalence) {
     this.estimatedPrevalence = estimatedPrevalence;
+    return this;
+  }
+
+  /**
+   * Whether this infoType was excluded from sensitivity and risk analysis due to factors such as
+   * low prevalence (subject to change).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludedFromAnalysis() {
+    return excludedFromAnalysis;
+  }
+
+  /**
+   * Whether this infoType was excluded from sensitivity and risk analysis due to factors such as
+   * low prevalence (subject to change).
+   * @param excludedFromAnalysis excludedFromAnalysis or {@code null} for none
+   */
+  public GooglePrivacyDlpV2OtherInfoTypeSummary setExcludedFromAnalysis(java.lang.Boolean excludedFromAnalysis) {
+    this.excludedFromAnalysis = excludedFromAnalysis;
     return this;
   }
 

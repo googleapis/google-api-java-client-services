@@ -65,6 +65,14 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private Status failureStatus;
 
   /**
+   * Output only. If true, the commitment is a flat-rate commitment, otherwise, it's an edition
+   * commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isFlatRate;
+
+  /**
    * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If
    * set to true, this commitment is placed in the organization's secondary region which is
    * designated for disaster recovery purposes. If false, this commitment is placed in the
@@ -184,6 +192,25 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
    */
   public CapacityCommitment setFailureStatus(Status failureStatus) {
     this.failureStatus = failureStatus;
+    return this;
+  }
+
+  /**
+   * Output only. If true, the commitment is a flat-rate commitment, otherwise, it's an edition
+   * commitment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsFlatRate() {
+    return isFlatRate;
+  }
+
+  /**
+   * Output only. If true, the commitment is a flat-rate commitment, otherwise, it's an edition
+   * commitment.
+   * @param isFlatRate isFlatRate or {@code null} for none
+   */
+  public CapacityCommitment setIsFlatRate(java.lang.Boolean isFlatRate) {
+    this.isFlatRate = isFlatRate;
     return this;
   }
 

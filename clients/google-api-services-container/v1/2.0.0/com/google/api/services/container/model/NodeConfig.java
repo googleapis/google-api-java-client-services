@@ -281,6 +281,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
+   * Parameters for node pools to be backed by shared sole tenant node groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SoleTenantConfig soleTenantConfig;
+
+  /**
    * Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
    * The value may be {@code null}.
    */
@@ -885,6 +892,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
     this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
+   * Parameters for node pools to be backed by shared sole tenant node groups.
+   * @return value or {@code null} for none
+   */
+  public SoleTenantConfig getSoleTenantConfig() {
+    return soleTenantConfig;
+  }
+
+  /**
+   * Parameters for node pools to be backed by shared sole tenant node groups.
+   * @param soleTenantConfig soleTenantConfig or {@code null} for none
+   */
+  public NodeConfig setSoleTenantConfig(SoleTenantConfig soleTenantConfig) {
+    this.soleTenantConfig = soleTenantConfig;
     return this;
   }
 

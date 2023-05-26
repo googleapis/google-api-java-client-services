@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class ImportGoogetArtifactsGcsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage paths URI (e.g., gs://my_bucket/my_object).
+   * Cloud Storage paths URI (e.g., `gs://my_bucket/my_object`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class ImportGoogetArtifactsGcsSource extends com.google.api.client.
   private java.lang.Boolean useWildcards;
 
   /**
-   * Cloud Storage paths URI (e.g., gs://my_bucket/my_object).
+   * Cloud Storage paths URI (e.g., `gs://my_bucket/my_object`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUris() {
@@ -53,7 +53,7 @@ public final class ImportGoogetArtifactsGcsSource extends com.google.api.client.
   }
 
   /**
-   * Cloud Storage paths URI (e.g., gs://my_bucket/my_object).
+   * Cloud Storage paths URI (e.g., `gs://my_bucket/my_object`).
    * @param uris uris or {@code null} for none
    */
   public ImportGoogetArtifactsGcsSource setUris(java.util.List<java.lang.String> uris) {

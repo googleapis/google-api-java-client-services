@@ -39,6 +39,13 @@ public final class GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow extends c
   private java.lang.String authCode;
 
   /**
+   * Auth URL for Authorization Code Flow
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authUri;
+
+  /**
    * Client ID for user-provided OAuth app.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow extends c
    */
   public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow setAuthCode(java.lang.String authCode) {
     this.authCode = authCode;
+    return this;
+  }
+
+  /**
+   * Auth URL for Authorization Code Flow
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthUri() {
+    return authUri;
+  }
+
+  /**
+   * Auth URL for Authorization Code Flow
+   * @param authUri authUri or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow setAuthUri(java.lang.String authUri) {
+    this.authUri = authUri;
     return this;
   }
 

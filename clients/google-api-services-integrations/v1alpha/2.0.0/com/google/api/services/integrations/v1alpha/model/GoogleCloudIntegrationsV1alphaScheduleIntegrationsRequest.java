@@ -75,7 +75,7 @@ public final class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest ext
   private String scheduleTime;
 
   /**
-   * Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
    * TriggerConfig.trigger_id.equals(trigger_id)
    * The value may be {@code null}.
    */
@@ -174,7 +174,7 @@ public final class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest ext
   }
 
   /**
-   * Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
    * TriggerConfig.trigger_id.equals(trigger_id)
    * @return value or {@code null} for none
    */
@@ -183,7 +183,7 @@ public final class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest ext
   }
 
   /**
-   * Matched against all {@link TriggerConfig}s across all integrations. i.e.
+   * Required. Matched against all {@link TriggerConfig}s across all integrations. i.e.
    * TriggerConfig.trigger_id.equals(trigger_id)
    * @param triggerId triggerId or {@code null} for none
    */

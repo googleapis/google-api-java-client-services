@@ -52,6 +52,13 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   private java.lang.String key;
 
   /**
+   * Value is a Encryption Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EncryptionKey keyValue;
+
+  /**
    * Value is a secret.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
    */
   public GoogleCloudConnectorsV1ConfigVariable setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EncryptionKey getKeyValue() {
+    return keyValue;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @param keyValue keyValue or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConfigVariable setKeyValue(GoogleCloudConnectorsV1EncryptionKey keyValue) {
+    this.keyValue = keyValue;
     return this;
   }
 

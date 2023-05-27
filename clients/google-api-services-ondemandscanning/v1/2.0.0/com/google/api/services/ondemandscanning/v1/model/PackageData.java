@@ -38,10 +38,20 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String architecture;
 
   /**
-   * The binary package. This is significant when the source is different than the binary itself.
-   * Historically if they've differed, we've stored the name of the source and its version in the
-   * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * A bundle containing the binary and source information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BinarySourceInfo> binarySourceInfo;
+
+  static {
+    // hack to force ProGuard to consider BinarySourceInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BinarySourceInfo.class);
+  }
+
+  /**
+   * DEPRECATED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,10 +144,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> patchedCve;
 
   /**
-   * The source package. Similar to the above, this is significant when the source is different than
-   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
-   * a separate field for both binary and source if we want to know definitively where the data is
-   * coming from.
+   * DEPRECATED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,10 +181,24 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The binary package. This is significant when the source is different than the binary itself.
-   * Historically if they've differed, we've stored the name of the source and its version in the
-   * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * A bundle containing the binary and source information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BinarySourceInfo> getBinarySourceInfo() {
+    return binarySourceInfo;
+  }
+
+  /**
+   * A bundle containing the binary and source information.
+   * @param binarySourceInfo binarySourceInfo or {@code null} for none
+   */
+  public PackageData setBinarySourceInfo(java.util.List<BinarySourceInfo> binarySourceInfo) {
+    this.binarySourceInfo = binarySourceInfo;
+    return this;
+  }
+
+  /**
+   * DEPRECATED
    * @return value or {@code null} for none
    */
   public PackageVersion getBinaryVersion() {
@@ -185,10 +206,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The binary package. This is significant when the source is different than the binary itself.
-   * Historically if they've differed, we've stored the name of the source and its version in the
-   * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * DEPRECATED
    * @param binaryVersion binaryVersion or {@code null} for none
    */
   public PackageData setBinaryVersion(PackageVersion binaryVersion) {
@@ -375,10 +393,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source package. Similar to the above, this is significant when the source is different than
-   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
-   * a separate field for both binary and source if we want to know definitively where the data is
-   * coming from.
+   * DEPRECATED
    * @return value or {@code null} for none
    */
   public PackageVersion getSourceVersion() {
@@ -386,10 +401,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source package. Similar to the above, this is significant when the source is different than
-   * the binary itself. Since the top-level package/version fields are based on an if/else, we need
-   * a separate field for both binary and source if we want to know definitively where the data is
-   * coming from.
+   * DEPRECATED
    * @param sourceVersion sourceVersion or {@code null} for none
    */
   public PackageData setSourceVersion(PackageVersion sourceVersion) {

@@ -38,6 +38,14 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
   private java.lang.String customToken;
 
   /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. A custom token signed using your project's Admin SDK service account credentials.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
    */
   public GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest setCustomToken(java.lang.String customToken) {
     this.customToken = customToken;
+    return this;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
     return this;
   }
 

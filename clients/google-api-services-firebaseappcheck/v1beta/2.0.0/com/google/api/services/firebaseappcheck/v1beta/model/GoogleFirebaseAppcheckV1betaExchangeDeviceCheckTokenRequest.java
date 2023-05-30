@@ -40,6 +40,14 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
   private java.lang.String deviceToken;
 
   /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. The `device_token` as returned by Apple's client-side [DeviceCheck
    * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This is the base64
    * encoded `Data` (Swift) or `NSData` (ObjC) object.
@@ -57,6 +65,25 @@ public final class GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest e
    */
   public GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest setDeviceToken(java.lang.String deviceToken) {
     this.deviceToken = deviceToken;
+    return this;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
     return this;
   }
 

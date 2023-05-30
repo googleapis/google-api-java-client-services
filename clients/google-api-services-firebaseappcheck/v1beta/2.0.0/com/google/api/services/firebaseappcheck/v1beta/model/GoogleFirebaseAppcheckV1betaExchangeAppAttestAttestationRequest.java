@@ -54,6 +54,14 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationReque
   private java.lang.String keyId;
 
   /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. The App Attest statement returned by the client-side App Attest API. This is a
    * base64url encoded CBOR object in the JSON response.
    * @see #decodeAttestationStatement()
@@ -193,6 +201,25 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationReque
    */
   public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest encodeKeyId(byte[] keyId) {
     this.keyId = com.google.api.client.util.Base64.encodeBase64URLSafeString(keyId);
+    return this;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
     return this;
   }
 

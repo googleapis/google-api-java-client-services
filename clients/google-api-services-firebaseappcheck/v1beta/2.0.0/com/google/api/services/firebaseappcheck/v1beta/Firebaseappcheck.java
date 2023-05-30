@@ -308,6 +308,494 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the OauthClients collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+   *   {@code Firebaseappcheck.OauthClients.List request = firebaseappcheck.oauthClients().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public OauthClients oauthClients() {
+    return new OauthClients();
+  }
+
+  /**
+   * The "oauthClients" collection of methods.
+   */
+  public class OauthClients {
+
+    /**
+     * Accepts an App Attest assertion and an artifact previously obtained from
+     * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
+     *
+     * Create a request for the method "oauthClients.exchangeAppAttestAssertion".
+     *
+     * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+     * optional parameters, call the {@link ExchangeAppAttestAssertion#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
+     * @return the request
+     */
+    public ExchangeAppAttestAssertion exchangeAppAttestAssertion(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest content) throws java.io.IOException {
+      ExchangeAppAttestAssertion result = new ExchangeAppAttestAssertion(app, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ExchangeAppAttestAssertion extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
+
+      private static final String REST_PATH = "v1beta/{+app}:exchangeAppAttestAssertion";
+
+      private final java.util.regex.Pattern APP_PATTERN =
+          java.util.regex.Pattern.compile("^oauthClients/[^/]+$");
+
+      /**
+       * Accepts an App Attest assertion and an artifact previously obtained from
+       * ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
+       *
+       * Create a request for the method "oauthClients.exchangeAppAttestAssertion".
+       *
+       * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeAppAttestAssertion#execute()} method to invoke the
+       * remote operation. <p> {@link ExchangeAppAttestAssertion#initialize(com.google.api.client.google
+       * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest}
+       * @since 1.13
+       */
+      protected ExchangeAppAttestAssertion(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest content) {
+        super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
+        this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion set$Xgafv(java.lang.String $Xgafv) {
+        return (ExchangeAppAttestAssertion) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setAccessToken(java.lang.String accessToken) {
+        return (ExchangeAppAttestAssertion) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setAlt(java.lang.String alt) {
+        return (ExchangeAppAttestAssertion) super.setAlt(alt);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setCallback(java.lang.String callback) {
+        return (ExchangeAppAttestAssertion) super.setCallback(callback);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setFields(java.lang.String fields) {
+        return (ExchangeAppAttestAssertion) super.setFields(fields);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setKey(java.lang.String key) {
+        return (ExchangeAppAttestAssertion) super.setKey(key);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setOauthToken(java.lang.String oauthToken) {
+        return (ExchangeAppAttestAssertion) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ExchangeAppAttestAssertion) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setQuotaUser(java.lang.String quotaUser) {
+        return (ExchangeAppAttestAssertion) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setUploadType(java.lang.String uploadType) {
+        return (ExchangeAppAttestAssertion) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ExchangeAppAttestAssertion) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String app;
+
+      /** Required. The relative resource name of the iOS app, in the format: ```
+     projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+     replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+     Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public java.lang.String getApp() {
+        return app;
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public ExchangeAppAttestAssertion setApp(java.lang.String app) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+        this.app = app;
+        return this;
+      }
+
+      @Override
+      public ExchangeAppAttestAssertion set(String parameterName, Object value) {
+        return (ExchangeAppAttestAssertion) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
+     * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
+     * AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's
+     * response object will also contain an AppCheckToken (if the verification is successful).
+     *
+     * Create a request for the method "oauthClients.exchangeAppAttestAttestation".
+     *
+     * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+     * optional parameters, call the {@link ExchangeAppAttestAttestation#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
+     * @return the request
+     */
+    public ExchangeAppAttestAttestation exchangeAppAttestAttestation(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest content) throws java.io.IOException {
+      ExchangeAppAttestAttestation result = new ExchangeAppAttestAttestation(app, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ExchangeAppAttestAttestation extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse> {
+
+      private static final String REST_PATH = "v1beta/{+app}:exchangeAppAttestAttestation";
+
+      private final java.util.regex.Pattern APP_PATTERN =
+          java.util.regex.Pattern.compile("^oauthClients/[^/]+$");
+
+      /**
+       * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team
+       * and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an
+       * AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's
+       * response object will also contain an AppCheckToken (if the verification is successful).
+       *
+       * Create a request for the method "oauthClients.exchangeAppAttestAttestation".
+       *
+       * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeAppAttestAttestation#execute()} method to invoke
+       * the remote operation. <p> {@link ExchangeAppAttestAttestation#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest}
+       * @since 1.13
+       */
+      protected ExchangeAppAttestAttestation(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest content) {
+        super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse.class);
+        this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation set$Xgafv(java.lang.String $Xgafv) {
+        return (ExchangeAppAttestAttestation) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setAccessToken(java.lang.String accessToken) {
+        return (ExchangeAppAttestAttestation) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setAlt(java.lang.String alt) {
+        return (ExchangeAppAttestAttestation) super.setAlt(alt);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setCallback(java.lang.String callback) {
+        return (ExchangeAppAttestAttestation) super.setCallback(callback);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setFields(java.lang.String fields) {
+        return (ExchangeAppAttestAttestation) super.setFields(fields);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setKey(java.lang.String key) {
+        return (ExchangeAppAttestAttestation) super.setKey(key);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setOauthToken(java.lang.String oauthToken) {
+        return (ExchangeAppAttestAttestation) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ExchangeAppAttestAttestation) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setQuotaUser(java.lang.String quotaUser) {
+        return (ExchangeAppAttestAttestation) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setUploadType(java.lang.String uploadType) {
+        return (ExchangeAppAttestAttestation) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ExchangeAppAttestAttestation) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String app;
+
+      /** Required. The relative resource name of the iOS app, in the format: ```
+     projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+     replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+     Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public java.lang.String getApp() {
+        return app;
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public ExchangeAppAttestAttestation setApp(java.lang.String app) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+        this.app = app;
+        return this;
+      }
+
+      @Override
+      public ExchangeAppAttestAttestation set(String parameterName, Object value) {
+        return (ExchangeAppAttestAttestation) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Generates a challenge that protects the integrity of an immediately following call to
+     * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for
+     * multiple calls.
+     *
+     * Create a request for the method "oauthClients.generateAppAttestChallenge".
+     *
+     * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+     * optional parameters, call the {@link GenerateAppAttestChallenge#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
+     * @return the request
+     */
+    public GenerateAppAttestChallenge generateAppAttestChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest content) throws java.io.IOException {
+      GenerateAppAttestChallenge result = new GenerateAppAttestChallenge(app, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateAppAttestChallenge extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse> {
+
+      private static final String REST_PATH = "v1beta/{+app}:generateAppAttestChallenge";
+
+      private final java.util.regex.Pattern APP_PATTERN =
+          java.util.regex.Pattern.compile("^oauthClients/[^/]+$");
+
+      /**
+       * Generates a challenge that protects the integrity of an immediately following call to
+       * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused
+       * for multiple calls.
+       *
+       * Create a request for the method "oauthClients.generateAppAttestChallenge".
+       *
+       * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link GenerateAppAttestChallenge#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateAppAttestChallenge#initialize(com.google.api.client.google
+       * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param app Required. The relative resource name of the iOS app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest}
+       * @since 1.13
+       */
+      protected GenerateAppAttestChallenge(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeRequest content) {
+        super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaGenerateAppAttestChallengeResponse.class);
+        this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+      }
+
+      @Override
+      public GenerateAppAttestChallenge set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateAppAttestChallenge) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setAccessToken(java.lang.String accessToken) {
+        return (GenerateAppAttestChallenge) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setAlt(java.lang.String alt) {
+        return (GenerateAppAttestChallenge) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setCallback(java.lang.String callback) {
+        return (GenerateAppAttestChallenge) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setFields(java.lang.String fields) {
+        return (GenerateAppAttestChallenge) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setKey(java.lang.String key) {
+        return (GenerateAppAttestChallenge) super.setKey(key);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setOauthToken(java.lang.String oauthToken) {
+        return (GenerateAppAttestChallenge) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateAppAttestChallenge) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateAppAttestChallenge) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setUploadType(java.lang.String uploadType) {
+        return (GenerateAppAttestChallenge) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateAppAttestChallenge setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateAppAttestChallenge) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String app;
+
+      /** Required. The relative resource name of the iOS app, in the format: ```
+     projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+     replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+     Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public java.lang.String getApp() {
+        return app;
+      }
+
+      /**
+       * Required. The relative resource name of the iOS app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public GenerateAppAttestChallenge setApp(java.lang.String app) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+        this.app = app;
+        return this;
+      }
+
+      @Override
+      public GenerateAppAttestChallenge set(String parameterName, Object value) {
+        return (GenerateAppAttestChallenge) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>

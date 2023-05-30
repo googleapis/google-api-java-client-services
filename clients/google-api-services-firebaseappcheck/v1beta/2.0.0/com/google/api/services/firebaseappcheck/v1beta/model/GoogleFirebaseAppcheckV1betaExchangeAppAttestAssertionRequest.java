@@ -53,6 +53,14 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
   private java.lang.String challenge;
 
   /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. The artifact returned by a previous call to ExchangeAppAttestAttestation.
    * @see #decodeArtifact()
    * @return value or {@code null} for none
@@ -188,6 +196,25 @@ public final class GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest
    */
   public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest encodeChallenge(byte[] challenge) {
     this.challenge = com.google.api.client.util.Base64.encodeBase64URLSafeString(challenge);
+    return this;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short-lived token with a 5 minute TTL. Useful when the client wishes to impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
     return this;
   }
 

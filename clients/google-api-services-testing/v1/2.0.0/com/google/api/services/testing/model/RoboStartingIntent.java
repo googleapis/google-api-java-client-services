@@ -37,6 +37,13 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   private LauncherActivityIntent launcherActivity;
 
   /**
+   * Skips the starting activity
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NoActivityIntent noActivity;
+
+  /**
    * An intent that starts an activity with specific details.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
    */
   public RoboStartingIntent setLauncherActivity(LauncherActivityIntent launcherActivity) {
     this.launcherActivity = launcherActivity;
+    return this;
+  }
+
+  /**
+   * Skips the starting activity
+   * @return value or {@code null} for none
+   */
+  public NoActivityIntent getNoActivity() {
+    return noActivity;
+  }
+
+  /**
+   * Skips the starting activity
+   * @param noActivity noActivity or {@code null} for none
+   */
+  public RoboStartingIntent setNoActivity(NoActivityIntent noActivity) {
+    this.noActivity = noActivity;
     return this;
   }
 

@@ -53,11 +53,29 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo chromeCounts;
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo creator;
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo discoverSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo discussion;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo documentIntent;
 
   /**
    * The value may be {@code null}.
@@ -139,7 +157,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getCreator() {
@@ -147,11 +164,57 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * @param creator creator or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setCreator(IndexingDocjoinerDataVersionVersionInfo creator) {
     this.creator = creator;
+    return this;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getDiscoverSource() {
+    return discoverSource;
+  }
+
+  /**
+   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
+   * @param discoverSource discoverSource or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setDiscoverSource(IndexingDocjoinerDataVersionVersionInfo discoverSource) {
+    this.discoverSource = discoverSource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getDiscussion() {
+    return discussion;
+  }
+
+  /**
+   * @param discussion discussion or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setDiscussion(IndexingDocjoinerDataVersionVersionInfo discussion) {
+    this.discussion = discussion;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getDocumentIntent() {
+    return documentIntent;
+  }
+
+  /**
+   * @param documentIntent documentIntent or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setDocumentIntent(IndexingDocjoinerDataVersionVersionInfo documentIntent) {
+    this.documentIntent = documentIntent;
     return this;
   }
 

@@ -67,6 +67,14 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
   private java.util.List<java.lang.String> documentCreatorFilter;
 
   /**
+   * Search the documents in the list. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> documentNameFilter;
+
+  /**
    * This filter specifies the exact document schema Document.document_schema_name of the documents
    * to search against. If a value isn't specified, documents within the search results are
    * associated with any schema. If multiple values are specified, documents within the search
@@ -236,6 +244,25 @@ public final class GoogleCloudContentwarehouseV1DocumentQuery extends com.google
    */
   public GoogleCloudContentwarehouseV1DocumentQuery setDocumentCreatorFilter(java.util.List<java.lang.String> documentCreatorFilter) {
     this.documentCreatorFilter = documentCreatorFilter;
+    return this;
+  }
+
+  /**
+   * Search the documents in the list. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDocumentNameFilter() {
+    return documentNameFilter;
+  }
+
+  /**
+   * Search the documents in the list. Format:
+   * projects/{project_number}/locations/{location}/documents/{document_id}.
+   * @param documentNameFilter documentNameFilter or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1DocumentQuery setDocumentNameFilter(java.util.List<java.lang.String> documentNameFilter) {
+    this.documentNameFilter = documentNameFilter;
     return this;
   }
 

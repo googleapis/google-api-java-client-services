@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The following message contains info of sub image docs, it is populated in query_state and
- * consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 25
+ * consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 26
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -91,6 +91,13 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.Float estRelevance;
+
+  /**
+   * Estimated Sigma U calculated from U*.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float estSigmaU;
 
   /**
    * The value may be {@code null}.
@@ -370,6 +377,23 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   public WWWResultInfoSubImageDocInfo setEstRelevance(java.lang.Float estRelevance) {
     this.estRelevance = estRelevance;
+    return this;
+  }
+
+  /**
+   * Estimated Sigma U calculated from U*.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getEstSigmaU() {
+    return estSigmaU;
+  }
+
+  /**
+   * Estimated Sigma U calculated from U*.
+   * @param estSigmaU estSigmaU or {@code null} for none
+   */
+  public WWWResultInfoSubImageDocInfo setEstSigmaU(java.lang.Float estSigmaU) {
+    this.estSigmaU = estSigmaU;
     return this;
   }
 

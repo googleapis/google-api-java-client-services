@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A button. Can be a text button or an image button.
+ * Metadata for attachments migrated from Hangouts
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,64 +27,58 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChatV1WidgetMarkupButton extends com.google.api.client.json.GenericJson {
+public final class AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * A button with image and `onclick` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleChatV1WidgetMarkupImageButton imageButton;
+  private AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId photoId;
 
   /**
-   * A button with text and `onclick` action.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private GoogleChatV1WidgetMarkupTextButton textButton;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long updateTimestampUsec;
 
   /**
-   * A button with image and `onclick` action.
    * @return value or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupImageButton getImageButton() {
-    return imageButton;
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId getPhotoId() {
+    return photoId;
   }
 
   /**
-   * A button with image and `onclick` action.
-   * @param imageButton imageButton or {@code null} for none
+   * @param photoId photoId or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupButton setImageButton(GoogleChatV1WidgetMarkupImageButton imageButton) {
-    this.imageButton = imageButton;
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata setPhotoId(AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadataPhotoId photoId) {
+    this.photoId = photoId;
     return this;
   }
 
   /**
-   * A button with text and `onclick` action.
    * @return value or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupTextButton getTextButton() {
-    return textButton;
+  public java.lang.Long getUpdateTimestampUsec() {
+    return updateTimestampUsec;
   }
 
   /**
-   * A button with text and `onclick` action.
-   * @param textButton textButton or {@code null} for none
+   * @param updateTimestampUsec updateTimestampUsec or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupButton setTextButton(GoogleChatV1WidgetMarkupTextButton textButton) {
-    this.textButton = textButton;
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata setUpdateTimestampUsec(java.lang.Long updateTimestampUsec) {
+    this.updateTimestampUsec = updateTimestampUsec;
     return this;
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupButton set(String fieldName, Object value) {
-    return (GoogleChatV1WidgetMarkupButton) super.set(fieldName, value);
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata set(String fieldName, Object value) {
+    return (AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupButton clone() {
-    return (GoogleChatV1WidgetMarkupButton) super.clone();
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata clone() {
+    return (AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata) super.clone();
   }
 
 }

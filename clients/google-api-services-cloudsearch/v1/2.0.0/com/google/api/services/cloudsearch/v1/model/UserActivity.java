@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A button with text and `onclick` action.
+ * User's single or bulk query activity. This can be a logging query or deletion query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChatV1WidgetMarkupTextButton extends com.google.api.client.json.GenericJson {
+public final class UserActivity extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `onclick` action of the button.
+   * Contains data which needs to be logged/removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleChatV1WidgetMarkupOnClick onClick;
+  private QueryActivity queryActivity;
 
   /**
-   * The text of the button.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String text;
-
-  /**
-   * The `onclick` action of the button.
+   * Contains data which needs to be logged/removed.
    * @return value or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupOnClick getOnClick() {
-    return onClick;
+  public QueryActivity getQueryActivity() {
+    return queryActivity;
   }
 
   /**
-   * The `onclick` action of the button.
-   * @param onClick onClick or {@code null} for none
+   * Contains data which needs to be logged/removed.
+   * @param queryActivity queryActivity or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupTextButton setOnClick(GoogleChatV1WidgetMarkupOnClick onClick) {
-    this.onClick = onClick;
-    return this;
-  }
-
-  /**
-   * The text of the button.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getText() {
-    return text;
-  }
-
-  /**
-   * The text of the button.
-   * @param text text or {@code null} for none
-   */
-  public GoogleChatV1WidgetMarkupTextButton setText(java.lang.String text) {
-    this.text = text;
+  public UserActivity setQueryActivity(QueryActivity queryActivity) {
+    this.queryActivity = queryActivity;
     return this;
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextButton set(String fieldName, Object value) {
-    return (GoogleChatV1WidgetMarkupTextButton) super.set(fieldName, value);
+  public UserActivity set(String fieldName, Object value) {
+    return (UserActivity) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupTextButton clone() {
-    return (GoogleChatV1WidgetMarkupTextButton) super.clone();
+  public UserActivity clone() {
+    return (UserActivity) super.clone();
   }
 
 }

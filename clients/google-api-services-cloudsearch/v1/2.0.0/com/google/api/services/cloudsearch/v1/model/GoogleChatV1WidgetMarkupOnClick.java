@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * An onclick action (e.g. open a link).
+ * An `onclick` action (for example, open a link).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GoogleChatV1WidgetMarkupOnClick extends com.google.api.client.json.GenericJson {
 
   /**
-   * A form action will be triggered by this onclick if specified.
+   * A form action is triggered by this `onclick` action if specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleChatV1WidgetMarkupFormAction action;
 
   /**
-   * This onclick triggers an open link action if specified.
+   * This `onclick` action triggers an open link action if specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleChatV1WidgetMarkupOpenLink openLink;
 
   /**
-   * A form action will be triggered by this onclick if specified.
+   * A form action is triggered by this `onclick` action if specified.
    * @return value or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupFormAction getAction() {
@@ -52,7 +52,7 @@ public final class GoogleChatV1WidgetMarkupOnClick extends com.google.api.client
   }
 
   /**
-   * A form action will be triggered by this onclick if specified.
+   * A form action is triggered by this `onclick` action if specified.
    * @param action action or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupOnClick setAction(GoogleChatV1WidgetMarkupFormAction action) {
@@ -61,7 +61,7 @@ public final class GoogleChatV1WidgetMarkupOnClick extends com.google.api.client
   }
 
   /**
-   * This onclick triggers an open link action if specified.
+   * This `onclick` action triggers an open link action if specified.
    * @return value or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupOpenLink getOpenLink() {
@@ -69,7 +69,7 @@ public final class GoogleChatV1WidgetMarkupOnClick extends com.google.api.client
   }
 
   /**
-   * This onclick triggers an open link action if specified.
+   * This `onclick` action triggers an open link action if specified.
    * @param openLink openLink or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupOnClick setOpenLink(GoogleChatV1WidgetMarkupOpenLink openLink) {

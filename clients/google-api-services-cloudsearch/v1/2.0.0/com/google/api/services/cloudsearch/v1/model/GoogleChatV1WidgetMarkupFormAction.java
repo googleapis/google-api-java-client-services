@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A form action describes the behavior when the form is submitted. For example, an Apps Script can
- * be invoked to handle the form.
+ * A form action describes the behavior when the form is submitted. For example, you can invoke Apps
+ * Script to handle the form.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -32,8 +32,8 @@ public final class GoogleChatV1WidgetMarkupFormAction extends com.google.api.cli
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the Chat app as part of the card click event. The same method
-   * name can be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. You can use the
+   * same method name for several elements that trigger a common behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleChatV1WidgetMarkupFormAction extends com.google.api.cli
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the Chat app as part of the card click event. The same method
-   * name can be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. You can use the
+   * same method name for several elements that trigger a common behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionMethodName() {
@@ -58,8 +58,8 @@ public final class GoogleChatV1WidgetMarkupFormAction extends com.google.api.cli
 
   /**
    * The method name is used to identify which part of the form triggered the form submission. This
-   * information is echoed back to the Chat app as part of the card click event. The same method
-   * name can be used for several elements that trigger a common behavior if desired.
+   * information is echoed back to the Chat app as part of the card click event. You can use the
+   * same method name for several elements that trigger a common behavior.
    * @param actionMethodName actionMethodName or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupFormAction setActionMethodName(java.lang.String actionMethodName) {

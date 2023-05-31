@@ -51,6 +51,13 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   private java.lang.String key;
 
   /**
+   * Value is a Encryption Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionKey keyValue;
+
+  /**
    * Value is a secret.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
    */
   public ConfigVariable setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @return value or {@code null} for none
+   */
+  public EncryptionKey getKeyValue() {
+    return keyValue;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @param keyValue keyValue or {@code null} for none
+   */
+  public ConfigVariable setKeyValue(EncryptionKey keyValue) {
+    this.keyValue = keyValue;
     return this;
   }
 

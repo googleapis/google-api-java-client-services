@@ -6374,6 +6374,22 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /** Filter string. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Filter string.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Filter string. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
             /** Page size. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;

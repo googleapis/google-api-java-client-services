@@ -51,6 +51,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long connectionRevision;
+
+  /**
    * Required. Connector version on which the connection is created. The format is:
    * projects/locations/providers/connectors/versions Only global location is supported for
    * ConnectorVersion resource.
@@ -225,6 +233,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setConfigVariables(java.util.List<ConfigVariable> configVariables) {
     this.configVariables = configVariables;
+    return this;
+  }
+
+  /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConnectionRevision() {
+    return connectionRevision;
+  }
+
+  /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * @param connectionRevision connectionRevision or {@code null} for none
+   */
+  public Connection setConnectionRevision(java.lang.Long connectionRevision) {
+    this.connectionRevision = connectionRevision;
     return this;
   }
 

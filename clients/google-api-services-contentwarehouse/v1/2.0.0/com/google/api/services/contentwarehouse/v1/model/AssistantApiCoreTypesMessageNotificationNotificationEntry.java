@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Structure of each notification in the MessageNotification Bundle. Attribute sender_name could be
- * different in case of group messages. Next Id: 6
+ * different in case of group messages. Next Id: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,6 +32,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiCoreTypesMessageNotificationNotificationEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Count of characters in the message body in the notification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer charCount;
+
+  /**
    * Uri for the attachment (image, audio, video etc.).
    * The value may be {@code null}.
    */
@@ -39,7 +46,8 @@ public final class AssistantApiCoreTypesMessageNotificationNotificationEntry ext
   private java.lang.String dataUri;
 
   /**
-   * Content of the message body in the notification.
+   * Note that this is not present in production traffic. Content of the message body in the
+   * notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +75,30 @@ public final class AssistantApiCoreTypesMessageNotificationNotificationEntry ext
   private AssistantApiCoreTypesMessageNotificationPerson sender;
 
   /**
+   * Count of words in the message body in the notification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer wordCount;
+
+  /**
+   * Count of characters in the message body in the notification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCharCount() {
+    return charCount;
+  }
+
+  /**
+   * Count of characters in the message body in the notification.
+   * @param charCount charCount or {@code null} for none
+   */
+  public AssistantApiCoreTypesMessageNotificationNotificationEntry setCharCount(java.lang.Integer charCount) {
+    this.charCount = charCount;
+    return this;
+  }
+
+  /**
    * Uri for the attachment (image, audio, video etc.).
    * @return value or {@code null} for none
    */
@@ -84,7 +116,8 @@ public final class AssistantApiCoreTypesMessageNotificationNotificationEntry ext
   }
 
   /**
-   * Content of the message body in the notification.
+   * Note that this is not present in production traffic. Content of the message body in the
+   * notification.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageBody() {
@@ -92,7 +125,8 @@ public final class AssistantApiCoreTypesMessageNotificationNotificationEntry ext
   }
 
   /**
-   * Content of the message body in the notification.
+   * Note that this is not present in production traffic. Content of the message body in the
+   * notification.
    * @param messageBody messageBody or {@code null} for none
    */
   public AssistantApiCoreTypesMessageNotificationNotificationEntry setMessageBody(java.lang.String messageBody) {
@@ -148,6 +182,23 @@ public final class AssistantApiCoreTypesMessageNotificationNotificationEntry ext
    */
   public AssistantApiCoreTypesMessageNotificationNotificationEntry setSender(AssistantApiCoreTypesMessageNotificationPerson sender) {
     this.sender = sender;
+    return this;
+  }
+
+  /**
+   * Count of words in the message body in the notification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getWordCount() {
+    return wordCount;
+  }
+
+  /**
+   * Count of words in the message body in the notification.
+   * @param wordCount wordCount or {@code null} for none
+   */
+  public AssistantApiCoreTypesMessageNotificationNotificationEntry setWordCount(java.lang.Integer wordCount) {
+    this.wordCount = wordCount;
     return this;
   }
 

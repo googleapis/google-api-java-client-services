@@ -32,7 +32,7 @@ public final class GeostoreTollClusterProto extends com.google.api.client.json.G
 
   /**
    * The list of TYPE_INTERSECTION features that are toll points and form this toll cluster. A toll
-   * cluser can consist of either a single or a group of intersection points called toll points at
+   * cluster can consist of either a single or a group of intersection points called toll points at
    * the end of various road segments in MapFacts that represent one or more lanes passing through a
    * toll fixture that all go to the same routing destination. This relationship is reciprocal, as a
    * toll point intersection also stores a reference to the toll cluster it belongs to. A toll
@@ -51,7 +51,7 @@ public final class GeostoreTollClusterProto extends com.google.api.client.json.G
 
   /**
    * The list of TYPE_INTERSECTION features that are toll points and form this toll cluster. A toll
-   * cluser can consist of either a single or a group of intersection points called toll points at
+   * cluster can consist of either a single or a group of intersection points called toll points at
    * the end of various road segments in MapFacts that represent one or more lanes passing through a
    * toll fixture that all go to the same routing destination. This relationship is reciprocal, as a
    * toll point intersection also stores a reference to the toll cluster it belongs to. A toll
@@ -65,7 +65,7 @@ public final class GeostoreTollClusterProto extends com.google.api.client.json.G
 
   /**
    * The list of TYPE_INTERSECTION features that are toll points and form this toll cluster. A toll
-   * cluser can consist of either a single or a group of intersection points called toll points at
+   * cluster can consist of either a single or a group of intersection points called toll points at
    * the end of various road segments in MapFacts that represent one or more lanes passing through a
    * toll fixture that all go to the same routing destination. This relationship is reciprocal, as a
    * toll point intersection also stores a reference to the toll cluster it belongs to. A toll

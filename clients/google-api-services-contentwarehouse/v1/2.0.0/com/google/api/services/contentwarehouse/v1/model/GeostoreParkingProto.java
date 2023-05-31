@@ -65,10 +65,10 @@ public final class GeostoreParkingProto extends com.google.api.client.json.Gener
   /**
    * Indicates whether long-term parking is available at the feature; if true, long-term parking is
    * available at the feature and parking allowances may be present on this feature, or
-   * parking_provider_feature may indicate defered parking feature(s). If false, this is an explicit
-   * statement that there is no long-term parking associated with this feature. If unset, we don't
-   * know whether there is long-term parking associated with this feature. If false or unset, only
-   * additional restrictions or short-term allowances will be populated.
+   * parking_provider_feature may indicate deferred parking feature(s). If false, this is an
+   * explicit statement that there is no long-term parking associated with this feature. If unset,
+   * we don't know whether there is long-term parking associated with this feature. If false or
+   * unset, only additional restrictions or short-term allowances will be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,10 +157,10 @@ public final class GeostoreParkingProto extends com.google.api.client.json.Gener
   /**
    * Indicates whether long-term parking is available at the feature; if true, long-term parking is
    * available at the feature and parking allowances may be present on this feature, or
-   * parking_provider_feature may indicate defered parking feature(s). If false, this is an explicit
-   * statement that there is no long-term parking associated with this feature. If unset, we don't
-   * know whether there is long-term parking associated with this feature. If false or unset, only
-   * additional restrictions or short-term allowances will be populated.
+   * parking_provider_feature may indicate deferred parking feature(s). If false, this is an
+   * explicit statement that there is no long-term parking associated with this feature. If unset,
+   * we don't know whether there is long-term parking associated with this feature. If false or
+   * unset, only additional restrictions or short-term allowances will be populated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getParkingAvailable() {
@@ -170,10 +170,10 @@ public final class GeostoreParkingProto extends com.google.api.client.json.Gener
   /**
    * Indicates whether long-term parking is available at the feature; if true, long-term parking is
    * available at the feature and parking allowances may be present on this feature, or
-   * parking_provider_feature may indicate defered parking feature(s). If false, this is an explicit
-   * statement that there is no long-term parking associated with this feature. If unset, we don't
-   * know whether there is long-term parking associated with this feature. If false or unset, only
-   * additional restrictions or short-term allowances will be populated.
+   * parking_provider_feature may indicate deferred parking feature(s). If false, this is an
+   * explicit statement that there is no long-term parking associated with this feature. If unset,
+   * we don't know whether there is long-term parking associated with this feature. If false or
+   * unset, only additional restrictions or short-term allowances will be populated.
    * @param parkingAvailable parkingAvailable or {@code null} for none
    */
   public GeostoreParkingProto setParkingAvailable(java.lang.Boolean parkingAvailable) {

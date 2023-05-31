@@ -46,6 +46,15 @@ public final class AssistantDevicesPlatformProtoAlarmCapability extends com.goog
   private java.lang.Boolean restrictAlarmsToNextDay;
 
   /**
+   * Whether the client supports mutation of any alarm attribute such as time_pattern,
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
+   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsGenericMutations;
+
+  /**
    * Whether the client supports the STOP alarm action. If this is false, stop actions will be
    * represented by the MUTATE action, and the device may need to check alarm state to determine if
    * there's a firing alarm that needs to be dismissed.
@@ -87,6 +96,27 @@ public final class AssistantDevicesPlatformProtoAlarmCapability extends com.goog
    */
   public AssistantDevicesPlatformProtoAlarmCapability setRestrictAlarmsToNextDay(java.lang.Boolean restrictAlarmsToNextDay) {
     this.restrictAlarmsToNextDay = restrictAlarmsToNextDay;
+    return this;
+  }
+
+  /**
+   * Whether the client supports mutation of any alarm attribute such as time_pattern,
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
+   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsGenericMutations() {
+    return supportsGenericMutations;
+  }
+
+  /**
+   * Whether the client supports mutation of any alarm attribute such as time_pattern,
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
+   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * @param supportsGenericMutations supportsGenericMutations or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoAlarmCapability setSupportsGenericMutations(java.lang.Boolean supportsGenericMutations) {
+    this.supportsGenericMutations = supportsGenericMutations;
     return this;
   }
 

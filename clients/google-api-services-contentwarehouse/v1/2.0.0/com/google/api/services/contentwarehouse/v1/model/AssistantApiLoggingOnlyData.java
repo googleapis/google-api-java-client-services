@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Data which is produced for logging and debugging. Servers MUST NOT use this for any other
- * purposes, such as branching on it. Next ID: 15
+ * purposes, such as branching on it. Next ID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,9 +32,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiLoggingOnlyData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device
-   * such as distinguishing primary user data from secondary users. There is no guarantee that this
-   * is a stable number but is relatively stable in practice.
+   * The index of the account on the device. Useful when there are multiple accounts on a device.
+   * There is no guarantee that this is a stable number but is relatively stable in practice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,6 +117,15 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
   private java.lang.String initialAppVersion;
 
   /**
+   * Boolean field to indicate whether a certain user is the primary user of a device or not. This
+   * is useful for distinguishing the user0 from other users given user0 might have certain
+   * privileges (Eg: Hubmode on Tangor)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isPrimaryUser;
+
+  /**
    * default display name of device over mdns. This is specified at the factory, not specified by
    * the user.
    * The value may be {@code null}.
@@ -141,9 +149,8 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
   private java.lang.String virtualReleaseChannel;
 
   /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device
-   * such as distinguishing primary user data from secondary users. There is no guarantee that this
-   * is a stable number but is relatively stable in practice.
+   * The index of the account on the device. Useful when there are multiple accounts on a device.
+   * There is no guarantee that this is a stable number but is relatively stable in practice.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAccountIndex() {
@@ -151,9 +158,8 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
   }
 
   /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device
-   * such as distinguishing primary user data from secondary users. There is no guarantee that this
-   * is a stable number but is relatively stable in practice.
+   * The index of the account on the device. Useful when there are multiple accounts on a device.
+   * There is no guarantee that this is a stable number but is relatively stable in practice.
    * @param accountIndex accountIndex or {@code null} for none
    */
   public AssistantApiLoggingOnlyData setAccountIndex(java.lang.Integer accountIndex) {
@@ -342,6 +348,27 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
    */
   public AssistantApiLoggingOnlyData setInitialAppVersion(java.lang.String initialAppVersion) {
     this.initialAppVersion = initialAppVersion;
+    return this;
+  }
+
+  /**
+   * Boolean field to indicate whether a certain user is the primary user of a device or not. This
+   * is useful for distinguishing the user0 from other users given user0 might have certain
+   * privileges (Eg: Hubmode on Tangor)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsPrimaryUser() {
+    return isPrimaryUser;
+  }
+
+  /**
+   * Boolean field to indicate whether a certain user is the primary user of a device or not. This
+   * is useful for distinguishing the user0 from other users given user0 might have certain
+   * privileges (Eg: Hubmode on Tangor)
+   * @param isPrimaryUser isPrimaryUser or {@code null} for none
+   */
+  public AssistantApiLoggingOnlyData setIsPrimaryUser(java.lang.Boolean isPrimaryUser) {
+    this.isPrimaryUser = isPrimaryUser;
     return this;
   }
 

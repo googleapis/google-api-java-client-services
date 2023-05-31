@@ -66,6 +66,13 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends 
   private java.lang.String nextPageToken;
 
   /**
+   * Experimental. Question answer from the query against the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String questionAnswer;
+
+  /**
    * The total number of matched documents which is available only if the client set
    * SearchDocumentsRequest.require_total_size to `true` or set
    * SearchDocumentsRequest.total_result_size to `ESTIMATED_SIZE` or `ACTUAL_SIZE`. Otherwise, the
@@ -143,6 +150,23 @@ public final class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends 
    */
   public GoogleCloudContentwarehouseV1SearchDocumentsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Experimental. Question answer from the query against the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuestionAnswer() {
+    return questionAnswer;
+  }
+
+  /**
+   * Experimental. Question answer from the query against the document.
+   * @param questionAnswer questionAnswer or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1SearchDocumentsResponse setQuestionAnswer(java.lang.String questionAnswer) {
+    this.questionAnswer = questionAnswer;
     return this;
   }
 

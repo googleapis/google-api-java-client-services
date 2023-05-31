@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 52
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 53
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -187,6 +187,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPodcastIntent;
+
+  /**
+   * Whether the intent is a media object tvm intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTvmIntent;
 
   /**
    * Whether the intent is a media object video intent.
@@ -742,6 +749,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsPodcastIntent(java.lang.Boolean isPodcastIntent) {
     this.isPodcastIntent = isPodcastIntent;
+    return this;
+  }
+
+  /**
+   * Whether the intent is a media object tvm intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTvmIntent() {
+    return isTvmIntent;
+  }
+
+  /**
+   * Whether the intent is a media object tvm intent.
+   * @param isTvmIntent isTvmIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsTvmIntent(java.lang.Boolean isTvmIntent) {
+    this.isTvmIntent = isTvmIntent;
     return this;
   }
 

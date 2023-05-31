@@ -122,6 +122,14 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
   private java.lang.Integer nonDisplayableOrganicScoreMillis;
 
   /**
+   * This is experimental, not filled in yet and not intended to be used. Please contact buyable-
+   * corpus@ before considering using this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo nonDisplayableStaleAvailability;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -357,6 +365,25 @@ public final class QualityShoppingShoppingAttachmentOffer extends com.google.api
    */
   public QualityShoppingShoppingAttachmentOffer setNonDisplayableOrganicScoreMillis(java.lang.Integer nonDisplayableOrganicScoreMillis) {
     this.nonDisplayableOrganicScoreMillis = nonDisplayableOrganicScoreMillis;
+    return this;
+  }
+
+  /**
+   * This is experimental, not filled in yet and not intended to be used. Please contact buyable-
+   * corpus@ before considering using this field.
+   * @return value or {@code null} for none
+   */
+  public ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo getNonDisplayableStaleAvailability() {
+    return nonDisplayableStaleAvailability;
+  }
+
+  /**
+   * This is experimental, not filled in yet and not intended to be used. Please contact buyable-
+   * corpus@ before considering using this field.
+   * @param nonDisplayableStaleAvailability nonDisplayableStaleAvailability or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentOffer setNonDisplayableStaleAvailability(ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo nonDisplayableStaleAvailability) {
+    this.nonDisplayableStaleAvailability = nonDisplayableStaleAvailability;
     return this;
   }
 

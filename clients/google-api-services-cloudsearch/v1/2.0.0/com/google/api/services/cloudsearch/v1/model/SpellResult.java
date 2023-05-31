@@ -37,6 +37,13 @@ public final class SpellResult extends com.google.api.client.json.GenericJson {
   private java.lang.String suggestedQuery;
 
   /**
+   * Suggestion triggered for the current query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suggestionType;
+
+  /**
    * The suggested spelling of the query.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class SpellResult extends com.google.api.client.json.GenericJson {
    */
   public SpellResult setSuggestedQuery(java.lang.String suggestedQuery) {
     this.suggestedQuery = suggestedQuery;
+    return this;
+  }
+
+  /**
+   * Suggestion triggered for the current query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuggestionType() {
+    return suggestionType;
+  }
+
+  /**
+   * Suggestion triggered for the current query.
+   * @param suggestionType suggestionType or {@code null} for none
+   */
+  public SpellResult setSuggestionType(java.lang.String suggestionType) {
+    this.suggestionType = suggestionType;
     return this;
   }
 

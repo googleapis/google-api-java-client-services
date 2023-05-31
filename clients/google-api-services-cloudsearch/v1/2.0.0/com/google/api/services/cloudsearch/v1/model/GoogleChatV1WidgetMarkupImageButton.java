@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * An image button with an onclick action.
+ * An image button with an `onclick` action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.client.json.GenericJson {
 
   /**
-   * The icon specified by an enum that indices to an icon provided by Chat API.
+   * The icon specified by an `enum` that indices to an icon provided by Chat API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,22 +44,22 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   private java.lang.String iconUrl;
 
   /**
-   * The name of this image_button which will be used for accessibility. Default value will be
-   * provided if developers don't specify.
+   * The name of this `image_button` that's used for accessibility. Default value is provided if
+   * this name isn't specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleChatV1WidgetMarkupOnClick onClick;
 
   /**
-   * The icon specified by an enum that indices to an icon provided by Chat API.
+   * The icon specified by an `enum` that indices to an icon provided by Chat API.
    * @return value or {@code null} for none
    */
   public java.lang.String getIcon() {
@@ -67,7 +67,7 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   }
 
   /**
-   * The icon specified by an enum that indices to an icon provided by Chat API.
+   * The icon specified by an `enum` that indices to an icon provided by Chat API.
    * @param icon icon or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupImageButton setIcon(java.lang.String icon) {
@@ -93,8 +93,8 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   }
 
   /**
-   * The name of this image_button which will be used for accessibility. Default value will be
-   * provided if developers don't specify.
+   * The name of this `image_button` that's used for accessibility. Default value is provided if
+   * this name isn't specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -102,8 +102,8 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   }
 
   /**
-   * The name of this image_button which will be used for accessibility. Default value will be
-   * provided if developers don't specify.
+   * The name of this `image_button` that's used for accessibility. Default value is provided if
+   * this name isn't specified.
    * @param name name or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupImageButton setName(java.lang.String name) {
@@ -112,7 +112,7 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   }
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * @return value or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupOnClick getOnClick() {
@@ -120,7 +120,7 @@ public final class GoogleChatV1WidgetMarkupImageButton extends com.google.api.cl
   }
 
   /**
-   * The onclick action.
+   * The `onclick` action.
    * @param onClick onClick or {@code null} for none
    */
   public GoogleChatV1WidgetMarkupImageButton setOnClick(GoogleChatV1WidgetMarkupOnClick onClick) {

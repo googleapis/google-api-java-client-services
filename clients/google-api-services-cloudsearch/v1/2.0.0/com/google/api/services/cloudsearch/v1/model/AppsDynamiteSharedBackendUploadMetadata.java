@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Metadata used only in Dynamite backend for uploaded attachments.
+ * Metadata used only in Dynamite backend for uploaded attachments. NEXT ID: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -76,7 +76,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   private DlpScanSummary dlpScanSummary;
 
   /**
-   * The list of experiments this video is enabled for Next tag: 19
+   * The list of experiments this video is enabled for
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,6 +95,12 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isClientSideTranscodedVideo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata migratedFromHangoutsMetadata;
 
   /**
    * Original dimension of the content. Only set for image attachments.
@@ -269,7 +275,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   }
 
   /**
-   * The list of experiments this video is enabled for Next tag: 19
+   * The list of experiments this video is enabled for
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExperiment() {
@@ -277,7 +283,7 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
   }
 
   /**
-   * The list of experiments this video is enabled for Next tag: 19
+   * The list of experiments this video is enabled for
    * @param experiment experiment or {@code null} for none
    */
   public AppsDynamiteSharedBackendUploadMetadata setExperiment(java.util.List<java.lang.String> experiment) {
@@ -316,6 +322,21 @@ public final class AppsDynamiteSharedBackendUploadMetadata extends com.google.ap
    */
   public AppsDynamiteSharedBackendUploadMetadata setIsClientSideTranscodedVideo(java.lang.Boolean isClientSideTranscodedVideo) {
     this.isClientSideTranscodedVideo = isClientSideTranscodedVideo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata getMigratedFromHangoutsMetadata() {
+    return migratedFromHangoutsMetadata;
+  }
+
+  /**
+   * @param migratedFromHangoutsMetadata migratedFromHangoutsMetadata or {@code null} for none
+   */
+  public AppsDynamiteSharedBackendUploadMetadata setMigratedFromHangoutsMetadata(AppsDynamiteSharedBackendUploadMetadataMigratedFromHangoutsMetadata migratedFromHangoutsMetadata) {
+    this.migratedFromHangoutsMetadata = migratedFromHangoutsMetadata;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A button. Can be a text button or an image button.
+ * Remove Logged Activity Request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleChatV1WidgetMarkupButton extends com.google.api.client.json.GenericJson {
+public final class RemoveActivityRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A button with image and `onclick` action.
+   * Request options, such as the search application and clientId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleChatV1WidgetMarkupImageButton imageButton;
+  private RequestOptions requestOptions;
 
   /**
-   * A button with text and `onclick` action.
+   * User Activity containing the data to be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleChatV1WidgetMarkupTextButton textButton;
+  private UserActivity userActivity;
 
   /**
-   * A button with image and `onclick` action.
+   * Request options, such as the search application and clientId.
    * @return value or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupImageButton getImageButton() {
-    return imageButton;
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
   }
 
   /**
-   * A button with image and `onclick` action.
-   * @param imageButton imageButton or {@code null} for none
+   * Request options, such as the search application and clientId.
+   * @param requestOptions requestOptions or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupButton setImageButton(GoogleChatV1WidgetMarkupImageButton imageButton) {
-    this.imageButton = imageButton;
+  public RemoveActivityRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 
   /**
-   * A button with text and `onclick` action.
+   * User Activity containing the data to be deleted.
    * @return value or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupTextButton getTextButton() {
-    return textButton;
+  public UserActivity getUserActivity() {
+    return userActivity;
   }
 
   /**
-   * A button with text and `onclick` action.
-   * @param textButton textButton or {@code null} for none
+   * User Activity containing the data to be deleted.
+   * @param userActivity userActivity or {@code null} for none
    */
-  public GoogleChatV1WidgetMarkupButton setTextButton(GoogleChatV1WidgetMarkupTextButton textButton) {
-    this.textButton = textButton;
+  public RemoveActivityRequest setUserActivity(UserActivity userActivity) {
+    this.userActivity = userActivity;
     return this;
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupButton set(String fieldName, Object value) {
-    return (GoogleChatV1WidgetMarkupButton) super.set(fieldName, value);
+  public RemoveActivityRequest set(String fieldName, Object value) {
+    return (RemoveActivityRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleChatV1WidgetMarkupButton clone() {
-    return (GoogleChatV1WidgetMarkupButton) super.clone();
+  public RemoveActivityRequest clone() {
+    return (RemoveActivityRequest) super.clone();
   }
 
 }

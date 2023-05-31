@@ -32,18 +32,20 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class AppsDynamiteSharedMessageSearchInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * An example use case: clients can use this field to highlight matched segments in message
-   * text_body defined in
-   * http://google3/apps/dynamite/v1/frontend/api/message.proto;l=104;rcl=513400736.
+   * Current usage: - DescriptionType=KEYWORD_MATCH is populated in this field to return metadata
+   * for keyword matches, which clients can use to highlight matched segments in a message's
+   * text_body. - DescriptionType=SNIPPET can be used to return metadata describing how a message's
+   * text_body can be broken up to provide a snippet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AppsDynamiteSharedTextSegmentsWithDescription> matchedSegmentsInTextBody;
 
   /**
-   * An example use case: clients can use this field to highlight matched segments in message
-   * text_body defined in
-   * http://google3/apps/dynamite/v1/frontend/api/message.proto;l=104;rcl=513400736.
+   * Current usage: - DescriptionType=KEYWORD_MATCH is populated in this field to return metadata
+   * for keyword matches, which clients can use to highlight matched segments in a message's
+   * text_body. - DescriptionType=SNIPPET can be used to return metadata describing how a message's
+   * text_body can be broken up to provide a snippet.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsDynamiteSharedTextSegmentsWithDescription> getMatchedSegmentsInTextBody() {
@@ -51,9 +53,10 @@ public final class AppsDynamiteSharedMessageSearchInfo extends com.google.api.cl
   }
 
   /**
-   * An example use case: clients can use this field to highlight matched segments in message
-   * text_body defined in
-   * http://google3/apps/dynamite/v1/frontend/api/message.proto;l=104;rcl=513400736.
+   * Current usage: - DescriptionType=KEYWORD_MATCH is populated in this field to return metadata
+   * for keyword matches, which clients can use to highlight matched segments in a message's
+   * text_body. - DescriptionType=SNIPPET can be used to return metadata describing how a message's
+   * text_body can be broken up to provide a snippet.
    * @param matchedSegmentsInTextBody matchedSegmentsInTextBody or {@code null} for none
    */
   public AppsDynamiteSharedMessageSearchInfo setMatchedSegmentsInTextBody(java.util.List<AppsDynamiteSharedTextSegmentsWithDescription> matchedSegmentsInTextBody) {

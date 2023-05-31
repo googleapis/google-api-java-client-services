@@ -18,8 +18,8 @@ package com.google.api.services.cloudsearch.v1.model;
 
 /**
  * A section contains a collection of widgets that are rendered (vertically) in the order that they
- * are specified. Across all platforms, cards have a narrow fixed width, so there is currently no
- * need for layout properties (e.g. float).
+ * are specified. Across all platforms, cards have a narrow fixed width, so there's currently no
+ * need for layout properties (for example, float).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -33,14 +33,16 @@ public final class GoogleChatV1ContextualAddOnMarkupCardSection extends com.goog
 
   /**
    * The header of the section. Formatted text is supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String header;
 
   /**
-   * A section must contain at least 1 widget.
+   * A section must contain at least one widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,9 @@ public final class GoogleChatV1ContextualAddOnMarkupCardSection extends com.goog
 
   /**
    * The header of the section. Formatted text is supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -57,7 +61,9 @@ public final class GoogleChatV1ContextualAddOnMarkupCardSection extends com.goog
 
   /**
    * The header of the section. Formatted text is supported. For more information about formatting
-   * text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
+   * text, see [Formatting text in Google Chat apps](https://developers.google.com/chat/api/guides
+   * /message-formats/cards#card_text_formatting) and [Formatting text in Google Workspace Add-
+   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
    * @param header header or {@code null} for none
    */
   public GoogleChatV1ContextualAddOnMarkupCardSection setHeader(java.lang.String header) {
@@ -66,7 +72,7 @@ public final class GoogleChatV1ContextualAddOnMarkupCardSection extends com.goog
   }
 
   /**
-   * A section must contain at least 1 widget.
+   * A section must contain at least one widget.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChatV1WidgetMarkup> getWidgets() {
@@ -74,7 +80,7 @@ public final class GoogleChatV1ContextualAddOnMarkupCardSection extends com.goog
   }
 
   /**
-   * A section must contain at least 1 widget.
+   * A section must contain at least one widget.
    * @param widgets widgets or {@code null} for none
    */
   public GoogleChatV1ContextualAddOnMarkupCardSection setWidgets(java.util.List<GoogleChatV1WidgetMarkup> widgets) {

@@ -96,6 +96,18 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
   private AppsDynamiteSharedDlpMetricsMetadata dlpMetricsMetadata;
 
   /**
+   * Message component search metadata for this upload_metadata (currently used for message
+   * highlighting and snippeting). For use by Search backend only; clients should get
+   * upload_metadata search info from Annotation.component_search_info. This field is necessary
+   * because backend Message keeps UploadMetadata in a separate field. Upon converting from backend
+   * message to frontend message, this field will be copied to Annotation.component_search_info
+   * while the corresponding UploadMetadata is converted into an Annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppsDynamiteSharedMessageComponentSearchInfo internalOnlyComponentSearchInfo;
+
+  /**
    * The timestamp of the most recent virus scan completed (in microseconds).
    * The value may be {@code null}.
    */
@@ -284,6 +296,33 @@ public final class UploadMetadata extends com.google.api.client.json.GenericJson
    */
   public UploadMetadata setDlpMetricsMetadata(AppsDynamiteSharedDlpMetricsMetadata dlpMetricsMetadata) {
     this.dlpMetricsMetadata = dlpMetricsMetadata;
+    return this;
+  }
+
+  /**
+   * Message component search metadata for this upload_metadata (currently used for message
+   * highlighting and snippeting). For use by Search backend only; clients should get
+   * upload_metadata search info from Annotation.component_search_info. This field is necessary
+   * because backend Message keeps UploadMetadata in a separate field. Upon converting from backend
+   * message to frontend message, this field will be copied to Annotation.component_search_info
+   * while the corresponding UploadMetadata is converted into an Annotation.
+   * @return value or {@code null} for none
+   */
+  public AppsDynamiteSharedMessageComponentSearchInfo getInternalOnlyComponentSearchInfo() {
+    return internalOnlyComponentSearchInfo;
+  }
+
+  /**
+   * Message component search metadata for this upload_metadata (currently used for message
+   * highlighting and snippeting). For use by Search backend only; clients should get
+   * upload_metadata search info from Annotation.component_search_info. This field is necessary
+   * because backend Message keeps UploadMetadata in a separate field. Upon converting from backend
+   * message to frontend message, this field will be copied to Annotation.component_search_info
+   * while the corresponding UploadMetadata is converted into an Annotation.
+   * @param internalOnlyComponentSearchInfo internalOnlyComponentSearchInfo or {@code null} for none
+   */
+  public UploadMetadata setInternalOnlyComponentSearchInfo(AppsDynamiteSharedMessageComponentSearchInfo internalOnlyComponentSearchInfo) {
+    this.internalOnlyComponentSearchInfo = internalOnlyComponentSearchInfo;
     return this;
   }
 

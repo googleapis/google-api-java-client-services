@@ -3911,6 +3911,113 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Query {
 
     /**
+     * Provides functionality to remove logged activity for a user. Currently to be used only for
+     * dynamite 1p clients **Note:** This API requires a standard end user account to execute. A service
+     * account can't perform Remove Activity requests directly; to use a service account to perform
+     * queries, set up [Google Workspace domain-wide delegation of
+     * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+     *
+     * Create a request for the method "query.removeActivity".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link RemoveActivity#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudsearch.v1.model.RemoveActivityRequest}
+     * @return the request
+     */
+    public RemoveActivity removeActivity(com.google.api.services.cloudsearch.v1.model.RemoveActivityRequest content) throws java.io.IOException {
+      RemoveActivity result = new RemoveActivity(content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveActivity extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.RemoveActivityResponse> {
+
+      private static final String REST_PATH = "v1/query:removeActivity";
+
+      /**
+       * Provides functionality to remove logged activity for a user. Currently to be used only for
+       * dynamite 1p clients **Note:** This API requires a standard end user account to execute. A
+       * service account can't perform Remove Activity requests directly; to use a service account to
+       * perform queries, set up [Google Workspace domain-wide delegation of
+       * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+       *
+       * Create a request for the method "query.removeActivity".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link RemoveActivity#execute()} method to invoke the remote
+       * operation. <p> {@link RemoveActivity#initialize(com.google.api.client.googleapis.services.Abstr
+       * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.RemoveActivityRequest}
+       * @since 1.13
+       */
+      protected RemoveActivity(com.google.api.services.cloudsearch.v1.model.RemoveActivityRequest content) {
+        super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.RemoveActivityResponse.class);
+      }
+
+      @Override
+      public RemoveActivity set$Xgafv(java.lang.String $Xgafv) {
+        return (RemoveActivity) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RemoveActivity setAccessToken(java.lang.String accessToken) {
+        return (RemoveActivity) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RemoveActivity setAlt(java.lang.String alt) {
+        return (RemoveActivity) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveActivity setCallback(java.lang.String callback) {
+        return (RemoveActivity) super.setCallback(callback);
+      }
+
+      @Override
+      public RemoveActivity setFields(java.lang.String fields) {
+        return (RemoveActivity) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveActivity setKey(java.lang.String key) {
+        return (RemoveActivity) super.setKey(key);
+      }
+
+      @Override
+      public RemoveActivity setOauthToken(java.lang.String oauthToken) {
+        return (RemoveActivity) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveActivity setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveActivity) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveActivity setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveActivity) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveActivity setUploadType(java.lang.String uploadType) {
+        return (RemoveActivity) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RemoveActivity setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RemoveActivity) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public RemoveActivity set(String parameterName, Object value) {
+        return (RemoveActivity) super.set(parameterName, value);
+      }
+    }
+    /**
      * The Cloud Search Query API provides the search method, which returns the most relevant results
      * from a user query. The results can come from Google Workspace apps, such as Gmail or Google
      * Drive, or they can come from data that you have indexed from a third party. **Note:** This API

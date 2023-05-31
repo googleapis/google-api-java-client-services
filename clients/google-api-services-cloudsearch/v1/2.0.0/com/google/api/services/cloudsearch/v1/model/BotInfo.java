@@ -112,6 +112,13 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> supportedUses;
 
   /**
+   * Determine how uninstall is permitted for this app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uninstallCapability;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getAppAllowlistStatus() {
@@ -305,6 +312,23 @@ public final class BotInfo extends com.google.api.client.json.GenericJson {
    */
   public BotInfo setSupportedUses(java.util.List<java.lang.String> supportedUses) {
     this.supportedUses = supportedUses;
+    return this;
+  }
+
+  /**
+   * Determine how uninstall is permitted for this app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUninstallCapability() {
+    return uninstallCapability;
+  }
+
+  /**
+   * Determine how uninstall is permitted for this app.
+   * @param uninstallCapability uninstallCapability or {@code null} for none
+   */
+  public BotInfo setUninstallCapability(java.lang.String uninstallCapability) {
+    this.uninstallCapability = uninstallCapability;
     return this;
   }
 

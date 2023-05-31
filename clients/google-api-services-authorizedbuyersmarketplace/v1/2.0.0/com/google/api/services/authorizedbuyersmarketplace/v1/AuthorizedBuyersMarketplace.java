@@ -329,7 +329,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * deal.displayName * deal.dealType * deal.createTime
          * * deal.updateTime * deal.flightStartTime * deal.flightEndTime * dealServingStatus
          */
@@ -337,7 +337,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         private java.lang.String filter;
 
         /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/v2/list-filters) Supported columns for filtering are: *
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
        deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
        deal.flightEndTime * dealServingStatus
          */
@@ -347,7 +347,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * deal.displayName * deal.dealType * deal.createTime
          * * deal.updateTime * deal.flightStartTime * deal.flightEndTime * dealServingStatus
          */
@@ -2098,7 +2098,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Query string using the [Filtering Syntax](https://developers.google.com/authorized-
-         * buyers/apis/guides/v2/list-filters) Supported fields for filtering are: * partnerClientId
+         * buyers/apis/guides/list-filters) Supported fields for filtering are: * partnerClientId
          * Use this field to filter the clients by the partnerClientId. For example, if the
          * partnerClientId of the client is "1234", the value of this field should be
          * `partnerClientId = "1234"`, in order to get only the client whose partnerClientId is
@@ -2108,7 +2108,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         private java.lang.String filter;
 
         /** Query string using the [Filtering Syntax](https://developers.google.com/authorized-
-       buyers/apis/guides/v2/list-filters) Supported fields for filtering are: * partnerClientId Use this
+       buyers/apis/guides/list-filters) Supported fields for filtering are: * partnerClientId Use this
        field to filter the clients by the partnerClientId. For example, if the partnerClientId of the
        client is "1234", the value of this field should be `partnerClientId = "1234"`, in order to get
        only the client whose partnerClientId is "1234" in the response.
@@ -2119,7 +2119,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Query string using the [Filtering Syntax](https://developers.google.com/authorized-
-         * buyers/apis/guides/v2/list-filters) Supported fields for filtering are: * partnerClientId
+         * buyers/apis/guides/list-filters) Supported fields for filtering are: * partnerClientId
          * Use this field to filter the clients by the partnerClientId. For example, if the
          * partnerClientId of the client is "1234", the value of this field should be
          * `partnerClientId = "1234"`, in order to get only the client whose partnerClientId is
@@ -3741,7 +3741,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * deal.displayName * deal.dealType * deal.createTime
          * * deal.updateTime * deal.flightStartTime * deal.flightEndTime * dealServingStatus
          */
@@ -3749,7 +3749,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         private java.lang.String filter;
 
         /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/v2/list-filters) Supported columns for filtering are: *
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
        deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
        deal.flightEndTime * dealServingStatus
          */
@@ -3759,7 +3759,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * deal.displayName * deal.dealType * deal.createTime
          * * deal.updateTime * deal.flightStartTime * deal.flightEndTime * dealServingStatus
          */
@@ -4713,7 +4713,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * Gets a proposal using its name. The proposal is returned at most recent revision. revision.
+       * Gets a proposal using its resource name. The proposal is returned at the latest revision.
        *
        * Create a request for the method "proposals.get".
        *
@@ -4738,7 +4738,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+/proposals/[^/]+$");
 
         /**
-         * Gets a proposal using its name. The proposal is returned at most recent revision. revision.
+         * Gets a proposal using its resource name. The proposal is returned at the latest revision.
          *
          * Create a request for the method "proposals.get".
          *
@@ -4853,9 +4853,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * Lists proposals. A filter expression (list filter syntax) may be specified to filter the results.
-       * This will not list finalized versions of proposals that are being renegotiated; to retrieve these
-       * use the finalizedProposals resource.
+       * Lists proposals. A filter expression using [Cloud API list filtering
+       * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) may be
+       * specified to filter the results.
        *
        * Create a request for the method "proposals.list".
        *
@@ -4880,9 +4880,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+$");
 
         /**
-         * Lists proposals. A filter expression (list filter syntax) may be specified to filter the
-         * results. This will not list finalized versions of proposals that are being renegotiated; to
-         * retrieve these use the finalizedProposals resource.
+         * Lists proposals. A filter expression using [Cloud API list filtering
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) may be
+         * specified to filter the results.
          *
          * Create a request for the method "proposals.list".
          *
@@ -4993,15 +4993,15 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * displayName * dealType * updateTime * state
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/v2/list-filters) Supported columns for filtering are: * displayName
-       * dealType * updateTime * state
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: * displayName *
+       dealType * updateTime * state
          */
         public java.lang.String getFilter() {
           return filter;
@@ -5009,7 +5009,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/v2/list-filters)
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters)
          * Supported columns for filtering are: * displayName * dealType * updateTime * state
          */
         public List setFilter(java.lang.String filter) {
@@ -5063,9 +5063,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
       }
       /**
        * Updates the proposal at the given revision number. If the revision number in the request is
-       * behind the latest from the server, an error message will be returned. See FieldMask for how to
-       * use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be updated;
-       * Fields noted as 'Immutable' or 'Output only' yet specified in the
+       * behind the latest one kept in the server, an error message will be returned. See FieldMask for
+       * how to use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be
+       * updated; Fields noted as 'Immutable' or 'Output only' yet specified in the
        * UpdateProposalRequest.update_mask will be ignored and left unchanged. Updating a private auction
        * proposal is not allowed and will result in an error.
        *
@@ -5095,9 +5095,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Updates the proposal at the given revision number. If the revision number in the request is
-         * behind the latest from the server, an error message will be returned. See FieldMask for how to
-         * use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be updated;
-         * Fields noted as 'Immutable' or 'Output only' yet specified in the
+         * behind the latest one kept in the server, an error message will be returned. See FieldMask for
+         * how to use FieldMask. Only fields specified in the UpdateProposalRequest.update_mask will be
+         * updated; Fields noted as 'Immutable' or 'Output only' yet specified in the
          * UpdateProposalRequest.update_mask will be ignored and left unchanged. Updating a private
          * auction proposal is not allowed and will result in an error.
          *
@@ -6404,13 +6404,13 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/v2/list-filters) syntax.
+         * /authorized-buyers/apis/guides/list-filters) syntax.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional query string using the [Cloud API list filtering] (https://developers.google.com
-       /authorized-buyers/apis/guides/v2/list-filters) syntax.
+       /authorized-buyers/apis/guides/list-filters) syntax.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6418,7 +6418,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/v2/list-filters) syntax.
+         * /authorized-buyers/apis/guides/list-filters) syntax.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

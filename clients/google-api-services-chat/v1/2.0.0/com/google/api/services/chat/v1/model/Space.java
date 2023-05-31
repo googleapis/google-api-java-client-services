@@ -71,8 +71,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceDetails spaceDetails;
 
   /**
-   * The message history state for messages and threads in this space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The message history state for messages and threads in this space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +85,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String spaceThreadingState;
 
   /**
-   * The type of space. Required when creating or updating a space. Output only for other usage.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The type of space. Required when creating a space or updating the space type of a space. Output
+   * only for other usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +101,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean threaded;
 
   /**
-   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
-   * type of a space.
+   * Output only. Deprecated: Use `space_type` instead. The type of a space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,8 +203,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message history state for messages and threads in this space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The message history state for messages and threads in this space.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpaceHistoryState() {
@@ -214,8 +211,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message history state for messages and threads in this space. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The message history state for messages and threads in this space.
    * @param spaceHistoryState spaceHistoryState or {@code null} for none
    */
   public Space setSpaceHistoryState(java.lang.String spaceHistoryState) {
@@ -241,8 +237,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of space. Required when creating or updating a space. Output only for other usage.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The type of space. Required when creating a space or updating the space type of a space. Output
+   * only for other usage.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpaceType() {
@@ -250,8 +246,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of space. Required when creating or updating a space. Output only for other usage.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The type of space. Required when creating a space or updating the space type of a space. Output
+   * only for other usage.
    * @param spaceType spaceType or {@code null} for none
    */
   public Space setSpaceType(java.lang.String spaceType) {
@@ -279,8 +275,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
-   * type of a space.
+   * Output only. Deprecated: Use `space_type` instead. The type of a space.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -288,8 +283,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated: Use `singleUserBotDm` or `spaceType` (developer preview) instead. The
-   * type of a space.
+   * Output only. Deprecated: Use `space_type` instead. The type of a space.
    * @param type type or {@code null} for none
    */
   public Space setType(java.lang.String type) {

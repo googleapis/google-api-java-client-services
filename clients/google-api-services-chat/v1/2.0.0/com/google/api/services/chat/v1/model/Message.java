@@ -108,8 +108,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
    * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. For example usage, see [Name a
-   * created
+   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
+   * Chat app recall the message without saving the message `name` from the [response
+   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
+   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
+   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
+   * you can reference while processing later operations, like updating or deleting the message. For
+   * example usage, see [Name a created
    * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
    * The value may be {@code null}.
    */
@@ -124,9 +129,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. The time at which the message was deleted in Google Chat server. If the message is
-   * never deleted, this field is empty. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The time at which the message was deleted in Google Chat. If the message is never
+   * deleted, this field is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,15 +138,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a deleted message. A message is deleted when `delete_time` is
-   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeletionMetadata deletionMetadata;
 
   /**
-   * Output only. The list of emoji reaction summaries on the message. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The list of emoji reaction summaries on the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,8 +366,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
    * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. For example usage, see [Name a
-   * created
+   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
+   * Chat app recall the message without saving the message `name` from the [response
+   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
+   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
+   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
+   * you can reference while processing later operations, like updating or deleting the message. For
+   * example usage, see [Name a created
    * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
    * @return value or {@code null} for none
    */
@@ -375,8 +383,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * A custom name for a Chat message assigned at creation. Must start with `client-` and contain
    * only lowercase letters, numbers, and hyphens up to 63 characters in length. Specify this field
-   * to get, update, or delete the message with the specified value. For example usage, see [Name a
-   * created
+   * to get, update, or delete the message with the specified value. Assigning a custom name lets a
+   * Chat app recall the message without saving the message `name` from the [response
+   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned when creating the
+   * message. Assigning a custom name doesn't replace the generated `name` field, the message's
+   * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
+   * you can reference while processing later operations, like updating or deleting the message. For
+   * example usage, see [Name a created
    * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
    * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
    */
@@ -403,9 +416,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was deleted in Google Chat server. If the message is
-   * never deleted, this field is empty. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The time at which the message was deleted in Google Chat. If the message is never
+   * deleted, this field is empty.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -413,9 +425,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time at which the message was deleted in Google Chat server. If the message is
-   * never deleted, this field is empty. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The time at which the message was deleted in Google Chat. If the message is never
+   * deleted, this field is empty.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public Message setDeleteTime(String deleteTime) {
@@ -425,7 +436,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a deleted message. A message is deleted when `delete_time` is
-   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * set.
    * @return value or {@code null} for none
    */
   public DeletionMetadata getDeletionMetadata() {
@@ -434,7 +445,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about a deleted message. A message is deleted when `delete_time` is
-   * set. [Developer Preview](https://developers.google.com/workspace/preview).
+   * set.
    * @param deletionMetadata deletionMetadata or {@code null} for none
    */
   public Message setDeletionMetadata(DeletionMetadata deletionMetadata) {
@@ -443,8 +454,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of emoji reaction summaries on the message. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The list of emoji reaction summaries on the message.
    * @return value or {@code null} for none
    */
   public java.util.List<EmojiReactionSummary> getEmojiReactionSummaries() {
@@ -452,8 +462,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of emoji reaction summaries on the message. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The list of emoji reaction summaries on the message.
    * @param emojiReactionSummaries emojiReactionSummaries or {@code null} for none
    */
   public Message setEmojiReactionSummaries(java.util.List<EmojiReactionSummary> emojiReactionSummaries) {

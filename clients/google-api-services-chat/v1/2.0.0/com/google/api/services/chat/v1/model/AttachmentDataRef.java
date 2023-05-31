@@ -31,8 +31,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
 
   /**
    * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * string and used to create or update Chat messages with attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +47,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
 
   /**
    * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * string and used to create or update Chat messages with attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentUploadToken() {
@@ -58,8 +56,7 @@ public final class AttachmentDataRef extends com.google.api.client.json.GenericJ
 
   /**
    * Opaque token containing a reference to an uploaded attachment. Treated by clients as an opaque
-   * string and used to create or update Chat messages with attachments. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * string and used to create or update Chat messages with attachments.
    * @param attachmentUploadToken attachmentUploadToken or {@code null} for none
    */
   public AttachmentDataRef setAttachmentUploadToken(java.lang.String attachmentUploadToken) {

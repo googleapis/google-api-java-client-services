@@ -31,35 +31,32 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreTransitStationProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * Transit agencies which service this transit station. A station can be serviced by one or more
-   * transit agencies. See go/transit-agency-relation-migration for more information.
+   * All the transit agencies which service this station. A station can be serviced by multiple
+   * stations. There may only be one agency association per transit agency. See go/transit-agency-
+   * relation-migration for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GeostoreFeatureIdProto> agencies;
-
-  static {
-    // hack to force ProGuard to consider GeostoreFeatureIdProto used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GeostoreFeatureIdProto.class);
-  }
+  private java.util.List<GeostoreTransitStationProtoTransitAgencyAssociationProto> agencyAssociations;
 
   /**
-   * Transit agencies which service this transit station. A station can be serviced by one or more
-   * transit agencies. See go/transit-agency-relation-migration for more information.
+   * All the transit agencies which service this station. A station can be serviced by multiple
+   * stations. There may only be one agency association per transit agency. See go/transit-agency-
+   * relation-migration for more details.
    * @return value or {@code null} for none
    */
-  public java.util.List<GeostoreFeatureIdProto> getAgencies() {
-    return agencies;
+  public java.util.List<GeostoreTransitStationProtoTransitAgencyAssociationProto> getAgencyAssociations() {
+    return agencyAssociations;
   }
 
   /**
-   * Transit agencies which service this transit station. A station can be serviced by one or more
-   * transit agencies. See go/transit-agency-relation-migration for more information.
-   * @param agencies agencies or {@code null} for none
+   * All the transit agencies which service this station. A station can be serviced by multiple
+   * stations. There may only be one agency association per transit agency. See go/transit-agency-
+   * relation-migration for more details.
+   * @param agencyAssociations agencyAssociations or {@code null} for none
    */
-  public GeostoreTransitStationProto setAgencies(java.util.List<GeostoreFeatureIdProto> agencies) {
-    this.agencies = agencies;
+  public GeostoreTransitStationProto setAgencyAssociations(java.util.List<GeostoreTransitStationProtoTransitAgencyAssociationProto> agencyAssociations) {
+    this.agencyAssociations = agencyAssociations;
     return this;
   }
 

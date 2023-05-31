@@ -38,13 +38,6 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
   private java.lang.Boolean isInAppProvider;
 
   /**
-   * This field is deprecated in favor of the integer field below.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> providerClusterIdDeprecated;
-
-  /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated
    * with multiple clusters. PRR specific feature.
    * The value may be {@code null}.
@@ -81,23 +74,6 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
    */
   public AssistantGroundingRankerProviderGroundingProviderFeatures setIsInAppProvider(java.lang.Boolean isInAppProvider) {
     this.isInAppProvider = isInAppProvider;
-    return this;
-  }
-
-  /**
-   * This field is deprecated in favor of the integer field below.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getProviderClusterIdDeprecated() {
-    return providerClusterIdDeprecated;
-  }
-
-  /**
-   * This field is deprecated in favor of the integer field below.
-   * @param providerClusterIdDeprecated providerClusterIdDeprecated or {@code null} for none
-   */
-  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderClusterIdDeprecated(java.util.List<java.lang.String> providerClusterIdDeprecated) {
-    this.providerClusterIdDeprecated = providerClusterIdDeprecated;
     return this;
   }
 

@@ -47,7 +47,7 @@ public final class AssistantApiSettingsDuoCallDeviceSettings extends com.google.
   private java.lang.Boolean shouldBeLinked;
 
   /**
-   * The call state of the device (i.e. whether an Duo call account has been setup on the device).
+   * The call state of the device (i.e. whether a Duo call account has been setup on the device).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class AssistantApiSettingsDuoCallDeviceSettings extends com.google.
   }
 
   /**
-   * The call state of the device (i.e. whether an Duo call account has been setup on the device).
+   * The call state of the device (i.e. whether a Duo call account has been setup on the device).
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -110,7 +110,7 @@ public final class AssistantApiSettingsDuoCallDeviceSettings extends com.google.
   }
 
   /**
-   * The call state of the device (i.e. whether an Duo call account has been setup on the device).
+   * The call state of the device (i.e. whether a Duo call account has been setup on the device).
    * @param state state or {@code null} for none
    */
   public AssistantApiSettingsDuoCallDeviceSettings setState(java.lang.String state) {

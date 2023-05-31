@@ -91,7 +91,7 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> greenFaresInfo;
+  private TravelFlightsAirlineConfigGreenFaresInfo greenFaresInfo;
 
   /**
    * Note that some iata_codes are reused (`dup_flag` field). For details, including how to resolve
@@ -327,14 +327,14 @@ public final class TravelFlightsAirlineConfig extends com.google.api.client.json
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> getGreenFaresInfo() {
+  public TravelFlightsAirlineConfigGreenFaresInfo getGreenFaresInfo() {
     return greenFaresInfo;
   }
 
   /**
    * @param greenFaresInfo greenFaresInfo or {@code null} for none
    */
-  public TravelFlightsAirlineConfig setGreenFaresInfo(java.util.List<TravelFlightsAirlineConfigGreenFaresInfo> greenFaresInfo) {
+  public TravelFlightsAirlineConfig setGreenFaresInfo(TravelFlightsAirlineConfigGreenFaresInfo greenFaresInfo) {
     this.greenFaresInfo = greenFaresInfo;
     return this;
   }

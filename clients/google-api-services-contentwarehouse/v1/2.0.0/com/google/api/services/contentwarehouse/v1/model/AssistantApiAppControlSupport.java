@@ -37,6 +37,15 @@ public final class AssistantApiAppControlSupport extends com.google.api.client.j
   private java.lang.String enabled;
 
   /**
+   * If true, disable send message AppControl/SD flow. This is needed to suppress the feature for
+   * specific device. If we decide to turn down this feature for all devices, then this field will
+   * become obsolete and should be removed. See context in b/275727627.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sendMessageSuppressed;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getEnabled() {
@@ -48,6 +57,27 @@ public final class AssistantApiAppControlSupport extends com.google.api.client.j
    */
   public AssistantApiAppControlSupport setEnabled(java.lang.String enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * If true, disable send message AppControl/SD flow. This is needed to suppress the feature for
+   * specific device. If we decide to turn down this feature for all devices, then this field will
+   * become obsolete and should be removed. See context in b/275727627.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSendMessageSuppressed() {
+    return sendMessageSuppressed;
+  }
+
+  /**
+   * If true, disable send message AppControl/SD flow. This is needed to suppress the feature for
+   * specific device. If we decide to turn down this feature for all devices, then this field will
+   * become obsolete and should be removed. See context in b/275727627.
+   * @param sendMessageSuppressed sendMessageSuppressed or {@code null} for none
+   */
+  public AssistantApiAppControlSupport setSendMessageSuppressed(java.lang.Boolean sendMessageSuppressed) {
+    this.sendMessageSuppressed = sendMessageSuppressed;
     return this;
   }
 

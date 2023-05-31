@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These are the set of features that are supported by the device. It's a part of the
- * SoftwareCapabilities of the device. Next ID: 64
+ * SoftwareCapabilities of the device. Next ID: 66
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -274,6 +274,13 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   private java.lang.Boolean liveCardsSupported;
 
   /**
+   * Whether the client supports the Lottie animation library for the broadcast feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lottieAnimationSupport;
+
+  /**
    * Whether the client supports Assistant dialogs within Maps. This field will be set only when the
    * Maps on the surface supports Assistant dialogs embedded within Maps. go/gsa-gmm.
    * The value may be {@code null}.
@@ -355,6 +362,14 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean privacyAwareLockscreenSupported;
+
+  /**
+   * Whether the client supports tts tapering for the read messages flow. If set to true the tapered
+   * tts variant would be used during the read messages flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readMessagesTtsTaperingSupported;
 
   /**
    * Whether the client has remote casting enabled. For ex: we want to disable this for clients like
@@ -1117,6 +1132,23 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
+   * Whether the client supports the Lottie animation library for the broadcast feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLottieAnimationSupport() {
+    return lottieAnimationSupport;
+  }
+
+  /**
+   * Whether the client supports the Lottie animation library for the broadcast feature.
+   * @param lottieAnimationSupport lottieAnimationSupport or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setLottieAnimationSupport(java.lang.String lottieAnimationSupport) {
+    this.lottieAnimationSupport = lottieAnimationSupport;
+    return this;
+  }
+
+  /**
    * Whether the client supports Assistant dialogs within Maps. This field will be set only when the
    * Maps on the surface supports Assistant dialogs embedded within Maps. go/gsa-gmm.
    * @return value or {@code null} for none
@@ -1309,6 +1341,25 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   public AssistantApiSupportedFeatures setPrivacyAwareLockscreenSupported(java.lang.Boolean privacyAwareLockscreenSupported) {
     this.privacyAwareLockscreenSupported = privacyAwareLockscreenSupported;
+    return this;
+  }
+
+  /**
+   * Whether the client supports tts tapering for the read messages flow. If set to true the tapered
+   * tts variant would be used during the read messages flow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadMessagesTtsTaperingSupported() {
+    return readMessagesTtsTaperingSupported;
+  }
+
+  /**
+   * Whether the client supports tts tapering for the read messages flow. If set to true the tapered
+   * tts variant would be used during the read messages flow.
+   * @param readMessagesTtsTaperingSupported readMessagesTtsTaperingSupported or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setReadMessagesTtsTaperingSupported(java.lang.Boolean readMessagesTtsTaperingSupported) {
+    this.readMessagesTtsTaperingSupported = readMessagesTtsTaperingSupported;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 14
+ * Features to be passed from Media GP to HGR. Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -81,6 +81,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSeedRadioRequest;
+
+  /**
+   * Indicates whether this is youtube content seeking music.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isYoutubeMusicSeeking;
 
   /**
    * MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type
@@ -255,6 +262,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsSeedRadioRequest(java.lang.Boolean isSeedRadioRequest) {
     this.isSeedRadioRequest = isSeedRadioRequest;
+    return this;
+  }
+
+  /**
+   * Indicates whether this is youtube content seeking music.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsYoutubeMusicSeeking() {
+    return isYoutubeMusicSeeking;
+  }
+
+  /**
+   * Indicates whether this is youtube content seeking music.
+   * @param isYoutubeMusicSeeking isYoutubeMusicSeeking or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsYoutubeMusicSeeking(java.lang.Boolean isYoutubeMusicSeeking) {
+    this.isYoutubeMusicSeeking = isYoutubeMusicSeeking;
     return this;
   }
 

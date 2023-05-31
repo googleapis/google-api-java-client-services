@@ -54,6 +54,14 @@ public final class ResearchScamNearestNeighborsNeighbor extends com.google.api.c
   private java.lang.String docid;
 
   /**
+   * The field isn't tpopulated by default, but when enabled (eg, in the ground-truth pipeline),
+   * this field provides the original database GFV corresponding to this result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResearchScamGenericFeatureVector gfv;
+
+  /**
    * Metadata about the neighbor. This is returned under some configurations as a serialized proto.
    * The specific proto depends on which metadata is configured to be returned.
    * The value may be {@code null}.
@@ -145,6 +153,25 @@ public final class ResearchScamNearestNeighborsNeighbor extends com.google.api.c
    */
   public ResearchScamNearestNeighborsNeighbor encodeDocid(byte[] docid) {
     this.docid = com.google.api.client.util.Base64.encodeBase64URLSafeString(docid);
+    return this;
+  }
+
+  /**
+   * The field isn't tpopulated by default, but when enabled (eg, in the ground-truth pipeline),
+   * this field provides the original database GFV corresponding to this result.
+   * @return value or {@code null} for none
+   */
+  public ResearchScamGenericFeatureVector getGfv() {
+    return gfv;
+  }
+
+  /**
+   * The field isn't tpopulated by default, but when enabled (eg, in the ground-truth pipeline),
+   * this field provides the original database GFV corresponding to this result.
+   * @param gfv gfv or {@code null} for none
+   */
+  public ResearchScamNearestNeighborsNeighbor setGfv(ResearchScamGenericFeatureVector gfv) {
+    this.gfv = gfv;
     return this;
   }
 

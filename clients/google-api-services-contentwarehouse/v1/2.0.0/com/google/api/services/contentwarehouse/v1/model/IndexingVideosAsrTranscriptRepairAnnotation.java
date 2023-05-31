@@ -38,6 +38,20 @@ public final class IndexingVideosAsrTranscriptRepairAnnotation extends com.googl
   private java.lang.String gibberishResult;
 
   /**
+   * The number of the above segments that were classified as gibberish.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numGibberishSegments;
+
+  /**
+   * The number of ASR segments that were sent for classification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numSegmentsClassified;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getGibberishResult() {
@@ -49,6 +63,40 @@ public final class IndexingVideosAsrTranscriptRepairAnnotation extends com.googl
    */
   public IndexingVideosAsrTranscriptRepairAnnotation setGibberishResult(java.lang.String gibberishResult) {
     this.gibberishResult = gibberishResult;
+    return this;
+  }
+
+  /**
+   * The number of the above segments that were classified as gibberish.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumGibberishSegments() {
+    return numGibberishSegments;
+  }
+
+  /**
+   * The number of the above segments that were classified as gibberish.
+   * @param numGibberishSegments numGibberishSegments or {@code null} for none
+   */
+  public IndexingVideosAsrTranscriptRepairAnnotation setNumGibberishSegments(java.lang.Integer numGibberishSegments) {
+    this.numGibberishSegments = numGibberishSegments;
+    return this;
+  }
+
+  /**
+   * The number of ASR segments that were sent for classification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumSegmentsClassified() {
+    return numSegmentsClassified;
+  }
+
+  /**
+   * The number of ASR segments that were sent for classification.
+   * @param numSegmentsClassified numSegmentsClassified or {@code null} for none
+   */
+  public IndexingVideosAsrTranscriptRepairAnnotation setNumSegmentsClassified(java.lang.Integer numSegmentsClassified) {
+    this.numSegmentsClassified = numSegmentsClassified;
     return this;
   }
 

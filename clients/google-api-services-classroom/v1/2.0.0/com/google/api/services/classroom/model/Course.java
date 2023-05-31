@@ -39,9 +39,9 @@ public final class Course extends com.google.api.client.json.GenericJson {
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
    * for course work and announcements in the course. The Calendar for a course is created
-   * asynchronously when the `course is set to the `CourseState.ACTIVE` for the first time (i.e. at
-   * creation time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID
-   * will not be populated until this processing is completed. Read-only.
+   * asynchronously when the course is set to `CourseState.ACTIVE` for the first time (at creation
+   * time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID will not be
+   * populated until the creation process is completed. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,9 +206,9 @@ public final class Course extends com.google.api.client.json.GenericJson {
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
    * for course work and announcements in the course. The Calendar for a course is created
-   * asynchronously when the `course is set to the `CourseState.ACTIVE` for the first time (i.e. at
-   * creation time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID
-   * will not be populated until this processing is completed. Read-only.
+   * asynchronously when the course is set to `CourseState.ACTIVE` for the first time (at creation
+   * time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID will not be
+   * populated until the creation process is completed. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCalendarId() {
@@ -218,9 +218,9 @@ public final class Course extends com.google.api.client.json.GenericJson {
   /**
    * The Calendar ID for a calendar that all course members can see, to which Classroom adds events
    * for course work and announcements in the course. The Calendar for a course is created
-   * asynchronously when the `course is set to the `CourseState.ACTIVE` for the first time (i.e. at
-   * creation time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID
-   * will not be populated until this processing is completed. Read-only.
+   * asynchronously when the course is set to `CourseState.ACTIVE` for the first time (at creation
+   * time or when it is updated to `ACTIVE` through the UI or the API). The Calendar ID will not be
+   * populated until the creation process is completed. Read-only.
    * @param calendarId calendarId or {@code null} for none
    */
   public Course setCalendarId(java.lang.String calendarId) {

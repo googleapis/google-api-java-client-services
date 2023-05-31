@@ -18,7 +18,7 @@ package com.google.api.services.run.v2.model;
 
 /**
  * A single application container. This specifies both the container to run, the command to run in
- * the container and the arguments to supply to it. Note that additional arguments may be supplied
+ * the container and the arguments to supply to it. Note that additional arguments can be supplied
  * by the system to the container at runtime.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -6906,6 +6906,176 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             return (Get) super.set(parameterName, value);
           }
         }
+        /**
+         * Recreates the required App Engine features for the specified App Engine application, for example
+         * a Cloud Storage bucket or App Engine service account. Use this method if you receive an error
+         * message about a missing feature, for example, Error retrieving the App Engine service account. If
+         * you have deleted your App Engine service account, this will not be able to recreate it. Instead,
+         * you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/refere
+         * nce/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAcco
+         * unts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be
+         * found in the Cloud Console Activity Log.
+         *
+         * Create a request for the method "applications.repair".
+         *
+         * This request holds the parameters needed by the appengine server.  After setting any optional
+         * parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId Part of `name`. Name of the application to repair. Example: apps/myapp
+         * @param locationsId Part of `name`. See documentation of `projectsId`.
+         * @param applicationsId Part of `name`. See documentation of `projectsId`.
+         * @param content the {@link com.google.api.services.appengine.v1.model.RepairApplicationRequest}
+         * @return the request
+         */
+        public Repair repair(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.v1.model.RepairApplicationRequest content) throws java.io.IOException {
+          Repair result = new Repair(projectsId, locationsId, applicationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Repair extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}:repair";
+
+          /**
+           * Recreates the required App Engine features for the specified App Engine application, for
+           * example a Cloud Storage bucket or App Engine service account. Use this method if you receive an
+           * error message about a missing feature, for example, Error retrieving the App Engine service
+           * account. If you have deleted your App Engine service account, this will not be able to recreate
+           * it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google
+           * .com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%
+           * 2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the
+           * numeric ID can be found in the Cloud Console Activity Log.
+           *
+           * Create a request for the method "applications.repair".
+           *
+           * This request holds the parameters needed by the the appengine server.  After setting any
+           * optional parameters, call the {@link Repair#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Repair#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId Part of `name`. Name of the application to repair. Example: apps/myapp
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.v1.model.RepairApplicationRequest}
+           * @since 1.13
+           */
+          protected Repair(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.v1.model.RepairApplicationRequest content) {
+            super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+            this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+          }
+
+          @Override
+          public Repair set$Xgafv(java.lang.String $Xgafv) {
+            return (Repair) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Repair setAccessToken(java.lang.String accessToken) {
+            return (Repair) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Repair setAlt(java.lang.String alt) {
+            return (Repair) super.setAlt(alt);
+          }
+
+          @Override
+          public Repair setCallback(java.lang.String callback) {
+            return (Repair) super.setCallback(callback);
+          }
+
+          @Override
+          public Repair setFields(java.lang.String fields) {
+            return (Repair) super.setFields(fields);
+          }
+
+          @Override
+          public Repair setKey(java.lang.String key) {
+            return (Repair) super.setKey(key);
+          }
+
+          @Override
+          public Repair setOauthToken(java.lang.String oauthToken) {
+            return (Repair) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Repair setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Repair) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Repair setQuotaUser(java.lang.String quotaUser) {
+            return (Repair) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Repair setUploadType(java.lang.String uploadType) {
+            return (Repair) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Repair setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Repair) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          /** Part of `name`. Name of the application to repair. Example: apps/myapp */
+          public Repair setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Repair setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          @com.google.api.client.util.Key
+          private java.lang.String applicationsId;
+
+          /** Part of `name`. See documentation of `projectsId`.
+           */
+          public java.lang.String getApplicationsId() {
+            return applicationsId;
+          }
+
+          /** Part of `name`. See documentation of `projectsId`. */
+          public Repair setApplicationsId(java.lang.String applicationsId) {
+            this.applicationsId = applicationsId;
+            return this;
+          }
+
+          @Override
+          public Repair set(String parameterName, Object value) {
+            return (Repair) super.set(parameterName, value);
+          }
+        }
 
       }
     }

@@ -46,7 +46,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
 
   /**
    * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.
    * The value may be {@code null}.
@@ -90,7 +90,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
 
   /**
    * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.
    * @return value or {@code null} for none
@@ -101,7 +101,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends com.go
 
   /**
    * Apple Developer account details for the app that is protected by the reCAPTCHA Key. reCAPTCHA
-   * Enterprise leverages platform specific checks like Apple AppAttest and Apple DeviceCheck to
+   * Enterprise leverages platform-specific checks like Apple App Attest and Apple DeviceCheck to
    * protect your app from abuse. Providing these fields allows reCAPTCHA Enterprise to get a better
    * assessment of the integrity of your app.
    * @param appleDeveloperId appleDeveloperId or {@code null} for none

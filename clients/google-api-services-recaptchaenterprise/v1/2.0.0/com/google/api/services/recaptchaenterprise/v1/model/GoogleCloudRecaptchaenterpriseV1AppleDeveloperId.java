@@ -39,7 +39,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AppleDeveloperId extends com.
 
   /**
    * Required. Input only. A private key (downloaded as a text file with a .p8 file extension)
-   * generated for your Apple Developer account.
+   * generated for your Apple Developer account. Ensure that Apple DeviceCheck is enabled for the
+   * private key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AppleDeveloperId extends com.
 
   /**
    * Required. Input only. A private key (downloaded as a text file with a .p8 file extension)
-   * generated for your Apple Developer account.
+   * generated for your Apple Developer account. Ensure that Apple DeviceCheck is enabled for the
+   * private key.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKey() {
@@ -81,7 +83,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AppleDeveloperId extends com.
 
   /**
    * Required. Input only. A private key (downloaded as a text file with a .p8 file extension)
-   * generated for your Apple Developer account.
+   * generated for your Apple Developer account. Ensure that Apple DeviceCheck is enabled for the
+   * private key.
    * @param privateKey privateKey or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AppleDeveloperId setPrivateKey(java.lang.String privateKey) {

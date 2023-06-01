@@ -51,6 +51,13 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
   private java.lang.String syncMode;
 
   /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for MySQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syncParallelLevel;
+
+  /**
    * MySQL-specific settings for start external sync.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
    */
   public SqlInstancesStartExternalSyncRequest setSyncMode(java.lang.String syncMode) {
     this.syncMode = syncMode;
+    return this;
+  }
+
+  /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for MySQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyncParallelLevel() {
+    return syncParallelLevel;
+  }
+
+  /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for MySQL.
+   * @param syncParallelLevel syncParallelLevel or {@code null} for none
+   */
+  public SqlInstancesStartExternalSyncRequest setSyncParallelLevel(java.lang.String syncParallelLevel) {
+    this.syncParallelLevel = syncParallelLevel;
     return this;
   }
 

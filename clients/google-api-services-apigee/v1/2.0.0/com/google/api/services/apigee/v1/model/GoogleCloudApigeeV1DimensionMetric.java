@@ -30,6 +30,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1DimensionMetric extends com.google.api.client.json.GenericJson {
 
   /**
+   * Individual dimension names. E.g. ["dim1_name", "dim2_name"].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> individualNames;
+
+  /**
    * List of metrics.
    * The value may be {@code null}.
    */
@@ -37,11 +44,29 @@ public final class GoogleCloudApigeeV1DimensionMetric extends com.google.api.cli
   private java.util.List<GoogleCloudApigeeV1Metric> metrics;
 
   /**
-   * Name of the dimension.
+   * Comma joined dimension names. E.g. "dim1_name,dim2_name". Deprecated. If name already has comma
+   * before join, we may get wrong splits. Please use individual_names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Individual dimension names. E.g. ["dim1_name", "dim2_name"].
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIndividualNames() {
+    return individualNames;
+  }
+
+  /**
+   * Individual dimension names. E.g. ["dim1_name", "dim2_name"].
+   * @param individualNames individualNames or {@code null} for none
+   */
+  public GoogleCloudApigeeV1DimensionMetric setIndividualNames(java.util.List<java.lang.String> individualNames) {
+    this.individualNames = individualNames;
+    return this;
+  }
 
   /**
    * List of metrics.
@@ -61,7 +86,8 @@ public final class GoogleCloudApigeeV1DimensionMetric extends com.google.api.cli
   }
 
   /**
-   * Name of the dimension.
+   * Comma joined dimension names. E.g. "dim1_name,dim2_name". Deprecated. If name already has comma
+   * before join, we may get wrong splits. Please use individual_names.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +95,8 @@ public final class GoogleCloudApigeeV1DimensionMetric extends com.google.api.cli
   }
 
   /**
-   * Name of the dimension.
+   * Comma joined dimension names. E.g. "dim1_name,dim2_name". Deprecated. If name already has comma
+   * before join, we may get wrong splits. Please use individual_names.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1DimensionMetric setName(java.lang.String name) {

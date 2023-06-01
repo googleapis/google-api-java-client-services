@@ -30,6 +30,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Description of the security profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Display name of the security profile.
    * The value may be {@code null}.
    */
@@ -66,6 +73,13 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Customized profile configuration that computes the security score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1ProfileConfig profileConfig;
+
+  /**
    * Output only. The time when revision was created.
    * The value may be {@code null}.
    */
@@ -100,6 +114,23 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1SecurityProfileScoringConfig> scoringConfigs;
+
+  /**
+   * Description of the security profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Description of the security profile.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityProfile setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * Display name of the security profile.
@@ -185,6 +216,23 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
    */
   public GoogleCloudApigeeV1SecurityProfile setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Customized profile configuration that computes the security score.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ProfileConfig getProfileConfig() {
+    return profileConfig;
+  }
+
+  /**
+   * Customized profile configuration that computes the security score.
+   * @param profileConfig profileConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityProfile setProfileConfig(GoogleCloudApigeeV1ProfileConfig profileConfig) {
+    this.profileConfig = profileConfig;
     return this;
   }
 

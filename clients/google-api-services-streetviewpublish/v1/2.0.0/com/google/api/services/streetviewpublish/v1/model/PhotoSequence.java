@@ -134,6 +134,13 @@ public final class PhotoSequence extends com.google.api.client.json.GenericJson 
   private LatLngBounds sequenceBounds;
 
   /**
+   * Output only. Set if a Photo within the PhotoSequence contains a takedown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean takedown;
+
+  /**
    * Input only. Required when creating photo sequence. The resource name where the bytes of the
    * photo sequence (in the form of video) are uploaded.
    * The value may be {@code null}.
@@ -383,6 +390,23 @@ public final class PhotoSequence extends com.google.api.client.json.GenericJson 
    */
   public PhotoSequence setSequenceBounds(LatLngBounds sequenceBounds) {
     this.sequenceBounds = sequenceBounds;
+    return this;
+  }
+
+  /**
+   * Output only. Set if a Photo within the PhotoSequence contains a takedown.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTakedown() {
+    return takedown;
+  }
+
+  /**
+   * Output only. Set if a Photo within the PhotoSequence contains a takedown.
+   * @param takedown takedown or {@code null} for none
+   */
+  public PhotoSequence setTakedown(java.lang.Boolean takedown) {
+    this.takedown = takedown;
     return this;
   }
 

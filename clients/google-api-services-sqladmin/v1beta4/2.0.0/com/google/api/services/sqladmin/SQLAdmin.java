@@ -5233,6 +5233,141 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Operations {
 
     /**
+     * Cancels an instance operation that has been performed on an instance.
+     *
+     * Create a request for the method "operations.cancel".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID of the project that contains the instance.
+     * @param operation Instance operation ID.
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String project, java.lang.String operation) throws java.io.IOException {
+      Cancel result = new Cancel(project, operation);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends SQLAdminRequest<com.google.api.services.sqladmin.model.Empty> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/operations/{operation}/cancel";
+
+      /**
+       * Cancels an instance operation that has been performed on an instance.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param operation Instance operation ID.
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String project, java.lang.String operation) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Empty.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.operation = com.google.api.client.util.Preconditions.checkNotNull(operation, "Required parameter operation must be specified.");
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID of the project that contains the instance. */
+      public Cancel setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Instance operation ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String operation;
+
+      /** Instance operation ID.
+       */
+      public java.lang.String getOperation() {
+        return operation;
+      }
+
+      /** Instance operation ID. */
+      public Cancel setOperation(java.lang.String operation) {
+        this.operation = operation;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves an instance operation that has been performed on an instance.
      *
      * Create a request for the method "operations.get".

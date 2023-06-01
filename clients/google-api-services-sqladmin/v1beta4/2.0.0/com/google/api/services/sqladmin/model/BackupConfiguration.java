@@ -66,7 +66,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.String location;
 
   /**
-   * (Postgres only) Whether point in time recovery is enabled.
+   * Whether point in time recovery is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +181,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * (Postgres only) Whether point in time recovery is enabled.
+   * Whether point in time recovery is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPointInTimeRecoveryEnabled() {
@@ -189,7 +189,7 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * (Postgres only) Whether point in time recovery is enabled.
+   * Whether point in time recovery is enabled.
    * @param pointInTimeRecoveryEnabled pointInTimeRecoveryEnabled or {@code null} for none
    */
   public BackupConfiguration setPointInTimeRecoveryEnabled(java.lang.Boolean pointInTimeRecoveryEnabled) {

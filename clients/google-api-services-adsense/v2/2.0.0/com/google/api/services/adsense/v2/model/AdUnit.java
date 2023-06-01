@@ -61,7 +61,7 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   private java.lang.String reportingDimensionId;
 
   /**
-   * State of the ad unit.
+   * Required. State of the ad unit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +138,7 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the ad unit.
+   * Required. State of the ad unit.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -146,7 +146,7 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * State of the ad unit.
+   * Required. State of the ad unit.
    * @param state state or {@code null} for none
    */
   public AdUnit setState(java.lang.String state) {

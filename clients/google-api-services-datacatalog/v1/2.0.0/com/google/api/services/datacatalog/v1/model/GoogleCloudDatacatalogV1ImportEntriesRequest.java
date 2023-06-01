@@ -38,6 +38,14 @@ public final class GoogleCloudDatacatalogV1ImportEntriesRequest extends com.goog
   private java.lang.String gcsBucketPath;
 
   /**
+   * Optional. (Optional) Dataplex task job id, if specified will be used as part of ImportEntries
+   * LRO ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobId;
+
+  /**
    * Path to a Cloud Storage bucket that contains a dump ready for ingestion.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudDatacatalogV1ImportEntriesRequest extends com.goog
    */
   public GoogleCloudDatacatalogV1ImportEntriesRequest setGcsBucketPath(java.lang.String gcsBucketPath) {
     this.gcsBucketPath = gcsBucketPath;
+    return this;
+  }
+
+  /**
+   * Optional. (Optional) Dataplex task job id, if specified will be used as part of ImportEntries
+   * LRO ID
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobId() {
+    return jobId;
+  }
+
+  /**
+   * Optional. (Optional) Dataplex task job id, if specified will be used as part of ImportEntries
+   * LRO ID
+   * @param jobId jobId or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ImportEntriesRequest setJobId(java.lang.String jobId) {
+    this.jobId = jobId;
     return this;
   }
 

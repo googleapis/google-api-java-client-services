@@ -55,6 +55,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private DNSConfig dnsConfig;
 
   /**
+   * Whether FQDN Network Policy is enabled on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableFqdnNetworkPolicy;
+
+  /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
    * traffic visible for VPC network.
    * The value may be {@code null}.
@@ -163,6 +170,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDnsConfig(DNSConfig dnsConfig) {
     this.dnsConfig = dnsConfig;
+    return this;
+  }
+
+  /**
+   * Whether FQDN Network Policy is enabled on this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableFqdnNetworkPolicy() {
+    return enableFqdnNetworkPolicy;
+  }
+
+  /**
+   * Whether FQDN Network Policy is enabled on this cluster.
+   * @param enableFqdnNetworkPolicy enableFqdnNetworkPolicy or {@code null} for none
+   */
+  public NetworkConfig setEnableFqdnNetworkPolicy(java.lang.Boolean enableFqdnNetworkPolicy) {
+    this.enableFqdnNetworkPolicy = enableFqdnNetworkPolicy;
     return this;
   }
 

@@ -110,6 +110,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
+   * Enable/Disable FQDN Network Policy for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredEnableFqdnNetworkPolicy;
+
+  /**
    * Enable/Disable private endpoint for the cluster's master.
    * The value may be {@code null}.
    */
@@ -157,6 +164,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
+
+  /**
+   * Beta APIs enabled for cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private K8sBetaAPIConfig desiredK8sBetaApis;
 
   /**
    * The desired L4 Internal Load Balancer Subsetting configuration.
@@ -400,6 +414,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private WorkloadIdentityConfig desiredWorkloadIdentityConfig;
 
   /**
+   * Kubernetes open source beta apis enabled on the cluster. Only beta apis
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private K8sBetaAPIConfig enableK8sBetaApis;
+
+  /**
    * The current etag of the cluster. If an etag is provided and does not match the current etag of
    * the cluster, update will be blocked and an ABORTED error will be returned.
    * The value may be {@code null}.
@@ -605,6 +626,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Enable/Disable FQDN Network Policy for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredEnableFqdnNetworkPolicy() {
+    return desiredEnableFqdnNetworkPolicy;
+  }
+
+  /**
+   * Enable/Disable FQDN Network Policy for the cluster.
+   * @param desiredEnableFqdnNetworkPolicy desiredEnableFqdnNetworkPolicy or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnableFqdnNetworkPolicy(java.lang.Boolean desiredEnableFqdnNetworkPolicy) {
+    this.desiredEnableFqdnNetworkPolicy = desiredEnableFqdnNetworkPolicy;
+    return this;
+  }
+
+  /**
    * Enable/Disable private endpoint for the cluster's master.
    * @return value or {@code null} for none
    */
@@ -720,6 +758,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig) {
     this.desiredIntraNodeVisibilityConfig = desiredIntraNodeVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * Beta APIs enabled for cluster.
+   * @return value or {@code null} for none
+   */
+  public K8sBetaAPIConfig getDesiredK8sBetaApis() {
+    return desiredK8sBetaApis;
+  }
+
+  /**
+   * Beta APIs enabled for cluster.
+   * @param desiredK8sBetaApis desiredK8sBetaApis or {@code null} for none
+   */
+  public ClusterUpdate setDesiredK8sBetaApis(K8sBetaAPIConfig desiredK8sBetaApis) {
+    this.desiredK8sBetaApis = desiredK8sBetaApis;
     return this;
   }
 
@@ -1292,6 +1347,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredWorkloadIdentityConfig(WorkloadIdentityConfig desiredWorkloadIdentityConfig) {
     this.desiredWorkloadIdentityConfig = desiredWorkloadIdentityConfig;
+    return this;
+  }
+
+  /**
+   * Kubernetes open source beta apis enabled on the cluster. Only beta apis
+   * @return value or {@code null} for none
+   */
+  public K8sBetaAPIConfig getEnableK8sBetaApis() {
+    return enableK8sBetaApis;
+  }
+
+  /**
+   * Kubernetes open source beta apis enabled on the cluster. Only beta apis
+   * @param enableK8sBetaApis enableK8sBetaApis or {@code null} for none
+   */
+  public ClusterUpdate setEnableK8sBetaApis(K8sBetaAPIConfig enableK8sBetaApis) {
+    this.enableK8sBetaApis = enableK8sBetaApis;
     return this;
   }
 

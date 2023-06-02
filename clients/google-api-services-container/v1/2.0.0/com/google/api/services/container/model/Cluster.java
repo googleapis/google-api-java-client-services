@@ -153,6 +153,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Beta APIs Config
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private K8sBetaAPIConfig enableK8sBetaApis;
+
+  /**
    * Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g.
    * v1alpha1) and features that may not be production ready in the kubernetes version of the master
    * and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha
@@ -851,6 +858,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Beta APIs Config
+   * @return value or {@code null} for none
+   */
+  public K8sBetaAPIConfig getEnableK8sBetaApis() {
+    return enableK8sBetaApis;
+  }
+
+  /**
+   * Beta APIs Config
+   * @param enableK8sBetaApis enableK8sBetaApis or {@code null} for none
+   */
+  public Cluster setEnableK8sBetaApis(K8sBetaAPIConfig enableK8sBetaApis) {
+    this.enableK8sBetaApis = enableK8sBetaApis;
     return this;
   }
 

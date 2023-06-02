@@ -54,6 +54,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodePoolAutoscaling autoscaling;
 
   /**
+   * Enable best effort provisioning for nodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BestEffortProvisioning bestEffortProvisioning;
+
+  /**
    * Which conditions caused the current node pool state.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setAutoscaling(NodePoolAutoscaling autoscaling) {
     this.autoscaling = autoscaling;
+    return this;
+  }
+
+  /**
+   * Enable best effort provisioning for nodes
+   * @return value or {@code null} for none
+   */
+  public BestEffortProvisioning getBestEffortProvisioning() {
+    return bestEffortProvisioning;
+  }
+
+  /**
+   * Enable best effort provisioning for nodes
+   * @param bestEffortProvisioning bestEffortProvisioning or {@code null} for none
+   */
+  public NodePool setBestEffortProvisioning(BestEffortProvisioning bestEffortProvisioning) {
+    this.bestEffortProvisioning = bestEffortProvisioning;
     return this;
   }
 

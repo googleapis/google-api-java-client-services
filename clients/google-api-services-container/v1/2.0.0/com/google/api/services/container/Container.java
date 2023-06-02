@@ -657,6 +657,156 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
       public class Clusters {
 
         /**
+         * Checks the cluster compatibility with Autopilot mode, and returns a list of compatibility issues.
+         *
+         * Create a request for the method "clusters.checkAutopilotCompatibility".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link CheckAutopilotCompatibility#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name The name (project, location, cluster) of the cluster to retrieve. Specified in the format
+         *        `projects/locations/clusters`.
+         * @return the request
+         */
+        public CheckAutopilotCompatibility checkAutopilotCompatibility(java.lang.String name) throws java.io.IOException {
+          CheckAutopilotCompatibility result = new CheckAutopilotCompatibility(name);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckAutopilotCompatibility extends ContainerRequest<com.google.api.services.container.model.CheckAutopilotCompatibilityResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:checkAutopilotCompatibility";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Checks the cluster compatibility with Autopilot mode, and returns a list of compatibility
+           * issues.
+           *
+           * Create a request for the method "clusters.checkAutopilotCompatibility".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link CheckAutopilotCompatibility#execute()} method to invoke
+           * the remote operation. <p> {@link CheckAutopilotCompatibility#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name The name (project, location, cluster) of the cluster to retrieve. Specified in the format
+         *        `projects/locations/clusters`.
+           * @since 1.13
+           */
+          protected CheckAutopilotCompatibility(java.lang.String name) {
+            super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.CheckAutopilotCompatibilityResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CheckAutopilotCompatibility set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckAutopilotCompatibility) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setAccessToken(java.lang.String accessToken) {
+            return (CheckAutopilotCompatibility) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setAlt(java.lang.String alt) {
+            return (CheckAutopilotCompatibility) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setCallback(java.lang.String callback) {
+            return (CheckAutopilotCompatibility) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setFields(java.lang.String fields) {
+            return (CheckAutopilotCompatibility) super.setFields(fields);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setKey(java.lang.String key) {
+            return (CheckAutopilotCompatibility) super.setKey(key);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setOauthToken(java.lang.String oauthToken) {
+            return (CheckAutopilotCompatibility) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckAutopilotCompatibility) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setQuotaUser(java.lang.String quotaUser) {
+            return (CheckAutopilotCompatibility) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setUploadType(java.lang.String uploadType) {
+            return (CheckAutopilotCompatibility) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckAutopilotCompatibility setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckAutopilotCompatibility) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to retrieve. Specified in the
+           * format `projects/locations/clusters`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name (project, location, cluster) of the cluster to retrieve. Specified in the format
+         `projects/locations/clusters`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name (project, location, cluster) of the cluster to retrieve. Specified in the
+           * format `projects/locations/clusters`.
+           */
+          public CheckAutopilotCompatibility setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CheckAutopilotCompatibility set(String parameterName, Object value) {
+            return (CheckAutopilotCompatibility) super.set(parameterName, value);
+          }
+        }
+        /**
          * Completes master IP rotation.
          *
          * Create a request for the method "clusters.completeIpRotation".

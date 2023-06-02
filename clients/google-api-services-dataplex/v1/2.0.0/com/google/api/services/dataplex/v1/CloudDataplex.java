@@ -4394,6 +4394,43 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
+             * Optional. An expression for filtering the results of the ListDataScanJobs request.If
+             * unspecified, all datascan jobs will be returned. Multiple filters can be applied
+             * (with AND, OR logical operators). Filters are case-sensitive.Allowed fields are:
+             * start_time end_timestart_time and end_time expect RFC-3339 formatted strings (e.g.
+             * 2018-10-08T18:30:00-07:00).For instance, 'start_time > 2018-10-08T00:00:00.123456789Z
+             * AND end_time < 2018-10-09T00:00:00.123456789Z' limits results to DataScanJobs between
+             * specified start and end times.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. An expression for filtering the results of the ListDataScanJobs request.If unspecified,
+           all datascan jobs will be returned. Multiple filters can be applied (with AND, OR logical
+           operators). Filters are case-sensitive.Allowed fields are: start_time end_timestart_time and
+           end_time expect RFC-3339 formatted strings (e.g. 2018-10-08T18:30:00-07:00).For instance,
+           'start_time > 2018-10-08T00:00:00.123456789Z AND end_time < 2018-10-09T00:00:00.123456789Z' limits
+           results to DataScanJobs between specified start and end times.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. An expression for filtering the results of the ListDataScanJobs request.If
+             * unspecified, all datascan jobs will be returned. Multiple filters can be applied
+             * (with AND, OR logical operators). Filters are case-sensitive.Allowed fields are:
+             * start_time end_timestart_time and end_time expect RFC-3339 formatted strings (e.g.
+             * 2018-10-08T18:30:00-07:00).For instance, 'start_time > 2018-10-08T00:00:00.123456789Z
+             * AND end_time < 2018-10-09T00:00:00.123456789Z' limits results to DataScanJobs between
+             * specified start and end times.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
              * Optional. Maximum number of DataScanJobs to return. The service may return fewer than
              * this value. If unspecified, at most 10 DataScanJobs will be returned. The maximum
              * value is 1000; values above 1000 will be coerced to 1000.

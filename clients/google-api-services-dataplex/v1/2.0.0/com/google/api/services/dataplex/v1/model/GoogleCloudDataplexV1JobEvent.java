@@ -38,6 +38,13 @@ public final class GoogleCloudDataplexV1JobEvent extends com.google.api.client.j
   private String endTime;
 
   /**
+   * Job execution trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String executionTrigger;
+
+  /**
    * The unique id identifying the job.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudDataplexV1JobEvent extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1JobEvent setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Job execution trigger.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExecutionTrigger() {
+    return executionTrigger;
+  }
+
+  /**
+   * Job execution trigger.
+   * @param executionTrigger executionTrigger or {@code null} for none
+   */
+  public GoogleCloudDataplexV1JobEvent setExecutionTrigger(java.lang.String executionTrigger) {
+    this.executionTrigger = executionTrigger;
     return this;
   }
 

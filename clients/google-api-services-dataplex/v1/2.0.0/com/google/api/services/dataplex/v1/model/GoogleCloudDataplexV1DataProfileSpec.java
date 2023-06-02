@@ -30,6 +30,22 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The fields to exclude from data profile.If specified, the fields will be excluded
+   * from data profile, regardless of include_fields value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProfileSpecSelectedFields excludeFields;
+
+  /**
+   * Optional. The fields to include in data profile.If not specified, all fields at the time of
+   * profile scan job execution are included, except for ones listed in exclude_fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields;
+
+  /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
    * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
    * < 10
@@ -46,6 +62,44 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Optional. The fields to exclude from data profile.If specified, the fields will be excluded
+   * from data profile, regardless of include_fields value.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpecSelectedFields getExcludeFields() {
+    return excludeFields;
+  }
+
+  /**
+   * Optional. The fields to exclude from data profile.If specified, the fields will be excluded
+   * from data profile, regardless of include_fields value.
+   * @param excludeFields excludeFields or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setExcludeFields(GoogleCloudDataplexV1DataProfileSpecSelectedFields excludeFields) {
+    this.excludeFields = excludeFields;
+    return this;
+  }
+
+  /**
+   * Optional. The fields to include in data profile.If not specified, all fields at the time of
+   * profile scan job execution are included, except for ones listed in exclude_fields.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpecSelectedFields getIncludeFields() {
+    return includeFields;
+  }
+
+  /**
+   * Optional. The fields to include in data profile.If not specified, all fields at the time of
+   * profile scan job execution are included, except for ones listed in exclude_fields.
+   * @param includeFields includeFields or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setIncludeFields(GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields) {
+    this.includeFields = includeFields;
+    return this;
+  }
 
   /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid

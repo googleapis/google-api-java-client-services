@@ -17,7 +17,7 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * Confugures transliteration feature on top of translation.
+ * Configures transliteration feature on top of translation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation

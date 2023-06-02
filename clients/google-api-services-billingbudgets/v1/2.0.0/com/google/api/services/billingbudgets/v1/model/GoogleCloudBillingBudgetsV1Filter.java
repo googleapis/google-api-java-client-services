@@ -87,6 +87,16 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   private java.util.List<java.lang.String> projects;
 
   /**
+   * Optional. A set of folder and organization names of the form `folders/{folderId}` or
+   * `organizations/{organizationId}`, specifying that usage from only this set of folders and
+   * organizations should be included in the budget. If omitted, the report includes all usage for
+   * all organizations, regardless of which organization the usage occurred on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourceAncestors;
+
+  /**
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
    * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
@@ -234,6 +244,29 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    */
   public GoogleCloudBillingBudgetsV1Filter setProjects(java.util.List<java.lang.String> projects) {
     this.projects = projects;
+    return this;
+  }
+
+  /**
+   * Optional. A set of folder and organization names of the form `folders/{folderId}` or
+   * `organizations/{organizationId}`, specifying that usage from only this set of folders and
+   * organizations should be included in the budget. If omitted, the report includes all usage for
+   * all organizations, regardless of which organization the usage occurred on.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourceAncestors() {
+    return resourceAncestors;
+  }
+
+  /**
+   * Optional. A set of folder and organization names of the form `folders/{folderId}` or
+   * `organizations/{organizationId}`, specifying that usage from only this set of folders and
+   * organizations should be included in the budget. If omitted, the report includes all usage for
+   * all organizations, regardless of which organization the usage occurred on.
+   * @param resourceAncestors resourceAncestors or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1Filter setResourceAncestors(java.util.List<java.lang.String> resourceAncestors) {
+    this.resourceAncestors = resourceAncestors;
     return this;
   }
 

@@ -538,6 +538,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ResourceUsageExportConfig resourceUsageExportConfig;
 
   /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPostureConfig securityPostureConfig;
+
+  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -1831,6 +1838,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
     this.resourceUsageExportConfig = resourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public SecurityPostureConfig getSecurityPostureConfig() {
+    return securityPostureConfig;
+  }
+
+  /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * @param securityPostureConfig securityPostureConfig or {@code null} for none
+   */
+  public Cluster setSecurityPostureConfig(SecurityPostureConfig securityPostureConfig) {
+    this.securityPostureConfig = securityPostureConfig;
     return this;
   }
 

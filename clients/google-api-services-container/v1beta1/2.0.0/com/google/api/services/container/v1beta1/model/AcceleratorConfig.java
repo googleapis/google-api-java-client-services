@@ -46,6 +46,13 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   private java.lang.String acceleratorType;
 
   /**
+   * The configuration for auto installation of GPU driver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GPUDriverInstallationConfig gpuDriverInstallationConfig;
+
+  /**
    * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user
    * guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
    * The value may be {@code null}.
@@ -100,6 +107,23 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
    */
   public AcceleratorConfig setAcceleratorType(java.lang.String acceleratorType) {
     this.acceleratorType = acceleratorType;
+    return this;
+  }
+
+  /**
+   * The configuration for auto installation of GPU driver.
+   * @return value or {@code null} for none
+   */
+  public GPUDriverInstallationConfig getGpuDriverInstallationConfig() {
+    return gpuDriverInstallationConfig;
+  }
+
+  /**
+   * The configuration for auto installation of GPU driver.
+   * @param gpuDriverInstallationConfig gpuDriverInstallationConfig or {@code null} for none
+   */
+  public AcceleratorConfig setGpuDriverInstallationConfig(GPUDriverInstallationConfig gpuDriverInstallationConfig) {
+    this.gpuDriverInstallationConfig = gpuDriverInstallationConfig;
     return this;
   }
 

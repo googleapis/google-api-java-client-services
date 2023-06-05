@@ -54,6 +54,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
 
   /**
+   * The desired workload policy configuration for the autopilot cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadPolicyConfig desiredAutopilotWorkloadPolicyConfig;
+
+  /**
    * The desired configuration options for the Binary Authorization feature.
    * The value may be {@code null}.
    */
@@ -356,6 +363,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPostureConfig desiredSecurityPostureConfig;
+
+  /**
    * ServiceExternalIPsConfig specifies the config for the use of Services with ExternalIPs field.
    * The value may be {@code null}.
    */
@@ -486,6 +500,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig) {
     this.desiredAuthenticatorGroupsConfig = desiredAuthenticatorGroupsConfig;
+    return this;
+  }
+
+  /**
+   * The desired workload policy configuration for the autopilot cluster.
+   * @return value or {@code null} for none
+   */
+  public WorkloadPolicyConfig getDesiredAutopilotWorkloadPolicyConfig() {
+    return desiredAutopilotWorkloadPolicyConfig;
+  }
+
+  /**
+   * The desired workload policy configuration for the autopilot cluster.
+   * @param desiredAutopilotWorkloadPolicyConfig desiredAutopilotWorkloadPolicyConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAutopilotWorkloadPolicyConfig(WorkloadPolicyConfig desiredAutopilotWorkloadPolicyConfig) {
+    this.desiredAutopilotWorkloadPolicyConfig = desiredAutopilotWorkloadPolicyConfig;
     return this;
   }
 
@@ -1207,6 +1238,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
     this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * @return value or {@code null} for none
+   */
+  public SecurityPostureConfig getDesiredSecurityPostureConfig() {
+    return desiredSecurityPostureConfig;
+  }
+
+  /**
+   * Enable/Disable Security Posture API features for the cluster.
+   * @param desiredSecurityPostureConfig desiredSecurityPostureConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredSecurityPostureConfig(SecurityPostureConfig desiredSecurityPostureConfig) {
+    this.desiredSecurityPostureConfig = desiredSecurityPostureConfig;
     return this;
   }
 

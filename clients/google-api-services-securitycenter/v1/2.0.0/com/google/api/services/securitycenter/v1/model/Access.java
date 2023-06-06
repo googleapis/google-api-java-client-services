@@ -103,6 +103,13 @@ public final class Access extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceName;
 
   /**
+   * The caller's user agent string associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userAgent;
+
+  /**
    * Type of user agent associated with the finding. For example, an operating system shell or an
    * embedded or standalone application.
    * The value may be {@code null}.
@@ -284,6 +291,23 @@ public final class Access extends com.google.api.client.json.GenericJson {
    */
   public Access setServiceName(java.lang.String serviceName) {
     this.serviceName = serviceName;
+    return this;
+  }
+
+  /**
+   * The caller's user agent string associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserAgent() {
+    return userAgent;
+  }
+
+  /**
+   * The caller's user agent string associated with the finding.
+   * @param userAgent userAgent or {@code null} for none
+   */
+  public Access setUserAgent(java.lang.String userAgent) {
+    this.userAgent = userAgent;
     return this;
   }
 

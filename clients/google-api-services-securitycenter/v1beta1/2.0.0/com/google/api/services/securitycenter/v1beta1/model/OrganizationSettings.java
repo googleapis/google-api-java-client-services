@@ -39,7 +39,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
 
   /**
    * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false, all historical assets will remain, but
+   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
    * discovery of future assets will not occur.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
 
   /**
    * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false, all historical assets will remain, but
+   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
    * discovery of future assets will not occur.
    * @return value or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
 
   /**
    * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false, all historical assets will remain, but
+   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
    * discovery of future assets will not occur.
    * @param enableAssetDiscovery enableAssetDiscovery or {@code null} for none
    */

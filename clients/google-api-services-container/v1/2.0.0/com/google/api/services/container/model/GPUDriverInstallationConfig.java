@@ -17,7 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Autopilot is the configuration for Autopilot settings on the cluster.
+ * GPUDriverInstallationConfig specifies the version of GPU driver to be auto installed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,64 +28,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Autopilot extends com.google.api.client.json.GenericJson {
+public final class GPUDriverInstallationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable Autopilot
+   * Mode for how the GPU driver is installed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.lang.String gpuDriverVersion;
 
   /**
-   * Workload policy configuration for Autopilot.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private WorkloadPolicyConfig workloadPolicyConfig;
-
-  /**
-   * Enable Autopilot
+   * Mode for how the GPU driver is installed.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.lang.String getGpuDriverVersion() {
+    return gpuDriverVersion;
   }
 
   /**
-   * Enable Autopilot
-   * @param enabled enabled or {@code null} for none
+   * Mode for how the GPU driver is installed.
+   * @param gpuDriverVersion gpuDriverVersion or {@code null} for none
    */
-  public Autopilot setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
-    return this;
-  }
-
-  /**
-   * Workload policy configuration for Autopilot.
-   * @return value or {@code null} for none
-   */
-  public WorkloadPolicyConfig getWorkloadPolicyConfig() {
-    return workloadPolicyConfig;
-  }
-
-  /**
-   * Workload policy configuration for Autopilot.
-   * @param workloadPolicyConfig workloadPolicyConfig or {@code null} for none
-   */
-  public Autopilot setWorkloadPolicyConfig(WorkloadPolicyConfig workloadPolicyConfig) {
-    this.workloadPolicyConfig = workloadPolicyConfig;
+  public GPUDriverInstallationConfig setGpuDriverVersion(java.lang.String gpuDriverVersion) {
+    this.gpuDriverVersion = gpuDriverVersion;
     return this;
   }
 
   @Override
-  public Autopilot set(String fieldName, Object value) {
-    return (Autopilot) super.set(fieldName, value);
+  public GPUDriverInstallationConfig set(String fieldName, Object value) {
+    return (GPUDriverInstallationConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Autopilot clone() {
-    return (Autopilot) super.clone();
+  public GPUDriverInstallationConfig clone() {
+    return (GPUDriverInstallationConfig) super.clone();
   }
 
 }

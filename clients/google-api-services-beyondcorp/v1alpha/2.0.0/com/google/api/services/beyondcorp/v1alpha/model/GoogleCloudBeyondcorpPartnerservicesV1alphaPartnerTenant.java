@@ -44,18 +44,12 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant exte
   private java.lang.String displayName;
 
   /**
-   * Optional. Google group email to which the PartnerTenant is enabled.
+   * Optional. Group information for the users enabled to use the partnerTenant. If the group
+   * information is not provided then the partnerTenant will be enabled for all users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String googleGroupEmail;
-
-  /**
-   * Optional. Google group ID to which the PartnerTenant is enabled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String googleGroupId;
+  private GoogleCloudBeyondcorpPartnerservicesV1alphaGroup group;
 
   /**
    * Output only. Unique resource name of the PartnerTenant. The name is ignored when creating
@@ -114,36 +108,21 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant exte
   }
 
   /**
-   * Optional. Google group email to which the PartnerTenant is enabled.
+   * Optional. Group information for the users enabled to use the partnerTenant. If the group
+   * information is not provided then the partnerTenant will be enabled for all users.
    * @return value or {@code null} for none
    */
-  public java.lang.String getGoogleGroupEmail() {
-    return googleGroupEmail;
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaGroup getGroup() {
+    return group;
   }
 
   /**
-   * Optional. Google group email to which the PartnerTenant is enabled.
-   * @param googleGroupEmail googleGroupEmail or {@code null} for none
+   * Optional. Group information for the users enabled to use the partnerTenant. If the group
+   * information is not provided then the partnerTenant will be enabled for all users.
+   * @param group group or {@code null} for none
    */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant setGoogleGroupEmail(java.lang.String googleGroupEmail) {
-    this.googleGroupEmail = googleGroupEmail;
-    return this;
-  }
-
-  /**
-   * Optional. Google group ID to which the PartnerTenant is enabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getGoogleGroupId() {
-    return googleGroupId;
-  }
-
-  /**
-   * Optional. Google group ID to which the PartnerTenant is enabled.
-   * @param googleGroupId googleGroupId or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant setGoogleGroupId(java.lang.String googleGroupId) {
-    this.googleGroupId = googleGroupId;
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant setGroup(GoogleCloudBeyondcorpPartnerservicesV1alphaGroup group) {
+    this.group = group;
     return this;
   }
 

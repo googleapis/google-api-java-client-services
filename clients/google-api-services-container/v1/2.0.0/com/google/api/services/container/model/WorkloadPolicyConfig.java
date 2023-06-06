@@ -17,7 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Autopilot is the configuration for Autopilot settings on the cluster.
+ * WorkloadPolicyConfig is the configuration of workload policy for autopilot clusters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,64 +28,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Autopilot extends com.google.api.client.json.GenericJson {
+public final class WorkloadPolicyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable Autopilot
+   * If true, workloads can use NET_ADMIN capability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
+  private java.lang.Boolean allowNetAdmin;
 
   /**
-   * Workload policy configuration for Autopilot.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private WorkloadPolicyConfig workloadPolicyConfig;
-
-  /**
-   * Enable Autopilot
+   * If true, workloads can use NET_ADMIN capability.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
+  public java.lang.Boolean getAllowNetAdmin() {
+    return allowNetAdmin;
   }
 
   /**
-   * Enable Autopilot
-   * @param enabled enabled or {@code null} for none
+   * If true, workloads can use NET_ADMIN capability.
+   * @param allowNetAdmin allowNetAdmin or {@code null} for none
    */
-  public Autopilot setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
-    return this;
-  }
-
-  /**
-   * Workload policy configuration for Autopilot.
-   * @return value or {@code null} for none
-   */
-  public WorkloadPolicyConfig getWorkloadPolicyConfig() {
-    return workloadPolicyConfig;
-  }
-
-  /**
-   * Workload policy configuration for Autopilot.
-   * @param workloadPolicyConfig workloadPolicyConfig or {@code null} for none
-   */
-  public Autopilot setWorkloadPolicyConfig(WorkloadPolicyConfig workloadPolicyConfig) {
-    this.workloadPolicyConfig = workloadPolicyConfig;
+  public WorkloadPolicyConfig setAllowNetAdmin(java.lang.Boolean allowNetAdmin) {
+    this.allowNetAdmin = allowNetAdmin;
     return this;
   }
 
   @Override
-  public Autopilot set(String fieldName, Object value) {
-    return (Autopilot) super.set(fieldName, value);
+  public WorkloadPolicyConfig set(String fieldName, Object value) {
+    return (WorkloadPolicyConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Autopilot clone() {
-    return (Autopilot) super.clone();
+  public WorkloadPolicyConfig clone() {
+    return (WorkloadPolicyConfig) super.clone();
   }
 
 }

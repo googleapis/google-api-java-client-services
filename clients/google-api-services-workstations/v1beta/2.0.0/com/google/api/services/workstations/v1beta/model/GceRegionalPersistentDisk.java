@@ -17,7 +17,12 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A PersistentDirectory backed by a Compute Engine regional persistent disk.
+ * A PersistentDirectory backed by a Compute Engine regional persistent disk. The
+ * `persistentDirectories[]` field is repeated, but it may contain only one entry. It creates a
+ * [persistent disk](https://cloud.google.com/compute/docs/disks/persistent-disks) that mounts to
+ * the workstation VM at `/home` when the session starts and detaches when the session ends. If this
+ * field is empty, workstations created with this configuration do not have a persistent home
+ * directory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -31,7 +36,8 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceRegionalPersistentDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the disk to use. Defaults to pd-standard.
+   * The [type of the persistent disk](https://cloud.google.com/compute/docs/disks#disk-types) for
+   * the home directory. Defaults to `pd-standard`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,21 +45,25 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to `ext4`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fsType;
 
   /**
-   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
+   * Whether the persistent disk should be deleted when the workstation is deleted. Valid values are
+   * `DELETE` and `RETAIN`. Defaults to `DELETE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reclaimPolicy;
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
+   * The GB capacity of a persistent home directory for each workstation created with this
+   * configuration. Must be empty if `source_snapshot` is set. Valid values are `10`, `50`, `100`,
+   * `200`, `500`, or `1000`. Defaults to `200`. If less than `200` GB, the `diskType` must be `pd-
+   * balanced` or `pd-ssd`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +78,8 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   private java.lang.String sourceSnapshot;
 
   /**
-   * Type of the disk to use. Defaults to pd-standard.
+   * The [type of the persistent disk](https://cloud.google.com/compute/docs/disks#disk-types) for
+   * the home directory. Defaults to `pd-standard`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -76,7 +87,8 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Type of the disk to use. Defaults to pd-standard.
+   * The [type of the persistent disk](https://cloud.google.com/compute/docs/disks#disk-types) for
+   * the home directory. Defaults to `pd-standard`.
    * @param diskType diskType or {@code null} for none
    */
   public GceRegionalPersistentDisk setDiskType(java.lang.String diskType) {
@@ -86,7 +98,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to `ext4`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFsType() {
@@ -95,7 +107,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Type of file system that the disk should be formatted with. The workstation image must support
-   * this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
+   * this file system type. Must be empty if source_snapshot is set. Defaults to `ext4`.
    * @param fsType fsType or {@code null} for none
    */
   public GceRegionalPersistentDisk setFsType(java.lang.String fsType) {
@@ -104,7 +116,8 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
+   * Whether the persistent disk should be deleted when the workstation is deleted. Valid values are
+   * `DELETE` and `RETAIN`. Defaults to `DELETE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReclaimPolicy() {
@@ -112,7 +125,8 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * What should happen to the disk after the workstation is deleted. Defaults to DELETE.
+   * Whether the persistent disk should be deleted when the workstation is deleted. Valid values are
+   * `DELETE` and `RETAIN`. Defaults to `DELETE`.
    * @param reclaimPolicy reclaimPolicy or {@code null} for none
    */
   public GceRegionalPersistentDisk setReclaimPolicy(java.lang.String reclaimPolicy) {
@@ -121,7 +135,10 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
+   * The GB capacity of a persistent home directory for each workstation created with this
+   * configuration. Must be empty if `source_snapshot` is set. Valid values are `10`, `50`, `100`,
+   * `200`, `500`, or `1000`. Defaults to `200`. If less than `200` GB, the `diskType` must be `pd-
+   * balanced` or `pd-ssd`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSizeGb() {
@@ -129,7 +146,10 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
   }
 
   /**
-   * Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
+   * The GB capacity of a persistent home directory for each workstation created with this
+   * configuration. Must be empty if `source_snapshot` is set. Valid values are `10`, `50`, `100`,
+   * `200`, `500`, or `1000`. Defaults to `200`. If less than `200` GB, the `diskType` must be `pd-
+   * balanced` or `pd-ssd`.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public GceRegionalPersistentDisk setSizeGb(java.lang.Integer sizeGb) {

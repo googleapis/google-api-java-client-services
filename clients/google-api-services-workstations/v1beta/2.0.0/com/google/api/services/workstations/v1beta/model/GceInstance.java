@@ -44,7 +44,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the boot disk in GB. Defaults to 50.
+   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
+   * Defaults to `50` GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,21 +59,28 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private GceConfidentialInstanceConfig confidentialInstanceConfig;
 
   /**
-   * Whether instances have no public IP address.
+   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
+   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
+   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
+   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
+   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disablePublicIpAddresses;
 
   /**
-   * The name of a Compute Engine machine type.
+   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
+   * about machine types that Cloud Workstations supports, see the list of [available machine
+   * types](https://cloud.google.com/workstations/docs/available-machine-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Number of instances to pool for faster workstation startup.
+   * The number of VMs that the system should keep idle so that new workstations can be started
+   * quickly for new users. Defaults to `0` in the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,10 +95,15 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer pooledInstances;
 
   /**
-   * Email address of the service account used on VM instances used to support this configuration.
-   * If not set, VMs run with a Google-managed service account. This service account must have
-   * permission to pull the specified container image; otherwise, the image must be publicly
-   * accessible.
+   * The email address of the service account for Cloud Workstations VMs created with this
+   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
+   * permission on the project so it can write logs out to Cloud Logging. If using a custom
+   * container image, the service account must have permissions to pull the specified image. If you
+   * as the administrator want to be able to `ssh` into the underlying VM, you need to set this
+   * value to a service account for which you have the `iam.serviceAccounts.actAs` permission.
+   * Conversely, if you don't want anyone to be able to `ssh` into the underlying VM, use a service
+   * account where no one has that permission. If not set, VMs run with a service account provided
+   * by the Cloud Workstations service, and the image must be publicly accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +117,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private GceShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
-   * Network tags to add to the Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
+   * created with this configuration. These network tags enable the creation of [firewall
+   * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +144,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the boot disk in GB. Defaults to 50.
+   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
+   * Defaults to `50` GB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBootDiskSizeGb() {
@@ -136,7 +153,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the boot disk in GB. Defaults to 50.
+   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
+   * Defaults to `50` GB.
    * @param bootDiskSizeGb bootDiskSizeGb or {@code null} for none
    */
   public GceInstance setBootDiskSizeGb(java.lang.Integer bootDiskSizeGb) {
@@ -162,7 +180,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether instances have no public IP address.
+   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
+   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
+   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
+   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
+   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisablePublicIpAddresses() {
@@ -170,7 +192,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether instances have no public IP address.
+   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
+   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
+   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
+   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
+   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * @param disablePublicIpAddresses disablePublicIpAddresses or {@code null} for none
    */
   public GceInstance setDisablePublicIpAddresses(java.lang.Boolean disablePublicIpAddresses) {
@@ -179,7 +205,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Compute Engine machine type.
+   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
+   * about machine types that Cloud Workstations supports, see the list of [available machine
+   * types](https://cloud.google.com/workstations/docs/available-machine-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -187,7 +215,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Compute Engine machine type.
+   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
+   * about machine types that Cloud Workstations supports, see the list of [available machine
+   * types](https://cloud.google.com/workstations/docs/available-machine-types).
    * @param machineType machineType or {@code null} for none
    */
   public GceInstance setMachineType(java.lang.String machineType) {
@@ -196,7 +226,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster workstation startup.
+   * The number of VMs that the system should keep idle so that new workstations can be started
+   * quickly for new users. Defaults to `0` in the API.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPoolSize() {
@@ -204,7 +235,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of instances to pool for faster workstation startup.
+   * The number of VMs that the system should keep idle so that new workstations can be started
+   * quickly for new users. Defaults to `0` in the API.
    * @param poolSize poolSize or {@code null} for none
    */
   public GceInstance setPoolSize(java.lang.Integer poolSize) {
@@ -232,10 +264,15 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the service account used on VM instances used to support this configuration.
-   * If not set, VMs run with a Google-managed service account. This service account must have
-   * permission to pull the specified container image; otherwise, the image must be publicly
-   * accessible.
+   * The email address of the service account for Cloud Workstations VMs created with this
+   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
+   * permission on the project so it can write logs out to Cloud Logging. If using a custom
+   * container image, the service account must have permissions to pull the specified image. If you
+   * as the administrator want to be able to `ssh` into the underlying VM, you need to set this
+   * value to a service account for which you have the `iam.serviceAccounts.actAs` permission.
+   * Conversely, if you don't want anyone to be able to `ssh` into the underlying VM, use a service
+   * account where no one has that permission. If not set, VMs run with a service account provided
+   * by the Cloud Workstations service, and the image must be publicly accessible.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -243,10 +280,15 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address of the service account used on VM instances used to support this configuration.
-   * If not set, VMs run with a Google-managed service account. This service account must have
-   * permission to pull the specified container image; otherwise, the image must be publicly
-   * accessible.
+   * The email address of the service account for Cloud Workstations VMs created with this
+   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
+   * permission on the project so it can write logs out to Cloud Logging. If using a custom
+   * container image, the service account must have permissions to pull the specified image. If you
+   * as the administrator want to be able to `ssh` into the underlying VM, you need to set this
+   * value to a service account for which you have the `iam.serviceAccounts.actAs` permission.
+   * Conversely, if you don't want anyone to be able to `ssh` into the underlying VM, use a service
+   * account where no one has that permission. If not set, VMs run with a service account provided
+   * by the Cloud Workstations service, and the image must be publicly accessible.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GceInstance setServiceAccount(java.lang.String serviceAccount) {
@@ -272,7 +314,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
+   * created with this configuration. These network tags enable the creation of [firewall
+   * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -280,7 +325,10 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Compute Engine machines backing the Workstations.
+   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
+   * created with this configuration. These network tags enable the creation of [firewall
+   * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
    * @param tags tags or {@code null} for none
    */
   public GceInstance setTags(java.util.List<java.lang.String> tags) {

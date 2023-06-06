@@ -17,8 +17,8 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A set of configuration options describing how a workstation will be run. Workstation
- * configurations are intended to be shared across multiple workstations.
+ * A set of configuration options that describe how a workstation runs. Workstation configurations
+ * are intended to be shared across multiple workstations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -52,8 +52,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each workstation using this configuration when that workstation
-   * is started.
+   * Container that runs upon startup for each workstation using this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,10 +88,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
-   * also be specified that has logging.buckets.write permission on the project. Operating system
-   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
-   * /audit-logging).
+   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
+   * must also be specified that has `logging.buckets.write` permission on the project. Operating
+   * system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,14 +99,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Immutable. Encrypts resources of this workstation configuration using a customer-managed
-   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
-   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
-   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
-   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
-   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * encryption key (CMEK). If specified, the boot disk of the Compute Engine instance and the
+   * persistent disk are encrypted using this encryption key. If this field is not set, the disks
+   * are encrypted using a generated key. Customer-managed encryption keys do not protect disk
+   * metadata. If the customer-managed encryption key is rotated, when the workstation instance is
+   * stopped, the system attempts to recreate the persistent disk with the new version of the key.
+   * Be sure to keep older versions of the key until the persistent disk is recreated. Otherwise,
+   * data on the persistent disk might be lost. If the encryption key is revoked, the workstation
+   * session automatically stops within 7 hours. Immutable after the workstation configuration is
    * created.
    * The value may be {@code null}.
    */
@@ -130,9 +129,12 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private Host host;
 
   /**
-   * How long to wait before automatically stopping an instance that hasn't received any user
-   * traffic. A value of 0 indicates that this instance should never time out due to idleness.
-   * Defaults to 20 minutes.
+   * Number of seconds to wait before automatically stopping a workstation after it last received
+   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
+   * [duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
+   * `7200s` (2 hours). The default is `1200s` (20 minutes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,16 +192,24 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean reconciling;
 
   /**
-   * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this configuration should never time out. Must be greater
-   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
+   * that workstations be shut down daily to reduce costs and so that security updates can be
+   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
+   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
+   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
+   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
+   * indicates that workstations using this configuration should never time out. If `encryption_key`
+   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String runningTimeout;
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,8 +257,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each workstation using this configuration when that workstation
-   * is started.
+   * Container that runs upon startup for each workstation using this workstation configuration.
    * @return value or {@code null} for none
    */
   public Container getContainer() {
@@ -256,8 +265,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that will be run for each workstation using this configuration when that workstation
-   * is started.
+   * Container that runs upon startup for each workstation using this workstation configuration.
    * @param container container or {@code null} for none
    */
   public WorkstationConfig setContainer(Container container) {
@@ -336,10 +344,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
-   * also be specified that has logging.buckets.write permission on the project. Operating system
-   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
-   * /audit-logging).
+   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
+   * must also be specified that has `logging.buckets.write` permission on the project. Operating
+   * system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAuditAgent() {
@@ -347,10 +355,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to enable linux auditd logging on the workstation. When enabled, a service account must
-   * also be specified that has logging.buckets.write permission on the project. Operating system
-   * audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs
-   * /audit-logging).
+   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
+   * must also be specified that has `logging.buckets.write` permission on the project. Operating
+   * system audit logging is distinct from [Cloud Audit
+   * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * @param enableAuditAgent enableAuditAgent or {@code null} for none
    */
   public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {
@@ -360,14 +368,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Immutable. Encrypts resources of this workstation configuration using a customer-managed
-   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
-   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
-   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
-   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
-   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * encryption key (CMEK). If specified, the boot disk of the Compute Engine instance and the
+   * persistent disk are encrypted using this encryption key. If this field is not set, the disks
+   * are encrypted using a generated key. Customer-managed encryption keys do not protect disk
+   * metadata. If the customer-managed encryption key is rotated, when the workstation instance is
+   * stopped, the system attempts to recreate the persistent disk with the new version of the key.
+   * Be sure to keep older versions of the key until the persistent disk is recreated. Otherwise,
+   * data on the persistent disk might be lost. If the encryption key is revoked, the workstation
+   * session automatically stops within 7 hours. Immutable after the workstation configuration is
    * created.
    * @return value or {@code null} for none
    */
@@ -377,14 +385,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Immutable. Encrypts resources of this workstation configuration using a customer-managed
-   * encryption key. If specified, the boot disk of the Compute Engine instance and the persistent
-   * disk are encrypted using this encryption key. If this field is not set, the disks are encrypted
-   * using a generated key. Customer-managed encryption keys do not protect disk metadata. If the
-   * customer-managed encryption key is rotated, when the workstation instance is stopped, the
-   * system attempts to recreate the persistent disk with the new version of the key. Be sure to
-   * keep older versions of the key until the persistent disk is recreated. Otherwise, data on the
-   * persistent disk will be lost. If the encryption key is revoked, the workstation session will
-   * automatically be stopped within 7 hours. Immutable after the workstation configuration is
+   * encryption key (CMEK). If specified, the boot disk of the Compute Engine instance and the
+   * persistent disk are encrypted using this encryption key. If this field is not set, the disks
+   * are encrypted using a generated key. Customer-managed encryption keys do not protect disk
+   * metadata. If the customer-managed encryption key is rotated, when the workstation instance is
+   * stopped, the system attempts to recreate the persistent disk with the new version of the key.
+   * Be sure to keep older versions of the key until the persistent disk is recreated. Otherwise,
+   * data on the persistent disk might be lost. If the encryption key is revoked, the workstation
+   * session automatically stops within 7 hours. Immutable after the workstation configuration is
    * created.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
@@ -430,9 +438,12 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How long to wait before automatically stopping an instance that hasn't received any user
-   * traffic. A value of 0 indicates that this instance should never time out due to idleness.
-   * Defaults to 20 minutes.
+   * Number of seconds to wait before automatically stopping a workstation after it last received
+   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
+   * [duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
+   * `7200s` (2 hours). The default is `1200s` (20 minutes).
    * @return value or {@code null} for none
    */
   public String getIdleTimeout() {
@@ -440,9 +451,12 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How long to wait before automatically stopping an instance that hasn't received any user
-   * traffic. A value of 0 indicates that this instance should never time out due to idleness.
-   * Defaults to 20 minutes.
+   * Number of seconds to wait before automatically stopping a workstation after it last received
+   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
+   * [duration](https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
+   * `7200s` (2 hours). The default is `1200s` (20 minutes).
    * @param idleTimeout idleTimeout or {@code null} for none
    */
   public WorkstationConfig setIdleTimeout(String idleTimeout) {
@@ -544,9 +558,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this configuration should never time out. Must be greater
-   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
+   * that workstations be shut down daily to reduce costs and so that security updates can be
+   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
+   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
+   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
+   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
+   * indicates that workstations using this configuration should never time out. If `encryption_key`
+   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * @return value or {@code null} for none
    */
   public String getRunningTimeout() {
@@ -554,9 +576,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * How long to wait before automatically stopping a workstation after it started. A value of 0
-   * indicates that workstations using this configuration should never time out. Must be greater
-   * than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
+   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
+   * that workstations be shut down daily to reduce costs and so that security updates can be
+   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
+   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
+   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
+   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
+   * indicates that workstations using this configuration should never time out. If `encryption_key`
+   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * @param runningTimeout runningTimeout or {@code null} for none
    */
   public WorkstationConfig setRunningTimeout(String runningTimeout) {
@@ -565,7 +595,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -573,7 +603,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * @param uid uid or {@code null} for none
    */
   public WorkstationConfig setUid(java.lang.String uid) {

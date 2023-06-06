@@ -52,8 +52,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> env;
 
   /**
-   * Docker image defining the container. This image must be accessible by the service account
-   * specified in the workstation configuration.
+   * A Docker container image that defines a custom environment. Cloud Workstations provides a
+   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
+   * images), but you can create your own [custom container
+   * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
+   * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
+   * configuration and must have permission to pull the specified image. Otherwise, the image must
+   * be publicly accessible.s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +130,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image defining the container. This image must be accessible by the service account
-   * specified in the workstation configuration.
+   * A Docker container image that defines a custom environment. Cloud Workstations provides a
+   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
+   * images), but you can create your own [custom container
+   * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
+   * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
+   * configuration and must have permission to pull the specified image. Otherwise, the image must
+   * be publicly accessible.s
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -134,8 +144,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Docker image defining the container. This image must be accessible by the service account
-   * specified in the workstation configuration.
+   * A Docker container image that defines a custom environment. Cloud Workstations provides a
+   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
+   * images), but you can create your own [custom container
+   * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
+   * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
+   * configuration and must have permission to pull the specified image. Otherwise, the image must
+   * be publicly accessible.s
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {

@@ -17,7 +17,8 @@
 package com.google.api.services.verifiedaccess.v2.model;
 
 /**
- * The device signals as reported by Chrome.
+ * The device signals as reported by Chrome. Unless otherwise specified, signals are available on
+ * all platforms.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Verified Access API. For a detailed
@@ -32,7 +33,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * Value of the AllowScreenLock policy on the device. See
-   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details.
+   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
+   * ChromeOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +65,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean chromeRemoteDesktopAppBlocked;
 
   /**
-   * Crowdstrike agent properties installed on the device, if any.
+   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +125,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.String hostname;
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device.
+   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +139,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> macAddresses;
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device.
+   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,14 +214,16 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.String screenLockSecured;
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled.
+   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secureBootMode;
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number.
+   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
+   * available on most Linux distributions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,21 +247,29 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   /**
    * Whether Chrome is blocking third-party software injection or not. This setting may be
    * controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled
+   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
+   * Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean thirdPartyBlockingEnabled;
 
   /**
-   * Windows domain that the current machine has joined.
+   * The trigger which generated this set of signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trigger;
+
+  /**
+   * Windows domain that the current machine has joined. Available on Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String windowsMachineDomain;
 
   /**
-   * Windows domain for the current OS user.
+   * Windows domain for the current OS user. Available on Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,7 +277,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * Value of the AllowScreenLock policy on the device. See
-   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details.
+   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
+   * ChromeOS only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowScreenLock() {
@@ -273,7 +287,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
 
   /**
    * Value of the AllowScreenLock policy on the device. See
-   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details.
+   * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
+   * ChromeOS only.
    * @param allowScreenLock allowScreenLock or {@code null} for none
    */
   public DeviceSignals setAllowScreenLock(java.lang.Boolean allowScreenLock) {
@@ -339,7 +354,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Crowdstrike agent properties installed on the device, if any.
+   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
+   * only.
    * @return value or {@code null} for none
    */
   public CrowdStrikeAgent getCrowdStrikeAgent() {
@@ -347,7 +363,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Crowdstrike agent properties installed on the device, if any.
+   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
+   * only.
    * @param crowdStrikeAgent crowdStrikeAgent or {@code null} for none
    */
   public DeviceSignals setCrowdStrikeAgent(CrowdStrikeAgent crowdStrikeAgent) {
@@ -481,7 +498,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device.
+   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getImei() {
@@ -489,7 +506,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device.
+   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
    * @param imei imei or {@code null} for none
    */
   public DeviceSignals setImei(java.util.List<java.lang.String> imei) {
@@ -515,7 +532,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device.
+   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMeid() {
@@ -523,7 +540,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device.
+   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * @param meid meid or {@code null} for none
    */
   public DeviceSignals setMeid(java.util.List<java.lang.String> meid) {
@@ -692,7 +709,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled.
+   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
+   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecureBootMode() {
@@ -700,7 +718,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled.
+   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
+   * only.
    * @param secureBootMode secureBootMode or {@code null} for none
    */
   public DeviceSignals setSecureBootMode(java.lang.String secureBootMode) {
@@ -709,7 +728,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number.
+   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
+   * available on most Linux distributions.
    * @return value or {@code null} for none
    */
   public java.lang.String getSerialNumber() {
@@ -717,7 +737,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number.
+   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
+   * available on most Linux distributions.
    * @param serialNumber serialNumber or {@code null} for none
    */
   public DeviceSignals setSerialNumber(java.lang.String serialNumber) {
@@ -764,7 +785,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   /**
    * Whether Chrome is blocking third-party software injection or not. This setting may be
    * controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled
+   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
+   * Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThirdPartyBlockingEnabled() {
@@ -774,7 +796,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   /**
    * Whether Chrome is blocking third-party software injection or not. This setting may be
    * controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled
+   * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
+   * Windows only.
    * @param thirdPartyBlockingEnabled thirdPartyBlockingEnabled or {@code null} for none
    */
   public DeviceSignals setThirdPartyBlockingEnabled(java.lang.Boolean thirdPartyBlockingEnabled) {
@@ -783,7 +806,24 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain that the current machine has joined.
+   * The trigger which generated this set of signals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrigger() {
+    return trigger;
+  }
+
+  /**
+   * The trigger which generated this set of signals.
+   * @param trigger trigger or {@code null} for none
+   */
+  public DeviceSignals setTrigger(java.lang.String trigger) {
+    this.trigger = trigger;
+    return this;
+  }
+
+  /**
+   * Windows domain that the current machine has joined. Available on Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.String getWindowsMachineDomain() {
@@ -791,7 +831,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain that the current machine has joined.
+   * Windows domain that the current machine has joined. Available on Windows only.
    * @param windowsMachineDomain windowsMachineDomain or {@code null} for none
    */
   public DeviceSignals setWindowsMachineDomain(java.lang.String windowsMachineDomain) {
@@ -800,7 +840,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain for the current OS user.
+   * Windows domain for the current OS user. Available on Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.String getWindowsUserDomain() {
@@ -808,7 +848,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain for the current OS user.
+   * Windows domain for the current OS user. Available on Windows only.
    * @param windowsUserDomain windowsUserDomain or {@code null} for none
    */
   public DeviceSignals setWindowsUserDomain(java.lang.String windowsUserDomain) {

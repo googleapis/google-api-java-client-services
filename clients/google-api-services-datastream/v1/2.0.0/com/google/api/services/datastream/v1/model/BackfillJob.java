@@ -51,7 +51,7 @@ public final class BackfillJob extends com.google.api.client.json.GenericJson {
   private String lastStartTime;
 
   /**
-   * Backfill job state.
+   * Output only. Backfill job state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class BackfillJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Backfill job state.
+   * Output only. Backfill job state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -124,7 +124,7 @@ public final class BackfillJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Backfill job state.
+   * Output only. Backfill job state.
    * @param state state or {@code null} for none
    */
   public BackfillJob setState(java.lang.String state) {

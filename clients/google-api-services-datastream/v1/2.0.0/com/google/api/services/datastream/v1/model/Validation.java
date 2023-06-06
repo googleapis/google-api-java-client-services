@@ -51,7 +51,7 @@ public final class Validation extends com.google.api.client.json.GenericJson {
   private java.util.List<ValidationMessage> message;
 
   /**
-   * Validation execution status.
+   * Output only. Validation execution status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class Validation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Validation execution status.
+   * Output only. Validation execution status.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -117,7 +117,7 @@ public final class Validation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Validation execution status.
+   * Output only. Validation execution status.
    * @param state state or {@code null} for none
    */
   public Validation setState(java.lang.String state) {

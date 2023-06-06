@@ -17,8 +17,10 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A customer-managed encryption key for the Compute Engine resources of this workstation
- * configuration.
+ * A customer-managed encryption key (CMEK) for the Compute Engine resources of the associated
+ * workstation configuration. Specify the name of your Cloud KMS encryption key and the default
+ * service account. We recommend that you use a separate service account and follow [Cloud KMS best
+ * practices](https://cloud.google.com/kms/docs/separation-of-duties).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation

@@ -114,7 +114,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +327,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -335,7 +335,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identified for this resource.
+   * Output only. A system-assigned unique identifier for this resource.
    * @param uid uid or {@code null} for none
    */
   public Workstation setUid(java.lang.String uid) {

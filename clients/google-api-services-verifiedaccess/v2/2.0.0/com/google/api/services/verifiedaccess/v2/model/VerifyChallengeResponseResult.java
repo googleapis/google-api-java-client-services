@@ -67,6 +67,21 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   private java.lang.String keyTrustLevel;
 
   /**
+   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
+   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profileCustomerId;
+
+  /**
+   * Profile attested key trust level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profileKeyTrustLevel;
+
+  /**
    * Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field.
    * This field will be set only if device has included CSR in its challenge response. (the option
    * to include CSR is now available for both user and machine responses)
@@ -81,6 +96,13 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualDeviceId;
+
+  /**
+   * The ID of a profile on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String virtualProfileId;
 
   /**
    * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
@@ -170,6 +192,42 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
+   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
+   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfileCustomerId() {
+    return profileCustomerId;
+  }
+
+  /**
+   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
+   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * @param profileCustomerId profileCustomerId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setProfileCustomerId(java.lang.String profileCustomerId) {
+    this.profileCustomerId = profileCustomerId;
+    return this;
+  }
+
+  /**
+   * Profile attested key trust level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfileKeyTrustLevel() {
+    return profileKeyTrustLevel;
+  }
+
+  /**
+   * Profile attested key trust level.
+   * @param profileKeyTrustLevel profileKeyTrustLevel or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setProfileKeyTrustLevel(java.lang.String profileKeyTrustLevel) {
+    this.profileKeyTrustLevel = profileKeyTrustLevel;
+    return this;
+  }
+
+  /**
    * Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field.
    * This field will be set only if device has included CSR in its challenge response. (the option
    * to include CSR is now available for both user and machine responses)
@@ -204,6 +262,23 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
    */
   public VerifyChallengeResponseResult setVirtualDeviceId(java.lang.String virtualDeviceId) {
     this.virtualDeviceId = virtualDeviceId;
+    return this;
+  }
+
+  /**
+   * The ID of a profile on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVirtualProfileId() {
+    return virtualProfileId;
+  }
+
+  /**
+   * The ID of a profile on the device.
+   * @param virtualProfileId virtualProfileId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setVirtualProfileId(java.lang.String virtualProfileId) {
+    this.virtualProfileId = virtualProfileId;
     return this;
   }
 

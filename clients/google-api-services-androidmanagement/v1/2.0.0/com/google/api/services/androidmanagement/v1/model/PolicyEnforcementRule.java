@@ -18,7 +18,11 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * A rule that defines the actions to take if a device or work profile is not compliant with the
- * policy specified in settingName.
+ * policy specified in settingName. In the case of multiple matching or multiple triggered
+ * enforcement rules, a merge will occur with the most severe action being taken. However, all
+ * triggered rules are still kept track of: this includes initial trigger time and all associated
+ * non-compliance details. In the situation where the most severe enforcement rule is satisfied, the
+ * next most appropriate action is applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

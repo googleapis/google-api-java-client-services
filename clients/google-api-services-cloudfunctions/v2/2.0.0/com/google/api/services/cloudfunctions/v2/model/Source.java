@@ -30,6 +30,14 @@ package com.google.api.services.cloudfunctions.v2.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
+   * If provided, get the source from GitHub repository. This option is valid only for GCF 1st Gen
+   * function. Example: https://github.comblob//
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gitUri;
+
+  /**
    * If provided, get the source from this location in a Cloud Source Repository.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private StorageSource storageSource;
+
+  /**
+   * If provided, get the source from GitHub repository. This option is valid only for GCF 1st Gen
+   * function. Example: https://github.comblob//
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGitUri() {
+    return gitUri;
+  }
+
+  /**
+   * If provided, get the source from GitHub repository. This option is valid only for GCF 1st Gen
+   * function. Example: https://github.comblob//
+   * @param gitUri gitUri or {@code null} for none
+   */
+  public Source setGitUri(java.lang.String gitUri) {
+    this.gitUri = gitUri;
+    return this;
+  }
 
   /**
    * If provided, get the source from this location in a Cloud Source Repository.

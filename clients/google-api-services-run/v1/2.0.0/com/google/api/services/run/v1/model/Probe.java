@@ -62,7 +62,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * Number of seconds after the container has started before the probe is initiated. Defaults to 0
    * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240. .
+   * startup probe is 240.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
    * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds. .
+   * equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +174,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * Number of seconds after the container has started before the probe is initiated. Defaults to 0
    * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240. .
+   * startup probe is 240.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySeconds() {
@@ -184,7 +184,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * Number of seconds after the container has started before the probe is initiated. Defaults to 0
    * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240. .
+   * startup probe is 240.
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
    */
   public Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
@@ -195,7 +195,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
    * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds. .
+   * equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -205,7 +205,7 @@ public final class Probe extends com.google.api.client.json.GenericJson {
   /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
    * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds. .
+   * equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public Probe setPeriodSeconds(java.lang.Integer periodSeconds) {

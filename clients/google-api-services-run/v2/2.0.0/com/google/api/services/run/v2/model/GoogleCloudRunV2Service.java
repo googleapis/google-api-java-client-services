@@ -95,6 +95,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String creator;
 
   /**
+   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customAudiences;
+
+  /**
    * Output only. The deletion time.
    * The value may be {@code null}.
    */
@@ -419,6 +426,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setCreator(java.lang.String creator) {
     this.creator = creator;
+    return this;
+  }
+
+  /**
+   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomAudiences() {
+    return customAudiences;
+  }
+
+  /**
+   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * @param customAudiences customAudiences or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setCustomAudiences(java.util.List<java.lang.String> customAudiences) {
+    this.customAudiences = customAudiences;
     return this;
   }
 

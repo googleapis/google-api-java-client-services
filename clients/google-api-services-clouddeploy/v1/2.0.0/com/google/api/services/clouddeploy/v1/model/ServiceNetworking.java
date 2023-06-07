@@ -38,6 +38,15 @@ public final class ServiceNetworking extends com.google.api.client.json.GenericJ
   private java.lang.String deployment;
 
   /**
+   * Optional. Whether to disable Pod overprovisioning. If Pod overprovisioning is disabled then
+   * Cloud Deploy will limit the number of total Pods used for the deployment strategy to the number
+   * of Pods the Deployment has on the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disablePodOverprovisioning;
+
+  /**
    * Required. Name of the Kubernetes Service.
    * The value may be {@code null}.
    */
@@ -58,6 +67,27 @@ public final class ServiceNetworking extends com.google.api.client.json.GenericJ
    */
   public ServiceNetworking setDeployment(java.lang.String deployment) {
     this.deployment = deployment;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to disable Pod overprovisioning. If Pod overprovisioning is disabled then
+   * Cloud Deploy will limit the number of total Pods used for the deployment strategy to the number
+   * of Pods the Deployment has on the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisablePodOverprovisioning() {
+    return disablePodOverprovisioning;
+  }
+
+  /**
+   * Optional. Whether to disable Pod overprovisioning. If Pod overprovisioning is disabled then
+   * Cloud Deploy will limit the number of total Pods used for the deployment strategy to the number
+   * of Pods the Deployment has on the cluster.
+   * @param disablePodOverprovisioning disablePodOverprovisioning or {@code null} for none
+   */
+  public ServiceNetworking setDisablePodOverprovisioning(java.lang.Boolean disablePodOverprovisioning) {
+    this.disablePodOverprovisioning = disablePodOverprovisioning;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.cloudfunctions.v2.model;
 public final class SourceProvenance extends com.google.api.client.json.GenericJson {
 
   /**
+   * A copy of the build's `source.git_uri`, if exists, with any commits resolved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gitUri;
+
+  /**
    * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private StorageSource resolvedStorageSource;
+
+  /**
+   * A copy of the build's `source.git_uri`, if exists, with any commits resolved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGitUri() {
+    return gitUri;
+  }
+
+  /**
+   * A copy of the build's `source.git_uri`, if exists, with any commits resolved.
+   * @param gitUri gitUri or {@code null} for none
+   */
+  public SourceProvenance setGitUri(java.lang.String gitUri) {
+    this.gitUri = gitUri;
+    return this;
+  }
 
   /**
    * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.

@@ -102,7 +102,7 @@ public final class AssistantApiScreenCapabilities extends com.google.api.client.
   private java.util.List<java.lang.String> supportedScreenStates;
 
   /**
-   * Whether the device enabled vision help features in accessiblity settings. The settings is
+   * Whether the device enabled vision help features in accessibility settings. The settings is
    * config in Assistant App and on-device settings, and stored in footprints. When enabled, font,
    * color and TTS will be adjusted.
    * The value may be {@code null}.
@@ -276,7 +276,7 @@ public final class AssistantApiScreenCapabilities extends com.google.api.client.
   }
 
   /**
-   * Whether the device enabled vision help features in accessiblity settings. The settings is
+   * Whether the device enabled vision help features in accessibility settings. The settings is
    * config in Assistant App and on-device settings, and stored in footprints. When enabled, font,
    * color and TTS will be adjusted.
    * @return value or {@code null} for none
@@ -286,7 +286,7 @@ public final class AssistantApiScreenCapabilities extends com.google.api.client.
   }
 
   /**
-   * Whether the device enabled vision help features in accessiblity settings. The settings is
+   * Whether the device enabled vision help features in accessibility settings. The settings is
    * config in Assistant App and on-device settings, and stored in footprints. When enabled, font,
    * color and TTS will be adjusted.
    * @param visionHelpEnabled visionHelpEnabled or {@code null} for none

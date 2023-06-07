@@ -89,10 +89,11 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * applies only to the side of road that the containing segment represents. That sibling's
    * pedestrian facility is restricted in both directions. Schema constraints: - SCOPE_SIDE must be
    * set if and only if travel_mode == [TRAVEL_PEDESTRIAN] and the segment containing the
-   * restriction has PEDESTRIAN_FACILITY_PRESENT. Such restrictions must have no subpath. - All
-   * other restrictions must have this field set to SCOPE_DIRECTION (whether explicitly or
-   * implicitly). This distinction is necessary for cases such as pedestrian facility on one-way
-   * segment/sibling roads.
+   * restriction has the pedestrian_facility field set and is not set to
+   * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
+   * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
+   * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
+   * roads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,10 +293,11 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * applies only to the side of road that the containing segment represents. That sibling's
    * pedestrian facility is restricted in both directions. Schema constraints: - SCOPE_SIDE must be
    * set if and only if travel_mode == [TRAVEL_PEDESTRIAN] and the segment containing the
-   * restriction has PEDESTRIAN_FACILITY_PRESENT. Such restrictions must have no subpath. - All
-   * other restrictions must have this field set to SCOPE_DIRECTION (whether explicitly or
-   * implicitly). This distinction is necessary for cases such as pedestrian facility on one-way
-   * segment/sibling roads.
+   * restriction has the pedestrian_facility field set and is not set to
+   * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
+   * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
+   * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
+   * roads.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -311,10 +313,11 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * applies only to the side of road that the containing segment represents. That sibling's
    * pedestrian facility is restricted in both directions. Schema constraints: - SCOPE_SIDE must be
    * set if and only if travel_mode == [TRAVEL_PEDESTRIAN] and the segment containing the
-   * restriction has PEDESTRIAN_FACILITY_PRESENT. Such restrictions must have no subpath. - All
-   * other restrictions must have this field set to SCOPE_DIRECTION (whether explicitly or
-   * implicitly). This distinction is necessary for cases such as pedestrian facility on one-way
-   * segment/sibling roads.
+   * restriction has the pedestrian_facility field set and is not set to
+   * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
+   * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
+   * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
+   * roads.
    * @param scope scope or {@code null} for none
    */
   public GeostoreRestrictionProto setScope(java.lang.String scope) {

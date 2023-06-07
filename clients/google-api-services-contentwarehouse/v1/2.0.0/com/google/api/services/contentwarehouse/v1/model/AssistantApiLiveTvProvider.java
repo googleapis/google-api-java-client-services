@@ -38,7 +38,7 @@ public final class AssistantApiLiveTvProvider extends com.google.api.client.json
   private AssistantApiCoreTypesProvider providerInfo;
 
   /**
-   * An provider enum string for OTT providers. The available key can be found in go/ump-provider-
+   * A provider enum string for OTT providers. The available key can be found in go/ump-provider-
    * enum For Tuner provider, the provider key would be an ID the tuner app uploaded from TIF. See
    * https://source.android.com/devices/tv
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class AssistantApiLiveTvProvider extends com.google.api.client.json
   }
 
   /**
-   * An provider enum string for OTT providers. The available key can be found in go/ump-provider-
+   * A provider enum string for OTT providers. The available key can be found in go/ump-provider-
    * enum For Tuner provider, the provider key would be an ID the tuner app uploaded from TIF. See
    * https://source.android.com/devices/tv
    * @return value or {@code null} for none
@@ -80,7 +80,7 @@ public final class AssistantApiLiveTvProvider extends com.google.api.client.json
   }
 
   /**
-   * An provider enum string for OTT providers. The available key can be found in go/ump-provider-
+   * A provider enum string for OTT providers. The available key can be found in go/ump-provider-
    * enum For Tuner provider, the provider key would be an ID the tuner app uploaded from TIF. See
    * https://source.android.com/devices/tv
    * @param providerKey providerKey or {@code null} for none

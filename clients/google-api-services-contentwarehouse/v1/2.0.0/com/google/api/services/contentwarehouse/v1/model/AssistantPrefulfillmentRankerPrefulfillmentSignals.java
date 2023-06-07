@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 53
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 55
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -39,11 +39,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Float bindingSetAuis;
 
   /**
+   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
+   * running the horizontal check in HGR. More details: go/gb-infeasible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bindingSetInvalidReason;
+
+  /**
    * Pauis score for the binding set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float bindingSetPauis;
+
+  /**
+   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
+   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bindingSetValidity;
 
   /**
    * A parsing score that is independently calibrated by each parser/IG.
@@ -393,6 +409,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
+   * running the horizontal check in HGR. More details: go/gb-infeasible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBindingSetInvalidReason() {
+    return bindingSetInvalidReason;
+  }
+
+  /**
+   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
+   * running the horizontal check in HGR. More details: go/gb-infeasible.
+   * @param bindingSetInvalidReason bindingSetInvalidReason or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetInvalidReason(java.lang.String bindingSetInvalidReason) {
+    this.bindingSetInvalidReason = bindingSetInvalidReason;
+    return this;
+  }
+
+  /**
    * Pauis score for the binding set
    * @return value or {@code null} for none
    */
@@ -406,6 +441,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetPauis(java.lang.Float bindingSetPauis) {
     this.bindingSetPauis = bindingSetPauis;
+    return this;
+  }
+
+  /**
+   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
+   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBindingSetValidity() {
+    return bindingSetValidity;
+  }
+
+  /**
+   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
+   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
+   * @param bindingSetValidity bindingSetValidity or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetValidity(java.lang.String bindingSetValidity) {
+    this.bindingSetValidity = bindingSetValidity;
     return this;
   }
 

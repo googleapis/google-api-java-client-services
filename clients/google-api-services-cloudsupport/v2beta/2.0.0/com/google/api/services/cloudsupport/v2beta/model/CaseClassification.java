@@ -31,7 +31,8 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class CaseClassification extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the classification.
+   * A display name for the classification. The display name is not static and can change. To
+   * uniquely and consistently identify classifications, use the `CaseClassification.id` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
-   * The display name of the classification.
+   * A display name for the classification. The display name is not static and can change. To
+   * uniquely and consistently identify classifications, use the `CaseClassification.id` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -54,7 +56,8 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   }
 
   /**
-   * The display name of the classification.
+   * A display name for the classification. The display name is not static and can change. To
+   * uniquely and consistently identify classifications, use the `CaseClassification.id` field.
    * @param displayName displayName or {@code null} for none
    */
   public CaseClassification setDisplayName(java.lang.String displayName) {

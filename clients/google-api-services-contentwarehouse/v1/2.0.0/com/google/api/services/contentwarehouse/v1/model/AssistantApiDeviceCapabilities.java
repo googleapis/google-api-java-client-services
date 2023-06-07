@@ -280,8 +280,8 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    * Restrictions related to system-level notifications. This field is superficially similar to
    * ProactiveNotificationOutput, but unlike that field which tracks a per-user preference on the
    * OPA side, this field captures system level notifications restrictions. This field is not stored
-   * and is merged to capablities from conversation params. It exists mostly for logging purposes of
-   * android channel state and global app-level notification opt out.
+   * and is merged to capabilities from conversation params. It exists mostly for logging purposes
+   * of android channel state and global app-level notification opt out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -869,8 +869,8 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    * Restrictions related to system-level notifications. This field is superficially similar to
    * ProactiveNotificationOutput, but unlike that field which tracks a per-user preference on the
    * OPA side, this field captures system level notifications restrictions. This field is not stored
-   * and is merged to capablities from conversation params. It exists mostly for logging purposes of
-   * android channel state and global app-level notification opt out.
+   * and is merged to capabilities from conversation params. It exists mostly for logging purposes
+   * of android channel state and global app-level notification opt out.
    * @return value or {@code null} for none
    */
   public AssistantApiSystemNotificationRestrictions getSystemNotificationRestrictions() {
@@ -881,8 +881,8 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    * Restrictions related to system-level notifications. This field is superficially similar to
    * ProactiveNotificationOutput, but unlike that field which tracks a per-user preference on the
    * OPA side, this field captures system level notifications restrictions. This field is not stored
-   * and is merged to capablities from conversation params. It exists mostly for logging purposes of
-   * android channel state and global app-level notification opt out.
+   * and is merged to capabilities from conversation params. It exists mostly for logging purposes
+   * of android channel state and global app-level notification opt out.
    * @param systemNotificationRestrictions systemNotificationRestrictions or {@code null} for none
    */
   public AssistantApiDeviceCapabilities setSystemNotificationRestrictions(AssistantApiSystemNotificationRestrictions systemNotificationRestrictions) {

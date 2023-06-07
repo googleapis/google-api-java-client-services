@@ -219,6 +219,18 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo> contactPromptSettingsInfo;
+
+  static {
+    // hack to force ProGuard to consider AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo.class);
+  }
+
+  /**
    * Contact state and related metadata. See go/fbs-contacts-trash. If this field was requested but
    * is not set on the Person then the contact is in the DEFAULT contact state. This field is read-
    * only, and should not be set on a mutate (e.g. UpdatePerson) call. Clients must call the
@@ -1049,6 +1061,21 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setContactGroupMembership(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactGroupMembership> contactGroupMembership) {
     this.contactGroupMembership = contactGroupMembership;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo> getContactPromptSettingsInfo() {
+    return contactPromptSettingsInfo;
+  }
+
+  /**
+   * @param contactPromptSettingsInfo contactPromptSettingsInfo or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiPerson setContactPromptSettingsInfo(java.util.List<AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo> contactPromptSettingsInfo) {
+    this.contactPromptSettingsInfo = contactPromptSettingsInfo;
     return this;
   }
 

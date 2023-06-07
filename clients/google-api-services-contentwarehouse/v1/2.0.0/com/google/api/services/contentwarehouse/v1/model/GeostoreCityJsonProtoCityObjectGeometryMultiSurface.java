@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * A collection of arbitrary surfaces that have no prescribed topological relationship.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,40 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
+public final class GeostoreCityJsonProtoCityObjectGeometryMultiSurface extends com.google.api.client.json.GenericJson {
 
   /**
-   * RESERVED
+   * All surfaces are standalone entities with no relationship to each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+  private java.util.List<GeostoreCityJsonProtoCityObjectGeometrySurface> surfaces;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
-
-  /**
-   * RESERVED
+   * All surfaces are standalone entities with no relationship to each other.
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.util.List<GeostoreCityJsonProtoCityObjectGeometrySurface> getSurfaces() {
+    return surfaces;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * All surfaces are standalone entities with no relationship to each other.
+   * @param surfaces surfaces or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GeostoreTrackProto getTrack() {
-    return track;
-  }
-
-  /**
-   * @param track track or {@code null} for none
-   */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public GeostoreCityJsonProtoCityObjectGeometryMultiSurface setSurfaces(java.util.List<GeostoreCityJsonProtoCityObjectGeometrySurface> surfaces) {
+    this.surfaces = surfaces;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public GeostoreCityJsonProtoCityObjectGeometryMultiSurface set(String fieldName, Object value) {
+    return (GeostoreCityJsonProtoCityObjectGeometryMultiSurface) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public GeostoreCityJsonProtoCityObjectGeometryMultiSurface clone() {
+    return (GeostoreCityJsonProtoCityObjectGeometryMultiSurface) super.clone();
   }
 
 }

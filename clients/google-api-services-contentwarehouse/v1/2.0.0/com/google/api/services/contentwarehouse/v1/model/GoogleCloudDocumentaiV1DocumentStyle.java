@@ -60,8 +60,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   private GoogleCloudDocumentaiV1DocumentStyleFontSize fontSize;
 
   /**
-   * Font weight. Possible values are normal, bold, bolder, and lighter.
-   * https://www.w3schools.com/cssref/pr_font_weight.asp
+   * [Font weight](https://www.w3schools.com/cssref/pr_font_weight.asp). Possible values are
+   * `normal`, `bold`, `bolder`, and `lighter`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,16 +75,16 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   private GoogleCloudDocumentaiV1DocumentTextAnchor textAnchor;
 
   /**
-   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
-   * decoration.asp
+   * [Text decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp). Follows CSS
+   * standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textDecoration;
 
   /**
-   * Text style. Possible values are normal, italic, and oblique. https://www.w3schools.com/cssref
-   * /pr_font_font-style.asp
+   * [Text style](https://www.w3schools.com/cssref/pr_font_font-style.asp). Possible values are
+   * `normal`, `italic`, and `oblique`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +161,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Font weight. Possible values are normal, bold, bolder, and lighter.
-   * https://www.w3schools.com/cssref/pr_font_weight.asp
+   * [Font weight](https://www.w3schools.com/cssref/pr_font_weight.asp). Possible values are
+   * `normal`, `bold`, `bolder`, and `lighter`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFontWeight() {
@@ -170,8 +170,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Font weight. Possible values are normal, bold, bolder, and lighter.
-   * https://www.w3schools.com/cssref/pr_font_weight.asp
+   * [Font weight](https://www.w3schools.com/cssref/pr_font_weight.asp). Possible values are
+   * `normal`, `bold`, `bolder`, and `lighter`.
    * @param fontWeight fontWeight or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentStyle setFontWeight(java.lang.String fontWeight) {
@@ -197,8 +197,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
-   * decoration.asp
+   * [Text decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp). Follows CSS
+   * standard.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextDecoration() {
@@ -206,8 +206,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Text decoration. Follows CSS standard. https://www.w3schools.com/cssref/pr_text_text-
-   * decoration.asp
+   * [Text decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp). Follows CSS
+   * standard.
    * @param textDecoration textDecoration or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentStyle setTextDecoration(java.lang.String textDecoration) {
@@ -216,8 +216,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Text style. Possible values are normal, italic, and oblique. https://www.w3schools.com/cssref
-   * /pr_font_font-style.asp
+   * [Text style](https://www.w3schools.com/cssref/pr_font_font-style.asp). Possible values are
+   * `normal`, `italic`, and `oblique`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextStyle() {
@@ -225,8 +225,8 @@ public final class GoogleCloudDocumentaiV1DocumentStyle extends com.google.api.c
   }
 
   /**
-   * Text style. Possible values are normal, italic, and oblique. https://www.w3schools.com/cssref
-   * /pr_font_font-style.asp
+   * [Text style](https://www.w3schools.com/cssref/pr_font_font-style.asp). Possible values are
+   * `normal`, `italic`, and `oblique`.
    * @param textStyle textStyle or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentStyle setTextStyle(java.lang.String textStyle) {

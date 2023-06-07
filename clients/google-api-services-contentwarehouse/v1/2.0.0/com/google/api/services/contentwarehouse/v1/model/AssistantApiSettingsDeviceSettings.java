@@ -527,14 +527,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
   private java.lang.String truncatedLocalNetworkId;
 
   /**
-   * DEPRECATED: Use speech_settings instead. Indicates whether the user has enabled trusted voice
-   * for this device. See go/hotword-settings-on-cloud for more info on this project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean trustedVoiceEnabled;
-
-  /**
    * The type of the device. Note: this should only be used for grouping devices for UI presentation
    * purpose. Use |capabilities| to decide what the device can do.
    * The value may be {@code null}.
@@ -1733,25 +1725,6 @@ public final class AssistantApiSettingsDeviceSettings extends com.google.api.cli
    */
   public AssistantApiSettingsDeviceSettings setTruncatedLocalNetworkId(java.lang.String truncatedLocalNetworkId) {
     this.truncatedLocalNetworkId = truncatedLocalNetworkId;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: Use speech_settings instead. Indicates whether the user has enabled trusted voice
-   * for this device. See go/hotword-settings-on-cloud for more info on this project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getTrustedVoiceEnabled() {
-    return trustedVoiceEnabled;
-  }
-
-  /**
-   * DEPRECATED: Use speech_settings instead. Indicates whether the user has enabled trusted voice
-   * for this device. See go/hotword-settings-on-cloud for more info on this project.
-   * @param trustedVoiceEnabled trustedVoiceEnabled or {@code null} for none
-   */
-  public AssistantApiSettingsDeviceSettings setTrustedVoiceEnabled(java.lang.Boolean trustedVoiceEnabled) {
-    this.trustedVoiceEnabled = trustedVoiceEnabled;
     return this;
   }
 

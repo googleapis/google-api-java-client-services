@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 4
+ * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -36,6 +36,20 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isExclusive;
+
+  /**
+   * The count of the unique users that listened to the podcast in the last 28 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer podcastListenersCount;
+
+  /**
+   * Provider popularity score. More details are here go/ps-to-kg.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double popularityScore;
 
   /**
    * The relevance score from Scubed.
@@ -65,6 +79,40 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
    */
   public AssistantGroundingRankerPodcastGroundingProviderFeatures setIsExclusive(java.lang.Boolean isExclusive) {
     this.isExclusive = isExclusive;
+    return this;
+  }
+
+  /**
+   * The count of the unique users that listened to the podcast in the last 28 days.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPodcastListenersCount() {
+    return podcastListenersCount;
+  }
+
+  /**
+   * The count of the unique users that listened to the podcast in the last 28 days.
+   * @param podcastListenersCount podcastListenersCount or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures setPodcastListenersCount(java.lang.Integer podcastListenersCount) {
+    this.podcastListenersCount = podcastListenersCount;
+    return this;
+  }
+
+  /**
+   * Provider popularity score. More details are here go/ps-to-kg.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getPopularityScore() {
+    return popularityScore;
+  }
+
+  /**
+   * Provider popularity score. More details are here go/ps-to-kg.
+   * @param popularityScore popularityScore or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures setPopularityScore(java.lang.Double popularityScore) {
+    this.popularityScore = popularityScore;
     return this;
   }
 

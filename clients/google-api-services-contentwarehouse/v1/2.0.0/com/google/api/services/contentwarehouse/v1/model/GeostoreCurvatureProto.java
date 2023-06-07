@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * Model definition for GeostoreCurvatureProto.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,43 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
+public final class GeostoreCurvatureProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * RESERVED
+   * Curvature values at points along the flowline. A linear interpolation between two successive
+   * points will yield the curvature value at intermediate points.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+  private java.util.List<GeostorePointCurvatureProto> pointCurvature;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
-
-  /**
-   * RESERVED
+   * Curvature values at points along the flowline. A linear interpolation between two successive
+   * points will yield the curvature value at intermediate points.
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.util.List<GeostorePointCurvatureProto> getPointCurvature() {
+    return pointCurvature;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * Curvature values at points along the flowline. A linear interpolation between two successive
+   * points will yield the curvature value at intermediate points.
+   * @param pointCurvature pointCurvature or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GeostoreTrackProto getTrack() {
-    return track;
-  }
-
-  /**
-   * @param track track or {@code null} for none
-   */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public GeostoreCurvatureProto setPointCurvature(java.util.List<GeostorePointCurvatureProto> pointCurvature) {
+    this.pointCurvature = pointCurvature;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public GeostoreCurvatureProto set(String fieldName, Object value) {
+    return (GeostoreCurvatureProto) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public GeostoreCurvatureProto clone() {
+    return (GeostoreCurvatureProto) super.clone();
   }
 
 }

@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * SafeSearch verticals only: Please also update this message with a new extension declaration. For
  * more details on extension declaration please refer to http://go/proto-proposals/extension-
  * declarations. Please refer to http://go/proto2-extensions for details on message extensions.
- * LINT.IfChange next extension id: 5
+ * LINT.IfChange next extension id: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Wrapper to hold data related to a lane’s track, extendable for future data.
+ * Vector of length three whose values respectively correspond to the x, y, and z axes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,61 +28,79 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeostoreFlowLineProto extends com.google.api.client.json.GenericJson {
-
-  /**
-   * RESERVED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCurvatureProto curvature;
+public final class GeostoreCityJsonProtoTransformXyzVector extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreTrackProto track;
+  private java.lang.Double x;
 
   /**
-   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double y;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double z;
+
+  /**
    * @return value or {@code null} for none
    */
-  public GeostoreCurvatureProto getCurvature() {
-    return curvature;
+  public java.lang.Double getX() {
+    return x;
   }
 
   /**
-   * RESERVED
-   * @param curvature curvature or {@code null} for none
+   * @param x x or {@code null} for none
    */
-  public GeostoreFlowLineProto setCurvature(GeostoreCurvatureProto curvature) {
-    this.curvature = curvature;
+  public GeostoreCityJsonProtoTransformXyzVector setX(java.lang.Double x) {
+    this.x = x;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public GeostoreTrackProto getTrack() {
-    return track;
+  public java.lang.Double getY() {
+    return y;
   }
 
   /**
-   * @param track track or {@code null} for none
+   * @param y y or {@code null} for none
    */
-  public GeostoreFlowLineProto setTrack(GeostoreTrackProto track) {
-    this.track = track;
+  public GeostoreCityJsonProtoTransformXyzVector setY(java.lang.Double y) {
+    this.y = y;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getZ() {
+    return z;
+  }
+
+  /**
+   * @param z z or {@code null} for none
+   */
+  public GeostoreCityJsonProtoTransformXyzVector setZ(java.lang.Double z) {
+    this.z = z;
     return this;
   }
 
   @Override
-  public GeostoreFlowLineProto set(String fieldName, Object value) {
-    return (GeostoreFlowLineProto) super.set(fieldName, value);
+  public GeostoreCityJsonProtoTransformXyzVector set(String fieldName, Object value) {
+    return (GeostoreCityJsonProtoTransformXyzVector) super.set(fieldName, value);
   }
 
   @Override
-  public GeostoreFlowLineProto clone() {
-    return (GeostoreFlowLineProto) super.clone();
+  public GeostoreCityJsonProtoTransformXyzVector clone() {
+    return (GeostoreCityJsonProtoTransformXyzVector) super.clone();
   }
 
 }

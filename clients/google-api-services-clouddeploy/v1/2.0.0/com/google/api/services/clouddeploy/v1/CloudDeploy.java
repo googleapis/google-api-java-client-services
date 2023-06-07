@@ -6012,22 +6012,21 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Optional. If set to true, then deleting an already deleted or non-existing
-           * DeliveryPipeline will succeed.
+           * Optional. If set to true, then deleting an already deleted or non-existing `Target`
+           * will succeed.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** Optional. If set to true, then deleting an already deleted or non-existing DeliveryPipeline will
-         succeed.
+          /** Optional. If set to true, then deleting an already deleted or non-existing `Target` will succeed.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * Optional. If set to true, then deleting an already deleted or non-existing
-           * DeliveryPipeline will succeed.
+           * Optional. If set to true, then deleting an already deleted or non-existing `Target`
+           * will succeed.
            */
           public Delete setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;

@@ -37,6 +37,13 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * The Cloud Storage bucket name for custom rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customRulesBucket;
+
+  /**
    * Description of the Evaluation
    * The value may be {@code null}.
    */
@@ -114,6 +121,23 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   public Evaluation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage bucket name for custom rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomRulesBucket() {
+    return customRulesBucket;
+  }
+
+  /**
+   * The Cloud Storage bucket name for custom rules.
+   * @param customRulesBucket customRulesBucket or {@code null} for none
+   */
+  public Evaluation setCustomRulesBucket(java.lang.String customRulesBucket) {
+    this.customRulesBucket = customRulesBucket;
     return this;
   }
 

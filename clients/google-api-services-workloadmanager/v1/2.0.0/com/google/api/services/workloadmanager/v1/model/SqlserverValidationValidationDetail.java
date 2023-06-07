@@ -30,18 +30,11 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SqlserverValidationValidationDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pairs of metrics data: field name & field value.
+   * pairs of metrics data: column name & column value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> details;
-
-  /**
-   * The instance id where the ValidationDetail is generated from
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceId;
+  private java.util.Map<String, java.lang.String> fields;
 
   /**
    * The Sqlserver system that the validation data is from.
@@ -51,36 +44,19 @@ public final class SqlserverValidationValidationDetail extends com.google.api.cl
   private java.lang.String type;
 
   /**
-   * The pairs of metrics data: field name & field value.
+   * pairs of metrics data: column name & column value.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getDetails() {
-    return details;
+  public java.util.Map<String, java.lang.String> getFields() {
+    return fields;
   }
 
   /**
-   * The pairs of metrics data: field name & field value.
-   * @param details details or {@code null} for none
+   * pairs of metrics data: column name & column value.
+   * @param fields fields or {@code null} for none
    */
-  public SqlserverValidationValidationDetail setDetails(java.util.Map<String, java.lang.String> details) {
-    this.details = details;
-    return this;
-  }
-
-  /**
-   * The instance id where the ValidationDetail is generated from
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceId() {
-    return instanceId;
-  }
-
-  /**
-   * The instance id where the ValidationDetail is generated from
-   * @param instanceId instanceId or {@code null} for none
-   */
-  public SqlserverValidationValidationDetail setInstanceId(java.lang.String instanceId) {
-    this.instanceId = instanceId;
+  public SqlserverValidationValidationDetail setFields(java.util.Map<String, java.lang.String> fields) {
+    this.fields = fields;
     return this;
   }
 

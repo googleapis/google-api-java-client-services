@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Detailed scores about the topicality of an entity. Next available tag: 16
+ * Detailed scores about the topicality of an entity. Next available tag: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -100,6 +100,13 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float normalizedTopicality;
+
+  /**
+   * Contains the link to the author's profile url on the platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profileUrl;
 
   /**
    * Signals used for mining new reference pages, set by the reference-page-scorer processor (that
@@ -282,6 +289,23 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   public RepositoryWebrefDetailedEntityScores setNormalizedTopicality(java.lang.Float normalizedTopicality) {
     this.normalizedTopicality = normalizedTopicality;
+    return this;
+  }
+
+  /**
+   * Contains the link to the author's profile url on the platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfileUrl() {
+    return profileUrl;
+  }
+
+  /**
+   * Contains the link to the author's profile url on the platform.
+   * @param profileUrl profileUrl or {@code null} for none
+   */
+  public RepositoryWebrefDetailedEntityScores setProfileUrl(java.lang.String profileUrl) {
+    this.profileUrl = profileUrl;
     return this;
   }
 

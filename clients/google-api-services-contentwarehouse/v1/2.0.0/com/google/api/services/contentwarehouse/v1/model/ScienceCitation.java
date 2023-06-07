@@ -76,6 +76,17 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
   private java.lang.String abstractText;
 
   /**
+   * The original (unnormalized) type of an abstract. AbstractDisplay holds a normalized type
+   * deduced from things like tagnames, tag-attributes, keywords in documents or the placement of
+   * the abstract in the document. This field is meant for the type of the abstract identified
+   * explicitly by the source document. E.g., the value of the 'abstract-type' attribute from a tag
+   * in XML ('primary abstract', 'summary', 'highlights' etc.).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("AbstractTypeFromSource")
+  private java.lang.String abstractTypeFromSource;
+
+  /**
    * Fingerprint of the URL after applying crawl and aggregate rewrites. Different citations with
    * the same AlternateVersionID must have the same VersionID, but not necessarily vice versa.
    * Omitted when identical to the VersionID.
@@ -880,6 +891,31 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
    */
   public ScienceCitation setAbstractText(java.lang.String abstractText) {
     this.abstractText = abstractText;
+    return this;
+  }
+
+  /**
+   * The original (unnormalized) type of an abstract. AbstractDisplay holds a normalized type
+   * deduced from things like tagnames, tag-attributes, keywords in documents or the placement of
+   * the abstract in the document. This field is meant for the type of the abstract identified
+   * explicitly by the source document. E.g., the value of the 'abstract-type' attribute from a tag
+   * in XML ('primary abstract', 'summary', 'highlights' etc.).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAbstractTypeFromSource() {
+    return abstractTypeFromSource;
+  }
+
+  /**
+   * The original (unnormalized) type of an abstract. AbstractDisplay holds a normalized type
+   * deduced from things like tagnames, tag-attributes, keywords in documents or the placement of
+   * the abstract in the document. This field is meant for the type of the abstract identified
+   * explicitly by the source document. E.g., the value of the 'abstract-type' attribute from a tag
+   * in XML ('primary abstract', 'summary', 'highlights' etc.).
+   * @param abstractTypeFromSource abstractTypeFromSource or {@code null} for none
+   */
+  public ScienceCitation setAbstractTypeFromSource(java.lang.String abstractTypeFromSource) {
+    this.abstractTypeFromSource = abstractTypeFromSource;
     return this;
   }
 

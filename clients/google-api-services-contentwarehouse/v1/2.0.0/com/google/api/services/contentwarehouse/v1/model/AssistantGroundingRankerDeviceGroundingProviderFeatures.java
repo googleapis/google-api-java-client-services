@@ -54,6 +54,13 @@ public final class AssistantGroundingRankerDeviceGroundingProviderFeatures exten
   private AssistantGroundingRankerDeviceTargetingLabels deviceTargetingLabels;
 
   /**
+   * The set of information that helps identify the surface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiCoreTypesGovernedSurfaceIdentity surfaceIdentity;
+
+  /**
    * ID for the device. This feature is needed specifically for PRR and it contains PII. Note that
    * not every device has a corresponding DeviceId.
    * @return value or {@code null} for none
@@ -103,6 +110,23 @@ public final class AssistantGroundingRankerDeviceGroundingProviderFeatures exten
    */
   public AssistantGroundingRankerDeviceGroundingProviderFeatures setDeviceTargetingLabels(AssistantGroundingRankerDeviceTargetingLabels deviceTargetingLabels) {
     this.deviceTargetingLabels = deviceTargetingLabels;
+    return this;
+  }
+
+  /**
+   * The set of information that helps identify the surface.
+   * @return value or {@code null} for none
+   */
+  public AssistantApiCoreTypesGovernedSurfaceIdentity getSurfaceIdentity() {
+    return surfaceIdentity;
+  }
+
+  /**
+   * The set of information that helps identify the surface.
+   * @param surfaceIdentity surfaceIdentity or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceGroundingProviderFeatures setSurfaceIdentity(AssistantApiCoreTypesGovernedSurfaceIdentity surfaceIdentity) {
+    this.surfaceIdentity = surfaceIdentity;
     return this;
   }
 

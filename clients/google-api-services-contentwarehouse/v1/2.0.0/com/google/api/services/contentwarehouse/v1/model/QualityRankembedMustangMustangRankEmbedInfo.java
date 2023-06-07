@@ -73,7 +73,7 @@ public final class QualityRankembedMustangMustangRankEmbedInfo extends com.googl
   private java.lang.String scaledShiftedFixedPoint4Encoding;
 
   /**
-   * First 7 bits encode the version, then each chunck of 5 bits encode the index of a potential
+   * First 7 bits encode the version, then each chunk of 5 bits encode the index of a potential
    * improv query (lsb to msb) -------|-----|-----|-----|-----|----- version| id1 | id2 | id3 | id4
    * | id5 where id1 is the index of the first improv query in the improv debug table. As of
    * cl/270008220, this field only contains the version info. For backward compatibility, version
@@ -297,7 +297,7 @@ public final class QualityRankembedMustangMustangRankEmbedInfo extends com.googl
   }
 
   /**
-   * First 7 bits encode the version, then each chunck of 5 bits encode the index of a potential
+   * First 7 bits encode the version, then each chunk of 5 bits encode the index of a potential
    * improv query (lsb to msb) -------|-----|-----|-----|-----|----- version| id1 | id2 | id3 | id4
    * | id5 where id1 is the index of the first improv query in the improv debug table. As of
    * cl/270008220, this field only contains the version info. For backward compatibility, version
@@ -309,7 +309,7 @@ public final class QualityRankembedMustangMustangRankEmbedInfo extends com.googl
   }
 
   /**
-   * First 7 bits encode the version, then each chunck of 5 bits encode the index of a potential
+   * First 7 bits encode the version, then each chunk of 5 bits encode the index of a potential
    * improv query (lsb to msb) -------|-----|-----|-----|-----|----- version| id1 | id2 | id3 | id4
    * | id5 where id1 is the index of the first improv query in the improv debug table. As of
    * cl/270008220, this field only contains the version info. For backward compatibility, version

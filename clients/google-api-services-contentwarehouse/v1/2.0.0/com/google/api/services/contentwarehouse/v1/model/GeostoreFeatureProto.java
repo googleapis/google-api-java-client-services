@@ -288,6 +288,14 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreFeatureIdProto futureGeometryFor;
 
   /**
+   * Geometry Store ID and materialized geometry representing the feature's physical shape in the
+   * world.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreGeometryStoreReferenceProto geometry3d;
+
+  /**
    * If set, the feature's actual location can be assumed to be somewhere within a circle of this
    * radius, centered on the feature's location. More information on this field at go/gpm-
    * definition-update. NOTE: Only applicable to features with 'point' geometry. Please contact geo-
@@ -829,6 +837,14 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreVerticalOrderingProto verticalOrdering;
 
   /**
+   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreGeometryStoreReferenceProto visualizationArea;
+
+  /**
    * A version of the geometry which has water removed but is not simplified (thus having equal or
    * more vertices than polygon_for_display).
    * The value may be {@code null}.
@@ -1344,6 +1360,25 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setFutureGeometryFor(GeostoreFeatureIdProto futureGeometryFor) {
     this.futureGeometryFor = futureGeometryFor;
+    return this;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry representing the feature's physical shape in the
+   * world.
+   * @return value or {@code null} for none
+   */
+  public GeostoreGeometryStoreReferenceProto getGeometry3d() {
+    return geometry3d;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry representing the feature's physical shape in the
+   * world.
+   * @param geometry3d geometry3d or {@code null} for none
+   */
+  public GeostoreFeatureProto setGeometry3d(GeostoreGeometryStoreReferenceProto geometry3d) {
+    this.geometry3d = geometry3d;
     return this;
   }
 
@@ -2540,6 +2575,25 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setVerticalOrdering(GeostoreVerticalOrderingProto verticalOrdering) {
     this.verticalOrdering = verticalOrdering;
+    return this;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * @return value or {@code null} for none
+   */
+  public GeostoreGeometryStoreReferenceProto getVisualizationArea() {
+    return visualizationArea;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * @param visualizationArea visualizationArea or {@code null} for none
+   */
+  public GeostoreFeatureProto setVisualizationArea(GeostoreGeometryStoreReferenceProto visualizationArea) {
+    this.visualizationArea = visualizationArea;
     return this;
   }
 

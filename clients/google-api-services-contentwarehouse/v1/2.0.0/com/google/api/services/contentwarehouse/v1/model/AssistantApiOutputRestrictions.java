@@ -32,13 +32,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiOutputRestrictions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Access settings for all providers.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AssistantApiAccessControlOutput accessControlOutput;
-
-  /**
    * The type of Google Photo content which the device can output.
    * The value may be {@code null}.
    */
@@ -46,7 +39,7 @@ public final class AssistantApiOutputRestrictions extends com.google.api.client.
   private java.lang.String googlePhotoContent;
 
   /**
-   * DEPRECATED: Use access_control_output instead. Access settings for guests.
+   * Access settings for guests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,23 +93,6 @@ public final class AssistantApiOutputRestrictions extends com.google.api.client.
   private java.lang.String youtubeTvContent;
 
   /**
-   * Access settings for all providers.
-   * @return value or {@code null} for none
-   */
-  public AssistantApiAccessControlOutput getAccessControlOutput() {
-    return accessControlOutput;
-  }
-
-  /**
-   * Access settings for all providers.
-   * @param accessControlOutput accessControlOutput or {@code null} for none
-   */
-  public AssistantApiOutputRestrictions setAccessControlOutput(AssistantApiAccessControlOutput accessControlOutput) {
-    this.accessControlOutput = accessControlOutput;
-    return this;
-  }
-
-  /**
    * The type of Google Photo content which the device can output.
    * @return value or {@code null} for none
    */
@@ -134,7 +110,7 @@ public final class AssistantApiOutputRestrictions extends com.google.api.client.
   }
 
   /**
-   * DEPRECATED: Use access_control_output instead. Access settings for guests.
+   * Access settings for guests.
    * @return value or {@code null} for none
    */
   public AssistantApiGuestAccessOutput getGuestAccessOutput() {
@@ -142,7 +118,7 @@ public final class AssistantApiOutputRestrictions extends com.google.api.client.
   }
 
   /**
-   * DEPRECATED: Use access_control_output instead. Access settings for guests.
+   * Access settings for guests.
    * @param guestAccessOutput guestAccessOutput or {@code null} for none
    */
   public AssistantApiOutputRestrictions setGuestAccessOutput(AssistantApiGuestAccessOutput guestAccessOutput) {

@@ -39,6 +39,13 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   private java.lang.String ipRange;
 
   /**
+   * IP version of this interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
+
+  /**
    * URI of the linked Interconnect attachment. It must be in the same region as the router. Each
    * interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment,
    * or a virtual machine instance.
@@ -128,6 +135,23 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
    */
   public RouterInterface setIpRange(java.lang.String ipRange) {
     this.ipRange = ipRange;
+    return this;
+  }
+
+  /**
+   * IP version of this interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * IP version of this interface.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public RouterInterface setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

@@ -95,6 +95,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long provisionedIops;
 
   /**
+   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * hyperdisk-balanced or hyperdisk-throughput.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedThroughput;
+
+  /**
    * [Output Only] Status information for the storage pool resource.
    * The value may be {@code null}.
    */
@@ -130,6 +138,20 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * [Output Only] Status information for the storage pool resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoragePoolResourceStatus status;
+
+  /**
+   * Type of the storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePoolType;
 
   /**
    * Type of the storage pool
@@ -339,6 +361,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * hyperdisk-balanced or hyperdisk-throughput.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * Provisioned throughput of the storage pool. Only relevant if the storage pool type is
+   * hyperdisk-balanced or hyperdisk-throughput.
+   * @param provisionedThroughput provisionedThroughput or {@code null} for none
+   */
+  public StoragePool setProvisionedThroughput(java.lang.Long provisionedThroughput) {
+    this.provisionedThroughput = provisionedThroughput;
+    return this;
+  }
+
+  /**
    * [Output Only] Status information for the storage pool resource.
    * @return value or {@code null} for none
    */
@@ -424,6 +465,40 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * [Output Only] Status information for the storage pool resource.
+   * @return value or {@code null} for none
+   */
+  public StoragePoolResourceStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * [Output Only] Status information for the storage pool resource.
+   * @param status status or {@code null} for none
+   */
+  public StoragePool setStatus(StoragePoolResourceStatus status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Type of the storage pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePoolType() {
+    return storagePoolType;
+  }
+
+  /**
+   * Type of the storage pool.
+   * @param storagePoolType storagePoolType or {@code null} for none
+   */
+  public StoragePool setStoragePoolType(java.lang.String storagePoolType) {
+    this.storagePoolType = storagePoolType;
     return this;
   }
 

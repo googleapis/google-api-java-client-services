@@ -238,6 +238,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstantSnapshot;
 
   /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceInstantSnapshotEncryptionKey;
+
+  /**
    * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
    * identifies the exact instant snapshot that was used to create this persistent disk. For
    * example, if you created the persistent disk from an instant snapshot that was later deleted and
@@ -827,6 +834,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSourceInstantSnapshot(java.lang.String sourceInstantSnapshot) {
     this.sourceInstantSnapshot = sourceInstantSnapshot;
+    return this;
+  }
+
+  /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceInstantSnapshotEncryptionKey() {
+    return sourceInstantSnapshotEncryptionKey;
+  }
+
+  /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * @param sourceInstantSnapshotEncryptionKey sourceInstantSnapshotEncryptionKey or {@code null} for none
+   */
+  public Snapshot setSourceInstantSnapshotEncryptionKey(CustomerEncryptionKey sourceInstantSnapshotEncryptionKey) {
+    this.sourceInstantSnapshotEncryptionKey = sourceInstantSnapshotEncryptionKey;
     return this;
   }
 

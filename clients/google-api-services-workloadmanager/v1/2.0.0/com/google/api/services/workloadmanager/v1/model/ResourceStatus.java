@@ -30,7 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * the new version of rule id if exists
+   * Historical: Used before 2023-05-22 the new version of rule id if exists
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * the new version of rule id if exists
+   * Historical: Used before 2023-05-22 the new version of rule id if exists
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRulesNewerVersions() {
@@ -52,7 +52,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * the new version of rule id if exists
+   * Historical: Used before 2023-05-22 the new version of rule id if exists
    * @param rulesNewerVersions rulesNewerVersions or {@code null} for none
    */
   public ResourceStatus setRulesNewerVersions(java.util.List<java.lang.String> rulesNewerVersions) {

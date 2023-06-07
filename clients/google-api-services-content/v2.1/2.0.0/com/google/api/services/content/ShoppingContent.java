@@ -20376,6 +20376,228 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Get) super.set(parameterName, value);
       }
     }
+    /**
+     * List all promotions from your Merchant Center account.
+     *
+     * Create a request for the method "promotions.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListPromotionResponse> {
+
+      private static final String REST_PATH = "{merchantId}/promotions";
+
+      /**
+       * List all promotions from your Merchant Center account.
+       *
+       * Create a request for the method "promotions.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListPromotionResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that contains the collection. */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for
+       * example, "US"), used as a filter on promotions target country.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String countryCode;
+
+      /**[ CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for example,
+    [ "US"), used as a filter on promotions target country.
+    [
+
+       */
+      public java.lang.String getCountryCode() {
+        return countryCode;
+      }
+
+      /**
+       * [CLDR country code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (for
+       * example, "US"), used as a filter on promotions target country.
+       */
+      public List setCountryCode(java.lang.String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+      }
+
+      /**
+       * The two-letter ISO 639-1 language code associated with the promotions, used as a filter.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** The two-letter ISO 639-1 language code associated with the promotions, used as a filter.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * The two-letter ISO 639-1 language code associated with the promotions, used as a filter.
+       */
+      public List setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * The maximum number of promotions to return. The service may return fewer than this value.
+       * If unspecified, at most 50 labels will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of promotions to return. The service may return fewer than this value. If
+     unspecified, at most 50 labels will be returned. The maximum value is 1000; values above 1000 will
+     be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of promotions to return. The service may return fewer than this value.
+       * If unspecified, at most 50 labels will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListPromotion` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListPromotion` must
+       * match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListPromotion` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `ListPromotion` must match the
+     call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListPromotion` call. Provide this to retrieve the
+       * subsequent page. When paginating, all other parameters provided to `ListPromotion` must
+       * match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
 
   }
 

@@ -219,8 +219,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The date time when an offer becomes visible in search results across Google’s YouTube surfaces,
-   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date](
-   * https://support.google.com/merchants/answer/13034208) for more information.
+   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure
+   * date](https://support.google.com/merchants/answer/13034208) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1169,8 +1169,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The date time when an offer becomes visible in search results across Google’s YouTube surfaces,
-   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date](
-   * https://support.google.com/merchants/answer/13034208) for more information.
+   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure
+   * date](https://support.google.com/merchants/answer/13034208) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisclosureDate() {
@@ -1179,8 +1179,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The date time when an offer becomes visible in search results across Google’s YouTube surfaces,
-   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date](
-   * https://support.google.com/merchants/answer/13034208) for more information.
+   * in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure
+   * date](https://support.google.com/merchants/answer/13034208) for more information.
    * @param disclosureDate disclosureDate or {@code null} for none
    */
   public Product setDisclosureDate(java.lang.String disclosureDate) {

@@ -51,6 +51,14 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   private OfficeLocation officeLocation;
 
   /**
+   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * If present, specifies that the user is working from a custom location.
    * @return value or {@code null} for none
    */
@@ -98,6 +106,25 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
    */
   public EventWorkingLocationProperties setOfficeLocation(OfficeLocation officeLocation) {
     this.officeLocation = officeLocation;
+    return this;
+  }
+
+  /**
+   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * @param type type or {@code null} for none
+   */
+  public EventWorkingLocationProperties setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
@@ -291,4 +318,5 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
   }
+
 }

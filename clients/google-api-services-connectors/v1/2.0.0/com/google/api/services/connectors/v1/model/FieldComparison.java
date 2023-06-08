@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
+ * Field that needs to be compared.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,52 +27,45 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ConfigVariable extends com.google.api.client.json.GenericJson {
+public final class FieldComparison extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value is a bool.
+   * Boolean value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
-   * Value is a Encryption Key.
+   * Comparator to use for comparing the field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private EncryptionKey encryptionKeyValue;
+  private java.lang.String comparator;
 
   /**
-   * Value is an integer
+   * Integer value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long intValue;
 
   /**
-   * Key of the config variable.
+   * Key of the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Value is a secret.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Secret secretValue;
-
-  /**
-   * Value is a string.
+   * String value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
-   * Value is a bool.
+   * Boolean value
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -80,33 +73,33 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a bool.
+   * Boolean value
    * @param boolValue boolValue or {@code null} for none
    */
-  public ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
+  public FieldComparison setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
     return this;
   }
 
   /**
-   * Value is a Encryption Key.
+   * Comparator to use for comparing the field value.
    * @return value or {@code null} for none
    */
-  public EncryptionKey getEncryptionKeyValue() {
-    return encryptionKeyValue;
+  public java.lang.String getComparator() {
+    return comparator;
   }
 
   /**
-   * Value is a Encryption Key.
-   * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
+   * Comparator to use for comparing the field value.
+   * @param comparator comparator or {@code null} for none
    */
-  public ConfigVariable setEncryptionKeyValue(EncryptionKey encryptionKeyValue) {
-    this.encryptionKeyValue = encryptionKeyValue;
+  public FieldComparison setComparator(java.lang.String comparator) {
+    this.comparator = comparator;
     return this;
   }
 
   /**
-   * Value is an integer
+   * Integer value
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntValue() {
@@ -114,16 +107,16 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is an integer
+   * Integer value
    * @param intValue intValue or {@code null} for none
    */
-  public ConfigVariable setIntValue(java.lang.Long intValue) {
+  public FieldComparison setIntValue(java.lang.Long intValue) {
     this.intValue = intValue;
     return this;
   }
 
   /**
-   * Key of the config variable.
+   * Key of the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -131,33 +124,16 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Key of the config variable.
+   * Key of the field.
    * @param key key or {@code null} for none
    */
-  public ConfigVariable setKey(java.lang.String key) {
+  public FieldComparison setKey(java.lang.String key) {
     this.key = key;
     return this;
   }
 
   /**
-   * Value is a secret.
-   * @return value or {@code null} for none
-   */
-  public Secret getSecretValue() {
-    return secretValue;
-  }
-
-  /**
-   * Value is a secret.
-   * @param secretValue secretValue or {@code null} for none
-   */
-  public ConfigVariable setSecretValue(Secret secretValue) {
-    this.secretValue = secretValue;
-    return this;
-  }
-
-  /**
-   * Value is a string.
+   * String value
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -165,22 +141,22 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a string.
+   * String value
    * @param stringValue stringValue or {@code null} for none
    */
-  public ConfigVariable setStringValue(java.lang.String stringValue) {
+  public FieldComparison setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
     return this;
   }
 
   @Override
-  public ConfigVariable set(String fieldName, Object value) {
-    return (ConfigVariable) super.set(fieldName, value);
+  public FieldComparison set(String fieldName, Object value) {
+    return (FieldComparison) super.set(fieldName, value);
   }
 
   @Override
-  public ConfigVariable clone() {
-    return (ConfigVariable) super.clone();
+  public FieldComparison clone() {
+    return (FieldComparison) super.clone();
   }
 
 }

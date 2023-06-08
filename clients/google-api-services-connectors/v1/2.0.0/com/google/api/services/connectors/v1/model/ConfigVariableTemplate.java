@@ -79,6 +79,14 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.Boolean required;
 
   /**
+   * Condition under which a field would be required. The condition can be represented in the form
+   * of a logical expression.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LogicalExpression requiredCondition;
+
+  /**
    * Role grant configuration for the config variable.
    * The value may be {@code null}.
    */
@@ -223,6 +231,25 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setRequired(java.lang.Boolean required) {
     this.required = required;
+    return this;
+  }
+
+  /**
+   * Condition under which a field would be required. The condition can be represented in the form
+   * of a logical expression.
+   * @return value or {@code null} for none
+   */
+  public LogicalExpression getRequiredCondition() {
+    return requiredCondition;
+  }
+
+  /**
+   * Condition under which a field would be required. The condition can be represented in the form
+   * of a logical expression.
+   * @param requiredCondition requiredCondition or {@code null} for none
+   */
+  public ConfigVariableTemplate setRequiredCondition(LogicalExpression requiredCondition) {
+    this.requiredCondition = requiredCondition;
     return this;
   }
 

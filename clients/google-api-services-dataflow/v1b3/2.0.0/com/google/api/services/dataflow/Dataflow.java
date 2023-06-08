@@ -441,7 +441,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
     public class Jobs {
 
       /**
-       * List the jobs of a project across all regions.
+       * List the jobs of a project across all regions. **Note:** This method doesn't support filtering
+       * the list of jobs by name.
        *
        * Create a request for the method "jobs.aggregated".
        *
@@ -462,7 +463,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs:aggregated";
 
         /**
-         * List the jobs of a project across all regions.
+         * List the jobs of a project across all regions. **Note:** This method doesn't support filtering
+         * the list of jobs by name.
          *
          * Create a request for the method "jobs.aggregated".
          *
@@ -600,17 +602,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The job name. Optional. */
+        /** Optional. The job name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Optional. The job name. Optional.
+        /** Optional. The job name.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Optional. The job name. Optional. */
+        /** Optional. The job name. */
         public Aggregated setName(java.lang.String name) {
           this.name = name;
           return this;
@@ -1256,8 +1258,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * List the jobs of a project. To list the jobs of a project in a region, we recommend using
        * `projects.locations.jobs.list` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across
-       * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as
-       * you can only get the list of jobs that are running in `us-central1`.
+       * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended,
+       * because you can only get the list of jobs that are running in `us-central1`.
+       * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
+       * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
        *
        * Create a request for the method "jobs.list".
        *
@@ -1282,7 +1286,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.jobs.list` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs
          * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
-         * recommended, as you can only get the list of jobs that are running in `us-central1`.
+         * recommended, because you can only get the list of jobs that are running in `us-central1`.
+         * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
+         * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -1419,17 +1425,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. The job name. Optional. */
+        /** Optional. The job name. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Optional. The job name. Optional.
+        /** Optional. The job name.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Optional. The job name. Optional. */
+        /** Optional. The job name. */
         public List setName(java.lang.String name) {
           this.name = name;
           return this;
@@ -3905,8 +3911,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * List the jobs of a project. To list the jobs of a project in a region, we recommend using
          * `projects.locations.jobs.list` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across
-         * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as
-         * you can only get the list of jobs that are running in `us-central1`.
+         * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended,
+         * because you can only get the list of jobs that are running in `us-central1`.
+         * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
+         * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -3933,7 +3941,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.jobs.list` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs
            * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
-           * recommended, as you can only get the list of jobs that are running in `us-central1`.
+           * recommended, because you can only get the list of jobs that are running in `us-central1`.
+           * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
+           * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
            *
            * Create a request for the method "jobs.list".
            *
@@ -4073,17 +4083,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The job name. Optional. */
+          /** Optional. The job name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Optional. The job name. Optional.
+          /** Optional. The job name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Optional. The job name. Optional. */
+          /** Optional. The job name. */
           public List setName(java.lang.String name) {
             this.name = name;
             return this;

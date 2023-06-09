@@ -38,6 +38,13 @@ public final class RemoveEnableRulesResponse extends com.google.api.client.json.
   private java.lang.String parent;
 
   /**
+   * The values removed from the parent consumer policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> removedValues;
+
+  /**
    * The parent consumer policy. It can be `projects/12345/consumerPolicies/default`, or
    * `folders/12345/consumerPolicies/default`, or `organizations/12345/consumerPolicies/default`.
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class RemoveEnableRulesResponse extends com.google.api.client.json.
    */
   public RemoveEnableRulesResponse setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * The values removed from the parent consumer policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRemovedValues() {
+    return removedValues;
+  }
+
+  /**
+   * The values removed from the parent consumer policy.
+   * @param removedValues removedValues or {@code null} for none
+   */
+  public RemoveEnableRulesResponse setRemovedValues(java.util.List<java.lang.String> removedValues) {
+    this.removedValues = removedValues;
     return this;
   }
 

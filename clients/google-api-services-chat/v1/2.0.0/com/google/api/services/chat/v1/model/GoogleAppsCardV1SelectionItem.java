@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * When `true`, more than one item is selected. If more than one item is selected for radio
-   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
+   * Whether the item is selected by default. If the selection input only accepts one value (such as
+   * for radio buttons or a dropdown menu), only set this field for one item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.String value;
 
   /**
-   * When `true`, more than one item is selected. If more than one item is selected for radio
-   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
+   * Whether the item is selected by default. If the selection input only accepts one value (such as
+   * for radio buttons or a dropdown menu), only set this field for one item.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelected() {
@@ -63,8 +63,8 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * When `true`, more than one item is selected. If more than one item is selected for radio
-   * buttons and dropdown menus, the first selected item is received and the ones after are ignored.
+   * Whether the item is selected by default. If the selection input only accepts one value (such as
+   * for radio buttons or a dropdown menu), only set this field for one item.
    * @param selected selected or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setSelected(java.lang.Boolean selected) {

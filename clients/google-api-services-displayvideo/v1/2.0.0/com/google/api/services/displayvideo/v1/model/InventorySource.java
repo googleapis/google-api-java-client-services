@@ -170,13 +170,6 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
   private InventorySourceStatus status;
 
   /**
-   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long subSitePropertyId;
-
-  /**
    * The time range when this inventory source starts and stops serving.
    * The value may be {@code null}.
    */
@@ -504,23 +497,6 @@ public final class InventorySource extends com.google.api.client.json.GenericJso
    */
   public InventorySource setStatus(InventorySourceStatus status) {
     this.status = status;
-    return this;
-  }
-
-  /**
-   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getSubSitePropertyId() {
-    return subSitePropertyId;
-  }
-
-  /**
-   * Immutable. The unique ID of the sub-site property assigned to this inventory source.
-   * @param subSitePropertyId subSitePropertyId or {@code null} for none
-   */
-  public InventorySource setSubSitePropertyId(java.lang.Long subSitePropertyId) {
-    this.subSitePropertyId = subSitePropertyId;
     return this;
   }
 

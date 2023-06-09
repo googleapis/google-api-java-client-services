@@ -30,6 +30,13 @@ package com.google.api.services.serviceusage.v1.model;
 public final class AddEnableRulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The values added to the parent consumer policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> addedValues;
+
+  /**
    * The parent consumer policy. It can be `projects/12345/consumerPolicies/default`, or
    * `folders/12345/consumerPolicies/default`, or `organizations/12345/consumerPolicies/default`.
    * The value may be {@code null}.
@@ -39,10 +46,20 @@ public final class AddEnableRulesResponse extends com.google.api.client.json.Gen
 
   /**
    * The values added to the parent consumer policy.
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.util.List<ValueInfo> values;
+  public java.util.List<java.lang.String> getAddedValues() {
+    return addedValues;
+  }
+
+  /**
+   * The values added to the parent consumer policy.
+   * @param addedValues addedValues or {@code null} for none
+   */
+  public AddEnableRulesResponse setAddedValues(java.util.List<java.lang.String> addedValues) {
+    this.addedValues = addedValues;
+    return this;
+  }
 
   /**
    * The parent consumer policy. It can be `projects/12345/consumerPolicies/default`, or
@@ -60,23 +77,6 @@ public final class AddEnableRulesResponse extends com.google.api.client.json.Gen
    */
   public AddEnableRulesResponse setParent(java.lang.String parent) {
     this.parent = parent;
-    return this;
-  }
-
-  /**
-   * The values added to the parent consumer policy.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ValueInfo> getValues() {
-    return values;
-  }
-
-  /**
-   * The values added to the parent consumer policy.
-   * @param values values or {@code null} for none
-   */
-  public AddEnableRulesResponse setValues(java.util.List<ValueInfo> values) {
-    this.values = values;
     return this;
   }
 

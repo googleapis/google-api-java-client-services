@@ -47,7 +47,8 @@ public final class GoogleCloudDialogflowCxV3beta1OutputAudioConfig extends com.g
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional. Configuration of how speech should be synthesized.
+   * Optional. Configuration of how speech should be synthesized. If not specified,
+   * Agent.text_to_speech_settings is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class GoogleCloudDialogflowCxV3beta1OutputAudioConfig extends com.g
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized.
+   * Optional. Configuration of how speech should be synthesized. If not specified,
+   * Agent.text_to_speech_settings is applied.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SynthesizeSpeechConfig getSynthesizeSpeechConfig() {
@@ -102,7 +104,8 @@ public final class GoogleCloudDialogflowCxV3beta1OutputAudioConfig extends com.g
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized.
+   * Optional. Configuration of how speech should be synthesized. If not specified,
+   * Agent.text_to_speech_settings is applied.
    * @param synthesizeSpeechConfig synthesizeSpeechConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1OutputAudioConfig setSynthesizeSpeechConfig(GoogleCloudDialogflowCxV3beta1SynthesizeSpeechConfig synthesizeSpeechConfig) {

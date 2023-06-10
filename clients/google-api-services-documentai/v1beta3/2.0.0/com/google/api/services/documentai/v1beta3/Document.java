@@ -2822,7 +2822,505 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             return (SetDefaultProcessorVersion) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates metadata associated with a dataset.
+         *
+         * Create a request for the method "processors.updateDataset".
+         *
+         * This request holds the parameters needed by the documentai server.  After setting any optional
+         * parameters, call the {@link UpdateDataset#execute()} method to invoke the remote operation.
+         *
+         * @param name Dataset resource name. Format:
+         *        `projects/{project}/locations/{location}/processors/{processor}/dataset`
+         * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Dataset}
+         * @return the request
+         */
+        public UpdateDataset updateDataset(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Dataset content) throws java.io.IOException {
+          UpdateDataset result = new UpdateDataset(name, content);
+          initialize(result);
+          return result;
+        }
 
+        public class UpdateDataset extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+
+          /**
+           * Updates metadata associated with a dataset.
+           *
+           * Create a request for the method "processors.updateDataset".
+           *
+           * This request holds the parameters needed by the the documentai server.  After setting any
+           * optional parameters, call the {@link UpdateDataset#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateDataset#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Dataset resource name. Format:
+         *        `projects/{project}/locations/{location}/processors/{processor}/dataset`
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Dataset}
+           * @since 1.13
+           */
+          protected UpdateDataset(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3Dataset content) {
+            super(Document.this, "PATCH", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+            }
+          }
+
+          @Override
+          public UpdateDataset set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateDataset) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateDataset setAccessToken(java.lang.String accessToken) {
+            return (UpdateDataset) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateDataset setAlt(java.lang.String alt) {
+            return (UpdateDataset) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateDataset setCallback(java.lang.String callback) {
+            return (UpdateDataset) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateDataset setFields(java.lang.String fields) {
+            return (UpdateDataset) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateDataset setKey(java.lang.String key) {
+            return (UpdateDataset) super.setKey(key);
+          }
+
+          @Override
+          public UpdateDataset setOauthToken(java.lang.String oauthToken) {
+            return (UpdateDataset) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateDataset setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateDataset) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateDataset setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateDataset) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateDataset setUploadType(java.lang.String uploadType) {
+            return (UpdateDataset) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateDataset setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateDataset) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Dataset resource name. Format:
+           * `projects/{project}/locations/{location}/processors/{processor}/dataset`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Dataset resource name. Format:
+         `projects/{project}/locations/{location}/processors/{processor}/dataset`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Dataset resource name. Format:
+           * `projects/{project}/locations/{location}/processors/{processor}/dataset`
+           */
+          public UpdateDataset setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The update mask applies to the resource. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The update mask applies to the resource.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The update mask applies to the resource. */
+          public UpdateDataset setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateDataset set(String parameterName, Object value) {
+            return (UpdateDataset) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Dataset collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Document documentai = new Document(...);}
+         *   {@code Document.Dataset.List request = documentai.dataset().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Dataset dataset() {
+          return new Dataset();
+        }
+
+        /**
+         * The "dataset" collection of methods.
+         */
+        public class Dataset {
+
+          /**
+           * Gets the DatasetSchema of a Dataset.
+           *
+           * Create a request for the method "dataset.getDatasetSchema".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link GetDatasetSchema#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The dataset schema resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema
+           * @return the request
+           */
+          public GetDatasetSchema getDatasetSchema(java.lang.String name) throws java.io.IOException {
+            GetDatasetSchema result = new GetDatasetSchema(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetDatasetSchema extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema> {
+
+            private static final String REST_PATH = "v1beta3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+
+            /**
+             * Gets the DatasetSchema of a Dataset.
+             *
+             * Create a request for the method "dataset.getDatasetSchema".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link GetDatasetSchema#execute()} method to invoke the remote
+             * operation. <p> {@link GetDatasetSchema#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The dataset schema resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema
+             * @since 1.13
+             */
+            protected GetDatasetSchema(java.lang.String name) {
+              super(Document.this, "GET", REST_PATH, null, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetDatasetSchema set$Xgafv(java.lang.String $Xgafv) {
+              return (GetDatasetSchema) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetDatasetSchema setAccessToken(java.lang.String accessToken) {
+              return (GetDatasetSchema) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetDatasetSchema setAlt(java.lang.String alt) {
+              return (GetDatasetSchema) super.setAlt(alt);
+            }
+
+            @Override
+            public GetDatasetSchema setCallback(java.lang.String callback) {
+              return (GetDatasetSchema) super.setCallback(callback);
+            }
+
+            @Override
+            public GetDatasetSchema setFields(java.lang.String fields) {
+              return (GetDatasetSchema) super.setFields(fields);
+            }
+
+            @Override
+            public GetDatasetSchema setKey(java.lang.String key) {
+              return (GetDatasetSchema) super.setKey(key);
+            }
+
+            @Override
+            public GetDatasetSchema setOauthToken(java.lang.String oauthToken) {
+              return (GetDatasetSchema) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetDatasetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetDatasetSchema) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetDatasetSchema setQuotaUser(java.lang.String quotaUser) {
+              return (GetDatasetSchema) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetDatasetSchema setUploadType(java.lang.String uploadType) {
+              return (GetDatasetSchema) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetDatasetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetDatasetSchema) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The dataset schema resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The dataset schema resource name. Format:
+           projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The dataset schema resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema
+             */
+            public GetDatasetSchema setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** If set, only returns the visible fields of the schema. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean visibleFieldsOnly;
+
+            /** If set, only returns the visible fields of the schema.
+             */
+            public java.lang.Boolean getVisibleFieldsOnly() {
+              return visibleFieldsOnly;
+            }
+
+            /** If set, only returns the visible fields of the schema. */
+            public GetDatasetSchema setVisibleFieldsOnly(java.lang.Boolean visibleFieldsOnly) {
+              this.visibleFieldsOnly = visibleFieldsOnly;
+              return this;
+            }
+
+            @Override
+            public GetDatasetSchema set(String parameterName, Object value) {
+              return (GetDatasetSchema) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a DatasetSchema.
+           *
+           * Create a request for the method "dataset.updateDatasetSchema".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link UpdateDatasetSchema#execute()} method to invoke the remote operation.
+           *
+           * @param name Dataset schema resource name. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema`
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema}
+           * @return the request
+           */
+          public UpdateDatasetSchema updateDatasetSchema(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema content) throws java.io.IOException {
+            UpdateDatasetSchema result = new UpdateDatasetSchema(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateDatasetSchema extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema> {
+
+            private static final String REST_PATH = "v1beta3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+
+            /**
+             * Updates a DatasetSchema.
+             *
+             * Create a request for the method "dataset.updateDatasetSchema".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link UpdateDatasetSchema#execute()} method to invoke the remote
+             * operation. <p> {@link UpdateDatasetSchema#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Dataset schema resource name. Format:
+           *        `projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema`
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema}
+             * @since 1.13
+             */
+            protected UpdateDatasetSchema(java.lang.String name, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema content) {
+              super(Document.this, "PATCH", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3DatasetSchema.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+              }
+            }
+
+            @Override
+            public UpdateDatasetSchema set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateDatasetSchema) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateDatasetSchema setAccessToken(java.lang.String accessToken) {
+              return (UpdateDatasetSchema) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateDatasetSchema setAlt(java.lang.String alt) {
+              return (UpdateDatasetSchema) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateDatasetSchema setCallback(java.lang.String callback) {
+              return (UpdateDatasetSchema) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateDatasetSchema setFields(java.lang.String fields) {
+              return (UpdateDatasetSchema) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateDatasetSchema setKey(java.lang.String key) {
+              return (UpdateDatasetSchema) super.setKey(key);
+            }
+
+            @Override
+            public UpdateDatasetSchema setOauthToken(java.lang.String oauthToken) {
+              return (UpdateDatasetSchema) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateDatasetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateDatasetSchema) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateDatasetSchema setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateDatasetSchema) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateDatasetSchema setUploadType(java.lang.String uploadType) {
+              return (UpdateDatasetSchema) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateDatasetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateDatasetSchema) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Dataset schema resource name. Format: `projects/{project}/locations/{location}/proces
+             * sors/{processor}/dataset/datasetSchema`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Dataset schema resource name. Format:
+           `projects/{project}/locations/{location}/processors/{processor}/dataset/datasetSchema`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Dataset schema resource name. Format: `projects/{project}/locations/{location}/proces
+             * sors/{processor}/dataset/datasetSchema`
+             */
+            public UpdateDatasetSchema setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The update mask applies to the resource. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The update mask applies to the resource.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** The update mask applies to the resource. */
+            public UpdateDatasetSchema setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateDatasetSchema set(String parameterName, Object value) {
+              return (UpdateDatasetSchema) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the HumanReviewConfig collection.
          *

@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Metadata about a property.
+ * Config specific to spanner based indexing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta3PropertyMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Whether the property should be considered as "inactive".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean inactive;
-
-  /**
-   * Whether the property should be considered as "inactive".
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getInactive() {
-    return inactive;
-  }
-
-  /**
-   * Whether the property should be considered as "inactive".
-   * @param inactive inactive or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata setInactive(java.lang.Boolean inactive) {
-    this.inactive = inactive;
-    return this;
+  @Override
+  public GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta3PropertyMetadata) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata clone() {
-    return (GoogleCloudDocumentaiV1beta3PropertyMetadata) super.clone();
+  public GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig clone() {
+    return (GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig) super.clone();
   }
 
 }

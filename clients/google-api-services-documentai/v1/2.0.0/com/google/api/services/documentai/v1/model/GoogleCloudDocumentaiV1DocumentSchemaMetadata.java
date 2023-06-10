@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   private java.lang.Boolean documentAllowMultipleLabels;
 
   /**
-   * If true, a `document` entity type can be applied to subdocument ( splitting). Otherwise, it can
+   * If true, a `document` entity type can be applied to subdocument (splitting). Otherwise, it can
    * only be applied to the entire document (classification).
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   }
 
   /**
-   * If true, a `document` entity type can be applied to subdocument ( splitting). Otherwise, it can
+   * If true, a `document` entity type can be applied to subdocument (splitting). Otherwise, it can
    * only be applied to the entire document (classification).
    * @return value or {@code null} for none
    */
@@ -88,7 +88,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   }
 
   /**
-   * If true, a `document` entity type can be applied to subdocument ( splitting). Otherwise, it can
+   * If true, a `document` entity type can be applied to subdocument (splitting). Otherwise, it can
    * only be applied to the entire document (classification).
    * @param documentSplitter documentSplitter or {@code null} for none
    */

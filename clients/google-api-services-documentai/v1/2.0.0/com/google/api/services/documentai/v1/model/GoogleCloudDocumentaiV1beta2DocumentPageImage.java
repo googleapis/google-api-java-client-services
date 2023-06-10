@@ -45,7 +45,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImage extends com.goo
   private java.lang.Integer height;
 
   /**
-   * Encoding mime type for the image.
+   * Encoding [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) for the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +122,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImage extends com.goo
   }
 
   /**
-   * Encoding mime type for the image.
+   * Encoding [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) for the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -129,7 +131,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImage extends com.goo
   }
 
   /**
-   * Encoding mime type for the image.
+   * Encoding [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) for the image.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageImage setMimeType(java.lang.String mimeType) {

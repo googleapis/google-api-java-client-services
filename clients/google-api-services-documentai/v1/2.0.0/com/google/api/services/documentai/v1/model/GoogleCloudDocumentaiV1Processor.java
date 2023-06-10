@@ -53,8 +53,8 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   private java.lang.String displayName;
 
   /**
-   * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com
-   * /security-key-management.
+   * The [KMS key](https://cloud.google.com/security-key-management) used for encryption/decryption
+   * in CMEK scenarios.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +142,8 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   }
 
   /**
-   * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com
-   * /security-key-management.
+   * The [KMS key](https://cloud.google.com/security-key-management) used for encryption/decryption
+   * in CMEK scenarios.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -151,8 +151,8 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   }
 
   /**
-   * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com
-   * /security-key-management.
+   * The [KMS key](https://cloud.google.com/security-key-management) used for encryption/decryption
+   * in CMEK scenarios.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1Processor setKmsKeyName(java.lang.String kmsKeyName) {

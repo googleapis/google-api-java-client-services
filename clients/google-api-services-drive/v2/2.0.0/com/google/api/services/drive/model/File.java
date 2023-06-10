@@ -525,8 +525,10 @@ public final class File extends com.google.api.client.json.GenericJson {
   private Thumbnail thumbnail;
 
   /**
-   * Output only. A short-lived link to the file's thumbnail. Typically lasts on the order of hours.
-   * Only populated when the requesting app can access the file's content.
+   * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
+   * order of hours. Only populated when the requesting app can access the file's content. If the
+   * file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using a
+   * credentialed request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1781,8 +1783,10 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A short-lived link to the file's thumbnail. Typically lasts on the order of hours.
-   * Only populated when the requesting app can access the file's content.
+   * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
+   * order of hours. Only populated when the requesting app can access the file's content. If the
+   * file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using a
+   * credentialed request.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailLink() {
@@ -1790,8 +1794,10 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A short-lived link to the file's thumbnail. Typically lasts on the order of hours.
-   * Only populated when the requesting app can access the file's content.
+   * Output only. A short-lived link to the file's thumbnail, if available. Typically lasts on the
+   * order of hours. Only populated when the requesting app can access the file's content. If the
+   * file isn't shared publicly, the URL returned in `Files.thumbnailLink` must be fetched using a
+   * credentialed request.
    * @param thumbnailLink thumbnailLink or {@code null} for none
    */
   public File setThumbnailLink(java.lang.String thumbnailLink) {

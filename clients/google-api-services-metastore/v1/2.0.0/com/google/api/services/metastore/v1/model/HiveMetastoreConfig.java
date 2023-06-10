@@ -60,6 +60,13 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   private java.util.Map<String, java.lang.String> configOverrides;
 
   /**
+   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpointProtocol;
+
+  /**
    * Information used to configure the Hive metastore service as a service principal in a Kerberos
    * realm. To disable Kerberos, use the UpdateService method and specify this field's path
    * (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field
@@ -123,6 +130,23 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
    */
   public HiveMetastoreConfig setConfigOverrides(java.util.Map<String, java.lang.String> configOverrides) {
     this.configOverrides = configOverrides;
+    return this;
+  }
+
+  /**
+   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpointProtocol() {
+    return endpointProtocol;
+  }
+
+  /**
+   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * @param endpointProtocol endpointProtocol or {@code null} for none
+   */
+  public HiveMetastoreConfig setEndpointProtocol(java.lang.String endpointProtocol) {
+    this.endpointProtocol = endpointProtocol;
     return this;
   }
 

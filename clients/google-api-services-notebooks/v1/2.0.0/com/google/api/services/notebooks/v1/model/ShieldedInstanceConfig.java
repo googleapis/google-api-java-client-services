@@ -17,7 +17,7 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * A set of Shielded Instance options. Check [Images using supported Shielded VM
+ * A set of Shielded Instance options. See [Images using supported Shielded VM
  * features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm). Not all
  * combinations are valid.
  *

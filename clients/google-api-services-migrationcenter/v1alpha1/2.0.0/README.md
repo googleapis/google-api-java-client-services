@@ -1,6 +1,6 @@
 # Migration Center API Client Library for Java
 
-
+A unified platform that helps you accelerate your end-to-end cloud journey from your current on-premises or cloud environments to Google Cloud.
 
 This page contains information about getting started with the Migration Center API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-migrationcenter</artifactId>
-      <version>v1alpha1-rev20230519-2.0.0</version>
+      <version>v1alpha1-rev20230602-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-migrationcenter:v1alpha1-rev20230519-2.0.0'
+  implementation 'com.google.apis:google-api-services-migrationcenter:v1alpha1-rev20230602-2.0.0'
 }
 ```
 

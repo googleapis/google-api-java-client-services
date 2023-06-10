@@ -38,8 +38,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage exte
   private java.lang.Float confidence;
 
   /**
-   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * The [BCP-47 language code](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier),
+   * such as `en-US` or `sr-Latn`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage exte
   }
 
   /**
-   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * The [BCP-47 language code](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier),
+   * such as `en-US` or `sr-Latn`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -72,8 +72,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage exte
   }
 
   /**
-   * The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see
-   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   * The [BCP-47 language code](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier),
+   * such as `en-US` or `sr-Latn`.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentPageDetectedLanguage setLanguageCode(java.lang.String languageCode) {

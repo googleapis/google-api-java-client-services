@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only applicable to "Document OCR Processor". Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig;
 
   /**
-   * Only applicable to "Document OCR Processor". Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig getOcrConfig() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   }
 
   /**
-   * Only applicable to "Document OCR Processor". Returns error if set on other processor types.
+   * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
    * @param ocrConfig ocrConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptions setOcrConfig(GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig) {

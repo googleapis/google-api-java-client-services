@@ -38,7 +38,8 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   private java.lang.String gcsSource;
 
   /**
-   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) of the input. If the input is a raw document, refer to [supported file
    * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
    * the input is a Document, the type should be `application/json`.
    * The value may be {@code null}.
@@ -64,7 +65,8 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   }
 
   /**
-   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) of the input. If the input is a raw document, refer to [supported file
    * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
    * the input is a Document, the type should be `application/json`.
    * @return value or {@code null} for none
@@ -74,7 +76,8 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConf
   }
 
   /**
-   * Media type (MIME type) of the input. If the input is a raw document, refer to [supported file
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml) of the input. If the input is a raw document, refer to [supported file
    * types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If
    * the input is a Document, the type should be `application/json`.
    * @param mimeType mimeType or {@code null} for none

@@ -70,8 +70,8 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentLabel> labels;
 
   /**
-   * An IANA published MIME type (also referred to as media type). For more information, see
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,8 +251,8 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * An IANA published MIME type (also referred to as media type). For more information, see
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml).
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -260,8 +260,8 @@ public final class GoogleCloudDocumentaiV1beta2Document extends com.google.api.c
   }
 
   /**
-   * An IANA published MIME type (also referred to as media type). For more information, see
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * An IANA published [media type (MIME type)](https://www.iana.org/assignments/media-types/media-
+   * types.xhtml).
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2Document setMimeType(java.lang.String mimeType) {

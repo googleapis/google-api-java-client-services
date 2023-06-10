@@ -18,7 +18,7 @@ package com.google.api.services.documentai.v1beta3.model;
 
 /**
  * A processor version is an implementation of a processor. Each processor can have multiple
- * versions, pre-trained by Google internally or up-trained by the customer. At a time, a processor
+ * versions, pre-trained by Google internally or uptrained by the customer. At a time, a processor
  * can only have one default version version. So the processor's behavior (when processing
  * documents) is defined by a default version
  *
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
 
   /**
-   * Denotes that this ProcessorVersion is managed by google.
+   * Denotes that this `ProcessorVersion` is managed by Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * Denotes that this ProcessorVersion is managed by google.
+   * Denotes that this `ProcessorVersion` is managed by Google.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGoogleManaged() {
@@ -181,7 +181,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * Denotes that this ProcessorVersion is managed by google.
+   * Denotes that this `ProcessorVersion` is managed by Google.
    * @param googleManaged googleManaged or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setGoogleManaged(java.lang.Boolean googleManaged) {

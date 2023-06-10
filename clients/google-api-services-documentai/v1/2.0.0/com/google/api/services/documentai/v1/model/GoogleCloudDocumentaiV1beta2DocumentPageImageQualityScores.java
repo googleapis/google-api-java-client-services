@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Image Quality Scores for the page image
+ * Image Quality Scores for the page image.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores ex
   private java.util.List<GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect> detectedDefects;
 
   /**
-   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where `1` is perfect quality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores ex
   }
 
   /**
-   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where `1` is perfect quality.
    * @return value or {@code null} for none
    */
   public java.lang.Float getQualityScore() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores ex
   }
 
   /**
-   * The overall quality score. Range `[0, 1]` where 1 is perfect quality.
+   * The overall quality score. Range `[0, 1]` where `1` is perfect quality.
    * @param qualityScore qualityScore or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores setQualityScore(java.lang.Float qualityScore) {

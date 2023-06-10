@@ -75,6 +75,13 @@ public final class Features extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean extractSyntax;
 
   /**
+   * Moderate the document for harmful and sensitive categories.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean moderateText;
+
+  /**
    * The model options to use for classification. Defaults to v1 options if not specified. Only used
    * if `classify_text` is set to true.
    * @return value or {@code null} for none
@@ -175,6 +182,23 @@ public final class Features extends com.google.api.client.json.GenericJson {
    */
   public Features setExtractSyntax(java.lang.Boolean extractSyntax) {
     this.extractSyntax = extractSyntax;
+    return this;
+  }
+
+  /**
+   * Moderate the document for harmful and sensitive categories.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getModerateText() {
+    return moderateText;
+  }
+
+  /**
+   * Moderate the document for harmful and sensitive categories.
+   * @param moderateText moderateText or {@code null} for none
+   */
+  public Features setModerateText(java.lang.Boolean moderateText) {
+    this.moderateText = moderateText;
     return this;
   }
 

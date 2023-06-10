@@ -756,6 +756,105 @@ public class CloudNaturalLanguage extends com.google.api.client.googleapis.servi
         return (ClassifyText) super.set(parameterName, value);
       }
     }
+    /**
+     * Moderates a document for harmful and sensitive categories.
+     *
+     * Create a request for the method "documents.moderateText".
+     *
+     * This request holds the parameters needed by the language server.  After setting any optional
+     * parameters, call the {@link ModerateText#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.language.v1beta2.model.ModerateTextRequest}
+     * @return the request
+     */
+    public ModerateText moderateText(com.google.api.services.language.v1beta2.model.ModerateTextRequest content) throws java.io.IOException {
+      ModerateText result = new ModerateText(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ModerateText extends CloudNaturalLanguageRequest<com.google.api.services.language.v1beta2.model.ModerateTextResponse> {
+
+      private static final String REST_PATH = "v1beta2/documents:moderateText";
+
+      /**
+       * Moderates a document for harmful and sensitive categories.
+       *
+       * Create a request for the method "documents.moderateText".
+       *
+       * This request holds the parameters needed by the the language server.  After setting any
+       * optional parameters, call the {@link ModerateText#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * ModerateText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.language.v1beta2.model.ModerateTextRequest}
+       * @since 1.13
+       */
+      protected ModerateText(com.google.api.services.language.v1beta2.model.ModerateTextRequest content) {
+        super(CloudNaturalLanguage.this, "POST", REST_PATH, content, com.google.api.services.language.v1beta2.model.ModerateTextResponse.class);
+      }
+
+      @Override
+      public ModerateText set$Xgafv(java.lang.String $Xgafv) {
+        return (ModerateText) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ModerateText setAccessToken(java.lang.String accessToken) {
+        return (ModerateText) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ModerateText setAlt(java.lang.String alt) {
+        return (ModerateText) super.setAlt(alt);
+      }
+
+      @Override
+      public ModerateText setCallback(java.lang.String callback) {
+        return (ModerateText) super.setCallback(callback);
+      }
+
+      @Override
+      public ModerateText setFields(java.lang.String fields) {
+        return (ModerateText) super.setFields(fields);
+      }
+
+      @Override
+      public ModerateText setKey(java.lang.String key) {
+        return (ModerateText) super.setKey(key);
+      }
+
+      @Override
+      public ModerateText setOauthToken(java.lang.String oauthToken) {
+        return (ModerateText) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ModerateText setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ModerateText) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ModerateText setQuotaUser(java.lang.String quotaUser) {
+        return (ModerateText) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ModerateText setUploadType(java.lang.String uploadType) {
+        return (ModerateText) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ModerateText setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ModerateText) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ModerateText set(String parameterName, Object value) {
+        return (ModerateText) super.set(parameterName, value);
+      }
+    }
 
   }
 

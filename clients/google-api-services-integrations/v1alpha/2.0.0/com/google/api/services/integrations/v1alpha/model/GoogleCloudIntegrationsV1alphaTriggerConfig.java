@@ -116,6 +116,14 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trigger;
+
+  /**
    * Optional. The backend trigger ID.
    * The value may be {@code null}.
    */
@@ -306,6 +314,25 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setStartTasks(java.util.List<GoogleCloudIntegrationsV1alphaNextTask> startTasks) {
     this.startTasks = startTasks;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrigger() {
+    return trigger;
+  }
+
+  /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * @param trigger trigger or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setTrigger(java.lang.String trigger) {
+    this.trigger = trigger;
     return this;
   }
 

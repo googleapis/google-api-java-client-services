@@ -38,6 +38,13 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   private java.lang.Boolean boolValue;
 
   /**
+   * Value is a Encryption Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue;
+
+  /**
    * Value is an integer
    * The value may be {@code null}.
    */
@@ -50,13 +57,6 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
-
-  /**
-   * Value is a Encryption Key.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudConnectorsV1EncryptionKey keyValue;
 
   /**
    * Value is a secret.
@@ -86,6 +86,23 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
    */
   public GoogleCloudConnectorsV1ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
+    return this;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EncryptionKey getEncryptionKeyValue() {
+    return encryptionKeyValue;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConfigVariable setEncryptionKeyValue(GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue) {
+    this.encryptionKeyValue = encryptionKeyValue;
     return this;
   }
 
@@ -120,23 +137,6 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
    */
   public GoogleCloudConnectorsV1ConfigVariable setKey(java.lang.String key) {
     this.key = key;
-    return this;
-  }
-
-  /**
-   * Value is a Encryption Key.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudConnectorsV1EncryptionKey getKeyValue() {
-    return keyValue;
-  }
-
-  /**
-   * Value is a Encryption Key.
-   * @param keyValue keyValue or {@code null} for none
-   */
-  public GoogleCloudConnectorsV1ConfigVariable setKeyValue(GoogleCloudConnectorsV1EncryptionKey keyValue) {
-    this.keyValue = keyValue;
     return this;
   }
 

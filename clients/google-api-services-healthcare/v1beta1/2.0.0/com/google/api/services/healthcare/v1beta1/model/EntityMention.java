@@ -30,6 +30,17 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class EntityMention extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional information about the entity mention. For example, for an entity mention of type
+   * `DATE` this can be its more specific date types from the following list: `ADMISSION_DATE`,
+   * `CONSULTATION_DATE`, `DISCHARGE_DATE`, `SERVICE_DATE`, `VISIT_DATE`, `DIAGNOSIS_DATE`,
+   * `MED_STARTED_DATE`, `MED_ENDED_DATE`, `NOTE_DATE`, `PROCEDURE_DATE`, `RADIATION_STARTED_DATE`,
+   * `RADIATION_ENDED_DATE`, `STAGE_DATE`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Feature> additionalInfo;
+
+  /**
    * The certainty assessment of the entity mention. Its value is one of: LIKELY, SOMEWHAT_LIKELY,
    * UNCERTAIN, SOMEWHAT_UNLIKELY, UNLIKELY, CONDITIONAL
    * The value may be {@code null}.
@@ -93,6 +104,31 @@ public final class EntityMention extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Additional information about the entity mention. For example, for an entity mention of type
+   * `DATE` this can be its more specific date types from the following list: `ADMISSION_DATE`,
+   * `CONSULTATION_DATE`, `DISCHARGE_DATE`, `SERVICE_DATE`, `VISIT_DATE`, `DIAGNOSIS_DATE`,
+   * `MED_STARTED_DATE`, `MED_ENDED_DATE`, `NOTE_DATE`, `PROCEDURE_DATE`, `RADIATION_STARTED_DATE`,
+   * `RADIATION_ENDED_DATE`, `STAGE_DATE`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Feature> getAdditionalInfo() {
+    return additionalInfo;
+  }
+
+  /**
+   * Additional information about the entity mention. For example, for an entity mention of type
+   * `DATE` this can be its more specific date types from the following list: `ADMISSION_DATE`,
+   * `CONSULTATION_DATE`, `DISCHARGE_DATE`, `SERVICE_DATE`, `VISIT_DATE`, `DIAGNOSIS_DATE`,
+   * `MED_STARTED_DATE`, `MED_ENDED_DATE`, `NOTE_DATE`, `PROCEDURE_DATE`, `RADIATION_STARTED_DATE`,
+   * `RADIATION_ENDED_DATE`, `STAGE_DATE`
+   * @param additionalInfo additionalInfo or {@code null} for none
+   */
+  public EntityMention setAdditionalInfo(java.util.List<Feature> additionalInfo) {
+    this.additionalInfo = additionalInfo;
+    return this;
+  }
 
   /**
    * The certainty assessment of the entity mention. Its value is one of: LIKELY, SOMEWHAT_LIKELY,

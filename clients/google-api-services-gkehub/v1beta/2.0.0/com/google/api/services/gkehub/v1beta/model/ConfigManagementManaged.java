@@ -31,15 +31,23 @@ public final class ConfigManagementManaged extends com.google.api.client.json.Ge
 
   /**
    * Set to true to enable Managed Config Sync. Defaults to false which disables Managed Config
-   * Sync.
+   * Sync. Setting this field to true when configSync.enabled is false is invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
+   * Set to true to stop syncing configs for a single cluster. Default to false. If set to true,
+   * Managed Config Sync will not upgrade Config Sync.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean stopSyncing;
+
+  /**
    * Set to true to enable Managed Config Sync. Defaults to false which disables Managed Config
-   * Sync.
+   * Sync. Setting this field to true when configSync.enabled is false is invalid.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -48,11 +56,30 @@ public final class ConfigManagementManaged extends com.google.api.client.json.Ge
 
   /**
    * Set to true to enable Managed Config Sync. Defaults to false which disables Managed Config
-   * Sync.
+   * Sync. Setting this field to true when configSync.enabled is false is invalid.
    * @param enabled enabled or {@code null} for none
    */
   public ConfigManagementManaged setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Set to true to stop syncing configs for a single cluster. Default to false. If set to true,
+   * Managed Config Sync will not upgrade Config Sync.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStopSyncing() {
+    return stopSyncing;
+  }
+
+  /**
+   * Set to true to stop syncing configs for a single cluster. Default to false. If set to true,
+   * Managed Config Sync will not upgrade Config Sync.
+   * @param stopSyncing stopSyncing or {@code null} for none
+   */
+  public ConfigManagementManaged setStopSyncing(java.lang.Boolean stopSyncing) {
+    this.stopSyncing = stopSyncing;
     return this;
   }
 

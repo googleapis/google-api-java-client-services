@@ -59,6 +59,16 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
   private java.lang.String outputUriPrefix;
 
   /**
+   * The timestamp that corresponds to the version of the database to be exported. The timestamp
+   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
+   * exported documents will represent a consistent view of the database at the provided time.
+   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String snapshotTime;
+
+  /**
    * Which collection ids to export. Unspecified means all collections.
    * @return value or {@code null} for none
    */
@@ -122,6 +132,29 @@ public final class GoogleFirestoreAdminV1ExportDocumentsRequest extends com.goog
    */
   public GoogleFirestoreAdminV1ExportDocumentsRequest setOutputUriPrefix(java.lang.String outputUriPrefix) {
     this.outputUriPrefix = outputUriPrefix;
+    return this;
+  }
+
+  /**
+   * The timestamp that corresponds to the version of the database to be exported. The timestamp
+   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
+   * exported documents will represent a consistent view of the database at the provided time.
+   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * @return value or {@code null} for none
+   */
+  public String getSnapshotTime() {
+    return snapshotTime;
+  }
+
+  /**
+   * The timestamp that corresponds to the version of the database to be exported. The timestamp
+   * must be rounded to the minute, in the past, and not older than 1 hour. If specified, then the
+   * exported documents will represent a consistent view of the database at the provided time.
+   * Otherwise, there are no guarantees about the consistency of the exported documents.
+   * @param snapshotTime snapshotTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1ExportDocumentsRequest setSnapshotTime(String snapshotTime) {
+    this.snapshotTime = snapshotTime;
     return this;
   }
 

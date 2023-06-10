@@ -31,11 +31,35 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The access expiration time for this line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String accessEndTime;
+
+  /**
    * The list of eligibility_ids which are applicable for the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> partnerEligibilityIds;
+
+  /**
+   * Output only. The access expiration time for this line item.
+   * @return value or {@code null} for none
+   */
+  public String getAccessEndTime() {
+    return accessEndTime;
+  }
+
+  /**
+   * Output only. The access expiration time for this line item.
+   * @param accessEndTime accessEndTime or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload setAccessEndTime(String accessEndTime) {
+    this.accessEndTime = accessEndTime;
+    return this;
+  }
 
   /**
    * The list of eligibility_ids which are applicable for the line item.

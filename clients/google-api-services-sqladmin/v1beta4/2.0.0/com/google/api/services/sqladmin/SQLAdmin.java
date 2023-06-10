@@ -4116,6 +4116,143 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Reencrypt CMEK instance with latest key version.
+     *
+     * Create a request for the method "instances.reencrypt".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Reencrypt#execute()} method to invoke the remote operation.
+     *
+     * @param project ID of the project that contains the instance.
+     * @param instance Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.InstancesReencryptRequest}
+     * @return the request
+     */
+    public Reencrypt reencrypt(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesReencryptRequest content) throws java.io.IOException {
+      Reencrypt result = new Reencrypt(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Reencrypt extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/reencrypt";
+
+      /**
+       * Reencrypt CMEK instance with latest key version.
+       *
+       * Create a request for the method "instances.reencrypt".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Reencrypt#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Reencrypt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.InstancesReencryptRequest}
+       * @since 1.13
+       */
+      protected Reencrypt(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesReencryptRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public Reencrypt set$Xgafv(java.lang.String $Xgafv) {
+        return (Reencrypt) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reencrypt setAccessToken(java.lang.String accessToken) {
+        return (Reencrypt) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Reencrypt setAlt(java.lang.String alt) {
+        return (Reencrypt) super.setAlt(alt);
+      }
+
+      @Override
+      public Reencrypt setCallback(java.lang.String callback) {
+        return (Reencrypt) super.setCallback(callback);
+      }
+
+      @Override
+      public Reencrypt setFields(java.lang.String fields) {
+        return (Reencrypt) super.setFields(fields);
+      }
+
+      @Override
+      public Reencrypt setKey(java.lang.String key) {
+        return (Reencrypt) super.setKey(key);
+      }
+
+      @Override
+      public Reencrypt setOauthToken(java.lang.String oauthToken) {
+        return (Reencrypt) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Reencrypt setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Reencrypt) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Reencrypt setQuotaUser(java.lang.String quotaUser) {
+        return (Reencrypt) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Reencrypt setUploadType(java.lang.String uploadType) {
+        return (Reencrypt) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reencrypt setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reencrypt) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** ID of the project that contains the instance. */
+      public Reencrypt setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Cloud SQL instance ID. This does not include the project ID. */
+      public Reencrypt setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public Reencrypt set(String parameterName, Object value) {
+        return (Reencrypt) super.set(parameterName, value);
+      }
+    }
+    /**
      * Deletes all client certificates and generates a new server SSL certificate for the instance.
      *
      * Create a request for the method "instances.resetSslConfig".

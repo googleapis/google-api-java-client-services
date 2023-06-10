@@ -37,10 +37,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   private ConfigManagementBinauthzState binauthzState;
 
   /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed ACM on the cluster
-   * manually prior to enabling the ACM hub feature. Unique within a Anthos Config Management
-   * installation.
+   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
+   * Otherwise, it is set to the cluster's fleet membership name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,10 +98,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed ACM on the cluster
-   * manually prior to enabling the ACM hub feature. Unique within a Anthos Config Management
-   * installation.
+   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
+   * Otherwise, it is set to the cluster's fleet membership name.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -111,10 +107,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * The user-defined name for the cluster used by ClusterSelectors to group clusters together. This
-   * should match Membership's membership_name, unless the user installed ACM on the cluster
-   * manually prior to enabling the ACM hub feature. Unique within a Anthos Config Management
-   * installation.
+   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
+   * Otherwise, it is set to the cluster's fleet membership name.
    * @param clusterName clusterName or {@code null} for none
    */
   public ConfigManagementMembershipState setClusterName(java.lang.String clusterName) {

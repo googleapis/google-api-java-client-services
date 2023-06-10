@@ -31,6 +31,17 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
+   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cluster;
+
+  /**
    * Config Sync configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -57,6 +68,31 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
+   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCluster() {
+    return cluster;
+  }
+
+  /**
+   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
+   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
+   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * @param cluster cluster or {@code null} for none
+   */
+  public ConfigManagementMembershipSpec setCluster(java.lang.String cluster) {
+    this.cluster = cluster;
+    return this;
+  }
 
   /**
    * Config Sync configuration for the cluster.

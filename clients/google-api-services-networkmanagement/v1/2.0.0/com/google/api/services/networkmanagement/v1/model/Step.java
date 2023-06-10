@@ -132,6 +132,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GKEMasterInfo gkeMaster;
 
   /**
+   * Display information of a Google service
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleServiceInfo googleService;
+
+  /**
    * Display information of a Compute Engine instance.
    * The value may be {@code null}.
    */
@@ -433,6 +440,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setGkeMaster(GKEMasterInfo gkeMaster) {
     this.gkeMaster = gkeMaster;
+    return this;
+  }
+
+  /**
+   * Display information of a Google service
+   * @return value or {@code null} for none
+   */
+  public GoogleServiceInfo getGoogleService() {
+    return googleService;
+  }
+
+  /**
+   * Display information of a Google service
+   * @param googleService googleService or {@code null} for none
+   */
+  public Step setGoogleService(GoogleServiceInfo googleService) {
+    this.googleService = googleService;
     return this;
   }
 

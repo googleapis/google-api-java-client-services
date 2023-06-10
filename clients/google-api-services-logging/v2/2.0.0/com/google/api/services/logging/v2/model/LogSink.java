@@ -56,9 +56,10 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
-   * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs with Sinks
+   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
+   * "logging.googleapis.com/projects/[PROJECT_ID]" The sink's writer_identity, set when the sink is
+   * created, must have permission to write to the destination or else the log entries are not
+   * exported. For more information, see Exporting Logs with Sinks
    * (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
    * The value may be {@code null}.
    */
@@ -206,9 +207,10 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
-   * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs with Sinks
+   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
+   * "logging.googleapis.com/projects/[PROJECT_ID]" The sink's writer_identity, set when the sink is
+   * created, must have permission to write to the destination or else the log entries are not
+   * exported. For more information, see Exporting Logs with Sinks
    * (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
    * @return value or {@code null} for none
    */
@@ -219,9 +221,10 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
-   * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs with Sinks
+   * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
+   * "logging.googleapis.com/projects/[PROJECT_ID]" The sink's writer_identity, set when the sink is
+   * created, must have permission to write to the destination or else the log entries are not
+   * exported. For more information, see Exporting Logs with Sinks
    * (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
    * @param destination destination or {@code null} for none
    */

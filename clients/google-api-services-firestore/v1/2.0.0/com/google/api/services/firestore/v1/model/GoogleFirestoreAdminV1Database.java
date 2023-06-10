@@ -60,6 +60,17 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String deleteProtectionState;
 
   /**
+   * Output only. The earliest timestamp at which older versions of the data can be read from the
+   * database. See [version_retention_period] above; this field is populated with `now -
+   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
+   * is queried. If you are using this value to recover data, make sure to account for the time from
+   * the moment when the value is queried to the moment when you initiate the recovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String earliestVersionTime;
+
+  /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -93,6 +104,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String name;
 
   /**
+   * Whether to enable the PITR feature on this database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pointInTimeRecoveryEnablement;
+
+  /**
    * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
    * for information about how to choose.
    * The value may be {@code null}.
@@ -114,6 +132,16 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The period during which past versions of data are retained in the database. Any
+   * read or query can specify a `read_time` within this window, and will read the state of the
+   * database at that time. If the PITR feature is enabled, the retention period is 7 days.
+   * Otherwise, the retention period is 1 hour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String versionRetentionPeriod;
 
   /**
    * The App Engine integration mode to use for this database.
@@ -182,6 +210,31 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setDeleteProtectionState(java.lang.String deleteProtectionState) {
     this.deleteProtectionState = deleteProtectionState;
+    return this;
+  }
+
+  /**
+   * Output only. The earliest timestamp at which older versions of the data can be read from the
+   * database. See [version_retention_period] above; this field is populated with `now -
+   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
+   * is queried. If you are using this value to recover data, make sure to account for the time from
+   * the moment when the value is queried to the moment when you initiate the recovery.
+   * @return value or {@code null} for none
+   */
+  public String getEarliestVersionTime() {
+    return earliestVersionTime;
+  }
+
+  /**
+   * Output only. The earliest timestamp at which older versions of the data can be read from the
+   * database. See [version_retention_period] above; this field is populated with `now -
+   * version_retention_period`. This value is continuously updated, and becomes stale the moment it
+   * is queried. If you are using this value to recover data, make sure to account for the time from
+   * the moment when the value is queried to the moment when you initiate the recovery.
+   * @param earliestVersionTime earliestVersionTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setEarliestVersionTime(String earliestVersionTime) {
+    this.earliestVersionTime = earliestVersionTime;
     return this;
   }
 
@@ -264,6 +317,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
+   * Whether to enable the PITR feature on this database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPointInTimeRecoveryEnablement() {
+    return pointInTimeRecoveryEnablement;
+  }
+
+  /**
+   * Whether to enable the PITR feature on this database.
+   * @param pointInTimeRecoveryEnablement pointInTimeRecoveryEnablement or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setPointInTimeRecoveryEnablement(java.lang.String pointInTimeRecoveryEnablement) {
+    this.pointInTimeRecoveryEnablement = pointInTimeRecoveryEnablement;
+    return this;
+  }
+
+  /**
    * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
    * for information about how to choose.
    * @return value or {@code null} for none
@@ -315,6 +385,29 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The period during which past versions of data are retained in the database. Any
+   * read or query can specify a `read_time` within this window, and will read the state of the
+   * database at that time. If the PITR feature is enabled, the retention period is 7 days.
+   * Otherwise, the retention period is 1 hour.
+   * @return value or {@code null} for none
+   */
+  public String getVersionRetentionPeriod() {
+    return versionRetentionPeriod;
+  }
+
+  /**
+   * Output only. The period during which past versions of data are retained in the database. Any
+   * read or query can specify a `read_time` within this window, and will read the state of the
+   * database at that time. If the PITR feature is enabled, the retention period is 7 days.
+   * Otherwise, the retention period is 1 hour.
+   * @param versionRetentionPeriod versionRetentionPeriod or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setVersionRetentionPeriod(String versionRetentionPeriod) {
+    this.versionRetentionPeriod = versionRetentionPeriod;
     return this;
   }
 

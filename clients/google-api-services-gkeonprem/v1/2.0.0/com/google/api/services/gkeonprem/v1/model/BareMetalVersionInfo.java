@@ -30,6 +30,13 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalVersionInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of upgrade dependencies for this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UpgradeDependency> dependencies;
+
+  /**
    * If set, the cluster dependencies (e.g. the admin cluster, other user clusters managed by the
    * same admin cluster, version skew policy, etc) must be upgraded before this version can be
    * installed or upgraded to.
@@ -44,6 +51,23 @@ public final class BareMetalVersionInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The list of upgrade dependencies for this version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UpgradeDependency> getDependencies() {
+    return dependencies;
+  }
+
+  /**
+   * The list of upgrade dependencies for this version.
+   * @param dependencies dependencies or {@code null} for none
+   */
+  public BareMetalVersionInfo setDependencies(java.util.List<UpgradeDependency> dependencies) {
+    this.dependencies = dependencies;
+    return this;
+  }
 
   /**
    * If set, the cluster dependencies (e.g. the admin cluster, other user clusters managed by the

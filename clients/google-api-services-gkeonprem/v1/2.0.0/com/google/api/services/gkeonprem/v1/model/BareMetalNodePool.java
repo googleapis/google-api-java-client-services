@@ -121,6 +121,13 @@ public final class BareMetalNodePool extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
+   * The worker node pool upgrade policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BareMetalNodePoolUpgradePolicy upgradePolicy;
+
+  /**
    * Annotations on the bare metal node pool. This field has the same restrictions as Kubernetes
    * annotations. The total size of all keys and values combined is limited to 256k. Key can have 2
    * segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS
@@ -335,6 +342,23 @@ public final class BareMetalNodePool extends com.google.api.client.json.GenericJ
    */
   public BareMetalNodePool setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The worker node pool upgrade policy.
+   * @return value or {@code null} for none
+   */
+  public BareMetalNodePoolUpgradePolicy getUpgradePolicy() {
+    return upgradePolicy;
+  }
+
+  /**
+   * The worker node pool upgrade policy.
+   * @param upgradePolicy upgradePolicy or {@code null} for none
+   */
+  public BareMetalNodePool setUpgradePolicy(BareMetalNodePoolUpgradePolicy upgradePolicy) {
+    this.upgradePolicy = upgradePolicy;
     return this;
   }
 

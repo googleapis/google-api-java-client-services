@@ -50,6 +50,14 @@ public final class SasPortalProvisionDeploymentRequest extends com.google.api.cl
   private java.lang.String newOrganizationDisplayName;
 
   /**
+   * Optional. If this field is set then a new deployment will be created under the organization
+   * specified by this id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long organizationId;
+
+  /**
    * Optional. If this field is set, and a new SAS Portal Deployment needs to be created, its
    * display name will be set to the value of this field.
    * @return value or {@code null} for none
@@ -84,6 +92,25 @@ public final class SasPortalProvisionDeploymentRequest extends com.google.api.cl
    */
   public SasPortalProvisionDeploymentRequest setNewOrganizationDisplayName(java.lang.String newOrganizationDisplayName) {
     this.newOrganizationDisplayName = newOrganizationDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. If this field is set then a new deployment will be created under the organization
+   * specified by this id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrganizationId() {
+    return organizationId;
+  }
+
+  /**
+   * Optional. If this field is set then a new deployment will be created under the organization
+   * specified by this id.
+   * @param organizationId organizationId or {@code null} for none
+   */
+  public SasPortalProvisionDeploymentRequest setOrganizationId(java.lang.Long organizationId) {
+    this.organizationId = organizationId;
     return this;
   }
 

@@ -140,8 +140,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> userLabels;
 
   /**
-   * Read-only description of how the alert policy is invalid. OK if the alert policy is valid. If
-   * not OK, the alert policy will not generate incidents.
+   * Read-only description of how the alert policy is invalid. This field is only set when the alert
+   * policy is invalid. An invalid alert policy will not generate incidents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -397,8 +397,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only description of how the alert policy is invalid. OK if the alert policy is valid. If
-   * not OK, the alert policy will not generate incidents.
+   * Read-only description of how the alert policy is invalid. This field is only set when the alert
+   * policy is invalid. An invalid alert policy will not generate incidents.
    * @return value or {@code null} for none
    */
   public Status getValidity() {
@@ -406,8 +406,8 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only description of how the alert policy is invalid. OK if the alert policy is valid. If
-   * not OK, the alert policy will not generate incidents.
+   * Read-only description of how the alert policy is invalid. This field is only set when the alert
+   * policy is invalid. An invalid alert policy will not generate incidents.
    * @param validity validity or {@code null} for none
    */
   public AlertPolicy setValidity(Status validity) {

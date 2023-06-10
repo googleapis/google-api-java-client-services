@@ -346,6 +346,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> videoLink;
 
   /**
+   * Virtual Model (3d) asset link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String virtualModelLink;
+
+  /**
    * The additional images of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#addlimage.
    * @return value or {@code null} for none
@@ -1087,6 +1094,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setVideoLink(java.util.List<java.lang.String> videoLink) {
     this.videoLink = videoLink;
+    return this;
+  }
+
+  /**
+   * Virtual Model (3d) asset link.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVirtualModelLink() {
+    return virtualModelLink;
+  }
+
+  /**
+   * Virtual Model (3d) asset link.
+   * @param virtualModelLink virtualModelLink or {@code null} for none
+   */
+  public Attributes setVirtualModelLink(java.lang.String virtualModelLink) {
+    this.virtualModelLink = virtualModelLink;
     return this;
   }
 

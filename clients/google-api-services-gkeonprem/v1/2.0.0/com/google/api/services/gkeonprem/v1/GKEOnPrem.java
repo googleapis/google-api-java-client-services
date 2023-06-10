@@ -2286,6 +2286,40 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * If set to true, the unenrollment of a bare metal admin cluster resource will succeed
+           * even if errors occur during unenrollment. This parameter can be used when you want to
+           * unenroll admin cluster resource and the on-prem admin cluster is disconnected /
+           * unreachable. WARNING: Using this parameter when your admin cluster still exists may
+           * result in a deleted GCP admin cluster but existing resourcelink in on-prem admin
+           * cluster and membership.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreErrors;
+
+          /** If set to true, the unenrollment of a bare metal admin cluster resource will succeed even if errors
+         occur during unenrollment. This parameter can be used when you want to unenroll admin cluster
+         resource and the on-prem admin cluster is disconnected / unreachable. WARNING: Using this parameter
+         when your admin cluster still exists may result in a deleted GCP admin cluster but existing
+         resourcelink in on-prem admin cluster and membership.
+           */
+          public java.lang.Boolean getIgnoreErrors() {
+            return ignoreErrors;
+          }
+
+          /**
+           * If set to true, the unenrollment of a bare metal admin cluster resource will succeed
+           * even if errors occur during unenrollment. This parameter can be used when you want to
+           * unenroll admin cluster resource and the on-prem admin cluster is disconnected /
+           * unreachable. WARNING: Using this parameter when your admin cluster still exists may
+           * result in a deleted GCP admin cluster but existing resourcelink in on-prem admin
+           * cluster and membership.
+           */
+          public Unenroll setIgnoreErrors(java.lang.Boolean ignoreErrors) {
+            this.ignoreErrors = ignoreErrors;
+            return this;
+          }
+
           /** Validate the request without actually doing any updates. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
@@ -7411,193 +7445,6 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
-            }
-          }
-
-        }
-      }
-      /**
-       * An accessor for creating requests from the BareMetalStandaloneClusters collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code GKEOnPrem gkeonprem = new GKEOnPrem(...);}
-       *   {@code GKEOnPrem.BareMetalStandaloneClusters.List request = gkeonprem.bareMetalStandaloneClusters().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public BareMetalStandaloneClusters bareMetalStandaloneClusters() {
-        return new BareMetalStandaloneClusters();
-      }
-
-      /**
-       * The "bareMetalStandaloneClusters" collection of methods.
-       */
-      public class BareMetalStandaloneClusters {
-
-        /**
-         * An accessor for creating requests from the BareMetalStandaloneNodePools collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code GKEOnPrem gkeonprem = new GKEOnPrem(...);}
-         *   {@code GKEOnPrem.BareMetalStandaloneNodePools.List request = gkeonprem.bareMetalStandaloneNodePools().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public BareMetalStandaloneNodePools bareMetalStandaloneNodePools() {
-          return new BareMetalStandaloneNodePools();
-        }
-
-        /**
-         * The "bareMetalStandaloneNodePools" collection of methods.
-         */
-        public class BareMetalStandaloneNodePools {
-
-          /**
-           * Enrolls an existing bare metal standalone node pool to the Anthos On-Prem API within a given
-           * project and location. Through enrollment, an existing standalone node pool will become Anthos On-
-           * Prem API managed. The corresponding GCP resources will be created.
-           *
-           * Create a request for the method "bareMetalStandaloneNodePools.enroll".
-           *
-           * This request holds the parameters needed by the gkeonprem server.  After setting any optional
-           * parameters, call the {@link Enroll#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The parent resource where this node pool will be created.
-           *        projects/{project}/locations/{location}/bareMetalStandaloneClusters/{cluster}
-           * @param content the {@link com.google.api.services.gkeonprem.v1.model.EnrollBareMetalStandaloneNodePoolRequest}
-           * @return the request
-           */
-          public Enroll enroll(java.lang.String parent, com.google.api.services.gkeonprem.v1.model.EnrollBareMetalStandaloneNodePoolRequest content) throws java.io.IOException {
-            Enroll result = new Enroll(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Enroll extends GKEOnPremRequest<com.google.api.services.gkeonprem.v1.model.Operation> {
-
-            private static final String REST_PATH = "v1/{+parent}/bareMetalStandaloneNodePools:enroll";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/bareMetalStandaloneClusters/[^/]+$");
-
-            /**
-             * Enrolls an existing bare metal standalone node pool to the Anthos On-Prem API within a given
-             * project and location. Through enrollment, an existing standalone node pool will become Anthos
-             * On-Prem API managed. The corresponding GCP resources will be created.
-             *
-             * Create a request for the method "bareMetalStandaloneNodePools.enroll".
-             *
-             * This request holds the parameters needed by the the gkeonprem server.  After setting any
-             * optional parameters, call the {@link Enroll#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Enroll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The parent resource where this node pool will be created.
-           *        projects/{project}/locations/{location}/bareMetalStandaloneClusters/{cluster}
-             * @param content the {@link com.google.api.services.gkeonprem.v1.model.EnrollBareMetalStandaloneNodePoolRequest}
-             * @since 1.13
-             */
-            protected Enroll(java.lang.String parent, com.google.api.services.gkeonprem.v1.model.EnrollBareMetalStandaloneNodePoolRequest content) {
-              super(GKEOnPrem.this, "POST", REST_PATH, content, com.google.api.services.gkeonprem.v1.model.Operation.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/bareMetalStandaloneClusters/[^/]+$");
-              }
-            }
-
-            @Override
-            public Enroll set$Xgafv(java.lang.String $Xgafv) {
-              return (Enroll) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Enroll setAccessToken(java.lang.String accessToken) {
-              return (Enroll) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Enroll setAlt(java.lang.String alt) {
-              return (Enroll) super.setAlt(alt);
-            }
-
-            @Override
-            public Enroll setCallback(java.lang.String callback) {
-              return (Enroll) super.setCallback(callback);
-            }
-
-            @Override
-            public Enroll setFields(java.lang.String fields) {
-              return (Enroll) super.setFields(fields);
-            }
-
-            @Override
-            public Enroll setKey(java.lang.String key) {
-              return (Enroll) super.setKey(key);
-            }
-
-            @Override
-            public Enroll setOauthToken(java.lang.String oauthToken) {
-              return (Enroll) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Enroll setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Enroll) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Enroll setQuotaUser(java.lang.String quotaUser) {
-              return (Enroll) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Enroll setUploadType(java.lang.String uploadType) {
-              return (Enroll) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Enroll setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Enroll) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The parent resource where this node pool will be created.
-             * projects/{project}/locations/{location}/bareMetalStandaloneClusters/{cluster}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The parent resource where this node pool will be created.
-           projects/{project}/locations/{location}/bareMetalStandaloneClusters/{cluster}
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * Required. The parent resource where this node pool will be created.
-             * projects/{project}/locations/{location}/bareMetalStandaloneClusters/{cluster}
-             */
-            public Enroll setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/bareMetalStandaloneClusters/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            @Override
-            public Enroll set(String parameterName, Object value) {
-              return (Enroll) super.set(parameterName, value);
             }
           }
 

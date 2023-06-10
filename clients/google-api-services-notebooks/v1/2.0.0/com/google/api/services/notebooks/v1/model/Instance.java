@@ -208,7 +208,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean noProxyAccess;
 
   /**
-   * If true, no public IP will be assigned to this instance.
+   * If true, no external IP will be assigned to this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -730,7 +730,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, no public IP will be assigned to this instance.
+   * If true, no external IP will be assigned to this instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoPublicIp() {
@@ -738,7 +738,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, no public IP will be assigned to this instance.
+   * If true, no external IP will be assigned to this instance.
    * @param noPublicIp noPublicIp or {@code null} for none
    */
   public Instance setNoPublicIp(java.lang.Boolean noPublicIp) {

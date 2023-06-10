@@ -2587,7 +2587,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Check if a notebook instance is healthy.
+         * Checks whether a notebook instance is healthy.
          *
          * Create a request for the method "instances.getInstanceHealth".
          *
@@ -2611,7 +2611,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Check if a notebook instance is healthy.
+           * Checks whether a notebook instance is healthy.
            *
            * Create a request for the method "instances.getInstanceHealth".
            *
@@ -2730,7 +2730,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Check if a notebook instance is upgradable.
+         * Checks whether a notebook instance is upgradable.
          *
          * Create a request for the method "instances.isUpgradeable".
          *
@@ -2754,7 +2754,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Check if a notebook instance is upgradable.
+           * Checks whether a notebook instance is upgradable.
            *
            * Create a request for the method "instances.isUpgradeable".
            *
@@ -7349,7 +7349,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Report and process a runtime event.
+         * Reports and processes a runtime event.
          *
          * Create a request for the method "runtimes.reportEvent".
          *
@@ -7374,7 +7374,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/runtimes/[^/]+$");
 
           /**
-           * Report and process a runtime event.
+           * Reports and processes a runtime event.
            *
            * Create a request for the method "runtimes.reportEvent".
            *

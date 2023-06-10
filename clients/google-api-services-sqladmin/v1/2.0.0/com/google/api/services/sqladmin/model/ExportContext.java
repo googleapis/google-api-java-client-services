@@ -271,16 +271,15 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     private java.lang.String bakType;
 
     /**
-     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
-     * behavior should default to copy_only = true use differential_base instead
+     * Deprecated: copy_only is deprecated. Use differential_base instead
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean copyOnly;
 
     /**
-     * Whether or not the backup can be use as differential base only non copy only backup can be
-     * served as differential base
+     * Whether or not the backup can be used as a differential base copy_only backup can not be served
+     * as differential base
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -319,8 +318,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
-     * behavior should default to copy_only = true use differential_base instead
+     * Deprecated: copy_only is deprecated. Use differential_base instead
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCopyOnly() {
@@ -328,8 +326,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the export will be exeucted with COPY_ONLY, SQL Server only deprecated as the
-     * behavior should default to copy_only = true use differential_base instead
+     * Deprecated: copy_only is deprecated. Use differential_base instead
      * @param copyOnly copyOnly or {@code null} for none
      */
     public BakExportOptions setCopyOnly(java.lang.Boolean copyOnly) {
@@ -338,8 +335,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the backup can be use as differential base only non copy only backup can be
-     * served as differential base
+     * Whether or not the backup can be used as a differential base copy_only backup can not be served
+     * as differential base
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getDifferentialBase() {
@@ -347,8 +344,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Whether or not the backup can be use as differential base only non copy only backup can be
-     * served as differential base
+     * Whether or not the backup can be used as a differential base copy_only backup can not be served
+     * as differential base
      * @param differentialBase differentialBase or {@code null} for none
      */
     public BakExportOptions setDifferentialBase(java.lang.Boolean differentialBase) {

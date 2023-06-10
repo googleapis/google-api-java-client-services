@@ -52,6 +52,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String databaseVersion;
 
   /**
+   * The dns name of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dnsName;
+
+  /**
    * The assigned IP addresses for the instance.
    * The value may be {@code null}.
    */
@@ -127,6 +134,23 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * The dns name of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDnsName() {
+    return dnsName;
+  }
+
+  /**
+   * The dns name of the instance.
+   * @param dnsName dnsName or {@code null} for none
+   */
+  public ConnectSettings setDnsName(java.lang.String dnsName) {
+    this.dnsName = dnsName;
     return this;
   }
 

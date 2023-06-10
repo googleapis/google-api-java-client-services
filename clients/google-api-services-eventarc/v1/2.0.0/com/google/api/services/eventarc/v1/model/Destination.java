@@ -56,6 +56,13 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private GKE gke;
 
   /**
+   * An HTTP endpoint destination described by an URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpEndpoint httpEndpoint;
+
+  /**
    * The resource name of the Workflow whose Executions are triggered by the events. The Workflow
    * resource should be deployed in the same project as the trigger. Format:
    * `projects/{project}/locations/{location}/workflows/{workflow}`
@@ -122,6 +129,23 @@ public final class Destination extends com.google.api.client.json.GenericJson {
    */
   public Destination setGke(GKE gke) {
     this.gke = gke;
+    return this;
+  }
+
+  /**
+   * An HTTP endpoint destination described by an URI.
+   * @return value or {@code null} for none
+   */
+  public HttpEndpoint getHttpEndpoint() {
+    return httpEndpoint;
+  }
+
+  /**
+   * An HTTP endpoint destination described by an URI.
+   * @param httpEndpoint httpEndpoint or {@code null} for none
+   */
+  public Destination setHttpEndpoint(HttpEndpoint httpEndpoint) {
+    this.httpEndpoint = httpEndpoint;
     return this;
   }
 

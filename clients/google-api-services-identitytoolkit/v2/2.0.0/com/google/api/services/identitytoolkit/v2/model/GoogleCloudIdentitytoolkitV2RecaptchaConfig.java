@@ -37,7 +37,9 @@ public final class GoogleCloudIdentitytoolkitV2RecaptchaConfig extends com.googl
   private java.util.List<GoogleCloudIdentitytoolkitV2RecaptchaEnforcementState> recaptchaEnforcementState;
 
   /**
-   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}".
+   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}". This will
+   * only be returned when the reCAPTCHA enforcement state is AUDIT or ENFORCE on at least one of
+   * the reCAPTCHA providers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,9 @@ public final class GoogleCloudIdentitytoolkitV2RecaptchaConfig extends com.googl
   }
 
   /**
-   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}".
+   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}". This will
+   * only be returned when the reCAPTCHA enforcement state is AUDIT or ENFORCE on at least one of
+   * the reCAPTCHA providers.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecaptchaKey() {
@@ -69,7 +73,9 @@ public final class GoogleCloudIdentitytoolkitV2RecaptchaConfig extends com.googl
   }
 
   /**
-   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}".
+   * The reCAPTCHA Enterprise key resource name, e.g. "projects/{project}/keys/{key}". This will
+   * only be returned when the reCAPTCHA enforcement state is AUDIT or ENFORCE on at least one of
+   * the reCAPTCHA providers.
    * @param recaptchaKey recaptchaKey or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV2RecaptchaConfig setRecaptchaKey(java.lang.String recaptchaKey) {

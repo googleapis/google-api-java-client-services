@@ -4180,7 +4180,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * @param targetProjectId If `tenant_id` is specified, the ID of the Google Cloud project that the Identity Platform tenant
          *        belongs to. Otherwise, the ID of the Google Cloud project that accounts belong to.
          * @param tenantId If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts belong
-         *        to an default Identity Platform project, the field is not needed.
+         *        to a default Identity Platform project, the field is not needed.
          * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest}
          * @return the request
          */
@@ -4217,7 +4217,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
            * @param targetProjectId If `tenant_id` is specified, the ID of the Google Cloud project that the Identity Platform tenant
          *        belongs to. Otherwise, the ID of the Google Cloud project that accounts belong to.
            * @param tenantId If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts belong
-         *        to an default Identity Platform project, the field is not needed.
+         *        to a default Identity Platform project, the field is not needed.
            * @param content the {@link com.google.api.services.identitytoolkit.v1.model.GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest}
            * @since 1.13
            */
@@ -4324,13 +4324,13 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
           /**
            * If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the
-           * accounts belong to an default Identity Platform project, the field is not needed.
+           * accounts belong to a default Identity Platform project, the field is not needed.
            */
           @com.google.api.client.util.Key
           private java.lang.String tenantId;
 
           /** If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts belong
-         to an default Identity Platform project, the field is not needed.
+         to a default Identity Platform project, the field is not needed.
            */
           public java.lang.String getTenantId() {
             return tenantId;
@@ -4338,7 +4338,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
           /**
            * If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the
-           * accounts belong to an default Identity Platform project, the field is not needed.
+           * accounts belong to a default Identity Platform project, the field is not needed.
            */
           public BatchDelete setTenantId(java.lang.String tenantId) {
             if (!getSuppressPatternChecks()) {

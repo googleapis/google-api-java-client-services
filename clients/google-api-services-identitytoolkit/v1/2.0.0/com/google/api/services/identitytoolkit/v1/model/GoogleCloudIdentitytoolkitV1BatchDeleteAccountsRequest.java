@@ -46,7 +46,7 @@ public final class GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest extend
 
   /**
    * If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts
-   * belong to an default Identity Platform project, the field is not needed.
+   * belong to a default Identity Platform project, the field is not needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest extend
 
   /**
    * If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts
-   * belong to an default Identity Platform project, the field is not needed.
+   * belong to a default Identity Platform project, the field is not needed.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenantId() {
@@ -99,7 +99,7 @@ public final class GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest extend
 
   /**
    * If the accounts belong to an Identity Platform tenant, the ID of the tenant. If the accounts
-   * belong to an default Identity Platform project, the field is not needed.
+   * belong to a default Identity Platform project, the field is not needed.
    * @param tenantId tenantId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1BatchDeleteAccountsRequest setTenantId(java.lang.String tenantId) {

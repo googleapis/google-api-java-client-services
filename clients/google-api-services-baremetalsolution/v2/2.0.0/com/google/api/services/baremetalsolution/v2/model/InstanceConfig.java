@@ -118,6 +118,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private NetworkAddress privateNetwork;
 
   /**
+   * List of names of ssh keys used to provision the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sshKeyNames;
+
+  /**
    * User note field, it can be used by customers to add additional information for the BMS Ops team
    * .
    * The value may be {@code null}.
@@ -317,6 +324,23 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setPrivateNetwork(NetworkAddress privateNetwork) {
     this.privateNetwork = privateNetwork;
+    return this;
+  }
+
+  /**
+   * List of names of ssh keys used to provision the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSshKeyNames() {
+    return sshKeyNames;
+  }
+
+  /**
+   * List of names of ssh keys used to provision the instance.
+   * @param sshKeyNames sshKeyNames or {@code null} for none
+   */
+  public InstanceConfig setSshKeyNames(java.util.List<java.lang.String> sshKeyNames) {
+    this.sshKeyNames = sshKeyNames;
     return this;
   }
 

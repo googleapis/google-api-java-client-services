@@ -3075,6 +3075,162 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         return (UpdateIapSettings) super.set(parameterName, value);
       }
     }
+    /**
+     * Validates a given CEL expression conforms to IAP restrictions.
+     *
+     * Create a request for the method "v1.validateAttributeExpression".
+     *
+     * This request holds the parameters needed by the iap server.  After setting any optional
+     * parameters, call the {@link ValidateAttributeExpression#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the IAP protected resource.
+     * @return the request
+     */
+    public ValidateAttributeExpression validateAttributeExpression(java.lang.String name) throws java.io.IOException {
+      ValidateAttributeExpression result = new ValidateAttributeExpression(name);
+      initialize(result);
+      return result;
+    }
+
+    public class ValidateAttributeExpression extends CloudIAPRequest<com.google.api.services.iap.v1.model.ValidateIapAttributeExpressionResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:validateAttributeExpression";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.*$");
+
+      /**
+       * Validates a given CEL expression conforms to IAP restrictions.
+       *
+       * Create a request for the method "v1.validateAttributeExpression".
+       *
+       * This request holds the parameters needed by the the iap server.  After setting any optional
+       * parameters, call the {@link ValidateAttributeExpression#execute()} method to invoke the remote
+       * operation. <p> {@link ValidateAttributeExpression#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the IAP protected resource.
+       * @since 1.13
+       */
+      protected ValidateAttributeExpression(java.lang.String name) {
+        super(CloudIAP.this, "POST", REST_PATH, null, com.google.api.services.iap.v1.model.ValidateIapAttributeExpressionResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.*$");
+        }
+      }
+
+      @Override
+      public ValidateAttributeExpression set$Xgafv(java.lang.String $Xgafv) {
+        return (ValidateAttributeExpression) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ValidateAttributeExpression setAccessToken(java.lang.String accessToken) {
+        return (ValidateAttributeExpression) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ValidateAttributeExpression setAlt(java.lang.String alt) {
+        return (ValidateAttributeExpression) super.setAlt(alt);
+      }
+
+      @Override
+      public ValidateAttributeExpression setCallback(java.lang.String callback) {
+        return (ValidateAttributeExpression) super.setCallback(callback);
+      }
+
+      @Override
+      public ValidateAttributeExpression setFields(java.lang.String fields) {
+        return (ValidateAttributeExpression) super.setFields(fields);
+      }
+
+      @Override
+      public ValidateAttributeExpression setKey(java.lang.String key) {
+        return (ValidateAttributeExpression) super.setKey(key);
+      }
+
+      @Override
+      public ValidateAttributeExpression setOauthToken(java.lang.String oauthToken) {
+        return (ValidateAttributeExpression) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ValidateAttributeExpression setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ValidateAttributeExpression) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ValidateAttributeExpression setQuotaUser(java.lang.String quotaUser) {
+        return (ValidateAttributeExpression) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ValidateAttributeExpression setUploadType(java.lang.String uploadType) {
+        return (ValidateAttributeExpression) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ValidateAttributeExpression setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ValidateAttributeExpression) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the IAP protected resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the IAP protected resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The resource name of the IAP protected resource. */
+      public ValidateAttributeExpression setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^.*$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. User input string expression. Should be of the form
+       * 'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+       * '{attribute_name}'])'
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String expression;
+
+      /** Required. User input string expression. Should be of the form
+     'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+     '{attribute_name}'])'
+       */
+      public java.lang.String getExpression() {
+        return expression;
+      }
+
+      /**
+       * Required. User input string expression. Should be of the form
+       * 'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+       * '{attribute_name}'])'
+       */
+      public ValidateAttributeExpression setExpression(java.lang.String expression) {
+        this.expression = expression;
+        return this;
+      }
+
+      @Override
+      public ValidateAttributeExpression set(String parameterName, Object value) {
+        return (ValidateAttributeExpression) super.set(parameterName, value);
+      }
+    }
 
   }
 

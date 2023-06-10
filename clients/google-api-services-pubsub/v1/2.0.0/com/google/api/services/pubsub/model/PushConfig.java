@@ -47,12 +47,28 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
+   * When set, the payload to the push endpoint is not wrapped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NoWrapper noWrapper;
+
+  /**
    * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
    * in the HTTP request for every pushed message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OidcToken oidcToken;
+
+  /**
+   * When set, the payload to the push endpoint is in the form of the JSON representation of a
+   * PubsubMessage
+   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PubsubWrapper pubsubWrapper;
 
   /**
    * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
@@ -100,6 +116,23 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * When set, the payload to the push endpoint is not wrapped.
+   * @return value or {@code null} for none
+   */
+  public NoWrapper getNoWrapper() {
+    return noWrapper;
+  }
+
+  /**
+   * When set, the payload to the push endpoint is not wrapped.
+   * @param noWrapper noWrapper or {@code null} for none
+   */
+  public PushConfig setNoWrapper(NoWrapper noWrapper) {
+    this.noWrapper = noWrapper;
+    return this;
+  }
+
+  /**
    * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
    * in the HTTP request for every pushed message.
    * @return value or {@code null} for none
@@ -115,6 +148,27 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
    */
   public PushConfig setOidcToken(OidcToken oidcToken) {
     this.oidcToken = oidcToken;
+    return this;
+  }
+
+  /**
+   * When set, the payload to the push endpoint is in the form of the JSON representation of a
+   * PubsubMessage
+   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * @return value or {@code null} for none
+   */
+  public PubsubWrapper getPubsubWrapper() {
+    return pubsubWrapper;
+  }
+
+  /**
+   * When set, the payload to the push endpoint is in the form of the JSON representation of a
+   * PubsubMessage
+   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * @param pubsubWrapper pubsubWrapper or {@code null} for none
+   */
+  public PushConfig setPubsubWrapper(PubsubWrapper pubsubWrapper) {
+    this.pubsubWrapper = pubsubWrapper;
     return this;
   }
 

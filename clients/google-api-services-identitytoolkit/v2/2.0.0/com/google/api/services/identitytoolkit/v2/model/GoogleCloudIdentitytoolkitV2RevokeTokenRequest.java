@@ -48,7 +48,7 @@ public final class GoogleCloudIdentitytoolkitV2RevokeTokenRequest extends com.go
 
   /**
    * The redirect URI provided in the initial authorization request made by the client to the IDP.
-   * The URI must use the HTTPS protocol, include a domain name, and can’t contain an IP address or
+   * The URI must use the HTTPS protocol, include a domain name, and can't contain an IP address or
    * localhost. Required if token_type is CODE.
    * The value may be {@code null}.
    */
@@ -120,7 +120,7 @@ public final class GoogleCloudIdentitytoolkitV2RevokeTokenRequest extends com.go
 
   /**
    * The redirect URI provided in the initial authorization request made by the client to the IDP.
-   * The URI must use the HTTPS protocol, include a domain name, and can’t contain an IP address or
+   * The URI must use the HTTPS protocol, include a domain name, and can't contain an IP address or
    * localhost. Required if token_type is CODE.
    * @return value or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class GoogleCloudIdentitytoolkitV2RevokeTokenRequest extends com.go
 
   /**
    * The redirect URI provided in the initial authorization request made by the client to the IDP.
-   * The URI must use the HTTPS protocol, include a domain name, and can’t contain an IP address or
+   * The URI must use the HTTPS protocol, include a domain name, and can't contain an IP address or
    * localhost. Required if token_type is CODE.
    * @param redirectUri redirectUri or {@code null} for none
    */

@@ -63,6 +63,13 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
   private java.lang.String language;
 
   /**
+   * Harmful and sensitive categories identified in the input document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClassificationCategory> moderationCategories;
+
+  /**
    * Sentences in the input document. Populated if the user enables
    * AnnotateTextRequest.Features.extract_syntax.
    * The value may be {@code null}.
@@ -151,6 +158,23 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
    */
   public AnnotateTextResponse setLanguage(java.lang.String language) {
     this.language = language;
+    return this;
+  }
+
+  /**
+   * Harmful and sensitive categories identified in the input document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClassificationCategory> getModerationCategories() {
+    return moderationCategories;
+  }
+
+  /**
+   * Harmful and sensitive categories identified in the input document.
+   * @param moderationCategories moderationCategories or {@code null} for none
+   */
+  public AnnotateTextResponse setModerationCategories(java.util.List<ClassificationCategory> moderationCategories) {
+    this.moderationCategories = moderationCategories;
     return this;
   }
 

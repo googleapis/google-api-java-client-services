@@ -55,6 +55,13 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   private java.lang.String project;
 
   /**
+   * Output only. Overall state of PSC Connections management for this consumer psc config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed
    * from another region.
    * @return value or {@code null} for none
@@ -108,6 +115,23 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
    */
   public ConsumerPscConfig setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Output only. Overall state of PSC Connections management for this consumer psc config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. Overall state of PSC Connections management for this consumer psc config.
+   * @param state state or {@code null} for none
+   */
+  public ConsumerPscConfig setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

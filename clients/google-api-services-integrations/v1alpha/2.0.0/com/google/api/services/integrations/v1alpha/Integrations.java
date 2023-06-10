@@ -3175,7 +3175,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
         }
         /**
          * Executes an integration on receiving events from Integration Connector triggers, Eventarc or CPS
-         * Trigger. The details about integration are derived from CloudEvent request body.
+         * Trigger. Input data to integration is received in body in json format
          *
          * Create a request for the method "integrations.executeEvent".
          *
@@ -3184,10 +3184,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          *
          * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-         * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaExecuteEventRequest}
+         * @param content the {@link com.google.api.services.integrations.v1alpha.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
          * @return the request
          */
-        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaExecuteEventRequest content) throws java.io.IOException {
+        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1alpha.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) throws java.io.IOException {
           ExecuteEvent result = new ExecuteEvent(name, content);
           initialize(result);
           return result;
@@ -3202,7 +3202,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
           /**
            * Executes an integration on receiving events from Integration Connector triggers, Eventarc or
-           * CPS Trigger. The details about integration are derived from CloudEvent request body.
+           * CPS Trigger. Input data to integration is received in body in json format
            *
            * Create a request for the method "integrations.executeEvent".
            *
@@ -3214,10 +3214,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *
            * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-           * @param content the {@link com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaExecuteEventRequest}
+           * @param content the {@link com.google.api.services.integrations.v1alpha.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
            * @since 1.13
            */
-          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaExecuteEventRequest content) {
+          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1alpha.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1alpha.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -3307,6 +3307,32 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                   "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Id of the integration trigger config. The trigger_id is in the format: `integ
+           * ration_connector_trigger/projects/{gcp_project_id}/location/{location}/connections/{con
+           * nection_name}/subscriptions/{subscription_name}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String triggerId;
+
+          /** Required. Id of the integration trigger config. The trigger_id is in the format: `integration_conne
+         ctor_trigger/projects/{gcp_project_id}/location/{location}/connections/{connection_name}/subscripti
+         ons/{subscription_name}`.
+           */
+          public java.lang.String getTriggerId() {
+            return triggerId;
+          }
+
+          /**
+           * Required. Id of the integration trigger config. The trigger_id is in the format: `integ
+           * ration_connector_trigger/projects/{gcp_project_id}/location/{location}/connections/{con
+           * nection_name}/subscriptions/{subscription_name}`.
+           */
+          public ExecuteEvent setTriggerId(java.lang.String triggerId) {
+            this.triggerId = triggerId;
             return this;
           }
 
@@ -4892,6 +4918,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                     "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Optional. Indicates if sample workflow should be created. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean createSampleIntegrations;
+
+            /** Optional. Optional. Indicates if sample workflow should be created.
+             */
+            public java.lang.Boolean getCreateSampleIntegrations() {
+              return createSampleIntegrations;
+            }
+
+            /** Optional. Optional. Indicates if sample workflow should be created. */
+            public Create setCreateSampleIntegrations(java.lang.Boolean createSampleIntegrations) {
+              this.createSampleIntegrations = createSampleIntegrations;
               return this;
             }
 
@@ -10532,6 +10574,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                       "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /** Optional. Optional. Indicates if sample workflow should be created. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean createSampleIntegrations;
+
+              /** Optional. Optional. Indicates if sample workflow should be created.
+               */
+              public java.lang.Boolean getCreateSampleIntegrations() {
+                return createSampleIntegrations;
+              }
+
+              /** Optional. Optional. Indicates if sample workflow should be created. */
+              public Create setCreateSampleIntegrations(java.lang.Boolean createSampleIntegrations) {
+                this.createSampleIntegrations = createSampleIntegrations;
                 return this;
               }
 

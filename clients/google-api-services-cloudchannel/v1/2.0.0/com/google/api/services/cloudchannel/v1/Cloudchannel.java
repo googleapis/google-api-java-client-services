@@ -9890,6 +9890,468 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
       }
 
     }
+    /**
+     * An accessor for creating requests from the SkuGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudchannel cloudchannel = new Cloudchannel(...);}
+     *   {@code Cloudchannel.SkuGroups.List request = cloudchannel.skuGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SkuGroups skuGroups() {
+      return new SkuGroups();
+    }
+
+    /**
+     * The "skuGroups" collection of methods.
+     */
+    public class SkuGroups {
+
+      /**
+       * Lists the Rebilling supported SKU groups the account is authorized to sell. Reference:
+       * https://cloud.google.com/skus/sku-groups Possible Error Codes: * PERMISSION_DENIED: If the
+       * account making the request and the account being queried are different, or the account doesn't
+       * exist. * INTERNAL: Any non-user error related to technical issues in the backend. In this case,
+       * contact Cloud Channel support. Return Value: If successful, the SkuGroup resources. The data for
+       * each resource is displayed in the alphabetical order of SKU group display name. The data for each
+       * resource is displayed in the ascending order of SkuGroup.display_name If unsuccessful, returns an
+       * error.
+       *
+       * Create a request for the method "skuGroups.list".
+       *
+       * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the account from which to list SKU groups. Parent uses the format:
+       *        accounts/{account}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSkuGroupsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/skuGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Lists the Rebilling supported SKU groups the account is authorized to sell. Reference:
+         * https://cloud.google.com/skus/sku-groups Possible Error Codes: * PERMISSION_DENIED: If the
+         * account making the request and the account being queried are different, or the account doesn't
+         * exist. * INTERNAL: Any non-user error related to technical issues in the backend. In this case,
+         * contact Cloud Channel support. Return Value: If successful, the SkuGroup resources. The data
+         * for each resource is displayed in the alphabetical order of SKU group display name. The data
+         * for each resource is displayed in the ascending order of SkuGroup.display_name If unsuccessful,
+         * returns an error.
+         *
+         * Create a request for the method "skuGroups.list".
+         *
+         * This request holds the parameters needed by the the cloudchannel server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the account from which to list SKU groups. Parent uses the format:
+       *        accounts/{account}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSkuGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the account from which to list SKU groups. Parent uses the
+         * format: accounts/{account}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the account from which to list SKU groups. Parent uses the format:
+       accounts/{account}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the account from which to list SKU groups. Parent uses the
+         * format: accounts/{account}.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of SKU groups to return. The service may return fewer than
+         * this value. If unspecified, returns a maximum of 1000 SKU groups. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of SKU groups to return. The service may return fewer than this value.
+       If unspecified, returns a maximum of 1000 SKU groups. The maximum value is 1000; values above 1000
+       will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of SKU groups to return. The service may return fewer than
+         * this value. If unspecified, returns a maximum of 1000 SKU groups. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token identifying a page of results beyond the first page. Obtained through
+         * ListSkuGroups.next_page_token of the previous CloudChannelService.ListSkuGroups call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token identifying a page of results beyond the first page. Obtained through
+       ListSkuGroups.next_page_token of the previous CloudChannelService.ListSkuGroups call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token identifying a page of results beyond the first page. Obtained through
+         * ListSkuGroups.next_page_token of the previous CloudChannelService.ListSkuGroups call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the BillableSkus collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudchannel cloudchannel = new Cloudchannel(...);}
+       *   {@code Cloudchannel.BillableSkus.List request = cloudchannel.billableSkus().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BillableSkus billableSkus() {
+        return new BillableSkus();
+      }
+
+      /**
+       * The "billableSkus" collection of methods.
+       */
+      public class BillableSkus {
+
+        /**
+         * Lists the Billable SKUs in a given SKU group. Possible error codes: PERMISSION_DENIED: If the
+         * account making the request and the account being queried for are different, or the account
+         * doesn't exist. INVALID_ARGUMENT: Missing or invalid required parameters in the request. INTERNAL:
+         * Any non-user error related to technical issue in the backend. In this case, contact cloud channel
+         * support. Return Value: If successful, the BillableSku resources. The data for each resource is
+         * displayed in the ascending order of: * BillableSku.service_display_name *
+         * BillableSku.sku_display_name If unsuccessful, returns an error.
+         *
+         * Create a request for the method "billableSkus.list".
+         *
+         * This request holds the parameters needed by the cloudchannel server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the SKU group. Format: accounts/{account}/skuGroups/{sku_group}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudchannelRequest<com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSkuGroupBillableSkusResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/billableSkus";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/skuGroups/[^/]+$");
+
+          /**
+           * Lists the Billable SKUs in a given SKU group. Possible error codes: PERMISSION_DENIED: If the
+           * account making the request and the account being queried for are different, or the account
+           * doesn't exist. INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+           * INTERNAL: Any non-user error related to technical issue in the backend. In this case, contact
+           * cloud channel support. Return Value: If successful, the BillableSku resources. The data for
+           * each resource is displayed in the ascending order of: * BillableSku.service_display_name *
+           * BillableSku.sku_display_name If unsuccessful, returns an error.
+           *
+           * Create a request for the method "billableSkus.list".
+           *
+           * This request holds the parameters needed by the the cloudchannel server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the SKU group. Format: accounts/{account}/skuGroups/{sku_group}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Cloudchannel.this, "GET", REST_PATH, null, com.google.api.services.cloudchannel.v1.model.GoogleCloudChannelV1ListSkuGroupBillableSkusResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/skuGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the SKU group. Format:
+           * accounts/{account}/skuGroups/{sku_group}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the SKU group. Format: accounts/{account}/skuGroups/{sku_group}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the SKU group. Format:
+           * accounts/{account}/skuGroups/{sku_group}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/skuGroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of SKUs to return. The service may return fewer than this
+           * value. If unspecified, returns a maximum of 100000 SKUs. The maximum value is 100000;
+           * values above 100000 will be coerced to 100000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of SKUs to return. The service may return fewer than this value. If
+         unspecified, returns a maximum of 100000 SKUs. The maximum value is 100000; values above 100000
+         will be coerced to 100000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of SKUs to return. The service may return fewer than this
+           * value. If unspecified, returns a maximum of 100000 SKUs. The maximum value is 100000;
+           * values above 100000 will be coerced to 100000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListSkuGroupBillableSkus.next_page_token of the previous
+           * CloudChannelService.ListSkuGroupBillableSkus call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results beyond the first page. Obtained through
+         ListSkuGroupBillableSkus.next_page_token of the previous
+         CloudChannelService.ListSkuGroupBillableSkus call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token identifying a page of results beyond the first page. Obtained through
+           * ListSkuGroupBillableSkus.next_page_token of the previous
+           * CloudChannelService.ListSkuGroupBillableSkus call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**

@@ -31,8 +31,8 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Domain name of the web app being measured, or empty. Example:
-   * "http://www.google.com", "https://www.google.com"
+   * Domain name of the web app being measured, or empty. Example: "http://www.google.com",
+   * "https://www.google.com"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,16 +47,15 @@ public final class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends co
   private java.lang.String firebaseAppId;
 
   /**
-   * Output only. Analytics "Measurement ID", without the "G-" prefix. Example: "G-1A2BCD345E" would
-   * just be "1A2BCD345E"
+   * Output only. Analytics Measurement ID. Example: "G-1A2BCD345E"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String measurementId;
 
   /**
-   * Immutable. Domain name of the web app being measured, or empty. Example:
-   * "http://www.google.com", "https://www.google.com"
+   * Domain name of the web app being measured, or empty. Example: "http://www.google.com",
+   * "https://www.google.com"
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultUri() {
@@ -64,8 +63,8 @@ public final class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends co
   }
 
   /**
-   * Immutable. Domain name of the web app being measured, or empty. Example:
-   * "http://www.google.com", "https://www.google.com"
+   * Domain name of the web app being measured, or empty. Example: "http://www.google.com",
+   * "https://www.google.com"
    * @param defaultUri defaultUri or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataStreamWebStreamData setDefaultUri(java.lang.String defaultUri) {
@@ -93,8 +92,7 @@ public final class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends co
   }
 
   /**
-   * Output only. Analytics "Measurement ID", without the "G-" prefix. Example: "G-1A2BCD345E" would
-   * just be "1A2BCD345E"
+   * Output only. Analytics Measurement ID. Example: "G-1A2BCD345E"
    * @return value or {@code null} for none
    */
   public java.lang.String getMeasurementId() {
@@ -102,8 +100,7 @@ public final class GoogleAnalyticsAdminV1alphaDataStreamWebStreamData extends co
   }
 
   /**
-   * Output only. Analytics "Measurement ID", without the "G-" prefix. Example: "G-1A2BCD345E" would
-   * just be "1A2BCD345E"
+   * Output only. Analytics Measurement ID. Example: "G-1A2BCD345E"
    * @param measurementId measurementId or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataStreamWebStreamData setMeasurementId(java.lang.String measurementId) {

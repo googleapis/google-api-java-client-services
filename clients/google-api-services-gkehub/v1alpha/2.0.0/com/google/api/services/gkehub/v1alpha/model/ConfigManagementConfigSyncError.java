@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * ScopeFeatureSpec contains feature specs for a fleet scope.
+ * Errors pertaining to the installation of Config Sync
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScopeFeatureSpec extends com.google.api.client.json.GenericJson {
+public final class ConfigManagementConfigSyncError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
+   * A string representing the user facing error message
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClusterUpgradeScopeSpec clusterupgrade;
+  private java.lang.String errorMessage;
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
+   * A string representing the user facing error message
    * @return value or {@code null} for none
    */
-  public ClusterUpgradeScopeSpec getClusterupgrade() {
-    return clusterupgrade;
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
   }
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
-   * @param clusterupgrade clusterupgrade or {@code null} for none
+   * A string representing the user facing error message
+   * @param errorMessage errorMessage or {@code null} for none
    */
-  public ScopeFeatureSpec setClusterupgrade(ClusterUpgradeScopeSpec clusterupgrade) {
-    this.clusterupgrade = clusterupgrade;
+  public ConfigManagementConfigSyncError setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
     return this;
   }
 
   @Override
-  public ScopeFeatureSpec set(String fieldName, Object value) {
-    return (ScopeFeatureSpec) super.set(fieldName, value);
+  public ConfigManagementConfigSyncError set(String fieldName, Object value) {
+    return (ConfigManagementConfigSyncError) super.set(fieldName, value);
   }
 
   @Override
-  public ScopeFeatureSpec clone() {
-    return (ScopeFeatureSpec) super.clone();
+  public ConfigManagementConfigSyncError clone() {
+    return (ConfigManagementConfigSyncError) super.clone();
   }
 
 }

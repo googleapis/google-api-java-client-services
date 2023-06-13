@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * ScopeFeatureState contains Scope-wide Feature status information.
+ * ScopeGKEUpgradeState is a GKEUpgrade and its state per-membership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScopeFeatureState extends com.google.api.client.json.GenericJson {
+public final class ClusterUpgradeMembershipGKEUpgradeState extends com.google.api.client.json.GenericJson {
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
+   * Status of the upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClusterUpgradeScopeState clusterupgrade;
+  private ClusterUpgradeUpgradeStatus status;
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Which upgrade to track the state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FeatureState state;
+  private ClusterUpgradeGKEUpgrade upgrade;
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
+   * Status of the upgrade.
    * @return value or {@code null} for none
    */
-  public ClusterUpgradeScopeState getClusterupgrade() {
-    return clusterupgrade;
+  public ClusterUpgradeUpgradeStatus getStatus() {
+    return status;
   }
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
-   * @param clusterupgrade clusterupgrade or {@code null} for none
+   * Status of the upgrade.
+   * @param status status or {@code null} for none
    */
-  public ScopeFeatureState setClusterupgrade(ClusterUpgradeScopeState clusterupgrade) {
-    this.clusterupgrade = clusterupgrade;
+  public ClusterUpgradeMembershipGKEUpgradeState setStatus(ClusterUpgradeUpgradeStatus status) {
+    this.status = status;
     return this;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Which upgrade to track the state.
    * @return value or {@code null} for none
    */
-  public FeatureState getState() {
-    return state;
+  public ClusterUpgradeGKEUpgrade getUpgrade() {
+    return upgrade;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
-   * @param state state or {@code null} for none
+   * Which upgrade to track the state.
+   * @param upgrade upgrade or {@code null} for none
    */
-  public ScopeFeatureState setState(FeatureState state) {
-    this.state = state;
+  public ClusterUpgradeMembershipGKEUpgradeState setUpgrade(ClusterUpgradeGKEUpgrade upgrade) {
+    this.upgrade = upgrade;
     return this;
   }
 
   @Override
-  public ScopeFeatureState set(String fieldName, Object value) {
-    return (ScopeFeatureState) super.set(fieldName, value);
+  public ClusterUpgradeMembershipGKEUpgradeState set(String fieldName, Object value) {
+    return (ClusterUpgradeMembershipGKEUpgradeState) super.set(fieldName, value);
   }
 
   @Override
-  public ScopeFeatureState clone() {
-    return (ScopeFeatureState) super.clone();
+  public ClusterUpgradeMembershipGKEUpgradeState clone() {
+    return (ClusterUpgradeMembershipGKEUpgradeState) super.clone();
   }
 
 }

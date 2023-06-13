@@ -38,6 +38,19 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   private ConfigManagementConfigSyncDeploymentState deploymentState;
 
   /**
+   * Errors pertaining to the installation of Config Sync.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConfigManagementConfigSyncError> errors;
+
+  static {
+    // hack to force ProGuard to consider ConfigManagementConfigSyncError used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConfigManagementConfigSyncError.class);
+  }
+
+  /**
    * The state of ConfigSync's process to sync configs to a cluster
    * The value may be {@code null}.
    */
@@ -67,6 +80,23 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
    */
   public ConfigManagementConfigSyncState setDeploymentState(ConfigManagementConfigSyncDeploymentState deploymentState) {
     this.deploymentState = deploymentState;
+    return this;
+  }
+
+  /**
+   * Errors pertaining to the installation of Config Sync.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConfigManagementConfigSyncError> getErrors() {
+    return errors;
+  }
+
+  /**
+   * Errors pertaining to the installation of Config Sync.
+   * @param errors errors or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setErrors(java.util.List<ConfigManagementConfigSyncError> errors) {
+    this.errors = errors;
     return this;
   }
 

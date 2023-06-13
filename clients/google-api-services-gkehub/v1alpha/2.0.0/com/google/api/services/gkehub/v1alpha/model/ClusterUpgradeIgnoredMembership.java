@@ -17,7 +17,8 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * ScopeFeatureState contains Scope-wide Feature status information.
+ * IgnoredMembership represents a membership ignored by the feature. A membership can be ignored
+ * because it was manually upgraded to a newer version than RC default.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +28,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScopeFeatureState extends com.google.api.client.json.GenericJson {
+public final class ClusterUpgradeIgnoredMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
+   * Time when the membership was first set to ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClusterUpgradeScopeState clusterupgrade;
+  private String ignoredTime;
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Reason why the membership is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FeatureState state;
+  private java.lang.String reason;
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
+   * Time when the membership was first set to ignored.
    * @return value or {@code null} for none
    */
-  public ClusterUpgradeScopeState getClusterupgrade() {
-    return clusterupgrade;
+  public String getIgnoredTime() {
+    return ignoredTime;
   }
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
-   * @param clusterupgrade clusterupgrade or {@code null} for none
+   * Time when the membership was first set to ignored.
+   * @param ignoredTime ignoredTime or {@code null} for none
    */
-  public ScopeFeatureState setClusterupgrade(ClusterUpgradeScopeState clusterupgrade) {
-    this.clusterupgrade = clusterupgrade;
+  public ClusterUpgradeIgnoredMembership setIgnoredTime(String ignoredTime) {
+    this.ignoredTime = ignoredTime;
     return this;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Reason why the membership is ignored.
    * @return value or {@code null} for none
    */
-  public FeatureState getState() {
-    return state;
+  public java.lang.String getReason() {
+    return reason;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
-   * @param state state or {@code null} for none
+   * Reason why the membership is ignored.
+   * @param reason reason or {@code null} for none
    */
-  public ScopeFeatureState setState(FeatureState state) {
-    this.state = state;
+  public ClusterUpgradeIgnoredMembership setReason(java.lang.String reason) {
+    this.reason = reason;
     return this;
   }
 
   @Override
-  public ScopeFeatureState set(String fieldName, Object value) {
-    return (ScopeFeatureState) super.set(fieldName, value);
+  public ClusterUpgradeIgnoredMembership set(String fieldName, Object value) {
+    return (ClusterUpgradeIgnoredMembership) super.set(fieldName, value);
   }
 
   @Override
-  public ScopeFeatureState clone() {
-    return (ScopeFeatureState) super.clone();
+  public ClusterUpgradeIgnoredMembership clone() {
+    return (ClusterUpgradeIgnoredMembership) super.clone();
   }
 
 }

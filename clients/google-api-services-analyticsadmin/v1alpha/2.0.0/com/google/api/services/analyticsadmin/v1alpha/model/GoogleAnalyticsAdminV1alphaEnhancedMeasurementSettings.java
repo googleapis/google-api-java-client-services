@@ -17,8 +17,8 @@
 package com.google.api.services.analyticsadmin.v1alpha.model;
 
 /**
- * Singleton resource under a WebDataStream, configuring measurement of additional site interactions
- * and content.
+ * Singleton resource under a web DataStream, configuring measurement of additional site
+ * interactions and content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Admin API. For a detailed

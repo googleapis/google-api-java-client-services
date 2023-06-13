@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * ScopeFeatureState contains Scope-wide Feature status information.
+ * GKEUpgradeFeatureState contains feature states for GKE clusters in the scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,70 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScopeFeatureState extends com.google.api.client.json.GenericJson {
+public final class ClusterUpgradeGKEUpgradeFeatureState extends com.google.api.client.json.GenericJson {
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
+   * Current conditions of the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClusterUpgradeScopeState clusterupgrade;
+  private java.util.List<ClusterUpgradeGKEUpgradeFeatureCondition> conditions;
 
-  /**
-   * Output only. The "running state" of the Feature in this Scope.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FeatureState state;
-
-  /**
-   * State for the ClusterUpgrade feature at the scope level
-   * @return value or {@code null} for none
-   */
-  public ClusterUpgradeScopeState getClusterupgrade() {
-    return clusterupgrade;
+  static {
+    // hack to force ProGuard to consider ClusterUpgradeGKEUpgradeFeatureCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClusterUpgradeGKEUpgradeFeatureCondition.class);
   }
 
   /**
-   * State for the ClusterUpgrade feature at the scope level
-   * @param clusterupgrade clusterupgrade or {@code null} for none
+   * Scope-level upgrade state.
+   * The value may be {@code null}.
    */
-  public ScopeFeatureState setClusterupgrade(ClusterUpgradeScopeState clusterupgrade) {
-    this.clusterupgrade = clusterupgrade;
+  @com.google.api.client.util.Key
+  private java.util.List<ClusterUpgradeScopeGKEUpgradeState> state;
+
+  /**
+   * Current conditions of the feature.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClusterUpgradeGKEUpgradeFeatureCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Current conditions of the feature.
+   * @param conditions conditions or {@code null} for none
+   */
+  public ClusterUpgradeGKEUpgradeFeatureState setConditions(java.util.List<ClusterUpgradeGKEUpgradeFeatureCondition> conditions) {
+    this.conditions = conditions;
     return this;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Scope-level upgrade state.
    * @return value or {@code null} for none
    */
-  public FeatureState getState() {
+  public java.util.List<ClusterUpgradeScopeGKEUpgradeState> getState() {
     return state;
   }
 
   /**
-   * Output only. The "running state" of the Feature in this Scope.
+   * Scope-level upgrade state.
    * @param state state or {@code null} for none
    */
-  public ScopeFeatureState setState(FeatureState state) {
+  public ClusterUpgradeGKEUpgradeFeatureState setState(java.util.List<ClusterUpgradeScopeGKEUpgradeState> state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public ScopeFeatureState set(String fieldName, Object value) {
-    return (ScopeFeatureState) super.set(fieldName, value);
+  public ClusterUpgradeGKEUpgradeFeatureState set(String fieldName, Object value) {
+    return (ClusterUpgradeGKEUpgradeFeatureState) super.set(fieldName, value);
   }
 
   @Override
-  public ScopeFeatureState clone() {
-    return (ScopeFeatureState) super.clone();
+  public ClusterUpgradeGKEUpgradeFeatureState clone() {
+    return (ClusterUpgradeGKEUpgradeFeatureState) super.clone();
   }
 
 }

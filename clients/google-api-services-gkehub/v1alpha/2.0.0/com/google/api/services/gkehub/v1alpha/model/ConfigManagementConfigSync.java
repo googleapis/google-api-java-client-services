@@ -39,9 +39,11 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of git field.
+   * and the other ConfigSync fields will be applied if exist. If set to false and Managed Config
+   * Sync is disabled, all other ConfigSync fields will be ignored, ConfigSync resources will be
+   * deleted. Setting this field to false while enabling Managed Config Sync is invalid. If omitted,
+   * ConfigSync resources will be managed if: * the git or oci field is present; or * Managed Config
+   * Sync is enabled (i.e., managed.enabled is true).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +62,17 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private ConfigManagementManaged managed;
+
+  /**
+   * The Email of the GCP Service Account (GSA) used for exporting Config Sync metrics to Cloud
+   * Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
+   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * ServiceAccount `default` in the namespace `config-management-monitoring` should be binded to
+   * the GSA. This field is required when Managed Config Sync is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metricsGcpServiceAccountEmail;
 
   /**
    * OCI repo configuration for the cluster
@@ -104,9 +117,11 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of git field.
+   * and the other ConfigSync fields will be applied if exist. If set to false and Managed Config
+   * Sync is disabled, all other ConfigSync fields will be ignored, ConfigSync resources will be
+   * deleted. Setting this field to false while enabling Managed Config Sync is invalid. If omitted,
+   * ConfigSync resources will be managed if: * the git or oci field is present; or * Managed Config
+   * Sync is enabled (i.e., managed.enabled is true).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -115,9 +130,11 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
 
   /**
    * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of git field.
+   * and the other ConfigSync fields will be applied if exist. If set to false and Managed Config
+   * Sync is disabled, all other ConfigSync fields will be ignored, ConfigSync resources will be
+   * deleted. Setting this field to false while enabling Managed Config Sync is invalid. If omitted,
+   * ConfigSync resources will be managed if: * the git or oci field is present; or * Managed Config
+   * Sync is enabled (i.e., managed.enabled is true).
    * @param enabled enabled or {@code null} for none
    */
   public ConfigManagementConfigSync setEnabled(java.lang.Boolean enabled) {
@@ -156,6 +173,31 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
    */
   public ConfigManagementConfigSync setManaged(ConfigManagementManaged managed) {
     this.managed = managed;
+    return this;
+  }
+
+  /**
+   * The Email of the GCP Service Account (GSA) used for exporting Config Sync metrics to Cloud
+   * Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
+   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * ServiceAccount `default` in the namespace `config-management-monitoring` should be binded to
+   * the GSA. This field is required when Managed Config Sync is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetricsGcpServiceAccountEmail() {
+    return metricsGcpServiceAccountEmail;
+  }
+
+  /**
+   * The Email of the GCP Service Account (GSA) used for exporting Config Sync metrics to Cloud
+   * Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
+   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * ServiceAccount `default` in the namespace `config-management-monitoring` should be binded to
+   * the GSA. This field is required when Managed Config Sync is enabled.
+   * @param metricsGcpServiceAccountEmail metricsGcpServiceAccountEmail or {@code null} for none
+   */
+  public ConfigManagementConfigSync setMetricsGcpServiceAccountEmail(java.lang.String metricsGcpServiceAccountEmail) {
+    this.metricsGcpServiceAccountEmail = metricsGcpServiceAccountEmail;
     return this;
   }
 

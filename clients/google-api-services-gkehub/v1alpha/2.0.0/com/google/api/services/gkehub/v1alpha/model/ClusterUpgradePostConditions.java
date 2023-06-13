@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * ScopeFeatureSpec contains feature specs for a fleet scope.
+ * Post conditional checks after an upgrade has been applied on all eligible clusters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScopeFeatureSpec extends com.google.api.client.json.GenericJson {
+public final class ClusterUpgradePostConditions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
+   * Required. Amount of time to "soak" after a rollout has been finished before marking it
+   * COMPLETE. Cannot exceed 30 days. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ClusterUpgradeScopeSpec clusterupgrade;
+  private String soaking;
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
+   * Required. Amount of time to "soak" after a rollout has been finished before marking it
+   * COMPLETE. Cannot exceed 30 days. Required.
    * @return value or {@code null} for none
    */
-  public ClusterUpgradeScopeSpec getClusterupgrade() {
-    return clusterupgrade;
+  public String getSoaking() {
+    return soaking;
   }
 
   /**
-   * Spec for the ClusterUpgrade feature at the scope level
-   * @param clusterupgrade clusterupgrade or {@code null} for none
+   * Required. Amount of time to "soak" after a rollout has been finished before marking it
+   * COMPLETE. Cannot exceed 30 days. Required.
+   * @param soaking soaking or {@code null} for none
    */
-  public ScopeFeatureSpec setClusterupgrade(ClusterUpgradeScopeSpec clusterupgrade) {
-    this.clusterupgrade = clusterupgrade;
+  public ClusterUpgradePostConditions setSoaking(String soaking) {
+    this.soaking = soaking;
     return this;
   }
 
   @Override
-  public ScopeFeatureSpec set(String fieldName, Object value) {
-    return (ScopeFeatureSpec) super.set(fieldName, value);
+  public ClusterUpgradePostConditions set(String fieldName, Object value) {
+    return (ClusterUpgradePostConditions) super.set(fieldName, value);
   }
 
   @Override
-  public ScopeFeatureSpec clone() {
-    return (ScopeFeatureSpec) super.clone();
+  public ClusterUpgradePostConditions clone() {
+    return (ClusterUpgradePostConditions) super.clone();
   }
 
 }

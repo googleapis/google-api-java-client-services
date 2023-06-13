@@ -1546,19 +1546,20 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters
        * supported are: `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`,
-       * `min_longitude`, `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for
-       * more information. Filename queries should sent as a Phrase in order to support multiple
-       * words and special characters by adding escaped quotes. Ex: filename_query="example of a
-       * phrase.mp4"
+       * `min_longitude`, `max_longitude`, `filename_query`, `min_capture_time_seconds`, and
+       * `max_capture_time_seconds`. See https://google.aip.dev/160 for more information. Filename
+       * queries should sent as a Phrase in order to support multiple words and special characters
+       * by adding escaped quotes. Ex: filename_query="example of a phrase.mp4"
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters supported are:
      `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`, `min_longitude`,
-     `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for more information.
-     Filename queries should sent as a Phrase in order to support multiple words and special characters
-     by adding escaped quotes. Ex: filename_query="example of a phrase.mp4"
+     `max_longitude`, `filename_query`, `min_capture_time_seconds`, and `max_capture_time_seconds`. See
+     https://google.aip.dev/160 for more information. Filename queries should sent as a Phrase in order
+     to support multiple words and special characters by adding escaped quotes. Ex:
+     filename_query="example of a phrase.mp4"
        */
       public java.lang.String getFilter() {
         return filter;
@@ -1567,10 +1568,10 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Optional. The filter expression. For example: `imagery_type=SPHERICAL`. The filters
        * supported are: `imagery_type`, `processing_state`, `min_latitude`, `max_latitude`,
-       * `min_longitude`, `max_longitude`, and `filename_query`. See https://google.aip.dev/160 for
-       * more information. Filename queries should sent as a Phrase in order to support multiple
-       * words and special characters by adding escaped quotes. Ex: filename_query="example of a
-       * phrase.mp4"
+       * `min_longitude`, `max_longitude`, `filename_query`, `min_capture_time_seconds`, and
+       * `max_capture_time_seconds`. See https://google.aip.dev/160 for more information. Filename
+       * queries should sent as a Phrase in order to support multiple words and special characters
+       * by adding escaped quotes. Ex: filename_query="example of a phrase.mp4"
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -2173,16 +2174,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
        * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`,
-       * `max_longitude`, 'min_capture_time_seconds', and 'max_capture_time_seconds'. See
-       * https://google.aip.dev/160 for more information.
+       * `max_longitude`. See https://google.aip.dev/160 for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The filters
-     supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`,
-     'min_capture_time_seconds', and 'max_capture_time_seconds'. See https://google.aip.dev/160 for more
-     information.
+     supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`, `max_longitude`. See
+     https://google.aip.dev/160 for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -2191,8 +2190,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Optional. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
        * filters supported are: `placeId`, `min_latitude`, `max_latitude`, `min_longitude`,
-       * `max_longitude`, 'min_capture_time_seconds', and 'max_capture_time_seconds'. See
-       * https://google.aip.dev/160 for more information.
+       * `max_longitude`. See https://google.aip.dev/160 for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

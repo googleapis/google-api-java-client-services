@@ -20,7 +20,7 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
  * `Documentation` provides the information for describing a service. Example: documentation:
  * summary: > The Google Calendar API gives access to most calendar features. pages: - name:
  * Overview content: (== include google/foo/overview.md ==) - name: Tutorial content: (== include
- * google/foo/tutorial.md ==) subpages; - name: Java content: (== include
+ * google/foo/tutorial.md ==) subpages: - name: Java content: (== include
  * google/foo/tutorial_java.md ==) rules: - selector: google.calendar.Calendar.Get description: >
  * ... - selector: google.calendar.Calendar.Put description: > ... Documentation is provided in
  * markdown syntax. In addition to standard markdown features, definition lists, tables and fenced
@@ -81,6 +81,14 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<DocumentationRule> rules;
+
+  /**
+   * Specifies section and content to override boilerplate content provided by go/api-docgen.
+   * Currently overrides following sections: 1. rest.service.client_libraries
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Page> sectionOverrides;
 
   /**
    * Specifies the service root url if the default one (the service name from the yaml file) is not
@@ -173,6 +181,25 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    */
   public Documentation setRules(java.util.List<DocumentationRule> rules) {
     this.rules = rules;
+    return this;
+  }
+
+  /**
+   * Specifies section and content to override boilerplate content provided by go/api-docgen.
+   * Currently overrides following sections: 1. rest.service.client_libraries
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Page> getSectionOverrides() {
+    return sectionOverrides;
+  }
+
+  /**
+   * Specifies section and content to override boilerplate content provided by go/api-docgen.
+   * Currently overrides following sections: 1. rest.service.client_libraries
+   * @param sectionOverrides sectionOverrides or {@code null} for none
+   */
+  public Documentation setSectionOverrides(java.util.List<Page> sectionOverrides) {
+    this.sectionOverrides = sectionOverrides;
     return this;
   }
 

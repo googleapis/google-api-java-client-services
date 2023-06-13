@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Google Chat events.
+ * Google Chat events. To learn how to use events, see [Receive and respond to Google Chat
+ * events](https://developers.google.com/chat/api/guides/message-formats).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

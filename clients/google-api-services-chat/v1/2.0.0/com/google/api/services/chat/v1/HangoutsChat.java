@@ -2056,7 +2056,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
+       * @param name Required. Resource name of the membership to retrieve. To get the app's own membership, you can
+       *        optionally use `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
+       *        `spaces/{space}/members/app`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2088,7 +2090,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
+         * @param name Required. Resource name of the membership to retrieve. To get the app's own membership, you can
+       *        optionally use `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
+       *        `spaces/{space}/members/app`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2167,21 +2171,25 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the membership to retrieve. Format:
-         * `spaces/{space}/members/{member}`
+         * Required. Resource name of the membership to retrieve. To get the app's own membership,
+         * you can optionally use `spaces/{space}/members/app`. Format:
+         * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the membership to retrieve. Format: `spaces/{space}/members/{member}`
+        /** Required. Resource name of the membership to retrieve. To get the app's own membership, you can
+       optionally use `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
+       `spaces/{space}/members/app`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the membership to retrieve. Format:
-         * `spaces/{space}/members/{member}`
+         * Required. Resource name of the membership to retrieve. To get the app's own membership,
+         * you can optionally use `spaces/{space}/members/app`. Format:
+         * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

@@ -65,6 +65,13 @@ public final class QuotaExceededInfo extends com.google.api.client.json.GenericJ
   private java.lang.String metricName;
 
   /**
+   * Rollout status of the future quota limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rolloutStatus;
+
+  /**
    * The map holding related quota dimensions.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class QuotaExceededInfo extends com.google.api.client.json.GenericJ
    */
   public QuotaExceededInfo setMetricName(java.lang.String metricName) {
     this.metricName = metricName;
+    return this;
+  }
+
+  /**
+   * Rollout status of the future quota limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRolloutStatus() {
+    return rolloutStatus;
+  }
+
+  /**
+   * Rollout status of the future quota limit.
+   * @param rolloutStatus rolloutStatus or {@code null} for none
+   */
+  public QuotaExceededInfo setRolloutStatus(java.lang.String rolloutStatus) {
+    this.rolloutStatus = rolloutStatus;
     return this;
   }
 

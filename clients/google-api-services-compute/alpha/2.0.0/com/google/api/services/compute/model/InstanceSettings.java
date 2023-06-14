@@ -46,15 +46,6 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   private java.lang.String kind;
 
   /**
-   * Partial URL of the machine type resource to use for this instance, in the format: machineTypes
-   * /machine-type. This is either provided by the client or chosen by the system. For example, the
-   * following is a valid partial url to a predefined machine type: machineTypes/n2-standard-1
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String machineType;
-
-  /**
    * [Output Only] URL of the zone where the resource resides You must specify this field as part of
    * the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -93,27 +84,6 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
    */
   public InstanceSettings setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * Partial URL of the machine type resource to use for this instance, in the format: machineTypes
-   * /machine-type. This is either provided by the client or chosen by the system. For example, the
-   * following is a valid partial url to a predefined machine type: machineTypes/n2-standard-1
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMachineType() {
-    return machineType;
-  }
-
-  /**
-   * Partial URL of the machine type resource to use for this instance, in the format: machineTypes
-   * /machine-type. This is either provided by the client or chosen by the system. For example, the
-   * following is a valid partial url to a predefined machine type: machineTypes/n2-standard-1
-   * @param machineType machineType or {@code null} for none
-   */
-  public InstanceSettings setMachineType(java.lang.String machineType) {
-    this.machineType = machineType;
     return this;
   }
 

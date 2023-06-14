@@ -119,7 +119,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopGateway;
 
   /**
-   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * [Output Only] The full resource name of the Network Connectivity Center hub that will handle
    * matching packets.
    * The value may be {@code null}.
    */
@@ -454,7 +454,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * [Output Only] The full resource name of the Network Connectivity Center hub that will handle
    * matching packets.
    * @return value or {@code null} for none
    */
@@ -463,7 +463,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The full resource name of the network connectivity center hub that should handle
+   * [Output Only] The full resource name of the Network Connectivity Center hub that will handle
    * matching packets.
    * @param nextHopHub nextHopHub or {@code null} for none
    */

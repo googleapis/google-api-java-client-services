@@ -57,8 +57,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
    * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
    * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
    * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * below this point. Here, the quartiles is provided as an ordered list of approximate quartile
+   * values for the scanned data, occurring in order Q1, median, Q3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -129,8 +129,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
    * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
    * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
    * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * below this point. Here, the quartiles is provided as an ordered list of approximate quartile
+   * values for the scanned data, occurring in order Q1, median, Q3.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getQuartiles() {
@@ -144,8 +144,8 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
    * the data is below this point. The second quartile (Q2) is the median of a data set. So, 50% of
    * the data lies below this point. The third quartile (Q3) splits off the highest 25% of data from
    * the lowest 75%. It is known as the upper or 75th empirical quartile, as 75% of the data lies
-   * below this point. Here, the quartiles is provided as an ordered list of quartile values for the
-   * scanned data, occurring in order Q1, median, Q3.
+   * below this point. Here, the quartiles is provided as an ordered list of approximate quartile
+   * values for the scanned data, occurring in order Q1, median, Q3.
    * @param quartiles quartiles or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo setQuartiles(java.util.List<java.lang.Long> quartiles) {

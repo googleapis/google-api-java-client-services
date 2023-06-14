@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Provider GP for ranking in HGR. Next ID: 6
+ * Features to be extracted from Provider GP for ranking in HGR. Next ID: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -29,13 +29,6 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantGroundingRankerProviderGroundingProviderFeatures extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Indicates that fulfillment on this provider will happen within the provider app.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isInAppProvider;
 
   /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated
@@ -53,29 +46,19 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
   private AssistantContextProviderId providerId;
 
   /**
+   * Provider signals extracted from Provider GP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantGroundingProviderProviderSignalResult providerSignalResult;
+
+  /**
    * Provider quality score in the range [0,1] that can be used for ranking providers. Incorporates
    * both policy rules and quality considerations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float pslScore;
-
-  /**
-   * Indicates that fulfillment on this provider will happen within the provider app.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsInAppProvider() {
-    return isInAppProvider;
-  }
-
-  /**
-   * Indicates that fulfillment on this provider will happen within the provider app.
-   * @param isInAppProvider isInAppProvider or {@code null} for none
-   */
-  public AssistantGroundingRankerProviderGroundingProviderFeatures setIsInAppProvider(java.lang.Boolean isInAppProvider) {
-    this.isInAppProvider = isInAppProvider;
-    return this;
-  }
 
   /**
    * Cluster IDs for the provider. This field is repeated because some providers can be associated
@@ -110,6 +93,23 @@ public final class AssistantGroundingRankerProviderGroundingProviderFeatures ext
    */
   public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderId(AssistantContextProviderId providerId) {
     this.providerId = providerId;
+    return this;
+  }
+
+  /**
+   * Provider signals extracted from Provider GP.
+   * @return value or {@code null} for none
+   */
+  public AssistantGroundingProviderProviderSignalResult getProviderSignalResult() {
+    return providerSignalResult;
+  }
+
+  /**
+   * Provider signals extracted from Provider GP.
+   * @param providerSignalResult providerSignalResult or {@code null} for none
+   */
+  public AssistantGroundingRankerProviderGroundingProviderFeatures setProviderSignalResult(AssistantGroundingProviderProviderSignalResult providerSignalResult) {
+    this.providerSignalResult = providerSignalResult;
     return this;
   }
 

@@ -46,7 +46,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * the SizeLimit specified here and the sum of memory limits of all containers in a pod. This
    * field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-
    * api/common-definitions/quantity/. The default is nil which means that the limit is undefined.
-   * More info: http://kubernetes.io/docs/user-guide/volumes#emptydir +optional
+   * More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * the SizeLimit specified here and the sum of memory limits of all containers in a pod. This
    * field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-
    * api/common-definitions/quantity/. The default is nil which means that the limit is undefined.
-   * More info: http://kubernetes.io/docs/user-guide/volumes#emptydir +optional
+   * More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
    * @return value or {@code null} for none
    */
   public java.lang.String getSizeLimit() {
@@ -92,7 +92,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * the SizeLimit specified here and the sum of memory limits of all containers in a pod. This
    * field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-
    * api/common-definitions/quantity/. The default is nil which means that the limit is undefined.
-   * More info: http://kubernetes.io/docs/user-guide/volumes#emptydir +optional
+   * More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
    * @param sizeLimit sizeLimit or {@code null} for none
    */
   public EmptyDirVolumeSource setSizeLimit(java.lang.String sizeLimit) {

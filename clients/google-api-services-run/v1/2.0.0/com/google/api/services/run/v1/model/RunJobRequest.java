@@ -30,16 +30,18 @@ package com.google.api.services.run.v1.model;
 public final class RunJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
-   * be applied to update the execution or task spec.
+   * Optional. Private preview feature. Currently only available by invitation. Overrides
+   * specification for a given execution of a job. If provided, overrides will be applied to update
+   * the execution or task spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Overrides overrides;
 
   /**
-   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
-   * be applied to update the execution or task spec.
+   * Optional. Private preview feature. Currently only available by invitation. Overrides
+   * specification for a given execution of a job. If provided, overrides will be applied to update
+   * the execution or task spec.
    * @return value or {@code null} for none
    */
   public Overrides getOverrides() {
@@ -47,8 +49,9 @@ public final class RunJobRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Overrides specification for a given execution of a job. If provided, overrides will
-   * be applied to update the execution or task spec.
+   * Optional. Private preview feature. Currently only available by invitation. Overrides
+   * specification for a given execution of a job. If provided, overrides will be applied to update
+   * the execution or task spec.
    * @param overrides overrides or {@code null} for none
    */
   public RunJobRequest setOverrides(Overrides overrides) {

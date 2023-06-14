@@ -37,6 +37,14 @@ public final class SpellResult extends com.google.api.client.json.GenericJson {
   private java.lang.String suggestedQuery;
 
   /**
+   * The sanitized HTML representing the spell corrected query that can be used in the UI. This
+   * usually has language-specific tags to mark up parts of the query that are spell checked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SafeHtmlProto suggestedQueryHtml;
+
+  /**
    * Suggestion triggered for the current query.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class SpellResult extends com.google.api.client.json.GenericJson {
    */
   public SpellResult setSuggestedQuery(java.lang.String suggestedQuery) {
     this.suggestedQuery = suggestedQuery;
+    return this;
+  }
+
+  /**
+   * The sanitized HTML representing the spell corrected query that can be used in the UI. This
+   * usually has language-specific tags to mark up parts of the query that are spell checked.
+   * @return value or {@code null} for none
+   */
+  public SafeHtmlProto getSuggestedQueryHtml() {
+    return suggestedQueryHtml;
+  }
+
+  /**
+   * The sanitized HTML representing the spell corrected query that can be used in the UI. This
+   * usually has language-specific tags to mark up parts of the query that are spell checked.
+   * @param suggestedQueryHtml suggestedQueryHtml or {@code null} for none
+   */
+  public SpellResult setSuggestedQueryHtml(SafeHtmlProto suggestedQueryHtml) {
+    this.suggestedQueryHtml = suggestedQueryHtml;
     return this;
   }
 

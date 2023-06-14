@@ -55,6 +55,14 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private ClusterResourceRestoreScope clusterResourceRestoreScope;
 
   /**
+   * A list of selected namespaces excluded from restoration. All namespaces except those in this
+   * list will be restored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Namespaces excludedNamespaces;
+
+  /**
    * Defines the behavior for handling the situation where sets of namespaced resources being
    * restored already exist in the target cluster. This MUST be set to a value other than
    * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
@@ -62,6 +70,14 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String namespacedResourceRestoreMode;
+
+  /**
+   * Do not restore any namespaced resources if set to "True". Specifying this field to "False" is
+   * not allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean noNamespaces;
 
   /**
    * A list of selected ProtectedApplications to restore. The listed ProtectedApplications and all
@@ -88,6 +104,16 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<SubstitutionRule> substitutionRules;
+
+  /**
+   * A list of transformation rules to be applied against Kubernetes resources as they are selected
+   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
+   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
+   * no transformation will occur.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TransformationRule> transformationRules;
 
   /**
    * Specifies the mechanism to be used to restore volume data. Default:
@@ -157,6 +183,25 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * A list of selected namespaces excluded from restoration. All namespaces except those in this
+   * list will be restored.
+   * @return value or {@code null} for none
+   */
+  public Namespaces getExcludedNamespaces() {
+    return excludedNamespaces;
+  }
+
+  /**
+   * A list of selected namespaces excluded from restoration. All namespaces except those in this
+   * list will be restored.
+   * @param excludedNamespaces excludedNamespaces or {@code null} for none
+   */
+  public RestoreConfig setExcludedNamespaces(Namespaces excludedNamespaces) {
+    this.excludedNamespaces = excludedNamespaces;
+    return this;
+  }
+
+  /**
    * Defines the behavior for handling the situation where sets of namespaced resources being
    * restored already exist in the target cluster. This MUST be set to a value other than
    * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
@@ -174,6 +219,25 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   public RestoreConfig setNamespacedResourceRestoreMode(java.lang.String namespacedResourceRestoreMode) {
     this.namespacedResourceRestoreMode = namespacedResourceRestoreMode;
+    return this;
+  }
+
+  /**
+   * Do not restore any namespaced resources if set to "True". Specifying this field to "False" is
+   * not allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNoNamespaces() {
+    return noNamespaces;
+  }
+
+  /**
+   * Do not restore any namespaced resources if set to "True". Specifying this field to "False" is
+   * not allowed.
+   * @param noNamespaces noNamespaces or {@code null} for none
+   */
+  public RestoreConfig setNoNamespaces(java.lang.Boolean noNamespaces) {
+    this.noNamespaces = noNamespaces;
     return this;
   }
 
@@ -235,6 +299,29 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   public RestoreConfig setSubstitutionRules(java.util.List<SubstitutionRule> substitutionRules) {
     this.substitutionRules = substitutionRules;
+    return this;
+  }
+
+  /**
+   * A list of transformation rules to be applied against Kubernetes resources as they are selected
+   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
+   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
+   * no transformation will occur.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TransformationRule> getTransformationRules() {
+    return transformationRules;
+  }
+
+  /**
+   * A list of transformation rules to be applied against Kubernetes resources as they are selected
+   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
+   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
+   * no transformation will occur.
+   * @param transformationRules transformationRules or {@code null} for none
+   */
+  public RestoreConfig setTransformationRules(java.util.List<TransformationRule> transformationRules) {
+    this.transformationRules = transformationRules;
     return this;
   }
 

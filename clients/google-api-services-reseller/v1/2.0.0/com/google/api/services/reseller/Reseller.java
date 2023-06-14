@@ -2383,6 +2383,35 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * The intented insert action. The usage of this field is governed by certain policies which
+       * are being developed & tested currently. Hence, these might not work as intended. Once this
+       * is fully tested & available to consume, we will share more information about its usage,
+       * limitations and policy documentation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String action;
+
+      /** The intented insert action. The usage of this field is governed by certain policies which are being
+     developed & tested currently. Hence, these might not work as intended. Once this is fully tested &
+     available to consume, we will share more information about its usage, limitations and policy
+     documentation.
+       */
+      public java.lang.String getAction() {
+        return action;
+      }
+
+      /**
+       * The intented insert action. The usage of this field is governed by certain policies which
+       * are being developed & tested currently. Hence, these might not work as intended. Once this
+       * is fully tested & available to consume, we will share more information about its usage,
+       * limitations and policy documentation.
+       */
+      public Insert setAction(java.lang.String action) {
+        this.action = action;
+        return this;
+      }
+
+      /**
        * The `customerAuthToken` query string is required when creating a resold account that
        * transfers a direct customer's subscription or transfers another reseller customer's
        * subscription to your reseller management. This is a hexadecimal authentication token needed
@@ -2410,6 +2439,37 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        */
       public Insert setCustomerAuthToken(java.lang.String customerAuthToken) {
         this.customerAuthToken = customerAuthToken;
+        return this;
+      }
+
+      /**
+       * The sku_id of the existing subscription to be upgraded or downgraded. This is required when
+       * action is SWITCH. The usage of this field is governed by certain policies which are being
+       * developed & tested currently. Hence, these might not work as intended. Once this is fully
+       * tested & available to consume, we will share more information about its usage, limitations
+       * and policy documentation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sourceSkuId;
+
+      /** The sku_id of the existing subscription to be upgraded or downgraded. This is required when action
+     is SWITCH. The usage of this field is governed by certain policies which are being developed &
+     tested currently. Hence, these might not work as intended. Once this is fully tested & available to
+     consume, we will share more information about its usage, limitations and policy documentation.
+       */
+      public java.lang.String getSourceSkuId() {
+        return sourceSkuId;
+      }
+
+      /**
+       * The sku_id of the existing subscription to be upgraded or downgraded. This is required when
+       * action is SWITCH. The usage of this field is governed by certain policies which are being
+       * developed & tested currently. Hence, these might not work as intended. Once this is fully
+       * tested & available to consume, we will share more information about its usage, limitations
+       * and policy documentation.
+       */
+      public Insert setSourceSkuId(java.lang.String sourceSkuId) {
+        this.sourceSkuId = sourceSkuId;
         return this;
       }
 

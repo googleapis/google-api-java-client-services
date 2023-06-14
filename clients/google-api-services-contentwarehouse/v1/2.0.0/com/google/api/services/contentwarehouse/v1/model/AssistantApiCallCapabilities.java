@@ -69,7 +69,6 @@ public final class AssistantApiCallCapabilities extends com.google.api.client.js
   private java.util.List<java.lang.String> supportedRecipientTypes;
 
   /**
-   * Whether the surface supports Duo calling email endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +166,6 @@ public final class AssistantApiCallCapabilities extends com.google.api.client.js
   }
 
   /**
-   * Whether the surface supports Duo calling email endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsDuoEmailEndpoint() {
@@ -175,7 +173,6 @@ public final class AssistantApiCallCapabilities extends com.google.api.client.js
   }
 
   /**
-   * Whether the surface supports Duo calling email endpoints.
    * @param supportsDuoEmailEndpoint supportsDuoEmailEndpoint or {@code null} for none
    */
   public AssistantApiCallCapabilities setSupportsDuoEmailEndpoint(java.lang.Boolean supportsDuoEmailEndpoint) {

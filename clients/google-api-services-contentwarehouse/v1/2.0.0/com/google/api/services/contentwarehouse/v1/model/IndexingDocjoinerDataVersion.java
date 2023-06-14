@@ -50,6 +50,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo authenticSiteRankData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo chromeCounts;
 
   /**
@@ -59,7 +65,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo creator;
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +86,18 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo extractedBookInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo instantChromeViews;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo instantNavboost;
 
   /**
@@ -96,7 +113,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo modernFormatContent;
 
   /**
-   * LINT.IfChange
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +122,19 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo predictedAuthenticity;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo rankembed;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo rosettaLanguage;
 
   /**
    * The value may be {@code null}.
@@ -144,6 +172,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getAuthenticSiteRankData() {
+    return authenticSiteRankData;
+  }
+
+  /**
+   * @param authenticSiteRankData authenticSiteRankData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setAuthenticSiteRankData(IndexingDocjoinerDataVersionVersionInfo authenticSiteRankData) {
+    this.authenticSiteRankData = authenticSiteRankData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getChromeCounts() {
     return chromeCounts;
   }
@@ -172,7 +215,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getDiscoverSource() {
@@ -180,7 +222,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/indexing/ames/spanner/schema/web-version.proto)
    * @param discoverSource discoverSource or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setDiscoverSource(IndexingDocjoinerDataVersionVersionInfo discoverSource) {
@@ -215,6 +256,36 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setDocumentIntent(IndexingDocjoinerDataVersionVersionInfo documentIntent) {
     this.documentIntent = documentIntent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getExtractedBookInfo() {
+    return extractedBookInfo;
+  }
+
+  /**
+   * @param extractedBookInfo extractedBookInfo or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setExtractedBookInfo(IndexingDocjoinerDataVersionVersionInfo extractedBookInfo) {
+    this.extractedBookInfo = extractedBookInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getInstantChromeViews() {
+    return instantChromeViews;
+  }
+
+  /**
+   * @param instantChromeViews instantChromeViews or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setInstantChromeViews(IndexingDocjoinerDataVersionVersionInfo instantChromeViews) {
+    this.instantChromeViews = instantChromeViews;
     return this;
   }
 
@@ -264,7 +335,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.IfChange
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getNavboost() {
@@ -272,11 +342,25 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * LINT.IfChange
    * @param navboost navboost or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setNavboost(IndexingDocjoinerDataVersionVersionInfo navboost) {
     this.navboost = navboost;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getPredictedAuthenticity() {
+    return predictedAuthenticity;
+  }
+
+  /**
+   * @param predictedAuthenticity predictedAuthenticity or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setPredictedAuthenticity(IndexingDocjoinerDataVersionVersionInfo predictedAuthenticity) {
+    this.predictedAuthenticity = predictedAuthenticity;
     return this;
   }
 
@@ -292,6 +376,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setRankembed(IndexingDocjoinerDataVersionVersionInfo rankembed) {
     this.rankembed = rankembed;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getRosettaLanguage() {
+    return rosettaLanguage;
+  }
+
+  /**
+   * @param rosettaLanguage rosettaLanguage or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setRosettaLanguage(IndexingDocjoinerDataVersionVersionInfo rosettaLanguage) {
+    this.rosettaLanguage = rosettaLanguage;
     return this;
   }
 

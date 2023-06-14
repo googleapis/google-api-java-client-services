@@ -69,14 +69,6 @@ public final class AssistantApiProactiveOutput extends com.google.api.client.jso
   private java.lang.String photosProactive;
 
   /**
-   * Whether a device supports proactive output. Note that this is assumed to be true for all Smart
-   * Display devices, but surfaces that newly start supporting proactive_output should set this bit.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean supportsProactiveOutput;
-
-  /**
    * Settings for displaying personal data on proactive surfaces with face match capability.
    * The value may be {@code null}.
    */
@@ -168,25 +160,6 @@ public final class AssistantApiProactiveOutput extends com.google.api.client.jso
    */
   public AssistantApiProactiveOutput setPhotosProactive(java.lang.String photosProactive) {
     this.photosProactive = photosProactive;
-    return this;
-  }
-
-  /**
-   * Whether a device supports proactive output. Note that this is assumed to be true for all Smart
-   * Display devices, but surfaces that newly start supporting proactive_output should set this bit.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getSupportsProactiveOutput() {
-    return supportsProactiveOutput;
-  }
-
-  /**
-   * Whether a device supports proactive output. Note that this is assumed to be true for all Smart
-   * Display devices, but surfaces that newly start supporting proactive_output should set this bit.
-   * @param supportsProactiveOutput supportsProactiveOutput or {@code null} for none
-   */
-  public AssistantApiProactiveOutput setSupportsProactiveOutput(java.lang.Boolean supportsProactiveOutput) {
-    this.supportsProactiveOutput = supportsProactiveOutput;
     return this;
   }
 

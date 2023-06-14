@@ -32,14 +32,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantApiLoggingOnlyData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device.
-   * There is no guarantee that this is a stable number but is relatively stable in practice.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer accountIndex;
-
-  /**
    * A user-readable string describing the ACP version (go/acp-version) of the client app used by
    * the user to originate the conversation.
    * The value may be {@code null}.
@@ -147,25 +139,6 @@ public final class AssistantApiLoggingOnlyData extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualReleaseChannel;
-
-  /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device.
-   * There is no guarantee that this is a stable number but is relatively stable in practice.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getAccountIndex() {
-    return accountIndex;
-  }
-
-  /**
-   * The index of the account on the device. Useful when there are multiple accounts on a device.
-   * There is no guarantee that this is a stable number but is relatively stable in practice.
-   * @param accountIndex accountIndex or {@code null} for none
-   */
-  public AssistantApiLoggingOnlyData setAccountIndex(java.lang.Integer accountIndex) {
-    this.accountIndex = accountIndex;
-    return this;
-  }
 
   /**
    * A user-readable string describing the ACP version (go/acp-version) of the client app used by

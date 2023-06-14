@@ -72,6 +72,13 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
   private GeostoreFeatureIdProto restrictionGroup;
 
   /**
+   * A token that can be used to identify the version of the data about this restriction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restrictionToken;
+
+  /**
    * When specified, restriction applies only at particular times (operating hours or times of the
    * year: reversing lanes, seasonal roads, no left turns from 3-5pm Mon-Fri except holidays).
    * Otherwise, restriction is in effect at all times.
@@ -260,6 +267,23 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    */
   public GeostoreRestrictionProto setRestrictionGroup(GeostoreFeatureIdProto restrictionGroup) {
     this.restrictionGroup = restrictionGroup;
+    return this;
+  }
+
+  /**
+   * A token that can be used to identify the version of the data about this restriction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestrictionToken() {
+    return restrictionToken;
+  }
+
+  /**
+   * A token that can be used to identify the version of the data about this restriction.
+   * @param restrictionToken restrictionToken or {@code null} for none
+   */
+  public GeostoreRestrictionProto setRestrictionToken(java.lang.String restrictionToken) {
+    this.restrictionToken = restrictionToken;
     return this;
   }
 

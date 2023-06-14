@@ -30,11 +30,19 @@ package com.google.api.services.run.v1.model;
 public final class ContainerOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override.
+   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
+   * if `clear_args` is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
+
+  /**
+   * Optional. True if the intention is to clear out existing args list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean clearArgs;
 
   /**
    * List of environment variables to set in the container. Will be merged with existing env for
@@ -52,7 +60,8 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override.
+   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
+   * if `clear_args` is set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -60,11 +69,29 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override.
+   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
+   * if `clear_args` is set to true.
    * @param args args or {@code null} for none
    */
   public ContainerOverride setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. True if the intention is to clear out existing args list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClearArgs() {
+    return clearArgs;
+  }
+
+  /**
+   * Optional. True if the intention is to clear out existing args list.
+   * @param clearArgs clearArgs or {@code null} for none
+   */
+  public ContainerOverride setClearArgs(java.lang.Boolean clearArgs) {
+    this.clearArgs = clearArgs;
     return this;
   }
 

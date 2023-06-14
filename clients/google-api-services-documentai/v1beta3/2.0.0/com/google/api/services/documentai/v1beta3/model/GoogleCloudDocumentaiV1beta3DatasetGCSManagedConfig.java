@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Config specific to the GCS-based implementation.
+ * Configuration specific to the Cloud Storage-based implementation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Cloud Storage uri (a directory) where the documents belonging to the dataset must
+   * Required. The Cloud Storage URI (a directory) where the documents belonging to the dataset must
    * be stored.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig extends c
   private GoogleCloudDocumentaiV1beta3GcsPrefix gcsPrefix;
 
   /**
-   * Required. The Cloud Storage uri (a directory) where the documents belonging to the dataset must
+   * Required. The Cloud Storage URI (a directory) where the documents belonging to the dataset must
    * be stored.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig extends c
   }
 
   /**
-   * Required. The Cloud Storage uri (a directory) where the documents belonging to the dataset must
+   * Required. The Cloud Storage URI (a directory) where the documents belonging to the dataset must
    * be stored.
    * @param gcsPrefix gcsPrefix or {@code null} for none
    */

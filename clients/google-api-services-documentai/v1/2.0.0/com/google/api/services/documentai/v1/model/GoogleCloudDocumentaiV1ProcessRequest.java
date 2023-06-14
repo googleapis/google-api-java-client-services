@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   private GoogleCloudDocumentaiV1RawDocument rawDocument;
 
   /**
-   * Whether Human Review feature should be skipped for this request. Default to false.
+   * Whether human review should be skipped for this request. Default to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   }
 
   /**
-   * Whether Human Review feature should be skipped for this request. Default to false.
+   * Whether human review should be skipped for this request. Default to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipHumanReview() {
@@ -124,7 +124,7 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   }
 
   /**
-   * Whether Human Review feature should be skipped for this request. Default to false.
+   * Whether human review should be skipped for this request. Default to `false`.
    * @param skipHumanReview skipHumanReview or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessRequest setSkipHumanReview(java.lang.Boolean skipHumanReview) {

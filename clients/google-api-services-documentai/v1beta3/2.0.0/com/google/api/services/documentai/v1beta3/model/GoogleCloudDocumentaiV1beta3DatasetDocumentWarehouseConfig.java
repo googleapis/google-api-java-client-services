@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Config specific to the Document Warehouse-based implementation.
+ * Configuration specific to the Document AI Warehouse-based implementation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The collection in Document Warehouse associated with the dataset.
+   * Output only. The collection in Document AI Warehouse associated with the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String collection;
 
   /**
-   * Output only. The schema in Document Warehouse associated with the dataset.
+   * Output only. The schema in Document AI Warehouse associated with the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schema;
 
   /**
-   * Output only. The collection in Document Warehouse associated with the dataset.
+   * Output only. The collection in Document AI Warehouse associated with the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollection() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig ex
   }
 
   /**
-   * Output only. The collection in Document Warehouse associated with the dataset.
+   * Output only. The collection in Document AI Warehouse associated with the dataset.
    * @param collection collection or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig setCollection(java.lang.String collection) {
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig ex
   }
 
   /**
-   * Output only. The schema in Document Warehouse associated with the dataset.
+   * Output only. The schema in Document AI Warehouse associated with the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig ex
   }
 
   /**
-   * Output only. The schema in Document Warehouse associated with the dataset.
+   * Output only. The schema in Document AI Warehouse associated with the dataset.
    * @param schema schema or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig setSchema(java.lang.String schema) {

@@ -31,15 +31,15 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Document Warehouse-based dataset config.
+   * Optional. Document AI Warehouse-based dataset configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig documentWarehouseConfig;
 
   /**
-   * Optional. User managed GCS dataset config. Use this config if the dataset documents are stored
-   * under a user managed GCS location.
+   * Optional. User-managed Cloud Storage dataset configuration. Use this configuration if the
+   * dataset documents are stored under a user-managed Cloud Storage location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,30 +54,30 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   private java.lang.String name;
 
   /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lack
-   * advanced features like CMEK and content based search.
+   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
+   * advanced features like CMEK and content-based search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig spannerIndexingConfig;
 
   /**
-   * Required. State of the dataset. Will be ignored when updating dataset.
+   * Required. State of the dataset. Ignored when updating dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Unmanaged dataset config. Use this config if the dataset documents are managed by the
-   * document service internally (not user managed).
+   * Optional. Unmanaged dataset configuration. Use this configuration if the dataset documents are
+   * managed by the document service internally (not user-managed).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig unmanagedDatasetConfig;
 
   /**
-   * Optional. Document Warehouse-based dataset config.
+   * Optional. Document AI Warehouse-based dataset configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig getDocumentWarehouseConfig() {
@@ -85,7 +85,7 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. Document Warehouse-based dataset config.
+   * Optional. Document AI Warehouse-based dataset configuration.
    * @param documentWarehouseConfig documentWarehouseConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setDocumentWarehouseConfig(GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig documentWarehouseConfig) {
@@ -94,8 +94,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. User managed GCS dataset config. Use this config if the dataset documents are stored
-   * under a user managed GCS location.
+   * Optional. User-managed Cloud Storage dataset configuration. Use this configuration if the
+   * dataset documents are stored under a user-managed Cloud Storage location.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig getGcsManagedConfig() {
@@ -103,8 +103,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. User managed GCS dataset config. Use this config if the dataset documents are stored
-   * under a user managed GCS location.
+   * Optional. User-managed Cloud Storage dataset configuration. Use this configuration if the
+   * dataset documents are stored under a user-managed Cloud Storage location.
    * @param gcsManagedConfig gcsManagedConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setGcsManagedConfig(GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig gcsManagedConfig) {
@@ -132,8 +132,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lack
-   * advanced features like CMEK and content based search.
+   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
+   * advanced features like CMEK and content-based search.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig getSpannerIndexingConfig() {
@@ -141,8 +141,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lack
-   * advanced features like CMEK and content based search.
+   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
+   * advanced features like CMEK and content-based search.
    * @param spannerIndexingConfig spannerIndexingConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setSpannerIndexingConfig(GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig spannerIndexingConfig) {
@@ -151,7 +151,7 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Required. State of the dataset. Will be ignored when updating dataset.
+   * Required. State of the dataset. Ignored when updating dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -159,7 +159,7 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Required. State of the dataset. Will be ignored when updating dataset.
+   * Required. State of the dataset. Ignored when updating dataset.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setState(java.lang.String state) {
@@ -168,8 +168,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. Unmanaged dataset config. Use this config if the dataset documents are managed by the
-   * document service internally (not user managed).
+   * Optional. Unmanaged dataset configuration. Use this configuration if the dataset documents are
+   * managed by the document service internally (not user-managed).
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig getUnmanagedDatasetConfig() {
@@ -177,8 +177,8 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   }
 
   /**
-   * Optional. Unmanaged dataset config. Use this config if the dataset documents are managed by the
-   * document service internally (not user managed).
+   * Optional. Unmanaged dataset configuration. Use this configuration if the dataset documents are
+   * managed by the document service internally (not user-managed).
    * @param unmanagedDatasetConfig unmanagedDatasetConfig or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Dataset setUnmanagedDatasetConfig(GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig unmanagedDatasetConfig) {

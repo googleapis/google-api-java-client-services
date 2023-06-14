@@ -3000,7 +3000,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         public class Dataset {
 
           /**
-           * Gets the DatasetSchema of a Dataset.
+           * Gets the `DatasetSchema` of a `Dataset`.
            *
            * Create a request for the method "dataset.getDatasetSchema".
            *
@@ -3025,7 +3025,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
 
             /**
-             * Gets the DatasetSchema of a Dataset.
+             * Gets the `DatasetSchema` of a `Dataset`.
              *
              * Create a request for the method "dataset.getDatasetSchema".
              *
@@ -3164,7 +3164,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Updates a DatasetSchema.
+           * Updates a `DatasetSchema`.
            *
            * Create a request for the method "dataset.updateDatasetSchema".
            *
@@ -3190,7 +3190,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset/datasetSchema$");
 
             /**
-             * Updates a DatasetSchema.
+             * Updates a `DatasetSchema`.
              *
              * Create a request for the method "dataset.updateDatasetSchema".
              *

@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * Identifies a document uniquely within the scope of a dataset in user managed Cloud Storage
+ * Identifies a document uniquely within the scope of a dataset in the user-managed Cloud Storage
  * option.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId 
   private java.lang.String cwDocId;
 
   /**
-   * Required. The Cloud Storage uri where the actual document is stored.
+   * Required. The Cloud Storage URI where the actual document is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId 
   }
 
   /**
-   * Required. The Cloud Storage uri where the actual document is stored.
+   * Required. The Cloud Storage URI where the actual document is stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId 
   }
 
   /**
-   * Required. The Cloud Storage uri where the actual document is stored.
+   * Required. The Cloud Storage URI where the actual document is stored.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId setGcsUri(java.lang.String gcsUri) {

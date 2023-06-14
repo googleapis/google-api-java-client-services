@@ -31,6 +31,15 @@ package com.google.api.services.batch.v1.model;
 public final class AgentTask extends com.google.api.client.json.GenericJson {
 
   /**
+   * AgentTaskSpec is the taskSpec representation between Agent and CLH communication. This field
+   * will replace the TaskSpec field above in future to have a better separation between user-
+   * facaing API and internal API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentTaskSpec agentTaskSpec;
+
+  /**
    * The intended state of the task.
    * The value may be {@code null}.
    */
@@ -45,7 +54,7 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
   private java.lang.Long reachedBarrier;
 
   /**
-   * Task Spec.
+   * Task Spec. This field will be replaced by agent_task_spec below in future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +80,27 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String taskSource;
+
+  /**
+   * AgentTaskSpec is the taskSpec representation between Agent and CLH communication. This field
+   * will replace the TaskSpec field above in future to have a better separation between user-
+   * facaing API and internal API.
+   * @return value or {@code null} for none
+   */
+  public AgentTaskSpec getAgentTaskSpec() {
+    return agentTaskSpec;
+  }
+
+  /**
+   * AgentTaskSpec is the taskSpec representation between Agent and CLH communication. This field
+   * will replace the TaskSpec field above in future to have a better separation between user-
+   * facaing API and internal API.
+   * @param agentTaskSpec agentTaskSpec or {@code null} for none
+   */
+  public AgentTask setAgentTaskSpec(AgentTaskSpec agentTaskSpec) {
+    this.agentTaskSpec = agentTaskSpec;
+    return this;
+  }
 
   /**
    * The intended state of the task.
@@ -107,7 +137,7 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task Spec.
+   * Task Spec. This field will be replaced by agent_task_spec below in future.
    * @return value or {@code null} for none
    */
   public TaskSpec getSpec() {
@@ -115,7 +145,7 @@ public final class AgentTask extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task Spec.
+   * Task Spec. This field will be replaced by agent_task_spec below in future.
    * @param spec spec or {@code null} for none
    */
   public AgentTask setSpec(TaskSpec spec) {

@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class UpcomingMaintenance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * Indicates if the maintenance can be customer triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.String windowStartTime;
 
   /**
-   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * Indicates if the maintenance can be customer triggered.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanReschedule() {
@@ -106,7 +106,7 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
+   * Indicates if the maintenance can be customer triggered.
    * @param canReschedule canReschedule or {@code null} for none
    */
   public UpcomingMaintenance setCanReschedule(java.lang.Boolean canReschedule) {

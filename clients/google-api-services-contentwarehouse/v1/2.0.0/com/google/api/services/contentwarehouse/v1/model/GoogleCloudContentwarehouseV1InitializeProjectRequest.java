@@ -52,6 +52,13 @@ public final class GoogleCloudContentwarehouseV1InitializeProjectRequest extends
   private java.lang.String documentCreatorDefaultRole;
 
   /**
+   * Optional. Whether to enable CAL user email logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableCalUserEmailLogging;
+
+  /**
    * Optional. The KMS key used for CMEK encryption. It is required that the kms key is in the same
    * region as the endpoint. The same key will be used for all provisioned resources, if encryption
    * is available. If the kms_key is left empty, no encryption will be enforced.
@@ -108,6 +115,23 @@ public final class GoogleCloudContentwarehouseV1InitializeProjectRequest extends
    */
   public GoogleCloudContentwarehouseV1InitializeProjectRequest setDocumentCreatorDefaultRole(java.lang.String documentCreatorDefaultRole) {
     this.documentCreatorDefaultRole = documentCreatorDefaultRole;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable CAL user email logging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableCalUserEmailLogging() {
+    return enableCalUserEmailLogging;
+  }
+
+  /**
+   * Optional. Whether to enable CAL user email logging.
+   * @param enableCalUserEmailLogging enableCalUserEmailLogging or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1InitializeProjectRequest setEnableCalUserEmailLogging(java.lang.Boolean enableCalUserEmailLogging) {
+    this.enableCalUserEmailLogging = enableCalUserEmailLogging;
     return this;
   }
 

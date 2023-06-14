@@ -167,6 +167,13 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
   private java.lang.Integer citationSource;
 
   /**
+   * Seconds since the epoch, should be consistent with CitationSourceUrl.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("CitationSourceCrawlTimestamp") @com.google.api.client.json.JsonString
+  private java.lang.Long citationSourceCrawlTimestamp;
+
+  /**
    * url where record came from
    * The value may be {@code null}.
    */
@@ -1109,6 +1116,23 @@ public final class ScienceCitation extends com.google.api.client.json.GenericJso
    */
   public ScienceCitation setCitationSource(java.lang.Integer citationSource) {
     this.citationSource = citationSource;
+    return this;
+  }
+
+  /**
+   * Seconds since the epoch, should be consistent with CitationSourceUrl.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCitationSourceCrawlTimestamp() {
+    return citationSourceCrawlTimestamp;
+  }
+
+  /**
+   * Seconds since the epoch, should be consistent with CitationSourceUrl.
+   * @param citationSourceCrawlTimestamp citationSourceCrawlTimestamp or {@code null} for none
+   */
+  public ScienceCitation setCitationSourceCrawlTimestamp(java.lang.Long citationSourceCrawlTimestamp) {
+    this.citationSourceCrawlTimestamp = citationSourceCrawlTimestamp;
     return this;
   }
 

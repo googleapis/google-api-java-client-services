@@ -30,6 +30,13 @@ package com.google.api.services.transcoder.v1.model;
 public final class Manifest extends com.google.api.client.json.GenericJson {
 
   /**
+   * `DASH` manifest configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DashConfig dash;
+
+  /**
    * The name of the generated file. The default is `manifest` with the extension suffix
    * corresponding to the `Manifest.type`.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * `DASH` manifest configuration.
+   * @return value or {@code null} for none
+   */
+  public DashConfig getDash() {
+    return dash;
+  }
+
+  /**
+   * `DASH` manifest configuration.
+   * @param dash dash or {@code null} for none
+   */
+  public Manifest setDash(DashConfig dash) {
+    this.dash = dash;
+    return this;
+  }
 
   /**
    * The name of the generated file. The default is `manifest` with the extension suffix

@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing Evaluation object
+ * LINT.IfChange Message describing Evaluation object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -94,7 +94,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ruleVersions;
 
   /**
-   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * crontab format schedule for scheduled evaluation, currently only support the following
+   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,7 +264,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * crontab format schedule for scheduled evaluation, currently only support the following
+   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -271,7 +273,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * crontab format schedule for scheduled evaluation, example: 0 3 * * *
+   * crontab format schedule for scheduled evaluation, currently only support the following
+   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
    * @param schedule schedule or {@code null} for none
    */
   public Evaluation setSchedule(java.lang.String schedule) {

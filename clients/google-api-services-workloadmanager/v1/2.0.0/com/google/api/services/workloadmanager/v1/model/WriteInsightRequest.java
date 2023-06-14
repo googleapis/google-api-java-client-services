@@ -37,13 +37,6 @@ public final class WriteInsightRequest extends com.google.api.client.json.Generi
   private Insight insight;
 
   /**
-   * Optional. The instance id where the insight is generated from
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceId;
-
-  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes since the first request. For
@@ -71,23 +64,6 @@ public final class WriteInsightRequest extends com.google.api.client.json.Generi
    */
   public WriteInsightRequest setInsight(Insight insight) {
     this.insight = insight;
-    return this;
-  }
-
-  /**
-   * Optional. The instance id where the insight is generated from
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceId() {
-    return instanceId;
-  }
-
-  /**
-   * Optional. The instance id where the insight is generated from
-   * @param instanceId instanceId or {@code null} for none
-   */
-  public WriteInsightRequest setInstanceId(java.lang.String instanceId) {
-    this.instanceId = instanceId;
     return this;
   }
 

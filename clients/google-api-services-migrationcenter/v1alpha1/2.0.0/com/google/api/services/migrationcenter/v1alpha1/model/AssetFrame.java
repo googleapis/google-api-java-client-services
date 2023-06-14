@@ -44,7 +44,7 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Asset performance data samples.
+   * Asset performance data samples. Samples that are older than 40 days are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Asset performance data samples.
+   * Asset performance data samples. Samples that are older than 40 days are ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<PerformanceSample> getPerformanceSamples() {
@@ -114,7 +114,7 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Asset performance data samples.
+   * Asset performance data samples. Samples that are older than 40 days are ignored.
    * @param performanceSamples performanceSamples or {@code null} for none
    */
   public AssetFrame setPerformanceSamples(java.util.List<PerformanceSample> performanceSamples) {

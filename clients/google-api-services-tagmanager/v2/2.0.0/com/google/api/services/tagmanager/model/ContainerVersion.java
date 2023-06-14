@@ -155,6 +155,13 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.lang.String tagManagerUrl;
 
   /**
+   * The transformations in the container that this version was taken from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Transformation> transformation;
+
+  /**
    * The triggers in the container that this version was taken from.
    * The value may be {@code null}.
    */
@@ -446,6 +453,23 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
    */
   public ContainerVersion setTagManagerUrl(java.lang.String tagManagerUrl) {
     this.tagManagerUrl = tagManagerUrl;
+    return this;
+  }
+
+  /**
+   * The transformations in the container that this version was taken from.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Transformation> getTransformation() {
+    return transformation;
+  }
+
+  /**
+   * The transformations in the container that this version was taken from.
+   * @param transformation transformation or {@code null} for none
+   */
+  public ContainerVersion setTransformation(java.util.List<Transformation> transformation) {
+    this.transformation = transformation;
     return this;
   }
 

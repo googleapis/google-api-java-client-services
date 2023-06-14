@@ -65,6 +65,28 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   private java.lang.String sizingOptimizationStrategy;
 
   /**
+   * Preferences concerning Sole Tenant nodes and virtual machines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SoleTenancyPreferences soleTenancyPreferences;
+
+  /**
+   * Target product for assets using this preference set. Specify either target product or business
+   * goal, but not both.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetProduct;
+
+  /**
+   * Preferences concerning insights and recommendations for Google Cloud VMware Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareEnginePreferences vmwareEnginePreferences;
+
+  /**
    * Commitment plan to consider when calculating costs for virtual machine insights and
    * recommendations. If you are unsure which value to set, a 3 year commitment plan is often a good
    * value to start with.
@@ -139,6 +161,59 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
    */
   public VirtualMachinePreferences setSizingOptimizationStrategy(java.lang.String sizingOptimizationStrategy) {
     this.sizingOptimizationStrategy = sizingOptimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Preferences concerning Sole Tenant nodes and virtual machines.
+   * @return value or {@code null} for none
+   */
+  public SoleTenancyPreferences getSoleTenancyPreferences() {
+    return soleTenancyPreferences;
+  }
+
+  /**
+   * Preferences concerning Sole Tenant nodes and virtual machines.
+   * @param soleTenancyPreferences soleTenancyPreferences or {@code null} for none
+   */
+  public VirtualMachinePreferences setSoleTenancyPreferences(SoleTenancyPreferences soleTenancyPreferences) {
+    this.soleTenancyPreferences = soleTenancyPreferences;
+    return this;
+  }
+
+  /**
+   * Target product for assets using this preference set. Specify either target product or business
+   * goal, but not both.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetProduct() {
+    return targetProduct;
+  }
+
+  /**
+   * Target product for assets using this preference set. Specify either target product or business
+   * goal, but not both.
+   * @param targetProduct targetProduct or {@code null} for none
+   */
+  public VirtualMachinePreferences setTargetProduct(java.lang.String targetProduct) {
+    this.targetProduct = targetProduct;
+    return this;
+  }
+
+  /**
+   * Preferences concerning insights and recommendations for Google Cloud VMware Engine.
+   * @return value or {@code null} for none
+   */
+  public VmwareEnginePreferences getVmwareEnginePreferences() {
+    return vmwareEnginePreferences;
+  }
+
+  /**
+   * Preferences concerning insights and recommendations for Google Cloud VMware Engine.
+   * @param vmwareEnginePreferences vmwareEnginePreferences or {@code null} for none
+   */
+  public VirtualMachinePreferences setVmwareEnginePreferences(VmwareEnginePreferences vmwareEnginePreferences) {
+    this.vmwareEnginePreferences = vmwareEnginePreferences;
     return this;
   }
 

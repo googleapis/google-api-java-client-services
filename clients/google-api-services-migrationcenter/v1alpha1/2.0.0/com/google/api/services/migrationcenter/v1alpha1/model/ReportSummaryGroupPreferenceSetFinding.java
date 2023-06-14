@@ -114,11 +114,25 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private java.lang.String pricingTrack;
 
   /**
+   * A set of findings that applies to Stole-Tenant machines in the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummarySoleTenantFinding soleTenantFinding;
+
+  /**
    * Text describing the business priority specified for this Preference Set
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topPriority;
+
+  /**
+   * A set of findings that applies to VMWare machines in the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryVMWareEngineFinding vmwareEngineFinding;
 
   /**
    * Description for the Preference Set.
@@ -325,6 +339,23 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
+   * A set of findings that applies to Stole-Tenant machines in the input.
+   * @return value or {@code null} for none
+   */
+  public ReportSummarySoleTenantFinding getSoleTenantFinding() {
+    return soleTenantFinding;
+  }
+
+  /**
+   * A set of findings that applies to Stole-Tenant machines in the input.
+   * @param soleTenantFinding soleTenantFinding or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setSoleTenantFinding(ReportSummarySoleTenantFinding soleTenantFinding) {
+    this.soleTenantFinding = soleTenantFinding;
+    return this;
+  }
+
+  /**
    * Text describing the business priority specified for this Preference Set
    * @return value or {@code null} for none
    */
@@ -338,6 +369,23 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   public ReportSummaryGroupPreferenceSetFinding setTopPriority(java.lang.String topPriority) {
     this.topPriority = topPriority;
+    return this;
+  }
+
+  /**
+   * A set of findings that applies to VMWare machines in the input.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryVMWareEngineFinding getVmwareEngineFinding() {
+    return vmwareEngineFinding;
+  }
+
+  /**
+   * A set of findings that applies to VMWare machines in the input.
+   * @param vmwareEngineFinding vmwareEngineFinding or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setVmwareEngineFinding(ReportSummaryVMWareEngineFinding vmwareEngineFinding) {
+    this.vmwareEngineFinding = vmwareEngineFinding;
     return this;
   }
 

@@ -58,7 +58,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   private NetworkUsageSample network;
 
   /**
-   * Time the sample was collected.
+   * Required. Time the sample was collected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Time the sample was collected.
+   * Required. Time the sample was collected.
    * @return value or {@code null} for none
    */
   public String getSampleTime() {
@@ -141,7 +141,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Time the sample was collected.
+   * Required. Time the sample was collected.
    * @param sampleTime sampleTime or {@code null} for none
    */
   public PerformanceSample setSampleTime(String sampleTime) {

@@ -31,12 +31,39 @@ package com.google.api.services.firebaseappcheck.v1.model;
 public final class GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. The reCAPTCHA token as returned by the [reCAPTCHA Enterprise JavaScript
    * API](https://cloud.google.com/recaptcha-enterprise/docs/instrument-web-pages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recaptchaEnterpriseToken;
+
+  /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
+    return this;
+  }
 
   /**
    * Required. The reCAPTCHA token as returned by the [reCAPTCHA Enterprise JavaScript

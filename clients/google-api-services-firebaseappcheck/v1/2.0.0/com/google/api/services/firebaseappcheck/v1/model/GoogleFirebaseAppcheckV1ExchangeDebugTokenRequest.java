@@ -39,6 +39,14 @@ public final class GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest extends com
   private java.lang.String debugToken;
 
   /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean limitedUse;
+
+  /**
    * Required. A debug token secret. This string must match a debug token secret previously created
    * using CreateDebugToken.
    * @return value or {@code null} for none
@@ -54,6 +62,25 @@ public final class GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest extends com
    */
   public GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest setDebugToken(java.lang.String debugToken) {
     this.debugToken = debugToken;
+    return this;
+  }
+
+  /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLimitedUse() {
+    return limitedUse;
+  }
+
+  /**
+   * Forces a short lived token with a 5 minute TTL. Useful when the client wishes to self impose
+   * stricter TTL requirements for this exchange. Default: false.
+   * @param limitedUse limitedUse or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1ExchangeDebugTokenRequest setLimitedUse(java.lang.Boolean limitedUse) {
+    this.limitedUse = limitedUse;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs extends com.google.api.client.json.GenericJson {
 
   /**
+   * Boolean indicating whether a column filter was applied in the DataScan job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean columnFilterApplied;
+
+  /**
    * Boolean indicating whether a row filter was applied in the DataScan job.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs e
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Boolean indicating whether a column filter was applied in the DataScan job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getColumnFilterApplied() {
+    return columnFilterApplied;
+  }
+
+  /**
+   * Boolean indicating whether a column filter was applied in the DataScan job.
+   * @param columnFilterApplied columnFilterApplied or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs setColumnFilterApplied(java.lang.Boolean columnFilterApplied) {
+    this.columnFilterApplied = columnFilterApplied;
+    return this;
+  }
 
   /**
    * Boolean indicating whether a row filter was applied in the DataScan job.

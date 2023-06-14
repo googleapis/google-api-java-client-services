@@ -103,9 +103,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the function (as defined in source code) that will be executed. Defaults to the
-   * resource name suffix, if not specified. For backward compatibility, if function with given name
-   * is not found, then the system will try to use function named "function". For Node.js this is
-   * name of a function exported by the module specified in `source_location`.
+   * resource name suffix (ID of the function), if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -488,9 +486,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the function (as defined in source code) that will be executed. Defaults to the
-   * resource name suffix, if not specified. For backward compatibility, if function with given name
-   * is not found, then the system will try to use function named "function". For Node.js this is
-   * name of a function exported by the module specified in `source_location`.
+   * resource name suffix (ID of the function), if not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntryPoint() {
@@ -499,9 +495,7 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
 
   /**
    * The name of the function (as defined in source code) that will be executed. Defaults to the
-   * resource name suffix, if not specified. For backward compatibility, if function with given name
-   * is not found, then the system will try to use function named "function". For Node.js this is
-   * name of a function exported by the module specified in `source_location`.
+   * resource name suffix (ID of the function), if not specified.
    * @param entryPoint entryPoint or {@code null} for none
    */
   public CloudFunction setEntryPoint(java.lang.String entryPoint) {

@@ -97,6 +97,21 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private RestoreConfig restoreConfig;
 
   /**
+   * Output only. State of the RestorePlan. This State field reflects the various stages a
+   * RestorePlan can be in during the Create operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stateReason;
+
+  /**
    * Output only. Server generated global unique identifier of
    * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
    * The value may be {@code null}.
@@ -264,6 +279,42 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
    */
   public RestorePlan setRestoreConfig(RestoreConfig restoreConfig) {
     this.restoreConfig = restoreConfig;
+    return this;
+  }
+
+  /**
+   * Output only. State of the RestorePlan. This State field reflects the various stages a
+   * RestorePlan can be in during the Create operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the RestorePlan. This State field reflects the various stages a
+   * RestorePlan can be in during the Create operation.
+   * @param state state or {@code null} for none
+   */
+  public RestorePlan setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStateReason() {
+    return stateReason;
+  }
+
+  /**
+   * Output only. Human-readable description of why RestorePlan is in the current `state`
+   * @param stateReason stateReason or {@code null} for none
+   */
+  public RestorePlan setStateReason(java.lang.String stateReason) {
+    this.stateReason = stateReason;
     return this;
   }
 

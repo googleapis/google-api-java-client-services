@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentStyleFontSize extends com
   private java.lang.Float size;
 
   /**
-   * Unit for the font size. Follows CSS naming (`in`, `px`, `pt`, etc.).
+   * Unit for the font size. Follows CSS naming (such as `in`, `px`, and `pt`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentStyleFontSize extends com
   }
 
   /**
-   * Unit for the font size. Follows CSS naming (`in`, `px`, `pt`, etc.).
+   * Unit for the font size. Follows CSS naming (such as `in`, `px`, and `pt`).
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentStyleFontSize extends com
   }
 
   /**
-   * Unit for the font size. Follows CSS naming (`in`, `px`, `pt`, etc.).
+   * Unit for the font size. Follows CSS naming (such as `in`, `px`, and `pt`).
    * @param unit unit or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentStyleFontSize setUnit(java.lang.String unit) {

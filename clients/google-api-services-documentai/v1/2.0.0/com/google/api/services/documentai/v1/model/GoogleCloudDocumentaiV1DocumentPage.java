@@ -75,7 +75,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   private GoogleCloudDocumentaiV1DocumentPageImage image;
 
   /**
-   * Image Quality Scores.
+   * Image quality scores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,7 +261,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * Image Quality Scores.
+   * Image quality scores.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageImageQualityScores getImageQualityScores() {
@@ -269,7 +269,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * Image Quality Scores.
+   * Image quality scores.
    * @param imageQualityScores imageQualityScores or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPage setImageQualityScores(GoogleCloudDocumentaiV1DocumentPageImageQualityScores imageQualityScores) {

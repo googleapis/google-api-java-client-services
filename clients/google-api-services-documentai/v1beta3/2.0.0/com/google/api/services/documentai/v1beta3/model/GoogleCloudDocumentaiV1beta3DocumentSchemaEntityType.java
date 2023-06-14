@@ -65,10 +65,10 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
 
   /**
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
-   * following naming conventions are used: - Use `snake_casing` - Name matching is case-sensitive -
-   * Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
+   * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
+   * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
    * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character) - The `/` is sometimes used to denote a property of a type. For example
+   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * The value may be {@code null}.
@@ -159,10 +159,10 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
 
   /**
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
-   * following naming conventions are used: - Use `snake_casing` - Name matching is case-sensitive -
-   * Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
+   * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
+   * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
    * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character) - The `/` is sometimes used to denote a property of a type. For example
+   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * @return value or {@code null} for none
@@ -173,10 +173,10 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityType extends 
 
   /**
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
-   * following naming conventions are used: - Use `snake_casing` - Name matching is case-sensitive -
-   * Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
+   * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
+   * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
    * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character) - The `/` is sometimes used to denote a property of a type. For example
+   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * @param name name or {@code null} for none

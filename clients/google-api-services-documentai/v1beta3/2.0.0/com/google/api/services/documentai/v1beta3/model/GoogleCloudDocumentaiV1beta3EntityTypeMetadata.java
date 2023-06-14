@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the entity type should be considered as "inactive".
+   * Whether the entity type should be considered inactive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inactive;
 
   /**
-   * Whether the entity type should be considered as "inactive".
+   * Whether the entity type should be considered inactive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInactive() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3EntityTypeMetadata extends com.go
   }
 
   /**
-   * Whether the entity type should be considered as "inactive".
+   * Whether the entity type should be considered inactive.
    * @param inactive inactive or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3EntityTypeMetadata setInactive(java.lang.Boolean inactive) {

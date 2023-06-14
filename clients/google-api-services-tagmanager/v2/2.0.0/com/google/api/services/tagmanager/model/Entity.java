@@ -59,6 +59,13 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   private Tag tag;
 
   /**
+   * The transformation being represented by the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Transformation transformation;
+
+  /**
    * The trigger being represented by the entity.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class Entity extends com.google.api.client.json.GenericJson {
    */
   public Entity setTag(Tag tag) {
     this.tag = tag;
+    return this;
+  }
+
+  /**
+   * The transformation being represented by the entity.
+   * @return value or {@code null} for none
+   */
+  public Transformation getTransformation() {
+    return transformation;
+  }
+
+  /**
+   * The transformation being represented by the entity.
+   * @param transformation transformation or {@code null} for none
+   */
+  public Entity setTransformation(Transformation transformation) {
+    this.transformation = transformation;
     return this;
   }
 

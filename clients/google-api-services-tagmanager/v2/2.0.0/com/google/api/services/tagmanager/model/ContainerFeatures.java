@@ -79,6 +79,13 @@ public final class ContainerFeatures extends com.google.api.client.json.GenericJ
   private java.lang.Boolean supportTemplates;
 
   /**
+   * Whether this Container supports transformations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportTransformations;
+
+  /**
    * Whether this Container supports triggers.
    * The value may be {@code null}.
    */
@@ -236,6 +243,23 @@ public final class ContainerFeatures extends com.google.api.client.json.GenericJ
    */
   public ContainerFeatures setSupportTemplates(java.lang.Boolean supportTemplates) {
     this.supportTemplates = supportTemplates;
+    return this;
+  }
+
+  /**
+   * Whether this Container supports transformations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportTransformations() {
+    return supportTransformations;
+  }
+
+  /**
+   * Whether this Container supports transformations.
+   * @param supportTransformations supportTransformations or {@code null} for none
+   */
+  public ContainerFeatures setSupportTransformations(java.lang.Boolean supportTransformations) {
+    this.supportTransformations = supportTransformations;
     return this;
   }
 

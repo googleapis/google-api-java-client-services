@@ -17,7 +17,9 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * Represents a rule defined in an organization policy
+ * This rule message is a customized version of the one defined in the Organization Policy system.
+ * In addition to the fields defined in the original organization policy, it contains additional
+ * field(s) under specific circumstances to support analysis results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

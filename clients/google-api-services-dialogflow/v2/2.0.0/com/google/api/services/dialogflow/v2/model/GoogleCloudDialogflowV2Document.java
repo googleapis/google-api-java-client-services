@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * The value may be {@code null}.
@@ -171,7 +171,7 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * @return value or {@code null} for none
@@ -187,7 +187,7 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
    * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
    * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
    * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document
+   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
    * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
    * clear the errors.
    * @param enableAutoReload enableAutoReload or {@code null} for none

@@ -31,7 +31,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
 
   /**
    * Optional. The Billing Account to look up Offers for. Format:
-   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant for
    * multi-currency accounts. It should be left empty for single currency accounts.
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
 
   /**
    * Optional. The Billing Account to look up Offers for. Format:
-   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant for
    * multi-currency accounts. It should be left empty for single currency accounts.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class GoogleCloudChannelV1ListTransferableOffersRequest extends com
 
   /**
    * Optional. The Billing Account to look up Offers for. Format:
-   * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant for
    * multi-currency accounts. It should be left empty for single currency accounts.
    * @param billingAccount billingAccount or {@code null} for none
    */

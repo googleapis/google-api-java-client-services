@@ -4754,7 +4754,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Resource name of the new target Billing Account. Provide this Billing Account
          * when setting up billing for a trial subscription. Format:
-         * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant
+         * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant
          * for multi-currency accounts. It should be left empty for single currency accounts.
          */
         @com.google.api.client.util.Key("changeOfferPurchase.billingAccount")
@@ -4762,7 +4762,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
 
         /** Optional. Resource name of the new target Billing Account. Provide this Billing Account when
        setting up billing for a trial subscription. Format:
-       accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant for multi-
+       accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant for multi-
        currency accounts. It should be left empty for single currency accounts.
          */
         public java.lang.String getChangeOfferPurchaseBillingAccount() {
@@ -4772,7 +4772,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
         /**
          * Optional. Resource name of the new target Billing Account. Provide this Billing Account
          * when setting up billing for a trial subscription. Format:
-         * accounts/{account_id}/billing_accounts/{billing_account_id}. This field is only relevant
+         * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is only relevant
          * for multi-currency accounts. It should be left empty for single currency accounts.
          */
         public ListPurchasableOffers setChangeOfferPurchaseBillingAccount(java.lang.String changeOfferPurchaseBillingAccount) {
@@ -4828,13 +4828,13 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. Billing account that the result should be restricted to. Format:
-         * accounts/{account_id}/billing_accounts/{billing_account_id}.
+         * accounts/{account_id}/billingAccounts/{billing_account_id}.
          */
         @com.google.api.client.util.Key("createEntitlementPurchase.billingAccount")
         private java.lang.String createEntitlementPurchaseBillingAccount;
 
         /** Optional. Billing account that the result should be restricted to. Format:
-       accounts/{account_id}/billing_accounts/{billing_account_id}.
+       accounts/{account_id}/billingAccounts/{billing_account_id}.
          */
         public java.lang.String getCreateEntitlementPurchaseBillingAccount() {
           return createEntitlementPurchaseBillingAccount;
@@ -4842,7 +4842,7 @@ public class Cloudchannel extends com.google.api.client.googleapis.services.json
 
         /**
          * Optional. Billing account that the result should be restricted to. Format:
-         * accounts/{account_id}/billing_accounts/{billing_account_id}.
+         * accounts/{account_id}/billingAccounts/{billing_account_id}.
          */
         public ListPurchasableOffers setCreateEntitlementPurchaseBillingAccount(java.lang.String createEntitlementPurchaseBillingAccount) {
           this.createEntitlementPurchaseBillingAccount = createEntitlementPurchaseBillingAccount;

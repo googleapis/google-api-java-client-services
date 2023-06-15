@@ -4116,6 +4116,181 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the InsightTypes collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Recommender recommender = new Recommender(...);}
+   *   {@code Recommender.InsightTypes.List request = recommender.insightTypes().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public InsightTypes insightTypes() {
+    return new InsightTypes();
+  }
+
+  /**
+   * The "insightTypes" collection of methods.
+   */
+  public class InsightTypes {
+
+    /**
+     * Lists available InsightTypes. No IAM permissions are required.
+     *
+     * Create a request for the method "insightTypes.list".
+     *
+     * This request holds the parameters needed by the recommender server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1ListInsightTypesResponse> {
+
+      private static final String REST_PATH = "v1beta1/insightTypes";
+
+      /**
+       * Lists available InsightTypes. No IAM permissions are required.
+       *
+       * Create a request for the method "insightTypes.list".
+       *
+       * This request holds the parameters needed by the the recommender server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1ListInsightTypesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The number of InsightTypes to return per page. The service may return fewer than
+       * this value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of InsightTypes to return per page. The service may return fewer than this
+     value.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of InsightTypes to return per page. The service may return fewer than
+       * this value.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListRecommenders` call. Provide this to
+       * retrieve the subsequent page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListRecommenders` call. Provide this to retrieve
+     the subsequent page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListRecommenders` call. Provide this to
+       * retrieve the subsequent page.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>
@@ -8787,6 +8962,181 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
         }
       }
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Recommenders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Recommender recommender = new Recommender(...);}
+   *   {@code Recommender.Recommenders.List request = recommender.recommenders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Recommenders recommenders() {
+    return new Recommenders();
+  }
+
+  /**
+   * The "recommenders" collection of methods.
+   */
+  public class Recommenders {
+
+    /**
+     * Lists all available Recommenders. No IAM permissions are required.
+     *
+     * Create a request for the method "recommenders.list".
+     *
+     * This request holds the parameters needed by the recommender server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends RecommenderRequest<com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1ListRecommendersResponse> {
+
+      private static final String REST_PATH = "v1beta1/recommenders";
+
+      /**
+       * Lists all available Recommenders. No IAM permissions are required.
+       *
+       * Create a request for the method "recommenders.list".
+       *
+       * This request holds the parameters needed by the the recommender server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Recommender.this, "GET", REST_PATH, null, com.google.api.services.recommender.v1beta1.model.GoogleCloudRecommenderV1beta1ListRecommendersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The number of RecommenderTypes to return per page. The service may return fewer
+       * than this value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of RecommenderTypes to return per page. The service may return fewer than this
+     value.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of RecommenderTypes to return per page. The service may return fewer
+       * than this value.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListRecommenders` call. Provide this to
+       * retrieve the subsequent page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListRecommenders` call. Provide this to retrieve
+     the subsequent page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListRecommenders` call. Provide this to
+       * retrieve the subsequent page.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

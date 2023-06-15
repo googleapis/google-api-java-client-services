@@ -37,8 +37,8 @@ public final class GoogleCloudDialogflowV2beta1ImportDocumentsRequest extends co
   private GoogleCloudDialogflowV2beta1ImportDocumentTemplate documentTemplate;
 
   /**
-   * The Google Cloud Storage location for the documents. The path can include a wildcard. These
-   * URIs may have the forms `gs:`. `gs:.`.
+   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
+   * These URIs may have the forms `gs:`. `gs:.`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class GoogleCloudDialogflowV2beta1ImportDocumentsRequest extends co
   }
 
   /**
-   * The Google Cloud Storage location for the documents. The path can include a wildcard. These
-   * URIs may have the forms `gs:`. `gs:.`.
+   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
+   * These URIs may have the forms `gs:`. `gs:.`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GcsSources getGcsSource() {
@@ -79,8 +79,8 @@ public final class GoogleCloudDialogflowV2beta1ImportDocumentsRequest extends co
   }
 
   /**
-   * The Google Cloud Storage location for the documents. The path can include a wildcard. These
-   * URIs may have the forms `gs:`. `gs:.`.
+   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
+   * These URIs may have the forms `gs:`. `gs:.`.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ImportDocumentsRequest setGcsSource(GoogleCloudDialogflowV2beta1GcsSources gcsSource) {

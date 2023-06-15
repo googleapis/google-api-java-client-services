@@ -52,6 +52,13 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   private GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse;
 
   /**
+   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestEntityExtractionResponse;
+
+  /**
    * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestDialogflowAssistsResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse) {
     this.suggestDialogflowAssistsResponse = suggestDialogflowAssistsResponse;
+    return this;
+  }
+
+  /**
+   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse getSuggestEntityExtractionResponse() {
+    return suggestEntityExtractionResponse;
+  }
+
+  /**
+   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
+   * @param suggestEntityExtractionResponse suggestEntityExtractionResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestEntityExtractionResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestEntityExtractionResponse) {
+    this.suggestEntityExtractionResponse = suggestEntityExtractionResponse;
     return this;
   }
 

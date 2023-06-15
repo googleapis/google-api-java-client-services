@@ -52,7 +52,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The starting page token for future changes. This will be present only if the end of the current
-   * changes list has been reached.
+   * changes list has been reached. The page token doesn't expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The page token for the next page of changes. This will be absent if the end of the changes list
-   * has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * has been reached. The page token doesn't expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +104,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The starting page token for future changes. This will be present only if the end of the current
-   * changes list has been reached.
+   * changes list has been reached. The page token doesn't expire.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewStartPageToken() {
@@ -114,7 +113,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The starting page token for future changes. This will be present only if the end of the current
-   * changes list has been reached.
+   * changes list has been reached. The page token doesn't expire.
    * @param newStartPageToken newStartPageToken or {@code null} for none
    */
   public ChangeList setNewStartPageToken(java.lang.String newStartPageToken) {
@@ -124,8 +123,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The page token for the next page of changes. This will be absent if the end of the changes list
-   * has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * has been reached. The page token doesn't expire.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -134,8 +132,7 @@ public final class ChangeList extends com.google.api.client.json.GenericJson {
 
   /**
    * The page token for the next page of changes. This will be absent if the end of the changes list
-   * has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * has been reached. The page token doesn't expire.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ChangeList setNextPageToken(java.lang.String nextPageToken) {

@@ -37,7 +37,7 @@ public final class StartPageToken extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
-   * The starting page token for listing changes.
+   * The starting page token for listing future changes. The page token doesn't expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class StartPageToken extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The starting page token for listing changes.
+   * The starting page token for listing future changes. The page token doesn't expire.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartPageToken() {
@@ -69,7 +69,7 @@ public final class StartPageToken extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The starting page token for listing changes.
+   * The starting page token for listing future changes. The page token doesn't expire.
    * @param startPageToken startPageToken or {@code null} for none
    */
   public StartPageToken setStartPageToken(java.lang.String startPageToken) {

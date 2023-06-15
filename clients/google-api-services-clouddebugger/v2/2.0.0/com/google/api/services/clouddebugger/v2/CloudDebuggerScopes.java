@@ -17,7 +17,7 @@
 package com.google.api.services.clouddebugger.v2;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Debugger API.
+ * Available OAuth 2.0 scopes for use with the Cloud Debugger API (Deprecated).
  *
  * @since 1.4
  */

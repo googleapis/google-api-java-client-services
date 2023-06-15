@@ -20,7 +20,8 @@ package com.google.api.services.clouddebugger.v2.model;
  * A GitSourceContext denotes a particular revision in a third party Git repository (e.g. GitHub).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Debugger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Debugger API (Deprecated). For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

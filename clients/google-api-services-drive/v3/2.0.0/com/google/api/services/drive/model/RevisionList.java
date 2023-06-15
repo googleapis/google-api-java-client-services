@@ -39,7 +39,9 @@ public final class RevisionList extends com.google.api.client.json.GenericJson {
   /**
    * The page token for the next page of revisions. This will be absent if the end of the revisions
    * list has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * pagination should be restarted from the first page of results. The page token is typically
+   * valid for several hours. However, if new items are added or removed, your expected results
+   * might differ.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +81,9 @@ public final class RevisionList extends com.google.api.client.json.GenericJson {
   /**
    * The page token for the next page of revisions. This will be absent if the end of the revisions
    * list has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * pagination should be restarted from the first page of results. The page token is typically
+   * valid for several hours. However, if new items are added or removed, your expected results
+   * might differ.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -89,7 +93,9 @@ public final class RevisionList extends com.google.api.client.json.GenericJson {
   /**
    * The page token for the next page of revisions. This will be absent if the end of the revisions
    * list has been reached. If the token is rejected for any reason, it should be discarded, and
-   * pagination should be restarted from the first page of results.
+   * pagination should be restarted from the first page of results. The page token is typically
+   * valid for several hours. However, if new items are added or removed, your expected results
+   * might differ.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public RevisionList setNextPageToken(java.lang.String nextPageToken) {

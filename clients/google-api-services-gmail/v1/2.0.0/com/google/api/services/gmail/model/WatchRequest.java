@@ -37,6 +37,14 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String labelFilterAction;
 
   /**
+   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
+   * label_filter_action is ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String labelFilterBehavior;
+
+  /**
    * List of label_ids to restrict notifications about. By default, if unspecified, all changes are
    * pushed out. If specified then dictates which labels are required for a push notification to be
    * generated.
@@ -70,6 +78,25 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
    */
   public WatchRequest setLabelFilterAction(java.lang.String labelFilterAction) {
     this.labelFilterAction = labelFilterAction;
+    return this;
+  }
+
+  /**
+   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
+   * label_filter_action is ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLabelFilterBehavior() {
+    return labelFilterBehavior;
+  }
+
+  /**
+   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
+   * label_filter_action is ignored.
+   * @param labelFilterBehavior labelFilterBehavior or {@code null} for none
+   */
+  public WatchRequest setLabelFilterBehavior(java.lang.String labelFilterBehavior) {
+    this.labelFilterBehavior = labelFilterBehavior;
     return this;
   }
 

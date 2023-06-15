@@ -414,6 +414,49 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
         return (ElectionQuery) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Whether to include data that has not been allowlisted yet */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean productionDataOnly;
+
+      /** Whether to include data that has not been allowlisted yet [default: true]
+       */
+      public java.lang.Boolean getProductionDataOnly() {
+        return productionDataOnly;
+      }
+
+      /** Whether to include data that has not been allowlisted yet */
+      public ElectionQuery setProductionDataOnly(java.lang.Boolean productionDataOnly) {
+        this.productionDataOnly = productionDataOnly;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether to include data that has not been allowlisted yet
+       * </p>
+       */
+      public boolean isProductionDataOnly() {
+        if (productionDataOnly == null || productionDataOnly == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return true;
+        }
+        return productionDataOnly;
+      }
+
       @Override
       public ElectionQuery set(String parameterName, Object value) {
         return (ElectionQuery) super.set(parameterName, value);
@@ -610,6 +653,60 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
           return false;
         }
         return officialOnly;
+      }
+
+      /**
+       * Whether to include data that has not been vetted yet. Should only be made available to
+       * internal IPs or trusted partners. This is a non-discoverable parameter in the One Platform
+       * API config.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean productionDataOnly;
+
+      /** Whether to include data that has not been vetted yet. Should only be made available to internal IPs
+     or trusted partners. This is a non-discoverable parameter in the One Platform API config. [default:
+     true]
+       */
+      public java.lang.Boolean getProductionDataOnly() {
+        return productionDataOnly;
+      }
+
+      /**
+       * Whether to include data that has not been vetted yet. Should only be made available to
+       * internal IPs or trusted partners. This is a non-discoverable parameter in the One Platform
+       * API config.
+       */
+      public VoterInfoQuery setProductionDataOnly(java.lang.Boolean productionDataOnly) {
+        this.productionDataOnly = productionDataOnly;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether to include data that has not been vetted yet. Should only be made available to internal IPs
+     or trusted partners. This is a non-discoverable parameter in the One Platform API config.
+       * </p>
+       */
+      public boolean isProductionDataOnly() {
+        if (productionDataOnly == null || productionDataOnly == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return true;
+        }
+        return productionDataOnly;
       }
 
       /**

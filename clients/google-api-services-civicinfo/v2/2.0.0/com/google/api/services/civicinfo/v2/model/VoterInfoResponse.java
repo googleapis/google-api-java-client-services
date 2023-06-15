@@ -143,7 +143,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
 
   /**
    * The precincts that match this voter's address. Will only be returned for project IDs which have
-   * been whitelisted as "partner projects".
+   * been allowlisted as "partner projects".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +363,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
 
   /**
    * The precincts that match this voter's address. Will only be returned for project IDs which have
-   * been whitelisted as "partner projects".
+   * been allowlisted as "partner projects".
    * @return value or {@code null} for none
    */
   public java.util.List<Precinct> getPrecincts() {
@@ -372,7 +372,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
 
   /**
    * The precincts that match this voter's address. Will only be returned for project IDs which have
-   * been whitelisted as "partner projects".
+   * been allowlisted as "partner projects".
    * @param precincts precincts or {@code null} for none
    */
   public VoterInfoResponse setPrecincts(java.util.List<Precinct> precincts) {

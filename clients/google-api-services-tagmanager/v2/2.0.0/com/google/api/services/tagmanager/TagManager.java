@@ -11945,6 +11945,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
+              checkRequiredParameter(content, "content");
+              checkRequiredParameter(content.getName(), "Transformation.getName()");
+              checkRequiredParameter(content, "content");
+              checkRequiredParameter(content.getType(), "Transformation.getType()");
             }
 
             @Override
@@ -12693,6 +12697,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/transformations/[^/]+$");
               }
+              checkRequiredParameter(content, "content");
+              checkRequiredParameter(content.getName(), "Transformation.getName()");
+              checkRequiredParameter(content, "content");
+              checkRequiredParameter(content.getType(), "Transformation.getType()");
             }
 
             @Override

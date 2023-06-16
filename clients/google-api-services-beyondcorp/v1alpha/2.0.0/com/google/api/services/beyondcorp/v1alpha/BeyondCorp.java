@@ -1057,113 +1057,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * Optional. Filter partnerTenants to be returned. See [List Sub-Collections]
-             * (https://cloud.google.com/apis/design/design_patterns#list_sub-collections) for more
-             * details. All fields can be used in the filter. Usage:
-             * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
-             * conditions are allowed.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String filter;
-
-            /** Optional. Filter partnerTenants to be returned. See [List Sub-Collections]
-           (https://cloud.google.com/apis/design/design_patterns#list_sub-collections) for more details. All
-           fields can be used in the filter. Usage: field_filter="fieldName1=fieldVal1 AND
-           fieldName2=fieldVal2". NOTE: Only `AND` conditions are allowed.
-             */
-            public java.lang.String getFilter() {
-              return filter;
-            }
-
-            /**
-             * Optional. Filter partnerTenants to be returned. See [List Sub-Collections]
-             * (https://cloud.google.com/apis/design/design_patterns#list_sub-collections) for more
-             * details. All fields can be used in the filter. Usage:
-             * field_filter="fieldName1=fieldVal1 AND fieldName2=fieldVal2". NOTE: Only `AND`
-             * conditions are allowed.
-             */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
-              return this;
-            }
-
-            /**
-             * Optional. Specifies the ordering of results. Currently, only ordering by the "name"
-             * and "create_time" fields are supported. See [Sorting
-             * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
-             * information.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String orderBy;
-
-            /** Optional. Specifies the ordering of results. Currently, only ordering by the "name" and
-           "create_time" fields are supported. See [Sorting
-           order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more information.
-             */
-            public java.lang.String getOrderBy() {
-              return orderBy;
-            }
-
-            /**
-             * Optional. Specifies the ordering of results. Currently, only ordering by the "name"
-             * and "create_time" fields are supported. See [Sorting
-             * order](https://cloud.google.com/apis/design/design_patterns#sorting_order) for more
-             * information.
-             */
-            public List setOrderBy(java.lang.String orderBy) {
-              this.orderBy = orderBy;
-              return this;
-            }
-
-            /**
-             * Optional. The maximum number of items to return. The service may return fewer than
-             * this value. If unspecified, at most 50 items will be returned. The maximum value is
-             * 1000; values above 1000 are coerced to 1000. Regardless of the page_size value, the
-             * response may include a partial list and a caller should only rely on response's
-             * next_page_token to determine if there are more instances left to be queried.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Optional. The maximum number of items to return. The service may return fewer than this value. If
-           unspecified, at most 50 items will be returned. The maximum value is 1000; values above 1000 are
-           coerced to 1000. Regardless of the page_size value, the response may include a partial list and a
-           caller should only rely on response's next_page_token to determine if there are more instances left
-           to be queried.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Optional. The maximum number of items to return. The service may return fewer than
-             * this value. If unspecified, at most 50 items will be returned. The maximum value is
-             * 1000; values above 1000 are coerced to 1000. Regardless of the page_size value, the
-             * response may include a partial list and a caller should only rely on response's
-             * next_page_token to determine if there are more instances left to be queried.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /** Optional. A token identifying a page of results the server should return. */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Optional. A token identifying a page of results the server should return.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /** Optional. A token identifying a page of results the server should return. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
@@ -1886,6 +1779,191 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
+             * Deletes an existing BrowserDlpRule.
+             *
+             * Create a request for the method "browserDlpRules.delete".
+             *
+             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the BrowserDlpRule using the form: `organizations/{organization_id}/l
+             *        ocations/global/partnerTenants/{partner_tenant_id}/browserDlpRules/{browser_dlp_rule_id}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+
+              /**
+               * Deletes an existing BrowserDlpRule.
+               *
+               * Create a request for the method "browserDlpRules.delete".
+               *
+               * This request holds the parameters needed by the the beyondcorp server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the BrowserDlpRule using the form: `organizations/{organization_id}/l
+             *        ocations/global/partnerTenants/{partner_tenant_id}/browserDlpRules/{browser_dlp_rule_id}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(BeyondCorp.this, "DELETE", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the BrowserDlpRule using the form: `organizations/{o
+               * rganization_id}/locations/global/partnerTenants/{partner_tenant_id}/browserDlpRules
+               * /{browser_dlp_rule_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the BrowserDlpRule using the form: `organizations/{organization_id}/
+             locations/global/partnerTenants/{partner_tenant_id}/browserDlpRules/{browser_dlp_rule_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the BrowserDlpRule using the form: `organizations/{o
+               * rganization_id}/locations/global/partnerTenants/{partner_tenant_id}/browserDlpRules
+               * /{browser_dlp_rule_id}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+             must retry your request, the server will know to ignore the request if it has already been
+             completed. The server will guarantee that for at least 60 minutes after the first request. For
+             example, consider a situation where you make an initial request and the request times out. If you
+             make the request again with the same request ID, the server can check if original operation with
+             the same request ID was received, and if so, will ignore the second request. This prevents clients
+             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Delete setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets details of a single BrowserDlpRule.
              *
              * Create a request for the method "browserDlpRules.get".
@@ -2232,6 +2310,208 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               @Override
               public GetIamPolicy set(String parameterName, Object value) {
                 return (GetIamPolicy) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update an existing BrowserDlpRule in a given organization and PartnerTenant.
+             *
+             * Create a request for the method "browserDlpRules.patch".
+             *
+             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Output only. Unique resource name. The name is ignored when creating BrowserDlpRule.
+             * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaBrowserDlpRule}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaBrowserDlpRule content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+
+              /**
+               * Update an existing BrowserDlpRule in a given organization and PartnerTenant.
+               *
+               * Create a request for the method "browserDlpRules.patch".
+               *
+               * This request holds the parameters needed by the the beyondcorp server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Output only. Unique resource name. The name is ignored when creating BrowserDlpRule.
+               * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaBrowserDlpRule}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaBrowserDlpRule content) {
+                super(BeyondCorp.this, "PATCH", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Output only. Unique resource name. The name is ignored when creating
+               * BrowserDlpRule.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Output only. Unique resource name. The name is ignored when creating BrowserDlpRule.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Output only. Unique resource name. The name is ignored when creating
+               * BrowserDlpRule.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/browserDlpRules/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes since the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+             must retry your request, the server will know to ignore the request if it has already been
+             completed. The server will guarantee that for at least 60 minutes since the first request. For
+             example, consider a situation where you make an initial request and the request times out. If you
+             make the request again with the same request ID, the server can check if original operation with
+             the same request ID was received, and if so, will ignore the second request. This prevents clients
+             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes since the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Patch setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              /**
+               * Required. Supported fields include: rule_setting.value.*, group.id/group.email.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. Supported fields include: rule_setting.value.*, group.id/group.email.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Required. Supported fields include: rule_setting.value.*, group.id/group.email.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
               }
             }
             /**
@@ -3260,6 +3540,352 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
               @Override
               public GetIamPolicy set(String parameterName, Object value) {
                 return (GetIamPolicy) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists ProxyConfigs for PartnerTenant in a given organization.
+             *
+             * Create a request for the method "proxyConfigs.list".
+             *
+             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent organization to which the ProxyConfigs belong. Format:
+             *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+parent}/proxyConfigs";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+
+              /**
+               * Lists ProxyConfigs for PartnerTenant in a given organization.
+               *
+               * Create a request for the method "proxyConfigs.list".
+               *
+               * This request holds the parameters needed by the the beyondcorp server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent organization to which the ProxyConfigs belong. Format:
+             *        `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent organization to which the ProxyConfigs belong. Format: `organi
+               * zations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent organization to which the ProxyConfigs belong. Format:
+             `organizations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent organization to which the ProxyConfigs belong. Format: `organi
+               * zations/{organization_id}/locations/global/partnerTenants/{partner_tenant_id}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates a single proxy config.
+             *
+             * Create a request for the method "proxyConfigs.patch".
+             *
+             * This request holds the parameters needed by the beyondcorp server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Output only. ProxyConfig resource name.
+             * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1alpha/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
+
+              /**
+               * Updates a single proxy config.
+               *
+               * Create a request for the method "proxyConfigs.patch".
+               *
+               * This request holds the parameters needed by the the beyondcorp server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Output only. ProxyConfig resource name.
+               * @param content the {@link com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.beyondcorp.v1alpha.model.GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig content) {
+                super(BeyondCorp.this, "PATCH", REST_PATH, content, com.google.api.services.beyondcorp.v1alpha.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Output only. ProxyConfig resource name. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Output only. ProxyConfig resource name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Output only. ProxyConfig resource name. */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/locations/global/partnerTenants/[^/]+/proxyConfigs/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+             must retry your request, the server will know to ignore the request if it has already been
+             completed. The server will guarantee that for at least 60 minutes after the first request. For
+             example, consider a situation where you make an initial request and the request times out. If you
+             make the request again with the same request ID, the server can check if original operation with
+             the same request ID was received, and if so, will ignore the second request. This prevents clients
+             from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+             exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. An optional request ID to identify requests. Specify a unique request ID
+               * so that if you must retry your request, the server will know to ignore the request
+               * if it has already been completed. The server will guarantee that for at least 60
+               * minutes after the first request. For example, consider a situation where you make
+               * an initial request and the request times out. If you make the request again with
+               * the same request ID, the server can check if original operation with the same
+               * request ID was received, and if so, will ignore the second request. This prevents
+               * clients from accidentally creating duplicate commitments. The request ID must be a
+               * valid UUID with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Patch setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              /**
+               * Required. Mutable fields include: display_name, proxy_uri, routing_info,
+               * transport_info, encryption_info.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. Mutable fields include: display_name, proxy_uri, routing_info, transport_info,
+             encryption_info.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Required. Mutable fields include: display_name, proxy_uri, routing_info,
+               * transport_info, encryption_info.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
               }
             }
             /**

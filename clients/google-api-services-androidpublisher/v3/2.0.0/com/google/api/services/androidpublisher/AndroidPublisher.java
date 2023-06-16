@@ -8197,7 +8197,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Inappproducts {
 
     /**
-     * Deletes an in-app product (i.e. a managed product or a subscription).
+     * Deletes an in-app product (i.e. a managed product or a subscription). This method should no
+     * longer be used to delete subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
      *
      * Create a request for the method "inappproducts.delete".
      *
@@ -8219,7 +8222,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Deletes an in-app product (i.e. a managed product or a subscription).
+       * Deletes an in-app product (i.e. a managed product or a subscription). This method should no
+       * longer be used to delete subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
        *
        * Create a request for the method "inappproducts.delete".
        *
@@ -8332,7 +8338,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Gets an in-app product, which can be a managed product or a subscription.
+     * Gets an in-app product, which can be a managed product or a subscription. This method should no
+     * longer be used to retrieve subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
      *
      * Create a request for the method "inappproducts.get".
      *
@@ -8354,7 +8363,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Gets an in-app product, which can be a managed product or a subscription.
+       * Gets an in-app product, which can be a managed product or a subscription. This method should no
+       * longer be used to retrieve subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
        *
        * Create a request for the method "inappproducts.get".
        *
@@ -8476,7 +8488,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Creates an in-app product (i.e. a managed product or a subscription).
+     * Creates an in-app product (i.e. a managed product or a subscription). This method should no
+     * longer be used to create subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
      *
      * Create a request for the method "inappproducts.insert".
      *
@@ -8498,7 +8513,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * Creates an in-app product (i.e. a managed product or a subscription).
+       * Creates an in-app product (i.e. a managed product or a subscription). This method should no
+       * longer be used to create subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
        *
        * Create a request for the method "inappproducts.insert".
        *
@@ -8623,7 +8641,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      * Lists all in-app products - both managed products and subscriptions. If an app has a large number
      * of in-app products, the response may be paginated. In this case the response field
      * `tokenPagination.nextPageToken` will be set and the caller should provide its value as a `token`
-     * request parameter to retrieve the next page.
+     * request parameter to retrieve the next page. This method should no longer be used to retrieve
+     * subscriptions. See [this article](https://android-developers.googleblog.com/2023/06/changes-to-
+     * google-play-developer-api-june-2023.html) for more information.
      *
      * Create a request for the method "inappproducts.list".
      *
@@ -8647,7 +8667,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * Lists all in-app products - both managed products and subscriptions. If an app has a large
        * number of in-app products, the response may be paginated. In this case the response field
        * `tokenPagination.nextPageToken` will be set and the caller should provide its value as a
-       * `token` request parameter to retrieve the next page.
+       * `token` request parameter to retrieve the next page. This method should no longer be used to
+       * retrieve subscriptions. See [this article](https://android-developers.googleblog.com/2023/06
+       * /changes-to-google-play-developer-api-june-2023.html) for more information.
        *
        * Create a request for the method "inappproducts.list".
        *
@@ -8799,7 +8821,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Patches an in-app product (i.e. a managed product or a subscription).
+     * Patches an in-app product (i.e. a managed product or a subscription). This method should no
+     * longer be used to update subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
      *
      * Create a request for the method "inappproducts.patch".
      *
@@ -8822,7 +8847,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Patches an in-app product (i.e. a managed product or a subscription).
+       * Patches an in-app product (i.e. a managed product or a subscription). This method should no
+       * longer be used to update subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
        *
        * Create a request for the method "inappproducts.patch".
        *
@@ -8962,7 +8990,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Updates an in-app product (i.e. a managed product or a subscription).
+     * Updates an in-app product (i.e. a managed product or a subscription). This method should no
+     * longer be used to update subscriptions. See [this article](https://android-
+     * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+     * information.
      *
      * Create a request for the method "inappproducts.update".
      *
@@ -8985,7 +9016,10 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Updates an in-app product (i.e. a managed product or a subscription).
+       * Updates an in-app product (i.e. a managed product or a subscription). This method should no
+       * longer be used to update subscriptions. See [this article](https://android-
+       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
+       * information.
        *
        * Create a request for the method "inappproducts.update".
        *

@@ -37,11 +37,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The first and third party audience ids and recencies of the excluded first and third party
    * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
    * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP`
-   * audience types will be deprecated on **May 20, 2023**. After this date, these audiences will
-   * not be able to be added to resource targeting. Read our [feature deprecation announcement
-   * ](/display-video/api/deprecations#features.first_and_third_party_audience_types) for more
-   * information.
+   * All items are logically ‘OR’ of each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,11 +47,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
    * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
    * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
-   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other. **Warning:**
-   * `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience
-   * types will be deprecated on **May 20, 2023**. After this date, these audiences will not be able
-   * to be added to resource targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,10 +73,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * groups. Each first and third party audience group contains first and third party audience ids
    * only. The relation between each first and third party audience group is INTERSECTION, and the
    * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP` audience types will be deprecated on
-   * **May 20, 2023**. After this date, these audiences will not be able to be added to resource
-   * targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.first_and_third_party_audience_types) for more information.
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,11 +81,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only. **Warning:** `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and
-   * `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience types will be deprecated on **May 20,
-   * 2023**. After this date, these audiences will not be able to be added to resource targeting.
-   * Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,11 +91,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The first and third party audience ids and recencies of the excluded first and third party
    * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
    * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP`
-   * audience types will be deprecated on **May 20, 2023**. After this date, these audiences will
-   * not be able to be added to resource targeting. Read our [feature deprecation announcement
-   * ](/display-video/api/deprecations#features.first_and_third_party_audience_types) for more
-   * information.
+   * All items are logically ‘OR’ of each other.
    * @return value or {@code null} for none
    */
   public FirstAndThirdPartyAudienceGroup getExcludedFirstAndThirdPartyAudienceGroup() {
@@ -121,11 +102,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The first and third party audience ids and recencies of the excluded first and third party
    * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
    * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP`
-   * audience types will be deprecated on **May 20, 2023**. After this date, these audiences will
-   * not be able to be added to resource targeting. Read our [feature deprecation announcement
-   * ](/display-video/api/deprecations#features.first_and_third_party_audience_types) for more
-   * information.
+   * All items are logically ‘OR’ of each other.
    * @param excludedFirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setExcludedFirstAndThirdPartyAudienceGroup(FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup) {
@@ -137,11 +114,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
    * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
    * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
-   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other. **Warning:**
-   * `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience
-   * types will be deprecated on **May 20, 2023**. After this date, these audiences will not be able
-   * to be added to resource targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @return value or {@code null} for none
    */
   public GoogleAudienceGroup getExcludedGoogleAudienceGroup() {
@@ -152,11 +125,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
    * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
    * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
-   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other. **Warning:**
-   * `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience
-   * types will be deprecated on **May 20, 2023**. After this date, these audiences will not be able
-   * to be added to resource targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @param excludedGoogleAudienceGroup excludedGoogleAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setExcludedGoogleAudienceGroup(GoogleAudienceGroup excludedGoogleAudienceGroup) {
@@ -205,10 +174,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * groups. Each first and third party audience group contains first and third party audience ids
    * only. The relation between each first and third party audience group is INTERSECTION, and the
    * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP` audience types will be deprecated on
-   * **May 20, 2023**. After this date, these audiences will not be able to be added to resource
-   * targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.first_and_third_party_audience_types) for more information.
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<FirstAndThirdPartyAudienceGroup> getIncludedFirstAndThirdPartyAudienceGroups() {
@@ -220,10 +186,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    * groups. Each first and third party audience group contains first and third party audience ids
    * only. The relation between each first and third party audience group is INTERSECTION, and the
    * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored. **Warning:** `ACTIVITY_BASED` and `FREQUENCY_CAP` audience types will be deprecated on
-   * **May 20, 2023**. After this date, these audiences will not be able to be added to resource
-   * targeting. Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.first_and_third_party_audience_types) for more information.
+   * ignored.
    * @param includedFirstAndThirdPartyAudienceGroups includedFirstAndThirdPartyAudienceGroups or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedFirstAndThirdPartyAudienceGroups(java.util.List<FirstAndThirdPartyAudienceGroup> includedFirstAndThirdPartyAudienceGroups) {
@@ -233,11 +196,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only. **Warning:** `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and
-   * `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience types will be deprecated on **May 20,
-   * 2023**. After this date, these audiences will not be able to be added to resource targeting.
-   * Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * only.
    * @return value or {@code null} for none
    */
   public GoogleAudienceGroup getIncludedGoogleAudienceGroup() {
@@ -246,11 +205,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
 
   /**
    * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only. **Warning:** `GOOGLE_AUDIENCE_TYPE_INSTALLED_APPS` and
-   * `GOOGLE_AUDIENCE_TYPE_NEW_MOBILE_DEVICES` audience types will be deprecated on **May 20,
-   * 2023**. After this date, these audiences will not be able to be added to resource targeting.
-   * Read our [feature deprecation announcement](/display-
-   * video/api/deprecations#features.google_audience_types) for more information.
+   * only.
    * @param includedGoogleAudienceGroup includedGoogleAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedGoogleAudienceGroup(GoogleAudienceGroup includedGoogleAudienceGroup) {

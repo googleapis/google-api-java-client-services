@@ -40,7 +40,10 @@ public final class CaseClassification extends com.google.api.client.json.Generic
 
   /**
    * The unique ID for a classification. Must be specified for case creation. To retrieve valid
-   * classification IDs for case creation, use `caseClassifications.search`.
+   * classification IDs for case creation, use `caseClassifications.search`. Classification IDs
+   * returned by `caseClassifications.search` are guaranteed to be valid for at least 6 months. If a
+   * given classification is deactiveated, it will immediately stop being returned. After 6 months,
+   * `case.create` requests using the classification ID will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +70,10 @@ public final class CaseClassification extends com.google.api.client.json.Generic
 
   /**
    * The unique ID for a classification. Must be specified for case creation. To retrieve valid
-   * classification IDs for case creation, use `caseClassifications.search`.
+   * classification IDs for case creation, use `caseClassifications.search`. Classification IDs
+   * returned by `caseClassifications.search` are guaranteed to be valid for at least 6 months. If a
+   * given classification is deactiveated, it will immediately stop being returned. After 6 months,
+   * `case.create` requests using the classification ID will fail.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -76,7 +82,10 @@ public final class CaseClassification extends com.google.api.client.json.Generic
 
   /**
    * The unique ID for a classification. Must be specified for case creation. To retrieve valid
-   * classification IDs for case creation, use `caseClassifications.search`.
+   * classification IDs for case creation, use `caseClassifications.search`. Classification IDs
+   * returned by `caseClassifications.search` are guaranteed to be valid for at least 6 months. If a
+   * given classification is deactiveated, it will immediately stop being returned. After 6 months,
+   * `case.create` requests using the classification ID will fail.
    * @param id id or {@code null} for none
    */
   public CaseClassification setId(java.lang.String id) {

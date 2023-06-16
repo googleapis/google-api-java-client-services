@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Message for response to listing PartnerTenants.
+ * Message for response to listing ProxyConfigs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.beyondcorp.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of PartnerTenant objects.
+   * The list of ProxyConfig objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant> partnerTenants;
+  private java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig> proxyConfigs;
 
   /**
-   * The list of PartnerTenant objects.
+   * The list of ProxyConfig objects.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant> getPartnerTenants() {
-    return partnerTenants;
+  public java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig> getProxyConfigs() {
+    return proxyConfigs;
   }
 
   /**
-   * The list of PartnerTenant objects.
-   * @param partnerTenants partnerTenants or {@code null} for none
+   * The list of ProxyConfig objects.
+   * @param proxyConfigs proxyConfigs or {@code null} for none
    */
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse setPartnerTenants(java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerTenant> partnerTenants) {
-    this.partnerTenants = partnerTenants;
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse setProxyConfigs(java.util.List<GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig> proxyConfigs) {
+    this.proxyConfigs = proxyConfigs;
     return this;
   }
 
   @Override
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse set(String fieldName, Object value) {
-    return (GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse) super.set(fieldName, value);
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse set(String fieldName, Object value) {
+    return (GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse clone() {
-    return (GoogleCloudBeyondcorpPartnerservicesV1alphaListPartnerTenantsResponse) super.clone();
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse clone() {
+    return (GoogleCloudBeyondcorpPartnerservicesV1alphaListProxyConfigsResponse) super.clone();
   }
 
 }

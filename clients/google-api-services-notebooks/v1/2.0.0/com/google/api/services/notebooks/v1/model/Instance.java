@@ -230,6 +230,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String postStartupScript;
 
   /**
+   * Output only. Check how possible a migration from UmN to WbI is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreMigrationCheck preMigrationCheck;
+
+  /**
    * Output only. The proxy endpoint that is used to access the Jupyter notebook.
    * The value may be {@code null}.
    */
@@ -779,6 +786,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPostStartupScript(java.lang.String postStartupScript) {
     this.postStartupScript = postStartupScript;
+    return this;
+  }
+
+  /**
+   * Output only. Check how possible a migration from UmN to WbI is.
+   * @return value or {@code null} for none
+   */
+  public PreMigrationCheck getPreMigrationCheck() {
+    return preMigrationCheck;
+  }
+
+  /**
+   * Output only. Check how possible a migration from UmN to WbI is.
+   * @param preMigrationCheck preMigrationCheck or {@code null} for none
+   */
+  public Instance setPreMigrationCheck(PreMigrationCheck preMigrationCheck) {
+    this.preMigrationCheck = preMigrationCheck;
     return this;
   }
 

@@ -155,8 +155,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
     /**
      * Retrieve valid classifications to be used when creating a support case. The classications are
-     * hierarchical, with each classification containing all levels of the hierarchy, separated by " >
-     * ". For example "Technical Issue > Compute > Compute Engine".
+     * hierarchical, with each classification containing all levels of the hierarchy, separated by `" >
+     * "`. For example `"Technical Issue > Compute > Compute Engine"`. Classification IDs returned by
+     * `caseClassifications.search` are guaranteed to be valid for at least 6 months. If a given
+     * classification is deactiveated, it will immediately stop being returned. After 6 months,
+     * `case.create` requests using the classification ID will fail.
      *
      * Create a request for the method "caseClassifications.search".
      *
@@ -177,8 +180,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
       /**
        * Retrieve valid classifications to be used when creating a support case. The classications are
-       * hierarchical, with each classification containing all levels of the hierarchy, separated by " >
-       * ". For example "Technical Issue > Compute > Compute Engine".
+       * hierarchical, with each classification containing all levels of the hierarchy, separated by `"
+       * > "`. For example `"Technical Issue > Compute > Compute Engine"`. Classification IDs returned
+       * by `caseClassifications.search` are guaranteed to be valid for at least 6 months. If a given
+       * classification is deactiveated, it will immediately stop being returned. After 6 months,
+       * `case.create` requests using the classification ID will fail.
        *
        * Create a request for the method "caseClassifications.search".
        *

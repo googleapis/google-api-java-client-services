@@ -82,6 +82,13 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private DeliveryPipeline deliveryPipelineSnapshot;
 
   /**
+   * Optional. The deploy parameters to use for all targets in this release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> deployParameters;
+
+  /**
    * Description of the `Release`. Max length is 255 characters.
    * The value may be {@code null}.
    */
@@ -291,6 +298,23 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setDeliveryPipelineSnapshot(DeliveryPipeline deliveryPipelineSnapshot) {
     this.deliveryPipelineSnapshot = deliveryPipelineSnapshot;
+    return this;
+  }
+
+  /**
+   * Optional. The deploy parameters to use for all targets in this release.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getDeployParameters() {
+    return deployParameters;
+  }
+
+  /**
+   * Optional. The deploy parameters to use for all targets in this release.
+   * @param deployParameters deployParameters or {@code null} for none
+   */
+  public Release setDeployParameters(java.util.Map<String, java.lang.String> deployParameters) {
+    this.deployParameters = deployParameters;
     return this;
   }
 

@@ -91,6 +91,13 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
   private java.lang.Boolean templateLibraryInstalled;
 
   /**
+   * Output only. Last time this membership spec was updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables
    * audit functionality altogether.
    * @return value or {@code null} for none
@@ -233,6 +240,23 @@ public final class ConfigManagementPolicyController extends com.google.api.clien
    */
   public ConfigManagementPolicyController setTemplateLibraryInstalled(java.lang.Boolean templateLibraryInstalled) {
     this.templateLibraryInstalled = templateLibraryInstalled;
+    return this;
+  }
+
+  /**
+   * Output only. Last time this membership spec was updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Last time this membership spec was updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public ConfigManagementPolicyController setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

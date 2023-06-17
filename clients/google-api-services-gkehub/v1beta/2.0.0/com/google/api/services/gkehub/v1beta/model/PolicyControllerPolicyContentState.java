@@ -43,6 +43,15 @@ public final class PolicyControllerPolicyContentState extends com.google.api.cli
   }
 
   /**
+   * The state of the referential data sync configuration. This could represent the state of either
+   * the syncSet object(s) or the config object, depending on the version of PoCo configured by the
+   * user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyControllerOnClusterState referentialSyncConfigState;
+
+  /**
    * The state of the template library
    * The value may be {@code null}.
    */
@@ -63,6 +72,27 @@ public final class PolicyControllerPolicyContentState extends com.google.api.cli
    */
   public PolicyControllerPolicyContentState setBundleStates(java.util.Map<String, PolicyControllerOnClusterState> bundleStates) {
     this.bundleStates = bundleStates;
+    return this;
+  }
+
+  /**
+   * The state of the referential data sync configuration. This could represent the state of either
+   * the syncSet object(s) or the config object, depending on the version of PoCo configured by the
+   * user.
+   * @return value or {@code null} for none
+   */
+  public PolicyControllerOnClusterState getReferentialSyncConfigState() {
+    return referentialSyncConfigState;
+  }
+
+  /**
+   * The state of the referential data sync configuration. This could represent the state of either
+   * the syncSet object(s) or the config object, depending on the version of PoCo configured by the
+   * user.
+   * @param referentialSyncConfigState referentialSyncConfigState or {@code null} for none
+   */
+  public PolicyControllerPolicyContentState setReferentialSyncConfigState(PolicyControllerOnClusterState referentialSyncConfigState) {
+    this.referentialSyncConfigState = referentialSyncConfigState;
     return this;
   }
 

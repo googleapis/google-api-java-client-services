@@ -55,6 +55,13 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The deploy parameters to use for this target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> deployParameters;
+
+  /**
    * Optional. Description of the `Target`. Max length is 255 characters.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class Target extends com.google.api.client.json.GenericJson {
    */
   public Target setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The deploy parameters to use for this target.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getDeployParameters() {
+    return deployParameters;
+  }
+
+  /**
+   * Optional. The deploy parameters to use for this target.
+   * @param deployParameters deployParameters or {@code null} for none
+   */
+  public Target setDeployParameters(java.util.Map<String, java.lang.String> deployParameters) {
+    this.deployParameters = deployParameters;
     return this;
   }
 

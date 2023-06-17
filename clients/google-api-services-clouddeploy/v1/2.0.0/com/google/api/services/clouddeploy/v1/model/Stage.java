@@ -31,6 +31,19 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Stage extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The deploy parameters to use for the target in this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DeployParameters> deployParameters;
+
+  static {
+    // hack to force ProGuard to consider DeployParameters used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeployParameters.class);
+  }
+
+  /**
    * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
    * The value may be {@code null}.
    */
@@ -53,6 +66,23 @@ public final class Stage extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String targetId;
+
+  /**
+   * Optional. The deploy parameters to use for the target in this stage.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DeployParameters> getDeployParameters() {
+    return deployParameters;
+  }
+
+  /**
+   * Optional. The deploy parameters to use for the target in this stage.
+   * @param deployParameters deployParameters or {@code null} for none
+   */
+  public Stage setDeployParameters(java.util.List<DeployParameters> deployParameters) {
+    this.deployParameters = deployParameters;
+    return this;
+  }
 
   /**
    * Skaffold profiles to use when rendering the manifest for this stage's `Target`.

@@ -30,11 +30,35 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementPolicyControllerMigration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Last time this membership spec was copied to PoCo feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String copyTime;
+
+  /**
    * Stage of the migration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stage;
+
+  /**
+   * Last time this membership spec was copied to PoCo feature.
+   * @return value or {@code null} for none
+   */
+  public String getCopyTime() {
+    return copyTime;
+  }
+
+  /**
+   * Last time this membership spec was copied to PoCo feature.
+   * @param copyTime copyTime or {@code null} for none
+   */
+  public ConfigManagementPolicyControllerMigration setCopyTime(String copyTime) {
+    this.copyTime = copyTime;
+    return this;
+  }
 
   /**
    * Stage of the migration.

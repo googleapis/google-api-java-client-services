@@ -39,6 +39,15 @@ public final class TriggerPubsubExecutionRequest extends com.google.api.client.j
   private java.lang.String gCPCloudEventsMode;
 
   /**
+   * The number of attempts that have been made to deliver this message. This is set by Pub/Sub for
+   * subscriptions that have the "dead letter" feature enabled, and hence provided here for
+   * compatibility, but is ignored by Workflows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer deliveryAttempt;
+
+  /**
    * Required. The message of the Pub/Sub push notification.
    * The value may be {@code null}.
    */
@@ -69,6 +78,27 @@ public final class TriggerPubsubExecutionRequest extends com.google.api.client.j
    */
   public TriggerPubsubExecutionRequest setGCPCloudEventsMode(java.lang.String gCPCloudEventsMode) {
     this.gCPCloudEventsMode = gCPCloudEventsMode;
+    return this;
+  }
+
+  /**
+   * The number of attempts that have been made to deliver this message. This is set by Pub/Sub for
+   * subscriptions that have the "dead letter" feature enabled, and hence provided here for
+   * compatibility, but is ignored by Workflows.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDeliveryAttempt() {
+    return deliveryAttempt;
+  }
+
+  /**
+   * The number of attempts that have been made to deliver this message. This is set by Pub/Sub for
+   * subscriptions that have the "dead letter" feature enabled, and hence provided here for
+   * compatibility, but is ignored by Workflows.
+   * @param deliveryAttempt deliveryAttempt or {@code null} for none
+   */
+  public TriggerPubsubExecutionRequest setDeliveryAttempt(java.lang.Integer deliveryAttempt) {
+    this.deliveryAttempt = deliveryAttempt;
     return this;
   }
 

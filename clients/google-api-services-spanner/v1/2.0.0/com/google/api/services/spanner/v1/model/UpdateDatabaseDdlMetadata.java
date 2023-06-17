@@ -30,6 +30,20 @@ package com.google.api.services.spanner.v1.model;
 public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The brief action info for the DDL statements. `actions[i]` is the brief info for
+   * `statements[i]`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DdlStatementActionInfo> actions;
+
+  static {
+    // hack to force ProGuard to consider DdlStatementActionInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DdlStatementActionInfo.class);
+  }
+
+  /**
    * Reports the commit timestamps of all statements that have succeeded so far, where
    * `commit_timestamps[i]` is the commit timestamp for the statement `statements[i]`.
    * The value may be {@code null}.
@@ -45,11 +59,10 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   private java.lang.String database;
 
   /**
-   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
-   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
-   * will have start time and end time populated with commit timestamp of operation, as well as a
-   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
-   * `statements[i]`.
+   * The progress of the UpdateDatabaseDdl operations. All DDL statements will have continuously
+   * updating progress, and `progress[i]` is the operation progress for `statements[i]`. Also,
+   * `progress[i]` will have start time and end time populated with commit timestamp of operation,
+   * as well as a progress of 100% once the operation has completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +90,25 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean throttled;
+
+  /**
+   * The brief action info for the DDL statements. `actions[i]` is the brief info for
+   * `statements[i]`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DdlStatementActionInfo> getActions() {
+    return actions;
+  }
+
+  /**
+   * The brief action info for the DDL statements. `actions[i]` is the brief info for
+   * `statements[i]`.
+   * @param actions actions or {@code null} for none
+   */
+  public UpdateDatabaseDdlMetadata setActions(java.util.List<DdlStatementActionInfo> actions) {
+    this.actions = actions;
+    return this;
+  }
 
   /**
    * Reports the commit timestamps of all statements that have succeeded so far, where
@@ -115,11 +147,10 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   }
 
   /**
-   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
-   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
-   * will have start time and end time populated with commit timestamp of operation, as well as a
-   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
-   * `statements[i]`.
+   * The progress of the UpdateDatabaseDdl operations. All DDL statements will have continuously
+   * updating progress, and `progress[i]` is the operation progress for `statements[i]`. Also,
+   * `progress[i]` will have start time and end time populated with commit timestamp of operation,
+   * as well as a progress of 100% once the operation has completed.
    * @return value or {@code null} for none
    */
   public java.util.List<OperationProgress> getProgress() {
@@ -127,11 +158,10 @@ public final class UpdateDatabaseDdlMetadata extends com.google.api.client.json.
   }
 
   /**
-   * The progress of the UpdateDatabaseDdl operations. Currently, only index creation statements
-   * will have a continuously updating progress. For non-index creation statements, `progress[i]`
-   * will have start time and end time populated with commit timestamp of operation, as well as a
-   * progress of 100% once the operation has completed. `progress[i]` is the operation progress for
-   * `statements[i]`.
+   * The progress of the UpdateDatabaseDdl operations. All DDL statements will have continuously
+   * updating progress, and `progress[i]` is the operation progress for `statements[i]`. Also,
+   * `progress[i]` will have start time and end time populated with commit timestamp of operation,
+   * as well as a progress of 100% once the operation has completed.
    * @param progress progress or {@code null} for none
    */
   public UpdateDatabaseDdlMetadata setProgress(java.util.List<OperationProgress> progress) {

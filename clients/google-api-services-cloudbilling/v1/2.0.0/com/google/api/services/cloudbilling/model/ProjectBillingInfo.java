@@ -40,16 +40,16 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   private java.lang.String billingAccountName;
 
   /**
-   * True if the project is associated with an open billing account, to which usage on the project
-   * is charged. False if the project is associated with a closed billing account, or no billing
-   * account at all, and therefore cannot use paid services. This field is read-only.
+   * Output only. True if the project is associated with an open billing account, to which usage on
+   * the project is charged. False if the project is associated with a closed billing account, or no
+   * billing account at all, and therefore cannot use paid services. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean billingEnabled;
 
   /**
-   * The resource name for the `ProjectBillingInfo`; has the form
+   * Output only. The resource name for the `ProjectBillingInfo`; has the form
    * `projects/{project_id}/billingInfo`. For example, the resource name for the billing information
    * for project `tokyo-rain-123` would be `projects/tokyo-rain-123/billingInfo`. This field is
    * read-only.
@@ -59,9 +59,9 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-rain-123`. This
-   * is a convenience field so that you don't need to parse the `name` field to obtain a project ID.
-   * This field is read-only.
+   * Output only. The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-
+   * rain-123`. This is a convenience field so that you don't need to parse the `name` field to
+   * obtain a project ID. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * True if the project is associated with an open billing account, to which usage on the project
-   * is charged. False if the project is associated with a closed billing account, or no billing
-   * account at all, and therefore cannot use paid services. This field is read-only.
+   * Output only. True if the project is associated with an open billing account, to which usage on
+   * the project is charged. False if the project is associated with a closed billing account, or no
+   * billing account at all, and therefore cannot use paid services. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBillingEnabled() {
@@ -97,9 +97,9 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * True if the project is associated with an open billing account, to which usage on the project
-   * is charged. False if the project is associated with a closed billing account, or no billing
-   * account at all, and therefore cannot use paid services. This field is read-only.
+   * Output only. True if the project is associated with an open billing account, to which usage on
+   * the project is charged. False if the project is associated with a closed billing account, or no
+   * billing account at all, and therefore cannot use paid services. This field is read-only.
    * @param billingEnabled billingEnabled or {@code null} for none
    */
   public ProjectBillingInfo setBillingEnabled(java.lang.Boolean billingEnabled) {
@@ -108,7 +108,7 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resource name for the `ProjectBillingInfo`; has the form
+   * Output only. The resource name for the `ProjectBillingInfo`; has the form
    * `projects/{project_id}/billingInfo`. For example, the resource name for the billing information
    * for project `tokyo-rain-123` would be `projects/tokyo-rain-123/billingInfo`. This field is
    * read-only.
@@ -119,7 +119,7 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resource name for the `ProjectBillingInfo`; has the form
+   * Output only. The resource name for the `ProjectBillingInfo`; has the form
    * `projects/{project_id}/billingInfo`. For example, the resource name for the billing information
    * for project `tokyo-rain-123` would be `projects/tokyo-rain-123/billingInfo`. This field is
    * read-only.
@@ -131,9 +131,9 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-rain-123`. This
-   * is a convenience field so that you don't need to parse the `name` field to obtain a project ID.
-   * This field is read-only.
+   * Output only. The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-
+   * rain-123`. This is a convenience field so that you don't need to parse the `name` field to
+   * obtain a project ID. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -141,9 +141,9 @@ public final class ProjectBillingInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-rain-123`. This
-   * is a convenience field so that you don't need to parse the `name` field to obtain a project ID.
-   * This field is read-only.
+   * Output only. The ID of the project that this `ProjectBillingInfo` represents, such as `tokyo-
+   * rain-123`. This is a convenience field so that you don't need to parse the `name` field to
+   * obtain a project ID. This field is read-only.
    * @param projectId projectId or {@code null} for none
    */
   public ProjectBillingInfo setProjectId(java.lang.String projectId) {

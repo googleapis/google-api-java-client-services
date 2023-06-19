@@ -4312,7 +4312,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
      * @return the request
@@ -4339,7 +4339,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
        * @since 1.13
@@ -4409,13 +4409,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -4423,7 +4423,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Delete setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -4507,7 +4507,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
      * @return the request
@@ -4534,7 +4534,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
        * @since 1.13
@@ -4614,13 +4614,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -4628,7 +4628,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Get setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -4712,7 +4712,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
      * @return the request
      */
@@ -4738,7 +4738,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
        * @since 1.13
        */
@@ -4810,13 +4810,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -4824,7 +4824,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Insert setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -4885,7 +4885,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @return the request
      */
     public List list(java.lang.String bucket, java.lang.String object__) throws java.io.IOException {
@@ -4910,7 +4910,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @since 1.13
        */
       protected List(java.lang.String bucket, java.lang.String object__) {
@@ -4987,13 +4987,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -5001,7 +5001,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public List setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -5062,7 +5062,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
      * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
@@ -5090,7 +5090,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
        * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
@@ -5161,13 +5161,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -5175,7 +5175,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Patch setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -5259,7 +5259,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of a bucket.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
      * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
@@ -5287,7 +5287,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of a bucket.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param entity The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-
      *        emailAddress, allUsers, or allAuthenticatedUsers.
        * @param content the {@link com.google.api.services.storage.model.ObjectAccessControl}
@@ -5358,13 +5358,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -5372,7 +5372,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Update setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -5479,7 +5479,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param destinationBucket Name of the bucket containing the source objects. The destination object is stored in this bucket.
      * @param destinationObject Name of the new object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.ComposeRequest}
      * @return the request
      */
@@ -5506,7 +5506,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param destinationBucket Name of the bucket containing the source objects. The destination object is stored in this bucket.
        * @param destinationObject Name of the new object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.ComposeRequest}
        * @since 1.13
        */
@@ -5580,13 +5580,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the new object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationObject;
 
       /** Name of the new object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getDestinationObject() {
         return destinationObject;
@@ -5594,7 +5594,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the new object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Compose setDestinationObject(java.lang.String destinationObject) {
         this.destinationObject = destinationObject;
@@ -5722,10 +5722,10 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param sourceBucket Name of the bucket in which to find the source object.
      * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param destinationBucket Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket
      *        value, if any.For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any.
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
@@ -5753,10 +5753,10 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param sourceBucket Name of the bucket in which to find the source object.
        * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param destinationBucket Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket
      *        value, if any.For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any.
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
@@ -5828,13 +5828,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the source object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String sourceObject;
 
       /** Name of the source object. For information about how to URL encode object names to be path safe,
-     see Encoding URI Path Parts.
+     see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getSourceObject() {
         return sourceObject;
@@ -5842,7 +5842,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the source object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Copy setSourceObject(java.lang.String sourceObject) {
         this.sourceObject = sourceObject;
@@ -5852,14 +5852,15 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the bucket in which to store the new object. Overrides the provided object
        * metadata's bucket value, if any.For information about how to URL encode object names to be
-       * path safe, see Encoding URI Path Parts.
+       * path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+       * endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationBucket;
 
       /** Name of the bucket in which to store the new object. Overrides the provided object metadata's
      bucket value, if any.For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getDestinationBucket() {
         return destinationBucket;
@@ -5868,7 +5869,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the bucket in which to store the new object. Overrides the provided object
        * metadata's bucket value, if any.For information about how to URL encode object names to be
-       * path safe, see Encoding URI Path Parts.
+       * path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+       * endpoints#encoding).
        */
       public Copy setDestinationBucket(java.lang.String destinationBucket) {
         this.destinationBucket = destinationBucket;
@@ -6208,7 +6210,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @return the request
      */
     public Delete delete(java.lang.String bucket, java.lang.String object__) throws java.io.IOException {
@@ -6234,7 +6236,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @since 1.13
        */
       protected Delete(java.lang.String bucket, java.lang.String object__) {
@@ -6301,13 +6303,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -6315,7 +6317,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Delete setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -6473,7 +6475,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @return the request
      */
     public Get get(java.lang.String bucket, java.lang.String object__) throws java.io.IOException {
@@ -6498,7 +6500,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @since 1.13
        */
       protected Get(java.lang.String bucket, java.lang.String object__) {
@@ -6599,13 +6601,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -6613,7 +6615,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Get setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -6787,7 +6789,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @return the request
      */
     public GetIamPolicy getIamPolicy(java.lang.String bucket, java.lang.String object__) throws java.io.IOException {
@@ -6813,7 +6815,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @since 1.13
        */
       protected GetIamPolicy(java.lang.String bucket, java.lang.String object__) {
@@ -6890,13 +6892,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -6904,7 +6906,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public GetIamPolicy setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -7266,14 +7268,15 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see Encoding URI Path Parts.
+       * names to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+       * endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Name of the object. Required when the object metadata is not otherwise provided. Overrides the
      object metadata's name value, if any. For information about how to URL encode object names to be
-     path safe, see Encoding URI Path Parts.
+     path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getName() {
         return name;
@@ -7282,7 +7285,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see Encoding URI Path Parts.
+       * names to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+       * endpoints#encoding).
        */
       public Insert setName(java.lang.String name) {
         this.name = name;
@@ -7706,7 +7710,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
@@ -7732,7 +7736,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */
@@ -7800,13 +7804,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -7814,7 +7818,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Patch setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -8004,12 +8008,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param sourceBucket Name of the bucket in which to find the source object.
      * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param destinationBucket Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket
      *        value, if any.
      * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see Encoding URI Path Parts.
+     *        to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+     *        endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
@@ -8036,12 +8041,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param sourceBucket Name of the bucket in which to find the source object.
        * @param sourceObject Name of the source object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param destinationBucket Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket
      *        value, if any.
        * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see Encoding URI Path Parts.
+     *        to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-
+     *        endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */
@@ -8111,13 +8117,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the source object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String sourceObject;
 
       /** Name of the source object. For information about how to URL encode object names to be path safe,
-     see Encoding URI Path Parts.
+     see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getSourceObject() {
         return sourceObject;
@@ -8125,7 +8131,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the source object. For information about how to URL encode object names to be path
-       * safe, see Encoding URI Path Parts.
+       * safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Rewrite setSourceObject(java.lang.String sourceObject) {
         this.sourceObject = sourceObject;
@@ -8158,14 +8164,15 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the new object. Required when the object metadata is not otherwise provided.
        * Overrides the object metadata's name value, if any. For information about how to URL encode
-       * object names to be path safe, see Encoding URI Path Parts.
+       * object names to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs
+       * /request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationObject;
 
       /** Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      object metadata's name value, if any. For information about how to URL encode object names to be
-     path safe, see Encoding URI Path Parts.
+     path safe, see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getDestinationObject() {
         return destinationObject;
@@ -8174,7 +8181,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the new object. Required when the object metadata is not otherwise provided.
        * Overrides the object metadata's name value, if any. For information about how to URL encode
-       * object names to be path safe, see Encoding URI Path Parts.
+       * object names to be path safe, see [Encoding URI Path Parts](http://cloud/storage/docs
+       * /request-endpoints#encoding).
        */
       public Rewrite setDestinationObject(java.lang.String destinationObject) {
         this.destinationObject = destinationObject;
@@ -8552,7 +8560,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.Policy}
      * @return the request
      */
@@ -8579,7 +8587,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.Policy}
        * @since 1.13
        */
@@ -8647,13 +8655,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -8661,7 +8669,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public SetIamPolicy setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -8722,7 +8730,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param permissions Permissions to test.
      * @return the request
      */
@@ -8749,7 +8757,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param permissions Permissions to test.
        * @since 1.13
        */
@@ -8828,13 +8836,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -8842,7 +8850,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public TestIamPermissions setObject(java.lang.String object__) {
         this.object__ = object__;
@@ -8919,7 +8927,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param bucket Name of the bucket in which the object resides.
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
@@ -8945,7 +8953,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param bucket Name of the bucket in which the object resides.
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
-     *        Encoding URI Path Parts.
+     *        [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */
@@ -9013,13 +9021,13 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key("object")
       private java.lang.String object__;
 
       /** Name of the object. For information about how to URL encode object names to be path safe, see
-     Encoding URI Path Parts.
+     [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public java.lang.String getObject() {
         return object__;
@@ -9027,7 +9035,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Name of the object. For information about how to URL encode object names to be path safe,
-       * see Encoding URI Path Parts.
+       * see [Encoding URI Path Parts](http://cloud/storage/docs/request-endpoints#encoding).
        */
       public Update setObject(java.lang.String object__) {
         this.object__ = object__;

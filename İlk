@@ -1,0 +1,149 @@
+İsim: Budibase CI
+
+üzerinde:
+  # Push veya pull isteğinde iş akışını tetikleyin,
+  #ama sadece master branch için
+  İtme:
+    dallar:
+- usta
+- geliştirmek
+  Çekme_istek:
+    dallar:
+- usta
+- geliştirmek
+  İş akışı_gönderim:
+
+env:
+  ŞUBE: ${{ github.event.pull_request.head.ref }}
+  BASE_BRANCH: ${{ github.event.pull_request.base.ref}}
+  PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+İşler:
+  tüy bırakma:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+- koşu: iplik tiftik
+
+  İnşa etmek:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+      # Run tüm projeleri inşa et
+- çalıştır: iplik yapısı
+      # esbuild üzerinden inşa edilen projelerin türlerini kontrol edin
+- çalıştır: iplik kontrolü: türler
+
+  Test kütüphaneleri:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+- çalıştır: iplik testi --ignore=@budibase/worker --ignore=@budibase/server --ignore=@budibase/pro
+- kullanır: codecov/codecov-action@v3
+        ile:
+          belirteç: ${{ secrets.CODECOV_TOKEN }} # genel depolar için gerekli değil
+          isim: codecov-şemsiye
+          ayrıntılı: doğru
+
+  Test hizmetleri:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+- çalıştır: iplik testi --scope=@budibase/worker --scope=@budibase/server
+- kullanır: codecov/codecov-action@v3
+        ile:
+          belirteç: ${{ secrets.CODECOV_TOKEN || github.token }} # genel depolar için gerekli değil
+          isim: codecov-şemsiye
+          ayrıntılı: doğru
+
+  Test-pro:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+- çalıştır: iplik testi --scope=@budibase/pro
+
+  Entegrasyon testi:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+- isim: Node.js 14.x kullanın
+        kullanır: eylemler/kurulum-node@v3
+        ile:
+          düğüm sürümü: 14.x
+          Önbellek: "iplik"
+- koşu: iplik
+- çalıştır: iplik yapısı
+- adı: Testleri çalıştır
+        Koş: |
+cd qa-çekirdekler
+İplik kurulumu
+İplik testi:ci
+        env:
+          BB_ADMIN_USER_EMAIL: yönetici
+          BB_ADMIN_USER_PASSWORD: yönetici
+
+  check-pro-altmodül:
+    çalışır-on: ubuntu-en son
+    adımlar:
+- isim: Ödeme kodu
+        kullanır: eylemler/checkout@v3
+        ile:
+          alt modüller: doğru
+          jeton: ${{ secrets.PERSONAL_ACCESS_TOKEN || github.token }}
+          Getirme derinliği: 0
+- isim: Alt modülü kontrol et
+        Koş: |
+cd paketleri/profesyonel
+Git getir
+eğer ! git merge-base --is-ancestor $(git log -n 1 --pretty=format:%H) origin/develop; then
+echo "Mevcut taahhüt gelişmek üzere birleştirilmedi"
+echo "Değişikliklerinizi birleştirmek için pro repo'ya bakın: https://github.com/Budibase/budibase-pro/blob/develop/docs/getting_started.md"
+çıkış 1
+başka
+echo "Her şey yolunda, alt modül birleştirildi!"
+fi

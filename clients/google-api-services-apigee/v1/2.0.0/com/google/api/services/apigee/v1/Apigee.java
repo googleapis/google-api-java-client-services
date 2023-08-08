@@ -8054,6 +8054,2645 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * An accessor for creating requests from the Appgroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.Appgroups.List request = apigee.appgroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Appgroups appgroups() {
+      return new Appgroups();
+    }
+
+    /**
+     * The "appgroups" collection of methods.
+     */
+    public class Appgroups {
+
+      /**
+       * Creates an AppGroup. Once created, user can register apps under the AppGroup to obtain secret key
+       * and password. At creation time, the AppGroup's state is set as `active`. The attribute
+       * `Attribute` with key `attribute_name` as `__apigee_reserved__developer_details` can be used to
+       * store developers and their roles. The JSON format expected is: [ { "developer_id":"", "roles":[
+       * "" ] } ] and is dealt in base64encoded format. Etag will be available in attribute `Attribute`
+       * with key `attribute_name` as `__apigee_reserved__developer_details_etag` for that AppGroup.
+       *
+       * Create a request for the method "appgroups.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the Apigee organization in which the AppGroup is created. Use the following
+       *        structure in your request: `organizations/{org}`.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup> {
+
+        private static final String REST_PATH = "v1/{+parent}/appgroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates an AppGroup. Once created, user can register apps under the AppGroup to obtain secret
+         * key and password. At creation time, the AppGroup's state is set as `active`. The attribute
+         * `Attribute` with key `attribute_name` as `__apigee_reserved__developer_details` can be used to
+         * store developers and their roles. The JSON format expected is: [ { "developer_id":"", "roles":[
+         * "" ] } ] and is dealt in base64encoded format. Etag will be available in attribute `Attribute`
+         * with key `attribute_name` as `__apigee_reserved__developer_details_etag` for that AppGroup.
+         *
+         * Create a request for the method "appgroups.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the Apigee organization in which the AppGroup is created. Use the following
+       *        structure in your request: `organizations/{org}`.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the Apigee organization in which the AppGroup is created. Use the
+         * following structure in your request: `organizations/{org}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the Apigee organization in which the AppGroup is created. Use the following
+       structure in your request: `organizations/{org}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the Apigee organization in which the AppGroup is created. Use the
+         * following structure in your request: `organizations/{org}`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an AppGroup. All app and API keys associations with the AppGroup are also removed.
+       * **Warning**: This API will permanently delete the AppGroup and related artifacts. **Note**: The
+       * delete operation is asynchronous. The AppGroup app is deleted immediately, but its associated
+       * resources, such as apps and API keys, may take anywhere from a few seconds to a few minutes to be
+       * deleted.
+       *
+       * Create a request for the method "appgroups.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+        /**
+         * Deletes an AppGroup. All app and API keys associations with the AppGroup are also removed.
+         * **Warning**: This API will permanently delete the AppGroup and related artifacts. **Note**: The
+         * delete operation is asynchronous. The AppGroup app is deleted immediately, but its associated
+         * resources, such as apps and API keys, may take anywhere from a few seconds to a few minutes to
+         * be deleted.
+         *
+         * Create a request for the method "appgroups.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the AppGroup details for the provided AppGroup name in the request URI.
+       *
+       * Create a request for the method "appgroups.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+        /**
+         * Returns the AppGroup details for the provided AppGroup name in the request URI.
+         *
+         * Create a request for the method "appgroups.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all AppGroups in an organization. A maximum of 1000 AppGroups are returned in the response
+       * if PageSize is not specified, or if the PageSize is greater than 1000.
+       *
+       * Create a request for the method "appgroups.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the Apigee organization. Use the following structure in your request:
+       *        `organizations/{org}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/appgroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists all AppGroups in an organization. A maximum of 1000 AppGroups are returned in the
+         * response if PageSize is not specified, or if the PageSize is greater than 1000.
+         *
+         * Create a request for the method "appgroups.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the Apigee organization. Use the following structure in your request:
+       *        `organizations/{org}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the Apigee organization. Use the following structure in your request:
+         * `organizations/{org}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the Apigee organization. Use the following structure in your request:
+       `organizations/{org}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the Apigee organization. Use the following structure in your request:
+         * `organizations/{org}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The filter expression to be used to get the list of AppGroups, where filtering can be
+         * done on name, correlationID or channelID of the app group. Example: filter = "name =
+         * foobar"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter expression to be used to get the list of AppGroups, where filtering can be done on name,
+       correlationID or channelID of the app group. Example: filter = "name = foobar"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter expression to be used to get the list of AppGroups, where filtering can be
+         * done on name, correlationID or channelID of the app group. Example: filter = "name =
+         * foobar"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Count of AppGroups a single page can have in the response. If unspecified, at most 1000
+         * AppGroups will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Count of AppGroups a single page can have in the response. If unspecified, at most 1000 AppGroups
+       will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Count of AppGroups a single page can have in the response. If unspecified, at most 1000
+         * AppGroups will be returned. The maximum value is 1000; values above 1000 will be coerced
+         * to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The starting index record for listing the AppGroups. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The starting index record for listing the AppGroups.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The starting index record for listing the AppGroups. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an appGroup. This API replaces the existing appGroup details with those specified in the
+       * request. Include or exclude any existing details that you want to retain or delete, respectively.
+       * Note that the state of the AppGroup should be updated using `action`, and not via AppGroup. The
+       * custom attribute limit is 1000, and is how `__apigee_reserved__developer_details` can be updated.
+       * **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps, developers, and
+       * API products) are cached for 180 seconds (current default). Any custom attributes associated with
+       * these entities are cached for at least 180 seconds after the entity is accessed at runtime.
+       * Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be able to expire an access token
+       * in less than 180 seconds.
+       *
+       * Create a request for the method "appgroups.update".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup}
+       * @return the request
+       */
+      public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup content) throws java.io.IOException {
+        Update result = new Update(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+        /**
+         * Updates an appGroup. This API replaces the existing appGroup details with those specified in
+         * the request. Include or exclude any existing details that you want to retain or delete,
+         * respectively. Note that the state of the AppGroup should be updated using `action`, and not via
+         * AppGroup. The custom attribute limit is 1000, and is how `__apigee_reserved__developer_details`
+         * can be updated. **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps,
+         * developers, and API products) are cached for 180 seconds (current default). Any custom
+         * attributes associated with these entities are cached for at least 180 seconds after the entity
+         * is accessed at runtime. Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be able
+         * to expire an access token in less than 180 seconds.
+         *
+         * Create a request for the method "appgroups.update".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group_name}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup}
+         * @since 1.13
+         */
+        protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup content) {
+          super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group_name}`
+         */
+        public Update setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The
+         * `Content-Type` header must be set to `application/octet-stream`, with empty body.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String action;
+
+        /** Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The `Content-
+       Type` header must be set to `application/octet-stream`, with empty body.
+         */
+        public java.lang.String getAction() {
+          return action;
+        }
+
+        /**
+         * Activate or de-activate the appGroup by setting the action as `active` or `inactive`. The
+         * `Content-Type` header must be set to `application/octet-stream`, with empty body.
+         */
+        public Update setAction(java.lang.String action) {
+          this.action = action;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Apps collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.Apps.List request = apigee.apps().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Apps apps() {
+        return new Apps();
+      }
+
+      /**
+       * The "apps" collection of methods.
+       */
+      public class Apps {
+
+        /**
+         * Creates an app and associates it with an AppGroup. This API associates the AppGroup app with the
+         * specified API product and auto-generates an API key for the app to use in calls to API proxies
+         * inside that API product. The `name` is the unique ID of the app that you can use in API calls.
+         *
+         * Create a request for the method "apps.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp> {
+
+          private static final String REST_PATH = "v1/{+parent}/apps";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+          /**
+           * Creates an app and associates it with an AppGroup. This API associates the AppGroup app with
+           * the specified API product and auto-generates an API key for the app to use in calls to API
+           * proxies inside that API product. The `name` is the unique ID of the app that you can use in API
+           * calls.
+           *
+           * Create a request for the method "apps.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AppGroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the AppGroup. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group_name}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the AppGroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an AppGroup app. **Note**: The delete operation is asynchronous. The AppGroup app is
+         * deleted immediately, but its associated resources, such as app keys or access tokens, may take
+         * anywhere from a few seconds to a few minutes to be deleted.
+         *
+         * Create a request for the method "apps.delete".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+
+          /**
+           * Deletes an AppGroup app. **Note**: The delete operation is asynchronous. The AppGroup app is
+           * deleted immediately, but its associated resources, such as app keys or access tokens, may take
+           * anywhere from a few seconds to a few minutes to be deleted.
+           *
+           * Create a request for the method "apps.delete".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the AppGroup app. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the details for an AppGroup app.
+         *
+         * Create a request for the method "apps.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+
+          /**
+           * Returns the details for an AppGroup app.
+           *
+           * Create a request for the method "apps.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the AppGroup app. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all apps created by an AppGroup in an Apigee organization. Optionally, you can request an
+         * expanded view of the AppGroup apps. Lists all AppGroupApps in an AppGroup. A maximum of 1000
+         * AppGroup apps are returned in the response if PageSize is not specified, or if the PageSize is
+         * greater than 1000.
+         *
+         * Create a request for the method "apps.list".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupAppsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/apps";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+          /**
+           * Lists all apps created by an AppGroup in an Apigee organization. Optionally, you can request an
+           * expanded view of the AppGroup apps. Lists all AppGroupApps in an AppGroup. A maximum of 1000
+           * AppGroup apps are returned in the response if PageSize is not specified, or if the PageSize is
+           * greater than 1000.
+           *
+           * Create a request for the method "apps.list".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupAppsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AppGroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the AppGroup. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group_name}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the AppGroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number entries to return. If unspecified, at most 1000 entries will
+           * be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number entries to return. If unspecified, at most 1000 entries will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number entries to return. If unspecified, at most 1000 entries will
+           * be returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token. If provides, must be a valid AppGroup app returned from a
+           * previous call that can be used to retrieve the next page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token. If provides, must be a valid AppGroup app returned from a previous call that
+         can be used to retrieve the next page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token. If provides, must be a valid AppGroup app returned from a
+           * previous call that can be used to retrieve the next page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the details for an AppGroup app. In addition, you can add an API product to an AppGroup
+         * app and automatically generate an API key for the app to use when calling APIs in the API
+         * product. If you want to use an existing API key for the API product, add the API product to the
+         * API key using the UpdateAppGroupAppKey API. Using this API, you cannot update the app name, as it
+         * is the primary key used to identify the app and cannot be changed. This API replaces the existing
+         * attributes with those specified in the request. Include or exclude any existing attributes that
+         * you want to retain or delete, respectively.
+         *
+         * Create a request for the method "apps.update".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+
+          /**
+           * Updates the details for an AppGroup app. In addition, you can add an API product to an AppGroup
+           * app and automatically generate an API key for the app to use when calling APIs in the API
+           * product. If you want to use an existing API key for the API product, add the API product to the
+           * API key using the UpdateAppGroupAppKey API. Using this API, you cannot update the app name, as
+           * it is the primary key used to identify the app and cannot be changed. This API replaces the
+           * existing attributes with those specified in the request. Include or exclude any existing
+           * attributes that you want to retain or delete, respectively.
+           *
+           * Create a request for the method "apps.update".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the AppGroup app. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp content) {
+            super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupApp.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the AppGroup app. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the AppGroup app. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Approve or revoke the consumer key by setting this value to `approve` or `revoke`. The
+           * `Content-Type` header must be set to `application/octet-stream`, with empty body.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String action;
+
+          /** Approve or revoke the consumer key by setting this value to `approve` or `revoke`. The `Content-
+         Type` header must be set to `application/octet-stream`, with empty body.
+           */
+          public java.lang.String getAction() {
+            return action;
+          }
+
+          /**
+           * Approve or revoke the consumer key by setting this value to `approve` or `revoke`. The
+           * `Content-Type` header must be set to `application/octet-stream`, with empty body.
+           */
+          public Update setAction(java.lang.String action) {
+            this.action = action;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Keys collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Apigee apigee = new Apigee(...);}
+         *   {@code Apigee.Keys.List request = apigee.keys().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Keys keys() {
+          return new Keys();
+        }
+
+        /**
+         * The "keys" collection of methods.
+         */
+        public class Keys {
+
+          /**
+           * Creates a custom consumer key and secret for a AppGroup app. This is particularly useful if you
+           * want to migrate existing consumer keys and secrets to Apigee from another system. Consumer keys
+           * and secrets can contain letters, numbers, underscores, and hyphens. No other special characters
+           * are allowed. To avoid service disruptions, a consumer key and secret should not exceed 2 KBs
+           * each. **Note**: When creating the consumer key and secret, an association to API products will
+           * not be made. Therefore, you should not specify the associated API products in your request.
+           * Instead, use the ProductizeAppGroupAppKey API to make the association after the consumer key and
+           * secret are created. If a consumer key and secret already exist, you can keep them or delete them
+           * using the DeleteAppGroupAppKey API.
+           *
+           * Create a request for the method "keys.create".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey> {
+
+            private static final String REST_PATH = "v1/{+parent}/keys";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+
+            /**
+             * Creates a custom consumer key and secret for a AppGroup app. This is particularly useful if you
+             * want to migrate existing consumer keys and secrets to Apigee from another system. Consumer keys
+             * and secrets can contain letters, numbers, underscores, and hyphens. No other special characters
+             * are allowed. To avoid service disruptions, a consumer key and secret should not exceed 2 KBs
+             * each. **Note**: When creating the consumer key and secret, an association to API products will
+             * not be made. Therefore, you should not specify the associated API products in your request.
+             * Instead, use the ProductizeAppGroupAppKey API to make the association after the consumer key
+             * and secret are created. If a consumer key and secret already exist, you can keep them or delete
+             * them using the DeleteAppGroupAppKey API.
+             *
+             * Create a request for the method "keys.create".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys`
+             * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey content) {
+              super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent of the AppGroup app key. Use the following structure in your
+             * request: `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent of the AppGroup app key. Use the following structure in your request:
+           `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent of the AppGroup app key. Use the following structure in your
+             * request: `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an app's consumer key and removes all API products associated with the app. After the
+           * consumer key is deleted, it cannot be used to access any APIs.
+           *
+           * Create a request for the method "keys.delete".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+
+            /**
+             * Deletes an app's consumer key and removes all API products associated with the app. After the
+             * consumer key is deleted, it cannot be used to access any APIs.
+             *
+             * Create a request for the method "keys.delete".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the AppGroup app key. Use the following structure in your request:
+           `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details for a consumer key for a AppGroup app, including the key and secret value,
+           * associated API products, and other information.
+           *
+           * Create a request for the method "keys.get".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+
+            /**
+             * Gets details for a consumer key for a AppGroup app, including the key and secret value,
+             * associated API products, and other information.
+             *
+             * Create a request for the method "keys.get".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the AppGroup app key. Use the following structure in your request:
+           `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Adds an API product to an AppGroupAppKey, enabling the app that holds the key to access the API
+           * resources bundled in the API product. In addition, you can add attributes to the AppGroupAppKey.
+           * This API replaces the existing attributes with those specified in the request. Include or exclude
+           * any existing attributes that you want to retain or delete, respectively. You can use the same key
+           * to access all API products associated with the app.
+           *
+           * Create a request for the method "keys.updateAppGroupAppKey".
+           *
+           * This request holds the parameters needed by the apigee server.  After setting any optional
+           * parameters, call the {@link UpdateAppGroupAppKey#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest}
+           * @return the request
+           */
+          public UpdateAppGroupAppKey updateAppGroupAppKey(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest content) throws java.io.IOException {
+            UpdateAppGroupAppKey result = new UpdateAppGroupAppKey(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateAppGroupAppKey extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+
+            /**
+             * Adds an API product to an AppGroupAppKey, enabling the app that holds the key to access the API
+             * resources bundled in the API product. In addition, you can add attributes to the
+             * AppGroupAppKey. This API replaces the existing attributes with those specified in the request.
+             * Include or exclude any existing attributes that you want to retain or delete, respectively. You
+             * can use the same key to access all API products associated with the app.
+             *
+             * Create a request for the method "keys.updateAppGroupAppKey".
+             *
+             * This request holds the parameters needed by the the apigee server.  After setting any optional
+             * parameters, call the {@link UpdateAppGroupAppKey#execute()} method to invoke the remote
+             * operation. <p> {@link UpdateAppGroupAppKey#initialize(com.google.api.client.googleapis.services
+             * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. Name of the AppGroup app key. Use the following structure in your request:
+           *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest}
+             * @since 1.13
+             */
+            protected UpdateAppGroupAppKey(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest content) {
+              super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+            }
+
+            @Override
+            public UpdateAppGroupAppKey set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateAppGroupAppKey) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setAccessToken(java.lang.String accessToken) {
+              return (UpdateAppGroupAppKey) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setAlt(java.lang.String alt) {
+              return (UpdateAppGroupAppKey) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setCallback(java.lang.String callback) {
+              return (UpdateAppGroupAppKey) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setFields(java.lang.String fields) {
+              return (UpdateAppGroupAppKey) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setKey(java.lang.String key) {
+              return (UpdateAppGroupAppKey) super.setKey(key);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setOauthToken(java.lang.String oauthToken) {
+              return (UpdateAppGroupAppKey) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateAppGroupAppKey) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateAppGroupAppKey) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setUploadType(java.lang.String uploadType) {
+              return (UpdateAppGroupAppKey) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateAppGroupAppKey setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateAppGroupAppKey) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the AppGroup app key. Use the following structure in your request:
+           `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the AppGroup app key. Use the following structure in your request:
+             * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
+             */
+            public UpdateAppGroupAppKey setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public UpdateAppGroupAppKey set(String parameterName, Object value) {
+              return (UpdateAppGroupAppKey) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Apiproducts collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Apigee apigee = new Apigee(...);}
+           *   {@code Apigee.Apiproducts.List request = apigee.apiproducts().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Apiproducts apiproducts() {
+            return new Apiproducts();
+          }
+
+          /**
+           * The "apiproducts" collection of methods.
+           */
+          public class Apiproducts {
+
+            /**
+             * Removes an API product from an app's consumer key. After the API product is removed, the app
+             * cannot access the API resources defined in that API product. **Note**: The consumer key is not
+             * removed, only its association with the API product.
+             *
+             * Create a request for the method "apiproducts.delete".
+             *
+             * This request holds the parameters needed by the apigee server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Parent of the AppGroup app key. Use the following structure in your request:
+             *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiprod
+             *        uct}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+
+              /**
+               * Removes an API product from an app's consumer key. After the API product is removed, the app
+               * cannot access the API resources defined in that API product. **Note**: The consumer key is not
+               * removed, only its association with the API product.
+               *
+               * Create a request for the method "apiproducts.delete".
+               *
+               * This request holds the parameters needed by the the apigee server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Parent of the AppGroup app key. Use the following structure in your request:
+             *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiprod
+             *        uct}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupAppKey.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent of the AppGroup app key. Use the following structure in your
+               * request: `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apip
+               * roducts/{apiproduct}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Parent of the AppGroup app key. Use the following structure in your request:
+             `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiproduct}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Parent of the AppGroup app key. Use the following structure in your
+               * request: `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apip
+               * roducts/{apiproduct}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Approves or revokes the consumer key for an API product. After a consumer key is approved, the
+             * app can use it to access APIs. A consumer key that is revoked or pending cannot be used to access
+             * an API. Any access tokens associated with a revoked consumer key will remain active. However,
+             * Apigee checks the status of the consumer key and if set to `revoked` will not allow access to the
+             * API.
+             *
+             * Create a request for the method "apiproducts.updateAppGroupAppKeyApiProduct".
+             *
+             * This request holds the parameters needed by the apigee server.  After setting any optional
+             * parameters, call the {@link UpdateAppGroupAppKeyApiProduct#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. Name of the API product in the developer app key in the following format:
+             *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiprod
+             *        uct}`
+             * @return the request
+             */
+            public UpdateAppGroupAppKeyApiProduct updateAppGroupAppKeyApiProduct(java.lang.String name) throws java.io.IOException {
+              UpdateAppGroupAppKeyApiProduct result = new UpdateAppGroupAppKeyApiProduct(name);
+              initialize(result);
+              return result;
+            }
+
+            public class UpdateAppGroupAppKeyApiProduct extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+
+              /**
+               * Approves or revokes the consumer key for an API product. After a consumer key is approved, the
+               * app can use it to access APIs. A consumer key that is revoked or pending cannot be used to
+               * access an API. Any access tokens associated with a revoked consumer key will remain active.
+               * However, Apigee checks the status of the consumer key and if set to `revoked` will not allow
+               * access to the API.
+               *
+               * Create a request for the method "apiproducts.updateAppGroupAppKeyApiProduct".
+               *
+               * This request holds the parameters needed by the the apigee server.  After setting any optional
+               * parameters, call the {@link UpdateAppGroupAppKeyApiProduct#execute()} method to invoke the
+               * remote operation. <p> {@link UpdateAppGroupAppKeyApiProduct#initialize(com.google.api.client.go
+               * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the API product in the developer app key in the following format:
+             *        `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiprod
+             *        uct}`
+               * @since 1.13
+               */
+              protected UpdateAppGroupAppKeyApiProduct(java.lang.String name) {
+                super(Apigee.this, "POST", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+                }
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct set$Xgafv(java.lang.String $Xgafv) {
+                return (UpdateAppGroupAppKeyApiProduct) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setAccessToken(java.lang.String accessToken) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setAlt(java.lang.String alt) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setAlt(alt);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setCallback(java.lang.String callback) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setCallback(callback);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setFields(java.lang.String fields) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setFields(fields);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setKey(java.lang.String key) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setKey(key);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setOauthToken(java.lang.String oauthToken) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setQuotaUser(java.lang.String quotaUser) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setUploadType(java.lang.String uploadType) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct setUploadProtocol(java.lang.String uploadProtocol) {
+                return (UpdateAppGroupAppKeyApiProduct) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Name of the API product in the developer app key in the following format:
+               * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{
+               * apiproduct}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the API product in the developer app key in the following format:
+             `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{apiproduct}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Name of the API product in the developer app key in the following format:
+               * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}/apiproducts/{
+               * apiproduct}`
+               */
+              public UpdateAppGroupAppKeyApiProduct setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^organizations/[^/]+/appgroups/[^/]+/apps/[^/]+/keys/[^/]+/apiproducts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Approve or revoke the consumer key by setting this value to `approve` or `revoke`
+               * respectively. The `Content-Type` header, if set, must be set to `application/octet-
+               * stream`, with empty body.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String action;
+
+              /** Approve or revoke the consumer key by setting this value to `approve` or `revoke` respectively. The
+             `Content-Type` header, if set, must be set to `application/octet-stream`, with empty body.
+               */
+              public java.lang.String getAction() {
+                return action;
+              }
+
+              /**
+               * Approve or revoke the consumer key by setting this value to `approve` or `revoke`
+               * respectively. The `Content-Type` header, if set, must be set to `application/octet-
+               * stream`, with empty body.
+               */
+              public UpdateAppGroupAppKeyApiProduct setAction(java.lang.String action) {
+                this.action = action;
+                return this;
+              }
+
+              @Override
+              public UpdateAppGroupAppKeyApiProduct set(String parameterName, Object value) {
+                return (UpdateAppGroupAppKeyApiProduct) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+    }
+    /**
      * An accessor for creating requests from the Apps collection.
      *
      * <p>The typical use is:</p>
@@ -8362,24 +11001,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /**
-         * Optional. Filter by the type of the app. Valid values are `company` or `developer`.
-         * Defaults to `developer`.
-         */
+        /** Optional. 'apptype' is no longer available. Use a 'filter' instead. */
         @com.google.api.client.util.Key
         private java.lang.String apptype;
 
-        /** Optional. Filter by the type of the app. Valid values are `company` or `developer`. Defaults to
-       `developer`.
+        /** Optional. 'apptype' is no longer available. Use a 'filter' instead.
          */
         public java.lang.String getApptype() {
           return apptype;
         }
 
-        /**
-         * Optional. Filter by the type of the app. Valid values are `company` or `developer`.
-         * Defaults to `developer`.
-         */
+        /** Optional. 'apptype' is no longer available. Use a 'filter' instead. */
         public List setApptype(java.lang.String apptype) {
           this.apptype = apptype;
           return this;
@@ -8405,6 +11037,35 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setExpand(java.lang.Boolean expand) {
           this.expand = expand;
+          return this;
+        }
+
+        /**
+         * Optional. The filter expression to be used to get the list of apps, where filtering can
+         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName and appType.
+         * Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer"
+         * "filter" is supported from ver 1.10.0 and above.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter expression to be used to get the list of apps, where filtering can be done on
+       developerEmail, apiProduct, consumerKey, status, appId, appName and appType. Examples:
+       "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer" "filter" is supported from
+       ver 1.10.0 and above.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter expression to be used to get the list of apps, where filtering can
+         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName and appType.
+         * Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer"
+         * "filter" is supported from ver 1.10.0 and above.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -8460,6 +11121,55 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setKeyStatus(java.lang.String keyStatus) {
           this.keyStatus = keyStatus;
+          return this;
+        }
+
+        /**
+         * Optional. Count of apps a single page can have in the response. If unspecified, at most
+         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
+         * 100. "page_size" is supported from ver 1.10.0 and above.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Count of apps a single page can have in the response. If unspecified, at most 100 apps
+       will be returned. The maximum value is 100; values above 100 will be coerced to 100. "page_size" is
+       supported from ver 1.10.0 and above.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Count of apps a single page can have in the response. If unspecified, at most
+         * 100 apps will be returned. The maximum value is 100; values above 100 will be coerced to
+         * 100. "page_size" is supported from ver 1.10.0 and above.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. The starting index record for listing the developers. "page_token" is supported
+         * from ver 1.10.0 and above.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The starting index record for listing the developers. "page_token" is supported from ver
+       1.10.0 and above.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. The starting index record for listing the developers. "page_token" is supported
+         * from ver 1.10.0 and above.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -13094,7 +15804,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * not be made. Therefore, you should not specify the associated API products in your request.
            * Instead, use the UpdateDeveloperAppKey API to make the association after the consumer key and
            * secret are created. If a consumer key and secret already exist, you can keep them or delete them
-           * using the DeleteDeveloperAppKey API.
+           * using the DeleteDeveloperAppKey API. **Note**: All keys start out with status=approved, even if
+           * status=revoked is passed when the key is created. To revoke a key, use the UpdateDeveloperAppKey
+           * API.
            *
            * Create a request for the method "keys.create".
            *
@@ -13128,7 +15840,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * products will not be made. Therefore, you should not specify the associated API products in
              * your request. Instead, use the UpdateDeveloperAppKey API to make the association after the
              * consumer key and secret are created. If a consumer key and secret already exist, you can keep
-             * them or delete them using the DeleteDeveloperAppKey API.
+             * them or delete them using the DeleteDeveloperAppKey API. **Note**: All keys start out with
+             * status=approved, even if status=revoked is passed when the key is created. To revoke a key, use
+             * the UpdateDeveloperAppKey API.
              *
              * Create a request for the method "keys.create".
              *
@@ -14225,7 +16939,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * not be made. Therefore, you should not specify the associated API products in your request.
              * Instead, use the UpdateDeveloperAppKey API to make the association after the consumer key and
              * secret are created. If a consumer key and secret already exist, you can keep them or delete them
-             * using the DeleteDeveloperAppKey API.
+             * using the DeleteDeveloperAppKey API. **Note**: All keys start out with status=approved, even if
+             * status=revoked is passed when the key is created. To revoke a key, use the UpdateDeveloperAppKey
+             * API.
              *
              * Create a request for the method "create.create".
              *
@@ -14259,7 +16975,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * products will not be made. Therefore, you should not specify the associated API products in
                * your request. Instead, use the UpdateDeveloperAppKey API to make the association after the
                * consumer key and secret are created. If a consumer key and secret already exist, you can keep
-               * them or delete them using the DeleteDeveloperAppKey API.
+               * them or delete them using the DeleteDeveloperAppKey API. **Note**: All keys start out with
+               * status=approved, even if status=revoked is passed when the key is created. To revoke a key, use
+               * the UpdateDeveloperAppKey API.
                *
                * Create a request for the method "create.create".
                *

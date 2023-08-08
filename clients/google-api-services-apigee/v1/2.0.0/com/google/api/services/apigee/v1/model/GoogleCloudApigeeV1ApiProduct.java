@@ -118,6 +118,16 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
   private GoogleCloudApigeeV1GraphQLOperationGroup graphqlOperationGroup;
 
   /**
+   * Optional. Configuration used to group Apigee proxies with gRPC services and method names. This
+   * grouping allows us to set quota for a particular proxy with the gRPC service name and method.
+   * If a method name is not set, this implies quota and authorization are applied to all gRPC
+   * methods implemented by that proxy for that particular gRPC service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1GrpcOperationGroup grpcOperationGroup;
+
+  /**
    * Response only. Modified time of this environment as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -398,6 +408,29 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1ApiProduct setGraphqlOperationGroup(GoogleCloudApigeeV1GraphQLOperationGroup graphqlOperationGroup) {
     this.graphqlOperationGroup = graphqlOperationGroup;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with gRPC services and method names. This
+   * grouping allows us to set quota for a particular proxy with the gRPC service name and method.
+   * If a method name is not set, this implies quota and authorization are applied to all gRPC
+   * methods implemented by that proxy for that particular gRPC service.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1GrpcOperationGroup getGrpcOperationGroup() {
+    return grpcOperationGroup;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with gRPC services and method names. This
+   * grouping allows us to set quota for a particular proxy with the gRPC service name and method.
+   * If a method name is not set, this implies quota and authorization are applied to all gRPC
+   * methods implemented by that proxy for that particular gRPC service.
+   * @param grpcOperationGroup grpcOperationGroup or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setGrpcOperationGroup(GoogleCloudApigeeV1GrpcOperationGroup grpcOperationGroup) {
+    this.grpcOperationGroup = grpcOperationGroup;
     return this;
   }
 

@@ -75,6 +75,15 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
   private java.util.List<GoogleCloudApigeeV1PodStatus> pods;
 
   /**
+   * Output only. The type of the deployment (standard or extensible) Deployed proxy revision will
+   * be marked as extensible in following 2 cases. 1. The deployed proxy revision uses extensible
+   * policies. 2. If a environment supports flowhooks and flow hook is configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String proxyDeploymentType;
+
+  /**
    * API proxy revision.
    * The value may be {@code null}.
    */
@@ -213,6 +222,27 @@ public final class GoogleCloudApigeeV1Deployment extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1Deployment setPods(java.util.List<GoogleCloudApigeeV1PodStatus> pods) {
     this.pods = pods;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the deployment (standard or extensible) Deployed proxy revision will
+   * be marked as extensible in following 2 cases. 1. The deployed proxy revision uses extensible
+   * policies. 2. If a environment supports flowhooks and flow hook is configured.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProxyDeploymentType() {
+    return proxyDeploymentType;
+  }
+
+  /**
+   * Output only. The type of the deployment (standard or extensible) Deployed proxy revision will
+   * be marked as extensible in following 2 cases. 1. The deployed proxy revision uses extensible
+   * policies. 2. If a environment supports flowhooks and flow hook is configured.
+   * @param proxyDeploymentType proxyDeploymentType or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Deployment setProxyDeploymentType(java.lang.String proxyDeploymentType) {
+    this.proxyDeploymentType = proxyDeploymentType;
     return this;
   }
 

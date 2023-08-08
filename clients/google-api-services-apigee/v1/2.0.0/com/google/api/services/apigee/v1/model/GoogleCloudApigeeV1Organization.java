@@ -146,6 +146,20 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String description;
 
   /**
+   * Optional. Flag that specifies whether the VPC Peering through Private Google Access should be
+   * disabled between the consumer network and Apigee. Valid only when RuntimeType is set to CLOUD.
+   * Required if an authorizedNetwork on the consumer project is not provided, in which case the
+   * flag should be set to true. The value must be set before the creation of any Apigee runtime
+   * instance and can be updated only when there are no runtime instances. **Note:** Apigee will be
+   * deprecating the vpc peering model that requires you to provide 'authorizedNetwork', by making
+   * the non-peering model as the default way of provisioning Apigee organization in future. So,
+   * this will be a temporary flag to enable the transition. Not supported for Apigee hybrid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableVpcPeering;
+
+  /**
    * Display name for the Apigee organization. Unused, but reserved for future use.
    * The value may be {@code null}.
    */
@@ -543,6 +557,37 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Flag that specifies whether the VPC Peering through Private Google Access should be
+   * disabled between the consumer network and Apigee. Valid only when RuntimeType is set to CLOUD.
+   * Required if an authorizedNetwork on the consumer project is not provided, in which case the
+   * flag should be set to true. The value must be set before the creation of any Apigee runtime
+   * instance and can be updated only when there are no runtime instances. **Note:** Apigee will be
+   * deprecating the vpc peering model that requires you to provide 'authorizedNetwork', by making
+   * the non-peering model as the default way of provisioning Apigee organization in future. So,
+   * this will be a temporary flag to enable the transition. Not supported for Apigee hybrid.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableVpcPeering() {
+    return disableVpcPeering;
+  }
+
+  /**
+   * Optional. Flag that specifies whether the VPC Peering through Private Google Access should be
+   * disabled between the consumer network and Apigee. Valid only when RuntimeType is set to CLOUD.
+   * Required if an authorizedNetwork on the consumer project is not provided, in which case the
+   * flag should be set to true. The value must be set before the creation of any Apigee runtime
+   * instance and can be updated only when there are no runtime instances. **Note:** Apigee will be
+   * deprecating the vpc peering model that requires you to provide 'authorizedNetwork', by making
+   * the non-peering model as the default way of provisioning Apigee organization in future. So,
+   * this will be a temporary flag to enable the transition. Not supported for Apigee hybrid.
+   * @param disableVpcPeering disableVpcPeering or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setDisableVpcPeering(java.lang.Boolean disableVpcPeering) {
+    this.disableVpcPeering = disableVpcPeering;
     return this;
   }
 

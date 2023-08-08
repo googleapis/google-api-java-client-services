@@ -73,13 +73,6 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
   private java.lang.String name;
 
   /**
-   * Customized profile configuration that computes the security score.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudApigeeV1ProfileConfig profileConfig;
-
-  /**
    * Output only. The time when revision was created.
    * The value may be {@code null}.
    */
@@ -216,23 +209,6 @@ public final class GoogleCloudApigeeV1SecurityProfile extends com.google.api.cli
    */
   public GoogleCloudApigeeV1SecurityProfile setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Customized profile configuration that computes the security score.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudApigeeV1ProfileConfig getProfileConfig() {
-    return profileConfig;
-  }
-
-  /**
-   * Customized profile configuration that computes the security score.
-   * @param profileConfig profileConfig or {@code null} for none
-   */
-  public GoogleCloudApigeeV1SecurityProfile setProfileConfig(GoogleCloudApigeeV1ProfileConfig profileConfig) {
-    this.profileConfig = profileConfig;
     return this;
   }
 

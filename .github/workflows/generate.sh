@@ -32,8 +32,8 @@ then
 fi
 
 # Install the local generator without dependencies first and then install the dependencies with hash checking.
-python2 -m pip install --no-deps -e ${ROOT_DIR}/google-api-java-client-services/generator --user -q
-python2 -m pip install --require-hashes -r ${ROOT_DIR}/google-api-java-client-services/generator/generator_requirements.txt --user
+python -m pip install --no-deps -e ${ROOT_DIR}/google-api-java-client-services/generator --user -q
+python -m pip install --require-hashes -r ${ROOT_DIR}/google-api-java-client-services/generator/generator_requirements.txt --user
 
 pushd ${ROOT_DIR}/discovery-artifact-manager
 

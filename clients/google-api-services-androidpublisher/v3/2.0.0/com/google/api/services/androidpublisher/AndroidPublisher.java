@@ -8197,8 +8197,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   public class Inappproducts {
 
     /**
-     * Deletes an in-app product (i.e. a managed product or a subscription). This method should no
-     * longer be used to delete subscriptions. See [this article](https://android-
+     * Deletes an in-app product (a managed product or a subscription). This method should no longer be
+     * used to delete subscriptions. See [this article](https://android-
      * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
      * information.
      *
@@ -8222,8 +8222,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Deletes an in-app product (i.e. a managed product or a subscription). This method should no
-       * longer be used to delete subscriptions. See [this article](https://android-
+       * Deletes an in-app product (a managed product or a subscription). This method should no longer
+       * be used to delete subscriptions. See [this article](https://android-
        * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
        * information.
        *
@@ -8488,8 +8488,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Creates an in-app product (i.e. a managed product or a subscription). This method should no
-     * longer be used to create subscriptions. See [this article](https://android-
+     * Creates an in-app product (a managed product or a subscription). This method should no longer be
+     * used to create subscriptions. See [this article](https://android-
      * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
      * information.
      *
@@ -8513,8 +8513,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts";
 
       /**
-       * Creates an in-app product (i.e. a managed product or a subscription). This method should no
-       * longer be used to create subscriptions. See [this article](https://android-
+       * Creates an in-app product (a managed product or a subscription). This method should no longer
+       * be used to create subscriptions. See [this article](https://android-
        * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
        * information.
        *
@@ -8821,8 +8821,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Patches an in-app product (i.e. a managed product or a subscription). This method should no
-     * longer be used to update subscriptions. See [this article](https://android-
+     * Patches an in-app product (a managed product or a subscription). This method should no longer be
+     * used to update subscriptions. See [this article](https://android-
      * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
      * information.
      *
@@ -8847,8 +8847,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Patches an in-app product (i.e. a managed product or a subscription). This method should no
-       * longer be used to update subscriptions. See [this article](https://android-
+       * Patches an in-app product (a managed product or a subscription). This method should no longer
+       * be used to update subscriptions. See [this article](https://android-
        * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
        * information.
        *
@@ -8990,8 +8990,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
     }
     /**
-     * Updates an in-app product (i.e. a managed product or a subscription). This method should no
-     * longer be used to update subscriptions. See [this article](https://android-
+     * Updates an in-app product (a managed product or a subscription). This method should no longer be
+     * used to update subscriptions. See [this article](https://android-
      * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
      * information.
      *
@@ -9016,8 +9016,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/inappproducts/{sku}";
 
       /**
-       * Updates an in-app product (i.e. a managed product or a subscription). This method should no
-       * longer be used to update subscriptions. See [this article](https://android-
+       * Updates an in-app product (a managed product or a subscription). This method should no longer
+       * be used to update subscriptions. See [this article](https://android-
        * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
        * information.
        *
@@ -12330,9 +12330,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
-           * @param productId Required. The parent subscription (ID) for which the offers should be read.
+           * @param productId Required. The parent subscription (ID) for which the offers should be read. May be specified as '-'
+           *        to read all offers under an app.
            * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
-           *        read all offers under a subscription.
+           *        read all offers under a subscription or an app. Must be specified as '-' if product_id is
+           *        specified as '-'.
            * @return the request
            */
           public List list(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) throws java.io.IOException {
@@ -12356,9 +12358,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param packageName Required. The parent app (package name) for which the subscriptions should be read.
-             * @param productId Required. The parent subscription (ID) for which the offers should be read.
+             * @param productId Required. The parent subscription (ID) for which the offers should be read. May be specified as '-'
+           *        to read all offers under an app.
              * @param basePlanId Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
-           *        read all offers under a subscription.
+           *        read all offers under a subscription or an app. Must be specified as '-' if product_id is
+           *        specified as '-'.
              * @since 1.13
              */
             protected List(java.lang.String packageName, java.lang.String productId, java.lang.String basePlanId) {
@@ -12453,17 +12457,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Required. The parent subscription (ID) for which the offers should be read. */
+            /**
+             * Required. The parent subscription (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under an app.
+             */
             @com.google.api.client.util.Key
             private java.lang.String productId;
 
-            /** Required. The parent subscription (ID) for which the offers should be read.
+            /** Required. The parent subscription (ID) for which the offers should be read. May be specified as '-'
+           to read all offers under an app.
              */
             public java.lang.String getProductId() {
               return productId;
             }
 
-            /** Required. The parent subscription (ID) for which the offers should be read. */
+            /**
+             * Required. The parent subscription (ID) for which the offers should be read. May be
+             * specified as '-' to read all offers under an app.
+             */
             public List setProductId(java.lang.String productId) {
               this.productId = productId;
               return this;
@@ -12471,13 +12482,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent base plan (ID) for which the offers should be read. May be
-             * specified as '-' to read all offers under a subscription.
+             * specified as '-' to read all offers under a subscription or an app. Must be specified
+             * as '-' if product_id is specified as '-'.
              */
             @com.google.api.client.util.Key
             private java.lang.String basePlanId;
 
             /** Required. The parent base plan (ID) for which the offers should be read. May be specified as '-' to
-           read all offers under a subscription.
+           read all offers under a subscription or an app. Must be specified as '-' if product_id is specified
+           as '-'.
              */
             public java.lang.String getBasePlanId() {
               return basePlanId;
@@ -12485,7 +12498,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent base plan (ID) for which the offers should be read. May be
-             * specified as '-' to read all offers under a subscription.
+             * specified as '-' to read all offers under a subscription or an app. Must be specified
+             * as '-' if product_id is specified as '-'.
              */
             public List setBasePlanId(java.lang.String basePlanId) {
               this.basePlanId = basePlanId;

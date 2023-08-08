@@ -42,6 +42,15 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
   private String oldestAllowedPriceVersionTime;
 
   /**
+   * Optional. The behavior the caller wants users to see when there is a price increase during
+   * migration. If left unset, the behavior defaults to PRICE_INCREASE_TYPE_OPT_IN. Note that the
+   * first opt-out price increase migration for each app must be initiated in Play Console.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String priceIncreaseType;
+
+  /**
    * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
    * The value may be {@code null}.
    */
@@ -70,6 +79,27 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
    */
   public RegionalPriceMigrationConfig setOldestAllowedPriceVersionTime(String oldestAllowedPriceVersionTime) {
     this.oldestAllowedPriceVersionTime = oldestAllowedPriceVersionTime;
+    return this;
+  }
+
+  /**
+   * Optional. The behavior the caller wants users to see when there is a price increase during
+   * migration. If left unset, the behavior defaults to PRICE_INCREASE_TYPE_OPT_IN. Note that the
+   * first opt-out price increase migration for each app must be initiated in Play Console.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPriceIncreaseType() {
+    return priceIncreaseType;
+  }
+
+  /**
+   * Optional. The behavior the caller wants users to see when there is a price increase during
+   * migration. If left unset, the behavior defaults to PRICE_INCREASE_TYPE_OPT_IN. Note that the
+   * first opt-out price increase migration for each app must be initiated in Play Console.
+   * @param priceIncreaseType priceIncreaseType or {@code null} for none
+   */
+  public RegionalPriceMigrationConfig setPriceIncreaseType(java.lang.String priceIncreaseType) {
+    this.priceIncreaseType = priceIncreaseType;
     return this;
   }
 

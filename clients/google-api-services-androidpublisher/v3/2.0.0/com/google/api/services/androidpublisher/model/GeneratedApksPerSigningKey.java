@@ -69,6 +69,13 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
   private GeneratedUniversalApk generatedUniversalApk;
 
   /**
+   * Contains targeting information about the generated apks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetingInfo targetingInfo;
+
+  /**
    * SHA256 hash of the APK signing public key certificate.
    * @return value or {@code null} for none
    */
@@ -154,6 +161,23 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
    */
   public GeneratedApksPerSigningKey setGeneratedUniversalApk(GeneratedUniversalApk generatedUniversalApk) {
     this.generatedUniversalApk = generatedUniversalApk;
+    return this;
+  }
+
+  /**
+   * Contains targeting information about the generated apks.
+   * @return value or {@code null} for none
+   */
+  public TargetingInfo getTargetingInfo() {
+    return targetingInfo;
+  }
+
+  /**
+   * Contains targeting information about the generated apks.
+   * @param targetingInfo targetingInfo or {@code null} for none
+   */
+  public GeneratedApksPerSigningKey setTargetingInfo(TargetingInfo targetingInfo) {
+    this.targetingInfo = targetingInfo;
     return this;
   }
 

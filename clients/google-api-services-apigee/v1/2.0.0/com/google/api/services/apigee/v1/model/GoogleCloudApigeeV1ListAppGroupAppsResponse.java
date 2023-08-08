@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * Model definition for GoogleCloudApigeeV1ListAppsResponse.
+ * Response for ListAppGroupApps
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -27,18 +27,19 @@ package com.google.api.services.apigee.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudApigeeV1ListAppGroupAppsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of AppGroup apps and their credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudApigeeV1App> app;
+  private java.util.List<GoogleCloudApigeeV1AppGroupApp> appGroupApps;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudApigeeV1App used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudApigeeV1AppGroupApp used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1App.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1AppGroupApp.class);
   }
 
   /**
@@ -50,24 +51,19 @@ public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.cl
   private java.lang.String nextPageToken;
 
   /**
-   * Total count of Apps.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer totalSize;
-
-  /**
+   * List of AppGroup apps and their credentials.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudApigeeV1App> getApp() {
-    return app;
+  public java.util.List<GoogleCloudApigeeV1AppGroupApp> getAppGroupApps() {
+    return appGroupApps;
   }
 
   /**
-   * @param app app or {@code null} for none
+   * List of AppGroup apps and their credentials.
+   * @param appGroupApps appGroupApps or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListAppsResponse setApp(java.util.List<GoogleCloudApigeeV1App> app) {
-    this.app = app;
+  public GoogleCloudApigeeV1ListAppGroupAppsResponse setAppGroupApps(java.util.List<GoogleCloudApigeeV1AppGroupApp> appGroupApps) {
+    this.appGroupApps = appGroupApps;
     return this;
   }
 
@@ -85,36 +81,19 @@ public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.cl
    * omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListAppsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public GoogleCloudApigeeV1ListAppGroupAppsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
-  /**
-   * Total count of Apps.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getTotalSize() {
-    return totalSize;
-  }
-
-  /**
-   * Total count of Apps.
-   * @param totalSize totalSize or {@code null} for none
-   */
-  public GoogleCloudApigeeV1ListAppsResponse setTotalSize(java.lang.Integer totalSize) {
-    this.totalSize = totalSize;
-    return this;
+  @Override
+  public GoogleCloudApigeeV1ListAppGroupAppsResponse set(String fieldName, Object value) {
+    return (GoogleCloudApigeeV1ListAppGroupAppsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudApigeeV1ListAppsResponse set(String fieldName, Object value) {
-    return (GoogleCloudApigeeV1ListAppsResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudApigeeV1ListAppsResponse clone() {
-    return (GoogleCloudApigeeV1ListAppsResponse) super.clone();
+  public GoogleCloudApigeeV1ListAppGroupAppsResponse clone() {
+    return (GoogleCloudApigeeV1ListAppGroupAppsResponse) super.clone();
   }
 
 }

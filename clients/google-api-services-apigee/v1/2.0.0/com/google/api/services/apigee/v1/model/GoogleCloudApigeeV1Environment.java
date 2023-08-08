@@ -80,6 +80,12 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
   private java.lang.String forwardProxyUri;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasAttachedFlowHooks;
+
+  /**
    * Output only. Last modification time of this environment as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -115,6 +121,13 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. EnvironmentType selected for the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * Optional. API Proxy type supported by the environment. The type can be set when creating the
@@ -235,6 +248,21 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasAttachedFlowHooks() {
+    return hasAttachedFlowHooks;
+  }
+
+  /**
+   * @param hasAttachedFlowHooks hasAttachedFlowHooks or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Environment setHasAttachedFlowHooks(java.lang.Boolean hasAttachedFlowHooks) {
+    this.hasAttachedFlowHooks = hasAttachedFlowHooks;
+    return this;
+  }
+
+  /**
    * Output only. Last modification time of this environment as milliseconds since epoch.
    * @return value or {@code null} for none
    */
@@ -320,6 +348,23 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
    */
   public GoogleCloudApigeeV1Environment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. EnvironmentType selected for the environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. EnvironmentType selected for the environment.
+   * @param type type or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Environment setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

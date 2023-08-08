@@ -17,7 +17,8 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * Model definition for GoogleCloudApigeeV1ListAppsResponse.
+ * ListAppGroupsResponse contains the 0 or more AppGroups, along with the optional page token and
+ * the total count of apps.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -27,18 +28,19 @@ package com.google.api.services.apigee.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudApigeeV1ListAppGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of AppGroups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudApigeeV1App> app;
+  private java.util.List<GoogleCloudApigeeV1AppGroup> appGroups;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudApigeeV1App used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudApigeeV1AppGroup used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1App.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1AppGroup.class);
   }
 
   /**
@@ -50,24 +52,26 @@ public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.cl
   private java.lang.String nextPageToken;
 
   /**
-   * Total count of Apps.
+   * Total count of AppGroups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
 
   /**
+   * List of AppGroups.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudApigeeV1App> getApp() {
-    return app;
+  public java.util.List<GoogleCloudApigeeV1AppGroup> getAppGroups() {
+    return appGroups;
   }
 
   /**
-   * @param app app or {@code null} for none
+   * List of AppGroups.
+   * @param appGroups appGroups or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListAppsResponse setApp(java.util.List<GoogleCloudApigeeV1App> app) {
-    this.app = app;
+  public GoogleCloudApigeeV1ListAppGroupsResponse setAppGroups(java.util.List<GoogleCloudApigeeV1AppGroup> appGroups) {
+    this.appGroups = appGroups;
     return this;
   }
 
@@ -85,13 +89,13 @@ public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.cl
    * omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListAppsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public GoogleCloudApigeeV1ListAppGroupsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Total count of Apps.
+   * Total count of AppGroups.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -99,22 +103,22 @@ public final class GoogleCloudApigeeV1ListAppsResponse extends com.google.api.cl
   }
 
   /**
-   * Total count of Apps.
+   * Total count of AppGroups.
    * @param totalSize totalSize or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListAppsResponse setTotalSize(java.lang.Integer totalSize) {
+  public GoogleCloudApigeeV1ListAppGroupsResponse setTotalSize(java.lang.Integer totalSize) {
     this.totalSize = totalSize;
     return this;
   }
 
   @Override
-  public GoogleCloudApigeeV1ListAppsResponse set(String fieldName, Object value) {
-    return (GoogleCloudApigeeV1ListAppsResponse) super.set(fieldName, value);
+  public GoogleCloudApigeeV1ListAppGroupsResponse set(String fieldName, Object value) {
+    return (GoogleCloudApigeeV1ListAppGroupsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudApigeeV1ListAppsResponse clone() {
-    return (GoogleCloudApigeeV1ListAppsResponse) super.clone();
+  public GoogleCloudApigeeV1ListAppGroupsResponse clone() {
+    return (GoogleCloudApigeeV1ListAppGroupsResponse) super.clone();
   }
 
 }

@@ -91,6 +91,14 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
   private java.util.Map<String, java.lang.String> entityMetaDataAsProperties;
 
   /**
+   * Output only. This field will be marked as true if revision contains any policies marked as
+   * extensible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasExtensiblePolicy;
+
+  /**
    * List of IntegrationEndpoints in the '/integration-endpoints' directory of the API proxy. This
    * is a 'manifest' setting designed to provide visibility into the contents of the API proxy.
    * The value may be {@code null}.
@@ -353,6 +361,25 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
    */
   public GoogleCloudApigeeV1ApiProxyRevision setEntityMetaDataAsProperties(java.util.Map<String, java.lang.String> entityMetaDataAsProperties) {
     this.entityMetaDataAsProperties = entityMetaDataAsProperties;
+    return this;
+  }
+
+  /**
+   * Output only. This field will be marked as true if revision contains any policies marked as
+   * extensible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasExtensiblePolicy() {
+    return hasExtensiblePolicy;
+  }
+
+  /**
+   * Output only. This field will be marked as true if revision contains any policies marked as
+   * extensible.
+   * @param hasExtensiblePolicy hasExtensiblePolicy or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProxyRevision setHasExtensiblePolicy(java.lang.Boolean hasExtensiblePolicy) {
+    this.hasExtensiblePolicy = hasExtensiblePolicy;
     return this;
   }
 

@@ -17,7 +17,9 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * Model definition for GoogleCloudApigeeV1App.
+ * Response for [GetAppGroupApp].[AppGroupApps.GetAppGroupApp],
+ * [CreateAppGroupAppRequest].[AppGroupApp.CreateAppGroupAppRequest] and
+ * [DeleteAppGroupApp].[AppGroupApp.DeleteAppGroupApp]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -27,37 +29,32 @@ package com.google.api.services.apigee.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudApigeeV1App extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudApigeeV1AppGroupApp extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of API products associated with the app.
+   * List of API products associated with the AppGroup app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudApigeeV1ApiProductRef> apiProducts;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudApigeeV1ApiProductRef used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1ApiProductRef.class);
-  }
+  private java.util.List<java.lang.String> apiProducts;
 
   /**
-   * Name of the AppGroup
+   * Immutable. Name of the parent AppGroup whose resource name format is of syntax
+   * (organizations/appgroups).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appGroup;
 
   /**
-   * ID of the app.
+   * Immutable. ID of the AppGroup app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appId;
 
   /**
-   * List of attributes.
+   * List of attributes for the AppGroup app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,105 +62,86 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
 
   /**
    * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to
-   * apps.
+   * AppGroup apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String callbackUrl;
 
   /**
-   * Name of the company that owns the app.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String companyName;
-
-  /**
-   * Output only. Unix time when the app was created.
+   * Output only. Time the AppGroup app was created in milliseconds since epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long createdAt;
 
   /**
-   * Output only. Set of credentials for the app. Credentials are API key/secret pairs associated
-   * with API products.
+   * Output only. Set of credentials for the AppGroup app consisting of the consumer key/secret
+   * pairs associated with the API products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudApigeeV1Credential> credentials;
 
   /**
-   * Email of the developer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String developerEmail;
-
-  /**
-   * ID of the developer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String developerId;
-
-  /**
-   * Duration, in milliseconds, of the consumer key that will be generated for the app. The default
-   * value, -1, indicates an infinite validity period. Once set, the expiration can't be updated.
-   * json key: keyExpiresIn
+   * Immutable. Expiration time, in seconds, for the consumer key that is generated for the AppGroup
+   * app. If not set or left to the default value of `-1`, the API key never expires. The expiration
+   * time can't be updated after it is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long keyExpiresIn;
 
   /**
-   * Output only. Last modified time as milliseconds since epoch.
+   * Output only. Time the AppGroup app was modified in milliseconds since epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lastModifiedAt;
 
   /**
-   * Name of the app.
+   * Immutable. Name of the AppGroup app whose resource name format is of syntax
+   * (organizations/appgroups/apps).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Scopes to apply to the app. The specified scope names must already exist on the API product
-   * that you associate with the app.
+   * Scopes to apply to the AppGroup app. The specified scopes must already exist for the API
+   * product that you associate with the AppGroup app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Status of the credential.
+   * Status of the App. Valid values include `approved` or `revoked`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * List of API products associated with the app.
+   * List of API products associated with the AppGroup app.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudApigeeV1ApiProductRef> getApiProducts() {
+  public java.util.List<java.lang.String> getApiProducts() {
     return apiProducts;
   }
 
   /**
-   * List of API products associated with the app.
+   * List of API products associated with the AppGroup app.
    * @param apiProducts apiProducts or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setApiProducts(java.util.List<GoogleCloudApigeeV1ApiProductRef> apiProducts) {
+  public GoogleCloudApigeeV1AppGroupApp setApiProducts(java.util.List<java.lang.String> apiProducts) {
     this.apiProducts = apiProducts;
     return this;
   }
 
   /**
-   * Name of the AppGroup
+   * Immutable. Name of the parent AppGroup whose resource name format is of syntax
+   * (organizations/appgroups).
    * @return value or {@code null} for none
    */
   public java.lang.String getAppGroup() {
@@ -171,16 +149,17 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name of the AppGroup
+   * Immutable. Name of the parent AppGroup whose resource name format is of syntax
+   * (organizations/appgroups).
    * @param appGroup appGroup or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setAppGroup(java.lang.String appGroup) {
+  public GoogleCloudApigeeV1AppGroupApp setAppGroup(java.lang.String appGroup) {
     this.appGroup = appGroup;
     return this;
   }
 
   /**
-   * ID of the app.
+   * Immutable. ID of the AppGroup app.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -188,16 +167,16 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * ID of the app.
+   * Immutable. ID of the AppGroup app.
    * @param appId appId or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setAppId(java.lang.String appId) {
+  public GoogleCloudApigeeV1AppGroupApp setAppId(java.lang.String appId) {
     this.appId = appId;
     return this;
   }
 
   /**
-   * List of attributes.
+   * List of attributes for the AppGroup app.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1Attribute> getAttributes() {
@@ -205,17 +184,17 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * List of attributes.
+   * List of attributes for the AppGroup app.
    * @param attributes attributes or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setAttributes(java.util.List<GoogleCloudApigeeV1Attribute> attributes) {
+  public GoogleCloudApigeeV1AppGroupApp setAttributes(java.util.List<GoogleCloudApigeeV1Attribute> attributes) {
     this.attributes = attributes;
     return this;
   }
 
   /**
    * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to
-   * apps.
+   * AppGroup apps.
    * @return value or {@code null} for none
    */
   public java.lang.String getCallbackUrl() {
@@ -224,33 +203,16 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
 
   /**
    * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to
-   * apps.
+   * AppGroup apps.
    * @param callbackUrl callbackUrl or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setCallbackUrl(java.lang.String callbackUrl) {
+  public GoogleCloudApigeeV1AppGroupApp setCallbackUrl(java.lang.String callbackUrl) {
     this.callbackUrl = callbackUrl;
     return this;
   }
 
   /**
-   * Name of the company that owns the app.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCompanyName() {
-    return companyName;
-  }
-
-  /**
-   * Name of the company that owns the app.
-   * @param companyName companyName or {@code null} for none
-   */
-  public GoogleCloudApigeeV1App setCompanyName(java.lang.String companyName) {
-    this.companyName = companyName;
-    return this;
-  }
-
-  /**
-   * Output only. Unix time when the app was created.
+   * Output only. Time the AppGroup app was created in milliseconds since epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreatedAt() {
@@ -258,17 +220,17 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Unix time when the app was created.
+   * Output only. Time the AppGroup app was created in milliseconds since epoch.
    * @param createdAt createdAt or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setCreatedAt(java.lang.Long createdAt) {
+  public GoogleCloudApigeeV1AppGroupApp setCreatedAt(java.lang.Long createdAt) {
     this.createdAt = createdAt;
     return this;
   }
 
   /**
-   * Output only. Set of credentials for the app. Credentials are API key/secret pairs associated
-   * with API products.
+   * Output only. Set of credentials for the AppGroup app consisting of the consumer key/secret
+   * pairs associated with the API products.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApigeeV1Credential> getCredentials() {
@@ -276,53 +238,19 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Set of credentials for the app. Credentials are API key/secret pairs associated
-   * with API products.
+   * Output only. Set of credentials for the AppGroup app consisting of the consumer key/secret
+   * pairs associated with the API products.
    * @param credentials credentials or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setCredentials(java.util.List<GoogleCloudApigeeV1Credential> credentials) {
+  public GoogleCloudApigeeV1AppGroupApp setCredentials(java.util.List<GoogleCloudApigeeV1Credential> credentials) {
     this.credentials = credentials;
     return this;
   }
 
   /**
-   * Email of the developer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDeveloperEmail() {
-    return developerEmail;
-  }
-
-  /**
-   * Email of the developer.
-   * @param developerEmail developerEmail or {@code null} for none
-   */
-  public GoogleCloudApigeeV1App setDeveloperEmail(java.lang.String developerEmail) {
-    this.developerEmail = developerEmail;
-    return this;
-  }
-
-  /**
-   * ID of the developer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDeveloperId() {
-    return developerId;
-  }
-
-  /**
-   * ID of the developer.
-   * @param developerId developerId or {@code null} for none
-   */
-  public GoogleCloudApigeeV1App setDeveloperId(java.lang.String developerId) {
-    this.developerId = developerId;
-    return this;
-  }
-
-  /**
-   * Duration, in milliseconds, of the consumer key that will be generated for the app. The default
-   * value, -1, indicates an infinite validity period. Once set, the expiration can't be updated.
-   * json key: keyExpiresIn
+   * Immutable. Expiration time, in seconds, for the consumer key that is generated for the AppGroup
+   * app. If not set or left to the default value of `-1`, the API key never expires. The expiration
+   * time can't be updated after it is set.
    * @return value or {@code null} for none
    */
   public java.lang.Long getKeyExpiresIn() {
@@ -330,18 +258,18 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Duration, in milliseconds, of the consumer key that will be generated for the app. The default
-   * value, -1, indicates an infinite validity period. Once set, the expiration can't be updated.
-   * json key: keyExpiresIn
+   * Immutable. Expiration time, in seconds, for the consumer key that is generated for the AppGroup
+   * app. If not set or left to the default value of `-1`, the API key never expires. The expiration
+   * time can't be updated after it is set.
    * @param keyExpiresIn keyExpiresIn or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setKeyExpiresIn(java.lang.Long keyExpiresIn) {
+  public GoogleCloudApigeeV1AppGroupApp setKeyExpiresIn(java.lang.Long keyExpiresIn) {
     this.keyExpiresIn = keyExpiresIn;
     return this;
   }
 
   /**
-   * Output only. Last modified time as milliseconds since epoch.
+   * Output only. Time the AppGroup app was modified in milliseconds since epoch.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLastModifiedAt() {
@@ -349,16 +277,17 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Last modified time as milliseconds since epoch.
+   * Output only. Time the AppGroup app was modified in milliseconds since epoch.
    * @param lastModifiedAt lastModifiedAt or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setLastModifiedAt(java.lang.Long lastModifiedAt) {
+  public GoogleCloudApigeeV1AppGroupApp setLastModifiedAt(java.lang.Long lastModifiedAt) {
     this.lastModifiedAt = lastModifiedAt;
     return this;
   }
 
   /**
-   * Name of the app.
+   * Immutable. Name of the AppGroup app whose resource name format is of syntax
+   * (organizations/appgroups/apps).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -366,17 +295,18 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name of the app.
+   * Immutable. Name of the AppGroup app whose resource name format is of syntax
+   * (organizations/appgroups/apps).
    * @param name name or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setName(java.lang.String name) {
+  public GoogleCloudApigeeV1AppGroupApp setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Scopes to apply to the app. The specified scope names must already exist on the API product
-   * that you associate with the app.
+   * Scopes to apply to the AppGroup app. The specified scopes must already exist for the API
+   * product that you associate with the AppGroup app.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -384,17 +314,17 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Scopes to apply to the app. The specified scope names must already exist on the API product
-   * that you associate with the app.
+   * Scopes to apply to the AppGroup app. The specified scopes must already exist for the API
+   * product that you associate with the AppGroup app.
    * @param scopes scopes or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setScopes(java.util.List<java.lang.String> scopes) {
+  public GoogleCloudApigeeV1AppGroupApp setScopes(java.util.List<java.lang.String> scopes) {
     this.scopes = scopes;
     return this;
   }
 
   /**
-   * Status of the credential.
+   * Status of the App. Valid values include `approved` or `revoked`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -402,22 +332,22 @@ public final class GoogleCloudApigeeV1App extends com.google.api.client.json.Gen
   }
 
   /**
-   * Status of the credential.
+   * Status of the App. Valid values include `approved` or `revoked`.
    * @param status status or {@code null} for none
    */
-  public GoogleCloudApigeeV1App setStatus(java.lang.String status) {
+  public GoogleCloudApigeeV1AppGroupApp setStatus(java.lang.String status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public GoogleCloudApigeeV1App set(String fieldName, Object value) {
-    return (GoogleCloudApigeeV1App) super.set(fieldName, value);
+  public GoogleCloudApigeeV1AppGroupApp set(String fieldName, Object value) {
+    return (GoogleCloudApigeeV1AppGroupApp) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudApigeeV1App clone() {
-    return (GoogleCloudApigeeV1App) super.clone();
+  public GoogleCloudApigeeV1AppGroupApp clone() {
+    return (GoogleCloudApigeeV1AppGroupApp) super.clone();
   }
 
 }

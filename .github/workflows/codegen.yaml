@@ -1,7 +1,7 @@
 on:
   schedule:
-    # every one hour from 00:30 to 02:30
-    - cron: '30 0-2 * * *'
+    # Runs at 00:30 and 02:30.
+    - cron: '30 0,2 * * *'
   workflow_dispatch:
 
 name: codegen
@@ -17,7 +17,7 @@ jobs:
         with:
           script: |
             console.log('checking size of services')
-            const MAX_SERVICE_SIZE = 300 // 00:30 to 02:30 implies 3 batches of size 100
+            const MAX_SERVICE_SIZE = 400 // 00:30 and 02:30 implies 2 batches of size 200
             const services = ${{ needs.discovery.outputs.services }}
             if (services.length > MAX_SERVICE_SIZE) {
               throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
@@ -35,7 +35,7 @@ jobs:
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
             const hour = new Date().getHours()
-            const MAX_BATCH_SIZE = 100
+            const MAX_BATCH_SIZE = 200
             const result = {
               batches: [],
               hour: new Date().getHours(),

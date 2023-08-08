@@ -45,7 +45,7 @@ do
   echo ${VERSION}
   echo ${OUTPUT_DIR}
   # run the local generator
-  python2 -m googleapis.codegen \
+  python -m googleapis.codegen \
       --output_dir=${OUTPUT_DIR} \
       --input=${DISCOVERY} \
       --language=java \

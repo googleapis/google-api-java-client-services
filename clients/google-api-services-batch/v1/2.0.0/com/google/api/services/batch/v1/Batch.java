@@ -1224,6 +1224,28 @@ public class Batch extends com.google.api.client.googleapis.services.json.Abstra
             return this;
           }
 
+          /**
+           * Optional. Sort results. Supported are "name", "name desc", "create_time", and
+           * "create_time desc".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sort results. Supported are "name", "name desc", "create_time", and "create_time desc".
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Sort results. Supported are "name", "name desc", "create_time", and
+           * "create_time desc".
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
           /** Page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;

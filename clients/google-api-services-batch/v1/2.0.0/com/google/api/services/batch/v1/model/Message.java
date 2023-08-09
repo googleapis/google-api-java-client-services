@@ -17,8 +17,10 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Message details. Describe the attribute that a message should have. Without specified message
- * attributes, no message will be sent by default.
+ * Message details. Describe the conditions under which messages will be sent. If no attribute is
+ * defined, no message will be sent by default. One message should specify either the job or the
+ * task level attributes, but not both. For example, job level: JOB_STATE_CHANGED and/or a specified
+ * new_job_state; task level: TASK_STATE_CHANGED and/or a specified new_task_state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:

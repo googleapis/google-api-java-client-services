@@ -38,8 +38,8 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   private Message message;
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. This topic
-   * exist in the same project as the job and billings will be charged to this project. If not
+   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
+   * must exist in the same project as the job and billings will be charged to this project. If not
    * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
    */
@@ -66,8 +66,8 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. This topic
-   * exist in the same project as the job and billings will be charged to this project. If not
+   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
+   * must exist in the same project as the job and billings will be charged to this project. If not
    * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
    * @return value or {@code null} for none
    */
@@ -76,8 +76,8 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. This topic
-   * exist in the same project as the job and billings will be charged to this project. If not
+   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
+   * must exist in the same project as the job and billings will be charged to this project. If not
    * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */

@@ -53,7 +53,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Non-boot disks to be attached for each VM created by this InstancePolicy. New disks will be
-   * deleted when the VM is deleted.
+   * deleted when the VM is deleted. A non-boot disk is a disk that can be of a device with a file
+   * system or a raw storage drive that is not ready for data storage and accessing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Non-boot disks to be attached for each VM created by this InstancePolicy. New disks will be
-   * deleted when the VM is deleted.
+   * deleted when the VM is deleted. A non-boot disk is a disk that can be of a device with a file
+   * system or a raw storage drive that is not ready for data storage and accessing.
    * @return value or {@code null} for none
    */
   public java.util.List<AttachedDisk> getDisks() {
@@ -134,7 +136,8 @@ public final class InstancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Non-boot disks to be attached for each VM created by this InstancePolicy. New disks will be
-   * deleted when the VM is deleted.
+   * deleted when the VM is deleted. A non-boot disk is a disk that can be of a device with a file
+   * system or a raw storage drive that is not ready for data storage and accessing.
    * @param disks disks or {@code null} for none
    */
   public InstancePolicy setDisks(java.util.List<AttachedDisk> disks) {

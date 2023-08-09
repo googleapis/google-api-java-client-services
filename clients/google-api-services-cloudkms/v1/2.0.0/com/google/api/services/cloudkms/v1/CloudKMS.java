@@ -7244,6 +7244,272 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
+             * Decrypts data that was originally encrypted using a raw cryptographic mechanism. The
+             * CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT.
+             *
+             * Create a request for the method "cryptoKeyVersions.rawDecrypt".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link RawDecrypt#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the CryptoKeyVersion to use for decryption.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.RawDecryptRequest}
+             * @return the request
+             */
+            public RawDecrypt rawDecrypt(java.lang.String name, com.google.api.services.cloudkms.v1.model.RawDecryptRequest content) throws java.io.IOException {
+              RawDecrypt result = new RawDecrypt(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RawDecrypt extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.RawDecryptResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:rawDecrypt";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Decrypts data that was originally encrypted using a raw cryptographic mechanism. The
+               * CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT.
+               *
+               * Create a request for the method "cryptoKeyVersions.rawDecrypt".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link RawDecrypt#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * RawDecrypt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the CryptoKeyVersion to use for decryption.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.RawDecryptRequest}
+               * @since 1.13
+               */
+              protected RawDecrypt(java.lang.String name, com.google.api.services.cloudkms.v1.model.RawDecryptRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.RawDecryptResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public RawDecrypt set$Xgafv(java.lang.String $Xgafv) {
+                return (RawDecrypt) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RawDecrypt setAccessToken(java.lang.String accessToken) {
+                return (RawDecrypt) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RawDecrypt setAlt(java.lang.String alt) {
+                return (RawDecrypt) super.setAlt(alt);
+              }
+
+              @Override
+              public RawDecrypt setCallback(java.lang.String callback) {
+                return (RawDecrypt) super.setCallback(callback);
+              }
+
+              @Override
+              public RawDecrypt setFields(java.lang.String fields) {
+                return (RawDecrypt) super.setFields(fields);
+              }
+
+              @Override
+              public RawDecrypt setKey(java.lang.String key) {
+                return (RawDecrypt) super.setKey(key);
+              }
+
+              @Override
+              public RawDecrypt setOauthToken(java.lang.String oauthToken) {
+                return (RawDecrypt) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RawDecrypt setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RawDecrypt) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RawDecrypt setQuotaUser(java.lang.String quotaUser) {
+                return (RawDecrypt) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RawDecrypt setUploadType(java.lang.String uploadType) {
+                return (RawDecrypt) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RawDecrypt setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RawDecrypt) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decryption. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decryption.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for decryption. */
+              public RawDecrypt setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public RawDecrypt set(String parameterName, Object value) {
+                return (RawDecrypt) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Encrypts data using portable cryptographic primitives. Most users should choose Encrypt and
+             * Decrypt rather than their raw counterparts. The CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT.
+             *
+             * Create a request for the method "cryptoKeyVersions.rawEncrypt".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link RawEncrypt#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the CryptoKeyVersion to use for encryption.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.RawEncryptRequest}
+             * @return the request
+             */
+            public RawEncrypt rawEncrypt(java.lang.String name, com.google.api.services.cloudkms.v1.model.RawEncryptRequest content) throws java.io.IOException {
+              RawEncrypt result = new RawEncrypt(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RawEncrypt extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.RawEncryptResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:rawEncrypt";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Encrypts data using portable cryptographic primitives. Most users should choose Encrypt and
+               * Decrypt rather than their raw counterparts. The CryptoKey.purpose must be RAW_ENCRYPT_DECRYPT.
+               *
+               * Create a request for the method "cryptoKeyVersions.rawEncrypt".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link RawEncrypt#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * RawEncrypt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the CryptoKeyVersion to use for encryption.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.RawEncryptRequest}
+               * @since 1.13
+               */
+              protected RawEncrypt(java.lang.String name, com.google.api.services.cloudkms.v1.model.RawEncryptRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.RawEncryptResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public RawEncrypt set$Xgafv(java.lang.String $Xgafv) {
+                return (RawEncrypt) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RawEncrypt setAccessToken(java.lang.String accessToken) {
+                return (RawEncrypt) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RawEncrypt setAlt(java.lang.String alt) {
+                return (RawEncrypt) super.setAlt(alt);
+              }
+
+              @Override
+              public RawEncrypt setCallback(java.lang.String callback) {
+                return (RawEncrypt) super.setCallback(callback);
+              }
+
+              @Override
+              public RawEncrypt setFields(java.lang.String fields) {
+                return (RawEncrypt) super.setFields(fields);
+              }
+
+              @Override
+              public RawEncrypt setKey(java.lang.String key) {
+                return (RawEncrypt) super.setKey(key);
+              }
+
+              @Override
+              public RawEncrypt setOauthToken(java.lang.String oauthToken) {
+                return (RawEncrypt) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RawEncrypt setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RawEncrypt) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RawEncrypt setQuotaUser(java.lang.String quotaUser) {
+                return (RawEncrypt) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RawEncrypt setUploadType(java.lang.String uploadType) {
+                return (RawEncrypt) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RawEncrypt setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RawEncrypt) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for encryption. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the CryptoKeyVersion to use for encryption.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the CryptoKeyVersion to use for encryption. */
+              public RawEncrypt setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public RawEncrypt set(String parameterName, Object value) {
+                return (RawEncrypt) super.set(parameterName, value);
+              }
+            }
+            /**
              * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state. Upon restoration of the
              * CryptoKeyVersion, state will be set to DISABLED, and destroy_time will be cleared.
              *

@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * A single target dataset to which all data will be streamed.
+ * Request message for running a stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SingleTargetDataset extends com.google.api.client.json.GenericJson {
+public final class RunStreamRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * Optional. The CDC strategy of the stream. If not set, the system's default value will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String datasetId;
+  private CdcStrategy cdcStrategy;
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * Optional. The CDC strategy of the stream. If not set, the system's default value will be used.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatasetId() {
-    return datasetId;
+  public CdcStrategy getCdcStrategy() {
+    return cdcStrategy;
   }
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
-   * @param datasetId datasetId or {@code null} for none
+   * Optional. The CDC strategy of the stream. If not set, the system's default value will be used.
+   * @param cdcStrategy cdcStrategy or {@code null} for none
    */
-  public SingleTargetDataset setDatasetId(java.lang.String datasetId) {
-    this.datasetId = datasetId;
+  public RunStreamRequest setCdcStrategy(CdcStrategy cdcStrategy) {
+    this.cdcStrategy = cdcStrategy;
     return this;
   }
 
   @Override
-  public SingleTargetDataset set(String fieldName, Object value) {
-    return (SingleTargetDataset) super.set(fieldName, value);
+  public RunStreamRequest set(String fieldName, Object value) {
+    return (RunStreamRequest) super.set(fieldName, value);
   }
 
   @Override
-  public SingleTargetDataset clone() {
-    return (SingleTargetDataset) super.clone();
+  public RunStreamRequest clone() {
+    return (RunStreamRequest) super.clone();
   }
 
 }

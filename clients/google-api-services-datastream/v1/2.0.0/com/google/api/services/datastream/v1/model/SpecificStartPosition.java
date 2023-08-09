@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * A single target dataset to which all data will be streamed.
+ * CDC strategy to start replicating from a specific position in the source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SingleTargetDataset extends com.google.api.client.json.GenericJson {
+public final class SpecificStartPosition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * MySQL specific log position to start replicating from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String datasetId;
+  private MysqlLogPosition mysqlLogPosition;
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * MySQL specific log position to start replicating from.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatasetId() {
-    return datasetId;
+  public MysqlLogPosition getMysqlLogPosition() {
+    return mysqlLogPosition;
   }
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
-   * @param datasetId datasetId or {@code null} for none
+   * MySQL specific log position to start replicating from.
+   * @param mysqlLogPosition mysqlLogPosition or {@code null} for none
    */
-  public SingleTargetDataset setDatasetId(java.lang.String datasetId) {
-    this.datasetId = datasetId;
+  public SpecificStartPosition setMysqlLogPosition(MysqlLogPosition mysqlLogPosition) {
+    this.mysqlLogPosition = mysqlLogPosition;
     return this;
   }
 
   @Override
-  public SingleTargetDataset set(String fieldName, Object value) {
-    return (SingleTargetDataset) super.set(fieldName, value);
+  public SpecificStartPosition set(String fieldName, Object value) {
+    return (SpecificStartPosition) super.set(fieldName, value);
   }
 
   @Override
-  public SingleTargetDataset clone() {
-    return (SingleTargetDataset) super.clone();
+  public SpecificStartPosition clone() {
+    return (SpecificStartPosition) super.clone();
   }
 
 }

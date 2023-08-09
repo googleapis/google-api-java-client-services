@@ -73,11 +73,25 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ordinalPosition;
 
   /**
+   * Column precision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer precision;
+
+  /**
    * Whether or not the column represents a primary key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean primaryKey;
+
+  /**
+   * Column scale.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer scale;
 
   /**
    * Column collation.
@@ -184,6 +198,23 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Column precision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPrecision() {
+    return precision;
+  }
+
+  /**
+   * Column precision.
+   * @param precision precision or {@code null} for none
+   */
+  public MysqlColumn setPrecision(java.lang.Integer precision) {
+    this.precision = precision;
+    return this;
+  }
+
+  /**
    * Whether or not the column represents a primary key.
    * @return value or {@code null} for none
    */
@@ -197,6 +228,23 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
    */
   public MysqlColumn setPrimaryKey(java.lang.Boolean primaryKey) {
     this.primaryKey = primaryKey;
+    return this;
+  }
+
+  /**
+   * Column scale.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScale() {
+    return scale;
+  }
+
+  /**
+   * Column scale.
+   * @param scale scale or {@code null} for none
+   */
+  public MysqlColumn setScale(java.lang.Integer scale) {
+    this.scale = scale;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The metric name, e.g. dfa:impressions
+   * The metric name, e.g. impressions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metric name, e.g. dfa:impressions
+   * The metric name, e.g. impressions
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metric name, e.g. dfa:impressions
+   * The metric name, e.g. impressions
    * @param name name or {@code null} for none
    */
   public Metric setName(java.lang.String name) {

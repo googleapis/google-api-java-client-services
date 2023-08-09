@@ -164,7 +164,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.String ordinal;
 
   /**
-   * The quantity of the conversion.
+   * The quantity of the conversion. This is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,7 +194,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.util.List<UserIdentifier> userIdentifiers;
 
   /**
-   * The value of the conversion.
+   * The value of the conversion. This is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -512,7 +512,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The quantity of the conversion.
+   * The quantity of the conversion. This is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -520,7 +520,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The quantity of the conversion.
+   * The quantity of the conversion. This is a required field.
    * @param quantity quantity or {@code null} for none
    */
   public Conversion setQuantity(java.lang.Long quantity) {
@@ -584,7 +584,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the conversion.
+   * The value of the conversion. This is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.Double getValue() {
@@ -592,7 +592,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the conversion.
+   * The value of the conversion. This is a required field.
    * @param value value or {@code null} for none
    */
   public Conversion setValue(java.lang.Double value) {

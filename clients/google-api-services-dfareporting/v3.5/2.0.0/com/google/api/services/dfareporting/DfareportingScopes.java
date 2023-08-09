@@ -23,12 +23,6 @@ package com.google.api.services.dfareporting;
  */
 public class DfareportingScopes {
 
-  /** Manage DoubleClick Digital Marketing conversions. */
-  public static final String DDMCONVERSIONS = "https://www.googleapis.com/auth/ddmconversions";
-
-  /** View and manage DoubleClick for Advertisers reports. */
-  public static final String DFAREPORTING = "https://www.googleapis.com/auth/dfareporting";
-
   /** View and manage your DoubleClick Campaign Manager's (DCM) display ad campaigns. */
   public static final String DFATRAFFICKING = "https://www.googleapis.com/auth/dfatrafficking";
 
@@ -39,8 +33,6 @@ public class DfareportingScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(DDMCONVERSIONS);
-    set.add(DFAREPORTING);
     set.add(DFATRAFFICKING);
     return java.util.Collections.unmodifiableSet(set);
   }

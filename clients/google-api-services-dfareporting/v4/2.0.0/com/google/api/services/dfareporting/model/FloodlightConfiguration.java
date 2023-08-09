@@ -74,7 +74,6 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   private java.lang.Boolean exposureToConversionEnabled;
 
   /**
-   * Day that will be counted as the first day of the week in reports. This is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +264,6 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * Day that will be counted as the first day of the week in reports. This is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstDayOfWeek() {
@@ -273,7 +271,6 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * Day that will be counted as the first day of the week in reports. This is a required field.
    * @param firstDayOfWeek firstDayOfWeek or {@code null} for none
    */
   public FloodlightConfiguration setFirstDayOfWeek(java.lang.String firstDayOfWeek) {

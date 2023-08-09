@@ -31,7 +31,7 @@ package com.google.api.services.dfareporting.model;
 public final class MeasurementPartnerAdvertiserLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * .
+   * Status of the partner link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class MeasurementPartnerAdvertiserLink extends com.google.api.clien
   private java.lang.String measurementPartner;
 
   /**
-   * .
+   * partner Advertiser Id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partnerAdvertiserId;
 
   /**
-   * .
+   * Status of the partner link.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkStatus() {
@@ -60,7 +60,7 @@ public final class MeasurementPartnerAdvertiserLink extends com.google.api.clien
   }
 
   /**
-   * .
+   * Status of the partner link.
    * @param linkStatus linkStatus or {@code null} for none
    */
   public MeasurementPartnerAdvertiserLink setLinkStatus(java.lang.String linkStatus) {
@@ -86,7 +86,7 @@ public final class MeasurementPartnerAdvertiserLink extends com.google.api.clien
   }
 
   /**
-   * .
+   * partner Advertiser Id.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerAdvertiserId() {
@@ -94,7 +94,7 @@ public final class MeasurementPartnerAdvertiserLink extends com.google.api.clien
   }
 
   /**
-   * .
+   * partner Advertiser Id.
    * @param partnerAdvertiserId partnerAdvertiserId or {@code null} for none
    */
   public MeasurementPartnerAdvertiserLink setPartnerAdvertiserId(java.lang.String partnerAdvertiserId) {

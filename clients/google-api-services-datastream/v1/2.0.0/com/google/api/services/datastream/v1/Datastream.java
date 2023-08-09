@@ -5080,6 +5080,147 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Use this method to start, resume or recover a stream with a non default CDC strategy. NOTE: This
+         * feature is currently experimental.
+         *
+         * Create a request for the method "streams.run".
+         *
+         * This request holds the parameters needed by the datastream server.  After setting any optional
+         * parameters, call the {@link Run#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the stream resource to start, in the format:
+         *        projects/{project_id}/locations/{location}/streams/{stream_name}
+         * @param content the {@link com.google.api.services.datastream.v1.model.RunStreamRequest}
+         * @return the request
+         */
+        public Run run(java.lang.String name, com.google.api.services.datastream.v1.model.RunStreamRequest content) throws java.io.IOException {
+          Run result = new Run(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Run extends DatastreamRequest<com.google.api.services.datastream.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:run";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+
+          /**
+           * Use this method to start, resume or recover a stream with a non default CDC strategy. NOTE:
+           * This feature is currently experimental.
+           *
+           * Create a request for the method "streams.run".
+           *
+           * This request holds the parameters needed by the the datastream server.  After setting any
+           * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+           * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the stream resource to start, in the format:
+         *        projects/{project_id}/locations/{location}/streams/{stream_name}
+           * @param content the {@link com.google.api.services.datastream.v1.model.RunStreamRequest}
+           * @since 1.13
+           */
+          protected Run(java.lang.String name, com.google.api.services.datastream.v1.model.RunStreamRequest content) {
+            super(Datastream.this, "POST", REST_PATH, content, com.google.api.services.datastream.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+            }
+          }
+
+          @Override
+          public Run set$Xgafv(java.lang.String $Xgafv) {
+            return (Run) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Run setAccessToken(java.lang.String accessToken) {
+            return (Run) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Run setAlt(java.lang.String alt) {
+            return (Run) super.setAlt(alt);
+          }
+
+          @Override
+          public Run setCallback(java.lang.String callback) {
+            return (Run) super.setCallback(callback);
+          }
+
+          @Override
+          public Run setFields(java.lang.String fields) {
+            return (Run) super.setFields(fields);
+          }
+
+          @Override
+          public Run setKey(java.lang.String key) {
+            return (Run) super.setKey(key);
+          }
+
+          @Override
+          public Run setOauthToken(java.lang.String oauthToken) {
+            return (Run) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Run) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Run setQuotaUser(java.lang.String quotaUser) {
+            return (Run) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Run setUploadType(java.lang.String uploadType) {
+            return (Run) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Run setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Run) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the stream resource to start, in the format:
+           * projects/{project_id}/locations/{location}/streams/{stream_name}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the stream resource to start, in the format:
+         projects/{project_id}/locations/{location}/streams/{stream_name}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the stream resource to start, in the format:
+           * projects/{project_id}/locations/{location}/streams/{stream_name}
+           */
+          public Run setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/streams/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Run set(String parameterName, Object value) {
+            return (Run) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Objects collection.

@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * A single target dataset to which all data will be streamed.
+ * MySQL log position
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,43 +27,64 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SingleTargetDataset extends com.google.api.client.json.GenericJson {
+public final class MysqlLogPosition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * The binary log file name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String datasetId;
+  private java.lang.String logFile;
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
+   * The position within the binary log file. Default is head of file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer logPosition;
+
+  /**
+   * The binary log file name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatasetId() {
-    return datasetId;
+  public java.lang.String getLogFile() {
+    return logFile;
   }
 
   /**
-   * The dataset ID of the target dataset. DatasetIds allowed characters:
-   * https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreference.
-   * @param datasetId datasetId or {@code null} for none
+   * The binary log file name.
+   * @param logFile logFile or {@code null} for none
    */
-  public SingleTargetDataset setDatasetId(java.lang.String datasetId) {
-    this.datasetId = datasetId;
+  public MysqlLogPosition setLogFile(java.lang.String logFile) {
+    this.logFile = logFile;
+    return this;
+  }
+
+  /**
+   * The position within the binary log file. Default is head of file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLogPosition() {
+    return logPosition;
+  }
+
+  /**
+   * The position within the binary log file. Default is head of file.
+   * @param logPosition logPosition or {@code null} for none
+   */
+  public MysqlLogPosition setLogPosition(java.lang.Integer logPosition) {
+    this.logPosition = logPosition;
     return this;
   }
 
   @Override
-  public SingleTargetDataset set(String fieldName, Object value) {
-    return (SingleTargetDataset) super.set(fieldName, value);
+  public MysqlLogPosition set(String fieldName, Object value) {
+    return (MysqlLogPosition) super.set(fieldName, value);
   }
 
   @Override
-  public SingleTargetDataset clone() {
-    return (SingleTargetDataset) super.clone();
+  public MysqlLogPosition clone() {
+    return (MysqlLogPosition) super.clone();
   }
 
 }

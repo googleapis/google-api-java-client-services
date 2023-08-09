@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * Job represents an operation for a `Rollout`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -64,6 +63,20 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String jobRun;
+
+  /**
+   * Output only. A postdeploy Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostdeployJob postdeployJob;
+
+  /**
+   * Output only. A predeploy Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PredeployJob predeployJob;
 
   /**
    * Output only. Additional information on why the Job was skipped, if available.
@@ -168,6 +181,40 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setJobRun(java.lang.String jobRun) {
     this.jobRun = jobRun;
+    return this;
+  }
+
+  /**
+   * Output only. A postdeploy Job.
+   * @return value or {@code null} for none
+   */
+  public PostdeployJob getPostdeployJob() {
+    return postdeployJob;
+  }
+
+  /**
+   * Output only. A postdeploy Job.
+   * @param postdeployJob postdeployJob or {@code null} for none
+   */
+  public Job setPostdeployJob(PostdeployJob postdeployJob) {
+    this.postdeployJob = postdeployJob;
+    return this;
+  }
+
+  /**
+   * Output only. A predeploy Job.
+   * @return value or {@code null} for none
+   */
+  public PredeployJob getPredeployJob() {
+    return predeployJob;
+  }
+
+  /**
+   * Output only. A predeploy Job.
+   * @param predeployJob predeployJob or {@code null} for none
+   */
+  public Job setPredeployJob(PredeployJob predeployJob) {
+    this.predeployJob = predeployJob;
     return this;
   }
 

@@ -49,7 +49,7 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Google Cloud Deploy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Cloud Deploy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

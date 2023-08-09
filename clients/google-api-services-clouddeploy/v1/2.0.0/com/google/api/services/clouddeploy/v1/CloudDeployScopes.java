@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Google Cloud Deploy API.
+ * Available OAuth 2.0 scopes for use with the Cloud Deploy API.
  *
  * @since 1.4
  */

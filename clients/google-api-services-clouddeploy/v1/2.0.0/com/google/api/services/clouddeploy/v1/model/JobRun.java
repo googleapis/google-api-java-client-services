@@ -17,12 +17,11 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A `JobRun` resource in the Google Cloud Deploy API. A `JobRun` contains information of a single
+ * A `JobRun` resource in the Cloud Deploy API. A `JobRun` contains information of a single
  * `Rollout` job evaluation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -96,6 +95,20 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String phaseId;
+
+  /**
+   * Output only. Information specific to a postdeploy `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostdeployJobRun postdeployJobRun;
+
+  /**
+   * Output only. Information specific to a predeploy `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PredeployJobRun predeployJobRun;
 
   /**
    * Output only. Time at which the `JobRun` was started.
@@ -281,6 +294,40 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
    */
   public JobRun setPhaseId(java.lang.String phaseId) {
     this.phaseId = phaseId;
+    return this;
+  }
+
+  /**
+   * Output only. Information specific to a postdeploy `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public PostdeployJobRun getPostdeployJobRun() {
+    return postdeployJobRun;
+  }
+
+  /**
+   * Output only. Information specific to a postdeploy `JobRun`.
+   * @param postdeployJobRun postdeployJobRun or {@code null} for none
+   */
+  public JobRun setPostdeployJobRun(PostdeployJobRun postdeployJobRun) {
+    this.postdeployJobRun = postdeployJobRun;
+    return this;
+  }
+
+  /**
+   * Output only. Information specific to a predeploy `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public PredeployJobRun getPredeployJobRun() {
+    return predeployJobRun;
+  }
+
+  /**
+   * Output only. Information specific to a predeploy `JobRun`.
+   * @param predeployJobRun predeployJobRun or {@code null} for none
+   */
+  public JobRun setPredeployJobRun(PredeployJobRun predeployJobRun) {
+    this.predeployJobRun = predeployJobRun;
     return this;
   }
 

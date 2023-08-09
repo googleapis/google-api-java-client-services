@@ -17,12 +17,11 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A `DeliveryPipeline` resource in the Google Cloud Deploy API. A `DeliveryPipeline` defines a
- * pipeline through which a Skaffold configuration can progress.
+ * A `DeliveryPipeline` resource in the Cloud Deploy API. A `DeliveryPipeline` defines a pipeline
+ * through which a Skaffold configuration can progress.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,8 +31,8 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeliveryPipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy.
+   * User annotations. These attributes can only be set and used by the user, and not by Cloud
+   * Deploy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +68,10 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private java.lang.String etag;
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: * Keys and values can contain only lowercase
-   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
-   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
+   * must meet the following constraints: * Keys and values can contain only lowercase letters,
+   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
+   * international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * The value may be {@code null}.
@@ -117,8 +116,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy.
+   * User annotations. These attributes can only be set and used by the user, and not by Cloud
+   * Deploy.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -126,8 +125,8 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User annotations. These attributes can only be set and used by the user, and not by Google
-   * Cloud Deploy.
+   * User annotations. These attributes can only be set and used by the user, and not by Cloud
+   * Deploy.
    * @param annotations annotations or {@code null} for none
    */
   public DeliveryPipeline setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -206,10 +205,10 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: * Keys and values can contain only lowercase
-   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
-   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
+   * must meet the following constraints: * Keys and values can contain only lowercase letters,
+   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
+   * international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @return value or {@code null} for none
@@ -219,10 +218,10 @@ public final class DeliveryPipeline extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy.
-   * Labels must meet the following constraints: * Keys and values can contain only lowercase
-   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
-   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
+   * must meet the following constraints: * Keys and values can contain only lowercase letters,
+   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
+   * international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @param labels labels or {@code null} for none

@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * Information about the Kubernetes Gateway API service mesh configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,6 +43,14 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String httpRoute;
+
+  /**
+   * Optional. The time to wait for route updates to propagate. The maximum configurable time is 3
+   * hours, in seconds format. If unspecified, there is no wait time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String routeUpdateWaitTime;
 
   /**
    * Required. Name of the Kubernetes Service.
@@ -85,6 +92,25 @@ public final class GatewayServiceMesh extends com.google.api.client.json.Generic
    */
   public GatewayServiceMesh setHttpRoute(java.lang.String httpRoute) {
     this.httpRoute = httpRoute;
+    return this;
+  }
+
+  /**
+   * Optional. The time to wait for route updates to propagate. The maximum configurable time is 3
+   * hours, in seconds format. If unspecified, there is no wait time.
+   * @return value or {@code null} for none
+   */
+  public String getRouteUpdateWaitTime() {
+    return routeUpdateWaitTime;
+  }
+
+  /**
+   * Optional. The time to wait for route updates to propagate. The maximum configurable time is 3
+   * hours, in seconds format. If unspecified, there is no wait time.
+   * @param routeUpdateWaitTime routeUpdateWaitTime or {@code null} for none
+   */
+  public GatewayServiceMesh setRouteUpdateWaitTime(String routeUpdateWaitTime) {
+    this.routeUpdateWaitTime = routeUpdateWaitTime;
     return this;
   }
 

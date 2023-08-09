@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The request object used by `CancelRollout`.
+ * Predeploy contains the predeploy job configuration information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,16 +27,43 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CancelRolloutRequest extends com.google.api.client.json.GenericJson {
+public final class Predeploy extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public CancelRolloutRequest set(String fieldName, Object value) {
-    return (CancelRolloutRequest) super.set(fieldName, value);
+  /**
+   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> actions;
+
+  /**
+   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActions() {
+    return actions;
+  }
+
+  /**
+   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * job.
+   * @param actions actions or {@code null} for none
+   */
+  public Predeploy setActions(java.util.List<java.lang.String> actions) {
+    this.actions = actions;
+    return this;
   }
 
   @Override
-  public CancelRolloutRequest clone() {
-    return (CancelRolloutRequest) super.clone();
+  public Predeploy set(String fieldName, Object value) {
+    return (Predeploy) super.set(fieldName, value);
+  }
+
+  @Override
+  public Predeploy clone() {
+    return (Predeploy) super.clone();
   }
 
 }

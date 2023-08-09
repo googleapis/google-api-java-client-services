@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * The request object used by `CancelRollout`.
+ * A postdeploy Job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,16 +27,40 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CancelRolloutRequest extends com.google.api.client.json.GenericJson {
+public final class PostdeployJob extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public CancelRolloutRequest set(String fieldName, Object value) {
-    return (CancelRolloutRequest) super.set(fieldName, value);
+  /**
+   * Output only. The custom actions that the postdeploy Job executes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> actions;
+
+  /**
+   * Output only. The custom actions that the postdeploy Job executes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActions() {
+    return actions;
+  }
+
+  /**
+   * Output only. The custom actions that the postdeploy Job executes.
+   * @param actions actions or {@code null} for none
+   */
+  public PostdeployJob setActions(java.util.List<java.lang.String> actions) {
+    this.actions = actions;
+    return this;
   }
 
   @Override
-  public CancelRolloutRequest clone() {
-    return (CancelRolloutRequest) super.clone();
+  public PostdeployJob set(String fieldName, Object value) {
+    return (PostdeployJob) super.set(fieldName, value);
+  }
+
+  @Override
+  public PostdeployJob clone() {
+    return (PostdeployJob) super.clone();
   }
 
 }

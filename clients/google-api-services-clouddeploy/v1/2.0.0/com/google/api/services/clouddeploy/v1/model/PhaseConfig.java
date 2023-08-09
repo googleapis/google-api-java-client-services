@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * PhaseConfig represents the configuration for a phase in the custom canary deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,6 +45,22 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String phaseId;
+
+  /**
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
+   * postdeploy job will not be present for this phase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Postdeploy postdeploy;
+
+  /**
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
+   * predeploy job will not be present for this phase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Predeploy predeploy;
 
   /**
    * Skaffold profiles to use when rendering the manifest for this phase. These are in addition to
@@ -99,6 +114,44 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
    */
   public PhaseConfig setPhaseId(java.lang.String phaseId) {
     this.phaseId = phaseId;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
+   * postdeploy job will not be present for this phase.
+   * @return value or {@code null} for none
+   */
+  public Postdeploy getPostdeploy() {
+    return postdeploy;
+  }
+
+  /**
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
+   * postdeploy job will not be present for this phase.
+   * @param postdeploy postdeploy or {@code null} for none
+   */
+  public PhaseConfig setPostdeploy(Postdeploy postdeploy) {
+    this.postdeploy = postdeploy;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
+   * predeploy job will not be present for this phase.
+   * @return value or {@code null} for none
+   */
+  public Predeploy getPredeploy() {
+    return predeploy;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
+   * predeploy job will not be present for this phase.
+   * @param predeploy predeploy or {@code null} for none
+   */
+  public PhaseConfig setPredeploy(Predeploy predeploy) {
+    this.predeploy = predeploy;
     return this;
   }
 

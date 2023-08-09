@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * Standard represents the standard deployment strategy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,11 +30,65 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Standard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
+   * not be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Postdeploy postdeploy;
+
+  /**
+   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
+   * not be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Predeploy predeploy;
+
+  /**
    * Whether to verify a deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean verify;
+
+  /**
+   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
+   * not be present.
+   * @return value or {@code null} for none
+   */
+  public Postdeploy getPostdeploy() {
+    return postdeploy;
+  }
+
+  /**
+   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
+   * not be present.
+   * @param postdeploy postdeploy or {@code null} for none
+   */
+  public Standard setPostdeploy(Postdeploy postdeploy) {
+    this.postdeploy = postdeploy;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
+   * not be present.
+   * @return value or {@code null} for none
+   */
+  public Predeploy getPredeploy() {
+    return predeploy;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
+   * not be present.
+   * @param predeploy predeploy or {@code null} for none
+   */
+  public Standard setPredeploy(Predeploy predeploy) {
+    this.predeploy = predeploy;
+    return this;
+  }
 
   /**
    * Whether to verify a deployment.

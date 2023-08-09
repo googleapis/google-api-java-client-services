@@ -122,6 +122,13 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
   private java.lang.String encryptionState;
 
   /**
+   * Host name of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostname;
+
+  /**
    * Output only. IMEI number of device if GSM device; empty otherwise.
    * The value may be {@code null}.
    */
@@ -455,6 +462,23 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
    */
   public GoogleAppsCloudidentityDevicesV1Device setEncryptionState(java.lang.String encryptionState) {
     this.encryptionState = encryptionState;
+    return this;
+  }
+
+  /**
+   * Host name of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostname() {
+    return hostname;
+  }
+
+  /**
+   * Host name of the device.
+   * @param hostname hostname or {@code null} for none
+   */
+  public GoogleAppsCloudidentityDevicesV1Device setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
     return this;
   }
 

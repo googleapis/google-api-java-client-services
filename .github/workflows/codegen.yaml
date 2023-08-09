@@ -1,7 +1,7 @@
 on:
   schedule:
-    # Runs at 00:30 and 02:30.
-    - cron: '30 0,2 * * *'
+    # Runs at 12:30, 1:30 and 2:30.
+    - cron: '30 0-2 * * *'
   workflow_dispatch:
 
 name: codegen
@@ -17,7 +17,7 @@ jobs:
         with:
           script: |
             console.log('checking size of services')
-            const MAX_SERVICE_SIZE = 400 // 00:30 and 02:30 implies 2 batches of size 200
+            const MAX_SERVICE_SIZE = 300 // 00:30 to 02:30 implies 3 batches of size 100
             const services = ${{ needs.discovery.outputs.services }}
             if (services.length > MAX_SERVICE_SIZE) {
               throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
@@ -35,7 +35,7 @@ jobs:
             console.log('splitting service names list into batches')
             const services = ${{ needs.discovery.outputs.services }}
             const hour = new Date().getHours()
-            const MAX_BATCH_SIZE = 200
+            const MAX_BATCH_SIZE = 100
             const result = {
               batches: [],
               hour: new Date().getHours(),
@@ -48,6 +48,7 @@ jobs:
     uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
     needs: batch
     secrets: inherit
+    # The number of batch is implicitly decided by the hour of the day
     if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 
       services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}

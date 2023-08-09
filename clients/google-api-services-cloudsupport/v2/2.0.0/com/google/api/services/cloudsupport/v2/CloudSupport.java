@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudsupport.v2beta;
+package com.google.api.services.cloudsupport.v2;
 
 /**
- * Service definition for CloudSupport (v2beta).
+ * Service definition for CloudSupport (v2).
  *
  * <p>
  * Manages Google Cloud technical support cases for Customer Care support offerings. 
@@ -177,9 +177,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class Search extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.SearchCaseClassificationsResponse> {
+    public class Search extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SearchCaseClassificationsResponse> {
 
-      private static final String REST_PATH = "v2beta/caseClassifications:search";
+      private static final String REST_PATH = "v2/caseClassifications:search";
 
       /**
        * Retrieve valid classifications to be used when creating a support case. The classications are
@@ -203,7 +203,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected Search() {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.SearchCaseClassificationsResponse.class);
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SearchCaseClassificationsResponse.class);
       }
 
       @Override
@@ -372,18 +372,18 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Close#execute()} method to invoke the remote operation.
      *
      * @param name Required. The fully qualified name of the case resource to be closed.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloseCaseRequest}
      * @return the request
      */
-    public Close close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) throws java.io.IOException {
+    public Close close(java.lang.String name, com.google.api.services.cloudsupport.v2.model.CloseCaseRequest content) throws java.io.IOException {
       Close result = new Close(name, content);
       initialize(result);
       return result;
     }
 
-    public class Close extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+    public class Close extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.CloudSupportCase> {
 
-      private static final String REST_PATH = "v2beta/{+name}:close";
+      private static final String REST_PATH = "v2/{+name}:close";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -403,11 +403,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The fully qualified name of the case resource to be closed.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloseCaseRequest}
        * @since 1.13
        */
-      protected Close(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloseCaseRequest content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+      protected Close(java.lang.String name, com.google.api.services.cloudsupport.v2.model.CloseCaseRequest content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.CloudSupportCase.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -515,18 +515,18 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
      * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
      * @return the request
      */
-    public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
+    public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CloudSupportCase content) throws java.io.IOException {
       Create result = new Create(parent, content);
       initialize(result);
       return result;
     }
 
-    public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+    public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.CloudSupportCase> {
 
-      private static final String REST_PATH = "v2beta/{+parent}/cases";
+      private static final String REST_PATH = "v2/{+parent}/cases";
 
       private final java.util.regex.Pattern PARENT_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
@@ -552,11 +552,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. The name of the Google Cloud Resource under which the case should be created.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
        * @since 1.13
        */
-      protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+      protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CloudSupportCase content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.CloudSupportCase.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -666,18 +666,18 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Escalate#execute()} method to invoke the remote operation.
      *
      * @param name Required. The fully qualified name of the Case resource to be escalated.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.EscalateCaseRequest}
      * @return the request
      */
-    public Escalate escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) throws java.io.IOException {
+    public Escalate escalate(java.lang.String name, com.google.api.services.cloudsupport.v2.model.EscalateCaseRequest content) throws java.io.IOException {
       Escalate result = new Escalate(name, content);
       initialize(result);
       return result;
     }
 
-    public class Escalate extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+    public class Escalate extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.CloudSupportCase> {
 
-      private static final String REST_PATH = "v2beta/{+name}:escalate";
+      private static final String REST_PATH = "v2/{+name}:escalate";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -702,11 +702,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The fully qualified name of the Case resource to be escalated.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.EscalateCaseRequest}
        * @since 1.13
        */
-      protected Escalate(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.EscalateCaseRequest content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+      protected Escalate(java.lang.String name, com.google.api.services.cloudsupport.v2.model.EscalateCaseRequest content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.CloudSupportCase.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -815,9 +815,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+    public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.CloudSupportCase> {
 
-      private static final String REST_PATH = "v2beta/{+name}";
+      private static final String REST_PATH = "v2/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -838,7 +838,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected Get(java.lang.String name) {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.CloudSupportCase.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -960,9 +960,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse> {
+    public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.ListCasesResponse> {
 
-      private static final String REST_PATH = "v2beta/{+parent}/cases";
+      private static final String REST_PATH = "v2/{+parent}/cases";
 
       private final java.util.regex.Pattern PARENT_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
@@ -986,7 +986,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected List(java.lang.String parent) {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCasesResponse.class);
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.ListCasesResponse.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1177,18 +1177,18 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param name The resource name for the case.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
      * @return the request
      */
-    public Patch patch(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) throws java.io.IOException {
+    public Patch patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.CloudSupportCase content) throws java.io.IOException {
       Patch result = new Patch(name, content);
       initialize(result);
       return result;
     }
 
-    public class Patch extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase> {
+    public class Patch extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.CloudSupportCase> {
 
-      private static final String REST_PATH = "v2beta/{+name}";
+      private static final String REST_PATH = "v2/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -1209,11 +1209,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name The resource name for the case.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
        * @since 1.13
        */
-      protected Patch(java.lang.String name, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase content) {
-        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.CloudSupportCase.class);
+      protected Patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.CloudSupportCase content) {
+        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.CloudSupportCase.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1348,17 +1348,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Search#execute()} method to invoke the remote operation.
      *
+     * @param parent The fully qualified name of parent resource to search cases under.
      * @return the request
      */
-    public Search search() throws java.io.IOException {
-      Search result = new Search();
+    public Search search(java.lang.String parent) throws java.io.IOException {
+      Search result = new Search(parent);
       initialize(result);
       return result;
     }
 
-    public class Search extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.SearchCasesResponse> {
+    public class Search extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SearchCasesResponse> {
 
-      private static final String REST_PATH = "v2beta/cases:search";
+      private static final String REST_PATH = "v2/{+parent}/cases:search";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
        * Search cases using the specified query. Here is an example of calling this endpoint using cURL:
@@ -1373,10 +1377,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
+       * @param parent The fully qualified name of parent resource to search cases under.
        * @since 1.13
        */
-      protected Search() {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.SearchCasesResponse.class);
+      protected Search(java.lang.String parent) {
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SearchCasesResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
       }
 
       @Override
@@ -1444,6 +1455,27 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The fully qualified name of parent resource to search cases under. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The fully qualified name of parent resource to search cases under.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** The fully qualified name of parent resource to search cases under. */
+      public Search setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
       /** The maximum number of cases fetched with each request. The default page size is 10. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
@@ -1479,22 +1511,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        */
       public Search setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /** The fully qualified name of parent resource to search cases under. */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The fully qualified name of parent resource to search cases under.
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /** The fully qualified name of parent resource to search cases under. */
-      public Search setParent(java.lang.String parent) {
-        this.parent = parent;
         return this;
       }
 
@@ -1613,9 +1629,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return result;
       }
 
-      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse> {
+      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.ListAttachmentsResponse> {
 
-        private static final String REST_PATH = "v2beta/{+parent}/attachments";
+        private static final String REST_PATH = "v2/{+parent}/attachments";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -1637,7 +1653,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListAttachmentsResponse.class);
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.ListAttachmentsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1817,18 +1833,18 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The resource name of Case to which this comment should be added.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.Comment}
        * @return the request
        */
-      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) throws java.io.IOException {
+      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.Comment content) throws java.io.IOException {
         Create result = new Create(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Comment> {
+      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.Comment> {
 
-        private static final String REST_PATH = "v2beta/{+parent}/comments";
+        private static final String REST_PATH = "v2/{+parent}/comments";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -1849,11 +1865,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The resource name of Case to which this comment should be added.
-         * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.Comment}
+         * @param content the {@link com.google.api.services.cloudsupport.v2.model.Comment}
          * @since 1.13
          */
-        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.Comment content) {
-          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Comment.class);
+        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.Comment content) {
+          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Comment.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1963,9 +1979,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return result;
       }
 
-      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse> {
+      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.ListCommentsResponse> {
 
-        private static final String REST_PATH = "v2beta/{+parent}/comments";
+        private static final String REST_PATH = "v2/{+parent}/comments";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -1987,7 +2003,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * @since 1.13
          */
         protected List(java.lang.String parent) {
-          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ListCommentsResponse.class);
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.ListCommentsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2170,9 +2186,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       return result;
     }
 
-    public class Download extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Media> {
+    public class Download extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.Media> {
 
-      private static final String REST_PATH = "v2beta/{+name}:download";
+      private static final String REST_PATH = "v2/{+name}:download";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
@@ -2196,7 +2212,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * @since 1.13
        */
       protected Download(java.lang.String name) {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.Media.class);
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.Media.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2334,10 +2350,10 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
      * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest}
      * @return the request
      */
-    public Upload upload(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest content) throws java.io.IOException {
+    public Upload upload(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest content) throws java.io.IOException {
       Upload result = new Upload(parent, content);
       initialize(result);
       return result;
@@ -2361,20 +2377,20 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * </p>
      *
      * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
-     * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest} media metadata or {@code null} if none
+     * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
      * @throws java.io.IOException if the initialization of the request fails
      */
-    public Upload upload(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+    public Upload upload(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
       Upload result = new Upload(parent, content, mediaContent);
       initialize(result);
       return result;
     }
 
-    public class Upload extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.Attachment> {
+    public class Upload extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.Attachment> {
 
-      private static final String REST_PATH = "v2beta/{+parent}/attachments";
+      private static final String REST_PATH = "v2/{+parent}/attachments";
 
       private final java.util.regex.Pattern PARENT_PATTERN =
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
@@ -2396,11 +2412,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest}
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest}
        * @since 1.13
        */
-      protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Attachment.class);
+      protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest content) {
+        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Attachment.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2430,12 +2446,12 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * </p>
        *
        * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
-       * @param content the {@link com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest} media metadata or {@code null} if none
+       * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
        */
-      protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2beta.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(CloudSupport.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.cloudsupport.v2beta.model.Attachment.class);
+      protected Upload(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(CloudSupport.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Attachment.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
         initializeMediaUpload(mediaContent);
       }

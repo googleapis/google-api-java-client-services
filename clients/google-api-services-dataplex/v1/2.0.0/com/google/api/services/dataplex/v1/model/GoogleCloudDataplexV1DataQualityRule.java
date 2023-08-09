@@ -37,6 +37,13 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private java.lang.String column;
 
   /**
+   * Optional. Description of the rule. The maximum length is 1,024 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
    * "INTEGRITY"
@@ -47,57 +54,67 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for row-
+   * level type rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreNull;
 
   /**
-   * ColumnMap rule which evaluates whether each column value is null.
+   * Optional. A mutable name for the rule. The name must contain only letters (a-z, A-Z), numbers
+   * (0-9), or hyphens (-). The maximum length is 63 characters. Must start with a letter. Must end
+   * with a number or a letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Row-level rule which evaluates whether each column value is null.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleNonNullExpectation nonNullExpectation;
 
   /**
-   * ColumnMap rule which evaluates whether each column value lies between a specified range.
+   * Row-level rule which evaluates whether each column value lies between a specified range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleRangeExpectation rangeExpectation;
 
   /**
-   * ColumnMap rule which evaluates whether each column value matches a specified regex.
+   * Row-level rule which evaluates whether each column value matches a specified regex.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleRegexExpectation regexExpectation;
 
   /**
-   * Table rule which evaluates whether each row passes the specified condition.
+   * Row-level rule which evaluates whether each row in a table passes the specified condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation rowConditionExpectation;
 
   /**
-   * ColumnMap rule which evaluates whether each column value is contained by a specified set.
+   * Row-level rule which evaluates whether each column value is contained by a specified set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleSetExpectation setExpectation;
 
   /**
-   * ColumnAggregate rule which evaluates whether the column aggregate statistic lies between a
-   * specified range.
+   * Aggregate rule which evaluates whether the column aggregate statistic lies between a specified
+   * range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation;
 
   /**
-   * Table rule which evaluates whether the provided expression is true.
+   * Aggregate rule which evaluates whether the provided expression is true for a table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,14 +122,15 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).This field is only valid for row-level
+   * type rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double threshold;
 
   /**
-   * ColumnAggregate rule which evaluates whether the column has duplicates.
+   * Row-level rule which evaluates whether each column value is unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,6 +150,23 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataQualityRule setColumn(java.lang.String column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Optional. Description of the rule. The maximum length is 1,024 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. Description of the rule. The maximum length is 1,024 characters.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
@@ -158,7 +193,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for row-
+   * level type rules.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreNull() {
@@ -167,7 +203,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. Rows with null values will automatically fail a rule, unless ignore_null is true. In
-   * that case, such null rows are trivially considered passing.Only applicable to ColumnMap rules.
+   * that case, such null rows are trivially considered passing.This field is only valid for row-
+   * level type rules.
    * @param ignoreNull ignoreNull or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setIgnoreNull(java.lang.Boolean ignoreNull) {
@@ -176,7 +213,28 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value is null.
+   * Optional. A mutable name for the rule. The name must contain only letters (a-z, A-Z), numbers
+   * (0-9), or hyphens (-). The maximum length is 63 characters. Must start with a letter. Must end
+   * with a number or a letter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Optional. A mutable name for the rule. The name must contain only letters (a-z, A-Z), numbers
+   * (0-9), or hyphens (-). The maximum length is 63 characters. Must start with a letter. Must end
+   * with a number or a letter.
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Row-level rule which evaluates whether each column value is null.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleNonNullExpectation getNonNullExpectation() {
@@ -184,7 +242,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value is null.
+   * Row-level rule which evaluates whether each column value is null.
    * @param nonNullExpectation nonNullExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setNonNullExpectation(GoogleCloudDataplexV1DataQualityRuleNonNullExpectation nonNullExpectation) {
@@ -193,7 +251,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value lies between a specified range.
+   * Row-level rule which evaluates whether each column value lies between a specified range.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRangeExpectation getRangeExpectation() {
@@ -201,7 +259,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value lies between a specified range.
+   * Row-level rule which evaluates whether each column value lies between a specified range.
    * @param rangeExpectation rangeExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setRangeExpectation(GoogleCloudDataplexV1DataQualityRuleRangeExpectation rangeExpectation) {
@@ -210,7 +268,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value matches a specified regex.
+   * Row-level rule which evaluates whether each column value matches a specified regex.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRegexExpectation getRegexExpectation() {
@@ -218,7 +276,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value matches a specified regex.
+   * Row-level rule which evaluates whether each column value matches a specified regex.
    * @param regexExpectation regexExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setRegexExpectation(GoogleCloudDataplexV1DataQualityRuleRegexExpectation regexExpectation) {
@@ -227,7 +285,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Table rule which evaluates whether each row passes the specified condition.
+   * Row-level rule which evaluates whether each row in a table passes the specified condition.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation getRowConditionExpectation() {
@@ -235,7 +293,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Table rule which evaluates whether each row passes the specified condition.
+   * Row-level rule which evaluates whether each row in a table passes the specified condition.
    * @param rowConditionExpectation rowConditionExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setRowConditionExpectation(GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation rowConditionExpectation) {
@@ -244,7 +302,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value is contained by a specified set.
+   * Row-level rule which evaluates whether each column value is contained by a specified set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleSetExpectation getSetExpectation() {
@@ -252,7 +310,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnMap rule which evaluates whether each column value is contained by a specified set.
+   * Row-level rule which evaluates whether each column value is contained by a specified set.
    * @param setExpectation setExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setSetExpectation(GoogleCloudDataplexV1DataQualityRuleSetExpectation setExpectation) {
@@ -261,8 +319,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnAggregate rule which evaluates whether the column aggregate statistic lies between a
-   * specified range.
+   * Aggregate rule which evaluates whether the column aggregate statistic lies between a specified
+   * range.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation getStatisticRangeExpectation() {
@@ -270,8 +328,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnAggregate rule which evaluates whether the column aggregate statistic lies between a
-   * specified range.
+   * Aggregate rule which evaluates whether the column aggregate statistic lies between a specified
+   * range.
    * @param statisticRangeExpectation statisticRangeExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setStatisticRangeExpectation(GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation statisticRangeExpectation) {
@@ -280,7 +338,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Table rule which evaluates whether the provided expression is true.
+   * Aggregate rule which evaluates whether the provided expression is true for a table.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation getTableConditionExpectation() {
@@ -288,7 +346,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Table rule which evaluates whether the provided expression is true.
+   * Aggregate rule which evaluates whether the provided expression is true for a table.
    * @param tableConditionExpectation tableConditionExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setTableConditionExpectation(GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation) {
@@ -298,7 +356,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).This field is only valid for row-level
+   * type rules.
    * @return value or {@code null} for none
    */
   public java.lang.Double getThreshold() {
@@ -307,7 +366,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
-   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).
+   * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).This field is only valid for row-level
+   * type rules.
    * @param threshold threshold or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setThreshold(java.lang.Double threshold) {
@@ -316,7 +376,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnAggregate rule which evaluates whether the column has duplicates.
+   * Row-level rule which evaluates whether each column value is unique.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation getUniquenessExpectation() {
@@ -324,7 +384,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * ColumnAggregate rule which evaluates whether the column has duplicates.
+   * Row-level rule which evaluates whether each column value is unique.
    * @param uniquenessExpectation uniquenessExpectation or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setUniquenessExpectation(GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation uniquenessExpectation) {

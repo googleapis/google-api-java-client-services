@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
+   * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
    * setting ignore_nulls = true.
@@ -40,7 +40,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private java.lang.Long evaluatedCount;
 
   /**
-   * The query to find rows that did not pass this rule. Only applies to ColumnMap and RowCondition
+   * The query to find rows that did not pass this rule.This field is only valid for row-level type
    * rules.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private java.lang.Long nullCount;
 
   /**
-   * The ratio of passed_count / evaluated_count. This field is only valid for ColumnMap type rules.
+   * The ratio of passed_count / evaluated_count.This field is only valid for row-level type rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private java.lang.Boolean passed;
 
   /**
-   * The number of rows which passed a rule evaluation. This field is only valid for ColumnMap type
+   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
    * rules.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private GoogleCloudDataplexV1DataQualityRule rule;
 
   /**
-   * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
+   * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
    * setting ignore_nulls = true.
@@ -95,7 +95,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The number of rows a rule was evaluated against. This field is only valid for ColumnMap type
+   * The number of rows a rule was evaluated against.This field is only valid for row-level type
    * rules.Evaluated count can be configured to either include all rows (default) - with null rows
    * automatically failing rule evaluation, or exclude null rows from the evaluated_count, by
    * setting ignore_nulls = true.
@@ -107,7 +107,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The query to find rows that did not pass this rule. Only applies to ColumnMap and RowCondition
+   * The query to find rows that did not pass this rule.This field is only valid for row-level type
    * rules.
    * @return value or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The query to find rows that did not pass this rule. Only applies to ColumnMap and RowCondition
+   * The query to find rows that did not pass this rule.This field is only valid for row-level type
    * rules.
    * @param failingRowsQuery failingRowsQuery or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The ratio of passed_count / evaluated_count. This field is only valid for ColumnMap type rules.
+   * The ratio of passed_count / evaluated_count.This field is only valid for row-level type rules.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPassRatio() {
@@ -151,7 +151,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The ratio of passed_count / evaluated_count. This field is only valid for ColumnMap type rules.
+   * The ratio of passed_count / evaluated_count.This field is only valid for row-level type rules.
    * @param passRatio passRatio or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setPassRatio(java.lang.Double passRatio) {
@@ -177,7 +177,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The number of rows which passed a rule evaluation. This field is only valid for ColumnMap type
+   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
    * rules.
    * @return value or {@code null} for none
    */
@@ -186,7 +186,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * The number of rows which passed a rule evaluation. This field is only valid for ColumnMap type
+   * The number of rows which passed a rule evaluation.This field is only valid for row-level type
    * rules.
    * @param passedCount passedCount or {@code null} for none
    */

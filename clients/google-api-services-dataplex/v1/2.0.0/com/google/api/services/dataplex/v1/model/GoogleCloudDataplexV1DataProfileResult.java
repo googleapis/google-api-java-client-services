@@ -31,6 +31,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The result of post scan actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProfileResultPostScanActionsResult postScanActionsResult;
+
+  /**
    * The profile information per field.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDataplexV1DataProfileResult extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1ScannedData scannedData;
+
+  /**
+   * Output only. The result of post scan actions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileResultPostScanActionsResult getPostScanActionsResult() {
+    return postScanActionsResult;
+  }
+
+  /**
+   * Output only. The result of post scan actions.
+   * @param postScanActionsResult postScanActionsResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileResult setPostScanActionsResult(GoogleCloudDataplexV1DataProfileResultPostScanActionsResult postScanActionsResult) {
+    this.postScanActionsResult = postScanActionsResult;
+    return this;
+  }
 
   /**
    * The profile information per field.

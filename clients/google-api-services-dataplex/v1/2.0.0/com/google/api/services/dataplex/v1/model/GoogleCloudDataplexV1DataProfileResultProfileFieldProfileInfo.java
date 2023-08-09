@@ -66,9 +66,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   private GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo stringProfile;
 
   /**
-   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
-   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
-   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
+   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
+   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
+   * available for complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,9 +162,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
-   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
-   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
+   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
+   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
+   * available for complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> getTopNValues() {
@@ -172,9 +172,9 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   }
 
   /**
-   * The list of top N non-null values and number of times they occur in the scanned data. N is 10
-   * or equal to the number of distinct values in the field, whichever is smaller. Not available for
-   * complex non-groupable field type RECORD and fields with REPEATABLE mode.
+   * The list of top N non-null values, frequency and ratio with which they occur in the scanned
+   * data. N is 10 or equal to the number of distinct values in the field, whichever is smaller. Not
+   * available for complex non-groupable field type RECORD and fields with REPEATABLE mode.
    * @param topNValues topNValues or {@code null} for none
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo setTopNValues(java.util.List<GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue> topNValues) {

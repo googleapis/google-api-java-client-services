@@ -30,47 +30,47 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The maximum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maxValue;
 
   /**
-   * The minimum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The minimum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String minValue;
 
   /**
-   * The aggregate metric to evaluate.
+   * Optional. The aggregate metric to evaluate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String statistic;
 
   /**
-   * Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is
-   * allowed.Only relevant if a max_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly lesser than ('<') the maximum, or if
+   * equality is allowed.Only relevant if a max_value has been defined. Default = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean strictMaxEnabled;
 
   /**
-   * Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is
-   * allowed.Only relevant if a min_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly greater than ('>') the minimum, or if
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean strictMinEnabled;
 
   /**
-   * The maximum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The maximum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaxValue() {
@@ -78,8 +78,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * The maximum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The maximum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * @param maxValue maxValue or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setMaxValue(java.lang.String maxValue) {
@@ -88,8 +88,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * The minimum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The minimum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinValue() {
@@ -97,8 +97,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * The minimum column statistic value allowed for a row to pass this validation.At least one of
-   * min_value and max_value need to be provided.
+   * Optional. The minimum column statistic value allowed for a row to pass this validation.At least
+   * one of min_value and max_value need to be provided.
    * @param minValue minValue or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setMinValue(java.lang.String minValue) {
@@ -107,7 +107,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * The aggregate metric to evaluate.
+   * Optional. The aggregate metric to evaluate.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatistic() {
@@ -115,7 +115,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * The aggregate metric to evaluate.
+   * Optional. The aggregate metric to evaluate.
    * @param statistic statistic or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setStatistic(java.lang.String statistic) {
@@ -124,8 +124,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is
-   * allowed.Only relevant if a max_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly lesser than ('<') the maximum, or if
+   * equality is allowed.Only relevant if a max_value has been defined. Default = false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrictMaxEnabled() {
@@ -133,8 +133,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is
-   * allowed.Only relevant if a max_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly lesser than ('<') the maximum, or if
+   * equality is allowed.Only relevant if a max_value has been defined. Default = false.
    * @param strictMaxEnabled strictMaxEnabled or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setStrictMaxEnabled(java.lang.Boolean strictMaxEnabled) {
@@ -143,8 +143,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is
-   * allowed.Only relevant if a min_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly greater than ('>') the minimum, or if
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrictMinEnabled() {
@@ -152,8 +152,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
   }
 
   /**
-   * Whether column statistic needs to be strictly greater than ('>') the minimum, or if equality is
-   * allowed.Only relevant if a min_value has been defined. Default = false.
+   * Optional. Whether column statistic needs to be strictly greater than ('>') the minimum, or if
+   * equality is allowed.Only relevant if a min_value has been defined. Default = false.
    * @param strictMinEnabled strictMinEnabled or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation setStrictMinEnabled(java.lang.Boolean strictMinEnabled) {

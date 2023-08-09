@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Evaluates whether each column value is contained by a specified set.
+ * The configuration of post scan actions of DataQualityScan.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.dataplex.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDataplexV1DataQualityRuleSetExpectation extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDataplexV1DataQualitySpecPostScanActions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Expected values for the column value.
+   * Optional. If set, results will be exported to the provided BigQuery table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> values;
+  private GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport bigqueryExport;
 
   /**
-   * Optional. Expected values for the column value.
+   * Optional. If set, results will be exported to the provided BigQuery table.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getValues() {
-    return values;
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport getBigqueryExport() {
+    return bigqueryExport;
   }
 
   /**
-   * Optional. Expected values for the column value.
-   * @param values values or {@code null} for none
+   * Optional. If set, results will be exported to the provided BigQuery table.
+   * @param bigqueryExport bigqueryExport or {@code null} for none
    */
-  public GoogleCloudDataplexV1DataQualityRuleSetExpectation setValues(java.util.List<java.lang.String> values) {
-    this.values = values;
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActions setBigqueryExport(GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport bigqueryExport) {
+    this.bigqueryExport = bigqueryExport;
     return this;
   }
 
   @Override
-  public GoogleCloudDataplexV1DataQualityRuleSetExpectation set(String fieldName, Object value) {
-    return (GoogleCloudDataplexV1DataQualityRuleSetExpectation) super.set(fieldName, value);
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActions set(String fieldName, Object value) {
+    return (GoogleCloudDataplexV1DataQualitySpecPostScanActions) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDataplexV1DataQualityRuleSetExpectation clone() {
-    return (GoogleCloudDataplexV1DataQualityRuleSetExpectation) super.clone();
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActions clone() {
+    return (GoogleCloudDataplexV1DataQualitySpecPostScanActions) super.clone();
   }
 
 }

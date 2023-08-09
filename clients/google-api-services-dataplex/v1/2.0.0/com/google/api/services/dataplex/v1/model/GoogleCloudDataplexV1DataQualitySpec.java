@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Actions to take upon job completion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualitySpecPostScanActions postScanActions;
+
+  /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
    * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
    * < 10
@@ -39,7 +46,7 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   private java.lang.String rowFilter;
 
   /**
-   * The list of rules to evaluate against a data source. At least one rule is required.
+   * Required. The list of rules to evaluate against a data source. At least one rule is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,6 +66,23 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Float samplingPercent;
+
+  /**
+   * Optional. Actions to take upon job completion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActions getPostScanActions() {
+    return postScanActions;
+  }
+
+  /**
+   * Optional. Actions to take upon job completion.
+   * @param postScanActions postScanActions or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpec setPostScanActions(GoogleCloudDataplexV1DataQualitySpecPostScanActions postScanActions) {
+    this.postScanActions = postScanActions;
+    return this;
+  }
 
   /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
@@ -82,7 +106,7 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   }
 
   /**
-   * The list of rules to evaluate against a data source. At least one rule is required.
+   * Required. The list of rules to evaluate against a data source. At least one rule is required.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataQualityRule> getRules() {
@@ -90,7 +114,7 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   }
 
   /**
-   * The list of rules to evaluate against a data source. At least one rule is required.
+   * Required. The list of rules to evaluate against a data source. At least one rule is required.
    * @param rules rules or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualitySpec setRules(java.util.List<GoogleCloudDataplexV1DataQualityRule> rules) {

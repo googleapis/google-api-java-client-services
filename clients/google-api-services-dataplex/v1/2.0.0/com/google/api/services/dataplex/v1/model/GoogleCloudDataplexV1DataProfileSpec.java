@@ -46,6 +46,13 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
   private GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields;
 
   /**
+   * Optional. Actions to take upon job completion..
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProfileSpecPostScanActions postScanActions;
+
+  /**
    * Optional. A filter applied to all rows in a single DataScan job. The filter needs to be a valid
    * SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 >= 0 AND col2
    * < 10
@@ -98,6 +105,23 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataProfileSpec setIncludeFields(GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields) {
     this.includeFields = includeFields;
+    return this;
+  }
+
+  /**
+   * Optional. Actions to take upon job completion..
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpecPostScanActions getPostScanActions() {
+    return postScanActions;
+  }
+
+  /**
+   * Optional. Actions to take upon job completion..
+   * @param postScanActions postScanActions or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setPostScanActions(GoogleCloudDataplexV1DataProfileSpecPostScanActions postScanActions) {
+    this.postScanActions = postScanActions;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.dataplex.v1.model;
 
 /**
  * These messages contain information about the execution of a datascan. The monitored resource is
- * 'DataScan'
+ * 'DataScan' Next ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -29,6 +29,13 @@ package com.google.api.services.dataplex.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The time when the data scan job was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
 
   /**
    * Data profile result for data profile type data scan.
@@ -87,6 +94,13 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
   private java.lang.String message;
 
   /**
+   * The result of post scan actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanEventPostScanActionsResult postScanActionsResult;
+
+  /**
    * The scope of the data scan (e.g. full, incremental).
    * The value may be {@code null}.
    */
@@ -127,6 +141,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The time when the data scan job was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The time when the data scan job was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Data profile result for data profile type data scan.
@@ -261,6 +292,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
    */
   public GoogleCloudDataplexV1DataScanEvent setMessage(java.lang.String message) {
     this.message = message;
+    return this;
+  }
+
+  /**
+   * The result of post scan actions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventPostScanActionsResult getPostScanActionsResult() {
+    return postScanActionsResult;
+  }
+
+  /**
+   * The result of post scan actions.
+   * @param postScanActionsResult postScanActionsResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setPostScanActionsResult(GoogleCloudDataplexV1DataScanEventPostScanActionsResult postScanActionsResult) {
+    this.postScanActionsResult = postScanActionsResult;
     return this;
   }
 

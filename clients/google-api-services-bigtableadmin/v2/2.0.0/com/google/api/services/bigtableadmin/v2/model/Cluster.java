@@ -71,8 +71,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The number of nodes allocated to this cluster. More nodes enable higher throughput and more
-   * consistent performance.
+   * The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates
+   * nodes based on your data footprint and optimized for 50% storage utilization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +179,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this cluster. More nodes enable higher throughput and more
-   * consistent performance.
+   * The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates
+   * nodes based on your data footprint and optimized for 50% storage utilization.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getServeNodes() {
@@ -188,8 +188,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of nodes allocated to this cluster. More nodes enable higher throughput and more
-   * consistent performance.
+   * The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates
+   * nodes based on your data footprint and optimized for 50% storage utilization.
    * @param serveNodes serveNodes or {@code null} for none
    */
   public Cluster setServeNodes(java.lang.Integer serveNodes) {

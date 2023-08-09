@@ -45,6 +45,13 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   private java.lang.Boolean dailyExportEnabled;
 
   /**
+   * If set true, enables enterprise export to the linked Google Cloud project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enterpriseExportEnabled;
+
+  /**
    * The list of event names that will be excluded from exports.
    * The value may be {@code null}.
    */
@@ -65,13 +72,6 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeAdvertisingId;
-
-  /**
-   * If set true, enables intraday export to the linked Google Cloud project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean intradayExportEnabled;
 
   /**
    * Output only. Resource name of this BigQuery link. Format:
@@ -134,6 +134,23 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   }
 
   /**
+   * If set true, enables enterprise export to the linked Google Cloud project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnterpriseExportEnabled() {
+    return enterpriseExportEnabled;
+  }
+
+  /**
+   * If set true, enables enterprise export to the linked Google Cloud project.
+   * @param enterpriseExportEnabled enterpriseExportEnabled or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaBigQueryLink setEnterpriseExportEnabled(java.lang.Boolean enterpriseExportEnabled) {
+    this.enterpriseExportEnabled = enterpriseExportEnabled;
+    return this;
+  }
+
+  /**
    * The list of event names that will be excluded from exports.
    * @return value or {@code null} for none
    */
@@ -183,23 +200,6 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaBigQueryLink setIncludeAdvertisingId(java.lang.Boolean includeAdvertisingId) {
     this.includeAdvertisingId = includeAdvertisingId;
-    return this;
-  }
-
-  /**
-   * If set true, enables intraday export to the linked Google Cloud project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIntradayExportEnabled() {
-    return intradayExportEnabled;
-  }
-
-  /**
-   * If set true, enables intraday export to the linked Google Cloud project.
-   * @param intradayExportEnabled intradayExportEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaBigQueryLink setIntradayExportEnabled(java.lang.Boolean intradayExportEnabled) {
-    this.intradayExportEnabled = intradayExportEnabled;
     return this;
   }
 

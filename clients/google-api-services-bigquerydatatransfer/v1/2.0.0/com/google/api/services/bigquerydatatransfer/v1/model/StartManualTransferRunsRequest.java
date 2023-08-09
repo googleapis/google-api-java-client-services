@@ -31,23 +31,27 @@ package com.google.api.services.bigquerydatatransfer.v1.model;
 public final class StartManualTransferRunsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specific run_time for a transfer run to be started. The requested_run_time must not be in the
-   * future.
+   * A run_time timestamp for historical data files or reports that are scheduled to be transferred
+   * by the scheduled transfer run. requested_run_time must be a past time and cannot include future
+   * time values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String requestedRunTime;
 
   /**
-   * Time range for the transfer runs that should be started.
+   * A time_range start and end timestamp for historical data files or reports that are scheduled to
+   * be transferred by the scheduled transfer run. requested_time_range must be a past time and
+   * cannot include future time values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeRange requestedTimeRange;
 
   /**
-   * Specific run_time for a transfer run to be started. The requested_run_time must not be in the
-   * future.
+   * A run_time timestamp for historical data files or reports that are scheduled to be transferred
+   * by the scheduled transfer run. requested_run_time must be a past time and cannot include future
+   * time values.
    * @return value or {@code null} for none
    */
   public String getRequestedRunTime() {
@@ -55,8 +59,9 @@ public final class StartManualTransferRunsRequest extends com.google.api.client.
   }
 
   /**
-   * Specific run_time for a transfer run to be started. The requested_run_time must not be in the
-   * future.
+   * A run_time timestamp for historical data files or reports that are scheduled to be transferred
+   * by the scheduled transfer run. requested_run_time must be a past time and cannot include future
+   * time values.
    * @param requestedRunTime requestedRunTime or {@code null} for none
    */
   public StartManualTransferRunsRequest setRequestedRunTime(String requestedRunTime) {
@@ -65,7 +70,9 @@ public final class StartManualTransferRunsRequest extends com.google.api.client.
   }
 
   /**
-   * Time range for the transfer runs that should be started.
+   * A time_range start and end timestamp for historical data files or reports that are scheduled to
+   * be transferred by the scheduled transfer run. requested_time_range must be a past time and
+   * cannot include future time values.
    * @return value or {@code null} for none
    */
   public TimeRange getRequestedTimeRange() {
@@ -73,7 +80,9 @@ public final class StartManualTransferRunsRequest extends com.google.api.client.
   }
 
   /**
-   * Time range for the transfer runs that should be started.
+   * A time_range start and end timestamp for historical data files or reports that are scheduled to
+   * be transferred by the scheduled transfer run. requested_time_range must be a past time and
+   * cannot include future time values.
    * @param requestedTimeRange requestedTimeRange or {@code null} for none
    */
   public StartManualTransferRunsRequest setRequestedTimeRange(TimeRange requestedTimeRange) {

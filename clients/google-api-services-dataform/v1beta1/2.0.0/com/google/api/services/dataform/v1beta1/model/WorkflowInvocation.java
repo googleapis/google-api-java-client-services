@@ -30,7 +30,7 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class WorkflowInvocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The name of the compilation result to compile. Must be in the format
+   * Immutable. The name of the compilation result to use for this invocation. Must be in the format
    * `projects/locations/repositories/compilationResults`.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String workflowConfig;
 
   /**
-   * Immutable. The name of the compilation result to compile. Must be in the format
+   * Immutable. The name of the compilation result to use for this invocation. Must be in the format
    * `projects/locations/repositories/compilationResults`.
    * @return value or {@code null} for none
    */
@@ -83,7 +83,7 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. The name of the compilation result to compile. Must be in the format
+   * Immutable. The name of the compilation result to use for this invocation. Must be in the format
    * `projects/locations/repositories/compilationResults`.
    * @param compilationResult compilationResult or {@code null} for none
    */

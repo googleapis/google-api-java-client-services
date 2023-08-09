@@ -30,7 +30,7 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class GitRemoteSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the Secret Manager secret version to use as an authentication token for
+   * Optional. The name of the Secret Manager secret version to use as an authentication token for
    * Git operations. Must be in the format `projects/secrets/versions`.
    * The value may be {@code null}.
    */
@@ -45,7 +45,9 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String defaultBranch;
 
   /**
-   * Output only. Indicates the status of the Git access token.
+   * Output only. Deprecated: The field does not contain any token status information. Instead use h
+   * ttps://cloud.google.com/dataform/reference/rest/v1beta1/projects.locations.repositories/compute
+   * AccessTokenStatus
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +61,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String url;
 
   /**
-   * Required. The name of the Secret Manager secret version to use as an authentication token for
+   * Optional. The name of the Secret Manager secret version to use as an authentication token for
    * Git operations. Must be in the format `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
@@ -68,7 +70,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The name of the Secret Manager secret version to use as an authentication token for
+   * Optional. The name of the Secret Manager secret version to use as an authentication token for
    * Git operations. Must be in the format `projects/secrets/versions`.
    * @param authenticationTokenSecretVersion authenticationTokenSecretVersion or {@code null} for none
    */
@@ -95,7 +97,9 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates the status of the Git access token.
+   * Output only. Deprecated: The field does not contain any token status information. Instead use h
+   * ttps://cloud.google.com/dataform/reference/rest/v1beta1/projects.locations.repositories/compute
+   * AccessTokenStatus
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenStatus() {
@@ -103,7 +107,9 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates the status of the Git access token.
+   * Output only. Deprecated: The field does not contain any token status information. Instead use h
+   * ttps://cloud.google.com/dataform/reference/rest/v1beta1/projects.locations.repositories/compute
+   * AccessTokenStatus
    * @param tokenStatus tokenStatus or {@code null} for none
    */
   public GitRemoteSettings setTokenStatus(java.lang.String tokenStatus) {

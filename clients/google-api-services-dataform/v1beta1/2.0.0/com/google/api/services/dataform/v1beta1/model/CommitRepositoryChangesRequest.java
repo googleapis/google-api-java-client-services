@@ -45,6 +45,15 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   private java.util.Map<String, FileOperation> fileOperations;
 
   /**
+   * Optional. The commit SHA which must be the repository's current HEAD before applying this
+   * commit; otherwise this request will fail. If unset, no validation on the current HEAD commit
+   * SHA is performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requiredHeadCommitSha;
+
+  /**
    * Required. The changes to commit to the repository.
    * @return value or {@code null} for none
    */
@@ -77,6 +86,27 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
    */
   public CommitRepositoryChangesRequest setFileOperations(java.util.Map<String, FileOperation> fileOperations) {
     this.fileOperations = fileOperations;
+    return this;
+  }
+
+  /**
+   * Optional. The commit SHA which must be the repository's current HEAD before applying this
+   * commit; otherwise this request will fail. If unset, no validation on the current HEAD commit
+   * SHA is performed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequiredHeadCommitSha() {
+    return requiredHeadCommitSha;
+  }
+
+  /**
+   * Optional. The commit SHA which must be the repository's current HEAD before applying this
+   * commit; otherwise this request will fail. If unset, no validation on the current HEAD commit
+   * SHA is performed.
+   * @param requiredHeadCommitSha requiredHeadCommitSha or {@code null} for none
+   */
+  public CommitRepositoryChangesRequest setRequiredHeadCommitSha(java.lang.String requiredHeadCommitSha) {
+    this.requiredHeadCommitSha = requiredHeadCommitSha;
     return this;
   }
 

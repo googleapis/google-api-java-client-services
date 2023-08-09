@@ -52,6 +52,13 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   private java.util.List<Target> includedTargets;
 
   /**
+   * Optional. The service account to run workflow invocations under.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. When set to true, transitive dependencies of included actions will be executed.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
    */
   public InvocationConfig setIncludedTargets(java.util.List<Target> includedTargets) {
     this.includedTargets = includedTargets;
+    return this;
+  }
+
+  /**
+   * Optional. The service account to run workflow invocations under.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account to run workflow invocations under.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public InvocationConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

@@ -30,11 +30,25 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The repository's user-friendly name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional. If set, configures this repository to be linked to a Git remote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GitRemoteSettings gitRemoteSettings;
+
+  /**
+   * Optional. Repository user labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * Output only. The repository's name.
@@ -53,6 +67,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String npmrcEnvironmentVariablesSecretVersion;
 
   /**
+   * Optional. The service account to run workflow invocations under.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
+   * Optional. Input only. If set to true, the authenticated user will be granted the
+   * roles/dataform.admin role on the created repository. To modify access to the created repository
+   * later apply setIamPolicy from https://cloud.google.com/dataform/reference/rest#rest-
+   * resource:-v1beta1.projects.locations.repositories
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean setAuthenticatedUserAdmin;
+
+  /**
    * Optional. If set, fields of `workspace_compilation_overrides` override the default compilation
    * settings that are specified in dataform.json when creating workspace-scoped compilation
    * results. See documentation for `WorkspaceCompilationOverrides` for more information.
@@ -60,6 +91,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkspaceCompilationOverrides workspaceCompilationOverrides;
+
+  /**
+   * Optional. The repository's user-friendly name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. The repository's user-friendly name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Repository setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Optional. If set, configures this repository to be linked to a Git remote.
@@ -75,6 +123,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setGitRemoteSettings(GitRemoteSettings gitRemoteSettings) {
     this.gitRemoteSettings = gitRemoteSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Repository user labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Repository user labels.
+   * @param labels labels or {@code null} for none
+   */
+  public Repository setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -113,6 +178,46 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setNpmrcEnvironmentVariablesSecretVersion(java.lang.String npmrcEnvironmentVariablesSecretVersion) {
     this.npmrcEnvironmentVariablesSecretVersion = npmrcEnvironmentVariablesSecretVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The service account to run workflow invocations under.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account to run workflow invocations under.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public Repository setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. If set to true, the authenticated user will be granted the
+   * roles/dataform.admin role on the created repository. To modify access to the created repository
+   * later apply setIamPolicy from https://cloud.google.com/dataform/reference/rest#rest-
+   * resource:-v1beta1.projects.locations.repositories
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSetAuthenticatedUserAdmin() {
+    return setAuthenticatedUserAdmin;
+  }
+
+  /**
+   * Optional. Input only. If set to true, the authenticated user will be granted the
+   * roles/dataform.admin role on the created repository. To modify access to the created repository
+   * later apply setIamPolicy from https://cloud.google.com/dataform/reference/rest#rest-
+   * resource:-v1beta1.projects.locations.repositories
+   * @param setAuthenticatedUserAdmin setAuthenticatedUserAdmin or {@code null} for none
+   */
+  public Repository setSetAuthenticatedUserAdmin(java.lang.Boolean setAuthenticatedUserAdmin) {
+    this.setAuthenticatedUserAdmin = setAuthenticatedUserAdmin;
     return this;
   }
 

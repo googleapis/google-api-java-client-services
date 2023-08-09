@@ -4524,12 +4524,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
        * "outOfOffice"This parameter can be repeated multiple times to return events of different
        * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
-       * "outOfOffice"] This value will be the default.
+       * "outOfOffice"] This value is the default.
        *
        * If you're enrolled in the Working Location developer preview program, in addition to the
        * default value above you can also set the "workingLocation" event type: - ["default",
        * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
-       * combinations of these 4 event types will be made available in later releases. Developer
+       * combinations of these four event types will be made available in later releases. Developer
        * Preview.
        */
       @com.google.api.client.util.Key
@@ -4537,12 +4537,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice"This
      parameter can be repeated multiple times to return events of different types. Currently, this is
-     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value will be
-     the default.
+     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value is the
+     default.
 
      If you're enrolled in the Working Location developer preview program, in addition to the default
      value above you can also set the "workingLocation" event type: - ["default", "focusTime",
-     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these 4 event
+     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these four event
      types will be made available in later releases. Developer Preview.
        */
       public java.util.List<java.lang.String> getEventTypes() {
@@ -4553,12 +4553,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
        * "outOfOffice"This parameter can be repeated multiple times to return events of different
        * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
-       * "outOfOffice"] This value will be the default.
+       * "outOfOffice"] This value is the default.
        *
        * If you're enrolled in the Working Location developer preview program, in addition to the
        * default value above you can also set the "workingLocation" event type: - ["default",
        * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
-       * combinations of these 4 event types will be made available in later releases. Developer
+       * combinations of these four event types will be made available in later releases. Developer
        * Preview.
        */
       public List setEventTypes(java.util.List<java.lang.String> eventTypes) {
@@ -4841,10 +4841,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * of the client state.
        *
        * These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty -
-       * timeMin - timeMax - updatedMin If the syncToken expires, the server will respond with a 410
-       * GONE response code and the client should clear its storage and perform a full
-       * synchronization without any syncToken. Learn more about incremental synchronization.
-       * Optional. The default is to return all entries.
+       * timeMin - timeMax - updatedMin All other query parameters should be the same as for the
+       * initial synchronization to avoid undefined behavior. If the syncToken expires, the server
+       * will respond with a 410 GONE response code and the client should clear its storage and
+       * perform a full synchronization without any syncToken. Learn more about incremental
+       * synchronization. Optional. The default is to return all entries.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
@@ -4856,10 +4857,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
      specified together with nextSyncToken to ensure consistency of the client state.
 
      These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty - timeMin -
-     timeMax - updatedMin If the syncToken expires, the server will respond with a 410 GONE response
-     code and the client should clear its storage and perform a full synchronization without any
-     syncToken. Learn more about incremental synchronization. Optional. The default is to return all
-     entries.
+     timeMax - updatedMin All other query parameters should be the same as for the initial
+     synchronization to avoid undefined behavior. If the syncToken expires, the server will respond with
+     a 410 GONE response code and the client should clear its storage and perform a full synchronization
+     without any syncToken. Learn more about incremental synchronization. Optional. The default is to
+     return all entries.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
@@ -4874,10 +4876,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * of the client state.
        *
        * These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty -
-       * timeMin - timeMax - updatedMin If the syncToken expires, the server will respond with a 410
-       * GONE response code and the client should clear its storage and perform a full
-       * synchronization without any syncToken. Learn more about incremental synchronization.
-       * Optional. The default is to return all entries.
+       * timeMin - timeMax - updatedMin All other query parameters should be the same as for the
+       * initial synchronization to avoid undefined behavior. If the syncToken expires, the server
+       * will respond with a 410 GONE response code and the client should clear its storage and
+       * perform a full synchronization without any syncToken. Learn more about incremental
+       * synchronization. Optional. The default is to return all entries.
        */
       public List setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;
@@ -6046,12 +6049,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
        * "outOfOffice"This parameter can be repeated multiple times to return events of different
        * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
-       * "outOfOffice"] This value will be the default.
+       * "outOfOffice"] This value is the default.
        *
        * If you're enrolled in the Working Location developer preview program, in addition to the
        * default value above you can also set the "workingLocation" event type: - ["default",
        * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
-       * combinations of these 4 event types will be made available in later releases. Developer
+       * combinations of these four event types will be made available in later releases. Developer
        * Preview.
        */
       @com.google.api.client.util.Key
@@ -6059,12 +6062,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /** Event types to return. Optional. Possible values are: - "default" - "focusTime" - "outOfOffice"This
      parameter can be repeated multiple times to return events of different types. Currently, this is
-     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value will be
-     the default.
+     the only allowed value for this field: - ["default", "focusTime", "outOfOffice"] This value is the
+     default.
 
      If you're enrolled in the Working Location developer preview program, in addition to the default
      value above you can also set the "workingLocation" event type: - ["default", "focusTime",
-     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these 4 event
+     "outOfOffice", "workingLocation"] - ["workingLocation"] Additional combinations of these four event
      types will be made available in later releases. Developer Preview.
        */
       public java.util.List<java.lang.String> getEventTypes() {
@@ -6075,12 +6078,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Event types to return. Optional. Possible values are: - "default" - "focusTime" -
        * "outOfOffice"This parameter can be repeated multiple times to return events of different
        * types. Currently, this is the only allowed value for this field: - ["default", "focusTime",
-       * "outOfOffice"] This value will be the default.
+       * "outOfOffice"] This value is the default.
        *
        * If you're enrolled in the Working Location developer preview program, in addition to the
        * default value above you can also set the "workingLocation" event type: - ["default",
        * "focusTime", "outOfOffice", "workingLocation"] - ["workingLocation"] Additional
-       * combinations of these 4 event types will be made available in later releases. Developer
+       * combinations of these four event types will be made available in later releases. Developer
        * Preview.
        */
       public Watch setEventTypes(java.util.List<java.lang.String> eventTypes) {
@@ -6363,10 +6366,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * of the client state.
        *
        * These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty -
-       * timeMin - timeMax - updatedMin If the syncToken expires, the server will respond with a 410
-       * GONE response code and the client should clear its storage and perform a full
-       * synchronization without any syncToken. Learn more about incremental synchronization.
-       * Optional. The default is to return all entries.
+       * timeMin - timeMax - updatedMin All other query parameters should be the same as for the
+       * initial synchronization to avoid undefined behavior. If the syncToken expires, the server
+       * will respond with a 410 GONE response code and the client should clear its storage and
+       * perform a full synchronization without any syncToken. Learn more about incremental
+       * synchronization. Optional. The default is to return all entries.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
@@ -6378,10 +6382,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
      specified together with nextSyncToken to ensure consistency of the client state.
 
      These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty - timeMin -
-     timeMax - updatedMin If the syncToken expires, the server will respond with a 410 GONE response
-     code and the client should clear its storage and perform a full synchronization without any
-     syncToken. Learn more about incremental synchronization. Optional. The default is to return all
-     entries.
+     timeMax - updatedMin All other query parameters should be the same as for the initial
+     synchronization to avoid undefined behavior. If the syncToken expires, the server will respond with
+     a 410 GONE response code and the client should clear its storage and perform a full synchronization
+     without any syncToken. Learn more about incremental synchronization. Optional. The default is to
+     return all entries.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
@@ -6396,10 +6401,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * of the client state.
        *
        * These are: - iCalUID - orderBy - privateExtendedProperty - q - sharedExtendedProperty -
-       * timeMin - timeMax - updatedMin If the syncToken expires, the server will respond with a 410
-       * GONE response code and the client should clear its storage and perform a full
-       * synchronization without any syncToken. Learn more about incremental synchronization.
-       * Optional. The default is to return all entries.
+       * timeMin - timeMax - updatedMin All other query parameters should be the same as for the
+       * initial synchronization to avoid undefined behavior. If the syncToken expires, the server
+       * will respond with a 410 GONE response code and the client should clear its storage and
+       * perform a full synchronization without any syncToken. Learn more about incremental
+       * synchronization. Optional. The default is to return all entries.
        */
       public Watch setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;

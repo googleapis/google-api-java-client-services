@@ -51,8 +51,8 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   private OfficeLocation officeLocation;
 
   /**
-   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * Indicates what kind of location this is. Any details are specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   }
 
   /**
-   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * Indicates what kind of location this is. Any details are specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -119,8 +119,8 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   }
 
   /**
-   * Indicates what kind of location this is. Any details will be specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields will be ignored.
+   * Indicates what kind of location this is. Any details are specified in a sub-field of the
+   * specified name (but which may be missing if empty). Any other fields are ignored.
    * @param type type or {@code null} for none
    */
   public EventWorkingLocationProperties setType(java.lang.String type) {

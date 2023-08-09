@@ -62,7 +62,7 @@ public final class GoogleCloudDatacatalogLineageV1LineageEvent extends com.googl
   private java.lang.String name;
 
   /**
-   * Optional. The beginning of the transformation which resulted in this lineage event. For
+   * Required. The beginning of the transformation which resulted in this lineage event. For
    * streaming scenarios, it should be the beginning of the period from which the lineage is being
    * reported.
    * The value may be {@code null}.
@@ -130,7 +130,7 @@ public final class GoogleCloudDatacatalogLineageV1LineageEvent extends com.googl
   }
 
   /**
-   * Optional. The beginning of the transformation which resulted in this lineage event. For
+   * Required. The beginning of the transformation which resulted in this lineage event. For
    * streaming scenarios, it should be the beginning of the period from which the lineage is being
    * reported.
    * @return value or {@code null} for none
@@ -140,7 +140,7 @@ public final class GoogleCloudDatacatalogLineageV1LineageEvent extends com.googl
   }
 
   /**
-   * Optional. The beginning of the transformation which resulted in this lineage event. For
+   * Required. The beginning of the transformation which resulted in this lineage event. For
    * streaming scenarios, it should be the beginning of the period from which the lineage is being
    * reported.
    * @param startTime startTime or {@code null} for none

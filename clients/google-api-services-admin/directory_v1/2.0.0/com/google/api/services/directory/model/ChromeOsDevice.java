@@ -139,6 +139,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String deviceId;
 
   /**
+   * Output only. Device license type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceLicenseType;
+
+  /**
    * Reports of disk space and other info about mounted/connected volumes.
    * The value may be {@code null}.
    */
@@ -617,6 +624,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setDeviceId(java.lang.String deviceId) {
     this.deviceId = deviceId;
+    return this;
+  }
+
+  /**
+   * Output only. Device license type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceLicenseType() {
+    return deviceLicenseType;
+  }
+
+  /**
+   * Output only. Device license type.
+   * @param deviceLicenseType deviceLicenseType or {@code null} for none
+   */
+  public ChromeOsDevice setDeviceLicenseType(java.lang.String deviceLicenseType) {
+    this.deviceLicenseType = deviceLicenseType;
     return this;
   }
 

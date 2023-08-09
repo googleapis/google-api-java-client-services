@@ -89,6 +89,16 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private EmailPreferences emailPreferences;
 
   /**
+   * The encryption configuration part. Currently, it is only used for the optional KMS key name.
+   * The BigQuery service account of your project must be granted permissions to use the key. Read
+   * methods will return the key name applied in effect. Write methods will apply the key if it is
+   * present, or otherwise try to apply project default keys if it is absent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfiguration encryptionConfiguration;
+
+  /**
    * The resource name of the transfer config. Transfer config names have the form
    * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is
    * usually a uuid, even though it is not guaranteed or required. The name is ignored when creating
@@ -302,6 +312,29 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setEmailPreferences(EmailPreferences emailPreferences) {
     this.emailPreferences = emailPreferences;
+    return this;
+  }
+
+  /**
+   * The encryption configuration part. Currently, it is only used for the optional KMS key name.
+   * The BigQuery service account of your project must be granted permissions to use the key. Read
+   * methods will return the key name applied in effect. Write methods will apply the key if it is
+   * present, or otherwise try to apply project default keys if it is absent.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfiguration getEncryptionConfiguration() {
+    return encryptionConfiguration;
+  }
+
+  /**
+   * The encryption configuration part. Currently, it is only used for the optional KMS key name.
+   * The BigQuery service account of your project must be granted permissions to use the key. Read
+   * methods will return the key name applied in effect. Write methods will apply the key if it is
+   * present, or otherwise try to apply project default keys if it is absent.
+   * @param encryptionConfiguration encryptionConfiguration or {@code null} for none
+   */
+  public TransferConfig setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+    this.encryptionConfiguration = encryptionConfiguration;
     return this;
   }
 

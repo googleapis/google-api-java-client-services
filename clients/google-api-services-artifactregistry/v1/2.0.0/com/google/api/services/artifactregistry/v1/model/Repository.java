@@ -31,6 +31,28 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cleanup policies for this repository. Cleanup policies indicate when certain package
+   * versions can be automatically deleted. Map keys are policy IDs supplied by users during policy
+   * creation. They must unique within a repository and be under 128 characters in length.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, CleanupPolicy> cleanupPolicies;
+
+  static {
+    // hack to force ProGuard to consider CleanupPolicy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CleanupPolicy.class);
+  }
+
+  /**
+   * Optional. If true, the cleanup pipeline is prevented from deleting versions in this repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cleanupPolicyDryRun;
+
+  /**
    * Output only. The time when the repository was created.
    * The value may be {@code null}.
    */
@@ -115,6 +137,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Optional. Config and state for sbom generation for resources within this Repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SbomConfig sbomConfig;
+
+  /**
    * Output only. The size, in bytes, of all artifact storage in this repository. Repositories that
    * are generally available or in public preview use this to calculate storage costs.
    * The value may be {@code null}.
@@ -135,6 +164,44 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VirtualRepositoryConfig virtualRepositoryConfig;
+
+  /**
+   * Optional. Cleanup policies for this repository. Cleanup policies indicate when certain package
+   * versions can be automatically deleted. Map keys are policy IDs supplied by users during policy
+   * creation. They must unique within a repository and be under 128 characters in length.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, CleanupPolicy> getCleanupPolicies() {
+    return cleanupPolicies;
+  }
+
+  /**
+   * Optional. Cleanup policies for this repository. Cleanup policies indicate when certain package
+   * versions can be automatically deleted. Map keys are policy IDs supplied by users during policy
+   * creation. They must unique within a repository and be under 128 characters in length.
+   * @param cleanupPolicies cleanupPolicies or {@code null} for none
+   */
+  public Repository setCleanupPolicies(java.util.Map<String, CleanupPolicy> cleanupPolicies) {
+    this.cleanupPolicies = cleanupPolicies;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the cleanup pipeline is prevented from deleting versions in this repository.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCleanupPolicyDryRun() {
+    return cleanupPolicyDryRun;
+  }
+
+  /**
+   * Optional. If true, the cleanup pipeline is prevented from deleting versions in this repository.
+   * @param cleanupPolicyDryRun cleanupPolicyDryRun or {@code null} for none
+   */
+  public Repository setCleanupPolicyDryRun(java.lang.Boolean cleanupPolicyDryRun) {
+    this.cleanupPolicyDryRun = cleanupPolicyDryRun;
+    return this;
+  }
 
   /**
    * Output only. The time when the repository was created.
@@ -334,6 +401,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Optional. Config and state for sbom generation for resources within this Repository.
+   * @return value or {@code null} for none
+   */
+  public SbomConfig getSbomConfig() {
+    return sbomConfig;
+  }
+
+  /**
+   * Optional. Config and state for sbom generation for resources within this Repository.
+   * @param sbomConfig sbomConfig or {@code null} for none
+   */
+  public Repository setSbomConfig(SbomConfig sbomConfig) {
+    this.sbomConfig = sbomConfig;
     return this;
   }
 

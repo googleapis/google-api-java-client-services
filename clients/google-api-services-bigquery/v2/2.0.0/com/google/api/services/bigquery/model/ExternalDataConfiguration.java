@@ -95,6 +95,15 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.util.List<java.lang.String> decimalTargetTypes;
 
   /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileSetSpecType;
+
+  /**
    * [Optional] Additional options if sourceFormat is set to GOOGLE_SHEETS.
    * The value may be {@code null}.
    */
@@ -349,6 +358,27 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setDecimalTargetTypes(java.util.List<java.lang.String> decimalTargetTypes) {
     this.decimalTargetTypes = decimalTargetTypes;
+    return this;
+  }
+
+  /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileSetSpecType() {
+    return fileSetSpecType;
+  }
+
+  /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * @param fileSetSpecType fileSetSpecType or {@code null} for none
+   */
+  public ExternalDataConfiguration setFileSetSpecType(java.lang.String fileSetSpecType) {
+    this.fileSetSpecType = fileSetSpecType;
     return this;
   }
 

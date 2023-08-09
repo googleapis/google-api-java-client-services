@@ -88,7 +88,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private java.lang.Long expirationTime;
 
   /**
-   * Output only. Input feature columns that were used to train this model.
+   * Output only. Input feature columns for the model inference. If the model is trained with
+   * TRANSFORM clause, these are the input of the TRANSFORM clause.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,6 +194,15 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<TrainingRun> trainingRuns;
+
+  /**
+   * Output only. This field will be populated if a TRANSFORM clause was used to train a model.
+   * TRANSFORM clause (if used) takes feature_columns as input and outputs transform_columns.
+   * transform_columns then are used to train the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TransformColumn> transformColumns;
 
   /**
    * The best trial_id across all training runs.
@@ -332,7 +342,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Input feature columns that were used to train this model.
+   * Output only. Input feature columns for the model inference. If the model is trained with
+   * TRANSFORM clause, these are the input of the TRANSFORM clause.
    * @return value or {@code null} for none
    */
   public java.util.List<StandardSqlField> getFeatureColumns() {
@@ -340,7 +351,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Input feature columns that were used to train this model.
+   * Output only. Input feature columns for the model inference. If the model is trained with
+   * TRANSFORM clause, these are the input of the TRANSFORM clause.
    * @param featureColumns featureColumns or {@code null} for none
    */
   public Model setFeatureColumns(java.util.List<StandardSqlField> featureColumns) {
@@ -569,6 +581,27 @@ public final class Model extends com.google.api.client.json.GenericJson {
    */
   public Model setTrainingRuns(java.util.List<TrainingRun> trainingRuns) {
     this.trainingRuns = trainingRuns;
+    return this;
+  }
+
+  /**
+   * Output only. This field will be populated if a TRANSFORM clause was used to train a model.
+   * TRANSFORM clause (if used) takes feature_columns as input and outputs transform_columns.
+   * transform_columns then are used to train the model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TransformColumn> getTransformColumns() {
+    return transformColumns;
+  }
+
+  /**
+   * Output only. This field will be populated if a TRANSFORM clause was used to train a model.
+   * TRANSFORM clause (if used) takes feature_columns as input and outputs transform_columns.
+   * transform_columns then are used to train the model.
+   * @param transformColumns transformColumns or {@code null} for none
+   */
+  public Model setTransformColumns(java.util.List<TransformColumn> transformColumns) {
+    this.transformColumns = transformColumns;
     return this;
   }
 

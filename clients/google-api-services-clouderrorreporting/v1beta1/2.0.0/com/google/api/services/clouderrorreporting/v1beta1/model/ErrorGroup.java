@@ -38,7 +38,12 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String groupId;
 
   /**
-   * The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
+   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
+   * unique identifier for a particular error group. The identifier is derived from key parts of the
+   * error-log content and is treated as Service Data. For information about how Service Data is
+   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+   * notice).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +83,12 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
+   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
+   * unique identifier for a particular error group. The identifier is derived from key parts of the
+   * error-log content and is treated as Service Data. For information about how Service Data is
+   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+   * notice).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -86,7 +96,12 @@ public final class ErrorGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The group resource name. Example: projects/my-project-123/groups/CNSgkpnppqKCUw
+   * The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
+   * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
+   * unique identifier for a particular error group. The identifier is derived from key parts of the
+   * error-log content and is treated as Service Data. For information about how Service Data is
+   * handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+   * notice).
    * @param name name or {@code null} for none
    */
   public ErrorGroup setName(java.lang.String name) {

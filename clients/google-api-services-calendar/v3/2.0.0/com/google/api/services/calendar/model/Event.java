@@ -376,7 +376,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String visibility;
 
   /**
-   * Developer Preview: Working Location event data. Read-only.
+   * Working Location event data. Developer Preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1416,7 +1416,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Developer Preview: Working Location event data. Read-only.
+   * Working Location event data. Developer Preview.
    * @return value or {@code null} for none
    */
   public EventWorkingLocationProperties getWorkingLocationProperties() {
@@ -1424,7 +1424,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Developer Preview: Working Location event data. Read-only.
+   * Working Location event data. Developer Preview.
    * @param workingLocationProperties workingLocationProperties or {@code null} for none
    */
   public Event setWorkingLocationProperties(EventWorkingLocationProperties workingLocationProperties) {

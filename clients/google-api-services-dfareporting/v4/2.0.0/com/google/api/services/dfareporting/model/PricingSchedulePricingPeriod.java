@@ -44,8 +44,8 @@ public final class PricingSchedulePricingPeriod extends com.google.api.client.js
   private java.lang.String pricingComment;
 
   /**
-   * Rate or cost of this pricing period in nanos (i.e., multipled by 1000000000). Acceptable values
-   * are 0 to 1000000000000000000, inclusive.
+   * Rate or cost of this pricing period in nanos (i.e., multiplied by 1000000000). Acceptable
+   * values are 0 to 1000000000000000000, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -97,8 +97,8 @@ public final class PricingSchedulePricingPeriod extends com.google.api.client.js
   }
 
   /**
-   * Rate or cost of this pricing period in nanos (i.e., multipled by 1000000000). Acceptable values
-   * are 0 to 1000000000000000000, inclusive.
+   * Rate or cost of this pricing period in nanos (i.e., multiplied by 1000000000). Acceptable
+   * values are 0 to 1000000000000000000, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRateOrCostNanos() {
@@ -106,8 +106,8 @@ public final class PricingSchedulePricingPeriod extends com.google.api.client.js
   }
 
   /**
-   * Rate or cost of this pricing period in nanos (i.e., multipled by 1000000000). Acceptable values
-   * are 0 to 1000000000000000000, inclusive.
+   * Rate or cost of this pricing period in nanos (i.e., multiplied by 1000000000). Acceptable
+   * values are 0 to 1000000000000000000, inclusive.
    * @param rateOrCostNanos rateOrCostNanos or {@code null} for none
    */
   public PricingSchedulePricingPeriod setRateOrCostNanos(java.lang.Long rateOrCostNanos) {

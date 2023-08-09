@@ -73,7 +73,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<Size> additionalSizes;
 
   /**
-   * Advertiser ID of this creative. This is a required field. Applicable to all creative types.
+   * Required. Advertiser ID of this creative. This is a required field. Applicable to all creative
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -380,8 +381,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Float mediaDuration;
 
   /**
-   * Name of the creative. This is a required field and must be less than 256 characters long.
-   * Applicable to all creative types.
+   * Required. Name of the creative. This must be less than 256 characters long. Applicable to all
+   * creative types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -573,9 +574,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalFileSize;
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
-   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
-   * should use DISPLAY as a replacement for these types.
+   * Required. Type of this creative. Applicable to all creative types. *Note:* FLASH_INPAGE,
+   * HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives should use DISPLAY
+   * as a replacement for these types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -701,7 +702,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advertiser ID of this creative. This is a required field. Applicable to all creative types.
+   * Required. Advertiser ID of this creative. This is a required field. Applicable to all creative
+   * types.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -709,7 +711,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advertiser ID of this creative. This is a required field. Applicable to all creative types.
+   * Required. Advertiser ID of this creative. This is a required field. Applicable to all creative
+   * types.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public Creative setAdvertiserId(java.lang.Long advertiserId) {
@@ -1405,8 +1408,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the creative. This is a required field and must be less than 256 characters long.
-   * Applicable to all creative types.
+   * Required. Name of the creative. This must be less than 256 characters long. Applicable to all
+   * creative types.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1414,8 +1417,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the creative. This is a required field and must be less than 256 characters long.
-   * Applicable to all creative types.
+   * Required. Name of the creative. This must be less than 256 characters long. Applicable to all
+   * creative types.
    * @param name name or {@code null} for none
    */
   public Creative setName(java.lang.String name) {
@@ -1860,9 +1863,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
-   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
-   * should use DISPLAY as a replacement for these types.
+   * Required. Type of this creative. Applicable to all creative types. *Note:* FLASH_INPAGE,
+   * HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives should use DISPLAY
+   * as a replacement for these types.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1870,9 +1873,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of this creative. This is a required field. Applicable to all creative types. *Note:*
-   * FLASH_INPAGE, HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives
-   * should use DISPLAY as a replacement for these types.
+   * Required. Type of this creative. Applicable to all creative types. *Note:* FLASH_INPAGE,
+   * HTML5_BANNER, and IMAGE are only used for existing creatives. New creatives should use DISPLAY
+   * as a replacement for these types.
    * @param type type or {@code null} for none
    */
   public Creative setType(java.lang.String type) {

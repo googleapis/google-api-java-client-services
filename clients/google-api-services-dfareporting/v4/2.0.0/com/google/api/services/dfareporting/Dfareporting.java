@@ -173,7 +173,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountActiveAdSummary> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountActiveAdSummaries/{+summaryAccountId}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern SUMMARY_ACCOUNT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets the account's active ad summary by account ID.
@@ -340,7 +346,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissionGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountPermissionGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one account permission group by ID.
@@ -483,7 +495,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissionGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountPermissionGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves the list of account permission groups.
@@ -632,7 +647,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermission> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissions/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountPermissions/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one account permission by ID.
@@ -775,7 +796,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountPermissionsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountPermissions";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountPermissions";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves the list of account permissions.
@@ -924,7 +948,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles/{id}";
+      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles/{+id}";
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one account user profile by ID.
@@ -1068,7 +1095,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountUserProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new account user profile.
@@ -1185,7 +1215,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfilesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountUserProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of account user profiles, possibly filtered. This method supports paging.
@@ -1322,7 +1355,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -1454,7 +1487,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing account user profile. This method supports patch semantics.
+     * Updates an existing user role. This method supports patch semantics.
      *
      * Create a request for the method "accountUserProfiles.patch".
      *
@@ -1462,7 +1495,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id AccountUserProfile ID.
+     * @param id Required. AccountUserProfile ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
      * @return the request
      */
@@ -1474,10 +1507,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountUserProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing account user profile. This method supports patch semantics.
+       * Updates an existing user role. This method supports patch semantics.
        *
        * Create a request for the method "accountUserProfiles.patch".
        *
@@ -1488,7 +1524,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id AccountUserProfile ID.
+       * @param id Required. AccountUserProfile ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AccountUserProfile}
        * @since 1.13
        */
@@ -1569,17 +1605,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** AccountUserProfile ID. */
+      /** Required. AccountUserProfile ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** AccountUserProfile ID.
+      /** Required. AccountUserProfile ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** AccountUserProfile ID. */
+      /** Required. AccountUserProfile ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -1610,7 +1646,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountUserProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accountUserProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accountUserProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing account user profile.
@@ -1751,7 +1790,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accounts/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accounts/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one account by ID.
@@ -1894,7 +1939,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AccountsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves the list of accounts, possibly filtered. This method supports paging.
@@ -2037,7 +2085,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -2143,7 +2191,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Account ID.
+     * @param id Required. Account ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Account}
      * @return the request
      */
@@ -2155,7 +2203,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing account. This method supports patch semantics.
@@ -2169,7 +2220,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Account ID.
+       * @param id Required. Account ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Account}
        * @since 1.13
        */
@@ -2250,17 +2301,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Account ID. */
+      /** Required. Account ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Account ID.
+      /** Required. Account ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Account ID. */
+      /** Required. Account ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -2291,7 +2342,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Account> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/accounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/accounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing account.
@@ -2432,7 +2486,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/ads/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/ads/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one ad by ID.
@@ -2576,7 +2636,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{+profileId}/ads";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new ad.
@@ -2693,7 +2756,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{+profileId}/ads";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of ads, possibly filtered. This method supports paging.
@@ -2998,7 +3064,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -3207,7 +3273,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing ad. This method supports patch semantics.
+     * Updates an existing event tag. This method supports patch semantics.
      *
      * Create a request for the method "ads.patch".
      *
@@ -3215,7 +3281,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Ad ID.
+     * @param id Required. RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Ad}
      * @return the request
      */
@@ -3227,10 +3293,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{+profileId}/ads";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing ad. This method supports patch semantics.
+       * Updates an existing event tag. This method supports patch semantics.
        *
        * Create a request for the method "ads.patch".
        *
@@ -3241,7 +3310,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Ad ID.
+       * @param id Required. RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Ad}
        * @since 1.13
        */
@@ -3322,17 +3391,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Ad ID. */
+      /** Required. RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Ad ID.
+      /** Required. RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Ad ID. */
+      /** Required. RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -3363,7 +3432,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Ad> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/ads";
+      private static final String REST_PATH = "userprofiles/{+profileId}/ads";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing ad.
@@ -3504,7 +3576,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing advertiser group.
@@ -3639,7 +3717,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one advertiser group by ID.
@@ -3783,7 +3867,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new advertiser group.
@@ -3900,7 +3987,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
@@ -4021,7 +4111,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -4130,7 +4220,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id AdvertiserGroup ID.
+     * @param id Required. Advertiser Group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
      * @return the request
      */
@@ -4142,7 +4232,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing advertiser group. This method supports patch semantics.
@@ -4156,7 +4249,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id AdvertiserGroup ID.
+       * @param id Required. Advertiser Group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.AdvertiserGroup}
        * @since 1.13
        */
@@ -4237,17 +4330,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** AdvertiserGroup ID. */
+      /** Required. Advertiser Group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** AdvertiserGroup ID.
+      /** Required. Advertiser Group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** AdvertiserGroup ID. */
+      /** Required. Advertiser Group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -4278,7 +4371,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing advertiser group.
@@ -4420,7 +4516,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserInvoicesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers/{advertiserId}/invoices";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers/{+advertiserId}/invoices";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of invoices for a particular issue month. The api only works if the billing
@@ -4560,7 +4662,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -4636,7 +4738,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserLandingPages/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one landing page by ID.
@@ -4780,7 +4888,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserLandingPages";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new landing page.
@@ -4897,7 +5008,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertiserLandingPagesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserLandingPages";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of landing pages.
@@ -5073,7 +5187,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -5189,7 +5303,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing advertiser landing page. This method supports patch semantics.
+     * Updates an existing advertiser. This method supports patch semantics.
      *
      * Create a request for the method "advertiserLandingPages.patch".
      *
@@ -5197,7 +5311,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id LandingPage ID.
+     * @param id Required. Landing Page ID.
      * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
      * @return the request
      */
@@ -5209,10 +5323,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserLandingPages";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing advertiser landing page. This method supports patch semantics.
+       * Updates an existing advertiser. This method supports patch semantics.
        *
        * Create a request for the method "advertiserLandingPages.patch".
        *
@@ -5223,7 +5340,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id LandingPage ID.
+       * @param id Required. Landing Page ID.
        * @param content the {@link com.google.api.services.dfareporting.model.LandingPage}
        * @since 1.13
        */
@@ -5304,17 +5421,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** LandingPage ID. */
+      /** Required. Landing Page ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** LandingPage ID.
+      /** Required. Landing Page ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** LandingPage ID. */
+      /** Required. Landing Page ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -5345,7 +5462,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.LandingPage> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertiserLandingPages";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertiserLandingPages";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing landing page.
@@ -5486,7 +5606,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one advertiser by ID.
@@ -5630,7 +5756,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new advertiser.
@@ -5747,7 +5876,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.AdvertisersListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of advertisers, possibly filtered. This method supports paging.
@@ -5916,7 +6048,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -6072,7 +6204,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Advertiser ID.
+     * @param id Required. Advertiser ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
      * @return the request
      */
@@ -6084,7 +6216,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing advertiser. This method supports patch semantics.
@@ -6098,7 +6233,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Advertiser ID.
+       * @param id Required. Advertiser ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Advertiser}
        * @since 1.13
        */
@@ -6179,17 +6314,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Advertiser ID. */
+      /** Required. Advertiser ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Advertiser ID.
+      /** Required. Advertiser ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Advertiser ID. */
+      /** Required. Advertiser ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -6220,7 +6355,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Advertiser> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/advertisers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/advertisers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing advertiser.
@@ -6365,7 +6503,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingAssignment> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles/{+billingProfileId}/billingAssignments";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern BILLING_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new billing assignment and returns the new assignment. Only one of advertiser_id or
@@ -6504,7 +6648,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingAssignmentsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingAssignments";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles/{+billingProfileId}/billingAssignments";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern BILLING_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of billing assignments.
@@ -6671,7 +6821,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one billing profile by ID.
@@ -6814,7 +6970,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfilesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of billing profiles, possibly filtered. This method supports paging.
@@ -6951,7 +7110,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -7130,7 +7289,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingProfile> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing billing profile.
@@ -7271,7 +7433,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BillingRatesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates";
+      private static final String REST_PATH = "userprofiles/{+profileId}/billingProfiles/{+billingProfileId}/billingRates";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern BILLING_PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of billing rates. This method supports paging.
@@ -7437,7 +7605,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.BrowsersListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/browsers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/browsers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of browsers.
@@ -7588,7 +7759,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignCreativeAssociation> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns/{+campaignId}/campaignCreativeAssociations";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CAMPAIGN_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Associates a creative with the specified campaign. This method creates a default ad with
@@ -7726,7 +7903,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignCreativeAssociationsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns/{+campaignId}/campaignCreativeAssociations";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CAMPAIGN_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves the list of creative IDs associated with the specified campaign. This method supports
@@ -7850,7 +8033,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -7942,7 +8125,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one campaign by ID.
@@ -8086,7 +8275,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new campaign.
@@ -8203,7 +8395,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CampaignsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of campaigns, possibly filtered. This method supports paging.
@@ -8411,7 +8606,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -8541,7 +8736,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing campaign. This method supports patch semantics.
+     * Updates an existing creative. This method supports patch semantics.
      *
      * Create a request for the method "campaigns.patch".
      *
@@ -8549,7 +8744,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Campaign ID.
+     * @param id Required. Campaign ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
      * @return the request
      */
@@ -8561,10 +8756,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing campaign. This method supports patch semantics.
+       * Updates an existing creative. This method supports patch semantics.
        *
        * Create a request for the method "campaigns.patch".
        *
@@ -8575,7 +8773,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Campaign ID.
+       * @param id Required. Campaign ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Campaign}
        * @since 1.13
        */
@@ -8656,17 +8854,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Campaign ID. */
+      /** Required. Campaign ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Campaign ID.
+      /** Required. Campaign ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Campaign ID. */
+      /** Required. Campaign ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -8697,7 +8895,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Campaign> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/campaigns";
+      private static final String REST_PATH = "userprofiles/{+profileId}/campaigns";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing campaign.
@@ -8838,7 +9039,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ChangeLog> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/changeLogs/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/changeLogs/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one change log by ID.
@@ -8981,7 +9188,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ChangeLogsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/changeLogs";
+      private static final String REST_PATH = "userprofiles/{+profileId}/changeLogs";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of change logs. This method supports paging.
@@ -9150,7 +9360,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -9327,7 +9537,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CitiesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/cities";
+      private static final String REST_PATH = "userprofiles/{+profileId}/cities";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of cities, possibly filtered.
@@ -9540,7 +9753,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ConnectionType> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/connectionTypes/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/connectionTypes/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one connection type by ID.
@@ -9683,7 +9902,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ConnectionTypesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/connectionTypes";
+      private static final String REST_PATH = "userprofiles/{+profileId}/connectionTypes";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of connection types.
@@ -9832,7 +10054,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing content category.
@@ -9967,7 +10195,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one content category by ID.
@@ -10111,7 +10345,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new content category.
@@ -10228,7 +10465,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategoriesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of content categories, possibly filtered. This method supports paging.
@@ -10349,7 +10589,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -10458,7 +10698,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id ContentCategory ID.
+     * @param id Required. ContentCategory ID.
      * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
      * @return the request
      */
@@ -10470,7 +10710,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing content category. This method supports patch semantics.
@@ -10484,7 +10727,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id ContentCategory ID.
+       * @param id Required. ContentCategory ID.
        * @param content the {@link com.google.api.services.dfareporting.model.ContentCategory}
        * @since 1.13
        */
@@ -10565,17 +10808,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** ContentCategory ID. */
+      /** Required. ContentCategory ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** ContentCategory ID.
+      /** Required. ContentCategory ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** ContentCategory ID. */
+      /** Required. ContentCategory ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -10606,7 +10849,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.ContentCategory> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/contentCategories";
+      private static final String REST_PATH = "userprofiles/{+profileId}/contentCategories";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing content category.
@@ -11006,7 +11252,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Country> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/countries/{dartId}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/countries/{+dartId}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DART_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one country by ID.
@@ -11149,7 +11401,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CountriesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/countries";
+      private static final String REST_PATH = "userprofiles/{+profileId}/countries";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of countries.
@@ -11323,7 +11578,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeAssetMetadata> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeAssets/{+advertiserId}/creativeAssets";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new creative asset.
@@ -11510,7 +11771,16 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing creative field value.
@@ -11664,7 +11934,16 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one creative field value by ID.
@@ -11827,7 +12106,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new creative field value.
@@ -11963,7 +12248,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValuesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of creative field values, possibly filtered. This method supports paging.
@@ -12102,7 +12393,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -12211,7 +12502,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative field value. This method supports patch semantics.
@@ -12366,7 +12663,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldValue> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{creativeFieldId}/creativeFieldValues";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+creativeFieldId}/creativeFieldValues";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CREATIVE_FIELD_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative field value.
@@ -12525,7 +12828,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing creative field.
@@ -12660,7 +12969,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one creative field by ID.
@@ -12804,7 +13119,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new creative field.
@@ -12921,7 +13239,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeFieldsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of creative fields, possibly filtered. This method supports paging.
@@ -13058,7 +13379,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -13179,7 +13500,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative field. This method supports patch semantics.
@@ -13315,7 +13639,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeField> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeFields";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeFields";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative field.
@@ -13456,7 +13783,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one creative group by ID.
@@ -13600,7 +13933,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new creative group.
@@ -13717,7 +14053,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of creative groups, possibly filtered. This method supports paging.
@@ -13839,8 +14178,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private java.lang.Integer groupNumber;
 
       /** Select only creative groups that belong to this subgroup.
-
-     [minimum: 1] [maximum: 2]
        */
       public java.lang.Integer getGroupNumber() {
         return groupNumber;
@@ -13872,7 +14209,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -13981,7 +14318,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id CreativeGroup ID.
+     * @param id Required. Creative Group ID.
      * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
      * @return the request
      */
@@ -13993,7 +14330,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative group. This method supports patch semantics.
@@ -14007,7 +14347,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id CreativeGroup ID.
+       * @param id Required. Creative Group ID.
        * @param content the {@link com.google.api.services.dfareporting.model.CreativeGroup}
        * @since 1.13
        */
@@ -14088,17 +14428,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** CreativeGroup ID. */
+      /** Required. Creative Group ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** CreativeGroup ID.
+      /** Required. Creative Group ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** CreativeGroup ID. */
+      /** Required. Creative Group ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -14129,7 +14469,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativeGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creativeGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creativeGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative group.
@@ -14270,7 +14613,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creatives/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creatives/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one creative by ID.
@@ -14414,7 +14763,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creatives";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new creative.
@@ -14531,7 +14883,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.CreativesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creatives";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of creatives, possibly filtered. This method supports paging.
@@ -14752,7 +15107,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -14922,7 +15277,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Creative ID.
+     * @param id Required. Creative ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Creative}
      * @return the request
      */
@@ -14934,7 +15289,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creatives";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative. This method supports patch semantics.
@@ -14948,7 +15306,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Creative ID.
+       * @param id Required. Creative ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Creative}
        * @since 1.13
        */
@@ -15029,17 +15387,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Creative ID. */
+      /** Required. Creative ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Creative ID.
+      /** Required. Creative ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Creative ID. */
+      /** Required. Creative ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -15070,7 +15428,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Creative> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/creatives";
+      private static final String REST_PATH = "userprofiles/{+profileId}/creatives";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing creative.
@@ -15308,7 +15669,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 0] [maximum: 100]
+      /** Maximum number of results to return. [default: 100]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -15384,7 +15745,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySite> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/directorySites/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/directorySites/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one directory site by ID.
@@ -15528,7 +15895,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySite> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/directorySites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/directorySites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new directory site.
@@ -15645,7 +16015,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.DirectorySitesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/directorySites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/directorySites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of directory sites, possibly filtered. This method supports paging.
@@ -15867,7 +16240,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -15999,9 +16372,9 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      *
      * @param profileId User profile ID associated with this request.
      * @param objectId ID of the object of this dynamic targeting key. This is a required field.
-     * @param name Name of this dynamic targeting key. This is a required field. Must be less than 256 characters long
-     *        and cannot contain commas. All characters are converted to lowercase.
-     * @param objectType Type of the object of this dynamic targeting key. This is a required field.
+     * @param name Required. Name of this dynamic targeting key. This is a required field. Must be less than 256
+     *        characters long and cannot contain commas. All characters are converted to lowercase.
+     * @param objectType Required. Type of the object of this dynamic targeting key. This is a required field.
      * @return the request
      */
     public Delete delete(java.lang.Long profileId, java.lang.Long objectId, java.lang.String name, java.lang.String objectType) throws java.io.IOException {
@@ -16012,7 +16385,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys/{objectId}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/dynamicTargetingKeys/{+objectId}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern OBJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing dynamic targeting key.
@@ -16027,9 +16406,9 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        *
        * @param profileId User profile ID associated with this request.
        * @param objectId ID of the object of this dynamic targeting key. This is a required field.
-       * @param name Name of this dynamic targeting key. This is a required field. Must be less than 256 characters long
-     *        and cannot contain commas. All characters are converted to lowercase.
-       * @param objectType Type of the object of this dynamic targeting key. This is a required field.
+       * @param name Required. Name of this dynamic targeting key. This is a required field. Must be less than 256
+     *        characters long and cannot contain commas. All characters are converted to lowercase.
+       * @param objectType Required. Type of the object of this dynamic targeting key. This is a required field.
        * @since 1.13
        */
       protected Delete(java.lang.Long profileId, java.lang.Long objectId, java.lang.String name, java.lang.String objectType) {
@@ -16128,39 +16507,39 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Name of this dynamic targeting key. This is a required field. Must be less than 256
-       * characters long and cannot contain commas. All characters are converted to lowercase.
+       * Required. Name of this dynamic targeting key. This is a required field. Must be less than
+       * 256 characters long and cannot contain commas. All characters are converted to lowercase.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of this dynamic targeting key. This is a required field. Must be less than 256 characters long
-     and cannot contain commas. All characters are converted to lowercase.
+      /** Required. Name of this dynamic targeting key. This is a required field. Must be less than 256
+     characters long and cannot contain commas. All characters are converted to lowercase.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Name of this dynamic targeting key. This is a required field. Must be less than 256
-       * characters long and cannot contain commas. All characters are converted to lowercase.
+       * Required. Name of this dynamic targeting key. This is a required field. Must be less than
+       * 256 characters long and cannot contain commas. All characters are converted to lowercase.
        */
       public Delete setName(java.lang.String name) {
         this.name = name;
         return this;
       }
 
-      /** Type of the object of this dynamic targeting key. This is a required field. */
+      /** Required. Type of the object of this dynamic targeting key. This is a required field. */
       @com.google.api.client.util.Key
       private java.lang.String objectType;
 
-      /** Type of the object of this dynamic targeting key. This is a required field.
+      /** Required. Type of the object of this dynamic targeting key. This is a required field.
        */
       public java.lang.String getObjectType() {
         return objectType;
       }
 
-      /** Type of the object of this dynamic targeting key. This is a required field. */
+      /** Required. Type of the object of this dynamic targeting key. This is a required field. */
       public Delete setObjectType(java.lang.String objectType) {
         this.objectType = objectType;
         return this;
@@ -16193,7 +16572,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicTargetingKey> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys";
+      private static final String REST_PATH = "userprofiles/{+profileId}/dynamicTargetingKeys";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being
@@ -16312,7 +16694,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.DynamicTargetingKeysListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/dynamicTargetingKeys";
+      private static final String REST_PATH = "userprofiles/{+profileId}/dynamicTargetingKeys";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of dynamic targeting keys.
@@ -16525,7 +16910,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing event tag.
@@ -16660,7 +17051,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one event tag by ID.
@@ -16804,7 +17201,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new event tag.
@@ -16921,7 +17321,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTagsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of event tags, possibly filtered.
@@ -17256,7 +17659,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id EventTag ID.
+     * @param id Required. EventTag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
      * @return the request
      */
@@ -17268,7 +17671,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing event tag. This method supports patch semantics.
@@ -17282,7 +17688,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id EventTag ID.
+       * @param id Required. EventTag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.EventTag}
        * @since 1.13
        */
@@ -17363,17 +17769,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** EventTag ID. */
+      /** Required. EventTag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** EventTag ID.
+      /** Required. EventTag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** EventTag ID. */
+      /** Required. EventTag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -17404,7 +17810,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.EventTag> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/eventTags";
+      private static final String REST_PATH = "userprofiles/{+profileId}/eventTags";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing event tag.
@@ -17809,7 +18218,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 10] [minimum: 0] [maximum: 10]
+      /** Maximum number of results to return. [default: 10]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -17933,7 +18342,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing floodlight activity.
@@ -18067,7 +18482,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Generatetag extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivitiesGenerateTagResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/generatetag";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities/generatetag";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Generates a tag for a floodlight activity.
@@ -18200,7 +18618,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one floodlight activity by ID.
@@ -18344,7 +18768,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new floodlight activity.
@@ -18461,7 +18888,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivitiesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of floodlight activities, possibly filtered. This method supports paging.
@@ -18703,7 +19133,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -18820,7 +19250,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing floodlight activity. This method supports patch semantics.
+     * Updates an existing event tag. This method supports patch semantics.
      *
      * Create a request for the method "floodlightActivities.patch".
      *
@@ -18828,7 +19258,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id FloodlightActivity ID.
+     * @param id Required. EventTag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
      * @return the request
      */
@@ -18840,10 +19270,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing floodlight activity. This method supports patch semantics.
+       * Updates an existing event tag. This method supports patch semantics.
        *
        * Create a request for the method "floodlightActivities.patch".
        *
@@ -18854,7 +19287,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id FloodlightActivity ID.
+       * @param id Required. EventTag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivity}
        * @since 1.13
        */
@@ -18935,17 +19368,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** FloodlightActivity ID. */
+      /** Required. EventTag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** FloodlightActivity ID.
+      /** Required. EventTag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** FloodlightActivity ID. */
+      /** Required. EventTag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -18976,7 +19409,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivity> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivities";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivities";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing floodlight activity.
@@ -19117,7 +19553,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivityGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one floodlight activity group by ID.
@@ -19261,7 +19703,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivityGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new floodlight activity group.
@@ -19378,7 +19823,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivityGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of floodlight activity groups, possibly filtered. This method supports paging.
@@ -19552,7 +20000,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -19676,7 +20124,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing floodlight activity group. This method supports patch semantics.
+     * Updates an existing event tag. This method supports patch semantics.
      *
      * Create a request for the method "floodlightActivityGroups.patch".
      *
@@ -19684,7 +20132,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id FloodlightActivityGroup ID.
+     * @param id Required. EventTag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
      * @return the request
      */
@@ -19696,10 +20144,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivityGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing floodlight activity group. This method supports patch semantics.
+       * Updates an existing event tag. This method supports patch semantics.
        *
        * Create a request for the method "floodlightActivityGroups.patch".
        *
@@ -19710,7 +20161,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id FloodlightActivityGroup ID.
+       * @param id Required. EventTag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightActivityGroup}
        * @since 1.13
        */
@@ -19791,17 +20242,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** FloodlightActivityGroup ID. */
+      /** Required. EventTag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** FloodlightActivityGroup ID.
+      /** Required. EventTag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** FloodlightActivityGroup ID. */
+      /** Required. EventTag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -19832,7 +20283,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightActivityGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightActivityGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightActivityGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing floodlight activity group.
@@ -19973,7 +20427,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightConfigurations/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one floodlight configuration by ID.
@@ -20116,7 +20576,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfigurationsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightConfigurations";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of floodlight configurations, possibly filtered.
@@ -20246,7 +20709,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing floodlight configuration. This method supports patch semantics.
+     * Updates an existing event tag. This method supports patch semantics.
      *
      * Create a request for the method "floodlightConfigurations.patch".
      *
@@ -20254,7 +20717,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id FloodlightConfiguration ID.
+     * @param id Required. EventTag ID.
      * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
      * @return the request
      */
@@ -20266,10 +20729,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightConfigurations";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing floodlight configuration. This method supports patch semantics.
+       * Updates an existing event tag. This method supports patch semantics.
        *
        * Create a request for the method "floodlightConfigurations.patch".
        *
@@ -20280,7 +20746,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id FloodlightConfiguration ID.
+       * @param id Required. EventTag ID.
        * @param content the {@link com.google.api.services.dfareporting.model.FloodlightConfiguration}
        * @since 1.13
        */
@@ -20361,17 +20827,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** FloodlightConfiguration ID. */
+      /** Required. EventTag ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** FloodlightConfiguration ID.
+      /** Required. EventTag ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** FloodlightConfiguration ID. */
+      /** Required. EventTag ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -20402,7 +20868,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.FloodlightConfiguration> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/floodlightConfigurations";
+      private static final String REST_PATH = "userprofiles/{+profileId}/floodlightConfigurations";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing floodlight configuration.
@@ -20544,7 +21013,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.InventoryItem> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects/{projectId}/inventoryItems/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one inventory item by ID.
@@ -20706,7 +21181,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.InventoryItemsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/inventoryItems";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects/{projectId}/inventoryItems";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of inventory items, possibly filtered. This method supports paging.
@@ -20861,7 +21339,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -21016,7 +21494,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.LanguagesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/languages";
+      private static final String REST_PATH = "userprofiles/{+profileId}/languages";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of languages.
@@ -21164,7 +21645,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MetrosListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/metros";
+      private static final String REST_PATH = "userprofiles/{+profileId}/metros";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of metros.
@@ -21313,7 +21797,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileApp> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/mobileApps/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/mobileApps/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one mobile app by ID.
@@ -21333,6 +21823,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.MobileApp.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+              "Parameter id must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -21428,6 +21923,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       /** Mobile app ID. */
       public Get setId(java.lang.String id) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ID_PATTERN.matcher(id).matches(),
+              "Parameter id must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.id = id;
         return this;
       }
@@ -21456,7 +21956,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileAppsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/mobileApps";
+      private static final String REST_PATH = "userprofiles/{+profileId}/mobileApps";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves list of available mobile apps.
@@ -21593,7 +22096,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -21700,7 +22203,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileCarrier> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/mobileCarriers/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/mobileCarriers/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one mobile carrier by ID.
@@ -21843,7 +22352,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.MobileCarriersListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/mobileCarriers";
+      private static final String REST_PATH = "userprofiles/{+profileId}/mobileCarriers";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of mobile carriers.
@@ -21992,7 +22504,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemVersion> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystemVersions/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/operatingSystemVersions/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one operating system version by ID.
@@ -22135,7 +22653,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemVersionsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystemVersions";
+      private static final String REST_PATH = "userprofiles/{+profileId}/operatingSystemVersions";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of operating system versions.
@@ -22284,7 +22805,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystem> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystems/{dartId}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/operatingSystems/{+dartId}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DART_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one operating system by DART ID.
@@ -22427,7 +22954,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OperatingSystemsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/operatingSystems";
+      private static final String REST_PATH = "userprofiles/{+profileId}/operatingSystems";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of operating systems.
@@ -22537,499 +23067,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   }
 
   /**
-   * An accessor for creating requests from the OrderDocuments collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
-   *   {@code Dfareporting.OrderDocuments.List request = dfareporting.orderDocuments().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public OrderDocuments orderDocuments() {
-    return new OrderDocuments();
-  }
-
-  /**
-   * The "orderDocuments" collection of methods.
-   */
-  public class OrderDocuments {
-
-    /**
-     * Gets one order document by ID.
-     *
-     * Create a request for the method "orderDocuments.get".
-     *
-     * This request holds the parameters needed by the dfareporting server.  After setting any optional
-     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param profileId User profile ID associated with this request.
-     * @param projectId Project ID for order documents.
-     * @param id Order document ID.
-     * @return the request
-     */
-    public Get get(java.lang.Long profileId, java.lang.Long projectId, java.lang.Long id) throws java.io.IOException {
-      Get result = new Get(profileId, projectId, id);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.OrderDocument> {
-
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}";
-
-      /**
-       * Gets one order document by ID.
-       *
-       * Create a request for the method "orderDocuments.get".
-       *
-       * This request holds the parameters needed by the the dfareporting server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param profileId User profile ID associated with this request.
-       * @param projectId Project ID for order documents.
-       * @param id Order document ID.
-       * @since 1.13
-       */
-      protected Get(java.lang.Long profileId, java.lang.Long projectId, java.lang.Long id) {
-        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.OrderDocument.class);
-        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
-        this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get set$Xgafv(java.lang.String $Xgafv) {
-        return (Get) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setCallback(java.lang.String callback) {
-        return (Get) super.setCallback(callback);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUploadType(java.lang.String uploadType) {
-        return (Get) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Get setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Get) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** User profile ID associated with this request. */
-      @com.google.api.client.util.Key
-      private java.lang.Long profileId;
-
-      /** User profile ID associated with this request.
-       */
-      public java.lang.Long getProfileId() {
-        return profileId;
-      }
-
-      /** User profile ID associated with this request. */
-      public Get setProfileId(java.lang.Long profileId) {
-        this.profileId = profileId;
-        return this;
-      }
-
-      /** Project ID for order documents. */
-      @com.google.api.client.util.Key
-      private java.lang.Long projectId;
-
-      /** Project ID for order documents.
-       */
-      public java.lang.Long getProjectId() {
-        return projectId;
-      }
-
-      /** Project ID for order documents. */
-      public Get setProjectId(java.lang.Long projectId) {
-        this.projectId = projectId;
-        return this;
-      }
-
-      /** Order document ID. */
-      @com.google.api.client.util.Key
-      private java.lang.Long id;
-
-      /** Order document ID.
-       */
-      public java.lang.Long getId() {
-        return id;
-      }
-
-      /** Order document ID. */
-      public Get setId(java.lang.Long id) {
-        this.id = id;
-        return this;
-      }
-
-      @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Retrieves a list of order documents, possibly filtered. This method supports paging.
-     *
-     * Create a request for the method "orderDocuments.list".
-     *
-     * This request holds the parameters needed by the dfareporting server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @param profileId User profile ID associated with this request.
-     * @param projectId Project ID for order documents.
-     * @return the request
-     */
-    public List list(java.lang.Long profileId, java.lang.Long projectId) throws java.io.IOException {
-      List result = new List(profileId, projectId);
-      initialize(result);
-      return result;
-    }
-
-    public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OrderDocumentsListResponse> {
-
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orderDocuments";
-
-      /**
-       * Retrieves a list of order documents, possibly filtered. This method supports paging.
-       *
-       * Create a request for the method "orderDocuments.list".
-       *
-       * This request holds the parameters needed by the the dfareporting server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param profileId User profile ID associated with this request.
-       * @param projectId Project ID for order documents.
-       * @since 1.13
-       */
-      protected List(java.lang.Long profileId, java.lang.Long projectId) {
-        super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.OrderDocumentsListResponse.class);
-        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** User profile ID associated with this request. */
-      @com.google.api.client.util.Key
-      private java.lang.Long profileId;
-
-      /** User profile ID associated with this request.
-       */
-      public java.lang.Long getProfileId() {
-        return profileId;
-      }
-
-      /** User profile ID associated with this request. */
-      public List setProfileId(java.lang.Long profileId) {
-        this.profileId = profileId;
-        return this;
-      }
-
-      /** Project ID for order documents. */
-      @com.google.api.client.util.Key
-      private java.lang.Long projectId;
-
-      /** Project ID for order documents.
-       */
-      public java.lang.Long getProjectId() {
-        return projectId;
-      }
-
-      /** Project ID for order documents. */
-      public List setProjectId(java.lang.Long projectId) {
-        this.projectId = projectId;
-        return this;
-      }
-
-      /** Select only order documents that have been approved by at least one user. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean approved;
-
-      /** Select only order documents that have been approved by at least one user.
-       */
-      public java.lang.Boolean getApproved() {
-        return approved;
-      }
-
-      /** Select only order documents that have been approved by at least one user. */
-      public List setApproved(java.lang.Boolean approved) {
-        this.approved = approved;
-        return this;
-      }
-
-      /** Select only order documents with these IDs. */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.Long> ids;
-
-      /** Select only order documents with these IDs.
-       */
-      public java.util.List<java.lang.Long> getIds() {
-        return ids;
-      }
-
-      /** Select only order documents with these IDs. */
-      public List setIds(java.util.List<java.lang.Long> ids) {
-        this.ids = ids;
-        return this;
-      }
-
-      /** Maximum number of results to return. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /** Maximum number of results to return. */
-      public List setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-      }
-
-      /** Select only order documents for specified orders. */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.Long> orderId;
-
-      /** Select only order documents for specified orders.
-       */
-      public java.util.List<java.lang.Long> getOrderId() {
-        return orderId;
-      }
-
-      /** Select only order documents for specified orders. */
-      public List setOrderId(java.util.List<java.lang.Long> orderId) {
-        this.orderId = orderId;
-        return this;
-      }
-
-      /** Value of the nextPageToken from the previous result page. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Value of the nextPageToken from the previous result page.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** Value of the nextPageToken from the previous result page. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Allows searching for order documents by name or ID. Wildcards (*) are allowed. For example,
-       * "orderdocument*2015" will return order documents with names like "orderdocument June 2015",
-       * "orderdocument April 2015", or simply "orderdocument 2015". Most of the searches also add
-       * wildcards implicitly at the start and the end of the search string. For example, a search
-       * string of "orderdocument" will match order documents with name "my orderdocument",
-       * "orderdocument 2015", or simply "orderdocument".
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String searchString;
-
-      /** Allows searching for order documents by name or ID. Wildcards (*) are allowed. For example,
-     "orderdocument*2015" will return order documents with names like "orderdocument June 2015",
-     "orderdocument April 2015", or simply "orderdocument 2015". Most of the searches also add wildcards
-     implicitly at the start and the end of the search string. For example, a search string of
-     "orderdocument" will match order documents with name "my orderdocument", "orderdocument 2015", or
-     simply "orderdocument".
-       */
-      public java.lang.String getSearchString() {
-        return searchString;
-      }
-
-      /**
-       * Allows searching for order documents by name or ID. Wildcards (*) are allowed. For example,
-       * "orderdocument*2015" will return order documents with names like "orderdocument June 2015",
-       * "orderdocument April 2015", or simply "orderdocument 2015". Most of the searches also add
-       * wildcards implicitly at the start and the end of the search string. For example, a search
-       * string of "orderdocument" will match order documents with name "my orderdocument",
-       * "orderdocument 2015", or simply "orderdocument".
-       */
-      public List setSearchString(java.lang.String searchString) {
-        this.searchString = searchString;
-        return this;
-      }
-
-      /** Select only order documents that are associated with these sites. */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.Long> siteId;
-
-      /** Select only order documents that are associated with these sites.
-       */
-      public java.util.List<java.lang.Long> getSiteId() {
-        return siteId;
-      }
-
-      /** Select only order documents that are associated with these sites. */
-      public List setSiteId(java.util.List<java.lang.Long> siteId) {
-        this.siteId = siteId;
-        return this;
-      }
-
-      /** Field by which to sort the list. */
-      @com.google.api.client.util.Key
-      private java.lang.String sortField;
-
-      /** Field by which to sort the list. [default: ID]
-       */
-      public java.lang.String getSortField() {
-        return sortField;
-      }
-
-      /** Field by which to sort the list. */
-      public List setSortField(java.lang.String sortField) {
-        this.sortField = sortField;
-        return this;
-      }
-
-      /** Order of sorted results. */
-      @com.google.api.client.util.Key
-      private java.lang.String sortOrder;
-
-      /** Order of sorted results. [default: ASCENDING]
-       */
-      public java.lang.String getSortOrder() {
-        return sortOrder;
-      }
-
-      /** Order of sorted results. */
-      public List setSortOrder(java.lang.String sortOrder) {
-        this.sortOrder = sortOrder;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Orders collection.
    *
    * <p>The typical use is:</p>
@@ -23070,7 +23107,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Order> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orders/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects/{projectId}/orders/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one order by ID.
@@ -23232,7 +23275,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.OrdersListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{projectId}/orders";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects/{projectId}/orders";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of orders, possibly filtered. This method supports paging.
@@ -23371,7 +23417,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -23527,7 +23573,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one placement group by ID.
@@ -23671,7 +23723,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new placement group.
@@ -23788,7 +23843,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of placement groups, possibly filtered. This method supports paging.
@@ -24012,7 +24070,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 800] [minimum: 0] [maximum: 800]
+      /** Maximum number of results to return. [default: 800]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -24270,7 +24328,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id PlacementGroup ID.
+     * @param id Required. Placement ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
      * @return the request
      */
@@ -24282,7 +24340,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement group. This method supports patch semantics.
@@ -24296,7 +24357,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id PlacementGroup ID.
+       * @param id Required. Placement ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementGroup}
        * @since 1.13
        */
@@ -24377,17 +24438,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** PlacementGroup ID. */
+      /** Required. Placement ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** PlacementGroup ID.
+      /** Required. Placement ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** PlacementGroup ID. */
+      /** Required. Placement ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -24418,7 +24479,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement group.
@@ -24559,7 +24623,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing placement strategy.
@@ -24694,7 +24764,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one placement strategy by ID.
@@ -24838,7 +24914,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new placement strategy.
@@ -24955,7 +25034,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategiesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of placement strategies, possibly filtered. This method supports paging.
@@ -25076,7 +25158,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -25185,7 +25267,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id PlacementStrategy ID.
+     * @param id Required. PlacementStrategy ID.
      * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
      * @return the request
      */
@@ -25197,7 +25279,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement strategy. This method supports patch semantics.
@@ -25211,7 +25296,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id PlacementStrategy ID.
+       * @param id Required. PlacementStrategy ID.
        * @param content the {@link com.google.api.services.dfareporting.model.PlacementStrategy}
        * @since 1.13
        */
@@ -25292,17 +25377,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** PlacementStrategy ID. */
+      /** Required. PlacementStrategy ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** PlacementStrategy ID.
+      /** Required. PlacementStrategy ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** PlacementStrategy ID. */
+      /** Required. PlacementStrategy ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -25333,7 +25418,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementStrategy> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placementStrategies";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placementStrategies";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement strategy.
@@ -25473,7 +25561,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Generatetags extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementsGenerateTagsResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements/generatetags";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements/generatetags";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Generates tags for a placement.
@@ -25645,7 +25736,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one placement by ID.
@@ -25789,7 +25886,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new placement.
@@ -25906,7 +26006,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlacementsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of placements, possibly filtered. This method supports paging.
@@ -26177,7 +26280,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -26432,7 +26535,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Placement ID.
+     * @param id Required. Placement ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Placement}
      * @return the request
      */
@@ -26444,7 +26547,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement. This method supports patch semantics.
@@ -26458,7 +26564,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Placement ID.
+       * @param id Required. Placement ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Placement}
        * @since 1.13
        */
@@ -26539,17 +26645,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Placement ID. */
+      /** Required. Placement ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Placement ID.
+      /** Required. Placement ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Placement ID. */
+      /** Required. Placement ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -26580,7 +26686,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Placement> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/placements";
+      private static final String REST_PATH = "userprofiles/{+profileId}/placements";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing placement.
@@ -26721,7 +26830,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PlatformType> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/platformTypes/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/platformTypes/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one platform type by ID.
@@ -26864,7 +26979,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PlatformTypesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/platformTypes";
+      private static final String REST_PATH = "userprofiles/{+profileId}/platformTypes";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of platform types.
@@ -27013,7 +27131,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.PostalCode> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/postalCodes/{code}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/postalCodes/{+code}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern CODE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one postal code by ID.
@@ -27033,6 +27157,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         super(Dfareporting.this, "GET", REST_PATH, null, com.google.api.services.dfareporting.model.PostalCode.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.code = com.google.api.client.util.Preconditions.checkNotNull(code, "Required parameter code must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CODE_PATTERN.matcher(code).matches(),
+              "Parameter code must conform to the pattern " +
+              "^[^/]+$");
+        }
       }
 
       @Override
@@ -27128,6 +27257,11 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
       /** Postal code ID. */
       public Get setCode(java.lang.String code) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CODE_PATTERN.matcher(code).matches(),
+              "Parameter code must conform to the pattern " +
+              "^[^/]+$");
+        }
         this.code = code;
         return this;
       }
@@ -27156,7 +27290,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.PostalCodesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/postalCodes";
+      private static final String REST_PATH = "userprofiles/{+profileId}/postalCodes";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of postal codes.
@@ -27305,7 +27442,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Project> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one project by ID.
@@ -27448,7 +27591,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.ProjectsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/projects";
+      private static final String REST_PATH = "userprofiles/{+profileId}/projects";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of projects, possibly filtered. This method supports paging .
@@ -27585,7 +27731,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -27724,7 +27870,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.RegionsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/regions";
+      private static final String REST_PATH = "userprofiles/{+profileId}/regions";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of regions.
@@ -27873,7 +28022,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares/{remarketingListId}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingListShares/{+remarketingListId}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern REMARKETING_LIST_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one remarketing list share by remarketing list ID.
@@ -27998,7 +28153,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing remarketing list share. This method supports patch semantics.
+     * Updates an existing RemarketingListShare. This method supports patch semantics.
      *
      * Create a request for the method "remarketingListShares.patch".
      *
@@ -28006,7 +28161,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id RemarketingList ID.
+     * @param id Required. RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
      * @return the request
      */
@@ -28018,10 +28173,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingListShares";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing remarketing list share. This method supports patch semantics.
+       * Updates an existing RemarketingListShare. This method supports patch semantics.
        *
        * Create a request for the method "remarketingListShares.patch".
        *
@@ -28032,7 +28190,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id RemarketingList ID.
+       * @param id Required. RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingListShare}
        * @since 1.13
        */
@@ -28113,17 +28271,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** RemarketingList ID. */
+      /** Required. RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** RemarketingList ID.
+      /** Required. RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** RemarketingList ID. */
+      /** Required. RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -28154,7 +28312,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListShare> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingListShares";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingListShares";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing remarketing list share.
@@ -28295,7 +28456,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingLists/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one remarketing list by ID.
@@ -28439,7 +28606,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingLists";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new remarketing list.
@@ -28546,7 +28716,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param advertiserId Select only remarketing lists owned by this advertiser.
+     * @param advertiserId Required. Select only remarketing lists owned by this advertiser.
      * @return the request
      */
     public List list(java.lang.Long profileId, java.lang.Long advertiserId) throws java.io.IOException {
@@ -28557,7 +28727,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingListsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingLists";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of remarketing lists, possibly filtered. This method supports paging.
@@ -28570,7 +28743,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param advertiserId Select only remarketing lists owned by this advertiser.
+       * @param advertiserId Required. Select only remarketing lists owned by this advertiser.
        * @since 1.13
        */
       protected List(java.lang.Long profileId, java.lang.Long advertiserId) {
@@ -28660,17 +28833,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Select only remarketing lists owned by this advertiser. */
+      /** Required. Select only remarketing lists owned by this advertiser. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** Select only remarketing lists owned by this advertiser.
+      /** Required. Select only remarketing lists owned by this advertiser.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
-      /** Select only remarketing lists owned by this advertiser. */
+      /** Required. Select only remarketing lists owned by this advertiser. */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -28712,7 +28885,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -28813,7 +28986,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing remarketing list. This method supports patch semantics.
+     * Updates an existing RemarketingList. This method supports patch semantics.
      *
      * Create a request for the method "remarketingLists.patch".
      *
@@ -28821,7 +28994,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id RemarketingList ID.
+     * @param id Required. RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
      * @return the request
      */
@@ -28833,10 +29006,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingLists";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing remarketing list. This method supports patch semantics.
+       * Updates an existing RemarketingList. This method supports patch semantics.
        *
        * Create a request for the method "remarketingLists.patch".
        *
@@ -28847,7 +29023,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id RemarketingList ID.
+       * @param id Required. RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.RemarketingList}
        * @since 1.13
        */
@@ -28928,17 +29104,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** RemarketingList ID. */
+      /** Required. RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** RemarketingList ID.
+      /** Required. RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** RemarketingList ID. */
+      /** Required. RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -28969,7 +29145,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.RemarketingList> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/remarketingLists";
+      private static final String REST_PATH = "userprofiles/{+profileId}/remarketingLists";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing remarketing list.
@@ -29409,10 +29588,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       protected Insert(java.lang.Long profileId, com.google.api.services.dfareporting.model.Report content) {
         super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.Report.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "Report.getName()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getType(), "Report.getType()");
       }
 
       @Override
@@ -29615,7 +29790,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 10] [minimum: 0] [maximum: 10]
+      /** Maximum number of results to return. [default: 10]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -30053,18 +30228,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         super(Dfareporting.this, "PUT", REST_PATH, content, com.google.api.services.dfareporting.model.Report.class);
         this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
         this.reportId = com.google.api.client.util.Preconditions.checkNotNull(reportId, "Required parameter reportId must be specified.");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getAccountId(), "Report.getAccountId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getId(), "Report.getId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getLastModifiedTime(), "Report.getLastModifiedTime()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getName(), "Report.getName()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getOwnerProfileId(), "Report.getOwnerProfileId()");
-        checkRequiredParameter(content, "content");
-        checkRequiredParameter(content.getType(), "Report.getType()");
       }
 
       @Override
@@ -30644,7 +30807,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.Integer maxResults;
 
-        /** Maximum number of results to return. [default: 10] [minimum: 0] [maximum: 10]
+        /** Maximum number of results to return. [default: 10]
          */
         public java.lang.Integer getMaxResults() {
           return maxResults;
@@ -30753,7 +30916,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sites/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sites/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one site by ID.
@@ -30897,7 +31066,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new site.
@@ -31014,7 +31186,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SitesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of sites, possibly filtered. This method supports paging.
@@ -31255,7 +31430,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -31393,7 +31568,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Site ID.
+     * @param id Required. Site ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Site}
      * @return the request
      */
@@ -31405,7 +31580,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing site. This method supports patch semantics.
@@ -31419,7 +31597,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Site ID.
+       * @param id Required. Site ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Site}
        * @since 1.13
        */
@@ -31500,17 +31678,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Site ID. */
+      /** Required. Site ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Site ID.
+      /** Required. Site ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Site ID. */
+      /** Required. Site ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -31541,7 +31719,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Site> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sites";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sites";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing site.
@@ -31682,7 +31863,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Size> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sizes/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sizes/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one size by ID.
@@ -31826,7 +32013,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Size> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sizes";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sizes";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new size.
@@ -31945,7 +32135,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SizesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/sizes";
+      private static final String REST_PATH = "userprofiles/{+profileId}/sizes";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may
@@ -32053,8 +32246,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private java.lang.Integer height;
 
       /** Select only sizes with this height.
-
-     [minimum: 0] [maximum: 32767]
        */
       public java.lang.Integer getHeight() {
         return height;
@@ -32103,8 +32294,6 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private java.lang.Integer width;
 
       /** Select only sizes with this width.
-
-     [minimum: 0] [maximum: 32767]
        */
       public java.lang.Integer getWidth() {
         return width;
@@ -32164,7 +32353,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/subaccounts/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one subaccount by ID.
@@ -32308,7 +32503,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/subaccounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new subaccount.
@@ -32425,7 +32623,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.SubaccountsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/subaccounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets a list of subaccounts, possibly filtered. This method supports paging.
@@ -32546,7 +32747,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -32654,7 +32855,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id Subaccount ID.
+     * @param id Required. Subaccount ID.
      * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
      * @return the request
      */
@@ -32666,7 +32867,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/subaccounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing subaccount. This method supports patch semantics.
@@ -32680,7 +32884,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id Subaccount ID.
+       * @param id Required. Subaccount ID.
        * @param content the {@link com.google.api.services.dfareporting.model.Subaccount}
        * @since 1.13
        */
@@ -32761,17 +32965,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Subaccount ID. */
+      /** Required. Subaccount ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** Subaccount ID.
+      /** Required. Subaccount ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** Subaccount ID. */
+      /** Required. Subaccount ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -32802,7 +33006,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.Subaccount> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/subaccounts";
+      private static final String REST_PATH = "userprofiles/{+profileId}/subaccounts";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing subaccount.
@@ -32943,7 +33150,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetableRemarketingList> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetableRemarketingLists/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetableRemarketingLists/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one remarketing list by ID.
@@ -33076,7 +33289,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param advertiserId Select only targetable remarketing lists targetable by these advertisers.
+     * @param advertiserId Required. Select only targetable remarketing lists targetable by these advertisers.
      * @return the request
      */
     public List list(java.lang.Long profileId, java.lang.Long advertiserId) throws java.io.IOException {
@@ -33087,7 +33300,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetableRemarketingListsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetableRemarketingLists";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetableRemarketingLists";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of targetable remarketing lists, possibly filtered. This method supports
@@ -33101,7 +33317,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param advertiserId Select only targetable remarketing lists targetable by these advertisers.
+       * @param advertiserId Required. Select only targetable remarketing lists targetable by these advertisers.
        * @since 1.13
        */
       protected List(java.lang.Long profileId, java.lang.Long advertiserId) {
@@ -33191,17 +33407,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Select only targetable remarketing lists targetable by these advertisers. */
+      /** Required. Select only targetable remarketing lists targetable by these advertisers. */
       @com.google.api.client.util.Key
       private java.lang.Long advertiserId;
 
-      /** Select only targetable remarketing lists targetable by these advertisers.
+      /** Required. Select only targetable remarketing lists targetable by these advertisers.
        */
       public java.lang.Long getAdvertiserId() {
         return advertiserId;
       }
 
-      /** Select only targetable remarketing lists targetable by these advertisers. */
+      /** Required. Select only targetable remarketing lists targetable by these advertisers. */
       public List setAdvertiserId(java.lang.Long advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -33227,7 +33443,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -33370,7 +33586,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetingTemplates/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one targeting template by ID.
@@ -33514,7 +33736,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetingTemplates";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new targeting template.
@@ -33631,7 +33856,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplatesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetingTemplates";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of targeting templates, optionally filtered. This method supports paging.
@@ -33768,7 +33996,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -33874,7 +34102,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id TargetingTemplate ID.
+     * @param id Required. RemarketingList ID.
      * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
      * @return the request
      */
@@ -33886,7 +34114,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetingTemplates";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing targeting template. This method supports patch semantics.
@@ -33900,7 +34131,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id TargetingTemplate ID.
+       * @param id Required. RemarketingList ID.
        * @param content the {@link com.google.api.services.dfareporting.model.TargetingTemplate}
        * @since 1.13
        */
@@ -33981,17 +34212,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** TargetingTemplate ID. */
+      /** Required. RemarketingList ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** TargetingTemplate ID.
+      /** Required. RemarketingList ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** TargetingTemplate ID. */
+      /** Required. RemarketingList ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -34022,7 +34253,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.TargetingTemplate> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/targetingTemplates";
+      private static final String REST_PATH = "userprofiles/{+profileId}/targetingTemplates";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing targeting template.
@@ -34417,7 +34651,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionGroup> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissionGroups/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRolePermissionGroups/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one user role permission group by ID.
@@ -34560,7 +34800,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionGroupsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissionGroups";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRolePermissionGroups";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets a list of all supported user role permission groups.
@@ -34709,7 +34952,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermission> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissions/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRolePermissions/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one user role permission by ID.
@@ -34852,7 +35101,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolePermissionsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRolePermissions";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRolePermissions";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets a list of user role permissions, possibly filtered.
@@ -35017,7 +35269,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Delete extends DfareportingRequest<Void> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Deletes an existing user role.
@@ -35152,7 +35410,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one user role by ID.
@@ -35296,7 +35560,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Insert extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Inserts a new user role.
@@ -35413,7 +35680,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRolesListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Retrieves a list of user roles, possibly filtered. This method supports paging.
@@ -35550,7 +35820,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 1000] [minimum: 0] [maximum: 1000]
+      /** Maximum number of results to return. [default: 1000]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -35672,7 +35942,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param profileId User profile ID associated with this request.
-     * @param id UserRole ID.
+     * @param id Required. UserRole ID.
      * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
      * @return the request
      */
@@ -35684,7 +35954,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Patch extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing user role. This method supports patch semantics.
@@ -35698,7 +35971,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param profileId User profile ID associated with this request.
-       * @param id UserRole ID.
+       * @param id Required. UserRole ID.
        * @param content the {@link com.google.api.services.dfareporting.model.UserRole}
        * @since 1.13
        */
@@ -35779,17 +36052,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** UserRole ID. */
+      /** Required. UserRole ID. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
-      /** UserRole ID.
+      /** Required. UserRole ID.
        */
       public java.lang.Long getId() {
         return id;
       }
 
-      /** UserRole ID. */
+      /** Required. UserRole ID. */
       public Patch setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -35820,7 +36093,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Update extends DfareportingRequest<com.google.api.services.dfareporting.model.UserRole> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/userRoles";
+      private static final String REST_PATH = "userprofiles/{+profileId}/userRoles";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Updates an existing user role.
@@ -35961,7 +36237,13 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class Get extends DfareportingRequest<com.google.api.services.dfareporting.model.VideoFormat> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/videoFormats/{id}";
+      private static final String REST_PATH = "userprofiles/{+profileId}/videoFormats/{+id}";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Gets one video format by ID.
@@ -36104,7 +36386,10 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
 
     public class List extends DfareportingRequest<com.google.api.services.dfareporting.model.VideoFormatsListResponse> {
 
-      private static final String REST_PATH = "userprofiles/{profileId}/videoFormats";
+      private static final String REST_PATH = "userprofiles/{+profileId}/videoFormats";
+
+      private final java.util.regex.Pattern PROFILE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
        * Lists available video formats.

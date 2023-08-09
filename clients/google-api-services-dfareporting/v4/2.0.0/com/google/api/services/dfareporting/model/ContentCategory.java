@@ -17,7 +17,7 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Organizes placements according to the contents of their associated webpages.
+ * Model definition for ContentCategory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation

@@ -17,7 +17,9 @@
 package com.google.api.services.batch.v1.model;
 
 /**
- * Either an InstancePolicy or an instance template.
+ * InstancePolicyOrTemplate lets you define the type of resources to use for this job either with an
+ * InstancePolicy or an instance template. If undefined, Batch picks the type of VM to use and
+ * doesn't include optional VM resources such as GPUs and extra disks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Batch API. For a detailed explanation see:
@@ -32,7 +34,11 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   /**
    * Set this field true if users want Batch to help fetch drivers from a third party location and
    * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
-   * Default is false.
+   * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
+   * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
+   * notes. For non Container-Optimized Image cases, following
+   * https://github.com/GoogleCloudPlatform/compute-gpu-
+   * installation/blob/main/linux/install_gpu_driver.py.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +62,11 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   /**
    * Set this field true if users want Batch to help fetch drivers from a third party location and
    * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
-   * Default is false.
+   * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
+   * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
+   * notes. For non Container-Optimized Image cases, following
+   * https://github.com/GoogleCloudPlatform/compute-gpu-
+   * installation/blob/main/linux/install_gpu_driver.py.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInstallGpuDrivers() {
@@ -66,7 +76,11 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   /**
    * Set this field true if users want Batch to help fetch drivers from a third party location and
    * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
-   * Default is false.
+   * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
+   * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
+   * notes. For non Container-Optimized Image cases, following
+   * https://github.com/GoogleCloudPlatform/compute-gpu-
+   * installation/blob/main/linux/install_gpu_driver.py.
    * @param installGpuDrivers installGpuDrivers or {@code null} for none
    */
   public InstancePolicyOrTemplate setInstallGpuDrivers(java.lang.Boolean installGpuDrivers) {

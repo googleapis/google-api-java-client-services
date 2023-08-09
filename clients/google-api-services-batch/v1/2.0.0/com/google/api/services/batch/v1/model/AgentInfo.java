@@ -30,7 +30,7 @@ package com.google.api.services.batch.v1.model;
 public final class AgentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The assigned Job ID
+   * Optional. The assigned Job ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class AgentInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<AgentTaskInfo> tasks;
 
   /**
-   * The assigned Job ID
+   * Optional. The assigned Job ID
    * @return value or {@code null} for none
    */
   public java.lang.String getJobId() {
@@ -73,7 +73,7 @@ public final class AgentInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The assigned Job ID
+   * Optional. The assigned Job ID
    * @param jobId jobId or {@code null} for none
    */
   public AgentInfo setJobId(java.lang.String jobId) {

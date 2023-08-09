@@ -37,6 +37,16 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   private java.lang.Long count;
 
   /**
+   * Optional. The NVIDIA GPU driver version that should be installed for this type. You can define
+   * the specific driver version such as "470.103.01", following the driver version requirements in
+   * https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#minimum-driver. Batch will
+   * install the specific accelerator driver if qualified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String driverVersion;
+
+  /**
    * Deprecated: please use instances[0].install_gpu_drivers instead.
    * The value may be {@code null}.
    */
@@ -65,6 +75,29 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
    */
   public Accelerator setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Optional. The NVIDIA GPU driver version that should be installed for this type. You can define
+   * the specific driver version such as "470.103.01", following the driver version requirements in
+   * https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#minimum-driver. Batch will
+   * install the specific accelerator driver if qualified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDriverVersion() {
+    return driverVersion;
+  }
+
+  /**
+   * Optional. The NVIDIA GPU driver version that should be installed for this type. You can define
+   * the specific driver version such as "470.103.01", following the driver version requirements in
+   * https://cloud.google.com/compute/docs/gpus/install-drivers-gpu#minimum-driver. Batch will
+   * install the specific accelerator driver if qualified.
+   * @param driverVersion driverVersion or {@code null} for none
+   */
+  public Accelerator setDriverVersion(java.lang.String driverVersion) {
+    this.driverVersion = driverVersion;
     return this;
   }
 

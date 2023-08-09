@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * A response that includes the analysis of the hypothetical resource move.
+ * Response containing the analysis results for the hypothetical resource move.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,16 +31,47 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of analysis results for each asset in scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAssuredworkloadsV1beta1AssetMoveAnalysis> assetMoveAnalyses;
+
+  /**
    * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload.
+   * workload to the destination folder-based workload. This field is now deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> blockers;
 
   /**
+   * The next page token. Is empty if the last page is reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * List of analysis results for each asset in scope.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAssuredworkloadsV1beta1AssetMoveAnalysis> getAssetMoveAnalyses() {
+    return assetMoveAnalyses;
+  }
+
+  /**
+   * List of analysis results for each asset in scope.
+   * @param assetMoveAnalyses assetMoveAnalyses or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse setAssetMoveAnalyses(java.util.List<GoogleCloudAssuredworkloadsV1beta1AssetMoveAnalysis> assetMoveAnalyses) {
+    this.assetMoveAnalyses = assetMoveAnalyses;
+    return this;
+  }
+
+  /**
    * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload.
+   * workload to the destination folder-based workload. This field is now deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlockers() {
@@ -49,11 +80,28 @@ public final class GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse
 
   /**
    * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload.
+   * workload to the destination folder-based workload. This field is now deprecated.
    * @param blockers blockers or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse setBlockers(java.util.List<java.lang.String> blockers) {
     this.blockers = blockers;
+    return this;
+  }
+
+  /**
+   * The next page token. Is empty if the last page is reached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * The next page token. Is empty if the last page is reached.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 

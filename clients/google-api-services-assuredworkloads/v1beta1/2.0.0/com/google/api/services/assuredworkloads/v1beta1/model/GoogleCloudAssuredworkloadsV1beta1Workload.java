@@ -73,13 +73,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
   private java.util.List<java.lang.String> compliantButDisallowedServices;
 
   /**
-   * Output only. Controls associated with the customer workload
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls controls;
-
-  /**
    * Output only. Immutable. The Workload creation timestamp.
    * The value may be {@code null}.
    */
@@ -193,6 +186,15 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String provisionedResourcesParent;
+
+  /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean resourceMonitoringEnabled;
 
   /**
    * Input only. Resource properties that are used to customize workload resources. These properties
@@ -327,23 +329,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setCompliantButDisallowedServices(java.util.List<java.lang.String> compliantButDisallowedServices) {
     this.compliantButDisallowedServices = compliantButDisallowedServices;
-    return this;
-  }
-
-  /**
-   * Output only. Controls associated with the customer workload
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls getControls() {
-    return controls;
-  }
-
-  /**
-   * Output only. Controls associated with the customer workload
-   * @param controls controls or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1beta1Workload setControls(GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls controls) {
-    this.controls = controls;
     return this;
   }
 
@@ -619,6 +604,27 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
    */
   public GoogleCloudAssuredworkloadsV1beta1Workload setProvisionedResourcesParent(java.lang.String provisionedResourcesParent) {
     this.provisionedResourcesParent = provisionedResourcesParent;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getResourceMonitoringEnabled() {
+    return resourceMonitoringEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether resource monitoring is enabled for workload or not. It is true
+   * when Resource feed is subscribed to AWM topic and AWM Service Agent Role is binded to AW
+   * Service Account for resource Assured workload.
+   * @param resourceMonitoringEnabled resourceMonitoringEnabled or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Workload setResourceMonitoringEnabled(java.lang.Boolean resourceMonitoringEnabled) {
+    this.resourceMonitoringEnabled = resourceMonitoringEnabled;
     return this;
   }
 

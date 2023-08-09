@@ -31,6 +31,13 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Allow partner to view violation alerts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean assuredWorkloadsMonitoring;
+
+  /**
    * Allow the partner to view inspectability logs and monitoring violations.
    * The value may be {@code null}.
    */
@@ -38,11 +45,28 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
   private java.lang.Boolean dataLogsViewer;
 
   /**
-   * Allow partner to monitor folder and remediate violations
+   * Optional. Allow partner to view access approval logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean remediateFolderViolations;
+  private java.lang.Boolean serviceAccessApprover;
+
+  /**
+   * Optional. Allow partner to view violation alerts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAssuredWorkloadsMonitoring() {
+    return assuredWorkloadsMonitoring;
+  }
+
+  /**
+   * Optional. Allow partner to view violation alerts.
+   * @param assuredWorkloadsMonitoring assuredWorkloadsMonitoring or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setAssuredWorkloadsMonitoring(java.lang.Boolean assuredWorkloadsMonitoring) {
+    this.assuredWorkloadsMonitoring = assuredWorkloadsMonitoring;
+    return this;
+  }
 
   /**
    * Allow the partner to view inspectability logs and monitoring violations.
@@ -62,19 +86,19 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions exten
   }
 
   /**
-   * Allow partner to monitor folder and remediate violations
+   * Optional. Allow partner to view access approval logs.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getRemediateFolderViolations() {
-    return remediateFolderViolations;
+  public java.lang.Boolean getServiceAccessApprover() {
+    return serviceAccessApprover;
   }
 
   /**
-   * Allow partner to monitor folder and remediate violations
-   * @param remediateFolderViolations remediateFolderViolations or {@code null} for none
+   * Optional. Allow partner to view access approval logs.
+   * @param serviceAccessApprover serviceAccessApprover or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setRemediateFolderViolations(java.lang.Boolean remediateFolderViolations) {
-    this.remediateFolderViolations = remediateFolderViolations;
+  public GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions setServiceAccessApprover(java.lang.Boolean serviceAccessApprover) {
+    this.serviceAccessApprover = serviceAccessApprover;
     return this;
   }
 

@@ -878,6 +878,145 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * Enable resource violation monitoring for a workload.
+         *
+         * Create a request for the method "workloads.enableResourceMonitoring".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link EnableResourceMonitoring#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+         * @return the request
+         */
+        public EnableResourceMonitoring enableResourceMonitoring(java.lang.String name) throws java.io.IOException {
+          EnableResourceMonitoring result = new EnableResourceMonitoring(name);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableResourceMonitoring extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1EnableResourceMonitoringResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:enableResourceMonitoring";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * Enable resource violation monitoring for a workload.
+           *
+           * Create a request for the method "workloads.enableResourceMonitoring".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link EnableResourceMonitoring#execute()} method to invoke the
+           * remote operation. <p> {@link EnableResourceMonitoring#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @since 1.13
+           */
+          protected EnableResourceMonitoring(java.lang.String name) {
+            super(Assuredworkloads.this, "POST", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1EnableResourceMonitoringResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableResourceMonitoring set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableResourceMonitoring) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableResourceMonitoring setAccessToken(java.lang.String accessToken) {
+            return (EnableResourceMonitoring) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableResourceMonitoring setAlt(java.lang.String alt) {
+            return (EnableResourceMonitoring) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableResourceMonitoring setCallback(java.lang.String callback) {
+            return (EnableResourceMonitoring) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableResourceMonitoring setFields(java.lang.String fields) {
+            return (EnableResourceMonitoring) super.setFields(fields);
+          }
+
+          @Override
+          public EnableResourceMonitoring setKey(java.lang.String key) {
+            return (EnableResourceMonitoring) super.setKey(key);
+          }
+
+          @Override
+          public EnableResourceMonitoring setOauthToken(java.lang.String oauthToken) {
+            return (EnableResourceMonitoring) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableResourceMonitoring setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableResourceMonitoring) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableResourceMonitoring setQuotaUser(java.lang.String quotaUser) {
+            return (EnableResourceMonitoring) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableResourceMonitoring setUploadType(java.lang.String uploadType) {
+            return (EnableResourceMonitoring) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableResourceMonitoring setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableResourceMonitoring) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the workload. Format:
+         organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public EnableResourceMonitoring setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableResourceMonitoring set(String parameterName, Object value) {
+            return (EnableResourceMonitoring) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets Assured Workload associated with a CRM Node
          *
          * Create a request for the method "workloads.get".
@@ -1561,314 +1700,6 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * An accessor for creating requests from the ChildOrganizations collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-         *   {@code Assuredworkloads.ChildOrganizations.List request = assuredworkloads.childOrganizations().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public ChildOrganizations childOrganizations() {
-          return new ChildOrganizations();
-        }
-
-        /**
-         * The "organizations" collection of methods.
-         */
-        public class ChildOrganizations {
-
-          /**
-           * An accessor for creating requests from the ChildLocations collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-           *   {@code Assuredworkloads.ChildLocations.List request = assuredworkloads.childLocations().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public ChildLocations childLocations() {
-            return new ChildLocations();
-          }
-
-          /**
-           * The "locations" collection of methods.
-           */
-          public class ChildLocations {
-
-            /**
-             * An accessor for creating requests from the ChildWorkloads collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
-             *   {@code Assuredworkloads.ChildWorkloads.List request = assuredworkloads.childWorkloads().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public ChildWorkloads childWorkloads() {
-              return new ChildWorkloads();
-            }
-
-            /**
-             * The "workloads" collection of methods.
-             */
-            public class ChildWorkloads {
-
-              /**
-               * Analyzes a hypothetical move of a source project or project-based workload to a target
-               * (destination) folder-based workload.
-               *
-               * Create a request for the method "workloads.analyzeWorkloadMove".
-               *
-               * This request holds the parameters needed by the assuredworkloads server.  After setting any
-               * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
-               * operation.
-               *
-               * @param source The source type is a project-based workload. Specify the workloads's relative resource name,
-               *        formatted as:
-               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
-               * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
-               *        source project will hypothetically be moved to. Specify the workload's relative resource
-               *        name, formatted as:
-               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
-               * @return the request
-               */
-              public AnalyzeWorkloadMove analyzeWorkloadMove(java.lang.String source, java.lang.String target) throws java.io.IOException {
-                AnalyzeWorkloadMove result = new AnalyzeWorkloadMove(source, target);
-                initialize(result);
-                return result;
-              }
-
-              public class AnalyzeWorkloadMove extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse> {
-
-                private static final String REST_PATH = "v1beta1/{+source}/{+target}:analyzeWorkloadMove";
-
-                private final java.util.regex.Pattern SOURCE_PATTERN =
-                    java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-
-                private final java.util.regex.Pattern TARGET_PATTERN =
-                    java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-
-                /**
-                 * Analyzes a hypothetical move of a source project or project-based workload to a target
-                 * (destination) folder-based workload.
-                 *
-                 * Create a request for the method "workloads.analyzeWorkloadMove".
-                 *
-                 * This request holds the parameters needed by the the assuredworkloads server.  After setting any
-                 * optional parameters, call the {@link AnalyzeWorkloadMove#execute()} method to invoke the remote
-                 * operation. <p> {@link AnalyzeWorkloadMove#initialize(com.google.api.client.googleapis.services.
-                 * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-                 * invoking the constructor. </p>
-                 *
-                 * @param source The source type is a project-based workload. Specify the workloads's relative resource name,
-               *        formatted as:
-               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
-                 * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
-               *        source project will hypothetically be moved to. Specify the workload's relative resource
-               *        name, formatted as:
-               *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
-                 * @since 1.13
-                 */
-                protected AnalyzeWorkloadMove(java.lang.String source, java.lang.String target) {
-                  super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse.class);
-                  this.source = com.google.api.client.util.Preconditions.checkNotNull(source, "Required parameter source must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(SOURCE_PATTERN.matcher(source).matches(),
-                        "Parameter source must conform to the pattern " +
-                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-                  }
-                  this.target = com.google.api.client.util.Preconditions.checkNotNull(target, "Required parameter target must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
-                        "Parameter target must conform to the pattern " +
-                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public AnalyzeWorkloadMove set$Xgafv(java.lang.String $Xgafv) {
-                  return (AnalyzeWorkloadMove) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setAccessToken(java.lang.String accessToken) {
-                  return (AnalyzeWorkloadMove) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setAlt(java.lang.String alt) {
-                  return (AnalyzeWorkloadMove) super.setAlt(alt);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setCallback(java.lang.String callback) {
-                  return (AnalyzeWorkloadMove) super.setCallback(callback);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setFields(java.lang.String fields) {
-                  return (AnalyzeWorkloadMove) super.setFields(fields);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setKey(java.lang.String key) {
-                  return (AnalyzeWorkloadMove) super.setKey(key);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setOauthToken(java.lang.String oauthToken) {
-                  return (AnalyzeWorkloadMove) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (AnalyzeWorkloadMove) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setQuotaUser(java.lang.String quotaUser) {
-                  return (AnalyzeWorkloadMove) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setUploadType(java.lang.String uploadType) {
-                  return (AnalyzeWorkloadMove) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public AnalyzeWorkloadMove setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (AnalyzeWorkloadMove) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * The source type is a project-based workload. Specify the workloads's relative
-                 * resource name, formatted as:
-                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String source;
-
-                /** The source type is a project-based workload. Specify the workloads's relative resource name,
-               formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
-                 */
-                public java.lang.String getSource() {
-                  return source;
-                }
-
-                /**
-                 * The source type is a project-based workload. Specify the workloads's relative
-                 * resource name, formatted as:
-                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
-                 */
-                public AnalyzeWorkloadMove setSource(java.lang.String source) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(SOURCE_PATTERN.matcher(source).matches(),
-                        "Parameter source must conform to the pattern " +
-                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-                  }
-                  this.source = source;
-                  return this;
-                }
-
-                /**
-                 * Required. The resource ID of the folder-based destination workload. This workload
-                 * is where the source project will hypothetically be moved to. Specify the
-                 * workload's relative resource name, formatted as:
-                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String target;
-
-                /** Required. The resource ID of the folder-based destination workload. This workload is where the
-               source project will hypothetically be moved to. Specify the workload's relative resource name,
-               formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-               example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
-                 */
-                public java.lang.String getTarget() {
-                  return target;
-                }
-
-                /**
-                 * Required. The resource ID of the folder-based destination workload. This workload
-                 * is where the source project will hypothetically be moved to. Specify the
-                 * workload's relative resource name, formatted as:
-                 * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-                 * For example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
-                 */
-                public AnalyzeWorkloadMove setTarget(java.lang.String target) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TARGET_PATTERN.matcher(target).matches(),
-                        "Parameter target must conform to the pattern " +
-                        "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
-                  }
-                  this.target = target;
-                  return this;
-                }
-
-                /**
-                 * The source type is a project. Specify the project's relative resource name,
-                 * formatted as either a project number or a project ID: "projects/{PROJECT_NUMBER}"
-                 * or "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
-                 * project number, or "projects/my-project-123" when specifying a project ID.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String project;
-
-                /** The source type is a project. Specify the project's relative resource name, formatted as either a
-               project number or a project ID: "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}" For example:
-               "projects/951040570662" when specifying a project number, or "projects/my-project-123" when
-               specifying a project ID.
-                 */
-                public java.lang.String getProject() {
-                  return project;
-                }
-
-                /**
-                 * The source type is a project. Specify the project's relative resource name,
-                 * formatted as either a project number or a project ID: "projects/{PROJECT_NUMBER}"
-                 * or "projects/{PROJECT_ID}" For example: "projects/951040570662" when specifying a
-                 * project number, or "projects/my-project-123" when specifying a project ID.
-                 */
-                public AnalyzeWorkloadMove setProject(java.lang.String project) {
-                  this.project = project;
-                  return this;
-                }
-
-                @Override
-                public AnalyzeWorkloadMove set(String parameterName, Object value) {
-                  return (AnalyzeWorkloadMove) super.set(parameterName, value);
-                }
-              }
-
-            }
-          }
-        }
-        /**
          * An accessor for creating requests from the Violations collection.
          *
          * <p>The typical use is:</p>
@@ -2506,8 +2337,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         public class Workloads {
 
           /**
-           * Analyzes a hypothetical move of a source project or project-based workload to a target
-           * (destination) folder-based workload.
+           * Analyzes a hypothetical move of a source resource to a target(destination) folder-based workload
+           * to surface compliance risks.
            *
            * Create a request for the method "workloads.analyzeWorkloadMove".
            *
@@ -2520,7 +2351,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            *        example: "projects/951040570662" when specifying a project number, or "projects/my-
            *        project-123" when specifying a project ID.
            * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
-           *        source project will hypothetically be moved to. Specify the workload's relative resource
+           *        source resource will hypothetically be moved to. Specify the workload's relative resource
            *        name, formatted as:
            *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
            *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
@@ -2543,8 +2374,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
 
             /**
-             * Analyzes a hypothetical move of a source project or project-based workload to a target
-             * (destination) folder-based workload.
+             * Analyzes a hypothetical move of a source resource to a target(destination) folder-based
+             * workload to surface compliance risks.
              *
              * Create a request for the method "workloads.analyzeWorkloadMove".
              *
@@ -2559,7 +2390,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            *        example: "projects/951040570662" when specifying a project number, or "projects/my-
            *        project-123" when specifying a project ID.
              * @param target Required. The resource ID of the folder-based destination workload. This workload is where the
-           *        source project will hypothetically be moved to. Specify the workload's relative resource
+           *        source resource will hypothetically be moved to. Specify the workload's relative resource
            *        name, formatted as:
            *        "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
            *        example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
@@ -2682,7 +2513,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The resource ID of the folder-based destination workload. This workload is
-             * where the source project will hypothetically be moved to. Specify the workload's
+             * where the source resource will hypothetically be moved to. Specify the workload's
              * relative resource name, formatted as:
              * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
              * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
@@ -2691,7 +2522,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             private java.lang.String target;
 
             /** Required. The resource ID of the folder-based destination workload. This workload is where the
-           source project will hypothetically be moved to. Specify the workload's relative resource name,
+           source resource will hypothetically be moved to. Specify the workload's relative resource name,
            formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
            example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
              */
@@ -2701,7 +2532,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The resource ID of the folder-based destination workload. This workload is
-             * where the source project will hypothetically be moved to. Specify the workload's
+             * where the source resource will hypothetically be moved to. Specify the workload's
              * relative resource name, formatted as:
              * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
              * example: "organizations/123/locations/us-east1/workloads/assured-workload-2"
@@ -2717,17 +2548,85 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
+             * Optional. Indicates if all child assets of the source resource should also be
+             * analyzed in addition to the source.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean analyzeChildAssets;
+
+            /** Optional. Indicates if all child assets of the source resource should also be analyzed in addition
+           to the source.
+             */
+            public java.lang.Boolean getAnalyzeChildAssets() {
+              return analyzeChildAssets;
+            }
+
+            /**
+             * Optional. Indicates if all child assets of the source resource should also be
+             * analyzed in addition to the source.
+             */
+            public AnalyzeWorkloadMove setAnalyzeChildAssets(java.lang.Boolean analyzeChildAssets) {
+              this.analyzeChildAssets = analyzeChildAssets;
+              return this;
+            }
+
+            /**
+             * Optional. Page size. If a value is not specified, the default value of 10 is used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Page size. If a value is not specified, the default value of 10 is used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Page size. If a value is not specified, the default value of 10 is used.
+             */
+            public AnalyzeWorkloadMove setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The page token from the previous response. It needs to be passed in the
+             * second and following requests.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The page token from the previous response. It needs to be passed in the second and
+           following requests.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The page token from the previous response. It needs to be passed in the
+             * second and following requests.
+             */
+            public AnalyzeWorkloadMove setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
              * The source type is a project-based workload. Specify the workloads's relative
              * resource name, formatted as:
              * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This
+             * option is now deprecated.
              */
             @com.google.api.client.util.Key
             private java.lang.String source;
 
             /** The source type is a project-based workload. Specify the workloads's relative resource name,
            formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-           example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+           example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This option is now
+           deprecated.
              */
             public java.lang.String getSource() {
               return source;
@@ -2737,7 +2636,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * The source type is a project-based workload. Specify the workloads's relative
              * resource name, formatted as:
              * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1"
+             * example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This
+             * option is now deprecated.
              */
             public AnalyzeWorkloadMove setSource(java.lang.String source) {
               this.source = source;

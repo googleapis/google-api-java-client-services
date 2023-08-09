@@ -34,7 +34,31 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerMetadata ex
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String internalTenantId;
+
+  /**
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String partnerTenantId;
+
+  /**
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalTenantId() {
+    return internalTenantId;
+  }
+
+  /**
+   * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.
+   * @param internalTenantId internalTenantId or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpPartnerservicesV1alphaPartnerMetadata setInternalTenantId(java.lang.String internalTenantId) {
+    this.internalTenantId = internalTenantId;
+    return this;
+  }
 
   /**
    * Optional. UUID used by the Partner to refer to the PartnerTenant in their internal systems.

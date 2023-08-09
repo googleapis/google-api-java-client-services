@@ -8297,17 +8297,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /** Required. */
+      /**
+       * Required. Resource name for the parent of the TagValues to be listed, in the format
+       * `tagKeys/123` or `tagValues/123`.
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required.
+      /** Required. Resource name for the parent of the TagValues to be listed, in the format `tagKeys/123`
+     or `tagValues/123`.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. */
+      /**
+       * Required. Resource name for the parent of the TagValues to be listed, in the format
+       * `tagKeys/123` or `tagValues/123`.
+       */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;

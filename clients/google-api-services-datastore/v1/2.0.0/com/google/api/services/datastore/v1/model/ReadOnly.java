@@ -30,14 +30,18 @@ package com.google.api.services.datastore.v1.model;
 public final class ReadOnly extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reads entities at the given time. This may not be older than 60 seconds.
+   * Reads entities at the given time. This must be a microsecond precision timestamp within the
+   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+   * timestamp within the past 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String readTime;
 
   /**
-   * Reads entities at the given time. This may not be older than 60 seconds.
+   * Reads entities at the given time. This must be a microsecond precision timestamp within the
+   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+   * timestamp within the past 7 days.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -45,7 +49,9 @@ public final class ReadOnly extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reads entities at the given time. This may not be older than 60 seconds.
+   * Reads entities at the given time. This must be a microsecond precision timestamp within the
+   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+   * timestamp within the past 7 days.
    * @param readTime readTime or {@code null} for none
    */
   public ReadOnly setReadTime(String readTime) {

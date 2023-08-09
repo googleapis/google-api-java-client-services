@@ -32,6 +32,13 @@ package com.google.api.services.datamigration.v1.model;
 public final class DatabaseEntity extends com.google.api.client.json.GenericJson {
 
   /**
+   * Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseInstanceEntity database;
+
+  /**
    * Function.
    * The value may be {@code null}.
    */
@@ -46,11 +53,27 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   private PackageEntity databasePackage;
 
   /**
+   * Details about the entity DDL script. Multiple DDL scripts are provided for child entities such
+   * as a table entity will have one DDL for the table with additional DDLs for each index,
+   * constraint and such.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EntityDdl> entityDdl;
+
+  /**
    * The type of the database entity (table, view, index, ...).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
+
+  /**
+   * Details about the various issues found for the entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EntityIssue> issues;
 
   /**
    * Details about entity mappings. For source tree entities, this holds the draft entities which
@@ -61,6 +84,13 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<EntityMapping> mappings;
+
+  /**
+   * Materialized view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaterializedViewEntity materializedView;
 
   /**
    * The full name of the parent entity (e.g. schema name).
@@ -119,11 +149,35 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   private java.lang.String tree;
 
   /**
+   * UDT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UDTEntity udt;
+
+  /**
    * View.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViewEntity view;
+
+  /**
+   * Database.
+   * @return value or {@code null} for none
+   */
+  public DatabaseInstanceEntity getDatabase() {
+    return database;
+  }
+
+  /**
+   * Database.
+   * @param database database or {@code null} for none
+   */
+  public DatabaseEntity setDatabase(DatabaseInstanceEntity database) {
+    this.database = database;
+    return this;
+  }
 
   /**
    * Function.
@@ -160,6 +214,27 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Details about the entity DDL script. Multiple DDL scripts are provided for child entities such
+   * as a table entity will have one DDL for the table with additional DDLs for each index,
+   * constraint and such.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EntityDdl> getEntityDdl() {
+    return entityDdl;
+  }
+
+  /**
+   * Details about the entity DDL script. Multiple DDL scripts are provided for child entities such
+   * as a table entity will have one DDL for the table with additional DDLs for each index,
+   * constraint and such.
+   * @param entityDdl entityDdl or {@code null} for none
+   */
+  public DatabaseEntity setEntityDdl(java.util.List<EntityDdl> entityDdl) {
+    this.entityDdl = entityDdl;
+    return this;
+  }
+
+  /**
    * The type of the database entity (table, view, index, ...).
    * @return value or {@code null} for none
    */
@@ -173,6 +248,23 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
    */
   public DatabaseEntity setEntityType(java.lang.String entityType) {
     this.entityType = entityType;
+    return this;
+  }
+
+  /**
+   * Details about the various issues found for the entity.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EntityIssue> getIssues() {
+    return issues;
+  }
+
+  /**
+   * Details about the various issues found for the entity.
+   * @param issues issues or {@code null} for none
+   */
+  public DatabaseEntity setIssues(java.util.List<EntityIssue> issues) {
+    this.issues = issues;
     return this;
   }
 
@@ -196,6 +288,23 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
    */
   public DatabaseEntity setMappings(java.util.List<EntityMapping> mappings) {
     this.mappings = mappings;
+    return this;
+  }
+
+  /**
+   * Materialized view.
+   * @return value or {@code null} for none
+   */
+  public MaterializedViewEntity getMaterializedView() {
+    return materializedView;
+  }
+
+  /**
+   * Materialized view.
+   * @param materializedView materializedView or {@code null} for none
+   */
+  public DatabaseEntity setMaterializedView(MaterializedViewEntity materializedView) {
+    this.materializedView = materializedView;
     return this;
   }
 
@@ -332,6 +441,23 @@ public final class DatabaseEntity extends com.google.api.client.json.GenericJson
    */
   public DatabaseEntity setTree(java.lang.String tree) {
     this.tree = tree;
+    return this;
+  }
+
+  /**
+   * UDT.
+   * @return value or {@code null} for none
+   */
+  public UDTEntity getUdt() {
+    return udt;
+  }
+
+  /**
+   * UDT.
+   * @param udt udt or {@code null} for none
+   */
+  public DatabaseEntity setUdt(UDTEntity udt) {
+    this.udt = udt;
     return this;
   }
 

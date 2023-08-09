@@ -17,7 +17,9 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job.
+ * Options to configure rule type SourceSqlChange. The rule is used to alter the sql code for
+ * database entities. The rule filter field can refer to one entity. The rule scope can be:
+ * StoredProcedure, Function, Trigger, View
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +30,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
+public final class SourceSqlChange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Sql code for source (stored procedure, function, trigger or view)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.String sqlCode;
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Sql code for source (stored procedure, function, trigger or view)
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.String getSqlCode() {
+    return sqlCode;
   }
 
   /**
-   * Output only. The connection profile which was used for the seed job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Required. Sql code for source (stored procedure, function, trigger or view)
+   * @param sqlCode sqlCode or {@code null} for none
    */
-  public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public SourceSqlChange setSqlCode(java.lang.String sqlCode) {
+    this.sqlCode = sqlCode;
     return this;
   }
 
   @Override
-  public SeedJobDetails set(String fieldName, Object value) {
-    return (SeedJobDetails) super.set(fieldName, value);
+  public SourceSqlChange set(String fieldName, Object value) {
+    return (SourceSqlChange) super.set(fieldName, value);
   }
 
   @Override
-  public SeedJobDetails clone() {
-    return (SeedJobDetails) super.clone();
+  public SourceSqlChange clone() {
+    return (SourceSqlChange) super.clone();
   }
 
 }

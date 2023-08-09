@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job.
+ * Performance configuration definition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
+public final class PerformanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Initial dump parallelism level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.String dumpParallelLevel;
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Initial dump parallelism level.
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.String getDumpParallelLevel() {
+    return dumpParallelLevel;
   }
 
   /**
-   * Output only. The connection profile which was used for the seed job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Initial dump parallelism level.
+   * @param dumpParallelLevel dumpParallelLevel or {@code null} for none
    */
-  public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public PerformanceConfig setDumpParallelLevel(java.lang.String dumpParallelLevel) {
+    this.dumpParallelLevel = dumpParallelLevel;
     return this;
   }
 
   @Override
-  public SeedJobDetails set(String fieldName, Object value) {
-    return (SeedJobDetails) super.set(fieldName, value);
+  public PerformanceConfig set(String fieldName, Object value) {
+    return (PerformanceConfig) super.set(fieldName, value);
   }
 
   @Override
-  public SeedJobDetails clone() {
-    return (SeedJobDetails) super.clone();
+  public PerformanceConfig clone() {
+    return (PerformanceConfig) super.clone();
   }
 
 }

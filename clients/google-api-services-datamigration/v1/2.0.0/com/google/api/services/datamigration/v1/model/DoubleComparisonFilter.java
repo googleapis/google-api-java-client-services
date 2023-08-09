@@ -17,7 +17,8 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding an Apply background job.
+ * Filter based on relation between source value and compare value of type double in
+ * ConditionalColumnSetValue
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,64 +29,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApplyJobDetails extends com.google.api.client.json.GenericJson {
+public final class DoubleComparisonFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Required. Double compare value to be used
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.Double value;
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Required. Relation between source value and compare value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String filter;
+  private java.lang.String valueComparison;
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Required. Double compare value to be used
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.Double getValue() {
+    return value;
   }
 
   /**
-   * Output only. The connection profile which was used for the apply job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Required. Double compare value to be used
+   * @param value value or {@code null} for none
    */
-  public ApplyJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public DoubleComparisonFilter setValue(java.lang.Double value) {
+    this.value = value;
     return this;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Required. Relation between source value and compare value
    * @return value or {@code null} for none
    */
-  public java.lang.String getFilter() {
-    return filter;
+  public java.lang.String getValueComparison() {
+    return valueComparison;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
-   * @param filter filter or {@code null} for none
+   * Required. Relation between source value and compare value
+   * @param valueComparison valueComparison or {@code null} for none
    */
-  public ApplyJobDetails setFilter(java.lang.String filter) {
-    this.filter = filter;
+  public DoubleComparisonFilter setValueComparison(java.lang.String valueComparison) {
+    this.valueComparison = valueComparison;
     return this;
   }
 
   @Override
-  public ApplyJobDetails set(String fieldName, Object value) {
-    return (ApplyJobDetails) super.set(fieldName, value);
+  public DoubleComparisonFilter set(String fieldName, Object value) {
+    return (DoubleComparisonFilter) super.set(fieldName, value);
   }
 
   @Override
-  public ApplyJobDetails clone() {
-    return (ApplyJobDetails) super.clone();
+  public DoubleComparisonFilter clone() {
+    return (DoubleComparisonFilter) super.clone();
   }
 
 }

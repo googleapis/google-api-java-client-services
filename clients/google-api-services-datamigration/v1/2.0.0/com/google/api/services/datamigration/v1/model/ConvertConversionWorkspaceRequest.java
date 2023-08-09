@@ -31,7 +31,7 @@ package com.google.api.services.datamigration.v1.model;
 public final class ConvertConversionWorkspaceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies whether the conversion workspace is to be committed automatically after the
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
    * conversion.
    * The value may be {@code null}.
    */
@@ -39,15 +39,24 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   private java.lang.Boolean autoCommit;
 
   /**
-   * Filter the entities to convert. Leaving this field empty will convert all of the entities.
-   * Supports Google AIP-160 style filtering.
+   * Optional. Automatically convert the full entity path for each entity specified by the filter.
+   * For example, if the filter specifies a table, that table schema (and database if there is one)
+   * will also be converted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean convertFullPath;
+
+  /**
+   * Optional. Filter the entities to convert. Leaving this field empty will convert all of the
+   * entities. Supports Google AIP-160 style filtering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Specifies whether the conversion workspace is to be committed automatically after the
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
    * conversion.
    * @return value or {@code null} for none
    */
@@ -56,7 +65,7 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   }
 
   /**
-   * Specifies whether the conversion workspace is to be committed automatically after the
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
    * conversion.
    * @param autoCommit autoCommit or {@code null} for none
    */
@@ -66,8 +75,29 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   }
 
   /**
-   * Filter the entities to convert. Leaving this field empty will convert all of the entities.
-   * Supports Google AIP-160 style filtering.
+   * Optional. Automatically convert the full entity path for each entity specified by the filter.
+   * For example, if the filter specifies a table, that table schema (and database if there is one)
+   * will also be converted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConvertFullPath() {
+    return convertFullPath;
+  }
+
+  /**
+   * Optional. Automatically convert the full entity path for each entity specified by the filter.
+   * For example, if the filter specifies a table, that table schema (and database if there is one)
+   * will also be converted.
+   * @param convertFullPath convertFullPath or {@code null} for none
+   */
+  public ConvertConversionWorkspaceRequest setConvertFullPath(java.lang.Boolean convertFullPath) {
+    this.convertFullPath = convertFullPath;
+    return this;
+  }
+
+  /**
+   * Optional. Filter the entities to convert. Leaving this field empty will convert all of the
+   * entities. Supports Google AIP-160 style filtering.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -75,8 +105,8 @@ public final class ConvertConversionWorkspaceRequest extends com.google.api.clie
   }
 
   /**
-   * Filter the entities to convert. Leaving this field empty will convert all of the entities.
-   * Supports Google AIP-160 style filtering.
+   * Optional. Filter the entities to convert. Leaving this field empty will convert all of the
+   * entities. Supports Google AIP-160 style filtering.
    * @param filter filter or {@code null} for none
    */
   public ConvertConversionWorkspaceRequest setFilter(java.lang.String filter) {

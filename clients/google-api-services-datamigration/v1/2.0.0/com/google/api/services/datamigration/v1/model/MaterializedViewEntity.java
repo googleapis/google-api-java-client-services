@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding an Apply background job.
+ * MaterializedView's parent is a schema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApplyJobDetails extends com.google.api.client.json.GenericJson {
+public final class MaterializedViewEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Custom engine specific features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.util.Map<String, java.lang.Object> customFeatures;
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * The SQL code which creates the view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String filter;
+  private java.lang.String sqlCode;
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Custom engine specific features.
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.util.Map<String, java.lang.Object> getCustomFeatures() {
+    return customFeatures;
   }
 
   /**
-   * Output only. The connection profile which was used for the apply job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Custom engine specific features.
+   * @param customFeatures customFeatures or {@code null} for none
    */
-  public ApplyJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public MaterializedViewEntity setCustomFeatures(java.util.Map<String, java.lang.Object> customFeatures) {
+    this.customFeatures = customFeatures;
     return this;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * The SQL code which creates the view.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFilter() {
-    return filter;
+  public java.lang.String getSqlCode() {
+    return sqlCode;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
-   * @param filter filter or {@code null} for none
+   * The SQL code which creates the view.
+   * @param sqlCode sqlCode or {@code null} for none
    */
-  public ApplyJobDetails setFilter(java.lang.String filter) {
-    this.filter = filter;
+  public MaterializedViewEntity setSqlCode(java.lang.String sqlCode) {
+    this.sqlCode = sqlCode;
     return this;
   }
 
   @Override
-  public ApplyJobDetails set(String fieldName, Object value) {
-    return (ApplyJobDetails) super.set(fieldName, value);
+  public MaterializedViewEntity set(String fieldName, Object value) {
+    return (MaterializedViewEntity) super.set(fieldName, value);
   }
 
   @Override
-  public ApplyJobDetails clone() {
-    return (ApplyJobDetails) super.clone();
+  public MaterializedViewEntity clone() {
+    return (MaterializedViewEntity) super.clone();
   }
 
 }

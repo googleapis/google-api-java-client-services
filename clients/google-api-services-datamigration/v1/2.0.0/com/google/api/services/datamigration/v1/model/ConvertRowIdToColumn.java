@@ -17,7 +17,11 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job.
+ * Options to configure rule type ConvertROWIDToColumn. The rule is used to add column rowid to
+ * destination tables based on an Oracle rowid function/property. The rule filter field can refer to
+ * one or more entities. The rule scope can be one of: Table. This rule requires additional filter
+ * to be specified beyond the basic rule filter field, which is whether or not to work on tables
+ * which already have a primary key defined.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +32,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
+public final class ConvertRowIdToColumn extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Only work on tables without primary key defined
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.Boolean onlyIfNoPrimaryKey;
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Only work on tables without primary key defined
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.Boolean getOnlyIfNoPrimaryKey() {
+    return onlyIfNoPrimaryKey;
   }
 
   /**
-   * Output only. The connection profile which was used for the seed job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Required. Only work on tables without primary key defined
+   * @param onlyIfNoPrimaryKey onlyIfNoPrimaryKey or {@code null} for none
    */
-  public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public ConvertRowIdToColumn setOnlyIfNoPrimaryKey(java.lang.Boolean onlyIfNoPrimaryKey) {
+    this.onlyIfNoPrimaryKey = onlyIfNoPrimaryKey;
     return this;
   }
 
   @Override
-  public SeedJobDetails set(String fieldName, Object value) {
-    return (SeedJobDetails) super.set(fieldName, value);
+  public ConvertRowIdToColumn set(String fieldName, Object value) {
+    return (ConvertRowIdToColumn) super.set(fieldName, value);
   }
 
   @Override
-  public SeedJobDetails clone() {
-    return (SeedJobDetails) super.clone();
+  public ConvertRowIdToColumn clone() {
+    return (ConvertRowIdToColumn) super.clone();
   }
 
 }

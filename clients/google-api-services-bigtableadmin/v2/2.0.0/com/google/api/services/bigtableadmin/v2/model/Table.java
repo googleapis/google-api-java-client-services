@@ -32,6 +32,14 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
+   * If specified, enable the change stream on this table. Otherwise, the change stream is disabled
+   * and the change stream is not retained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChangeStreamConfig changeStreamConfig;
+
+  /**
    * Output only. Map from cluster ID to per-cluster table state. If it could not be determined
    * whether or not the table has data in a particular cluster (for example, if its zone is
    * unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`.
@@ -105,6 +113,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TableStats stats;
+
+  /**
+   * If specified, enable the change stream on this table. Otherwise, the change stream is disabled
+   * and the change stream is not retained.
+   * @return value or {@code null} for none
+   */
+  public ChangeStreamConfig getChangeStreamConfig() {
+    return changeStreamConfig;
+  }
+
+  /**
+   * If specified, enable the change stream on this table. Otherwise, the change stream is disabled
+   * and the change stream is not retained.
+   * @param changeStreamConfig changeStreamConfig or {@code null} for none
+   */
+  public Table setChangeStreamConfig(ChangeStreamConfig changeStreamConfig) {
+    this.changeStreamConfig = changeStreamConfig;
+    return this;
+  }
 
   /**
    * Output only. Map from cluster ID to per-cluster table state. If it could not be determined

@@ -103,6 +103,13 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
+   * Whether the app is user facing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userFacingType;
+
+  /**
    * The app version code, which can be used to determine whether one version is more recent than
    * another.
    * The value may be {@code null}.
@@ -273,6 +280,23 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
    */
   public ApplicationReport setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Whether the app is user facing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserFacingType() {
+    return userFacingType;
+  }
+
+  /**
+   * Whether the app is user facing.
+   * @param userFacingType userFacingType or {@code null} for none
+   */
+  public ApplicationReport setUserFacingType(java.lang.String userFacingType) {
+    this.userFacingType = userFacingType;
     return this;
   }
 

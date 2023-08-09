@@ -88,6 +88,42 @@ public final class Command extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resetPasswordFlags;
 
   /**
+   * Parameters for the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to START_LOST_MODE. It is also acceptable to explicitly
+   * set type to START_LOST_MODE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StartLostModeParams startLostModeParams;
+
+  /**
+   * Output only. Status of the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeStatus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StartLostModeStatus startLostModeStatus;
+
+  /**
+   * Parameters for the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to STOP_LOST_MODE. It is also acceptable to explicitly
+   * set type to STOP_LOST_MODE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StopLostModeParams stopLostModeParams;
+
+  /**
+   * Output only. Status of the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeStatus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StopLostModeStatus stopLostModeStatus;
+
+  /**
    * The type of the command.
    * The value may be {@code null}.
    */
@@ -235,6 +271,90 @@ public final class Command extends com.google.api.client.json.GenericJson {
    */
   public Command setResetPasswordFlags(java.util.List<java.lang.String> resetPasswordFlags) {
     this.resetPasswordFlags = resetPasswordFlags;
+    return this;
+  }
+
+  /**
+   * Parameters for the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to START_LOST_MODE. It is also acceptable to explicitly
+   * set type to START_LOST_MODE.
+   * @return value or {@code null} for none
+   */
+  public StartLostModeParams getStartLostModeParams() {
+    return startLostModeParams;
+  }
+
+  /**
+   * Parameters for the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to START_LOST_MODE. It is also acceptable to explicitly
+   * set type to START_LOST_MODE.
+   * @param startLostModeParams startLostModeParams or {@code null} for none
+   */
+  public Command setStartLostModeParams(StartLostModeParams startLostModeParams) {
+    this.startLostModeParams = startLostModeParams;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeStatus.
+   * @return value or {@code null} for none
+   */
+  public StartLostModeStatus getStartLostModeStatus() {
+    return startLostModeStatus;
+  }
+
+  /**
+   * Output only. Status of the START_LOST_MODE command to put the device into lost mode. See
+   * StartLostModeStatus.
+   * @param startLostModeStatus startLostModeStatus or {@code null} for none
+   */
+  public Command setStartLostModeStatus(StartLostModeStatus startLostModeStatus) {
+    this.startLostModeStatus = startLostModeStatus;
+    return this;
+  }
+
+  /**
+   * Parameters for the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to STOP_LOST_MODE. It is also acceptable to explicitly
+   * set type to STOP_LOST_MODE.
+   * @return value or {@code null} for none
+   */
+  public StopLostModeParams getStopLostModeParams() {
+    return stopLostModeParams;
+  }
+
+  /**
+   * Parameters for the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeParams. If this is set, then it is suggested that type should not be set. In this
+   * case, the server automatically sets it to STOP_LOST_MODE. It is also acceptable to explicitly
+   * set type to STOP_LOST_MODE.
+   * @param stopLostModeParams stopLostModeParams or {@code null} for none
+   */
+  public Command setStopLostModeParams(StopLostModeParams stopLostModeParams) {
+    this.stopLostModeParams = stopLostModeParams;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeStatus.
+   * @return value or {@code null} for none
+   */
+  public StopLostModeStatus getStopLostModeStatus() {
+    return stopLostModeStatus;
+  }
+
+  /**
+   * Output only. Status of the STOP_LOST_MODE command to take the device out of lost mode. See
+   * StopLostModeStatus.
+   * @param stopLostModeStatus stopLostModeStatus or {@code null} for none
+   */
+  public Command setStopLostModeStatus(StopLostModeStatus stopLostModeStatus) {
+    this.stopLostModeStatus = stopLostModeStatus;
     return this;
   }
 

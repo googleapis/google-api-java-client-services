@@ -32,12 +32,74 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class DeviceConnectivityManagement extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
+   * limited or no control in configuring Wi-Fi networks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String configureWifi;
+
+  /**
+   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
+   * from using different forms of tethering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tetheringSettings;
+
+  /**
    * Controls what files and/or data can be transferred via USB. Supported only on company-owned
    * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String usbDataAccess;
+
+  /**
+   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
+   * running Android 13 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String wifiDirectSettings;
+
+  /**
+   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
+   * limited or no control in configuring Wi-Fi networks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfigureWifi() {
+    return configureWifi;
+  }
+
+  /**
+   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
+   * limited or no control in configuring Wi-Fi networks.
+   * @param configureWifi configureWifi or {@code null} for none
+   */
+  public DeviceConnectivityManagement setConfigureWifi(java.lang.String configureWifi) {
+    this.configureWifi = configureWifi;
+    return this;
+  }
+
+  /**
+   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
+   * from using different forms of tethering.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTetheringSettings() {
+    return tetheringSettings;
+  }
+
+  /**
+   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
+   * from using different forms of tethering.
+   * @param tetheringSettings tetheringSettings or {@code null} for none
+   */
+  public DeviceConnectivityManagement setTetheringSettings(java.lang.String tetheringSettings) {
+    this.tetheringSettings = tetheringSettings;
+    return this;
+  }
 
   /**
    * Controls what files and/or data can be transferred via USB. Supported only on company-owned
@@ -55,6 +117,25 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
    */
   public DeviceConnectivityManagement setUsbDataAccess(java.lang.String usbDataAccess) {
     this.usbDataAccess = usbDataAccess;
+    return this;
+  }
+
+  /**
+   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
+   * running Android 13 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWifiDirectSettings() {
+    return wifiDirectSettings;
+  }
+
+  /**
+   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
+   * running Android 13 and above.
+   * @param wifiDirectSettings wifiDirectSettings or {@code null} for none
+   */
+  public DeviceConnectivityManagement setWifiDirectSettings(java.lang.String wifiDirectSettings) {
+    this.wifiDirectSettings = wifiDirectSettings;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Message for response when you subscribe to a listing.
+ * Message for response to the listing of subscriptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscribeListingResponse extends com.google.api.client.json.GenericJson {
+public final class ListSubscriptionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subscription object created from this subscribe action.
+   * Next page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Subscription subscription;
+  private java.lang.String nextPageToken;
 
   /**
-   * Subscription object created from this subscribe action.
+   * The list of subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Subscription> subscriptions;
+
+  /**
+   * Next page token.
    * @return value or {@code null} for none
    */
-  public Subscription getSubscription() {
-    return subscription;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Subscription object created from this subscribe action.
-   * @param subscription subscription or {@code null} for none
+   * Next page token.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public SubscribeListingResponse setSubscription(Subscription subscription) {
-    this.subscription = subscription;
+  public ListSubscriptionsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The list of subscriptions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Subscription> getSubscriptions() {
+    return subscriptions;
+  }
+
+  /**
+   * The list of subscriptions.
+   * @param subscriptions subscriptions or {@code null} for none
+   */
+  public ListSubscriptionsResponse setSubscriptions(java.util.List<Subscription> subscriptions) {
+    this.subscriptions = subscriptions;
     return this;
   }
 
   @Override
-  public SubscribeListingResponse set(String fieldName, Object value) {
-    return (SubscribeListingResponse) super.set(fieldName, value);
+  public ListSubscriptionsResponse set(String fieldName, Object value) {
+    return (ListSubscriptionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public SubscribeListingResponse clone() {
-    return (SubscribeListingResponse) super.clone();
+  public ListSubscriptionsResponse clone() {
+    return (ListSubscriptionsResponse) super.clone();
   }
 
 }

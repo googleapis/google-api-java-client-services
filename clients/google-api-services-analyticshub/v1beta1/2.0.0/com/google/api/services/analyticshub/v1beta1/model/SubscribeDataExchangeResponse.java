@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.analyticshub.v1.model;
+package com.google.api.services.analyticshub.v1beta1.model;
 
 /**
- * Message for response when you subscribe to a listing.
+ * Message for response when you subscribe to a Data Exchange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscribeListingResponse extends com.google.api.client.json.GenericJson {
+public final class SubscribeDataExchangeResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Subscription object created from this subscribe action.
@@ -48,19 +48,19 @@ public final class SubscribeListingResponse extends com.google.api.client.json.G
    * Subscription object created from this subscribe action.
    * @param subscription subscription or {@code null} for none
    */
-  public SubscribeListingResponse setSubscription(Subscription subscription) {
+  public SubscribeDataExchangeResponse setSubscription(Subscription subscription) {
     this.subscription = subscription;
     return this;
   }
 
   @Override
-  public SubscribeListingResponse set(String fieldName, Object value) {
-    return (SubscribeListingResponse) super.set(fieldName, value);
+  public SubscribeDataExchangeResponse set(String fieldName, Object value) {
+    return (SubscribeDataExchangeResponse) super.set(fieldName, value);
   }
 
   @Override
-  public SubscribeListingResponse clone() {
-    return (SubscribeListingResponse) super.clone();
+  public SubscribeDataExchangeResponse clone() {
+    return (SubscribeDataExchangeResponse) super.clone();
   }
 
 }

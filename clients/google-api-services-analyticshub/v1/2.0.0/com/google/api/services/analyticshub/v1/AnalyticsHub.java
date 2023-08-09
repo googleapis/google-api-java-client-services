@@ -1221,6 +1221,213 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Lists all subscriptions on a given Data Exchange or Listing.
+         *
+         * Create a request for the method "dataExchanges.listSubscriptions".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link ListSubscriptions#execute()} method to invoke the remote operation.
+         *
+         * @param resource Required. Resource name of the requested target. This resource may be either a Listing or a
+         *        DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+         *        projects/123/locations/US/dataExchanges/456/listings/789
+         * @return the request
+         */
+        public ListSubscriptions listSubscriptions(java.lang.String resource) throws java.io.IOException {
+          ListSubscriptions result = new ListSubscriptions(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class ListSubscriptions extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.ListSharedResourceSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:listSubscriptions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+
+          /**
+           * Lists all subscriptions on a given Data Exchange or Listing.
+           *
+           * Create a request for the method "dataExchanges.listSubscriptions".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link ListSubscriptions#execute()} method to invoke the remote
+           * operation. <p> {@link ListSubscriptions#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource Required. Resource name of the requested target. This resource may be either a Listing or a
+         *        DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+         *        projects/123/locations/US/dataExchanges/456/listings/789
+           * @since 1.13
+           */
+          protected ListSubscriptions(java.lang.String resource) {
+            super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.ListSharedResourceSubscriptionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListSubscriptions set$Xgafv(java.lang.String $Xgafv) {
+            return (ListSubscriptions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListSubscriptions setAccessToken(java.lang.String accessToken) {
+            return (ListSubscriptions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListSubscriptions setAlt(java.lang.String alt) {
+            return (ListSubscriptions) super.setAlt(alt);
+          }
+
+          @Override
+          public ListSubscriptions setCallback(java.lang.String callback) {
+            return (ListSubscriptions) super.setCallback(callback);
+          }
+
+          @Override
+          public ListSubscriptions setFields(java.lang.String fields) {
+            return (ListSubscriptions) super.setFields(fields);
+          }
+
+          @Override
+          public ListSubscriptions setKey(java.lang.String key) {
+            return (ListSubscriptions) super.setKey(key);
+          }
+
+          @Override
+          public ListSubscriptions setOauthToken(java.lang.String oauthToken) {
+            return (ListSubscriptions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListSubscriptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListSubscriptions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListSubscriptions setQuotaUser(java.lang.String quotaUser) {
+            return (ListSubscriptions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListSubscriptions setUploadType(java.lang.String uploadType) {
+            return (ListSubscriptions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListSubscriptions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListSubscriptions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the requested target. This resource may be either a Listing
+           * or a DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+           * projects/123/locations/US/dataExchanges/456/listings/789
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** Required. Resource name of the requested target. This resource may be either a Listing or a
+         DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+         projects/123/locations/US/dataExchanges/456/listings/789
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * Required. Resource name of the requested target. This resource may be either a Listing
+           * or a DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+           * projects/123/locations/US/dataExchanges/456/listings/789
+           */
+          public ListSubscriptions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * If selected, includes deleted subscriptions in the response (up to 63 days after
+           * deletion).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeDeletedSubscriptions;
+
+          /** If selected, includes deleted subscriptions in the response (up to 63 days after deletion).
+           */
+          public java.lang.Boolean getIncludeDeletedSubscriptions() {
+            return includeDeletedSubscriptions;
+          }
+
+          /**
+           * If selected, includes deleted subscriptions in the response (up to 63 days after
+           * deletion).
+           */
+          public ListSubscriptions setIncludeDeletedSubscriptions(java.lang.Boolean includeDeletedSubscriptions) {
+            this.includeDeletedSubscriptions = includeDeletedSubscriptions;
+            return this;
+          }
+
+          /** The maximum number of results to return in a single response page. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response page.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of results to return in a single response page. */
+          public ListSubscriptions setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token, returned by a previous call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token, returned by a previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token, returned by a previous call. */
+          public ListSubscriptions setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListSubscriptions set(String parameterName, Object value) {
+            return (ListSubscriptions) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates an existing data exchange.
          *
          * Create a request for the method "dataExchanges.patch".
@@ -1528,6 +1735,148 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a Subscription to a Data Exchange. This is a long-running operation as it will create one
+         * or more linked datasets.
+         *
+         * Create a request for the method "dataExchanges.subscribe".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the Data Exchange. e.g.
+         *        `projects/publisherproject/locations/US/dataExchanges/123`
+         * @param content the {@link com.google.api.services.analyticshub.v1.model.SubscribeDataExchangeRequest}
+         * @return the request
+         */
+        public Subscribe subscribe(java.lang.String name, com.google.api.services.analyticshub.v1.model.SubscribeDataExchangeRequest content) throws java.io.IOException {
+          Subscribe result = new Subscribe(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Subscribe extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:subscribe";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+
+          /**
+           * Creates a Subscription to a Data Exchange. This is a long-running operation as it will create
+           * one or more linked datasets.
+           *
+           * Create a request for the method "dataExchanges.subscribe".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Subscribe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the Data Exchange. e.g.
+         *        `projects/publisherproject/locations/US/dataExchanges/123`
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.SubscribeDataExchangeRequest}
+           * @since 1.13
+           */
+          protected Subscribe(java.lang.String name, com.google.api.services.analyticshub.v1.model.SubscribeDataExchangeRequest content) {
+            super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+            }
+          }
+
+          @Override
+          public Subscribe set$Xgafv(java.lang.String $Xgafv) {
+            return (Subscribe) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Subscribe setAccessToken(java.lang.String accessToken) {
+            return (Subscribe) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Subscribe setAlt(java.lang.String alt) {
+            return (Subscribe) super.setAlt(alt);
+          }
+
+          @Override
+          public Subscribe setCallback(java.lang.String callback) {
+            return (Subscribe) super.setCallback(callback);
+          }
+
+          @Override
+          public Subscribe setFields(java.lang.String fields) {
+            return (Subscribe) super.setFields(fields);
+          }
+
+          @Override
+          public Subscribe setKey(java.lang.String key) {
+            return (Subscribe) super.setKey(key);
+          }
+
+          @Override
+          public Subscribe setOauthToken(java.lang.String oauthToken) {
+            return (Subscribe) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Subscribe setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Subscribe) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Subscribe setQuotaUser(java.lang.String quotaUser) {
+            return (Subscribe) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Subscribe setUploadType(java.lang.String uploadType) {
+            return (Subscribe) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Subscribe setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Subscribe) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Data Exchange. e.g.
+           * `projects/publisherproject/locations/US/dataExchanges/123`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the Data Exchange. e.g.
+         `projects/publisherproject/locations/US/dataExchanges/123`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the Data Exchange. e.g.
+           * `projects/publisherproject/locations/US/dataExchanges/123`
+           */
+          public Subscribe setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Subscribe set(String parameterName, Object value) {
+            return (Subscribe) super.set(parameterName, value);
           }
         }
         /**
@@ -2479,6 +2828,213 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
             }
           }
           /**
+           * Lists all subscriptions on a given Data Exchange or Listing.
+           *
+           * Create a request for the method "listings.listSubscriptions".
+           *
+           * This request holds the parameters needed by the analyticshub server.  After setting any optional
+           * parameters, call the {@link ListSubscriptions#execute()} method to invoke the remote operation.
+           *
+           * @param resource Required. Resource name of the requested target. This resource may be either a Listing or a
+           *        DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+           *        projects/123/locations/US/dataExchanges/456/listings/789
+           * @return the request
+           */
+          public ListSubscriptions listSubscriptions(java.lang.String resource) throws java.io.IOException {
+            ListSubscriptions result = new ListSubscriptions(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class ListSubscriptions extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.ListSharedResourceSubscriptionsResponse> {
+
+            private static final String REST_PATH = "v1/{+resource}:listSubscriptions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/listings/[^/]+$");
+
+            /**
+             * Lists all subscriptions on a given Data Exchange or Listing.
+             *
+             * Create a request for the method "listings.listSubscriptions".
+             *
+             * This request holds the parameters needed by the the analyticshub server.  After setting any
+             * optional parameters, call the {@link ListSubscriptions#execute()} method to invoke the remote
+             * operation. <p> {@link ListSubscriptions#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource Required. Resource name of the requested target. This resource may be either a Listing or a
+           *        DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+           *        projects/123/locations/US/dataExchanges/456/listings/789
+             * @since 1.13
+             */
+            protected ListSubscriptions(java.lang.String resource) {
+              super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.ListSharedResourceSubscriptionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/listings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ListSubscriptions set$Xgafv(java.lang.String $Xgafv) {
+              return (ListSubscriptions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ListSubscriptions setAccessToken(java.lang.String accessToken) {
+              return (ListSubscriptions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ListSubscriptions setAlt(java.lang.String alt) {
+              return (ListSubscriptions) super.setAlt(alt);
+            }
+
+            @Override
+            public ListSubscriptions setCallback(java.lang.String callback) {
+              return (ListSubscriptions) super.setCallback(callback);
+            }
+
+            @Override
+            public ListSubscriptions setFields(java.lang.String fields) {
+              return (ListSubscriptions) super.setFields(fields);
+            }
+
+            @Override
+            public ListSubscriptions setKey(java.lang.String key) {
+              return (ListSubscriptions) super.setKey(key);
+            }
+
+            @Override
+            public ListSubscriptions setOauthToken(java.lang.String oauthToken) {
+              return (ListSubscriptions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ListSubscriptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ListSubscriptions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ListSubscriptions setQuotaUser(java.lang.String quotaUser) {
+              return (ListSubscriptions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ListSubscriptions setUploadType(java.lang.String uploadType) {
+              return (ListSubscriptions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ListSubscriptions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ListSubscriptions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the requested target. This resource may be either a
+             * Listing or a DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+             * projects/123/locations/US/dataExchanges/456/listings/789
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** Required. Resource name of the requested target. This resource may be either a Listing or a
+           DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+           projects/123/locations/US/dataExchanges/456/listings/789
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * Required. Resource name of the requested target. This resource may be either a
+             * Listing or a DataExchange. e.g. projects/123/locations/US/dataExchanges/456 OR e.g.
+             * projects/123/locations/US/dataExchanges/456/listings/789
+             */
+            public ListSubscriptions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataExchanges/[^/]+/listings/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * If selected, includes deleted subscriptions in the response (up to 63 days after
+             * deletion).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean includeDeletedSubscriptions;
+
+            /** If selected, includes deleted subscriptions in the response (up to 63 days after deletion).
+             */
+            public java.lang.Boolean getIncludeDeletedSubscriptions() {
+              return includeDeletedSubscriptions;
+            }
+
+            /**
+             * If selected, includes deleted subscriptions in the response (up to 63 days after
+             * deletion).
+             */
+            public ListSubscriptions setIncludeDeletedSubscriptions(java.lang.Boolean includeDeletedSubscriptions) {
+              this.includeDeletedSubscriptions = includeDeletedSubscriptions;
+              return this;
+            }
+
+            /** The maximum number of results to return in a single response page. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return in a single response page.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of results to return in a single response page. */
+            public ListSubscriptions setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Page token, returned by a previous call. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token, returned by a previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Page token, returned by a previous call. */
+            public ListSubscriptions setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public ListSubscriptions set(String parameterName, Object value) {
+              return (ListSubscriptions) super.set(parameterName, value);
+            }
+          }
+          /**
            * Updates an existing listing.
            *
            * Create a request for the method "listings.patch".
@@ -3079,6 +3635,784 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Subscriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AnalyticsHub analyticshub = new AnalyticsHub(...);}
+       *   {@code AnalyticsHub.Subscriptions.List request = analyticshub.subscriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Subscriptions subscriptions() {
+        return new Subscriptions();
+      }
+
+      /**
+       * The "subscriptions" collection of methods.
+       */
+      public class Subscriptions {
+
+        /**
+         * Deletes a subscription.
+         *
+         * Create a request for the method "subscriptions.delete".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the subscription to delete. e.g.
+         *        projects/123/locations/US/subscriptions/456
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Deletes a subscription.
+           *
+           * Create a request for the method "subscriptions.delete".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the subscription to delete. e.g.
+         *        projects/123/locations/US/subscriptions/456
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(AnalyticsHub.this, "DELETE", REST_PATH, null, com.google.api.services.analyticshub.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the subscription to delete. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the subscription to delete. e.g.
+         projects/123/locations/US/subscriptions/456
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the subscription to delete. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the details of a Subscription.
+         *
+         * Create a request for the method "subscriptions.get".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the subscription. e.g. projects/123/locations/US/subscriptions/456
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.Subscription> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Gets the details of a Subscription.
+           *
+           * Create a request for the method "subscriptions.get".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the subscription. e.g. projects/123/locations/US/subscriptions/456
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.Subscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the subscription. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the subscription. e.g. projects/123/locations/US/subscriptions/456
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the subscription. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all subscriptions in a given project and location.
+         *
+         * Create a request for the method "subscriptions.list".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource path of the subscription. e.g. projects/myproject/locations/US
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.ListSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all subscriptions in a given project and location.
+           *
+           * Create a request for the method "subscriptions.list".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource path of the subscription. e.g. projects/myproject/locations/US
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AnalyticsHub.this, "GET", REST_PATH, null, com.google.api.services.analyticshub.v1.model.ListSubscriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource path of the subscription. e.g.
+           * projects/myproject/locations/US
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource path of the subscription. e.g. projects/myproject/locations/US
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource path of the subscription. e.g.
+           * projects/myproject/locations/US
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The filter expression may be used to filter by Data Exchange or Listing. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression may be used to filter by Data Exchange or Listing.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The filter expression may be used to filter by Data Exchange or Listing. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** The maximum number of results to return in a single response page. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response page.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of results to return in a single response page. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token, returned by a previous call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token, returned by a previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token, returned by a previous call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Refreshes a Subscription to a Data Exchange. A Data Exchange can become stale when a publisher
+         * adds or removes data. This is a long-running operation as it may create many linked datasets.
+         *
+         * Create a request for the method "subscriptions.refresh".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the Subscription to refresh. e.g.
+         *        `projects/subscriberproject/locations/US/subscriptions/123`
+         * @param content the {@link com.google.api.services.analyticshub.v1.model.RefreshSubscriptionRequest}
+         * @return the request
+         */
+        public Refresh refresh(java.lang.String name, com.google.api.services.analyticshub.v1.model.RefreshSubscriptionRequest content) throws java.io.IOException {
+          Refresh result = new Refresh(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Refresh extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:refresh";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Refreshes a Subscription to a Data Exchange. A Data Exchange can become stale when a publisher
+           * adds or removes data. This is a long-running operation as it may create many linked datasets.
+           *
+           * Create a request for the method "subscriptions.refresh".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Refresh#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the Subscription to refresh. e.g.
+         *        `projects/subscriberproject/locations/US/subscriptions/123`
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.RefreshSubscriptionRequest}
+           * @since 1.13
+           */
+          protected Refresh(java.lang.String name, com.google.api.services.analyticshub.v1.model.RefreshSubscriptionRequest content) {
+            super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Refresh set$Xgafv(java.lang.String $Xgafv) {
+            return (Refresh) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Refresh setAccessToken(java.lang.String accessToken) {
+            return (Refresh) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Refresh setAlt(java.lang.String alt) {
+            return (Refresh) super.setAlt(alt);
+          }
+
+          @Override
+          public Refresh setCallback(java.lang.String callback) {
+            return (Refresh) super.setCallback(callback);
+          }
+
+          @Override
+          public Refresh setFields(java.lang.String fields) {
+            return (Refresh) super.setFields(fields);
+          }
+
+          @Override
+          public Refresh setKey(java.lang.String key) {
+            return (Refresh) super.setKey(key);
+          }
+
+          @Override
+          public Refresh setOauthToken(java.lang.String oauthToken) {
+            return (Refresh) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Refresh setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Refresh) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Refresh setQuotaUser(java.lang.String quotaUser) {
+            return (Refresh) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Refresh setUploadType(java.lang.String uploadType) {
+            return (Refresh) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Refresh setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Refresh) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Subscription to refresh. e.g.
+           * `projects/subscriberproject/locations/US/subscriptions/123`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the Subscription to refresh. e.g.
+         `projects/subscriberproject/locations/US/subscriptions/123`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the Subscription to refresh. e.g.
+           * `projects/subscriberproject/locations/US/subscriptions/123`
+           */
+          public Refresh setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Refresh set(String parameterName, Object value) {
+            return (Refresh) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Revokes a given subscription.
+         *
+         * Create a request for the method "subscriptions.revoke".
+         *
+         * This request holds the parameters needed by the analyticshub server.  After setting any optional
+         * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the subscription to revoke. e.g.
+         *        projects/123/locations/US/subscriptions/456
+         * @param content the {@link com.google.api.services.analyticshub.v1.model.RevokeSubscriptionRequest}
+         * @return the request
+         */
+        public Revoke revoke(java.lang.String name, com.google.api.services.analyticshub.v1.model.RevokeSubscriptionRequest content) throws java.io.IOException {
+          Revoke result = new Revoke(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Revoke extends AnalyticsHubRequest<com.google.api.services.analyticshub.v1.model.RevokeSubscriptionResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:revoke";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Revokes a given subscription.
+           *
+           * Create a request for the method "subscriptions.revoke".
+           *
+           * This request holds the parameters needed by the the analyticshub server.  After setting any
+           * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the subscription to revoke. e.g.
+         *        projects/123/locations/US/subscriptions/456
+           * @param content the {@link com.google.api.services.analyticshub.v1.model.RevokeSubscriptionRequest}
+           * @since 1.13
+           */
+          protected Revoke(java.lang.String name, com.google.api.services.analyticshub.v1.model.RevokeSubscriptionRequest content) {
+            super(AnalyticsHub.this, "POST", REST_PATH, content, com.google.api.services.analyticshub.v1.model.RevokeSubscriptionResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Revoke set$Xgafv(java.lang.String $Xgafv) {
+            return (Revoke) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Revoke setAccessToken(java.lang.String accessToken) {
+            return (Revoke) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Revoke setAlt(java.lang.String alt) {
+            return (Revoke) super.setAlt(alt);
+          }
+
+          @Override
+          public Revoke setCallback(java.lang.String callback) {
+            return (Revoke) super.setCallback(callback);
+          }
+
+          @Override
+          public Revoke setFields(java.lang.String fields) {
+            return (Revoke) super.setFields(fields);
+          }
+
+          @Override
+          public Revoke setKey(java.lang.String key) {
+            return (Revoke) super.setKey(key);
+          }
+
+          @Override
+          public Revoke setOauthToken(java.lang.String oauthToken) {
+            return (Revoke) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Revoke) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Revoke setQuotaUser(java.lang.String quotaUser) {
+            return (Revoke) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Revoke setUploadType(java.lang.String uploadType) {
+            return (Revoke) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Revoke) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the subscription to revoke. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the subscription to revoke. e.g.
+         projects/123/locations/US/subscriptions/456
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the subscription to revoke. e.g.
+           * projects/123/locations/US/subscriptions/456
+           */
+          public Revoke setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Revoke set(String parameterName, Object value) {
+            return (Revoke) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

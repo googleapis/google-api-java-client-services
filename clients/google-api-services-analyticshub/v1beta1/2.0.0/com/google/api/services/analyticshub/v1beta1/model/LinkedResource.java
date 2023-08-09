@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.analyticshub.v1.model;
+package com.google.api.services.analyticshub.v1beta1.model;
 
 /**
- * Message for response when you subscribe to a listing.
+ * Reference to a linked resource tracked by this Subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscribeListingResponse extends com.google.api.client.json.GenericJson {
+public final class LinkedResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subscription object created from this subscribe action.
+   * Output only. Name of the linked dataset, e.g.
+   * projects/subscriberproject/datasets/linked_dataset
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Subscription subscription;
+  private java.lang.String linkedDataset;
 
   /**
-   * Subscription object created from this subscribe action.
+   * Output only. Name of the linked dataset, e.g.
+   * projects/subscriberproject/datasets/linked_dataset
    * @return value or {@code null} for none
    */
-  public Subscription getSubscription() {
-    return subscription;
+  public java.lang.String getLinkedDataset() {
+    return linkedDataset;
   }
 
   /**
-   * Subscription object created from this subscribe action.
-   * @param subscription subscription or {@code null} for none
+   * Output only. Name of the linked dataset, e.g.
+   * projects/subscriberproject/datasets/linked_dataset
+   * @param linkedDataset linkedDataset or {@code null} for none
    */
-  public SubscribeListingResponse setSubscription(Subscription subscription) {
-    this.subscription = subscription;
+  public LinkedResource setLinkedDataset(java.lang.String linkedDataset) {
+    this.linkedDataset = linkedDataset;
     return this;
   }
 
   @Override
-  public SubscribeListingResponse set(String fieldName, Object value) {
-    return (SubscribeListingResponse) super.set(fieldName, value);
+  public LinkedResource set(String fieldName, Object value) {
+    return (LinkedResource) super.set(fieldName, value);
   }
 
   @Override
-  public SubscribeListingResponse clone() {
-    return (SubscribeListingResponse) super.clone();
+  public LinkedResource clone() {
+    return (LinkedResource) super.clone();
   }
 
 }

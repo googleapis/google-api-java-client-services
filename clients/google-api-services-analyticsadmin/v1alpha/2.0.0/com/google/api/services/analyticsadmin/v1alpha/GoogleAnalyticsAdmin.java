@@ -20,7 +20,7 @@ package com.google.api.services.analyticsadmin.v1alpha;
  * Service definition for GoogleAnalyticsAdmin (v1alpha).
  *
  * <p>
- * 
+ * Manage properties in Google Analytics. Warning: Creating multiple Customer Applications, Accounts, or Projects to simulate or act as a single Customer Application, Account, or Project (respectively) or to circumvent Service-specific usage limits or quotas is a direct violation of Google Cloud Platform Terms of Service as well as Google APIs Terms of Service. These actions can result in immediate termination of your GCP project(s) without any warning.
  * </p>
  *
  * <p>
@@ -16214,17 +16214,17 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             return this;
           }
 
-          /** The list of fields to be updated. Omitted fields will not be updated. */
+          /** Required. The list of fields to be updated. Omitted fields will not be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. Omitted fields will not be updated.
+          /** Required. The list of fields to be updated. Omitted fields will not be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. Omitted fields will not be updated. */
+          /** Required. The list of fields to be updated. Omitted fields will not be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

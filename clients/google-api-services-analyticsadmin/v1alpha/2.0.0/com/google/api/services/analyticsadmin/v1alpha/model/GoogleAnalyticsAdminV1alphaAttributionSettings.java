@@ -39,6 +39,13 @@ public final class GoogleAnalyticsAdminV1alphaAttributionSettings extends com.go
   private java.lang.String acquisitionConversionEventLookbackWindow;
 
   /**
+   * Required. The Conversion Export Scope for data exported to linked Ads Accounts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adsWebConversionDataExportScope;
+
+  /**
    * Output only. Resource name of this attribution settings resource. Format:
    * properties/{property_id}/attributionSettings Example: "properties/1000/attributionSettings"
    * The value may be {@code null}.
@@ -80,6 +87,23 @@ public final class GoogleAnalyticsAdminV1alphaAttributionSettings extends com.go
    */
   public GoogleAnalyticsAdminV1alphaAttributionSettings setAcquisitionConversionEventLookbackWindow(java.lang.String acquisitionConversionEventLookbackWindow) {
     this.acquisitionConversionEventLookbackWindow = acquisitionConversionEventLookbackWindow;
+    return this;
+  }
+
+  /**
+   * Required. The Conversion Export Scope for data exported to linked Ads Accounts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdsWebConversionDataExportScope() {
+    return adsWebConversionDataExportScope;
+  }
+
+  /**
+   * Required. The Conversion Export Scope for data exported to linked Ads Accounts.
+   * @param adsWebConversionDataExportScope adsWebConversionDataExportScope or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAttributionSettings setAdsWebConversionDataExportScope(java.lang.String adsWebConversionDataExportScope) {
+    this.adsWebConversionDataExportScope = adsWebConversionDataExportScope;
     return this;
   }
 

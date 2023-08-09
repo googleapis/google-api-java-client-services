@@ -1728,8 +1728,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Deletes the batch workload resource. If the batch is not in terminal state, the delete fails and
-         * the response returns FAILED_PRECONDITION.
+         * Deletes the batch workload resource. If the batch is not in a CANCELLED, SUCCEEDED or FAILED
+         * State, the delete operation fails and the response returns FAILED_PRECONDITION.
          *
          * Create a request for the method "batches.delete".
          *
@@ -1754,8 +1754,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
 
           /**
-           * Deletes the batch workload resource. If the batch is not in terminal state, the delete fails
-           * and the response returns FAILED_PRECONDITION.
+           * Deletes the batch workload resource. If the batch is not in a CANCELLED, SUCCEEDED or FAILED
+           * State, the delete operation fails and the response returns FAILED_PRECONDITION.
            *
            * Create a request for the method "batches.delete".
            *

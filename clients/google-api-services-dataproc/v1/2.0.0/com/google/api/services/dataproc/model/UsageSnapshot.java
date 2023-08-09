@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * The usage snaphot represents the resources consumed by a workload at a specified time.
+ * The usage snapshot represents the resources consumed by a workload at a specified time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -38,12 +38,28 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
   private java.lang.Long milliDcu;
 
   /**
+   * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) charged at premium tier (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliDcuPremium;
+
+  /**
    * Optional. Shuffle Storage in gigabytes (GB). (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long shuffleStorageGb;
+
+  /**
+   * Optional. Shuffle Storage in gigabytes (GB) charged at premium tier. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long shuffleStorageGbPremium;
 
   /**
    * Optional. The timestamp of the usage snapshot.
@@ -72,6 +88,25 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) charged at premium tier (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliDcuPremium() {
+    return milliDcuPremium;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) charged at premium tier (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @param milliDcuPremium milliDcuPremium or {@code null} for none
+   */
+  public UsageSnapshot setMilliDcuPremium(java.lang.Long milliDcuPremium) {
+    this.milliDcuPremium = milliDcuPremium;
+    return this;
+  }
+
+  /**
    * Optional. Shuffle Storage in gigabytes (GB). (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing))
    * @return value or {@code null} for none
@@ -87,6 +122,25 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
    */
   public UsageSnapshot setShuffleStorageGb(java.lang.Long shuffleStorageGb) {
     this.shuffleStorageGb = shuffleStorageGb;
+    return this;
+  }
+
+  /**
+   * Optional. Shuffle Storage in gigabytes (GB) charged at premium tier. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getShuffleStorageGbPremium() {
+    return shuffleStorageGbPremium;
+  }
+
+  /**
+   * Optional. Shuffle Storage in gigabytes (GB) charged at premium tier. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @param shuffleStorageGbPremium shuffleStorageGbPremium or {@code null} for none
+   */
+  public UsageSnapshot setShuffleStorageGbPremium(java.lang.Long shuffleStorageGbPremium) {
+    this.shuffleStorageGbPremium = shuffleStorageGbPremium;
     return this;
   }
 

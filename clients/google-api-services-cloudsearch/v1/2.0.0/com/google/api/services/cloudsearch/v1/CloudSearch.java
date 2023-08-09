@@ -3911,11 +3911,11 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Query {
 
     /**
-     * Provides functionality to remove logged activity for a user. Currently to be used only for
-     * dynamite 1p clients **Note:** This API requires a standard end user account to execute. A service
-     * account can't perform Remove Activity requests directly; to use a service account to perform
-     * queries, set up [Google Workspace domain-wide delegation of
-     * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+     * Provides functionality to remove logged activity for a user. Currently to be used only for Chat
+     * 1p clients **Note:** This API requires a standard end user account to execute. A service account
+     * can't perform Remove Activity requests directly; to use a service account to perform queries, set
+     * up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-
+     * search/docs/guides/delegation/).
      *
      * Create a request for the method "query.removeActivity".
      *
@@ -3936,10 +3936,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/query:removeActivity";
 
       /**
-       * Provides functionality to remove logged activity for a user. Currently to be used only for
-       * dynamite 1p clients **Note:** This API requires a standard end user account to execute. A
-       * service account can't perform Remove Activity requests directly; to use a service account to
-       * perform queries, set up [Google Workspace domain-wide delegation of
+       * Provides functionality to remove logged activity for a user. Currently to be used only for Chat
+       * 1p clients **Note:** This API requires a standard end user account to execute. A service
+       * account can't perform Remove Activity requests directly; to use a service account to perform
+       * queries, set up [Google Workspace domain-wide delegation of
        * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "query.removeActivity".
@@ -4406,9 +4406,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
          * this field using the language set in browser or for the page. In the event that the
          * user's language preference is known, set this field to the known user language. When
-         * specified, the documents in search results are biased towards the specified language.
-         * From Suggest API perspective, for 3p suggest this is used as a hint while making
-         * predictions to add language boosting.
+         * specified, the documents in search results are biased towards the specified language. The
+         * Suggest API uses this field as a hint to make better third-party autocomplete
+         * predictions.
          */
         @com.google.api.client.util.Key("requestOptions.languageCode")
         private java.lang.String requestOptionsLanguageCode;
@@ -4417,8 +4417,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this field
        using the language set in browser or for the page. In the event that the user's language preference
        is known, set this field to the known user language. When specified, the documents in search
-       results are biased towards the specified language. From Suggest API perspective, for 3p suggest
-       this is used as a hint while making predictions to add language boosting.
+       results are biased towards the specified language. The Suggest API uses this field as a hint to
+       make better third-party autocomplete predictions.
          */
         public java.lang.String getRequestOptionsLanguageCode() {
           return requestOptionsLanguageCode;
@@ -4429,9 +4429,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set
          * this field using the language set in browser or for the page. In the event that the
          * user's language preference is known, set this field to the known user language. When
-         * specified, the documents in search results are biased towards the specified language.
-         * From Suggest API perspective, for 3p suggest this is used as a hint while making
-         * predictions to add language boosting.
+         * specified, the documents in search results are biased towards the specified language. The
+         * Suggest API uses this field as a hint to make better third-party autocomplete
+         * predictions.
          */
         public List setRequestOptionsLanguageCode(java.lang.String requestOptionsLanguageCode) {
           this.requestOptionsLanguageCode = requestOptionsLanguageCode;

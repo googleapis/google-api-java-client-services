@@ -41,8 +41,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this
    * field using the language set in browser or for the page. In the event that the user's language
    * preference is known, set this field to the known user language. When specified, the documents
-   * in search results are biased towards the specified language. From Suggest API perspective, for
-   * 3p suggest this is used as a hint while making predictions to add language boosting.
+   * in search results are biased towards the specified language. The Suggest API uses this field as
+   * a hint to make better third-party autocomplete predictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this
    * field using the language set in browser or for the page. In the event that the user's language
    * preference is known, set this field to the known user language. When specified, the documents
-   * in search results are biased towards the specified language. From Suggest API perspective, for
-   * 3p suggest this is used as a hint while making predictions to add language boosting.
+   * in search results are biased towards the specified language. The Suggest API uses this field as
+   * a hint to make better third-party autocomplete predictions.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -103,8 +103,8 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this
    * field using the language set in browser or for the page. In the event that the user's language
    * preference is known, set this field to the known user language. When specified, the documents
-   * in search results are biased towards the specified language. From Suggest API perspective, for
-   * 3p suggest this is used as a hint while making predictions to add language boosting.
+   * in search results are biased towards the specified language. The Suggest API uses this field as
+   * a hint to make better third-party autocomplete predictions.
    * @param languageCode languageCode or {@code null} for none
    */
   public RequestOptions setLanguageCode(java.lang.String languageCode) {

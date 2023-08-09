@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class ListBatchesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The batches from the specified collection.
+   * Output only. The batches from the specified collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ListBatchesResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * The batches from the specified collection.
+   * Output only. The batches from the specified collection.
    * @return value or {@code null} for none
    */
   public java.util.List<Batch> getBatches() {
@@ -59,7 +59,7 @@ public final class ListBatchesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The batches from the specified collection.
+   * Output only. The batches from the specified collection.
    * @param batches batches or {@code null} for none
    */
   public ListBatchesResponse setBatches(java.util.List<Batch> batches) {

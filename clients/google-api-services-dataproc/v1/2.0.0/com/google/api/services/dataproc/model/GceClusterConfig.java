@@ -50,8 +50,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean internalIpOnly;
 
   /**
-   * The Compute Engine metadata entries to add to all instances (see Project and instance metadata
-   * (https://cloud.google.com/compute/docs/storing-retrieving-
+   * Optional. The Compute Engine metadata entries to add to all instances (see Project and instance
+   * metadata (https://cloud.google.com/compute/docs/storing-retrieving-
    * metadata#project_and_instance_metadata)).
    * The value may be {@code null}.
    */
@@ -202,8 +202,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine metadata entries to add to all instances (see Project and instance metadata
-   * (https://cloud.google.com/compute/docs/storing-retrieving-
+   * Optional. The Compute Engine metadata entries to add to all instances (see Project and instance
+   * metadata (https://cloud.google.com/compute/docs/storing-retrieving-
    * metadata#project_and_instance_metadata)).
    * @return value or {@code null} for none
    */
@@ -212,8 +212,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine metadata entries to add to all instances (see Project and instance metadata
-   * (https://cloud.google.com/compute/docs/storing-retrieving-
+   * Optional. The Compute Engine metadata entries to add to all instances (see Project and instance
+   * metadata (https://cloud.google.com/compute/docs/storing-retrieving-
    * metadata#project_and_instance_metadata)).
    * @param metadata metadata or {@code null} for none
    */

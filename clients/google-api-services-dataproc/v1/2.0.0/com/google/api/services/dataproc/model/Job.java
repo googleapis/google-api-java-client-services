@@ -62,6 +62,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private DriverSchedulingConfig driverSchedulingConfig;
 
   /**
+   * Optional. Job is a Flink job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlinkJob flinkJob;
+
+  /**
    * Optional. Job is a Hadoop job.
    * The value may be {@code null}.
    */
@@ -261,6 +268,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setDriverSchedulingConfig(DriverSchedulingConfig driverSchedulingConfig) {
     this.driverSchedulingConfig = driverSchedulingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Job is a Flink job.
+   * @return value or {@code null} for none
+   */
+  public FlinkJob getFlinkJob() {
+    return flinkJob;
+  }
+
+  /**
+   * Optional. Job is a Flink job.
+   * @param flinkJob flinkJob or {@code null} for none
+   */
+  public Job setFlinkJob(FlinkJob flinkJob) {
+    this.flinkJob = flinkJob;
     return this;
   }
 

@@ -30,8 +30,12 @@ package com.google.api.services.dataproc.model;
 public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes (see
-   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Output only. Approximate workload resource usage, calculated when the workload completes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).Note: This
+   * metric calculation may change in the future, for example, to capture cumulative workload
+   * resource consumption during workload execution (see the Dataproc Serverless release notes
+   * (https://cloud.google.com/dataproc-serverless/docs/release-notes) for announcements, changes,
+   * fixes and other Dataproc developments).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +70,12 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String outputUri;
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes (see
-   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Output only. Approximate workload resource usage, calculated when the workload completes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).Note: This
+   * metric calculation may change in the future, for example, to capture cumulative workload
+   * resource consumption during workload execution (see the Dataproc Serverless release notes
+   * (https://cloud.google.com/dataproc-serverless/docs/release-notes) for announcements, changes,
+   * fixes and other Dataproc developments).
    * @return value or {@code null} for none
    */
   public UsageMetrics getApproximateUsage() {
@@ -75,8 +83,12 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Approximate workload resource usage calculated after workload finishes (see
-   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Output only. Approximate workload resource usage, calculated when the workload completes (see
+   * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).Note: This
+   * metric calculation may change in the future, for example, to capture cumulative workload
+   * resource consumption during workload execution (see the Dataproc Serverless release notes
+   * (https://cloud.google.com/dataproc-serverless/docs/release-notes) for announcements, changes,
+   * fixes and other Dataproc developments).
    * @param approximateUsage approximateUsage or {@code null} for none
    */
   public RuntimeInfo setApproximateUsage(UsageMetrics approximateUsage) {

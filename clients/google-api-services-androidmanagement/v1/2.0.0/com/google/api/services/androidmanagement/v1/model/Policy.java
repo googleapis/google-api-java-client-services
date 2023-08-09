@@ -259,6 +259,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private UserFacingMessage deviceOwnerLockScreenInfo;
 
   /**
+   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceRadioState deviceRadioState;
+
+  /**
    * Whether encryption is enabled
    * The value may be {@code null}.
    */
@@ -418,7 +425,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
    * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
    * override this setting under specific circumstances. Please see wifiConfigDisabled for further
-   * details.
+   * details. Setting configureWifi to DISALLOW_CONFIGURING_WIFI will override this setting under
+   * specific circumstances. Please see DISALLOW_CONFIGURING_WIFI for further details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -695,7 +703,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private SystemUpdate systemUpdate;
 
   /**
-   * Whether configuring tethering and portable hotspots is disabled.
+   * Whether configuring tethering and portable hotspots is disabled. If tetheringSettings is set to
+   * anything other than TETHERING_SETTINGS_UNSPECIFIED, this setting is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -761,9 +770,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * profiles on company-owned devices. For fully managed devices, setting this to true removes all
    * configured networks and retains only the networks configured using openNetworkConfiguration.
    * For work profiles on company-owned devices, existing configured networks are not affected and
-   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
-   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
-   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. If configureWifi is set to
+   * anything other than CONFIGURE_WIFI_UNSPECIFIED, this setting is ignored. Note: If a network
+   * connection can't be made at boot time and configuring Wi-Fi is disabled then network escape
+   * hatch will be shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1276,6 +1286,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * @return value or {@code null} for none
+   */
+  public DeviceRadioState getDeviceRadioState() {
+    return deviceRadioState;
+  }
+
+  /**
+   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * @param deviceRadioState deviceRadioState or {@code null} for none
+   */
+  public Policy setDeviceRadioState(DeviceRadioState deviceRadioState) {
+    this.deviceRadioState = deviceRadioState;
+    return this;
+  }
+
+  /**
    * Whether encryption is enabled
    * @return value or {@code null} for none
    */
@@ -1647,7 +1674,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
    * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
    * override this setting under specific circumstances. Please see wifiConfigDisabled for further
-   * details.
+   * details. Setting configureWifi to DISALLOW_CONFIGURING_WIFI will override this setting under
+   * specific circumstances. Please see DISALLOW_CONFIGURING_WIFI for further details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNetworkEscapeHatchEnabled() {
@@ -1662,7 +1690,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * suitable network in the last policy and the device boots into an app in lock task mode, or the
    * user is otherwise unable to reach device settings.Note: Setting wifiConfigDisabled to true will
    * override this setting under specific circumstances. Please see wifiConfigDisabled for further
-   * details.
+   * details. Setting configureWifi to DISALLOW_CONFIGURING_WIFI will override this setting under
+   * specific circumstances. Please see DISALLOW_CONFIGURING_WIFI for further details.
    * @param networkEscapeHatchEnabled networkEscapeHatchEnabled or {@code null} for none
    */
   public Policy setNetworkEscapeHatchEnabled(java.lang.Boolean networkEscapeHatchEnabled) {
@@ -2256,7 +2285,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring tethering and portable hotspots is disabled.
+   * Whether configuring tethering and portable hotspots is disabled. If tetheringSettings is set to
+   * anything other than TETHERING_SETTINGS_UNSPECIFIED, this setting is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTetheringConfigDisabled() {
@@ -2264,7 +2294,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether configuring tethering and portable hotspots is disabled.
+   * Whether configuring tethering and portable hotspots is disabled. If tetheringSettings is set to
+   * anything other than TETHERING_SETTINGS_UNSPECIFIED, this setting is ignored.
    * @param tetheringConfigDisabled tetheringConfigDisabled or {@code null} for none
    */
   public Policy setTetheringConfigDisabled(java.lang.Boolean tetheringConfigDisabled) {
@@ -2408,9 +2439,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * profiles on company-owned devices. For fully managed devices, setting this to true removes all
    * configured networks and retains only the networks configured using openNetworkConfiguration.
    * For work profiles on company-owned devices, existing configured networks are not affected and
-   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
-   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
-   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. If configureWifi is set to
+   * anything other than CONFIGURE_WIFI_UNSPECIFIED, this setting is ignored. Note: If a network
+   * connection can't be made at boot time and configuring Wi-Fi is disabled then network escape
+   * hatch will be shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigDisabled() {
@@ -2422,9 +2454,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * profiles on company-owned devices. For fully managed devices, setting this to true removes all
    * configured networks and retains only the networks configured using openNetworkConfiguration.
    * For work profiles on company-owned devices, existing configured networks are not affected and
-   * the user is not allowed to add, remove, or modify Wi-Fi networks. Note: If a network connection
-   * can't be made at boot time and configuring Wi-Fi is disabled then network escape hatch will be
-   * shown in order to refresh the device policy (see networkEscapeHatchEnabled).
+   * the user is not allowed to add, remove, or modify Wi-Fi networks. If configureWifi is set to
+   * anything other than CONFIGURE_WIFI_UNSPECIFIED, this setting is ignored. Note: If a network
+   * connection can't be made at boot time and configuring Wi-Fi is disabled then network escape
+   * hatch will be shown in order to refresh the device policy (see networkEscapeHatchEnabled).
    * @param wifiConfigDisabled wifiConfigDisabled or {@code null} for none
    */
   public Policy setWifiConfigDisabled(java.lang.Boolean wifiConfigDisabled) {

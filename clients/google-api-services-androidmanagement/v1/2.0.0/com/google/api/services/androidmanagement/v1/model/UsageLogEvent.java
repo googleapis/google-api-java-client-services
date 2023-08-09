@@ -103,6 +103,13 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private DnsEvent dnsEvent;
 
   /**
+   * Device has completed enrollment. Part of AMAPI_LOGS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnrollmentCompleteEvent enrollmentCompleteEvent;
+
+  /**
    * Unique id of the event.
    * The value may be {@code null}.
    */
@@ -215,6 +222,20 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private LoggingStoppedEvent loggingStoppedEvent;
 
   /**
+   * A lost mode location update when a device in lost mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LostModeLocationEvent lostModeLocationEvent;
+
+  /**
+   * An outgoing phone call has been made when a device in lost mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LostModeOutgoingPhoneCallEvent lostModeOutgoingPhoneCallEvent;
+
+  /**
    * Removable media was mounted. Part of SECURITY_LOGS.
    * The value may be {@code null}.
    */
@@ -248,6 +269,13 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private RemoteLockEvent remoteLockEvent;
+
+  /**
+   * An attempt to take a device out of lost mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StopLostModeUserAttemptEvent stopLostModeUserAttemptEvent;
 
   /**
    * The work profile or company-owned device failed to wipe when requested. This could be user
@@ -425,6 +453,23 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
    */
   public UsageLogEvent setDnsEvent(DnsEvent dnsEvent) {
     this.dnsEvent = dnsEvent;
+    return this;
+  }
+
+  /**
+   * Device has completed enrollment. Part of AMAPI_LOGS.
+   * @return value or {@code null} for none
+   */
+  public EnrollmentCompleteEvent getEnrollmentCompleteEvent() {
+    return enrollmentCompleteEvent;
+  }
+
+  /**
+   * Device has completed enrollment. Part of AMAPI_LOGS.
+   * @param enrollmentCompleteEvent enrollmentCompleteEvent or {@code null} for none
+   */
+  public UsageLogEvent setEnrollmentCompleteEvent(EnrollmentCompleteEvent enrollmentCompleteEvent) {
+    this.enrollmentCompleteEvent = enrollmentCompleteEvent;
     return this;
   }
 
@@ -698,6 +743,40 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * A lost mode location update when a device in lost mode.
+   * @return value or {@code null} for none
+   */
+  public LostModeLocationEvent getLostModeLocationEvent() {
+    return lostModeLocationEvent;
+  }
+
+  /**
+   * A lost mode location update when a device in lost mode.
+   * @param lostModeLocationEvent lostModeLocationEvent or {@code null} for none
+   */
+  public UsageLogEvent setLostModeLocationEvent(LostModeLocationEvent lostModeLocationEvent) {
+    this.lostModeLocationEvent = lostModeLocationEvent;
+    return this;
+  }
+
+  /**
+   * An outgoing phone call has been made when a device in lost mode.
+   * @return value or {@code null} for none
+   */
+  public LostModeOutgoingPhoneCallEvent getLostModeOutgoingPhoneCallEvent() {
+    return lostModeOutgoingPhoneCallEvent;
+  }
+
+  /**
+   * An outgoing phone call has been made when a device in lost mode.
+   * @param lostModeOutgoingPhoneCallEvent lostModeOutgoingPhoneCallEvent or {@code null} for none
+   */
+  public UsageLogEvent setLostModeOutgoingPhoneCallEvent(LostModeOutgoingPhoneCallEvent lostModeOutgoingPhoneCallEvent) {
+    this.lostModeOutgoingPhoneCallEvent = lostModeOutgoingPhoneCallEvent;
+    return this;
+  }
+
+  /**
    * Removable media was mounted. Part of SECURITY_LOGS.
    * @return value or {@code null} for none
    */
@@ -779,6 +858,23 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
    */
   public UsageLogEvent setRemoteLockEvent(RemoteLockEvent remoteLockEvent) {
     this.remoteLockEvent = remoteLockEvent;
+    return this;
+  }
+
+  /**
+   * An attempt to take a device out of lost mode.
+   * @return value or {@code null} for none
+   */
+  public StopLostModeUserAttemptEvent getStopLostModeUserAttemptEvent() {
+    return stopLostModeUserAttemptEvent;
+  }
+
+  /**
+   * An attempt to take a device out of lost mode.
+   * @param stopLostModeUserAttemptEvent stopLostModeUserAttemptEvent or {@code null} for none
+   */
+  public UsageLogEvent setStopLostModeUserAttemptEvent(StopLostModeUserAttemptEvent stopLostModeUserAttemptEvent) {
+    this.stopLostModeUserAttemptEvent = stopLostModeUserAttemptEvent;
     return this;
   }
 

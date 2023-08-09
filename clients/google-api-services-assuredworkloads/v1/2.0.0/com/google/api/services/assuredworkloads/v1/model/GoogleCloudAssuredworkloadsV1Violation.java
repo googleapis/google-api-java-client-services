@@ -87,6 +87,13 @@ public final class GoogleCloudAssuredworkloadsV1Violation extends com.google.api
   private java.lang.String exceptionAuditLogLink;
 
   /**
+   * Output only. List of all the exception detail added for the violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAssuredworkloadsV1ViolationExceptionContext> exceptionContexts;
+
+  /**
    * Output only. Immutable. Name of the Violation. Format: organizations/{organization}/locations/{
    * location}/workloads/{workload_id}/violations/{violations_id}
    * The value may be {@code null}.
@@ -271,6 +278,23 @@ public final class GoogleCloudAssuredworkloadsV1Violation extends com.google.api
    */
   public GoogleCloudAssuredworkloadsV1Violation setExceptionAuditLogLink(java.lang.String exceptionAuditLogLink) {
     this.exceptionAuditLogLink = exceptionAuditLogLink;
+    return this;
+  }
+
+  /**
+   * Output only. List of all the exception detail added for the violation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAssuredworkloadsV1ViolationExceptionContext> getExceptionContexts() {
+    return exceptionContexts;
+  }
+
+  /**
+   * Output only. List of all the exception detail added for the violation.
+   * @param exceptionContexts exceptionContexts or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1Violation setExceptionContexts(java.util.List<GoogleCloudAssuredworkloadsV1ViolationExceptionContext> exceptionContexts) {
+    this.exceptionContexts = exceptionContexts;
     return this;
   }
 

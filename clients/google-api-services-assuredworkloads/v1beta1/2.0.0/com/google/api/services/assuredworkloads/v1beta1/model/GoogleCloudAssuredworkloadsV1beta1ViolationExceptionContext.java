@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * Violation exception detail. Next Id: 5
+ * Violation exception detail. Next Id: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -45,11 +45,11 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   private java.lang.String comment;
 
   /**
-   * Email address of the user (or service account) who acknowledged the violation.
+   * Name of the user (or service account) who acknowledged the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String principalEmail;
+  private java.lang.String userName;
 
   /**
    * Timestamp when the violation was acknowledged.
@@ -86,19 +86,19 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Email address of the user (or service account) who acknowledged the violation.
+   * Name of the user (or service account) who acknowledged the violation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrincipalEmail() {
-    return principalEmail;
+  public java.lang.String getUserName() {
+    return userName;
   }
 
   /**
-   * Email address of the user (or service account) who acknowledged the violation.
-   * @param principalEmail principalEmail or {@code null} for none
+   * Name of the user (or service account) who acknowledged the violation.
+   * @param userName userName or {@code null} for none
    */
-  public GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext setPrincipalEmail(java.lang.String principalEmail) {
-    this.principalEmail = principalEmail;
+  public GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext setUserName(java.lang.String userName) {
+    this.userName = userName;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Acknowledge type of specified violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acknowledgeType;
+
+  /**
    * Required. Business justification explaining the need for violation acknowledgement
    * The value may be {@code null}.
    */
@@ -47,6 +54,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest
    */
   @com.google.api.client.util.Key
   private java.lang.String nonCompliantOrgPolicy;
+
+  /**
+   * Optional. Acknowledge type of specified violation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcknowledgeType() {
+    return acknowledgeType;
+  }
+
+  /**
+   * Optional. Acknowledge type of specified violation.
+   * @param acknowledgeType acknowledgeType or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1AcknowledgeViolationRequest setAcknowledgeType(java.lang.String acknowledgeType) {
+    this.acknowledgeType = acknowledgeType;
+    return this;
+  }
 
   /**
    * Required. Business justification explaining the need for violation acknowledgement

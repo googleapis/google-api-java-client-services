@@ -47,6 +47,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private String acknowledgementTime;
 
   /**
+   * Optional. Output only. Violation Id of the org-policy violation due to which the resource
+   * violation is caused. Empty for org-policy violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String associatedOrgPolicyViolationId;
+
+  /**
    * Output only. Immutable. Audit Log Link for violated resource Format: https://console.cloud.goog
    * le.com/logs/query;query={logName}{protoPayload.resourceName}{timeRange}{folder}
    * The value may be {@code null}.
@@ -87,6 +95,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private java.lang.String exceptionAuditLogLink;
 
   /**
+   * Output only. List of all the exception detail added for the violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> exceptionContexts;
+
+  /**
    * Output only. Immutable. Name of the Violation. Format: organizations/{organization}/locations/{
    * location}/workloads/{workload_id}/violations/{violations_id}
    * The value may be {@code null}.
@@ -113,6 +128,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private java.lang.String orgPolicyConstraint;
 
   /**
+   * Optional. Output only. Parent project number where resource is present. Empty for org-policy
+   * violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentProjectNumber;
+
+  /**
    * Output only. Compliance violation remediation
    * The value may be {@code null}.
    */
@@ -128,6 +151,22 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private String resolveTime;
 
   /**
+   * Optional. Output only. Name of the resource like //storage.googleapis.com/myprojectxyz-
+   * testbucket. Empty for org-policy violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
+
+  /**
+   * Optional. Output only. Type of the resource like compute.googleapis.com/Disk, etc. Empty for
+   * org-policy violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceType;
+
+  /**
    * Output only. State of the violation
    * The value may be {@code null}.
    */
@@ -140,6 +179,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Type of the violation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String violationType;
 
   /**
    * A boolean that indicates if the violation is acknowledged
@@ -176,6 +222,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setAcknowledgementTime(String acknowledgementTime) {
     this.acknowledgementTime = acknowledgementTime;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Violation Id of the org-policy violation due to which the resource
+   * violation is caused. Empty for org-policy violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssociatedOrgPolicyViolationId() {
+    return associatedOrgPolicyViolationId;
+  }
+
+  /**
+   * Optional. Output only. Violation Id of the org-policy violation due to which the resource
+   * violation is caused. Empty for org-policy violations.
+   * @param associatedOrgPolicyViolationId associatedOrgPolicyViolationId or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setAssociatedOrgPolicyViolationId(java.lang.String associatedOrgPolicyViolationId) {
+    this.associatedOrgPolicyViolationId = associatedOrgPolicyViolationId;
     return this;
   }
 
@@ -275,6 +340,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
+   * Output only. List of all the exception detail added for the violation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> getExceptionContexts() {
+    return exceptionContexts;
+  }
+
+  /**
+   * Output only. List of all the exception detail added for the violation.
+   * @param exceptionContexts exceptionContexts or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setExceptionContexts(java.util.List<GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext> exceptionContexts) {
+    this.exceptionContexts = exceptionContexts;
+    return this;
+  }
+
+  /**
    * Output only. Immutable. Name of the Violation. Format: organizations/{organization}/locations/{
    * location}/workloads/{workload_id}/violations/{violations_id}
    * @return value or {@code null} for none
@@ -336,6 +418,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
+   * Optional. Output only. Parent project number where resource is present. Empty for org-policy
+   * violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentProjectNumber() {
+    return parentProjectNumber;
+  }
+
+  /**
+   * Optional. Output only. Parent project number where resource is present. Empty for org-policy
+   * violations.
+   * @param parentProjectNumber parentProjectNumber or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setParentProjectNumber(java.lang.String parentProjectNumber) {
+    this.parentProjectNumber = parentProjectNumber;
+    return this;
+  }
+
+  /**
    * Output only. Compliance violation remediation
    * @return value or {@code null} for none
    */
@@ -372,6 +473,44 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
+   * Optional. Output only. Name of the resource like //storage.googleapis.com/myprojectxyz-
+   * testbucket. Empty for org-policy violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * Optional. Output only. Name of the resource like //storage.googleapis.com/myprojectxyz-
+   * testbucket. Empty for org-policy violations.
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Type of the resource like compute.googleapis.com/Disk, etc. Empty for
+   * org-policy violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceType() {
+    return resourceType;
+  }
+
+  /**
+   * Optional. Output only. Type of the resource like compute.googleapis.com/Disk, etc. Empty for
+   * org-policy violations.
+   * @param resourceType resourceType or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setResourceType(java.lang.String resourceType) {
+    this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
    * Output only. State of the violation
    * @return value or {@code null} for none
    */
@@ -402,6 +541,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Type of the violation
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getViolationType() {
+    return violationType;
+  }
+
+  /**
+   * Output only. Type of the violation
+   * @param violationType violationType or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setViolationType(java.lang.String violationType) {
+    this.violationType = violationType;
     return this;
   }
 

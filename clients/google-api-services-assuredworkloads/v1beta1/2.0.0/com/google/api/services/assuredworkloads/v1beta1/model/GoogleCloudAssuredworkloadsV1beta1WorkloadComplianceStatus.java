@@ -31,6 +31,13 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Number of current resource violations which are not acknowledged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acknowledgedResourceViolationCount;
+
+  /**
    * Number of current orgPolicy violations which are acknowledged.
    * The value may be {@code null}.
    */
@@ -38,11 +45,35 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus ex
   private java.lang.Integer acknowledgedViolationCount;
 
   /**
+   * Number of current resource violations which are acknowledged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer activeResourceViolationCount;
+
+  /**
    * Number of current orgPolicy violations which are not acknowledged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer activeViolationCount;
+
+  /**
+   * Number of current resource violations which are not acknowledged.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcknowledgedResourceViolationCount() {
+    return acknowledgedResourceViolationCount;
+  }
+
+  /**
+   * Number of current resource violations which are not acknowledged.
+   * @param acknowledgedResourceViolationCount acknowledgedResourceViolationCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus setAcknowledgedResourceViolationCount(java.lang.Integer acknowledgedResourceViolationCount) {
+    this.acknowledgedResourceViolationCount = acknowledgedResourceViolationCount;
+    return this;
+  }
 
   /**
    * Number of current orgPolicy violations which are acknowledged.
@@ -58,6 +89,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus ex
    */
   public GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus setAcknowledgedViolationCount(java.lang.Integer acknowledgedViolationCount) {
     this.acknowledgedViolationCount = acknowledgedViolationCount;
+    return this;
+  }
+
+  /**
+   * Number of current resource violations which are acknowledged.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getActiveResourceViolationCount() {
+    return activeResourceViolationCount;
+  }
+
+  /**
+   * Number of current resource violations which are acknowledged.
+   * @param activeResourceViolationCount activeResourceViolationCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus setActiveResourceViolationCount(java.lang.Integer activeResourceViolationCount) {
+    this.activeResourceViolationCount = activeResourceViolationCount;
     return this;
   }
 

@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * Deployment job composition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -36,6 +35,22 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private Job deployJob;
+
+  /**
+   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
+   * of the phase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Job postdeployJob;
+
+  /**
+   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
+   * of the phase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Job predeployJob;
 
   /**
    * Output only. The verify Job. Runs after a deploy if the deploy succeeds.
@@ -58,6 +73,44 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
    */
   public DeploymentJobs setDeployJob(Job deployJob) {
     this.deployJob = deployJob;
+    return this;
+  }
+
+  /**
+   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
+   * of the phase.
+   * @return value or {@code null} for none
+   */
+  public Job getPostdeployJob() {
+    return postdeployJob;
+  }
+
+  /**
+   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
+   * of the phase.
+   * @param postdeployJob postdeployJob or {@code null} for none
+   */
+  public DeploymentJobs setPostdeployJob(Job postdeployJob) {
+    this.postdeployJob = postdeployJob;
+    return this;
+  }
+
+  /**
+   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
+   * of the phase.
+   * @return value or {@code null} for none
+   */
+  public Job getPredeployJob() {
+    return predeployJob;
+  }
+
+  /**
+   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
+   * of the phase.
+   * @param predeployJob predeployJob or {@code null} for none
+   */
+  public DeploymentJobs setPredeployJob(Job predeployJob) {
+    this.predeployJob = predeployJob;
     return this;
   }
 

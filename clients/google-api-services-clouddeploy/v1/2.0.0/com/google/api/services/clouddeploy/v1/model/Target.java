@@ -17,12 +17,11 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A `Target` resource in the Google Cloud Deploy API. A `Target` defines a location to which a
- * Skaffold configuration can be deployed.
+ * A `Target` resource in the Cloud Deploy API. A `Target` defines a location to which a Skaffold
+ * configuration can be deployed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -33,15 +32,15 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
-   * Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations.
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Information specifying an Anthos Cluster.
+   * Optional. Information specifying an Anthos Cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,18 +94,18 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a GKE Cluster.
+   * Optional. Information specifying a GKE Cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GkeCluster gke;
 
   /**
-   * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud
-   * Deploy. Labels must meet the following constraints: * Keys and values can contain only
-   * lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8
-   * encoding, and international characters are allowed. * Keys must start with a lowercase letter
-   * or international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * The value may be {@code null}.
    */
@@ -114,7 +113,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Information specifying a multiTarget.
+   * Optional. Information specifying a multiTarget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +135,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requireApproval;
 
   /**
-   * Information specifying a Cloud Run deployment target.
+   * Optional. Information specifying a Cloud Run deployment target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,8 +164,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
-   * Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations.
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -175,8 +174,8 @@ public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User annotations. These attributes can only be set and used by the user, and not by
-   * Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format
-   * and size limitations.
+   * Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and
+   * size limitations.
    * @param annotations annotations or {@code null} for none
    */
   public Target setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -185,7 +184,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying an Anthos Cluster.
+   * Optional. Information specifying an Anthos Cluster.
    * @return value or {@code null} for none
    */
   public AnthosCluster getAnthosCluster() {
@@ -193,7 +192,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying an Anthos Cluster.
+   * Optional. Information specifying an Anthos Cluster.
    * @param anthosCluster anthosCluster or {@code null} for none
    */
   public Target setAnthosCluster(AnthosCluster anthosCluster) {
@@ -299,7 +298,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a GKE Cluster.
+   * Optional. Information specifying a GKE Cluster.
    * @return value or {@code null} for none
    */
   public GkeCluster getGke() {
@@ -307,7 +306,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a GKE Cluster.
+   * Optional. Information specifying a GKE Cluster.
    * @param gke gke or {@code null} for none
    */
   public Target setGke(GkeCluster gke) {
@@ -316,11 +315,11 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud
-   * Deploy. Labels must meet the following constraints: * Keys and values can contain only
-   * lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8
-   * encoding, and international characters are allowed. * Keys must start with a lowercase letter
-   * or international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @return value or {@code null} for none
    */
@@ -329,11 +328,11 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud
-   * Deploy. Labels must meet the following constraints: * Keys and values can contain only
-   * lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8
-   * encoding, and international characters are allowed. * Keys must start with a lowercase letter
-   * or international character. * Each resource is limited to a maximum of 64 labels. Both keys and
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
+   * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @param labels labels or {@code null} for none
    */
@@ -343,7 +342,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a multiTarget.
+   * Optional. Information specifying a multiTarget.
    * @return value or {@code null} for none
    */
   public MultiTarget getMultiTarget() {
@@ -351,7 +350,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a multiTarget.
+   * Optional. Information specifying a multiTarget.
    * @param multiTarget multiTarget or {@code null} for none
    */
   public Target setMultiTarget(MultiTarget multiTarget) {
@@ -396,7 +395,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a Cloud Run deployment target.
+   * Optional. Information specifying a Cloud Run deployment target.
    * @return value or {@code null} for none
    */
   public CloudRunLocation getRun() {
@@ -404,7 +403,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a Cloud Run deployment target.
+   * Optional. Information specifying a Cloud Run deployment target.
    * @param run run or {@code null} for none
    */
   public Target setRun(CloudRunLocation run) {

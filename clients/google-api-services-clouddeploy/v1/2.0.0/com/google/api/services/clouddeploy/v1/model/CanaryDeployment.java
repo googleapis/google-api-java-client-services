@@ -20,8 +20,7 @@ package com.google.api.services.clouddeploy.v1.model;
  * CanaryDeployment represents the canary deployment configuration
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deploy API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,6 +36,22 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> percentages;
+
+  /**
+   * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
+   * postdeploy job will not be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Postdeploy postdeploy;
+
+  /**
+   * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
+   * predeploy job will not be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Predeploy predeploy;
 
   /**
    * Whether to run verify tests after each percentage deployment.
@@ -61,6 +76,44 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
    */
   public CanaryDeployment setPercentages(java.util.List<java.lang.Integer> percentages) {
     this.percentages = percentages;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
+   * postdeploy job will not be present.
+   * @return value or {@code null} for none
+   */
+  public Postdeploy getPostdeploy() {
+    return postdeploy;
+  }
+
+  /**
+   * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
+   * postdeploy job will not be present.
+   * @param postdeploy postdeploy or {@code null} for none
+   */
+  public CanaryDeployment setPostdeploy(Postdeploy postdeploy) {
+    this.postdeploy = postdeploy;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
+   * predeploy job will not be present.
+   * @return value or {@code null} for none
+   */
+  public Predeploy getPredeploy() {
+    return predeploy;
+  }
+
+  /**
+   * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
+   * predeploy job will not be present.
+   * @param predeploy predeploy or {@code null} for none
+   */
+  public CanaryDeployment setPredeploy(Predeploy predeploy) {
+    this.predeploy = predeploy;
     return this;
   }
 

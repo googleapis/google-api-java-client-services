@@ -64,7 +64,8 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
+   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
+   * satisfied. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +158,8 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
+   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
+   * satisfied. Defaults to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegate() {
@@ -166,7 +168,8 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
+   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
+   * satisfied. Defaults to false.
    * @param negate negate or {@code null} for none
    */
   public Condition setNegate(java.lang.Boolean negate) {

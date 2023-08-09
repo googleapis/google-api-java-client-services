@@ -89,6 +89,13 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryContact;
 
   /**
+   * Required. Configurable data sharing environment option for a data exchange.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SharingEnvironmentConfig sharingEnvironmentConfig;
+
+  /**
    * Optional. Description of the data exchange. The description must not contain Unicode non-
    * characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage
    * returns (CR), and page breaks (FF). Default value is an empty string. Max length: 2000 bytes.
@@ -256,6 +263,23 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
    */
   public DataExchange setPrimaryContact(java.lang.String primaryContact) {
     this.primaryContact = primaryContact;
+    return this;
+  }
+
+  /**
+   * Required. Configurable data sharing environment option for a data exchange.
+   * @return value or {@code null} for none
+   */
+  public SharingEnvironmentConfig getSharingEnvironmentConfig() {
+    return sharingEnvironmentConfig;
+  }
+
+  /**
+   * Required. Configurable data sharing environment option for a data exchange.
+   * @param sharingEnvironmentConfig sharingEnvironmentConfig or {@code null} for none
+   */
+  public DataExchange setSharingEnvironmentConfig(SharingEnvironmentConfig sharingEnvironmentConfig) {
+    this.sharingEnvironmentConfig = sharingEnvironmentConfig;
     return this;
   }
 

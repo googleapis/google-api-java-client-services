@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Message for response when you subscribe to a listing.
+ * Message for response when you revoke a subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.analyticshub.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SubscribeListingResponse extends com.google.api.client.json.GenericJson {
+public final class RevokeSubscriptionResponse extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Subscription object created from this subscribe action.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Subscription subscription;
-
-  /**
-   * Subscription object created from this subscribe action.
-   * @return value or {@code null} for none
-   */
-  public Subscription getSubscription() {
-    return subscription;
-  }
-
-  /**
-   * Subscription object created from this subscribe action.
-   * @param subscription subscription or {@code null} for none
-   */
-  public SubscribeListingResponse setSubscription(Subscription subscription) {
-    this.subscription = subscription;
-    return this;
+  @Override
+  public RevokeSubscriptionResponse set(String fieldName, Object value) {
+    return (RevokeSubscriptionResponse) super.set(fieldName, value);
   }
 
   @Override
-  public SubscribeListingResponse set(String fieldName, Object value) {
-    return (SubscribeListingResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public SubscribeListingResponse clone() {
-    return (SubscribeListingResponse) super.clone();
+  public RevokeSubscriptionResponse clone() {
+    return (RevokeSubscriptionResponse) super.clone();
   }
 
 }

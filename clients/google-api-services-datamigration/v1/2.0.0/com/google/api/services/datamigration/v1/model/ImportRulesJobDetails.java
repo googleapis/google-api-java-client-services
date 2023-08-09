@@ -31,21 +31,21 @@ package com.google.api.services.datamigration.v1.model;
 public final class ImportRulesJobDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested file format.
+   * Output only. The requested file format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileFormat;
 
   /**
-   * File names used for the import rules job.
+   * Output only. File names used for the import rules job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> files;
 
   /**
-   * The requested file format.
+   * Output only. The requested file format.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileFormat() {
@@ -53,7 +53,7 @@ public final class ImportRulesJobDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The requested file format.
+   * Output only. The requested file format.
    * @param fileFormat fileFormat or {@code null} for none
    */
   public ImportRulesJobDetails setFileFormat(java.lang.String fileFormat) {
@@ -62,7 +62,7 @@ public final class ImportRulesJobDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * File names used for the import rules job.
+   * Output only. File names used for the import rules job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFiles() {
@@ -70,7 +70,7 @@ public final class ImportRulesJobDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * File names used for the import rules job.
+   * Output only. File names used for the import rules job.
    * @param files files or {@code null} for none
    */
   public ImportRulesJobDetails setFiles(java.util.List<java.lang.String> files) {

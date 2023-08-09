@@ -45,17 +45,17 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   private DatabaseEngineInfo destination;
 
   /**
-   * The display name for the workspace.
+   * Optional. The display name for the workspace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * A generic list of settings for the workspace. The settings are database pair dependant and can
-   * indicate default behavior for the mapping rules engine or turn on or off specific features.
-   * Such examples can be: convert_foreign_key_to_interleave=true, skip_triggers=false,
-   * ignore_non_table_synonyms=true
+   * Optional. A generic list of settings for the workspace. The settings are database pair
+   * dependant and can indicate default behavior for the mapping rules engine or turn on or off
+   * specific features. Such examples can be: convert_foreign_key_to_interleave=true,
+   * skip_triggers=false, ignore_non_table_synonyms=true
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name for the workspace.
+   * Optional. The display name for the workspace.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -148,7 +148,7 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * The display name for the workspace.
+   * Optional. The display name for the workspace.
    * @param displayName displayName or {@code null} for none
    */
   public ConversionWorkspace setDisplayName(java.lang.String displayName) {
@@ -157,10 +157,10 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * A generic list of settings for the workspace. The settings are database pair dependant and can
-   * indicate default behavior for the mapping rules engine or turn on or off specific features.
-   * Such examples can be: convert_foreign_key_to_interleave=true, skip_triggers=false,
-   * ignore_non_table_synonyms=true
+   * Optional. A generic list of settings for the workspace. The settings are database pair
+   * dependant and can indicate default behavior for the mapping rules engine or turn on or off
+   * specific features. Such examples can be: convert_foreign_key_to_interleave=true,
+   * skip_triggers=false, ignore_non_table_synonyms=true
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getGlobalSettings() {
@@ -168,10 +168,10 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
-   * A generic list of settings for the workspace. The settings are database pair dependant and can
-   * indicate default behavior for the mapping rules engine or turn on or off specific features.
-   * Such examples can be: convert_foreign_key_to_interleave=true, skip_triggers=false,
-   * ignore_non_table_synonyms=true
+   * Optional. A generic list of settings for the workspace. The settings are database pair
+   * dependant and can indicate default behavior for the mapping rules engine or turn on or off
+   * specific features. Such examples can be: convert_foreign_key_to_interleave=true,
+   * skip_triggers=false, ignore_non_table_synonyms=true
    * @param globalSettings globalSettings or {@code null} for none
    */
   public ConversionWorkspace setGlobalSettings(java.util.Map<String, java.lang.String> globalSettings) {

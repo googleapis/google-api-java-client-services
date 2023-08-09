@@ -17,7 +17,9 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job.
+ * This allows the data to change scale, for example if the source is 2 digits after the decimal
+ * point, specify round to scale value = 2. If for example the value needs to be converted to an
+ * integer, use round to scale value = 0.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +30,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
+public final class RoundToScale extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Scale value to be used
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.Integer scale;
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Required. Scale value to be used
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.Integer getScale() {
+    return scale;
   }
 
   /**
-   * Output only. The connection profile which was used for the seed job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Required. Scale value to be used
+   * @param scale scale or {@code null} for none
    */
-  public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public RoundToScale setScale(java.lang.Integer scale) {
+    this.scale = scale;
     return this;
   }
 
   @Override
-  public SeedJobDetails set(String fieldName, Object value) {
-    return (SeedJobDetails) super.set(fieldName, value);
+  public RoundToScale set(String fieldName, Object value) {
+    return (RoundToScale) super.set(fieldName, value);
   }
 
   @Override
-  public SeedJobDetails clone() {
-    return (SeedJobDetails) super.clone();
+  public RoundToScale clone() {
+    return (RoundToScale) super.clone();
   }
 
 }

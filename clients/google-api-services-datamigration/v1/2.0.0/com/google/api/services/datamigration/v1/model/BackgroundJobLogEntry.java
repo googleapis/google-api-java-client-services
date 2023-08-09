@@ -31,29 +31,29 @@ package com.google.api.services.datamigration.v1.model;
 public final class BackgroundJobLogEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Apply job details.
+   * Output only. Apply job details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ApplyJobDetails applyJobDetails;
 
   /**
-   * Job completion comment, such as how many entities were seeded, how many warnings were found
-   * during conversion, and similar information.
+   * Output only. Job completion comment, such as how many entities were seeded, how many warnings
+   * were found during conversion, and similar information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String completionComment;
 
   /**
-   * Job completion state, i.e. the final state after the job completed.
+   * Output only. Job completion state, i.e. the final state after the job completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String completionState;
 
   /**
-   * Convert job details.
+   * Output only. Convert job details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   private java.lang.String id;
 
   /**
-   * Import rules job details.
+   * Output only. Import rules job details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,15 +88,15 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   private java.lang.String jobType;
 
   /**
-   * Whether the client requested the conversion workspace to be committed after a successful
-   * completion of the job.
+   * Output only. Whether the client requested the conversion workspace to be committed after a
+   * successful completion of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requestAutocommit;
 
   /**
-   * Seed job details.
+   * Output only. Seed job details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   private String startTime;
 
   /**
-   * Apply job details.
+   * Output only. Apply job details.
    * @return value or {@code null} for none
    */
   public ApplyJobDetails getApplyJobDetails() {
@@ -118,7 +118,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Apply job details.
+   * Output only. Apply job details.
    * @param applyJobDetails applyJobDetails or {@code null} for none
    */
   public BackgroundJobLogEntry setApplyJobDetails(ApplyJobDetails applyJobDetails) {
@@ -127,8 +127,8 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Job completion comment, such as how many entities were seeded, how many warnings were found
-   * during conversion, and similar information.
+   * Output only. Job completion comment, such as how many entities were seeded, how many warnings
+   * were found during conversion, and similar information.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompletionComment() {
@@ -136,8 +136,8 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Job completion comment, such as how many entities were seeded, how many warnings were found
-   * during conversion, and similar information.
+   * Output only. Job completion comment, such as how many entities were seeded, how many warnings
+   * were found during conversion, and similar information.
    * @param completionComment completionComment or {@code null} for none
    */
   public BackgroundJobLogEntry setCompletionComment(java.lang.String completionComment) {
@@ -146,7 +146,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Job completion state, i.e. the final state after the job completed.
+   * Output only. Job completion state, i.e. the final state after the job completed.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompletionState() {
@@ -154,7 +154,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Job completion state, i.e. the final state after the job completed.
+   * Output only. Job completion state, i.e. the final state after the job completed.
    * @param completionState completionState or {@code null} for none
    */
   public BackgroundJobLogEntry setCompletionState(java.lang.String completionState) {
@@ -163,7 +163,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Convert job details.
+   * Output only. Convert job details.
    * @return value or {@code null} for none
    */
   public ConvertJobDetails getConvertJobDetails() {
@@ -171,7 +171,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Convert job details.
+   * Output only. Convert job details.
    * @param convertJobDetails convertJobDetails or {@code null} for none
    */
   public BackgroundJobLogEntry setConvertJobDetails(ConvertJobDetails convertJobDetails) {
@@ -214,7 +214,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Import rules job details.
+   * Output only. Import rules job details.
    * @return value or {@code null} for none
    */
   public ImportRulesJobDetails getImportRulesJobDetails() {
@@ -222,7 +222,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Import rules job details.
+   * Output only. Import rules job details.
    * @param importRulesJobDetails importRulesJobDetails or {@code null} for none
    */
   public BackgroundJobLogEntry setImportRulesJobDetails(ImportRulesJobDetails importRulesJobDetails) {
@@ -248,8 +248,8 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether the client requested the conversion workspace to be committed after a successful
-   * completion of the job.
+   * Output only. Whether the client requested the conversion workspace to be committed after a
+   * successful completion of the job.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequestAutocommit() {
@@ -257,8 +257,8 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether the client requested the conversion workspace to be committed after a successful
-   * completion of the job.
+   * Output only. Whether the client requested the conversion workspace to be committed after a
+   * successful completion of the job.
    * @param requestAutocommit requestAutocommit or {@code null} for none
    */
   public BackgroundJobLogEntry setRequestAutocommit(java.lang.Boolean requestAutocommit) {
@@ -267,7 +267,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Seed job details.
+   * Output only. Seed job details.
    * @return value or {@code null} for none
    */
   public SeedJobDetails getSeedJobDetails() {
@@ -275,7 +275,7 @@ public final class BackgroundJobLogEntry extends com.google.api.client.json.Gene
   }
 
   /**
-   * Seed job details.
+   * Output only. Seed job details.
    * @param seedJobDetails seedJobDetails or {@code null} for none
    */
   public BackgroundJobLogEntry setSeedJobDetails(SeedJobDetails seedJobDetails) {

@@ -31,14 +31,14 @@ package com.google.api.services.datamigration.v1.model;
 public final class ConvertJobDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * AIP-160 based filter used to specify the entities to convert
+   * Output only. AIP-160 based filter used to specify the entities to convert
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * AIP-160 based filter used to specify the entities to convert
+   * Output only. AIP-160 based filter used to specify the entities to convert
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -46,7 +46,7 @@ public final class ConvertJobDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * AIP-160 based filter used to specify the entities to convert
+   * Output only. AIP-160 based filter used to specify the entities to convert
    * @param filter filter or {@code null} for none
    */
   public ConvertJobDetails setFilter(java.lang.String filter) {

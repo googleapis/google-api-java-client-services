@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding a Seed background job.
+ * Apply a hash function on the value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SeedJobDetails extends com.google.api.client.json.GenericJson {
+public final class ApplyHash extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Optional. Generate UUID from the data's byte array
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private Empty uuidFromBytes;
 
   /**
-   * Output only. The connection profile which was used for the seed job.
+   * Optional. Generate UUID from the data's byte array
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public Empty getUuidFromBytes() {
+    return uuidFromBytes;
   }
 
   /**
-   * Output only. The connection profile which was used for the seed job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Optional. Generate UUID from the data's byte array
+   * @param uuidFromBytes uuidFromBytes or {@code null} for none
    */
-  public SeedJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public ApplyHash setUuidFromBytes(Empty uuidFromBytes) {
+    this.uuidFromBytes = uuidFromBytes;
     return this;
   }
 
   @Override
-  public SeedJobDetails set(String fieldName, Object value) {
-    return (SeedJobDetails) super.set(fieldName, value);
+  public ApplyHash set(String fieldName, Object value) {
+    return (ApplyHash) super.set(fieldName, value);
   }
 
   @Override
-  public SeedJobDetails clone() {
-    return (SeedJobDetails) super.clone();
+  public ApplyHash clone() {
+    return (ApplyHash) super.clone();
   }
 
 }

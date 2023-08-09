@@ -17,7 +17,9 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding an Apply background job.
+ * Options to configure rule type SetTablePrimaryKey. The rule is used to specify the columns and
+ * name to configure/alter the primary key of a table. The rule filter field can refer to one
+ * entity. The rule scope can be one of: Table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,64 +30,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApplyJobDetails extends com.google.api.client.json.GenericJson {
+public final class SetTablePrimaryKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Optional. Name for the primary key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.String primaryKey;
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Required. List of column names for the primary key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String filter;
+  private java.util.List<java.lang.String> primaryKeyColumns;
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Optional. Name for the primary key
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.String getPrimaryKey() {
+    return primaryKey;
   }
 
   /**
-   * Output only. The connection profile which was used for the apply job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Optional. Name for the primary key
+   * @param primaryKey primaryKey or {@code null} for none
    */
-  public ApplyJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public SetTablePrimaryKey setPrimaryKey(java.lang.String primaryKey) {
+    this.primaryKey = primaryKey;
     return this;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Required. List of column names for the primary key
    * @return value or {@code null} for none
    */
-  public java.lang.String getFilter() {
-    return filter;
+  public java.util.List<java.lang.String> getPrimaryKeyColumns() {
+    return primaryKeyColumns;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
-   * @param filter filter or {@code null} for none
+   * Required. List of column names for the primary key
+   * @param primaryKeyColumns primaryKeyColumns or {@code null} for none
    */
-  public ApplyJobDetails setFilter(java.lang.String filter) {
-    this.filter = filter;
+  public SetTablePrimaryKey setPrimaryKeyColumns(java.util.List<java.lang.String> primaryKeyColumns) {
+    this.primaryKeyColumns = primaryKeyColumns;
     return this;
   }
 
   @Override
-  public ApplyJobDetails set(String fieldName, Object value) {
-    return (ApplyJobDetails) super.set(fieldName, value);
+  public SetTablePrimaryKey set(String fieldName, Object value) {
+    return (SetTablePrimaryKey) super.set(fieldName, value);
   }
 
   @Override
-  public ApplyJobDetails clone() {
-    return (ApplyJobDetails) super.clone();
+  public SetTablePrimaryKey clone() {
+    return (SetTablePrimaryKey) super.clone();
   }
 
 }

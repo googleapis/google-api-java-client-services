@@ -103,6 +103,13 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.String databaseVersion;
 
   /**
+   * Optional. The edition of the given Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * The settings for IP Management. This allows to enable or disable the instance IP and manage
    * which external networks can connect to the instance. The IPv4 address cannot be disabled.
    * The value may be {@code null}.
@@ -342,6 +349,23 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
    */
   public CloudSqlSettings setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The edition of the given Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. The edition of the given Cloud SQL instance.
+   * @param edition edition or {@code null} for none
+   */
+  public CloudSqlSettings setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

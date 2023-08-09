@@ -31,11 +31,27 @@ package com.google.api.services.datamigration.v1.model;
 public final class ApplyConversionWorkspaceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
+   * apply.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoCommit;
+
+  /**
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionProfile;
+
+  /**
+   * Optional. Only validates the apply process, but doesn't change the destination database. Only
+   * works for PostgreSQL destination connection profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dryRun;
 
   /**
    * Filter which entities to apply. Leaving this field empty will apply all of the entities.
@@ -46,7 +62,26 @@ public final class ApplyConversionWorkspaceRequest extends com.google.api.client
   private java.lang.String filter;
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
+   * apply.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoCommit() {
+    return autoCommit;
+  }
+
+  /**
+   * Optional. Specifies whether the conversion workspace is to be committed automatically after the
+   * apply.
+   * @param autoCommit autoCommit or {@code null} for none
+   */
+  public ApplyConversionWorkspaceRequest setAutoCommit(java.lang.Boolean autoCommit) {
+    this.autoCommit = autoCommit;
+    return this;
+  }
+
+  /**
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionProfile() {
@@ -54,11 +89,30 @@ public final class ApplyConversionWorkspaceRequest extends com.google.api.client
   }
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * @param connectionProfile connectionProfile or {@code null} for none
    */
   public ApplyConversionWorkspaceRequest setConnectionProfile(java.lang.String connectionProfile) {
     this.connectionProfile = connectionProfile;
+    return this;
+  }
+
+  /**
+   * Optional. Only validates the apply process, but doesn't change the destination database. Only
+   * works for PostgreSQL destination connection profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDryRun() {
+    return dryRun;
+  }
+
+  /**
+   * Optional. Only validates the apply process, but doesn't change the destination database. Only
+   * works for PostgreSQL destination connection profile.
+   * @param dryRun dryRun or {@code null} for none
+   */
+  public ApplyConversionWorkspaceRequest setDryRun(java.lang.Boolean dryRun) {
+    this.dryRun = dryRun;
     return this;
   }
 

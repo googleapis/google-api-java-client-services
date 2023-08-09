@@ -17,7 +17,8 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Details regarding an Apply background job.
+ * Options to configure rule type SinglePackageChange. The rule is used to alter the sql code for a
+ * package entities. The rule filter field can refer to one entity. The rule scope can be: Package
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,64 +29,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApplyJobDetails extends com.google.api.client.json.GenericJson {
+public final class SinglePackageChange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Optional. Sql code for package body
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String connectionProfile;
+  private java.lang.String packageBody;
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Optional. Sql code for package description
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String filter;
+  private java.lang.String packageDescription;
 
   /**
-   * Output only. The connection profile which was used for the apply job.
+   * Optional. Sql code for package body
    * @return value or {@code null} for none
    */
-  public java.lang.String getConnectionProfile() {
-    return connectionProfile;
+  public java.lang.String getPackageBody() {
+    return packageBody;
   }
 
   /**
-   * Output only. The connection profile which was used for the apply job.
-   * @param connectionProfile connectionProfile or {@code null} for none
+   * Optional. Sql code for package body
+   * @param packageBody packageBody or {@code null} for none
    */
-  public ApplyJobDetails setConnectionProfile(java.lang.String connectionProfile) {
-    this.connectionProfile = connectionProfile;
+  public SinglePackageChange setPackageBody(java.lang.String packageBody) {
+    this.packageBody = packageBody;
     return this;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
+   * Optional. Sql code for package description
    * @return value or {@code null} for none
    */
-  public java.lang.String getFilter() {
-    return filter;
+  public java.lang.String getPackageDescription() {
+    return packageDescription;
   }
 
   /**
-   * Output only. AIP-160 based filter used to specify the entities to apply
-   * @param filter filter or {@code null} for none
+   * Optional. Sql code for package description
+   * @param packageDescription packageDescription or {@code null} for none
    */
-  public ApplyJobDetails setFilter(java.lang.String filter) {
-    this.filter = filter;
+  public SinglePackageChange setPackageDescription(java.lang.String packageDescription) {
+    this.packageDescription = packageDescription;
     return this;
   }
 
   @Override
-  public ApplyJobDetails set(String fieldName, Object value) {
-    return (ApplyJobDetails) super.set(fieldName, value);
+  public SinglePackageChange set(String fieldName, Object value) {
+    return (SinglePackageChange) super.set(fieldName, value);
   }
 
   @Override
-  public ApplyJobDetails clone() {
-    return (ApplyJobDetails) super.clone();
+  public SinglePackageChange clone() {
+    return (SinglePackageChange) super.clone();
   }
 
 }

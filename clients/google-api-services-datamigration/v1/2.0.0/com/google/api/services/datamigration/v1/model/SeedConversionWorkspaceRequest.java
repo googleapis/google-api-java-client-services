@@ -38,14 +38,14 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   private java.lang.Boolean autoCommit;
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationConnectionProfile;
 
   /**
-   * Fully qualified (Uri) name of the source connection profile.
+   * Optional. Fully qualified (Uri) name of the source connection profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   }
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationConnectionProfile() {
@@ -77,7 +77,7 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   }
 
   /**
-   * Fully qualified (Uri) name of the destination connection profile.
+   * Optional. Fully qualified (Uri) name of the destination connection profile.
    * @param destinationConnectionProfile destinationConnectionProfile or {@code null} for none
    */
   public SeedConversionWorkspaceRequest setDestinationConnectionProfile(java.lang.String destinationConnectionProfile) {
@@ -86,7 +86,7 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   }
 
   /**
-   * Fully qualified (Uri) name of the source connection profile.
+   * Optional. Fully qualified (Uri) name of the source connection profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceConnectionProfile() {
@@ -94,7 +94,7 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   }
 
   /**
-   * Fully qualified (Uri) name of the source connection profile.
+   * Optional. Fully qualified (Uri) name of the source connection profile.
    * @param sourceConnectionProfile sourceConnectionProfile or {@code null} for none
    */
   public SeedConversionWorkspaceRequest setSourceConnectionProfile(java.lang.String sourceConnectionProfile) {

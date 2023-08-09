@@ -31,28 +31,30 @@ package com.google.api.services.datamigration.v1.model;
 public final class ImportMappingRulesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Should the conversion workspace be committed automatically after the import operation.
+   * Required. Should the conversion workspace be committed automatically after the import
+   * operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoCommit;
 
   /**
-   * One or more rules files.
+   * Required. One or more rules files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RulesFile> rulesFiles;
 
   /**
-   * The format of the rules content file.
+   * Required. The format of the rules content file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rulesFormat;
 
   /**
-   * Should the conversion workspace be committed automatically after the import operation.
+   * Required. Should the conversion workspace be committed automatically after the import
+   * operation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCommit() {
@@ -60,7 +62,8 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * Should the conversion workspace be committed automatically after the import operation.
+   * Required. Should the conversion workspace be committed automatically after the import
+   * operation.
    * @param autoCommit autoCommit or {@code null} for none
    */
   public ImportMappingRulesRequest setAutoCommit(java.lang.Boolean autoCommit) {
@@ -69,7 +72,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * One or more rules files.
+   * Required. One or more rules files.
    * @return value or {@code null} for none
    */
   public java.util.List<RulesFile> getRulesFiles() {
@@ -77,7 +80,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * One or more rules files.
+   * Required. One or more rules files.
    * @param rulesFiles rulesFiles or {@code null} for none
    */
   public ImportMappingRulesRequest setRulesFiles(java.util.List<RulesFile> rulesFiles) {
@@ -86,7 +89,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * The format of the rules content file.
+   * Required. The format of the rules content file.
    * @return value or {@code null} for none
    */
   public java.lang.String getRulesFormat() {
@@ -94,7 +97,7 @@ public final class ImportMappingRulesRequest extends com.google.api.client.json.
   }
 
   /**
-   * The format of the rules content file.
+   * Required. The format of the rules content file.
    * @param rulesFormat rulesFormat or {@code null} for none
    */
   public ImportMappingRulesRequest setRulesFormat(java.lang.String rulesFormat) {

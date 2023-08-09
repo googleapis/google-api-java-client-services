@@ -30,6 +30,57 @@ package com.google.api.services.datamigration.v1.model;
 @SuppressWarnings("javadoc")
 public final class VerifyMigrationJobRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The changed migration job parameters to verify. It will not update the migration job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MigrationJob migrationJob;
+
+  /**
+   * Optional. Field mask is used to specify the changed fields to be verified. It will not update
+   * the migration job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
+   * Optional. The changed migration job parameters to verify. It will not update the migration job.
+   * @return value or {@code null} for none
+   */
+  public MigrationJob getMigrationJob() {
+    return migrationJob;
+  }
+
+  /**
+   * Optional. The changed migration job parameters to verify. It will not update the migration job.
+   * @param migrationJob migrationJob or {@code null} for none
+   */
+  public VerifyMigrationJobRequest setMigrationJob(MigrationJob migrationJob) {
+    this.migrationJob = migrationJob;
+    return this;
+  }
+
+  /**
+   * Optional. Field mask is used to specify the changed fields to be verified. It will not update
+   * the migration job.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Optional. Field mask is used to specify the changed fields to be verified. It will not update
+   * the migration job.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public VerifyMigrationJobRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
+    return this;
+  }
+
   @Override
   public VerifyMigrationJobRequest set(String fieldName, Object value) {
     return (VerifyMigrationJobRequest) super.set(fieldName, value);

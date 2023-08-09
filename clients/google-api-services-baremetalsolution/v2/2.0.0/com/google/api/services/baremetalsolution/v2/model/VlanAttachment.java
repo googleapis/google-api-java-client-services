@@ -38,6 +38,14 @@ public final class VlanAttachment extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
+   * Optional. The name of the vlan attachment within vrf. This is of the form
+   * projects/{project_number}/regions/{region}/interconnectAttachments/{interconnect_attachment}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interconnectAttachment;
+
+  /**
    * Input only. Pairing key.
    * The value may be {@code null}.
    */
@@ -87,6 +95,25 @@ public final class VlanAttachment extends com.google.api.client.json.GenericJson
    */
   public VlanAttachment setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the vlan attachment within vrf. This is of the form
+   * projects/{project_number}/regions/{region}/interconnectAttachments/{interconnect_attachment}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterconnectAttachment() {
+    return interconnectAttachment;
+  }
+
+  /**
+   * Optional. The name of the vlan attachment within vrf. This is of the form
+   * projects/{project_number}/regions/{region}/interconnectAttachments/{interconnect_attachment}
+   * @param interconnectAttachment interconnectAttachment or {@code null} for none
+   */
+  public VlanAttachment setInterconnectAttachment(java.lang.String interconnectAttachment) {
+    this.interconnectAttachment = interconnectAttachment;
     return this;
   }
 

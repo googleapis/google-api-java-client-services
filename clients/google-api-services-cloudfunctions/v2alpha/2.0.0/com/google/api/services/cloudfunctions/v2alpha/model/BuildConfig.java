@@ -101,6 +101,14 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
   private SourceProvenance sourceProvenance;
 
   /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceToken;
+
+  /**
    * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
    * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * {project} and {region} are the project id and region respectively where the worker pool is
@@ -276,6 +284,25 @@ public final class BuildConfig extends com.google.api.client.json.GenericJson {
    */
   public BuildConfig setSourceProvenance(SourceProvenance sourceProvenance) {
     this.sourceProvenance = sourceProvenance;
+    return this;
+  }
+
+  /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceToken() {
+    return sourceToken;
+  }
+
+  /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * @param sourceToken sourceToken or {@code null} for none
+   */
+  public BuildConfig setSourceToken(java.lang.String sourceToken) {
+    this.sourceToken = sourceToken;
     return this;
   }
 

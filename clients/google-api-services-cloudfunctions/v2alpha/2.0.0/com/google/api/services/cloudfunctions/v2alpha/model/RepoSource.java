@@ -54,13 +54,6 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   private java.lang.String dir;
 
   /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean invertRegex;
-
-  /**
    * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting
    * the build is assumed.
    * The value may be {@code null}.
@@ -137,23 +130,6 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
    */
   public RepoSource setDir(java.lang.String dir) {
     this.dir = dir;
-    return this;
-  }
-
-  /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getInvertRegex() {
-    return invertRegex;
-  }
-
-  /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
-   * @param invertRegex invertRegex or {@code null} for none
-   */
-  public RepoSource setInvertRegex(java.lang.Boolean invertRegex) {
-    this.invertRegex = invertRegex;
     return this;
   }
 

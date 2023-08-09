@@ -379,7 +379,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
-         *        "organizations/{organization}/locations/{location}".
+         *        "organizations/{organization}/locations/{location}"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -407,7 +407,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which owns this collection of notifications. Must be of the form
-         *        "organizations/{organization}/locations/{location}".
+         *        "organizations/{organization}/locations/{location}"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -487,13 +487,13 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns this collection of notifications. Must be of the form
-           * "organizations/{organization}/locations/{location}".
+           * "organizations/{organization}/locations/{location}"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which owns this collection of notifications. Must be of the form
-         "organizations/{organization}/locations/{location}".
+         "organizations/{organization}/locations/{location}"
            */
           public java.lang.String getParent() {
             return parent;
@@ -501,7 +501,7 @@ public class Advisorynotifications extends com.google.api.client.googleapis.serv
 
           /**
            * Required. The parent, which owns this collection of notifications. Must be of the form
-           * "organizations/{organization}/locations/{location}".
+           * "organizations/{organization}/locations/{location}"
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

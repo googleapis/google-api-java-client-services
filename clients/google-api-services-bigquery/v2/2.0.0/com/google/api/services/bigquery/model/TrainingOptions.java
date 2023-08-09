@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class TrainingOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Activation function of the neural nets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activationFn;
+
+  /**
    * If true, detect step changes and make data adjustment in the input time series.
    * The value may be {@code null}.
    */
@@ -66,6 +73,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long autoArimaMinOrder;
 
   /**
+   * Whether to calculate class weights automatically based on the popularity of each label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoClassWeights;
+
+  /**
    * Batch size for dnn models.
    * The value may be {@code null}.
    */
@@ -78,6 +92,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String boosterType;
+
+  /**
+   * Budget in hours for AutoML training.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double budgetHours;
 
   /**
    * Whether or not p-value test should be computed for this model. Only available for linear and
@@ -210,6 +231,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String feedbackType;
 
   /**
+   * Whether the model should include intercept during model training.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fitIntercept;
+
+  /**
    * Hidden units for dnn models.
    * The value may be {@code null}.
    */
@@ -294,6 +322,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String kmeansInitializationMethod;
+
+  /**
+   * L1 regularization coefficient to activations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double l1RegActivation;
 
   /**
    * L1 regularization coefficient.
@@ -398,6 +433,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long minTreeChildWeight;
 
   /**
+   * The model registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelRegistry;
+
+  /**
    * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * The value may be {@code null}.
@@ -435,6 +477,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long numParallelTree;
 
   /**
+   * Number of principal components to keep in the PCA model. Must be <= the number of features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numPrincipalComponents;
+
+  /**
    * Number of trials to run this hyperparameter tuning job.
    * The value may be {@code null}.
    */
@@ -449,13 +498,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String optimizationStrategy;
 
   /**
-   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
-   * field b. When false (default), the output feature name is A_b. When true, the output feature
-   * name is A.b.
+   * Optimizer used for training the neural nets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean preserveInputStructs;
+  private java.lang.String optimizer;
+
+  /**
+   * The minimum ratio of cumulative explained variance that needs to be given by the PCA model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double pcaExplainedVarianceRatio;
+
+  /**
+   * The solver for PCA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pcaSolver;
 
   /**
    * Number of paths for the sampled Shapley explain method.
@@ -463,6 +524,21 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sampledShapleyNumPaths;
+
+  /**
+   * If true, scale the feature values by dividing the feature standard deviation. Currently only
+   * apply to PCA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean scaleFeatures;
+
+  /**
+   * Whether to standardize numerical features. Default to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean standardizeFeatures;
 
   /**
    * Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree
@@ -537,6 +613,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String userColumn;
 
   /**
+   * The version aliases to apply in Vertex AI model registry. Always overwrite if the version
+   * aliases exists in a existing model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> vertexAiModelVersionAliases;
+
+  /**
    * Hyperparameter for matrix factoration when implicit feedback type is specified.
    * The value may be {@code null}.
    */
@@ -556,6 +640,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String xgboostVersion;
+
+  /**
+   * Activation function of the neural nets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActivationFn() {
+    return activationFn;
+  }
+
+  /**
+   * Activation function of the neural nets.
+   * @param activationFn activationFn or {@code null} for none
+   */
+  public TrainingOptions setActivationFn(java.lang.String activationFn) {
+    this.activationFn = activationFn;
+    return this;
+  }
 
   /**
    * If true, detect step changes and make data adjustment in the input time series.
@@ -645,6 +746,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Whether to calculate class weights automatically based on the popularity of each label.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoClassWeights() {
+    return autoClassWeights;
+  }
+
+  /**
+   * Whether to calculate class weights automatically based on the popularity of each label.
+   * @param autoClassWeights autoClassWeights or {@code null} for none
+   */
+  public TrainingOptions setAutoClassWeights(java.lang.Boolean autoClassWeights) {
+    this.autoClassWeights = autoClassWeights;
+    return this;
+  }
+
+  /**
    * Batch size for dnn models.
    * @return value or {@code null} for none
    */
@@ -675,6 +793,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setBoosterType(java.lang.String boosterType) {
     this.boosterType = boosterType;
+    return this;
+  }
+
+  /**
+   * Budget in hours for AutoML training.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getBudgetHours() {
+    return budgetHours;
+  }
+
+  /**
+   * Budget in hours for AutoML training.
+   * @param budgetHours budgetHours or {@code null} for none
+   */
+  public TrainingOptions setBudgetHours(java.lang.Double budgetHours) {
+    this.budgetHours = budgetHours;
     return this;
   }
 
@@ -990,6 +1125,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Whether the model should include intercept during model training.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFitIntercept() {
+    return fitIntercept;
+  }
+
+  /**
+   * Whether the model should include intercept during model training.
+   * @param fitIntercept fitIntercept or {@code null} for none
+   */
+  public TrainingOptions setFitIntercept(java.lang.Boolean fitIntercept) {
+    this.fitIntercept = fitIntercept;
+    return this;
+  }
+
+  /**
    * Hidden units for dnn models.
    * @return value or {@code null} for none
    */
@@ -1194,6 +1346,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setKmeansInitializationMethod(java.lang.String kmeansInitializationMethod) {
     this.kmeansInitializationMethod = kmeansInitializationMethod;
+    return this;
+  }
+
+  /**
+   * L1 regularization coefficient to activations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getL1RegActivation() {
+    return l1RegActivation;
+  }
+
+  /**
+   * L1 regularization coefficient to activations.
+   * @param l1RegActivation l1RegActivation or {@code null} for none
+   */
+  public TrainingOptions setL1RegActivation(java.lang.Double l1RegActivation) {
+    this.l1RegActivation = l1RegActivation;
     return this;
   }
 
@@ -1444,6 +1613,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The model registry.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelRegistry() {
+    return modelRegistry;
+  }
+
+  /**
+   * The model registry.
+   * @param modelRegistry modelRegistry or {@code null} for none
+   */
+  public TrainingOptions setModelRegistry(java.lang.String modelRegistry) {
+    this.modelRegistry = modelRegistry;
+    return this;
+  }
+
+  /**
    * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * @return value or {@code null} for none
@@ -1533,6 +1719,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Number of principal components to keep in the PCA model. Must be <= the number of features.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumPrincipalComponents() {
+    return numPrincipalComponents;
+  }
+
+  /**
+   * Number of principal components to keep in the PCA model. Must be <= the number of features.
+   * @param numPrincipalComponents numPrincipalComponents or {@code null} for none
+   */
+  public TrainingOptions setNumPrincipalComponents(java.lang.Long numPrincipalComponents) {
+    this.numPrincipalComponents = numPrincipalComponents;
+    return this;
+  }
+
+  /**
    * Number of trials to run this hyperparameter tuning job.
    * @return value or {@code null} for none
    */
@@ -1567,23 +1770,53 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
-   * field b. When false (default), the output feature name is A_b. When true, the output feature
-   * name is A.b.
+   * Optimizer used for training the neural nets.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getPreserveInputStructs() {
-    return preserveInputStructs;
+  public java.lang.String getOptimizer() {
+    return optimizer;
   }
 
   /**
-   * Whether to preserve the input structs in output feature names. Suppose there is a struct A with
-   * field b. When false (default), the output feature name is A_b. When true, the output feature
-   * name is A.b.
-   * @param preserveInputStructs preserveInputStructs or {@code null} for none
+   * Optimizer used for training the neural nets.
+   * @param optimizer optimizer or {@code null} for none
    */
-  public TrainingOptions setPreserveInputStructs(java.lang.Boolean preserveInputStructs) {
-    this.preserveInputStructs = preserveInputStructs;
+  public TrainingOptions setOptimizer(java.lang.String optimizer) {
+    this.optimizer = optimizer;
+    return this;
+  }
+
+  /**
+   * The minimum ratio of cumulative explained variance that needs to be given by the PCA model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getPcaExplainedVarianceRatio() {
+    return pcaExplainedVarianceRatio;
+  }
+
+  /**
+   * The minimum ratio of cumulative explained variance that needs to be given by the PCA model.
+   * @param pcaExplainedVarianceRatio pcaExplainedVarianceRatio or {@code null} for none
+   */
+  public TrainingOptions setPcaExplainedVarianceRatio(java.lang.Double pcaExplainedVarianceRatio) {
+    this.pcaExplainedVarianceRatio = pcaExplainedVarianceRatio;
+    return this;
+  }
+
+  /**
+   * The solver for PCA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPcaSolver() {
+    return pcaSolver;
+  }
+
+  /**
+   * The solver for PCA.
+   * @param pcaSolver pcaSolver or {@code null} for none
+   */
+  public TrainingOptions setPcaSolver(java.lang.String pcaSolver) {
+    this.pcaSolver = pcaSolver;
     return this;
   }
 
@@ -1601,6 +1834,42 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setSampledShapleyNumPaths(java.lang.Long sampledShapleyNumPaths) {
     this.sampledShapleyNumPaths = sampledShapleyNumPaths;
+    return this;
+  }
+
+  /**
+   * If true, scale the feature values by dividing the feature standard deviation. Currently only
+   * apply to PCA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getScaleFeatures() {
+    return scaleFeatures;
+  }
+
+  /**
+   * If true, scale the feature values by dividing the feature standard deviation. Currently only
+   * apply to PCA.
+   * @param scaleFeatures scaleFeatures or {@code null} for none
+   */
+  public TrainingOptions setScaleFeatures(java.lang.Boolean scaleFeatures) {
+    this.scaleFeatures = scaleFeatures;
+    return this;
+  }
+
+  /**
+   * Whether to standardize numerical features. Default to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStandardizeFeatures() {
+    return standardizeFeatures;
+  }
+
+  /**
+   * Whether to standardize numerical features. Default to true.
+   * @param standardizeFeatures standardizeFeatures or {@code null} for none
+   */
+  public TrainingOptions setStandardizeFeatures(java.lang.Boolean standardizeFeatures) {
+    this.standardizeFeatures = standardizeFeatures;
     return this;
   }
 
@@ -1775,6 +2044,25 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setUserColumn(java.lang.String userColumn) {
     this.userColumn = userColumn;
+    return this;
+  }
+
+  /**
+   * The version aliases to apply in Vertex AI model registry. Always overwrite if the version
+   * aliases exists in a existing model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getVertexAiModelVersionAliases() {
+    return vertexAiModelVersionAliases;
+  }
+
+  /**
+   * The version aliases to apply in Vertex AI model registry. Always overwrite if the version
+   * aliases exists in a existing model.
+   * @param vertexAiModelVersionAliases vertexAiModelVersionAliases or {@code null} for none
+   */
+  public TrainingOptions setVertexAiModelVersionAliases(java.util.List<java.lang.String> vertexAiModelVersionAliases) {
+    this.vertexAiModelVersionAliases = vertexAiModelVersionAliases;
     return this;
   }
 

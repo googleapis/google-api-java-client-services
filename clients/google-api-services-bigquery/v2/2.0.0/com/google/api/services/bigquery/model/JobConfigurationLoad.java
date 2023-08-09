@@ -158,6 +158,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileSetSpecType;
+
+  /**
    * [Optional] Options to configure hive partitioning support.
    * The value may be {@code null}.
    */
@@ -639,6 +648,27 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setFieldDelimiter(java.lang.String fieldDelimiter) {
     this.fieldDelimiter = fieldDelimiter;
+    return this;
+  }
+
+  /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileSetSpecType() {
+    return fileSetSpecType;
+  }
+
+  /**
+   * [Optional] Specifies how source URIs are interpreted for constructing the file set to load. By
+   * default source URIs are expanded against the underlying storage. Other options include
+   * specifying manifest files. Only applicable to object storage systems.
+   * @param fileSetSpecType fileSetSpecType or {@code null} for none
+   */
+  public JobConfigurationLoad setFileSetSpecType(java.lang.String fileSetSpecType) {
+    this.fileSetSpecType = fileSetSpecType;
     return this;
   }
 

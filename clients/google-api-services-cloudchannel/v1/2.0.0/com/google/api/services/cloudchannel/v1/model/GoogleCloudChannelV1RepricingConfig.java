@@ -37,8 +37,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   private GoogleCloudChannelV1RepricingAdjustment adjustment;
 
   /**
-   * Applies the repricing configuration at the channel partner level. This is the only supported
-   * value for ChannelPartnerRepricingConfig.
+   * Applies the repricing configuration at the channel partner level. Only
+   * ChannelPartnerRepricingConfig supports this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,11 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   private GoogleTypeDate effectiveInvoiceMonth;
 
   /**
-   * Applies the repricing configuration at the entitlement level. This is the only supported value
-   * for CustomerRepricingConfig.
+   * Applies the repricing configuration at the entitlement level. Note: If a
+   * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
+   * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
+   * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both
+   * CustomerRepricingConfig and ChannelPartnerRepricingConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +104,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the channel partner level. This is the only supported
-   * value for ChannelPartnerRepricingConfig.
+   * Applies the repricing configuration at the channel partner level. Only
+   * ChannelPartnerRepricingConfig supports this value.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity getChannelPartnerGranularity() {
@@ -110,8 +113,8 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the channel partner level. This is the only supported
-   * value for ChannelPartnerRepricingConfig.
+   * Applies the repricing configuration at the channel partner level. Only
+   * ChannelPartnerRepricingConfig supports this value.
    * @param channelPartnerGranularity channelPartnerGranularity or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfig setChannelPartnerGranularity(GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity channelPartnerGranularity) {
@@ -160,8 +163,11 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the entitlement level. This is the only supported value
-   * for CustomerRepricingConfig.
+   * Applies the repricing configuration at the entitlement level. Note: If a
+   * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
+   * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
+   * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both
+   * CustomerRepricingConfig and ChannelPartnerRepricingConfig.
    * @return value or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfigEntitlementGranularity getEntitlementGranularity() {
@@ -169,8 +175,11 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the entitlement level. This is the only supported value
-   * for CustomerRepricingConfig.
+   * Applies the repricing configuration at the entitlement level. Note: If a
+   * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
+   * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
+   * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both
+   * CustomerRepricingConfig and ChannelPartnerRepricingConfig.
    * @param entitlementGranularity entitlementGranularity or {@code null} for none
    */
   public GoogleCloudChannelV1RepricingConfig setEntitlementGranularity(GoogleCloudChannelV1RepricingConfigEntitlementGranularity entitlementGranularity) {

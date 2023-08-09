@@ -104,8 +104,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
    * once an hour if you have recently changed your baseline slot capacity and your baseline slots
    * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
-   * NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked
-   * separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -274,8 +272,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
    * once an hour if you have recently changed your baseline slot capacity and your baseline slots
    * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
-   * NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked
-   * separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCapacity() {
@@ -295,8 +291,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    * reservation every few minutes. If you want to decrease your baseline slots, you are limited to
    * once an hour if you have recently changed your baseline slot capacity and your baseline slots
    * exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes.
-   * NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked
-   * separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
    * @param slotCapacity slotCapacity or {@code null} for none
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {

@@ -14,10 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.datastore.v1beta3.model;
+package com.google.api.services.datastore.v1.model;
 
 /**
- * Options specific to read-only transactions.
+ * Average of the values of the requested property. * Only numeric values will be aggregated. All
+ * non-numeric values including `NULL` are skipped. * If the aggregated values contain `NaN`,
+ * returns `NaN`. * If the aggregated value set is empty, returns `NULL`. * Always returns the
+ * result as a double.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:
@@ -27,46 +30,40 @@ package com.google.api.services.datastore.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReadOnly extends com.google.api.client.json.GenericJson {
+public final class Avg extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reads entities at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
+   * The property to aggregate on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String readTime;
+  private PropertyReference property;
 
   /**
-   * Reads entities at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
+   * The property to aggregate on.
    * @return value or {@code null} for none
    */
-  public String getReadTime() {
-    return readTime;
+  public PropertyReference getProperty() {
+    return property;
   }
 
   /**
-   * Reads entities at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
-   * @param readTime readTime or {@code null} for none
+   * The property to aggregate on.
+   * @param property property or {@code null} for none
    */
-  public ReadOnly setReadTime(String readTime) {
-    this.readTime = readTime;
+  public Avg setProperty(PropertyReference property) {
+    this.property = property;
     return this;
   }
 
   @Override
-  public ReadOnly set(String fieldName, Object value) {
-    return (ReadOnly) super.set(fieldName, value);
+  public Avg set(String fieldName, Object value) {
+    return (Avg) super.set(fieldName, value);
   }
 
   @Override
-  public ReadOnly clone() {
-    return (ReadOnly) super.clone();
+  public Avg clone() {
+    return (Avg) super.clone();
   }
 
 }

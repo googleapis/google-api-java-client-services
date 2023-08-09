@@ -32,14 +32,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SQL expression.
+   * Optional. The SQL expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlExpression;
 
   /**
-   * The SQL expression.
+   * Optional. The SQL expression.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlExpression() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation e
   }
 
   /**
-   * The SQL expression.
+   * Optional. The SQL expression.
    * @param sqlExpression sqlExpression or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation setSqlExpression(java.lang.String sqlExpression) {

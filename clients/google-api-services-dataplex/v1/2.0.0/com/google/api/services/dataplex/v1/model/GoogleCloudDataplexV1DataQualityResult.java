@@ -50,6 +50,13 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
   private java.lang.Boolean passed;
 
   /**
+   * Output only. The result of post scan actions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualityResultPostScanActionsResult postScanActionsResult;
+
+  /**
    * The count of rows processed.
    * The value may be {@code null}.
    */
@@ -101,6 +108,23 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
    */
   public GoogleCloudDataplexV1DataQualityResult setPassed(java.lang.Boolean passed) {
     this.passed = passed;
+    return this;
+  }
+
+  /**
+   * Output only. The result of post scan actions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResultPostScanActionsResult getPostScanActionsResult() {
+    return postScanActionsResult;
+  }
+
+  /**
+   * Output only. The result of post scan actions.
+   * @param postScanActionsResult postScanActionsResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResult setPostScanActionsResult(GoogleCloudDataplexV1DataQualityResultPostScanActionsResult postScanActionsResult) {
+    this.postScanActionsResult = postScanActionsResult;
     return this;
   }
 

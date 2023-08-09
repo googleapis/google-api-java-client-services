@@ -39,6 +39,13 @@ public final class GoogleCloudDataplexV1DataTaxonomy extends com.google.api.clie
   private java.lang.Integer attributeCount;
 
   /**
+   * Output only. The number of classes in the DataTaxonomy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer classCount;
+
+  /**
    * Output only. The time when the DataTaxonomy was created.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class GoogleCloudDataplexV1DataTaxonomy extends com.google.api.clie
    */
   public GoogleCloudDataplexV1DataTaxonomy setAttributeCount(java.lang.Integer attributeCount) {
     this.attributeCount = attributeCount;
+    return this;
+  }
+
+  /**
+   * Output only. The number of classes in the DataTaxonomy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getClassCount() {
+    return classCount;
+  }
+
+  /**
+   * Output only. The number of classes in the DataTaxonomy.
+   * @param classCount classCount or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataTaxonomy setClassCount(java.lang.Integer classCount) {
+    this.classCount = classCount;
     return this;
   }
 

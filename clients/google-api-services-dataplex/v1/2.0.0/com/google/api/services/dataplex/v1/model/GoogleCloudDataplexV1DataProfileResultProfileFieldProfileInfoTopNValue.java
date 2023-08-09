@@ -37,6 +37,14 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
   private java.lang.Long count;
 
   /**
+   * Ratio of the corresponding value in the field against the total number of rows in the scanned
+   * data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double ratio;
+
+  /**
    * String value of a top N non-null value.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
    */
   public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Ratio of the corresponding value in the field against the total number of rows in the scanned
+   * data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getRatio() {
+    return ratio;
+  }
+
+  /**
+   * Ratio of the corresponding value in the field against the total number of rows in the scanned
+   * data.
+   * @param ratio ratio or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue setRatio(java.lang.Double ratio) {
+    this.ratio = ratio;
     return this;
   }
 

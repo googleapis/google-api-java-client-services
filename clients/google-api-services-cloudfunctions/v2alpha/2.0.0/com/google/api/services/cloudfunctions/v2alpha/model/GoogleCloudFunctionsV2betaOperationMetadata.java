@@ -67,6 +67,14 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
   private java.util.Map<String, java.lang.Object> requestResource;
 
   /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceToken;
+
+  /**
    * Mechanism for reporting in-progress stages
    * The value may be {@code null}.
    */
@@ -180,6 +188,25 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
    */
   public GoogleCloudFunctionsV2betaOperationMetadata setRequestResource(java.util.Map<String, java.lang.Object> requestResource) {
     this.requestResource = requestResource;
+    return this;
+  }
+
+  /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceToken() {
+    return sourceToken;
+  }
+
+  /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only supported for
+   * Firebase function deployments.
+   * @param sourceToken sourceToken or {@code null} for none
+   */
+  public GoogleCloudFunctionsV2betaOperationMetadata setSourceToken(java.lang.String sourceToken) {
+    this.sourceToken = sourceToken;
     return this;
   }
 

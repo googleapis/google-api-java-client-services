@@ -45,7 +45,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private BiddingStrategy bidStrategy;
 
   /**
-   * Immutable. The billable outcome of the insertion order.
+   * Immutable. The billable outcome of the insertion order. Outcome based buying is deprecated.
+   * `BILLABLE_OUTCOME_PAY_PER_IMPRESSION` is the only valid value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +194,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The billable outcome of the insertion order.
+   * Immutable. The billable outcome of the insertion order. Outcome based buying is deprecated.
+   * `BILLABLE_OUTCOME_PAY_PER_IMPRESSION` is the only valid value.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillableOutcome() {
@@ -201,7 +203,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The billable outcome of the insertion order.
+   * Immutable. The billable outcome of the insertion order. Outcome based buying is deprecated.
+   * `BILLABLE_OUTCOME_PAY_PER_IMPRESSION` is the only valid value.
    * @param billableOutcome billableOutcome or {@code null} for none
    */
   public InsertionOrder setBillableOutcome(java.lang.String billableOutcome) {

@@ -59,6 +59,20 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends co
   private java.lang.Long issueCount;
 
   /**
+   * Language of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
+   * Type of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelType;
+
+  /**
    * Immutable. The resource name of the issue model. Format:
    * projects/{project}/locations/{location}/issueModels/{issue_model}
    * The value may be {@code null}.
@@ -152,6 +166,40 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends co
    */
   public GoogleCloudContactcenterinsightsV1alpha1IssueModel setIssueCount(java.lang.Long issueCount) {
     this.issueCount = issueCount;
+    return this;
+  }
+
+  /**
+   * Language of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Language of the model.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IssueModel setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Type of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelType() {
+    return modelType;
+  }
+
+  /**
+   * Type of the model.
+   * @param modelType modelType or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IssueModel setModelType(java.lang.String modelType) {
+    this.modelType = modelType;
     return this;
   }
 

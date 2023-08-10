@@ -44,6 +44,20 @@ public final class GoogleCloudIdentitytoolkitV2PasswordPolicy extends com.google
   private GoogleCloudIdentitytoolkitV2CustomStrengthOptions customStrengthOptions;
 
   /**
+   * Output only. Which enforcement mode to use for the password policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enforcementState;
+
+  /**
+   * Users must have a password compliant with the password policy to sign-in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean forceUpgradeOnSignin;
+
+  /**
    * Output only. schema version number for the password policy
    * The value may be {@code null}.
    */
@@ -81,6 +95,40 @@ public final class GoogleCloudIdentitytoolkitV2PasswordPolicy extends com.google
    */
   public GoogleCloudIdentitytoolkitV2PasswordPolicy setCustomStrengthOptions(GoogleCloudIdentitytoolkitV2CustomStrengthOptions customStrengthOptions) {
     this.customStrengthOptions = customStrengthOptions;
+    return this;
+  }
+
+  /**
+   * Output only. Which enforcement mode to use for the password policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnforcementState() {
+    return enforcementState;
+  }
+
+  /**
+   * Output only. Which enforcement mode to use for the password policy.
+   * @param enforcementState enforcementState or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2PasswordPolicy setEnforcementState(java.lang.String enforcementState) {
+    this.enforcementState = enforcementState;
+    return this;
+  }
+
+  /**
+   * Users must have a password compliant with the password policy to sign-in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForceUpgradeOnSignin() {
+    return forceUpgradeOnSignin;
+  }
+
+  /**
+   * Users must have a password compliant with the password policy to sign-in.
+   * @param forceUpgradeOnSignin forceUpgradeOnSignin or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2PasswordPolicy setForceUpgradeOnSignin(java.lang.Boolean forceUpgradeOnSignin) {
+    this.forceUpgradeOnSignin = forceUpgradeOnSignin;
     return this;
   }
 

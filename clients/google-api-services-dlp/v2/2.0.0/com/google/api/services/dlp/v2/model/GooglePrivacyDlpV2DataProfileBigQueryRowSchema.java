@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Model definition for GooglePrivacyDlpV2ProfileStatus.
+ * The schema of data to be saved to the BigQuery when the `DataProfileAction` is enabled.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP). For a detailed
@@ -28,67 +28,64 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2ProfileStatus extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * Profiling status code and optional message. The `status.code` value is 0 (default value) for
-   * OK.
+   * Column data profile column
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleRpcStatus status;
+  private GooglePrivacyDlpV2ColumnDataProfile columnProfile;
 
   /**
-   * Time when the profile generation status was updated
+   * Table data profile column
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String timestamp;
+  private GooglePrivacyDlpV2TableDataProfile tableProfile;
 
   /**
-   * Profiling status code and optional message. The `status.code` value is 0 (default value) for
-   * OK.
+   * Column data profile column
    * @return value or {@code null} for none
    */
-  public GoogleRpcStatus getStatus() {
-    return status;
+  public GooglePrivacyDlpV2ColumnDataProfile getColumnProfile() {
+    return columnProfile;
   }
 
   /**
-   * Profiling status code and optional message. The `status.code` value is 0 (default value) for
-   * OK.
-   * @param status status or {@code null} for none
+   * Column data profile column
+   * @param columnProfile columnProfile or {@code null} for none
    */
-  public GooglePrivacyDlpV2ProfileStatus setStatus(GoogleRpcStatus status) {
-    this.status = status;
+  public GooglePrivacyDlpV2DataProfileBigQueryRowSchema setColumnProfile(GooglePrivacyDlpV2ColumnDataProfile columnProfile) {
+    this.columnProfile = columnProfile;
     return this;
   }
 
   /**
-   * Time when the profile generation status was updated
+   * Table data profile column
    * @return value or {@code null} for none
    */
-  public String getTimestamp() {
-    return timestamp;
+  public GooglePrivacyDlpV2TableDataProfile getTableProfile() {
+    return tableProfile;
   }
 
   /**
-   * Time when the profile generation status was updated
-   * @param timestamp timestamp or {@code null} for none
+   * Table data profile column
+   * @param tableProfile tableProfile or {@code null} for none
    */
-  public GooglePrivacyDlpV2ProfileStatus setTimestamp(String timestamp) {
-    this.timestamp = timestamp;
+  public GooglePrivacyDlpV2DataProfileBigQueryRowSchema setTableProfile(GooglePrivacyDlpV2TableDataProfile tableProfile) {
+    this.tableProfile = tableProfile;
     return this;
   }
 
   @Override
-  public GooglePrivacyDlpV2ProfileStatus set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2ProfileStatus) super.set(fieldName, value);
+  public GooglePrivacyDlpV2DataProfileBigQueryRowSchema set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2DataProfileBigQueryRowSchema) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2ProfileStatus clone() {
-    return (GooglePrivacyDlpV2ProfileStatus) super.clone();
+  public GooglePrivacyDlpV2DataProfileBigQueryRowSchema clone() {
+    return (GooglePrivacyDlpV2DataProfileBigQueryRowSchema) super.clone();
   }
 
 }

@@ -62,6 +62,17 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String cloudSqlInstance;
 
   /**
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
+   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRule;
+
+  /**
    * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-
    * engine/docs/concepts/cluster-architecture).
    * The value may be {@code null}.
@@ -190,6 +201,31 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setCloudSqlInstance(java.lang.String cloudSqlInstance) {
     this.cloudSqlInstance = cloudSqlInstance;
+    return this;
+  }
+
+  /**
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
+   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRule() {
+    return forwardingRule;
+  }
+
+  /**
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
+   * projects/{project}/regions/{region}/forwardingRules/{id}
+   * @param forwardingRule forwardingRule or {@code null} for none
+   */
+  public Endpoint setForwardingRule(java.lang.String forwardingRule) {
+    this.forwardingRule = forwardingRule;
     return this;
   }
 

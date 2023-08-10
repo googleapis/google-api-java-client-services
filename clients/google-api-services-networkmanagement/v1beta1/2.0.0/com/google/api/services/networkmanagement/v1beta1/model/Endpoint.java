@@ -62,8 +62,10 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String cloudSqlInstance;
 
   /**
-   * Forwarding rule URI. Forwarding rules are frontends for load balancers, PSC endpoints and
-   * Protocol Forwarding. Format: projects/{project}/global/forwardingRules/{id} or
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
    * projects/{project}/regions/{region}/forwardingRules/{id}
    * The value may be {@code null}.
    */
@@ -225,8 +227,10 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Forwarding rule URI. Forwarding rules are frontends for load balancers, PSC endpoints and
-   * Protocol Forwarding. Format: projects/{project}/global/forwardingRules/{id} or
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
    * projects/{project}/regions/{region}/forwardingRules/{id}
    * @return value or {@code null} for none
    */
@@ -235,8 +239,10 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Forwarding rule URI. Forwarding rules are frontends for load balancers, PSC endpoints and
-   * Protocol Forwarding. Format: projects/{project}/global/forwardingRules/{id} or
+   * A forwarding rule and its corresponding IP address represent the frontend configuration of a
+   * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
+   * Service Connect and other network services to provide forwarding information in the control
+   * plane. Format: projects/{project}/global/forwardingRules/{id} or
    * projects/{project}/regions/{region}/forwardingRules/{id}
    * @param forwardingRule forwardingRule or {@code null} for none
    */

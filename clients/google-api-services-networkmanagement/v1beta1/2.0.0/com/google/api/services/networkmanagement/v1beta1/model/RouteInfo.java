@@ -45,7 +45,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> destPortRanges;
 
   /**
-   * Name of a Compute Engine route.
+   * Name of a route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,21 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> instanceTags;
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a NCC Hub. NCC_HUB routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nccHubUri;
+
+  /**
+   * URI of a NCC Spoke. NCC_HUB routes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nccSpokeUri;
+
+  /**
+   * URI of a Compute Engine network. NETWORK routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +108,13 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> protocols;
 
   /**
+   * Indicates where route is applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routeScope;
+
+  /**
    * Type of route.
    * The value may be {@code null}.
    */
@@ -115,8 +136,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> srcPortRanges;
 
   /**
-   * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised
-   * route from Google Cloud VPC to on-premises network also does not have a URI.
+   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
+   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +178,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a Compute Engine route.
+   * Name of a route.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -165,7 +186,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a Compute Engine route.
+   * Name of a route.
    * @param displayName displayName or {@code null} for none
    */
   public RouteInfo setDisplayName(java.lang.String displayName) {
@@ -191,7 +212,41 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a NCC Hub. NCC_HUB routes only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNccHubUri() {
+    return nccHubUri;
+  }
+
+  /**
+   * URI of a NCC Hub. NCC_HUB routes only.
+   * @param nccHubUri nccHubUri or {@code null} for none
+   */
+  public RouteInfo setNccHubUri(java.lang.String nccHubUri) {
+    this.nccHubUri = nccHubUri;
+    return this;
+  }
+
+  /**
+   * URI of a NCC Spoke. NCC_HUB routes only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNccSpokeUri() {
+    return nccSpokeUri;
+  }
+
+  /**
+   * URI of a NCC Spoke. NCC_HUB routes only.
+   * @param nccSpokeUri nccSpokeUri or {@code null} for none
+   */
+  public RouteInfo setNccSpokeUri(java.lang.String nccSpokeUri) {
+    this.nccSpokeUri = nccSpokeUri;
+    return this;
+  }
+
+  /**
+   * URI of a Compute Engine network. NETWORK routes only.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -199,7 +254,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network. NETWORK routes only.
    * @param networkUri networkUri or {@code null} for none
    */
   public RouteInfo setNetworkUri(java.lang.String networkUri) {
@@ -276,6 +331,23 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Indicates where route is applicable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouteScope() {
+    return routeScope;
+  }
+
+  /**
+   * Indicates where route is applicable.
+   * @param routeScope routeScope or {@code null} for none
+   */
+  public RouteInfo setRouteScope(java.lang.String routeScope) {
+    this.routeScope = routeScope;
+    return this;
+  }
+
+  /**
    * Type of route.
    * @return value or {@code null} for none
    */
@@ -327,8 +399,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised
-   * route from Google Cloud VPC to on-premises network also does not have a URI.
+   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
+   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -336,8 +408,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised
-   * route from Google Cloud VPC to on-premises network also does not have a URI.
+   * URI of a route. Dynamic, peering static and peering dynamic routes do not have an URI.
+   * Advertised route from Google Cloud VPC to on-premises network also does not have an URI.
    * @param uri uri or {@code null} for none
    */
   public RouteInfo setUri(java.lang.String uri) {

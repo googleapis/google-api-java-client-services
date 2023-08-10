@@ -25,7 +25,7 @@ package com.google.api.services.cloudbilling.v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/billing/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/billing/docs/apis" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -302,6 +302,2533 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
     }
 
+    /**
+     * An accessor for creating requests from the Services collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Services.List request = cloudbilling.services().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Services services() {
+      return new Services();
+    }
+
+    /**
+     * The "services" collection of methods.
+     */
+    public class Services {
+
+      /**
+       * Gets a Google Cloud service visible to a billing account.
+       *
+       * Create a request for the method "services.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the billing account service to retrieve. Format:
+       *        billingAccounts/{billing_account}/services/{service}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountservicesV1betaBillingAccountService> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/services/[^/]+$");
+
+        /**
+         * Gets a Google Cloud service visible to a billing account.
+         *
+         * Create a request for the method "services.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the billing account service to retrieve. Format:
+       *        billingAccounts/{billing_account}/services/{service}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountservicesV1betaBillingAccountService.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the billing account service to retrieve. Format:
+         * billingAccounts/{billing_account}/services/{service}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the billing account service to retrieve. Format:
+       billingAccounts/{billing_account}/services/{service}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the billing account service to retrieve. Format:
+         * billingAccounts/{billing_account}/services/{service}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/services/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists services visible to a billing account.
+       *
+       * Create a request for the method "services.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The billing account to list billing account service from. Format:
+       *        billingAccounts/{billing_account}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountservicesV1betaListBillingAccountServicesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/services";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists services visible to a billing account.
+         *
+         * Create a request for the method "services.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The billing account to list billing account service from. Format:
+       *        billingAccounts/{billing_account}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountservicesV1betaListBillingAccountServicesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The billing account to list billing account service from. Format:
+         * billingAccounts/{billing_account}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The billing account to list billing account service from. Format:
+       billingAccounts/{billing_account}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The billing account to list billing account service from. Format:
+         * billingAccounts/{billing_account}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Maximum number of billing account service to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 5000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of billing account service to return. Results may return fewer than this value.
+       Default value is 50 and maximum value is 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of billing account service to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 5000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountServices call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token received from a previous ListBillingAccountServices call to retrieve the next page of
+       results. If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountServices call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the SkuGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.SkuGroups.List request = cloudbilling.skuGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SkuGroups skuGroups() {
+      return new SkuGroups();
+    }
+
+    /**
+     * The "skuGroups" collection of methods.
+     */
+    public class SkuGroups {
+
+      /**
+       * Gets a SKU group visible to a billing account.
+       *
+       * Create a request for the method "skuGroups.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the BillingAccountSkuGroup to retrieve. Format:
+       *        billingAccounts/{billing_account}/skuGroups/{sku_group}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupsV1betaBillingAccountSkuGroup> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skuGroups/[^/]+$");
+
+        /**
+         * Gets a SKU group visible to a billing account.
+         *
+         * Create a request for the method "skuGroups.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the BillingAccountSkuGroup to retrieve. Format:
+       *        billingAccounts/{billing_account}/skuGroups/{sku_group}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupsV1betaBillingAccountSkuGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/skuGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the BillingAccountSkuGroup to retrieve. Format:
+         * billingAccounts/{billing_account}/skuGroups/{sku_group}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the BillingAccountSkuGroup to retrieve. Format:
+       billingAccounts/{billing_account}/skuGroups/{sku_group}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the BillingAccountSkuGroup to retrieve. Format:
+         * billingAccounts/{billing_account}/skuGroups/{sku_group}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/skuGroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists SKU groups visible to a billing account.
+       *
+       * Create a request for the method "skuGroups.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The billing account to list billing account SKU groups from. Format:
+       *        billingAccounts/{billing_account}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupsV1betaListBillingAccountSkuGroupsResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/skuGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists SKU groups visible to a billing account.
+         *
+         * Create a request for the method "skuGroups.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The billing account to list billing account SKU groups from. Format:
+       *        billingAccounts/{billing_account}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupsV1betaListBillingAccountSkuGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The billing account to list billing account SKU groups from. Format:
+         * billingAccounts/{billing_account}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The billing account to list billing account SKU groups from. Format:
+       billingAccounts/{billing_account}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The billing account to list billing account SKU groups from. Format:
+         * billingAccounts/{billing_account}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Maximum number of billing account SKU groups to return. Results may return fewer than
+         * this value. Default value is 50 and maximum value is 5000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of billing account SKU groups to return. Results may return fewer than this value.
+       Default value is 50 and maximum value is 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of billing account SKU groups to return. Results may return fewer than
+         * this value. Default value is 50 and maximum value is 5000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountSkuGroups call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token received from a previous ListBillingAccountSkuGroups call to retrieve the next page of
+       results. If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountSkuGroups call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Skus collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+       *   {@code Cloudbilling.Skus.List request = cloudbilling.skus().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Skus skus() {
+        return new Skus();
+      }
+
+      /**
+       * The "skus" collection of methods.
+       */
+      public class Skus {
+
+        /**
+         * Gets a SKU that is part of a billing account SKU group.
+         *
+         * Create a request for the method "skus.get".
+         *
+         * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the billing account SKU group SKU to retrieve. Format:
+         *        billingAccounts/{billing_account}/skuGroups/{sku_group}/skus/{sku}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupskusV1betaBillingAccountSkuGroupSku> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skuGroups/[^/]+/skus/[^/]+$");
+
+          /**
+           * Gets a SKU that is part of a billing account SKU group.
+           *
+           * Create a request for the method "skus.get".
+           *
+           * This request holds the parameters needed by the the cloudbilling server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the billing account SKU group SKU to retrieve. Format:
+         *        billingAccounts/{billing_account}/skuGroups/{sku_group}/skus/{sku}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupskusV1betaBillingAccountSkuGroupSku.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skuGroups/[^/]+/skus/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the billing account SKU group SKU to retrieve. Format:
+           * billingAccounts/{billing_account}/skuGroups/{sku_group}/skus/{sku}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the billing account SKU group SKU to retrieve. Format:
+         billingAccounts/{billing_account}/skuGroups/{sku_group}/skus/{sku}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the billing account SKU group SKU to retrieve. Format:
+           * billingAccounts/{billing_account}/skuGroups/{sku_group}/skus/{sku}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skuGroups/[^/]+/skus/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists SKUs that is part of billing account SKU groups.
+         *
+         * Create a request for the method "skus.list".
+         *
+         * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The billing account SKU group to list billing account SKU group SKUs from. Format:
+         *        billingAccounts/{billing_account}/skuGroups/{sku_group}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupskusV1betaListBillingAccountSkuGroupSkusResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/skus";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skuGroups/[^/]+$");
+
+          /**
+           * Lists SKUs that is part of billing account SKU groups.
+           *
+           * Create a request for the method "skus.list".
+           *
+           * This request holds the parameters needed by the the cloudbilling server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The billing account SKU group to list billing account SKU group SKUs from. Format:
+         *        billingAccounts/{billing_account}/skuGroups/{sku_group}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskugroupskusV1betaListBillingAccountSkuGroupSkusResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skuGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The billing account SKU group to list billing account SKU group SKUs from.
+           * Format: billingAccounts/{billing_account}/skuGroups/{sku_group}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The billing account SKU group to list billing account SKU group SKUs from. Format:
+         billingAccounts/{billing_account}/skuGroups/{sku_group}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The billing account SKU group to list billing account SKU group SKUs from.
+           * Format: billingAccounts/{billing_account}/skuGroups/{sku_group}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skuGroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Maximum number of billing account SKU group SKUs to return. Results may return fewer
+           * than this value. Default value is 50 and maximum value is 5000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of billing account SKU group SKUs to return. Results may return fewer than this
+         value. Default value is 50 and maximum value is 5000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Maximum number of billing account SKU group SKUs to return. Results may return fewer
+           * than this value. Default value is 50 and maximum value is 5000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Page token received from a previous ListBillingAccountSkuGroupSkus call to retrieve the
+           * next page of results. If this field is empty, the first page is returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token received from a previous ListBillingAccountSkuGroupSkus call to retrieve the next page
+         of results. If this field is empty, the first page is returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Page token received from a previous ListBillingAccountSkuGroupSkus call to retrieve the
+           * next page of results. If this field is empty, the first page is returned.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the Skus collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Skus.List request = cloudbilling.skus().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Skus skus() {
+      return new Skus();
+    }
+
+    /**
+     * The "skus" collection of methods.
+     */
+    public class Skus {
+
+      /**
+       * Gets a SKU visible to a billing account.
+       *
+       * Create a request for the method "skus.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the billing account SKU to retrieve. Format:
+       *        billingAccounts/{billing_account}/skus/{sku}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskusV1betaBillingAccountSku> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skus/[^/]+$");
+
+        /**
+         * Gets a SKU visible to a billing account.
+         *
+         * Create a request for the method "skus.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the billing account SKU to retrieve. Format:
+       *        billingAccounts/{billing_account}/skus/{sku}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskusV1betaBillingAccountSku.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/skus/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the billing account SKU to retrieve. Format:
+         * billingAccounts/{billing_account}/skus/{sku}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the billing account SKU to retrieve. Format:
+       billingAccounts/{billing_account}/skus/{sku}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the billing account SKU to retrieve. Format:
+         * billingAccounts/{billing_account}/skus/{sku}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/skus/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists SKUs visible to a billing account.
+       *
+       * Create a request for the method "skus.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The billing account to list billing account SKU from. Format:
+       *        billingAccounts/{billing_account}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskusV1betaListBillingAccountSkusResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/skus";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists SKUs visible to a billing account.
+         *
+         * Create a request for the method "skus.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The billing account to list billing account SKU from. Format:
+       *        billingAccounts/{billing_account}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountskusV1betaListBillingAccountSkusResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The billing account to list billing account SKU from. Format:
+         * billingAccounts/{billing_account}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The billing account to list billing account SKU from. Format:
+       billingAccounts/{billing_account}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The billing account to list billing account SKU from. Format:
+         * billingAccounts/{billing_account}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Options for how to filter the billing account SKUs. Currently, only filter on
+         * `billing_account_service` is supported. Only !=, = operators are supported. Examples: -
+         * billing_account_service = "billingAccounts/012345-567890-ABCDEF/services/DA34-426B-A397"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Options for how to filter the billing account SKUs. Currently, only filter on
+       `billing_account_service` is supported. Only !=, = operators are supported. Examples: -
+       billing_account_service = "billingAccounts/012345-567890-ABCDEF/services/DA34-426B-A397"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Options for how to filter the billing account SKUs. Currently, only filter on
+         * `billing_account_service` is supported. Only !=, = operators are supported. Examples: -
+         * billing_account_service = "billingAccounts/012345-567890-ABCDEF/services/DA34-426B-A397"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Maximum number of billing account SKUs to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 5000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of billing account SKUs to return. Results may return fewer than this value. Default
+       value is 50 and maximum value is 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of billing account SKUs to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 5000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountSkus call to retrieve the next page
+         * of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token received from a previous ListBillingAccountSkus call to retrieve the next page of
+       results. If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token received from a previous ListBillingAccountSkus call to retrieve the next page
+         * of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Price collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+       *   {@code Cloudbilling.Price.List request = cloudbilling.price().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Price price() {
+        return new Price();
+      }
+
+      /**
+       * The "price" collection of methods.
+       */
+      public class Price {
+
+        /**
+         * Gets the latest price for the given billing account SKU.
+         *
+         * Create a request for the method "price.get".
+         *
+         * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the latest billing account price to retrieve. Format:
+         *        billingAccounts/{billing_account}/skus/{sku}/price
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPrice> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^billingAccounts/[^/]+/skus/[^/]+/price$");
+
+          /**
+           * Gets the latest price for the given billing account SKU.
+           *
+           * Create a request for the method "price.get".
+           *
+           * This request holds the parameters needed by the the cloudbilling server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the latest billing account price to retrieve. Format:
+         *        billingAccounts/{billing_account}/skus/{sku}/price
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingBillingaccountpricesV1betaBillingAccountPrice.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skus/[^/]+/price$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the latest billing account price to retrieve. Format:
+           * billingAccounts/{billing_account}/skus/{sku}/price
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the latest billing account price to retrieve. Format:
+         billingAccounts/{billing_account}/skus/{sku}/price
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the latest billing account price to retrieve. Format:
+           * billingAccounts/{billing_account}/skus/{sku}/price
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^billingAccounts/[^/]+/skus/[^/]+/price$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
+           * account will be used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String currencyCode;
+
+          /** Optional. ISO-4217 currency code for the price. If not specified, currency of billing account will
+         be used.
+           */
+          public java.lang.String getCurrencyCode() {
+            return currencyCode;
+          }
+
+          /**
+           * Optional. ISO-4217 currency code for the price. If not specified, currency of billing
+           * account will be used.
+           */
+          public Get setCurrencyCode(java.lang.String currencyCode) {
+            this.currencyCode = currencyCode;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the SkuGroups collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+   *   {@code Cloudbilling.SkuGroups.List request = cloudbilling.skuGroups().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public SkuGroups skuGroups() {
+    return new SkuGroups();
+  }
+
+  /**
+   * The "skuGroups" collection of methods.
+   */
+  public class SkuGroups {
+
+    /**
+     * Gets a publicly listed SKU group.
+     *
+     * Create a request for the method "skuGroups.get".
+     *
+     * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the SKU group to retrieve. Format: skuGroups/{sku_group}
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupsV1betaSkuGroup> {
+
+      private static final String REST_PATH = "v1beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^skuGroups/[^/]+$");
+
+      /**
+       * Gets a publicly listed SKU group.
+       *
+       * Create a request for the method "skuGroups.get".
+       *
+       * This request holds the parameters needed by the the cloudbilling server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the SKU group to retrieve. Format: skuGroups/{sku_group}
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupsV1betaSkuGroup.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^skuGroups/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the SKU group to retrieve. Format: skuGroups/{sku_group} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the SKU group to retrieve. Format: skuGroups/{sku_group}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the SKU group to retrieve. Format: skuGroups/{sku_group} */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^skuGroups/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all publicly listed SKU groups.
+     *
+     * Create a request for the method "skuGroups.list".
+     *
+     * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupsV1betaListSkuGroupsResponse> {
+
+      private static final String REST_PATH = "v1beta/skuGroups";
+
+      /**
+       * Lists all publicly listed SKU groups.
+       *
+       * Create a request for the method "skuGroups.list".
+       *
+       * This request holds the parameters needed by the the cloudbilling server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupsV1betaListSkuGroupsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Maximum number of SKU groups to return. Results may return fewer than this value. Default
+       * value is 50 and maximum value is 5000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of SKU groups to return. Results may return fewer than this value. Default value is
+     50 and maximum value is 5000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Maximum number of SKU groups to return. Results may return fewer than this value. Default
+       * value is 50 and maximum value is 5000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Page token received from a previous ListSkuGroups call to retrieve the next page of
+       * results. If this field is empty, the first page is returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token received from a previous ListSkuGroups call to retrieve the next page of results. If
+     this field is empty, the first page is returned.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Page token received from a previous ListSkuGroups call to retrieve the next page of
+       * results. If this field is empty, the first page is returned.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Skus collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Skus.List request = cloudbilling.skus().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Skus skus() {
+      return new Skus();
+    }
+
+    /**
+     * The "skus" collection of methods.
+     */
+    public class Skus {
+
+      /**
+       * Gets a publicly listed SKU that is part of a publicly listed SKU group.
+       *
+       * Create a request for the method "skus.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the SKU group SKU to retrieve. Format: skuGroups/{sku_group}/skus/{sku}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupskusV1betaSkuGroupSku> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^skuGroups/[^/]+/skus/[^/]+$");
+
+        /**
+         * Gets a publicly listed SKU that is part of a publicly listed SKU group.
+         *
+         * Create a request for the method "skus.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the SKU group SKU to retrieve. Format: skuGroups/{sku_group}/skus/{sku}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupskusV1betaSkuGroupSku.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^skuGroups/[^/]+/skus/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the SKU group SKU to retrieve. Format:
+         * skuGroups/{sku_group}/skus/{sku}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the SKU group SKU to retrieve. Format: skuGroups/{sku_group}/skus/{sku}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the SKU group SKU to retrieve. Format:
+         * skuGroups/{sku_group}/skus/{sku}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^skuGroups/[^/]+/skus/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all publicly listed SKUs contained by a publicly listed SKU group.
+       *
+       * Create a request for the method "skus.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The SkuGroup to list SkuGroupSku from. Format: skuGroups/{sku_group}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupskusV1betaListSkuGroupSkusResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/skus";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^skuGroups/[^/]+$");
+
+        /**
+         * Lists all publicly listed SKUs contained by a publicly listed SKU group.
+         *
+         * Create a request for the method "skus.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The SkuGroup to list SkuGroupSku from. Format: skuGroups/{sku_group}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingSkugroupskusV1betaListSkuGroupSkusResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^skuGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The SkuGroup to list SkuGroupSku from. Format: skuGroups/{sku_group} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The SkuGroup to list SkuGroupSku from. Format: skuGroups/{sku_group}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The SkuGroup to list SkuGroupSku from. Format: skuGroups/{sku_group} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^skuGroups/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Maximum number of SKU group SKUs to return. Results may return fewer than this value.
+         * Default value is 50 and maximum value is 5000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of SKU group SKUs to return. Results may return fewer than this value. Default value
+       is 50 and maximum value is 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of SKU group SKUs to return. Results may return fewer than this value.
+         * Default value is 50 and maximum value is 5000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token received from a previous ListSkuGroupSkus call to retrieve the next page of
+         * results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token received from a previous ListSkuGroupSkus call to retrieve the next page of results. If
+       this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token received from a previous ListSkuGroupSkus call to retrieve the next page of
+         * results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Skus collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+   *   {@code Cloudbilling.Skus.List request = cloudbilling.skus().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Skus skus() {
+    return new Skus();
+  }
+
+  /**
+   * The "skus" collection of methods.
+   */
+  public class Skus {
+
+    /**
+     * An accessor for creating requests from the Price collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Price.List request = cloudbilling.price().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Price price() {
+      return new Price();
+    }
+
+    /**
+     * The "price" collection of methods.
+     */
+    public class Price {
+
+      /**
+       * Gets the latest price for the given SKU.
+       *
+       * Create a request for the method "price.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the latest price to retrieve. Format: skus/{sku}/price
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingPricesV1betaPrice> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^skus/[^/]+/price$");
+
+        /**
+         * Gets the latest price for the given SKU.
+         *
+         * Create a request for the method "price.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the latest price to retrieve. Format: skus/{sku}/price
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingPricesV1betaPrice.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^skus/[^/]+/price$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the latest price to retrieve. Format: skus/{sku}/price */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the latest price to retrieve. Format: skus/{sku}/price
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the latest price to retrieve. Format: skus/{sku}/price */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^skus/[^/]+/price$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used. */
+        @com.google.api.client.util.Key
+        private java.lang.String currencyCode;
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used.
+         */
+        public java.lang.String getCurrencyCode() {
+          return currencyCode;
+        }
+
+        /** Optional. ISO-4217 currency code for the price. If not specified, USD will be used. */
+        public Get setCurrencyCode(java.lang.String currencyCode) {
+          this.currencyCode = currencyCode;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

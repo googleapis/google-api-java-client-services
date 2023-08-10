@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpecs extends com.google.api.client.json.GenericJson {
 
   /**
-   * The previous share settings of the Future Reservation.
+   * [Output Only] The previous share settings of the Future Reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShareSettings shareSettings;
 
   /**
-   * The previous instance related properties of the Future Reservation.
+   * [Output Only] The previous instance related properties of the Future Reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FutureReservationSpecificSKUProperties specificSkuProperties;
 
   /**
-   * The previous time window of the Future Reservation.
+   * [Output Only] The previous time window of the Future Reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FutureReservationTimeWindow timeWindow;
 
   /**
-   * The previous share settings of the Future Reservation.
+   * [Output Only] The previous share settings of the Future Reservation.
    * @return value or {@code null} for none
    */
   public ShareSettings getShareSettings() {
@@ -59,7 +59,7 @@ public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpe
   }
 
   /**
-   * The previous share settings of the Future Reservation.
+   * [Output Only] The previous share settings of the Future Reservation.
    * @param shareSettings shareSettings or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodStateFutureReservationSpecs setShareSettings(ShareSettings shareSettings) {
@@ -68,7 +68,7 @@ public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpe
   }
 
   /**
-   * The previous instance related properties of the Future Reservation.
+   * [Output Only] The previous instance related properties of the Future Reservation.
    * @return value or {@code null} for none
    */
   public FutureReservationSpecificSKUProperties getSpecificSkuProperties() {
@@ -76,7 +76,7 @@ public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpe
   }
 
   /**
-   * The previous instance related properties of the Future Reservation.
+   * [Output Only] The previous instance related properties of the Future Reservation.
    * @param specificSkuProperties specificSkuProperties or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodStateFutureReservationSpecs setSpecificSkuProperties(FutureReservationSpecificSKUProperties specificSkuProperties) {
@@ -85,7 +85,7 @@ public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpe
   }
 
   /**
-   * The previous time window of the Future Reservation.
+   * [Output Only] The previous time window of the Future Reservation.
    * @return value or {@code null} for none
    */
   public FutureReservationTimeWindow getTimeWindow() {
@@ -93,7 +93,7 @@ public final class FutureReservationStatusLastKnownGoodStateFutureReservationSpe
   }
 
   /**
-   * The previous time window of the Future Reservation.
+   * [Output Only] The previous time window of the Future Reservation.
    * @param timeWindow timeWindow or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodStateFutureReservationSpecs setTimeWindow(FutureReservationTimeWindow timeWindow) {

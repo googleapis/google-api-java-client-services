@@ -46,7 +46,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String description;
 
   /**
-   * The IPv4 address to be used for reverse DNS verification.
+   * The address to be used for reverse DNS verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.math.BigInteger id;
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+   * The address range, in CIDR format, represented by this public advertised prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IPv4 address to be used for reverse DNS verification.
+   * The address to be used for reverse DNS verification.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsVerificationIp() {
@@ -174,7 +174,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IPv4 address to be used for reverse DNS verification.
+   * The address to be used for reverse DNS verification.
    * @param dnsVerificationIp dnsVerificationIp or {@code null} for none
    */
   public PublicAdvertisedPrefix setDnsVerificationIp(java.lang.String dnsVerificationIp) {
@@ -263,7 +263,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+   * The address range, in CIDR format, represented by this public advertised prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -271,7 +271,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
+   * The address range, in CIDR format, represented by this public advertised prefix.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public PublicAdvertisedPrefix setIpCidrRange(java.lang.String ipCidrRange) {

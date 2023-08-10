@@ -66,7 +66,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.math.BigInteger id;
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+   * The IP address range, in CIDR format, represented by this public delegated prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+   * The IP address range, in CIDR format, represented by this public delegated prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -262,7 +262,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
+   * The IP address range, in CIDR format, represented by this public delegated prefix.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public PublicDelegatedPrefix setIpCidrRange(java.lang.String ipCidrRange) {

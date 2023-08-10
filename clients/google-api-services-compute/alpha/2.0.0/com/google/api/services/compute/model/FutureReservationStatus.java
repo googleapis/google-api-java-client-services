@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current status of the requested amendment.
+   * [Output Only] The current status of the requested amendment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,10 +52,10 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private java.lang.Long fulfilledCount;
 
   /**
-   * This field represents the future reservation before an amendment was requested. If the
-   * amendment is declined, the Future Reservation will be reverted to the last known good state.
-   * The last known good state is not set when updating a future reservation whose Procurement
-   * Status is DRAFTING.
+   * [Output Only] This field represents the future reservation before an amendment was requested.
+   * If the amendment is declined, the Future Reservation will be reverted to the last known good
+   * state. The last known good state is not set when updating a future reservation whose
+   * Procurement Status is DRAFTING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private FutureReservationStatusSpecificSKUProperties specificSkuProperties;
 
   /**
-   * The current status of the requested amendment.
+   * [Output Only] The current status of the requested amendment.
    * @return value or {@code null} for none
    */
   public java.lang.String getAmendmentStatus() {
@@ -93,7 +93,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * The current status of the requested amendment.
+   * [Output Only] The current status of the requested amendment.
    * @param amendmentStatus amendmentStatus or {@code null} for none
    */
   public FutureReservationStatus setAmendmentStatus(java.lang.String amendmentStatus) {
@@ -138,10 +138,10 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * This field represents the future reservation before an amendment was requested. If the
-   * amendment is declined, the Future Reservation will be reverted to the last known good state.
-   * The last known good state is not set when updating a future reservation whose Procurement
-   * Status is DRAFTING.
+   * [Output Only] This field represents the future reservation before an amendment was requested.
+   * If the amendment is declined, the Future Reservation will be reverted to the last known good
+   * state. The last known good state is not set when updating a future reservation whose
+   * Procurement Status is DRAFTING.
    * @return value or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodState getLastKnownGoodState() {
@@ -149,10 +149,10 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * This field represents the future reservation before an amendment was requested. If the
-   * amendment is declined, the Future Reservation will be reverted to the last known good state.
-   * The last known good state is not set when updating a future reservation whose Procurement
-   * Status is DRAFTING.
+   * [Output Only] This field represents the future reservation before an amendment was requested.
+   * If the amendment is declined, the Future Reservation will be reverted to the last known good
+   * state. The last known good state is not set when updating a future reservation whose
+   * Procurement Status is DRAFTING.
    * @param lastKnownGoodState lastKnownGoodState or {@code null} for none
    */
   public FutureReservationStatus setLastKnownGoodState(FutureReservationStatusLastKnownGoodState lastKnownGoodState) {

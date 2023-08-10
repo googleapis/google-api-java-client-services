@@ -82,6 +82,13 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String diskType;
 
   /**
+   * Whether this disk is using confidential compute mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * A list of features to enable on the guest operating system. Applicable only for bootable
    * images. Read Enabling guest operating system features to see a list of available options. Guest
    * OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
@@ -140,7 +147,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Required for each regional disk associated with the instance. Specify the URLs of the zones
    * where the disk should be replicated to. You must provide exactly two replica zones, and one
-   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * zone must be the same as the instance zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,6 +196,18 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private CustomerEncryptionKey sourceImageEncryptionKey;
+
+  /**
+   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
+   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
+   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
+   * field will not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshot;
 
   /**
    * The source snapshot to create this disk. When creating a new instance, one of
@@ -316,6 +335,23 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this disk is using confidential compute mode.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 
@@ -455,7 +491,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Required for each regional disk associated with the instance. Specify the URLs of the zones
    * where the disk should be replicated to. You must provide exactly two replica zones, and one
-   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * zone must be the same as the instance zone.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReplicaZones() {
@@ -465,7 +501,7 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   /**
    * Required for each regional disk associated with the instance. Specify the URLs of the zones
    * where the disk should be replicated to. You must provide exactly two replica zones, and one
-   * zone must be the same as the instance zone. You can't use this option with boot disks.
+   * zone must be the same as the instance zone.
    * @param replicaZones replicaZones or {@code null} for none
    */
   public AttachedDiskInitializeParams setReplicaZones(java.util.List<java.lang.String> replicaZones) {
@@ -570,6 +606,33 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
     this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+    return this;
+  }
+
+  /**
+   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
+   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
+   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
+   * field will not be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshot() {
+    return sourceInstantSnapshot;
+  }
+
+  /**
+   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
+   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
+   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
+   * field will not be set.
+   * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setSourceInstantSnapshot(java.lang.String sourceInstantSnapshot) {
+    this.sourceInstantSnapshot = sourceInstantSnapshot;
     return this;
   }
 

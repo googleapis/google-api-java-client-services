@@ -92,6 +92,15 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * assumed to be CA_STANDARD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managedProtectionTier;
+
+  /**
    * The project ID. For example: my-example-project. Use the project ID to make requests to Compute
    * Engine.
    * The value may be {@code null}.
@@ -279,6 +288,27 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   public Project setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * assumed to be CA_STANDARD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagedProtectionTier() {
+    return managedProtectionTier;
+  }
+
+  /**
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values: CA_STANDARD, CAMP_PLUS_MONTHLY. If this field is not specified, it is
+   * assumed to be CA_STANDARD.
+   * @param managedProtectionTier managedProtectionTier or {@code null} for none
+   */
+  public Project setManagedProtectionTier(java.lang.String managedProtectionTier) {
+    this.managedProtectionTier = managedProtectionTier;
     return this;
   }
 

@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class SecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * The configuration needed to generate a signature for access to private storage buckets that
+   * support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and
+   * INTERNET_FQDN_PORT NEG backends.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AWSV4Signature awsV4Authentication;
+
+  /**
    * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how
    * clients should authenticate with this service's backends. clientTlsPolicy only applies to a
    * global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank,
@@ -53,6 +62,27 @@ public final class SecuritySettings extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subjectAltNames;
+
+  /**
+   * The configuration needed to generate a signature for access to private storage buckets that
+   * support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and
+   * INTERNET_FQDN_PORT NEG backends.
+   * @return value or {@code null} for none
+   */
+  public AWSV4Signature getAwsV4Authentication() {
+    return awsV4Authentication;
+  }
+
+  /**
+   * The configuration needed to generate a signature for access to private storage buckets that
+   * support AWS's Signature Version 4 for authentication. Allowed only for INTERNET_IP_PORT and
+   * INTERNET_FQDN_PORT NEG backends.
+   * @param awsV4Authentication awsV4Authentication or {@code null} for none
+   */
+  public SecuritySettings setAwsV4Authentication(AWSV4Signature awsV4Authentication) {
+    this.awsV4Authentication = awsV4Authentication;
+    return this;
+  }
 
   /**
    * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how

@@ -56,9 +56,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
    * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the minimum action is NONE. If your update requires a more disruptive action than you
-   * set with this flag, the necessary action is performed to execute the update.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the minimum action is NONE. If your update
+   * requires a more disruptive action than you set with this flag, the necessary action is
+   * performed to execute the update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +68,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
    * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the most disruptive allowed action is REPLACE. If your update requires a more
-   * disruptive action than you set with this flag, the update request will fail.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the most disruptive allowed action is REPLACE. If
+   * your update requires a more disruptive action than you set with this flag, the update request
+   * will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,9 +137,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
    * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the minimum action is NONE. If your update requires a more disruptive action than you
-   * set with this flag, the necessary action is performed to execute the update.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the minimum action is NONE. If your update
+   * requires a more disruptive action than you set with this flag, the necessary action is
+   * performed to execute the update.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinimalAction() {
@@ -147,9 +150,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The minimal action that you want to perform on each instance during the update: - REPLACE: At
    * minimum, delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the minimum action is NONE. If your update requires a more disruptive action than you
-   * set with this flag, the necessary action is performed to execute the update.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the minimum action is NONE. If your update
+   * requires a more disruptive action than you set with this flag, the necessary action is
+   * performed to execute the update.
    * @param minimalAction minimalAction or {@code null} for none
    */
   public RegionInstanceGroupManagersApplyUpdatesRequest setMinimalAction(java.lang.String minimalAction) {
@@ -160,9 +164,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
    * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the most disruptive allowed action is REPLACE. If your update requires a more
-   * disruptive action than you set with this flag, the update request will fail.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the most disruptive allowed action is REPLACE. If
+   * your update requires a more disruptive action than you set with this flag, the update request
+   * will fail.
    * @return value or {@code null} for none
    */
   public java.lang.String getMostDisruptiveAllowedAction() {
@@ -172,9 +177,10 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   /**
    * The most disruptive action that you want to perform on each instance during the update: -
    * REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it
-   * again. - REFRESH: Do not stop the instance. - NONE: Do not disrupt the instance at all. By
-   * default, the most disruptive allowed action is REPLACE. If your update requires a more
-   * disruptive action than you set with this flag, the update request will fail.
+   * again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do
+   * not disrupt the instance at all. By default, the most disruptive allowed action is REPLACE. If
+   * your update requires a more disruptive action than you set with this flag, the update request
+   * will fail.
    * @param mostDisruptiveAllowedAction mostDisruptiveAllowedAction or {@code null} for none
    */
   public RegionInstanceGroupManagersApplyUpdatesRequest setMostDisruptiveAllowedAction(java.lang.String mostDisruptiveAllowedAction) {

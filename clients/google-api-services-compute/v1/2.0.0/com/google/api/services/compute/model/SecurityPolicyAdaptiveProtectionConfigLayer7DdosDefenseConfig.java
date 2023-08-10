@@ -48,6 +48,13 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
   private java.lang.String ruleVisibility;
 
   /**
+   * Configuration options for layer7 adaptive protection for various customizable thresholds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig> thresholdConfigs;
+
+  /**
    * If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global
    * Security Policies of type CLOUD_ARMOR.
    * @return value or {@code null} for none
@@ -84,6 +91,23 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
    */
   public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig setRuleVisibility(java.lang.String ruleVisibility) {
     this.ruleVisibility = ruleVisibility;
+    return this;
+  }
+
+  /**
+   * Configuration options for layer7 adaptive protection for various customizable thresholds.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig> getThresholdConfigs() {
+    return thresholdConfigs;
+  }
+
+  /**
+   * Configuration options for layer7 adaptive protection for various customizable thresholds.
+   * @param thresholdConfigs thresholdConfigs or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig setThresholdConfigs(java.util.List<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig> thresholdConfigs) {
+    this.thresholdConfigs = thresholdConfigs;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class StoragePoolResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Sum of all the disk' provisioned IOPS.
+   * [Output Only] Sum of all the disks' provisioned IOPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -81,7 +81,14 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long usedReducedBytes;
 
   /**
-   * [Output Only] Sum of all the disk' provisioned IOPS.
+   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long usedThroughput;
+
+  /**
+   * [Output Only] Sum of all the disks' provisioned IOPS.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAggregateDiskProvisionedIops() {
@@ -89,7 +96,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Sum of all the disk' provisioned IOPS.
+   * [Output Only] Sum of all the disks' provisioned IOPS.
    * @param aggregateDiskProvisionedIops aggregateDiskProvisionedIops or {@code null} for none
    */
   public StoragePoolResourceStatus setAggregateDiskProvisionedIops(java.lang.Long aggregateDiskProvisionedIops) {
@@ -200,6 +207,23 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
    */
   public StoragePoolResourceStatus setUsedReducedBytes(java.lang.Long usedReducedBytes) {
     this.usedReducedBytes = usedReducedBytes;
+    return this;
+  }
+
+  /**
+   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUsedThroughput() {
+    return usedThroughput;
+  }
+
+  /**
+   * [Output Only] Sum of all the disks' provisioned throughput in MB/s.
+   * @param usedThroughput usedThroughput or {@code null} for none
+   */
+  public StoragePoolResourceStatus setUsedThroughput(java.lang.Long usedThroughput) {
+    this.usedThroughput = usedThroughput;
     return this;
   }
 

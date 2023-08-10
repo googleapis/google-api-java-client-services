@@ -32,16 +32,16 @@ package com.google.api.services.gkebackup.v1.model;
 public final class SubstitutionRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * This is the new value to set for any fields that pass the filtering and selection criteria. To
-   * remove a value from a Kubernetes resource, either leave this field unspecified, or set it to
-   * the empty string ("").
+   * Optional. This is the new value to set for any fields that pass the filtering and selection
+   * criteria. To remove a value from a Kubernetes resource, either leave this field unspecified, or
+   * set it to the empty string ("").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String newValue;
 
   /**
-   * (Filtering parameter) This is a [regular expression]
+   * Optional. (Filtering parameter) This is a [regular expression]
    * (https://en.wikipedia.org/wiki/Regular_expression) that is compared against the fields matched
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
@@ -54,9 +54,10 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   private java.lang.String originalValuePattern;
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for substitution).
+   * Optional. (Filtering parameter) Any resource subject to substitution must belong to one of the
+   * listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * substitution).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,20 +81,20 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   private java.lang.String targetJsonPath;
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must be contained within one of the
-   * listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for substitution). To mix cluster-scoped and namespaced resources
-   * in the same rule, use an empty string ("") as one of the target namespaces.
+   * Optional. (Filtering parameter) Any resource subject to substitution must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for substitution). To mix cluster-scoped and namespaced
+   * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> targetNamespaces;
 
   /**
-   * This is the new value to set for any fields that pass the filtering and selection criteria. To
-   * remove a value from a Kubernetes resource, either leave this field unspecified, or set it to
-   * the empty string ("").
+   * Optional. This is the new value to set for any fields that pass the filtering and selection
+   * criteria. To remove a value from a Kubernetes resource, either leave this field unspecified, or
+   * set it to the empty string ("").
    * @return value or {@code null} for none
    */
   public java.lang.String getNewValue() {
@@ -101,9 +102,9 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This is the new value to set for any fields that pass the filtering and selection criteria. To
-   * remove a value from a Kubernetes resource, either leave this field unspecified, or set it to
-   * the empty string ("").
+   * Optional. This is the new value to set for any fields that pass the filtering and selection
+   * criteria. To remove a value from a Kubernetes resource, either leave this field unspecified, or
+   * set it to the empty string ("").
    * @param newValue newValue or {@code null} for none
    */
   public SubstitutionRule setNewValue(java.lang.String newValue) {
@@ -112,7 +113,7 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) This is a [regular expression]
+   * Optional. (Filtering parameter) This is a [regular expression]
    * (https://en.wikipedia.org/wiki/Regular_expression) that is compared against the fields matched
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
@@ -126,7 +127,7 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) This is a [regular expression]
+   * Optional. (Filtering parameter) This is a [regular expression]
    * (https://en.wikipedia.org/wiki/Regular_expression) that is compared against the fields matched
    * by the target_json_path expression (and must also have passed the previous filters).
    * Substitution will not be performed against fields whose value does not match this expression.
@@ -141,9 +142,10 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for substitution).
+   * Optional. (Filtering parameter) Any resource subject to substitution must belong to one of the
+   * listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * substitution).
    * @return value or {@code null} for none
    */
   public java.util.List<GroupKind> getTargetGroupKinds() {
@@ -151,9 +153,10 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for substitution).
+   * Optional. (Filtering parameter) Any resource subject to substitution must belong to one of the
+   * listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * substitution).
    * @param targetGroupKinds targetGroupKinds or {@code null} for none
    */
   public SubstitutionRule setTargetGroupKinds(java.util.List<GroupKind> targetGroupKinds) {
@@ -187,11 +190,11 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must be contained within one of the
-   * listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for substitution). To mix cluster-scoped and namespaced resources
-   * in the same rule, use an empty string ("") as one of the target namespaces.
+   * Optional. (Filtering parameter) Any resource subject to substitution must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for substitution). To mix cluster-scoped and namespaced
+   * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetNamespaces() {
@@ -199,11 +202,11 @@ public final class SubstitutionRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * (Filtering parameter) Any resource subject to substitution must be contained within one of the
-   * listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for substitution). To mix cluster-scoped and namespaced resources
-   * in the same rule, use an empty string ("") as one of the target namespaces.
+   * Optional. (Filtering parameter) Any resource subject to substitution must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for substitution). To mix cluster-scoped and namespaced
+   * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * @param targetNamespaces targetNamespaces or {@code null} for none
    */
   public SubstitutionRule setTargetNamespaces(java.util.List<java.lang.String> targetNamespaces) {

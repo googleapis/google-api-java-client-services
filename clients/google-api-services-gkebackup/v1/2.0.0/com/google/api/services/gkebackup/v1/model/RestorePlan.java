@@ -55,7 +55,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * User specified descriptive string for this RestorePlan.
+   * Optional. User specified descriptive string for this RestorePlan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified descriptive string for this RestorePlan.
+   * Optional. User specified descriptive string for this RestorePlan.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -192,7 +192,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified descriptive string for this RestorePlan.
+   * Optional. User specified descriptive string for this RestorePlan.
    * @param description description or {@code null} for none
    */
   public RestorePlan setDescription(java.lang.String description) {
@@ -230,7 +230,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -238,7 +238,7 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * @param labels labels or {@code null} for none
    */
   public RestorePlan setLabels(java.util.Map<String, java.lang.String> labels) {

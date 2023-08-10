@@ -31,8 +31,8 @@ package com.google.api.services.gkebackup.v1.model;
 public final class TransformationRuleAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * A string containing a JSON Pointer value that references the location in the target document to
-   * move the value from.
+   * Optional. A string containing a JSON Pointer value that references the location in the target
+   * document to move the value from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,23 +46,23 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   private java.lang.String op;
 
   /**
-   * A string containing a JSON-Pointer value that references a location within the target document
-   * where the operation is performed.
+   * Optional. A string containing a JSON-Pointer value that references a location within the target
+   * document where the operation is performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * A string that specifies the desired value in string format to use for transformation.
+   * Optional. A string that specifies the desired value in string format to use for transformation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * A string containing a JSON Pointer value that references the location in the target document to
-   * move the value from.
+   * Optional. A string containing a JSON Pointer value that references the location in the target
+   * document to move the value from.
    * @return value or {@code null} for none
    */
   public java.lang.String getFromPath() {
@@ -70,8 +70,8 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   }
 
   /**
-   * A string containing a JSON Pointer value that references the location in the target document to
-   * move the value from.
+   * Optional. A string containing a JSON Pointer value that references the location in the target
+   * document to move the value from.
    * @param fromPath fromPath or {@code null} for none
    */
   public TransformationRuleAction setFromPath(java.lang.String fromPath) {
@@ -97,8 +97,8 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   }
 
   /**
-   * A string containing a JSON-Pointer value that references a location within the target document
-   * where the operation is performed.
+   * Optional. A string containing a JSON-Pointer value that references a location within the target
+   * document where the operation is performed.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -106,8 +106,8 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   }
 
   /**
-   * A string containing a JSON-Pointer value that references a location within the target document
-   * where the operation is performed.
+   * Optional. A string containing a JSON-Pointer value that references a location within the target
+   * document where the operation is performed.
    * @param path path or {@code null} for none
    */
   public TransformationRuleAction setPath(java.lang.String path) {
@@ -116,7 +116,7 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   }
 
   /**
-   * A string that specifies the desired value in string format to use for transformation.
+   * Optional. A string that specifies the desired value in string format to use for transformation.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -124,7 +124,7 @@ public final class TransformationRuleAction extends com.google.api.client.json.G
   }
 
   /**
-   * A string that specifies the desired value in string format to use for transformation.
+   * Optional. A string that specifies the desired value in string format to use for transformation.
    * @param value value or {@code null} for none
    */
   public TransformationRuleAction setValue(java.lang.String value) {

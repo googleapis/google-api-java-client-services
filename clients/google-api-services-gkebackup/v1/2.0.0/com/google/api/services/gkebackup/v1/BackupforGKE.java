@@ -962,22 +962,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * If provided, this value must match the current value of the target BackupPlan's etag
-           * field or the request is rejected.
+           * Optional. If provided, this value must match the current value of the target
+           * BackupPlan's etag field or the request is rejected.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** If provided, this value must match the current value of the target BackupPlan's etag field or the
-         request is rejected.
+          /** Optional. If provided, this value must match the current value of the target BackupPlan's etag
+         field or the request is rejected.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * If provided, this value must match the current value of the target BackupPlan's etag
-           * field or the request is rejected.
+           * Optional. If provided, this value must match the current value of the target
+           * BackupPlan's etag field or the request is rejected.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -1468,60 +1468,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Field match expression used to filter the results. */
+          /** Optional. Field match expression used to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Field match expression used to filter the results.
+          /** Optional. Field match expression used to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Field match expression used to filter the results. */
+          /** Optional. Field match expression used to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Field by which to sort the results. */
+          /** Optional. Field by which to sort the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the results.
+          /** Optional. Field by which to sort the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Field by which to sort the results. */
+          /** Optional. Field by which to sort the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * The target number of results to return in a single response. If not specified, a
-           * default value will be chosen by the service. Note that the response may inclue a
-           * partial list and a caller should only rely on the response's next_page_token to
-           * determine if there are more instances left to be queried.
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The target number of results to return in a single response. If not specified, a default value will
-         be chosen by the service. Note that the response may inclue a partial list and a caller should only
-         rely on the response's next_page_token to determine if there are more instances left to be queried.
+          /** Optional. The target number of results to return in a single response. If not specified, a default
+         value will be chosen by the service. Note that the response may include a partial list and a caller
+         should only rely on the response's next_page_token to determine if there are more instances left to
+         be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The target number of results to return in a single response. If not specified, a
-           * default value will be chosen by the service. Note that the response may inclue a
-           * partial list and a caller should only rely on the response's next_page_token to
-           * determine if there are more instances left to be queried.
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1529,27 +1530,27 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The value of next_page_token received from a previous `ListBackupPlans` call. Provide
-           * this to retrieve the subsequent page in a multi-page list of results. When paginating,
-           * all other parameters provided to `ListBackupPlans` must match the call that provided
-           * the page token.
+           * Optional. The value of next_page_token received from a previous `ListBackupPlans` call.
+           * Provide this to retrieve the subsequent page in a multi-page list of results. When
+           * paginating, all other parameters provided to `ListBackupPlans` must match the call that
+           * provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value of next_page_token received from a previous `ListBackupPlans` call. Provide this to
-         retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters
-         provided to `ListBackupPlans` must match the call that provided the page token.
+          /** Optional. The value of next_page_token received from a previous `ListBackupPlans` call. Provide
+         this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+         parameters provided to `ListBackupPlans` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value of next_page_token received from a previous `ListBackupPlans` call. Provide
-           * this to retrieve the subsequent page in a multi-page list of results. When paginating,
-           * all other parameters provided to `ListBackupPlans` must match the call that provided
-           * the page token.
+           * Optional. The value of next_page_token received from a previous `ListBackupPlans` call.
+           * Provide this to retrieve the subsequent page in a multi-page list of results. When
+           * paginating, all other parameters provided to `ListBackupPlans` must match the call that
+           * provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1694,8 +1695,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * This is used to specify the fields to be overwritten in the BackupPlan targeted for
-           * update. The values for each of these updated fields will be taken from the
+           * Optional. This is used to specify the fields to be overwritten in the BackupPlan
+           * targeted for update. The values for each of these updated fields will be taken from the
            * `backup_plan` provided with this request. Field names are relative to the root of the
            * resource (e.g., `description`, `backup_config.include_volume_data`, etc.) If no
            * `update_mask` is provided, all fields in `backup_plan` will be written to the target
@@ -1705,9 +1706,9 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** This is used to specify the fields to be overwritten in the BackupPlan targeted for update. The
-         values for each of these updated fields will be taken from the `backup_plan` provided with this
-         request. Field names are relative to the root of the resource (e.g., `description`,
+          /** Optional. This is used to specify the fields to be overwritten in the BackupPlan targeted for
+         update. The values for each of these updated fields will be taken from the `backup_plan` provided
+         with this request. Field names are relative to the root of the resource (e.g., `description`,
          `backup_config.include_volume_data`, etc.) If no `update_mask` is provided, all fields in
          `backup_plan` will be written to the target BackupPlan resource. Note that OUTPUT_ONLY and
          IMMUTABLE fields in `backup_plan` are ignored and are not used to update the target BackupPlan.
@@ -1717,8 +1718,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * This is used to specify the fields to be overwritten in the BackupPlan targeted for
-           * update. The values for each of these updated fields will be taken from the
+           * Optional. This is used to specify the fields to be overwritten in the BackupPlan
+           * targeted for update. The values for each of these updated fields will be taken from the
            * `backup_plan` provided with this request. Field names are relative to the root of the
            * resource (e.g., `description`, `backup_config.include_volume_data`, etc.) If no
            * `update_mask` is provided, all fields in `backup_plan` will be written to the target
@@ -2188,28 +2189,28 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The client-provided short name for the Backup resource. This name must: - be between
-             * 1 and 63 characters long (inclusive) - consist of only lower-case ASCII letters,
-             * numbers, and dashes - start with a lower-case letter - end with a lower-case letter
-             * or number - be unique within the set of Backups in this BackupPlan
+             * Optional. The client-provided short name for the Backup resource. This name must: -
+             * be between 1 and 63 characters long (inclusive) - consist of only lower-case ASCII
+             * letters, numbers, and dashes - start with a lower-case letter - end with a lower-case
+             * letter or number - be unique within the set of Backups in this BackupPlan
              */
             @com.google.api.client.util.Key
             private java.lang.String backupId;
 
-            /** The client-provided short name for the Backup resource. This name must: - be between 1 and 63
-           characters long (inclusive) - consist of only lower-case ASCII letters, numbers, and dashes - start
-           with a lower-case letter - end with a lower-case letter or number - be unique within the set of
-           Backups in this BackupPlan
+            /** Optional. The client-provided short name for the Backup resource. This name must: - be between 1
+           and 63 characters long (inclusive) - consist of only lower-case ASCII letters, numbers, and dashes
+           - start with a lower-case letter - end with a lower-case letter or number - be unique within the
+           set of Backups in this BackupPlan
              */
             public java.lang.String getBackupId() {
               return backupId;
             }
 
             /**
-             * The client-provided short name for the Backup resource. This name must: - be between
-             * 1 and 63 characters long (inclusive) - consist of only lower-case ASCII letters,
-             * numbers, and dashes - start with a lower-case letter - end with a lower-case letter
-             * or number - be unique within the set of Backups in this BackupPlan
+             * Optional. The client-provided short name for the Backup resource. This name must: -
+             * be between 1 and 63 characters long (inclusive) - consist of only lower-case ASCII
+             * letters, numbers, and dashes - start with a lower-case letter - end with a lower-case
+             * letter or number - be unique within the set of Backups in this BackupPlan
              */
             public Create setBackupId(java.lang.String backupId) {
               this.backupId = backupId;
@@ -2352,22 +2353,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * If provided, this value must match the current value of the target Backup's etag
-             * field or the request is rejected.
+             * Optional. If provided, this value must match the current value of the target Backup's
+             * etag field or the request is rejected.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
-            /** If provided, this value must match the current value of the target Backup's etag field or the
-           request is rejected.
+            /** Optional. If provided, this value must match the current value of the target Backup's etag field or
+           the request is rejected.
              */
             public java.lang.String getEtag() {
               return etag;
             }
 
             /**
-             * If provided, this value must match the current value of the target Backup's etag
-             * field or the request is rejected.
+             * Optional. If provided, this value must match the current value of the target Backup's
+             * etag field or the request is rejected.
              */
             public Delete setEtag(java.lang.String etag) {
               this.etag = etag;
@@ -2375,22 +2376,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * If set to true, any VolumeBackups below this Backup will also be deleted. Otherwise,
-             * the request will only succeed if the Backup has no VolumeBackups.
+             * Optional. If set to true, any VolumeBackups below this Backup will also be deleted.
+             * Otherwise, the request will only succeed if the Backup has no VolumeBackups.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** If set to true, any VolumeBackups below this Backup will also be deleted. Otherwise, the request
-           will only succeed if the Backup has no VolumeBackups.
+            /** Optional. If set to true, any VolumeBackups below this Backup will also be deleted. Otherwise, the
+           request will only succeed if the Backup has no VolumeBackups.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * If set to true, any VolumeBackups below this Backup will also be deleted. Otherwise,
-             * the request will only succeed if the Backup has no VolumeBackups.
+             * Optional. If set to true, any VolumeBackups below this Backup will also be deleted.
+             * Otherwise, the request will only succeed if the Backup has no VolumeBackups.
              */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
@@ -2884,60 +2885,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /** Field match expression used to filter the results. */
+            /** Optional. Field match expression used to filter the results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Field match expression used to filter the results.
+            /** Optional. Field match expression used to filter the results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Field match expression used to filter the results. */
+            /** Optional. Field match expression used to filter the results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Field by which to sort the results. */
+            /** Optional. Field by which to sort the results. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Field by which to sort the results.
+            /** Optional. Field by which to sort the results.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Field by which to sort the results. */
+            /** Optional. Field by which to sort the results. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
             /**
-             * The target number of results to return in a single response. If not specified, a
-             * default value will be chosen by the service. Note that the response may inclue a
-             * partial list and a caller should only rely on the response's next_page_token to
-             * determine if there are more instances left to be queried.
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The target number of results to return in a single response. If not specified, a default value will
-           be chosen by the service. Note that the response may inclue a partial list and a caller should only
-           rely on the response's next_page_token to determine if there are more instances left to be queried.
+            /** Optional. The target number of results to return in a single response. If not specified, a default
+           value will be chosen by the service. Note that the response may include a partial list and a caller
+           should only rely on the response's next_page_token to determine if there are more instances left to
+           be queried.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The target number of results to return in a single response. If not specified, a
-             * default value will be chosen by the service. Note that the response may inclue a
-             * partial list and a caller should only rely on the response's next_page_token to
-             * determine if there are more instances left to be queried.
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2945,25 +2947,25 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The value of next_page_token received from a previous `ListBackups` call. Provide
-             * this to retrieve the subsequent page in a multi-page list of results. When
+             * Optional. The value of next_page_token received from a previous `ListBackups` call.
+             * Provide this to retrieve the subsequent page in a multi-page list of results. When
              * paginating, all other parameters provided to `ListBackups` must match the call that
              * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value of next_page_token received from a previous `ListBackups` call. Provide this to retrieve
-           the subsequent page in a multi-page list of results. When paginating, all other parameters provided
-           to `ListBackups` must match the call that provided the page token.
+            /** Optional. The value of next_page_token received from a previous `ListBackups` call. Provide this to
+           retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters
+           provided to `ListBackups` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The value of next_page_token received from a previous `ListBackups` call. Provide
-             * this to retrieve the subsequent page in a multi-page list of results. When
+             * Optional. The value of next_page_token received from a previous `ListBackups` call.
+             * Provide this to retrieve the subsequent page in a multi-page list of results. When
              * paginating, all other parameters provided to `ListBackups` must match the call that
              * provided the page token.
              */
@@ -3110,8 +3112,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * This is used to specify the fields to be overwritten in the Backup targeted for
-             * update. The values for each of these updated fields will be taken from the
+             * Optional. This is used to specify the fields to be overwritten in the Backup targeted
+             * for update. The values for each of these updated fields will be taken from the
              * `backup_plan` provided with this request. Field names are relative to the root of the
              * resource. If no `update_mask` is provided, all fields in `backup` will be written to
              * the target Backup resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `backup`
@@ -3120,19 +3122,19 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** This is used to specify the fields to be overwritten in the Backup targeted for update. The values
-           for each of these updated fields will be taken from the `backup_plan` provided with this request.
-           Field names are relative to the root of the resource. If no `update_mask` is provided, all fields
-           in `backup` will be written to the target Backup resource. Note that OUTPUT_ONLY and IMMUTABLE
-           fields in `backup` are ignored and are not used to update the target Backup.
+            /** Optional. This is used to specify the fields to be overwritten in the Backup targeted for update.
+           The values for each of these updated fields will be taken from the `backup_plan` provided with this
+           request. Field names are relative to the root of the resource. If no `update_mask` is provided, all
+           fields in `backup` will be written to the target Backup resource. Note that OUTPUT_ONLY and
+           IMMUTABLE fields in `backup` are ignored and are not used to update the target Backup.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * This is used to specify the fields to be overwritten in the Backup targeted for
-             * update. The values for each of these updated fields will be taken from the
+             * Optional. This is used to specify the fields to be overwritten in the Backup targeted
+             * for update. The values for each of these updated fields will be taken from the
              * `backup_plan` provided with this request. Field names are relative to the root of the
              * resource. If no `update_mask` is provided, all fields in `backup` will be written to
              * the target Backup resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `backup`
@@ -3956,60 +3958,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
-              /** Field match expression used to filter the results. */
+              /** Optional. Field match expression used to filter the results. */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Field match expression used to filter the results.
+              /** Optional. Field match expression used to filter the results.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
-              /** Field match expression used to filter the results. */
+              /** Optional. Field match expression used to filter the results. */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
                 return this;
               }
 
-              /** Field by which to sort the results. */
+              /** Optional. Field by which to sort the results. */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
-              /** Field by which to sort the results.
+              /** Optional. Field by which to sort the results.
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
               }
 
-              /** Field by which to sort the results. */
+              /** Optional. Field by which to sort the results. */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
                 return this;
               }
 
               /**
-               * The target number of results to return in a single response. If not specified, a
-               * default value will be chosen by the service. Note that the response may inclue a
-               * partial list and a caller should only rely on the response's next_page_token to
-               * determine if there are more instances left to be queried.
+               * Optional. The target number of results to return in a single response. If not
+               * specified, a default value will be chosen by the service. Note that the response
+               * may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The target number of results to return in a single response. If not specified, a default value will
-             be chosen by the service. Note that the response may inclue a partial list and a caller should only
-             rely on the response's next_page_token to determine if there are more instances left to be queried.
+              /** Optional. The target number of results to return in a single response. If not specified, a default
+             value will be chosen by the service. Note that the response may include a partial list and a caller
+             should only rely on the response's next_page_token to determine if there are more instances left to
+             be queried.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The target number of results to return in a single response. If not specified, a
-               * default value will be chosen by the service. Note that the response may inclue a
-               * partial list and a caller should only rely on the response's next_page_token to
-               * determine if there are more instances left to be queried.
+               * Optional. The target number of results to return in a single response. If not
+               * specified, a default value will be chosen by the service. Note that the response
+               * may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -4017,27 +4020,27 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * The value of next_page_token received from a previous `ListVolumeBackups` call.
-               * Provide this to retrieve the subsequent page in a multi-page list of results. When
-               * paginating, all other parameters provided to `ListVolumeBackups` must match the
-               * call that provided the page token.
+               * Optional. The value of next_page_token received from a previous `ListVolumeBackups`
+               * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+               * When paginating, all other parameters provided to `ListVolumeBackups` must match
+               * the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The value of next_page_token received from a previous `ListVolumeBackups` call. Provide this to
-             retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters
-             provided to `ListVolumeBackups` must match the call that provided the page token.
+              /** Optional. The value of next_page_token received from a previous `ListVolumeBackups` call. Provide
+             this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+             parameters provided to `ListVolumeBackups` must match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * The value of next_page_token received from a previous `ListVolumeBackups` call.
-               * Provide this to retrieve the subsequent page in a multi-page list of results. When
-               * paginating, all other parameters provided to `ListVolumeBackups` must match the
-               * call that provided the page token.
+               * Optional. The value of next_page_token received from a previous `ListVolumeBackups`
+               * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+               * When paginating, all other parameters provided to `ListVolumeBackups` must match
+               * the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -5159,22 +5162,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * If provided, this value must match the current value of the target RestorePlan's etag
-           * field or the request is rejected.
+           * Optional. If provided, this value must match the current value of the target
+           * RestorePlan's etag field or the request is rejected.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** If provided, this value must match the current value of the target RestorePlan's etag field or the
-         request is rejected.
+          /** Optional. If provided, this value must match the current value of the target RestorePlan's etag
+         field or the request is rejected.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * If provided, this value must match the current value of the target RestorePlan's etag
-           * field or the request is rejected.
+           * Optional. If provided, this value must match the current value of the target
+           * RestorePlan's etag field or the request is rejected.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -5182,22 +5185,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * If set to true, any Restores below this RestorePlan will also be deleted. Otherwise,
-           * the request will only succeed if the RestorePlan has no Restores.
+           * Optional. If set to true, any Restores below this RestorePlan will also be deleted.
+           * Otherwise, the request will only succeed if the RestorePlan has no Restores.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** If set to true, any Restores below this RestorePlan will also be deleted. Otherwise, the request
-         will only succeed if the RestorePlan has no Restores.
+          /** Optional. If set to true, any Restores below this RestorePlan will also be deleted. Otherwise, the
+         request will only succeed if the RestorePlan has no Restores.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * If set to true, any Restores below this RestorePlan will also be deleted. Otherwise,
-           * the request will only succeed if the RestorePlan has no Restores.
+           * Optional. If set to true, any Restores below this RestorePlan will also be deleted.
+           * Otherwise, the request will only succeed if the RestorePlan has no Restores.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -5688,60 +5691,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** Field match expression used to filter the results. */
+          /** Optional. Field match expression used to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Field match expression used to filter the results.
+          /** Optional. Field match expression used to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Field match expression used to filter the results. */
+          /** Optional. Field match expression used to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Field by which to sort the results. */
+          /** Optional. Field by which to sort the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Field by which to sort the results.
+          /** Optional. Field by which to sort the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Field by which to sort the results. */
+          /** Optional. Field by which to sort the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * The target number of results to return in a single response. If not specified, a
-           * default value will be chosen by the service. Note that the response may inclue a
-           * partial list and a caller should only rely on the response's next_page_token to
-           * determine if there are more instances left to be queried.
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The target number of results to return in a single response. If not specified, a default value will
-         be chosen by the service. Note that the response may inclue a partial list and a caller should only
-         rely on the response's next_page_token to determine if there are more instances left to be queried.
+          /** Optional. The target number of results to return in a single response. If not specified, a default
+         value will be chosen by the service. Note that the response may include a partial list and a caller
+         should only rely on the response's next_page_token to determine if there are more instances left to
+         be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The target number of results to return in a single response. If not specified, a
-           * default value will be chosen by the service. Note that the response may inclue a
-           * partial list and a caller should only rely on the response's next_page_token to
-           * determine if there are more instances left to be queried.
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -5749,27 +5753,27 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The value of next_page_token received from a previous `ListRestorePlans` call. Provide
-           * this to retrieve the subsequent page in a multi-page list of results. When paginating,
-           * all other parameters provided to `ListRestorePlans` must match the call that provided
-           * the page token.
+           * Optional. The value of next_page_token received from a previous `ListRestorePlans`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListRestorePlans` must match the
+           * call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value of next_page_token received from a previous `ListRestorePlans` call. Provide this to
-         retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters
-         provided to `ListRestorePlans` must match the call that provided the page token.
+          /** Optional. The value of next_page_token received from a previous `ListRestorePlans` call. Provide
+         this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+         parameters provided to `ListRestorePlans` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value of next_page_token received from a previous `ListRestorePlans` call. Provide
-           * this to retrieve the subsequent page in a multi-page list of results. When paginating,
-           * all other parameters provided to `ListRestorePlans` must match the call that provided
-           * the page token.
+           * Optional. The value of next_page_token received from a previous `ListRestorePlans`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListRestorePlans` must match the
+           * call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5914,8 +5918,8 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * This is used to specify the fields to be overwritten in the RestorePlan targeted for
-           * update. The values for each of these updated fields will be taken from the
+           * Optional. This is used to specify the fields to be overwritten in the RestorePlan
+           * targeted for update. The values for each of these updated fields will be taken from the
            * `restore_plan` provided with this request. Field names are relative to the root of the
            * resource. If no `update_mask` is provided, all fields in `restore_plan` will be written
            * to the target RestorePlan resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
@@ -5924,20 +5928,20 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** This is used to specify the fields to be overwritten in the RestorePlan targeted for update. The
-         values for each of these updated fields will be taken from the `restore_plan` provided with this
-         request. Field names are relative to the root of the resource. If no `update_mask` is provided, all
-         fields in `restore_plan` will be written to the target RestorePlan resource. Note that OUTPUT_ONLY
-         and IMMUTABLE fields in `restore_plan` are ignored and are not used to update the target
-         RestorePlan.
+          /** Optional. This is used to specify the fields to be overwritten in the RestorePlan targeted for
+         update. The values for each of these updated fields will be taken from the `restore_plan` provided
+         with this request. Field names are relative to the root of the resource. If no `update_mask` is
+         provided, all fields in `restore_plan` will be written to the target RestorePlan resource. Note
+         that OUTPUT_ONLY and IMMUTABLE fields in `restore_plan` are ignored and are not used to update the
+         target RestorePlan.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * This is used to specify the fields to be overwritten in the RestorePlan targeted for
-           * update. The values for each of these updated fields will be taken from the
+           * Optional. This is used to specify the fields to be overwritten in the RestorePlan
+           * targeted for update. The values for each of these updated fields will be taken from the
            * `restore_plan` provided with this request. Field names are relative to the root of the
            * resource. If no `update_mask` is provided, all fields in `restore_plan` will be written
            * to the target RestorePlan resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
@@ -6570,22 +6574,22 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * If provided, this value must match the current value of the target Restore's etag
-             * field or the request is rejected.
+             * Optional. If provided, this value must match the current value of the target
+             * Restore's etag field or the request is rejected.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
-            /** If provided, this value must match the current value of the target Restore's etag field or the
-           request is rejected.
+            /** Optional. If provided, this value must match the current value of the target Restore's etag field
+           or the request is rejected.
              */
             public java.lang.String getEtag() {
               return etag;
             }
 
             /**
-             * If provided, this value must match the current value of the target Restore's etag
-             * field or the request is rejected.
+             * Optional. If provided, this value must match the current value of the target
+             * Restore's etag field or the request is rejected.
              */
             public Delete setEtag(java.lang.String etag) {
               this.etag = etag;
@@ -6593,21 +6597,21 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * If set to true, any VolumeRestores below this restore will also be deleted.
+             * Optional. If set to true, any VolumeRestores below this restore will also be deleted.
              * Otherwise, the request will only succeed if the restore has no VolumeRestores.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** If set to true, any VolumeRestores below this restore will also be deleted. Otherwise, the request
-           will only succeed if the restore has no VolumeRestores.
+            /** Optional. If set to true, any VolumeRestores below this restore will also be deleted. Otherwise,
+           the request will only succeed if the restore has no VolumeRestores.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * If set to true, any VolumeRestores below this restore will also be deleted.
+             * Optional. If set to true, any VolumeRestores below this restore will also be deleted.
              * Otherwise, the request will only succeed if the restore has no VolumeRestores.
              */
             public Delete setForce(java.lang.Boolean force) {
@@ -7104,60 +7108,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /** Field match expression used to filter the results. */
+            /** Optional. Field match expression used to filter the results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Field match expression used to filter the results.
+            /** Optional. Field match expression used to filter the results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Field match expression used to filter the results. */
+            /** Optional. Field match expression used to filter the results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Field by which to sort the results. */
+            /** Optional. Field by which to sort the results. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Field by which to sort the results.
+            /** Optional. Field by which to sort the results.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Field by which to sort the results. */
+            /** Optional. Field by which to sort the results. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
             /**
-             * The target number of results to return in a single response. If not specified, a
-             * default value will be chosen by the service. Note that the response may inclue a
-             * partial list and a caller should only rely on the response's next_page_token to
-             * determine if there are more instances left to be queried.
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The target number of results to return in a single response. If not specified, a default value will
-           be chosen by the service. Note that the response may inclue a partial list and a caller should only
-           rely on the response's next_page_token to determine if there are more instances left to be queried.
+            /** Optional. The target number of results to return in a single response. If not specified, a default
+           value will be chosen by the service. Note that the response may include a partial list and a caller
+           should only rely on the response's next_page_token to determine if there are more instances left to
+           be queried.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The target number of results to return in a single response. If not specified, a
-             * default value will be chosen by the service. Note that the response may inclue a
-             * partial list and a caller should only rely on the response's next_page_token to
-             * determine if there are more instances left to be queried.
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -7165,25 +7170,25 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The value of next_page_token received from a previous `ListRestores` call. Provide
-             * this to retrieve the subsequent page in a multi-page list of results. When
+             * Optional. The value of next_page_token received from a previous `ListRestores` call.
+             * Provide this to retrieve the subsequent page in a multi-page list of results. When
              * paginating, all other parameters provided to `ListRestores` must match the call that
              * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value of next_page_token received from a previous `ListRestores` call. Provide this to retrieve
-           the subsequent page in a multi-page list of results. When paginating, all other parameters provided
-           to `ListRestores` must match the call that provided the page token.
+            /** Optional. The value of next_page_token received from a previous `ListRestores` call. Provide this
+           to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+           parameters provided to `ListRestores` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The value of next_page_token received from a previous `ListRestores` call. Provide
-             * this to retrieve the subsequent page in a multi-page list of results. When
+             * Optional. The value of next_page_token received from a previous `ListRestores` call.
+             * Provide this to retrieve the subsequent page in a multi-page list of results. When
              * paginating, all other parameters provided to `ListRestores` must match the call that
              * provided the page token.
              */
@@ -7333,33 +7338,33 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * This is used to specify the fields to be overwritten in the Restore targeted for
-             * update. The values for each of these updated fields will be taken from the `restore`
-             * provided with this request. Field names are relative to the root of the resource. If
-             * no `update_mask` is provided, all fields in `restore` will be written to the target
-             * Restore resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `restore` are ignored
-             * and are not used to update the target Restore.
+             * Optional. This is used to specify the fields to be overwritten in the Restore
+             * targeted for update. The values for each of these updated fields will be taken from
+             * the `restore` provided with this request. Field names are relative to the root of the
+             * resource. If no `update_mask` is provided, all fields in `restore` will be written to
+             * the target Restore resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `restore`
+             * are ignored and are not used to update the target Restore.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** This is used to specify the fields to be overwritten in the Restore targeted for update. The values
-           for each of these updated fields will be taken from the `restore` provided with this request. Field
-           names are relative to the root of the resource. If no `update_mask` is provided, all fields in
-           `restore` will be written to the target Restore resource. Note that OUTPUT_ONLY and IMMUTABLE
-           fields in `restore` are ignored and are not used to update the target Restore.
+            /** Optional. This is used to specify the fields to be overwritten in the Restore targeted for update.
+           The values for each of these updated fields will be taken from the `restore` provided with this
+           request. Field names are relative to the root of the resource. If no `update_mask` is provided, all
+           fields in `restore` will be written to the target Restore resource. Note that OUTPUT_ONLY and
+           IMMUTABLE fields in `restore` are ignored and are not used to update the target Restore.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * This is used to specify the fields to be overwritten in the Restore targeted for
-             * update. The values for each of these updated fields will be taken from the `restore`
-             * provided with this request. Field names are relative to the root of the resource. If
-             * no `update_mask` is provided, all fields in `restore` will be written to the target
-             * Restore resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `restore` are ignored
-             * and are not used to update the target Restore.
+             * Optional. This is used to specify the fields to be overwritten in the Restore
+             * targeted for update. The values for each of these updated fields will be taken from
+             * the `restore` provided with this request. Field names are relative to the root of the
+             * resource. If no `update_mask` is provided, all fields in `restore` will be written to
+             * the target Restore resource. Note that OUTPUT_ONLY and IMMUTABLE fields in `restore`
+             * are ignored and are not used to update the target Restore.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -8179,60 +8184,61 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
-              /** Field match expression used to filter the results. */
+              /** Optional. Field match expression used to filter the results. */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Field match expression used to filter the results.
+              /** Optional. Field match expression used to filter the results.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
-              /** Field match expression used to filter the results. */
+              /** Optional. Field match expression used to filter the results. */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
                 return this;
               }
 
-              /** Field by which to sort the results. */
+              /** Optional. Field by which to sort the results. */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
-              /** Field by which to sort the results.
+              /** Optional. Field by which to sort the results.
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
               }
 
-              /** Field by which to sort the results. */
+              /** Optional. Field by which to sort the results. */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
                 return this;
               }
 
               /**
-               * The target number of results to return in a single response. If not specified, a
-               * default value will be chosen by the service. Note that the response may inclue a
-               * partial list and a caller should only rely on the response's next_page_token to
-               * determine if there are more instances left to be queried.
+               * Optional. The target number of results to return in a single response. If not
+               * specified, a default value will be chosen by the service. Note that the response
+               * may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The target number of results to return in a single response. If not specified, a default value will
-             be chosen by the service. Note that the response may inclue a partial list and a caller should only
-             rely on the response's next_page_token to determine if there are more instances left to be queried.
+              /** Optional. The target number of results to return in a single response. If not specified, a default
+             value will be chosen by the service. Note that the response may include a partial list and a caller
+             should only rely on the response's next_page_token to determine if there are more instances left to
+             be queried.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The target number of results to return in a single response. If not specified, a
-               * default value will be chosen by the service. Note that the response may inclue a
-               * partial list and a caller should only rely on the response's next_page_token to
-               * determine if there are more instances left to be queried.
+               * Optional. The target number of results to return in a single response. If not
+               * specified, a default value will be chosen by the service. Note that the response
+               * may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -8240,27 +8246,27 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * The value of next_page_token received from a previous `ListVolumeRestores` call.
-               * Provide this to retrieve the subsequent page in a multi-page list of results. When
-               * paginating, all other parameters provided to `ListVolumeRestores` must match the
-               * call that provided the page token.
+               * Optional. The value of next_page_token received from a previous
+               * `ListVolumeRestores` call. Provide this to retrieve the subsequent page in a multi-
+               * page list of results. When paginating, all other parameters provided to
+               * `ListVolumeRestores` must match the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The value of next_page_token received from a previous `ListVolumeRestores` call. Provide this to
-             retrieve the subsequent page in a multi-page list of results. When paginating, all other parameters
-             provided to `ListVolumeRestores` must match the call that provided the page token.
+              /** Optional. The value of next_page_token received from a previous `ListVolumeRestores` call. Provide
+             this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+             parameters provided to `ListVolumeRestores` must match the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * The value of next_page_token received from a previous `ListVolumeRestores` call.
-               * Provide this to retrieve the subsequent page in a multi-page list of results. When
-               * paginating, all other parameters provided to `ListVolumeRestores` must match the
-               * call that provided the page token.
+               * Optional. The value of next_page_token received from a previous
+               * `ListVolumeRestores` call. Provide this to retrieve the subsequent page in a multi-
+               * page list of results. When paginating, all other parameters provided to
+               * `ListVolumeRestores` must match the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;

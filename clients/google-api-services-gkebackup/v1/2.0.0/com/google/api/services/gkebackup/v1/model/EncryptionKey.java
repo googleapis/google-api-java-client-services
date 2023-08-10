@@ -30,14 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class EncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
+   * Optional. Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpKmsEncryptionKey;
 
   /**
-   * Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
+   * Optional. Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpKmsEncryptionKey() {
@@ -45,7 +45,7 @@ public final class EncryptionKey extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
+   * Optional. Google Cloud KMS encryption key. Format: `projects/locations/keyRings/cryptoKeys`
    * @param gcpKmsEncryptionKey gcpKmsEncryptionKey or {@code null} for none
    */
   public EncryptionKey setGcpKmsEncryptionKey(java.lang.String gcpKmsEncryptionKey) {

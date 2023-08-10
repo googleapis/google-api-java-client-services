@@ -30,14 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class Namespaces extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> namespaces;
 
   /**
-   * A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNamespaces() {
@@ -45,7 +45,7 @@ public final class Namespaces extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of Kubernetes Namespaces
+   * Optional. A list of Kubernetes Namespaces
    * @param namespaces namespaces or {@code null} for none
    */
   public Namespaces setNamespaces(java.util.List<java.lang.String> namespaces) {

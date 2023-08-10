@@ -30,7 +30,7 @@ package com.google.api.services.gkebackup.v1.model;
 public final class NamespacedNames extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of namespaced Kubernetes resources.
+   * Optional. A list of namespaced Kubernetes resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class NamespacedNames extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of namespaced Kubernetes resources.
+   * Optional. A list of namespaced Kubernetes resources.
    * @return value or {@code null} for none
    */
   public java.util.List<NamespacedName> getNamespacedNames() {
@@ -51,7 +51,7 @@ public final class NamespacedNames extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of namespaced Kubernetes resources.
+   * Optional. A list of namespaced Kubernetes resources.
    * @param namespacedNames namespacedNames or {@code null} for none
    */
   public NamespacedNames setNamespacedNames(java.util.List<NamespacedName> namespacedNames) {

@@ -37,41 +37,42 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ClusterResourceRestoreScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * If True, all valid cluster-scoped resources will be restored. Mutually exclusive to any other
-   * field in the message.
+   * Optional. If True, all valid cluster-scoped resources will be restored. Mutually exclusive to
+   * any other field in the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allGroupKinds;
 
   /**
-   * A list of cluster-scoped resource group kinds to NOT restore from the backup. If specified, all
-   * valid cluster-scoped resources will be restored except for those specified in the list.
-   * Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to NOT restore from the backup. If
+   * specified, all valid cluster-scoped resources will be restored except for those specified in
+   * the list. Mutually exclusive to any other field in the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GroupKind> excludedGroupKinds;
 
   /**
-   * If True, no cluster-scoped resources will be restored. This has the same restore scope as if
-   * the message is not defined. Mutually exclusive to any other field in the message.
+   * Optional. If True, no cluster-scoped resources will be restored. This has the same restore
+   * scope as if the message is not defined. Mutually exclusive to any other field in the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noGroupKinds;
 
   /**
-   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
-   * the selected resources will be restored. Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to restore from the backup. If
+   * specified, only the selected resources will be restored. Mutually exclusive to any other field
+   * in the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GroupKind> selectedGroupKinds;
 
   /**
-   * If True, all valid cluster-scoped resources will be restored. Mutually exclusive to any other
-   * field in the message.
+   * Optional. If True, all valid cluster-scoped resources will be restored. Mutually exclusive to
+   * any other field in the message.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllGroupKinds() {
@@ -79,8 +80,8 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * If True, all valid cluster-scoped resources will be restored. Mutually exclusive to any other
-   * field in the message.
+   * Optional. If True, all valid cluster-scoped resources will be restored. Mutually exclusive to
+   * any other field in the message.
    * @param allGroupKinds allGroupKinds or {@code null} for none
    */
   public ClusterResourceRestoreScope setAllGroupKinds(java.lang.Boolean allGroupKinds) {
@@ -89,9 +90,9 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * A list of cluster-scoped resource group kinds to NOT restore from the backup. If specified, all
-   * valid cluster-scoped resources will be restored except for those specified in the list.
-   * Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to NOT restore from the backup. If
+   * specified, all valid cluster-scoped resources will be restored except for those specified in
+   * the list. Mutually exclusive to any other field in the message.
    * @return value or {@code null} for none
    */
   public java.util.List<GroupKind> getExcludedGroupKinds() {
@@ -99,9 +100,9 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * A list of cluster-scoped resource group kinds to NOT restore from the backup. If specified, all
-   * valid cluster-scoped resources will be restored except for those specified in the list.
-   * Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to NOT restore from the backup. If
+   * specified, all valid cluster-scoped resources will be restored except for those specified in
+   * the list. Mutually exclusive to any other field in the message.
    * @param excludedGroupKinds excludedGroupKinds or {@code null} for none
    */
   public ClusterResourceRestoreScope setExcludedGroupKinds(java.util.List<GroupKind> excludedGroupKinds) {
@@ -110,8 +111,8 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * If True, no cluster-scoped resources will be restored. This has the same restore scope as if
-   * the message is not defined. Mutually exclusive to any other field in the message.
+   * Optional. If True, no cluster-scoped resources will be restored. This has the same restore
+   * scope as if the message is not defined. Mutually exclusive to any other field in the message.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoGroupKinds() {
@@ -119,8 +120,8 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * If True, no cluster-scoped resources will be restored. This has the same restore scope as if
-   * the message is not defined. Mutually exclusive to any other field in the message.
+   * Optional. If True, no cluster-scoped resources will be restored. This has the same restore
+   * scope as if the message is not defined. Mutually exclusive to any other field in the message.
    * @param noGroupKinds noGroupKinds or {@code null} for none
    */
   public ClusterResourceRestoreScope setNoGroupKinds(java.lang.Boolean noGroupKinds) {
@@ -129,8 +130,9 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
-   * the selected resources will be restored. Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to restore from the backup. If
+   * specified, only the selected resources will be restored. Mutually exclusive to any other field
+   * in the message.
    * @return value or {@code null} for none
    */
   public java.util.List<GroupKind> getSelectedGroupKinds() {
@@ -138,8 +140,9 @@ public final class ClusterResourceRestoreScope extends com.google.api.client.jso
   }
 
   /**
-   * A list of cluster-scoped resource group kinds to restore from the backup. If specified, only
-   * the selected resources will be restored. Mutually exclusive to any other field in the message.
+   * Optional. A list of cluster-scoped resource group kinds to restore from the backup. If
+   * specified, only the selected resources will be restored. Mutually exclusive to any other field
+   * in the message.
    * @param selectedGroupKinds selectedGroupKinds or {@code null} for none
    */
   public ClusterResourceRestoreScope setSelectedGroupKinds(java.util.List<GroupKind> selectedGroupKinds) {

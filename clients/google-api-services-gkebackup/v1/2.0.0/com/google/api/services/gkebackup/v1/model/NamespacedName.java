@@ -30,21 +30,21 @@ package com.google.api.services.gkebackup.v1.model;
 public final class NamespacedName extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Kubernetes resource.
+   * Optional. The name of the Kubernetes resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The Namespace of the Kubernetes resource.
+   * Optional. The Namespace of the Kubernetes resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namespace;
 
   /**
-   * The name of the Kubernetes resource.
+   * Optional. The name of the Kubernetes resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class NamespacedName extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the Kubernetes resource.
+   * Optional. The name of the Kubernetes resource.
    * @param name name or {@code null} for none
    */
   public NamespacedName setName(java.lang.String name) {
@@ -61,7 +61,7 @@ public final class NamespacedName extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The Namespace of the Kubernetes resource.
+   * Optional. The Namespace of the Kubernetes resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -69,7 +69,7 @@ public final class NamespacedName extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The Namespace of the Kubernetes resource.
+   * Optional. The Namespace of the Kubernetes resource.
    * @param namespace namespace or {@code null} for none
    */
   public NamespacedName setNamespace(java.lang.String namespace) {

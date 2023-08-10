@@ -30,14 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines the configuration of Backups created via this BackupPlan.
+   * Optional. Defines the configuration of Backups created via this BackupPlan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackupConfig backupConfig;
 
   /**
-   * Defines a schedule for automatic Backup creation via this BackupPlan.
+   * Optional. Defines a schedule for automatic Backup creation via this BackupPlan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,17 +59,17 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
-   * the deactivated field itself. It also prevents any new Backups from being created via this
-   * BackupPlan (including scheduled Backups). Default: False
+   * Optional. This flag indicates whether this BackupPlan has been deactivated. Setting this field
+   * to True locks the BackupPlan such that no further updates will be allowed (except deletes),
+   * including the deactivated field itself. It also prevents any new Backups from being created via
+   * this BackupPlan (including scheduled Backups). Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deactivated;
 
   /**
-   * User specified descriptive string for this BackupPlan.
+   * Optional. User specified descriptive string for this BackupPlan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.Integer protectedPodCount;
 
   /**
-   * RetentionPolicy governs lifecycle of Backups created under this plan.
+   * Optional. RetentionPolicy governs lifecycle of Backups created under this plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Defines the configuration of Backups created via this BackupPlan.
+   * Optional. Defines the configuration of Backups created via this BackupPlan.
    * @return value or {@code null} for none
    */
   public BackupConfig getBackupConfig() {
@@ -157,7 +157,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the configuration of Backups created via this BackupPlan.
+   * Optional. Defines the configuration of Backups created via this BackupPlan.
    * @param backupConfig backupConfig or {@code null} for none
    */
   public BackupPlan setBackupConfig(BackupConfig backupConfig) {
@@ -166,7 +166,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines a schedule for automatic Backup creation via this BackupPlan.
+   * Optional. Defines a schedule for automatic Backup creation via this BackupPlan.
    * @return value or {@code null} for none
    */
   public Schedule getBackupSchedule() {
@@ -174,7 +174,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines a schedule for automatic Backup creation via this BackupPlan.
+   * Optional. Defines a schedule for automatic Backup creation via this BackupPlan.
    * @param backupSchedule backupSchedule or {@code null} for none
    */
   public BackupPlan setBackupSchedule(Schedule backupSchedule) {
@@ -219,10 +219,10 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
-   * the deactivated field itself. It also prevents any new Backups from being created via this
-   * BackupPlan (including scheduled Backups). Default: False
+   * Optional. This flag indicates whether this BackupPlan has been deactivated. Setting this field
+   * to True locks the BackupPlan such that no further updates will be allowed (except deletes),
+   * including the deactivated field itself. It also prevents any new Backups from being created via
+   * this BackupPlan (including scheduled Backups). Default: False
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeactivated() {
@@ -230,10 +230,10 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag indicates whether this BackupPlan has been deactivated. Setting this field to True
-   * locks the BackupPlan such that no further updates will be allowed (except deletes), including
-   * the deactivated field itself. It also prevents any new Backups from being created via this
-   * BackupPlan (including scheduled Backups). Default: False
+   * Optional. This flag indicates whether this BackupPlan has been deactivated. Setting this field
+   * to True locks the BackupPlan such that no further updates will be allowed (except deletes),
+   * including the deactivated field itself. It also prevents any new Backups from being created via
+   * this BackupPlan (including scheduled Backups). Default: False
    * @param deactivated deactivated or {@code null} for none
    */
   public BackupPlan setDeactivated(java.lang.Boolean deactivated) {
@@ -242,7 +242,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified descriptive string for this BackupPlan.
+   * Optional. User specified descriptive string for this BackupPlan.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -250,7 +250,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified descriptive string for this BackupPlan.
+   * Optional. User specified descriptive string for this BackupPlan.
    * @param description description or {@code null} for none
    */
   public BackupPlan setDescription(java.lang.String description) {
@@ -288,7 +288,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -296,7 +296,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of custom labels supplied by user.
+   * Optional. A set of custom labels supplied by user.
    * @param labels labels or {@code null} for none
    */
   public BackupPlan setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -341,7 +341,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * RetentionPolicy governs lifecycle of Backups created under this plan.
+   * Optional. RetentionPolicy governs lifecycle of Backups created under this plan.
    * @return value or {@code null} for none
    */
   public RetentionPolicy getRetentionPolicy() {
@@ -349,7 +349,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * RetentionPolicy governs lifecycle of Backups created under this plan.
+   * Optional. RetentionPolicy governs lifecycle of Backups created under this plan.
    * @param retentionPolicy retentionPolicy or {@code null} for none
    */
   public BackupPlan setRetentionPolicy(RetentionPolicy retentionPolicy) {

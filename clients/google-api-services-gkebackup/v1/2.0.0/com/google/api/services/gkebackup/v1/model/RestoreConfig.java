@@ -38,8 +38,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean allNamespaces;
 
   /**
-   * Defines the behavior for handling the situation where cluster-scoped resources being restored
-   * already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where cluster-scoped resources being
+   * restored already exist in the target cluster. This MUST be set to a value other than
    * CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
    * The value may be {@code null}.
    */
@@ -47,8 +47,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String clusterResourceConflictPolicy;
 
   /**
-   * Identifies the cluster-scoped resources to restore from the Backup. Not specifying it means NO
-   * cluster resource will be restored.
+   * Optional. Identifies the cluster-scoped resources to restore from the Backup. Not specifying it
+   * means NO cluster resource will be restored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private Namespaces excludedNamespaces;
 
   /**
-   * Defines the behavior for handling the situation where sets of namespaced resources being
-   * restored already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where sets of namespaced resources
+   * being restored already exist in the target cluster. This MUST be set to a value other than
    * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * The value may be {@code null}.
    */
@@ -96,27 +96,27 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private Namespaces selectedNamespaces;
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no substitution will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no substitution will occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SubstitutionRule> substitutionRules;
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no transformation will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no transformation will occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TransformationRule> transformationRules;
 
   /**
-   * Specifies the mechanism to be used to restore volume data. Default:
+   * Optional. Specifies the mechanism to be used to restore volume data. Default:
    * VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as NO_VOLUME_DATA_RESTORATION).
    * The value may be {@code null}.
    */
@@ -143,8 +143,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Defines the behavior for handling the situation where cluster-scoped resources being restored
-   * already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where cluster-scoped resources being
+   * restored already exist in the target cluster. This MUST be set to a value other than
    * CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
    * @return value or {@code null} for none
    */
@@ -153,8 +153,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Defines the behavior for handling the situation where cluster-scoped resources being restored
-   * already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where cluster-scoped resources being
+   * restored already exist in the target cluster. This MUST be set to a value other than
    * CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
    * @param clusterResourceConflictPolicy clusterResourceConflictPolicy or {@code null} for none
    */
@@ -164,8 +164,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies the cluster-scoped resources to restore from the Backup. Not specifying it means NO
-   * cluster resource will be restored.
+   * Optional. Identifies the cluster-scoped resources to restore from the Backup. Not specifying it
+   * means NO cluster resource will be restored.
    * @return value or {@code null} for none
    */
   public ClusterResourceRestoreScope getClusterResourceRestoreScope() {
@@ -173,8 +173,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifies the cluster-scoped resources to restore from the Backup. Not specifying it means NO
-   * cluster resource will be restored.
+   * Optional. Identifies the cluster-scoped resources to restore from the Backup. Not specifying it
+   * means NO cluster resource will be restored.
    * @param clusterResourceRestoreScope clusterResourceRestoreScope or {@code null} for none
    */
   public RestoreConfig setClusterResourceRestoreScope(ClusterResourceRestoreScope clusterResourceRestoreScope) {
@@ -202,8 +202,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Defines the behavior for handling the situation where sets of namespaced resources being
-   * restored already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where sets of namespaced resources
+   * being restored already exist in the target cluster. This MUST be set to a value other than
    * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
@@ -212,8 +212,8 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Defines the behavior for handling the situation where sets of namespaced resources being
-   * restored already exist in the target cluster. This MUST be set to a value other than
+   * Optional. Defines the behavior for handling the situation where sets of namespaced resources
+   * being restored already exist in the target cluster. This MUST be set to a value other than
    * NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
    * @param namespacedResourceRestoreMode namespacedResourceRestoreMode or {@code null} for none
    */
@@ -280,10 +280,10 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no substitution will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no substitution will occur.
    * @return value or {@code null} for none
    */
   public java.util.List<SubstitutionRule> getSubstitutionRules() {
@@ -291,10 +291,10 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no substitution will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no substitution will occur.
    * @param substitutionRules substitutionRules or {@code null} for none
    */
   public RestoreConfig setSubstitutionRules(java.util.List<SubstitutionRule> substitutionRules) {
@@ -303,10 +303,10 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no transformation will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no transformation will occur.
    * @return value or {@code null} for none
    */
   public java.util.List<TransformationRule> getTransformationRules() {
@@ -314,10 +314,10 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of transformation rules to be applied against Kubernetes resources as they are selected
-   * for restoration from a Backup. Rules are executed in order defined - this order matters, as
-   * changes made by a rule may impact the filtering logic of subsequent rules. An empty list means
-   * no transformation will occur.
+   * Optional. A list of transformation rules to be applied against Kubernetes resources as they are
+   * selected for restoration from a Backup. Rules are executed in order defined - this order
+   * matters, as changes made by a rule may impact the filtering logic of subsequent rules. An empty
+   * list means no transformation will occur.
    * @param transformationRules transformationRules or {@code null} for none
    */
   public RestoreConfig setTransformationRules(java.util.List<TransformationRule> transformationRules) {
@@ -326,7 +326,7 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the mechanism to be used to restore volume data. Default:
+   * Optional. Specifies the mechanism to be used to restore volume data. Default:
    * VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as NO_VOLUME_DATA_RESTORATION).
    * @return value or {@code null} for none
    */
@@ -335,7 +335,7 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the mechanism to be used to restore volume data. Default:
+   * Optional. Specifies the mechanism to be used to restore volume data. Default:
    * VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED (will be treated as NO_VOLUME_DATA_RESTORATION).
    * @param volumeDataRestorePolicy volumeDataRestorePolicy or {@code null} for none
    */

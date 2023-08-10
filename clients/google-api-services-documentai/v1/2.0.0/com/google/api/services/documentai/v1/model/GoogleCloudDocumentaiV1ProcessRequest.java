@@ -40,11 +40,25 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   private String fieldMask;
 
   /**
+   * A raw document on Google Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1GcsDocument gcsDocument;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiV1Document inlineDocument;
+
+  /**
+   * Inference-time options for the process API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1ProcessOptions processOptions;
 
   /**
    * A raw document content (bytes).
@@ -82,6 +96,23 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
   }
 
   /**
+   * A raw document on Google Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1GcsDocument getGcsDocument() {
+    return gcsDocument;
+  }
+
+  /**
+   * A raw document on Google Cloud Storage.
+   * @param gcsDocument gcsDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessRequest setGcsDocument(GoogleCloudDocumentaiV1GcsDocument gcsDocument) {
+    this.gcsDocument = gcsDocument;
+    return this;
+  }
+
+  /**
    * An inline document proto.
    * @return value or {@code null} for none
    */
@@ -95,6 +126,23 @@ public final class GoogleCloudDocumentaiV1ProcessRequest extends com.google.api.
    */
   public GoogleCloudDocumentaiV1ProcessRequest setInlineDocument(GoogleCloudDocumentaiV1Document inlineDocument) {
     this.inlineDocument = inlineDocument;
+    return this;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptions getProcessOptions() {
+    return processOptions;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @param processOptions processOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessRequest setProcessOptions(GoogleCloudDocumentaiV1ProcessOptions processOptions) {
+    this.processOptions = processOptions;
     return this;
   }
 

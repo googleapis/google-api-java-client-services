@@ -41,7 +41,8 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   private java.util.List<java.lang.String> advancedOcrOptions;
 
   /**
-   * Turn on font id model and returns font style information.
+   * Turn on font id model and returns font style information. Use
+   * PremiumFeatures.compute_style_info instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +103,8 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   }
 
   /**
-   * Turn on font id model and returns font style information.
+   * Turn on font id model and returns font style information. Use
+   * PremiumFeatures.compute_style_info instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getComputeStyleInfo() {
@@ -110,7 +112,8 @@ public final class GoogleCloudDocumentaiV1beta3OcrConfig extends com.google.api.
   }
 
   /**
-   * Turn on font id model and returns font style information.
+   * Turn on font id model and returns font style information. Use
+   * PremiumFeatures.compute_style_info instead.
    * @param computeStyleInfo computeStyleInfo or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3OcrConfig setComputeStyleInfo(java.lang.Boolean computeStyleInfo) {

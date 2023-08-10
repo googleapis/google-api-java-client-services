@@ -3000,6 +3000,147 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         public class Dataset {
 
           /**
+           * Deletes a set of documents.
+           *
+           * Create a request for the method "dataset.batchDeleteDocuments".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link BatchDeleteDocuments#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataset Required. The dataset resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsRequest}
+           * @return the request
+           */
+          public BatchDeleteDocuments batchDeleteDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsRequest content) throws java.io.IOException {
+            BatchDeleteDocuments result = new BatchDeleteDocuments(dataset, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchDeleteDocuments extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+dataset}:batchDeleteDocuments";
+
+            private final java.util.regex.Pattern DATASET_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+
+            /**
+             * Deletes a set of documents.
+             *
+             * Create a request for the method "dataset.batchDeleteDocuments".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link BatchDeleteDocuments#execute()} method to invoke the
+             * remote operation. <p> {@link BatchDeleteDocuments#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param dataset Required. The dataset resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsRequest}
+             * @since 1.13
+             */
+            protected BatchDeleteDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+            }
+
+            @Override
+            public BatchDeleteDocuments set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchDeleteDocuments) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchDeleteDocuments setAccessToken(java.lang.String accessToken) {
+              return (BatchDeleteDocuments) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchDeleteDocuments setAlt(java.lang.String alt) {
+              return (BatchDeleteDocuments) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchDeleteDocuments setCallback(java.lang.String callback) {
+              return (BatchDeleteDocuments) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchDeleteDocuments setFields(java.lang.String fields) {
+              return (BatchDeleteDocuments) super.setFields(fields);
+            }
+
+            @Override
+            public BatchDeleteDocuments setKey(java.lang.String key) {
+              return (BatchDeleteDocuments) super.setKey(key);
+            }
+
+            @Override
+            public BatchDeleteDocuments setOauthToken(java.lang.String oauthToken) {
+              return (BatchDeleteDocuments) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchDeleteDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchDeleteDocuments) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchDeleteDocuments setQuotaUser(java.lang.String quotaUser) {
+              return (BatchDeleteDocuments) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchDeleteDocuments setUploadType(java.lang.String uploadType) {
+              return (BatchDeleteDocuments) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchDeleteDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchDeleteDocuments) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The dataset resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataset;
+
+            /** Required. The dataset resource name. Format:
+           projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public java.lang.String getDataset() {
+              return dataset;
+            }
+
+            /**
+             * Required. The dataset resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public BatchDeleteDocuments setDataset(java.lang.String dataset) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+              this.dataset = dataset;
+              return this;
+            }
+
+            @Override
+            public BatchDeleteDocuments set(String parameterName, Object value) {
+              return (BatchDeleteDocuments) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the `DatasetSchema` of a `Dataset`.
            *
            * Create a request for the method "dataset.getDatasetSchema".
@@ -3161,6 +3302,455 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public GetDatasetSchema set(String parameterName, Object value) {
               return (GetDatasetSchema) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns relevant fields present in the requested document.
+           *
+           * Create a request for the method "dataset.getDocument".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link GetDocument#execute()} method to invoke the remote operation.
+           *
+           * @param dataset Required. The resource name of the dataset that the document belongs to . Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+           * @return the request
+           */
+          public GetDocument getDocument(java.lang.String dataset) throws java.io.IOException {
+            GetDocument result = new GetDocument(dataset);
+            initialize(result);
+            return result;
+          }
+
+          public class GetDocument extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3GetDocumentResponse> {
+
+            private static final String REST_PATH = "v1beta3/{+dataset}:getDocument";
+
+            private final java.util.regex.Pattern DATASET_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+
+            /**
+             * Returns relevant fields present in the requested document.
+             *
+             * Create a request for the method "dataset.getDocument".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link GetDocument#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetDocument#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param dataset Required. The resource name of the dataset that the document belongs to . Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+             * @since 1.13
+             */
+            protected GetDocument(java.lang.String dataset) {
+              super(Document.this, "GET", REST_PATH, null, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3GetDocumentResponse.class);
+              this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetDocument set$Xgafv(java.lang.String $Xgafv) {
+              return (GetDocument) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetDocument setAccessToken(java.lang.String accessToken) {
+              return (GetDocument) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetDocument setAlt(java.lang.String alt) {
+              return (GetDocument) super.setAlt(alt);
+            }
+
+            @Override
+            public GetDocument setCallback(java.lang.String callback) {
+              return (GetDocument) super.setCallback(callback);
+            }
+
+            @Override
+            public GetDocument setFields(java.lang.String fields) {
+              return (GetDocument) super.setFields(fields);
+            }
+
+            @Override
+            public GetDocument setKey(java.lang.String key) {
+              return (GetDocument) super.setKey(key);
+            }
+
+            @Override
+            public GetDocument setOauthToken(java.lang.String oauthToken) {
+              return (GetDocument) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetDocument) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetDocument setQuotaUser(java.lang.String quotaUser) {
+              return (GetDocument) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetDocument setUploadType(java.lang.String uploadType) {
+              return (GetDocument) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetDocument setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetDocument) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the dataset that the document belongs to . Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataset;
+
+            /** Required. The resource name of the dataset that the document belongs to . Format:
+           projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public java.lang.String getDataset() {
+              return dataset;
+            }
+
+            /**
+             * Required. The resource name of the dataset that the document belongs to . Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public GetDocument setDataset(java.lang.String dataset) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+              this.dataset = dataset;
+              return this;
+            }
+
+            /** Id of the document (indexed) managed by Content Warehouse. */
+            @com.google.api.client.util.Key("documentId.gcsManagedDocId.cwDocId")
+            private java.lang.String documentIdGcsManagedDocIdCwDocId;
+
+            /** Id of the document (indexed) managed by Content Warehouse.
+             */
+            public java.lang.String getDocumentIdGcsManagedDocIdCwDocId() {
+              return documentIdGcsManagedDocIdCwDocId;
+            }
+
+            /** Id of the document (indexed) managed by Content Warehouse. */
+            public GetDocument setDocumentIdGcsManagedDocIdCwDocId(java.lang.String documentIdGcsManagedDocIdCwDocId) {
+              this.documentIdGcsManagedDocIdCwDocId = documentIdGcsManagedDocIdCwDocId;
+              return this;
+            }
+
+            /** Required. The Cloud Storage URI where the actual document is stored. */
+            @com.google.api.client.util.Key("documentId.gcsManagedDocId.gcsUri")
+            private java.lang.String documentIdGcsManagedDocIdGcsUri;
+
+            /** Required. The Cloud Storage URI where the actual document is stored.
+             */
+            public java.lang.String getDocumentIdGcsManagedDocIdGcsUri() {
+              return documentIdGcsManagedDocIdGcsUri;
+            }
+
+            /** Required. The Cloud Storage URI where the actual document is stored. */
+            public GetDocument setDocumentIdGcsManagedDocIdGcsUri(java.lang.String documentIdGcsManagedDocIdGcsUri) {
+              this.documentIdGcsManagedDocIdGcsUri = documentIdGcsManagedDocIdGcsUri;
+              return this;
+            }
+
+            /**
+             * Reads the revision generated by the processor version. The format takes the full
+             * resource name of processor version. `projects/{project}/locations/{location}/processo
+             * rs/{processor}/processorVersions/{processorVersion}`
+             */
+            @com.google.api.client.util.Key("documentId.revisionRef.latestProcessorVersion")
+            private java.lang.String documentIdRevisionRefLatestProcessorVersion;
+
+            /** Reads the revision generated by the processor version. The format takes the full resource name of
+           processor version. `projects/{project}/locations/{location}/processors/{processor}/processorVersion
+           s/{processorVersion}`
+             */
+            public java.lang.String getDocumentIdRevisionRefLatestProcessorVersion() {
+              return documentIdRevisionRefLatestProcessorVersion;
+            }
+
+            /**
+             * Reads the revision generated by the processor version. The format takes the full
+             * resource name of processor version. `projects/{project}/locations/{location}/processo
+             * rs/{processor}/processorVersions/{processorVersion}`
+             */
+            public GetDocument setDocumentIdRevisionRefLatestProcessorVersion(java.lang.String documentIdRevisionRefLatestProcessorVersion) {
+              this.documentIdRevisionRefLatestProcessorVersion = documentIdRevisionRefLatestProcessorVersion;
+              return this;
+            }
+
+            /** Reads the revision by the predefined case. */
+            @com.google.api.client.util.Key("documentId.revisionRef.revisionCase")
+            private java.lang.String documentIdRevisionRefRevisionCase;
+
+            /** Reads the revision by the predefined case.
+             */
+            public java.lang.String getDocumentIdRevisionRefRevisionCase() {
+              return documentIdRevisionRefRevisionCase;
+            }
+
+            /** Reads the revision by the predefined case. */
+            public GetDocument setDocumentIdRevisionRefRevisionCase(java.lang.String documentIdRevisionRefRevisionCase) {
+              this.documentIdRevisionRefRevisionCase = documentIdRevisionRefRevisionCase;
+              return this;
+            }
+
+            /** Reads the revision given by the id. */
+            @com.google.api.client.util.Key("documentId.revisionRef.revisionId")
+            private java.lang.String documentIdRevisionRefRevisionId;
+
+            /** Reads the revision given by the id.
+             */
+            public java.lang.String getDocumentIdRevisionRefRevisionId() {
+              return documentIdRevisionRefRevisionId;
+            }
+
+            /** Reads the revision given by the id. */
+            public GetDocument setDocumentIdRevisionRefRevisionId(java.lang.String documentIdRevisionRefRevisionId) {
+              this.documentIdRevisionRefRevisionId = documentIdRevisionRefRevisionId;
+              return this;
+            }
+
+            /** Required. The id of the document. */
+            @com.google.api.client.util.Key("documentId.unmanagedDocId.docId")
+            private java.lang.String documentIdUnmanagedDocIdDocId;
+
+            /** Required. The id of the document.
+             */
+            public java.lang.String getDocumentIdUnmanagedDocIdDocId() {
+              return documentIdUnmanagedDocIdDocId;
+            }
+
+            /** Required. The id of the document. */
+            public GetDocument setDocumentIdUnmanagedDocIdDocId(java.lang.String documentIdUnmanagedDocIdDocId) {
+              this.documentIdUnmanagedDocIdDocId = documentIdUnmanagedDocIdDocId;
+              return this;
+            }
+
+            /** Last page number (one-based index) to be returned. */
+            @com.google.api.client.util.Key("pageRange.end")
+            private java.lang.Integer pageRangeEnd;
+
+            /** Last page number (one-based index) to be returned.
+             */
+            public java.lang.Integer getPageRangeEnd() {
+              return pageRangeEnd;
+            }
+
+            /** Last page number (one-based index) to be returned. */
+            public GetDocument setPageRangeEnd(java.lang.Integer pageRangeEnd) {
+              this.pageRangeEnd = pageRangeEnd;
+              return this;
+            }
+
+            /** First page number (one-based index) to be returned. */
+            @com.google.api.client.util.Key("pageRange.start")
+            private java.lang.Integer pageRangeStart;
+
+            /** First page number (one-based index) to be returned.
+             */
+            public java.lang.Integer getPageRangeStart() {
+              return pageRangeStart;
+            }
+
+            /** First page number (one-based index) to be returned. */
+            public GetDocument setPageRangeStart(java.lang.Integer pageRangeStart) {
+              this.pageRangeStart = pageRangeStart;
+              return this;
+            }
+
+            /**
+             * If set, only fields listed here will be returned. Otherwise, all fields will be
+             * returned by default.
+             */
+            @com.google.api.client.util.Key
+            private String readMask;
+
+            /** If set, only fields listed here will be returned. Otherwise, all fields will be returned by
+           default.
+             */
+            public String getReadMask() {
+              return readMask;
+            }
+
+            /**
+             * If set, only fields listed here will be returned. Otherwise, all fields will be
+             * returned by default.
+             */
+            public GetDocument setReadMask(String readMask) {
+              this.readMask = readMask;
+              return this;
+            }
+
+            @Override
+            public GetDocument set(String parameterName, Object value) {
+              return (GetDocument) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Import documents into a dataset.
+           *
+           * Create a request for the method "dataset.importDocuments".
+           *
+           * This request holds the parameters needed by the documentai server.  After setting any optional
+           * parameters, call the {@link ImportDocuments#execute()} method to invoke the remote operation.
+           *
+           * @param dataset Required. The dataset resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+           * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportDocumentsRequest}
+           * @return the request
+           */
+          public ImportDocuments importDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportDocumentsRequest content) throws java.io.IOException {
+            ImportDocuments result = new ImportDocuments(dataset, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ImportDocuments extends DocumentRequest<com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta3/{+dataset}:importDocuments";
+
+            private final java.util.regex.Pattern DATASET_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+
+            /**
+             * Import documents into a dataset.
+             *
+             * Create a request for the method "dataset.importDocuments".
+             *
+             * This request holds the parameters needed by the the documentai server.  After setting any
+             * optional parameters, call the {@link ImportDocuments#execute()} method to invoke the remote
+             * operation. <p> {@link ImportDocuments#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param dataset Required. The dataset resource name. Format:
+           *        projects/{project}/locations/{location}/processors/{processor}/dataset
+             * @param content the {@link com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportDocumentsRequest}
+             * @since 1.13
+             */
+            protected ImportDocuments(java.lang.String dataset, com.google.api.services.documentai.v1beta3.model.GoogleCloudDocumentaiV1beta3ImportDocumentsRequest content) {
+              super(Document.this, "POST", REST_PATH, content, com.google.api.services.documentai.v1beta3.model.GoogleLongrunningOperation.class);
+              this.dataset = com.google.api.client.util.Preconditions.checkNotNull(dataset, "Required parameter dataset must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+            }
+
+            @Override
+            public ImportDocuments set$Xgafv(java.lang.String $Xgafv) {
+              return (ImportDocuments) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImportDocuments setAccessToken(java.lang.String accessToken) {
+              return (ImportDocuments) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImportDocuments setAlt(java.lang.String alt) {
+              return (ImportDocuments) super.setAlt(alt);
+            }
+
+            @Override
+            public ImportDocuments setCallback(java.lang.String callback) {
+              return (ImportDocuments) super.setCallback(callback);
+            }
+
+            @Override
+            public ImportDocuments setFields(java.lang.String fields) {
+              return (ImportDocuments) super.setFields(fields);
+            }
+
+            @Override
+            public ImportDocuments setKey(java.lang.String key) {
+              return (ImportDocuments) super.setKey(key);
+            }
+
+            @Override
+            public ImportDocuments setOauthToken(java.lang.String oauthToken) {
+              return (ImportDocuments) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImportDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImportDocuments) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImportDocuments setQuotaUser(java.lang.String quotaUser) {
+              return (ImportDocuments) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImportDocuments setUploadType(java.lang.String uploadType) {
+              return (ImportDocuments) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImportDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImportDocuments) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The dataset resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataset;
+
+            /** Required. The dataset resource name. Format:
+           projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public java.lang.String getDataset() {
+              return dataset;
+            }
+
+            /**
+             * Required. The dataset resource name. Format:
+             * projects/{project}/locations/{location}/processors/{processor}/dataset
+             */
+            public ImportDocuments setDataset(java.lang.String dataset) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATASET_PATTERN.matcher(dataset).matches(),
+                    "Parameter dataset must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
+              }
+              this.dataset = dataset;
+              return this;
+            }
+
+            @Override
+            public ImportDocuments set(String parameterName, Object value) {
+              return (ImportDocuments) super.set(parameterName, value);
             }
           }
           /**

@@ -31,11 +31,59 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The status of sampling documents in test split.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus sampleTestStatus;
+
+  /**
+   * The status of sampling documents in training split.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus sampleTrainingStatus;
+
+  /**
    * The result of the sampling process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument> selectedDocuments;
+
+  /**
+   * The status of sampling documents in test split.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getSampleTestStatus() {
+    return sampleTestStatus;
+  }
+
+  /**
+   * The status of sampling documents in test split.
+   * @param sampleTestStatus sampleTestStatus or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse setSampleTestStatus(GoogleRpcStatus sampleTestStatus) {
+    this.sampleTestStatus = sampleTestStatus;
+    return this;
+  }
+
+  /**
+   * The status of sampling documents in training split.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getSampleTrainingStatus() {
+    return sampleTrainingStatus;
+  }
+
+  /**
+   * The status of sampling documents in training split.
+   * @param sampleTrainingStatus sampleTrainingStatus or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse setSampleTrainingStatus(GoogleRpcStatus sampleTrainingStatus) {
+    this.sampleTrainingStatus = sampleTrainingStatus;
+    return this;
+  }
 
   /**
    * The result of the sampling process.

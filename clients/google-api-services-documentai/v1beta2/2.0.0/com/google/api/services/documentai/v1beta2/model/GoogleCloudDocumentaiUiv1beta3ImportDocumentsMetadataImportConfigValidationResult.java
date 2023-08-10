@@ -17,8 +17,9 @@
 package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * The validation status of each import config. Status is set to errors if there is no documents to
- * import in the import_config, or OK if the operation will try to proceed at least one document.
+ * The validation status of each import config. Status is set to an error if there are no documents
+ * to import in the `import_config`, or `OK` if the operation will try to proceed with at least one
+ * document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

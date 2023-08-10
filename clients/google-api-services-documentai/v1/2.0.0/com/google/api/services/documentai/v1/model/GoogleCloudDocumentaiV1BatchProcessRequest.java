@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
   private GoogleCloudDocumentaiV1BatchDocumentsInputConfig inputDocuments;
 
   /**
+   * Inference-time options for the process API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1ProcessOptions processOptions;
+
+  /**
    * Whether human review should be skipped for this request. Default to `false`.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudDocumentaiV1BatchProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1BatchDocumentsInputConfig inputDocuments) {
     this.inputDocuments = inputDocuments;
+    return this;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1ProcessOptions getProcessOptions() {
+    return processOptions;
+  }
+
+  /**
+   * Inference-time options for the process API
+   * @param processOptions processOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1BatchProcessRequest setProcessOptions(GoogleCloudDocumentaiV1ProcessOptions processOptions) {
+    this.processOptions = processOptions;
     return this;
   }
 

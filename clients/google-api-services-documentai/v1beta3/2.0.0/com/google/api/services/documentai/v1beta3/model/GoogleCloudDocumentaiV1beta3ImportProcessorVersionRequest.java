@@ -17,12 +17,11 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The request message for the ImportProcessorVersion method. Requirements: - The source processor
- * version and destination processor must be in the same location. - The Document AI [Service
- * Agent](https://cloud.google.com/iam/docs/service-agents) of the destination project must have
- * [Document AI Editor role](https://cloud.google.com/document-ai/docs/access-control/iam-roles) on
- * the source project. The destination project is specified as part of the parent field. The source
- * project is specified as part of the source field.
+ * The request message for the ImportProcessorVersion method. Requirements: - The Document AI
+ * [Service Agent](https://cloud.google.com/iam/docs/service-agents) of the destination project must
+ * have [Document AI Editor role](https://cloud.google.com/document-ai/docs/access-control/iam-
+ * roles) on the source project. The destination project is specified as part of the parent field.
+ * The source project is specified as part of the source field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -36,12 +35,39 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The source processor version to import from, and can be from different environment and region
+   * than the destination processor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequestExternalProcessorVersionSource externalProcessorVersionSource;
+
+  /**
    * The source processor version to import from. The source processor version and destination
    * processor need to be in the same environment and region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String processorVersionSource;
+
+  /**
+   * The source processor version to import from, and can be from different environment and region
+   * than the destination processor.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequestExternalProcessorVersionSource getExternalProcessorVersionSource() {
+    return externalProcessorVersionSource;
+  }
+
+  /**
+   * The source processor version to import from, and can be from different environment and region
+   * than the destination processor.
+   * @param externalProcessorVersionSource externalProcessorVersionSource or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest setExternalProcessorVersionSource(GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequestExternalProcessorVersionSource externalProcessorVersionSource) {
+    this.externalProcessorVersionSource = externalProcessorVersionSource;
+    return this;
+  }
 
   /**
    * The source processor version to import from. The source processor version and destination

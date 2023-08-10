@@ -40,6 +40,13 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequest extends c
   private java.lang.String baseProcessorVersion;
 
   /**
+   * Options to control Custom Document Extraction (CDE) Processor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1TrainProcessorVersionRequestCustomDocumentExtractionOptions customDocumentExtractionOptions;
+
+  /**
    * Optional. The schema the processor version will be trained with.
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequest extends c
    */
   public GoogleCloudDocumentaiV1TrainProcessorVersionRequest setBaseProcessorVersion(java.lang.String baseProcessorVersion) {
     this.baseProcessorVersion = baseProcessorVersion;
+    return this;
+  }
+
+  /**
+   * Options to control Custom Document Extraction (CDE) Processor.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1TrainProcessorVersionRequestCustomDocumentExtractionOptions getCustomDocumentExtractionOptions() {
+    return customDocumentExtractionOptions;
+  }
+
+  /**
+   * Options to control Custom Document Extraction (CDE) Processor.
+   * @param customDocumentExtractionOptions customDocumentExtractionOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1TrainProcessorVersionRequest setCustomDocumentExtractionOptions(GoogleCloudDocumentaiV1TrainProcessorVersionRequestCustomDocumentExtractionOptions customDocumentExtractionOptions) {
+    this.customDocumentExtractionOptions = customDocumentExtractionOptions;
     return this;
   }
 

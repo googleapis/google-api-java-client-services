@@ -102,7 +102,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription exte
 
   /**
    * Output only. Provides the description of the fields nested in this field, if the field is a
-   * message type that defines multiple fields.
+   * message type that defines multiple fields. Fields are suggested to be displayed by the ordering
+   * in this list, not by field number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +276,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription exte
 
   /**
    * Output only. Provides the description of the fields nested in this field, if the field is a
-   * message type that defines multiple fields.
+   * message type that defines multiple fields. Fields are suggested to be displayed by the ordering
+   * in this list, not by field number.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDescription> getNestedFieldDescriptions() {
@@ -284,7 +286,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription exte
 
   /**
    * Output only. Provides the description of the fields nested in this field, if the field is a
-   * message type that defines multiple fields.
+   * message type that defines multiple fields. Fields are suggested to be displayed by the ordering
+   * in this list, not by field number.
    * @param nestedFieldDescriptions nestedFieldDescriptions or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription setNestedFieldDescriptions(java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDescription> nestedFieldDescriptions) {

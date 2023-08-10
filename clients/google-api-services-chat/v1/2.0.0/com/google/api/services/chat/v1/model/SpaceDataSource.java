@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A list of buttons layed out horizontally. For an example in Google Chat apps, see [Button
- * list](https://developers.google.com/chat/ui/widgets/button-list).
+ * A data source representing a Google Chat space. Format: spaces/{space} [Developer
+ * Preview](https://developers.google.com/workspace/preview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -28,46 +28,43 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json.GenericJson {
+public final class SpaceDataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of buttons.
+   * When `true`, uses the card's Google Chat space as the default selection. The default value is
+   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAppsCardV1Button> buttons;
-
-  static {
-    // hack to force ProGuard to consider GoogleAppsCardV1Button used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAppsCardV1Button.class);
-  }
+  private java.lang.Boolean defaultToCurrentSpace;
 
   /**
-   * An array of buttons.
+   * When `true`, uses the card's Google Chat space as the default selection. The default value is
+   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAppsCardV1Button> getButtons() {
-    return buttons;
+  public java.lang.Boolean getDefaultToCurrentSpace() {
+    return defaultToCurrentSpace;
   }
 
   /**
-   * An array of buttons.
-   * @param buttons buttons or {@code null} for none
+   * When `true`, uses the card's Google Chat space as the default selection. The default value is
+   * `false`. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param defaultToCurrentSpace defaultToCurrentSpace or {@code null} for none
    */
-  public GoogleAppsCardV1ButtonList setButtons(java.util.List<GoogleAppsCardV1Button> buttons) {
-    this.buttons = buttons;
+  public SpaceDataSource setDefaultToCurrentSpace(java.lang.Boolean defaultToCurrentSpace) {
+    this.defaultToCurrentSpace = defaultToCurrentSpace;
     return this;
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList set(String fieldName, Object value) {
-    return (GoogleAppsCardV1ButtonList) super.set(fieldName, value);
+  public SpaceDataSource set(String fieldName, Object value) {
+    return (SpaceDataSource) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList clone() {
-    return (GoogleAppsCardV1ButtonList) super.clone();
+  public SpaceDataSource clone() {
+    return (SpaceDataSource) super.clone();
   }
 
 }

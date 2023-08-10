@@ -17,9 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Displays a divider between widgets as a horizontal line. For an example in Google Chat apps, see
- * [Divider](https://developers.google.com/chat/ui/widgets/divider). For example, the following JSON
- * creates a divider: ``` "divider": {} ```
+ * A GIF image that's specified by a URL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -29,16 +27,40 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAppsCardV1Divider extends com.google.api.client.json.GenericJson {
+public final class AttachedGif extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleAppsCardV1Divider set(String fieldName, Object value) {
-    return (GoogleAppsCardV1Divider) super.set(fieldName, value);
+  /**
+   * Output only. The URL that hosts the GIF image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
+   * Output only. The URL that hosts the GIF image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * Output only. The URL that hosts the GIF image.
+   * @param uri uri or {@code null} for none
+   */
+  public AttachedGif setUri(java.lang.String uri) {
+    this.uri = uri;
+    return this;
   }
 
   @Override
-  public GoogleAppsCardV1Divider clone() {
-    return (GoogleAppsCardV1Divider) super.clone();
+  public AttachedGif set(String fieldName, Object value) {
+    return (AttachedGif) super.set(fieldName, value);
+  }
+
+  @Override
+  public AttachedGif clone() {
+    return (AttachedGif) super.clone();
   }
 
 }

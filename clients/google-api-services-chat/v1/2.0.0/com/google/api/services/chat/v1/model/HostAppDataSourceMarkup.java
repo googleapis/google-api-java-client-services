@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A list of buttons layed out horizontally. For an example in Google Chat apps, see [Button
- * list](https://developers.google.com/chat/ui/widgets/button-list).
+ * Chat apps only. For a `SelectionInput` widget that uses a multi-select menu, a data source from a
+ * Google Workspace host application. [Developer
+ * Preview](https://developers.google.com/workspace/preview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -28,46 +29,43 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json.GenericJson {
+public final class HostAppDataSourceMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of buttons.
+   * The data source is Google Chat. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAppsCardV1Button> buttons;
-
-  static {
-    // hack to force ProGuard to consider GoogleAppsCardV1Button used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAppsCardV1Button.class);
-  }
+  private ChatClientDataSourceMarkup chatDataSource;
 
   /**
-   * An array of buttons.
+   * The data source is Google Chat. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAppsCardV1Button> getButtons() {
-    return buttons;
+  public ChatClientDataSourceMarkup getChatDataSource() {
+    return chatDataSource;
   }
 
   /**
-   * An array of buttons.
-   * @param buttons buttons or {@code null} for none
+   * The data source is Google Chat. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param chatDataSource chatDataSource or {@code null} for none
    */
-  public GoogleAppsCardV1ButtonList setButtons(java.util.List<GoogleAppsCardV1Button> buttons) {
-    this.buttons = buttons;
+  public HostAppDataSourceMarkup setChatDataSource(ChatClientDataSourceMarkup chatDataSource) {
+    this.chatDataSource = chatDataSource;
     return this;
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList set(String fieldName, Object value) {
-    return (GoogleAppsCardV1ButtonList) super.set(fieldName, value);
+  public HostAppDataSourceMarkup set(String fieldName, Object value) {
+    return (HostAppDataSourceMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList clone() {
-    return (GoogleAppsCardV1ButtonList) super.clone();
+  public HostAppDataSourceMarkup clone() {
+    return (HostAppDataSourceMarkup) super.clone();
   }
 
 }

@@ -57,6 +57,19 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String argumentText;
 
   /**
+   * Output only. GIF images that are attached to the message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AttachedGif> attachedGifs;
+
+  static {
+    // hack to force ProGuard to consider AttachedGif used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AttachedGif.class);
+  }
+
+  /**
    * User-uploaded attachment.
    * The value may be {@code null}.
    */
@@ -114,8 +127,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. Assigning a custom name doesn't replace the generated `name` field, the message's
    * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
    * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created
-   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
+   * ssages/create#name_a_created_message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,6 +207,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Chat users can quote a message to reply to it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuotedMessageMetadata quotedMessageMetadata;
+
+  /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
    * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
    * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
@@ -219,8 +240,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private Space space;
 
   /**
-   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
-   * able item generates a preview chip.
+   * Plain-text body of the message. The first link to an image, video, or web page generates a
+   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
+   * about creating text messages, see [Create a text
+   * message](https://developers.google.com/chat/api/guides/message-formats/text).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -293,6 +316,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setArgumentText(java.lang.String argumentText) {
     this.argumentText = argumentText;
+    return this;
+  }
+
+  /**
+   * Output only. GIF images that are attached to the message.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AttachedGif> getAttachedGifs() {
+    return attachedGifs;
+  }
+
+  /**
+   * Output only. GIF images that are attached to the message.
+   * @param attachedGifs attachedGifs or {@code null} for none
+   */
+  public Message setAttachedGifs(java.util.List<AttachedGif> attachedGifs) {
+    this.attachedGifs = attachedGifs;
     return this;
   }
 
@@ -376,8 +416,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. Assigning a custom name doesn't replace the generated `name` field, the message's
    * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
    * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created
-   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
+   * ssages/create#name_a_created_message).
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAssignedMessageId() {
@@ -393,8 +433,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. Assigning a custom name doesn't replace the generated `name` field, the message's
    * resource name. Instead, it sets the custom name as the `clientAssignedMessageId` field, which
    * you can reference while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created
-   * message](https://developers.google.com/chat/api/guides/crudl/messages#name_a_created_message).
+   * example usage, see [Name a created message](https://developers.google.com/chat/api/guides/v1/me
+   * ssages/create#name_a_created_message).
    * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
    */
   public Message setClientAssignedMessageId(java.lang.String clientAssignedMessageId) {
@@ -559,6 +599,25 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Chat users can quote a message to reply to it.
+   * @return value or {@code null} for none
+   */
+  public QuotedMessageMetadata getQuotedMessageMetadata() {
+    return quotedMessageMetadata;
+  }
+
+  /**
+   * Output only. Information about a message that's quoted by a Google Chat user in a space. Google
+   * Chat users can quote a message to reply to it.
+   * @param quotedMessageMetadata quotedMessageMetadata or {@code null} for none
+   */
+  public Message setQuotedMessageMetadata(QuotedMessageMetadata quotedMessageMetadata) {
+    this.quotedMessageMetadata = quotedMessageMetadata;
+    return this;
+  }
+
+  /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
    * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
    * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
@@ -618,8 +677,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
-   * able item generates a preview chip.
+   * Plain-text body of the message. The first link to an image, video, or web page generates a
+   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
+   * about creating text messages, see [Create a text
+   * message](https://developers.google.com/chat/api/guides/message-formats/text).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -627,8 +688,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Plain-text body of the message. The first link to an image, video, web page, or other preview-
-   * able item generates a preview chip.
+   * Plain-text body of the message. The first link to an image, video, or web page generates a
+   * preview chip. You can also @mention a Google Chat user, or everyone in the space. To learn
+   * about creating text messages, see [Create a text
+   * message](https://developers.google.com/chat/api/guides/message-formats/text).
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {

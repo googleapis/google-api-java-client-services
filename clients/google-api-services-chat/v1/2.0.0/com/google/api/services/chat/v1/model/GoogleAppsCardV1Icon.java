@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An icon displayed in a widget on a card. Supports [built-
+ * An icon displayed in a widget on a card. For an example in Google Chat apps, see
+ * [Icon](https://developers.google.com/chat/ui/widgets/icon). Supports [built-
  * in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and
  * [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons) icons.
  *

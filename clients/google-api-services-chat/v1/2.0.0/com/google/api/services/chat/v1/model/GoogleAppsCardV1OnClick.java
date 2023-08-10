@@ -48,6 +48,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
+   * Supported by Google Workspace Add-ons, but not Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,6 +101,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
+   * Supported by Google Workspace Add-ons, but not Google Chat apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOpenDynamicLinkAction() {
@@ -110,6 +112,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
    * An add-on triggers this action when the action needs to open a link. This differs from the
    * `open_link` above in that this needs to talk to server to get the link. Thus some preparation
    * work is required for web client to do before the open link action response comes back.
+   * Supported by Google Workspace Add-ons, but not Google Chat apps.
    * @param openDynamicLinkAction openDynamicLinkAction or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setOpenDynamicLinkAction(GoogleAppsCardV1Action openDynamicLinkAction) {

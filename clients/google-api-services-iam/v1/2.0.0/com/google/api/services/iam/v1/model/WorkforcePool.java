@@ -54,6 +54,14 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
+   * Output only. Time after which the workforce pool will be permanently purged and cannot be
+   * recovered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Output only. The resource name of the pool. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}`
    * The value may be {@code null}.
@@ -136,6 +144,25 @@ public final class WorkforcePool extends com.google.api.client.json.GenericJson 
    */
   public WorkforcePool setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Time after which the workforce pool will be permanently purged and cannot be
+   * recovered.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. Time after which the workforce pool will be permanently purged and cannot be
+   * recovered.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public WorkforcePool setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 

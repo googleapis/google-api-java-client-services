@@ -39,6 +39,13 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private java.lang.String clientId;
 
   /**
+   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret clientSecret;
+
+  /**
    * Required. The OIDC issuer URI. Must be a valid URI using the 'https' scheme.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc setClientId(java.lang.String clientId) {
     this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret getClientSecret() {
+    return clientSecret;
+  }
+
+  /**
+   * The optional client secret. Required to enable Authorization Code flow for web sign-in.
+   * @param clientSecret clientSecret or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidc setClientSecret(GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret clientSecret) {
+    this.clientSecret = clientSecret;
     return this;
   }
 

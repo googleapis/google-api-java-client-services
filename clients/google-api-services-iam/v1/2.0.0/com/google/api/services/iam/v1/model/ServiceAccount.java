@@ -22,7 +22,7 @@ package com.google.api.services.iam.v1.model;
  * read the [overview of service accounts](https://cloud.google.com/iam/help/service-
  * accounts/overview). When you create a service account, you specify the project ID that owns the
  * service account, as well as a name that must be unique within the project. IAM uses these values
- * to create an email address that identifies the service //
+ * to create an email address that identifies the service account. //
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a

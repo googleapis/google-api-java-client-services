@@ -62,7 +62,7 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   /**
    * An opaque tag that identifies the current version of the `Policy`. IAM uses this value to help
    * manage concurrent updates, so they do not cause one update to be overwritten by another. If
-   * this field is present in a CreatePolicy request, the value is ignored.
+   * this field is present in a CreatePolicyRequest, the value is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   /**
    * An opaque tag that identifies the current version of the `Policy`. IAM uses this value to help
    * manage concurrent updates, so they do not cause one update to be overwritten by another. If
-   * this field is present in a CreatePolicy request, the value is ignored.
+   * this field is present in a CreatePolicyRequest, the value is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -194,7 +194,7 @@ public final class GoogleIamV2betaPolicy extends com.google.api.client.json.Gene
   /**
    * An opaque tag that identifies the current version of the `Policy`. IAM uses this value to help
    * manage concurrent updates, so they do not cause one update to be overwritten by another. If
-   * this field is present in a CreatePolicy request, the value is ignored.
+   * this field is present in a CreatePolicyRequest, the value is ignored.
    * @param etag etag or {@code null} for none
    */
   public GoogleIamV2betaPolicy setEtag(java.lang.String etag) {

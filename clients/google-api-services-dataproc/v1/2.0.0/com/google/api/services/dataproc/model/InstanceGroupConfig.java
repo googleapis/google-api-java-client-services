@@ -117,6 +117,23 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private java.lang.String minCpuPlatform;
 
   /**
+   * Optional. The minimum number of instances to create. If min_num_instances is set,
+   * min_num_instances is used for a criteria to decide the cluster. Cluster creation will be failed
+   * by being an error state if the total number of instances created is less than the
+   * min_num_instances. For example, given that num_instances = 5 and min_num_instances = 3, * if 4
+   * instances are created and then registered successfully but one instance is failed, the failed
+   * VM will be deleted and the cluster will be resized to 4 instances in running state. * if 2
+   * instances are created successfully and 3 instances are failed, the cluster will be in an error
+   * state and does not delete failed VMs for debugging. * if 2 instance are created and then
+   * registered successfully but 3 instances are failed to initialize, the cluster will be in an
+   * error state and does not delete failed VMs for debugging. NB: This can only be set for primary
+   * workers now.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minNumInstances;
+
+  /**
    * Optional. The number of VM instances in the instance group. For HA cluster master_config
    * groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
    * The value may be {@code null}.
@@ -317,6 +334,43 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    */
   public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
     this.minCpuPlatform = minCpuPlatform;
+    return this;
+  }
+
+  /**
+   * Optional. The minimum number of instances to create. If min_num_instances is set,
+   * min_num_instances is used for a criteria to decide the cluster. Cluster creation will be failed
+   * by being an error state if the total number of instances created is less than the
+   * min_num_instances. For example, given that num_instances = 5 and min_num_instances = 3, * if 4
+   * instances are created and then registered successfully but one instance is failed, the failed
+   * VM will be deleted and the cluster will be resized to 4 instances in running state. * if 2
+   * instances are created successfully and 3 instances are failed, the cluster will be in an error
+   * state and does not delete failed VMs for debugging. * if 2 instance are created and then
+   * registered successfully but 3 instances are failed to initialize, the cluster will be in an
+   * error state and does not delete failed VMs for debugging. NB: This can only be set for primary
+   * workers now.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinNumInstances() {
+    return minNumInstances;
+  }
+
+  /**
+   * Optional. The minimum number of instances to create. If min_num_instances is set,
+   * min_num_instances is used for a criteria to decide the cluster. Cluster creation will be failed
+   * by being an error state if the total number of instances created is less than the
+   * min_num_instances. For example, given that num_instances = 5 and min_num_instances = 3, * if 4
+   * instances are created and then registered successfully but one instance is failed, the failed
+   * VM will be deleted and the cluster will be resized to 4 instances in running state. * if 2
+   * instances are created successfully and 3 instances are failed, the cluster will be in an error
+   * state and does not delete failed VMs for debugging. * if 2 instance are created and then
+   * registered successfully but 3 instances are failed to initialize, the cluster will be in an
+   * error state and does not delete failed VMs for debugging. NB: This can only be set for primary
+   * workers now.
+   * @param minNumInstances minNumInstances or {@code null} for none
+   */
+  public InstanceGroupConfig setMinNumInstances(java.lang.Integer minNumInstances) {
+    this.minNumInstances = minNumInstances;
     return this;
   }
 

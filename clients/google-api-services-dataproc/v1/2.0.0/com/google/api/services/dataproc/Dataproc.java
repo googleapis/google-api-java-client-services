@@ -6414,6 +6414,41 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. The graceful termination timeout for the deletion of the cluster. Indicate
+           * the time the request will wait to complete the running jobs on the cluster before its
+           * forceful deletion. Default value is 0 indicating that the user has not enabled the
+           * graceful termination. Value can be between 60 second and 6 Hours, in case the graceful
+           * termination is enabled. (There is no separate flag to check the enabling or disabling
+           * of graceful termination, it can be checked by the values in the field).
+           */
+          @com.google.api.client.util.Key
+          private String gracefulTerminationTimeout;
+
+          /** Optional. The graceful termination timeout for the deletion of the cluster. Indicate the time the
+         request will wait to complete the running jobs on the cluster before its forceful deletion. Default
+         value is 0 indicating that the user has not enabled the graceful termination. Value can be between
+         60 second and 6 Hours, in case the graceful termination is enabled. (There is no separate flag to
+         check the enabling or disabling of graceful termination, it can be checked by the values in the
+         field).
+           */
+          public String getGracefulTerminationTimeout() {
+            return gracefulTerminationTimeout;
+          }
+
+          /**
+           * Optional. The graceful termination timeout for the deletion of the cluster. Indicate
+           * the time the request will wait to complete the running jobs on the cluster before its
+           * forceful deletion. Default value is 0 indicating that the user has not enabled the
+           * graceful termination. Value can be between 60 second and 6 Hours, in case the graceful
+           * termination is enabled. (There is no separate flag to check the enabling or disabling
+           * of graceful termination, it can be checked by the values in the field).
+           */
+          public Delete setGracefulTerminationTimeout(String gracefulTerminationTimeout) {
+            this.gracefulTerminationTimeout = gracefulTerminationTimeout;
+            return this;
+          }
+
+          /**
            * Optional. A unique ID used to identify the request. If the server receives two
            * DeleteClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
            * .dataproc.v1#google.cloud.dataproc.v1.DeleteClusterRequest)s with the same id, then the

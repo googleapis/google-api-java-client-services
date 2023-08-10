@@ -64,7 +64,7 @@ public final class OSImage extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ServerNetworkTemplate> supportedNetworkTemplates;
+  private java.util.List<java.lang.String> supportedNetworkTemplates;
 
   /**
    * Instance types this image is applicable to. [Available types](https://cloud.google.com/bare-
@@ -140,7 +140,7 @@ public final class OSImage extends com.google.api.client.json.GenericJson {
    * Network templates that can be used with this OS Image.
    * @return value or {@code null} for none
    */
-  public java.util.List<ServerNetworkTemplate> getSupportedNetworkTemplates() {
+  public java.util.List<java.lang.String> getSupportedNetworkTemplates() {
     return supportedNetworkTemplates;
   }
 
@@ -148,7 +148,7 @@ public final class OSImage extends com.google.api.client.json.GenericJson {
    * Network templates that can be used with this OS Image.
    * @param supportedNetworkTemplates supportedNetworkTemplates or {@code null} for none
    */
-  public OSImage setSupportedNetworkTemplates(java.util.List<ServerNetworkTemplate> supportedNetworkTemplates) {
+  public OSImage setSupportedNetworkTemplates(java.util.List<java.lang.String> supportedNetworkTemplates) {
     this.supportedNetworkTemplates = supportedNetworkTemplates;
     return this;
   }

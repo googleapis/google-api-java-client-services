@@ -39,7 +39,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
-   * postdeploy job will not be present.
+   * there will be no postdeploy job for this phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
-   * predeploy job will not be present.
+   * there will be no predeploy job for this phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
-   * postdeploy job will not be present.
+   * there will be no postdeploy job for this phase.
    * @return value or {@code null} for none
    */
   public Postdeploy getPostdeploy() {
@@ -90,7 +90,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the postdeploy job of the last phase. If this is not configured,
-   * postdeploy job will not be present.
+   * there will be no postdeploy job for this phase.
    * @param postdeploy postdeploy or {@code null} for none
    */
   public CanaryDeployment setPostdeploy(Postdeploy postdeploy) {
@@ -100,7 +100,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
-   * predeploy job will not be present.
+   * there will be no predeploy job for this phase.
    * @return value or {@code null} for none
    */
   public Predeploy getPredeploy() {
@@ -109,7 +109,7 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Configuration for the predeploy job of the first phase. If this is not configured,
-   * predeploy job will not be present.
+   * there will be no predeploy job for this phase.
    * @param predeploy predeploy or {@code null} for none
    */
   public CanaryDeployment setPredeploy(Predeploy predeploy) {

@@ -69,9 +69,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A short name or phrase used to identify the policy in dashboards, notifications, and incidents.
    * To avoid confusion, don't use the same display name for multiple policies in the same project.
    * The name is limited to 512 Unicode characters.The convention for the display_name of a
-   * PrometheusQueryLanguageCondition is "/", where the and should be taken from the corresponding
-   * Prometheus configuration file. This convention is not enforced. In any case the display_name is
-   * not a unique key of the AlertPolicy.
+   * PrometheusQueryLanguageCondition is "{rule group name}/{alert name}", where the {rule group
+   * name} and {alert name} should be taken from the corresponding Prometheus configuration file.
+   * This convention is not enforced. In any case the display_name is not a unique key of the
+   * AlertPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,9 +132,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
    * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
    * letters, numerals, underscores, and dashes. Keys must begin with a letter.Note that Prometheus
-   * and are valid Prometheus label names (https://prometheus.io/docs/concepts/data_model/#metric-
-   * names-and-labels). This means that they cannot be stored as is in user labels, because
-   * Prometheus labels may contain upper-case letters.
+   * {alert name} is a valid Prometheus label names (https://prometheus.io/docs/concepts/data_model
+   * /#metric-names-and-labels), whereas Prometheus {rule group} is an unrestricted UTF-8 string.
+   * This means that they cannot be stored as-is in user labels, because they may contain characters
+   * that are not allowed in user-label values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,9 +233,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A short name or phrase used to identify the policy in dashboards, notifications, and incidents.
    * To avoid confusion, don't use the same display name for multiple policies in the same project.
    * The name is limited to 512 Unicode characters.The convention for the display_name of a
-   * PrometheusQueryLanguageCondition is "/", where the and should be taken from the corresponding
-   * Prometheus configuration file. This convention is not enforced. In any case the display_name is
-   * not a unique key of the AlertPolicy.
+   * PrometheusQueryLanguageCondition is "{rule group name}/{alert name}", where the {rule group
+   * name} and {alert name} should be taken from the corresponding Prometheus configuration file.
+   * This convention is not enforced. In any case the display_name is not a unique key of the
+   * AlertPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -244,9 +247,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * A short name or phrase used to identify the policy in dashboards, notifications, and incidents.
    * To avoid confusion, don't use the same display name for multiple policies in the same project.
    * The name is limited to 512 Unicode characters.The convention for the display_name of a
-   * PrometheusQueryLanguageCondition is "/", where the and should be taken from the corresponding
-   * Prometheus configuration file. This convention is not enforced. In any case the display_name is
-   * not a unique key of the AlertPolicy.
+   * PrometheusQueryLanguageCondition is "{rule group name}/{alert name}", where the {rule group
+   * name} and {alert name} should be taken from the corresponding Prometheus configuration file.
+   * This convention is not enforced. In any case the display_name is not a unique key of the
+   * AlertPolicy.
    * @param displayName displayName or {@code null} for none
    */
   public AlertPolicy setDisplayName(java.lang.String displayName) {
@@ -372,9 +376,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
    * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
    * letters, numerals, underscores, and dashes. Keys must begin with a letter.Note that Prometheus
-   * and are valid Prometheus label names (https://prometheus.io/docs/concepts/data_model/#metric-
-   * names-and-labels). This means that they cannot be stored as is in user labels, because
-   * Prometheus labels may contain upper-case letters.
+   * {alert name} is a valid Prometheus label names (https://prometheus.io/docs/concepts/data_model
+   * /#metric-names-and-labels), whereas Prometheus {rule group} is an unrestricted UTF-8 string.
+   * This means that they cannot be stored as-is in user labels, because they may contain characters
+   * that are not allowed in user-label values.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getUserLabels() {
@@ -386,9 +391,10 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
    * objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode
    * characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase
    * letters, numerals, underscores, and dashes. Keys must begin with a letter.Note that Prometheus
-   * and are valid Prometheus label names (https://prometheus.io/docs/concepts/data_model/#metric-
-   * names-and-labels). This means that they cannot be stored as is in user labels, because
-   * Prometheus labels may contain upper-case letters.
+   * {alert name} is a valid Prometheus label names (https://prometheus.io/docs/concepts/data_model
+   * /#metric-names-and-labels), whereas Prometheus {rule group} is an unrestricted UTF-8 string.
+   * This means that they cannot be stored as-is in user labels, because they may contain characters
+   * that are not allowed in user-label values.
    * @param userLabels userLabels or {@code null} for none
    */
   public AlertPolicy setUserLabels(java.util.Map<String, java.lang.String> userLabels) {

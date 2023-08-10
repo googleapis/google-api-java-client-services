@@ -140,6 +140,13 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> selectedRegions;
 
   /**
+   * Specifies a Synthetic Monitor to invoke.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SyntheticMonitorTarget syntheticMonitor;
+
+  /**
    * Contains information needed to make a TCP check.
    * The value may be {@code null}.
    */
@@ -390,6 +397,23 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   public UptimeCheckConfig setSelectedRegions(java.util.List<java.lang.String> selectedRegions) {
     this.selectedRegions = selectedRegions;
+    return this;
+  }
+
+  /**
+   * Specifies a Synthetic Monitor to invoke.
+   * @return value or {@code null} for none
+   */
+  public SyntheticMonitorTarget getSyntheticMonitor() {
+    return syntheticMonitor;
+  }
+
+  /**
+   * Specifies a Synthetic Monitor to invoke.
+   * @param syntheticMonitor syntheticMonitor or {@code null} for none
+   */
+  public UptimeCheckConfig setSyntheticMonitor(SyntheticMonitorTarget syntheticMonitor) {
+    this.syntheticMonitor = syntheticMonitor;
     return this;
   }
 

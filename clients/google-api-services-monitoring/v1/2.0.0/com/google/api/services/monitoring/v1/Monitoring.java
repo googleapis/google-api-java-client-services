@@ -1897,22 +1897,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
              * Create a request for the method "v1.labels".
              *
              * This request holds the parameters needed by the monitoring server.  After setting any optional
-             * parameters, call the {@link LabelsRequest#execute()} method to invoke the remote operation.
+             * parameters, call the {@link Labels#execute()} method to invoke the remote operation.
              *
              * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
              *        request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
              * @param location Location of the resource information. Has to be "global" now.
-             * @param content the {@link com.google.api.services.monitoring.v1.model.ListLabelsRequest}
+             * @param content the {@link com.google.api.services.monitoring.v1.model.QueryLabelsRequest}
              * @return the request
              */
-            public LabelsRequest labels(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.ListLabelsRequest content) throws java.io.IOException {
-              LabelsRequest result = new LabelsRequest(name, location, content);
+            public Labels labels(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.QueryLabelsRequest content) throws java.io.IOException {
+              Labels result = new Labels(name, location, content);
               initialize(result);
               return result;
             }
 
-            public class LabelsRequest extends MonitoringRequest<com.google.api.services.monitoring.v1.model.HttpBody> {
+            public class Labels extends MonitoringRequest<com.google.api.services.monitoring.v1.model.HttpBody> {
 
               private static final String REST_PATH = "v1/{+name}/location/{location}/prometheus/api/v1/labels";
 
@@ -1925,19 +1925,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * Create a request for the method "v1.labels".
                *
                * This request holds the parameters needed by the the monitoring server.  After setting any
-               * optional parameters, call the {@link LabelsRequest#execute()} method to invoke the remote
-               * operation. <p> {@link LabelsRequest#initialize(com.google.api.client.googleapis.services.Abstra
-               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-               * the constructor. </p>
+               * optional parameters, call the {@link Labels#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Labels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
              *        request path prefix to distinguish different virtual Prometheus instances of Google
              *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
                * @param location Location of the resource information. Has to be "global" now.
-               * @param content the {@link com.google.api.services.monitoring.v1.model.ListLabelsRequest}
+               * @param content the {@link com.google.api.services.monitoring.v1.model.QueryLabelsRequest}
                * @since 1.13
                */
-              protected LabelsRequest(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.ListLabelsRequest content) {
+              protected Labels(java.lang.String name, java.lang.String location, com.google.api.services.monitoring.v1.model.QueryLabelsRequest content) {
                 super(Monitoring.this, "POST", REST_PATH, content, com.google.api.services.monitoring.v1.model.HttpBody.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -1949,58 +1949,58 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               @Override
-              public LabelsRequest set$Xgafv(java.lang.String $Xgafv) {
-                return (LabelsRequest) super.set$Xgafv($Xgafv);
+              public Labels set$Xgafv(java.lang.String $Xgafv) {
+                return (Labels) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public LabelsRequest setAccessToken(java.lang.String accessToken) {
-                return (LabelsRequest) super.setAccessToken(accessToken);
+              public Labels setAccessToken(java.lang.String accessToken) {
+                return (Labels) super.setAccessToken(accessToken);
               }
 
               @Override
-              public LabelsRequest setAlt(java.lang.String alt) {
-                return (LabelsRequest) super.setAlt(alt);
+              public Labels setAlt(java.lang.String alt) {
+                return (Labels) super.setAlt(alt);
               }
 
               @Override
-              public LabelsRequest setCallback(java.lang.String callback) {
-                return (LabelsRequest) super.setCallback(callback);
+              public Labels setCallback(java.lang.String callback) {
+                return (Labels) super.setCallback(callback);
               }
 
               @Override
-              public LabelsRequest setFields(java.lang.String fields) {
-                return (LabelsRequest) super.setFields(fields);
+              public Labels setFields(java.lang.String fields) {
+                return (Labels) super.setFields(fields);
               }
 
               @Override
-              public LabelsRequest setKey(java.lang.String key) {
-                return (LabelsRequest) super.setKey(key);
+              public Labels setKey(java.lang.String key) {
+                return (Labels) super.setKey(key);
               }
 
               @Override
-              public LabelsRequest setOauthToken(java.lang.String oauthToken) {
-                return (LabelsRequest) super.setOauthToken(oauthToken);
+              public Labels setOauthToken(java.lang.String oauthToken) {
+                return (Labels) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public LabelsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (LabelsRequest) super.setPrettyPrint(prettyPrint);
+              public Labels setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Labels) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public LabelsRequest setQuotaUser(java.lang.String quotaUser) {
-                return (LabelsRequest) super.setQuotaUser(quotaUser);
+              public Labels setQuotaUser(java.lang.String quotaUser) {
+                return (Labels) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public LabelsRequest setUploadType(java.lang.String uploadType) {
-                return (LabelsRequest) super.setUploadType(uploadType);
+              public Labels setUploadType(java.lang.String uploadType) {
+                return (Labels) super.setUploadType(uploadType);
               }
 
               @Override
-              public LabelsRequest setUploadProtocol(java.lang.String uploadProtocol) {
-                return (LabelsRequest) super.setUploadProtocol(uploadProtocol);
+              public Labels setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Labels) super.setUploadProtocol(uploadProtocol);
               }
 
               /**
@@ -2026,7 +2026,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                * instances of Google Prometheus Engine. The format is:
                * projects/PROJECT_ID_OR_NUMBER.
                */
-              public LabelsRequest setName(java.lang.String name) {
+              public Labels setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                       "Parameter name must conform to the pattern " +
@@ -2047,14 +2047,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
               }
 
               /** Location of the resource information. Has to be "global" now. */
-              public LabelsRequest setLocation(java.lang.String location) {
+              public Labels setLocation(java.lang.String location) {
                 this.location = location;
                 return this;
               }
 
               @Override
-              public LabelsRequest set(String parameterName, Object value) {
-                return (LabelsRequest) super.set(parameterName, value);
+              public Labels set(String parameterName, Object value) {
+                return (Labels) super.set(parameterName, value);
               }
             }
             /**
@@ -3008,270 +3008,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
                 @Override
                 public Values set(String parameterName, Object value) {
                   return (Values) super.set(parameterName, value);
-                }
-              }
-
-            }
-            /**
-             * An accessor for creating requests from the Labels collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code Monitoring monitoring = new Monitoring(...);}
-             *   {@code Monitoring.Labels.List request = monitoring.labels().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public Labels labels() {
-              return new Labels();
-            }
-
-            /**
-             * The "labels" collection of methods.
-             */
-            public class Labels {
-
-              /**
-               * Lists labels for metrics.
-               *
-               * Create a request for the method "labels.list".
-               *
-               * This request holds the parameters needed by the monitoring server.  After setting any optional
-               * parameters, call the {@link List#execute()} method to invoke the remote operation.
-               *
-               * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-               *        request path prefix to distinguish different virtual Prometheus instances of Google
-               *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-               * @param location Location of the resource information. Has to be "global" now.
-               * @return the request
-               */
-              public List list(java.lang.String name, java.lang.String location) throws java.io.IOException {
-                List result = new List(name, location);
-                initialize(result);
-                return result;
-              }
-
-              public class List extends MonitoringRequest<com.google.api.services.monitoring.v1.model.HttpBody> {
-
-                private static final String REST_PATH = "v1/{+name}/location/{location}/prometheus/api/v1/labels";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-                /**
-                 * Lists labels for metrics.
-                 *
-                 * Create a request for the method "labels.list".
-                 *
-                 * This request holds the parameters needed by the the monitoring server.  After setting any
-                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name The workspace on which to execute the request. It is not part of the open source API but used as a
-               *        request path prefix to distinguish different virtual Prometheus instances of Google
-               *        Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-                 * @param location Location of the resource information. Has to be "global" now.
-                 * @since 1.13
-                 */
-                protected List(java.lang.String name, java.lang.String location) {
-                  super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v1.model.HttpBody.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+$");
-                  }
-                  this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public List set$Xgafv(java.lang.String $Xgafv) {
-                  return (List) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public List setAccessToken(java.lang.String accessToken) {
-                  return (List) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public List setAlt(java.lang.String alt) {
-                  return (List) super.setAlt(alt);
-                }
-
-                @Override
-                public List setCallback(java.lang.String callback) {
-                  return (List) super.setCallback(callback);
-                }
-
-                @Override
-                public List setFields(java.lang.String fields) {
-                  return (List) super.setFields(fields);
-                }
-
-                @Override
-                public List setKey(java.lang.String key) {
-                  return (List) super.setKey(key);
-                }
-
-                @Override
-                public List setOauthToken(java.lang.String oauthToken) {
-                  return (List) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (List) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public List setQuotaUser(java.lang.String quotaUser) {
-                  return (List) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public List setUploadType(java.lang.String uploadType) {
-                  return (List) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public List setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (List) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * The workspace on which to execute the request. It is not part of the open source
-                 * API but used as a request path prefix to distinguish different virtual Prometheus
-                 * instances of Google Prometheus Engine. The format is:
-                 * projects/PROJECT_ID_OR_NUMBER.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** The workspace on which to execute the request. It is not part of the open source API but used as a
-               request path prefix to distinguish different virtual Prometheus instances of Google Prometheus
-               Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /**
-                 * The workspace on which to execute the request. It is not part of the open source
-                 * API but used as a request path prefix to distinguish different virtual Prometheus
-                 * instances of Google Prometheus Engine. The format is:
-                 * projects/PROJECT_ID_OR_NUMBER.
-                 */
-                public List setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                /** Location of the resource information. Has to be "global" now. */
-                @com.google.api.client.util.Key
-                private java.lang.String location;
-
-                /** Location of the resource information. Has to be "global" now.
-                 */
-                public java.lang.String getLocation() {
-                  return location;
-                }
-
-                /** Location of the resource information. Has to be "global" now. */
-                public List setLocation(java.lang.String location) {
-                  this.location = location;
-                  return this;
-                }
-
-                /**
-                 * The end time to evaluate the query for. Either floating point UNIX seconds or
-                 * RFC3339 formatted timestamp.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String end;
-
-                /** The end time to evaluate the query for. Either floating point UNIX seconds or RFC3339 formatted
-               timestamp.
-                 */
-                public java.lang.String getEnd() {
-                  return end;
-                }
-
-                /**
-                 * The end time to evaluate the query for. Either floating point UNIX seconds or
-                 * RFC3339 formatted timestamp.
-                 */
-                public List setEnd(java.lang.String end) {
-                  this.end = end;
-                  return this;
-                }
-
-                /**
-                 * A list of matchers encoded in the Prometheus label matcher format to constrain
-                 * the values to series that satisfy them.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String match;
-
-                /** A list of matchers encoded in the Prometheus label matcher format to constrain the values to series
-               that satisfy them.
-                 */
-                public java.lang.String getMatch() {
-                  return match;
-                }
-
-                /**
-                 * A list of matchers encoded in the Prometheus label matcher format to constrain
-                 * the values to series that satisfy them.
-                 */
-                public List setMatch(java.lang.String match) {
-                  this.match = match;
-                  return this;
-                }
-
-                /**
-                 * The start time to evaluate the query for. Either floating point UNIX seconds or
-                 * RFC3339 formatted timestamp.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String start;
-
-                /** The start time to evaluate the query for. Either floating point UNIX seconds or RFC3339 formatted
-               timestamp.
-                 */
-                public java.lang.String getStart() {
-                  return start;
-                }
-
-                /**
-                 * The start time to evaluate the query for. Either floating point UNIX seconds or
-                 * RFC3339 formatted timestamp.
-                 */
-                public List setStart(java.lang.String start) {
-                  this.start = start;
-                  return this;
-                }
-
-                @Override
-                public List set(String parameterName, Object value) {
-                  return (List) super.set(parameterName, value);
                 }
               }
 

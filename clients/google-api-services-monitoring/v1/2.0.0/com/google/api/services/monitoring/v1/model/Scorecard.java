@@ -31,6 +31,14 @@ package com.google.api.services.monitoring.v1.model;
 public final class Scorecard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Will cause the Scorecard to show only the value, with no indicator to its value relative to its
+   * thresholds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Empty blankView;
+
+  /**
    * Will cause the scorecard to show a gauge chart.
    * The value may be {@code null}.
    */
@@ -68,6 +76,25 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TimeSeriesQuery timeSeriesQuery;
+
+  /**
+   * Will cause the Scorecard to show only the value, with no indicator to its value relative to its
+   * thresholds.
+   * @return value or {@code null} for none
+   */
+  public Empty getBlankView() {
+    return blankView;
+  }
+
+  /**
+   * Will cause the Scorecard to show only the value, with no indicator to its value relative to its
+   * thresholds.
+   * @param blankView blankView or {@code null} for none
+   */
+  public Scorecard setBlankView(Empty blankView) {
+    this.blankView = blankView;
+    return this;
+  }
 
   /**
    * Will cause the scorecard to show a gauge chart.

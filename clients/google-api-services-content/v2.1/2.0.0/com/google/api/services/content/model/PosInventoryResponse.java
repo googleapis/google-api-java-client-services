@@ -60,6 +60,25 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
+   * Optional. Supported pickup method for this offer. Unless the value is "not supported", this
+   * field must be submitted together with `pickupSla`. For accepted attribute values, see the
+   * [local product inventory feed
+   * specification](https://support.google.com/merchants/answer/3061342).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pickupMethod;
+
+  /**
+   * Optional. Expected date that an order will be ready for pickup relative to the order date. Must
+   * be submitted together with `pickupMethod`. For accepted attribute values, see the [local
+   * product inventory feed specification](https://support.google.com/merchants/answer/3061342).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pickupSla;
+
+  /**
    * Required. The current price of the item.
    * The value may be {@code null}.
    */
@@ -162,6 +181,50 @@ public final class PosInventoryResponse extends com.google.api.client.json.Gener
    */
   public PosInventoryResponse setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. Supported pickup method for this offer. Unless the value is "not supported", this
+   * field must be submitted together with `pickupSla`. For accepted attribute values, see the
+   * [local product inventory feed
+   * specification](https://support.google.com/merchants/answer/3061342).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPickupMethod() {
+    return pickupMethod;
+  }
+
+  /**
+   * Optional. Supported pickup method for this offer. Unless the value is "not supported", this
+   * field must be submitted together with `pickupSla`. For accepted attribute values, see the
+   * [local product inventory feed
+   * specification](https://support.google.com/merchants/answer/3061342).
+   * @param pickupMethod pickupMethod or {@code null} for none
+   */
+  public PosInventoryResponse setPickupMethod(java.lang.String pickupMethod) {
+    this.pickupMethod = pickupMethod;
+    return this;
+  }
+
+  /**
+   * Optional. Expected date that an order will be ready for pickup relative to the order date. Must
+   * be submitted together with `pickupMethod`. For accepted attribute values, see the [local
+   * product inventory feed specification](https://support.google.com/merchants/answer/3061342).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPickupSla() {
+    return pickupSla;
+  }
+
+  /**
+   * Optional. Expected date that an order will be ready for pickup relative to the order date. Must
+   * be submitted together with `pickupMethod`. For accepted attribute values, see the [local
+   * product inventory feed specification](https://support.google.com/merchants/answer/3061342).
+   * @param pickupSla pickupSla or {@code null} for none
+   */
+  public PosInventoryResponse setPickupSla(java.lang.String pickupSla) {
+    this.pickupSla = pickupSla;
     return this;
   }
 

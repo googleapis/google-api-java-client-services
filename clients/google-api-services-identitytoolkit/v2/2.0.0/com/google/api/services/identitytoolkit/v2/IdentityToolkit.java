@@ -1124,6 +1124,153 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * Retrieve a passkey configuration for an Identity Toolkit project.
+     *
+     * Create a request for the method "projects.getPasskeyConfig".
+     *
+     * This request holds the parameters needed by the identitytoolkit server.  After setting any
+     * optional parameters, call the {@link GetPasskeyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the config, for example: 'projects/my-awesome-project/passkeyConfig'.
+     * @return the request
+     */
+    public GetPasskeyConfig getPasskeyConfig(java.lang.String name) throws java.io.IOException {
+      GetPasskeyConfig result = new GetPasskeyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetPasskeyConfig extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig> {
+
+      private static final String REST_PATH = "v2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/passkeyConfig$");
+
+      /**
+       * Retrieve a passkey configuration for an Identity Toolkit project.
+       *
+       * Create a request for the method "projects.getPasskeyConfig".
+       *
+       * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link GetPasskeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetPasskeyConfig#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the config, for example: 'projects/my-awesome-project/passkeyConfig'.
+       * @since 1.13
+       */
+      protected GetPasskeyConfig(java.lang.String name) {
+        super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/passkeyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetPasskeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetPasskeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetPasskeyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetPasskeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetPasskeyConfig setAlt(java.lang.String alt) {
+        return (GetPasskeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetPasskeyConfig setCallback(java.lang.String callback) {
+        return (GetPasskeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetPasskeyConfig setFields(java.lang.String fields) {
+        return (GetPasskeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetPasskeyConfig setKey(java.lang.String key) {
+        return (GetPasskeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetPasskeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetPasskeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetPasskeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetPasskeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetPasskeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetPasskeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetPasskeyConfig setUploadType(java.lang.String uploadType) {
+        return (GetPasskeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetPasskeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetPasskeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the config, for example: 'projects/my-awesome-
+       * project/passkeyConfig'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the config, for example: 'projects/my-awesome-
+     project/passkeyConfig'.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the config, for example: 'projects/my-awesome-
+       * project/passkeyConfig'.
+       */
+      public GetPasskeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/passkeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetPasskeyConfig set(String parameterName, Object value) {
+        return (GetPasskeyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Update an Identity Toolkit project configuration.
      *
      * Create a request for the method "projects.updateConfig".
@@ -1283,6 +1430,164 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       @Override
       public UpdateConfig set(String parameterName, Object value) {
         return (UpdateConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update a passkey configuration for an Identity Toolkit project.
+     *
+     * Create a request for the method "projects.updatePasskeyConfig".
+     *
+     * This request holds the parameters needed by the identitytoolkit server.  After setting any
+     * optional parameters, call the {@link UpdatePasskeyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the PasskeyConfig resource.
+     * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig}
+     * @return the request
+     */
+    public UpdatePasskeyConfig updatePasskeyConfig(java.lang.String name, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig content) throws java.io.IOException {
+      UpdatePasskeyConfig result = new UpdatePasskeyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdatePasskeyConfig extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig> {
+
+      private static final String REST_PATH = "v2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/passkeyConfig$");
+
+      /**
+       * Update a passkey configuration for an Identity Toolkit project.
+       *
+       * Create a request for the method "projects.updatePasskeyConfig".
+       *
+       * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link UpdatePasskeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdatePasskeyConfig#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the PasskeyConfig resource.
+       * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig}
+       * @since 1.13
+       */
+      protected UpdatePasskeyConfig(java.lang.String name, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig content) {
+        super(IdentityToolkit.this, "PATCH", REST_PATH, content, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/passkeyConfig$");
+        }
+      }
+
+      @Override
+      public UpdatePasskeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdatePasskeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdatePasskeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setAlt(java.lang.String alt) {
+        return (UpdatePasskeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setCallback(java.lang.String callback) {
+        return (UpdatePasskeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setFields(java.lang.String fields) {
+        return (UpdatePasskeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setKey(java.lang.String key) {
+        return (UpdatePasskeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdatePasskeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdatePasskeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdatePasskeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdatePasskeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdatePasskeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdatePasskeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the PasskeyConfig resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the PasskeyConfig resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the PasskeyConfig resource. */
+      public UpdatePasskeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/passkeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. The update mask applies to the resource. Empty update mask will result in
+       * updating nothing. For the `FieldMask` definition, see https://developers.google.com
+       * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The update mask applies to the resource. Empty update mask will result in updating
+     nothing. For the `FieldMask` definition, see https://developers.google.com/protocol-
+     buffers/docs/reference/google.protobuf#fieldmask
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. The update mask applies to the resource. Empty update mask will result in
+       * updating nothing. For the `FieldMask` definition, see https://developers.google.com
+       * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+       */
+      public UpdatePasskeyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdatePasskeyConfig set(String parameterName, Object value) {
+        return (UpdatePasskeyConfig) super.set(parameterName, value);
       }
     }
 
@@ -4419,6 +4724,153 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Retrieve a passkey configuration for an Identity Toolkit project.
+       *
+       * Create a request for the method "tenants.getPasskeyConfig".
+       *
+       * This request holds the parameters needed by the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link GetPasskeyConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource name of the config, for example: 'projects/my-awesome-project/passkeyConfig'.
+       * @return the request
+       */
+      public GetPasskeyConfig getPasskeyConfig(java.lang.String name) throws java.io.IOException {
+        GetPasskeyConfig result = new GetPasskeyConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetPasskeyConfig extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+
+        /**
+         * Retrieve a passkey configuration for an Identity Toolkit project.
+         *
+         * Create a request for the method "tenants.getPasskeyConfig".
+         *
+         * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+         * optional parameters, call the {@link GetPasskeyConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetPasskeyConfig#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the config, for example: 'projects/my-awesome-project/passkeyConfig'.
+         * @since 1.13
+         */
+        protected GetPasskeyConfig(java.lang.String name) {
+          super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetPasskeyConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetPasskeyConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetPasskeyConfig setAccessToken(java.lang.String accessToken) {
+          return (GetPasskeyConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetPasskeyConfig setAlt(java.lang.String alt) {
+          return (GetPasskeyConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetPasskeyConfig setCallback(java.lang.String callback) {
+          return (GetPasskeyConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetPasskeyConfig setFields(java.lang.String fields) {
+          return (GetPasskeyConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetPasskeyConfig setKey(java.lang.String key) {
+          return (GetPasskeyConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetPasskeyConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetPasskeyConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetPasskeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetPasskeyConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetPasskeyConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetPasskeyConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetPasskeyConfig setUploadType(java.lang.String uploadType) {
+          return (GetPasskeyConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetPasskeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetPasskeyConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the config, for example: 'projects/my-awesome-
+         * project/passkeyConfig'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the config, for example: 'projects/my-awesome-
+       project/passkeyConfig'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the config, for example: 'projects/my-awesome-
+         * project/passkeyConfig'.
+         */
+        public GetPasskeyConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetPasskeyConfig set(String parameterName, Object value) {
+          return (GetPasskeyConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * List tenants under the given agent project. Requires read permission on the Agent project.
        *
        * Create a request for the method "tenants.list".
@@ -5051,6 +5503,164 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         @Override
         public TestIamPermissions set(String parameterName, Object value) {
           return (TestIamPermissions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update a passkey configuration for an Identity Toolkit project.
+       *
+       * Create a request for the method "tenants.updatePasskeyConfig".
+       *
+       * This request holds the parameters needed by the identitytoolkit server.  After setting any
+       * optional parameters, call the {@link UpdatePasskeyConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the PasskeyConfig resource.
+       * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig}
+       * @return the request
+       */
+      public UpdatePasskeyConfig updatePasskeyConfig(java.lang.String name, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig content) throws java.io.IOException {
+        UpdatePasskeyConfig result = new UpdatePasskeyConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdatePasskeyConfig extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+
+        /**
+         * Update a passkey configuration for an Identity Toolkit project.
+         *
+         * Create a request for the method "tenants.updatePasskeyConfig".
+         *
+         * This request holds the parameters needed by the the identitytoolkit server.  After setting any
+         * optional parameters, call the {@link UpdatePasskeyConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdatePasskeyConfig#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the PasskeyConfig resource.
+         * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig}
+         * @since 1.13
+         */
+        protected UpdatePasskeyConfig(java.lang.String name, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig content) {
+          super(IdentityToolkit.this, "PATCH", REST_PATH, content, com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2PasskeyConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+          }
+        }
+
+        @Override
+        public UpdatePasskeyConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdatePasskeyConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdatePasskeyConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setAlt(java.lang.String alt) {
+          return (UpdatePasskeyConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setCallback(java.lang.String callback) {
+          return (UpdatePasskeyConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setFields(java.lang.String fields) {
+          return (UpdatePasskeyConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setKey(java.lang.String key) {
+          return (UpdatePasskeyConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdatePasskeyConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdatePasskeyConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdatePasskeyConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setUploadType(java.lang.String uploadType) {
+          return (UpdatePasskeyConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdatePasskeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdatePasskeyConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the PasskeyConfig resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the PasskeyConfig resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the PasskeyConfig resource. */
+        public UpdatePasskeyConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/tenants/[^/]+/passkeyConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The update mask applies to the resource. Empty update mask will result in
+         * updating nothing. For the `FieldMask` definition, see https://developers.google.com
+         * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The update mask applies to the resource. Empty update mask will result in updating
+       nothing. For the `FieldMask` definition, see https://developers.google.com/protocol-
+       buffers/docs/reference/google.protobuf#fieldmask
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. The update mask applies to the resource. Empty update mask will result in
+         * updating nothing. For the `FieldMask` definition, see https://developers.google.com
+         * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+         */
+        public UpdatePasskeyConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdatePasskeyConfig set(String parameterName, Object value) {
+          return (UpdatePasskeyConfig) super.set(parameterName, value);
         }
       }
 

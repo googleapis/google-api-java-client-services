@@ -31,6 +31,16 @@ package com.google.api.services.iam.v1.model;
 public final class GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional scopes to request for in the OIDC authentication request on top of scopes requested
+   * by default. By default, the `openid`, `profile` and `email` scopes that are supported by the
+   * identity provider are requested. Each additional scope may be at most 256 characters. A maximum
+   * of 10 additional scopes may be configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalScopes;
+
+  /**
    * Required. The behavior for how OIDC Claims are included in the `assertion` object used for
    * attribute mapping and attribute condition.
    * The value may be {@code null}.
@@ -40,10 +50,34 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig extends
 
   /**
    * Required. The Response Type to request for in the OIDC Authorization Request for web sign-in.
+   * The `CODE` Response Type is recommended to avoid the Implicit Flow, for security reasons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseType;
+
+  /**
+   * Additional scopes to request for in the OIDC authentication request on top of scopes requested
+   * by default. By default, the `openid`, `profile` and `email` scopes that are supported by the
+   * identity provider are requested. Each additional scope may be at most 256 characters. A maximum
+   * of 10 additional scopes may be configured.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalScopes() {
+    return additionalScopes;
+  }
+
+  /**
+   * Additional scopes to request for in the OIDC authentication request on top of scopes requested
+   * by default. By default, the `openid`, `profile` and `email` scopes that are supported by the
+   * identity provider are requested. Each additional scope may be at most 256 characters. A maximum
+   * of 10 additional scopes may be configured.
+   * @param additionalScopes additionalScopes or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig setAdditionalScopes(java.util.List<java.lang.String> additionalScopes) {
+    this.additionalScopes = additionalScopes;
+    return this;
+  }
 
   /**
    * Required. The behavior for how OIDC Claims are included in the `assertion` object used for
@@ -66,6 +100,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig extends
 
   /**
    * Required. The Response Type to request for in the OIDC Authorization Request for web sign-in.
+   * The `CODE` Response Type is recommended to avoid the Implicit Flow, for security reasons.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseType() {
@@ -74,6 +109,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig extends
 
   /**
    * Required. The Response Type to request for in the OIDC Authorization Request for web sign-in.
+   * The `CODE` Response Type is recommended to avoid the Implicit Flow, for security reasons.
    * @param responseType responseType or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidcWebSsoConfig setResponseType(java.lang.String responseType) {

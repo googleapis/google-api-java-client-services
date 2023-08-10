@@ -108,6 +108,14 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.String displayName;
 
   /**
+   * Output only. Time after which the workload pool provider will be permanently purged and cannot
+   * be recovered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * Output only. The resource name of the provider. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
    * The value may be {@code null}.
@@ -302,6 +310,25 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Time after which the workload pool provider will be permanently purged and cannot
+   * be recovered.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. Time after which the workload pool provider will be permanently purged and cannot
+   * be recovered.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public WorkforcePoolProvider setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 

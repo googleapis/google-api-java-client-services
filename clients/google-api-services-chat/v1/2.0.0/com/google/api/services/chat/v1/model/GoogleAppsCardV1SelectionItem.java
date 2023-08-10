@@ -30,12 +30,30 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * For multi-select menus, a text description or label that's displayed below the item's `text`
+   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bottomText;
+
+  /**
    * Whether the item is selected by default. If the selection input only accepts one value (such as
    * for radio buttons or a dropdown menu), only set this field for one item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean selected;
+
+  /**
+   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
+   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startIconUri;
 
   /**
    * The text that identifies or describes the item to users.
@@ -47,11 +65,30 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+   * data](https://developers.google.com/chat/ui/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
+
+  /**
+   * For multi-select menus, a text description or label that's displayed below the item's `text`
+   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBottomText() {
+    return bottomText;
+  }
+
+  /**
+   * For multi-select menus, a text description or label that's displayed below the item's `text`
+   * field. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param bottomText bottomText or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionItem setBottomText(java.lang.String bottomText) {
+    this.bottomText = bottomText;
+    return this;
+  }
 
   /**
    * Whether the item is selected by default. If the selection input only accepts one value (such as
@@ -69,6 +106,29 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
    */
   public GoogleAppsCardV1SelectionItem setSelected(java.lang.Boolean selected) {
     this.selected = selected;
+    return this;
+  }
+
+  /**
+   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
+   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartIconUri() {
+    return startIconUri;
+  }
+
+  /**
+   * For multi-select menus, the URL for the icon displayed next to the item's `text` field.
+   * Supports PNG and JPEG files. Must be an `HTTPS` URL. For example,
+   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param startIconUri startIconUri or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionItem setStartIconUri(java.lang.String startIconUri) {
+    this.startIconUri = startIconUri;
     return this;
   }
 
@@ -92,7 +152,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+   * data](https://developers.google.com/chat/ui/read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -102,7 +162,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+   * data](https://developers.google.com/chat/ui/read-form-data).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setValue(java.lang.String value) {

@@ -38,14 +38,14 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private AttachmentDataRef attachmentDataRef;
 
   /**
-   * The original file name for the content, not the full path.
+   * Output only. The original file name for the content, not the full path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentName;
 
   /**
-   * The content type (MIME type) of the file.
+   * Output only. The content type (MIME type) of the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.lang.String downloadUri;
 
   /**
-   * A reference to the drive attachment. This field is used with the Drive API.
+   * Output only. A reference to the Google Drive attachment. This field is used with the Google
+   * Drive API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The source of the attachment.
+   * Output only. The source of the attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The original file name for the content, not the full path.
+   * Output only. The original file name for the content, not the full path.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentName() {
@@ -116,7 +117,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The original file name for the content, not the full path.
+   * Output only. The original file name for the content, not the full path.
    * @param contentName contentName or {@code null} for none
    */
   public Attachment setContentName(java.lang.String contentName) {
@@ -125,7 +126,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content type (MIME type) of the file.
+   * Output only. The content type (MIME type) of the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -133,7 +134,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content type (MIME type) of the file.
+   * Output only. The content type (MIME type) of the file.
    * @param contentType contentType or {@code null} for none
    */
   public Attachment setContentType(java.lang.String contentType) {
@@ -161,7 +162,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the drive attachment. This field is used with the Drive API.
+   * Output only. A reference to the Google Drive attachment. This field is used with the Google
+   * Drive API.
    * @return value or {@code null} for none
    */
   public DriveDataRef getDriveDataRef() {
@@ -169,7 +171,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to the drive attachment. This field is used with the Drive API.
+   * Output only. A reference to the Google Drive attachment. This field is used with the Google
+   * Drive API.
    * @param driveDataRef driveDataRef or {@code null} for none
    */
   public Attachment setDriveDataRef(DriveDataRef driveDataRef) {
@@ -195,7 +198,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the attachment.
+   * Output only. The source of the attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -203,7 +206,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source of the attachment.
+   * Output only. The source of the attachment.
    * @param source source or {@code null} for none
    */
   public Attachment setSource(java.lang.String source) {

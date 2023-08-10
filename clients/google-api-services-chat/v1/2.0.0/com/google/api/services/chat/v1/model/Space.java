@@ -42,12 +42,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field might be empty. Supports up to 128 characters.
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). If you receive
+   * the error message `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
+   * different `displayName`. An existing space within the Google Workspace organization might
+   * already use this display name. For direct messages, this field might be empty. Supports up to
+   * 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
+   * space in a Google Workspace organization. For Google Chat users that use a Google Account, omit
+   * this field when creating a space (By default, the space permits any Google Chat user). For
+   * existing spaces, this field is output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean externalUserAllowed;
 
   /**
    * Resource name of the space. Format: `spaces/{space}`
@@ -132,8 +145,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field might be empty. Supports up to 128 characters.
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). If you receive
+   * the error message `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
+   * different `displayName`. An existing space within the Google Workspace organization might
+   * already use this display name. For direct messages, this field might be empty. Supports up to
+   * 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -142,12 +158,38 @@ public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
    * The space's display name. Required when [creating a
-   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). For direct
-   * messages, this field might be empty. Supports up to 128 characters.
+   * space](https://developers.google.com/chat/api/reference/rest/v1/spaces/create). If you receive
+   * the error message `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
+   * different `displayName`. An existing space within the Google Workspace organization might
+   * already use this display name. For direct messages, this field might be empty. Supports up to
+   * 128 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Space setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
+   * space in a Google Workspace organization. For Google Chat users that use a Google Account, omit
+   * this field when creating a space (By default, the space permits any Google Chat user). For
+   * existing spaces, this field is output only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExternalUserAllowed() {
+    return externalUserAllowed;
+  }
+
+  /**
+   * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
+   * space in a Google Workspace organization. For Google Chat users that use a Google Account, omit
+   * this field when creating a space (By default, the space permits any Google Chat user). For
+   * existing spaces, this field is output only.
+   * @param externalUserAllowed externalUserAllowed or {@code null} for none
+   */
+  public Space setExternalUserAllowed(java.lang.Boolean externalUserAllowed) {
+    this.externalUserAllowed = externalUserAllowed;
     return this;
   }
 

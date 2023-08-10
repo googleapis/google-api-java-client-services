@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An image that is specified by a URL and can have an `onClick` action.
+ * An image that is specified by a URL and can have an `onClick` action. For an example, see
+ * [Image](https://developers.google.com/chat/ui/widgets/image).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

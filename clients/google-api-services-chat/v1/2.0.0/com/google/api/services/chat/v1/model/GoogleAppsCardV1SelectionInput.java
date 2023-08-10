@@ -18,11 +18,12 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A widget that creates one or more UI items that users can select. For example, a dropdown menu or
- * checkboxes. You can use this widget to collect data that can be predicted or enumerated. Chat
- * apps can process the value of items that users select or input. For details about working with
- * form inputs, see [Receive form data](https://developers.google.com/chat/how-
- * tos/dialogs#receive_form_data_from_dialogs). To collect undefined or abstract data from users,
- * use the TextInput widget.
+ * checkboxes. You can use this widget to collect data that can be predicted or enumerated. For an
+ * example in Google Chat apps, see [Selection input](https://developers.google.com/chat/ui/widgets
+ * /selection-input). Chat apps can process the value of items that users select or input. For
+ * details about working with form inputs, see [Receive form
+ * data](https://developers.google.com/chat/ui/read-form-data). To collect undefined or abstract
+ * data from users, use the TextInput widget.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -33,6 +34,14 @@ package com.google.api.services.chat.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.json.GenericJson {
+
+  /**
+   * An external data source, such as a relational data base. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1Action externalDataSource;
 
   /**
    * An array of selectable items. For example, an array of radio buttons or checkboxes. Supports up
@@ -53,9 +62,28 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private java.lang.String label;
 
   /**
+   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, set to 3 items. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer multiSelectMaxSelectedItems;
+
+  /**
+   * For multi-select menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
+   * characters for static data sources and 3 characters for external data sources. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer multiSelectMinQueryLength;
+
+  /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
+   * data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,12 +92,20 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action onChangeAction;
+
+  /**
+   * A data source from a [Google Workspace host
+   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1PlatformDataSource platformDataSource;
 
   /**
    * The type of items that are displayed to users in a `SelectionInput` widget. Selection types
@@ -79,6 +115,25 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * An external data source, such as a relational data base. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1Action getExternalDataSource() {
+    return externalDataSource;
+  }
+
+  /**
+   * An external data source, such as a relational data base. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param externalDataSource externalDataSource or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setExternalDataSource(GoogleAppsCardV1Action externalDataSource) {
+    this.externalDataSource = externalDataSource;
+    return this;
+  }
 
   /**
    * An array of selectable items. For example, an array of radio buttons or checkboxes. Supports up
@@ -123,9 +178,53 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
+   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, set to 3 items. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMultiSelectMaxSelectedItems() {
+    return multiSelectMaxSelectedItems;
+  }
+
+  /**
+   * For multi-select menus, the maximum number of items that a user can select. Minimum value is 1
+   * item. If unspecified, set to 3 items. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param multiSelectMaxSelectedItems multiSelectMaxSelectedItems or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setMultiSelectMaxSelectedItems(java.lang.Integer multiSelectMaxSelectedItems) {
+    this.multiSelectMaxSelectedItems = multiSelectMaxSelectedItems;
+    return this;
+  }
+
+  /**
+   * For multi-select menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
+   * characters for static data sources and 3 characters for external data sources. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMultiSelectMinQueryLength() {
+    return multiSelectMinQueryLength;
+  }
+
+  /**
+   * For multi-select menus, the number of text characters that a user inputs before the Chat app
+   * queries autocomplete and displays suggested items on the card. If unspecified, set to 0
+   * characters for static data sources and 3 characters for external data sources. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param multiSelectMinQueryLength multiSelectMinQueryLength or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setMultiSelectMinQueryLength(java.lang.Integer multiSelectMinQueryLength) {
+    this.multiSelectMinQueryLength = multiSelectMinQueryLength;
+    return this;
+  }
+
+  /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
+   * data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -134,8 +233,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
+   * data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setName(java.lang.String name) {
@@ -146,8 +245,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -157,12 +255,32 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
     this.onChangeAction = onChangeAction;
+    return this;
+  }
+
+  /**
+   * A data source from a [Google Workspace host
+   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1PlatformDataSource getPlatformDataSource() {
+    return platformDataSource;
+  }
+
+  /**
+   * A data source from a [Google Workspace host
+   * application](https://developers.google.com/chat/api/reference/rest/v1/HostApp). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param platformDataSource platformDataSource or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setPlatformDataSource(GoogleAppsCardV1PlatformDataSource platformDataSource) {
+    this.platformDataSource = platformDataSource;
     return this;
   }
 

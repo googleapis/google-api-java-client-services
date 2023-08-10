@@ -17,9 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Lets users input a date, a time, or both a date and a time. Users can input text or use the
- * picker to select dates and times. If users input an invalid date or time, the picker shows an
- * error that prompts users to input the information correctly.
+ * Lets users input a date, a time, or both a date and a time. For an example in Google Chat apps,
+ * see [Date time picker](https://developers.google.com/chat/ui/widgets/date-time-picker). Users can
+ * input text or use the picker to select dates and times. If users input an invalid date or time,
+ * the picker shows an error that prompts users to input the information correctly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -42,8 +43,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
+   * form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +108,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
+   * form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,8 +118,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/how-
-   * tos/dialogs#receive_form_data_from_dialogs).
+   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
+   * form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setName(java.lang.String name) {

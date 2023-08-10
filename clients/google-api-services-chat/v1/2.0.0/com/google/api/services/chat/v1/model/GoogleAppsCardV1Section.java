@@ -43,9 +43,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
    * information about formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting).
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +94,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
    * information about formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting).
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -106,9 +106,9 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   /**
    * Text that appears at the top of a section. Supports simple HTML formatted text. For more
    * information about formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting).
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * @param header header or {@code null} for none
    */
   public GoogleAppsCardV1Section setHeader(java.lang.String header) {

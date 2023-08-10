@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A thread in a Google Chat space. For example usage, see [Start or reply to a message thread](http
- * s://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+ * Information about a quoted message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -28,25 +27,44 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Thread extends com.google.api.client.json.GenericJson {
+public final class QuotedMessageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. The timestamp when the quoted message was created or when the quoted message was
+   * last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastUpdateTime;
+
+  /**
+   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
-   * The value may be {@code null}.
+   * Output only. The timestamp when the quoted message was created or when the quoted message was
+   * last updated.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String threadKey;
+  public String getLastUpdateTime() {
+    return lastUpdateTime;
+  }
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. The timestamp when the quoted message was created or when the quoted message was
+   * last updated.
+   * @param lastUpdateTime lastUpdateTime or {@code null} for none
+   */
+  public QuotedMessageMetadata setLastUpdateTime(String lastUpdateTime) {
+    this.lastUpdateTime = lastUpdateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,41 +72,22 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. Resource name of the quoted message. Format: `spaces/{space}/messages/{message}`
    * @param name name or {@code null} for none
    */
-  public Thread setName(java.lang.String name) {
+  public QuotedMessageMetadata setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
-  /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getThreadKey() {
-    return threadKey;
-  }
-
-  /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
-   * @param threadKey threadKey or {@code null} for none
-   */
-  public Thread setThreadKey(java.lang.String threadKey) {
-    this.threadKey = threadKey;
-    return this;
+  @Override
+  public QuotedMessageMetadata set(String fieldName, Object value) {
+    return (QuotedMessageMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public Thread set(String fieldName, Object value) {
-    return (Thread) super.set(fieldName, value);
-  }
-
-  @Override
-  public Thread clone() {
-    return (Thread) super.clone();
+  public QuotedMessageMetadata clone() {
+    return (QuotedMessageMetadata) super.clone();
   }
 
 }

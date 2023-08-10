@@ -24,18 +24,20 @@ package com.google.api.services.chat.v1.model;
  * [dialog](https://developers.google.com/chat/how-tos/dialogs). The following example JSON creates
  * a "contact card" that features: - A header with the contact's name, job title, and avatar
  * picture. - A section with the contact information, including formatted text. - Buttons that users
- * can click to share the contact, or see more or less information. ![Example contact
- * card](https://developers.google.com/chat/images/card_api_reference.png) ``` { "cardsV2": [ {
- * "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software
- * Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
- * "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact
- * Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": {
- * "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": {
- * "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": {
- * "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": {
- * "buttons": [ { "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", }
- * } }, { "text": "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key":
- * "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
+ * can click to share the contact, or see more or less information. For more examples, see [Design
+ * dynamic, interactive, and consistent UIs with cards](https://developers.google.com/chat/ui).
+ * ![Example contact card](https://developers.google.com/chat/images/card_api_reference.png) ``` {
+ * "cardsV2": [ { "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle":
+ * "Software Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-
+ * avatar.png", "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ {
+ * "header": "Contact Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ {
+ * "decoratedText": { "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, {
+ * "decoratedText": { "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, {
+ * "decoratedText": { "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, {
+ * "buttonList": { "buttons": [ { "text": "Share", "onClick": { "openLink": { "url":
+ * "https://example.com/share", } } }, { "text": "Edit", "onClick": { "action": { "function":
+ * "goToView", "parameters": [ { "key": "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], },
+ * } ], } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -105,8 +107,16 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   private GoogleAppsCardV1CardHeader peekCardHeader;
 
   /**
+   * The divider style between sections.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sectionDividerStyle;
+
+  /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider.
+   * visually separated by a line divider. For an example in Google Chat apps, see [Card
+   * section](https://developers.google.com/chat/ui/widgets/card-section).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +255,26 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   }
 
   /**
+   * The divider style between sections.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSectionDividerStyle() {
+    return sectionDividerStyle;
+  }
+
+  /**
+   * The divider style between sections.
+   * @param sectionDividerStyle sectionDividerStyle or {@code null} for none
+   */
+  public GoogleAppsCardV1Card setSectionDividerStyle(java.lang.String sectionDividerStyle) {
+    this.sectionDividerStyle = sectionDividerStyle;
+    return this;
+  }
+
+  /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider.
+   * visually separated by a line divider. For an example in Google Chat apps, see [Card
+   * section](https://developers.google.com/chat/ui/widgets/card-section).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Section> getSections() {
@@ -255,7 +283,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider.
+   * visually separated by a line divider. For an example in Google Chat apps, see [Card
+   * section](https://developers.google.com/chat/ui/widgets/card-section).
    * @param sections sections or {@code null} for none
    */
   public GoogleAppsCardV1Card setSections(java.util.List<GoogleAppsCardV1Section> sections) {

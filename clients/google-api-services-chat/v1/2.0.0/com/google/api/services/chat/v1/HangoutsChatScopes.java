@@ -29,6 +29,9 @@ public class HangoutsChatScopes {
   /** Delete conversations and spaces & remove access to associated files in Google Chat. */
   public static final String CHAT_DELETE = "https://www.googleapis.com/auth/chat.delete";
 
+  /** Import spaces, messages, and memberships into Google Chat.. */
+  public static final String CHAT_IMPORT = "https://www.googleapis.com/auth/chat.import";
+
   /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
@@ -74,6 +77,7 @@ public class HangoutsChatScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHAT_BOT);
     set.add(CHAT_DELETE);
+    set.add(CHAT_IMPORT);
     set.add(CHAT_MEMBERSHIPS);
     set.add(CHAT_MEMBERSHIPS_APP);
     set.add(CHAT_MEMBERSHIPS_READONLY);

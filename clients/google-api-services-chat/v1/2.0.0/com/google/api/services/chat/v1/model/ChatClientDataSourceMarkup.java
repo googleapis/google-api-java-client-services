@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A list of buttons layed out horizontally. For an example in Google Chat apps, see [Button
- * list](https://developers.google.com/chat/ui/widgets/button-list).
+ * Chat apps only. For a `SelectionInput` widget that uses a multi-select menu, a data source from
+ * Google Chat. For example, a list of Google Chat spaces of which the user is a member. [Developer
+ * Preview](https://developers.google.com/workspace/preview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -28,46 +29,43 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAppsCardV1ButtonList extends com.google.api.client.json.GenericJson {
+public final class ChatClientDataSourceMarkup extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of buttons.
+   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAppsCardV1Button> buttons;
-
-  static {
-    // hack to force ProGuard to consider GoogleAppsCardV1Button used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAppsCardV1Button.class);
-  }
+  private SpaceDataSource spaceDataSource;
 
   /**
-   * An array of buttons.
+   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
+   * Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAppsCardV1Button> getButtons() {
-    return buttons;
+  public SpaceDataSource getSpaceDataSource() {
+    return spaceDataSource;
   }
 
   /**
-   * An array of buttons.
-   * @param buttons buttons or {@code null} for none
+   * A data source representing a Google Chat space. Format: spaces/{space} [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param spaceDataSource spaceDataSource or {@code null} for none
    */
-  public GoogleAppsCardV1ButtonList setButtons(java.util.List<GoogleAppsCardV1Button> buttons) {
-    this.buttons = buttons;
+  public ChatClientDataSourceMarkup setSpaceDataSource(SpaceDataSource spaceDataSource) {
+    this.spaceDataSource = spaceDataSource;
     return this;
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList set(String fieldName, Object value) {
-    return (GoogleAppsCardV1ButtonList) super.set(fieldName, value);
+  public ChatClientDataSourceMarkup set(String fieldName, Object value) {
+    return (ChatClientDataSourceMarkup) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAppsCardV1ButtonList clone() {
-    return (GoogleAppsCardV1ButtonList) super.clone();
+  public ChatClientDataSourceMarkup clone() {
+    return (ChatClientDataSourceMarkup) super.clone();
   }
 
 }

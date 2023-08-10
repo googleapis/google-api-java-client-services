@@ -141,10 +141,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
+   * ``` "textParagraph": { "text": " *bold text*" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -399,10 +399,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
+   * ``` "textParagraph": { "text": " *bold text*" } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1TextParagraph getTextParagraph() {
@@ -412,10 +412,10 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
   /**
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
-   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card_text_formatting)
-   * and [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script
-   * /add-ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded
-   * text: ``` "textParagraph": { "text": " *bold text*" } ```
+   * apps](https://developers.google.com/chat/api/guides/message-formats/cards#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
+   * ``` "textParagraph": { "text": " *bold text*" } ```
    * @param textParagraph textParagraph or {@code null} for none
    */
   public GoogleAppsCardV1Widget setTextParagraph(GoogleAppsCardV1TextParagraph textParagraph) {

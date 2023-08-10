@@ -1860,6 +1860,822 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
 
     }
     /**
+     * An accessor for creating requests from the Platforms collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code BinaryAuthorization binaryauthorization = new BinaryAuthorization(...);}
+     *   {@code BinaryAuthorization.Platforms.List request = binaryauthorization.platforms().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Platforms platforms() {
+      return new Platforms();
+    }
+
+    /**
+     * The "platforms" collection of methods.
+     */
+    public class Platforms {
+
+      /**
+       * An accessor for creating requests from the Policies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BinaryAuthorization binaryauthorization = new BinaryAuthorization(...);}
+       *   {@code BinaryAuthorization.Policies.List request = binaryauthorization.policies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Policies policies() {
+        return new Policies();
+      }
+
+      /**
+       * The "policies" collection of methods.
+       */
+      public class Policies {
+
+        /**
+         * Creates a platform policy, and returns a copy of it. Returns NOT_FOUND if the project or platform
+         * doesn't exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the policy already
+         * exists, and INVALID_ARGUMENT if the policy contains a platform-specific policy that does not
+         * match the platform value specified in the URL.
+         *
+         * Create a request for the method "policies.create".
+         *
+         * This request holds the parameters needed by the binaryauthorization server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent of this platform policy.
+         * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.PlatformPolicy> {
+
+          private static final String REST_PATH = "v1/{+parent}/policies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+$");
+
+          /**
+           * Creates a platform policy, and returns a copy of it. Returns NOT_FOUND if the project or
+           * platform doesn't exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+           * policy already exists, and INVALID_ARGUMENT if the policy contains a platform-specific policy
+           * that does not match the platform value specified in the URL.
+           *
+           * Create a request for the method "policies.create".
+           *
+           * This request holds the parameters needed by the the binaryauthorization server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent of this platform policy.
+           * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy content) {
+            super(BinaryAuthorization.this, "POST", REST_PATH, content, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent of this platform policy. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent of this platform policy.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent of this platform policy. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The platform policy ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String policyId;
+
+          /** Required. The platform policy ID.
+           */
+          public java.lang.String getPolicyId() {
+            return policyId;
+          }
+
+          /** Required. The platform policy ID. */
+          public Create setPolicyId(java.lang.String policyId) {
+            this.policyId = policyId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         *
+         * Create a request for the method "policies.delete".
+         *
+         * This request holds the parameters needed by the binaryauthorization server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the platform policy to delete, in the format `projects/platforms/policies`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+
+          /**
+           * Deletes a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           *
+           * Create a request for the method "policies.delete".
+           *
+           * This request holds the parameters needed by the the binaryauthorization server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the platform policy to delete, in the format `projects/platforms/policies`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(BinaryAuthorization.this, "DELETE", REST_PATH, null, com.google.api.services.binaryauthorization.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the platform policy to delete, in the format
+           * `projects/platforms/policies`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the platform policy to delete, in the format `projects/platforms/policies`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the platform policy to delete, in the format
+           * `projects/platforms/policies`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         *
+         * Create a request for the method "policies.get".
+         *
+         * This request holds the parameters needed by the binaryauthorization server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the platform policy to retrieve in the format `projects/platforms/policies`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.PlatformPolicy> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+
+          /**
+           * Gets a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           *
+           * Create a request for the method "policies.get".
+           *
+           * This request holds the parameters needed by the the binaryauthorization server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the platform policy to retrieve in the format `projects/platforms/policies`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BinaryAuthorization.this, "GET", REST_PATH, null, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the platform policy to retrieve in the format
+           * `projects/platforms/policies`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the platform policy to retrieve in the format `projects/platforms/policies`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the platform policy to retrieve in the format
+           * `projects/platforms/policies`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists platform policies owned by a project in the specified platform. Returns INVALID_ARGUMENT if
+         * the project or the platform doesn't exist.
+         *
+         * Create a request for the method "policies.list".
+         *
+         * This request holds the parameters needed by the binaryauthorization server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the platform associated with the platform policies using the format
+         *        `projects/platforms`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.ListPlatformPoliciesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/policies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+$");
+
+          /**
+           * Lists platform policies owned by a project in the specified platform. Returns INVALID_ARGUMENT
+           * if the project or the platform doesn't exist.
+           *
+           * Create a request for the method "policies.list".
+           *
+           * This request holds the parameters needed by the the binaryauthorization server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the platform associated with the platform policies using the format
+         *        `projects/platforms`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BinaryAuthorization.this, "GET", REST_PATH, null, com.google.api.services.binaryauthorization.v1.model.ListPlatformPoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the platform associated with the platform policies using
+           * the format `projects/platforms`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the platform associated with the platform policies using the format
+         `projects/platforms`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the platform associated with the platform policies using
+           * the format `projects/platforms`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListPlatformPoliciesResponse.next_page_token returned from the previous call
+           * to the `ListPlatformPolicies` method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListPlatformPoliciesResponse.next_page_token returned from the previous call to the
+         `ListPlatformPolicies` method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListPlatformPoliciesResponse.next_page_token returned from the previous call
+           * to the `ListPlatformPolicies` method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         *
+         * Create a request for the method "policies.replacePlatformPolicy".
+         *
+         * This request holds the parameters needed by the binaryauthorization server.  After setting any
+         * optional parameters, call the {@link ReplacePlatformPolicy#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Output only. The relative resource name of the BinAuthz platform policy, in the form of
+         *        `projects/platforms/policies`.
+         * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
+         * @return the request
+         */
+        public ReplacePlatformPolicy replacePlatformPolicy(java.lang.String name, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy content) throws java.io.IOException {
+          ReplacePlatformPolicy result = new ReplacePlatformPolicy(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplacePlatformPolicy extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.PlatformPolicy> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+
+          /**
+           * Replaces a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           *
+           * Create a request for the method "policies.replacePlatformPolicy".
+           *
+           * This request holds the parameters needed by the the binaryauthorization server.  After setting
+           * any optional parameters, call the {@link ReplacePlatformPolicy#execute()} method to invoke the
+           * remote operation. <p> {@link ReplacePlatformPolicy#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Output only. The relative resource name of the BinAuthz platform policy, in the form of
+         *        `projects/platforms/policies`.
+           * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
+           * @since 1.13
+           */
+          protected ReplacePlatformPolicy(java.lang.String name, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy content) {
+            super(BinaryAuthorization.this, "PUT", REST_PATH, content, com.google.api.services.binaryauthorization.v1.model.PlatformPolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplacePlatformPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplacePlatformPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setAccessToken(java.lang.String accessToken) {
+            return (ReplacePlatformPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setAlt(java.lang.String alt) {
+            return (ReplacePlatformPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setCallback(java.lang.String callback) {
+            return (ReplacePlatformPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setFields(java.lang.String fields) {
+            return (ReplacePlatformPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setKey(java.lang.String key) {
+            return (ReplacePlatformPolicy) super.setKey(key);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setOauthToken(java.lang.String oauthToken) {
+            return (ReplacePlatformPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplacePlatformPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (ReplacePlatformPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setUploadType(java.lang.String uploadType) {
+            return (ReplacePlatformPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplacePlatformPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplacePlatformPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The relative resource name of the BinAuthz platform policy, in the form of
+           * `projects/platforms/policies`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The relative resource name of the BinAuthz platform policy, in the form of
+         `projects/platforms/policies`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The relative resource name of the BinAuthz platform policy, in the form of
+           * `projects/platforms/policies`.
+           */
+          public ReplacePlatformPolicy setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReplacePlatformPolicy set(String parameterName, Object value) {
+            return (ReplacePlatformPolicy) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Policy collection.
      *
      * <p>The typical use is:</p>

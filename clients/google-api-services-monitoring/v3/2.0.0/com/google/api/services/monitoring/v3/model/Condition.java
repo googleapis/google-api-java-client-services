@@ -53,6 +53,13 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage;
 
   /**
+   * A condition that uses the Prometheus query language to define alerts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrometheusQueryLanguageCondition conditionPrometheusQueryLanguage;
+
+  /**
    * A condition that compares a time series against a threshold.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setConditionMonitoringQueryLanguage(MonitoringQueryLanguageCondition conditionMonitoringQueryLanguage) {
     this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
+    return this;
+  }
+
+  /**
+   * A condition that uses the Prometheus query language to define alerts.
+   * @return value or {@code null} for none
+   */
+  public PrometheusQueryLanguageCondition getConditionPrometheusQueryLanguage() {
+    return conditionPrometheusQueryLanguage;
+  }
+
+  /**
+   * A condition that uses the Prometheus query language to define alerts.
+   * @param conditionPrometheusQueryLanguage conditionPrometheusQueryLanguage or {@code null} for none
+   */
+  public Condition setConditionPrometheusQueryLanguage(PrometheusQueryLanguageCondition conditionPrometheusQueryLanguage) {
+    this.conditionPrometheusQueryLanguage = conditionPrometheusQueryLanguage;
     return this;
   }
 

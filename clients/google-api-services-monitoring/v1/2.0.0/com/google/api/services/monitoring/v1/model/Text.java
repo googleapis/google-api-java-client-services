@@ -44,6 +44,13 @@ public final class Text extends com.google.api.client.json.GenericJson {
   private java.lang.String format;
 
   /**
+   * How the text is styled
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TextStyle style;
+
+  /**
    * The text content to be displayed.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class Text extends com.google.api.client.json.GenericJson {
    */
   public Text setFormat(java.lang.String format) {
     this.format = format;
+    return this;
+  }
+
+  /**
+   * How the text is styled
+   * @return value or {@code null} for none
+   */
+  public TextStyle getStyle() {
+    return style;
+  }
+
+  /**
+   * How the text is styled
+   * @param style style or {@code null} for none
+   */
+  public Text setStyle(TextStyle style) {
+    this.style = style;
     return this;
   }
 

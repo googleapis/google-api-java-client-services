@@ -31,6 +31,16 @@ package com.google.api.services.monitoring.v1.model;
 public final class TimeSeriesQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period
+   * so that there will be only 1 output value.*Note: This could override the configured alignment
+   * period except for the cases where a series of data points are expected, like - XyChart -
+   * Scorecard's spark chart
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean outputFullDuration;
+
+  /**
    * A query used to fetch time series with PromQL.
    * The value may be {@code null}.
    */
@@ -67,6 +77,29 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String unitOverride;
+
+  /**
+   * Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period
+   * so that there will be only 1 output value.*Note: This could override the configured alignment
+   * period except for the cases where a series of data points are expected, like - XyChart -
+   * Scorecard's spark chart
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOutputFullDuration() {
+    return outputFullDuration;
+  }
+
+  /**
+   * Optional. If set, Cloud Monitoring will treat the full query duration as the alignment period
+   * so that there will be only 1 output value.*Note: This could override the configured alignment
+   * period except for the cases where a series of data points are expected, like - XyChart -
+   * Scorecard's spark chart
+   * @param outputFullDuration outputFullDuration or {@code null} for none
+   */
+  public TimeSeriesQuery setOutputFullDuration(java.lang.Boolean outputFullDuration) {
+    this.outputFullDuration = outputFullDuration;
+    return this;
+  }
 
   /**
    * A query used to fetch time series with PromQL.

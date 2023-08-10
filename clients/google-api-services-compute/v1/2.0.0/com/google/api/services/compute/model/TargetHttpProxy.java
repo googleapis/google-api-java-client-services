@@ -61,6 +61,17 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String fingerprint;
 
   /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer httpKeepAliveTimeoutSec;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -211,6 +222,31 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
    */
   public TargetHttpProxy encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHttpKeepAliveTimeoutSec() {
+    return httpKeepAliveTimeoutSec;
+  }
+
+  /**
+   * Specifies how long to keep a connection open, after completing a response, while there is no
+   * matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610
+   * seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is
+   * 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load
+   * balancer (classic), this option is not available publicly.
+   * @param httpKeepAliveTimeoutSec httpKeepAliveTimeoutSec or {@code null} for none
+   */
+  public TargetHttpProxy setHttpKeepAliveTimeoutSec(java.lang.Integer httpKeepAliveTimeoutSec) {
+    this.httpKeepAliveTimeoutSec = httpKeepAliveTimeoutSec;
     return this;
   }
 

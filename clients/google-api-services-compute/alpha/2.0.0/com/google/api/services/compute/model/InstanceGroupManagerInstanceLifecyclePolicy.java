@@ -30,7 +30,11 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines behaviour for all instance or failures
+   * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
+   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
+   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
+   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
+   * VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +66,11 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignal metadataBasedReadinessSignal;
 
   /**
-   * Defines behaviour for all instance or failures
+   * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
+   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
+   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
+   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
+   * VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultActionOnFailure() {
@@ -70,7 +78,11 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   }
 
   /**
-   * Defines behaviour for all instance or failures
+   * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
+   * the application running on that VM fails a health check. Valid values are - REPAIR (default):
+   * MIG automatically repairs a failed or an unhealthy VM by recreating it. For more information,
+   * see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed or an unhealthy
+   * VM.
    * @param defaultActionOnFailure defaultActionOnFailure or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setDefaultActionOnFailure(java.lang.String defaultActionOnFailure) {

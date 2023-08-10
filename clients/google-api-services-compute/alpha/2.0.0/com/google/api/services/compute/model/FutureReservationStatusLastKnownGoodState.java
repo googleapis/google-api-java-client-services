@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatusLastKnownGoodState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the FutureReservation before an amendment was requested.
+   * [Output Only] The description of the FutureReservation before an amendment was requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,21 +43,28 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   private FutureReservationStatusLastKnownGoodStateFutureReservationSpecs futureReservationSpecs;
 
   /**
-   * The name prefix of the Future Reservation before an amendment was requested.
+   * [Output Only] The lock time of the FutureReservation before an amendment was requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lockTime;
+
+  /**
+   * [Output Only] The name prefix of the Future Reservation before an amendment was requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namePrefix;
 
   /**
-   * The status of the last known good state for the Future Reservation.
+   * [Output Only] The status of the last known good state for the Future Reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String procurementStatus;
 
   /**
-   * The description of the FutureReservation before an amendment was requested.
+   * [Output Only] The description of the FutureReservation before an amendment was requested.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -65,7 +72,7 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   }
 
   /**
-   * The description of the FutureReservation before an amendment was requested.
+   * [Output Only] The description of the FutureReservation before an amendment was requested.
    * @param description description or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodState setDescription(java.lang.String description) {
@@ -89,7 +96,24 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   }
 
   /**
-   * The name prefix of the Future Reservation before an amendment was requested.
+   * [Output Only] The lock time of the FutureReservation before an amendment was requested.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLockTime() {
+    return lockTime;
+  }
+
+  /**
+   * [Output Only] The lock time of the FutureReservation before an amendment was requested.
+   * @param lockTime lockTime or {@code null} for none
+   */
+  public FutureReservationStatusLastKnownGoodState setLockTime(java.lang.String lockTime) {
+    this.lockTime = lockTime;
+    return this;
+  }
+
+  /**
+   * [Output Only] The name prefix of the Future Reservation before an amendment was requested.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamePrefix() {
@@ -97,7 +121,7 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   }
 
   /**
-   * The name prefix of the Future Reservation before an amendment was requested.
+   * [Output Only] The name prefix of the Future Reservation before an amendment was requested.
    * @param namePrefix namePrefix or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodState setNamePrefix(java.lang.String namePrefix) {
@@ -106,7 +130,7 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   }
 
   /**
-   * The status of the last known good state for the Future Reservation.
+   * [Output Only] The status of the last known good state for the Future Reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcurementStatus() {
@@ -114,7 +138,7 @@ public final class FutureReservationStatusLastKnownGoodState extends com.google.
   }
 
   /**
-   * The status of the last known good state for the Future Reservation.
+   * [Output Only] The status of the last known good state for the Future Reservation.
    * @param procurementStatus procurementStatus or {@code null} for none
    */
   public FutureReservationStatusLastKnownGoodState setProcurementStatus(java.lang.String procurementStatus) {

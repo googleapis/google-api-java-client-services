@@ -30,6 +30,14 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersDeleteInstancesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of instance names to delete. Queued instances do not have URL and can be deleted only
+   * by name. You cannot specify both URLs and names in a single request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> instanceNames;
+
+  /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as
    * zones/[ZONE]/instances/[INSTANCE_NAME]. Queued instances do not have URL and can be deleted
    * only by name. One cannot specify both URLs and names in a single request.
@@ -48,6 +56,25 @@ public final class InstanceGroupManagersDeleteInstancesRequest extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipInstancesOnValidationError;
+
+  /**
+   * The list of instance names to delete. Queued instances do not have URL and can be deleted only
+   * by name. You cannot specify both URLs and names in a single request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInstanceNames() {
+    return instanceNames;
+  }
+
+  /**
+   * The list of instance names to delete. Queued instances do not have URL and can be deleted only
+   * by name. You cannot specify both URLs and names in a single request.
+   * @param instanceNames instanceNames or {@code null} for none
+   */
+  public InstanceGroupManagersDeleteInstancesRequest setInstanceNames(java.util.List<java.lang.String> instanceNames) {
+    this.instanceNames = instanceNames;
+    return this;
+  }
 
   /**
    * The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as

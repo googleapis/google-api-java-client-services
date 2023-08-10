@@ -90,10 +90,11 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
 
   /**
    * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
-   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
-   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
-   * actions. If the Updater determines that the minimal update action needed is more disruptive
-   * than most disruptive allowed action you specify it will not perform the update at all.
+   * to forbid any actions, REFRESH to avoid restarting the VM and to limit disruption as much as
+   * possible. RESTART to allow actions that can be applied without instance replacing or REPLACE to
+   * allow all possible actions. If the Updater determines that the minimal update action needed is
+   * more disruptive than most disruptive allowed action you specify it will not perform the update
+   * at all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,10 +108,9 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.lang.String replacementMethod;
 
   /**
-   * The type of update process. You can specify either PROACTIVE so that the instance group manager
-   * proactively executes actions in order to bring instances to their target versions or
-   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
-   * part of other actions (for example, resizes or recreateInstances calls).
+   * The type of update process. You can specify either PROACTIVE so that the MIG automatically
+   * updates VMs to the latest configurations or OPPORTUNISTIC so that you can select the VMs that
+   * you want to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,10 +251,11 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
 
   /**
    * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
-   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
-   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
-   * actions. If the Updater determines that the minimal update action needed is more disruptive
-   * than most disruptive allowed action you specify it will not perform the update at all.
+   * to forbid any actions, REFRESH to avoid restarting the VM and to limit disruption as much as
+   * possible. RESTART to allow actions that can be applied without instance replacing or REPLACE to
+   * allow all possible actions. If the Updater determines that the minimal update action needed is
+   * more disruptive than most disruptive allowed action you specify it will not perform the update
+   * at all.
    * @return value or {@code null} for none
    */
   public java.lang.String getMostDisruptiveAllowedAction() {
@@ -263,10 +264,11 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
 
   /**
    * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE
-   * to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to
-   * allow actions that can be applied without instance replacing or REPLACE to allow all possible
-   * actions. If the Updater determines that the minimal update action needed is more disruptive
-   * than most disruptive allowed action you specify it will not perform the update at all.
+   * to forbid any actions, REFRESH to avoid restarting the VM and to limit disruption as much as
+   * possible. RESTART to allow actions that can be applied without instance replacing or REPLACE to
+   * allow all possible actions. If the Updater determines that the minimal update action needed is
+   * more disruptive than most disruptive allowed action you specify it will not perform the update
+   * at all.
    * @param mostDisruptiveAllowedAction mostDisruptiveAllowedAction or {@code null} for none
    */
   public InstanceGroupManagerUpdatePolicy setMostDisruptiveAllowedAction(java.lang.String mostDisruptiveAllowedAction) {
@@ -292,10 +294,9 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   }
 
   /**
-   * The type of update process. You can specify either PROACTIVE so that the instance group manager
-   * proactively executes actions in order to bring instances to their target versions or
-   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
-   * part of other actions (for example, resizes or recreateInstances calls).
+   * The type of update process. You can specify either PROACTIVE so that the MIG automatically
+   * updates VMs to the latest configurations or OPPORTUNISTIC so that you can select the VMs that
+   * you want to update.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -303,10 +304,9 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   }
 
   /**
-   * The type of update process. You can specify either PROACTIVE so that the instance group manager
-   * proactively executes actions in order to bring instances to their target versions or
-   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
-   * part of other actions (for example, resizes or recreateInstances calls).
+   * The type of update process. You can specify either PROACTIVE so that the MIG automatically
+   * updates VMs to the latest configurations or OPPORTUNISTIC so that you can select the VMs that
+   * you want to update.
    * @param type type or {@code null} for none
    */
   public InstanceGroupManagerUpdatePolicy setType(java.lang.String type) {

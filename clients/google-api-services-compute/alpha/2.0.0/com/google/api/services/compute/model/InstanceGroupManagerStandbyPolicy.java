@@ -36,6 +36,13 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
   private java.lang.Integer initialDelaySec;
 
   /**
+   * Defines behaviour of using instances from standby pool to resize MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySec() {
@@ -47,6 +54,23 @@ public final class InstanceGroupManagerStandbyPolicy extends com.google.api.clie
    */
   public InstanceGroupManagerStandbyPolicy setInitialDelaySec(java.lang.Integer initialDelaySec) {
     this.initialDelaySec = initialDelaySec;
+    return this;
+  }
+
+  /**
+   * Defines behaviour of using instances from standby pool to resize MIG.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Defines behaviour of using instances from standby pool to resize MIG.
+   * @param mode mode or {@code null} for none
+   */
+  public InstanceGroupManagerStandbyPolicy setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

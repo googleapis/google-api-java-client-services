@@ -84,9 +84,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
-   * from all regions. Otherwise only allows access from clients in the same region as the internal
-   * load balancer.
+   * target field for internal TargetInstance. If set to true, clients can access the Internal
+   * TCP/UDP Load Balancer, Internal HTTP(S) and TCP Proxy Load Balancer from all regions. If false,
+   * only allows access from the local region the load balancer is located at. Note that for
+   * INTERNAL_MANAGED forwarding rules, this field cannot be changed after the forwarding rule is
+   * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,7 +261,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
-   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * DNS zone or not. Non-PSC forwarding rules do not use this field. Once set, this field is not
+   * mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -387,7 +390,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
    * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
    * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment.
+   * service attachment. The target is not mutable once set as a service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -496,9 +499,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
-   * from all regions. Otherwise only allows access from clients in the same region as the internal
-   * load balancer.
+   * target field for internal TargetInstance. If set to true, clients can access the Internal
+   * TCP/UDP Load Balancer, Internal HTTP(S) and TCP Proxy Load Balancer from all regions. If false,
+   * only allows access from the local region the load balancer is located at. Note that for
+   * INTERNAL_MANAGED forwarding rules, this field cannot be changed after the forwarding rule is
+   * created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowGlobalAccess() {
@@ -507,9 +512,11 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This field is used along with the backend_service field for internal load balancing or with the
-   * target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB
-   * from all regions. Otherwise only allows access from clients in the same region as the internal
-   * load balancer.
+   * target field for internal TargetInstance. If set to true, clients can access the Internal
+   * TCP/UDP Load Balancer, Internal HTTP(S) and TCP Proxy Load Balancer from all regions. If false,
+   * only allows access from the local region the load balancer is located at. Note that for
+   * INTERNAL_MANAGED forwarding rules, this field cannot be changed after the forwarding rule is
+   * created.
    * @param allowGlobalAccess allowGlobalAccess or {@code null} for none
    */
   public ForwardingRule setAllowGlobalAccess(java.lang.Boolean allowGlobalAccess) {
@@ -974,7 +981,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
-   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * DNS zone or not. Non-PSC forwarding rules do not use this field. Once set, this field is not
+   * mutable.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoAutomateDnsZone() {
@@ -983,7 +991,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a
-   * DNS zone or not. Non-PSC forwarding rules do not use this field.
+   * DNS zone or not. Non-PSC forwarding rules do not use this field. Once set, this field is not
+   * mutable.
    * @param noAutomateDnsZone noAutomateDnsZone or {@code null} for none
    */
   public ForwardingRule setNoAutomateDnsZone(java.lang.Boolean noAutomateDnsZone) {
@@ -1258,7 +1267,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
    * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
    * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment.
+   * service attachment. The target is not mutable once set as a service attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1275,7 +1284,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forward traffic to Google APIs, provide the name of a supported Google API bundle: - vpc-sc -
    * APIs that support VPC Service Controls. - all-apis - All supported Google APIs. - For Private
    * Service Connect forwarding rules that forward traffic to managed services, the target must be a
-   * service attachment.
+   * service attachment. The target is not mutable once set as a service attachment.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

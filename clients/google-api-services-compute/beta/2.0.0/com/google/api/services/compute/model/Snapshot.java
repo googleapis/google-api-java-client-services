@@ -92,12 +92,35 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Long downloadBytes;
 
   /**
+   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
+   * field is not set by user, but from source disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialCompute;
+
+  /**
    * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
    * prepare for the snapshot process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean guestFlush;
+
+  /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GuestOsFeature> guestOsFeatures;
+
+  static {
+    // hack to force ProGuard to consider GuestOsFeature used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GuestOsFeature.class);
+  }
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -457,6 +480,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
+   * field is not set by user, but from source disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialCompute() {
+    return enableConfidentialCompute;
+  }
+
+  /**
+   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
+   * field is not set by user, but from source disk.
+   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
+   */
+  public Snapshot setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
+    this.enableConfidentialCompute = enableConfidentialCompute;
+    return this;
+  }
+
+  /**
    * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to
    * prepare for the snapshot process.
    * @return value or {@code null} for none
@@ -472,6 +514,27 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setGuestFlush(java.lang.Boolean guestFlush) {
     this.guestFlush = guestFlush;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GuestOsFeature> getGuestOsFeatures() {
+    return guestOsFeatures;
+  }
+
+  /**
+   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
+   * bootable images. Read Enabling guest operating system features to see a list of available
+   * options.
+   * @param guestOsFeatures guestOsFeatures or {@code null} for none
+   */
+  public Snapshot setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {
+    this.guestOsFeatures = guestOsFeatures;
     return this;
   }
 

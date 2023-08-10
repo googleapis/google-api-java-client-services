@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ServiceAttachmentConnectedEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * The url of the consumer network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumerNetwork;
+
+  /**
    * The url of a connected endpoint.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The url of the consumer network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumerNetwork() {
+    return consumerNetwork;
+  }
+
+  /**
+   * The url of the consumer network.
+   * @param consumerNetwork consumerNetwork or {@code null} for none
+   */
+  public ServiceAttachmentConnectedEndpoint setConsumerNetwork(java.lang.String consumerNetwork) {
+    this.consumerNetwork = consumerNetwork;
+    return this;
+  }
 
   /**
    * The url of a connected endpoint.

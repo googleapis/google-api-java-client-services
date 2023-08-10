@@ -104,6 +104,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String instanceGroup;
 
   /**
+   * The repair policy for this managed instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy;
+
+  /**
    * The URL of the instance template that is specified for this managed instance group. The group
    * uses this template to create all new instances in the managed instance group. The templates for
    * existing instances in the group do not change unless you run recreateInstances, run
@@ -418,6 +425,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setInstanceGroup(java.lang.String instanceGroup) {
     this.instanceGroup = instanceGroup;
+    return this;
+  }
+
+  /**
+   * The repair policy for this managed instance group.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceLifecyclePolicy getInstanceLifecyclePolicy() {
+    return instanceLifecyclePolicy;
+  }
+
+  /**
+   * The repair policy for this managed instance group.
+   * @param instanceLifecyclePolicy instanceLifecyclePolicy or {@code null} for none
+   */
+  public InstanceGroupManager setInstanceLifecyclePolicy(InstanceGroupManagerInstanceLifecyclePolicy instanceLifecyclePolicy) {
+    this.instanceLifecyclePolicy = instanceLifecyclePolicy;
     return this;
   }
 

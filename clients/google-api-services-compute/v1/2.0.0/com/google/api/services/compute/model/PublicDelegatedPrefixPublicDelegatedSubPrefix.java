@@ -44,7 +44,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String description;
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+   * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+   * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -122,7 +122,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
+   * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setIpCidrRange(java.lang.String ipCidrRange) {

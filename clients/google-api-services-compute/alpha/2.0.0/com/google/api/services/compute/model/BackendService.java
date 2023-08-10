@@ -329,11 +329,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
-   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
-   * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
-   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
+   * of each individual proxy instance that processes the traffic for the given backend service. If
+   * not set, this feature is considered disabled. Results of the outlier detection algorithm
+   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
+   * executed independently by each proxy instance of the load balancer. In most cases, more than
+   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
+   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
+   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
+   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
+   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
+   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
+   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
+   * managed regional API endpoints or managed services published using Private Service Connect
+   * Applicable backend service types can be: - A global backend service with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
+   * service with the serviceProtocol set to HTTP, HTTPS, or HTTP2, and loadBalancingScheme set to
+   * INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when the
+   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -418,9 +432,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
-   * reference a global policy. If used with a regional backend service, must reference a regional
-   * policy.
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -453,6 +465,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSec;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceUsedBy> usedBys;
 
   /**
    * The network scope of the backends that can be added to the backend service. This field can be
@@ -1160,11 +1178,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
-   * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
-   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
+   * of each individual proxy instance that processes the traffic for the given backend service. If
+   * not set, this feature is considered disabled. Results of the outlier detection algorithm
+   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
+   * executed independently by each proxy instance of the load balancer. In most cases, more than
+   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
+   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
+   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
+   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
+   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
+   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
+   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
+   * managed regional API endpoints or managed services published using Private Service Connect
+   * Applicable backend service types can be: - A global backend service with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
+   * service with the serviceProtocol set to HTTP, HTTPS, or HTTP2, and loadBalancingScheme set to
+   * INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when the
+   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public OutlierDetection getOutlierDetection() {
@@ -1172,11 +1204,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings controlling the eviction of unhealthy hosts from the load balancing pool for the
-   * backend service. If not set, this feature is considered disabled. This field is applicable to
-   * either: - A regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2, or
-   * GRPC, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the
-   * load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
+   * of each individual proxy instance that processes the traffic for the given backend service. If
+   * not set, this feature is considered disabled. Results of the outlier detection algorithm
+   * (ejection of endpoints from the load balancing pool and returning them back to the pool) are
+   * executed independently by each proxy instance of the load balancer. In most cases, more than
+   * one proxy instance handles the traffic received by a backend service. Thus, it is possible that
+   * an unhealthy endpoint is detected and ejected by only some of the proxies, and while this
+   * happens, other proxies may continue to send requests to the same unhealthy endpoint until they
+   * detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in
+   * an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a
+   * Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run,
+   * App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-
+   * managed regional API endpoints or managed services published using Private Service Connect
+   * Applicable backend service types can be: - A global backend service with the
+   * loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend
+   * service with the serviceProtocol set to HTTP, HTTPS, or HTTP2, and loadBalancingScheme set to
+   * INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when the
+   * backend service is referenced by a URL map that is bound to target gRPC proxy that has
+   * validateForProxyless field set to true.
    * @param outlierDetection outlierDetection or {@code null} for none
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
@@ -1367,9 +1413,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
-   * reference a global policy. If used with a regional backend service, must reference a regional
-   * policy.
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceLbPolicy() {
@@ -1378,9 +1422,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
-   * EXTERNAL, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED. If used with a backend service, must
-   * reference a global policy. If used with a regional backend service, must reference a regional
-   * policy.
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
    * @param serviceLbPolicy serviceLbPolicy or {@code null} for none
    */
   public BackendService setServiceLbPolicy(java.lang.String serviceLbPolicy) {
@@ -1450,6 +1492,21 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {
     this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceUsedBy> getUsedBys() {
+    return usedBys;
+  }
+
+  /**
+   * @param usedBys usedBys or {@code null} for none
+   */
+  public BackendService setUsedBys(java.util.List<BackendServiceUsedBy> usedBys) {
+    this.usedBys = usedBys;
     return this;
   }
 

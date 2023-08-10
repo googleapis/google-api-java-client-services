@@ -64,6 +64,13 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   private InterconnectDiagnosticsLinkLACPStatus lacpStatus;
 
   /**
+   * Describes the status of MACsec encryption on this link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectDiagnosticsMacsecStatus macsec;
+
+  /**
    * The operational status of the link.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
    */
   public InterconnectDiagnosticsLinkStatus setLacpStatus(InterconnectDiagnosticsLinkLACPStatus lacpStatus) {
     this.lacpStatus = lacpStatus;
+    return this;
+  }
+
+  /**
+   * Describes the status of MACsec encryption on this link.
+   * @return value or {@code null} for none
+   */
+  public InterconnectDiagnosticsMacsecStatus getMacsec() {
+    return macsec;
+  }
+
+  /**
+   * Describes the status of MACsec encryption on this link.
+   * @param macsec macsec or {@code null} for none
+   */
+  public InterconnectDiagnosticsLinkStatus setMacsec(InterconnectDiagnosticsMacsecStatus macsec) {
+    this.macsec = macsec;
     return this;
   }
 

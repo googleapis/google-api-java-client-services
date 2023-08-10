@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Diagnostics information about interconnect, contains detailed and current technical information
- * about Google's side of the connection.
+ * Diagnostics information about the Interconnect connection, which contains detailed and current
+ * technical information about Google's side of the connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

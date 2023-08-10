@@ -30,6 +30,35 @@ package com.google.api.services.compute.model;
 public final class FutureReservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
+   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoCreatedReservationsDeleteTime;
+
+  /**
+   * Specifies the duration of auto-created reservations. It represents relative time to future
+   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
+   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
+   * resolution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration autoCreatedReservationsDuration;
+
+  /**
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
+   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
+   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
+   * indefinitely, this value should be set to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoDeleteAutoCreatedReservations;
+
+  /**
    * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -134,6 +163,73 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
+   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoCreatedReservationsDeleteTime() {
+    return autoCreatedReservationsDeleteTime;
+  }
+
+  /**
+   * Future timestamp when the FR auto-created reservations will be deleted by GCE. Format of this
+   * field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+   * @param autoCreatedReservationsDeleteTime autoCreatedReservationsDeleteTime or {@code null} for none
+   */
+  public FutureReservation setAutoCreatedReservationsDeleteTime(java.lang.String autoCreatedReservationsDeleteTime) {
+    this.autoCreatedReservationsDeleteTime = autoCreatedReservationsDeleteTime;
+    return this;
+  }
+
+  /**
+   * Specifies the duration of auto-created reservations. It represents relative time to future
+   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
+   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
+   * resolution.
+   * @return value or {@code null} for none
+   */
+  public Duration getAutoCreatedReservationsDuration() {
+    return autoCreatedReservationsDuration;
+  }
+
+  /**
+   * Specifies the duration of auto-created reservations. It represents relative time to future
+   * reservation start_time when auto-created reservations will be automatically deleted by GCE.
+   * Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond
+   * resolution.
+   * @param autoCreatedReservationsDuration autoCreatedReservationsDuration or {@code null} for none
+   */
+  public FutureReservation setAutoCreatedReservationsDuration(Duration autoCreatedReservationsDuration) {
+    this.autoCreatedReservationsDuration = autoCreatedReservationsDuration;
+    return this;
+  }
+
+  /**
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
+   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
+   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
+   * indefinitely, this value should be set to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoDeleteAutoCreatedReservations() {
+    return autoDeleteAutoCreatedReservations;
+  }
+
+  /**
+   * Setting for enabling or disabling automatic deletion for auto-created reservation. If omitted
+   * or set to true, auto-created reservations will be deleted at Future Reservation's end time
+   * (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time,
+   * auto_created_reservations_duration] values is specified. For keeping auto-created reservation
+   * indefinitely, this value should be set to false.
+   * @param autoDeleteAutoCreatedReservations autoDeleteAutoCreatedReservations or {@code null} for none
+   */
+  public FutureReservation setAutoDeleteAutoCreatedReservations(java.lang.Boolean autoDeleteAutoCreatedReservations) {
+    this.autoDeleteAutoCreatedReservations = autoDeleteAutoCreatedReservations;
+    return this;
+  }
 
   /**
    * [Output Only] The creation timestamp for this future reservation in RFC3339 text format.

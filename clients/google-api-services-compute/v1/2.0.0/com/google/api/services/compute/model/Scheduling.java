@@ -47,6 +47,15 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String instanceTerminationAction;
 
   /**
+   * Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd
+   * state is attempted. Its value should be in between 0 and 168 hours with hour granularity and
+   * the default value being 1 hour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration localSsdRecoveryTimeout;
+
+  /**
    * An opaque location hint used to place the instance close to other resources. This field is for
    * use by internal tools that use the public API.
    * The value may be {@code null}.
@@ -132,6 +141,27 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setInstanceTerminationAction(java.lang.String instanceTerminationAction) {
     this.instanceTerminationAction = instanceTerminationAction;
+    return this;
+  }
+
+  /**
+   * Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd
+   * state is attempted. Its value should be in between 0 and 168 hours with hour granularity and
+   * the default value being 1 hour.
+   * @return value or {@code null} for none
+   */
+  public Duration getLocalSsdRecoveryTimeout() {
+    return localSsdRecoveryTimeout;
+  }
+
+  /**
+   * Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd
+   * state is attempted. Its value should be in between 0 and 168 hours with hour granularity and
+   * the default value being 1 hour.
+   * @param localSsdRecoveryTimeout localSsdRecoveryTimeout or {@code null} for none
+   */
+  public Scheduling setLocalSsdRecoveryTimeout(Duration localSsdRecoveryTimeout) {
+    this.localSsdRecoveryTimeout = localSsdRecoveryTimeout;
     return this;
   }
 

@@ -24,7 +24,7 @@ package com.google.api.services.compute.model;
  * manage asynchronous API requests. For more information, read Handling API responses. Operations
  * can be global, regional or zonal. - For global operations, use the `globalOperations` resource. -
  * For regional operations, use the `regionOperations` resource. - For zonal operations, use the
- * `zonalOperations` resource. For more information, read Global, Regional, and Zonal Resources.
+ * `zoneOperations` resource. For more information, read Global, Regional, and Zonal Resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -106,6 +106,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String insertTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata;
+
+  /**
    * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * The value may be {@code null}.
    */
@@ -160,6 +166,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
+   * contain information on all underlying zonal actions and their state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata;
+
+  /**
    * [Output Only] The time that this operation was started by the server. This value is in RFC3339
    * text format.
    * The value may be {@code null}.
@@ -199,7 +213,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String targetLink;
 
   /**
-   * [Output Only] User who requested the operation, for example: `user@example.com`.
+   * [Output Only] User who requested the operation, for example: `user@example.com` or
+   * `alice_smith_identifier (global/workforcePools/example-com-us-employees)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -393,6 +408,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public InstancesBulkInsertOperationMetadata getInstancesBulkInsertOperationMetadata() {
+    return instancesBulkInsertOperationMetadata;
+  }
+
+  /**
+   * @param instancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata or {@code null} for none
+   */
+  public Operation setInstancesBulkInsertOperationMetadata(InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata) {
+    this.instancesBulkInsertOperationMetadata = instancesBulkInsertOperationMetadata;
+    return this;
+  }
+
+  /**
    * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
    * @return value or {@code null} for none
    */
@@ -522,6 +552,25 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
+   * contain information on all underlying zonal actions and their state.
+   * @return value or {@code null} for none
+   */
+  public SetCommonInstanceMetadataOperationMetadata getSetCommonInstanceMetadataOperationMetadata() {
+    return setCommonInstanceMetadataOperationMetadata;
+  }
+
+  /**
+   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
+   * contain information on all underlying zonal actions and their state.
+   * @param setCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata or {@code null} for none
+   */
+  public Operation setSetCommonInstanceMetadataOperationMetadata(SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata) {
+    this.setCommonInstanceMetadataOperationMetadata = setCommonInstanceMetadataOperationMetadata;
+    return this;
+  }
+
+  /**
    * [Output Only] The time that this operation was started by the server. This value is in RFC3339
    * text format.
    * @return value or {@code null} for none
@@ -615,7 +664,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] User who requested the operation, for example: `user@example.com`.
+   * [Output Only] User who requested the operation, for example: `user@example.com` or
+   * `alice_smith_identifier (global/workforcePools/example-com-us-employees)`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUser() {
@@ -623,7 +673,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] User who requested the operation, for example: `user@example.com`.
+   * [Output Only] User who requested the operation, for example: `user@example.com` or
+   * `alice_smith_identifier (global/workforcePools/example-com-us-employees)`.
    * @param user user or {@code null} for none
    */
   public Operation setUser(java.lang.String user) {

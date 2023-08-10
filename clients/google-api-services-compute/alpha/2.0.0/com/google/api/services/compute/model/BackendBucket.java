@@ -60,7 +60,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String creationTimestamp;
 
   /**
-   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * Headers that the Application Load Balancer should add to proxied responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * Headers that the Application Load Balancer should add to proxied responses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomResponseHeaders() {
@@ -207,7 +207,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Headers that the HTTP/S load balancer should add to proxied responses.
+   * Headers that the Application Load Balancer should add to proxied responses.
    * @param customResponseHeaders customResponseHeaders or {@code null} for none
    */
   public BackendBucket setCustomResponseHeaders(java.util.List<java.lang.String> customResponseHeaders) {

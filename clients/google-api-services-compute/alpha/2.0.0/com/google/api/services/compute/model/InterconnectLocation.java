@@ -49,7 +49,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String availabilityZone;
 
   /**
-   * [Output only] List of features available at this interconnect location, which can take one of
+   * [Output only] List of features available at this InterconnectLocation, which can take one of
    * the following values: - MACSEC
    * The value may be {@code null}.
    */
@@ -57,7 +57,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> availableFeatures;
 
   /**
-   * [Output only] List of link types available at this interconnect location, which can take one of
+   * [Output only] List of link types available at this InterconnectLocation, which can take one of
    * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
    * The value may be {@code null}.
    */
@@ -218,7 +218,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] List of features available at this interconnect location, which can take one of
+   * [Output only] List of features available at this InterconnectLocation, which can take one of
    * the following values: - MACSEC
    * @return value or {@code null} for none
    */
@@ -227,7 +227,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] List of features available at this interconnect location, which can take one of
+   * [Output only] List of features available at this InterconnectLocation, which can take one of
    * the following values: - MACSEC
    * @param availableFeatures availableFeatures or {@code null} for none
    */
@@ -237,7 +237,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] List of link types available at this interconnect location, which can take one of
+   * [Output only] List of link types available at this InterconnectLocation, which can take one of
    * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
    * @return value or {@code null} for none
    */
@@ -246,7 +246,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] List of link types available at this interconnect location, which can take one of
+   * [Output only] List of link types available at this InterconnectLocation, which can take one of
    * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
    * @param availableLinkTypes availableLinkTypes or {@code null} for none
    */

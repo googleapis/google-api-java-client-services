@@ -53,6 +53,13 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. Labels for this Fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Output only. The full, unique resource name of this fleet in the format of
    * `projects/{project}/locations/{location}/fleets/{fleet}`. Each Google Cloud project can have at
    * most one fleet resource, named "default".
@@ -136,6 +143,23 @@ public final class Fleet extends com.google.api.client.json.GenericJson {
    */
   public Fleet setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Labels for this Fleet.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels for this Fleet.
+   * @param labels labels or {@code null} for none
+   */
+  public Fleet setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

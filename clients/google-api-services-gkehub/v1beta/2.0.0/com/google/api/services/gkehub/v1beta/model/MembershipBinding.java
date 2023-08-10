@@ -53,6 +53,13 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
   private java.lang.Boolean fleet;
 
   /**
+   * Optional. Labels for this MembershipBinding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The resource name for the membershipbinding itself
    * `projects/{project}/locations/{location}/memberships/{membership}/bindings/{membershipbinding}`
    * The value may be {@code null}.
@@ -140,6 +147,23 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
    */
   public MembershipBinding setFleet(java.lang.Boolean fleet) {
     this.fleet = fleet;
+    return this;
+  }
+
+  /**
+   * Optional. Labels for this MembershipBinding.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels for this MembershipBinding.
+   * @param labels labels or {@code null} for none
+   */
+  public MembershipBinding setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

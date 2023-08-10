@@ -52,13 +52,6 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   private ConfigManagementMembershipSpec configmanagement;
 
   /**
-   * True if value of `feature_spec` was inherited from a fleet-level default.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean fleetInherited;
-
-  /**
    * Fleet observability membership spec
    * The value may be {@code null}.
    */
@@ -78,6 +71,15 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private ServiceMeshMembershipSpec mesh;
+
+  /**
+   * Whether this per-Membership spec was inherited from a fleet-level default. This field can be
+   * updated by users by either overriding a Membership config (updated to USER implicitly) or
+   * setting to FLEET explicitly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Origin origin;
 
   /**
    * Policy Controller spec.
@@ -145,23 +147,6 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
   }
 
   /**
-   * True if value of `feature_spec` was inherited from a fleet-level default.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFleetInherited() {
-    return fleetInherited;
-  }
-
-  /**
-   * True if value of `feature_spec` was inherited from a fleet-level default.
-   * @param fleetInherited fleetInherited or {@code null} for none
-   */
-  public MembershipFeatureSpec setFleetInherited(java.lang.Boolean fleetInherited) {
-    this.fleetInherited = fleetInherited;
-    return this;
-  }
-
-  /**
    * Fleet observability membership spec
    * @return value or {@code null} for none
    */
@@ -209,6 +194,27 @@ public final class MembershipFeatureSpec extends com.google.api.client.json.Gene
    */
   public MembershipFeatureSpec setMesh(ServiceMeshMembershipSpec mesh) {
     this.mesh = mesh;
+    return this;
+  }
+
+  /**
+   * Whether this per-Membership spec was inherited from a fleet-level default. This field can be
+   * updated by users by either overriding a Membership config (updated to USER implicitly) or
+   * setting to FLEET explicitly.
+   * @return value or {@code null} for none
+   */
+  public Origin getOrigin() {
+    return origin;
+  }
+
+  /**
+   * Whether this per-Membership spec was inherited from a fleet-level default. This field can be
+   * updated by users by either overriding a Membership config (updated to USER implicitly) or
+   * setting to FLEET explicitly.
+   * @param origin origin or {@code null} for none
+   */
+  public MembershipFeatureSpec setOrigin(Origin origin) {
+    this.origin = origin;
     return this;
   }
 

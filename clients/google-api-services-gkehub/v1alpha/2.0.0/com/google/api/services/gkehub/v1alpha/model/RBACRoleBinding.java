@@ -51,6 +51,13 @@ public final class RBACRoleBinding extends com.google.api.client.json.GenericJso
   private java.lang.String group;
 
   /**
+   * Optional. Labels for this RBACRolebinding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{
    * namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memb
    * erships/{membership}/rbacrolebindings/{rbacrolebinding}`
@@ -145,6 +152,23 @@ public final class RBACRoleBinding extends com.google.api.client.json.GenericJso
    */
   public RBACRoleBinding setGroup(java.lang.String group) {
     this.group = group;
+    return this;
+  }
+
+  /**
+   * Optional. Labels for this RBACRolebinding.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels for this RBACRolebinding.
+   * @param labels labels or {@code null} for none
+   */
+  public RBACRoleBinding setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

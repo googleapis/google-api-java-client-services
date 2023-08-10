@@ -44,12 +44,29 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   private String deleteTime;
 
   /**
+   * Optional. Labels for this Namespace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The resource name for the namespace
    * `projects/{project}/locations/{location}/namespaces/{namespace}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Namespace-level cluster namespace labels. These labels are applied to the related
+   * namespace of the member clusters bound to the parent Scope. Scope-level labels
+   * (`namespace_labels` in the Fleet Scope resource) take precedence over Namespace-level labels if
+   * they share a key. Keys and values must be Kubernetes-conformant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> namespaceLabels;
 
   /**
    * Required. Scope associated with the namespace
@@ -116,6 +133,23 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Labels for this Namespace.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Labels for this Namespace.
+   * @param labels labels or {@code null} for none
+   */
+  public Namespace setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * The resource name for the namespace
    * `projects/{project}/locations/{location}/namespaces/{namespace}`
    * @return value or {@code null} for none
@@ -131,6 +165,29 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
    */
   public Namespace setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Namespace-level cluster namespace labels. These labels are applied to the related
+   * namespace of the member clusters bound to the parent Scope. Scope-level labels
+   * (`namespace_labels` in the Fleet Scope resource) take precedence over Namespace-level labels if
+   * they share a key. Keys and values must be Kubernetes-conformant.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getNamespaceLabels() {
+    return namespaceLabels;
+  }
+
+  /**
+   * Optional. Namespace-level cluster namespace labels. These labels are applied to the related
+   * namespace of the member clusters bound to the parent Scope. Scope-level labels
+   * (`namespace_labels` in the Fleet Scope resource) take precedence over Namespace-level labels if
+   * they share a key. Keys and values must be Kubernetes-conformant.
+   * @param namespaceLabels namespaceLabels or {@code null} for none
+   */
+  public Namespace setNamespaceLabels(java.util.Map<String, java.lang.String> namespaceLabels) {
+    this.namespaceLabels = namespaceLabels;
     return this;
   }
 

@@ -29,6 +29,54 @@ package com.google.api.services.gkehub.v1.model;
 @SuppressWarnings("javadoc")
 public final class FleetObservabilityFeatureState extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The feature state of default logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityFleetObservabilityLoggingState logging;
+
+  /**
+   * The feature state of fleet monitoring.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FleetObservabilityFleetObservabilityMonitoringState monitoring;
+
+  /**
+   * The feature state of default logging.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityFleetObservabilityLoggingState getLogging() {
+    return logging;
+  }
+
+  /**
+   * The feature state of default logging.
+   * @param logging logging or {@code null} for none
+   */
+  public FleetObservabilityFeatureState setLogging(FleetObservabilityFleetObservabilityLoggingState logging) {
+    this.logging = logging;
+    return this;
+  }
+
+  /**
+   * The feature state of fleet monitoring.
+   * @return value or {@code null} for none
+   */
+  public FleetObservabilityFleetObservabilityMonitoringState getMonitoring() {
+    return monitoring;
+  }
+
+  /**
+   * The feature state of fleet monitoring.
+   * @param monitoring monitoring or {@code null} for none
+   */
+  public FleetObservabilityFeatureState setMonitoring(FleetObservabilityFleetObservabilityMonitoringState monitoring) {
+    this.monitoring = monitoring;
+    return this;
+  }
+
   @Override
   public FleetObservabilityFeatureState set(String fieldName, Object value) {
     return (FleetObservabilityFeatureState) super.set(fieldName, value);

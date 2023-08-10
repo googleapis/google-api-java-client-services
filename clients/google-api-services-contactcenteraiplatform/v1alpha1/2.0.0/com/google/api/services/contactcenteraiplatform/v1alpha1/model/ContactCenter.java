@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Message describing ContactCenter object Next ID: 14
+ * Message describing ContactCenter object Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -73,6 +73,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private InstanceConfig instanceConfig;
+
+  /**
+   * Immutable. The KMS key name to encrypt the user input (`ContactCenter`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
 
   /**
    * Labels as key value pairs
@@ -226,6 +233,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setInstanceConfig(InstanceConfig instanceConfig) {
     this.instanceConfig = instanceConfig;
+    return this;
+  }
+
+  /**
+   * Immutable. The KMS key name to encrypt the user input (`ContactCenter`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Immutable. The KMS key name to encrypt the user input (`ContactCenter`).
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public ContactCenter setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 

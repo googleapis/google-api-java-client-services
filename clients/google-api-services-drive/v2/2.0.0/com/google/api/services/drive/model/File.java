@@ -2126,11 +2126,20 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canModifyContent;
 
     /**
-     * Output only. Whether the current user can modify restrictions on content of this file.
+     * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
+     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canModifyContentRestriction;
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions on the file which
+     * are editor restricted.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyEditorContentRestriction;
 
     /**
      * Output only. Whether the current user can modify the labels on the file.
@@ -2138,6 +2147,14 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canModifyLabels;
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions which are owner
+     * restricted.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyOwnerContentRestriction;
 
     /**
      * Output only. Whether the current user can move children of this folder outside of the shared
@@ -2255,6 +2272,14 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canRemoveChildren;
+
+    /**
+     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * current user.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canRemoveContentRestriction;
 
     /**
      * Output only. Whether the current user can remove a parent from the item without adding another
@@ -2582,7 +2607,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can modify restrictions on content of this file.
+     * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
+     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanModifyContentRestriction() {
@@ -2590,11 +2616,31 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can modify restrictions on content of this file.
+     * Deprecated: Output only. Use one of `canModifyEditorContentRestriction`,
+     * `canModifyOwnerContentRestriction` or `canRemoveContentRestriction`.
      * @param canModifyContentRestriction canModifyContentRestriction or {@code null} for none
      */
     public Capabilities setCanModifyContentRestriction(java.lang.Boolean canModifyContentRestriction) {
       this.canModifyContentRestriction = canModifyContentRestriction;
+      return this;
+    }
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions on the file which
+     * are editor restricted.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyEditorContentRestriction() {
+      return canModifyEditorContentRestriction;
+    }
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions on the file which
+     * are editor restricted.
+     * @param canModifyEditorContentRestriction canModifyEditorContentRestriction or {@code null} for none
+     */
+    public Capabilities setCanModifyEditorContentRestriction(java.lang.Boolean canModifyEditorContentRestriction) {
+      this.canModifyEditorContentRestriction = canModifyEditorContentRestriction;
       return this;
     }
 
@@ -2612,6 +2658,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanModifyLabels(java.lang.Boolean canModifyLabels) {
       this.canModifyLabels = canModifyLabels;
+      return this;
+    }
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions which are owner
+     * restricted.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyOwnerContentRestriction() {
+      return canModifyOwnerContentRestriction;
+    }
+
+    /**
+     * Output only. Whether the current user can add or modify content restrictions which are owner
+     * restricted.
+     * @param canModifyOwnerContentRestriction canModifyOwnerContentRestriction or {@code null} for none
+     */
+    public Capabilities setCanModifyOwnerContentRestriction(java.lang.Boolean canModifyOwnerContentRestriction) {
+      this.canModifyOwnerContentRestriction = canModifyOwnerContentRestriction;
       return this;
     }
 
@@ -2891,6 +2956,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanRemoveChildren(java.lang.Boolean canRemoveChildren) {
       this.canRemoveChildren = canRemoveChildren;
+      return this;
+    }
+
+    /**
+     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * current user.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanRemoveContentRestriction() {
+      return canRemoveContentRestriction;
+    }
+
+    /**
+     * Output only. Whether there is a content restriction on the file that can be removed by the
+     * current user.
+     * @param canRemoveContentRestriction canRemoveContentRestriction or {@code null} for none
+     */
+    public Capabilities setCanRemoveContentRestriction(java.lang.Boolean canRemoveContentRestriction) {
+      this.canRemoveContentRestriction = canRemoveContentRestriction;
       return this;
     }
 

@@ -30,6 +30,15 @@ package com.google.api.services.drive.model;
 public final class ContentRestriction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the content restriction can only be modified or removed by a user who owns the file.
+   * For files in shared drives, any user with `organizer` capabilities can modify or remove this
+   * content restriction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ownerRestricted;
+
+  /**
    * Whether the content of the file is read-only. If a file is read-only, a new revision of the
    * file may not be added, comments may not be added or modified, and the title of the file may not
    * be modified.
@@ -68,6 +77,27 @@ public final class ContentRestriction extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Whether the content restriction can only be modified or removed by a user who owns the file.
+   * For files in shared drives, any user with `organizer` capabilities can modify or remove this
+   * content restriction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOwnerRestricted() {
+    return ownerRestricted;
+  }
+
+  /**
+   * Whether the content restriction can only be modified or removed by a user who owns the file.
+   * For files in shared drives, any user with `organizer` capabilities can modify or remove this
+   * content restriction.
+   * @param ownerRestricted ownerRestricted or {@code null} for none
+   */
+  public ContentRestriction setOwnerRestricted(java.lang.Boolean ownerRestricted) {
+    this.ownerRestricted = ownerRestricted;
+    return this;
+  }
 
   /**
    * Whether the content of the file is read-only. If a file is read-only, a new revision of the

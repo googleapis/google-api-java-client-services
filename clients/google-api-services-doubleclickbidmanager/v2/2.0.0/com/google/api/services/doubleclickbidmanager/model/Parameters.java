@@ -66,9 +66,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used. **Warning:** The `AUDIENCE_COMPOSITION` report type will be deprecated in
-   * Display & Video 360 on **June 8, 2023**. Once deprecated, you will no longer be able to create
-   * new or retrieve existing Query and Report resources of this type.
+   * metrics can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +142,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used. **Warning:** The `AUDIENCE_COMPOSITION` report type will be deprecated in
-   * Display & Video 360 on **June 8, 2023**. Once deprecated, you will no longer be able to create
-   * new or retrieve existing Query and Report resources of this type.
+   * metrics can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -155,9 +151,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
 
   /**
    * The type of the report. The type of the report will dictate what dimesions, filters, and
-   * metrics can be used. **Warning:** The `AUDIENCE_COMPOSITION` report type will be deprecated in
-   * Display & Video 360 on **June 8, 2023**. Once deprecated, you will no longer be able to create
-   * new or retrieve existing Query and Report resources of this type.
+   * metrics can be used.
    * @param type type or {@code null} for none
    */
   public Parameters setType(java.lang.String type) {

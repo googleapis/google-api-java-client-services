@@ -535,6 +535,738 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
       public class Instances {
 
         /**
+         * Checks whether a notebook instance is upgradable.
+         *
+         * Create a request for the method "instances.checkUpgradability".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link CheckUpgradability#execute()} method to invoke the remote operation.
+         *
+         * @param notebookInstance Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @return the request
+         */
+        public CheckUpgradability checkUpgradability(java.lang.String notebookInstance) throws java.io.IOException {
+          CheckUpgradability result = new CheckUpgradability(notebookInstance);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckUpgradability extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.CheckInstanceUpgradabilityResponse> {
+
+          private static final String REST_PATH = "v2/{+notebookInstance}:checkUpgradability";
+
+          private final java.util.regex.Pattern NOTEBOOK_INSTANCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Checks whether a notebook instance is upgradable.
+           *
+           * Create a request for the method "instances.checkUpgradability".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link CheckUpgradability#execute()} method to invoke the remote
+           * operation. <p> {@link CheckUpgradability#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param notebookInstance Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @since 1.13
+           */
+          protected CheckUpgradability(java.lang.String notebookInstance) {
+            super(AIPlatformNotebooks.this, "GET", REST_PATH, null, com.google.api.services.notebooks.v2.model.CheckInstanceUpgradabilityResponse.class);
+            this.notebookInstance = com.google.api.client.util.Preconditions.checkNotNull(notebookInstance, "Required parameter notebookInstance must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NOTEBOOK_INSTANCE_PATTERN.matcher(notebookInstance).matches(),
+                  "Parameter notebookInstance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CheckUpgradability set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckUpgradability) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckUpgradability setAccessToken(java.lang.String accessToken) {
+            return (CheckUpgradability) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckUpgradability setAlt(java.lang.String alt) {
+            return (CheckUpgradability) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckUpgradability setCallback(java.lang.String callback) {
+            return (CheckUpgradability) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckUpgradability setFields(java.lang.String fields) {
+            return (CheckUpgradability) super.setFields(fields);
+          }
+
+          @Override
+          public CheckUpgradability setKey(java.lang.String key) {
+            return (CheckUpgradability) super.setKey(key);
+          }
+
+          @Override
+          public CheckUpgradability setOauthToken(java.lang.String oauthToken) {
+            return (CheckUpgradability) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckUpgradability setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckUpgradability) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckUpgradability setQuotaUser(java.lang.String quotaUser) {
+            return (CheckUpgradability) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckUpgradability setUploadType(java.lang.String uploadType) {
+            return (CheckUpgradability) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckUpgradability setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckUpgradability) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String notebookInstance;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getNotebookInstance() {
+            return notebookInstance;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public CheckUpgradability setNotebookInstance(java.lang.String notebookInstance) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NOTEBOOK_INSTANCE_PATTERN.matcher(notebookInstance).matches(),
+                  "Parameter notebookInstance must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.notebookInstance = notebookInstance;
+            return this;
+          }
+
+          @Override
+          public CheckUpgradability set(String parameterName, Object value) {
+            return (CheckUpgradability) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new Instance in a given project and location.
+         *
+         * Create a request for the method "instances.create".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.notebooks.v2.model.Instance content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+parent}/instances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new Instance in a given project and location.
+           *
+           * Create a request for the method "instances.create".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.notebooks.v2.model.Instance content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. User-defined unique ID of this instance. */
+          @com.google.api.client.util.Key
+          private java.lang.String instanceId;
+
+          /** Required. User-defined unique ID of this instance.
+           */
+          public java.lang.String getInstanceId() {
+            return instanceId;
+          }
+
+          /** Required. User-defined unique ID of this instance. */
+          public Create setInstanceId(java.lang.String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single Instance.
+         *
+         * Create a request for the method "instances.delete".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Deletes a single Instance.
+           *
+           * Create a request for the method "instances.delete".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(AIPlatformNotebooks.this, "DELETE", REST_PATH, null, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+         *
+         * Create a request for the method "instances.diagnose".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.DiagnoseInstanceRequest}
+         * @return the request
+         */
+        public Diagnose diagnose(java.lang.String name, com.google.api.services.notebooks.v2.model.DiagnoseInstanceRequest content) throws java.io.IOException {
+          Diagnose result = new Diagnose(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Diagnose extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:diagnose";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Creates a Diagnostic File and runs Diagnostic Tool given an Instance.
+           *
+           * Create a request for the method "instances.diagnose".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Diagnose#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Diagnose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.DiagnoseInstanceRequest}
+           * @since 1.13
+           */
+          protected Diagnose(java.lang.String name, com.google.api.services.notebooks.v2.model.DiagnoseInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Diagnose set$Xgafv(java.lang.String $Xgafv) {
+            return (Diagnose) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Diagnose setAccessToken(java.lang.String accessToken) {
+            return (Diagnose) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Diagnose setAlt(java.lang.String alt) {
+            return (Diagnose) super.setAlt(alt);
+          }
+
+          @Override
+          public Diagnose setCallback(java.lang.String callback) {
+            return (Diagnose) super.setCallback(callback);
+          }
+
+          @Override
+          public Diagnose setFields(java.lang.String fields) {
+            return (Diagnose) super.setFields(fields);
+          }
+
+          @Override
+          public Diagnose setKey(java.lang.String key) {
+            return (Diagnose) super.setKey(key);
+          }
+
+          @Override
+          public Diagnose setOauthToken(java.lang.String oauthToken) {
+            return (Diagnose) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Diagnose setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Diagnose) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Diagnose setQuotaUser(java.lang.String quotaUser) {
+            return (Diagnose) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Diagnose setUploadType(java.lang.String uploadType) {
+            return (Diagnose) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Diagnose setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Diagnose) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Diagnose setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Diagnose set(String parameterName, Object value) {
+            return (Diagnose) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single Instance.
+         *
+         * Create a request for the method "instances.get".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Instance> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Gets details of a single Instance.
+           *
+           * Create a request for the method "instances.get".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(AIPlatformNotebooks.this, "GET", REST_PATH, null, com.google.api.services.notebooks.v2.model.Instance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -733,6 +1465,763 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Lists instances in a given project and location.
+         *
+         * Create a request for the method "instances.list".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.ListInstancesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/instances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists instances in a given project and location.
+           *
+           * Create a request for the method "instances.list".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AIPlatformNotebooks.this, "GET", REST_PATH, null, com.google.api.services.notebooks.v2.model.ListInstancesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Maximum return size of the list call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum return size of the list call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Maximum return size of the list call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A previous returned page token that can be used to continue listing from the
+           * last result.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A previous returned page token that can be used to continue listing from the last result.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A previous returned page token that can be used to continue listing from the
+           * last result.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * UpdateInstance updates an Instance.
+         *
+         * Create a request for the method "instances.patch".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The name of this notebook instance. Format:
+         *        `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.notebooks.v2.model.Instance content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * UpdateInstance updates an Instance.
+           *
+           * Create a request for the method "instances.patch".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The name of this notebook instance. Format:
+         *        `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.Instance}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.notebooks.v2.model.Instance content) {
+            super(AIPlatformNotebooks.this, "PATCH", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The name of this notebook instance. Format:
+           * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The name of this notebook instance. Format:
+         `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The name of this notebook instance. Format:
+           * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Required. Mask used to update an instance */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask used to update an instance
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Mask used to update an instance */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Allows notebook instances to report their latest instance information to the Notebooks API
+         * server. The server will merge the reported information to the instance metadata store. Do not use
+         * this method directly.
+         *
+         * Create a request for the method "instances.reportInfoSystem".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link ReportInfoSystem#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.ReportInstanceInfoSystemRequest}
+         * @return the request
+         */
+        public ReportInfoSystem reportInfoSystem(java.lang.String name, com.google.api.services.notebooks.v2.model.ReportInstanceInfoSystemRequest content) throws java.io.IOException {
+          ReportInfoSystem result = new ReportInfoSystem(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReportInfoSystem extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:reportInfoSystem";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Allows notebook instances to report their latest instance information to the Notebooks API
+           * server. The server will merge the reported information to the instance metadata store. Do not
+           * use this method directly.
+           *
+           * Create a request for the method "instances.reportInfoSystem".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link ReportInfoSystem#execute()} method to invoke the remote
+           * operation. <p> {@link ReportInfoSystem#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.ReportInstanceInfoSystemRequest}
+           * @since 1.13
+           */
+          protected ReportInfoSystem(java.lang.String name, com.google.api.services.notebooks.v2.model.ReportInstanceInfoSystemRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReportInfoSystem set$Xgafv(java.lang.String $Xgafv) {
+            return (ReportInfoSystem) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReportInfoSystem setAccessToken(java.lang.String accessToken) {
+            return (ReportInfoSystem) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReportInfoSystem setAlt(java.lang.String alt) {
+            return (ReportInfoSystem) super.setAlt(alt);
+          }
+
+          @Override
+          public ReportInfoSystem setCallback(java.lang.String callback) {
+            return (ReportInfoSystem) super.setCallback(callback);
+          }
+
+          @Override
+          public ReportInfoSystem setFields(java.lang.String fields) {
+            return (ReportInfoSystem) super.setFields(fields);
+          }
+
+          @Override
+          public ReportInfoSystem setKey(java.lang.String key) {
+            return (ReportInfoSystem) super.setKey(key);
+          }
+
+          @Override
+          public ReportInfoSystem setOauthToken(java.lang.String oauthToken) {
+            return (ReportInfoSystem) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReportInfoSystem setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReportInfoSystem) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReportInfoSystem setQuotaUser(java.lang.String quotaUser) {
+            return (ReportInfoSystem) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReportInfoSystem setUploadType(java.lang.String uploadType) {
+            return (ReportInfoSystem) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReportInfoSystem setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReportInfoSystem) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public ReportInfoSystem setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReportInfoSystem set(String parameterName, Object value) {
+            return (ReportInfoSystem) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resets a notebook instance.
+         *
+         * Create a request for the method "instances.reset".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Reset#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.ResetInstanceRequest}
+         * @return the request
+         */
+        public Reset reset(java.lang.String name, com.google.api.services.notebooks.v2.model.ResetInstanceRequest content) throws java.io.IOException {
+          Reset result = new Reset(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reset extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:reset";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Resets a notebook instance.
+           *
+           * Create a request for the method "instances.reset".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Reset#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Reset#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.ResetInstanceRequest}
+           * @since 1.13
+           */
+          protected Reset(java.lang.String name, com.google.api.services.notebooks.v2.model.ResetInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reset set$Xgafv(java.lang.String $Xgafv) {
+            return (Reset) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reset setAccessToken(java.lang.String accessToken) {
+            return (Reset) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reset setAlt(java.lang.String alt) {
+            return (Reset) super.setAlt(alt);
+          }
+
+          @Override
+          public Reset setCallback(java.lang.String callback) {
+            return (Reset) super.setCallback(callback);
+          }
+
+          @Override
+          public Reset setFields(java.lang.String fields) {
+            return (Reset) super.setFields(fields);
+          }
+
+          @Override
+          public Reset setKey(java.lang.String key) {
+            return (Reset) super.setKey(key);
+          }
+
+          @Override
+          public Reset setOauthToken(java.lang.String oauthToken) {
+            return (Reset) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reset setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reset) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reset setQuotaUser(java.lang.String quotaUser) {
+            return (Reset) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reset setUploadType(java.lang.String uploadType) {
+            return (Reset) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reset setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reset) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Reset setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reset set(String parameterName, Object value) {
+            return (Reset) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rollbacks a notebook instance to the previous version.
+         *
+         * Create a request for the method "instances.rollback".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.RollbackInstanceRequest}
+         * @return the request
+         */
+        public Rollback rollback(java.lang.String name, com.google.api.services.notebooks.v2.model.RollbackInstanceRequest content) throws java.io.IOException {
+          Rollback result = new Rollback(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rollback extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:rollback";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Rollbacks a notebook instance to the previous version.
+           *
+           * Create a request for the method "instances.rollback".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.RollbackInstanceRequest}
+           * @since 1.13
+           */
+          protected Rollback(java.lang.String name, com.google.api.services.notebooks.v2.model.RollbackInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rollback set$Xgafv(java.lang.String $Xgafv) {
+            return (Rollback) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rollback setAccessToken(java.lang.String accessToken) {
+            return (Rollback) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rollback setAlt(java.lang.String alt) {
+            return (Rollback) super.setAlt(alt);
+          }
+
+          @Override
+          public Rollback setCallback(java.lang.String callback) {
+            return (Rollback) super.setCallback(callback);
+          }
+
+          @Override
+          public Rollback setFields(java.lang.String fields) {
+            return (Rollback) super.setFields(fields);
+          }
+
+          @Override
+          public Rollback setKey(java.lang.String key) {
+            return (Rollback) super.setKey(key);
+          }
+
+          @Override
+          public Rollback setOauthToken(java.lang.String oauthToken) {
+            return (Rollback) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rollback) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rollback setQuotaUser(java.lang.String quotaUser) {
+            return (Rollback) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rollback setUploadType(java.lang.String uploadType) {
+            return (Rollback) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rollback) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Rollback setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Rollback set(String parameterName, Object value) {
+            return (Rollback) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
@@ -877,6 +2366,275 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts a notebook instance.
+         *
+         * Create a request for the method "instances.start".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.StartInstanceRequest}
+         * @return the request
+         */
+        public Start start(java.lang.String name, com.google.api.services.notebooks.v2.model.StartInstanceRequest content) throws java.io.IOException {
+          Start result = new Start(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Start extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:start";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Starts a notebook instance.
+           *
+           * Create a request for the method "instances.start".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.StartInstanceRequest}
+           * @since 1.13
+           */
+          protected Start(java.lang.String name, com.google.api.services.notebooks.v2.model.StartInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Start set$Xgafv(java.lang.String $Xgafv) {
+            return (Start) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Start setAccessToken(java.lang.String accessToken) {
+            return (Start) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Start setAlt(java.lang.String alt) {
+            return (Start) super.setAlt(alt);
+          }
+
+          @Override
+          public Start setCallback(java.lang.String callback) {
+            return (Start) super.setCallback(callback);
+          }
+
+          @Override
+          public Start setFields(java.lang.String fields) {
+            return (Start) super.setFields(fields);
+          }
+
+          @Override
+          public Start setKey(java.lang.String key) {
+            return (Start) super.setKey(key);
+          }
+
+          @Override
+          public Start setOauthToken(java.lang.String oauthToken) {
+            return (Start) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Start) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Start setQuotaUser(java.lang.String quotaUser) {
+            return (Start) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Start setUploadType(java.lang.String uploadType) {
+            return (Start) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Start setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Start) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Start setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Start set(String parameterName, Object value) {
+            return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops a notebook instance.
+         *
+         * Create a request for the method "instances.stop".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.StopInstanceRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.notebooks.v2.model.StopInstanceRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Stops a notebook instance.
+           *
+           * Create a request for the method "instances.stop".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p>
+           * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.StopInstanceRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.notebooks.v2.model.StopInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
           }
         }
         /**
@@ -1028,6 +2786,276 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Upgrades a notebook instance to the latest version.
+         *
+         * Create a request for the method "instances.upgrade".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.UpgradeInstanceRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.notebooks.v2.model.UpgradeInstanceRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Upgrades a notebook instance to the latest version.
+           *
+           * Create a request for the method "instances.upgrade".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.UpgradeInstanceRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.notebooks.v2.model.UpgradeInstanceRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Allows notebook instances to upgrade themselves. Do not use this method directly.
+         *
+         * Create a request for the method "instances.upgradeSystem".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link UpgradeSystem#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.UpgradeInstanceSystemRequest}
+         * @return the request
+         */
+        public UpgradeSystem upgradeSystem(java.lang.String name, com.google.api.services.notebooks.v2.model.UpgradeInstanceSystemRequest content) throws java.io.IOException {
+          UpgradeSystem result = new UpgradeSystem(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpgradeSystem extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:upgradeSystem";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Allows notebook instances to upgrade themselves. Do not use this method directly.
+           *
+           * Create a request for the method "instances.upgradeSystem".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link UpgradeSystem#execute()} method to invoke the remote
+           * operation. <p> {@link UpgradeSystem#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.UpgradeInstanceSystemRequest}
+           * @since 1.13
+           */
+          protected UpgradeSystem(java.lang.String name, com.google.api.services.notebooks.v2.model.UpgradeInstanceSystemRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpgradeSystem set$Xgafv(java.lang.String $Xgafv) {
+            return (UpgradeSystem) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpgradeSystem setAccessToken(java.lang.String accessToken) {
+            return (UpgradeSystem) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpgradeSystem setAlt(java.lang.String alt) {
+            return (UpgradeSystem) super.setAlt(alt);
+          }
+
+          @Override
+          public UpgradeSystem setCallback(java.lang.String callback) {
+            return (UpgradeSystem) super.setCallback(callback);
+          }
+
+          @Override
+          public UpgradeSystem setFields(java.lang.String fields) {
+            return (UpgradeSystem) super.setFields(fields);
+          }
+
+          @Override
+          public UpgradeSystem setKey(java.lang.String key) {
+            return (UpgradeSystem) super.setKey(key);
+          }
+
+          @Override
+          public UpgradeSystem setOauthToken(java.lang.String oauthToken) {
+            return (UpgradeSystem) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpgradeSystem setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpgradeSystem) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpgradeSystem setQuotaUser(java.lang.String quotaUser) {
+            return (UpgradeSystem) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpgradeSystem setUploadType(java.lang.String uploadType) {
+            return (UpgradeSystem) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpgradeSystem setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpgradeSystem) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
+           */
+          public UpgradeSystem setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public UpgradeSystem set(String parameterName, Object value) {
+            return (UpgradeSystem) super.set(parameterName, value);
           }
         }
 

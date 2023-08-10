@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.notebooks.v1.model;
+package com.google.api.services.notebooks.v2.model;
 
 /**
  * Request for creating a notebook instance diagnostic file.
@@ -27,7 +27,7 @@ package com.google.api.services.notebooks.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DiagnoseRuntimeRequest extends com.google.api.client.json.GenericJson {
+public final class DiagnoseInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Defines flags that are used to run the diagnostic tool
@@ -55,7 +55,7 @@ public final class DiagnoseRuntimeRequest extends com.google.api.client.json.Gen
    * Required. Defines flags that are used to run the diagnostic tool
    * @param diagnosticConfig diagnosticConfig or {@code null} for none
    */
-  public DiagnoseRuntimeRequest setDiagnosticConfig(DiagnosticConfig diagnosticConfig) {
+  public DiagnoseInstanceRequest setDiagnosticConfig(DiagnosticConfig diagnosticConfig) {
     this.diagnosticConfig = diagnosticConfig;
     return this;
   }
@@ -72,19 +72,19 @@ public final class DiagnoseRuntimeRequest extends com.google.api.client.json.Gen
    * Optional. Maxmium amount of time in minutes before the operation times out.
    * @param timeoutMinutes timeoutMinutes or {@code null} for none
    */
-  public DiagnoseRuntimeRequest setTimeoutMinutes(java.lang.Integer timeoutMinutes) {
+  public DiagnoseInstanceRequest setTimeoutMinutes(java.lang.Integer timeoutMinutes) {
     this.timeoutMinutes = timeoutMinutes;
     return this;
   }
 
   @Override
-  public DiagnoseRuntimeRequest set(String fieldName, Object value) {
-    return (DiagnoseRuntimeRequest) super.set(fieldName, value);
+  public DiagnoseInstanceRequest set(String fieldName, Object value) {
+    return (DiagnoseInstanceRequest) super.set(fieldName, value);
   }
 
   @Override
-  public DiagnoseRuntimeRequest clone() {
-    return (DiagnoseRuntimeRequest) super.clone();
+  public DiagnoseInstanceRequest clone() {
+    return (DiagnoseInstanceRequest) super.clone();
   }
 
 }

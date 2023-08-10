@@ -14,13 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.notebooks.v1.model;
+package com.google.api.services.notebooks.v2.model;
 
 /**
- * Definition of the types of hardware accelerators that can be used. See [Compute Engine
- * AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).
- * Examples: * `nvidia-tesla-k80` * `nvidia-tesla-p100` * `nvidia-tesla-v100` * `nvidia-tesla-p4` *
- * `nvidia-tesla-t4` * `nvidia-tesla-a100`
+ * The definition of an Event for a managed / semi-managed notebook instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -30,41 +27,65 @@ package com.google.api.services.notebooks.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RuntimeAcceleratorConfig extends com.google.api.client.json.GenericJson {
+public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of cores of this accelerator.
+   * Optional. Event details. This field is used to pass event information.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long coreCount;
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> details;
 
   /**
-   * Accelerator model.
+   * Optional. Event report time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String reportTime;
+
+  /**
+   * Optional. Event type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Count of cores of this accelerator.
+   * Optional. Event details. This field is used to pass event information.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getCoreCount() {
-    return coreCount;
+  public java.util.Map<String, java.lang.String> getDetails() {
+    return details;
   }
 
   /**
-   * Count of cores of this accelerator.
-   * @param coreCount coreCount or {@code null} for none
+   * Optional. Event details. This field is used to pass event information.
+   * @param details details or {@code null} for none
    */
-  public RuntimeAcceleratorConfig setCoreCount(java.lang.Long coreCount) {
-    this.coreCount = coreCount;
+  public Event setDetails(java.util.Map<String, java.lang.String> details) {
+    this.details = details;
     return this;
   }
 
   /**
-   * Accelerator model.
+   * Optional. Event report time.
+   * @return value or {@code null} for none
+   */
+  public String getReportTime() {
+    return reportTime;
+  }
+
+  /**
+   * Optional. Event report time.
+   * @param reportTime reportTime or {@code null} for none
+   */
+  public Event setReportTime(String reportTime) {
+    this.reportTime = reportTime;
+    return this;
+  }
+
+  /**
+   * Optional. Event type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,22 +93,22 @@ public final class RuntimeAcceleratorConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Accelerator model.
+   * Optional. Event type.
    * @param type type or {@code null} for none
    */
-  public RuntimeAcceleratorConfig setType(java.lang.String type) {
+  public Event setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public RuntimeAcceleratorConfig set(String fieldName, Object value) {
-    return (RuntimeAcceleratorConfig) super.set(fieldName, value);
+  public Event set(String fieldName, Object value) {
+    return (Event) super.set(fieldName, value);
   }
 
   @Override
-  public RuntimeAcceleratorConfig clone() {
-    return (RuntimeAcceleratorConfig) super.clone();
+  public Event clone() {
+    return (Event) super.clone();
   }
 
 }

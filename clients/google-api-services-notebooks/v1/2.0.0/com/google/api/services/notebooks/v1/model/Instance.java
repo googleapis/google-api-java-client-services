@@ -178,6 +178,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean migrated;
+
+  /**
    * Output only. The name of this notebook instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * The value may be {@code null}.
@@ -661,6 +668,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMigrated() {
+    return migrated;
+  }
+
+  /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * @param migrated migrated or {@code null} for none
+   */
+  public Instance setMigrated(java.lang.Boolean migrated) {
+    this.migrated = migrated;
     return this;
   }
 

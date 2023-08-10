@@ -70,7 +70,9 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a matching request prior to delivery of the
-   * request to the destination.
+   * request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +90,8 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a response prior to sending the response back to
-   * the client.
+   * the client. If HeaderModifiers are set on both the Destination and the RouteAction, they will
+   * be merged. Conflicts between the two will not be resolved on the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +200,9 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a matching request prior to delivery of the
-   * request to the destination.
+   * request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
    * @return value or {@code null} for none
    */
   public HttpRouteHeaderModifier getRequestHeaderModifier() {
@@ -206,7 +211,9 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a matching request prior to delivery of the
-   * request to the destination.
+   * request to the destination. If HeaderModifiers are set on both the Destination and the
+   * RouteAction, they will be merged. Conflicts between the two will not be resolved on the
+   * configuration.
    * @param requestHeaderModifier requestHeaderModifier or {@code null} for none
    */
   public HttpRouteRouteAction setRequestHeaderModifier(HttpRouteHeaderModifier requestHeaderModifier) {
@@ -239,7 +246,8 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a response prior to sending the response back to
-   * the client.
+   * the client. If HeaderModifiers are set on both the Destination and the RouteAction, they will
+   * be merged. Conflicts between the two will not be resolved on the configuration.
    * @return value or {@code null} for none
    */
   public HttpRouteHeaderModifier getResponseHeaderModifier() {
@@ -248,7 +256,8 @@ public final class HttpRouteRouteAction extends com.google.api.client.json.Gener
 
   /**
    * The specification for modifying the headers of a response prior to sending the response back to
-   * the client.
+   * the client. If HeaderModifiers are set on both the Destination and the RouteAction, they will
+   * be merged. Conflicts between the two will not be resolved on the configuration.
    * @param responseHeaderModifier responseHeaderModifier or {@code null} for none
    */
   public HttpRouteRouteAction setResponseHeaderModifier(HttpRouteHeaderModifier responseHeaderModifier) {

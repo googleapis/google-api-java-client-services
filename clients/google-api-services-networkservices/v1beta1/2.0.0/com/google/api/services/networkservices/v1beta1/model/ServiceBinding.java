@@ -68,6 +68,15 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
   private java.lang.String service;
 
   /**
+   * Output only. The unique identifier of the Service Directory Service against which the Service
+   * Binding resource is validated. This is populated when the Service Binding resource is used in
+   * another resource (like Backend Service). This is of the UUID4 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceId;
+
+  /**
    * Output only. The timestamp when the resource was updated.
    * The value may be {@code null}.
    */
@@ -160,6 +169,27 @@ public final class ServiceBinding extends com.google.api.client.json.GenericJson
    */
   public ServiceBinding setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * Output only. The unique identifier of the Service Directory Service against which the Service
+   * Binding resource is validated. This is populated when the Service Binding resource is used in
+   * another resource (like Backend Service). This is of the UUID4 format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceId() {
+    return serviceId;
+  }
+
+  /**
+   * Output only. The unique identifier of the Service Directory Service against which the Service
+   * Binding resource is validated. This is populated when the Service Binding resource is used in
+   * another resource (like Backend Service). This is of the UUID4 format.
+   * @param serviceId serviceId or {@code null} for none
+   */
+  public ServiceBinding setServiceId(java.lang.String serviceId) {
+    this.serviceId = serviceId;
     return this;
   }
 

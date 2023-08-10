@@ -66,7 +66,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchema extends com.google.a
   private Proto2FileDescriptorProto definition;
 
   /**
-   * Output only. Detailed description of each field that is part of the schema.
+   * Output only. Detailed description of each field that is part of the schema. Fields are
+   * suggested to be displayed by the ordering in this list, not by field number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +198,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchema extends com.google.a
   }
 
   /**
-   * Output only. Detailed description of each field that is part of the schema.
+   * Output only. Detailed description of each field that is part of the schema. Fields are
+   * suggested to be displayed by the ordering in this list, not by field number.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDescription> getFieldDescriptions() {
@@ -205,7 +207,8 @@ public final class GoogleChromePolicyVersionsV1PolicySchema extends com.google.a
   }
 
   /**
-   * Output only. Detailed description of each field that is part of the schema.
+   * Output only. Detailed description of each field that is part of the schema. Fields are
+   * suggested to be displayed by the ordering in this list, not by field number.
    * @param fieldDescriptions fieldDescriptions or {@code null} for none
    */
   public GoogleChromePolicyVersionsV1PolicySchema setFieldDescriptions(java.util.List<GoogleChromePolicyVersionsV1PolicySchemaFieldDescription> fieldDescriptions) {

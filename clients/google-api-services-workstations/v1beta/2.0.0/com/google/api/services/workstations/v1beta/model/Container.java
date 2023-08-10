@@ -31,55 +31,55 @@ package com.google.api.services.workstations.v1beta.model;
 public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
-   * Arguments passed to the entrypoint.
+   * Optional. Arguments passed to the entrypoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * If set, overrides the default ENTRYPOINT specified by the image.
+   * Optional. If set, overrides the default ENTRYPOINT specified by the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> command;
 
   /**
-   * Environment variables passed to the container's entrypoint.
+   * Optional. Environment variables passed to the container's entrypoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> env;
 
   /**
-   * A Docker container image that defines a custom environment. Cloud Workstations provides a
-   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
-   * images), but you can create your own [custom container
+   * Optional. A Docker container image that defines a custom environment. Cloud Workstations
+   * provides a number of [preconfigured images](https://cloud.google.com/workstations/docs
+   * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
    * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.s
+   * be publicly accessible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * If set, overrides the USER specified in the image with the given uid.
+   * Optional. If set, overrides the USER specified in the image with the given uid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer runAsUser;
 
   /**
-   * If set, overrides the default DIR specified by the image.
+   * Optional. If set, overrides the default DIR specified by the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workingDir;
 
   /**
-   * Arguments passed to the entrypoint.
+   * Optional. Arguments passed to the entrypoint.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -87,7 +87,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Arguments passed to the entrypoint.
+   * Optional. Arguments passed to the entrypoint.
    * @param args args or {@code null} for none
    */
   public Container setArgs(java.util.List<java.lang.String> args) {
@@ -96,7 +96,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the default ENTRYPOINT specified by the image.
+   * Optional. If set, overrides the default ENTRYPOINT specified by the image.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -104,7 +104,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the default ENTRYPOINT specified by the image.
+   * Optional. If set, overrides the default ENTRYPOINT specified by the image.
    * @param command command or {@code null} for none
    */
   public Container setCommand(java.util.List<java.lang.String> command) {
@@ -113,7 +113,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the container's entrypoint.
+   * Optional. Environment variables passed to the container's entrypoint.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnv() {
@@ -121,7 +121,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the container's entrypoint.
+   * Optional. Environment variables passed to the container's entrypoint.
    * @param env env or {@code null} for none
    */
   public Container setEnv(java.util.Map<String, java.lang.String> env) {
@@ -130,13 +130,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Docker container image that defines a custom environment. Cloud Workstations provides a
-   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
-   * images), but you can create your own [custom container
+   * Optional. A Docker container image that defines a custom environment. Cloud Workstations
+   * provides a number of [preconfigured images](https://cloud.google.com/workstations/docs
+   * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
    * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.s
+   * be publicly accessible.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -144,13 +144,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Docker container image that defines a custom environment. Cloud Workstations provides a
-   * number of [preconfigured images](https://cloud.google.com/workstations/docs/preconfigured-base-
-   * images), but you can create your own [custom container
+   * Optional. A Docker container image that defines a custom environment. Cloud Workstations
+   * provides a number of [preconfigured images](https://cloud.google.com/workstations/docs
+   * /preconfigured-base-images), but you can create your own [custom container
    * images](https://cloud.google.com/workstations/docs/custom-container-images). If using a private
    * image, the `host.gceInstance.serviceAccount` field must be specified in the workstation
    * configuration and must have permission to pull the specified image. Otherwise, the image must
-   * be publicly accessible.s
+   * be publicly accessible.
    * @param image image or {@code null} for none
    */
   public Container setImage(java.lang.String image) {
@@ -159,7 +159,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the USER specified in the image with the given uid.
+   * Optional. If set, overrides the USER specified in the image with the given uid.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRunAsUser() {
@@ -167,7 +167,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the USER specified in the image with the given uid.
+   * Optional. If set, overrides the USER specified in the image with the given uid.
    * @param runAsUser runAsUser or {@code null} for none
    */
   public Container setRunAsUser(java.lang.Integer runAsUser) {
@@ -176,7 +176,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the default DIR specified by the image.
+   * Optional. If set, overrides the default DIR specified by the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkingDir() {
@@ -184,7 +184,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, overrides the default DIR specified by the image.
+   * Optional. If set, overrides the default DIR specified by the image.
    * @param workingDir workingDir or {@code null} for none
    */
   public Container setWorkingDir(java.lang.String workingDir) {

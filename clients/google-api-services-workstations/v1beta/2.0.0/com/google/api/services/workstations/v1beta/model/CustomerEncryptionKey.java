@@ -35,7 +35,7 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Immutable. The name of the Google Cloud KMS encryption key. For example,
-   * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`. The key must be
+   * `"projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"`. The key must be
    * in the same region as the workstation configuration.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Immutable. The name of the Google Cloud KMS encryption key. For example,
-   * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`. The key must be
+   * `"projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"`. The key must be
    * in the same region as the workstation configuration.
    * @return value or {@code null} for none
    */
@@ -65,7 +65,7 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
 
   /**
    * Immutable. The name of the Google Cloud KMS encryption key. For example,
-   * `projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME`. The key must be
+   * `"projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"`. The key must be
    * in the same region as the workstation configuration.
    * @param kmsKey kmsKey or {@code null} for none
    */

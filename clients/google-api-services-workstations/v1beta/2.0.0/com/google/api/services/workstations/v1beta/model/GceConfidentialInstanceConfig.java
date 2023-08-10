@@ -31,14 +31,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceConfidentialInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the instance has confidential compute enabled.
+   * Optional. Whether the instance has confidential compute enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
 
   /**
-   * Whether the instance has confidential compute enabled.
+   * Optional. Whether the instance has confidential compute enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -46,7 +46,7 @@ public final class GceConfidentialInstanceConfig extends com.google.api.client.j
   }
 
   /**
-   * Whether the instance has confidential compute enabled.
+   * Optional. Whether the instance has confidential compute enabled.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public GceConfidentialInstanceConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {

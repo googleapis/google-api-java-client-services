@@ -31,14 +31,15 @@ package com.google.api.services.workstations.v1beta.model;
 public final class ListWorkstationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
+   * Optional. Token to retrieve the next page of results, or empty if there are no more results in
+   * the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Unreachable resources.
+   * Optional. Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class ListWorkstationsResponse extends com.google.api.client.json.G
   private java.util.List<Workstation> workstations;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
+   * Optional. Token to retrieve the next page of results, or empty if there are no more results in
+   * the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -60,7 +62,8 @@ public final class ListWorkstationsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
+   * Optional. Token to retrieve the next page of results, or empty if there are no more results in
+   * the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListWorkstationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -69,7 +72,7 @@ public final class ListWorkstationsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Unreachable resources.
+   * Optional. Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -77,7 +80,7 @@ public final class ListWorkstationsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Unreachable resources.
+   * Optional. Unreachable resources.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListWorkstationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

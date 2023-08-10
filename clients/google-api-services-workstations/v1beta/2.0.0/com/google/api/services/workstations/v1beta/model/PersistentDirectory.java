@@ -38,7 +38,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   private GceRegionalPersistentDisk gcePd;
 
   /**
-   * Location of this directory in the running workstation.
+   * Optional. Location of this directory in the running workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location of this directory in the running workstation.
+   * Optional. Location of this directory in the running workstation.
    * @return value or {@code null} for none
    */
   public java.lang.String getMountPath() {
@@ -70,7 +70,7 @@ public final class PersistentDirectory extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location of this directory in the running workstation.
+   * Optional. Location of this directory in the running workstation.
    * @param mountPath mountPath or {@code null} for none
    */
   public PersistentDirectory setMountPath(java.lang.String mountPath) {

@@ -945,17 +945,23 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not actually
+           * apply it.
+           */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** If set, validate the request and preview the review, but do not actually apply it.
+          /** Optional. If set, validate the request and preview the review, but do not actually apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not actually
+           * apply it.
+           */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -1107,22 +1113,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, the request will be rejected if the latest version of the workstation cluster
-           * on the server does not have this ETag.
+           * Optional. If set, the request will be rejected if the latest version of the workstation
+           * cluster on the server does not have this ETag.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** If set, the request will be rejected if the latest version of the workstation cluster on the server
-         does not have this ETag.
+          /** Optional. If set, the request will be rejected if the latest version of the workstation cluster on
+         the server does not have this ETag.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * If set, the request will be rejected if the latest version of the workstation cluster
-           * on the server does not have this ETag.
+           * Optional. If set, the request will be rejected if the latest version of the workstation
+           * cluster on the server does not have this ETag.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -1130,15 +1136,15 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, any workstation configurations and workstations in the workstation cluster are
-           * also deleted. Otherwise, the request only works if the workstation cluster has no
-           * configurations or workstations.
+           * Optional. If set, any workstation configurations and workstations in the workstation
+           * cluster are also deleted. Otherwise, the request only works if the workstation cluster
+           * has no configurations or workstations.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** If set, any workstation configurations and workstations in the workstation cluster are also
-         deleted. Otherwise, the request only works if the workstation cluster has no configurations or
+          /** Optional. If set, any workstation configurations and workstations in the workstation cluster are
+         also deleted. Otherwise, the request only works if the workstation cluster has no configurations or
          workstations.
            */
           public java.lang.Boolean getForce() {
@@ -1146,26 +1152,30 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, any workstation configurations and workstations in the workstation cluster are
-           * also deleted. Otherwise, the request only works if the workstation cluster has no
-           * configurations or workstations.
+           * Optional. If set, any workstation configurations and workstations in the workstation
+           * cluster are also deleted. Otherwise, the request only works if the workstation cluster
+           * has no configurations or workstations.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
             return this;
           }
 
-          /** If set, validate the request and preview the review, but do not apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not apply it.
+           */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** If set, validate the request and preview the review, but do not apply it.
+          /** Optional. If set, validate the request and preview the review, but do not apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** If set, validate the request and preview the review, but do not apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not apply it.
+           */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -1447,33 +1457,33 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** Maximum number of items to return. */
+          /** Optional. Maximum number of items to return. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of items to return.
+          /** Optional. Maximum number of items to return.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of items to return. */
+          /** Optional. Maximum number of items to return. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** next_page_token value returned from a previous List request, if any. */
+          /** Optional. next_page_token value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** next_page_token value returned from a previous List request, if any.
+          /** Optional. next_page_token value returned from a previous List request, if any.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** next_page_token value returned from a previous List request, if any. */
+          /** Optional. next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1492,7 +1502,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the workstations server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Full name of this resource.
+         * @param name Full name of this workstation cluster.
          * @param content the {@link com.google.api.services.workstations.v1beta.model.WorkstationCluster}
          * @return the request
          */
@@ -1520,7 +1530,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Full name of this resource.
+           * @param name Full name of this workstation cluster.
            * @param content the {@link com.google.api.services.workstations.v1beta.model.WorkstationCluster}
            * @since 1.13
            */
@@ -1589,17 +1599,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Full name of this resource. */
+          /** Full name of this workstation cluster. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Full name of this resource.
+          /** Full name of this workstation cluster.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Full name of this resource. */
+          /** Full name of this workstation cluster. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1611,22 +1621,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * If set, and the workstation cluster is not found, a new workstation cluster will be
-           * created. In this situation, update_mask is ignored.
+           * Optional. If set, and the workstation cluster is not found, a new workstation cluster
+           * will be created. In this situation, update_mask is ignored.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** If set, and the workstation cluster is not found, a new workstation cluster will be created. In
-         this situation, update_mask is ignored.
+          /** Optional. If set, and the workstation cluster is not found, a new workstation cluster will be
+         created. In this situation, update_mask is ignored.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * If set, and the workstation cluster is not found, a new workstation cluster will be
-           * created. In this situation, update_mask is ignored.
+           * Optional. If set, and the workstation cluster is not found, a new workstation cluster
+           * will be created. In this situation, update_mask is ignored.
            */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
@@ -1655,17 +1665,23 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not actually
+           * apply it.
+           */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** If set, validate the request and preview the review, but do not actually apply it.
+          /** Optional. If set, validate the request and preview the review, but do not actually apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
-          /** If set, validate the request and preview the review, but do not actually apply it. */
+          /**
+           * Optional. If set, validate the request and preview the review, but do not actually
+           * apply it.
+           */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -1824,19 +1840,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             public Create setValidateOnly(java.lang.Boolean validateOnly) {
               this.validateOnly = validateOnly;
@@ -1989,21 +2007,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, the request is rejected if the latest version of the workstation
+             * Optional. If set, the request is rejected if the latest version of the workstation
              * configuration on the server does not have this ETag.
              */
             @com.google.api.client.util.Key
             private java.lang.String etag;
 
-            /** If set, the request is rejected if the latest version of the workstation configuration on the
-           server does not have this ETag.
+            /** Optional. If set, the request is rejected if the latest version of the workstation configuration on
+           the server does not have this ETag.
              */
             public java.lang.String getEtag() {
               return etag;
             }
 
             /**
-             * If set, the request is rejected if the latest version of the workstation
+             * Optional. If set, the request is rejected if the latest version of the workstation
              * configuration on the server does not have this ETag.
              */
             public Delete setEtag(java.lang.String etag) {
@@ -2012,22 +2030,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, any workstations in the workstation configuration are also deleted.
+             * Optional. If set, any workstations in the workstation configuration are also deleted.
              * Otherwise, the request works only if the workstation configuration has no
              * workstations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** If set, any workstations in the workstation configuration are also deleted. Otherwise, the request
-           works only if the workstation configuration has no workstations.
+            /** Optional. If set, any workstations in the workstation configuration are also deleted. Otherwise,
+           the request works only if the workstation configuration has no workstations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * If set, any workstations in the workstation configuration are also deleted.
+             * Optional. If set, any workstations in the workstation configuration are also deleted.
              * Otherwise, the request works only if the workstation configuration has no
              * workstations.
              */
@@ -2037,19 +2055,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             public Delete setValidateOnly(java.lang.Boolean validateOnly) {
               this.validateOnly = validateOnly;
@@ -2530,33 +2550,33 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return this;
             }
 
-            /** Maximum number of items to return. */
+            /** Optional. Maximum number of items to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of items to return.
+            /** Optional. Maximum number of items to return.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Maximum number of items to return. */
+            /** Optional. Maximum number of items to return. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** next_page_token value returned from a previous List request, if any. */
+            /** Optional. next_page_token value returned from a previous List request, if any. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** next_page_token value returned from a previous List request, if any.
+            /** Optional. next_page_token value returned from a previous List request, if any.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** next_page_token value returned from a previous List request, if any. */
+            /** Optional. next_page_token value returned from a previous List request, if any. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2703,33 +2723,33 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return this;
             }
 
-            /** Maximum number of items to return. */
+            /** Optional. Maximum number of items to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of items to return.
+            /** Optional. Maximum number of items to return.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Maximum number of items to return. */
+            /** Optional. Maximum number of items to return. */
             public ListUsable setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** next_page_token value returned from a previous List request, if any. */
+            /** Optional. next_page_token value returned from a previous List request, if any. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** next_page_token value returned from a previous List request, if any.
+            /** Optional. next_page_token value returned from a previous List request, if any.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** next_page_token value returned from a previous List request, if any. */
+            /** Optional. next_page_token value returned from a previous List request, if any. */
             public ListUsable setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2748,7 +2768,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the workstations server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Full name of this resource.
+           * @param name Full name of this workstation configuration.
            * @param content the {@link com.google.api.services.workstations.v1beta.model.WorkstationConfig}
            * @return the request
            */
@@ -2776,7 +2796,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Full name of this resource.
+             * @param name Full name of this workstation configuration.
              * @param content the {@link com.google.api.services.workstations.v1beta.model.WorkstationConfig}
              * @since 1.13
              */
@@ -2845,17 +2865,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Full name of this resource. */
+            /** Full name of this workstation configuration. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Full name of this resource.
+            /** Full name of this workstation configuration.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Full name of this resource. */
+            /** Full name of this workstation configuration. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2867,21 +2887,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set and the workstation configuration is not found, a new workstation
+             * Optional. If set and the workstation configuration is not found, a new workstation
              * configuration will be created. In this situation, update_mask is ignored.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** If set and the workstation configuration is not found, a new workstation configuration will be
-           created. In this situation, update_mask is ignored.
+            /** Optional. If set and the workstation configuration is not found, a new workstation configuration
+           will be created. In this situation, update_mask is ignored.
              */
             public java.lang.Boolean getAllowMissing() {
               return allowMissing;
             }
 
             /**
-             * If set and the workstation configuration is not found, a new workstation
+             * Optional. If set and the workstation configuration is not found, a new workstation
              * configuration will be created. In this situation, update_mask is ignored.
              */
             public Patch setAllowMissing(java.lang.Boolean allowMissing) {
@@ -2912,19 +2932,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * If set, validate the request and preview the review, but do not actually apply it.
+             * Optional. If set, validate the request and preview the review, but do not actually
+             * apply it.
              */
             public Patch setValidateOnly(java.lang.Boolean validateOnly) {
               this.validateOnly = validateOnly;
@@ -3382,19 +3404,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               public Create setValidateOnly(java.lang.Boolean validateOnly) {
                 this.validateOnly = validateOnly;
@@ -3547,22 +3571,22 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set, the request will be rejected if the latest version of the workstation on
-               * the server does not have this ETag.
+               * Optional. If set, the request will be rejected if the latest version of the
+               * workstation on the server does not have this ETag.
                */
               @com.google.api.client.util.Key
               private java.lang.String etag;
 
-              /** If set, the request will be rejected if the latest version of the workstation on the server does
-             not have this ETag.
+              /** Optional. If set, the request will be rejected if the latest version of the workstation on the
+             server does not have this ETag.
                */
               public java.lang.String getEtag() {
                 return etag;
               }
 
               /**
-               * If set, the request will be rejected if the latest version of the workstation on
-               * the server does not have this ETag.
+               * Optional. If set, the request will be rejected if the latest version of the
+               * workstation on the server does not have this ETag.
                */
               public Delete setEtag(java.lang.String etag) {
                 this.etag = etag;
@@ -3570,19 +3594,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               public Delete setValidateOnly(java.lang.Boolean validateOnly) {
                 this.validateOnly = validateOnly;
@@ -4202,33 +4228,33 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 return this;
               }
 
-              /** Maximum number of items to return. */
+              /** Optional. Maximum number of items to return. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Maximum number of items to return.
+              /** Optional. Maximum number of items to return.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** Maximum number of items to return. */
+              /** Optional. Maximum number of items to return. */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** next_page_token value returned from a previous List request, if any. */
+              /** Optional. next_page_token value returned from a previous List request, if any. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** next_page_token value returned from a previous List request, if any.
+              /** Optional. next_page_token value returned from a previous List request, if any.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** next_page_token value returned from a previous List request, if any. */
+              /** Optional. next_page_token value returned from a previous List request, if any. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -4375,33 +4401,33 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 return this;
               }
 
-              /** Maximum number of items to return. */
+              /** Optional. Maximum number of items to return. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Maximum number of items to return.
+              /** Optional. Maximum number of items to return.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** Maximum number of items to return. */
+              /** Optional. Maximum number of items to return. */
               public ListUsable setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** next_page_token value returned from a previous List request, if any. */
+              /** Optional. next_page_token value returned from a previous List request, if any. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** next_page_token value returned from a previous List request, if any.
+              /** Optional. next_page_token value returned from a previous List request, if any.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** next_page_token value returned from a previous List request, if any. */
+              /** Optional. next_page_token value returned from a previous List request, if any. */
               public ListUsable setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -4420,7 +4446,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the workstations server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Full name of this resource.
+             * @param name Full name of this workstation.
              * @param content the {@link com.google.api.services.workstations.v1beta.model.Workstation}
              * @return the request
              */
@@ -4448,7 +4474,7 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Full name of this resource.
+               * @param name Full name of this workstation.
                * @param content the {@link com.google.api.services.workstations.v1beta.model.Workstation}
                * @since 1.13
                */
@@ -4517,17 +4543,17 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Full name of this resource. */
+              /** Full name of this workstation. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Full name of this resource.
+              /** Full name of this workstation.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Full name of this resource. */
+              /** Full name of this workstation. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4539,21 +4565,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set and the workstation configuration is not found, a new workstation
+               * Optional. If set and the workstation configuration is not found, a new workstation
                * configuration is created. In this situation, update_mask is ignored.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** If set and the workstation configuration is not found, a new workstation configuration is created.
-             In this situation, update_mask is ignored.
+              /** Optional. If set and the workstation configuration is not found, a new workstation configuration is
+             created. In this situation, update_mask is ignored.
                */
               public java.lang.Boolean getAllowMissing() {
                 return allowMissing;
               }
 
               /**
-               * If set and the workstation configuration is not found, a new workstation
+               * Optional. If set and the workstation configuration is not found, a new workstation
                * configuration is created. In this situation, update_mask is ignored.
                */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
@@ -4584,19 +4610,21 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * If set, validate the request and preview the review, but do not actually apply it.
+               * Optional. If set, validate the request and preview the review, but do not actually
+               * apply it.
                */
               public Patch setValidateOnly(java.lang.Boolean validateOnly) {
                 this.validateOnly = validateOnly;

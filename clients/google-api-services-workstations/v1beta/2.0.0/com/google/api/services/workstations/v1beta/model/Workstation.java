@@ -31,43 +31,43 @@ package com.google.api.services.workstations.v1beta.model;
 public final class Workstation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation was soft-deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deleteTime;
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Environment variables passed to the workstation container's entrypoint.
+   * Optional. Environment variables passed to the workstation container's entrypoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> env;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,23 +84,23 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation and that are also propagated to the underlying Compute Engine resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation is currently being updated to match its
+   * intended state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,21 +114,21 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation was most recently updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -136,7 +136,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @param annotations annotations or {@code null} for none
    */
   public Workstation setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -145,7 +145,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -153,7 +153,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation was created.
    * @param createTime createTime or {@code null} for none
    */
   public Workstation setCreateTime(String createTime) {
@@ -162,7 +162,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation was soft-deleted.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -170,7 +170,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation was soft-deleted.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public Workstation setDeleteTime(String deleteTime) {
@@ -179,7 +179,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -187,7 +187,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation.
    * @param displayName displayName or {@code null} for none
    */
   public Workstation setDisplayName(java.lang.String displayName) {
@@ -196,7 +196,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the workstation container's entrypoint.
+   * Optional. Environment variables passed to the workstation container's entrypoint.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnv() {
@@ -204,7 +204,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Environment variables passed to the workstation container's entrypoint.
+   * Optional. Environment variables passed to the workstation container's entrypoint.
    * @param env env or {@code null} for none
    */
   public Workstation setEnv(java.util.Map<String, java.lang.String> env) {
@@ -213,8 +213,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -222,8 +222,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public Workstation setEtag(java.lang.String etag) {
@@ -255,8 +255,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation and that are also propagated to the underlying Compute Engine resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -264,8 +264,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation and that are also propagated to the underlying Compute Engine resources.
    * @param labels labels or {@code null} for none
    */
   public Workstation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -274,7 +274,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -282,7 +282,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation.
    * @param name name or {@code null} for none
    */
   public Workstation setName(java.lang.String name) {
@@ -291,8 +291,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation is currently being updated to match its
+   * intended state.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -300,8 +300,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation is currently being updated to match its
+   * intended state.
    * @param reconciling reconciling or {@code null} for none
    */
   public Workstation setReconciling(java.lang.Boolean reconciling) {
@@ -327,7 +327,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -335,7 +335,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation.
    * @param uid uid or {@code null} for none
    */
   public Workstation setUid(java.lang.String uid) {
@@ -344,7 +344,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation was most recently updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -352,7 +352,7 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Workstation setUpdateTime(String updateTime) {

@@ -31,7 +31,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of the type and count of accelerator cards attached to the instance.
+   * Optional. A list of the type and count of accelerator cards attached to the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,43 +44,69 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
-   * Defaults to `50` GB.
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * A set of Compute Engine Confidential VM instance options.
+   * Optional. A set of Compute Engine Confidential VM instance options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GceConfidentialInstanceConfig confidentialInstanceConfig;
 
   /**
-   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
-   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
-   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
-   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
-   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
+   * Optional. When set to true, disables public IP addresses for VMs. If you disable public IP
+   * addresses, you must set up Private Google Access or Cloud NAT on your network. If you use
+   * Private Google Access and you use `private.googleapis.com` or `restricted.googleapis.com` for
+   * Container Registry and Artifact Registry, make sure that you set up DNS records for domains
+   * `*.gcr.io` and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disablePublicIpAddresses;
 
   /**
-   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
-   * about machine types that Cloud Workstations supports, see the list of [available machine
-   * types](https://cloud.google.com/workstations/docs/available-machine-types).
+   * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created under this
+   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
+   * inside your workstation. Before enabling nested virtualization, consider the following
+   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
+   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on workstation configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableNestedVirtualization;
+
+  /**
+   * Optional. The type of machine to use for VM instances—for example, `"e2-standard-4"`. For more
+   * information about machine types that Cloud Workstations supports, see the list of [available
+   * machine types](https://cloud.google.com/workstations/docs/available-machine-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * The number of VMs that the system should keep idle so that new workstations can be started
-   * quickly for new users. Defaults to `0` in the API.
+   * Optional. The number of VMs that the system should keep idle so that new workstations can be
+   * started quickly for new users. Defaults to `0` in the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +121,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.Integer pooledInstances;
 
   /**
-   * The email address of the service account for Cloud Workstations VMs created with this
+   * Optional. The email address of the service account for Cloud Workstations VMs created with this
    * configuration. When specified, be sure that the service account has `logginglogEntries.create`
    * permission on the project so it can write logs out to Cloud Logging. If using a custom
    * container image, the service account must have permissions to pull the specified image. If you
@@ -110,14 +136,14 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * A set of Compute Engine Shielded instance options.
+   * Optional. A set of Compute Engine Shielded instance options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GceShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
-   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * Optional. Network tags to add to the Compute Engine VMs backing the workstations. This option
    * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
    * created with this configuration. These network tags enable the creation of [firewall
    * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
@@ -127,7 +153,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * A list of the type and count of accelerator cards attached to the instance.
+   * Optional. A list of the type and count of accelerator cards attached to the instance.
    * @return value or {@code null} for none
    */
   public java.util.List<Accelerator> getAccelerators() {
@@ -135,7 +161,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the type and count of accelerator cards attached to the instance.
+   * Optional. A list of the type and count of accelerator cards attached to the instance.
    * @param accelerators accelerators or {@code null} for none
    */
   public GceInstance setAccelerators(java.util.List<Accelerator> accelerators) {
@@ -144,8 +170,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
-   * Defaults to `50` GB.
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBootDiskSizeGb() {
@@ -153,8 +179,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is `30` GB.
-   * Defaults to `50` GB.
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
    * @param bootDiskSizeGb bootDiskSizeGb or {@code null} for none
    */
   public GceInstance setBootDiskSizeGb(java.lang.Integer bootDiskSizeGb) {
@@ -163,7 +189,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Compute Engine Confidential VM instance options.
+   * Optional. A set of Compute Engine Confidential VM instance options.
    * @return value or {@code null} for none
    */
   public GceConfidentialInstanceConfig getConfidentialInstanceConfig() {
@@ -171,7 +197,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Compute Engine Confidential VM instance options.
+   * Optional. A set of Compute Engine Confidential VM instance options.
    * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
    */
   public GceInstance setConfidentialInstanceConfig(GceConfidentialInstanceConfig confidentialInstanceConfig) {
@@ -180,11 +206,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
-   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
-   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
-   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
-   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
+   * Optional. When set to true, disables public IP addresses for VMs. If you disable public IP
+   * addresses, you must set up Private Google Access or Cloud NAT on your network. If you use
+   * Private Google Access and you use `private.googleapis.com` or `restricted.googleapis.com` for
+   * Container Registry and Artifact Registry, make sure that you set up DNS records for domains
+   * `*.gcr.io` and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisablePublicIpAddresses() {
@@ -192,11 +218,11 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you
-   * must set up Private Google Access or Cloud NAT on your network. If you use Private Google
-   * Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container
-   * Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io`
-   * and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
+   * Optional. When set to true, disables public IP addresses for VMs. If you disable public IP
+   * addresses, you must set up Private Google Access or Cloud NAT on your network. If you use
+   * Private Google Access and you use `private.googleapis.com` or `restricted.googleapis.com` for
+   * Container Registry and Artifact Registry, make sure that you set up DNS records for domains
+   * `*.gcr.io` and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
    * @param disablePublicIpAddresses disablePublicIpAddresses or {@code null} for none
    */
   public GceInstance setDisablePublicIpAddresses(java.lang.Boolean disablePublicIpAddresses) {
@@ -205,9 +231,64 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
-   * about machine types that Cloud Workstations supports, see the list of [available machine
-   * types](https://cloud.google.com/workstations/docs/available-machine-types).
+   * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created under this
+   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
+   * inside your workstation. Before enabling nested virtualization, consider the following
+   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
+   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on workstation configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableNestedVirtualization() {
+    return enableNestedVirtualization;
+  }
+
+  /**
+   * Optional. Whether to enable nested virtualization on Cloud Workstations VMs created under this
+   * workstation configuration. Nested virtualization lets you run virtual machine (VM) instances
+   * inside your workstation. Before enabling nested virtualization, consider the following
+   * important considerations. Cloud Workstations instances are subject to the [same restrictions as
+   * Compute Engine instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on workstation configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image.
+   * @param enableNestedVirtualization enableNestedVirtualization or {@code null} for none
+   */
+  public GceInstance setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
+    this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * Optional. The type of machine to use for VM instances—for example, `"e2-standard-4"`. For more
+   * information about machine types that Cloud Workstations supports, see the list of [available
+   * machine types](https://cloud.google.com/workstations/docs/available-machine-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -215,9 +296,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of machine to use for VM instances—for example, `e2-standard-4`. For more information
-   * about machine types that Cloud Workstations supports, see the list of [available machine
-   * types](https://cloud.google.com/workstations/docs/available-machine-types).
+   * Optional. The type of machine to use for VM instances—for example, `"e2-standard-4"`. For more
+   * information about machine types that Cloud Workstations supports, see the list of [available
+   * machine types](https://cloud.google.com/workstations/docs/available-machine-types).
    * @param machineType machineType or {@code null} for none
    */
   public GceInstance setMachineType(java.lang.String machineType) {
@@ -226,8 +307,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of VMs that the system should keep idle so that new workstations can be started
-   * quickly for new users. Defaults to `0` in the API.
+   * Optional. The number of VMs that the system should keep idle so that new workstations can be
+   * started quickly for new users. Defaults to `0` in the API.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPoolSize() {
@@ -235,8 +316,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of VMs that the system should keep idle so that new workstations can be started
-   * quickly for new users. Defaults to `0` in the API.
+   * Optional. The number of VMs that the system should keep idle so that new workstations can be
+   * started quickly for new users. Defaults to `0` in the API.
    * @param poolSize poolSize or {@code null} for none
    */
   public GceInstance setPoolSize(java.lang.Integer poolSize) {
@@ -264,7 +345,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the service account for Cloud Workstations VMs created with this
+   * Optional. The email address of the service account for Cloud Workstations VMs created with this
    * configuration. When specified, be sure that the service account has `logginglogEntries.create`
    * permission on the project so it can write logs out to Cloud Logging. If using a custom
    * container image, the service account must have permissions to pull the specified image. If you
@@ -280,7 +361,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the service account for Cloud Workstations VMs created with this
+   * Optional. The email address of the service account for Cloud Workstations VMs created with this
    * configuration. When specified, be sure that the service account has `logginglogEntries.create`
    * permission on the project so it can write logs out to Cloud Logging. If using a custom
    * container image, the service account must have permissions to pull the specified image. If you
@@ -297,7 +378,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Compute Engine Shielded instance options.
+   * Optional. A set of Compute Engine Shielded instance options.
    * @return value or {@code null} for none
    */
   public GceShieldedInstanceConfig getShieldedInstanceConfig() {
@@ -305,7 +386,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of Compute Engine Shielded instance options.
+   * Optional. A set of Compute Engine Shielded instance options.
    * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
    */
   public GceInstance setShieldedInstanceConfig(GceShieldedInstanceConfig shieldedInstanceConfig) {
@@ -314,7 +395,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * Optional. Network tags to add to the Compute Engine VMs backing the workstations. This option
    * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
    * created with this configuration. These network tags enable the creation of [firewall
    * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).
@@ -325,7 +406,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network tags to add to the Compute Engine machines backing the workstations. This option
+   * Optional. Network tags to add to the Compute Engine VMs backing the workstations. This option
    * applies [network tags](https://cloud.google.com/vpc/docs/add-remove-network-tags) to VMs
    * created with this configuration. These network tags enable the creation of [firewall
    * rules](https://cloud.google.com/workstations/docs/configure-firewall-rules).

@@ -31,28 +31,28 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceShieldedInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the instance has integrity monitoring enabled.
+   * Optional. Whether the instance has integrity monitoring enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableIntegrityMonitoring;
 
   /**
-   * Whether the instance has Secure Boot enabled.
+   * Optional. Whether the instance has Secure Boot enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSecureBoot;
 
   /**
-   * Whether the instance has the vTPM enabled.
+   * Optional. Whether the instance has the vTPM enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableVtpm;
 
   /**
-   * Whether the instance has integrity monitoring enabled.
+   * Optional. Whether the instance has integrity monitoring enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIntegrityMonitoring() {
@@ -60,7 +60,7 @@ public final class GceShieldedInstanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Whether the instance has integrity monitoring enabled.
+   * Optional. Whether the instance has integrity monitoring enabled.
    * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
    */
   public GceShieldedInstanceConfig setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
@@ -69,7 +69,7 @@ public final class GceShieldedInstanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Whether the instance has Secure Boot enabled.
+   * Optional. Whether the instance has Secure Boot enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSecureBoot() {
@@ -77,7 +77,7 @@ public final class GceShieldedInstanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Whether the instance has Secure Boot enabled.
+   * Optional. Whether the instance has Secure Boot enabled.
    * @param enableSecureBoot enableSecureBoot or {@code null} for none
    */
   public GceShieldedInstanceConfig setEnableSecureBoot(java.lang.Boolean enableSecureBoot) {
@@ -86,7 +86,7 @@ public final class GceShieldedInstanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Whether the instance has the vTPM enabled.
+   * Optional. Whether the instance has the vTPM enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableVtpm() {
@@ -94,7 +94,7 @@ public final class GceShieldedInstanceConfig extends com.google.api.client.json.
   }
 
   /**
-   * Whether the instance has the vTPM enabled.
+   * Optional. Whether the instance has the vTPM enabled.
    * @param enableVtpm enableVtpm or {@code null} for none
    */
   public GceShieldedInstanceConfig setEnableVtpm(java.lang.Boolean enableVtpm) {

@@ -17,7 +17,8 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A grouping of workstation configurations and the associated workstations in that region.
+ * A workstation cluster resource in the Cloud Workstations API. Defines a group of workstations in
+ * a particular region and the VPC network they're attached to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -31,14 +32,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation cluster's current state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,84 +52,85 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so make sure that your firewall rules allow
-   * egress from the workstation VMs to this address.
+   * Output only. The private IP address of the control plane for this workstation cluster.
+   * Workstation VMs need access to this IP address to work with the service, so make sure that your
+   * firewall rules allow egress from the workstation VMs to this address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String controlPlaneIp;
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation cluster was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
+   * user action to restore full functionality. Details can be found in conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean degraded;
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation cluster was soft-deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deleteTime;
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation cluster and that are also propagated to the underlying Compute Engine
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
-   * will be created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this
+   * workstation cluster will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Configuration for private cluster.
+   * Optional. Configuration for private workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrivateClusterConfig privateClusterConfig;
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation cluster is currently being updated to match its
+   * intended state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,28 +138,29 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
-   * cluster will be created. Must be part of the subnetwork specified for this cluster.
+   * workstation cluster will be created. Must be part of the subnetwork specified for this
+   * workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation cluster was most recently updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -165,7 +168,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @param annotations annotations or {@code null} for none
    */
   public WorkstationCluster setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -174,7 +177,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation cluster's current state.
    * @return value or {@code null} for none
    */
   public java.util.List<Status> getConditions() {
@@ -182,7 +185,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation cluster's current state.
    * @param conditions conditions or {@code null} for none
    */
   public WorkstationCluster setConditions(java.util.List<Status> conditions) {
@@ -191,9 +194,9 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so make sure that your firewall rules allow
-   * egress from the workstation VMs to this address.
+   * Output only. The private IP address of the control plane for this workstation cluster.
+   * Workstation VMs need access to this IP address to work with the service, so make sure that your
+   * firewall rules allow egress from the workstation VMs to this address.
    * @return value or {@code null} for none
    */
   public java.lang.String getControlPlaneIp() {
@@ -201,9 +204,9 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The private IP address of the control plane for this cluster. Workstation VMs need
-   * access to this IP address to work with the service, so make sure that your firewall rules allow
-   * egress from the workstation VMs to this address.
+   * Output only. The private IP address of the control plane for this workstation cluster.
+   * Workstation VMs need access to this IP address to work with the service, so make sure that your
+   * firewall rules allow egress from the workstation VMs to this address.
    * @param controlPlaneIp controlPlaneIp or {@code null} for none
    */
   public WorkstationCluster setControlPlaneIp(java.lang.String controlPlaneIp) {
@@ -212,7 +215,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation cluster was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -220,7 +223,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation cluster was created.
    * @param createTime createTime or {@code null} for none
    */
   public WorkstationCluster setCreateTime(String createTime) {
@@ -229,8 +232,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
+   * user action to restore full functionality. Details can be found in conditions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDegraded() {
@@ -238,8 +241,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
+   * user action to restore full functionality. Details can be found in conditions.
    * @param degraded degraded or {@code null} for none
    */
   public WorkstationCluster setDegraded(java.lang.Boolean degraded) {
@@ -248,7 +251,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation cluster was soft-deleted.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -256,7 +259,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation cluster was soft-deleted.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public WorkstationCluster setDeleteTime(String deleteTime) {
@@ -265,7 +268,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -273,7 +276,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation cluster.
    * @param displayName displayName or {@code null} for none
    */
   public WorkstationCluster setDisplayName(java.lang.String displayName) {
@@ -282,8 +285,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -291,8 +294,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public WorkstationCluster setEtag(java.lang.String etag) {
@@ -301,8 +304,9 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation cluster and that are also propagated to the underlying Compute Engine
+   * resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -310,8 +314,9 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation cluster and that are also propagated to the underlying Compute Engine
+   * resources.
    * @param labels labels or {@code null} for none
    */
   public WorkstationCluster setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -320,7 +325,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -328,7 +333,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation cluster.
    * @param name name or {@code null} for none
    */
   public WorkstationCluster setName(java.lang.String name) {
@@ -337,8 +342,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
-   * will be created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this
+   * workstation cluster will be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -346,8 +351,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Immutable. Name of the Compute Engine network in which instances associated with this cluster
-   * will be created.
+   * Immutable. Name of the Compute Engine network in which instances associated with this
+   * workstation cluster will be created.
    * @param network network or {@code null} for none
    */
   public WorkstationCluster setNetwork(java.lang.String network) {
@@ -356,7 +361,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration for private cluster.
+   * Optional. Configuration for private workstation cluster.
    * @return value or {@code null} for none
    */
   public PrivateClusterConfig getPrivateClusterConfig() {
@@ -364,7 +369,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration for private cluster.
+   * Optional. Configuration for private workstation cluster.
    * @param privateClusterConfig privateClusterConfig or {@code null} for none
    */
   public WorkstationCluster setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
@@ -373,8 +378,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation cluster is currently being updated to match its
+   * intended state.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -382,8 +387,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation cluster is currently being updated to match its
+   * intended state.
    * @param reconciling reconciling or {@code null} for none
    */
   public WorkstationCluster setReconciling(java.lang.Boolean reconciling) {
@@ -393,7 +398,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
-   * cluster will be created. Must be part of the subnetwork specified for this cluster.
+   * workstation cluster will be created. Must be part of the subnetwork specified for this
+   * workstation cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -402,7 +408,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Immutable. Name of the Compute Engine subnetwork in which instances associated with this
-   * cluster will be created. Must be part of the subnetwork specified for this cluster.
+   * workstation cluster will be created. Must be part of the subnetwork specified for this
+   * workstation cluster.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public WorkstationCluster setSubnetwork(java.lang.String subnetwork) {
@@ -411,7 +418,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -419,7 +426,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation cluster.
    * @param uid uid or {@code null} for none
    */
   public WorkstationCluster setUid(java.lang.String uid) {
@@ -428,7 +435,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation cluster was most recently updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -436,7 +443,7 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation cluster was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public WorkstationCluster setUpdateTime(String updateTime) {

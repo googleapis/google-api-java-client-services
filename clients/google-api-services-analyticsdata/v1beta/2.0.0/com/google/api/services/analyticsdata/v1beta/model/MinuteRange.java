@@ -17,8 +17,8 @@
 package com.google.api.services.analyticsdata.v1beta.model;
 
 /**
- * A contiguous set of minutes: startMinutesAgo, startMinutesAgo + 1, ..., endMinutesAgo. Requests
- * are allowed up to 2 minute ranges.
+ * A contiguous set of minutes: `startMinutesAgo`, `startMinutesAgo + 1`, ..., `endMinutesAgo`.
+ * Requests are allowed up to 2 minute ranges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

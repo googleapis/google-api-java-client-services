@@ -60,6 +60,13 @@ public final class LiveBroadcast extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * The monetizationDetails object contains information about the event's monetization details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveBroadcastMonetizationDetails monetizationDetails;
+
+  /**
    * The snippet object contains basic details about the event, including its title, description,
    * start time, and end time.
    * The value may be {@code null}.
@@ -152,6 +159,23 @@ public final class LiveBroadcast extends com.google.api.client.json.GenericJson 
    */
   public LiveBroadcast setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The monetizationDetails object contains information about the event's monetization details.
+   * @return value or {@code null} for none
+   */
+  public LiveBroadcastMonetizationDetails getMonetizationDetails() {
+    return monetizationDetails;
+  }
+
+  /**
+   * The monetizationDetails object contains information about the event's monetization details.
+   * @param monetizationDetails monetizationDetails or {@code null} for none
+   */
+  public LiveBroadcast setMonetizationDetails(LiveBroadcastMonetizationDetails monetizationDetails) {
+    this.monetizationDetails = monetizationDetails;
     return this;
   }
 

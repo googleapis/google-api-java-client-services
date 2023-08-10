@@ -39,6 +39,18 @@ public final class ServiceStoreConfigCutoffConfig extends com.google.api.client.
   private ServiceStoreConfigCutoffConfigLocalCutoffTime localCutoffTime;
 
   /**
+   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * configured to n day local delivery. For example, if the shipping service defines same-day
+   * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
+   * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
+   * field to `false` results in the calculated shipping time being one day. This is only for local
+   * delivery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean noDeliveryPostCutoff;
+
+  /**
    * Represents cutoff time as the number of hours before store closing. Mutually exclusive with
    * other fields (hour and minute).
    * The value may be {@code null}.
@@ -60,6 +72,33 @@ public final class ServiceStoreConfigCutoffConfig extends com.google.api.client.
    */
   public ServiceStoreConfigCutoffConfig setLocalCutoffTime(ServiceStoreConfigCutoffConfigLocalCutoffTime localCutoffTime) {
     this.localCutoffTime = localCutoffTime;
+    return this;
+  }
+
+  /**
+   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * configured to n day local delivery. For example, if the shipping service defines same-day
+   * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
+   * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
+   * field to `false` results in the calculated shipping time being one day. This is only for local
+   * delivery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNoDeliveryPostCutoff() {
+    return noDeliveryPostCutoff;
+  }
+
+  /**
+   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * configured to n day local delivery. For example, if the shipping service defines same-day
+   * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
+   * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
+   * field to `false` results in the calculated shipping time being one day. This is only for local
+   * delivery.
+   * @param noDeliveryPostCutoff noDeliveryPostCutoff or {@code null} for none
+   */
+  public ServiceStoreConfigCutoffConfig setNoDeliveryPostCutoff(java.lang.Boolean noDeliveryPostCutoff) {
+    this.noDeliveryPostCutoff = noDeliveryPostCutoff;
     return this;
   }
 

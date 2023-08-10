@@ -112,6 +112,15 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String canonicalLink;
 
   /**
+   * Product [certification](https://support.google.com/merchants/answer/13528839), introduced for
+   * EU energy efficiency labeling compliance using the [EU
+   * EPREL](https://eprel.ec.europa.eu/screen/home) database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductCertification> certifications;
+
+  /**
    * Required. The item's channel (online or local). Acceptable values are: - "`local`" - "`online`"
    * The value may be {@code null}.
    */
@@ -750,6 +759,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private ProductUnitPricingMeasure unitPricingMeasure;
 
   /**
+   * URL of the 3D model of the item to provide more visuals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String virtualModelLink;
+
+  /**
    * Additional URLs of images of the item.
    * @return value or {@code null} for none
    */
@@ -937,6 +953,27 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setCanonicalLink(java.lang.String canonicalLink) {
     this.canonicalLink = canonicalLink;
+    return this;
+  }
+
+  /**
+   * Product [certification](https://support.google.com/merchants/answer/13528839), introduced for
+   * EU energy efficiency labeling compliance using the [EU
+   * EPREL](https://eprel.ec.europa.eu/screen/home) database.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductCertification> getCertifications() {
+    return certifications;
+  }
+
+  /**
+   * Product [certification](https://support.google.com/merchants/answer/13528839), introduced for
+   * EU energy efficiency labeling compliance using the [EU
+   * EPREL](https://eprel.ec.europa.eu/screen/home) database.
+   * @param certifications certifications or {@code null} for none
+   */
+  public Product setCertifications(java.util.List<ProductCertification> certifications) {
+    this.certifications = certifications;
     return this;
   }
 
@@ -2441,6 +2478,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setUnitPricingMeasure(ProductUnitPricingMeasure unitPricingMeasure) {
     this.unitPricingMeasure = unitPricingMeasure;
+    return this;
+  }
+
+  /**
+   * URL of the 3D model of the item to provide more visuals.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVirtualModelLink() {
+    return virtualModelLink;
+  }
+
+  /**
+   * URL of the 3D model of the item to provide more visuals.
+   * @param virtualModelLink virtualModelLink or {@code null} for none
+   */
+  public Product setVirtualModelLink(java.lang.String virtualModelLink) {
+    this.virtualModelLink = virtualModelLink;
     return this;
   }
 

@@ -47,6 +47,15 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private Brand brand;
 
   /**
+   * Competitive visibility fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `CompetitiveVisibilityTopMerchantView`,
+   * `CompetitiveVisibilityBenchmarkView` or `CompetitiveVisibilityCompetitorView`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompetitiveVisibility competitiveVisibility;
+
+  /**
    * Metrics requested by the merchant in the query. Metric values are only set for metrics
    * requested explicitly in the query.
    * The value may be {@code null}.
@@ -129,6 +138,27 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
    */
   public ReportRow setBrand(Brand brand) {
     this.brand = brand;
+    return this;
+  }
+
+  /**
+   * Competitive visibility fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `CompetitiveVisibilityTopMerchantView`,
+   * `CompetitiveVisibilityBenchmarkView` or `CompetitiveVisibilityCompetitorView`.
+   * @return value or {@code null} for none
+   */
+  public CompetitiveVisibility getCompetitiveVisibility() {
+    return competitiveVisibility;
+  }
+
+  /**
+   * Competitive visibility fields requested by the merchant in the query. Field values are only set
+   * if the merchant queries `CompetitiveVisibilityTopMerchantView`,
+   * `CompetitiveVisibilityBenchmarkView` or `CompetitiveVisibilityCompetitorView`.
+   * @param competitiveVisibility competitiveVisibility or {@code null} for none
+   */
+  public ReportRow setCompetitiveVisibility(CompetitiveVisibility competitiveVisibility) {
+    this.competitiveVisibility = competitiveVisibility;
     return this;
   }
 

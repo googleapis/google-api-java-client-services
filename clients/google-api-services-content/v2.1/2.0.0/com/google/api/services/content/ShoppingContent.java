@@ -7902,150 +7902,6 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
-   * An accessor for creating requests from the Customers collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code ShoppingContent content = new ShoppingContent(...);}
-   *   {@code ShoppingContent.Customers.List request = content.customers().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Customers customers() {
-    return new Customers();
-  }
-
-  /**
-   * The "customers" collection of methods.
-   */
-  public class Customers {
-
-    /**
-     * Allows uploading one customer information entry. Adding a customer with loyalty data enables the
-     * customer to see personalized loyalty annotations on search. Uploading a previously existing
-     * customer will overwrite the old entry.
-     *
-     * Create a request for the method "customers.create".
-     *
-     * This request holds the parameters needed by the content server.  After setting any optional
-     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-     *
-     * @param merchantId Required. The ID of the account that owns the customer information.
-     * @param content the {@link com.google.api.services.content.model.Customer}
-     * @return the request
-     */
-    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.Customer content) throws java.io.IOException {
-      Create result = new Create(merchantId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Customer> {
-
-      private static final String REST_PATH = "{merchantId}/customers";
-
-      /**
-       * Allows uploading one customer information entry. Adding a customer with loyalty data enables
-       * the customer to see personalized loyalty annotations on search. Uploading a previously existing
-       * customer will overwrite the old entry.
-       *
-       * Create a request for the method "customers.create".
-       *
-       * This request holds the parameters needed by the the content server.  After setting any optional
-       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param merchantId Required. The ID of the account that owns the customer information.
-       * @param content the {@link com.google.api.services.content.model.Customer}
-       * @since 1.13
-       */
-      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.Customer content) {
-        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Customer.class);
-        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
-      }
-
-      @Override
-      public Create set$Xgafv(java.lang.String $Xgafv) {
-        return (Create) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Create setAlt(java.lang.String alt) {
-        return (Create) super.setAlt(alt);
-      }
-
-      @Override
-      public Create setCallback(java.lang.String callback) {
-        return (Create) super.setCallback(callback);
-      }
-
-      @Override
-      public Create setFields(java.lang.String fields) {
-        return (Create) super.setFields(fields);
-      }
-
-      @Override
-      public Create setKey(java.lang.String key) {
-        return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Create) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Create setQuotaUser(java.lang.String quotaUser) {
-        return (Create) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Create setUploadType(java.lang.String uploadType) {
-        return (Create) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Create setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Create) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Required. The ID of the account that owns the customer information. */
-      @com.google.api.client.util.Key
-      private java.lang.Long merchantId;
-
-      /** Required. The ID of the account that owns the customer information.
-       */
-      public java.lang.Long getMerchantId() {
-        return merchantId;
-      }
-
-      /** Required. The ID of the account that owns the customer information. */
-      public Create setMerchantId(java.lang.Long merchantId) {
-        this.merchantId = merchantId;
-        return this;
-      }
-
-      @Override
-      public Create set(String parameterName, Object value) {
-        return (Create) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Datafeeds collection.
    *
    * <p>The typical use is:</p>
@@ -9819,6 +9675,387 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
 
+    /**
+     * An accessor for creating requests from the Checkoutsettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Checkoutsettings.List request = content.checkoutsettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Checkoutsettings checkoutsettings() {
+      return new Checkoutsettings();
+    }
+
+    /**
+     * The "checkoutsettings" collection of methods.
+     */
+    public class Checkoutsettings {
+
+      /**
+       * Deletes `Checkout` settings and unenrolls merchant from `Checkout` program.
+       *
+       * Create a request for the method "checkoutsettings.delete".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. The ID of the account.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long merchantId) throws java.io.IOException {
+        Delete result = new Delete(merchantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ShoppingContentRequest<Void> {
+
+        private static final String REST_PATH = "{merchantId}/freelistingsprogram/checkoutsettings";
+
+        /**
+         * Deletes `Checkout` settings and unenrolls merchant from `Checkout` program.
+         *
+         * Create a request for the method "checkoutsettings.delete".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. The ID of the account.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long merchantId) {
+          super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the account. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. The ID of the account.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. The ID of the account. */
+        public Delete setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets Checkout settings for the given merchant. This includes information about review state,
+       * enrollment state and URL settings.
+       *
+       * Create a request for the method "checkoutsettings.get".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. The ID of the account.
+       * @return the request
+       */
+      public Get get(java.lang.Long merchantId) throws java.io.IOException {
+        Get result = new Get(merchantId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ShoppingContentRequest<com.google.api.services.content.model.CheckoutSettings> {
+
+        private static final String REST_PATH = "{merchantId}/freelistingsprogram/checkoutsettings";
+
+        /**
+         * Gets Checkout settings for the given merchant. This includes information about review state,
+         * enrollment state and URL settings.
+         *
+         * Create a request for the method "checkoutsettings.get".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. The ID of the account.
+         * @since 1.13
+         */
+        protected Get(java.lang.Long merchantId) {
+          super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.CheckoutSettings.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the account. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. The ID of the account.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. The ID of the account. */
+        public Get setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Enrolls merchant in `Checkout` program.
+       *
+       * Create a request for the method "checkoutsettings.insert".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param content the {@link com.google.api.services.content.model.InsertCheckoutSettingsRequest}
+       * @return the request
+       */
+      public Insert insert(java.lang.Long merchantId, com.google.api.services.content.model.InsertCheckoutSettingsRequest content) throws java.io.IOException {
+        Insert result = new Insert(merchantId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.CheckoutSettings> {
+
+        private static final String REST_PATH = "{merchantId}/freelistingsprogram/checkoutsettings";
+
+        /**
+         * Enrolls merchant in `Checkout` program.
+         *
+         * Create a request for the method "checkoutsettings.insert".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+         * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param merchantId Required. The ID of the account.
+         * @param content the {@link com.google.api.services.content.model.InsertCheckoutSettingsRequest}
+         * @since 1.13
+         */
+        protected Insert(java.lang.Long merchantId, com.google.api.services.content.model.InsertCheckoutSettingsRequest content) {
+          super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.CheckoutSettings.class);
+          this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        }
+
+        @Override
+        public Insert set$Xgafv(java.lang.String $Xgafv) {
+          return (Insert) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Insert setAccessToken(java.lang.String accessToken) {
+          return (Insert) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Insert setAlt(java.lang.String alt) {
+          return (Insert) super.setAlt(alt);
+        }
+
+        @Override
+        public Insert setCallback(java.lang.String callback) {
+          return (Insert) super.setCallback(callback);
+        }
+
+        @Override
+        public Insert setFields(java.lang.String fields) {
+          return (Insert) super.setFields(fields);
+        }
+
+        @Override
+        public Insert setKey(java.lang.String key) {
+          return (Insert) super.setKey(key);
+        }
+
+        @Override
+        public Insert setOauthToken(java.lang.String oauthToken) {
+          return (Insert) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Insert) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Insert setQuotaUser(java.lang.String quotaUser) {
+          return (Insert) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Insert setUploadType(java.lang.String uploadType) {
+          return (Insert) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Insert) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the account. */
+        @com.google.api.client.util.Key
+        private java.lang.Long merchantId;
+
+        /** Required. The ID of the account.
+         */
+        public java.lang.Long getMerchantId() {
+          return merchantId;
+        }
+
+        /** Required. The ID of the account. */
+        public Insert setMerchantId(java.lang.Long merchantId) {
+          this.merchantId = merchantId;
+          return this;
+        }
+
+        @Override
+        public Insert set(String parameterName, Object value) {
+          return (Insert) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

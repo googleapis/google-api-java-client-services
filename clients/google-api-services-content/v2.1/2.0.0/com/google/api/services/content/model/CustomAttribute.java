@@ -17,7 +17,10 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for CustomAttribute.
+ * A message that represents custom attributes. Exactly one of `value` or `groupValues` must be
+ * provided. Maximum allowed number of characters for each custom attribute is 10240 (represents sum
+ * of characters for name and value). Maximum 2500 custom attributes can be set per merchant, with
+ * total size of 102.4kB.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

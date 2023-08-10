@@ -3609,6 +3609,172 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates a conversion event with the specified attributes.
+       *
+       * Create a request for the method "conversionEvents.patch".
+       *
+       * This request holds the parameters needed by the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Resource name of this conversion event. Format:
+       *        properties/{property}/conversionEvents/{conversion_event}
+       * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^properties/[^/]+/conversionEvents/[^/]+$");
+
+        /**
+         * Updates a conversion event with the specified attributes.
+         *
+         * Create a request for the method "conversionEvents.patch".
+         *
+         * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Resource name of this conversion event. Format:
+       *        properties/{property}/conversionEvents/{conversion_event}
+         * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent content) {
+          super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/conversionEvents/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Resource name of this conversion event. Format:
+         * properties/{property}/conversionEvents/{conversion_event}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Resource name of this conversion event. Format:
+       properties/{property}/conversionEvents/{conversion_event}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Resource name of this conversion event. Format:
+         * properties/{property}/conversionEvents/{conversion_event}
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^properties/[^/]+/conversionEvents/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to be updated. Field names must be in snake case (e.g.,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

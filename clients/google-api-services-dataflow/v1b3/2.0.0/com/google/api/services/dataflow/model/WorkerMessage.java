@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class WorkerMessage extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Contains metrics related to go/dataflow-data-sampling-telemetry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataSamplingReport dataSamplingReport;
+
+  /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular
    * container might have the labels: { "JOB_ID": "2015-04-22", "WORKER_ID": "wordcount-vm-2015…"
    * "CONTAINER_TYPE": "worker", "CONTAINER_ID": "ac1234def"} Label tags typically correspond to
@@ -88,6 +95,23 @@ public final class WorkerMessage extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private WorkerThreadScalingReport workerThreadScalingReport;
+
+  /**
+   * Optional. Contains metrics related to go/dataflow-data-sampling-telemetry.
+   * @return value or {@code null} for none
+   */
+  public DataSamplingReport getDataSamplingReport() {
+    return dataSamplingReport;
+  }
+
+  /**
+   * Optional. Contains metrics related to go/dataflow-data-sampling-telemetry.
+   * @param dataSamplingReport dataSamplingReport or {@code null} for none
+   */
+  public WorkerMessage setDataSamplingReport(DataSamplingReport dataSamplingReport) {
+    this.dataSamplingReport = dataSamplingReport;
+    return this;
+  }
 
   /**
    * Labels are used to group WorkerMessages. For example, a worker_message about a particular

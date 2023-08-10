@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Describes any options that have an effect on the debugging of pipelines.
+ * A bug found in the Dataflow SDK.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -27,64 +27,88 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DebugOptions extends com.google.api.client.json.GenericJson {
+public final class SdkBug extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration options for sampling elements from a running pipeline.
+   * Output only. How severe the SDK bug is.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataSamplingConfig dataSampling;
+  private java.lang.String severity;
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+   * Output only. Describes the impact of this SDK bug.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enableHotKeyLogging;
+  private java.lang.String type;
 
   /**
-   * Configuration options for sampling elements from a running pipeline.
+   * Output only. Link to more information on the bug.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
+   * Output only. How severe the SDK bug is.
    * @return value or {@code null} for none
    */
-  public DataSamplingConfig getDataSampling() {
-    return dataSampling;
+  public java.lang.String getSeverity() {
+    return severity;
   }
 
   /**
-   * Configuration options for sampling elements from a running pipeline.
-   * @param dataSampling dataSampling or {@code null} for none
+   * Output only. How severe the SDK bug is.
+   * @param severity severity or {@code null} for none
    */
-  public DebugOptions setDataSampling(DataSamplingConfig dataSampling) {
-    this.dataSampling = dataSampling;
+  public SdkBug setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
+   * Output only. Describes the impact of this SDK bug.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnableHotKeyLogging() {
-    return enableHotKeyLogging;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * When true, enables the logging of the literal hot key to the user's Cloud Logging.
-   * @param enableHotKeyLogging enableHotKeyLogging or {@code null} for none
+   * Output only. Describes the impact of this SDK bug.
+   * @param type type or {@code null} for none
    */
-  public DebugOptions setEnableHotKeyLogging(java.lang.Boolean enableHotKeyLogging) {
-    this.enableHotKeyLogging = enableHotKeyLogging;
+  public SdkBug setType(java.lang.String type) {
+    this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. Link to more information on the bug.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * Output only. Link to more information on the bug.
+   * @param uri uri or {@code null} for none
+   */
+  public SdkBug setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public DebugOptions set(String fieldName, Object value) {
-    return (DebugOptions) super.set(fieldName, value);
+  public SdkBug set(String fieldName, Object value) {
+    return (SdkBug) super.set(fieldName, value);
   }
 
   @Override
-  public DebugOptions clone() {
-    return (DebugOptions) super.clone();
+  public SdkBug clone() {
+    return (SdkBug) super.clone();
   }
 
 }

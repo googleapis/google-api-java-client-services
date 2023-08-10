@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Option to include built-in and custom substitutions as env variables for all build steps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean automapSubstitutions;
+
+  /**
    * Optional. Option to specify how default logs buckets are setup.
    * The value may be {@code null}.
    */
@@ -146,6 +153,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions exten
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for all build steps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutomapSubstitutions() {
+    return automapSubstitutions;
+  }
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for all build steps.
+   * @param automapSubstitutions automapSubstitutions or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions setAutomapSubstitutions(java.lang.Boolean automapSubstitutions) {
+    this.automapSubstitutions = automapSubstitutions;
+    return this;
+  }
 
   /**
    * Optional. Option to specify how default logs buckets are setup.

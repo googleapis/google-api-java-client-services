@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * A step in the build pipeline. Next ID: 20
+ * A step in the build pipeline. Next ID: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation
@@ -57,6 +57,14 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean automapSubstitutions;
 
   /**
    * Working directory to use when running this step's container. If this value is a relative path,
@@ -245,6 +253,25 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   public BuildStep setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutomapSubstitutions() {
+    return automapSubstitutions;
+  }
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * @param automapSubstitutions automapSubstitutions or {@code null} for none
+   */
+  public BuildStep setAutomapSubstitutions(java.lang.Boolean automapSubstitutions) {
+    this.automapSubstitutions = automapSubstitutions;
     return this;
   }
 

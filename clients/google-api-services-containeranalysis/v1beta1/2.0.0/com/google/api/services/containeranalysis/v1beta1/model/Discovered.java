@@ -74,6 +74,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private String lastAnalysisTime;
 
   /**
+   * The status of an SBOM generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SBOMStatus sbomStatus;
+
+  /**
    * @return value or {@code null} for none
    */
   public AnalysisCompleted getAnalysisCompleted() {
@@ -174,6 +181,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setLastAnalysisTime(String lastAnalysisTime) {
     this.lastAnalysisTime = lastAnalysisTime;
+    return this;
+  }
+
+  /**
+   * The status of an SBOM generation.
+   * @return value or {@code null} for none
+   */
+  public SBOMStatus getSbomStatus() {
+    return sbomStatus;
+  }
+
+  /**
+   * The status of an SBOM generation.
+   * @param sbomStatus sbomStatus or {@code null} for none
+   */
+  public Discovered setSbomStatus(SBOMStatus sbomStatus) {
+    this.sbomStatus = sbomStatus;
     return this;
   }
 

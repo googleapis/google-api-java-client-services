@@ -46,6 +46,14 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
   private java.util.List<EntityMention> entityMentions;
 
   /**
+   * The FHIR bundle ([`R4`](http://hl7.org/fhir/R4/bundle.html)) that includes all the entities,
+   * the entity mentions, and the relationships in JSON format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fhirBundle;
+
+  /**
    * relationships contains all the binary relationships that were identified between entity
    * mentions within the provided document.
    * The value may be {@code null}.
@@ -88,6 +96,25 @@ public final class AnalyzeEntitiesResponse extends com.google.api.client.json.Ge
    */
   public AnalyzeEntitiesResponse setEntityMentions(java.util.List<EntityMention> entityMentions) {
     this.entityMentions = entityMentions;
+    return this;
+  }
+
+  /**
+   * The FHIR bundle ([`R4`](http://hl7.org/fhir/R4/bundle.html)) that includes all the entities,
+   * the entity mentions, and the relationships in JSON format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFhirBundle() {
+    return fhirBundle;
+  }
+
+  /**
+   * The FHIR bundle ([`R4`](http://hl7.org/fhir/R4/bundle.html)) that includes all the entities,
+   * the entity mentions, and the relationships in JSON format.
+   * @param fhirBundle fhirBundle or {@code null} for none
+   */
+  public AnalyzeEntitiesResponse setFhirBundle(java.lang.String fhirBundle) {
+    this.fhirBundle = fhirBundle;
     return this;
   }
 

@@ -57,6 +57,17 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * Optional. A list of streaming configs used to configure the destination of streaming exports
+   * for every DICOM instance insertion in this DICOM store. After a new config is added to
+   * `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config
+   * is removed from `stream_configs`, the server stops streaming to that destination. Each config
+   * must contain a unique destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudHealthcareV1DicomStreamConfig> streamConfigs;
+
+  /**
    * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and
    * 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
    * following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be
@@ -116,6 +127,31 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
    */
   public DicomStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. A list of streaming configs used to configure the destination of streaming exports
+   * for every DICOM instance insertion in this DICOM store. After a new config is added to
+   * `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config
+   * is removed from `stream_configs`, the server stops streaming to that destination. Each config
+   * must contain a unique destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudHealthcareV1DicomStreamConfig> getStreamConfigs() {
+    return streamConfigs;
+  }
+
+  /**
+   * Optional. A list of streaming configs used to configure the destination of streaming exports
+   * for every DICOM instance insertion in this DICOM store. After a new config is added to
+   * `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config
+   * is removed from `stream_configs`, the server stops streaming to that destination. Each config
+   * must contain a unique destination.
+   * @param streamConfigs streamConfigs or {@code null} for none
+   */
+  public DicomStore setStreamConfigs(java.util.List<GoogleCloudHealthcareV1DicomStreamConfig> streamConfigs) {
+    this.streamConfigs = streamConfigs;
     return this;
   }
 

@@ -42,8 +42,8 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * limit of 5,000 characters. * For text attributes, at most 400 values are allowed. Empty values
    * are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256
    * characters. * For number attributes, at most 400 values are allowed. For product
-   * recommendations, an example of extra user information is ` traffic_channel`, which is how a
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, coming
+   * recommendations, an example of extra user information is `traffic_channel`, which is how a user
+   * arrives at the site. Users can arrive at the site by coming to the site directly, coming
    * through Google search, or in other ways.
    * The value may be {@code null}.
    */
@@ -60,22 +60,22 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
    * for user events that are the result of RecommendationService.Recommend. This field enables
    * accurate attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of
+   * RecommendResponse.attribution_token for events that are the result of
    * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
-   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
-   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
-   * page view or conversion completion back to the event and the particular predict response
-   * containing this clicked/purchased product. If user clicks on product K in the recommendation
-   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
-   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
+   * result of SearchService.Search. This token enables us to accurately attribute page view or
+   * conversion completion back to the event and the particular predict response containing this
+   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
+   * RecommendResponse.attribution_token as a URL parameter to product K's page. When recording
+   * events on product K's page, log the RecommendResponse.attribution_token to this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributionToken;
 
   /**
-   * CompleteQuery API details related to the event. This field should be set for `search` event
-   * when autocomplete function is enabled and the user clicks a suggestion for search.
+   * CompletionService.CompleteQuery details related to the event. This field should be set for
+   * `search` event when autocomplete function is enabled and the user clicks a suggestion for
+   * search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * from a RecommendationService.RecommendRequest, this field may be populated directly from
    * RecommendationService.RecommendRequest.filter conforming to
    * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
-   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +176,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
   private java.util.List<java.lang.String> promotionIds;
 
   /**
-   * Search API details related to the event. This field should be set for `search` event.
+   * SearchService.Search details related to the event. This field should be set for `search` event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,7 +222,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * This unique identifier should not change if the visitor log in/out of the website. Do not set
    * the field to the same fixed ID for different users. This mixes the event history of those users
    * together, which results in degraded model quality. The field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. The
+   * with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. The
    * field should not contain PII or user-data. We recommend to use Google Analytics [Client
    * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-
    * reference#clientId) for this field.
@@ -243,8 +243,8 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * limit of 5,000 characters. * For text attributes, at most 400 values are allowed. Empty values
    * are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256
    * characters. * For number attributes, at most 400 values are allowed. For product
-   * recommendations, an example of extra user information is ` traffic_channel`, which is how a
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, coming
+   * recommendations, an example of extra user information is `traffic_channel`, which is how a user
+   * arrives at the site. Users can arrive at the site by coming to the site directly, coming
    * through Google search, or in other ways.
    * @return value or {@code null} for none
    */
@@ -264,8 +264,8 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * limit of 5,000 characters. * For text attributes, at most 400 values are allowed. Empty values
    * are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256
    * characters. * For number attributes, at most 400 values are allowed. For product
-   * recommendations, an example of extra user information is ` traffic_channel`, which is how a
-   * user arrives at the site. Users can arrive at the site by coming to the site directly, coming
+   * recommendations, an example of extra user information is `traffic_channel`, which is how a user
+   * arrives at the site. Users can arrive at the site by coming to the site directly, coming
    * through Google search, or in other ways.
    * @param attributes attributes or {@code null} for none
    */
@@ -278,14 +278,13 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
    * for user events that are the result of RecommendationService.Recommend. This field enables
    * accurate attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of
+   * RecommendResponse.attribution_token for events that are the result of
    * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
-   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
-   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
-   * page view or conversion completion back to the event and the particular predict response
-   * containing this clicked/purchased product. If user clicks on product K in the recommendation
-   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
-   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
+   * result of SearchService.Search. This token enables us to accurately attribute page view or
+   * conversion completion back to the event and the particular predict response containing this
+   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
+   * RecommendResponse.attribution_token as a URL parameter to product K's page. When recording
+   * events on product K's page, log the RecommendResponse.attribution_token to this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionToken() {
@@ -296,14 +295,13 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * Token to attribute an API response to user action(s) to trigger the event. Highly recommended
    * for user events that are the result of RecommendationService.Recommend. This field enables
    * accurate attribution of recommendation model performance. The value must be one of: *
-   * PredictResponse.attribution_token for events that are the result of
+   * RecommendResponse.attribution_token for events that are the result of
    * RecommendationService.Recommend. * SearchResponse.attribution_token for events that are the
-   * result of SearchService.Search. * CompleteQueryResponse.attribution_token for events that are
-   * the result of CompletionService.CompleteQuery. This token enables us to accurately attribute
-   * page view or conversion completion back to the event and the particular predict response
-   * containing this clicked/purchased product. If user clicks on product K in the recommendation
-   * results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When
-   * recording events on product K's page, log the PredictResponse.attribution_token to this field.
+   * result of SearchService.Search. This token enables us to accurately attribute page view or
+   * conversion completion back to the event and the particular predict response containing this
+   * clicked/purchased product. If user clicks on product K in the recommendation results, pass
+   * RecommendResponse.attribution_token as a URL parameter to product K's page. When recording
+   * events on product K's page, log the RecommendResponse.attribution_token to this field.
    * @param attributionToken attributionToken or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setAttributionToken(java.lang.String attributionToken) {
@@ -312,8 +310,9 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
   }
 
   /**
-   * CompleteQuery API details related to the event. This field should be set for `search` event
-   * when autocomplete function is enabled and the user clicks a suggestion for search.
+   * CompletionService.CompleteQuery details related to the event. This field should be set for
+   * `search` event when autocomplete function is enabled and the user clicks a suggestion for
+   * search.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCompletionInfo getCompletionInfo() {
@@ -321,8 +320,9 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
   }
 
   /**
-   * CompleteQuery API details related to the event. This field should be set for `search` event
-   * when autocomplete function is enabled and the user clicks a suggestion for search.
+   * CompletionService.CompleteQuery details related to the event. This field should be set for
+   * `search` event when autocomplete function is enabled and the user clicks a suggestion for
+   * search.
    * @param completionInfo completionInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setCompletionInfo(GoogleCloudDiscoveryengineV1alphaCompletionInfo completionInfo) {
@@ -438,7 +438,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * from a RecommendationService.RecommendRequest, this field may be populated directly from
    * RecommendationService.RecommendRequest.filter conforming to
    * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
-   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -453,7 +453,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * from a RecommendationService.RecommendRequest, this field may be populated directly from
    * RecommendationService.RecommendRequest.filter conforming to
    * https://google.aip.dev/160#filtering. The value must be a UTF-8 encoded string with a length
-   * limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setFilter(java.lang.String filter) {
@@ -534,7 +534,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
   }
 
   /**
-   * Search API details related to the event. This field should be set for `search` event.
+   * SearchService.Search details related to the event. This field should be set for `search` event.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchInfo getSearchInfo() {
@@ -542,7 +542,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
   }
 
   /**
-   * Search API details related to the event. This field should be set for `search` event.
+   * SearchService.Search details related to the event. This field should be set for `search` event.
    * @param searchInfo searchInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setSearchInfo(GoogleCloudDiscoveryengineV1alphaSearchInfo searchInfo) {
@@ -636,7 +636,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * This unique identifier should not change if the visitor log in/out of the website. Do not set
    * the field to the same fixed ID for different users. This mixes the event history of those users
    * together, which results in degraded model quality. The field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. The
+   * with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. The
    * field should not contain PII or user-data. We recommend to use Google Analytics [Client
    * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-
    * reference#clientId) for this field.
@@ -652,7 +652,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
    * This unique identifier should not change if the visitor log in/out of the website. Do not set
    * the field to the same fixed ID for different users. This mixes the event history of those users
    * together, which results in degraded model quality. The field must be a UTF-8 encoded string
-   * with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. The
+   * with a length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. The
    * field should not contain PII or user-data. We recommend to use Google Analytics [Client
    * ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-
    * reference#clientId) for this field.

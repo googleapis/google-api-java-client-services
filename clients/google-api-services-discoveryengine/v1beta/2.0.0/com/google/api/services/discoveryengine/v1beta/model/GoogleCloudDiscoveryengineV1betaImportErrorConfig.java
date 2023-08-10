@@ -31,7 +31,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportErrorConfig extends com
 
   /**
    * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
-   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * directory. Import errors are written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportErrorConfig extends com
 
   /**
    * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
-   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * directory. Import errors are written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * @return value or {@code null} for none
    */
@@ -50,7 +50,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportErrorConfig extends com
 
   /**
    * Cloud Storage prefix for import errors. This must be an empty, existing Cloud Storage
-   * directory. Import errors will be written to sharded files in this directory, one per line, as a
+   * directory. Import errors are written to sharded files in this directory, one per line, as a
    * JSON-encoded `google.rpc.Status` message.
    * @param gcsPrefix gcsPrefix or {@code null} for none
    */

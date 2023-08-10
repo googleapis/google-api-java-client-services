@@ -33,10 +33,12 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * The schema to use when parsing the data from the source. Supported values for document imports:
    * * `document` (default): One JSON Document per line. Each document must have a valid
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
-   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
-   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms the defined
-   * Schema of the data store. This can only be used by the GENERIC Data Store vertical. Supported
-   * values for user even imports: * `user_event` (default): One JSON UserEvent per line.
+   * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
+   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
+   * with header conforming to the defined Schema of the data store. Each entry after the header is
+   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
+   * even imports: * `user_event` (default): One JSON UserEvent per line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +59,12 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * The schema to use when parsing the data from the source. Supported values for document imports:
    * * `document` (default): One JSON Document per line. Each document must have a valid
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
-   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
-   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms the defined
-   * Schema of the data store. This can only be used by the GENERIC Data Store vertical. Supported
-   * values for user even imports: * `user_event` (default): One JSON UserEvent per line.
+   * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
+   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
+   * with header conforming to the defined Schema of the data store. Each entry after the header is
+   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
+   * even imports: * `user_event` (default): One JSON UserEvent per line.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -71,10 +75,12 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * The schema to use when parsing the data from the source. Supported values for document imports:
    * * `document` (default): One JSON Document per line. Each document must have a valid
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
-   * will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
-   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms the defined
-   * Schema of the data store. This can only be used by the GENERIC Data Store vertical. Supported
-   * values for user even imports: * `user_event` (default): One JSON UserEvent per line.
+   * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
+   * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
+   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
+   * with header conforming to the defined Schema of the data store. Each entry after the header is
+   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
+   * even imports: * `user_event` (default): One JSON UserEvent per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaGcsSource setDataSchema(java.lang.String dataSchema) {

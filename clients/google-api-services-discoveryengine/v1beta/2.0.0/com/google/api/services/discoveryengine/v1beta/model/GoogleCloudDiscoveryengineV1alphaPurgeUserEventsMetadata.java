@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * Metadata related to the progress of the Import operation. This is returned by the
+ * Metadata related to the progress of the PurgeUserEvents operation. This will be returned by the
  * google.longrunning.Operation.metadata field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -28,7 +28,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Operation create time.
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata exte
   private java.lang.Long failureCount;
 
   /**
-   * Count of entries that were processed successfully.
+   * Count of entries that were deleted successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -70,7 +70,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata exte
    * Operation create time.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata setCreateTime(String createTime) {
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -87,13 +87,13 @@ public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata exte
    * Count of entries that encountered errors while processing.
    * @param failureCount failureCount or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata setFailureCount(java.lang.Long failureCount) {
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata setFailureCount(java.lang.Long failureCount) {
     this.failureCount = failureCount;
     return this;
   }
 
   /**
-   * Count of entries that were processed successfully.
+   * Count of entries that were deleted successfully.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSuccessCount() {
@@ -101,10 +101,10 @@ public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata exte
   }
 
   /**
-   * Count of entries that were processed successfully.
+   * Count of entries that were deleted successfully.
    * @param successCount successCount or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata setSuccessCount(java.lang.Long successCount) {
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata setSuccessCount(java.lang.Long successCount) {
     this.successCount = successCount;
     return this;
   }
@@ -121,19 +121,19 @@ public final class GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata exte
    * Operation last update time. If the operation is done, this is also the finish time.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata setUpdateTime(String updateTime) {
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata clone() {
-    return (GoogleCloudDiscoveryengineV1betaImportUserEventsMetadata) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata clone() {
+    return (GoogleCloudDiscoveryengineV1alphaPurgeUserEventsMetadata) super.clone();
   }
 
 }

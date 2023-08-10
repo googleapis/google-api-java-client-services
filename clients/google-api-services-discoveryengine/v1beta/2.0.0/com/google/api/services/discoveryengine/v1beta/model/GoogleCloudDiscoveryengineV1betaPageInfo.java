@@ -33,9 +33,9 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
    * The most specific category associated with a category page. To represent full path of category,
    * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
    * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: "pageCategory" :
-   * "Sales > 2017 Black Friday Deals". Required for `view-category-page` events. Other event types
-   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
+   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
+   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
   /**
    * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
-   * user is browsing the page. The `pageViewId` property should be kept the same for all these
+   * user is browsing the page. The `pageview_id` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
    * reporting with JavaScript pixel and Google Tag Manager, this value is filled in automatically.
    * The value may be {@code null}.
@@ -74,9 +74,9 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
    * The most specific category associated with a category page. To represent full path of category,
    * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
    * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: "pageCategory" :
-   * "Sales > 2017 Black Friday Deals". Required for `view-category-page` events. Other event types
-   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
+   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
+   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageCategory() {
@@ -87,9 +87,9 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
    * The most specific category associated with a category page. To represent full path of category,
    * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
    * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: "pageCategory" :
-   * "Sales > 2017 Black Friday Deals". Required for `view-category-page` events. Other event types
-   * should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
+   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
+   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @param pageCategory pageCategory or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaPageInfo setPageCategory(java.lang.String pageCategory) {
@@ -100,7 +100,7 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
   /**
    * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
-   * user is browsing the page. The `pageViewId` property should be kept the same for all these
+   * user is browsing the page. The `pageview_id` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
    * reporting with JavaScript pixel and Google Tag Manager, this value is filled in automatically.
    * @return value or {@code null} for none
@@ -112,7 +112,7 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
   /**
    * A unique ID of a web page view. This should be kept the same for all user events triggered from
    * the same pageview. For example, an item detail page view could trigger multiple events as the
-   * user is browsing the page. The `pageViewId` property should be kept the same for all these
+   * user is browsing the page. The `pageview_id` property should be kept the same for all these
    * events so that they can be grouped together properly. When using the client side event
    * reporting with JavaScript pixel and Google Tag Manager, this value is filled in automatically.
    * @param pageviewId pageviewId or {@code null} for none

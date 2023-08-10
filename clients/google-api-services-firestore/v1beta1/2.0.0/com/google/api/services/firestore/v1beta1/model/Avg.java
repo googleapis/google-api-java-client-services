@@ -14,10 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firestore.v1.model;
+package com.google.api.services.firestore.v1beta1.model;
 
 /**
- * Options for a transaction that can only be used to read documents.
+ * Average of the values of the requested field. * Only numeric values will be aggregated. All non-
+ * numeric values including `NULL` are skipped. * If the aggregated values contain `NaN`, returns
+ * `NaN`. Infinity math follows IEEE-754 standards. * If the aggregated value set is empty, returns
+ * `NULL`. * Always returns the result as a double.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,46 +30,40 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ReadOnly extends com.google.api.client.json.GenericJson {
+public final class Avg extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reads documents at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
+   * The field to aggregate on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String readTime;
+  private FieldReference field;
 
   /**
-   * Reads documents at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
+   * The field to aggregate on.
    * @return value or {@code null} for none
    */
-  public String getReadTime() {
-    return readTime;
+  public FieldReference getField() {
+    return field;
   }
 
   /**
-   * Reads documents at the given time. This must be a microsecond precision timestamp within the
-   * past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
-   * timestamp within the past 7 days.
-   * @param readTime readTime or {@code null} for none
+   * The field to aggregate on.
+   * @param field field or {@code null} for none
    */
-  public ReadOnly setReadTime(String readTime) {
-    this.readTime = readTime;
+  public Avg setField(FieldReference field) {
+    this.field = field;
     return this;
   }
 
   @Override
-  public ReadOnly set(String fieldName, Object value) {
-    return (ReadOnly) super.set(fieldName, value);
+  public Avg set(String fieldName, Object value) {
+    return (Avg) super.set(fieldName, value);
   }
 
   @Override
-  public ReadOnly clone() {
-    return (ReadOnly) super.clone();
+  public Avg clone() {
+    return (Avg) super.clone();
   }
 
 }

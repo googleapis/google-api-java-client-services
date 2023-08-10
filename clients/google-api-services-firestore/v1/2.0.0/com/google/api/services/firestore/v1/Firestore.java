@@ -301,13 +301,17 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. The ID to use for the database, which will become the final component of the
-         * database's resource name. The value must be set to "(default)".
+         * database's resource name. This value should be 4-63 characters. Valid characters are
+         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
          */
         @com.google.api.client.util.Key
         private java.lang.String databaseId;
 
         /** Required. The ID to use for the database, which will become the final component of the database's
-       resource name. The value must be set to "(default)".
+       resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
+       character a letter and the last a letter or a number. Must not be UUID-like
+       /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
          */
         public java.lang.String getDatabaseId() {
           return databaseId;
@@ -315,7 +319,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. The ID to use for the database, which will become the final component of the
-         * database's resource name. The value must be set to "(default)".
+         * database's resource name. This value should be 4-63 characters. Valid characters are
+         * /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-
+         * like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
          */
         public Create setDatabaseId(java.lang.String databaseId) {
           this.databaseId = databaseId;
@@ -452,28 +458,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * If set to true and the Database is not found, the request will succeed but no action will
-         * be taken.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean allowMissing;
-
-        /** If set to true and the Database is not found, the request will succeed but no action will be taken.
-         */
-        public java.lang.Boolean getAllowMissing() {
-          return allowMissing;
-        }
-
-        /**
-         * If set to true and the Database is not found, the request will succeed but no action will
-         * be taken.
-         */
-        public Delete setAllowMissing(java.lang.Boolean allowMissing) {
-          this.allowMissing = allowMissing;
-          return this;
-        }
-
-        /**
          * The current etag of the Database. If an etag is provided and does not match the current
          * etag of the database, deletion will be blocked and a FAILED_PRECONDITION error will be
          * returned.
@@ -495,28 +479,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
-          return this;
-        }
-
-        /**
-         * If set, validate the request and preview the response, but do not actually delete the
-         * database.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean validateOnly;
-
-        /** If set, validate the request and preview the response, but do not actually delete the database.
-         */
-        public java.lang.Boolean getValidateOnly() {
-          return validateOnly;
-        }
-
-        /**
-         * If set, validate the request and preview the response, but do not actually delete the
-         * database.
-         */
-        public Delete setValidateOnly(java.lang.Boolean validateOnly) {
-          this.validateOnly = validateOnly;
           return this;
         }
 
@@ -2332,7 +2294,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Lists the field configuration and metadata for this database. Currently,
            * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
            * issue this query, call FirestoreAdmin.ListFields with the filter set to
-           * `indexConfig.usesAncestorConfig:false` .
+           * `indexConfig.usesAncestorConfig:false or `ttlConfig:*`.
            *
            * Create a request for the method "fields.list".
            *
@@ -2360,7 +2322,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Lists the field configuration and metadata for this database. Currently,
              * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
              * issue this query, call FirestoreAdmin.ListFields with the filter set to
-             * `indexConfig.usesAncestorConfig:false` .
+             * `indexConfig.usesAncestorConfig:false or `ttlConfig:*`.
              *
              * Create a request for the method "fields.list".
              *
@@ -4592,21 +4554,25 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 270
-           * seconds.
+           * Reads the version of the document at the given time. This must be a microsecond
+           * precision timestamp within the past one hour, or if Point-in-Time Recovery is enabled,
+           * can additionally be a whole minute timestamp within the past 7 days.
            */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads the version of the document at the given time. This may not be older than 270 seconds.
+          /** Reads the version of the document at the given time. This must be a microsecond precision timestamp
+         within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+         minute timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 270
-           * seconds.
+           * Reads the version of the document at the given time. This must be a microsecond
+           * precision timestamp within the past one hour, or if Point-in-Time Recovery is enabled,
+           * can additionally be a whole minute timestamp within the past 7 days.
            */
           public Get setReadTime(String readTime) {
             this.readTime = readTime;
@@ -4923,17 +4889,27 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This must be a microsecond precision timestamp within the
+         past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+         timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -5424,17 +5400,27 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This must be a microsecond precision timestamp within the
+         past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+         timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           public ListDocuments setReadTime(String readTime) {
             this.readTime = readTime;
             return this;

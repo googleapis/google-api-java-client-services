@@ -79,6 +79,14 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
   private GoogleFirestoreAdminV1Progress progressDocuments;
 
   /**
+   * The timestamp that corresponds to the version of the database that is being exported. If
+   * unspecified, there are no guarantees about the consistency of the documents being exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String snapshotTime;
+
+  /**
    * The time this operation started.
    * The value may be {@code null}.
    */
@@ -201,6 +209,25 @@ public final class GoogleFirestoreAdminV1ExportDocumentsMetadata extends com.goo
    */
   public GoogleFirestoreAdminV1ExportDocumentsMetadata setProgressDocuments(GoogleFirestoreAdminV1Progress progressDocuments) {
     this.progressDocuments = progressDocuments;
+    return this;
+  }
+
+  /**
+   * The timestamp that corresponds to the version of the database that is being exported. If
+   * unspecified, there are no guarantees about the consistency of the documents being exported.
+   * @return value or {@code null} for none
+   */
+  public String getSnapshotTime() {
+    return snapshotTime;
+  }
+
+  /**
+   * The timestamp that corresponds to the version of the database that is being exported. If
+   * unspecified, there are no guarantees about the consistency of the documents being exported.
+   * @param snapshotTime snapshotTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1ExportDocumentsMetadata setSnapshotTime(String snapshotTime) {
+    this.snapshotTime = snapshotTime;
     return this;
   }
 

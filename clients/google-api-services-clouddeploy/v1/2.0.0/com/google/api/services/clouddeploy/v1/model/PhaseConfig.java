@@ -47,16 +47,16 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String phaseId;
 
   /**
-   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
-   * postdeploy job will not be present for this phase.
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured, there
+   * will be no postdeploy job for this phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Postdeploy postdeploy;
 
   /**
-   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
-   * predeploy job will not be present for this phase.
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured, there
+   * will be no predeploy job for this phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
-   * postdeploy job will not be present for this phase.
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured, there
+   * will be no postdeploy job for this phase.
    * @return value or {@code null} for none
    */
   public Postdeploy getPostdeploy() {
@@ -127,8 +127,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the postdeploy job of this phase. If this is not configured,
-   * postdeploy job will not be present for this phase.
+   * Optional. Configuration for the postdeploy job of this phase. If this is not configured, there
+   * will be no postdeploy job for this phase.
    * @param postdeploy postdeploy or {@code null} for none
    */
   public PhaseConfig setPostdeploy(Postdeploy postdeploy) {
@@ -137,8 +137,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
-   * predeploy job will not be present for this phase.
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured, there
+   * will be no predeploy job for this phase.
    * @return value or {@code null} for none
    */
   public Predeploy getPredeploy() {
@@ -146,8 +146,8 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the predeploy job of this phase. If this is not configured,
-   * predeploy job will not be present for this phase.
+   * Optional. Configuration for the predeploy job of this phase. If this is not configured, there
+   * will be no predeploy job for this phase.
    * @param predeploy predeploy or {@code null} for none
    */
   public PhaseConfig setPredeploy(Predeploy predeploy) {

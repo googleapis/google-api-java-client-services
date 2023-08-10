@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Predeploy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * Optional. A sequence of Skaffold custom actions to invoke during execution of the predeploy
    * job.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class Predeploy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> actions;
 
   /**
-   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * Optional. A sequence of Skaffold custom actions to invoke during execution of the predeploy
    * job.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class Predeploy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy
+   * Optional. A sequence of Skaffold custom actions to invoke during execution of the predeploy
    * job.
    * @param actions actions or {@code null} for none
    */

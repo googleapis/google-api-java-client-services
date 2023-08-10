@@ -37,16 +37,14 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   private Job deployJob;
 
   /**
-   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
-   * of the phase.
+   * Output only. The postdeploy Job, which is the last job on the phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Job postdeployJob;
 
   /**
-   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
-   * of the phase.
+   * Output only. The predeploy Job, which is the first job on the phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +75,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
-   * of the phase.
+   * Output only. The postdeploy Job, which is the last job on the phase.
    * @return value or {@code null} for none
    */
   public Job getPostdeployJob() {
@@ -86,8 +83,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The postdeploy Job. This is the postdeploy job in the phase. This is the last job
-   * of the phase.
+   * Output only. The postdeploy Job, which is the last job on the phase.
    * @param postdeployJob postdeployJob or {@code null} for none
    */
   public DeploymentJobs setPostdeployJob(Job postdeployJob) {
@@ -96,8 +92,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
-   * of the phase.
+   * Output only. The predeploy Job, which is the first job on the phase.
    * @return value or {@code null} for none
    */
   public Job getPredeployJob() {
@@ -105,8 +100,7 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The predeploy Job. This is the predeploy job in the phase. This is the first job
-   * of the phase.
+   * Output only. The predeploy Job, which is the first job on the phase.
    * @param predeployJob predeployJob or {@code null} for none
    */
   public DeploymentJobs setPredeployJob(Job predeployJob) {

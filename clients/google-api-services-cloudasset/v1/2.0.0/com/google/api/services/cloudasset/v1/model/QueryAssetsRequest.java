@@ -83,8 +83,8 @@ public final class QueryAssetsRequest extends com.google.api.client.json.Generic
   private TimeWindow readTimeWindow;
 
   /**
-   * Optional. A SQL statement that's compatible with [BigQuery Standard
-   * SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+   * Optional. A SQL statement that's compatible with [BigQuery
+   * SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +229,8 @@ public final class QueryAssetsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. A SQL statement that's compatible with [BigQuery Standard
-   * SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+   * Optional. A SQL statement that's compatible with [BigQuery
+   * SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
    * @return value or {@code null} for none
    */
   public java.lang.String getStatement() {
@@ -238,8 +238,8 @@ public final class QueryAssetsRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. A SQL statement that's compatible with [BigQuery Standard
-   * SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+   * Optional. A SQL statement that's compatible with [BigQuery
+   * SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
    * @param statement statement or {@code null} for none
    */
   public QueryAssetsRequest setStatement(java.lang.String statement) {

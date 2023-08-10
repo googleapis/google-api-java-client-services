@@ -30,11 +30,11 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. If set to false, an uri_pattern will be generated to include all pages whose
-   * address contains the provided_uri_pattern. If set to true, an uri_pattern will be generated to
-   * try to be an exact match of the provided_uri_pattern or just the specific page if the
-   * provided_uri_pattern is a specific one. provided_uri_pattern will always be normalized to
-   * generate the uri pattern to be used by the search engine.
+   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
+   * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
+   * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be
+   * used by the search engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,12 +57,19 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   private java.lang.String name;
 
   /**
-   * Required. Input only. The user provided uri pattern from which the `generated_uri_pattern` is
+   * Required. Input only. The user provided URI pattern from which the `generated_uri_pattern` is
    * generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String providedUriPattern;
+
+  /**
+   * Output only. Site ownership and validity verification status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo siteVerificationInfo;
 
   /**
    * The type of the target site, e.g. whether the site is to be included or excluded.
@@ -79,11 +86,11 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   private String updateTime;
 
   /**
-   * Input only. If set to false, an uri_pattern will be generated to include all pages whose
-   * address contains the provided_uri_pattern. If set to true, an uri_pattern will be generated to
-   * try to be an exact match of the provided_uri_pattern or just the specific page if the
-   * provided_uri_pattern is a specific one. provided_uri_pattern will always be normalized to
-   * generate the uri pattern to be used by the search engine.
+   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
+   * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
+   * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be
+   * used by the search engine.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExactMatch() {
@@ -91,11 +98,11 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * Input only. If set to false, an uri_pattern will be generated to include all pages whose
-   * address contains the provided_uri_pattern. If set to true, an uri_pattern will be generated to
-   * try to be an exact match of the provided_uri_pattern or just the specific page if the
-   * provided_uri_pattern is a specific one. provided_uri_pattern will always be normalized to
-   * generate the uri pattern to be used by the search engine.
+   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
+   * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
+   * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be
+   * used by the search engine.
    * @param exactMatch exactMatch or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTargetSite setExactMatch(java.lang.Boolean exactMatch) {
@@ -142,7 +149,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * Required. Input only. The user provided uri pattern from which the `generated_uri_pattern` is
+   * Required. Input only. The user provided URI pattern from which the `generated_uri_pattern` is
    * generated.
    * @return value or {@code null} for none
    */
@@ -151,12 +158,29 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * Required. Input only. The user provided uri pattern from which the `generated_uri_pattern` is
+   * Required. Input only. The user provided URI pattern from which the `generated_uri_pattern` is
    * generated.
    * @param providedUriPattern providedUriPattern or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTargetSite setProvidedUriPattern(java.lang.String providedUriPattern) {
     this.providedUriPattern = providedUriPattern;
+    return this;
+  }
+
+  /**
+   * Output only. Site ownership and validity verification status.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo getSiteVerificationInfo() {
+    return siteVerificationInfo;
+  }
+
+  /**
+   * Output only. Site ownership and validity verification status.
+   * @param siteVerificationInfo siteVerificationInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTargetSite setSiteVerificationInfo(GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo siteVerificationInfo) {
+    this.siteVerificationInfo = siteVerificationInfo;
     return this;
   }
 

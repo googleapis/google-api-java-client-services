@@ -34,8 +34,8 @@ public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.go
    * imports: * `user_event` (default): One UserEvent per row. Supported values for document
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
-   * per row in arbitrary format that conforms the defined Schema of the data store. This can only
-   * be used by the GENERIC Data Store vertical.
+   * per row in arbitrary format that conforms to the defined Schema of the data store. This can
+   * only be used by Gen App Builder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.go
    * imports: * `user_event` (default): One UserEvent per row. Supported values for document
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
-   * per row in arbitrary format that conforms the defined Schema of the data store. This can only
-   * be used by the GENERIC Data Store vertical.
+   * per row in arbitrary format that conforms to the defined Schema of the data store. This can
+   * only be used by Gen App Builder.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -97,8 +97,8 @@ public final class GoogleCloudDiscoveryengineV1betaBigQuerySource extends com.go
    * imports: * `user_event` (default): One UserEvent per row. Supported values for document
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
-   * per row in arbitrary format that conforms the defined Schema of the data store. This can only
-   * be used by the GENERIC Data Store vertical.
+   * per row in arbitrary format that conforms to the defined Schema of the data store. This can
+   * only be used by Gen App Builder.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaBigQuerySource setDataSchema(java.lang.String dataSchema) {

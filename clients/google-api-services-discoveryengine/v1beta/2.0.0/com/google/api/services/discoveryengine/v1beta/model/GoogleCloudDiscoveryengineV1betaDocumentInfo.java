@@ -30,16 +30,15 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Document resource ID.
+   * The Document resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. The Document resource full name, of the form: `projects/{project_id}/locations/{locat
-   * ion}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{doc
-   * ument_id}`
+   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
+   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,14 +62,14 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   private java.lang.Integer quantity;
 
   /**
-   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * The Document URI - only allowed for website data stores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The Document resource ID.
+   * The Document resource ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -78,7 +77,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   }
 
   /**
-   * Required. The Document resource ID.
+   * The Document resource ID.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentInfo setId(java.lang.String id) {
@@ -87,9 +86,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   }
 
   /**
-   * Required. The Document resource full name, of the form: `projects/{project_id}/locations/{locat
-   * ion}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{doc
-   * ument_id}`
+   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
+   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -97,9 +95,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   }
 
   /**
-   * Required. The Document resource full name, of the form: `projects/{project_id}/locations/{locat
-   * ion}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{doc
-   * ument_id}`
+   * The Document resource full name, of the form: `projects/{project_id}/locations/{location}/colle
+   * ctions/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentInfo setName(java.lang.String name) {
@@ -148,7 +145,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   }
 
   /**
-   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * The Document URI - only allowed for website data stores.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -156,7 +153,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
   }
 
   /**
-   * Required. The Document url - only allowed for DataStores with content_config PUBLIC_WEBSITE.
+   * The Document URI - only allowed for website data stores.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentInfo setUri(java.lang.String uri) {

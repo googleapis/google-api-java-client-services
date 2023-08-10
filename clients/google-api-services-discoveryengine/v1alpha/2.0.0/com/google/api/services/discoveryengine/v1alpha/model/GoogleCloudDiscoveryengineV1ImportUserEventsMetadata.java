@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Metadata related to the progress of the Import operation. This will be returned by the
+ * Metadata related to the progress of the Import operation. This is returned by the
  * google.longrunning.Operation.metadata field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

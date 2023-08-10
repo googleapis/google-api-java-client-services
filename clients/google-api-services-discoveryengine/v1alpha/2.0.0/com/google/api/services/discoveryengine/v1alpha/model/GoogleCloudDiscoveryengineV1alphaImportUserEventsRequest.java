@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. BigQuery input source.
+   * BigQuery input source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,21 +45,21 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   private GoogleCloudDiscoveryengineV1alphaImportErrorConfig errorConfig;
 
   /**
-   * Required. Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource;
 
   /**
-   * Required. The Inline source for the input content for UserEvents.
+   * The Inline source for the input content for UserEvents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource inlineSource;
 
   /**
-   * Required. BigQuery input source.
+   * BigQuery input source.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaBigQuerySource getBigquerySource() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. BigQuery input source.
+   * BigQuery input source.
    * @param bigquerySource bigquerySource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest setBigquerySource(GoogleCloudDiscoveryengineV1alphaBigQuerySource bigquerySource) {
@@ -95,7 +95,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource getGcsSource() {
@@ -103,7 +103,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. Cloud Storage location for the input content.
+   * Cloud Storage location for the input content.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest setGcsSource(GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource) {
@@ -112,7 +112,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. The Inline source for the input content for UserEvents.
+   * The Inline source for the input content for UserEvents.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource getInlineSource() {
@@ -120,7 +120,7 @@ public final class GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest exte
   }
 
   /**
-   * Required. The Inline source for the input content for UserEvents.
+   * The Inline source for the input content for UserEvents.
    * @param inlineSource inlineSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaImportUserEventsRequest setInlineSource(GoogleCloudDiscoveryengineV1alphaImportUserEventsRequestInlineSource inlineSource) {

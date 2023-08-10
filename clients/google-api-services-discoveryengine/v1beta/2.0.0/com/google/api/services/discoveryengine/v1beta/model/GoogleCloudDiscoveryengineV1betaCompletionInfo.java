@@ -31,21 +31,21 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaCompletionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion position, starting from 0.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion position, starting from 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer selectedPosition;
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selectedSuggestion;
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion position, starting from 0.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion position, starting from 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSelectedPosition() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDiscoveryengineV1betaCompletionInfo extends com.go
   }
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion position, starting from 0.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion position, starting from 0.
    * @param selectedPosition selectedPosition or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCompletionInfo setSelectedPosition(java.lang.Integer selectedPosition) {
@@ -62,7 +62,7 @@ public final class GoogleCloudDiscoveryengineV1betaCompletionInfo extends com.go
   }
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelectedSuggestion() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDiscoveryengineV1betaCompletionInfo extends com.go
   }
 
   /**
-   * End user selected CompleteQueryResponse.CompletionResult.suggestion.
+   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * @param selectedSuggestion selectedSuggestion or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCompletionInfo setSelectedSuggestion(java.lang.String selectedSuggestion) {

@@ -41,19 +41,18 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all bare metal clusters within a project and location and will return a 409 if the
-   * cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bareMetalClusterId;
 
   /**
-   * The object name of the bare metal cluster custom resource on the associated admin cluster. This
-   * field is used to support conflicting resource names when enrolling existing clusters to the
-   * API. When not provided, this field will resolve to the bare_metal_cluster_id. Otherwise, it
-   * must match the object name of the bare metal cluster custom resource. It is not modifiable
-   * outside / beyond the enrollment operation.
+   * Optional. The object name of the bare metal cluster custom resource on the associated admin
+   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * clusters to the API. When not provided, this field will resolve to the bare_metal_cluster_id.
+   * Otherwise, it must match the object name of the bare metal cluster custom resource. It is not
+   * modifiable outside / beyond the enrollment operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +82,7 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all bare metal clusters within a project and location and will return a 409 if the
-   * cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getBareMetalClusterId() {
@@ -94,8 +92,7 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all bare metal clusters within a project and location and will return a 409 if the
-   * cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @param bareMetalClusterId bareMetalClusterId or {@code null} for none
    */
   public EnrollBareMetalClusterRequest setBareMetalClusterId(java.lang.String bareMetalClusterId) {
@@ -104,11 +101,11 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   }
 
   /**
-   * The object name of the bare metal cluster custom resource on the associated admin cluster. This
-   * field is used to support conflicting resource names when enrolling existing clusters to the
-   * API. When not provided, this field will resolve to the bare_metal_cluster_id. Otherwise, it
-   * must match the object name of the bare metal cluster custom resource. It is not modifiable
-   * outside / beyond the enrollment operation.
+   * Optional. The object name of the bare metal cluster custom resource on the associated admin
+   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * clusters to the API. When not provided, this field will resolve to the bare_metal_cluster_id.
+   * Otherwise, it must match the object name of the bare metal cluster custom resource. It is not
+   * modifiable outside / beyond the enrollment operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalName() {
@@ -116,11 +113,11 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   }
 
   /**
-   * The object name of the bare metal cluster custom resource on the associated admin cluster. This
-   * field is used to support conflicting resource names when enrolling existing clusters to the
-   * API. When not provided, this field will resolve to the bare_metal_cluster_id. Otherwise, it
-   * must match the object name of the bare metal cluster custom resource. It is not modifiable
-   * outside / beyond the enrollment operation.
+   * Optional. The object name of the bare metal cluster custom resource on the associated admin
+   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * clusters to the API. When not provided, this field will resolve to the bare_metal_cluster_id.
+   * Otherwise, it must match the object name of the bare metal cluster custom resource. It is not
+   * modifiable outside / beyond the enrollment operation.
    * @param localName localName or {@code null} for none
    */
   public EnrollBareMetalClusterRequest setLocalName(java.lang.String localName) {

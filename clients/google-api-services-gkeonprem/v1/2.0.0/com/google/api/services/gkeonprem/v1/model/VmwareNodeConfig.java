@@ -106,7 +106,7 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Specifies the vSphere config for node pool.
+   * Specifies the vSphere config for node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,7 +280,7 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Specifies the vSphere config for node pool.
+   * Specifies the vSphere config for node pool.
    * @return value or {@code null} for none
    */
   public VmwareVsphereConfig getVsphereConfig() {
@@ -288,7 +288,7 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Specifies the vSphere config for node pool.
+   * Specifies the vSphere config for node pool.
    * @param vsphereConfig vsphereConfig or {@code null} for none
    */
   public VmwareNodeConfig setVsphereConfig(VmwareVsphereConfig vsphereConfig) {

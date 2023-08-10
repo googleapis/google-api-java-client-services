@@ -37,6 +37,13 @@ public final class VmwareAdminNetworkConfig extends com.google.api.client.json.G
   private VmwareDhcpIpConfig dhcpIpConfig;
 
   /**
+   * Configuration for HA admin cluster control plane.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareAdminHAControlPlaneConfig haControlPlaneConfig;
+
+  /**
    * Represents common network settings irrespective of the host's IP address.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class VmwareAdminNetworkConfig extends com.google.api.client.json.G
    */
   public VmwareAdminNetworkConfig setDhcpIpConfig(VmwareDhcpIpConfig dhcpIpConfig) {
     this.dhcpIpConfig = dhcpIpConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for HA admin cluster control plane.
+   * @return value or {@code null} for none
+   */
+  public VmwareAdminHAControlPlaneConfig getHaControlPlaneConfig() {
+    return haControlPlaneConfig;
+  }
+
+  /**
+   * Configuration for HA admin cluster control plane.
+   * @param haControlPlaneConfig haControlPlaneConfig or {@code null} for none
+   */
+  public VmwareAdminNetworkConfig setHaControlPlaneConfig(VmwareAdminHAControlPlaneConfig haControlPlaneConfig) {
+    this.haControlPlaneConfig = haControlPlaneConfig;
     return this;
   }
 

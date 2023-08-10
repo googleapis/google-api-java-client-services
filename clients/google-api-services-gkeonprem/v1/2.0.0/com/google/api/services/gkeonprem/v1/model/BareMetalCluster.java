@@ -248,6 +248,13 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
+   * The cluster upgrade policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BareMetalClusterUpgradePolicy upgradePolicy;
+
+  /**
    * Output only. The result of the preflight check.
    * The value may be {@code null}.
    */
@@ -774,6 +781,23 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
    */
   public BareMetalCluster setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The cluster upgrade policy.
+   * @return value or {@code null} for none
+   */
+  public BareMetalClusterUpgradePolicy getUpgradePolicy() {
+    return upgradePolicy;
+  }
+
+  /**
+   * The cluster upgrade policy.
+   * @param upgradePolicy upgradePolicy or {@code null} for none
+   */
+  public BareMetalCluster setUpgradePolicy(BareMetalClusterUpgradePolicy upgradePolicy) {
+    this.upgradePolicy = upgradePolicy;
     return this;
   }
 

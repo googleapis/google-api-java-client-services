@@ -30,8 +30,8 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class EnrollBareMetalNodePoolRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * User provided OnePlatform identifier that is used as part of the resource name. This value must
-   * be up to 40 characters and follow RFC-1123 (https://tools.ietf.org/html/rfc1123) format.
+   * User provided OnePlatform identifier that is used as part of the resource name.
+   * (https://tools.ietf.org/html/rfc1123) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class EnrollBareMetalNodePoolRequest extends com.google.api.client.
   private java.lang.Boolean validateOnly;
 
   /**
-   * User provided OnePlatform identifier that is used as part of the resource name. This value must
-   * be up to 40 characters and follow RFC-1123 (https://tools.ietf.org/html/rfc1123) format.
+   * User provided OnePlatform identifier that is used as part of the resource name.
+   * (https://tools.ietf.org/html/rfc1123) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getBareMetalNodePoolId() {
@@ -54,8 +54,8 @@ public final class EnrollBareMetalNodePoolRequest extends com.google.api.client.
   }
 
   /**
-   * User provided OnePlatform identifier that is used as part of the resource name. This value must
-   * be up to 40 characters and follow RFC-1123 (https://tools.ietf.org/html/rfc1123) format.
+   * User provided OnePlatform identifier that is used as part of the resource name.
+   * (https://tools.ietf.org/html/rfc1123) format.
    * @param bareMetalNodePoolId bareMetalNodePoolId or {@code null} for none
    */
   public EnrollBareMetalNodePoolRequest setBareMetalNodePoolId(java.lang.String bareMetalNodePoolId) {

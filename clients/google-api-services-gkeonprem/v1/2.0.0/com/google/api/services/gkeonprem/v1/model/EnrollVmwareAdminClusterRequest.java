@@ -39,8 +39,7 @@ public final class EnrollVmwareAdminClusterRequest extends com.google.api.client
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +65,7 @@ public final class EnrollVmwareAdminClusterRequest extends com.google.api.client
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmwareAdminClusterId() {
@@ -77,8 +75,7 @@ public final class EnrollVmwareAdminClusterRequest extends com.google.api.client
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @param vmwareAdminClusterId vmwareAdminClusterId or {@code null} for none
    */
   public EnrollVmwareAdminClusterRequest setVmwareAdminClusterId(java.lang.String vmwareAdminClusterId) {

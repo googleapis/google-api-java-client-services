@@ -45,6 +45,13 @@ public final class VmwareAdminControlPlaneNodeConfig extends com.google.api.clie
   private java.lang.Long memory;
 
   /**
+   * The number of control plane nodes for this VMware admin cluster. (default: 1 replica).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long replicas;
+
+  /**
    * The number of vCPUs for the control-plane node of the admin cluster.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class VmwareAdminControlPlaneNodeConfig extends com.google.api.clie
    */
   public VmwareAdminControlPlaneNodeConfig setMemory(java.lang.Long memory) {
     this.memory = memory;
+    return this;
+  }
+
+  /**
+   * The number of control plane nodes for this VMware admin cluster. (default: 1 replica).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getReplicas() {
+    return replicas;
+  }
+
+  /**
+   * The number of control plane nodes for this VMware admin cluster. (default: 1 replica).
+   * @param replicas replicas or {@code null} for none
+   */
+  public VmwareAdminControlPlaneNodeConfig setReplicas(java.lang.Long replicas) {
+    this.replicas = replicas;
     return this;
   }
 

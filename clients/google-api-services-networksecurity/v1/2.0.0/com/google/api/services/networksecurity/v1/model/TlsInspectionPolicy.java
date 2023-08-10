@@ -47,11 +47,46 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
   private String createTime;
 
   /**
+   * Optional. List of custom TLS cipher suites selected. This field is valid only if the selected
+   * tls_feature_profile is CUSTOM. The compute.SslPoliciesService.ListAvailableFeatures method
+   * returns the set of features that can be specified in this list. Note that Secure Web Proxy does
+   * not yet honor this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customTlsFeatures;
+
+  /**
    * Optional. Free-text description of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. If FALSE (the default), use our default set of public CAs in addition to any CAs
+   * specified in trust_config. These public CAs are currently based on the Mozilla Root Program and
+   * are subject to change over time. If TRUE, do not accept our default set of public CAs. Only CAs
+   * specified in trust_config will be accepted. This defaults to FALSE (use public CAs in addition
+   * to trust_config) for backwards compatibility, but trusting public root CAs is *not recommended*
+   * unless the traffic in question is outbound to public web servers. When possible, prefer setting
+   * this to "false" and explicitly specifying trusted CAs and certificates in a TrustConfig. Note
+   * that Secure Web Proxy does not yet honor this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludePublicCaSet;
+
+  /**
+   * Optional. Minimum TLS version that the firewall should use when negotiating connections with
+   * both clients and servers. If this is not set, then the default value is to allow the broadest
+   * set of clients and servers (TLS 1.0 or higher). Setting this to more restrictive values may
+   * improve security, but may also prevent the firewall from connecting to some clients or servers.
+   * Note that Secure Web Proxy does not yet honor this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minTlsVersion;
 
   /**
    * Required. Name of the resource. Name is of the form
@@ -61,6 +96,27 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The selected Profile. If this is not set, then the default value is to allow the
+   * broadest set of clients and servers ("PROFILE_COMPATIBLE"). Setting this to more restrictive
+   * values may improve security, but may also prevent the TLS inspection proxy from connecting to
+   * some clients or servers. Note that Secure Web Proxy does not yet honor this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsFeatureProfile;
+
+  /**
+   * Optional. A TrustConfig resource used when making a connection to the TLS server. This is a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/trustConfigs/{trust_config}". This is necessary to
+   * intercept TLS connections to servers with certificates signed by a private CA or self-signed
+   * certificates. Note that Secure Web Proxy does not yet honor this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trustConfig;
 
   /**
    * Output only. The timestamp when the resource was updated.
@@ -108,6 +164,29 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
   }
 
   /**
+   * Optional. List of custom TLS cipher suites selected. This field is valid only if the selected
+   * tls_feature_profile is CUSTOM. The compute.SslPoliciesService.ListAvailableFeatures method
+   * returns the set of features that can be specified in this list. Note that Secure Web Proxy does
+   * not yet honor this field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomTlsFeatures() {
+    return customTlsFeatures;
+  }
+
+  /**
+   * Optional. List of custom TLS cipher suites selected. This field is valid only if the selected
+   * tls_feature_profile is CUSTOM. The compute.SslPoliciesService.ListAvailableFeatures method
+   * returns the set of features that can be specified in this list. Note that Secure Web Proxy does
+   * not yet honor this field.
+   * @param customTlsFeatures customTlsFeatures or {@code null} for none
+   */
+  public TlsInspectionPolicy setCustomTlsFeatures(java.util.List<java.lang.String> customTlsFeatures) {
+    this.customTlsFeatures = customTlsFeatures;
+    return this;
+  }
+
+  /**
    * Optional. Free-text description of the resource.
    * @return value or {@code null} for none
    */
@@ -121,6 +200,62 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
    */
   public TlsInspectionPolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. If FALSE (the default), use our default set of public CAs in addition to any CAs
+   * specified in trust_config. These public CAs are currently based on the Mozilla Root Program and
+   * are subject to change over time. If TRUE, do not accept our default set of public CAs. Only CAs
+   * specified in trust_config will be accepted. This defaults to FALSE (use public CAs in addition
+   * to trust_config) for backwards compatibility, but trusting public root CAs is *not recommended*
+   * unless the traffic in question is outbound to public web servers. When possible, prefer setting
+   * this to "false" and explicitly specifying trusted CAs and certificates in a TrustConfig. Note
+   * that Secure Web Proxy does not yet honor this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludePublicCaSet() {
+    return excludePublicCaSet;
+  }
+
+  /**
+   * Optional. If FALSE (the default), use our default set of public CAs in addition to any CAs
+   * specified in trust_config. These public CAs are currently based on the Mozilla Root Program and
+   * are subject to change over time. If TRUE, do not accept our default set of public CAs. Only CAs
+   * specified in trust_config will be accepted. This defaults to FALSE (use public CAs in addition
+   * to trust_config) for backwards compatibility, but trusting public root CAs is *not recommended*
+   * unless the traffic in question is outbound to public web servers. When possible, prefer setting
+   * this to "false" and explicitly specifying trusted CAs and certificates in a TrustConfig. Note
+   * that Secure Web Proxy does not yet honor this field.
+   * @param excludePublicCaSet excludePublicCaSet or {@code null} for none
+   */
+  public TlsInspectionPolicy setExcludePublicCaSet(java.lang.Boolean excludePublicCaSet) {
+    this.excludePublicCaSet = excludePublicCaSet;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum TLS version that the firewall should use when negotiating connections with
+   * both clients and servers. If this is not set, then the default value is to allow the broadest
+   * set of clients and servers (TLS 1.0 or higher). Setting this to more restrictive values may
+   * improve security, but may also prevent the firewall from connecting to some clients or servers.
+   * Note that Secure Web Proxy does not yet honor this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinTlsVersion() {
+    return minTlsVersion;
+  }
+
+  /**
+   * Optional. Minimum TLS version that the firewall should use when negotiating connections with
+   * both clients and servers. If this is not set, then the default value is to allow the broadest
+   * set of clients and servers (TLS 1.0 or higher). Setting this to more restrictive values may
+   * improve security, but may also prevent the firewall from connecting to some clients or servers.
+   * Note that Secure Web Proxy does not yet honor this field.
+   * @param minTlsVersion minTlsVersion or {@code null} for none
+   */
+  public TlsInspectionPolicy setMinTlsVersion(java.lang.String minTlsVersion) {
+    this.minTlsVersion = minTlsVersion;
     return this;
   }
 
@@ -142,6 +277,54 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
    */
   public TlsInspectionPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The selected Profile. If this is not set, then the default value is to allow the
+   * broadest set of clients and servers ("PROFILE_COMPATIBLE"). Setting this to more restrictive
+   * values may improve security, but may also prevent the TLS inspection proxy from connecting to
+   * some clients or servers. Note that Secure Web Proxy does not yet honor this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsFeatureProfile() {
+    return tlsFeatureProfile;
+  }
+
+  /**
+   * Optional. The selected Profile. If this is not set, then the default value is to allow the
+   * broadest set of clients and servers ("PROFILE_COMPATIBLE"). Setting this to more restrictive
+   * values may improve security, but may also prevent the TLS inspection proxy from connecting to
+   * some clients or servers. Note that Secure Web Proxy does not yet honor this field.
+   * @param tlsFeatureProfile tlsFeatureProfile or {@code null} for none
+   */
+  public TlsInspectionPolicy setTlsFeatureProfile(java.lang.String tlsFeatureProfile) {
+    this.tlsFeatureProfile = tlsFeatureProfile;
+    return this;
+  }
+
+  /**
+   * Optional. A TrustConfig resource used when making a connection to the TLS server. This is a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/trustConfigs/{trust_config}". This is necessary to
+   * intercept TLS connections to servers with certificates signed by a private CA or self-signed
+   * certificates. Note that Secure Web Proxy does not yet honor this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrustConfig() {
+    return trustConfig;
+  }
+
+  /**
+   * Optional. A TrustConfig resource used when making a connection to the TLS server. This is a
+   * relative resource path following the form
+   * "projects/{project}/locations/{location}/trustConfigs/{trust_config}". This is necessary to
+   * intercept TLS connections to servers with certificates signed by a private CA or self-signed
+   * certificates. Note that Secure Web Proxy does not yet honor this field.
+   * @param trustConfig trustConfig or {@code null} for none
+   */
+  public TlsInspectionPolicy setTrustConfig(java.lang.String trustConfig) {
+    this.trustConfig = trustConfig;
     return this;
   }
 

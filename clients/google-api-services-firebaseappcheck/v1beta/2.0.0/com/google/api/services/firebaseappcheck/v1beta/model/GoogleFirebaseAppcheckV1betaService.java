@@ -38,16 +38,33 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   private java.lang.String enforcementMode;
 
   /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update and delete requests to ensure the client has an up-to-date value before proceeding. This
+   * etag is strongly validated as defined by RFC 7232.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
+   * Platform)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Required. The App Check enforcement mode for this service.
@@ -67,12 +84,34 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   }
 
   /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update and delete requests to ensure the client has an up-to-date value before proceeding. This
+   * etag is strongly validated as defined by RFC 7232.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * This checksum is computed by the server based on the value of other fields, and may be sent on
+   * update and delete requests to ensure the client has an up-to-date value before proceeding. This
+   * etag is strongly validated as defined by RFC 7232.
+   * @param etag etag or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaService setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
+   * Platform)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -85,11 +124,29 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
    * a supported service ID. Currently, the following service IDs are supported: *
    * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore)
+   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
+   * Platform)
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1betaService setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

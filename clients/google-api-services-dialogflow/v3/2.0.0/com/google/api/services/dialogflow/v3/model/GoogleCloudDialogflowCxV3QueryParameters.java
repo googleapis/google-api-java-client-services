@@ -117,6 +117,15 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   private java.util.List<GoogleCloudDialogflowCxV3SessionEntityType> sessionEntityTypes;
 
   /**
+   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
+   * and its data is stored for 30 minutes after the last request is sent for the session. This
+   * value should be no longer than 1 day.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sessionTtl;
+
+  /**
    * The time zone of this conversational query from the [time zone database](https://www.iana.org
    * /time-zones), e.g., America/New_York, Europe/Paris. If not provided, the time zone specified in
    * the agent is used.
@@ -335,6 +344,27 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
    */
   public GoogleCloudDialogflowCxV3QueryParameters setSessionEntityTypes(java.util.List<GoogleCloudDialogflowCxV3SessionEntityType> sessionEntityTypes) {
     this.sessionEntityTypes = sessionEntityTypes;
+    return this;
+  }
+
+  /**
+   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
+   * and its data is stored for 30 minutes after the last request is sent for the session. This
+   * value should be no longer than 1 day.
+   * @return value or {@code null} for none
+   */
+  public String getSessionTtl() {
+    return sessionTtl;
+  }
+
+  /**
+   * Optional. Sets Dialogflow session life time. By default, a Dialogflow session remains active
+   * and its data is stored for 30 minutes after the last request is sent for the session. This
+   * value should be no longer than 1 day.
+   * @param sessionTtl sessionTtl or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryParameters setSessionTtl(String sessionTtl) {
+    this.sessionTtl = sessionTtl;
     return this;
   }
 

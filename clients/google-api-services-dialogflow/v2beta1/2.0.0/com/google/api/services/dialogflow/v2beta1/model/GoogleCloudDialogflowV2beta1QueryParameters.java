@@ -67,6 +67,14 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
+   * The platform of the virtual agent response messages. If not empty, only emits messages from
+   * this platform in the response. Valid values are the enum names of platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String platform;
+
+  /**
    * Specifies whether to delete all contexts in the current session before the new ones are
    * activated.
    * The value may be {@code null}.
@@ -192,6 +200,25 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setPayload(java.util.Map<String, java.lang.Object> payload) {
     this.payload = payload;
+    return this;
+  }
+
+  /**
+   * The platform of the virtual agent response messages. If not empty, only emits messages from
+   * this platform in the response. Valid values are the enum names of platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlatform() {
+    return platform;
+  }
+
+  /**
+   * The platform of the virtual agent response messages. If not empty, only emits messages from
+   * this platform in the response. Valid values are the enum names of platform.
+   * @param platform platform or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1QueryParameters setPlatform(java.lang.String platform) {
+    this.platform = platform;
     return this;
   }
 

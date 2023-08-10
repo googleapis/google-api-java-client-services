@@ -44,6 +44,15 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfig extends com.googl
   private java.lang.String agent;
 
   /**
+   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
+   * active and its data is stored for 30 minutes after the last request is sent for the session.
+   * This value should be no longer than 1 day.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String sessionTtl;
+
+  /**
    * Required. ID of the Dialogflow agent environment to use. This project needs to either be the
    * same project as the conversation or you need to grant `service-@gcp-sa-
    * dialogflow.iam.gserviceaccount.com` the `Dialogflow API Service Agent` role in this project. -
@@ -71,6 +80,27 @@ public final class GoogleCloudDialogflowV2AutomatedAgentConfig extends com.googl
    */
   public GoogleCloudDialogflowV2AutomatedAgentConfig setAgent(java.lang.String agent) {
     this.agent = agent;
+    return this;
+  }
+
+  /**
+   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
+   * active and its data is stored for 30 minutes after the last request is sent for the session.
+   * This value should be no longer than 1 day.
+   * @return value or {@code null} for none
+   */
+  public String getSessionTtl() {
+    return sessionTtl;
+  }
+
+  /**
+   * Optional. Sets Dialogflow CX session life time. By default, a Dialogflow CX session remains
+   * active and its data is stored for 30 minutes after the last request is sent for the session.
+   * This value should be no longer than 1 day.
+   * @param sessionTtl sessionTtl or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentConfig setSessionTtl(String sessionTtl) {
+    this.sessionTtl = sessionTtl;
     return this;
   }
 

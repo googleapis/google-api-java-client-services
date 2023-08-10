@@ -48,6 +48,13 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   private java.lang.String agentUri;
 
   /**
+   * Setting for restoring from a git branch
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource gitSource;
+
+  /**
    * Agent restore mode. If not specified, `KEEP` is assumed.
    * The value may be {@code null}.
    */
@@ -121,6 +128,23 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
    */
   public GoogleCloudDialogflowCxV3beta1RestoreAgentRequest setAgentUri(java.lang.String agentUri) {
     this.agentUri = agentUri;
+    return this;
+  }
+
+  /**
+   * Setting for restoring from a git branch
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource getGitSource() {
+    return gitSource;
+  }
+
+  /**
+   * Setting for restoring from a git branch
+   * @param gitSource gitSource or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1RestoreAgentRequest setGitSource(GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource gitSource) {
+    this.gitSource = gitSource;
     return this;
   }
 

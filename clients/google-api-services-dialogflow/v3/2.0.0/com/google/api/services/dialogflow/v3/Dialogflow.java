@@ -16319,7 +16319,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Fetches a list of results for a given test case.
+             * Fetches the list of run results for the given test case. A maximum of 100 results are kept for
+             * each test case.
              *
              * Create a request for the method "results.list".
              *
@@ -16344,7 +16345,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+$");
 
               /**
-               * Fetches a list of results for a given test case.
+               * Fetches the list of run results for the given test case. A maximum of 100 results are kept for
+               * each test case.
                *
                * Create a request for the method "results.list".
                *

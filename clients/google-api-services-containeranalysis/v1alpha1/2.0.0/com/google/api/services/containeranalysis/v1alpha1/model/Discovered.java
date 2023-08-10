@@ -97,6 +97,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private Operation operation;
 
   /**
+   * Output only. The status of an SBOM generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SBOMStatus sbomStatus;
+
+  /**
    * The list of analysis that were completed for a resource.
    * @return value or {@code null} for none
    */
@@ -252,6 +259,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setOperation(Operation operation) {
     this.operation = operation;
+    return this;
+  }
+
+  /**
+   * Output only. The status of an SBOM generation.
+   * @return value or {@code null} for none
+   */
+  public SBOMStatus getSbomStatus() {
+    return sbomStatus;
+  }
+
+  /**
+   * Output only. The status of an SBOM generation.
+   * @param sbomStatus sbomStatus or {@code null} for none
+   */
+  public Discovered setSbomStatus(SBOMStatus sbomStatus) {
+    this.sbomStatus = sbomStatus;
     return this;
   }
 

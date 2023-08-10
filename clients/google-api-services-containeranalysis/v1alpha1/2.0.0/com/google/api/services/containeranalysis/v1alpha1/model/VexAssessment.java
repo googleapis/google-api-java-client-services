@@ -97,6 +97,14 @@ public final class VexAssessment extends com.google.api.client.json.GenericJson 
   private java.lang.String state;
 
   /**
+   * The vulnerability identifier for this Assessment. Will hold one of common identifiers e.g. CVE,
+   * GHSA etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vulnerabilityId;
+
+  /**
    * Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the
    * vulnerability.
    * @return value or {@code null} for none
@@ -220,6 +228,25 @@ public final class VexAssessment extends com.google.api.client.json.GenericJson 
    */
   public VexAssessment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * The vulnerability identifier for this Assessment. Will hold one of common identifiers e.g. CVE,
+   * GHSA etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVulnerabilityId() {
+    return vulnerabilityId;
+  }
+
+  /**
+   * The vulnerability identifier for this Assessment. Will hold one of common identifiers e.g. CVE,
+   * GHSA etc.
+   * @param vulnerabilityId vulnerabilityId or {@code null} for none
+   */
+  public VexAssessment setVulnerabilityId(java.lang.String vulnerabilityId) {
+    this.vulnerabilityId = vulnerabilityId;
     return this;
   }
 

@@ -31,6 +31,12 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class GrafeasV1beta1BuildDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1;
+
+  /**
    * Required. The actual provenance for the build.
    * The value may be {@code null}.
    */
@@ -49,6 +55,21 @@ public final class GrafeasV1beta1BuildDetails extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String provenanceBytes;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public InTotoSlsaProvenanceV1 getInTotoSlsaProvenanceV1() {
+    return inTotoSlsaProvenanceV1;
+  }
+
+  /**
+   * @param inTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1 or {@code null} for none
+   */
+  public GrafeasV1beta1BuildDetails setInTotoSlsaProvenanceV1(InTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1) {
+    this.inTotoSlsaProvenanceV1 = inTotoSlsaProvenanceV1;
+    return this;
+  }
 
   /**
    * Required. The actual provenance for the build.

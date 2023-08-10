@@ -1603,21 +1603,25 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 270
-           * seconds.
+           * Reads the version of the document at the given time. This must be a microsecond
+           * precision timestamp within the past one hour, or if Point-in-Time Recovery is enabled,
+           * can additionally be a whole minute timestamp within the past 7 days.
            */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Reads the version of the document at the given time. This may not be older than 270 seconds.
+          /** Reads the version of the document at the given time. This must be a microsecond precision timestamp
+         within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+         minute timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
           /**
-           * Reads the version of the document at the given time. This may not be older than 270
-           * seconds.
+           * Reads the version of the document at the given time. This must be a microsecond
+           * precision timestamp within the past one hour, or if Point-in-Time Recovery is enabled,
+           * can additionally be a whole minute timestamp within the past 7 days.
            */
           public Get setReadTime(String readTime) {
             this.readTime = readTime;
@@ -1934,17 +1938,27 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This must be a microsecond precision timestamp within the
+         past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+         timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -2435,17 +2449,27 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds.
+          /** Perform the read at the provided time. This must be a microsecond precision timestamp within the
+         past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole minute
+         timestamp within the past 7 days.
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /** Perform the read at the provided time. This may not be older than 270 seconds. */
+          /**
+           * Perform the read at the provided time. This must be a microsecond precision timestamp
+           * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be
+           * a whole minute timestamp within the past 7 days.
+           */
           public ListDocuments setReadTime(String readTime) {
             this.readTime = readTime;
             return this;

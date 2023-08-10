@@ -38,8 +38,9 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   private TransactionOptions newTransaction;
 
   /**
-   * Executes the query at the given timestamp. Requires: * Cannot be more than 270 seconds in the
-   * past.
+   * Executes the query at the given timestamp. This must be a microsecond precision timestamp
+   * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+   * minute timestamp within the past 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +81,9 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   }
 
   /**
-   * Executes the query at the given timestamp. Requires: * Cannot be more than 270 seconds in the
-   * past.
+   * Executes the query at the given timestamp. This must be a microsecond precision timestamp
+   * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+   * minute timestamp within the past 7 days.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -89,8 +91,9 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   }
 
   /**
-   * Executes the query at the given timestamp. Requires: * Cannot be more than 270 seconds in the
-   * past.
+   * Executes the query at the given timestamp. This must be a microsecond precision timestamp
+   * within the past one hour, or if Point-in-Time Recovery is enabled, can additionally be a whole
+   * minute timestamp within the past 7 days.
    * @param readTime readTime or {@code null} for none
    */
   public RunAggregationQueryRequest setReadTime(String readTime) {

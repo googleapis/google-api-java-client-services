@@ -43,11 +43,25 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
   private java.lang.String alias;
 
   /**
+   * Average aggregator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Avg avg;
+
+  /**
    * Count aggregator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Count count;
+
+  /**
+   * Sum aggregator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Sum sum;
 
   /**
    * Optional. Optional name of the field to store the result of the aggregation into. If not
@@ -79,6 +93,23 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Average aggregator.
+   * @return value or {@code null} for none
+   */
+  public Avg getAvg() {
+    return avg;
+  }
+
+  /**
+   * Average aggregator.
+   * @param avg avg or {@code null} for none
+   */
+  public Aggregation setAvg(Avg avg) {
+    this.avg = avg;
+    return this;
+  }
+
+  /**
    * Count aggregator.
    * @return value or {@code null} for none
    */
@@ -92,6 +123,23 @@ public final class Aggregation extends com.google.api.client.json.GenericJson {
    */
   public Aggregation setCount(Count count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Sum aggregator.
+   * @return value or {@code null} for none
+   */
+  public Sum getSum() {
+    return sum;
+  }
+
+  /**
+   * Sum aggregator.
+   * @param sum sum or {@code null} for none
+   */
+  public Aggregation setSum(Sum sum) {
+    this.sum = sum;
     return this;
   }
 

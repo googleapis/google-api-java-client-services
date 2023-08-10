@@ -17,7 +17,8 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Options for a transaction that can be used to read and write documents.
+ * Options for a transaction that can be used to read and write documents. Firestore does not allow
+ * 3rd party auth requests to create read-write. transactions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:

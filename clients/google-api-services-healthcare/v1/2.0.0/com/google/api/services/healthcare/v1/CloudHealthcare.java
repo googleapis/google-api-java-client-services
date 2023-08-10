@@ -16904,6 +16904,649 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Deletes a FHIR resource that match an identifier search query. Implements the FHIR standard
+             * conditional delete interaction, limited to searching by resource identifier. If multiple
+             * resources match, 412 Precondition Failed error will be returned. Search term for identifier
+             * should be in the pattern identifier=system|value or identifier=value - similar to the search
+             * method on resources with a specific identifier. Note: Unless resource versioning is disabled by
+             * setting the disable_resource_versioning flag on the FHIR store, the deleted resource is moved to
+             * a history repository that can still be retrieved through vread and related methods, unless they
+             * are removed by the purge method. For samples that show how to call `conditionalDelete`, see
+             * [Conditionally deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * resources#conditionally_deleting_a_fhir_resource).
+             *
+             * Create a request for the method "fhir.conditionalDelete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the FHIR store this resource belongs to.
+             * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             * @return the request
+             */
+            public ConditionalDelete conditionalDelete(java.lang.String parent, java.lang.String type) throws java.io.IOException {
+              ConditionalDelete result = new ConditionalDelete(parent, type);
+              initialize(result);
+              return result;
+            }
+
+            public class ConditionalDelete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+parent}/fhir/{+type}";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              private final java.util.regex.Pattern TYPE_PATTERN =
+                  java.util.regex.Pattern.compile("^[^/]+$");
+
+              /**
+               * Deletes a FHIR resource that match an identifier search query. Implements the FHIR standard
+               * conditional delete interaction, limited to searching by resource identifier. If multiple
+               * resources match, 412 Precondition Failed error will be returned. Search term for identifier
+               * should be in the pattern identifier=system|value or identifier=value - similar to the search
+               * method on resources with a specific identifier. Note: Unless resource versioning is disabled by
+               * setting the disable_resource_versioning flag on the FHIR store, the deleted resource is moved
+               * to a history repository that can still be retrieved through vread and related methods, unless
+               * they are removed by the purge method. For samples that show how to call `conditionalDelete`,
+               * see [Conditionally deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos
+               * /fhir-resources#conditionally_deleting_a_fhir_resource).
+               *
+               * Create a request for the method "fhir.conditionalDelete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalDelete#initialize(com.google.api.client.googleapis.services.Ab
+               * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param parent The name of the FHIR store this resource belongs to.
+               * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * @since 1.13
+               */
+              protected ConditionalDelete(java.lang.String parent, java.lang.String type) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+              }
+
+              @Override
+              public ConditionalDelete set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalDelete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConditionalDelete setAccessToken(java.lang.String accessToken) {
+                return (ConditionalDelete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConditionalDelete setAlt(java.lang.String alt) {
+                return (ConditionalDelete) super.setAlt(alt);
+              }
+
+              @Override
+              public ConditionalDelete setCallback(java.lang.String callback) {
+                return (ConditionalDelete) super.setCallback(callback);
+              }
+
+              @Override
+              public ConditionalDelete setFields(java.lang.String fields) {
+                return (ConditionalDelete) super.setFields(fields);
+              }
+
+              @Override
+              public ConditionalDelete setKey(java.lang.String key) {
+                return (ConditionalDelete) super.setKey(key);
+              }
+
+              @Override
+              public ConditionalDelete setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalDelete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConditionalDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalDelete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConditionalDelete setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalDelete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConditionalDelete setUploadType(java.lang.String uploadType) {
+                return (ConditionalDelete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConditionalDelete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalDelete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the FHIR store this resource belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              public ConditionalDelete setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The FHIR resource type to delete, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String type;
+
+              /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * The FHIR resource type to delete, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              public ConditionalDelete setType(java.lang.String type) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+                this.type = type;
+                return this;
+              }
+
+              @Override
+              public ConditionalDelete set(String parameterName, Object value) {
+                return (ConditionalDelete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * If a resource is found with the identifier specified in the query parameters, updates part of
+             * that resource by applying the operations specified in a [JSON Patch](http://jsonpatch.com/)
+             * document. Implements the FHIR standard conditional patch interaction, limited to searching by
+             * resource identifier. DSTU2 doesn't define a conditional patch method, but the server supports it
+             * in the same way it supports STU3. Search term for identifier should be in the pattern
+             * identifier=system|value or identifier=value - similar to the search method on resources with a
+             * specific identifier. If the search criteria identify more than one match, the request returns a
+             * `412 Precondition Failed` error. The request body must contain a JSON Patch document, and the
+             * request headers must contain `Content-Type: application/json-patch+json`. On success, the
+             * response body contains a JSON-encoded representation of the updated resource, including the
+             * server-assigned version ID. Errors generated by the FHIR store contain a JSON-encoded
+             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
+             * to a valid API method on a FHIR store, a generic GCP error might be returned instead. For samples
+             * that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+             * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * resources#conditionally_patching_a_fhir_resource).
+             *
+             * Create a request for the method "fhir.conditionalPatch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the FHIR store this resource belongs to.
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+             * @return the request
+             */
+            public ConditionalPatch conditionalPatch(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) throws java.io.IOException {
+              ConditionalPatch result = new ConditionalPatch(parent, type, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ConditionalPatch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/fhir/{+type}";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              private final java.util.regex.Pattern TYPE_PATTERN =
+                  java.util.regex.Pattern.compile("^[^/]+$");
+
+              /**
+               * If a resource is found with the identifier specified in the query parameters, updates part of
+               * that resource by applying the operations specified in a [JSON Patch](http://jsonpatch.com/)
+               * document. Implements the FHIR standard conditional patch interaction, limited to searching by
+               * resource identifier. DSTU2 doesn't define a conditional patch method, but the server supports
+               * it in the same way it supports STU3. Search term for identifier should be in the pattern
+               * identifier=system|value or identifier=value - similar to the search method on resources with a
+               * specific identifier. If the search criteria identify more than one match, the request returns a
+               * `412 Precondition Failed` error. The request body must contain a JSON Patch document, and the
+               * request headers must contain `Content-Type: application/json-patch+json`. On success, the
+               * response body contains a JSON-encoded representation of the updated resource, including the
+               * server-assigned version ID. Errors generated by the FHIR store contain a JSON-encoded
+               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
+               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               * For samples that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+               * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * resources#conditionally_patching_a_fhir_resource).
+               *
+               * Create a request for the method "fhir.conditionalPatch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalPatch#initialize(com.google.api.client.googleapis.services.Abs
+               * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param parent The name of the FHIR store this resource belongs to.
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+               * @since 1.13
+               */
+              protected ConditionalPatch(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+              }
+
+              @Override
+              public ConditionalPatch set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalPatch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConditionalPatch setAccessToken(java.lang.String accessToken) {
+                return (ConditionalPatch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConditionalPatch setAlt(java.lang.String alt) {
+                return (ConditionalPatch) super.setAlt(alt);
+              }
+
+              @Override
+              public ConditionalPatch setCallback(java.lang.String callback) {
+                return (ConditionalPatch) super.setCallback(callback);
+              }
+
+              @Override
+              public ConditionalPatch setFields(java.lang.String fields) {
+                return (ConditionalPatch) super.setFields(fields);
+              }
+
+              @Override
+              public ConditionalPatch setKey(java.lang.String key) {
+                return (ConditionalPatch) super.setKey(key);
+              }
+
+              @Override
+              public ConditionalPatch setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalPatch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConditionalPatch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalPatch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConditionalPatch setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalPatch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConditionalPatch setUploadType(java.lang.String uploadType) {
+                return (ConditionalPatch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConditionalPatch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalPatch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the FHIR store this resource belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              public ConditionalPatch setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String type;
+
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               */
+              public ConditionalPatch setType(java.lang.String type) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+                this.type = type;
+                return this;
+              }
+
+              @Override
+              public ConditionalPatch set(String parameterName, Object value) {
+                return (ConditionalPatch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * If a resource is found with the identifier specified in the query parameters, updates the entire
+             * contents of that resource. Implements the FHIR standard conditional update interaction, limited
+             * to searching by resource identifier. Search term for identifier should be in the pattern
+             * identifier=system|value or identifier=value - similar to the search method on resources with a
+             * specific identifier. If the search criteria identify more than one match, the request returns a
+             * `412 Precondition Failed` error. If the search criteria identify zero matches, and the supplied
+             * resource body contains an `id`, and the FHIR store has enable_update_create set, creates the
+             * resource with the client-specified ID. It is strongly advised not to include or encode any
+             * sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part
+             * of the FHIR resource path recorded in Cloud Audit Logs and Pub/Sub notifications. Those IDs can
+             * also be contained in reference fields within other resources. If the search criteria identify
+             * zero matches, and the supplied resource body does not contain an `id`, the resource is created
+             * with a server-assigned ID as per the create method. The request body must contain a JSON-encoded
+             * FHIR resource, and the request headers must contain `Content-Type: application/fhir+json`. On
+             * success, the response body contains a JSON-encoded representation of the updated resource,
+             * including the server-assigned version ID. Errors generated by the FHIR store contain a JSON-
+             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
+             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead. For
+             * samples that show how to call `conditionalUpdate`, see [Conditionally updating a FHIR
+             * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * resources#conditionally_updating_a_fhir_resource).
+             *
+             * Create a request for the method "fhir.conditionalUpdate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the FHIR store this resource belongs to.
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+             *        resource type in the provided content.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+             * @return the request
+             */
+            public ConditionalUpdate conditionalUpdate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) throws java.io.IOException {
+              ConditionalUpdate result = new ConditionalUpdate(parent, type, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ConditionalUpdate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/fhir/{+type}";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              private final java.util.regex.Pattern TYPE_PATTERN =
+                  java.util.regex.Pattern.compile("^[^/]+$");
+
+              /**
+               * If a resource is found with the identifier specified in the query parameters, updates the
+               * entire contents of that resource. Implements the FHIR standard conditional update interaction,
+               * limited to searching by resource identifier. Search term for identifier should be in the
+               * pattern identifier=system|value or identifier=value - similar to the search method on resources
+               * with a specific identifier. If the search criteria identify more than one match, the request
+               * returns a `412 Precondition Failed` error. If the search criteria identify zero matches, and
+               * the supplied resource body contains an `id`, and the FHIR store has enable_update_create set,
+               * creates the resource with the client-specified ID. It is strongly advised not to include or
+               * encode any sensitive data such as patient identifiers in client-specified resource IDs. Those
+               * IDs are part of the FHIR resource path recorded in Cloud Audit Logs and Pub/Sub notifications.
+               * Those IDs can also be contained in reference fields within other resources. If the search
+               * criteria identify zero matches, and the supplied resource body does not contain an `id`, the
+               * resource is created with a server-assigned ID as per the create method. The request body must
+               * contain a JSON-encoded FHIR resource, and the request headers must contain `Content-Type:
+               * application/fhir+json`. On success, the response body contains a JSON-encoded representation of
+               * the updated resource, including the server-assigned version ID. Errors generated by the FHIR
+               * store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error.
+               * If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
+               * might be returned instead. For samples that show how to call `conditionalUpdate`, see
+               * [Conditionally updating a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * resources#conditionally_updating_a_fhir_resource).
+               *
+               * Create a request for the method "fhir.conditionalUpdate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalUpdate#initialize(com.google.api.client.googleapis.services.Ab
+               * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param parent The name of the FHIR store this resource belongs to.
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
+             *        resource type in the provided content.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.HttpBody}
+               * @since 1.13
+               */
+              protected ConditionalUpdate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1.model.HttpBody content) {
+                super(CloudHealthcare.this, "PUT", REST_PATH, content, com.google.api.services.healthcare.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+              }
+
+              @Override
+              public ConditionalUpdate set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalUpdate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConditionalUpdate setAccessToken(java.lang.String accessToken) {
+                return (ConditionalUpdate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConditionalUpdate setAlt(java.lang.String alt) {
+                return (ConditionalUpdate) super.setAlt(alt);
+              }
+
+              @Override
+              public ConditionalUpdate setCallback(java.lang.String callback) {
+                return (ConditionalUpdate) super.setCallback(callback);
+              }
+
+              @Override
+              public ConditionalUpdate setFields(java.lang.String fields) {
+                return (ConditionalUpdate) super.setFields(fields);
+              }
+
+              @Override
+              public ConditionalUpdate setKey(java.lang.String key) {
+                return (ConditionalUpdate) super.setKey(key);
+              }
+
+              @Override
+              public ConditionalUpdate setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalUpdate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConditionalUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalUpdate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConditionalUpdate setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalUpdate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConditionalUpdate setUploadType(java.lang.String uploadType) {
+                return (ConditionalUpdate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConditionalUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalUpdate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the FHIR store this resource belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** The name of the FHIR store this resource belongs to. */
+              public ConditionalUpdate setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String type;
+
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
+             in the provided content.
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the FHIR Resource Index
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
+               */
+              public ConditionalUpdate setType(java.lang.String type) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
+                      "Parameter type must conform to the pattern " +
+                      "^[^/]+$");
+                }
+                this.type = type;
+                return this;
+              }
+
+              @Override
+              public ConditionalUpdate set(String parameterName, Object value) {
+                return (ConditionalUpdate) super.set(parameterName, value);
+              }
+            }
+            /**
              * Creates a FHIR resource. Implements the FHIR standard create interaction
              * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
              * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
@@ -18078,8 +18721,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changes and when the change is reflected in search results. For samples
-             * and detailed information, see [Searching for FHIR
+             * resource is created or changed, and the time when the change reflects in search results. The only
+             * exception is resource identifier data, which is indexed synchronously as a special index. As a
+             * result, searching using resource identifier is not subject to indexing delay. To use the special
+             * synchronous index, the search term for identifier should be in the pattern
+             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
+             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
+             * your query contains any other search parameters, the standard asynchronous index will be used
+             * instead. Note that searching against the special index is optimized for resolving a small number
+             * of matches. The search isn't optimized if your identifier search criteria matches a large number
+             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
+             * resources, you can avoiding using the special synchronous index by including an additional
+             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
+             * sorting order. For samples and detailed information, see [Searching for FHIR
              * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
              * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
@@ -18142,10 +18796,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
                * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
-               * slight delay between the time a resource is created or changes and when the change is reflected
-               * in search results. For samples and detailed information, see [Searching for FHIR
-               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * slight delay between the time a resource is created or changed, and the time when the change
+               * reflects in search results. The only exception is resource identifier data, which is indexed
+               * synchronously as a special index. As a result, searching using resource identifier is not
+               * subject to indexing delay. To use the special synchronous index, the search term for identifier
+               * should be in the pattern `identifier=[system]|[value]` or `identifier=[value]`, and any of the
+               * following search result parameters can be used: * `_count` * `_include` * `_revinclude` *
+               * `_summary` * `_elements` If your query contains any other search parameters, the standard
+               * asynchronous index will be used instead. Note that searching against the special index is
+               * optimized for resolving a small number of matches. The search isn't optimized if your
+               * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
+               * search query that will match a large number of resources, you can avoiding using the special
+               * synchronous index by including an additional `_sort` parameter in your query. Use
+               * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+               * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+               * tos/fhir-search) and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs
+               * /how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -18287,8 +18953,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * page. Resources with a total size larger than 5MB or a field count larger than 50,000 might not
              * be fully searchable as the server might trim its generated search index in those cases. Note:
              * FHIR resources are indexed asynchronously, so there might be a slight delay between the time a
-             * resource is created or changes and when the change is reflected in search results. For samples
-             * and detailed information, see [Searching for FHIR
+             * resource is created or changed, and the time when the change reflects in search results. The only
+             * exception is resource identifier data, which is indexed synchronously as a special index. As a
+             * result, searching using resource identifier is not subject to indexing delay. To use the special
+             * synchronous index, the search term for identifier should be in the pattern
+             * `identifier=[system]|[value]` or `identifier=[value]`, and any of the following search result
+             * parameters can be used: * `_count` * `_include` * `_revinclude` * `_summary` * `_elements` If
+             * your query contains any other search parameters, the standard asynchronous index will be used
+             * instead. Note that searching against the special index is optimized for resolving a small number
+             * of matches. The search isn't optimized if your identifier search criteria matches a large number
+             * (i.e. more than 2,000) of resources. For a search query that will match a large number of
+             * resources, you can avoiding using the special synchronous index by including an additional
+             * `_sort` parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the default
+             * sorting order. For samples and detailed information, see [Searching for FHIR
              * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
              * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
              *
@@ -18355,10 +19032,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be used to retrieve the next page. Resources with a total size larger than 5MB or a field count
                * larger than 50,000 might not be fully searchable as the server might trim its generated search
                * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a
-               * slight delay between the time a resource is created or changes and when the change is reflected
-               * in search results. For samples and detailed information, see [Searching for FHIR
-               * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR
-               * search features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-search).
+               * slight delay between the time a resource is created or changed, and the time when the change
+               * reflects in search results. The only exception is resource identifier data, which is indexed
+               * synchronously as a special index. As a result, searching using resource identifier is not
+               * subject to indexing delay. To use the special synchronous index, the search term for identifier
+               * should be in the pattern `identifier=[system]|[value]` or `identifier=[value]`, and any of the
+               * following search result parameters can be used: * `_count` * `_include` * `_revinclude` *
+               * `_summary` * `_elements` If your query contains any other search parameters, the standard
+               * asynchronous index will be used instead. Note that searching against the special index is
+               * optimized for resolving a small number of matches. The search isn't optimized if your
+               * identifier search criteria matches a large number (i.e. more than 2,000) of resources. For a
+               * search query that will match a large number of resources, you can avoiding using the special
+               * synchronous index by including an additional `_sort` parameter in your query. Use
+               * `_sort=-_lastUpdated` if you want to keep the default sorting order. For samples and detailed
+               * information, see [Searching for FHIR resources](https://cloud.google.com/healthcare/docs/how-
+               * tos/fhir-search) and [Advanced FHIR search features](https://cloud.google.com/healthcare/docs
+               * /how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search-type".
                *

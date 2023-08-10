@@ -30,6 +30,13 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class AnalyzeEntitiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Alternative output format to be generated based on the results of analysis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alternativeOutputFormat;
+
+  /**
    * document_content is a document to be annotated.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class AnalyzeEntitiesRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> licensedVocabularies;
+
+  /**
+   * Optional. Alternative output format to be generated based on the results of analysis.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlternativeOutputFormat() {
+    return alternativeOutputFormat;
+  }
+
+  /**
+   * Optional. Alternative output format to be generated based on the results of analysis.
+   * @param alternativeOutputFormat alternativeOutputFormat or {@code null} for none
+   */
+  public AnalyzeEntitiesRequest setAlternativeOutputFormat(java.lang.String alternativeOutputFormat) {
+    this.alternativeOutputFormat = alternativeOutputFormat;
+    return this;
+  }
 
   /**
    * document_content is a document to be annotated.

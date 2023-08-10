@@ -30,15 +30,16 @@ package com.google.api.services.gmail.model;
 public final class WatchRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filtering behavior of labelIds list specified.
+   * Filtering behavior of `labelIds list` specified. This field is deprecated because it caused
+   * incorrect behavior in some cases; use `label_filter_behavior` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelFilterAction;
 
   /**
-   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
-   * label_filter_action is ignored.
+   * Filtering behavior of `labelIds list` specified. This field replaces `label_filter_action`; if
+   * set, `label_filter_action` is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String topicName;
 
   /**
-   * Filtering behavior of labelIds list specified.
+   * Filtering behavior of `labelIds list` specified. This field is deprecated because it caused
+   * incorrect behavior in some cases; use `label_filter_behavior` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelFilterAction() {
@@ -73,7 +75,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filtering behavior of labelIds list specified.
+   * Filtering behavior of `labelIds list` specified. This field is deprecated because it caused
+   * incorrect behavior in some cases; use `label_filter_behavior` instead.
    * @param labelFilterAction labelFilterAction or {@code null} for none
    */
   public WatchRequest setLabelFilterAction(java.lang.String labelFilterAction) {
@@ -82,8 +85,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
-   * label_filter_action is ignored.
+   * Filtering behavior of `labelIds list` specified. This field replaces `label_filter_action`; if
+   * set, `label_filter_action` is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelFilterBehavior() {
@@ -91,8 +94,8 @@ public final class WatchRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Filtering behavior of labelIds list specified. This field replaces label_filter_action; if set,
-   * label_filter_action is ignored.
+   * Filtering behavior of `labelIds list` specified. This field replaces `label_filter_action`; if
+   * set, `label_filter_action` is ignored.
    * @param labelFilterBehavior labelFilterBehavior or {@code null} for none
    */
   public WatchRequest setLabelFilterBehavior(java.lang.String labelFilterBehavior) {

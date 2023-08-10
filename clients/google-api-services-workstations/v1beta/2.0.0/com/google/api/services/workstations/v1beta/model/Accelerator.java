@@ -31,21 +31,22 @@ package com.google.api.services.workstations.v1beta.model;
 public final class Accelerator extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of accelerator cards exposed to the instance.
+   * Optional. Number of accelerator cards exposed to the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer count;
 
   /**
-   * Type of accelerator resource to attach to the instance, for example, "nvidia-tesla-p100".
+   * Optional. Type of accelerator resource to attach to the instance, for example, `"nvidia-
+   * tesla-p100"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Number of accelerator cards exposed to the instance.
+   * Optional. Number of accelerator cards exposed to the instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -53,7 +54,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of accelerator cards exposed to the instance.
+   * Optional. Number of accelerator cards exposed to the instance.
    * @param count count or {@code null} for none
    */
   public Accelerator setCount(java.lang.Integer count) {
@@ -62,7 +63,8 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of accelerator resource to attach to the instance, for example, "nvidia-tesla-p100".
+   * Optional. Type of accelerator resource to attach to the instance, for example, `"nvidia-
+   * tesla-p100"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -70,7 +72,8 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of accelerator resource to attach to the instance, for example, "nvidia-tesla-p100".
+   * Optional. Type of accelerator resource to attach to the instance, for example, `"nvidia-
+   * tesla-p100"`.
    * @param type type or {@code null} for none
    */
   public Accelerator setType(java.lang.String type) {

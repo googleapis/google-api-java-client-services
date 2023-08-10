@@ -31,21 +31,21 @@ package com.google.api.services.workstations.v1beta.model;
 public final class ReadinessCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to which the request should be sent.
+   * Optional. Path to which the request should be sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Port to which the request should be sent.
+   * Optional. Port to which the request should be sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Path to which the request should be sent.
+   * Optional. Path to which the request should be sent.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -53,7 +53,7 @@ public final class ReadinessCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Path to which the request should be sent.
+   * Optional. Path to which the request should be sent.
    * @param path path or {@code null} for none
    */
   public ReadinessCheck setPath(java.lang.String path) {
@@ -62,7 +62,7 @@ public final class ReadinessCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Port to which the request should be sent.
+   * Optional. Port to which the request should be sent.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -70,7 +70,7 @@ public final class ReadinessCheck extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Port to which the request should be sent.
+   * Optional. Port to which the request should be sent.
    * @param port port or {@code null} for none
    */
   public ReadinessCheck setPort(java.lang.Integer port) {

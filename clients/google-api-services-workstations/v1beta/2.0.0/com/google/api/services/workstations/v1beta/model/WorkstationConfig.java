@@ -17,8 +17,12 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A set of configuration options that describe how a workstation runs. Workstation configurations
- * are intended to be shared across multiple workstations.
+ * A workstation configuration resource in the Cloud Workstations API. Workstation configurations
+ * act as templates for workstations. The workstation configuration defines details such as the
+ * workstation virtual machine (VM) instance type, persistent storage, container image defining
+ * environment, which IDE or Code Editor to use, and more. Administrators and platform teams can
+ * also use [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/overview) rules
+ * to grant access to teams or to individual developers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -32,7 +36,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,45 +56,46 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that runs upon startup for each workstation using this workstation configuration.
+   * Optional. Container that runs upon startup for each workstation using this workstation
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Container container;
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation configuration was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this resource is degraded, in which case it may require user action to
+   * restore full functionality. See also the conditions field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean degraded;
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation configuration was soft-deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deleteTime;
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
-   * must also be specified that has `logging.buckets.write` permission on the project. Operating
-   * system audit logging is distinct from [Cloud Audit
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
    * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * The value may be {@code null}.
    */
@@ -114,49 +119,50 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private CustomerEncryptionKey encryptionKey;
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Runtime host for the workstation.
+   * Optional. Runtime host for the workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Host host;
 
   /**
-   * Number of seconds to wait before automatically stopping a workstation after it last received
-   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
-   * configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
+   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
+   * this configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
-   * `7200s` (2 hours). The default is `1200s` (20 minutes).
+   * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String idleTimeout;
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation configuration and that are also propagated to the underlying Compute Engine
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Directories to persist across workstation sessions.
+   * Optional. Directories to persist across workstation sessions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +175,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Readiness checks to perform when starting a workstation using this workstation configuration.
-   * Mark a workstation as running only after all specified readiness checks return 200 status
-   * codes.
+   * Optional. Readiness checks to perform when starting a workstation using this workstation
+   * configuration. Mark a workstation as running only after all specified readiness checks return
+   * 200 status codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,22 +190,22 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation configuration is currently being updated to
+   * match its intended state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
 
   /**
-   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
-   * that workstations be shut down daily to reduce costs and so that security updates can be
-   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
-   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
-   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
-   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
-   * indicates that workstations using this configuration should never time out. If `encryption_key`
-   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
    * indicates that Cloud Workstations VMs created with this configuration have no maximum running
    * time. This is strongly discouraged because you incur costs and will not pick up security
    * updates.
@@ -209,21 +215,21 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String runningTimeout;
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation configuration was most recently updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -231,7 +237,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Client-specified annotations.
+   * Optional. Client-specified annotations.
    * @param annotations annotations or {@code null} for none
    */
   public WorkstationConfig setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -257,7 +263,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that runs upon startup for each workstation using this workstation configuration.
+   * Optional. Container that runs upon startup for each workstation using this workstation
+   * configuration.
    * @return value or {@code null} for none
    */
   public Container getContainer() {
@@ -265,7 +272,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Container that runs upon startup for each workstation using this workstation configuration.
+   * Optional. Container that runs upon startup for each workstation using this workstation
+   * configuration.
    * @param container container or {@code null} for none
    */
   public WorkstationConfig setContainer(Container container) {
@@ -274,7 +282,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation configuration was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -282,7 +290,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was created.
+   * Output only. Time when this workstation configuration was created.
    * @param createTime createTime or {@code null} for none
    */
   public WorkstationConfig setCreateTime(String createTime) {
@@ -291,8 +299,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this resource is degraded, in which case it may require user action to
+   * restore full functionality. See also the conditions field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDegraded() {
@@ -300,8 +308,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Whether this resource is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in the `conditions` field.
+   * Output only. Whether this resource is degraded, in which case it may require user action to
+   * restore full functionality. See also the conditions field.
    * @param degraded degraded or {@code null} for none
    */
   public WorkstationConfig setDegraded(java.lang.Boolean degraded) {
@@ -310,7 +318,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation configuration was soft-deleted.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -318,7 +326,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was soft-deleted.
+   * Output only. Time when this workstation configuration was soft-deleted.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public WorkstationConfig setDeleteTime(String deleteTime) {
@@ -327,7 +335,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -335,7 +343,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Human-readable name for this resource.
+   * Optional. Human-readable name for this workstation configuration.
    * @param displayName displayName or {@code null} for none
    */
   public WorkstationConfig setDisplayName(java.lang.String displayName) {
@@ -344,9 +352,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
-   * must also be specified that has `logging.buckets.write` permission on the project. Operating
-   * system audit logging is distinct from [Cloud Audit
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
    * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * @return value or {@code null} for none
    */
@@ -355,9 +363,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether to enable Linux `auditd` logging on the workstation. When enabled, a service account
-   * must also be specified that has `logging.buckets.write` permission on the project. Operating
-   * system audit logging is distinct from [Cloud Audit
+   * Optional. Whether to enable Linux `auditd` logging on the workstation. When enabled, a service
+   * account must also be specified that has `logging.buckets.write` permission on the project.
+   * Operating system audit logging is distinct from [Cloud Audit
    * Logs](https://cloud.google.com/workstations/docs/audit-logging).
    * @param enableAuditAgent enableAuditAgent or {@code null} for none
    */
@@ -402,8 +410,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -411,8 +419,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Checksum computed by the server. May be sent on update and delete requests to make sure that
-   * the client has an up-to-date value before proceeding.
+   * Optional. Checksum computed by the server. May be sent on update and delete requests to make
+   * sure that the client has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none
    */
   public WorkstationConfig setEtag(java.lang.String etag) {
@@ -421,7 +429,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Runtime host for the workstation.
+   * Optional. Runtime host for the workstation.
    * @return value or {@code null} for none
    */
   public Host getHost() {
@@ -429,7 +437,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Runtime host for the workstation.
+   * Optional. Runtime host for the workstation.
    * @param host host or {@code null} for none
    */
   public WorkstationConfig setHost(Host host) {
@@ -438,12 +446,12 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds to wait before automatically stopping a workstation after it last received
-   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
-   * configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
+   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
+   * this configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
-   * `7200s` (2 hours). The default is `1200s` (20 minutes).
+   * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
    * @return value or {@code null} for none
    */
   public String getIdleTimeout() {
@@ -451,12 +459,12 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds to wait before automatically stopping a workstation after it last received
-   * user traffic. A value of `0s` indicates that Cloud Workstations VMs created with this
-   * configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
+   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
+   * this configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
-   * `7200s` (2 hours). The default is `1200s` (20 minutes).
+   * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
    * @param idleTimeout idleTimeout or {@code null} for none
    */
   public WorkstationConfig setIdleTimeout(String idleTimeout) {
@@ -465,8 +473,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation configuration and that are also propagated to the underlying Compute Engine
+   * resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -474,8 +483,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Client-specified labels that are applied to the resource and that are also propagated to the
-   * underlying Compute Engine resources.
+   * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
+   * to the workstation configuration and that are also propagated to the underlying Compute Engine
+   * resources.
    * @param labels labels or {@code null} for none
    */
   public WorkstationConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -484,7 +494,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -492,7 +502,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full name of this resource.
+   * Full name of this workstation configuration.
    * @param name name or {@code null} for none
    */
   public WorkstationConfig setName(java.lang.String name) {
@@ -501,7 +511,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Directories to persist across workstation sessions.
+   * Optional. Directories to persist across workstation sessions.
    * @return value or {@code null} for none
    */
   public java.util.List<PersistentDirectory> getPersistentDirectories() {
@@ -509,7 +519,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Directories to persist across workstation sessions.
+   * Optional. Directories to persist across workstation sessions.
    * @param persistentDirectories persistentDirectories or {@code null} for none
    */
   public WorkstationConfig setPersistentDirectories(java.util.List<PersistentDirectory> persistentDirectories) {
@@ -518,9 +528,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Readiness checks to perform when starting a workstation using this workstation configuration.
-   * Mark a workstation as running only after all specified readiness checks return 200 status
-   * codes.
+   * Optional. Readiness checks to perform when starting a workstation using this workstation
+   * configuration. Mark a workstation as running only after all specified readiness checks return
+   * 200 status codes.
    * @return value or {@code null} for none
    */
   public java.util.List<ReadinessCheck> getReadinessChecks() {
@@ -528,9 +538,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Readiness checks to perform when starting a workstation using this workstation configuration.
-   * Mark a workstation as running only after all specified readiness checks return 200 status
-   * codes.
+   * Optional. Readiness checks to perform when starting a workstation using this workstation
+   * configuration. Mark a workstation as running only after all specified readiness checks return
+   * 200 status codes.
    * @param readinessChecks readinessChecks or {@code null} for none
    */
   public WorkstationConfig setReadinessChecks(java.util.List<ReadinessCheck> readinessChecks) {
@@ -539,8 +549,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation configuration is currently being updated to
+   * match its intended state.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -548,8 +558,8 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates whether this resource is currently being updated to match its intended
-   * state.
+   * Output only. Indicates whether this workstation configuration is currently being updated to
+   * match its intended state.
    * @param reconciling reconciling or {@code null} for none
    */
   public WorkstationConfig setReconciling(java.lang.Boolean reconciling) {
@@ -558,14 +568,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
-   * that workstations be shut down daily to reduce costs and so that security updates can be
-   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
-   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
-   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
-   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
-   * indicates that workstations using this configuration should never time out. If `encryption_key`
-   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
    * indicates that Cloud Workstations VMs created with this configuration have no maximum running
    * time. This is strongly discouraged because you incur costs and will not pick up security
    * updates.
@@ -576,14 +586,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds that a workstation can run until it is automatically shut down. We recommend
-   * that workstations be shut down daily to reduce costs and so that security updates can be
-   * applied upon restart. The `idleTimeout` and `runningTimeout` parameters are independent of each
-   * other. Note that the `runningTimeout` parameter shuts down VMs after the specified time,
-   * regardless of whether or not the VMs are idle. Provide duration terminated by `s` for
-   * seconds—for example, `54000s` (15 hours). Defaults to `43200s` (12 hours). A value of `0`
-   * indicates that workstations using this configuration should never time out. If `encryption_key`
-   * is set, it must be greater than `0` and less than `86400s` (24 hours). Warning: A value of `0s`
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
    * indicates that Cloud Workstations VMs created with this configuration have no maximum running
    * time. This is strongly discouraged because you incur costs and will not pick up security
    * updates.
@@ -595,7 +605,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -603,7 +613,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. A system-assigned unique identifier for this resource.
+   * Output only. A system-assigned unique identifier for this workstation configuration.
    * @param uid uid or {@code null} for none
    */
   public WorkstationConfig setUid(java.lang.String uid) {
@@ -612,7 +622,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation configuration was most recently updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -620,7 +630,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Time when this resource was most recently updated.
+   * Output only. Time when this workstation configuration was most recently updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public WorkstationConfig setUpdateTime(String updateTime) {

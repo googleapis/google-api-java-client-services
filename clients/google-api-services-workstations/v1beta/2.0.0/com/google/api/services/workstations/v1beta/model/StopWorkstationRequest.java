@@ -31,23 +31,23 @@ package com.google.api.services.workstations.v1beta.model;
 public final class StopWorkstationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
+   * Optional. If set, the request will be rejected if the latest version of the workstation on the
+   * server does not have this ETag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the review, but do not actually apply it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
+   * Optional. If set, the request will be rejected if the latest version of the workstation on the
+   * server does not have this ETag.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -55,8 +55,8 @@ public final class StopWorkstationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * If set, the request will be rejected if the latest version of the workstation on the server
-   * does not have this ETag.
+   * Optional. If set, the request will be rejected if the latest version of the workstation on the
+   * server does not have this ETag.
    * @param etag etag or {@code null} for none
    */
   public StopWorkstationRequest setEtag(java.lang.String etag) {
@@ -65,7 +65,7 @@ public final class StopWorkstationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the review, but do not actually apply it.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -73,7 +73,7 @@ public final class StopWorkstationRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the review, but do not actually apply it.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public StopWorkstationRequest setValidateOnly(java.lang.Boolean validateOnly) {

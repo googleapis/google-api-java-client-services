@@ -37,6 +37,13 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
   private PolicyControllerResourceRequirements containerResources;
 
   /**
+   * Pod affinity configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String podAffinity;
+
+  /**
    * Pod anti-affinity enablement.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class PolicyControllerPolicyControllerDeploymentConfig extends com.
    */
   public PolicyControllerPolicyControllerDeploymentConfig setContainerResources(PolicyControllerResourceRequirements containerResources) {
     this.containerResources = containerResources;
+    return this;
+  }
+
+  /**
+   * Pod affinity configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPodAffinity() {
+    return podAffinity;
+  }
+
+  /**
+   * Pod affinity configuration.
+   * @param podAffinity podAffinity or {@code null} for none
+   */
+  public PolicyControllerPolicyControllerDeploymentConfig setPodAffinity(java.lang.String podAffinity) {
+    this.podAffinity = podAffinity;
     return this;
   }
 

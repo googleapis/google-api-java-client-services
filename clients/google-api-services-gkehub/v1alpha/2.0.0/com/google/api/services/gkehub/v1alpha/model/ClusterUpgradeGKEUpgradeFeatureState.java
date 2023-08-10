@@ -50,6 +50,13 @@ public final class ClusterUpgradeGKEUpgradeFeatureState extends com.google.api.c
   private java.util.List<ClusterUpgradeScopeGKEUpgradeState> state;
 
   /**
+   * Upgrade state. It will eventually replace `state`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClusterUpgradeGKEUpgradeState> upgradeState;
+
+  /**
    * Current conditions of the feature.
    * @return value or {@code null} for none
    */
@@ -80,6 +87,23 @@ public final class ClusterUpgradeGKEUpgradeFeatureState extends com.google.api.c
    */
   public ClusterUpgradeGKEUpgradeFeatureState setState(java.util.List<ClusterUpgradeScopeGKEUpgradeState> state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Upgrade state. It will eventually replace `state`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClusterUpgradeGKEUpgradeState> getUpgradeState() {
+    return upgradeState;
+  }
+
+  /**
+   * Upgrade state. It will eventually replace `state`.
+   * @param upgradeState upgradeState or {@code null} for none
+   */
+  public ClusterUpgradeGKEUpgradeFeatureState setUpgradeState(java.util.List<ClusterUpgradeGKEUpgradeState> upgradeState) {
+    this.upgradeState = upgradeState;
     return this;
   }
 

@@ -106,13 +106,6 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
   private java.lang.Boolean referentialRulesEnabled;
 
   /**
-   * Configures the library templates to install along with Policy Controller.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PolicyControllerTemplateLibraryConfig templateLibraryConfig;
-
-  /**
    * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables
    * audit functionality altogether.
    * @return value or {@code null} for none
@@ -291,23 +284,6 @@ public final class PolicyControllerHubConfig extends com.google.api.client.json.
    */
   public PolicyControllerHubConfig setReferentialRulesEnabled(java.lang.Boolean referentialRulesEnabled) {
     this.referentialRulesEnabled = referentialRulesEnabled;
-    return this;
-  }
-
-  /**
-   * Configures the library templates to install along with Policy Controller.
-   * @return value or {@code null} for none
-   */
-  public PolicyControllerTemplateLibraryConfig getTemplateLibraryConfig() {
-    return templateLibraryConfig;
-  }
-
-  /**
-   * Configures the library templates to install along with Policy Controller.
-   * @param templateLibraryConfig templateLibraryConfig or {@code null} for none
-   */
-  public PolicyControllerHubConfig setTemplateLibraryConfig(PolicyControllerTemplateLibraryConfig templateLibraryConfig) {
-    this.templateLibraryConfig = templateLibraryConfig;
     return this;
   }
 

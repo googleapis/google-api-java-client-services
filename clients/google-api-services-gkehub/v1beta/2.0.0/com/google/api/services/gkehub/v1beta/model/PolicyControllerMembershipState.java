@@ -37,14 +37,6 @@ public final class PolicyControllerMembershipState extends com.google.api.client
   private java.util.Map<String, PolicyControllerOnClusterState> componentStates;
 
   /**
-   * The state of the template library and any bundles included in the chosen version of the
-   * manifest
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, PolicyControllerOnClusterState> contentStates;
-
-  /**
    * The overall content state observed by the Hub Feature controller.
    * The value may be {@code null}.
    */
@@ -72,25 +64,6 @@ public final class PolicyControllerMembershipState extends com.google.api.client
    */
   public PolicyControllerMembershipState setComponentStates(java.util.Map<String, PolicyControllerOnClusterState> componentStates) {
     this.componentStates = componentStates;
-    return this;
-  }
-
-  /**
-   * The state of the template library and any bundles included in the chosen version of the
-   * manifest
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, PolicyControllerOnClusterState> getContentStates() {
-    return contentStates;
-  }
-
-  /**
-   * The state of the template library and any bundles included in the chosen version of the
-   * manifest
-   * @param contentStates contentStates or {@code null} for none
-   */
-  public PolicyControllerMembershipState setContentStates(java.util.Map<String, PolicyControllerOnClusterState> contentStates) {
-    this.contentStates = contentStates;
     return this;
   }
 

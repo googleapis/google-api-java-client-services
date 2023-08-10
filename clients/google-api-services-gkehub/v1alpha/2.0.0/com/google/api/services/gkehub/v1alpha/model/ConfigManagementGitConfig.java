@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementGitConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   private java.lang.Long syncWaitSecs;
 
   /**
-   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -96,7 +96,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The GCP Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementGitConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {

@@ -30,35 +30,11 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class PolicyControllerTemplateLibraryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the standard template library should be installed or not.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean included;
-
-  /**
    * Configures the manner in which the template library is installed on the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String installation;
-
-  /**
-   * Whether the standard template library should be installed or not.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIncluded() {
-    return included;
-  }
-
-  /**
-   * Whether the standard template library should be installed or not.
-   * @param included included or {@code null} for none
-   */
-  public PolicyControllerTemplateLibraryConfig setIncluded(java.lang.Boolean included) {
-    this.included = included;
-    return this;
-  }
 
   /**
    * Configures the manner in which the template library is installed on the cluster.

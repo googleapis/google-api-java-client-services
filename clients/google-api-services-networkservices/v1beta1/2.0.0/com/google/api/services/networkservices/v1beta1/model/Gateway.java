@@ -32,9 +32,10 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class Gateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
-   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
-   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * Optional. Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When
+   * no address is provided, an IP from the subnetwork is allocated This field only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4
+   * and :: for IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
    * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * multiple ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,9 +157,10 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
-   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
-   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * Optional. Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When
+   * no address is provided, an IP from the subnetwork is allocated This field only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4
+   * and :: for IPv6.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAddresses() {
@@ -165,9 +168,10 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no
-   * address is provided, an IP from the subnetwork is allocated This field only applies to gateways
-   * of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+   * Optional. Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When
+   * no address is provided, an IP from the subnetwork is allocated This field only applies to
+   * gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4
+   * and :: for IPv6.
    * @param addresses addresses or {@code null} for none
    */
   public Gateway setAddresses(java.util.List<java.lang.String> addresses) {
@@ -311,7 +315,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
    * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * multiple ports.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getPorts() {
@@ -321,7 +326,8 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The
    * proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1
-   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
+   * port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support
+   * multiple ports.
    * @param ports ports or {@code null} for none
    */
   public Gateway setPorts(java.util.List<java.lang.Integer> ports) {

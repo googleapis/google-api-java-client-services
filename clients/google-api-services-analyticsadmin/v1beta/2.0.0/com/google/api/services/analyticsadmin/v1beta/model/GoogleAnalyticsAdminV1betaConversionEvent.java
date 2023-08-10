@@ -31,6 +31,14 @@ package com.google.api.services.analyticsadmin.v1beta.model;
 public final class GoogleAnalyticsAdminV1betaConversionEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The method by which conversions will be counted across multiple events within a
+   * session. If this value is not provided, it will be set to `ONCE_PER_EVENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String countingMethod;
+
+  /**
    * Output only. Time when this conversion event was created in the property.
    * The value may be {@code null}.
    */
@@ -69,6 +77,25 @@ public final class GoogleAnalyticsAdminV1betaConversionEvent extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The method by which conversions will be counted across multiple events within a
+   * session. If this value is not provided, it will be set to `ONCE_PER_EVENT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCountingMethod() {
+    return countingMethod;
+  }
+
+  /**
+   * Optional. The method by which conversions will be counted across multiple events within a
+   * session. If this value is not provided, it will be set to `ONCE_PER_EVENT`.
+   * @param countingMethod countingMethod or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1betaConversionEvent setCountingMethod(java.lang.String countingMethod) {
+    this.countingMethod = countingMethod;
+    return this;
+  }
 
   /**
    * Output only. Time when this conversion event was created in the property.

@@ -31,9 +31,10 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ResourceFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for transformation).
+   * Optional. (Filtering parameter) Any resource subject to transformation must belong to one of
+   * the listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * transformation).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +47,9 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md) expression
-   * that matches specific fields of candidate resources and it operates as a filtering parameter
-   * (resources that are not matched with this expression will not be candidates for
+   * Optional. This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md)
+   * expression that matches specific fields of candidate resources and it operates as a filtering
+   * parameter (resources that are not matched with this expression will not be candidates for
    * transformation).
    * The value may be {@code null}.
    */
@@ -56,10 +57,10 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   private java.lang.String jsonPath;
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must be contained within one of
-   * the listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for transformation). To mix cluster-scoped and namespaced
+   * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
    * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * The value may be {@code null}.
    */
@@ -67,9 +68,10 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> namespaces;
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for transformation).
+   * Optional. (Filtering parameter) Any resource subject to transformation must belong to one of
+   * the listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * transformation).
    * @return value or {@code null} for none
    */
   public java.util.List<GroupKind> getGroupKinds() {
@@ -77,9 +79,10 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must belong to one of the listed
-   * "types". If this field is not provided, no type filtering will be performed (all resources of
-   * all types matching previous filtering parameters will be candidates for transformation).
+   * Optional. (Filtering parameter) Any resource subject to transformation must belong to one of
+   * the listed "types". If this field is not provided, no type filtering will be performed (all
+   * resources of all types matching previous filtering parameters will be candidates for
+   * transformation).
    * @param groupKinds groupKinds or {@code null} for none
    */
   public ResourceFilter setGroupKinds(java.util.List<GroupKind> groupKinds) {
@@ -88,9 +91,9 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md) expression
-   * that matches specific fields of candidate resources and it operates as a filtering parameter
-   * (resources that are not matched with this expression will not be candidates for
+   * Optional. This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md)
+   * expression that matches specific fields of candidate resources and it operates as a filtering
+   * parameter (resources that are not matched with this expression will not be candidates for
    * transformation).
    * @return value or {@code null} for none
    */
@@ -99,9 +102,9 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md) expression
-   * that matches specific fields of candidate resources and it operates as a filtering parameter
-   * (resources that are not matched with this expression will not be candidates for
+   * Optional. This is a [JSONPath] (https://github.com/json-path/JsonPath/blob/master/README.md)
+   * expression that matches specific fields of candidate resources and it operates as a filtering
+   * parameter (resources that are not matched with this expression will not be candidates for
    * transformation).
    * @param jsonPath jsonPath or {@code null} for none
    */
@@ -111,10 +114,10 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must be contained within one of
-   * the listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for transformation). To mix cluster-scoped and namespaced
+   * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
    * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * @return value or {@code null} for none
    */
@@ -123,10 +126,10 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * (Filtering parameter) Any resource subject to transformation must be contained within one of
-   * the listed Kubernetes Namespace in the Backup. If this field is not provided, no namespace
-   * filtering will be performed (all resources in all Namespaces, including all cluster-scoped
-   * resources, will be candidates for transformation). To mix cluster-scoped and namespaced
+   * Optional. (Filtering parameter) Any resource subject to transformation must be contained within
+   * one of the listed Kubernetes Namespace in the Backup. If this field is not provided, no
+   * namespace filtering will be performed (all resources in all Namespaces, including all cluster-
+   * scoped resources, will be candidates for transformation). To mix cluster-scoped and namespaced
    * resources in the same rule, use an empty string ("") as one of the target namespaces.
    * @param namespaces namespaces or {@code null} for none
    */

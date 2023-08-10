@@ -30,21 +30,21 @@ package com.google.api.services.gkebackup.v1.model;
 public final class ClusterMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Anthos version
+   * Output only. Anthos version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String anthosVersion;
 
   /**
-   * A list of the Backup for GKE CRD versions found in the cluster.
+   * Output only. A list of the Backup for GKE CRD versions found in the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> backupCrdVersions;
 
   /**
-   * The source cluster from which this Backup was created. Valid formats: -
+   * Output only. The source cluster from which this Backup was created. Valid formats: -
    * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * The value may be {@code null}.
@@ -53,21 +53,21 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String cluster;
 
   /**
-   * GKE version
+   * Output only. GKE version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gkeVersion;
 
   /**
-   * The Kubernetes server version of the source cluster.
+   * Output only. The Kubernetes server version of the source cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String k8sVersion;
 
   /**
-   * Anthos version
+   * Output only. Anthos version
    * @return value or {@code null} for none
    */
   public java.lang.String getAnthosVersion() {
@@ -75,7 +75,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Anthos version
+   * Output only. Anthos version
    * @param anthosVersion anthosVersion or {@code null} for none
    */
   public ClusterMetadata setAnthosVersion(java.lang.String anthosVersion) {
@@ -84,7 +84,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of the Backup for GKE CRD versions found in the cluster.
+   * Output only. A list of the Backup for GKE CRD versions found in the cluster.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getBackupCrdVersions() {
@@ -92,7 +92,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of the Backup for GKE CRD versions found in the cluster.
+   * Output only. A list of the Backup for GKE CRD versions found in the cluster.
    * @param backupCrdVersions backupCrdVersions or {@code null} for none
    */
   public ClusterMetadata setBackupCrdVersions(java.util.Map<String, java.lang.String> backupCrdVersions) {
@@ -101,7 +101,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The source cluster from which this Backup was created. Valid formats: -
+   * Output only. The source cluster from which this Backup was created. Valid formats: -
    * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * @return value or {@code null} for none
@@ -111,7 +111,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The source cluster from which this Backup was created. Valid formats: -
+   * Output only. The source cluster from which this Backup was created. Valid formats: -
    * `projects/locations/clusters` - `projects/zones/clusters` This is inherited from the parent
    * BackupPlan's cluster field.
    * @param cluster cluster or {@code null} for none
@@ -122,7 +122,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * GKE version
+   * Output only. GKE version
    * @return value or {@code null} for none
    */
   public java.lang.String getGkeVersion() {
@@ -130,7 +130,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * GKE version
+   * Output only. GKE version
    * @param gkeVersion gkeVersion or {@code null} for none
    */
   public ClusterMetadata setGkeVersion(java.lang.String gkeVersion) {
@@ -139,7 +139,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Kubernetes server version of the source cluster.
+   * Output only. The Kubernetes server version of the source cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getK8sVersion() {
@@ -147,7 +147,7 @@ public final class ClusterMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Kubernetes server version of the source cluster.
+   * Output only. The Kubernetes server version of the source cluster.
    * @param k8sVersion k8sVersion or {@code null} for none
    */
   public ClusterMetadata setK8sVersion(java.lang.String k8sVersion) {

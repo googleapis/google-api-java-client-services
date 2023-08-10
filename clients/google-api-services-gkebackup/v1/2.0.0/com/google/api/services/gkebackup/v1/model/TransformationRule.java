@@ -32,7 +32,7 @@ package com.google.api.services.gkebackup.v1.model;
 public final class TransformationRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description is a user specified string description of the transformation rule.
+   * Optional. The description is a user specified string description of the transformation rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,16 +48,16 @@ public final class TransformationRule extends com.google.api.client.json.Generic
   private java.util.List<TransformationRuleAction> fieldActions;
 
   /**
-   * This field is used to specify a set of fields that should be used to determine which resources
-   * in backup should be acted upon by the supplied transformation rule actions, and this will
-   * ensure that only specific resources are affected by transformation rule actions.
+   * Optional. This field is used to specify a set of fields that should be used to determine which
+   * resources in backup should be acted upon by the supplied transformation rule actions, and this
+   * will ensure that only specific resources are affected by transformation rule actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceFilter resourceFilter;
 
   /**
-   * The description is a user specified string description of the transformation rule.
+   * Optional. The description is a user specified string description of the transformation rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -65,7 +65,7 @@ public final class TransformationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * The description is a user specified string description of the transformation rule.
+   * Optional. The description is a user specified string description of the transformation rule.
    * @param description description or {@code null} for none
    */
   public TransformationRule setDescription(java.lang.String description) {
@@ -95,9 +95,9 @@ public final class TransformationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field is used to specify a set of fields that should be used to determine which resources
-   * in backup should be acted upon by the supplied transformation rule actions, and this will
-   * ensure that only specific resources are affected by transformation rule actions.
+   * Optional. This field is used to specify a set of fields that should be used to determine which
+   * resources in backup should be acted upon by the supplied transformation rule actions, and this
+   * will ensure that only specific resources are affected by transformation rule actions.
    * @return value or {@code null} for none
    */
   public ResourceFilter getResourceFilter() {
@@ -105,9 +105,9 @@ public final class TransformationRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * This field is used to specify a set of fields that should be used to determine which resources
-   * in backup should be acted upon by the supplied transformation rule actions, and this will
-   * ensure that only specific resources are affected by transformation rule actions.
+   * Optional. This field is used to specify a set of fields that should be used to determine which
+   * resources in backup should be acted upon by the supplied transformation rule actions, and this
+   * will ensure that only specific resources are affected by transformation rule actions.
    * @param resourceFilter resourceFilter or {@code null} for none
    */
   public TransformationRule setResourceFilter(ResourceFilter resourceFilter) {

@@ -30,30 +30,30 @@ package com.google.api.services.gkebackup.v1.model;
 public final class Schedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
-   * creating Backups via this BackupPlan. This is mutually exclusive with the rpo_config field
-   * since at most one schedule can be defined for a BackupPlan. If this is defined, then
-   * backup_retain_days must also be defined. Default (empty): no automatic backup creation will
-   * occur.
+   * Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating
+   * schedule for creating Backups via this BackupPlan. This is mutually exclusive with the
+   * rpo_config field since at most one schedule can be defined for a BackupPlan. If this is
+   * defined, then backup_retain_days must also be defined. Default (empty): no automatic backup
+   * creation will occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cronSchedule;
 
   /**
-   * This flag denotes whether automatic Backup creation is paused for this BackupPlan. Default:
-   * False
+   * Optional. This flag denotes whether automatic Backup creation is paused for this BackupPlan.
+   * Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean paused;
 
   /**
-   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
-   * creating Backups via this BackupPlan. This is mutually exclusive with the rpo_config field
-   * since at most one schedule can be defined for a BackupPlan. If this is defined, then
-   * backup_retain_days must also be defined. Default (empty): no automatic backup creation will
-   * occur.
+   * Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating
+   * schedule for creating Backups via this BackupPlan. This is mutually exclusive with the
+   * rpo_config field since at most one schedule can be defined for a BackupPlan. If this is
+   * defined, then backup_retain_days must also be defined. Default (empty): no automatic backup
+   * creation will occur.
    * @return value or {@code null} for none
    */
   public java.lang.String getCronSchedule() {
@@ -61,11 +61,11 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating schedule for
-   * creating Backups via this BackupPlan. This is mutually exclusive with the rpo_config field
-   * since at most one schedule can be defined for a BackupPlan. If this is defined, then
-   * backup_retain_days must also be defined. Default (empty): no automatic backup creation will
-   * occur.
+   * Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating
+   * schedule for creating Backups via this BackupPlan. This is mutually exclusive with the
+   * rpo_config field since at most one schedule can be defined for a BackupPlan. If this is
+   * defined, then backup_retain_days must also be defined. Default (empty): no automatic backup
+   * creation will occur.
    * @param cronSchedule cronSchedule or {@code null} for none
    */
   public Schedule setCronSchedule(java.lang.String cronSchedule) {
@@ -74,8 +74,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag denotes whether automatic Backup creation is paused for this BackupPlan. Default:
-   * False
+   * Optional. This flag denotes whether automatic Backup creation is paused for this BackupPlan.
+   * Default: False
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPaused() {
@@ -83,8 +83,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag denotes whether automatic Backup creation is paused for this BackupPlan. Default:
-   * False
+   * Optional. This flag denotes whether automatic Backup creation is paused for this BackupPlan.
+   * Default: False
    * @param paused paused or {@code null} for none
    */
   public Schedule setPaused(java.lang.Boolean paused) {

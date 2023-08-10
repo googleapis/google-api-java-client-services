@@ -37,25 +37,25 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allNamespaces;
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the "config"
-   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
-   * backup artifacts will not be encrypted.
+   * Optional. This defines a customer managed encryption key that will be used to encrypt the
+   * "config" portion (the Kubernetes resources) of Backups created via this plan. Default (empty):
+   * Config backup artifacts will not be encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionKey encryptionKey;
 
   /**
-   * This flag specifies whether Kubernetes Secret resources should be included when they fall into
-   * the scope of Backups. Default: False
+   * Optional. This flag specifies whether Kubernetes Secret resources should be included when they
+   * fall into the scope of Backups. Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeSecrets;
 
   /**
-   * This flag specifies whether volume data should be backed up when PVCs are included in the scope
-   * of a Backup. Default: False
+   * Optional. This flag specifies whether volume data should be backed up when PVCs are included in
+   * the scope of a Backup. Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +93,9 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the "config"
-   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
-   * backup artifacts will not be encrypted.
+   * Optional. This defines a customer managed encryption key that will be used to encrypt the
+   * "config" portion (the Kubernetes resources) of Backups created via this plan. Default (empty):
+   * Config backup artifacts will not be encrypted.
    * @return value or {@code null} for none
    */
   public EncryptionKey getEncryptionKey() {
@@ -103,9 +103,9 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This defines a customer managed encryption key that will be used to encrypt the "config"
-   * portion (the Kubernetes resources) of Backups created via this plan. Default (empty): Config
-   * backup artifacts will not be encrypted.
+   * Optional. This defines a customer managed encryption key that will be used to encrypt the
+   * "config" portion (the Kubernetes resources) of Backups created via this plan. Default (empty):
+   * Config backup artifacts will not be encrypted.
    * @param encryptionKey encryptionKey or {@code null} for none
    */
   public BackupConfig setEncryptionKey(EncryptionKey encryptionKey) {
@@ -114,8 +114,8 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag specifies whether Kubernetes Secret resources should be included when they fall into
-   * the scope of Backups. Default: False
+   * Optional. This flag specifies whether Kubernetes Secret resources should be included when they
+   * fall into the scope of Backups. Default: False
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeSecrets() {
@@ -123,8 +123,8 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag specifies whether Kubernetes Secret resources should be included when they fall into
-   * the scope of Backups. Default: False
+   * Optional. This flag specifies whether Kubernetes Secret resources should be included when they
+   * fall into the scope of Backups. Default: False
    * @param includeSecrets includeSecrets or {@code null} for none
    */
   public BackupConfig setIncludeSecrets(java.lang.Boolean includeSecrets) {
@@ -133,8 +133,8 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag specifies whether volume data should be backed up when PVCs are included in the scope
-   * of a Backup. Default: False
+   * Optional. This flag specifies whether volume data should be backed up when PVCs are included in
+   * the scope of a Backup. Default: False
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeVolumeData() {
@@ -142,8 +142,8 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This flag specifies whether volume data should be backed up when PVCs are included in the scope
-   * of a Backup. Default: False
+   * Optional. This flag specifies whether volume data should be backed up when PVCs are included in
+   * the scope of a Backup. Default: False
    * @param includeVolumeData includeVolumeData or {@code null} for none
    */
   public BackupConfig setIncludeVolumeData(java.lang.Boolean includeVolumeData) {

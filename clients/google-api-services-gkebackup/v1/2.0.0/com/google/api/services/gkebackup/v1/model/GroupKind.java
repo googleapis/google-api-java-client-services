@@ -32,23 +32,23 @@ package com.google.api.services.gkebackup.v1.model;
 public final class GroupKind extends com.google.api.client.json.GenericJson {
 
   /**
-   * API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io", "storage.k8s.io", etc.
-   * Note: use empty string for core API group
+   * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
+   * "storage.k8s.io", etc. Note: use empty string for core API group
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceGroup;
 
   /**
-   * Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceKind;
 
   /**
-   * API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io", "storage.k8s.io", etc.
-   * Note: use empty string for core API group
+   * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
+   * "storage.k8s.io", etc. Note: use empty string for core API group
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceGroup() {
@@ -56,8 +56,8 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io", "storage.k8s.io", etc.
-   * Note: use empty string for core API group
+   * Optional. API group string of a Kubernetes resource, e.g. "apiextensions.k8s.io",
+   * "storage.k8s.io", etc. Note: use empty string for core API group
    * @param resourceGroup resourceGroup or {@code null} for none
    */
   public GroupKind setResourceGroup(java.lang.String resourceGroup) {
@@ -66,7 +66,7 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceKind() {
@@ -74,7 +74,7 @@ public final class GroupKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
+   * Optional. Kind of a Kubernetes resource, e.g. "CustomResourceDefinition", "StorageClass", etc.
    * @param resourceKind resourceKind or {@code null} for none
    */
   public GroupKind setResourceKind(java.lang.String resourceKind) {

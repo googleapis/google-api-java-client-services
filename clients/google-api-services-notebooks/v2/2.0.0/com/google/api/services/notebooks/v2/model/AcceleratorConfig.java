@@ -14,13 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.notebooks.v1.model;
+package com.google.api.services.notebooks.v2.model;
 
 /**
- * Definition of the types of hardware accelerators that can be used. See [Compute Engine
- * AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).
- * Examples: * `nvidia-tesla-k80` * `nvidia-tesla-p100` * `nvidia-tesla-v100` * `nvidia-tesla-p4` *
- * `nvidia-tesla-t4` * `nvidia-tesla-a100`
+ * An accelerator configuration for a VM instance Definition of a hardware accelerator. Note that
+ * there is no check on `type` and `core_count` combinations. TPUs are not supported. See [GPUs on
+ * Compute Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid
+ * combination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -30,24 +30,24 @@ package com.google.api.services.notebooks.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RuntimeAcceleratorConfig extends com.google.api.client.json.GenericJson {
+public final class AcceleratorConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of cores of this accelerator.
+   * Optional. Count of cores of this accelerator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long coreCount;
 
   /**
-   * Accelerator model.
+   * Optional. Type of this accelerator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Count of cores of this accelerator.
+   * Optional. Count of cores of this accelerator.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCoreCount() {
@@ -55,16 +55,16 @@ public final class RuntimeAcceleratorConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Count of cores of this accelerator.
+   * Optional. Count of cores of this accelerator.
    * @param coreCount coreCount or {@code null} for none
    */
-  public RuntimeAcceleratorConfig setCoreCount(java.lang.Long coreCount) {
+  public AcceleratorConfig setCoreCount(java.lang.Long coreCount) {
     this.coreCount = coreCount;
     return this;
   }
 
   /**
-   * Accelerator model.
+   * Optional. Type of this accelerator.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,22 +72,22 @@ public final class RuntimeAcceleratorConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Accelerator model.
+   * Optional. Type of this accelerator.
    * @param type type or {@code null} for none
    */
-  public RuntimeAcceleratorConfig setType(java.lang.String type) {
+  public AcceleratorConfig setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public RuntimeAcceleratorConfig set(String fieldName, Object value) {
-    return (RuntimeAcceleratorConfig) super.set(fieldName, value);
+  public AcceleratorConfig set(String fieldName, Object value) {
+    return (AcceleratorConfig) super.set(fieldName, value);
   }
 
   @Override
-  public RuntimeAcceleratorConfig clone() {
-    return (RuntimeAcceleratorConfig) super.clone();
+  public AcceleratorConfig clone() {
+    return (AcceleratorConfig) super.clone();
   }
 
 }

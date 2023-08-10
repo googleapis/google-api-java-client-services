@@ -37,6 +37,13 @@ public final class DiagnoseInstanceRequest extends com.google.api.client.json.Ge
   private DiagnosticConfig diagnosticConfig;
 
   /**
+   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer timeoutMinutes;
+
+  /**
    * Required. Defines flags that are used to run the diagnostic tool
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class DiagnoseInstanceRequest extends com.google.api.client.json.Ge
    */
   public DiagnoseInstanceRequest setDiagnosticConfig(DiagnosticConfig diagnosticConfig) {
     this.diagnosticConfig = diagnosticConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTimeoutMinutes() {
+    return timeoutMinutes;
+  }
+
+  /**
+   * Optional. Maxmium amount of time in minutes before the operation times out.
+   * @param timeoutMinutes timeoutMinutes or {@code null} for none
+   */
+  public DiagnoseInstanceRequest setTimeoutMinutes(java.lang.Integer timeoutMinutes) {
+    this.timeoutMinutes = timeoutMinutes;
     return this;
   }
 

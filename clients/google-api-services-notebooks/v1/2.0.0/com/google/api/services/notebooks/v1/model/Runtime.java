@@ -70,6 +70,13 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private RuntimeMetrics metrics;
 
   /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean migrated;
+
+  /**
    * Output only. The resource name of the runtime. Format:
    * `projects/{project}/locations/{location}/runtimes/{runtimeId}`
    * The value may be {@code null}.
@@ -197,6 +204,23 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   public Runtime setMetrics(RuntimeMetrics metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMigrated() {
+    return migrated;
+  }
+
+  /**
+   * Output only. Bool indicating whether this notebook has been migrated to a Workbench Instance
+   * @param migrated migrated or {@code null} for none
+   */
+  public Runtime setMigrated(java.lang.Boolean migrated) {
+    this.migrated = migrated;
     return this;
   }
 

@@ -37,6 +37,14 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isProduction;
 
   /**
+   * The SDK version this app targets, as specified in the manifest of the APK. See
+   * http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetSdkVersion;
+
+  /**
    * Deprecated, use trackId instead.
    * The value may be {@code null}.
    */
@@ -80,6 +88,25 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
    */
   public AppVersion setIsProduction(java.lang.Boolean isProduction) {
     this.isProduction = isProduction;
+    return this;
+  }
+
+  /**
+   * The SDK version this app targets, as specified in the manifest of the APK. See
+   * http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetSdkVersion() {
+    return targetSdkVersion;
+  }
+
+  /**
+   * The SDK version this app targets, as specified in the manifest of the APK. See
+   * http://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+   * @param targetSdkVersion targetSdkVersion or {@code null} for none
+   */
+  public AppVersion setTargetSdkVersion(java.lang.Integer targetSdkVersion) {
+    this.targetSdkVersion = targetSdkVersion;
     return this;
   }
 

@@ -30,11 +30,11 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ValidationError extends com.google.api.client.json.GenericJson {
 
   /**
-   * The names of the entries that the error is associated with. Format: - "projects//agent", if the
-   * error is associated with the entire agent. - "projects//agent/intents/", if the error is
-   * associated with certain intents. - "projects//agent/intents//trainingPhrases/", if the error is
-   * associated with certain intent training phrases. - "projects//agent/intents//parameters/", if
-   * the error is associated with certain intent parameters. - "projects//agent/entities/", if the
+   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
+   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
+   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
+   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
+   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
    * error is associated with certain entities.
    * The value may be {@code null}.
    */
@@ -56,11 +56,11 @@ public final class GoogleCloudDialogflowV2beta1ValidationError extends com.googl
   private java.lang.String severity;
 
   /**
-   * The names of the entries that the error is associated with. Format: - "projects//agent", if the
-   * error is associated with the entire agent. - "projects//agent/intents/", if the error is
-   * associated with certain intents. - "projects//agent/intents//trainingPhrases/", if the error is
-   * associated with certain intent training phrases. - "projects//agent/intents//parameters/", if
-   * the error is associated with certain intent parameters. - "projects//agent/entities/", if the
+   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
+   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
+   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
+   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
+   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
    * error is associated with certain entities.
    * @return value or {@code null} for none
    */
@@ -69,11 +69,11 @@ public final class GoogleCloudDialogflowV2beta1ValidationError extends com.googl
   }
 
   /**
-   * The names of the entries that the error is associated with. Format: - "projects//agent", if the
-   * error is associated with the entire agent. - "projects//agent/intents/", if the error is
-   * associated with certain intents. - "projects//agent/intents//trainingPhrases/", if the error is
-   * associated with certain intent training phrases. - "projects//agent/intents//parameters/", if
-   * the error is associated with certain intent parameters. - "projects//agent/entities/", if the
+   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
+   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
+   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
+   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
+   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
    * error is associated with certain entities.
    * @param entries entries or {@code null} for none
    */

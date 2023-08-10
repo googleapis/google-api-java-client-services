@@ -104,6 +104,13 @@ public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.a
   private GoogleCloudDialogflowCxV3ResponseMessagePlayAudio playAudio;
 
   /**
+   * Response type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseType;
+
+  /**
    * A signal that the client should transfer the phone call connected to this agent to a third-
    * party endpoint.
    * The value may be {@code null}.
@@ -269,6 +276,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.a
    */
   public GoogleCloudDialogflowCxV3ResponseMessage setPlayAudio(GoogleCloudDialogflowCxV3ResponseMessagePlayAudio playAudio) {
     this.playAudio = playAudio;
+    return this;
+  }
+
+  /**
+   * Response type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseType() {
+    return responseType;
+  }
+
+  /**
+   * Response type.
+   * @param responseType responseType or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ResponseMessage setResponseType(java.lang.String responseType) {
+    this.responseType = responseType;
     return this;
   }
 

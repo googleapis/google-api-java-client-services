@@ -90,6 +90,13 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
+   * Git integration settings for this agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AgentGitIntegrationSettings gitIntegrationSettings;
+
+  /**
    * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
    * agent will be rejected except for RestoreAgent.
    * The value may be {@code null}.
@@ -281,6 +288,23 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {
     this.enableStackdriverLogging = enableStackdriverLogging;
+    return this;
+  }
+
+  /**
+   * Git integration settings for this agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AgentGitIntegrationSettings getGitIntegrationSettings() {
+    return gitIntegrationSettings;
+  }
+
+  /**
+   * Git integration settings for this agent.
+   * @param gitIntegrationSettings gitIntegrationSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setGitIntegrationSettings(GoogleCloudDialogflowCxV3AgentGitIntegrationSettings gitIntegrationSettings) {
+    this.gitIntegrationSettings = gitIntegrationSettings;
     return this;
   }
 

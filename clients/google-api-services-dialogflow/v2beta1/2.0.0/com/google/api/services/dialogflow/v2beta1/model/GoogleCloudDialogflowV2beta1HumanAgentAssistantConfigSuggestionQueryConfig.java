@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings;
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
+   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
+   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource getDialogflowQuerySource() {
@@ -142,7 +142,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
+   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * @param dialogflowQuerySource dialogflowQuerySource or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfig setDialogflowQuerySource(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource dialogflowQuerySource) {

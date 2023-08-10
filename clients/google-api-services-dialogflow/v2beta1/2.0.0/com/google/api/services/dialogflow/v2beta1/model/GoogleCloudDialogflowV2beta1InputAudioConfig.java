@@ -104,8 +104,9 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * A list of strings containing words and phrases that the speech recognizer should recognize with
    * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
    * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [speech_contexts]() instead. If you specify both [phrase_hints]() and [speech_contexts](),
-   * Dialogflow will treat the [phrase_hints]() as a single additional [SpeechContext]().
+   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
+   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
+   * [`SpeechContext`]().
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -311,8 +312,9 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * A list of strings containing words and phrases that the speech recognizer should recognize with
    * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
    * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [speech_contexts]() instead. If you specify both [phrase_hints]() and [speech_contexts](),
-   * Dialogflow will treat the [phrase_hints]() as a single additional [SpeechContext]().
+   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
+   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
+   * [`SpeechContext`]().
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -323,8 +325,9 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * A list of strings containing words and phrases that the speech recognizer should recognize with
    * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
    * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [speech_contexts]() instead. If you specify both [phrase_hints]() and [speech_contexts](),
-   * Dialogflow will treat the [phrase_hints]() as a single additional [SpeechContext]().
+   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
+   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
+   * [`SpeechContext`]().
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {

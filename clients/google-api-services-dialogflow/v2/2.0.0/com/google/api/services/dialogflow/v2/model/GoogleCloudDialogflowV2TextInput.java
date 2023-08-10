@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * ============================================================================ Auxiliary proto
- * messages. Represents the natural language text to be processed.
+ * Auxiliary proto messages. Represents the natural language text to be processed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

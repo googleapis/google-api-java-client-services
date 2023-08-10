@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
 
   /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
 
   /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEventBasedSuggestion() {
@@ -118,7 +118,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
 
   /**
    * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
    * @param enableEventBasedSuggestion enableEventBasedSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setEnableEventBasedSuggestion(java.lang.Boolean enableEventBasedSuggestion) {

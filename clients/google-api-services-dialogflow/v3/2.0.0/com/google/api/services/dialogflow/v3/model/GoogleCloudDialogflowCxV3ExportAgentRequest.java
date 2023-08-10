@@ -57,6 +57,20 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   private java.lang.String environment;
 
   /**
+   * Optional. The Git branch to export the agent to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination gitDestination;
+
+  /**
+   * Optional. Whether to include BigQuery Export setting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeBigqueryExportSettings;
+
+  /**
    * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
    * agent to. The format of this URI must be `gs:`. If left unspecified, the serialized agent is
    * returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
@@ -116,6 +130,40 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setEnvironment(java.lang.String environment) {
     this.environment = environment;
+    return this;
+  }
+
+  /**
+   * Optional. The Git branch to export the agent to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination getGitDestination() {
+    return gitDestination;
+  }
+
+  /**
+   * Optional. The Git branch to export the agent to.
+   * @param gitDestination gitDestination or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ExportAgentRequest setGitDestination(GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination gitDestination) {
+    this.gitDestination = gitDestination;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to include BigQuery Export setting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeBigqueryExportSettings() {
+    return includeBigqueryExportSettings;
+  }
+
+  /**
+   * Optional. Whether to include BigQuery Export setting.
+   * @param includeBigqueryExportSettings includeBigqueryExportSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ExportAgentRequest setIncludeBigqueryExportSettings(java.lang.Boolean includeBigqueryExportSettings) {
+    this.includeBigqueryExportSettings = includeBigqueryExportSettings;
     return this;
   }
 

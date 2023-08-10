@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.dialogflow.v2.model;
+package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Google Cloud Storage location for the inputs.
+ * Settings for restoring from a git branch
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.dialogflow.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowV2GcsSources extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket/object-
-   * prefix-or-name` Whether a prefix or name is used depends on the use case.
+   * tracking branch for the git pull
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> uris;
+  private java.lang.String trackingBranch;
 
   /**
-   * Required. Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket/object-
-   * prefix-or-name` Whether a prefix or name is used depends on the use case.
+   * tracking branch for the git pull
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUris() {
-    return uris;
+  public java.lang.String getTrackingBranch() {
+    return trackingBranch;
   }
 
   /**
-   * Required. Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket/object-
-   * prefix-or-name` Whether a prefix or name is used depends on the use case.
-   * @param uris uris or {@code null} for none
+   * tracking branch for the git pull
+   * @param trackingBranch trackingBranch or {@code null} for none
    */
-  public GoogleCloudDialogflowV2GcsSources setUris(java.util.List<java.lang.String> uris) {
-    this.uris = uris;
+  public GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource setTrackingBranch(java.lang.String trackingBranch) {
+    this.trackingBranch = trackingBranch;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowV2GcsSources set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowV2GcsSources) super.set(fieldName, value);
+  public GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowV2GcsSources clone() {
-    return (GoogleCloudDialogflowV2GcsSources) super.clone();
+  public GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource clone() {
+    return (GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource) super.clone();
   }
 
 }

@@ -40,7 +40,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RedactionConfig exten
 
   /**
    * The fully-qualified DLP inspect template resource name. Format:
-   * `projects/{project}/inspectTemplates/{template}`
+   * `projects/{project}/locations/{location}/inspectTemplates/{template}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RedactionConfig exten
 
   /**
    * The fully-qualified DLP inspect template resource name. Format:
-   * `projects/{project}/inspectTemplates/{template}`
+   * `projects/{project}/locations/{location}/inspectTemplates/{template}`
    * @return value or {@code null} for none
    */
   public java.lang.String getInspectTemplate() {
@@ -76,7 +76,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RedactionConfig exten
 
   /**
    * The fully-qualified DLP inspect template resource name. Format:
-   * `projects/{project}/inspectTemplates/{template}`
+   * `projects/{project}/locations/{location}/inspectTemplates/{template}`
    * @param inspectTemplate inspectTemplate or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1RedactionConfig setInspectTemplate(java.lang.String inspectTemplate) {

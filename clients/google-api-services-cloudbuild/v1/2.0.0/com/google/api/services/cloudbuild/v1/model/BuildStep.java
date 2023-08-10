@@ -58,6 +58,14 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> args;
 
   /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean automapSubstitutions;
+
+  /**
    * Working directory to use when running this step's container. If this value is a relative path,
    * it is relative to the build's working directory. If this value is absolute, it may be outside
    * the build's working directory, in which case the contents of the path may not be persisted
@@ -244,6 +252,25 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   public BuildStep setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutomapSubstitutions() {
+    return automapSubstitutions;
+  }
+
+  /**
+   * Option to include built-in and custom substitutions as env variables for this build step. This
+   * option will override the global option in BuildOption.
+   * @param automapSubstitutions automapSubstitutions or {@code null} for none
+   */
+  public BuildStep setAutomapSubstitutions(java.lang.Boolean automapSubstitutions) {
+    this.automapSubstitutions = automapSubstitutions;
     return this;
   }
 

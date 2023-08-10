@@ -3030,32 +3030,38 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. Only include resources that match the filter. Supported filter fields: -
-           * device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type
-           * The "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339
-           * UTC "Zulu" format with nanosecond resolution and up to nine fractional digits. Both
-           * formats should be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * Optional. Only include resources that match the filter. Although this parameter is
+           * currently optional, this parameter will be required- please specify at least 1 event
+           * type. Supported filter fields: - device_id - user_id - device_org_unit_id -
+           * user_org_unit_id - timestamp - event_type The "timestamp" filter accepts either the
+           * Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond
+           * resolution and up to nine fractional digits. Both formats should be surrounded by
+           * simple double quotes. Examples: "2014-10-02T15:01:23Z",
            * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Only include resources that match the filter. Supported filter fields: - device_id -
-         user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type The "timestamp" filter
-         accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond
-         resolution and up to nine fractional digits. Both formats should be surrounded by simple double
-         quotes. Examples: "2014-10-02T15:01:23Z", "2014-10-02T15:01:23.045123456Z", "1679283943823".
+          /** Optional. Only include resources that match the filter. Although this parameter is currently
+         optional, this parameter will be required- please specify at least 1 event type. Supported filter
+         fields: - device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type The
+         "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu"
+         format with nanosecond resolution and up to nine fractional digits. Both formats should be
+         surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+         "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Only include resources that match the filter. Supported filter fields: -
-           * device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type
-           * The "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339
-           * UTC "Zulu" format with nanosecond resolution and up to nine fractional digits. Both
-           * formats should be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z",
+           * Optional. Only include resources that match the filter. Although this parameter is
+           * currently optional, this parameter will be required- please specify at least 1 event
+           * type. Supported filter fields: - device_id - user_id - device_org_unit_id -
+           * user_org_unit_id - timestamp - event_type The "timestamp" filter accepts either the
+           * Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond
+           * resolution and up to nine fractional digits. Both formats should be surrounded by
+           * simple double quotes. Examples: "2014-10-02T15:01:23Z",
            * "2014-10-02T15:01:23.045123456Z", "1679283943823".
            */
           public List setFilter(java.lang.String filter) {
@@ -3101,17 +3107,26 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Required. Read mask to specify which fields to return. */
+          /**
+           * Required. Read mask to specify which fields to return. Although currently required,
+           * this field will become optional, while the filter parameter with an event type will be
+           * come required.
+           */
           @com.google.api.client.util.Key
           private String readMask;
 
-          /** Required. Read mask to specify which fields to return.
+          /** Required. Read mask to specify which fields to return. Although currently required, this field will
+         become optional, while the filter parameter with an event type will be come required.
            */
           public String getReadMask() {
             return readMask;
           }
 
-          /** Required. Read mask to specify which fields to return. */
+          /**
+           * Required. Read mask to specify which fields to return. Although currently required,
+           * this field will become optional, while the filter parameter with an event type will be
+           * come required.
+           */
           public List setReadMask(String readMask) {
             this.readMask = readMask;
             return this;

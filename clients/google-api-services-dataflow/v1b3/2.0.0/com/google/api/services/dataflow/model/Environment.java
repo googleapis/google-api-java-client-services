@@ -130,6 +130,14 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String tempStoragePrefix;
 
   /**
+   * Output only. Whether the job uses the new streaming engine billing model based on resource
+   * usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useStreamingEngineResourceBasedBilling;
+
+  /**
    * A description of the process that generated the request.
    * The value may be {@code null}.
    */
@@ -404,6 +412,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setTempStoragePrefix(java.lang.String tempStoragePrefix) {
     this.tempStoragePrefix = tempStoragePrefix;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the job uses the new streaming engine billing model based on resource
+   * usage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseStreamingEngineResourceBasedBilling() {
+    return useStreamingEngineResourceBasedBilling;
+  }
+
+  /**
+   * Output only. Whether the job uses the new streaming engine billing model based on resource
+   * usage.
+   * @param useStreamingEngineResourceBasedBilling useStreamingEngineResourceBasedBilling or {@code null} for none
+   */
+  public Environment setUseStreamingEngineResourceBasedBilling(java.lang.Boolean useStreamingEngineResourceBasedBilling) {
+    this.useStreamingEngineResourceBasedBilling = useStreamingEngineResourceBasedBilling;
     return this;
   }
 

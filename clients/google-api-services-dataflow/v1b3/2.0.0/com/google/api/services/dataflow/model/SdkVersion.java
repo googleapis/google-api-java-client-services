@@ -30,6 +30,19 @@ package com.google.api.services.dataflow.model;
 public final class SdkVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Known bugs found in this SDK version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SdkBug> bugs;
+
+  static {
+    // hack to force ProGuard to consider SdkBug used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SdkBug.class);
+  }
+
+  /**
    * The support status for this SDK version.
    * The value may be {@code null}.
    */
@@ -49,6 +62,23 @@ public final class SdkVersion extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String versionDisplayName;
+
+  /**
+   * Output only. Known bugs found in this SDK version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SdkBug> getBugs() {
+    return bugs;
+  }
+
+  /**
+   * Output only. Known bugs found in this SDK version.
+   * @param bugs bugs or {@code null} for none
+   */
+  public SdkVersion setBugs(java.util.List<SdkBug> bugs) {
+    this.bugs = bugs;
+    return this;
+  }
 
   /**
    * The support status for this SDK version.

@@ -37,6 +37,13 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> customMetadata;
 
   /**
+   * Optional. The options shown when ENUM ParameterType is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ParameterMetadataEnumOption> enumOptions;
+
+  /**
    * Optional. Specifies a group name for this parameter to be rendered under. Group header text
    * will be rendered exactly as specified in this field. Only considered when parent_name is NOT
    * provided.
@@ -120,6 +127,23 @@ public final class ParameterMetadata extends com.google.api.client.json.GenericJ
    */
   public ParameterMetadata setCustomMetadata(java.util.Map<String, java.lang.String> customMetadata) {
     this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The options shown when ENUM ParameterType is specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ParameterMetadataEnumOption> getEnumOptions() {
+    return enumOptions;
+  }
+
+  /**
+   * Optional. The options shown when ENUM ParameterType is specified.
+   * @param enumOptions enumOptions or {@code null} for none
+   */
+  public ParameterMetadata setEnumOptions(java.util.List<ParameterMetadataEnumOption> enumOptions) {
+    this.enumOptions = enumOptions;
     return this;
   }
 

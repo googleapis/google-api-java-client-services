@@ -1812,8 +1812,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * The list of fields to update relative to Job. If empty, only RequestedJobState will be
          * considered for update. If the FieldMask is not empty and RequestedJobState is none/empty,
          * The fields specified in the update mask will be the only ones considered for update. If
-         * both RequestedJobState and update_mask are specified, we will first handle
-         * RequestedJobState and then the update_mask fields.
+         * both RequestedJobState and update_mask are specified, an error will be returned as we
+         * cannot update both state and mask.
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -1821,7 +1821,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The list of fields to update relative to Job. If empty, only RequestedJobState will be considered
        for update. If the FieldMask is not empty and RequestedJobState is none/empty, The fields specified
        in the update mask will be the only ones considered for update. If both RequestedJobState and
-       update_mask are specified, we will first handle RequestedJobState and then the update_mask fields.
+       update_mask are specified, an error will be returned as we cannot update both state and mask.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -1831,8 +1831,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * The list of fields to update relative to Job. If empty, only RequestedJobState will be
          * considered for update. If the FieldMask is not empty and RequestedJobState is none/empty,
          * The fields specified in the update mask will be the only ones considered for update. If
-         * both RequestedJobState and update_mask are specified, we will first handle
-         * RequestedJobState and then the update_mask fields.
+         * both RequestedJobState and update_mask are specified, an error will be returned as we
+         * cannot update both state and mask.
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4494,8 +4494,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * The list of fields to update relative to Job. If empty, only RequestedJobState will be
            * considered for update. If the FieldMask is not empty and RequestedJobState is
            * none/empty, The fields specified in the update mask will be the only ones considered
-           * for update. If both RequestedJobState and update_mask are specified, we will first
-           * handle RequestedJobState and then the update_mask fields.
+           * for update. If both RequestedJobState and update_mask are specified, an error will be
+           * returned as we cannot update both state and mask.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -4503,7 +4503,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** The list of fields to update relative to Job. If empty, only RequestedJobState will be considered
          for update. If the FieldMask is not empty and RequestedJobState is none/empty, The fields specified
          in the update mask will be the only ones considered for update. If both RequestedJobState and
-         update_mask are specified, we will first handle RequestedJobState and then the update_mask fields.
+         update_mask are specified, an error will be returned as we cannot update both state and mask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4513,8 +4513,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * The list of fields to update relative to Job. If empty, only RequestedJobState will be
            * considered for update. If the FieldMask is not empty and RequestedJobState is
            * none/empty, The fields specified in the update mask will be the only ones considered
-           * for update. If both RequestedJobState and update_mask are specified, we will first
-           * handle RequestedJobState and then the update_mask fields.
+           * for update. If both RequestedJobState and update_mask are specified, an error will be
+           * returned as we cannot update both state and mask.
            */
           public Update setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

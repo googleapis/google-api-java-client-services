@@ -55,6 +55,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.Boolean bypassTempDirValidation;
 
   /**
+   * Optional. The disk size, in gigabytes, to use on each remote Compute Engine worker instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer diskSizeGb;
+
+  /**
    * Optional. Whether to enable Streaming Engine for the job.
    * The value may be {@code null}.
    */
@@ -220,6 +227,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setBypassTempDirValidation(java.lang.Boolean bypassTempDirValidation) {
     this.bypassTempDirValidation = bypassTempDirValidation;
+    return this;
+  }
+
+  /**
+   * Optional. The disk size, in gigabytes, to use on each remote Compute Engine worker instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * Optional. The disk size, in gigabytes, to use on each remote Compute Engine worker instance.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public RuntimeEnvironment setDiskSizeGb(java.lang.Integer diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
     return this;
   }
 

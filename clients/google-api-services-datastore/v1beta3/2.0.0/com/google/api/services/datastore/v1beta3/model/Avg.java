@@ -19,8 +19,8 @@ package com.google.api.services.datastore.v1beta3.model;
 /**
  * Average of the values of the requested property. * Only numeric values will be aggregated. All
  * non-numeric values including `NULL` are skipped. * If the aggregated values contain `NaN`,
- * returns `NaN`. * If the aggregated value set is empty, returns `NULL`. * Always returns the
- * result as a double.
+ * returns `NaN`. Infinity math follows IEEE-754 standards. * If the aggregated value set is empty,
+ * returns `NULL`. * Always returns the result as a double.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

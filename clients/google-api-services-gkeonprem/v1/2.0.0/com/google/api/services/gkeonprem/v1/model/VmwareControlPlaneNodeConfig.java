@@ -60,7 +60,7 @@ public final class VmwareControlPlaneNodeConfig extends com.google.api.client.js
   private java.lang.Long replicas;
 
   /**
-   * Output only. Vsphere-specific config.
+   * Vsphere-specific config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class VmwareControlPlaneNodeConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. Vsphere-specific config.
+   * Vsphere-specific config.
    * @return value or {@code null} for none
    */
   public VmwareControlPlaneVsphereConfig getVsphereConfig() {
@@ -147,7 +147,7 @@ public final class VmwareControlPlaneNodeConfig extends com.google.api.client.js
   }
 
   /**
-   * Output only. Vsphere-specific config.
+   * Vsphere-specific config.
    * @param vsphereConfig vsphereConfig or {@code null} for none
    */
   public VmwareControlPlaneNodeConfig setVsphereConfig(VmwareControlPlaneVsphereConfig vsphereConfig) {

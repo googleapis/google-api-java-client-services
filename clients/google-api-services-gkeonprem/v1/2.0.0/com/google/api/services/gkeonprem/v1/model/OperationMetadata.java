@@ -59,6 +59,13 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private String endTime;
 
   /**
+   * Output only. Detailed progress information for the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperationProgress progress;
+
+  /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
    * Operations that have successfully been cancelled have [Operation.error] value with a
    * [google.rpc.Status.code] of 1, corresponding to `Code.CANCELLED`.
@@ -162,6 +169,23 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. Detailed progress information for the operation.
+   * @return value or {@code null} for none
+   */
+  public OperationProgress getProgress() {
+    return progress;
+  }
+
+  /**
+   * Output only. Detailed progress information for the operation.
+   * @param progress progress or {@code null} for none
+   */
+  public OperationMetadata setProgress(OperationProgress progress) {
+    this.progress = progress;
     return this;
   }
 

@@ -39,8 +39,8 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   private java.lang.String adminClusterMembership;
 
   /**
-   * The object name of the VMware OnPremUserCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * Optional. The object name of the VMware OnPremUserCluster custom resource on the associated
+   * admin cluster. This field is used to support conflicting resource names when enrolling existing
    * clusters to the API. When not provided, this field will resolve to the vmware_cluster_id.
    * Otherwise, it must match the object name of the VMware OnPremUserCluster custom resource. It is
    * not modifiable outside / beyond the enrollment operation.
@@ -59,8 +59,7 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +87,8 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   }
 
   /**
-   * The object name of the VMware OnPremUserCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * Optional. The object name of the VMware OnPremUserCluster custom resource on the associated
+   * admin cluster. This field is used to support conflicting resource names when enrolling existing
    * clusters to the API. When not provided, this field will resolve to the vmware_cluster_id.
    * Otherwise, it must match the object name of the VMware OnPremUserCluster custom resource. It is
    * not modifiable outside / beyond the enrollment operation.
@@ -100,8 +99,8 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   }
 
   /**
-   * The object name of the VMware OnPremUserCluster custom resource on the associated admin
-   * cluster. This field is used to support conflicting resource names when enrolling existing
+   * Optional. The object name of the VMware OnPremUserCluster custom resource on the associated
+   * admin cluster. This field is used to support conflicting resource names when enrolling existing
    * clusters to the API. When not provided, this field will resolve to the vmware_cluster_id.
    * Otherwise, it must match the object name of the VMware OnPremUserCluster custom resource. It is
    * not modifiable outside / beyond the enrollment operation.
@@ -132,8 +131,7 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmwareClusterId() {
@@ -143,8 +141,7 @@ public final class EnrollVmwareClusterRequest extends com.google.api.client.json
   /**
    * User provided OnePlatform identifier that is used as part of the resource name. This must be
    * unique among all GKE on-prem clusters within a project and location and will return a 409 if
-   * the cluster already exists. This value must be up to 40 characters and follow RFC-1123
-   * (https://tools.ietf.org/html/rfc1123) format.
+   * the cluster already exists. (https://tools.ietf.org/html/rfc1123) format.
    * @param vmwareClusterId vmwareClusterId or {@code null} for none
    */
   public EnrollVmwareClusterRequest setVmwareClusterId(java.lang.String vmwareClusterId) {

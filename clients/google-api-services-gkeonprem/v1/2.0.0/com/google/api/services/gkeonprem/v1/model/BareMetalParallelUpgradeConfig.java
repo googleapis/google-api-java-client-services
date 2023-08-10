@@ -30,7 +30,7 @@ package com.google.api.services.gkeonprem.v1.model;
 public final class BareMetalParallelUpgradeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The maximum number of nodes that can be upgraded at once. Defaults to 1.
+   * The maximum number of nodes that can be upgraded at once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class BareMetalParallelUpgradeConfig extends com.google.api.client.
   private java.lang.Integer minimumAvailableNodes;
 
   /**
-   * Required. The maximum number of nodes that can be upgraded at once. Defaults to 1.
+   * The maximum number of nodes that can be upgraded at once.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConcurrentNodes() {
@@ -54,7 +54,7 @@ public final class BareMetalParallelUpgradeConfig extends com.google.api.client.
   }
 
   /**
-   * Required. The maximum number of nodes that can be upgraded at once. Defaults to 1.
+   * The maximum number of nodes that can be upgraded at once.
    * @param concurrentNodes concurrentNodes or {@code null} for none
    */
   public BareMetalParallelUpgradeConfig setConcurrentNodes(java.lang.Integer concurrentNodes) {

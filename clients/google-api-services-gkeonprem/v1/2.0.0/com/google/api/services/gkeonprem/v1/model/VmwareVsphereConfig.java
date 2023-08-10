@@ -37,6 +37,13 @@ public final class VmwareVsphereConfig extends com.google.api.client.json.Generi
   private java.lang.String datastore;
 
   /**
+   * Vsphere host groups to apply to all VMs in the node pool
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> hostGroups;
+
+  /**
    * Tags to apply to VMs.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class VmwareVsphereConfig extends com.google.api.client.json.Generi
    */
   public VmwareVsphereConfig setDatastore(java.lang.String datastore) {
     this.datastore = datastore;
+    return this;
+  }
+
+  /**
+   * Vsphere host groups to apply to all VMs in the node pool
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHostGroups() {
+    return hostGroups;
+  }
+
+  /**
+   * Vsphere host groups to apply to all VMs in the node pool
+   * @param hostGroups hostGroups or {@code null} for none
+   */
+  public VmwareVsphereConfig setHostGroups(java.util.List<java.lang.String> hostGroups) {
+    this.hostGroups = hostGroups;
     return this;
   }
 

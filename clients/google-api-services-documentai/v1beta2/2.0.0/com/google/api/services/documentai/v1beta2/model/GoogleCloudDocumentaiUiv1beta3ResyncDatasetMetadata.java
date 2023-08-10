@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   private java.util.List<GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus> individualDocumentResyncStatuses;
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata getCommonMetadata() {
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends c
   }
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @param commonMetadata commonMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {

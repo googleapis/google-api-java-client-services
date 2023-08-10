@@ -47,6 +47,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private String fieldMask;
 
   /**
+   * A raw document on Google Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3GcsDocument gcsDocument;
+
+  /**
    * An inline document proto.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setFieldMask(String fieldMask) {
     this.fieldMask = fieldMask;
+    return this;
+  }
+
+  /**
+   * A raw document on Google Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3GcsDocument getGcsDocument() {
+    return gcsDocument;
+  }
+
+  /**
+   * A raw document on Google Cloud Storage.
+   * @param gcsDocument gcsDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setGcsDocument(GoogleCloudDocumentaiV1beta3GcsDocument gcsDocument) {
+    this.gcsDocument = gcsDocument;
     return this;
   }
 

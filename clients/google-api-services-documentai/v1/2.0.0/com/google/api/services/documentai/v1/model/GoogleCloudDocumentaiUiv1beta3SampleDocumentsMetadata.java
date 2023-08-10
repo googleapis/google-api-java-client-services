@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiUiv1beta3SampleDocumentsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata getCommonMetadata() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiUiv1beta3SampleDocumentsMetadata extends
   }
 
   /**
-   * The basic metadata of the long running operation.
+   * The basic metadata of the long-running operation.
    * @param commonMetadata commonMetadata or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3SampleDocumentsMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {

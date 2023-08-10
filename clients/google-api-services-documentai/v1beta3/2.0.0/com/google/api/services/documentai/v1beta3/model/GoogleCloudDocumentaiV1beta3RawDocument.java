@@ -38,6 +38,15 @@ public final class GoogleCloudDocumentaiV1beta3RawDocument extends com.google.ap
   private java.lang.String content;
 
   /**
+   * The display name of the document, it supports all Unicode characters except the following: `*`,
+   * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
+   * default ID will be generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * An IANA MIME type (RFC6838) indicating the nature and format of the content.
    * The value may be {@code null}.
    */
@@ -86,6 +95,27 @@ public final class GoogleCloudDocumentaiV1beta3RawDocument extends com.google.ap
    */
   public GoogleCloudDocumentaiV1beta3RawDocument encodeContent(byte[] content) {
     this.content = com.google.api.client.util.Base64.encodeBase64URLSafeString(content);
+    return this;
+  }
+
+  /**
+   * The display name of the document, it supports all Unicode characters except the following: `*`,
+   * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
+   * default ID will be generated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The display name of the document, it supports all Unicode characters except the following: `*`,
+   * `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,` `~`, `=` and `:` are reserved. If not specified, a
+   * default ID will be generated.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3RawDocument setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

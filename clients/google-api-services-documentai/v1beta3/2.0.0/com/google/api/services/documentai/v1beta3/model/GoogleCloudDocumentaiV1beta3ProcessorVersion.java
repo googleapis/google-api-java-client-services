@@ -61,7 +61,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   private GoogleCloudDocumentaiV1beta3DocumentSchema documentSchema;
 
   /**
-   * Denotes that this `ProcessorVersion` is managed by Google.
+   * Output only. Denotes that this `ProcessorVersion` is managed by Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * Denotes that this `ProcessorVersion` is managed by Google.
+   * Output only. Denotes that this `ProcessorVersion` is managed by Google.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGoogleManaged() {
@@ -180,7 +180,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersion extends com.goog
   }
 
   /**
-   * Denotes that this `ProcessorVersion` is managed by Google.
+   * Output only. Denotes that this `ProcessorVersion` is managed by Google.
    * @param googleManaged googleManaged or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersion setGoogleManaged(java.lang.Boolean googleManaged) {

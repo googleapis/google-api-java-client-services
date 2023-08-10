@@ -76,6 +76,13 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
   private java.lang.String processEndpoint;
 
   /**
+   * Output only. The processor version aliases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1ProcessorVersionAlias> processorVersionAliases;
+
+  /**
    * Output only. The state of the processor.
    * The value may be {@code null}.
    */
@@ -193,6 +200,23 @@ public final class GoogleCloudDocumentaiV1Processor extends com.google.api.clien
    */
   public GoogleCloudDocumentaiV1Processor setProcessEndpoint(java.lang.String processEndpoint) {
     this.processEndpoint = processEndpoint;
+    return this;
+  }
+
+  /**
+   * Output only. The processor version aliases.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1ProcessorVersionAlias> getProcessorVersionAliases() {
+    return processorVersionAliases;
+  }
+
+  /**
+   * Output only. The processor version aliases.
+   * @param processorVersionAliases processorVersionAliases or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1Processor setProcessorVersionAliases(java.util.List<GoogleCloudDocumentaiV1ProcessorVersionAlias> processorVersionAliases) {
+    this.processorVersionAliases = processorVersionAliases;
     return this;
   }
 

@@ -31,6 +31,15 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class BuildOccurrence extends com.google.api.client.json.GenericJson {
 
   /**
+   * In-Toto Slsa Provenance V1 represents a slsa provenance meeting the slsa spec, wrapped in an
+   * in-toto statement. This allows for direct jsonification of a to-spec in-toto slsa statement
+   * with a to-spec slsa provenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1;
+
+  /**
    * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as
    * defined in spec.
    * The value may be {@code null}.
@@ -66,6 +75,27 @@ public final class BuildOccurrence extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String provenanceBytes;
+
+  /**
+   * In-Toto Slsa Provenance V1 represents a slsa provenance meeting the slsa spec, wrapped in an
+   * in-toto statement. This allows for direct jsonification of a to-spec in-toto slsa statement
+   * with a to-spec slsa provenance.
+   * @return value or {@code null} for none
+   */
+  public InTotoSlsaProvenanceV1 getInTotoSlsaProvenanceV1() {
+    return inTotoSlsaProvenanceV1;
+  }
+
+  /**
+   * In-Toto Slsa Provenance V1 represents a slsa provenance meeting the slsa spec, wrapped in an
+   * in-toto statement. This allows for direct jsonification of a to-spec in-toto slsa statement
+   * with a to-spec slsa provenance.
+   * @param inTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1 or {@code null} for none
+   */
+  public BuildOccurrence setInTotoSlsaProvenanceV1(InTotoSlsaProvenanceV1 inTotoSlsaProvenanceV1) {
+    this.inTotoSlsaProvenanceV1 = inTotoSlsaProvenanceV1;
+    return this;
+  }
 
   /**
    * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as

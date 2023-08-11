@@ -52,6 +52,15 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
   private java.lang.Boolean containVulgarCandidates;
 
   /**
+   * Indicates that SR side should disable the ng3 scoring and soly rely on the SnippetBrain scoring
+   * for selecting the final candidate. E.g. this can happen when the offline snippet generation
+   * routine is triggered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableNg3Scoring;
+
+  /**
    * Indicates whether the query relevance features is disabled or not in Muppet scoring.
    * The value may be {@code null}.
    */
@@ -121,6 +130,27 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
    */
   public SnippetExtraInfo setContainVulgarCandidates(java.lang.Boolean containVulgarCandidates) {
     this.containVulgarCandidates = containVulgarCandidates;
+    return this;
+  }
+
+  /**
+   * Indicates that SR side should disable the ng3 scoring and soly rely on the SnippetBrain scoring
+   * for selecting the final candidate. E.g. this can happen when the offline snippet generation
+   * routine is triggered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableNg3Scoring() {
+    return disableNg3Scoring;
+  }
+
+  /**
+   * Indicates that SR side should disable the ng3 scoring and soly rely on the SnippetBrain scoring
+   * for selecting the final candidate. E.g. this can happen when the offline snippet generation
+   * routine is triggered.
+   * @param disableNg3Scoring disableNg3Scoring or {@code null} for none
+   */
+  public SnippetExtraInfo setDisableNg3Scoring(java.lang.Boolean disableNg3Scoring) {
+    this.disableNg3Scoring = disableNg3Scoring;
     return this;
   }
 

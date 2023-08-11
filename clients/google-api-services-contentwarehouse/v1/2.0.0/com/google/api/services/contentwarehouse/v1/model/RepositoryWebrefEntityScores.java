@@ -63,19 +63,12 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   private java.lang.Float entityIdf;
 
   /**
-   * Probability that any given name of this entity is capitalized.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float nameCapitalizationProb;
-
-  /**
    * The following fields are deprecated and should eventually be removed. They use data and rules
    * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float personProb;
+  private java.lang.Float nameCapitalizationProb;
 
   /**
    * Probability that any given name of this entity is fully capitalized.
@@ -154,7 +147,8 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   }
 
   /**
-   * Probability that any given name of this entity is capitalized.
+   * The following fields are deprecated and should eventually be removed. They use data and rules
+   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * @return value or {@code null} for none
    */
   public java.lang.Float getNameCapitalizationProb() {
@@ -162,30 +156,12 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   }
 
   /**
-   * Probability that any given name of this entity is capitalized.
+   * The following fields are deprecated and should eventually be removed. They use data and rules
+   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * @param nameCapitalizationProb nameCapitalizationProb or {@code null} for none
    */
   public RepositoryWebrefEntityScores setNameCapitalizationProb(java.lang.Float nameCapitalizationProb) {
     this.nameCapitalizationProb = nameCapitalizationProb;
-    return this;
-  }
-
-  /**
-   * The following fields are deprecated and should eventually be removed. They use data and rules
-   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getPersonProb() {
-    return personProb;
-  }
-
-  /**
-   * The following fields are deprecated and should eventually be removed. They use data and rules
-   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
-   * @param personProb personProb or {@code null} for none
-   */
-  public RepositoryWebrefEntityScores setPersonProb(java.lang.Float personProb) {
-    this.personProb = personProb;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contains information about comment that is posted through a Super VOD purchase. Next ID: 6
+ * Contains information about comment that is posted through a Super Thanks purchase. Next ID: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,42 +31,50 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Currency code the user uses to purchase this Super VOD item.
+   * Currency code the user uses to purchase this Super Thanks item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currencyCode;
 
   /**
-   * The ID of the Super VOD entitlement. It uniquely identifies a Super VOD purchase.
+   * The ID of the Super Thanks entitlement. It uniquely identifies a Super Thanks purchase. This
+   * field is deprecated in favor of transaction_id, see go/st-deprecate-ent-id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entitlementId;
 
   /**
-   * Price of Super VOD item the user purchases in micros.
+   * Price of Super Thanks item the user purchases in micros.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger priceInMicros;
 
   /**
-   * The Super VOD item the user purchases, it represents price tier.
+   * The Super Thanks item the user purchases, it represents price tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String superVodItemId;
 
   /**
-   * Which version of experiment this Super VOD comment is posted in.
+   * The ID of the Super Thanks transaction. It uniquely identifies a Super Thanks purchase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transactionId;
+
+  /**
+   * Which version of experiment this Super Thanks comment is posted in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Currency code the user uses to purchase this Super VOD item.
+   * Currency code the user uses to purchase this Super Thanks item.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -74,7 +82,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * Currency code the user uses to purchase this Super VOD item.
+   * Currency code the user uses to purchase this Super Thanks item.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public YoutubeBackstageSuperVodCommentInfo setCurrencyCode(java.lang.String currencyCode) {
@@ -83,7 +91,8 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * The ID of the Super VOD entitlement. It uniquely identifies a Super VOD purchase.
+   * The ID of the Super Thanks entitlement. It uniquely identifies a Super Thanks purchase. This
+   * field is deprecated in favor of transaction_id, see go/st-deprecate-ent-id.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntitlementId() {
@@ -91,7 +100,8 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * The ID of the Super VOD entitlement. It uniquely identifies a Super VOD purchase.
+   * The ID of the Super Thanks entitlement. It uniquely identifies a Super Thanks purchase. This
+   * field is deprecated in favor of transaction_id, see go/st-deprecate-ent-id.
    * @param entitlementId entitlementId or {@code null} for none
    */
   public YoutubeBackstageSuperVodCommentInfo setEntitlementId(java.lang.String entitlementId) {
@@ -100,7 +110,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * Price of Super VOD item the user purchases in micros.
+   * Price of Super Thanks item the user purchases in micros.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getPriceInMicros() {
@@ -108,7 +118,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * Price of Super VOD item the user purchases in micros.
+   * Price of Super Thanks item the user purchases in micros.
    * @param priceInMicros priceInMicros or {@code null} for none
    */
   public YoutubeBackstageSuperVodCommentInfo setPriceInMicros(java.math.BigInteger priceInMicros) {
@@ -117,7 +127,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * The Super VOD item the user purchases, it represents price tier.
+   * The Super Thanks item the user purchases, it represents price tier.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuperVodItemId() {
@@ -125,7 +135,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * The Super VOD item the user purchases, it represents price tier.
+   * The Super Thanks item the user purchases, it represents price tier.
    * @param superVodItemId superVodItemId or {@code null} for none
    */
   public YoutubeBackstageSuperVodCommentInfo setSuperVodItemId(java.lang.String superVodItemId) {
@@ -134,7 +144,24 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * Which version of experiment this Super VOD comment is posted in.
+   * The ID of the Super Thanks transaction. It uniquely identifies a Super Thanks purchase.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransactionId() {
+    return transactionId;
+  }
+
+  /**
+   * The ID of the Super Thanks transaction. It uniquely identifies a Super Thanks purchase.
+   * @param transactionId transactionId or {@code null} for none
+   */
+  public YoutubeBackstageSuperVodCommentInfo setTransactionId(java.lang.String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
+
+  /**
+   * Which version of experiment this Super Thanks comment is posted in.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -142,7 +169,7 @@ public final class YoutubeBackstageSuperVodCommentInfo extends com.google.api.cl
   }
 
   /**
-   * Which version of experiment this Super VOD comment is posted in.
+   * Which version of experiment this Super Thanks comment is posted in.
    * @param version version or {@code null} for none
    */
   public YoutubeBackstageSuperVodCommentInfo setVersion(java.lang.String version) {

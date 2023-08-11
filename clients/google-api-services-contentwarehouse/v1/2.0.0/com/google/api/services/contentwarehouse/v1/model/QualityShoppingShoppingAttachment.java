@@ -21,7 +21,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * deep copy of protos defined in ShoppingAnnotation so that we can control individual fields that
  * will sit in Muppet. Data here will be used for scoring organic shopping web results and previews.
  * Many shopping related signals, e.g., product review score, are also served from this attachment.
- * Next ID: 21
+ * DEPRECATED: Please use UDR (go/udr) instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

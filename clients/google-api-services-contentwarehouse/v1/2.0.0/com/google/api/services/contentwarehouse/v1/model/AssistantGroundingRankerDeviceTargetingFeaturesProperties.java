@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The properties of the device. They are static and won't change.
+ * The properties of the device. They are static and won't change. Next ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -43,6 +43,13 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesProperties ext
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isOwnedBySpeaker;
+
+  /**
+   * Assistant surface type (ontology).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String surfaceType;
 
   /**
    * The model ID of the device. This should be globally unique across manufacturers/OEMs.
@@ -75,6 +82,23 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesProperties ext
    */
   public AssistantGroundingRankerDeviceTargetingFeaturesProperties setIsOwnedBySpeaker(java.lang.Boolean isOwnedBySpeaker) {
     this.isOwnedBySpeaker = isOwnedBySpeaker;
+    return this;
+  }
+
+  /**
+   * Assistant surface type (ontology).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSurfaceType() {
+    return surfaceType;
+  }
+
+  /**
+   * Assistant surface type (ontology).
+   * @param surfaceType surfaceType or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesProperties setSurfaceType(java.lang.String surfaceType) {
+    this.surfaceType = surfaceType;
     return this;
   }
 

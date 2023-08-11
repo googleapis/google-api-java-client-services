@@ -19,9 +19,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * PToken expresses policy-relevant properties of the data objects being processed and stored in
  * Google's production systems. See go/ptoken to learn more. PTokens are intentionally opaque: go
- * /ptokens-are-opaque. The following should be considered implementation details. Next ID: 8
- * INTERNAL: If both the Scalar and the Compound extensions are populated, we use the Compound and
- * discard the Scalar. In principle, this should never happen.
+ * /ptokens-are-opaque. The following should be considered implementation details. Next ID: 9
+ * LINT.IfChange INTERNAL: If both the Scalar and the Compound extensions are populated, we use the
+ * Compound and discard the Scalar. In principle, this should never happen.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

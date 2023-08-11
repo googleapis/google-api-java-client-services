@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for GeostoreBoundingMarkerProto.
+ * NOTE: BoundingMarkerProto could be compared against one another by canonicalizing them via
+ * GetCanonicalBoundingMarker() in google3/geostore/base/internal/lane.cc. Any fields that don't
+ * contribute to the definition of a bounding marker in the real world should be bundled with the
+ * annotative fields near the bottom and excluded in GetCanonicalBoundingMarker(). LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

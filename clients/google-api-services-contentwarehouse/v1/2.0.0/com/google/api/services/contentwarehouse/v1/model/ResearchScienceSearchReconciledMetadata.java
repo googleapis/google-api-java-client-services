@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 71
+ * A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 73
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -218,6 +218,13 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ResearchScienceSearchOrganization.class);
   }
+
+  /**
+   * Indicates if the dataset has croissant format (https://github.com/mlcommons/croissant).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasCroissantFormat;
 
   /**
    * Indicates if the dataset has table summaries. This field is only populated during indexing
@@ -497,6 +504,14 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Float> versionEmbeddingVector;
+
+  /**
+   * A simhash value of the fields used for identifying versions of a dataset. This will be used by
+   * the VersionClusterInfoWriter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger versionsSimhash;
 
   /**
    * Alternate names and acronyms for the dataset.
@@ -906,6 +921,23 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   public ResearchScienceSearchReconciledMetadata setFunder(java.util.List<ResearchScienceSearchOrganization> funder) {
     this.funder = funder;
+    return this;
+  }
+
+  /**
+   * Indicates if the dataset has croissant format (https://github.com/mlcommons/croissant).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasCroissantFormat() {
+    return hasCroissantFormat;
+  }
+
+  /**
+   * Indicates if the dataset has croissant format (https://github.com/mlcommons/croissant).
+   * @param hasCroissantFormat hasCroissantFormat or {@code null} for none
+   */
+  public ResearchScienceSearchReconciledMetadata setHasCroissantFormat(java.lang.Boolean hasCroissantFormat) {
+    this.hasCroissantFormat = hasCroissantFormat;
     return this;
   }
 
@@ -1518,6 +1550,25 @@ public final class ResearchScienceSearchReconciledMetadata extends com.google.ap
    */
   public ResearchScienceSearchReconciledMetadata setVersionEmbeddingVector(java.util.List<java.lang.Float> versionEmbeddingVector) {
     this.versionEmbeddingVector = versionEmbeddingVector;
+    return this;
+  }
+
+  /**
+   * A simhash value of the fields used for identifying versions of a dataset. This will be used by
+   * the VersionClusterInfoWriter.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getVersionsSimhash() {
+    return versionsSimhash;
+  }
+
+  /**
+   * A simhash value of the fields used for identifying versions of a dataset. This will be used by
+   * the VersionClusterInfoWriter.
+   * @param versionsSimhash versionsSimhash or {@code null} for none
+   */
+  public ResearchScienceSearchReconciledMetadata setVersionsSimhash(java.math.BigInteger versionsSimhash) {
+    this.versionsSimhash = versionsSimhash;
     return this;
   }
 

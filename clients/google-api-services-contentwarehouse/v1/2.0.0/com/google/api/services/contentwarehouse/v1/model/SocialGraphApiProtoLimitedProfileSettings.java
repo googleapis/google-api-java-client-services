@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 9
+ * Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Created with user input in Android Messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean androidMessages;
+
+  /**
    * Indicates why the limited profile has been disabled. Will be set iff the limited profile is
    * disabled. Note: When mutating limited profiles, in order to disable them,
    * MutateDataRequest.DisableLimitedProfile must be true. Currently, disables are only performed
@@ -41,7 +48,8 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
   private java.lang.String disableReason;
 
   /**
-   * Created with user input in GPay OOBE.
+   * Created with user input in GPay OOBE. This is not currently used because GPay does not setup
+   * mini profile, this might change in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,6 +92,23 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
   private SocialGraphApiProtoLimitedProfilePictureSettings profilePictureSettings;
 
   /**
+   * Created with user input in Android Messages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAndroidMessages() {
+    return androidMessages;
+  }
+
+  /**
+   * Created with user input in Android Messages.
+   * @param androidMessages androidMessages or {@code null} for none
+   */
+  public SocialGraphApiProtoLimitedProfileSettings setAndroidMessages(java.lang.Boolean androidMessages) {
+    this.androidMessages = androidMessages;
+    return this;
+  }
+
+  /**
    * Indicates why the limited profile has been disabled. Will be set iff the limited profile is
    * disabled. Note: When mutating limited profiles, in order to disable them,
    * MutateDataRequest.DisableLimitedProfile must be true. Currently, disables are only performed
@@ -107,7 +132,8 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
   }
 
   /**
-   * Created with user input in GPay OOBE.
+   * Created with user input in GPay OOBE. This is not currently used because GPay does not setup
+   * mini profile, this might change in the future.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGpayOobe() {
@@ -115,7 +141,8 @@ public final class SocialGraphApiProtoLimitedProfileSettings extends com.google.
   }
 
   /**
-   * Created with user input in GPay OOBE.
+   * Created with user input in GPay OOBE. This is not currently used because GPay does not setup
+   * mini profile, this might change in the future.
    * @param gpayOobe gpayOobe or {@code null} for none
    */
   public SocialGraphApiProtoLimitedProfileSettings setGpayOobe(java.lang.Boolean gpayOobe) {

@@ -34,6 +34,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityRankembedMustangMustangRankEmbedInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Each of the repeated elements in this field has the same scheme as 'fixed_point_encoding'; See
+   * go/rankembed-astro-rule-set-dd
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalFixedPointEncodings;
+
+  /**
    * Each uint64 encodes 8 8-bit values for the quantized document embedding
    * The value may be {@code null}.
    */
@@ -82,6 +90,25 @@ public final class QualityRankembedMustangMustangRankEmbedInfo extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.Long versionAndImprovInfo;
+
+  /**
+   * Each of the repeated elements in this field has the same scheme as 'fixed_point_encoding'; See
+   * go/rankembed-astro-rule-set-dd
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalFixedPointEncodings() {
+    return additionalFixedPointEncodings;
+  }
+
+  /**
+   * Each of the repeated elements in this field has the same scheme as 'fixed_point_encoding'; See
+   * go/rankembed-astro-rule-set-dd
+   * @param additionalFixedPointEncodings additionalFixedPointEncodings or {@code null} for none
+   */
+  public QualityRankembedMustangMustangRankEmbedInfo setAdditionalFixedPointEncodings(java.util.List<java.lang.String> additionalFixedPointEncodings) {
+    this.additionalFixedPointEncodings = additionalFixedPointEncodings;
+    return this;
+  }
 
   /**
    * Each uint64 encodes 8 8-bit values for the quantized document embedding

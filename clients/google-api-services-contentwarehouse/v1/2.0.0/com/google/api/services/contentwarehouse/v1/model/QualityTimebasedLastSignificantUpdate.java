@@ -49,6 +49,12 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
   private java.lang.Long date;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualityTimebasedDateReliability dateReliabilityInfo;
+
+  /**
    * The source the signal comes from.
    * The value may be {@code null}.
    */
@@ -94,6 +100,21 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
    */
   public QualityTimebasedLastSignificantUpdate setDate(java.lang.Long date) {
     this.date = date;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public QualityTimebasedDateReliability getDateReliabilityInfo() {
+    return dateReliabilityInfo;
+  }
+
+  /**
+   * @param dateReliabilityInfo dateReliabilityInfo or {@code null} for none
+   */
+  public QualityTimebasedLastSignificantUpdate setDateReliabilityInfo(QualityTimebasedDateReliability dateReliabilityInfo) {
+    this.dateReliabilityInfo = dateReliabilityInfo;
     return this;
   }
 

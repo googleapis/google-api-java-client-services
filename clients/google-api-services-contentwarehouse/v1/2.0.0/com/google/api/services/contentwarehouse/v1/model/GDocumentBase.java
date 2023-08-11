@@ -136,14 +136,16 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
   private java.lang.Integer noTranslateReason;
 
   /**
-   * Pagerank for doc (if known)
+   * This field is long-deprecated in favour of Pagerank_NS, it is no longer maintained and can
+   * break at any moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("Pagerank")
   private java.lang.Integer pagerank;
 
   /**
-   * Pagerank-NearestSeeds is an alternative pagerank score for the doc.
+   * Pagerank-NearestSeeds is a pagerank score for the doc, calculated using NearestSeeds method.
+   * This is the production PageRank value teams should use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("PagerankNS")
@@ -542,7 +544,8 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Pagerank for doc (if known)
+   * This field is long-deprecated in favour of Pagerank_NS, it is no longer maintained and can
+   * break at any moment.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPagerank() {
@@ -550,7 +553,8 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Pagerank for doc (if known)
+   * This field is long-deprecated in favour of Pagerank_NS, it is no longer maintained and can
+   * break at any moment.
    * @param pagerank pagerank or {@code null} for none
    */
   public GDocumentBase setPagerank(java.lang.Integer pagerank) {
@@ -559,7 +563,8 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Pagerank-NearestSeeds is an alternative pagerank score for the doc.
+   * Pagerank-NearestSeeds is a pagerank score for the doc, calculated using NearestSeeds method.
+   * This is the production PageRank value teams should use.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPagerankNS() {
@@ -567,7 +572,8 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Pagerank-NearestSeeds is an alternative pagerank score for the doc.
+   * Pagerank-NearestSeeds is a pagerank score for the doc, calculated using NearestSeeds method.
+   * This is the production PageRank value teams should use.
    * @param pagerankNS pagerankNS or {@code null} for none
    */
   public GDocumentBase setPagerankNS(java.lang.Integer pagerankNS) {

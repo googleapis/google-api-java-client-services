@@ -31,7 +31,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CDW dataset resource name. Format:
+   * Optional. The CDW dataset resource name. This field is optional. If not set, the documents will
+   * be exported to Cloud Storage only. Format:
    * projects/{project}/locations/{location}/processors/{processor}/dataset
    * The value may be {@code null}.
    */
@@ -48,7 +49,7 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,14 +57,16 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
+   * automatically split into training and test split category with the specified ratio. This field
+   * is required if doc_ai_dataset is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float trainingSplitRatio;
 
   /**
-   * The CDW dataset resource name. Format:
+   * Optional. The CDW dataset resource name. This field is optional. If not set, the documents will
+   * be exported to Cloud Storage only. Format:
    * projects/{project}/locations/{location}/processors/{processor}/dataset
    * @return value or {@code null} for none
    */
@@ -72,7 +75,8 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
   }
 
   /**
-   * The CDW dataset resource name. Format:
+   * Optional. The CDW dataset resource name. This field is optional. If not set, the documents will
+   * be exported to Cloud Storage only. Format:
    * projects/{project}/locations/{location}/processors/{processor}/dataset
    * @param docAiDataset docAiDataset or {@code null} for none
    */
@@ -102,7 +106,7 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExportFolderPath() {
@@ -111,7 +115,7 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * @param exportFolderPath exportFolderPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1ExportToCdwPipeline setExportFolderPath(java.lang.String exportFolderPath) {
@@ -121,7 +125,8 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
+   * automatically split into training and test split category with the specified ratio. This field
+   * is required if doc_ai_dataset is set.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTrainingSplitRatio() {
@@ -130,7 +135,8 @@ public final class GoogleCloudContentwarehouseV1ExportToCdwPipeline extends com.
 
   /**
    * Ratio of training dataset split. When importing into Document AI Workbench, documents will be
-   * automatically split into training and test split category with the specified ratio.
+   * automatically split into training and test split category with the specified ratio. This field
+   * is required if doc_ai_dataset is set.
    * @param trainingSplitRatio trainingSplitRatio or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1ExportToCdwPipeline setTrainingSplitRatio(java.lang.Float trainingSplitRatio) {

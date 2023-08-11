@@ -87,6 +87,13 @@ public final class GeostoreRoadSignComponentProto extends com.google.api.client.
   private java.lang.String routeDirection;
 
   /**
+   * The semantic type of sign.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String semanticType;
+
+  /**
    * If this sign component is of type "TYPE_TEXT", this field contains the text of the component. A
    * NameProto is used to allow language and flags to be associated with the text.
    * The value may be {@code null}.
@@ -211,6 +218,23 @@ public final class GeostoreRoadSignComponentProto extends com.google.api.client.
    */
   public GeostoreRoadSignComponentProto setRouteDirection(java.lang.String routeDirection) {
     this.routeDirection = routeDirection;
+    return this;
+  }
+
+  /**
+   * The semantic type of sign.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSemanticType() {
+    return semanticType;
+  }
+
+  /**
+   * The semantic type of sign.
+   * @param semanticType semanticType or {@code null} for none
+   */
+  public GeostoreRoadSignComponentProto setSemanticType(java.lang.String semanticType) {
+    this.semanticType = semanticType;
     return this;
   }
 

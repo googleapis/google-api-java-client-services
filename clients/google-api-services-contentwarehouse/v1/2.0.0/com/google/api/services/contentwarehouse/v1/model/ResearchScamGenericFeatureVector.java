@@ -142,13 +142,14 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query.
+   * a query. copybara:strip_end
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResearchScamQueryMetadata queryMetadata;
 
   /**
+   * copybara:strip_end_and_replace reserved 15;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -505,7 +506,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query.
+   * a query. copybara:strip_end
    * @return value or {@code null} for none
    */
   public ResearchScamQueryMetadata getQueryMetadata() {
@@ -514,7 +515,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
 
   /**
    * copybara:strip_begin A field that contains metadata information when the datapoint is acting as
-   * a query.
+   * a query. copybara:strip_end
    * @param queryMetadata queryMetadata or {@code null} for none
    */
   public ResearchScamGenericFeatureVector setQueryMetadata(ResearchScamQueryMetadata queryMetadata) {
@@ -523,6 +524,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   }
 
   /**
+   * copybara:strip_end_and_replace reserved 15;
    * @return value or {@code null} for none
    */
   public ResearchScamGenericFeatureVectorRestrictTokens getRestrictTokens() {
@@ -530,6 +532,7 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   }
 
   /**
+   * copybara:strip_end_and_replace reserved 15;
    * @param restrictTokens restrictTokens or {@code null} for none
    */
   public ResearchScamGenericFeatureVector setRestrictTokens(ResearchScamGenericFeatureVectorRestrictTokens restrictTokens) {

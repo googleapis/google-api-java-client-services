@@ -47,8 +47,10 @@ public final class AssistantDevicesPlatformProtoAlarmCapability extends com.goog
 
   /**
    * Whether the client supports mutation of any alarm attribute such as time_pattern,
-   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
-   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used to
+   * disable or dismiss an alarm. This field is true by default for backwards-compatibility; clients
+   * which don't support mutation outside of Disable/DismissAlarm should explicitly set this to
+   * false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +103,10 @@ public final class AssistantDevicesPlatformProtoAlarmCapability extends com.goog
 
   /**
    * Whether the client supports mutation of any alarm attribute such as time_pattern,
-   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
-   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used to
+   * disable or dismiss an alarm. This field is true by default for backwards-compatibility; clients
+   * which don't support mutation outside of Disable/DismissAlarm should explicitly set this to
+   * false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsGenericMutations() {
@@ -111,8 +115,10 @@ public final class AssistantDevicesPlatformProtoAlarmCapability extends com.goog
 
   /**
    * Whether the client supports mutation of any alarm attribute such as time_pattern,
-   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used
-   * for changing the alarm's status (to e.g. disable or dismiss the alarm).
+   * recurrence_pattern, etc through the MUTATE action. If this is false, MUTATE may only be used to
+   * disable or dismiss an alarm. This field is true by default for backwards-compatibility; clients
+   * which don't support mutation outside of Disable/DismissAlarm should explicitly set this to
+   * false.
    * @param supportsGenericMutations supportsGenericMutations or {@code null} for none
    */
   public AssistantDevicesPlatformProtoAlarmCapability setSupportsGenericMutations(java.lang.Boolean supportsGenericMutations) {

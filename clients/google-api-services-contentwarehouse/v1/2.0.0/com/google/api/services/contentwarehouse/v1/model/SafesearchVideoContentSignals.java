@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * SafeSearch video content classification scores are computed based on go/golden7 video features.
  * To access these scores see the library at:
- * google3/quality/safesearch/video/api/video_score_info.h
+ * google3/quality/safesearch/video/api/video_score_info.h Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,6 +31,12 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class SafesearchVideoContentSignals extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SafesearchVideoContentSignalsMultiLabelClassificationInfo internalMultiLabelClassification;
 
   /**
    * This is used by Amarna to determine whether it should notify Raffia for immediate reprocessing.
@@ -61,6 +67,21 @@ public final class SafesearchVideoContentSignals extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private SafesearchVideoClassifierOutput videoClassifierOutput;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SafesearchVideoContentSignalsMultiLabelClassificationInfo getInternalMultiLabelClassification() {
+    return internalMultiLabelClassification;
+  }
+
+  /**
+   * @param internalMultiLabelClassification internalMultiLabelClassification or {@code null} for none
+   */
+  public SafesearchVideoContentSignals setInternalMultiLabelClassification(SafesearchVideoContentSignalsMultiLabelClassificationInfo internalMultiLabelClassification) {
+    this.internalMultiLabelClassification = internalMultiLabelClassification;
+    return this;
+  }
 
   /**
    * This is used by Amarna to determine whether it should notify Raffia for immediate reprocessing.

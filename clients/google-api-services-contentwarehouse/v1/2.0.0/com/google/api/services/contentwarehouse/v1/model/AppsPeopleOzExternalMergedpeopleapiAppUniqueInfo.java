@@ -39,6 +39,15 @@ public final class AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo extends com.
   private java.lang.String appUniqueId;
 
   /**
+   * Where this contact info was retrieved from. Note: only added for Assistant usage, and will not
+   * be populated by PAPI. This is due to the coupling between Assistant Proto, and PAPI proto.
+   * (//depot/google3/quality/qrewrite/servlets/proto/focus_name.proto)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contactInfoSource;
+
+  /**
    * Store third party endpoint that is displayed to users. For example, display_app_unique_id for
    * Whatsapp will be "Message +11234567890".
    * The value may be {@code null}.
@@ -79,6 +88,27 @@ public final class AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo extends com.
    */
   public AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo setAppUniqueId(java.lang.String appUniqueId) {
     this.appUniqueId = appUniqueId;
+    return this;
+  }
+
+  /**
+   * Where this contact info was retrieved from. Note: only added for Assistant usage, and will not
+   * be populated by PAPI. This is due to the coupling between Assistant Proto, and PAPI proto.
+   * (//depot/google3/quality/qrewrite/servlets/proto/focus_name.proto)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContactInfoSource() {
+    return contactInfoSource;
+  }
+
+  /**
+   * Where this contact info was retrieved from. Note: only added for Assistant usage, and will not
+   * be populated by PAPI. This is due to the coupling between Assistant Proto, and PAPI proto.
+   * (//depot/google3/quality/qrewrite/servlets/proto/focus_name.proto)
+   * @param contactInfoSource contactInfoSource or {@code null} for none
+   */
+  public AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo setContactInfoSource(java.lang.String contactInfoSource) {
+    this.contactInfoSource = contactInfoSource;
     return this;
   }
 

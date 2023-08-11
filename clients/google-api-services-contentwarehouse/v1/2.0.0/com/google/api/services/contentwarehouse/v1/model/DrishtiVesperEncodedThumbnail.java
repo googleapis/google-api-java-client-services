@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The attributes of encoded thumbnail images. Next id: 7.
+ * The attributes of encoded thumbnail images. Next id: 9.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -29,6 +29,14 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Image size in bytes. Meaningful when contents are not stored inline (e.g., via
+   * `image_blob_id`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long byteSize;
 
   /**
    * JPEG/WEBP quality factor in range [0,100].
@@ -51,6 +59,15 @@ public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.j
   private java.lang.Integer height;
 
   /**
+   * The Blob ID of the thumbnail image in the Blobstore. We recommend absolute IDs with universe
+   * prefix if this field is passed across systems. The owner of this blob is also responsible for
+   * data Wipeout compliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageBlobId;
+
+  /**
    * Encoded thumbnail bytes. Prefer this over `image_string` as we are not supposed to store image
    * bytes in a proto string field.
    * The value may be {@code null}.
@@ -71,6 +88,25 @@ public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Integer width;
+
+  /**
+   * Image size in bytes. Meaningful when contents are not stored inline (e.g., via
+   * `image_blob_id`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getByteSize() {
+    return byteSize;
+  }
+
+  /**
+   * Image size in bytes. Meaningful when contents are not stored inline (e.g., via
+   * `image_blob_id`).
+   * @param byteSize byteSize or {@code null} for none
+   */
+  public DrishtiVesperEncodedThumbnail setByteSize(java.lang.Long byteSize) {
+    this.byteSize = byteSize;
+    return this;
+  }
 
   /**
    * JPEG/WEBP quality factor in range [0,100].
@@ -118,6 +154,27 @@ public final class DrishtiVesperEncodedThumbnail extends com.google.api.client.j
    */
   public DrishtiVesperEncodedThumbnail setHeight(java.lang.Integer height) {
     this.height = height;
+    return this;
+  }
+
+  /**
+   * The Blob ID of the thumbnail image in the Blobstore. We recommend absolute IDs with universe
+   * prefix if this field is passed across systems. The owner of this blob is also responsible for
+   * data Wipeout compliance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageBlobId() {
+    return imageBlobId;
+  }
+
+  /**
+   * The Blob ID of the thumbnail image in the Blobstore. We recommend absolute IDs with universe
+   * prefix if this field is passed across systems. The owner of this blob is also responsible for
+   * data Wipeout compliance.
+   * @param imageBlobId imageBlobId or {@code null} for none
+   */
+  public DrishtiVesperEncodedThumbnail setImageBlobId(java.lang.String imageBlobId) {
+    this.imageBlobId = imageBlobId;
     return this;
   }
 

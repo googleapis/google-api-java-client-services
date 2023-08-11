@@ -67,12 +67,6 @@ public final class RepositoryWebrefLinkKindFlags extends com.google.api.client.j
   private java.lang.String property;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String resolution;
-
-  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -159,21 +153,6 @@ public final class RepositoryWebrefLinkKindFlags extends com.google.api.client.j
    */
   public RepositoryWebrefLinkKindFlags setProperty(java.lang.String property) {
     this.property = property;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResolution() {
-    return resolution;
-  }
-
-  /**
-   * @param resolution resolution or {@code null} for none
-   */
-  public RepositoryWebrefLinkKindFlags setResolution(java.lang.String resolution) {
-    this.resolution = resolution;
     return this;
   }
 

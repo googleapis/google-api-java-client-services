@@ -257,8 +257,8 @@ public final class QualityQrewritePersonalContactData extends com.google.api.cli
   /**
    * LINT.ThenChange(//depot/google3/assistant/verticals/communication/\
    * fulfillment/proto/contact_logging_enums.proto,
-   * //depot/google3/assistant/api/dialog_state/values/person.proto) Data source of the contact
-   * data.
+   * //depot/google3/assistant/api/dialog_state/values/person.proto,
+   * //depot/google3/assistant/context/proto/person.proto) Data source of the contact data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -799,8 +799,8 @@ public final class QualityQrewritePersonalContactData extends com.google.api.cli
   /**
    * LINT.ThenChange(//depot/google3/assistant/verticals/communication/\
    * fulfillment/proto/contact_logging_enums.proto,
-   * //depot/google3/assistant/api/dialog_state/values/person.proto) Data source of the contact
-   * data.
+   * //depot/google3/assistant/api/dialog_state/values/person.proto,
+   * //depot/google3/assistant/context/proto/person.proto) Data source of the contact data.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -810,8 +810,8 @@ public final class QualityQrewritePersonalContactData extends com.google.api.cli
   /**
    * LINT.ThenChange(//depot/google3/assistant/verticals/communication/\
    * fulfillment/proto/contact_logging_enums.proto,
-   * //depot/google3/assistant/api/dialog_state/values/person.proto) Data source of the contact
-   * data.
+   * //depot/google3/assistant/api/dialog_state/values/person.proto,
+   * //depot/google3/assistant/context/proto/person.proto) Data source of the contact data.
    * @param source source or {@code null} for none
    */
   public QualityQrewritePersonalContactData setSource(java.lang.String source) {

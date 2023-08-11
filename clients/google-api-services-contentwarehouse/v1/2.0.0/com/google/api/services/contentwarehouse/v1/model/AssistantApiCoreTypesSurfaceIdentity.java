@@ -46,16 +46,16 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
 
   /**
    * The device's surface type. The types are defined at
-   * google3/assistant/api/core_types/surfaces.gcl. NOTE: This is the new field that is going to
-   * replace the `surface_type_string` field above. For more details please refer to go
-   * /ontologicalize-surface-type.
+   * google3/assistant/api/core_types/surfaces.gcl. For more details, refer to go/ontologicalize-
+   * surface-type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String surfaceType;
 
   /**
-   * The device's surface type. This is the string version of the
+   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
+   * instead. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * The value may be {@code null}.
@@ -89,9 +89,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
 
   /**
    * The device's surface type. The types are defined at
-   * google3/assistant/api/core_types/surfaces.gcl. NOTE: This is the new field that is going to
-   * replace the `surface_type_string` field above. For more details please refer to go
-   * /ontologicalize-surface-type.
+   * google3/assistant/api/core_types/surfaces.gcl. For more details, refer to go/ontologicalize-
+   * surface-type.
    * @return value or {@code null} for none
    */
   public java.lang.String getSurfaceType() {
@@ -100,9 +99,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
 
   /**
    * The device's surface type. The types are defined at
-   * google3/assistant/api/core_types/surfaces.gcl. NOTE: This is the new field that is going to
-   * replace the `surface_type_string` field above. For more details please refer to go
-   * /ontologicalize-surface-type.
+   * google3/assistant/api/core_types/surfaces.gcl. For more details, refer to go/ontologicalize-
+   * surface-type.
    * @param surfaceType surfaceType or {@code null} for none
    */
   public AssistantApiCoreTypesSurfaceIdentity setSurfaceType(java.lang.String surfaceType) {
@@ -111,7 +109,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
   }
 
   /**
-   * The device's surface type. This is the string version of the
+   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
+   * instead. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * @return value or {@code null} for none
@@ -121,7 +120,8 @@ public final class AssistantApiCoreTypesSurfaceIdentity extends com.google.api.c
   }
 
   /**
-   * The device's surface type. This is the string version of the
+   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
+   * instead. The device's surface type. This is the string version of the
    * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
    * should use the SurfaceType value derived from this string.
    * @param surfaceTypeString surfaceTypeString or {@code null} for none

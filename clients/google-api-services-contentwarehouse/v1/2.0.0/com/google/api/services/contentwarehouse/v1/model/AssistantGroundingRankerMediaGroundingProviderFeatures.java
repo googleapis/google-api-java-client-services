@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 15
+ * Features to be passed from Media GP to HGR. Next ID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   private java.lang.String albumReleaseType;
 
   /**
-   * Temporary ambiguity classifier signal.
+   * Temporary ambiguity classifier signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +67,12 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isMediaSearchQuerySubsetOfEntityNameAndArtist;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMostRecentSongAlbumAmbiguous;
 
   /**
    * True if the media deeplink has tag SEED_RADIO.
@@ -158,7 +164,7 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   }
 
   /**
-   * Temporary ambiguity classifier signal.
+   * Temporary ambiguity classifier signals.
    * @return value or {@code null} for none
    */
   public java.lang.String getAmbiguityClassifier() {
@@ -166,7 +172,7 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
   }
 
   /**
-   * Temporary ambiguity classifier signal.
+   * Temporary ambiguity classifier signals.
    * @param ambiguityClassifier ambiguityClassifier or {@code null} for none
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setAmbiguityClassifier(java.lang.String ambiguityClassifier) {
@@ -228,6 +234,21 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setIsMediaSearchQuerySubsetOfEntityNameAndArtist(java.lang.Boolean isMediaSearchQuerySubsetOfEntityNameAndArtist) {
     this.isMediaSearchQuerySubsetOfEntityNameAndArtist = isMediaSearchQuerySubsetOfEntityNameAndArtist;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMostRecentSongAlbumAmbiguous() {
+    return isMostRecentSongAlbumAmbiguous;
+  }
+
+  /**
+   * @param isMostRecentSongAlbumAmbiguous isMostRecentSongAlbumAmbiguous or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setIsMostRecentSongAlbumAmbiguous(java.lang.Boolean isMostRecentSongAlbumAmbiguous) {
+    this.isMostRecentSongAlbumAmbiguous = isMostRecentSongAlbumAmbiguous;
     return this;
   }
 

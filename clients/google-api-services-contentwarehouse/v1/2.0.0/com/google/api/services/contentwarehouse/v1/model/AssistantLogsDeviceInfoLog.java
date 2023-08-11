@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The information related to the device.
+ * The information related to the device. Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -89,6 +89,13 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String eliminatingLumosProcessor;
+
+  /**
+   * The home structure id of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String homeStructureId;
 
   /**
    * The value may be {@code null}.
@@ -279,6 +286,23 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
    */
   public AssistantLogsDeviceInfoLog setEliminatingLumosProcessor(java.lang.String eliminatingLumosProcessor) {
     this.eliminatingLumosProcessor = eliminatingLumosProcessor;
+    return this;
+  }
+
+  /**
+   * The home structure id of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHomeStructureId() {
+    return homeStructureId;
+  }
+
+  /**
+   * The home structure id of the device.
+   * @param homeStructureId homeStructureId or {@code null} for none
+   */
+  public AssistantLogsDeviceInfoLog setHomeStructureId(java.lang.String homeStructureId) {
+    this.homeStructureId = homeStructureId;
     return this;
   }
 

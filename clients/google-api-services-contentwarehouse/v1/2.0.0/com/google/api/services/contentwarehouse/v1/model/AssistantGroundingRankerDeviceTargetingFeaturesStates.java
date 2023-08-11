@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The states of the device. They are dynamic and may change based on the current context.
+ * The states of the device. They are dynamic and may change based on the current context. Next ID:
+ * 5
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

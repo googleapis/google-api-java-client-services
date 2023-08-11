@@ -43,6 +43,16 @@ public final class GoogleAssistantEmbeddedV1Alarm extends com.google.api.client.
   private java.lang.String alarmId;
 
   /**
+   * The entity that created this alarm. Note this may be different from the device that reported
+   * this alarm. In particular, this field is meant for remote alarms which have been synced to the
+   * current device by the Clock app. Synced alarms exist in each device's Clock app and can be
+   * managed by either device; this field indicates their origin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alarmSource;
+
+  /**
    * For single alarms: the one date the alarm should next be scheduled for.
    * The value may be {@code null}.
    */
@@ -108,6 +118,29 @@ public final class GoogleAssistantEmbeddedV1Alarm extends com.google.api.client.
    */
   public GoogleAssistantEmbeddedV1Alarm setAlarmId(java.lang.String alarmId) {
     this.alarmId = alarmId;
+    return this;
+  }
+
+  /**
+   * The entity that created this alarm. Note this may be different from the device that reported
+   * this alarm. In particular, this field is meant for remote alarms which have been synced to the
+   * current device by the Clock app. Synced alarms exist in each device's Clock app and can be
+   * managed by either device; this field indicates their origin.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlarmSource() {
+    return alarmSource;
+  }
+
+  /**
+   * The entity that created this alarm. Note this may be different from the device that reported
+   * this alarm. In particular, this field is meant for remote alarms which have been synced to the
+   * current device by the Clock app. Synced alarms exist in each device's Clock app and can be
+   * managed by either device; this field indicates their origin.
+   * @param alarmSource alarmSource or {@code null} for none
+   */
+  public GoogleAssistantEmbeddedV1Alarm setAlarmSource(java.lang.String alarmSource) {
+    this.alarmSource = alarmSource;
     return this;
   }
 

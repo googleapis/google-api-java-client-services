@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * All the possible location constraints. This message is associated with a location and can be
  * nested accordingly. E.g., for a compound location the constraint may be associated with the
  * entire location or with either of the two internal locations (loc_1 and loc_2). There is an
- * implicit AND relation between the different constraints. Next ID: 25.
+ * implicit AND relation between the different constraints. Next ID: 26.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -58,6 +58,13 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   @com.google.api.client.util.Key
   private NlpSemanticParsingLocalEvChargingStationConnectorConstraint evcsConnectorConstraint;
+
+  /**
+   * Used for populating ElectricVehiclePaymentRefinement from QBF go/evcs-qbf-payment
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpSemanticParsingLocalEvChargingStationPaymentConstraint evcsPaymentConstraint;
 
   /**
    * The value may be {@code null}.
@@ -243,6 +250,23 @@ public final class NlpSemanticParsingLocalLocationConstraint extends com.google.
    */
   public NlpSemanticParsingLocalLocationConstraint setEvcsConnectorConstraint(NlpSemanticParsingLocalEvChargingStationConnectorConstraint evcsConnectorConstraint) {
     this.evcsConnectorConstraint = evcsConnectorConstraint;
+    return this;
+  }
+
+  /**
+   * Used for populating ElectricVehiclePaymentRefinement from QBF go/evcs-qbf-payment
+   * @return value or {@code null} for none
+   */
+  public NlpSemanticParsingLocalEvChargingStationPaymentConstraint getEvcsPaymentConstraint() {
+    return evcsPaymentConstraint;
+  }
+
+  /**
+   * Used for populating ElectricVehiclePaymentRefinement from QBF go/evcs-qbf-payment
+   * @param evcsPaymentConstraint evcsPaymentConstraint or {@code null} for none
+   */
+  public NlpSemanticParsingLocalLocationConstraint setEvcsPaymentConstraint(NlpSemanticParsingLocalEvChargingStationPaymentConstraint evcsPaymentConstraint) {
+    this.evcsPaymentConstraint = evcsPaymentConstraint;
     return this;
   }
 

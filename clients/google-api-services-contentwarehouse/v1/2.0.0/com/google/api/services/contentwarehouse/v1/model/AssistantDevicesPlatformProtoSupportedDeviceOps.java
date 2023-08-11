@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This message will specify supports for fields in |assistant.embedded.v1.DeviceOp|, for a device
- * model package. See go/easi-client-op2 for more info. Next ID: 16
+ * model package. See go/easi-client-op2 for more info. Next ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -72,6 +72,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   @com.google.api.client.util.Key
   private AssistantDevicesPlatformProtoDeviceTakePhotoCapability deviceTakePhoto;
+
+  /**
+   * |execution_wait| specifies the support for execution.WAIT client_op, and the corresponding
+   * execution_wait field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoExecutionWaitCapability executionWait;
 
   /**
    * The value may be {@code null}.
@@ -235,6 +243,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setDeviceTakePhoto(AssistantDevicesPlatformProtoDeviceTakePhotoCapability deviceTakePhoto) {
     this.deviceTakePhoto = deviceTakePhoto;
+    return this;
+  }
+
+  /**
+   * |execution_wait| specifies the support for execution.WAIT client_op, and the corresponding
+   * execution_wait field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoExecutionWaitCapability getExecutionWait() {
+    return executionWait;
+  }
+
+  /**
+   * |execution_wait| specifies the support for execution.WAIT client_op, and the corresponding
+   * execution_wait field in assistant.embedded.v1.DeviceOp.
+   * @param executionWait executionWait or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setExecutionWait(AssistantDevicesPlatformProtoExecutionWaitCapability executionWait) {
+    this.executionWait = executionWait;
     return this;
   }
 

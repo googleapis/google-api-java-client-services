@@ -40,7 +40,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
   private GoogleCloudContentwarehouseV1ProcessorInfo processorInfo;
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExportFolderPath() {
@@ -90,7 +90,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
 
   /**
    * The Cloud Storage folder path used to store the exported documents before being sent to CDW.
-   * Format: gs:.
+   * Format: `gs:`.
    * @param exportFolderPath exportFolderPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline setExportFolderPath(java.lang.String exportFolderPath) {
@@ -116,7 +116,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
   }
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessorResultsFolderPath() {
@@ -124,7 +124,7 @@ public final class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends
   }
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * @param processorResultsFolderPath processorResultsFolderPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline setProcessorResultsFolderPath(java.lang.String processorResultsFolderPath) {

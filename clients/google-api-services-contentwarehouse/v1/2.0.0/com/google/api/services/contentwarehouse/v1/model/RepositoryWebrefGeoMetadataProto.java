@@ -38,6 +38,8 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   private GeostoreAddressProto address;
 
   /**
+   * This field is only provided through the online qref interface (QrefMetadata). This is a fairly
+   * simple extraction from the /geo/type/feature/address_proto_blob triple.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,6 +130,8 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   }
 
   /**
+   * This field is only provided through the online qref interface (QrefMetadata). This is a fairly
+   * simple extraction from the /geo/type/feature/address_proto_blob triple.
    * @return value or {@code null} for none
    */
   public java.util.List<RepositoryWebrefGeoMetadataProtoAddressSynonym> getAddressSynonyms() {
@@ -135,6 +139,8 @@ public final class RepositoryWebrefGeoMetadataProto extends com.google.api.clien
   }
 
   /**
+   * This field is only provided through the online qref interface (QrefMetadata). This is a fairly
+   * simple extraction from the /geo/type/feature/address_proto_blob triple.
    * @param addressSynonyms addressSynonyms or {@code null} for none
    */
   public RepositoryWebrefGeoMetadataProto setAddressSynonyms(java.util.List<RepositoryWebrefGeoMetadataProtoAddressSynonym> addressSynonyms) {

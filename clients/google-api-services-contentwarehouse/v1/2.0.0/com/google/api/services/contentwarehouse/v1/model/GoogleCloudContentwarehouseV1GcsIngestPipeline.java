@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The configuration of the Cloud Storage ingestion pipeline.
+ * The configuration of the Cloud Storage Ingestion pipeline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,16 +32,23 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
 
   /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputPath;
 
   /**
+   * Optional. The config for the Cloud Storage Ingestion pipeline. It provides additional
+   * customization options to run the pipeline and can be skipped if it is not applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1IngestPipelineConfig pipelineConfig;
+
+  /**
    * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
-   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
-   * core/c/proto/processor.proto;l=21
+   * proto format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +64,17 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   private java.lang.String schemaName;
 
   /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipIngestedDocuments;
+
+  /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputPath() {
@@ -67,7 +83,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
 
   /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * @param inputPath inputPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1GcsIngestPipeline setInputPath(java.lang.String inputPath) {
@@ -76,9 +92,27 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
   }
 
   /**
+   * Optional. The config for the Cloud Storage Ingestion pipeline. It provides additional
+   * customization options to run the pipeline and can be skipped if it is not applicable.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1IngestPipelineConfig getPipelineConfig() {
+    return pipelineConfig;
+  }
+
+  /**
+   * Optional. The config for the Cloud Storage Ingestion pipeline. It provides additional
+   * customization options to run the pipeline and can be skipped if it is not applicable.
+   * @param pipelineConfig pipelineConfig or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestPipeline setPipelineConfig(GoogleCloudContentwarehouseV1IngestPipelineConfig pipelineConfig) {
+    this.pipelineConfig = pipelineConfig;
+    return this;
+  }
+
+  /**
    * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
-   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
-   * core/c/proto/processor.proto;l=21
+   * proto format.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessorType() {
@@ -87,8 +121,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
 
   /**
    * The Doc AI processor type name. Only used when the format of ingested files is Doc AI Document
-   * proto format. Reference: https://source.corp.google.com/piperdepot/google3/cloud/ai/documentai/
-   * core/c/proto/processor.proto;l=21
+   * proto format.
    * @param processorType processorType or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1GcsIngestPipeline setProcessorType(java.lang.String processorType) {
@@ -114,6 +147,27 @@ public final class GoogleCloudContentwarehouseV1GcsIngestPipeline extends com.go
    */
   public GoogleCloudContentwarehouseV1GcsIngestPipeline setSchemaName(java.lang.String schemaName) {
     this.schemaName = schemaName;
+    return this;
+  }
+
+  /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipIngestedDocuments() {
+    return skipIngestedDocuments;
+  }
+
+  /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * @param skipIngestedDocuments skipIngestedDocuments or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestPipeline setSkipIngestedDocuments(java.lang.Boolean skipIngestedDocuments) {
+    this.skipIngestedDocuments = skipIngestedDocuments;
     return this;
   }
 

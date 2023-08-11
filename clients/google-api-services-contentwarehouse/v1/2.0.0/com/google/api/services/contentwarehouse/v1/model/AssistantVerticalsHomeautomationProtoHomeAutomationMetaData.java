@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 43
+ * Next ID: 44
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -123,6 +123,13 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean lanscanOptedIn;
+
+  /**
+   * Matter Unique ID. Contains VID/PID information
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantVerticalsHomeautomationProtoMatterUniqueId matterUniqueId;
 
   /**
    * Model name from HomeGraph, populated from model_manifest.model_name. See b/200087451.
@@ -611,6 +618,23 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setLanscanOptedIn(java.lang.Boolean lanscanOptedIn) {
     this.lanscanOptedIn = lanscanOptedIn;
+    return this;
+  }
+
+  /**
+   * Matter Unique ID. Contains VID/PID information
+   * @return value or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoMatterUniqueId getMatterUniqueId() {
+    return matterUniqueId;
+  }
+
+  /**
+   * Matter Unique ID. Contains VID/PID information
+   * @param matterUniqueId matterUniqueId or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setMatterUniqueId(AssistantVerticalsHomeautomationProtoMatterUniqueId matterUniqueId) {
+    this.matterUniqueId = matterUniqueId;
     return this;
   }
 

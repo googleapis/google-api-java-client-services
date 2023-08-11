@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * PerDocData for fringe-query-prior (built into the shards for eventual consumption at Fringe
- * classification time). Not stored in DocJoins. NEXT ID: 12
+ * classification time). Not stored in DocJoins. NEXT ID: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -43,6 +43,13 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Long encodedChardXlqHoaxPrediction;
+
+  /**
+   * An encoding of the Chard XLQ prediction on translated content in [0,1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long encodedChardXlqTranslatedPrediction;
 
   /**
    * An encoding of the Chard XLQ-YMYL prediction in [0,1].
@@ -157,6 +164,23 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   public QualityFringeFringeQueryPriorPerDocData setEncodedChardXlqHoaxPrediction(java.lang.Long encodedChardXlqHoaxPrediction) {
     this.encodedChardXlqHoaxPrediction = encodedChardXlqHoaxPrediction;
+    return this;
+  }
+
+  /**
+   * An encoding of the Chard XLQ prediction on translated content in [0,1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEncodedChardXlqTranslatedPrediction() {
+    return encodedChardXlqTranslatedPrediction;
+  }
+
+  /**
+   * An encoding of the Chard XLQ prediction on translated content in [0,1].
+   * @param encodedChardXlqTranslatedPrediction encodedChardXlqTranslatedPrediction or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setEncodedChardXlqTranslatedPrediction(java.lang.Long encodedChardXlqTranslatedPrediction) {
+    this.encodedChardXlqTranslatedPrediction = encodedChardXlqTranslatedPrediction;
     return this;
   }
 

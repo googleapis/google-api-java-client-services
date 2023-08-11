@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This is an optional container of arbitrary data that can be added to a FetchReplyData. This data
  * is meant to be logged, but not sent back in a fetch reply (it should be added *after* the reply
  * is prepared). Use FetchResponsePreparatorImpl::AddTrawlerPrivateDataToFetchReplyData to add. See
- * also the comment in fetch_response_preparator_impl.cc. Next Tag: 45
+ * also the comment in fetch_response_preparator_impl.cc. Next Tag: 46
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -246,6 +246,13 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long concurrentStreamNum;
+
+  /**
+   * Log the credential id
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialId;
 
   /**
    * Dependent fetch type
@@ -906,6 +913,23 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   public TrawlerTrawlerPrivateFetchReplyData setConcurrentStreamNum(java.lang.Long concurrentStreamNum) {
     this.concurrentStreamNum = concurrentStreamNum;
+    return this;
+  }
+
+  /**
+   * Log the credential id
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialId() {
+    return credentialId;
+  }
+
+  /**
+   * Log the credential id
+   * @param credentialId credentialId or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setCredentialId(java.lang.String credentialId) {
+    this.credentialId = credentialId;
     return this;
   }
 

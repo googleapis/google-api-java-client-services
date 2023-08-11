@@ -5120,7 +5120,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
            * optional parameters, call the {@link TagRevision#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name of the deployment to be tagged, including the revision ID.
+           * @param name Required. The name of the deployment to be tagged, including the revision ID is optional. If a
+           *        revision is not specified, it will tag the latest revision.
            * @param content the {@link com.google.api.services.apigeeregistry.v1.model.TagApiDeploymentRevisionRequest}
            * @return the request
            */
@@ -5148,7 +5149,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * TagRevision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the deployment to be tagged, including the revision ID.
+             * @param name Required. The name of the deployment to be tagged, including the revision ID is optional. If a
+           *        revision is not specified, it will tag the latest revision.
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.TagApiDeploymentRevisionRequest}
              * @since 1.13
              */
@@ -5217,17 +5219,24 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
               return (TagRevision) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the deployment to be tagged, including the revision ID. */
+            /**
+             * Required. The name of the deployment to be tagged, including the revision ID is
+             * optional. If a revision is not specified, it will tag the latest revision.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the deployment to be tagged, including the revision ID.
+            /** Required. The name of the deployment to be tagged, including the revision ID is optional. If a
+           revision is not specified, it will tag the latest revision.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the deployment to be tagged, including the revision ID. */
+            /**
+             * Required. The name of the deployment to be tagged, including the revision ID is
+             * optional. If a revision is not specified, it will tag the latest revision.
+             */
             public TagRevision setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11158,7 +11167,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
              * optional parameters, call the {@link TagRevision#execute()} method to invoke the remote
              * operation.
              *
-             * @param name Required. The name of the spec to be tagged, including the revision ID.
+             * @param name Required. The name of the spec to be tagged, including the revision ID is optional. If a revision is
+             *        not specified, it will tag the latest revision.
              * @param content the {@link com.google.api.services.apigeeregistry.v1.model.TagApiSpecRevisionRequest}
              * @return the request
              */
@@ -11186,7 +11196,8 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                * TagRevision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the spec to be tagged, including the revision ID.
+               * @param name Required. The name of the spec to be tagged, including the revision ID is optional. If a revision is
+             *        not specified, it will tag the latest revision.
                * @param content the {@link com.google.api.services.apigeeregistry.v1.model.TagApiSpecRevisionRequest}
                * @since 1.13
                */
@@ -11255,17 +11266,24 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
                 return (TagRevision) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The name of the spec to be tagged, including the revision ID. */
+              /**
+               * Required. The name of the spec to be tagged, including the revision ID is optional.
+               * If a revision is not specified, it will tag the latest revision.
+               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the spec to be tagged, including the revision ID.
+              /** Required. The name of the spec to be tagged, including the revision ID is optional. If a revision
+             is not specified, it will tag the latest revision.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Required. The name of the spec to be tagged, including the revision ID. */
+              /**
+               * Required. The name of the spec to be tagged, including the revision ID is optional.
+               * If a revision is not specified, it will tag the latest revision.
+               */
               public TagRevision setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15760,12 +15778,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
-         * the binding to use different resource name schemes, such as `users/operations`. To override the
-         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
-         * configuration. For backwards compatibility, the default name includes the operations collection
-         * id, however overriding users must ensure the name binding is the parent resource, without the
-         * operations collection id.
+         * this method, it returns `UNIMPLEMENTED`.
          *
          * Create a request for the method "operations.list".
          *
@@ -15790,12 +15803,7 @@ public class ApigeeRegistry extends com.google.api.client.googleapis.services.js
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
-           * override the binding to use different resource name schemes, such as `users/operations`. To
-           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
-           * their service configuration. For backwards compatibility, the default name includes the
-           * operations collection id, however overriding users must ensure the name binding is the parent
-           * resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`.
            *
            * Create a request for the method "operations.list".
            *

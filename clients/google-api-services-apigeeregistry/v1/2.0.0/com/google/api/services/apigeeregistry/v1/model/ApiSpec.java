@@ -94,8 +94,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * A style (format) descriptor for this spec that is specified as a Media Type
-   * (https://en.wikipedia.org/wiki/Media_type). Possible values include
+   * A style (format) descriptor for this spec that is specified as a [Media
+   * Type](https://en.wikipedia.org/wiki/Media_type). Possible values include
    * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
    * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838
@@ -322,8 +322,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A style (format) descriptor for this spec that is specified as a Media Type
-   * (https://en.wikipedia.org/wiki/Media_type). Possible values include
+   * A style (format) descriptor for this spec that is specified as a [Media
+   * Type](https://en.wikipedia.org/wiki/Media_type). Possible values include
    * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
    * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838
@@ -336,8 +336,8 @@ public final class ApiSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A style (format) descriptor for this spec that is specified as a Media Type
-   * (https://en.wikipedia.org/wiki/Media_type). Possible values include
+   * A style (format) descriptor for this spec that is specified as a [Media
+   * Type](https://en.wikipedia.org/wiki/Media_type). Possible values include
    * `application/vnd.apigee.proto`, `application/vnd.apigee.openapi`, and
    * `application/vnd.apigee.graphql`, with possible suffixes representing compression types. These
    * hypothetical names are defined in the vendor tree defined in RFC6838

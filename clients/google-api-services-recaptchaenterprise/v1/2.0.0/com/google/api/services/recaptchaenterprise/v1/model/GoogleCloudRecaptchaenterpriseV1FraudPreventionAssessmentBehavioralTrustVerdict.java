@@ -31,14 +31,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict extends com.google.api.client.json.GenericJson {
 
   /**
-   * Probability (0-1) of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Probability of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Values are from 0.0 (lowest) to 1.0 (highest).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float trust;
 
   /**
-   * Probability (0-1) of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Probability of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Values are from 0.0 (lowest) to 1.0 (highest).
    * @return value or {@code null} for none
    */
   public java.lang.Float getTrust() {
@@ -46,7 +48,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBeha
   }
 
   /**
-   * Probability (0-1) of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Probability of this transaction attempt being executed in a behaviorally trustworthy way.
+   * Values are from 0.0 (lowest) to 1.0 (highest).
    * @param trust trust or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict setTrust(java.lang.Float trust) {

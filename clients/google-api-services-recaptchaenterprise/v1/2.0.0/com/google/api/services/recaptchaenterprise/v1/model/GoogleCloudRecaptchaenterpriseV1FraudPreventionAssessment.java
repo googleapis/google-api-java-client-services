@@ -52,8 +52,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict stolenInstrumentVerdict;
 
   /**
-   * Probability (0-1) of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below.
+   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
+   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +111,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Probability (0-1) of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below.
+   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
+   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * @return value or {@code null} for none
    */
   public java.lang.Float getTransactionRisk() {
@@ -120,8 +120,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   }
 
   /**
-   * Probability (0-1) of this transaction being fraudulent. Summarizes the combined risk of attack
-   * vectors below.
+   * Probability of this transaction being fraudulent. Summarizes the combined risk of attack
+   * vectors below. Values are from 0.0 (lowest) to 1.0 (highest).
    * @param transactionRisk transactionRisk or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setTransactionRisk(java.lang.Float transactionRisk) {

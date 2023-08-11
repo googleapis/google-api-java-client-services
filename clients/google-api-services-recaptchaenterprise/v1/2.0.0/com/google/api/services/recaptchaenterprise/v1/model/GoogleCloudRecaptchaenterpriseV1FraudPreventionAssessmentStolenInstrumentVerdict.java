@@ -32,14 +32,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict extends com.google.api.client.json.GenericJson {
 
   /**
-   * Probability (0-1) of this transaction being executed with a stolen instrument.
+   * Probability of this transaction being executed with a stolen instrument. Values are from 0.0
+   * (lowest) to 1.0 (highest).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float risk;
 
   /**
-   * Probability (0-1) of this transaction being executed with a stolen instrument.
+   * Probability of this transaction being executed with a stolen instrument. Values are from 0.0
+   * (lowest) to 1.0 (highest).
    * @return value or {@code null} for none
    */
   public java.lang.Float getRisk() {
@@ -47,7 +49,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStol
   }
 
   /**
-   * Probability (0-1) of this transaction being executed with a stolen instrument.
+   * Probability of this transaction being executed with a stolen instrument. Values are from 0.0
+   * (lowest) to 1.0 (highest).
    * @param risk risk or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentStolenInstrumentVerdict setRisk(java.lang.Float risk) {

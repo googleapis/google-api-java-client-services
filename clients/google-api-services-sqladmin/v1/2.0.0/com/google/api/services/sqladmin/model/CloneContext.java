@@ -86,6 +86,14 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private String pointInTime;
 
   /**
+   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
+   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preferredZone;
+
+  /**
    * The name of the allocated ip range for the private ip Cloud SQL instance. For example: "google-
    * managed-services-default". If set, the cloned instance ip will be created in the allocated
    * range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035).
@@ -215,6 +223,25 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
    */
   public CloneContext setPointInTime(String pointInTime) {
     this.pointInTime = pointInTime;
+    return this;
+  }
+
+  /**
+   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
+   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreferredZone() {
+    return preferredZone;
+  }
+
+  /**
+   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
+   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * @param preferredZone preferredZone or {@code null} for none
+   */
+  public CloneContext setPreferredZone(java.lang.String preferredZone) {
+    this.preferredZone = preferredZone;
     return this;
   }
 

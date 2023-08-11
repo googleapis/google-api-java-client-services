@@ -258,6 +258,21 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     private java.lang.Boolean recoveryOnly;
 
     /**
+     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private String stopAt;
+
+    /**
+     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
+     * only
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String stopAtMark;
+
+    /**
      * Whether or not the backup set being restored is striped. Applies only to Cloud SQL for SQL
      * Server.
      * The value may be {@code null}.
@@ -334,6 +349,42 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
      */
     public BakImportOptions setRecoveryOnly(java.lang.Boolean recoveryOnly) {
       this.recoveryOnly = recoveryOnly;
+      return this;
+    }
+
+    /**
+     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * @return value or {@code null} for none
+     */
+    public String getStopAt() {
+      return stopAt;
+    }
+
+    /**
+     * Optional. StopAt keyword for transaction log import, Applies to Cloud SQL for SQL Server only
+     * @param stopAt stopAt or {@code null} for none
+     */
+    public BakImportOptions setStopAt(String stopAt) {
+      this.stopAt = stopAt;
+      return this;
+    }
+
+    /**
+     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
+     * only
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getStopAtMark() {
+      return stopAtMark;
+    }
+
+    /**
+     * Optional. StopAtMark keyword for transaction log import, Applies to Cloud SQL for SQL Server
+     * only
+     * @param stopAtMark stopAtMark or {@code null} for none
+     */
+    public BakImportOptions setStopAtMark(java.lang.String stopAtMark) {
+      this.stopAtMark = stopAtMark;
       return this;
     }
 

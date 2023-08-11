@@ -69,6 +69,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String connectorVersion;
 
   /**
+   * Output only. Infra configs supported by Connector Version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1ConnectorVersionInfraConfig connectorVersionInfraConfig;
+
+  /**
    * Output only. Flag to mark the version indicating the launch stage.
    * The value may be {@code null}.
    */
@@ -104,6 +111,27 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String envoyImageLocation;
+
+  /**
+   * Optional. Eventing config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingConfig eventingConfig;
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventingEnablementType;
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingRuntimeData eventingRuntimeData;
 
   /**
    * Output only. GCR location where the runtime image is stored. formatted like:
@@ -151,7 +179,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1NodeConfig nodeConfig;
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,6 +306,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Output only. Infra configs supported by Connector Version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig getConnectorVersionInfraConfig() {
+    return connectorVersionInfraConfig;
+  }
+
+  /**
+   * Output only. Infra configs supported by Connector Version.
+   * @param connectorVersionInfraConfig connectorVersionInfraConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setConnectorVersionInfraConfig(GoogleCloudConnectorsV1ConnectorVersionInfraConfig connectorVersionInfraConfig) {
+    this.connectorVersionInfraConfig = connectorVersionInfraConfig;
+    return this;
+  }
+
+  /**
    * Output only. Flag to mark the version indicating the launch stage.
    * @return value or {@code null} for none
    */
@@ -363,6 +408,57 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setEnvoyImageLocation(java.lang.String envoyImageLocation) {
     this.envoyImageLocation = envoyImageLocation;
+    return this;
+  }
+
+  /**
+   * Optional. Eventing config of a connection
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig getEventingConfig() {
+    return eventingConfig;
+  }
+
+  /**
+   * Optional. Eventing config of a connection
+   * @param eventingConfig eventingConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingConfig(GoogleCloudConnectorsV1EventingConfig eventingConfig) {
+    this.eventingConfig = eventingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventingEnablementType() {
+    return eventingEnablementType;
+  }
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * @param eventingEnablementType eventingEnablementType or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingEnablementType(java.lang.String eventingEnablementType) {
+    this.eventingEnablementType = eventingEnablementType;
+    return this;
+  }
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeData getEventingRuntimeData() {
+    return eventingRuntimeData;
+  }
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * @param eventingRuntimeData eventingRuntimeData or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingRuntimeData(GoogleCloudConnectorsV1EventingRuntimeData eventingRuntimeData) {
+    this.eventingRuntimeData = eventingRuntimeData;
     return this;
   }
 
@@ -475,7 +571,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -483,7 +579,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudConnectorsV1Connection setServiceAccount(java.lang.String serviceAccount) {

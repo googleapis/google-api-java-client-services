@@ -60,6 +60,13 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   private EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue;
 
   /**
+   * Optional. The description about the parameter
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Specifies the input/output type for the parameter.
    * The value may be {@code null}.
    */
@@ -193,6 +200,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
    */
   public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setDefaultValue(EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue) {
     this.defaultValue = defaultValue;
+    return this;
+  }
+
+  /**
+   * Optional. The description about the parameter
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. The description about the parameter
+   * @param description description or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

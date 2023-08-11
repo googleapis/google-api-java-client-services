@@ -961,8 +961,10 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      * operation.
      *
      * @param parent Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
-     *        currently only support projects. An example name would be:
-     *        `projects/123/services/example.googleapis.com` where `123` is the project number.
+     *        currently support projects, folders, organizations. Example parents would be:
+     *        `projects/123/services/example.googleapis.com`
+     *        `folders/123/services/example.googleapis.com`
+     *        `organizations/123/services/example.googleapis.com`
      * @return the request
      */
     public GenerateServiceIdentity generateServiceIdentity(java.lang.String parent) throws java.io.IOException {
@@ -990,8 +992,10 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * after invoking the constructor. </p>
        *
        * @param parent Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
-     *        currently only support projects. An example name would be:
-     *        `projects/123/services/example.googleapis.com` where `123` is the project number.
+     *        currently support projects, folders, organizations. Example parents would be:
+     *        `projects/123/services/example.googleapis.com`
+     *        `folders/123/services/example.googleapis.com`
+     *        `organizations/123/services/example.googleapis.com`
        * @since 1.13
        */
       protected GenerateServiceIdentity(java.lang.String parent) {
@@ -1061,15 +1065,18 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity`
-       * methods currently only support projects. An example name would be:
-       * `projects/123/services/example.googleapis.com` where `123` is the project number.
+       * methods currently support projects, folders, organizations. Example parents would be:
+       * `projects/123/services/example.googleapis.com`
+       * `folders/123/services/example.googleapis.com`
+       * `organizations/123/services/example.googleapis.com`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
-     currently only support projects. An example name would be:
-     `projects/123/services/example.googleapis.com` where `123` is the project number.
+     currently support projects, folders, organizations. Example parents would be:
+     `projects/123/services/example.googleapis.com` `folders/123/services/example.googleapis.com`
+     `organizations/123/services/example.googleapis.com`
        */
       public java.lang.String getParent() {
         return parent;
@@ -1077,8 +1084,10 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity`
-       * methods currently only support projects. An example name would be:
-       * `projects/123/services/example.googleapis.com` where `123` is the project number.
+       * methods currently support projects, folders, organizations. Example parents would be:
+       * `projects/123/services/example.googleapis.com`
+       * `folders/123/services/example.googleapis.com`
+       * `organizations/123/services/example.googleapis.com`
        */
       public GenerateServiceIdentity setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

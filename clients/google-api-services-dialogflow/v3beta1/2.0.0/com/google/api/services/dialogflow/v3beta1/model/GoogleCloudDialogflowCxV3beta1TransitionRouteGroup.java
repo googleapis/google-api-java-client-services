@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An TransitionRouteGroup represents a group of `TransitionRoutes` to be used by a Page.
+ * A TransitionRouteGroup represents a group of `TransitionRoutes` to be used by a Page.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -40,7 +40,8 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends co
   /**
    * The unique identifier of the transition route group.
    * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/`.
+   * `projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +82,8 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends co
   /**
    * The unique identifier of the transition route group.
    * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/`.
+   * `projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -91,7 +93,8 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroup extends co
   /**
    * The unique identifier of the transition route group.
    * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/`.
+   * `projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRouteGroup setName(java.lang.String name) {

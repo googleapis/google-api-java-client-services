@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1ImportFlowRequest extends com.g
   private java.lang.String flowContent;
 
   /**
+   * Optional. Specifies the import strategy used when resolving resource conflicts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1FlowImportStrategy flowImportStrategy;
+
+  /**
    * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import flow from. The
    * format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud Storage
    * object on the caller's behalf, so your request authentication must have read permissions for
@@ -96,6 +103,23 @@ public final class GoogleCloudDialogflowCxV3beta1ImportFlowRequest extends com.g
    */
   public GoogleCloudDialogflowCxV3beta1ImportFlowRequest encodeFlowContent(byte[] flowContent) {
     this.flowContent = com.google.api.client.util.Base64.encodeBase64URLSafeString(flowContent);
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the import strategy used when resolving resource conflicts.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1FlowImportStrategy getFlowImportStrategy() {
+    return flowImportStrategy;
+  }
+
+  /**
+   * Optional. Specifies the import strategy used when resolving resource conflicts.
+   * @param flowImportStrategy flowImportStrategy or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ImportFlowRequest setFlowImportStrategy(GoogleCloudDialogflowCxV3beta1FlowImportStrategy flowImportStrategy) {
+    this.flowImportStrategy = flowImportStrategy;
     return this;
   }
 

@@ -88,7 +88,8 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * A flow's transition route group serve two purposes: * They are responsible for matching the
    * user's first utterances in the flow. * They are inherited by every page's transition route
    * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +209,8 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * A flow's transition route group serve two purposes: * They are responsible for matching the
    * user's first utterances in the flow. * They are inherited by every page's transition route
    * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTransitionRouteGroups() {
@@ -219,7 +221,8 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * A flow's transition route group serve two purposes: * They are responsible for matching the
    * user's first utterances in the flow. * They are inherited by every page's transition route
    * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @param transitionRouteGroups transitionRouteGroups or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setTransitionRouteGroups(java.util.List<java.lang.String> transitionRouteGroups) {

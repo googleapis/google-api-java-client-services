@@ -879,20 +879,24 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. Filter expression to restrict the insights returned. Supported filter fields: *
-           `stateInfo.state` * `insightSubtype` * `severity` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR
-           severity = HIGH` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These
-           expressions are based on the filter language described at https://google.aip.dev/160)
+           `stateInfo.state` * `insightSubtype` * `severity` * `targetResources` Examples: * `stateInfo.state
+           = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity =
+           CRITICAL OR severity = HIGH` * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+           central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity =
+           HIGH)` The max allowed filter length is 500 characters. (These expressions are based on the filter
+           language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -900,11 +904,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -1815,21 +1821,25 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Filter expression to restrict the recommendations returned. Supported filter fields: *
-           `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype =
-           REPLACE_ROLE` * `priority = P1 OR priority = P2` * `stateInfo.state = ACTIVE AND (priority = P1 OR
-           priority = P2)` (These expressions are based on the filter language described at
-           https://google.aip.dev/160)
+           `state_info.state` * `recommenderSubtype` * `priority` * `targetResources` Examples: *
+           `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
+           recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` * `targetResources :
+           //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` * `stateInfo.state
+           = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed filter length is 500 characters.
+           (These expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -1837,11 +1847,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -2870,20 +2883,24 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. Filter expression to restrict the insights returned. Supported filter fields: *
-           `stateInfo.state` * `insightSubtype` * `severity` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR
-           severity = HIGH` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These
-           expressions are based on the filter language described at https://google.aip.dev/160)
+           `stateInfo.state` * `insightSubtype` * `severity` * `targetResources` Examples: * `stateInfo.state
+           = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity =
+           CRITICAL OR severity = HIGH` * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+           central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity =
+           HIGH)` The max allowed filter length is 500 characters. (These expressions are based on the filter
+           language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -2891,11 +2908,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -3460,21 +3479,25 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Filter expression to restrict the recommendations returned. Supported filter fields: *
-           `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype =
-           REPLACE_ROLE` * `priority = P1 OR priority = P2` * `stateInfo.state = ACTIVE AND (priority = P1 OR
-           priority = P2)` (These expressions are based on the filter language described at
-           https://google.aip.dev/160)
+           `state_info.state` * `recommenderSubtype` * `priority` * `targetResources` Examples: *
+           `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
+           recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` * `targetResources :
+           //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` * `stateInfo.state
+           = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed filter length is 500 characters.
+           (These expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -3482,11 +3505,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -5036,20 +5062,24 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. Filter expression to restrict the insights returned. Supported filter fields: *
-           `stateInfo.state` * `insightSubtype` * `severity` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR
-           severity = HIGH` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These
-           expressions are based on the filter language described at https://google.aip.dev/160)
+           `stateInfo.state` * `insightSubtype` * `severity` * `targetResources` Examples: * `stateInfo.state
+           = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity =
+           CRITICAL OR severity = HIGH` * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+           central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity =
+           HIGH)` The max allowed filter length is 500 characters. (These expressions are based on the filter
+           language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -5057,11 +5087,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -5972,21 +6004,25 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Filter expression to restrict the recommendations returned. Supported filter fields: *
-           `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype =
-           REPLACE_ROLE` * `priority = P1 OR priority = P2` * `stateInfo.state = ACTIVE AND (priority = P1 OR
-           priority = P2)` (These expressions are based on the filter language described at
-           https://google.aip.dev/160)
+           `state_info.state` * `recommenderSubtype` * `priority` * `targetResources` Examples: *
+           `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
+           recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` * `targetResources :
+           //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` * `stateInfo.state
+           = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed filter length is 500 characters.
+           (These expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -5994,11 +6030,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -7373,20 +7412,24 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. Filter expression to restrict the insights returned. Supported filter fields: *
-           `stateInfo.state` * `insightSubtype` * `severity` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR
-           severity = HIGH` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These
-           expressions are based on the filter language described at https://google.aip.dev/160)
+           `stateInfo.state` * `insightSubtype` * `severity` * `targetResources` Examples: * `stateInfo.state
+           = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype = PERMISSIONS_USAGE` * `severity =
+           CRITICAL OR severity = HIGH` * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+           central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL OR severity =
+           HIGH)` The max allowed filter length is 500 characters. (These expressions are based on the filter
+           language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -7394,11 +7437,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Optional. Filter expression to restrict the insights returned. Supported filter
-             * fields: * `stateInfo.state` * `insightSubtype` * `severity` Examples: *
-             * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `insightSubtype =
-             * PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` * `stateInfo.state =
-             * ACTIVE AND (severity = CRITICAL OR severity = HIGH)` (These expressions are based on
-             * the filter language described at https://google.aip.dev/160)
+             * fields: * `stateInfo.state` * `insightSubtype` * `severity` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `insightSubtype = PERMISSIONS_USAGE` * `severity = CRITICAL OR severity = HIGH` *
+             * `targetResources : //compute.googleapis.com/projects/1234/zones/us-
+             * central1-a/instances/instance-1` * `stateInfo.state = ACTIVE AND (severity = CRITICAL
+             * OR severity = HIGH)` The max allowed filter length is 500 characters. (These
+             * expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -8309,21 +8354,25 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Filter expression to restrict the recommendations returned. Supported filter fields: *
-           `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state = ACTIVE OR
-           stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype =
-           REPLACE_ROLE` * `priority = P1 OR priority = P2` * `stateInfo.state = ACTIVE AND (priority = P1 OR
-           priority = P2)` (These expressions are based on the filter language described at
-           https://google.aip.dev/160)
+           `state_info.state` * `recommenderSubtype` * `priority` * `targetResources` Examples: *
+           `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
+           recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` * `targetResources :
+           //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` * `stateInfo.state
+           = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed filter length is 500 characters.
+           (These expressions are based on the filter language described at https://google.aip.dev/160)
              */
             public java.lang.String getFilter() {
               return filter;
@@ -8331,11 +8380,14 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
 
             /**
              * Filter expression to restrict the recommendations returned. Supported filter fields:
-             * * `state_info.state` * `recommenderSubtype` * `priority` Examples: * `stateInfo.state
-             * = ACTIVE OR stateInfo.state = DISMISSED` * `recommenderSubtype = REMOVE_ROLE OR
-             * recommenderSubtype = REPLACE_ROLE` * `priority = P1 OR priority = P2` *
-             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` (These expressions
-             * are based on the filter language described at https://google.aip.dev/160)
+             * * `state_info.state` * `recommenderSubtype` * `priority` * `targetResources`
+             * Examples: * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED` *
+             * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE` * `priority =
+             * P1 OR priority = P2` * `targetResources :
+             * //compute.googleapis.com/projects/1234/zones/us-central1-a/instances/instance-1` *
+             * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)` The max allowed
+             * filter length is 500 characters. (These expressions are based on the filter language
+             * described at https://google.aip.dev/160)
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

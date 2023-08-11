@@ -32,14 +32,16 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict extends com.google.api.client.json.GenericJson {
 
   /**
-   * Probability (0-1) of this transaction attempt being part of a card testing attack.
+   * Probability of this transaction attempt being part of a card testing attack. Values are from
+   * 0.0 (lowest) to 1.0 (highest).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float risk;
 
   /**
-   * Probability (0-1) of this transaction attempt being part of a card testing attack.
+   * Probability of this transaction attempt being part of a card testing attack. Values are from
+   * 0.0 (lowest) to 1.0 (highest).
    * @return value or {@code null} for none
    */
   public java.lang.Float getRisk() {
@@ -47,7 +49,8 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCard
   }
 
   /**
-   * Probability (0-1) of this transaction attempt being part of a card testing attack.
+   * Probability of this transaction attempt being part of a card testing attack. Values are from
+   * 0.0 (lowest) to 1.0 (highest).
    * @param risk risk or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict setRisk(java.lang.Float risk) {

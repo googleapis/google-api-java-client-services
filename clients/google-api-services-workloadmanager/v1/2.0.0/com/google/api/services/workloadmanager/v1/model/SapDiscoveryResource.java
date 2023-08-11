@@ -37,14 +37,14 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> relatedResources;
 
   /**
-   * ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Required. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceKind;
 
   /**
-   * The type of this resource.
+   * Required. The type of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Required. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceKind() {
@@ -90,7 +90,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
+   * Required. ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
    * @param resourceKind resourceKind or {@code null} for none
    */
   public SapDiscoveryResource setResourceKind(java.lang.String resourceKind) {
@@ -99,7 +99,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * The type of this resource.
+   * Required. The type of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -107,7 +107,7 @@ public final class SapDiscoveryResource extends com.google.api.client.json.Gener
   }
 
   /**
-   * The type of this resource.
+   * Required. The type of this resource.
    * @param resourceType resourceType or {@code null} for none
    */
   public SapDiscoveryResource setResourceType(java.lang.String resourceType) {

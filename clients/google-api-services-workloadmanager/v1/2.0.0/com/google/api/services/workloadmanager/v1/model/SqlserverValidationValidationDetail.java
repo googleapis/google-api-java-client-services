@@ -30,11 +30,17 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SqlserverValidationValidationDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * pairs of metrics data: column name & column value.
+   * Required. Details wraps map that represents collected data names and values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> fields;
+  private java.util.List<SqlserverValidationDetails> details;
+
+  static {
+    // hack to force ProGuard to consider SqlserverValidationDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SqlserverValidationDetails.class);
+  }
 
   /**
    * The Sqlserver system that the validation data is from.
@@ -44,19 +50,19 @@ public final class SqlserverValidationValidationDetail extends com.google.api.cl
   private java.lang.String type;
 
   /**
-   * pairs of metrics data: column name & column value.
+   * Required. Details wraps map that represents collected data names and values.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getFields() {
-    return fields;
+  public java.util.List<SqlserverValidationDetails> getDetails() {
+    return details;
   }
 
   /**
-   * pairs of metrics data: column name & column value.
-   * @param fields fields or {@code null} for none
+   * Required. Details wraps map that represents collected data names and values.
+   * @param details details or {@code null} for none
    */
-  public SqlserverValidationValidationDetail setFields(java.util.Map<String, java.lang.String> fields) {
-    this.fields = fields;
+  public SqlserverValidationValidationDetail setDetails(java.util.List<SqlserverValidationDetails> details) {
+    this.details = details;
     return this;
   }
 

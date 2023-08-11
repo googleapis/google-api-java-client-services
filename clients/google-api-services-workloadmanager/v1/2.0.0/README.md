@@ -1,6 +1,6 @@
 # Workload Manager API Client Library for Java
 
-
+Workload Manager is a service that provides tooling for enterprise workloads to automate the deployment and validation of your workloads against best practices and recommendations.
 
 This page contains information about getting started with the Workload Manager API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-workloadmanager</artifactId>
-      <version>v1-rev20230605-2.0.0</version>
+      <version>v1-rev20230719-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-workloadmanager:v1-rev20230605-2.0.0'
+  implementation 'com.google.apis:google-api-services-workloadmanager:v1-rev20230719-2.0.0'
 }
 ```
 

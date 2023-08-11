@@ -38,6 +38,22 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
   private java.lang.String agentVersion;
 
   /**
+   * Required. The instance_name of the instance that the Insight data comes from. According to
+   * https://linter.aip.dev/122/name-suffix: field names should not use the _name suffix unless the
+   * field would be ambiguous without it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instance;
+
+  /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
    * A list of SqlServer validation metrics data.
    * The value may be {@code null}.
    */
@@ -58,6 +74,44 @@ public final class SqlserverValidation extends com.google.api.client.json.Generi
    */
   public SqlserverValidation setAgentVersion(java.lang.String agentVersion) {
     this.agentVersion = agentVersion;
+    return this;
+  }
+
+  /**
+   * Required. The instance_name of the instance that the Insight data comes from. According to
+   * https://linter.aip.dev/122/name-suffix: field names should not use the _name suffix unless the
+   * field would be ambiguous without it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstance() {
+    return instance;
+  }
+
+  /**
+   * Required. The instance_name of the instance that the Insight data comes from. According to
+   * https://linter.aip.dev/122/name-suffix: field names should not use the _name suffix unless the
+   * field would be ambiguous without it.
+   * @param instance instance or {@code null} for none
+   */
+  public SqlserverValidation setInstance(java.lang.String instance) {
+    this.instance = instance;
+    return this;
+  }
+
+  /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * Required. The project_id of the cloud project that the Insight data comes from.
+   * @param projectId projectId or {@code null} for none
+   */
+  public SqlserverValidation setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
     return this;
   }
 

@@ -20,7 +20,7 @@ package com.google.api.services.workloadmanager.v1;
  * Service definition for WorkloadManager (v1).
  *
  * <p>
- * 
+ * Workload Manager is a service that provides tooling for enterprise workloads to automate the deployment and validation of your workloads against best practices and recommendations.
  * </p>
  *
  * <p>

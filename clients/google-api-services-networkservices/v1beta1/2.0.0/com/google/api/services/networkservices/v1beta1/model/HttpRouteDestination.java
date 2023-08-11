@@ -38,12 +38,12 @@ public final class HttpRouteDestination extends com.google.api.client.json.Gener
 
   /**
    * Specifies the proportion of requests forwarded to the backend referenced by the serviceName
-   * field. This is computed as: weight/Sum(weights in this destination list). For non-zero values,
-   * there may be some epsilon from the exact proportion defined here depending on the precision an
-   * implementation supports. If only one serviceName is specified and it has a weight greater than
-   * 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one
-   * service name, they need to be specified for all of them. If weights are unspecified for all
-   * services, then, traffic is distributed in equal proportions to all of them.
+   * field. This is computed as: - weight/Sum(weights in this destination list). For non-zero
+   * values, there may be some epsilon from the exact proportion defined here depending on the
+   * precision an implementation supports. If only one serviceName is specified and it has a weight
+   * greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for
+   * any one service name, they need to be specified for all of them. If weights are unspecified for
+   * all services, then, traffic is distributed in equal proportions to all of them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,12 +68,12 @@ public final class HttpRouteDestination extends com.google.api.client.json.Gener
 
   /**
    * Specifies the proportion of requests forwarded to the backend referenced by the serviceName
-   * field. This is computed as: weight/Sum(weights in this destination list). For non-zero values,
-   * there may be some epsilon from the exact proportion defined here depending on the precision an
-   * implementation supports. If only one serviceName is specified and it has a weight greater than
-   * 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one
-   * service name, they need to be specified for all of them. If weights are unspecified for all
-   * services, then, traffic is distributed in equal proportions to all of them.
+   * field. This is computed as: - weight/Sum(weights in this destination list). For non-zero
+   * values, there may be some epsilon from the exact proportion defined here depending on the
+   * precision an implementation supports. If only one serviceName is specified and it has a weight
+   * greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for
+   * any one service name, they need to be specified for all of them. If weights are unspecified for
+   * all services, then, traffic is distributed in equal proportions to all of them.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWeight() {
@@ -82,12 +82,12 @@ public final class HttpRouteDestination extends com.google.api.client.json.Gener
 
   /**
    * Specifies the proportion of requests forwarded to the backend referenced by the serviceName
-   * field. This is computed as: weight/Sum(weights in this destination list). For non-zero values,
-   * there may be some epsilon from the exact proportion defined here depending on the precision an
-   * implementation supports. If only one serviceName is specified and it has a weight greater than
-   * 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one
-   * service name, they need to be specified for all of them. If weights are unspecified for all
-   * services, then, traffic is distributed in equal proportions to all of them.
+   * field. This is computed as: - weight/Sum(weights in this destination list). For non-zero
+   * values, there may be some epsilon from the exact proportion defined here depending on the
+   * precision an implementation supports. If only one serviceName is specified and it has a weight
+   * greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for
+   * any one service name, they need to be specified for all of them. If weights are unspecified for
+   * all services, then, traffic is distributed in equal proportions to all of them.
    * @param weight weight or {@code null} for none
    */
   public HttpRouteDestination setWeight(java.lang.Integer weight) {

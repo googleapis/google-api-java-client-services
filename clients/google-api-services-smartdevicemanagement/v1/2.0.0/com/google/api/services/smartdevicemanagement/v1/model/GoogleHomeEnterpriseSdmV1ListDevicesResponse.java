@@ -44,13 +44,6 @@ public final class GoogleHomeEnterpriseSdmV1ListDevicesResponse extends com.goog
   }
 
   /**
-   * The pagination token to retrieve the next page of results.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
-
-  /**
    * The list of devices.
    * @return value or {@code null} for none
    */
@@ -64,23 +57,6 @@ public final class GoogleHomeEnterpriseSdmV1ListDevicesResponse extends com.goog
    */
   public GoogleHomeEnterpriseSdmV1ListDevicesResponse setDevices(java.util.List<GoogleHomeEnterpriseSdmV1Device> devices) {
     this.devices = devices;
-    return this;
-  }
-
-  /**
-   * The pagination token to retrieve the next page of results.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
-  }
-
-  /**
-   * The pagination token to retrieve the next page of results.
-   * @param nextPageToken nextPageToken or {@code null} for none
-   */
-  public GoogleHomeEnterpriseSdmV1ListDevicesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
     return this;
   }
 

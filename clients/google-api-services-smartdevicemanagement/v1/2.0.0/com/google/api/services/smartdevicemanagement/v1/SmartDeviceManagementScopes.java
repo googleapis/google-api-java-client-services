@@ -26,6 +26,9 @@ public class SmartDeviceManagementScopes {
   /** See and/or control the devices that you selected. */
   public static final String SDM_SERVICE = "https://www.googleapis.com/auth/sdm.service";
 
+  /** See your primary Google Account email address. */
+  public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class SmartDeviceManagementScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(SDM_SERVICE);
+    set.add(USERINFO_EMAIL);
     return java.util.Collections.unmodifiableSet(set);
   }
 

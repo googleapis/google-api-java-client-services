@@ -601,45 +601,6 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional requested page size. Server may return fewer devices than requested. If
-         * unspecified, server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Optional requested page size. Server may return fewer devices than requested. If unspecified,
-       server will pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Optional requested page size. Server may return fewer devices than requested. If
-         * unspecified, server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** Optional token of the page to retrieve. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional token of the page to retrieve.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Optional token of the page to retrieve. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -956,45 +917,6 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Requested page size. Server may return fewer structures than requested. If unspecified,
-         * server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. Server may return fewer structures than requested. If unspecified, server will
-       pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. Server may return fewer structures than requested. If unspecified,
-         * server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** The token of the page to retrieve. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The token of the page to retrieve.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The token of the page to retrieve. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -1303,45 +1225,6 @@ public class SmartDeviceManagement extends com.google.api.client.googleapis.serv
                   "^enterprises/[^/]+/structures/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Requested page size. Server may return fewer rooms than requested. If unspecified,
-           * server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. Server may return fewer rooms than requested. If unspecified, server will pick
-         an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. Server may return fewer rooms than requested. If unspecified,
-           * server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /** The token of the page to retrieve. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The token of the page to retrieve.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The token of the page to retrieve. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
             return this;
           }
 

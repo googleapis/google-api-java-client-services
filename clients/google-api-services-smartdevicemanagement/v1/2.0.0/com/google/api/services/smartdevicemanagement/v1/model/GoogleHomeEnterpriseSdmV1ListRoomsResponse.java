@@ -31,38 +31,11 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 public final class GoogleHomeEnterpriseSdmV1ListRoomsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pagination token to retrieve the next page of results. If this field is omitted, there are
-   * no subsequent pages.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
-
-  /**
    * The list of rooms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleHomeEnterpriseSdmV1Room> rooms;
-
-  /**
-   * The pagination token to retrieve the next page of results. If this field is omitted, there are
-   * no subsequent pages.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
-  }
-
-  /**
-   * The pagination token to retrieve the next page of results. If this field is omitted, there are
-   * no subsequent pages.
-   * @param nextPageToken nextPageToken or {@code null} for none
-   */
-  public GoogleHomeEnterpriseSdmV1ListRoomsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
-    return this;
-  }
 
   /**
    * The list of rooms.

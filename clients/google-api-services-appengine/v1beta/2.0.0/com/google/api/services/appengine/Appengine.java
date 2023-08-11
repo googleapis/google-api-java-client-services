@@ -4054,6 +4054,205 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
 
     }
     /**
+     * An accessor for creating requests from the Runtimes collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Appengine appengine = new Appengine(...);}
+     *   {@code Appengine.Runtimes.List request = appengine.runtimes().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Runtimes runtimes() {
+      return new Runtimes();
+    }
+
+    /**
+     * The "runtimes" collection of methods.
+     */
+    public class Runtimes {
+
+      /**
+       * Lists all the available runtimes for the application.
+       *
+       * Create a request for the method "runtimes.list".
+       *
+       * This request holds the parameters needed by the appengine server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+       * @return the request
+       */
+      public List list(java.lang.String appsId) throws java.io.IOException {
+        List result = new List(appsId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AppengineRequest<com.google.api.services.appengine.model.ListRuntimesResponse> {
+
+        private static final String REST_PATH = "v1beta/apps/{appsId}/runtimes";
+
+        /**
+         * Lists all the available runtimes for the application.
+         *
+         * Create a request for the method "runtimes.list".
+         *
+         * This request holds the parameters needed by the the appengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param appsId Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         * @since 1.13
+         */
+        protected List(java.lang.String appsId) {
+          super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.ListRuntimesResponse.class);
+          this.appsId = com.google.api.client.util.Preconditions.checkNotNull(appsId, "Required parameter appsId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String appsId;
+
+        /** Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
+        public java.lang.String getAppsId() {
+          return appsId;
+        }
+
+        /**
+         * Part of `parent`. Required. Name of the parent Application resource. Example: apps/myapp.
+         */
+        public List setAppsId(java.lang.String appsId) {
+          this.appsId = appsId;
+          return this;
+        }
+
+        /** Optional. The environment of the Application. */
+        @com.google.api.client.util.Key
+        private java.lang.String environment;
+
+        /** Optional. The environment of the Application.
+         */
+        public java.lang.String getEnvironment() {
+          return environment;
+        }
+
+        /** Optional. The environment of the Application. */
+        public List setEnvironment(java.lang.String environment) {
+          this.environment = environment;
+          return this;
+        }
+
+        /** Optional. Maximum results to return per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum results to return per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Maximum results to return per page. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Continuation token for fetching the next page of results. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Continuation token for fetching the next page of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Continuation token for fetching the next page of results. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Services collection.
      *
      * <p>The typical use is:</p>

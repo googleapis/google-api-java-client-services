@@ -17,7 +17,7 @@
 package com.google.api.services.toolresults.model;
 
 /**
- * Failed to install the App.
+ * There was an issue with the assets in this test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation
@@ -28,16 +28,16 @@ package com.google.api.services.toolresults.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FailedToInstall extends com.google.api.client.json.GenericJson {
+public final class AssetIssue extends com.google.api.client.json.GenericJson {
 
   @Override
-  public FailedToInstall set(String fieldName, Object value) {
-    return (FailedToInstall) super.set(fieldName, value);
+  public AssetIssue set(String fieldName, Object value) {
+    return (AssetIssue) super.set(fieldName, value);
   }
 
   @Override
-  public FailedToInstall clone() {
-    return (FailedToInstall) super.clone();
+  public AssetIssue clone() {
+    return (AssetIssue) super.clone();
   }
 
 }

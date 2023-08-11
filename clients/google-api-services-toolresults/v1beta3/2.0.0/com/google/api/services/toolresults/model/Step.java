@@ -26,7 +26,7 @@ package com.google.api.services.toolresults.model;
  * update TestExecutionStep with id 100 to add a raw xml log + the service parses the xml logs and
  * returns a TestExecutionStep with updated TestResult(s). - user update the status of
  * TestExecutionStep with id 100 to COMPLETE A Step can be updated until its state is set to
- * COMPLETE at which points it becomes immutable. Next tag: 27
+ * COMPLETE at which points it becomes immutable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Tool Results API. For a detailed explanation

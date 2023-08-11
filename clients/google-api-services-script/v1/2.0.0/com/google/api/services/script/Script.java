@@ -2711,7 +2711,9 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
      * parameters, call the {@link Run#execute()} method to invoke the remote operation.
      *
      * @param scriptId The script ID of the script to be executed. Find the script ID on the **Project settings** page
-     *        under "IDs."
+     *        under "IDs." As multiple executable APIs can be deployed in new IDE for same script, this
+     *        field should be populated with DeploymentID generated while deploying in new IDE instead
+     *        of script ID.
      * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
      * @return the request
      */
@@ -2744,7 +2746,9 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param scriptId The script ID of the script to be executed. Find the script ID on the **Project settings** page
-     *        under "IDs."
+     *        under "IDs." As multiple executable APIs can be deployed in new IDE for same script, this
+     *        field should be populated with DeploymentID generated while deploying in new IDE instead
+     *        of script ID.
        * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
        * @since 1.13
        */
@@ -2810,13 +2814,16 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * The script ID of the script to be executed. Find the script ID on the **Project settings**
-       * page under "IDs."
+       * page under "IDs." As multiple executable APIs can be deployed in new IDE for same script,
+       * this field should be populated with DeploymentID generated while deploying in new IDE
+       * instead of script ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String scriptId;
 
       /** The script ID of the script to be executed. Find the script ID on the **Project settings** page
-     under "IDs."
+     under "IDs." As multiple executable APIs can be deployed in new IDE for same script, this field
+     should be populated with DeploymentID generated while deploying in new IDE instead of script ID.
        */
       public java.lang.String getScriptId() {
         return scriptId;
@@ -2824,7 +2831,9 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * The script ID of the script to be executed. Find the script ID on the **Project settings**
-       * page under "IDs."
+       * page under "IDs." As multiple executable APIs can be deployed in new IDE for same script,
+       * this field should be populated with DeploymentID generated while deploying in new IDE
+       * instead of script ID.
        */
       public Run setScriptId(java.lang.String scriptId) {
         this.scriptId = scriptId;

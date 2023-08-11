@@ -698,6 +698,147 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
+           * CheckMigrationPermission API gets the current state of DomainMigration
+           *
+           * Create a request for the method "domains.checkMigrationPermission".
+           *
+           * This request holds the parameters needed by the managedidentities server.  After setting any
+           * optional parameters, call the {@link CheckMigrationPermission#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+           * @param content the {@link com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionRequest}
+           * @return the request
+           */
+          public CheckMigrationPermission checkMigrationPermission(java.lang.String domain, com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionRequest content) throws java.io.IOException {
+            CheckMigrationPermission result = new CheckMigrationPermission(domain, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckMigrationPermission extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionResponse> {
+
+            private static final String REST_PATH = "v1/{+domain}:checkMigrationPermission";
+
+            private final java.util.regex.Pattern DOMAIN_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+            /**
+             * CheckMigrationPermission API gets the current state of DomainMigration
+             *
+             * Create a request for the method "domains.checkMigrationPermission".
+             *
+             * This request holds the parameters needed by the the managedidentities server.  After setting
+             * any optional parameters, call the {@link CheckMigrationPermission#execute()} method to invoke
+             * the remote operation. <p> {@link CheckMigrationPermission#initialize(com.google.api.client.goog
+             * leapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param domain Required. The domain resource name using the form:
+           *        `projects/{project_id}/locations/global/domains/{domain_name}`
+             * @param content the {@link com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionRequest}
+             * @since 1.13
+             */
+            protected CheckMigrationPermission(java.lang.String domain, com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionRequest content) {
+              super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "POST", REST_PATH, content, com.google.api.services.managedidentities.v1.model.CheckMigrationPermissionResponse.class);
+              this.domain = com.google.api.client.util.Preconditions.checkNotNull(domain, "Required parameter domain must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+            }
+
+            @Override
+            public CheckMigrationPermission set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckMigrationPermission) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckMigrationPermission setAccessToken(java.lang.String accessToken) {
+              return (CheckMigrationPermission) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckMigrationPermission setAlt(java.lang.String alt) {
+              return (CheckMigrationPermission) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckMigrationPermission setCallback(java.lang.String callback) {
+              return (CheckMigrationPermission) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckMigrationPermission setFields(java.lang.String fields) {
+              return (CheckMigrationPermission) super.setFields(fields);
+            }
+
+            @Override
+            public CheckMigrationPermission setKey(java.lang.String key) {
+              return (CheckMigrationPermission) super.setKey(key);
+            }
+
+            @Override
+            public CheckMigrationPermission setOauthToken(java.lang.String oauthToken) {
+              return (CheckMigrationPermission) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckMigrationPermission setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckMigrationPermission) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckMigrationPermission setQuotaUser(java.lang.String quotaUser) {
+              return (CheckMigrationPermission) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckMigrationPermission setUploadType(java.lang.String uploadType) {
+              return (CheckMigrationPermission) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckMigrationPermission setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckMigrationPermission) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String domain;
+
+            /** Required. The domain resource name using the form:
+           `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public java.lang.String getDomain() {
+              return domain;
+            }
+
+            /**
+             * Required. The domain resource name using the form:
+             * `projects/{project_id}/locations/global/domains/{domain_name}`
+             */
+            public CheckMigrationPermission setDomain(java.lang.String domain) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DOMAIN_PATTERN.matcher(domain).matches(),
+                    "Parameter domain must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/domains/[^/]+$");
+              }
+              this.domain = domain;
+              return this;
+            }
+
+            @Override
+            public CheckMigrationPermission set(String parameterName, Object value) {
+              return (CheckMigrationPermission) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a Microsoft AD domain.
            *
            * Create a request for the method "domains.create".

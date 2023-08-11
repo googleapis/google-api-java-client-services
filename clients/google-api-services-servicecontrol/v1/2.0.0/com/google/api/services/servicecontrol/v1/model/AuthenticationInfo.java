@@ -76,6 +76,13 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   private java.lang.String serviceAccountKeyName;
 
   /**
+   * Records the history of delegated resource access across Google services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceDelegationHistory serviceDelegationHistory;
+
+  /**
    * The third party identification (if any) of the authenticated user making the request. When the
    * JSON object represented here has a proto equivalent, the proto name will be indicated in the
    * `@type` property.
@@ -188,6 +195,23 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
    */
   public AuthenticationInfo setServiceAccountKeyName(java.lang.String serviceAccountKeyName) {
     this.serviceAccountKeyName = serviceAccountKeyName;
+    return this;
+  }
+
+  /**
+   * Records the history of delegated resource access across Google services.
+   * @return value or {@code null} for none
+   */
+  public ServiceDelegationHistory getServiceDelegationHistory() {
+    return serviceDelegationHistory;
+  }
+
+  /**
+   * Records the history of delegated resource access across Google services.
+   * @param serviceDelegationHistory serviceDelegationHistory or {@code null} for none
+   */
+  public AuthenticationInfo setServiceDelegationHistory(ServiceDelegationHistory serviceDelegationHistory) {
+    this.serviceDelegationHistory = serviceDelegationHistory;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.servicecontrol.v2.model;
 
 /**
- * Response message for the Report method. If the request contains any invalid data, the server
- * returns an RPC error.
+ * Response message for the Report method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:

@@ -32,16 +32,16 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
    * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
-   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
-   * takes precedence on the container extracted from name when presents.
+   * Required for the policy enforcement on the container level (e.g. VPCSC, Location Policy check,
+   * Org Policy check).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String container;
 
   /**
-   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
-   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * Optional. The location of the resource, it must be a valid zone, region or multiregion, for
+   * example: "europe-west4", "northamerica-northeast1-a". Required for location policy check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
    * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
-   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
-   * takes precedence on the container extracted from name when presents.
+   * Required for the policy enforcement on the container level (e.g. VPCSC, Location Policy check,
+   * Org Policy check).
    * @return value or {@code null} for none
    */
   public java.lang.String getContainer() {
@@ -83,8 +83,8 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The identifier of the container of this resource. For Google Cloud APIs, the resource
    * container must be one of the following formats: - `projects/` - `folders/` - `organizations/`
-   * For the policy enforcement on the container level (VPCSC and Location Policy check), this field
-   * takes precedence on the container extracted from name when presents.
+   * Required for the policy enforcement on the container level (e.g. VPCSC, Location Policy check,
+   * Org Policy check).
    * @param container container or {@code null} for none
    */
   public ResourceInfo setContainer(java.lang.String container) {
@@ -93,8 +93,8 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
-   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * Optional. The location of the resource, it must be a valid zone, region or multiregion, for
+   * example: "europe-west4", "northamerica-northeast1-a". Required for location policy check.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -102,8 +102,8 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The location of the resource. The value must be a valid zone, region or multiregion.
-   * For example: "europe-west4" or "northamerica-northeast1-a"
+   * Optional. The location of the resource, it must be a valid zone, region or multiregion, for
+   * example: "europe-west4", "northamerica-northeast1-a". Required for location policy check.
    * @param location location or {@code null} for none
    */
   public ResourceInfo setLocation(java.lang.String location) {

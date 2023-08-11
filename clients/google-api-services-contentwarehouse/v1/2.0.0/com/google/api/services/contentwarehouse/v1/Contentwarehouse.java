@@ -477,6 +477,151 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
     public class Locations {
 
       /**
+       * Get the project status.
+       *
+       * Create a request for the method "locations.getStatus".
+       *
+       * This request holds the parameters needed by the contentwarehouse server.  After setting any
+       * optional parameters, call the {@link GetStatus#execute()} method to invoke the remote operation.
+       *
+       * @param location Required. The location to be queried Format: projects/{project_number}/locations/{location}.
+       * @return the request
+       */
+      public GetStatus getStatus(java.lang.String location) throws java.io.IOException {
+        GetStatus result = new GetStatus(location);
+        initialize(result);
+        return result;
+      }
+
+      public class GetStatus extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1ProjectStatus> {
+
+        private static final String REST_PATH = "v1/{+location}:getStatus";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Get the project status.
+         *
+         * Create a request for the method "locations.getStatus".
+         *
+         * This request holds the parameters needed by the the contentwarehouse server.  After setting any
+         * optional parameters, call the {@link GetStatus#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param location Required. The location to be queried Format: projects/{project_number}/locations/{location}.
+         * @since 1.13
+         */
+        protected GetStatus(java.lang.String location) {
+          super(Contentwarehouse.this, "GET", REST_PATH, null, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1ProjectStatus.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetStatus set$Xgafv(java.lang.String $Xgafv) {
+          return (GetStatus) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetStatus setAccessToken(java.lang.String accessToken) {
+          return (GetStatus) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetStatus setAlt(java.lang.String alt) {
+          return (GetStatus) super.setAlt(alt);
+        }
+
+        @Override
+        public GetStatus setCallback(java.lang.String callback) {
+          return (GetStatus) super.setCallback(callback);
+        }
+
+        @Override
+        public GetStatus setFields(java.lang.String fields) {
+          return (GetStatus) super.setFields(fields);
+        }
+
+        @Override
+        public GetStatus setKey(java.lang.String key) {
+          return (GetStatus) super.setKey(key);
+        }
+
+        @Override
+        public GetStatus setOauthToken(java.lang.String oauthToken) {
+          return (GetStatus) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetStatus) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetStatus setQuotaUser(java.lang.String quotaUser) {
+          return (GetStatus) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetStatus setUploadType(java.lang.String uploadType) {
+          return (GetStatus) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetStatus setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetStatus) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The location to be queried Format:
+         * projects/{project_number}/locations/{location}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The location to be queried Format: projects/{project_number}/locations/{location}.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. The location to be queried Format:
+         * projects/{project_number}/locations/{location}.
+         */
+        public GetStatus setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public GetStatus set(String parameterName, Object value) {
+          return (GetStatus) super.set(parameterName, value);
+        }
+      }
+      /**
        * Provisions resources for given tenant project. Returns a long running operation.
        *
        * Create a request for the method "locations.initialize".
@@ -611,6 +756,147 @@ public class Contentwarehouse extends com.google.api.client.googleapis.services.
         @Override
         public Initialize set(String parameterName, Object value) {
           return (Initialize) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Run a predefined pipeline.
+       *
+       * Create a request for the method "locations.runPipeline".
+       *
+       * This request holds the parameters needed by the contentwarehouse server.  After setting any
+       * optional parameters, call the {@link RunPipeline#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource name which owns the resources of the pipeline. Format:
+       *        projects/{project_number}/locations/{location}.
+       * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest}
+       * @return the request
+       */
+      public RunPipeline runPipeline(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest content) throws java.io.IOException {
+        RunPipeline result = new RunPipeline(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RunPipeline extends ContentwarehouseRequest<com.google.api.services.contentwarehouse.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}:runPipeline";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Run a predefined pipeline.
+         *
+         * Create a request for the method "locations.runPipeline".
+         *
+         * This request holds the parameters needed by the the contentwarehouse server.  After setting any
+         * optional parameters, call the {@link RunPipeline#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * RunPipeline#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name which owns the resources of the pipeline. Format:
+       *        projects/{project_number}/locations/{location}.
+         * @param content the {@link com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest}
+         * @since 1.13
+         */
+        protected RunPipeline(java.lang.String name, com.google.api.services.contentwarehouse.v1.model.GoogleCloudContentwarehouseV1RunPipelineRequest content) {
+          super(Contentwarehouse.this, "POST", REST_PATH, content, com.google.api.services.contentwarehouse.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public RunPipeline set$Xgafv(java.lang.String $Xgafv) {
+          return (RunPipeline) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RunPipeline setAccessToken(java.lang.String accessToken) {
+          return (RunPipeline) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RunPipeline setAlt(java.lang.String alt) {
+          return (RunPipeline) super.setAlt(alt);
+        }
+
+        @Override
+        public RunPipeline setCallback(java.lang.String callback) {
+          return (RunPipeline) super.setCallback(callback);
+        }
+
+        @Override
+        public RunPipeline setFields(java.lang.String fields) {
+          return (RunPipeline) super.setFields(fields);
+        }
+
+        @Override
+        public RunPipeline setKey(java.lang.String key) {
+          return (RunPipeline) super.setKey(key);
+        }
+
+        @Override
+        public RunPipeline setOauthToken(java.lang.String oauthToken) {
+          return (RunPipeline) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RunPipeline setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RunPipeline) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RunPipeline setQuotaUser(java.lang.String quotaUser) {
+          return (RunPipeline) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RunPipeline setUploadType(java.lang.String uploadType) {
+          return (RunPipeline) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RunPipeline setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RunPipeline) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name which owns the resources of the pipeline. Format:
+         * projects/{project_number}/locations/{location}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name which owns the resources of the pipeline. Format:
+       projects/{project_number}/locations/{location}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name which owns the resources of the pipeline. Format:
+         * projects/{project_number}/locations/{location}.
+         */
+        public RunPipeline setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RunPipeline set(String parameterName, Object value) {
+          return (RunPipeline) super.set(parameterName, value);
         }
       }
 

@@ -17,7 +17,11 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Describes a single physical marker line.
+ * Describes a single physical marker line. NOTE: PhysicalLineProto could be compared against one
+ * another by canonicalizing them via GetCanonicalPhysicalLine() in
+ * google3/geostore/base/internal/lane_marker.cc. Any fields that don't contribute to the definition
+ * of a physical line in the real world should be bundled with the annotative fields near the bottom
+ * and excluded in GetCanonicalPhysicalLine(). LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

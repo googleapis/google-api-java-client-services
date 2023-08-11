@@ -80,6 +80,13 @@ public final class AssistantDevicesPlatformProtoInlinedActionCapability extends 
   private AssistantDevicesPlatformProtoTimerCapability timer;
 
   /**
+   * Specifies whether client supports receiving `DeviceAction.tts_output`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoTtsOutputCapability ttsOutput;
+
+  /**
    * Specifies capabilities for handling on-device alarms. The presence of this field, even if
    * empty, implies that the device supports alarms.
    * @return value or {@code null} for none
@@ -192,6 +199,23 @@ public final class AssistantDevicesPlatformProtoInlinedActionCapability extends 
    */
   public AssistantDevicesPlatformProtoInlinedActionCapability setTimer(AssistantDevicesPlatformProtoTimerCapability timer) {
     this.timer = timer;
+    return this;
+  }
+
+  /**
+   * Specifies whether client supports receiving `DeviceAction.tts_output`.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoTtsOutputCapability getTtsOutput() {
+    return ttsOutput;
+  }
+
+  /**
+   * Specifies whether client supports receiving `DeviceAction.tts_output`.
+   * @param ttsOutput ttsOutput or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoInlinedActionCapability setTtsOutput(AssistantDevicesPlatformProtoTtsOutputCapability ttsOutput) {
+    this.ttsOutput = ttsOutput;
     return this;
   }
 

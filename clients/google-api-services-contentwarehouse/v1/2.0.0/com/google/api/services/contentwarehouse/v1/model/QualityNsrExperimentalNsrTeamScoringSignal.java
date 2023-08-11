@@ -58,6 +58,12 @@ public final class QualityNsrExperimentalNsrTeamScoringSignal extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String valueString;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Long valueUint32;
 
   /**
@@ -123,6 +129,21 @@ public final class QualityNsrExperimentalNsrTeamScoringSignal extends com.google
    */
   public QualityNsrExperimentalNsrTeamScoringSignal setValueInt32(java.lang.Integer valueInt32) {
     this.valueInt32 = valueInt32;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getValueString() {
+    return valueString;
+  }
+
+  /**
+   * @param valueString valueString or {@code null} for none
+   */
+  public QualityNsrExperimentalNsrTeamScoringSignal setValueString(java.lang.String valueString) {
+    this.valueString = valueString;
     return this;
   }
 

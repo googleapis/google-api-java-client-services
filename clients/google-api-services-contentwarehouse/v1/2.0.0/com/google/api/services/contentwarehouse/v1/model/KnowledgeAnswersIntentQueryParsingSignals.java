@@ -62,15 +62,6 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
   private java.lang.Float inQueryMaxEffectiveArgSpanLength;
 
   /**
-   * This proto holds the complete call path info of the QRewrite client (e.g. the QUS's phase like
-   * "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
-   * "FuzzyMatcher").
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private NlpLoggingQRewriteClientCallPathInfo qrewriteCallPathInfo;
-
-  /**
    * This proto holds the fingerprint of the call path info of QRewrite client (e.g. the QUS's phase
    * like "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
    * "FuzzyMatcher").
@@ -146,27 +137,6 @@ public final class KnowledgeAnswersIntentQueryParsingSignals extends com.google.
    */
   public KnowledgeAnswersIntentQueryParsingSignals setInQueryMaxEffectiveArgSpanLength(java.lang.Float inQueryMaxEffectiveArgSpanLength) {
     this.inQueryMaxEffectiveArgSpanLength = inQueryMaxEffectiveArgSpanLength;
-    return this;
-  }
-
-  /**
-   * This proto holds the complete call path info of the QRewrite client (e.g. the QUS's phase like
-   * "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
-   * "FuzzyMatcher").
-   * @return value or {@code null} for none
-   */
-  public NlpLoggingQRewriteClientCallPathInfo getQrewriteCallPathInfo() {
-    return qrewriteCallPathInfo;
-  }
-
-  /**
-   * This proto holds the complete call path info of the QRewrite client (e.g. the QUS's phase like
-   * "RBT","QBT"; the QUS's candidate type like "Identity"; and the ACE's candidate type like
-   * "FuzzyMatcher").
-   * @param qrewriteCallPathInfo qrewriteCallPathInfo or {@code null} for none
-   */
-  public KnowledgeAnswersIntentQueryParsingSignals setQrewriteCallPathInfo(NlpLoggingQRewriteClientCallPathInfo qrewriteCallPathInfo) {
-    this.qrewriteCallPathInfo = qrewriteCallPathInfo;
     return this;
   }
 

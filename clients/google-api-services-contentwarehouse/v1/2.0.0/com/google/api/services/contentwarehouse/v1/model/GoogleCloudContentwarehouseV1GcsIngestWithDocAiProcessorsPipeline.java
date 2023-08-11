@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The configuration of the document classify/split and entity/kvp extraction pipeline.
+ * The configuration of the Cloud Storage Ingestion with DocAI Processors pipeline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,7 +32,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The extract processors information. One matched extract processor will be used to process
-   * documents based on the classify processor result. If no classify processor is specificied, the
+   * documents based on the classify processor result. If no classify processor is specified, the
    * first extract processor will be used.
    * The value may be {@code null}.
    */
@@ -41,18 +41,36 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputPath;
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * Optional. The config for the Cloud Storage Ingestion with DocAI Processors pipeline. It
+   * provides additional customization options to run the pipeline and can be skipped if it is not
+   * applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContentwarehouseV1IngestPipelineConfig pipelineConfig;
+
+  /**
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String processorResultsFolderPath;
+
+  /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipIngestedDocuments;
 
   /**
    * The split and classify processor information. The split and classify result will be used to
@@ -64,7 +82,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The extract processors information. One matched extract processor will be used to process
-   * documents based on the classify processor result. If no classify processor is specificied, the
+   * documents based on the classify processor result. If no classify processor is specified, the
    * first extract processor will be used.
    * @return value or {@code null} for none
    */
@@ -74,7 +92,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The extract processors information. One matched extract processor will be used to process
-   * documents based on the classify processor result. If no classify processor is specificied, the
+   * documents based on the classify processor result. If no classify processor is specified, the
    * first extract processor will be used.
    * @param extractProcessorInfos extractProcessorInfos or {@code null} for none
    */
@@ -85,7 +103,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputPath() {
@@ -94,7 +112,7 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
 
   /**
    * The input Cloud Storage folder. All files under this folder will be imported to Document
-   * Warehouse. Format: gs:.
+   * Warehouse. Format: `gs:`.
    * @param inputPath inputPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setInputPath(java.lang.String inputPath) {
@@ -103,7 +121,28 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
   }
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * Optional. The config for the Cloud Storage Ingestion with DocAI Processors pipeline. It
+   * provides additional customization options to run the pipeline and can be skipped if it is not
+   * applicable.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1IngestPipelineConfig getPipelineConfig() {
+    return pipelineConfig;
+  }
+
+  /**
+   * Optional. The config for the Cloud Storage Ingestion with DocAI Processors pipeline. It
+   * provides additional customization options to run the pipeline and can be skipped if it is not
+   * applicable.
+   * @param pipelineConfig pipelineConfig or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setPipelineConfig(GoogleCloudContentwarehouseV1IngestPipelineConfig pipelineConfig) {
+    this.pipelineConfig = pipelineConfig;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProcessorResultsFolderPath() {
@@ -111,11 +150,32 @@ public final class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipe
   }
 
   /**
-   * The Cloud Storage folder path used to store the raw results from processors. Format: gs:.
+   * The Cloud Storage folder path used to store the raw results from processors. Format: `gs:`.
    * @param processorResultsFolderPath processorResultsFolderPath or {@code null} for none
    */
   public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setProcessorResultsFolderPath(java.lang.String processorResultsFolderPath) {
     this.processorResultsFolderPath = processorResultsFolderPath;
+    return this;
+  }
+
+  /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipIngestedDocuments() {
+    return skipIngestedDocuments;
+  }
+
+  /**
+   * The flag whether to skip ingested documents. If it is set to true, documents in Cloud Storage
+   * contains key "status" with value "status=ingested" in custom metadata will be skipped to
+   * ingest.
+   * @param skipIngestedDocuments skipIngestedDocuments or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline setSkipIngestedDocuments(java.lang.Boolean skipIngestedDocuments) {
+    this.skipIngestedDocuments = skipIngestedDocuments;
     return this;
   }
 

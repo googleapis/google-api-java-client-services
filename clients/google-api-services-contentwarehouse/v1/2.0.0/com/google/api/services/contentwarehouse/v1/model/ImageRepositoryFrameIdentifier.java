@@ -34,6 +34,12 @@ public final class ImageRepositoryFrameIdentifier extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private ImageRepositoryFrameIdentifierMultiThumbnailVariant multiThumbnailVariant;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private ImageRepositoryFrameIdentifierPreviewFrameZeroVariant previewFrameZeroVariant;
 
   /**
@@ -48,6 +54,21 @@ public final class ImageRepositoryFrameIdentifier extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timestampMs;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryFrameIdentifierMultiThumbnailVariant getMultiThumbnailVariant() {
+    return multiThumbnailVariant;
+  }
+
+  /**
+   * @param multiThumbnailVariant multiThumbnailVariant or {@code null} for none
+   */
+  public ImageRepositoryFrameIdentifier setMultiThumbnailVariant(ImageRepositoryFrameIdentifierMultiThumbnailVariant multiThumbnailVariant) {
+    this.multiThumbnailVariant = multiThumbnailVariant;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

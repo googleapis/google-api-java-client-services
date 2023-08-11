@@ -110,6 +110,14 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   private java.lang.String policySourceType;
 
   /**
+   * Policy metadata fields for Real World Journey (RWJ) data. Only expected to be used by RWJ
+   * providers -- please consult ke-data-governance@ before populating this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageGraphBfgRwjPolicyMetadata rwjPolicyMetadata;
+
+  /**
    * Policy metadata fields for UMP data. Only expected to be used by UMP providers -- please
    * consult ke-data-governance@ before populating this field.
    * The value may be {@code null}.
@@ -261,6 +269,25 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setPolicySourceType(java.lang.String policySourceType) {
     this.policySourceType = policySourceType;
+    return this;
+  }
+
+  /**
+   * Policy metadata fields for Real World Journey (RWJ) data. Only expected to be used by RWJ
+   * providers -- please consult ke-data-governance@ before populating this field.
+   * @return value or {@code null} for none
+   */
+  public StorageGraphBfgRwjPolicyMetadata getRwjPolicyMetadata() {
+    return rwjPolicyMetadata;
+  }
+
+  /**
+   * Policy metadata fields for Real World Journey (RWJ) data. Only expected to be used by RWJ
+   * providers -- please consult ke-data-governance@ before populating this field.
+   * @param rwjPolicyMetadata rwjPolicyMetadata or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setRwjPolicyMetadata(StorageGraphBfgRwjPolicyMetadata rwjPolicyMetadata) {
+    this.rwjPolicyMetadata = rwjPolicyMetadata;
     return this;
   }
 

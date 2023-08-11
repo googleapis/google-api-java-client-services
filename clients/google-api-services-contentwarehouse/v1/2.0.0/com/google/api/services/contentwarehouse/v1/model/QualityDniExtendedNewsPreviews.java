@@ -34,13 +34,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityDniExtendedNewsPreviews extends com.google.api.client.json.GenericJson {
 
   /**
-   * Publisher's country code (ISO-3166) Used in V0.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String countryCode;
-
-  /**
    * List of countries that desnippet the publisher. ISO 3166-1-alpha-2 country code (such as FR).
    * See go/iiuse#region-identifiers. Used in V1.
    * The value may be {@code null}.
@@ -71,23 +64,6 @@ public final class QualityDniExtendedNewsPreviews extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
-
-  /**
-   * Publisher's country code (ISO-3166) Used in V0.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCountryCode() {
-    return countryCode;
-  }
-
-  /**
-   * Publisher's country code (ISO-3166) Used in V0.
-   * @param countryCode countryCode or {@code null} for none
-   */
-  public QualityDniExtendedNewsPreviews setCountryCode(java.lang.String countryCode) {
-    this.countryCode = countryCode;
-    return this;
-  }
 
   /**
    * List of countries that desnippet the publisher. ISO 3166-1-alpha-2 country code (such as FR).

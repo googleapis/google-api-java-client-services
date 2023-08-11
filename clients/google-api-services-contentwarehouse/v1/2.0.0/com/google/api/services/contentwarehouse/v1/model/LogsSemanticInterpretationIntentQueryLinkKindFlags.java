@@ -68,6 +68,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindFlags extends co
   private java.lang.String property;
 
   /**
+   * Has not been useful since at least 2015 (before this was logged).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,6 +165,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindFlags extends co
   }
 
   /**
+   * Has not been useful since at least 2015 (before this was logged).
    * @return value or {@code null} for none
    */
   public java.lang.String getResolution() {
@@ -171,6 +173,7 @@ public final class LogsSemanticInterpretationIntentQueryLinkKindFlags extends co
   }
 
   /**
+   * Has not been useful since at least 2015 (before this was logged).
    * @param resolution resolution or {@code null} for none
    */
   public LogsSemanticInterpretationIntentQueryLinkKindFlags setResolution(java.lang.String resolution) {

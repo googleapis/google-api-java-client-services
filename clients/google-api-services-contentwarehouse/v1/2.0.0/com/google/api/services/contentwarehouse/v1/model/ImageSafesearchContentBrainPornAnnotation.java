@@ -45,6 +45,20 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
   private java.lang.Double csaiScore;
 
   /**
+   * Experimental score. Do not use. Google confidential!
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float csamA1Score;
+
+  /**
+   * Experimental score. Do not use. Google confidential!
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float csamAgeIndeterminateScore;
+
+  /**
    * This field contains the probability that an image is inappropriate for Images Universal,
    * according to this policy: go/iupolicy.
    * The value may be {@code null}.
@@ -76,6 +90,13 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Float racyScore;
+
+  /**
+   * This score is related to racy/sexual images where scores have semantic meaning from 0 to 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float semanticSexualizationScore;
 
   /**
    * The value may be {@code null}.
@@ -136,6 +157,40 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
    */
   public ImageSafesearchContentBrainPornAnnotation setCsaiScore(java.lang.Double csaiScore) {
     this.csaiScore = csaiScore;
+    return this;
+  }
+
+  /**
+   * Experimental score. Do not use. Google confidential!
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCsamA1Score() {
+    return csamA1Score;
+  }
+
+  /**
+   * Experimental score. Do not use. Google confidential!
+   * @param csamA1Score csamA1Score or {@code null} for none
+   */
+  public ImageSafesearchContentBrainPornAnnotation setCsamA1Score(java.lang.Float csamA1Score) {
+    this.csamA1Score = csamA1Score;
+    return this;
+  }
+
+  /**
+   * Experimental score. Do not use. Google confidential!
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCsamAgeIndeterminateScore() {
+    return csamAgeIndeterminateScore;
+  }
+
+  /**
+   * Experimental score. Do not use. Google confidential!
+   * @param csamAgeIndeterminateScore csamAgeIndeterminateScore or {@code null} for none
+   */
+  public ImageSafesearchContentBrainPornAnnotation setCsamAgeIndeterminateScore(java.lang.Float csamAgeIndeterminateScore) {
+    this.csamAgeIndeterminateScore = csamAgeIndeterminateScore;
     return this;
   }
 
@@ -217,6 +272,23 @@ public final class ImageSafesearchContentBrainPornAnnotation extends com.google.
    */
   public ImageSafesearchContentBrainPornAnnotation setRacyScore(java.lang.Float racyScore) {
     this.racyScore = racyScore;
+    return this;
+  }
+
+  /**
+   * This score is related to racy/sexual images where scores have semantic meaning from 0 to 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSemanticSexualizationScore() {
+    return semanticSexualizationScore;
+  }
+
+  /**
+   * This score is related to racy/sexual images where scores have semantic meaning from 0 to 1.
+   * @param semanticSexualizationScore semanticSexualizationScore or {@code null} for none
+   */
+  public ImageSafesearchContentBrainPornAnnotation setSemanticSexualizationScore(java.lang.Float semanticSexualizationScore) {
+    this.semanticSexualizationScore = semanticSexualizationScore;
     return this;
   }
 

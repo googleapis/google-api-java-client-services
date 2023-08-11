@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Information about the state of the device. This contains any state that Assistant may need to
- * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 10
+ * know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -95,6 +95,15 @@ public final class GoogleAssistantAccessoryV1DeviceState extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleAssistantEmbeddedV1Timers timerState;
+
+  /**
+   * This indicates which specific settings are currently unavailable for modification, despite
+   * being listed as a supported setting. Assistant can use this field to trigger unavailability
+   * messages, rather than claiming that a setting is entirely unsupported on device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unavailableSettings;
 
   /**
    * *Optional* Information about on-device alarms. For devices that support alarms, all on-device
@@ -274,6 +283,27 @@ public final class GoogleAssistantAccessoryV1DeviceState extends com.google.api.
    */
   public GoogleAssistantAccessoryV1DeviceState setTimerState(GoogleAssistantEmbeddedV1Timers timerState) {
     this.timerState = timerState;
+    return this;
+  }
+
+  /**
+   * This indicates which specific settings are currently unavailable for modification, despite
+   * being listed as a supported setting. Assistant can use this field to trigger unavailability
+   * messages, rather than claiming that a setting is entirely unsupported on device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnavailableSettings() {
+    return unavailableSettings;
+  }
+
+  /**
+   * This indicates which specific settings are currently unavailable for modification, despite
+   * being listed as a supported setting. Assistant can use this field to trigger unavailability
+   * messages, rather than claiming that a setting is entirely unsupported on device.
+   * @param unavailableSettings unavailableSettings or {@code null} for none
+   */
+  public GoogleAssistantAccessoryV1DeviceState setUnavailableSettings(java.util.List<java.lang.String> unavailableSettings) {
+    this.unavailableSettings = unavailableSettings;
     return this;
   }
 

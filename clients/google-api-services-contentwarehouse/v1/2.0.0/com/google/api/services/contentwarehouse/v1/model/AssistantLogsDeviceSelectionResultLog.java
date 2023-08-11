@@ -60,7 +60,7 @@ public final class AssistantLogsDeviceSelectionResultLog extends com.google.api.
   /**
    * // Ambiguous Results: the library failed to select the final target device(s) but it narrows
    * down to a set of devices which are all valid target device candidates. The client needs to do
-   * further disambiguation, e.g., giving a dialog or having costomized logic. The low confidence
+   * further disambiguation, e.g., giving a dialog or having customized logic. The low confidence
    * target device means the library falied to select the target device but it picked two devices
    * for the client to do disambiguation.
    * The value may be {@code null}.
@@ -174,7 +174,7 @@ public final class AssistantLogsDeviceSelectionResultLog extends com.google.api.
   /**
    * // Ambiguous Results: the library failed to select the final target device(s) but it narrows
    * down to a set of devices which are all valid target device candidates. The client needs to do
-   * further disambiguation, e.g., giving a dialog or having costomized logic. The low confidence
+   * further disambiguation, e.g., giving a dialog or having customized logic. The low confidence
    * target device means the library falied to select the target device but it picked two devices
    * for the client to do disambiguation.
    * @return value or {@code null} for none
@@ -186,7 +186,7 @@ public final class AssistantLogsDeviceSelectionResultLog extends com.google.api.
   /**
    * // Ambiguous Results: the library failed to select the final target device(s) but it narrows
    * down to a set of devices which are all valid target device candidates. The client needs to do
-   * further disambiguation, e.g., giving a dialog or having costomized logic. The low confidence
+   * further disambiguation, e.g., giving a dialog or having customized logic. The low confidence
    * target device means the library falied to select the target device but it picked two devices
    * for the client to do disambiguation.
    * @param lowConfidenceTargetDevice lowConfidenceTargetDevice or {@code null} for none

@@ -60,6 +60,20 @@ public final class GoogleCloudContentwarehouseV1DocumentReference extends com.go
   private java.lang.Boolean documentIsFolder;
 
   /**
+   * Document is a folder with legal hold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean documentIsLegalHoldFolder;
+
+  /**
+   * Document is a folder with retention policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean documentIsRetentionFolder;
+
+  /**
    * Required. Name of the referenced document.
    * The value may be {@code null}.
    */
@@ -148,6 +162,40 @@ public final class GoogleCloudContentwarehouseV1DocumentReference extends com.go
    */
   public GoogleCloudContentwarehouseV1DocumentReference setDocumentIsFolder(java.lang.Boolean documentIsFolder) {
     this.documentIsFolder = documentIsFolder;
+    return this;
+  }
+
+  /**
+   * Document is a folder with legal hold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDocumentIsLegalHoldFolder() {
+    return documentIsLegalHoldFolder;
+  }
+
+  /**
+   * Document is a folder with legal hold.
+   * @param documentIsLegalHoldFolder documentIsLegalHoldFolder or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1DocumentReference setDocumentIsLegalHoldFolder(java.lang.Boolean documentIsLegalHoldFolder) {
+    this.documentIsLegalHoldFolder = documentIsLegalHoldFolder;
+    return this;
+  }
+
+  /**
+   * Document is a folder with retention policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDocumentIsRetentionFolder() {
+    return documentIsRetentionFolder;
+  }
+
+  /**
+   * Document is a folder with retention policy.
+   * @param documentIsRetentionFolder documentIsRetentionFolder or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1DocumentReference setDocumentIsRetentionFolder(java.lang.Boolean documentIsRetentionFolder) {
+    this.documentIsRetentionFolder = documentIsRetentionFolder;
     return this;
   }
 

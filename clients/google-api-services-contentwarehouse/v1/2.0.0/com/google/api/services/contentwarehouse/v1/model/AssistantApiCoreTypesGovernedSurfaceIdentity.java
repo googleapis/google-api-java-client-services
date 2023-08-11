@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * The set of information that helps the server identify the surface. This replaces the User-Agent
  * string within the Assistant Server. Note: The SurfaceIdentity proto should only be used to derive
  * the capabilities of a surface. It should not be accessed outside of the CapabilityBuilder or
- * CapabilityChecker. NEXT ID: 5 LINT.IfChange
+ * CapabilityChecker. NEXT ID: 6 LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -39,6 +39,15 @@ public final class AssistantApiCoreTypesGovernedSurfaceIdentity extends com.goog
    */
   @com.google.api.client.util.Key
   private AssistantApiCoreTypesDeviceId deviceId;
+
+  /**
+   * DEPRECATED: The legacy device's surface type enum. NOTE: Prefer using the ontological
+   * `surface_type` field above. If you need to access the legacy surface type, please file a bug
+   * and add it in your code to migrate to ontological surface type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String legacySurfaceType;
 
   /**
    * The device's surface type. The types are defined at
@@ -69,6 +78,27 @@ public final class AssistantApiCoreTypesGovernedSurfaceIdentity extends com.goog
    */
   public AssistantApiCoreTypesGovernedSurfaceIdentity setDeviceId(AssistantApiCoreTypesDeviceId deviceId) {
     this.deviceId = deviceId;
+    return this;
+  }
+
+  /**
+   * DEPRECATED: The legacy device's surface type enum. NOTE: Prefer using the ontological
+   * `surface_type` field above. If you need to access the legacy surface type, please file a bug
+   * and add it in your code to migrate to ontological surface type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLegacySurfaceType() {
+    return legacySurfaceType;
+  }
+
+  /**
+   * DEPRECATED: The legacy device's surface type enum. NOTE: Prefer using the ontological
+   * `surface_type` field above. If you need to access the legacy surface type, please file a bug
+   * and add it in your code to migrate to ontological surface type.
+   * @param legacySurfaceType legacySurfaceType or {@code null} for none
+   */
+  public AssistantApiCoreTypesGovernedSurfaceIdentity setLegacySurfaceType(java.lang.String legacySurfaceType) {
+    this.legacySurfaceType = legacySurfaceType;
     return this;
   }
 

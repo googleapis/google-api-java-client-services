@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * assistant.api.core_types.SurfaceType enum. A surface's capabilities can differ from the device's.
  * An example would be ANDROID_ALLO running on Pixel. Allo does not support AudioInput while the
  * Pixel does. In this case, audio_input will be set to false for Assistant Allo requests while it
- * might be set to true for OPA_NEXUS requests. Next ID: 35
+ * might be set to true for OPA_NEXUS requests. Next ID: 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -43,6 +43,13 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private AssistantApiAndroidIntentCapabilities androidIntentCapabilities;
+
+  /**
+   * Capabilities if surface supports Google Assistant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assistantCapability;
 
   /**
    * These capabilities are scoped to the ability to gather audio. It includes information like the
@@ -268,9 +275,10 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   private AssistantApiCoreTypesSurfaceIdentity surfaceIdentity;
 
   /**
-   * The device's surface type. This is the string version of the
-   * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
-   * should use the SurfaceType value derived from this string.
+   * DEPRECATED. surface_identity field below already contains this information. The device's
+   * surface type. This is the string version of the assistant.api.core_types.SurfaceType enum. The
+   * server should not use this field, rather it should use the SurfaceType value derived from this
+   * string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,6 +316,23 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
    */
   public AssistantApiDeviceCapabilities setAndroidIntentCapabilities(AssistantApiAndroidIntentCapabilities androidIntentCapabilities) {
     this.androidIntentCapabilities = androidIntentCapabilities;
+    return this;
+  }
+
+  /**
+   * Capabilities if surface supports Google Assistant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssistantCapability() {
+    return assistantCapability;
+  }
+
+  /**
+   * Capabilities if surface supports Google Assistant.
+   * @param assistantCapability assistantCapability or {@code null} for none
+   */
+  public AssistantApiDeviceCapabilities setAssistantCapability(java.lang.String assistantCapability) {
+    this.assistantCapability = assistantCapability;
     return this;
   }
 
@@ -845,9 +870,10 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   }
 
   /**
-   * The device's surface type. This is the string version of the
-   * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
-   * should use the SurfaceType value derived from this string.
+   * DEPRECATED. surface_identity field below already contains this information. The device's
+   * surface type. This is the string version of the assistant.api.core_types.SurfaceType enum. The
+   * server should not use this field, rather it should use the SurfaceType value derived from this
+   * string.
    * @return value or {@code null} for none
    */
   public java.lang.String getSurfaceTypeString() {
@@ -855,9 +881,10 @@ public final class AssistantApiDeviceCapabilities extends com.google.api.client.
   }
 
   /**
-   * The device's surface type. This is the string version of the
-   * assistant.api.core_types.SurfaceType enum. The server should not use this field, rather it
-   * should use the SurfaceType value derived from this string.
+   * DEPRECATED. surface_identity field below already contains this information. The device's
+   * surface type. This is the string version of the assistant.api.core_types.SurfaceType enum. The
+   * server should not use this field, rather it should use the SurfaceType value derived from this
+   * string.
    * @param surfaceTypeString surfaceTypeString or {@code null} for none
    */
   public AssistantApiDeviceCapabilities setSurfaceTypeString(java.lang.String surfaceTypeString) {

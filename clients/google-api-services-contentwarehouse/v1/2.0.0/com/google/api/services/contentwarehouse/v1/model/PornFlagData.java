@@ -32,22 +32,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class PornFlagData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Aggregated brain_porn_scores for navboost co-clicked images. Historical: this signal is
-   * deprecated and no longer populated as of 2020-12-01. Refer to b/172897542 for more information.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ImageSafesearchContentBrainPornAnnotation coclickBrainScores;
-
-  /**
-   * Score predicting how likely an image is offensive or suggestive about CSAI (child sexual abuse
-   * imagery).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float csaiScore;
-
-  /**
    * DebugInfo stores debug information from the overall classifier. This allows for instance to
    * update counters related to blacklisting without running the full classifier again.
    * The value may be {@code null}.
@@ -201,49 +185,12 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private java.lang.String url;
 
   /**
-   * Information about the URL porn scores for image URLs associated with this image.
+   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
+   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClassifierPornAggregatedUrlPornScores urlPornScores;
-
-  /**
-   * Aggregated brain_porn_scores for navboost co-clicked images. Historical: this signal is
-   * deprecated and no longer populated as of 2020-12-01. Refer to b/172897542 for more information.
-   * @return value or {@code null} for none
-   */
-  public ImageSafesearchContentBrainPornAnnotation getCoclickBrainScores() {
-    return coclickBrainScores;
-  }
-
-  /**
-   * Aggregated brain_porn_scores for navboost co-clicked images. Historical: this signal is
-   * deprecated and no longer populated as of 2020-12-01. Refer to b/172897542 for more information.
-   * @param coclickBrainScores coclickBrainScores or {@code null} for none
-   */
-  public PornFlagData setCoclickBrainScores(ImageSafesearchContentBrainPornAnnotation coclickBrainScores) {
-    this.coclickBrainScores = coclickBrainScores;
-    return this;
-  }
-
-  /**
-   * Score predicting how likely an image is offensive or suggestive about CSAI (child sexual abuse
-   * imagery).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getCsaiScore() {
-    return csaiScore;
-  }
-
-  /**
-   * Score predicting how likely an image is offensive or suggestive about CSAI (child sexual abuse
-   * imagery).
-   * @param csaiScore csaiScore or {@code null} for none
-   */
-  public PornFlagData setCsaiScore(java.lang.Float csaiScore) {
-    this.csaiScore = csaiScore;
-    return this;
-  }
 
   /**
    * DebugInfo stores debug information from the overall classifier. This allows for instance to
@@ -629,7 +576,8 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the URL porn scores for image URLs associated with this image.
+   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
+   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
    * @return value or {@code null} for none
    */
   public ClassifierPornAggregatedUrlPornScores getUrlPornScores() {
@@ -637,7 +585,8 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the URL porn scores for image URLs associated with this image.
+   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
+   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
    * @param urlPornScores urlPornScores or {@code null} for none
    */
   public PornFlagData setUrlPornScores(ClassifierPornAggregatedUrlPornScores urlPornScores) {

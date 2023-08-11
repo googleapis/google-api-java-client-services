@@ -58,6 +58,12 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<ShoppingWebentityShoppingAnnotationProductImage> images;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private QualityShoppingShoppingAttachmentLocale locale;
 
   /**
@@ -203,6 +209,21 @@ public final class QualityShoppingShoppingAttachmentProduct extends com.google.a
    */
   public QualityShoppingShoppingAttachmentProduct setGlobalProductClusterId(java.math.BigInteger globalProductClusterId) {
     this.globalProductClusterId = globalProductClusterId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ShoppingWebentityShoppingAnnotationProductImage> getImages() {
+    return images;
+  }
+
+  /**
+   * @param images images or {@code null} for none
+   */
+  public QualityShoppingShoppingAttachmentProduct setImages(java.util.List<ShoppingWebentityShoppingAnnotationProductImage> images) {
+    this.images = images;
     return this;
   }
 

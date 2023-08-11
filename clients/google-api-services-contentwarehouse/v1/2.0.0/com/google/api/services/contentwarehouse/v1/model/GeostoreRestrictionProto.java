@@ -27,7 +27,12 @@ package com.google.api.services.contentwarehouse.v1.model;
  * cannot be taken. In other words, restrictions are OR-ed together. Putting all of this together, a
  * set of RestrictionProtos can be interpreted as an bool expression in disjunctive normal form: (A
  * and B) or (D and E and F) or (G and H) The action is prohibited if this expression is true. Note
- * that a restriction with no conditions is always true, i.e. its action is always prohibited.
+ * that a restriction with no conditions is always true, i.e. its action is always prohibited. NOTE:
+ * RestrictionProtos are often compared against one another (e.g. to check for duplicate/redundant
+ * restrictions) by canonicalizing them via GetCanonicalRestriction() in
+ * google3/geostore/base/internal/restriction.cc. Any fields that don't contribute to the definition
+ * of a restriction in the real world should be bundled with the annotative fields near the bottom
+ * and excluded in GetCanonicalRestriction(). LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -45,15 +45,26 @@ public final class RepositoryWebrefFreebaseType extends com.google.api.client.js
   private java.lang.Float score;
 
   /**
+   * Fingerprint of type hrid http://cs/google3/repository/webref/universal/base/kg-
+   * schema.h;rcl=543911652;l=51
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger typeFprint;
+
+  /**
    * Mid of this type. Equivalent to type_name, but is more compact. When present, overrides
-   * type_name (which can be omitted in this case to save space).
+   * type_name (which can be omitted in this case to save space). This field is deprecated and
+   * migrated to fprint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger typeMid;
 
   /**
-   * e.g.: "/business/industry", "/book/book_subject", "/people/person"...
+   * e.g.: "/business/industry", "/book/book_subject", "/people/person"... HRID of the type. May be
+   * missing for optimisation reasons in Refcon, but is present for Qref/Webref. At least one of
+   * type_name or type_fprint will be present at all times
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +105,28 @@ public final class RepositoryWebrefFreebaseType extends com.google.api.client.js
   }
 
   /**
+   * Fingerprint of type hrid http://cs/google3/repository/webref/universal/base/kg-
+   * schema.h;rcl=543911652;l=51
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getTypeFprint() {
+    return typeFprint;
+  }
+
+  /**
+   * Fingerprint of type hrid http://cs/google3/repository/webref/universal/base/kg-
+   * schema.h;rcl=543911652;l=51
+   * @param typeFprint typeFprint or {@code null} for none
+   */
+  public RepositoryWebrefFreebaseType setTypeFprint(java.math.BigInteger typeFprint) {
+    this.typeFprint = typeFprint;
+    return this;
+  }
+
+  /**
    * Mid of this type. Equivalent to type_name, but is more compact. When present, overrides
-   * type_name (which can be omitted in this case to save space).
+   * type_name (which can be omitted in this case to save space). This field is deprecated and
+   * migrated to fprint.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getTypeMid() {
@@ -104,7 +135,8 @@ public final class RepositoryWebrefFreebaseType extends com.google.api.client.js
 
   /**
    * Mid of this type. Equivalent to type_name, but is more compact. When present, overrides
-   * type_name (which can be omitted in this case to save space).
+   * type_name (which can be omitted in this case to save space). This field is deprecated and
+   * migrated to fprint.
    * @param typeMid typeMid or {@code null} for none
    */
   public RepositoryWebrefFreebaseType setTypeMid(java.math.BigInteger typeMid) {
@@ -113,7 +145,9 @@ public final class RepositoryWebrefFreebaseType extends com.google.api.client.js
   }
 
   /**
-   * e.g.: "/business/industry", "/book/book_subject", "/people/person"...
+   * e.g.: "/business/industry", "/book/book_subject", "/people/person"... HRID of the type. May be
+   * missing for optimisation reasons in Refcon, but is present for Qref/Webref. At least one of
+   * type_name or type_fprint will be present at all times
    * @return value or {@code null} for none
    */
   public java.lang.String getTypeName() {
@@ -121,7 +155,9 @@ public final class RepositoryWebrefFreebaseType extends com.google.api.client.js
   }
 
   /**
-   * e.g.: "/business/industry", "/book/book_subject", "/people/person"...
+   * e.g.: "/business/industry", "/book/book_subject", "/people/person"... HRID of the type. May be
+   * missing for optimisation reasons in Refcon, but is present for Qref/Webref. At least one of
+   * type_name or type_fprint will be present at all times
    * @param typeName typeName or {@code null} for none
    */
   public RepositoryWebrefFreebaseType setTypeName(java.lang.String typeName) {

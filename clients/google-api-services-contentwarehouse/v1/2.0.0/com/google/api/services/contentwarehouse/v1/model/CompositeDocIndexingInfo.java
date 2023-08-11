@@ -121,15 +121,6 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
   private java.lang.Long indexingTs;
 
   /**
-   * Page is deleted when indexing choice flips between different corpora (e.g. desktop, mobile,
-   * archive, scholar, etc.) for the same URL. It's only set for deletion cdocs. Downstreams using
-   * URL as key should ignore the current deletion if the field is set.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isSiblingDeletion;
-
-  /**
    * If set, the timestamp in microseconds when the URL stopped being canonical. This should never
    * be set for exported canonical documents. This field is used by dups during canonical flip, and
    * by webmain when doc selection switched between desktop and mobile. Union respects this
@@ -424,27 +415,6 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
    */
   public CompositeDocIndexingInfo setIndexingTs(java.lang.Long indexingTs) {
     this.indexingTs = indexingTs;
-    return this;
-  }
-
-  /**
-   * Page is deleted when indexing choice flips between different corpora (e.g. desktop, mobile,
-   * archive, scholar, etc.) for the same URL. It's only set for deletion cdocs. Downstreams using
-   * URL as key should ignore the current deletion if the field is set.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsSiblingDeletion() {
-    return isSiblingDeletion;
-  }
-
-  /**
-   * Page is deleted when indexing choice flips between different corpora (e.g. desktop, mobile,
-   * archive, scholar, etc.) for the same URL. It's only set for deletion cdocs. Downstreams using
-   * URL as key should ignore the current deletion if the field is set.
-   * @param isSiblingDeletion isSiblingDeletion or {@code null} for none
-   */
-  public CompositeDocIndexingInfo setIsSiblingDeletion(java.lang.Boolean isSiblingDeletion) {
-    this.isSiblingDeletion = isSiblingDeletion;
     return this;
   }
 

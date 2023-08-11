@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Labels tagged by Device Targeting library (Lumos). See go/hgr-lumos-integration and go/lumos-
- * feature-extraction for more details.
+ * feature-extraction for more details. Next ID: 2
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

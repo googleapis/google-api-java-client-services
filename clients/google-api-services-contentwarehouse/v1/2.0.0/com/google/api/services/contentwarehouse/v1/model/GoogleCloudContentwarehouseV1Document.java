@@ -98,6 +98,13 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
   private java.lang.String inlineRawDocument;
 
   /**
+   * Output only. Indicates if the document has a legal hold on it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean legalHold;
+
+  /**
    * The resource name of the document. Format:
    * projects/{project_number}/locations/{location}/documents/{document_id}. The name is ignored
    * when creating a document.
@@ -365,6 +372,23 @@ public final class GoogleCloudContentwarehouseV1Document extends com.google.api.
    */
   public GoogleCloudContentwarehouseV1Document encodeInlineRawDocument(byte[] inlineRawDocument) {
     this.inlineRawDocument = com.google.api.client.util.Base64.encodeBase64URLSafeString(inlineRawDocument);
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if the document has a legal hold on it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLegalHold() {
+    return legalHold;
+  }
+
+  /**
+   * Output only. Indicates if the document has a legal hold on it.
+   * @param legalHold legalHold or {@code null} for none
+   */
+  public GoogleCloudContentwarehouseV1Document setLegalHold(java.lang.Boolean legalHold) {
+    this.legalHold = legalHold;
     return this;
   }
 

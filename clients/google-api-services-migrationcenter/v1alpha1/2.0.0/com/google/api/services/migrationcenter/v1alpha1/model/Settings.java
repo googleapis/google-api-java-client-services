@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Disable Cloud Logging for the Migration Center API. Users are billed for the logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableCloudLogging;
+
+  /**
    * Output only. The name of the resource.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String preferenceSet;
+
+  /**
+   * Disable Cloud Logging for the Migration Center API. Users are billed for the logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableCloudLogging() {
+    return disableCloudLogging;
+  }
+
+  /**
+   * Disable Cloud Logging for the Migration Center API. Users are billed for the logs.
+   * @param disableCloudLogging disableCloudLogging or {@code null} for none
+   */
+  public Settings setDisableCloudLogging(java.lang.Boolean disableCloudLogging) {
+    this.disableCloudLogging = disableCloudLogging;
+    return this;
+  }
 
   /**
    * Output only. The name of the resource.

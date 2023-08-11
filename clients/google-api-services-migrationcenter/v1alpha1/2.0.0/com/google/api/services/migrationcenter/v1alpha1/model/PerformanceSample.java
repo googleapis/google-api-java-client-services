@@ -58,7 +58,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   private NetworkUsageSample network;
 
   /**
-   * Required. Time the sample was collected.
+   * Time the sample was collected. If omitted, the frame report time will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Time the sample was collected.
+   * Time the sample was collected. If omitted, the frame report time will be used.
    * @return value or {@code null} for none
    */
   public String getSampleTime() {
@@ -141,7 +141,7 @@ public final class PerformanceSample extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Time the sample was collected.
+   * Time the sample was collected. If omitted, the frame report time will be used.
    * @param sampleTime sampleTime or {@code null} for none
    */
   public PerformanceSample setSampleTime(String sampleTime) {

@@ -65,6 +65,13 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   private java.lang.String series;
 
   /**
+   * Compute Engine storage. Never empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ComputeStorageDescriptor> storage;
+
+  /**
    * Number of logical cores.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
    */
   public ComputeEngineShapeDescriptor setSeries(java.lang.String series) {
     this.series = series;
+    return this;
+  }
+
+  /**
+   * Compute Engine storage. Never empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ComputeStorageDescriptor> getStorage() {
+    return storage;
+  }
+
+  /**
+   * Compute Engine storage. Never empty.
+   * @param storage storage or {@code null} for none
+   */
+  public ComputeEngineShapeDescriptor setStorage(java.util.List<ComputeStorageDescriptor> storage) {
+    this.storage = storage;
     return this;
   }
 

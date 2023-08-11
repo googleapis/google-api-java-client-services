@@ -30,11 +30,35 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class Insight extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A generic insight about an asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenericInsight genericInsight;
+
+  /**
    * Output only. An insight about potential migrations for an asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MigrationInsight migrationInsight;
+
+  /**
+   * Output only. A generic insight about an asset.
+   * @return value or {@code null} for none
+   */
+  public GenericInsight getGenericInsight() {
+    return genericInsight;
+  }
+
+  /**
+   * Output only. A generic insight about an asset.
+   * @param genericInsight genericInsight or {@code null} for none
+   */
+  public Insight setGenericInsight(GenericInsight genericInsight) {
+    this.genericInsight = genericInsight;
+    return this;
+  }
 
   /**
    * Output only. An insight about potential migrations for an asset.

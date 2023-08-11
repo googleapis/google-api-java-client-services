@@ -31,11 +31,38 @@ package com.google.api.services.managedidentities.v1alpha1.model;
 public final class EnableMigrationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Period after which the migration would be auto disabled. If unspecified, a default
+   * timeout of 48h is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String enableDuration;
+
+  /**
    * Required. List of the on-prem domains to be migrated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OnPremDomainDetails> migratingDomains;
+
+  /**
+   * Optional. Period after which the migration would be auto disabled. If unspecified, a default
+   * timeout of 48h is used.
+   * @return value or {@code null} for none
+   */
+  public String getEnableDuration() {
+    return enableDuration;
+  }
+
+  /**
+   * Optional. Period after which the migration would be auto disabled. If unspecified, a default
+   * timeout of 48h is used.
+   * @param enableDuration enableDuration or {@code null} for none
+   */
+  public EnableMigrationRequest setEnableDuration(String enableDuration) {
+    this.enableDuration = enableDuration;
+    return this;
+  }
 
   /**
    * Required. List of the on-prem domains to be migrated.

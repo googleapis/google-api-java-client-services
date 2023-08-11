@@ -31,18 +31,33 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1SearchCatalogRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set, use searchAll permission granted on organizations from `include_org_ids` and
+   * projects from `include_project_ids` instead of the fine grained per resource permissions when
+   * filtering the search results. The only allowed `order_by` criteria for admin_search mode is
+   * `default`. Using this flags guarantees a full recall of the search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean adminSearch;
+
+  /**
    * Specifies the order of results. Currently supported case-sensitive values are: * `relevance`
    * that can only be descending * `last_modified_timestamp [asc|desc]` with descending (`desc`) as
-   * default * `default` that can only be descending If this parameter is omitted, it defaults to
-   * the descending `relevance`.
+   * default * `default` that can only be descending Search queries don't guarantee full recall.
+   * Results that match your query might not be returned, even in subsequent result pages.
+   * Additionally, returned (and not returned) results can vary if you repeat search queries. If you
+   * are experiencing recall issues and you don't have to fetch the results in any specific order,
+   * consider setting this parameter to `default`. If this parameter is omitted, it defaults to the
+   * descending `relevance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderBy;
 
   /**
-   * Number of results to return in a single search page. Can't be negative or 0, defaults to 10 in
-   * this case. The maximum number is 1000. If exceeded, throws an "invalid argument" exception.
+   * Upper bound on the number of results you can get in a single response. Can't be negative or 0,
+   * defaults to 10 in this case. The maximum number is 1000. If exceeded, throws an "invalid
+   * argument" exception.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,10 +94,37 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequest extends com.goog
   private GoogleCloudDatacatalogV1SearchCatalogRequestScope scope;
 
   /**
+   * Optional. If set, use searchAll permission granted on organizations from `include_org_ids` and
+   * projects from `include_project_ids` instead of the fine grained per resource permissions when
+   * filtering the search results. The only allowed `order_by` criteria for admin_search mode is
+   * `default`. Using this flags guarantees a full recall of the search results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAdminSearch() {
+    return adminSearch;
+  }
+
+  /**
+   * Optional. If set, use searchAll permission granted on organizations from `include_org_ids` and
+   * projects from `include_project_ids` instead of the fine grained per resource permissions when
+   * filtering the search results. The only allowed `order_by` criteria for admin_search mode is
+   * `default`. Using this flags guarantees a full recall of the search results.
+   * @param adminSearch adminSearch or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SearchCatalogRequest setAdminSearch(java.lang.Boolean adminSearch) {
+    this.adminSearch = adminSearch;
+    return this;
+  }
+
+  /**
    * Specifies the order of results. Currently supported case-sensitive values are: * `relevance`
    * that can only be descending * `last_modified_timestamp [asc|desc]` with descending (`desc`) as
-   * default * `default` that can only be descending If this parameter is omitted, it defaults to
-   * the descending `relevance`.
+   * default * `default` that can only be descending Search queries don't guarantee full recall.
+   * Results that match your query might not be returned, even in subsequent result pages.
+   * Additionally, returned (and not returned) results can vary if you repeat search queries. If you
+   * are experiencing recall issues and you don't have to fetch the results in any specific order,
+   * consider setting this parameter to `default`. If this parameter is omitted, it defaults to the
+   * descending `relevance`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -92,8 +134,12 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequest extends com.goog
   /**
    * Specifies the order of results. Currently supported case-sensitive values are: * `relevance`
    * that can only be descending * `last_modified_timestamp [asc|desc]` with descending (`desc`) as
-   * default * `default` that can only be descending If this parameter is omitted, it defaults to
-   * the descending `relevance`.
+   * default * `default` that can only be descending Search queries don't guarantee full recall.
+   * Results that match your query might not be returned, even in subsequent result pages.
+   * Additionally, returned (and not returned) results can vary if you repeat search queries. If you
+   * are experiencing recall issues and you don't have to fetch the results in any specific order,
+   * consider setting this parameter to `default`. If this parameter is omitted, it defaults to the
+   * descending `relevance`.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SearchCatalogRequest setOrderBy(java.lang.String orderBy) {
@@ -102,8 +148,9 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequest extends com.goog
   }
 
   /**
-   * Number of results to return in a single search page. Can't be negative or 0, defaults to 10 in
-   * this case. The maximum number is 1000. If exceeded, throws an "invalid argument" exception.
+   * Upper bound on the number of results you can get in a single response. Can't be negative or 0,
+   * defaults to 10 in this case. The maximum number is 1000. If exceeded, throws an "invalid
+   * argument" exception.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -111,8 +158,9 @@ public final class GoogleCloudDatacatalogV1SearchCatalogRequest extends com.goog
   }
 
   /**
-   * Number of results to return in a single search page. Can't be negative or 0, defaults to 10 in
-   * this case. The maximum number is 1000. If exceeded, throws an "invalid argument" exception.
+   * Upper bound on the number of results you can get in a single response. Can't be negative or 0,
+   * defaults to 10 in this case. The maximum number is 1000. If exceeded, throws an "invalid
+   * argument" exception.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SearchCatalogRequest setPageSize(java.lang.Integer pageSize) {

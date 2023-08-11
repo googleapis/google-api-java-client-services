@@ -229,9 +229,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1SqlDatabaseSystemSpec sqlDatabaseSystemSpec;
 
   /**
-   * The type of the entry. Only used for entries with types listed in the `EntryType` enum.
-   * Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must
-   * use the `user_specified_type`.
+   * The type of the entry. For details, see [`EntryType`](#entrytype).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -724,9 +722,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * The type of the entry. Only used for entries with types listed in the `EntryType` enum.
-   * Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must
-   * use the `user_specified_type`.
+   * The type of the entry. For details, see [`EntryType`](#entrytype).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -734,9 +730,7 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * The type of the entry. Only used for entries with types listed in the `EntryType` enum.
-   * Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must
-   * use the `user_specified_type`.
+   * The type of the entry. For details, see [`EntryType`](#entrytype).
    * @param type type or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setType(java.lang.String type) {

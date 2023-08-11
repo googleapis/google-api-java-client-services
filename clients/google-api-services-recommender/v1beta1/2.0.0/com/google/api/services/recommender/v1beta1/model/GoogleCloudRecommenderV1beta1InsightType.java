@@ -17,8 +17,7 @@
 package com.google.api.services.recommender.v1beta1.model;
 
 /**
- * The type of insight. See google3/googledata/devsite/site-cloud/en/recommender/docs/insights
- * /insight-types.md for more info.
+ * The type of insight.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Recommender API. For a detailed explanation see:

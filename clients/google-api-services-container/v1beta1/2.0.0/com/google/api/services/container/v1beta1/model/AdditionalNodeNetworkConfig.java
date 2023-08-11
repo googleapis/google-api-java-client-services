@@ -17,8 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the
- * ClusterUpdate message.
+ * AdditionalNodeNetworkConfig is the configuration for additional node networks within the
+ * NodeNetworkConfig message
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,64 +29,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdditionalPodRangesConfig extends com.google.api.client.json.GenericJson {
+public final class AdditionalNodeNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Name of the VPC where the additional interface belongs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RangeInfo> podRangeInfo;
+  private java.lang.String network;
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Name of the subnetwork where the additional interface belongs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> podRangeNames;
+  private java.lang.String subnetwork;
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Name of the VPC where the additional interface belongs
    * @return value or {@code null} for none
    */
-  public java.util.List<RangeInfo> getPodRangeInfo() {
-    return podRangeInfo;
+  public java.lang.String getNetwork() {
+    return network;
   }
 
   /**
-   * Output only. [Output only] Information for additional pod range.
-   * @param podRangeInfo podRangeInfo or {@code null} for none
+   * Name of the VPC where the additional interface belongs
+   * @param network network or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeInfo(java.util.List<RangeInfo> podRangeInfo) {
-    this.podRangeInfo = podRangeInfo;
+  public AdditionalNodeNetworkConfig setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Name of the subnetwork where the additional interface belongs
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPodRangeNames() {
-    return podRangeNames;
+  public java.lang.String getSubnetwork() {
+    return subnetwork;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
-   * @param podRangeNames podRangeNames or {@code null} for none
+   * Name of the subnetwork where the additional interface belongs
+   * @param subnetwork subnetwork or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeNames(java.util.List<java.lang.String> podRangeNames) {
-    this.podRangeNames = podRangeNames;
+  public AdditionalNodeNetworkConfig setSubnetwork(java.lang.String subnetwork) {
+    this.subnetwork = subnetwork;
     return this;
   }
 
   @Override
-  public AdditionalPodRangesConfig set(String fieldName, Object value) {
-    return (AdditionalPodRangesConfig) super.set(fieldName, value);
+  public AdditionalNodeNetworkConfig set(String fieldName, Object value) {
+    return (AdditionalNodeNetworkConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AdditionalPodRangesConfig clone() {
-    return (AdditionalPodRangesConfig) super.clone();
+  public AdditionalNodeNetworkConfig clone() {
+    return (AdditionalNodeNetworkConfig) super.clone();
   }
 
 }

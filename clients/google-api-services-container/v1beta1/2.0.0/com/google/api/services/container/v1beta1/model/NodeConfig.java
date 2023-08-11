@@ -125,6 +125,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private VirtualNIC gvnic;
 
   /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostMaintenancePolicy hostMaintenancePolicy;
+
+  /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
    * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
    * for available image types.
@@ -242,7 +250,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more inforamtion about
+   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
    * preemptible VM instances.
    * The value may be {@code null}.
    */
@@ -542,6 +550,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @return value or {@code null} for none
+   */
+  public HostMaintenancePolicy getHostMaintenancePolicy() {
+    return hostMaintenancePolicy;
+  }
+
+  /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @param hostMaintenancePolicy hostMaintenancePolicy or {@code null} for none
+   */
+  public NodeConfig setHostMaintenancePolicy(HostMaintenancePolicy hostMaintenancePolicy) {
+    this.hostMaintenancePolicy = hostMaintenancePolicy;
+    return this;
+  }
+
+  /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
    * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
    * for available image types.
@@ -811,7 +838,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more inforamtion about
+   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
    * preemptible VM instances.
    * @return value or {@code null} for none
    */
@@ -821,7 +848,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more inforamtion about
+   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
    * preemptible VM instances.
    * @param preemptible preemptible or {@code null} for none
    */

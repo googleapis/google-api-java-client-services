@@ -47,6 +47,13 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
   private java.lang.String evaluationMode;
 
   /**
+   * Optional. Binauthz policies that apply to this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PolicyBinding> policyBindings;
+
+  /**
    * This field is deprecated. Leave this unset and instead configure BinaryAuthorization using
    * evaluation_mode. If evaluation_mode is set to anything other than EVALUATION_MODE_UNSPECIFIED,
    * this field is ignored.
@@ -81,6 +88,23 @@ public final class BinaryAuthorization extends com.google.api.client.json.Generi
    */
   public BinaryAuthorization setEvaluationMode(java.lang.String evaluationMode) {
     this.evaluationMode = evaluationMode;
+    return this;
+  }
+
+  /**
+   * Optional. Binauthz policies that apply to this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PolicyBinding> getPolicyBindings() {
+    return policyBindings;
+  }
+
+  /**
+   * Optional. Binauthz policies that apply to this cluster.
+   * @param policyBindings policyBindings or {@code null} for none
+   */
+  public BinaryAuthorization setPolicyBindings(java.util.List<PolicyBinding> policyBindings) {
+    this.policyBindings = policyBindings;
     return this;
   }
 

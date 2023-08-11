@@ -38,6 +38,14 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
   private GcfsConfig gcfsConfig;
 
   /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostMaintenancePolicy hostMaintenancePolicy;
+
+  /**
    * Logging configuration for node pools.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
    */
   public NodeConfigDefaults setGcfsConfig(GcfsConfig gcfsConfig) {
     this.gcfsConfig = gcfsConfig;
+    return this;
+  }
+
+  /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @return value or {@code null} for none
+   */
+  public HostMaintenancePolicy getHostMaintenancePolicy() {
+    return hostMaintenancePolicy;
+  }
+
+  /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @param hostMaintenancePolicy hostMaintenancePolicy or {@code null} for none
+   */
+  public NodeConfigDefaults setHostMaintenancePolicy(HostMaintenancePolicy hostMaintenancePolicy) {
+    this.hostMaintenancePolicy = hostMaintenancePolicy;
     return this;
   }
 

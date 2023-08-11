@@ -31,6 +31,34 @@ package com.google.api.services.container.model;
 public final class NodeNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * We specify the additional node networks for this node pool using this list. Each node network
+   * corresponds to an additional interface
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdditionalNodeNetworkConfig> additionalNodeNetworkConfigs;
+
+  static {
+    // hack to force ProGuard to consider AdditionalNodeNetworkConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdditionalNodeNetworkConfig.class);
+  }
+
+  /**
+   * We specify the additional pod networks for this node pool using this list. Each pod network
+   * corresponds to an additional alias IP range for the node
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdditionalPodNetworkConfig> additionalPodNetworkConfigs;
+
+  static {
+    // hack to force ProGuard to consider AdditionalPodNetworkConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdditionalPodNetworkConfig.class);
+  }
+
+  /**
    * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided
    * for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither
    * `create_pod_range` or `pod_range` are specified, the cluster-level default
@@ -82,6 +110,14 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.String podIpv4CidrBlock;
 
   /**
+   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double podIpv4RangeUtilization;
+
+  /**
    * The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for
    * the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
    * Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed
@@ -90,6 +126,44 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String podRange;
+
+  /**
+   * We specify the additional node networks for this node pool using this list. Each node network
+   * corresponds to an additional interface
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdditionalNodeNetworkConfig> getAdditionalNodeNetworkConfigs() {
+    return additionalNodeNetworkConfigs;
+  }
+
+  /**
+   * We specify the additional node networks for this node pool using this list. Each node network
+   * corresponds to an additional interface
+   * @param additionalNodeNetworkConfigs additionalNodeNetworkConfigs or {@code null} for none
+   */
+  public NodeNetworkConfig setAdditionalNodeNetworkConfigs(java.util.List<AdditionalNodeNetworkConfig> additionalNodeNetworkConfigs) {
+    this.additionalNodeNetworkConfigs = additionalNodeNetworkConfigs;
+    return this;
+  }
+
+  /**
+   * We specify the additional pod networks for this node pool using this list. Each pod network
+   * corresponds to an additional alias IP range for the node
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdditionalPodNetworkConfig> getAdditionalPodNetworkConfigs() {
+    return additionalPodNetworkConfigs;
+  }
+
+  /**
+   * We specify the additional pod networks for this node pool using this list. Each pod network
+   * corresponds to an additional alias IP range for the node
+   * @param additionalPodNetworkConfigs additionalPodNetworkConfigs or {@code null} for none
+   */
+  public NodeNetworkConfig setAdditionalPodNetworkConfigs(java.util.List<AdditionalPodNetworkConfig> additionalPodNetworkConfigs) {
+    this.additionalPodNetworkConfigs = additionalPodNetworkConfigs;
+    return this;
+  }
 
   /**
    * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided
@@ -205,6 +279,25 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setPodIpv4CidrBlock(java.lang.String podIpv4CidrBlock) {
     this.podIpv4CidrBlock = podIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getPodIpv4RangeUtilization() {
+    return podIpv4RangeUtilization;
+  }
+
+  /**
+   * Output only. [Output only] The utilization of the IPv4 range for the pod. The ratio is
+   * Usage/[Total number of IPs in the secondary range], Usage=numNodes*numZones*podIPsPerNode.
+   * @param podIpv4RangeUtilization podIpv4RangeUtilization or {@code null} for none
+   */
+  public NodeNetworkConfig setPodIpv4RangeUtilization(java.lang.Double podIpv4RangeUtilization) {
+    this.podIpv4RangeUtilization = podIpv4RangeUtilization;
     return this;
   }
 

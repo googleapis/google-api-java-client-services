@@ -31,6 +31,13 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time that the container was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional container image ID, if provided by the container runtime. Uniquely identifies the
    * container image launched using a container image digest.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * The time that the container was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The time that the container was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Container setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Optional container image ID, if provided by the container runtime. Uniquely identifies the

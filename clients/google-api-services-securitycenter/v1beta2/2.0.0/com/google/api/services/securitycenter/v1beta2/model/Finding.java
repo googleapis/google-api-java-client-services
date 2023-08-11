@@ -42,6 +42,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Access access;
 
   /**
+   * The results of an attack path simulation relevant to this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AttackExposure attackExposure;
+
+  /**
    * The canonical name of the finding. It's either
    * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
    * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
@@ -386,6 +393,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAccess(Access access) {
     this.access = access;
+    return this;
+  }
+
+  /**
+   * The results of an attack path simulation relevant to this finding.
+   * @return value or {@code null} for none
+   */
+  public AttackExposure getAttackExposure() {
+    return attackExposure;
+  }
+
+  /**
+   * The results of an attack path simulation relevant to this finding.
+   * @param attackExposure attackExposure or {@code null} for none
+   */
+  public Finding setAttackExposure(AttackExposure attackExposure) {
+    this.attackExposure = attackExposure;
     return this;
   }
 

@@ -9163,6 +9163,985 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the EventThreatDetectionSettings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.EventThreatDetectionSettings.List request = securitycenter.eventThreatDetectionSettings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public EventThreatDetectionSettings eventThreatDetectionSettings() {
+      return new EventThreatDetectionSettings();
+    }
+
+    /**
+     * The "eventThreatDetectionSettings" collection of methods.
+     */
+    public class EventThreatDetectionSettings {
+
+      /**
+       * Validates the given Event Threat Detection custom module.
+       *
+       * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link ValidateCustomModule#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
+       *        "organizations/{organization}/eventThreatDetectionSettings".
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
+       * @return the request
+       */
+      public ValidateCustomModule validateCustomModule(java.lang.String parent, com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest content) throws java.io.IOException {
+        ValidateCustomModule result = new ValidateCustomModule(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ValidateCustomModule extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:validateCustomModule";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
+
+        /**
+         * Validates the given Event Threat Detection custom module.
+         *
+         * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link ValidateCustomModule#execute()} method to invoke the
+         * remote operation. <p> {@link ValidateCustomModule#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
+       *        "organizations/{organization}/eventThreatDetectionSettings".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
+         * @since 1.13
+         */
+        protected ValidateCustomModule(java.lang.String parent, com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+/eventThreatDetectionSettings$");
+          }
+        }
+
+        @Override
+        public ValidateCustomModule set$Xgafv(java.lang.String $Xgafv) {
+          return (ValidateCustomModule) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ValidateCustomModule setAccessToken(java.lang.String accessToken) {
+          return (ValidateCustomModule) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ValidateCustomModule setAlt(java.lang.String alt) {
+          return (ValidateCustomModule) super.setAlt(alt);
+        }
+
+        @Override
+        public ValidateCustomModule setCallback(java.lang.String callback) {
+          return (ValidateCustomModule) super.setCallback(callback);
+        }
+
+        @Override
+        public ValidateCustomModule setFields(java.lang.String fields) {
+          return (ValidateCustomModule) super.setFields(fields);
+        }
+
+        @Override
+        public ValidateCustomModule setKey(java.lang.String key) {
+          return (ValidateCustomModule) super.setKey(key);
+        }
+
+        @Override
+        public ValidateCustomModule setOauthToken(java.lang.String oauthToken) {
+          return (ValidateCustomModule) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ValidateCustomModule setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ValidateCustomModule) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ValidateCustomModule setQuotaUser(java.lang.String quotaUser) {
+          return (ValidateCustomModule) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ValidateCustomModule setUploadType(java.lang.String uploadType) {
+          return (ValidateCustomModule) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ValidateCustomModule setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ValidateCustomModule) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
+         * * "organizations/{organization}/eventThreatDetectionSettings".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
+       "organizations/{organization}/eventThreatDetectionSettings".
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
+         * * "organizations/{organization}/eventThreatDetectionSettings".
+         */
+        public ValidateCustomModule setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+/eventThreatDetectionSettings$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ValidateCustomModule set(String parameterName, Object value) {
+          return (ValidateCustomModule) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the CustomModules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.CustomModules.List request = securitycenter.customModules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CustomModules customModules() {
+        return new CustomModules();
+      }
+
+      /**
+       * The "customModules" collection of methods.
+       */
+      public class CustomModules {
+
+        /**
+         * Creates an Event Threat Detection custom module.
+         *
+         * Create a request for the method "customModules.create".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The new custom module's parent. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule> {
+
+          private static final String REST_PATH = "v1/{+parent}/customModules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
+
+          /**
+           * Creates an Event Threat Detection custom module.
+           *
+           * Create a request for the method "customModules.create".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The new custom module's parent. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The new custom module's parent. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The new custom module's parent. Its format is: *
+         "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The new custom module's parent. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an Event Threat Detection custom module.
+         *
+         * Create a request for the method "customModules.delete".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the custom module to delete. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+
+          /**
+           * Deletes an Event Threat Detection custom module.
+           *
+           * Create a request for the method "customModules.delete".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the custom module to delete. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the custom module to delete. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the custom module to delete. Its format is: *
+         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the custom module to delete. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an Event Threat Detection custom module.
+         *
+         * Create a request for the method "customModules.get".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the custom module to get. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+
+          /**
+           * Gets an Event Threat Detection custom module.
+           *
+           * Create a request for the method "customModules.get".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the custom module to get. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the custom module to get. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the custom module to get. Its format is: *
+         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the custom module to get. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Event Threat Detection custom modules.
+         *
+         * Create a request for the method "customModules.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings".
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListEventThreatDetectionCustomModulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customModules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
+
+          /**
+           * Lists Event Threat Detection custom modules.
+           *
+           * Create a request for the method "customModules.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings".
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListEventThreatDetectionCustomModulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the parent to list custom modules under. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the parent to list custom modules under. Its format is: *
+         "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the parent to list custom modules under. Its format is: *
+           * "organizations/{organization}/eventThreatDetectionSettings".
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of modules to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of modules to return. The service may return fewer than this value. If
+         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of modules to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
+           * the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListEventThreatDetectionCustomModules` call. Provide this
+         to retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListEventThreatDetectionCustomModules` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
+           * the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an Event Threat Detection custom module.
+         *
+         * Create a request for the method "customModules.patch".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
+         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
+         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+
+          /**
+           * Updates an Event Threat Detection custom module.
+           *
+           * Create a request for the method "customModules.patch".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
+         *        "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
+         *        "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
+         *        "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule content) {
+            super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The resource name of the Event Threat Detection custom module. Its format
+           * is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
+           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
+           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
+         "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
+         "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
+         "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The resource name of the Event Threat Detection custom module. Its format
+           * is: *
+           * "organizations/{organization}/eventThreatDetectionSettings/customModules/{module}". *
+           * "folders/{folder}/eventThreatDetectionSettings/customModules/{module}". *
+           * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** The list of fields to be updated. If empty all mutable fields will be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Findings collection.
      *
      * <p>The typical use is:</p>
@@ -11670,6 +12649,796 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
     }
     /**
+     * An accessor for creating requests from the ResourceValueConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.ResourceValueConfigs.List request = securitycenter.resourceValueConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ResourceValueConfigs resourceValueConfigs() {
+      return new ResourceValueConfigs();
+    }
+
+    /**
+     * The "resourceValueConfigs" collection of methods.
+     */
+    public class ResourceValueConfigs {
+
+      /**
+       * Creates a ResourceValueConfig for an organization. Maps user's tags to difference resource values
+       * for use by the attack path simulation.
+       *
+       * Create a request for the method "resourceValueConfigs.batchCreate".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
+       *        CreateResourceValueConfigRequest messages must either be empty or match this field.
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest}
+       * @return the request
+       */
+      public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest content) throws java.io.IOException {
+        BatchCreate result = new BatchCreate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCreate extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/resourceValueConfigs:batchCreate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a ResourceValueConfig for an organization. Maps user's tags to difference resource
+         * values for use by the attack path simulation.
+         *
+         * Create a request for the method "resourceValueConfigs.batchCreate".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
+       *        CreateResourceValueConfigRequest messages must either be empty or match this field.
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest}
+         * @since 1.13
+         */
+        protected BatchCreate(java.lang.String parent, com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest content) {
+          super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCreate setAccessToken(java.lang.String accessToken) {
+          return (BatchCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCreate setAlt(java.lang.String alt) {
+          return (BatchCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCreate setCallback(java.lang.String callback) {
+          return (BatchCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCreate setFields(java.lang.String fields) {
+          return (BatchCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCreate setKey(java.lang.String key) {
+          return (BatchCreate) super.setKey(key);
+        }
+
+        @Override
+        public BatchCreate setOauthToken(java.lang.String oauthToken) {
+          return (BatchCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCreate setUploadType(java.lang.String uploadType) {
+          return (BatchCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
+         * CreateResourceValueConfigRequest messages must either be empty or match this field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
+       CreateResourceValueConfigRequest messages must either be empty or match this field.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
+         * CreateResourceValueConfigRequest messages must either be empty or match this field.
+         */
+        public BatchCreate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchCreate set(String parameterName, Object value) {
+          return (BatchCreate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a ResourceValueConfig.
+       *
+       * Create a request for the method "resourceValueConfigs.delete".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the ResourceValueConfig to delete
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+
+        /**
+         * Deletes a ResourceValueConfig.
+         *
+         * Create a request for the method "resourceValueConfigs.delete".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the ResourceValueConfig to delete
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(SecurityCommandCenter.this, "DELETE", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the ResourceValueConfig to delete */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the ResourceValueConfig to delete
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the ResourceValueConfig to delete */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a ResourceValueConfig.
+       *
+       * Create a request for the method "resourceValueConfigs.get".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the resource value config to retrieve. Its format is
+       *        organizations/{organization}/resourceValueConfigs/{config_id}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+
+        /**
+         * Gets a ResourceValueConfig.
+         *
+         * Create a request for the method "resourceValueConfigs.get".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the resource value config to retrieve. Its format is
+       *        organizations/{organization}/resourceValueConfigs/{config_id}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the resource value config to retrieve. Its format is
+         * organizations/{organization}/resourceValueConfigs/{config_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the resource value config to retrieve. Its format is
+       organizations/{organization}/resourceValueConfigs/{config_id}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the resource value config to retrieve. Its format is
+         * organizations/{organization}/resourceValueConfigs/{config_id}.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all ResourceValueConfigs.
+       *
+       * Create a request for the method "resourceValueConfigs.list".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
+       *        "organizations/[organization_id]"
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListResourceValueConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/resourceValueConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists all ResourceValueConfigs.
+         *
+         * Create a request for the method "resourceValueConfigs.list".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
+       *        "organizations/[organization_id]"
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListResourceValueConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns the collection of resource value configs. Its format is
+         * "organizations/[organization_id]"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns the collection of resource value configs. Its format is
+       "organizations/[organization_id]"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns the collection of resource value configs. Its format is
+         * "organizations/[organization_id]"
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The number of results to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The number of results to return. The service may return fewer than this value. If unspecified, at
+       most 10 configs will be returned. The maximum value is 1000; values above 1000 will be coerced to
+       1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The number of results to return. The service may return fewer than this value. If
+         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
+         * 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListResourceValueConfigs` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListResourceValueConfigs` must match the call that provided the page token. page_size
+         * can be specified, and the new page_size will be used.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListResourceValueConfigs` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListResourceValueConfigs`
+       must match the call that provided the page token. page_size can be specified, and the new page_size
+       will be used.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListResourceValueConfigs` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListResourceValueConfigs` must match the call that provided the page token. page_size
+         * can be specified, and the new page_size will be used.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an existing ResourceValueConfigs with new rules.
+       *
+       * Create a request for the method "resourceValueConfigs.patch".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Name for the resource value config
+       * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+
+        /**
+         * Updates an existing ResourceValueConfigs with new rules.
+         *
+         * Create a request for the method "resourceValueConfigs.patch".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name for the resource value config
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig content) {
+          super(SecurityCommandCenter.this, "PATCH", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name for the resource value config */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name for the resource value config
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name for the resource value config */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/resourceValueConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to be updated. If empty all mutable fields will be updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the SecurityHealthAnalyticsSettings collection.
      *
      * <p>The typical use is:</p>
@@ -13136,6 +14905,1451 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
 
+      }
+    }
+    /**
+     * An accessor for creating requests from the Simulations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+     *   {@code SecurityCommandCenter.Simulations.List request = securitycenter.simulations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Simulations simulations() {
+      return new Simulations();
+    }
+
+    /**
+     * The "simulations" collection of methods.
+     */
+    public class Simulations {
+
+      /**
+       * Get the simulation by name or the latest simulation for the given organization.
+       *
+       * Create a request for the method "simulations.get".
+       *
+       * This request holds the parameters needed by the securitycenter server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The organization name or simulation name of this simulation Valid format:
+       *        "organizations/{organization}/simulations/latest"
+       *        "organizations/{organization}/simulations/{simulation}"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.Simulation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
+
+        /**
+         * Get the simulation by name or the latest simulation for the given organization.
+         *
+         * Create a request for the method "simulations.get".
+         *
+         * This request holds the parameters needed by the the securitycenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The organization name or simulation name of this simulation Valid format:
+       *        "organizations/{organization}/simulations/latest"
+       *        "organizations/{organization}/simulations/{simulation}"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.Simulation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/simulations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The organization name or simulation name of this simulation Valid format:
+         * "organizations/{organization}/simulations/latest"
+         * "organizations/{organization}/simulations/{simulation}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The organization name or simulation name of this simulation Valid format:
+       "organizations/{organization}/simulations/latest"
+       "organizations/{organization}/simulations/{simulation}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The organization name or simulation name of this simulation Valid format:
+         * "organizations/{organization}/simulations/latest"
+         * "organizations/{organization}/simulations/{simulation}"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/simulations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the AttackExposureResults collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.AttackExposureResults.List request = securitycenter.attackExposureResults().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AttackExposureResults attackExposureResults() {
+        return new AttackExposureResults();
+      }
+
+      /**
+       * The "attackExposureResults" collection of methods.
+       */
+      public class AttackExposureResults {
+
+        /**
+         * An accessor for creating requests from the AttackPaths collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+         *   {@code SecurityCommandCenter.AttackPaths.List request = securitycenter.attackPaths().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AttackPaths attackPaths() {
+          return new AttackPaths();
+        }
+
+        /**
+         * The "attackPaths" collection of methods.
+         */
+        public class AttackPaths {
+
+          /**
+           * Lists the attack paths for a set of simulation results or valued resources and filter.
+           *
+           * Create a request for the method "attackPaths.list".
+           *
+           * This request holds the parameters needed by the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/attackPaths";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+
+            /**
+             * Lists the attack paths for a set of simulation results or valued resources and filter.
+             *
+             * Create a request for the method "attackPaths.list".
+             *
+             * This request holds the parameters needed by the the securitycenter server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of parent to list attack paths. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of parent to list attack paths. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression that filters the attack path in the response. Supported fields:
+             * * `valued_resources` supports =
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression that filters the attack path in the response. Supported fields: *
+           `valued_resources` supports =
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression that filters the attack path in the response. Supported fields:
+             * * `valued_resources` supports =
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+           is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+             * continuation of a prior `ListAttackPaths` call, and that the system should return the
+             * next page of data.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
+           a prior `ListAttackPaths` call, and that the system should return the next page of data.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+             * continuation of a prior `ListAttackPaths` call, and that the system should return the
+             * next page of data.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ValuedResources collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+         *   {@code SecurityCommandCenter.ValuedResources.List request = securitycenter.valuedResources().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ValuedResources valuedResources() {
+          return new ValuedResources();
+        }
+
+        /**
+         * The "valuedResources" collection of methods.
+         */
+        public class ValuedResources {
+
+          /**
+           * Lists the valued resources for a set of simulation results and filter.
+           *
+           * Create a request for the method "valuedResources.list".
+           *
+           * This request holds the parameters needed by the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/valuedResources";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+
+            /**
+             * Lists the valued resources for a set of simulation results and filter.
+             *
+             * Create a request for the method "valuedResources.list".
+             *
+             * This request holds the parameters needed by the the securitycenter server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of parent to list valued resources. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of parent to list valued resources. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression that filters the valued resources in the response. Supported
+             * fields: * `resource_value` supports = * `resource_type` supports =
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression that filters the valued resources in the response. Supported fields: *
+           `resource_value` supports = * `resource_type` supports =
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression that filters the valued resources in the response. Supported
+             * fields: * `resource_value` supports = * `resource_type` supports =
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+           is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The value returned by the last `ListValuedResourcesResponse`; indicates that this is
+             * a continuation of a prior `ListValuedResources` call, and that the system should
+             * return the next page of data.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
+           of a prior `ListValuedResources` call, and that the system should return the next page of data.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The value returned by the last `ListValuedResourcesResponse`; indicates that this is
+             * a continuation of a prior `ListValuedResources` call, and that the system should
+             * return the next page of data.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the AttackPaths collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.AttackPaths.List request = securitycenter.attackPaths().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AttackPaths attackPaths() {
+        return new AttackPaths();
+      }
+
+      /**
+       * The "attackPaths" collection of methods.
+       */
+      public class AttackPaths {
+
+        /**
+         * Lists the attack paths for a set of simulation results or valued resources and filter.
+         *
+         * Create a request for the method "attackPaths.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/attackPaths";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
+
+          /**
+           * Lists the attack paths for a set of simulation results or valued resources and filter.
+           *
+           * Create a request for the method "attackPaths.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+         *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/simulations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of parent to list attack paths. Valid formats:
+           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
+           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}" "organizations/{organization}/simulations/{simulation}/valuedResourc
+           * es/{valued_resource}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+         "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
+         simulation}/attackExposureResults/{attack_exposure_result_v2}"
+         "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of parent to list attack paths. Valid formats:
+           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
+           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}" "organizations/{organization}/simulations/{simulation}/valuedResourc
+           * es/{valued_resource}"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/simulations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter expression that filters the attack path in the response. Supported fields: *
+           * `valued_resources` supports =
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression that filters the attack path in the response. Supported fields: *
+         `valued_resources` supports =
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression that filters the attack path in the response. Supported fields: *
+           * `valued_resources` supports =
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+         is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+           * continuation of a prior `ListAttackPaths` call, and that the system should return the
+           * next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
+         a prior `ListAttackPaths` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+           * continuation of a prior `ListAttackPaths` call, and that the system should return the
+           * next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the ValuedResources collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+       *   {@code SecurityCommandCenter.ValuedResources.List request = securitycenter.valuedResources().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ValuedResources valuedResources() {
+        return new ValuedResources();
+      }
+
+      /**
+       * The "valuedResources" collection of methods.
+       */
+      public class ValuedResources {
+
+        /**
+         * Lists the valued resources for a set of simulation results and filter.
+         *
+         * Create a request for the method "valuedResources.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/valuedResources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
+
+          /**
+           * Lists the valued resources for a set of simulation results and filter.
+           *
+           * Create a request for the method "valuedResources.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+         *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListValuedResourcesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/simulations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of parent to list valued resources. Valid formats:
+           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
+           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of parent to list valued resources. Valid formats: "organizations/{organization}",
+         "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
+         simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of parent to list valued resources. Valid formats:
+           * "organizations/{organization}", "organizations/{organization}/simulations/{simulation}"
+           * "organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
+           * posure_result_v2}"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/simulations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter expression that filters the valued resources in the response. Supported
+           * fields: * `resource_value` supports = * `resource_type` supports =
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression that filters the valued resources in the response. Supported fields: *
+         `resource_value` supports = * `resource_type` supports =
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter expression that filters the valued resources in the response. Supported
+           * fields: * `resource_value` supports = * `resource_type` supports =
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+         is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of results to return in a single response. Default is 10, minimum is
+           * 1, maximum is 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
+           * continuation of a prior `ListValuedResources` call, and that the system should return
+           * the next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
+         of a prior `ListValuedResources` call, and that the system should return the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
+           * continuation of a prior `ListValuedResources` call, and that the system should return
+           * the next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the AttackPaths collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code SecurityCommandCenter securitycenter = new SecurityCommandCenter(...);}
+         *   {@code SecurityCommandCenter.AttackPaths.List request = securitycenter.attackPaths().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AttackPaths attackPaths() {
+          return new AttackPaths();
+        }
+
+        /**
+         * The "attackPaths" collection of methods.
+         */
+        public class AttackPaths {
+
+          /**
+           * Lists the attack paths for a set of simulation results or valued resources and filter.
+           *
+           * Create a request for the method "attackPaths.list".
+           *
+           * This request holds the parameters needed by the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/attackPaths";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/valuedResources/[^/]+$");
+
+            /**
+             * Lists the attack paths for a set of simulation results or valued resources and filter.
+             *
+             * Create a request for the method "attackPaths.list".
+             *
+             * This request holds the parameters needed by the the securitycenter server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           *        "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simu
+           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           *        "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListAttackPathsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/valuedResources/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of parent to list attack paths. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of parent to list attack paths. Valid formats: "organizations/{organization}",
+           "organizations/{organization}/simulations/{simulation}" "organizations/{organization}/simulations/{
+           simulation}/attackExposureResults/{attack_exposure_result_v2}"
+           "organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of parent to list attack paths. Valid formats:
+             * "organizations/{organization}",
+             * "organizations/{organization}/simulations/{simulation}" "organizations/{organization}
+             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}" "organiz
+             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/simulations/[^/]+/valuedResources/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The filter expression that filters the attack path in the response. Supported fields:
+             * * `valued_resources` supports =
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression that filters the attack path in the response. Supported fields: *
+           `valued_resources` supports =
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression that filters the attack path in the response. Supported fields:
+             * * `valued_resources` supports =
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
+           is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of results to return in a single response. Default is 10, minimum
+             * is 1, maximum is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+             * continuation of a prior `ListAttackPaths` call, and that the system should return the
+             * next page of data.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
+           a prior `ListAttackPaths` call, and that the system should return the next page of data.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
+             * continuation of a prior `ListAttackPaths` call, and that the system should return the
+             * next page of data.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
     /**

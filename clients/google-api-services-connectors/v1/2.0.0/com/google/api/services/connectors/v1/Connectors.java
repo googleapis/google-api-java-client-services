@@ -1827,7 +1827,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * Required. You can modify only the fields listed below. To lock/unlock a connection: *
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
-           * `auth_config` * `destination_configs` * `node_config`
+           * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
+           * `eventing_enablement_type` * `eventing_config`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -1835,7 +1836,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           /** Required. You can modify only the fields listed below. To lock/unlock a connection: * `lock_config`
          To suspend/resume a connection: * `suspended` To update the connection details: * `description` *
          `labels` * `connector_version` * `config_variables` * `auth_config` * `destination_configs` *
-         `node_config`
+         `node_config` * `log_config` * `ssl_config` * `eventing_enablement_type` * `eventing_config`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1845,7 +1846,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * Required. You can modify only the fields listed below. To lock/unlock a connection: *
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
-           * `auth_config` * `destination_configs` * `node_config`
+           * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
+           * `eventing_enablement_type` * `eventing_config`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1855,6 +1857,137 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * RepaiEventing tries to repair eventing related event subscriptions.
+         *
+         * Create a request for the method "connections.repairEventing".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link RepairEventing#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the form: `projects/locations/connections`
+         * @param content the {@link com.google.api.services.connectors.v1.model.RepairEventingRequest}
+         * @return the request
+         */
+        public RepairEventing repairEventing(java.lang.String name, com.google.api.services.connectors.v1.model.RepairEventingRequest content) throws java.io.IOException {
+          RepairEventing result = new RepairEventing(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RepairEventing extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:repairEventing";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * RepaiEventing tries to repair eventing related event subscriptions.
+           *
+           * Create a request for the method "connections.repairEventing".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link RepairEventing#execute()} method to invoke the remote
+           * operation. <p> {@link RepairEventing#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. Resource name of the form: `projects/locations/connections`
+           * @param content the {@link com.google.api.services.connectors.v1.model.RepairEventingRequest}
+           * @since 1.13
+           */
+          protected RepairEventing(java.lang.String name, com.google.api.services.connectors.v1.model.RepairEventingRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public RepairEventing set$Xgafv(java.lang.String $Xgafv) {
+            return (RepairEventing) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RepairEventing setAccessToken(java.lang.String accessToken) {
+            return (RepairEventing) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RepairEventing setAlt(java.lang.String alt) {
+            return (RepairEventing) super.setAlt(alt);
+          }
+
+          @Override
+          public RepairEventing setCallback(java.lang.String callback) {
+            return (RepairEventing) super.setCallback(callback);
+          }
+
+          @Override
+          public RepairEventing setFields(java.lang.String fields) {
+            return (RepairEventing) super.setFields(fields);
+          }
+
+          @Override
+          public RepairEventing setKey(java.lang.String key) {
+            return (RepairEventing) super.setKey(key);
+          }
+
+          @Override
+          public RepairEventing setOauthToken(java.lang.String oauthToken) {
+            return (RepairEventing) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RepairEventing setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RepairEventing) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RepairEventing setQuotaUser(java.lang.String quotaUser) {
+            return (RepairEventing) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RepairEventing setUploadType(java.lang.String uploadType) {
+            return (RepairEventing) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RepairEventing setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RepairEventing) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the form: `projects/locations/connections` */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the form: `projects/locations/connections`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Resource name of the form: `projects/locations/connections` */
+          public RepairEventing setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RepairEventing set(String parameterName, Object value) {
+            return (RepairEventing) super.set(parameterName, value);
           }
         }
         /**
@@ -2314,6 +2447,978 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             @Override
             public Refresh set(String parameterName, Object value) {
               return (Refresh) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the EventSubscriptions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Connectors connectors = new Connectors(...);}
+         *   {@code Connectors.EventSubscriptions.List request = connectors.eventSubscriptions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public EventSubscriptions eventSubscriptions() {
+          return new EventSubscriptions();
+        }
+
+        /**
+         * The "eventSubscriptions" collection of methods.
+         */
+        public class EventSubscriptions {
+
+          /**
+           * Creates a new EventSubscription in a given project,location and connection.
+           *
+           * Create a request for the method "eventSubscriptions.create".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+           * @param content the {@link com.google.api.services.connectors.v1.model.EventSubscription}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.connectors.v1.model.EventSubscription content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/eventSubscriptions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+            /**
+             * Creates a new EventSubscription in a given project,location and connection.
+             *
+             * Create a request for the method "eventSubscriptions.create".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+             * @param content the {@link com.google.api.services.connectors.v1.model.EventSubscription}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.connectors.v1.model.EventSubscription content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent resource of the EventSubscription, of the form:
+             * `projects/locations/connections`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent resource of the EventSubscription, of the form:
+             * `projects/locations/connections`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. Identifier to assign to the Event Subscription. Must be unique within scope
+             * of the parent resource.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String eventSubscriptionId;
+
+            /** Required. Identifier to assign to the Event Subscription. Must be unique within scope of the parent
+           resource.
+             */
+            public java.lang.String getEventSubscriptionId() {
+              return eventSubscriptionId;
+            }
+
+            /**
+             * Required. Identifier to assign to the Event Subscription. Must be unique within scope
+             * of the parent resource.
+             */
+            public Create setEventSubscriptionId(java.lang.String eventSubscriptionId) {
+              this.eventSubscriptionId = eventSubscriptionId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single EventSubscription.
+           *
+           * Create a request for the method "eventSubscriptions.delete".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/locations/connections/eventsubscriptions`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+
+            /**
+             * Deletes a single EventSubscription.
+             *
+             * Create a request for the method "eventSubscriptions.delete".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/locations/connections/eventsubscriptions`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Connectors.this, "DELETE", REST_PATH, null, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventsubscriptions`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/locations/connections/eventsubscriptions`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventsubscriptions`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single EventSubscription.
+           *
+           * Create a request for the method "eventSubscriptions.get".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.EventSubscription> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+
+            /**
+             * Gets details of a single EventSubscription.
+             *
+             * Create a request for the method "eventSubscriptions.get".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.EventSubscription.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventSubscriptions`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventSubscriptions`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List EventSubscriptions in a given project,location and connection.
+           *
+           * Create a request for the method "eventSubscriptions.list".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListEventSubscriptionsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/eventSubscriptions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+            /**
+             * List EventSubscriptions in a given project,location and connection.
+             *
+             * Create a request for the method "eventSubscriptions.list".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListEventSubscriptionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent resource of the EventSubscription, of the form:
+             * `projects/locations/connections`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent resource of the EventSubscription, of the form: `projects/locations/connections`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent resource of the EventSubscription, of the form:
+             * `projects/locations/connections`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Order by parameters. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Order by parameters.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Order by parameters. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the parameters of a single EventSubscription.
+           *
+           * Create a request for the method "eventSubscriptions.patch".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{location}/co
+           *        nnections/{connection}/eventSubscriptions/{event_subscription}
+           * @param content the {@link com.google.api.services.connectors.v1.model.EventSubscription}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.connectors.v1.model.EventSubscription content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+
+            /**
+             * Updates the parameters of a single EventSubscription.
+             *
+             * Create a request for the method "eventSubscriptions.patch".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{location}/co
+           *        nnections/{connection}/eventSubscriptions/{event_subscription}
+             * @param content the {@link com.google.api.services.connectors.v1.model.EventSubscription}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.connectors.v1.model.EventSubscription content) {
+              super(Connectors.this, "PATCH", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the EventSubscription. Format: projects/{project}/location
+             * s/{location}/connections/{connection}/eventSubscriptions/{event_subscription}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{location}/c
+           onnections/{connection}/eventSubscriptions/{event_subscription}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the EventSubscription. Format: projects/{project}/location
+             * s/{location}/connections/{connection}/eventSubscriptions/{event_subscription}
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The list of fields to update. Fields are specified relative to the
+             * Subscription. A field will be overwritten if it is in the mask. You can modify only
+             * the fields listed below. To update the EventSubscription details: * `serviceAccount`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update. Fields are specified relative to the Subscription. A field
+           will be overwritten if it is in the mask. You can modify only the fields listed below. To update
+           the EventSubscription details: * `serviceAccount`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. The list of fields to update. Fields are specified relative to the
+             * Subscription. A field will be overwritten if it is in the mask. You can modify only
+             * the fields listed below. To update the EventSubscription details: * `serviceAccount`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * RetryEventSubscription retries the registration of Subscription.
+           *
+           * Create a request for the method "eventSubscriptions.retry".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Retry#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+           * @param content the {@link com.google.api.services.connectors.v1.model.RetryEventSubscriptionRequest}
+           * @return the request
+           */
+          public Retry retry(java.lang.String name, com.google.api.services.connectors.v1.model.RetryEventSubscriptionRequest content) throws java.io.IOException {
+            Retry result = new Retry(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Retry extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:retry";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+
+            /**
+             * RetryEventSubscription retries the registration of Subscription.
+             *
+             * Create a request for the method "eventSubscriptions.retry".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Retry#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Retry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+             * @param content the {@link com.google.api.services.connectors.v1.model.RetryEventSubscriptionRequest}
+             * @since 1.13
+             */
+            protected Retry(java.lang.String name, com.google.api.services.connectors.v1.model.RetryEventSubscriptionRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Retry set$Xgafv(java.lang.String $Xgafv) {
+              return (Retry) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Retry setAccessToken(java.lang.String accessToken) {
+              return (Retry) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Retry setAlt(java.lang.String alt) {
+              return (Retry) super.setAlt(alt);
+            }
+
+            @Override
+            public Retry setCallback(java.lang.String callback) {
+              return (Retry) super.setCallback(callback);
+            }
+
+            @Override
+            public Retry setFields(java.lang.String fields) {
+              return (Retry) super.setFields(fields);
+            }
+
+            @Override
+            public Retry setKey(java.lang.String key) {
+              return (Retry) super.setKey(key);
+            }
+
+            @Override
+            public Retry setOauthToken(java.lang.String oauthToken) {
+              return (Retry) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Retry setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Retry) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Retry setQuotaUser(java.lang.String quotaUser) {
+              return (Retry) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Retry setUploadType(java.lang.String uploadType) {
+              return (Retry) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Retry setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Retry) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventSubscriptions`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/locations/connections/eventSubscriptions`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form:
+             * `projects/locations/connections/eventSubscriptions`
+             */
+            public Retry setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/eventSubscriptions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Retry set(String parameterName, Object value) {
+              return (Retry) super.set(parameterName, value);
             }
           }
 
@@ -3355,24 +4460,17 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * Filter. https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filterin
-           * g.md#filtering.
-           */
+          /** Filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Filter.
-         https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filtering.md#filtering.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Filter. https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filterin
-           * g.md#filtering.
-           */
+          /** Filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -3758,6 +4856,159 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           @Override
           public GetSettings set(String parameterName, Object value) {
             return (GetSettings) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update the global settings of a project.
+         *
+         * Create a request for the method "global.updateSettings".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Resource name of the Connection. Format: projects/{project}/locations/global/settings}
+         * @param content the {@link com.google.api.services.connectors.v1.model.Settings}
+         * @return the request
+         */
+        public UpdateSettings updateSettings(java.lang.String name, com.google.api.services.connectors.v1.model.Settings content) throws java.io.IOException {
+          UpdateSettings result = new UpdateSettings(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateSettings extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/settings$");
+
+          /**
+           * Update the global settings of a project.
+           *
+           * Create a request for the method "global.updateSettings".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link UpdateSettings#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateSettings#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Output only. Resource name of the Connection. Format: projects/{project}/locations/global/settings}
+           * @param content the {@link com.google.api.services.connectors.v1.model.Settings}
+           * @since 1.13
+           */
+          protected UpdateSettings(java.lang.String name, com.google.api.services.connectors.v1.model.Settings content) {
+            super(Connectors.this, "PATCH", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/settings$");
+            }
+          }
+
+          @Override
+          public UpdateSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateSettings setAccessToken(java.lang.String accessToken) {
+            return (UpdateSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateSettings setAlt(java.lang.String alt) {
+            return (UpdateSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateSettings setCallback(java.lang.String callback) {
+            return (UpdateSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateSettings setFields(java.lang.String fields) {
+            return (UpdateSettings) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateSettings setKey(java.lang.String key) {
+            return (UpdateSettings) super.setKey(key);
+          }
+
+          @Override
+          public UpdateSettings setOauthToken(java.lang.String oauthToken) {
+            return (UpdateSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateSettings setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateSettings setUploadType(java.lang.String uploadType) {
+            return (UpdateSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Resource name of the Connection. Format:
+           * projects/{project}/locations/global/settings}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Resource name of the Connection. Format: projects/{project}/locations/global/settings}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Resource name of the Connection. Format:
+           * projects/{project}/locations/global/settings}
+           */
+          public UpdateSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/settings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. The list of fields to update. */
+          public UpdateSettings setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateSettings set(String parameterName, Object value) {
+            return (UpdateSettings) super.set(parameterName, value);
           }
         }
 
@@ -4347,24 +5598,17 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * Filter. https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filter
-             * ing.md#filtering.
-             */
+            /** Filter. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Filter.
-           https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filtering.md#filtering.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * Filter. https://g3doc.corp.google.com/cloud/control2/g3doc/dev/apihosting/list_filter
-             * ing.md#filtering.
-             */
+            /** Filter. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -6825,6 +8069,361 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               }
             }
 
+            /**
+             * An accessor for creating requests from the Eventtypes collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code Connectors connectors = new Connectors(...);}
+             *   {@code Connectors.Eventtypes.List request = connectors.eventtypes().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Eventtypes eventtypes() {
+              return new Eventtypes();
+            }
+
+            /**
+             * The "eventtypes" collection of methods.
+             */
+            public class Eventtypes {
+
+              /**
+               * Gets details of a single event type.
+               *
+               * Create a request for the method "eventtypes.get".
+               *
+               * This request holds the parameters needed by the connectors server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions/eventtypes`
+               *        Only global location is supported for EventType resource.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends ConnectorsRequest<com.google.api.services.connectors.v1.model.EventType> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+/eventtypes/[^/]+$");
+
+                /**
+                 * Gets details of a single event type.
+                 *
+                 * Create a request for the method "eventtypes.get".
+                 *
+                 * This request holds the parameters needed by the the connectors server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Resource name of the form: `projects/locations/providers/connectors/versions/eventtypes`
+               *        Only global location is supported for EventType resource.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.EventType.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+/eventtypes/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Resource name of the form:
+                 * `projects/locations/providers/connectors/versions/eventtypes` Only global
+                 * location is supported for EventType resource.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Resource name of the form: `projects/locations/providers/connectors/versions/eventtypes`
+               Only global location is supported for EventType resource.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Resource name of the form:
+                 * `projects/locations/providers/connectors/versions/eventtypes` Only global
+                 * location is supported for EventType resource.
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+/eventtypes/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists Event Types in a given Connector Version.
+               *
+               * Create a request for the method "eventtypes.list".
+               *
+               * This request holds the parameters needed by the connectors server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. Parent resource of the connectors, of the form:
+               *        `projects/locations/providers/connectors/versions` Only global location is supported for
+               *        EventType resource.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ListEventTypesResponse> {
+
+                private static final String REST_PATH = "v1/{+parent}/eventtypes";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+
+                /**
+                 * Lists Event Types in a given Connector Version.
+                 *
+                 * Create a request for the method "eventtypes.list".
+                 *
+                 * This request holds the parameters needed by the the connectors server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. Parent resource of the connectors, of the form:
+               *        `projects/locations/providers/connectors/versions` Only global location is supported for
+               *        EventType resource.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.ListEventTypesResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Parent resource of the connectors, of the form:
+                 * `projects/locations/providers/connectors/versions` Only global location is
+                 * supported for EventType resource.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. Parent resource of the connectors, of the form:
+               `projects/locations/providers/connectors/versions` Only global location is supported for EventType
+               resource.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. Parent resource of the connectors, of the form:
+                 * `projects/locations/providers/connectors/versions` Only global location is
+                 * supported for EventType resource.
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/providers/[^/]+/connectors/[^/]+/versions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /** Page size. */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Page size.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /** Page size. */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /** Page token. */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /** Page token. */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
         }
       }

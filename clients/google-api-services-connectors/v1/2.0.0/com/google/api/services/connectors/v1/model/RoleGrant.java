@@ -17,10 +17,10 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * This configuration defines all the Cloud IAM roles that needs to be granted to a particular GCP
- * resource for the selected principal like service account. These configurations will let UI
- * display to customers what IAM roles need to be granted by them. Or these configurations can be
- * used by the UI to render a 'grant' button to do the same on behalf of the user.
+ * This configuration defines all the Cloud IAM roles that needs to be granted to a particular
+ * Google Cloud resource for the selected principal like service account. These configurations will
+ * let UI display to customers what IAM roles need to be granted by them. Or these configurations
+ * can be used by the UI to render a 'grant' button to do the same on behalf of the user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:

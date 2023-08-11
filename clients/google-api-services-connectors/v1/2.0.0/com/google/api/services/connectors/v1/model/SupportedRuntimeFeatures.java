@@ -17,9 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Supported runtime features of a connector version. This is passed to the management layer to add
- * a new connector version by the connector developer. Details about how this proto is passed to the
- * management layer is covered in this doc - go/runtime-manifest.
+ * Supported runtime features of a connector version.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:

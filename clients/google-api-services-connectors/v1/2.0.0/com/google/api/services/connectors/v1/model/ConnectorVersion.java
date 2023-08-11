@@ -56,6 +56,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. Infra configs supported by Connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorInfraConfig connectorInfraConfig;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -82,6 +89,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private EgressControlConfig egressControlConfig;
+
+  /**
+   * Output only. Eventing configuration supported by the Connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventingConfigTemplate eventingConfigTemplate;
 
   /**
    * Output only. Resource labels to represent user-provided metadata. Refer to cloud documentation
@@ -184,6 +198,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. Infra configs supported by Connector.
+   * @return value or {@code null} for none
+   */
+  public ConnectorInfraConfig getConnectorInfraConfig() {
+    return connectorInfraConfig;
+  }
+
+  /**
+   * Output only. Infra configs supported by Connector.
+   * @param connectorInfraConfig connectorInfraConfig or {@code null} for none
+   */
+  public ConnectorVersion setConnectorInfraConfig(ConnectorInfraConfig connectorInfraConfig) {
+    this.connectorInfraConfig = connectorInfraConfig;
+    return this;
+  }
+
+  /**
    * Output only. Created time.
    * @return value or {@code null} for none
    */
@@ -248,6 +279,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setEgressControlConfig(EgressControlConfig egressControlConfig) {
     this.egressControlConfig = egressControlConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Eventing configuration supported by the Connector.
+   * @return value or {@code null} for none
+   */
+  public EventingConfigTemplate getEventingConfigTemplate() {
+    return eventingConfigTemplate;
+  }
+
+  /**
+   * Output only. Eventing configuration supported by the Connector.
+   * @param eventingConfigTemplate eventingConfigTemplate or {@code null} for none
+   */
+  public ConnectorVersion setEventingConfigTemplate(EventingConfigTemplate eventingConfigTemplate) {
+    this.eventingConfigTemplate = eventingConfigTemplate;
     return this;
   }
 

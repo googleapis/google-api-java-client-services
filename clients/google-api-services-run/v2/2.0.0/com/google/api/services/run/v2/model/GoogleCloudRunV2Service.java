@@ -95,7 +95,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String creator;
 
   /**
-   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * One or more custom audiences that you want this service to support. Specify each custom
+   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
+   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
+   * /custom-audiences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,6 +278,14 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.util.List<GoogleCloudRunV2TrafficTargetStatus> trafficStatuses;
 
   /**
+   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
+   * non-serving tagged traffic targets based on creation item. The default value is 2000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long trafficTagsCleanupThreshold;
+
+  /**
    * Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and
    * guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -430,7 +441,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * One or more custom audiences that you want this service to support. Specify each custom
+   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
+   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
+   * /custom-audiences.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomAudiences() {
@@ -438,7 +452,10 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Custom audiences that can be used in the audience field of ID token for authenticated requests.
+   * One or more custom audiences that you want this service to support. Specify each custom
+   * audience as the full URL in a string. The custom audiences are encoded in the token and used to
+   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
+   * /custom-audiences.
    * @param customAudiences customAudiences or {@code null} for none
    */
   public GoogleCloudRunV2Service setCustomAudiences(java.util.List<java.lang.String> customAudiences) {
@@ -846,6 +863,25 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setTrafficStatuses(java.util.List<GoogleCloudRunV2TrafficTargetStatus> trafficStatuses) {
     this.trafficStatuses = trafficStatuses;
+    return this;
+  }
+
+  /**
+   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
+   * non-serving tagged traffic targets based on creation item. The default value is 2000.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTrafficTagsCleanupThreshold() {
+    return trafficTagsCleanupThreshold;
+  }
+
+  /**
+   * Optional. Override the traffic tag threshold limit. Garbage collection will start cleaning up
+   * non-serving tagged traffic targets based on creation item. The default value is 2000.
+   * @param trafficTagsCleanupThreshold trafficTagsCleanupThreshold or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setTrafficTagsCleanupThreshold(java.lang.Long trafficTagsCleanupThreshold) {
+    this.trafficTagsCleanupThreshold = trafficTagsCleanupThreshold;
     return this;
   }
 

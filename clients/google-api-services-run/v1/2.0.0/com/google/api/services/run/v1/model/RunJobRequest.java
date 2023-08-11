@@ -31,8 +31,8 @@ public final class RunJobRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Private preview feature. Currently only available by invitation. Overrides
-   * specification for a given execution of a job. If provided, overrides will be applied to update
-   * the execution or task spec.
+   * specification for a given execution of a job. The specified values update the specification of
+   * the created execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class RunJobRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Private preview feature. Currently only available by invitation. Overrides
-   * specification for a given execution of a job. If provided, overrides will be applied to update
-   * the execution or task spec.
+   * specification for a given execution of a job. The specified values update the specification of
+   * the created execution.
    * @return value or {@code null} for none
    */
   public Overrides getOverrides() {
@@ -50,8 +50,8 @@ public final class RunJobRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Private preview feature. Currently only available by invitation. Overrides
-   * specification for a given execution of a job. If provided, overrides will be applied to update
-   * the execution or task spec.
+   * specification for a given execution of a job. The specified values update the specification of
+   * the created execution.
    * @param overrides overrides or {@code null} for none
    */
   public RunJobRequest setOverrides(Overrides overrides) {

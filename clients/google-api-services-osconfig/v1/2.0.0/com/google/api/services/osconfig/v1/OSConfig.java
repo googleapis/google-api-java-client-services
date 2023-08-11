@@ -672,7 +672,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           public class Reports {
 
             /**
-             * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+             * Get the OS policy assignment report for the specified Compute Engine VM instance.
              *
              * Create a request for the method "reports.get".
              *
@@ -700,7 +700,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+/report$");
 
               /**
-               * Get the OS policy asssignment report for the specified Compute Engine VM instance.
+               * Get the OS policy assignment report for the specified Compute Engine VM instance.
                *
                * Create a request for the method "reports.get".
                *
@@ -834,7 +834,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
+             * List OS policy assignment reports for all Compute Engine VM instances in the specified zone.
              *
              * Create a request for the method "reports.list".
              *
@@ -871,7 +871,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+/osPolicyAssignments/[^/]+$");
 
               /**
-               * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
+               * List OS policy assignment reports for all Compute Engine VM instances in the specified zone.
                *
                * Create a request for the method "reports.list".
                *

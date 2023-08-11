@@ -1122,6 +1122,154 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
     public class Locations {
 
       /**
+       * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
+       * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are
+       * specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these specified
+       * changes.
+       *
+       * Create a request for the method "locations.orgPolicyViolationsPreviews".
+       *
+       * This request holds the parameters needed by the policysimulator server.  After setting any
+       * optional parameters, call the {@link OrgPolicyViolationsPreviewsRequest#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+       *        `organizations/my-example-org/locations/global`
+       * @param content the {@link com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview}
+       * @return the request
+       */
+      public OrgPolicyViolationsPreviewsRequest orgPolicyViolationsPreviews(java.lang.String parent, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview content) throws java.io.IOException {
+        OrgPolicyViolationsPreviewsRequest result = new OrgPolicyViolationsPreviewsRequest(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class OrgPolicyViolationsPreviewsRequest extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/orgPolicyViolationsPreviews";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+        /**
+         * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
+         * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy
+         * are specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these
+         * specified changes.
+         *
+         * Create a request for the method "locations.orgPolicyViolationsPreviews".
+         *
+         * This request holds the parameters needed by the the policysimulator server.  After setting any
+         * optional parameters, call the {@link OrgPolicyViolationsPreviewsRequest#execute()} method to
+         * invoke the remote operation. <p> {@link OrgPolicyViolationsPreviewsRequest#initialize(com.googl
+         * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+         * this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+       *        `organizations/my-example-org/locations/global`
+         * @param content the {@link com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview}
+         * @since 1.13
+         */
+        protected OrgPolicyViolationsPreviewsRequest(java.lang.String parent, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview content) {
+          super(PolicySimulator.this, "POST", REST_PATH, content, com.google.api.services.policysimulator.v1beta.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest set$Xgafv(java.lang.String $Xgafv) {
+          return (OrgPolicyViolationsPreviewsRequest) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setAccessToken(java.lang.String accessToken) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setAlt(java.lang.String alt) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setAlt(alt);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setCallback(java.lang.String callback) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setCallback(callback);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setFields(java.lang.String fields) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setFields(fields);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setKey(java.lang.String key) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setKey(key);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setOauthToken(java.lang.String oauthToken) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setQuotaUser(java.lang.String quotaUser) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setUploadType(java.lang.String uploadType) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest setUploadProtocol(java.lang.String uploadProtocol) {
+          return (OrgPolicyViolationsPreviewsRequest) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+         * Example: `organizations/my-example-org/locations/global`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+       `organizations/my-example-org/locations/global`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+         * Example: `organizations/my-example-org/locations/global`
+         */
+        public OrgPolicyViolationsPreviewsRequest setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public OrgPolicyViolationsPreviewsRequest set(String parameterName, Object value) {
+          return (OrgPolicyViolationsPreviewsRequest) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the OrgPolicyViolationsPreviews collection.
        *
        * <p>The typical use is:</p>
@@ -1140,6 +1288,342 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
        * The "orgPolicyViolationsPreviews" collection of methods.
        */
       public class OrgPolicyViolationsPreviews {
+
+        /**
+         * GetOrgPolicyViolationsPreview gets the specified OrgPolicyViolationsPreview. Each
+         * OrgPolicyViolationsPreview is available for at least 7 days.
+         *
+         * Create a request for the method "orgPolicyViolationsPreviews.get".
+         *
+         * This request holds the parameters needed by the policysimulator server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the OrgPolicyViolationsPreview to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+
+          /**
+           * GetOrgPolicyViolationsPreview gets the specified OrgPolicyViolationsPreview. Each
+           * OrgPolicyViolationsPreview is available for at least 7 days.
+           *
+           * Create a request for the method "orgPolicyViolationsPreviews.get".
+           *
+           * This request holds the parameters needed by the the policysimulator server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the OrgPolicyViolationsPreview to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaOrgPolicyViolationsPreview.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the OrgPolicyViolationsPreview to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the OrgPolicyViolationsPreview to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the OrgPolicyViolationsPreview to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * ListOrgPolicyViolationsPreviews lists each OrgPolicyViolationsPreview in an organization. Each
+         * OrgPolicyViolationsPreview is available for at least 7 days.
+         *
+         * Create a request for the method "orgPolicyViolationsPreviews.list".
+         *
+         * This request holds the parameters needed by the policysimulator server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent the violations are scoped to. Format: organizations/{organization}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaListOrgPolicyViolationsPreviewsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/orgPolicyViolationsPreviews";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * ListOrgPolicyViolationsPreviews lists each OrgPolicyViolationsPreview in an organization. Each
+           * OrgPolicyViolationsPreview is available for at least 7 days.
+           *
+           * Create a request for the method "orgPolicyViolationsPreviews.list".
+           *
+           * This request holds the parameters needed by the the policysimulator server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent the violations are scoped to. Format: organizations/{organization}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaListOrgPolicyViolationsPreviewsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent the violations are scoped to. Format: organizations/{organization}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent the violations are scoped to. Format: organizations/{organization}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent the violations are scoped to. Format: organizations/{organization}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of items to return. The service may return fewer than this value. If
+           * unspecified, at most 5 items will be returned. The maximum value is 10; values above 10
+           * will be coerced to 10.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return. The service may return fewer than this value. If
+         unspecified, at most 5 items will be returned. The maximum value is 10; values above 10 will be
+         coerced to 10.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of items to return. The service may return fewer than this value. If
+           * unspecified, at most 5 items will be returned. The maximum value is 10; values above 10
+           * will be coerced to 10.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous call. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Operations collection.
@@ -1299,6 +1783,230 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the OrgPolicyViolations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code PolicySimulator policysimulator = new PolicySimulator(...);}
+         *   {@code PolicySimulator.OrgPolicyViolations.List request = policysimulator.orgPolicyViolations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public OrgPolicyViolations orgPolicyViolations() {
+          return new OrgPolicyViolations();
+        }
+
+        /**
+         * The "orgPolicyViolations" collection of methods.
+         */
+        public class OrgPolicyViolations {
+
+          /**
+           * ListOrgPolicyViolations lists the OrgPolicyViolations that are present in an
+           * OrgPolicyViolationsPreview.
+           *
+           * Create a request for the method "orgPolicyViolations.list".
+           *
+           * This request holds the parameters needed by the policysimulator server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The OrgPolicyViolationsPreview to get OrgPolicyViolations from. Format: organizations/{org
+           *        anization}/locations/{location}/orgPolicyViolationsPreviews/{orgPolicyViolationsPreview}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaListOrgPolicyViolationsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/orgPolicyViolations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+
+            /**
+             * ListOrgPolicyViolations lists the OrgPolicyViolations that are present in an
+             * OrgPolicyViolationsPreview.
+             *
+             * Create a request for the method "orgPolicyViolations.list".
+             *
+             * This request holds the parameters needed by the the policysimulator server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The OrgPolicyViolationsPreview to get OrgPolicyViolations from. Format: organizations/{org
+           *        anization}/locations/{location}/orgPolicyViolationsPreviews/{orgPolicyViolationsPreview}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(PolicySimulator.this, "GET", REST_PATH, null, com.google.api.services.policysimulator.v1beta.model.GoogleCloudPolicysimulatorV1betaListOrgPolicyViolationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The OrgPolicyViolationsPreview to get OrgPolicyViolations from. Format: org
+             * anizations/{organization}/locations/{location}/orgPolicyViolationsPreviews/{orgPolicy
+             * ViolationsPreview}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The OrgPolicyViolationsPreview to get OrgPolicyViolations from. Format: organizations/{or
+           ganization}/locations/{location}/orgPolicyViolationsPreviews/{orgPolicyViolationsPreview}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The OrgPolicyViolationsPreview to get OrgPolicyViolations from. Format: org
+             * anizations/{organization}/locations/{location}/orgPolicyViolationsPreviews/{orgPolicy
+             * ViolationsPreview}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/orgPolicyViolationsPreviews/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of items to return. The service may return fewer than this value.
+             * If unspecified, at most 50 items will be returned. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return. The service may return fewer than this value. If
+           unspecified, at most 50 items will be returned. The maximum value is 1000; values above 1000 will
+           be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of items to return. The service may return fewer than this value.
+             * If unspecified, at most 50 items will be returned. The maximum value is 1000; values
+             * above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters must match the call that provided the
+             * page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous call. Provide this to retrieve the subsequent page. When
+           paginating, all other parameters must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters must match the call that provided the
+             * page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
 

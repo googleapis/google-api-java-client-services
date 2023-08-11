@@ -48,11 +48,11 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
-   * "projects/123/policies/compute.disableSerialPortAccess". Note:
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
    * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests,
    * but responses will return the name using the equivalent project number.
    * The value may be {@code null}.
@@ -105,11 +105,11 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
-   * "projects/123/policies/compute.disableSerialPortAccess". Note:
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
    * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests,
    * but responses will return the name using the equivalent project number.
    * @return value or {@code null} for none
@@ -120,11 +120,11 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * constraint_name is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint which this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
-   * "projects/123/policies/compute.disableSerialPortAccess". Note:
+   * `projects/123/policies/compute.disableSerialPortAccess`. Note:
    * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests,
    * but responses will return the name using the equivalent project number.
    * @param name name or {@code null} for none

@@ -38,7 +38,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
-   * service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
+   * service account has the needed cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
    * key.The Cloud KMS key used by the Log Router can be updated by changing the kms_key_name to a
    * new valid key name or disabled by setting the key name to an empty string. Encryption
    * operations that are in progress will be completed with the key that was in use when they
@@ -88,7 +88,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
-   * service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
+   * service account has the needed cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
    * key.The Cloud KMS key used by the Log Router can be updated by changing the kms_key_name to a
    * new valid key name or disabled by setting the key name to an empty string. Encryption
    * operations that are in progress will be completed with the key that was in use when they
@@ -107,7 +107,7 @@ public final class CmekSettings extends com.google.api.client.json.GenericJson {
    * "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryptoKeys/[KEY]" For
    * example:"projects/my-project/locations/us-central1/keyRings/my-ring/cryptoKeys/my-key"To enable
    * CMEK for the Log Router, set this field to a valid kms_key_name for which the associated
-   * service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
+   * service account has the needed cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the
    * key.The Cloud KMS key used by the Log Router can be updated by changing the kms_key_name to a
    * new valid key name or disabled by setting the key name to an empty string. Encryption
    * operations that are in progress will be completed with the key that was in use when they

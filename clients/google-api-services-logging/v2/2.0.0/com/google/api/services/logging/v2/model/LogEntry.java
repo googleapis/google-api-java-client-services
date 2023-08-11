@@ -79,7 +79,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
+   * entry is processed as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * The value may be {@code null}.
@@ -185,7 +185,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
    * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
    * Logging.
    * The value may be {@code null}.
    */
@@ -316,7 +316,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
+   * entry is processed as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * @return value or {@code null} for none
@@ -336,7 +336,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * less than 512 characters long and can only include the following characters: upper and lower
    * case alphanumeric characters, forward-slash, underscore, hyphen, and period.For backward
    * compatibility, if log_name begins with a forward-slash, such as /projects/..., then the log
-   * entry is ingested as usual, but the forward-slash is removed. Listing the log entry will not
+   * entry is processed as usual, but the forward-slash is removed. Listing the log entry will not
    * show the leading slash and filtering for a log name with a leading slash will never return any
    * results.
    * @param logName logName or {@code null} for none
@@ -565,7 +565,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
    * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
    * Logging.
    * @return value or {@code null} for none
    */
@@ -580,7 +580,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * trailing zeros in the fractional seconds might be omitted when the timestamp is
    * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
    * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries aren't ingested by
+   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
    * Logging.
    * @param timestamp timestamp or {@code null} for none
    */

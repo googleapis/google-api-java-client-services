@@ -311,7 +311,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private RandomizeRangeRequest randomizeRange;
 
   /**
-   * Refreshs one or multiple data sources and associated dbobjects.
+   * Refreshes one or multiple data sources and associated dbobjects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1168,7 +1168,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Refreshs one or multiple data sources and associated dbobjects.
+   * Refreshes one or multiple data sources and associated dbobjects.
    * @return value or {@code null} for none
    */
   public RefreshDataSourceRequest getRefreshDataSource() {
@@ -1176,7 +1176,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Refreshs one or multiple data sources and associated dbobjects.
+   * Refreshes one or multiple data sources and associated dbobjects.
    * @param refreshDataSource refreshDataSource or {@code null} for none
    */
   public Request setRefreshDataSource(RefreshDataSourceRequest refreshDataSource) {

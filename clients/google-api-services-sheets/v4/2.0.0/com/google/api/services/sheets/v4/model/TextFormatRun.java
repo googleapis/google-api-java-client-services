@@ -38,7 +38,7 @@ public final class TextFormatRun extends com.google.api.client.json.GenericJson 
   private TextFormat format;
 
   /**
-   * The character index where this run starts.
+   * The zero-based character index where this run starts, in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class TextFormatRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The character index where this run starts.
+   * The zero-based character index where this run starts, in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -70,7 +70,7 @@ public final class TextFormatRun extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The character index where this run starts.
+   * The zero-based character index where this run starts, in UTF-16 code units.
    * @param startIndex startIndex or {@code null} for none
    */
   public TextFormatRun setStartIndex(java.lang.Integer startIndex) {

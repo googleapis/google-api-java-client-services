@@ -30,18 +30,18 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryComponent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The component is a SAP application.
+   * Optional. The component is a SAP application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String applicationType;
+  private SapDiscoveryComponentApplicationProperties applicationProperties;
 
   /**
-   * The component is a SAP database.
+   * Optional. The component is a SAP database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String databaseType;
+  private SapDiscoveryComponentDatabaseProperties databaseProperties;
 
   /**
    * Pantheon Project in which the resources reside.
@@ -65,36 +65,36 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   private java.lang.String sid;
 
   /**
-   * The component is a SAP application.
+   * Optional. The component is a SAP application.
    * @return value or {@code null} for none
    */
-  public java.lang.String getApplicationType() {
-    return applicationType;
+  public SapDiscoveryComponentApplicationProperties getApplicationProperties() {
+    return applicationProperties;
   }
 
   /**
-   * The component is a SAP application.
-   * @param applicationType applicationType or {@code null} for none
+   * Optional. The component is a SAP application.
+   * @param applicationProperties applicationProperties or {@code null} for none
    */
-  public SapDiscoveryComponent setApplicationType(java.lang.String applicationType) {
-    this.applicationType = applicationType;
+  public SapDiscoveryComponent setApplicationProperties(SapDiscoveryComponentApplicationProperties applicationProperties) {
+    this.applicationProperties = applicationProperties;
     return this;
   }
 
   /**
-   * The component is a SAP database.
+   * Optional. The component is a SAP database.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatabaseType() {
-    return databaseType;
+  public SapDiscoveryComponentDatabaseProperties getDatabaseProperties() {
+    return databaseProperties;
   }
 
   /**
-   * The component is a SAP database.
-   * @param databaseType databaseType or {@code null} for none
+   * Optional. The component is a SAP database.
+   * @param databaseProperties databaseProperties or {@code null} for none
    */
-  public SapDiscoveryComponent setDatabaseType(java.lang.String databaseType) {
-    this.databaseType = databaseType;
+  public SapDiscoveryComponent setDatabaseProperties(SapDiscoveryComponentDatabaseProperties databaseProperties) {
+    this.databaseProperties = databaseProperties;
     return this;
   }
 

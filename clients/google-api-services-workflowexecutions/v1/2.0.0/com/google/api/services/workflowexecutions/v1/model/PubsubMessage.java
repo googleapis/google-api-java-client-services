@@ -36,15 +36,15 @@ package com.google.api.services.workflowexecutions.v1.model;
 public final class PubsubMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attributes for this message. If this field is empty, the message must contain non-empty data.
-   * This can be used to filter messages on the subscription.
+   * Optional. Attributes for this message. If this field is empty, the message must contain non-
+   * empty data. This can be used to filter messages on the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
-   * The message data field. If this field is empty, the message must contain at least one
+   * Optional. The message data field. If this field is empty, the message must contain at least one
    * attribute.
    * The value may be {@code null}.
    */
@@ -52,38 +52,38 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   private java.lang.String data;
 
   /**
-   * ID of this message, assigned by the server when the message is published. Guaranteed to be
-   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
-   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
-   * call.
+   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
+   * to be unique within the topic. This value may be read by a subscriber that receives a
+   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
+   * in a `Publish` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageId;
 
   /**
-   * If non-empty, identifies related messages for which publish order should be respected. If a
-   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
-   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
-   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value. For more information, see [ordering
-   * messages](https://cloud.google.com/pubsub/docs/ordering).
+   * Optional. If non-empty, identifies related messages for which publish order should be
+   * respected. If a `Subscription` has `enable_message_ordering` set to `true`, messages published
+   * with the same non-empty `ordering_key` value will be delivered to subscribers in the order in
+   * which they are received by the Pub/Sub system. All `PubsubMessage`s published in a given
+   * `PublishRequest` must specify the same `ordering_key` value. For more information, see
+   * [ordering messages](https://cloud.google.com/pubsub/docs/ordering).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderingKey;
 
   /**
-   * The time at which the message was published, populated by the server when it receives the
-   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * Optional. The time at which the message was published, populated by the server when it receives
+   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String publishTime;
 
   /**
-   * Attributes for this message. If this field is empty, the message must contain non-empty data.
-   * This can be used to filter messages on the subscription.
+   * Optional. Attributes for this message. If this field is empty, the message must contain non-
+   * empty data. This can be used to filter messages on the subscription.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -91,8 +91,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Attributes for this message. If this field is empty, the message must contain non-empty data.
-   * This can be used to filter messages on the subscription.
+   * Optional. Attributes for this message. If this field is empty, the message must contain non-
+   * empty data. This can be used to filter messages on the subscription.
    * @param attributes attributes or {@code null} for none
    */
   public PubsubMessage setAttributes(java.util.Map<String, java.lang.String> attributes) {
@@ -101,7 +101,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The message data field. If this field is empty, the message must contain at least one
+   * Optional. The message data field. If this field is empty, the message must contain at least one
    * attribute.
    * @see #decodeData()
    * @return value or {@code null} for none
@@ -111,7 +111,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The message data field. If this field is empty, the message must contain at least one
+   * Optional. The message data field. If this field is empty, the message must contain at least one
    * attribute.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
@@ -123,7 +123,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The message data field. If this field is empty, the message must contain at least one
+   * Optional. The message data field. If this field is empty, the message must contain at least one
    * attribute.
    * @see #encodeData()
    * @param data data or {@code null} for none
@@ -134,7 +134,7 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The message data field. If this field is empty, the message must contain at least one
+   * Optional. The message data field. If this field is empty, the message must contain at least one
    * attribute.
    * @see #setData()
    *
@@ -150,10 +150,10 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ID of this message, assigned by the server when the message is published. Guaranteed to be
-   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
-   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
-   * call.
+   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
+   * to be unique within the topic. This value may be read by a subscriber that receives a
+   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
+   * in a `Publish` call.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageId() {
@@ -161,10 +161,10 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * ID of this message, assigned by the server when the message is published. Guaranteed to be
-   * unique within the topic. This value may be read by a subscriber that receives a `PubsubMessage`
-   * via a `Pull` call or a push delivery. It must not be populated by the publisher in a `Publish`
-   * call.
+   * Optional. ID of this message, assigned by the server when the message is published. Guaranteed
+   * to be unique within the topic. This value may be read by a subscriber that receives a
+   * `PubsubMessage` via a `Pull` call or a push delivery. It must not be populated by the publisher
+   * in a `Publish` call.
    * @param messageId messageId or {@code null} for none
    */
   public PubsubMessage setMessageId(java.lang.String messageId) {
@@ -173,12 +173,12 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If non-empty, identifies related messages for which publish order should be respected. If a
-   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
-   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
-   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value. For more information, see [ordering
-   * messages](https://cloud.google.com/pubsub/docs/ordering).
+   * Optional. If non-empty, identifies related messages for which publish order should be
+   * respected. If a `Subscription` has `enable_message_ordering` set to `true`, messages published
+   * with the same non-empty `ordering_key` value will be delivered to subscribers in the order in
+   * which they are received by the Pub/Sub system. All `PubsubMessage`s published in a given
+   * `PublishRequest` must specify the same `ordering_key` value. For more information, see
+   * [ordering messages](https://cloud.google.com/pubsub/docs/ordering).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderingKey() {
@@ -186,12 +186,12 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If non-empty, identifies related messages for which publish order should be respected. If a
-   * `Subscription` has `enable_message_ordering` set to `true`, messages published with the same
-   * non-empty `ordering_key` value will be delivered to subscribers in the order in which they are
-   * received by the Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest` must
-   * specify the same `ordering_key` value. For more information, see [ordering
-   * messages](https://cloud.google.com/pubsub/docs/ordering).
+   * Optional. If non-empty, identifies related messages for which publish order should be
+   * respected. If a `Subscription` has `enable_message_ordering` set to `true`, messages published
+   * with the same non-empty `ordering_key` value will be delivered to subscribers in the order in
+   * which they are received by the Pub/Sub system. All `PubsubMessage`s published in a given
+   * `PublishRequest` must specify the same `ordering_key` value. For more information, see
+   * [ordering messages](https://cloud.google.com/pubsub/docs/ordering).
    * @param orderingKey orderingKey or {@code null} for none
    */
   public PubsubMessage setOrderingKey(java.lang.String orderingKey) {
@@ -200,8 +200,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The time at which the message was published, populated by the server when it receives the
-   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * Optional. The time at which the message was published, populated by the server when it receives
+   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * @return value or {@code null} for none
    */
   public String getPublishTime() {
@@ -209,8 +209,8 @@ public final class PubsubMessage extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The time at which the message was published, populated by the server when it receives the
-   * `Publish` call. It must not be populated by the publisher in a `Publish` call.
+   * Optional. The time at which the message was published, populated by the server when it receives
+   * the `Publish` call. It must not be populated by the publisher in a `Publish` call.
    * @param publishTime publishTime or {@code null} for none
    */
   public PubsubMessage setPublishTime(String publishTime) {

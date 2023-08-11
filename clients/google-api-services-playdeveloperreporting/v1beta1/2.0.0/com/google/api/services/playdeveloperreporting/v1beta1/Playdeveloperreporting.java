@@ -3082,15 +3082,15 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
 
           /**
            * The maximum number of reports to return. The service may return fewer than this value.
-           * If unspecified, at most 50 reports will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
+           * If unspecified, at most 50 reports will be returned. The maximum value is 100; values
+           * above 100 will be coerced to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** The maximum number of reports to return. The service may return fewer than this value. If
-         unspecified, at most 50 reports will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+         unspecified, at most 50 reports will be returned. The maximum value is 100; values above 100 will
+         be coerced to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -3098,8 +3098,8 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
 
           /**
            * The maximum number of reports to return. The service may return fewer than this value.
-           * If unspecified, at most 50 reports will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
+           * If unspecified, at most 50 reports will be returned. The maximum value is 100; values
+           * above 100 will be coerced to 100.
            */
           public Search setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

@@ -20,8 +20,8 @@ package com.google.api.services.dialogflow.v3beta1.model;
  * Agents are best described as Natural Language Understanding (NLU) modules that transform user
  * requests into actionable data. You can include agents in your app, product, or service to
  * determine user intent and respond to the user in a natural way. After you create an agent, you
- * can add Intents, Entity Types, Flows, Fulfillments, Webhooks, and so on to manage the
- * conversation flows..
+ * can add Intents, Entity Types, Flows, Fulfillments, Webhooks, TransitionRouteGroups and so on to
+ * manage the conversation flows.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

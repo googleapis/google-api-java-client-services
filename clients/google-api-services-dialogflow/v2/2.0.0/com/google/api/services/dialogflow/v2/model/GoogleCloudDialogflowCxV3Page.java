@@ -87,7 +87,8 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.
-   * Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +203,8 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.
-   * Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTransitionRouteGroups() {
@@ -215,7 +217,8 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.
-   * Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+   * Format:`projects//locations//agents//flows//transitionRouteGroups/` or
+   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @param transitionRouteGroups transitionRouteGroups or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Page setTransitionRouteGroups(java.util.List<java.lang.String> transitionRouteGroups) {

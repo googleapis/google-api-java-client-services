@@ -18,7 +18,7 @@ package com.google.api.services.dialogflow.v2.model;
 
 /**
  * Represents the query input. It can contain either: 1. An audio config which instructs the speech
- * recognizer how to process the speech audio. 2. A conversational query in the form of text,. 3. An
+ * recognizer how to process the speech audio. 2. A conversational query in the form of text. 3. An
  * event that specifies which intent to trigger.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

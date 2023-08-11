@@ -88,6 +88,13 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
   private String lastScanTime;
 
   /**
+   * The status of an SBOM generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SBOMStatus sbomStatus;
+
+  /**
    * @return value or {@code null} for none
    */
   public AnalysisCompleted getAnalysisCompleted() {
@@ -222,6 +229,23 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
    */
   public DiscoveryOccurrence setLastScanTime(String lastScanTime) {
     this.lastScanTime = lastScanTime;
+    return this;
+  }
+
+  /**
+   * The status of an SBOM generation.
+   * @return value or {@code null} for none
+   */
+  public SBOMStatus getSbomStatus() {
+    return sbomStatus;
+  }
+
+  /**
+   * The status of an SBOM generation.
+   * @param sbomStatus sbomStatus or {@code null} for none
+   */
+  public DiscoveryOccurrence setSbomStatus(SBOMStatus sbomStatus) {
+    this.sbomStatus = sbomStatus;
     return this;
   }
 

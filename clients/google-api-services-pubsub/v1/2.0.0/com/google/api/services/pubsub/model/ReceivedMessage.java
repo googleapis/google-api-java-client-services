@@ -30,14 +30,14 @@ package com.google.api.services.pubsub.model;
 public final class ReceivedMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * This ID can be used to acknowledge the received message.
+   * Optional. This ID can be used to acknowledge the received message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ackId;
 
   /**
-   * The approximate number of times that Cloud Pub/Sub has attempted to deliver the associated
+   * Optional. The approximate number of times that Pub/Sub has attempted to deliver the associated
    * message to a subscriber. More precisely, this is 1 + (number of NACKs) + (number of
    * ack_deadline exceeds) for this message. A NACK is any call to ModifyAckDeadline with a 0
    * deadline. An ack_deadline exceeds event is whenever a message is not acknowledged within
@@ -51,14 +51,14 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   private java.lang.Integer deliveryAttempt;
 
   /**
-   * The message.
+   * Optional. The message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PubsubMessage message;
 
   /**
-   * This ID can be used to acknowledge the received message.
+   * Optional. This ID can be used to acknowledge the received message.
    * @return value or {@code null} for none
    */
   public java.lang.String getAckId() {
@@ -66,7 +66,7 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This ID can be used to acknowledge the received message.
+   * Optional. This ID can be used to acknowledge the received message.
    * @param ackId ackId or {@code null} for none
    */
   public ReceivedMessage setAckId(java.lang.String ackId) {
@@ -75,7 +75,7 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The approximate number of times that Cloud Pub/Sub has attempted to deliver the associated
+   * Optional. The approximate number of times that Pub/Sub has attempted to deliver the associated
    * message to a subscriber. More precisely, this is 1 + (number of NACKs) + (number of
    * ack_deadline exceeds) for this message. A NACK is any call to ModifyAckDeadline with a 0
    * deadline. An ack_deadline exceeds event is whenever a message is not acknowledged within
@@ -90,7 +90,7 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The approximate number of times that Cloud Pub/Sub has attempted to deliver the associated
+   * Optional. The approximate number of times that Pub/Sub has attempted to deliver the associated
    * message to a subscriber. More precisely, this is 1 + (number of NACKs) + (number of
    * ack_deadline exceeds) for this message. A NACK is any call to ModifyAckDeadline with a 0
    * deadline. An ack_deadline exceeds event is whenever a message is not acknowledged within
@@ -106,7 +106,7 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message.
+   * Optional. The message.
    * @return value or {@code null} for none
    */
   public PubsubMessage getMessage() {
@@ -114,7 +114,7 @@ public final class ReceivedMessage extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message.
+   * Optional. The message.
    * @param message message or {@code null} for none
    */
   public ReceivedMessage setMessage(PubsubMessage message) {

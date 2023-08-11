@@ -30,7 +30,7 @@ package com.google.api.services.pubsub.model;
 public final class CreateSnapshotRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
   private java.lang.String subscription;
 
   /**
-   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -57,7 +57,7 @@ public final class CreateSnapshotRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels](https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public CreateSnapshotRequest setLabels(java.util.Map<String, java.lang.String> labels) {

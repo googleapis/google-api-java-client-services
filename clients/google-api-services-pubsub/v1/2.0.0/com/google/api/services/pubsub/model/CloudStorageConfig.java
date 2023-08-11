@@ -30,7 +30,7 @@ package com.google.api.services.pubsub.model;
 public final class CloudStorageConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, message data will be written to Cloud Storage in Avro format.
+   * Optional. If set, message data will be written to Cloud Storage in Avro format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private java.lang.String bucket;
 
   /**
-   * User-provided prefix for Cloud Storage filename. See the [object naming
+   * Optional. User-provided prefix for Cloud Storage filename. See the [object naming
    * requirements](https://cloud.google.com/storage/docs/objects#naming).
    * The value may be {@code null}.
    */
@@ -54,25 +54,26 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private java.lang.String filenamePrefix;
 
   /**
-   * User-provided suffix for Cloud Storage filename. See the [object naming
-   * requirements](https://cloud.google.com/storage/docs/objects#naming).
+   * Optional. User-provided suffix for Cloud Storage filename. See the [object naming
+   * requirements](https://cloud.google.com/storage/docs/objects#naming). Must not end in "/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filenameSuffix;
 
   /**
-   * The maximum bytes that can be written to a Cloud Storage file before a new file is created. Min
-   * 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are larger than
-   * the limit.
+   * Optional. The maximum bytes that can be written to a Cloud Storage file before a new file is
+   * created. Min 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are
+   * larger than the limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxBytes;
 
   /**
-   * The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute,
-   * max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement deadline.
+   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * deadline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,14 +88,14 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private java.lang.String state;
 
   /**
-   * If set, message data will be written to Cloud Storage in text format.
+   * Optional. If set, message data will be written to Cloud Storage in text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextConfig textConfig;
 
   /**
-   * If set, message data will be written to Cloud Storage in Avro format.
+   * Optional. If set, message data will be written to Cloud Storage in Avro format.
    * @return value or {@code null} for none
    */
   public AvroConfig getAvroConfig() {
@@ -102,7 +103,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * If set, message data will be written to Cloud Storage in Avro format.
+   * Optional. If set, message data will be written to Cloud Storage in Avro format.
    * @param avroConfig avroConfig or {@code null} for none
    */
   public CloudStorageConfig setAvroConfig(AvroConfig avroConfig) {
@@ -132,7 +133,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User-provided prefix for Cloud Storage filename. See the [object naming
+   * Optional. User-provided prefix for Cloud Storage filename. See the [object naming
    * requirements](https://cloud.google.com/storage/docs/objects#naming).
    * @return value or {@code null} for none
    */
@@ -141,7 +142,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User-provided prefix for Cloud Storage filename. See the [object naming
+   * Optional. User-provided prefix for Cloud Storage filename. See the [object naming
    * requirements](https://cloud.google.com/storage/docs/objects#naming).
    * @param filenamePrefix filenamePrefix or {@code null} for none
    */
@@ -151,8 +152,8 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User-provided suffix for Cloud Storage filename. See the [object naming
-   * requirements](https://cloud.google.com/storage/docs/objects#naming).
+   * Optional. User-provided suffix for Cloud Storage filename. See the [object naming
+   * requirements](https://cloud.google.com/storage/docs/objects#naming). Must not end in "/".
    * @return value or {@code null} for none
    */
   public java.lang.String getFilenameSuffix() {
@@ -160,8 +161,8 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User-provided suffix for Cloud Storage filename. See the [object naming
-   * requirements](https://cloud.google.com/storage/docs/objects#naming).
+   * Optional. User-provided suffix for Cloud Storage filename. See the [object naming
+   * requirements](https://cloud.google.com/storage/docs/objects#naming). Must not end in "/".
    * @param filenameSuffix filenameSuffix or {@code null} for none
    */
   public CloudStorageConfig setFilenameSuffix(java.lang.String filenameSuffix) {
@@ -170,9 +171,9 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum bytes that can be written to a Cloud Storage file before a new file is created. Min
-   * 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are larger than
-   * the limit.
+   * Optional. The maximum bytes that can be written to a Cloud Storage file before a new file is
+   * created. Min 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are
+   * larger than the limit.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxBytes() {
@@ -180,9 +181,9 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum bytes that can be written to a Cloud Storage file before a new file is created. Min
-   * 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are larger than
-   * the limit.
+   * Optional. The maximum bytes that can be written to a Cloud Storage file before a new file is
+   * created. Min 1 KB, max 10 GiB. The max_bytes limit may be exceeded in cases where messages are
+   * larger than the limit.
    * @param maxBytes maxBytes or {@code null} for none
    */
   public CloudStorageConfig setMaxBytes(java.lang.Long maxBytes) {
@@ -191,8 +192,9 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute,
-   * max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement deadline.
+   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * deadline.
    * @return value or {@code null} for none
    */
   public String getMaxDuration() {
@@ -200,8 +202,9 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute,
-   * max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement deadline.
+   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * deadline.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public CloudStorageConfig setMaxDuration(String maxDuration) {
@@ -229,7 +232,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * If set, message data will be written to Cloud Storage in text format.
+   * Optional. If set, message data will be written to Cloud Storage in text format.
    * @return value or {@code null} for none
    */
   public TextConfig getTextConfig() {
@@ -237,7 +240,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * If set, message data will be written to Cloud Storage in text format.
+   * Optional. If set, message data will be written to Cloud Storage in text format.
    * @param textConfig textConfig or {@code null} for none
    */
   public CloudStorageConfig setTextConfig(TextConfig textConfig) {

@@ -30,23 +30,23 @@ package com.google.api.services.pubsub.model;
 public final class ListTopicsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If not empty, indicates that there may be more topics that match the request; this value should
-   * be passed in a new `ListTopicsRequest`.
+   * Optional. If not empty, indicates that there may be more topics that match the request; this
+   * value should be passed in a new `ListTopicsRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The resulting topics.
+   * Optional. The resulting topics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Topic> topics;
 
   /**
-   * If not empty, indicates that there may be more topics that match the request; this value should
-   * be passed in a new `ListTopicsRequest`.
+   * Optional. If not empty, indicates that there may be more topics that match the request; this
+   * value should be passed in a new `ListTopicsRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListTopicsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * If not empty, indicates that there may be more topics that match the request; this value should
-   * be passed in a new `ListTopicsRequest`.
+   * Optional. If not empty, indicates that there may be more topics that match the request; this
+   * value should be passed in a new `ListTopicsRequest`.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTopicsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class ListTopicsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resulting topics.
+   * Optional. The resulting topics.
    * @return value or {@code null} for none
    */
   public java.util.List<Topic> getTopics() {
@@ -72,7 +72,7 @@ public final class ListTopicsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resulting topics.
+   * Optional. The resulting topics.
    * @param topics topics or {@code null} for none
    */
   public ListTopicsResponse setTopics(java.util.List<Topic> topics) {

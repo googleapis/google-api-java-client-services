@@ -30,30 +30,30 @@ package com.google.api.services.pubsub.model;
 public final class SeekRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The snapshot to seek to. The snapshot's topic must be the same as that of the provided
-   * subscription. Format is `projects/{project}/snapshots/{snap}`.
+   * Optional. The snapshot to seek to. The snapshot's topic must be the same as that of the
+   * provided subscription. Format is `projects/{project}/snapshots/{snap}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String snapshot;
 
   /**
-   * The time to seek to. Messages retained in the subscription that were published before this time
-   * are marked as acknowledged, and messages retained in the subscription that were published after
-   * this time are marked as unacknowledged. Note that this operation affects only those messages
-   * retained in the subscription (configured by the combination of `message_retention_duration` and
-   * `retain_acked_messages`). For example, if `time` corresponds to a point before the message
-   * retention window (or to a point before the system's notion of the subscription creation time),
-   * only retained messages will be marked as unacknowledged, and already-expunged messages will not
-   * be restored.
+   * Optional. The time to seek to. Messages retained in the subscription that were published before
+   * this time are marked as acknowledged, and messages retained in the subscription that were
+   * published after this time are marked as unacknowledged. Note that this operation affects only
+   * those messages retained in the subscription (configured by the combination of
+   * `message_retention_duration` and `retain_acked_messages`). For example, if `time` corresponds
+   * to a point before the message retention window (or to a point before the system's notion of the
+   * subscription creation time), only retained messages will be marked as unacknowledged, and
+   * already-expunged messages will not be restored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String time;
 
   /**
-   * The snapshot to seek to. The snapshot's topic must be the same as that of the provided
-   * subscription. Format is `projects/{project}/snapshots/{snap}`.
+   * Optional. The snapshot to seek to. The snapshot's topic must be the same as that of the
+   * provided subscription. Format is `projects/{project}/snapshots/{snap}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnapshot() {
@@ -61,8 +61,8 @@ public final class SeekRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snapshot to seek to. The snapshot's topic must be the same as that of the provided
-   * subscription. Format is `projects/{project}/snapshots/{snap}`.
+   * Optional. The snapshot to seek to. The snapshot's topic must be the same as that of the
+   * provided subscription. Format is `projects/{project}/snapshots/{snap}`.
    * @param snapshot snapshot or {@code null} for none
    */
   public SeekRequest setSnapshot(java.lang.String snapshot) {
@@ -71,14 +71,14 @@ public final class SeekRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time to seek to. Messages retained in the subscription that were published before this time
-   * are marked as acknowledged, and messages retained in the subscription that were published after
-   * this time are marked as unacknowledged. Note that this operation affects only those messages
-   * retained in the subscription (configured by the combination of `message_retention_duration` and
-   * `retain_acked_messages`). For example, if `time` corresponds to a point before the message
-   * retention window (or to a point before the system's notion of the subscription creation time),
-   * only retained messages will be marked as unacknowledged, and already-expunged messages will not
-   * be restored.
+   * Optional. The time to seek to. Messages retained in the subscription that were published before
+   * this time are marked as acknowledged, and messages retained in the subscription that were
+   * published after this time are marked as unacknowledged. Note that this operation affects only
+   * those messages retained in the subscription (configured by the combination of
+   * `message_retention_duration` and `retain_acked_messages`). For example, if `time` corresponds
+   * to a point before the message retention window (or to a point before the system's notion of the
+   * subscription creation time), only retained messages will be marked as unacknowledged, and
+   * already-expunged messages will not be restored.
    * @return value or {@code null} for none
    */
   public String getTime() {
@@ -86,14 +86,14 @@ public final class SeekRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time to seek to. Messages retained in the subscription that were published before this time
-   * are marked as acknowledged, and messages retained in the subscription that were published after
-   * this time are marked as unacknowledged. Note that this operation affects only those messages
-   * retained in the subscription (configured by the combination of `message_retention_duration` and
-   * `retain_acked_messages`). For example, if `time` corresponds to a point before the message
-   * retention window (or to a point before the system's notion of the subscription creation time),
-   * only retained messages will be marked as unacknowledged, and already-expunged messages will not
-   * be restored.
+   * Optional. The time to seek to. Messages retained in the subscription that were published before
+   * this time are marked as acknowledged, and messages retained in the subscription that were
+   * published after this time are marked as unacknowledged. Note that this operation affects only
+   * those messages retained in the subscription (configured by the combination of
+   * `message_retention_duration` and `retain_acked_messages`). For example, if `time` corresponds
+   * to a point before the message retention window (or to a point before the system's notion of the
+   * subscription creation time), only retained messages will be marked as unacknowledged, and
+   * already-expunged messages will not be restored.
    * @param time time or {@code null} for none
    */
   public SeekRequest setTime(String time) {

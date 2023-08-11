@@ -3075,41 +3075,42 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Maximum number of snapshots to return. */
+        /** Optional. Maximum number of snapshots to return. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of snapshots to return.
+        /** Optional. Maximum number of snapshots to return.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of snapshots to return. */
+        /** Optional. Maximum number of snapshots to return. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * The value returned by the last `ListSnapshotsResponse`; indicates that this is a
-         * continuation of a prior `ListSnapshots` call, and that the system should return the next
-         * page of data.
+         * Optional. The value returned by the last `ListSnapshotsResponse`; indicates that this is
+         * a continuation of a prior `ListSnapshots` call, and that the system should return the
+         * next page of data.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSnapshotsResponse`; indicates that this is a continuation of a
-       prior `ListSnapshots` call, and that the system should return the next page of data.
+        /** Optional. The value returned by the last `ListSnapshotsResponse`; indicates that this is a
+       continuation of a prior `ListSnapshots` call, and that the system should return the next page of
+       data.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The value returned by the last `ListSnapshotsResponse`; indicates that this is a
-         * continuation of a prior `ListSnapshots` call, and that the system should return the next
-         * page of data.
+         * Optional. The value returned by the last `ListSnapshotsResponse`; indicates that this is
+         * a continuation of a prior `ListSnapshots` call, and that the system should return the
+         * next page of data.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -3132,7 +3133,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the snapshot.
+       * @param name Optional. The name of the snapshot.
        * @param content the {@link com.google.api.services.pubsub.model.UpdateSnapshotRequest}
        * @return the request
        */
@@ -3162,7 +3163,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the snapshot.
+         * @param name Optional. The name of the snapshot.
          * @param content the {@link com.google.api.services.pubsub.model.UpdateSnapshotRequest}
          * @since 1.13
          */
@@ -3231,17 +3232,17 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the snapshot. */
+        /** Optional. The name of the snapshot. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the snapshot.
+        /** Optional. The name of the snapshot.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the snapshot. */
+        /** Optional. The name of the snapshot. */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4649,41 +4650,42 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Maximum number of subscriptions to return. */
+        /** Optional. Maximum number of subscriptions to return. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of subscriptions to return.
+        /** Optional. Maximum number of subscriptions to return.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of subscriptions to return. */
+        /** Optional. Maximum number of subscriptions to return. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * The value returned by the last `ListSubscriptionsResponse`; indicates that this is a
-         * continuation of a prior `ListSubscriptions` call, and that the system should return the
-         * next page of data.
+         * Optional. The value returned by the last `ListSubscriptionsResponse`; indicates that this
+         * is a continuation of a prior `ListSubscriptions` call, and that the system should return
+         * the next page of data.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSubscriptionsResponse`; indicates that this is a continuation
-       of a prior `ListSubscriptions` call, and that the system should return the next page of data.
+        /** Optional. The value returned by the last `ListSubscriptionsResponse`; indicates that this is a
+       continuation of a prior `ListSubscriptions` call, and that the system should return the next page
+       of data.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The value returned by the last `ListSubscriptionsResponse`; indicates that this is a
-         * continuation of a prior `ListSubscriptions` call, and that the system should return the
-         * next page of data.
+         * Optional. The value returned by the last `ListSubscriptionsResponse`; indicates that this
+         * is a continuation of a prior `ListSubscriptions` call, and that the system should return
+         * the next page of data.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -6506,39 +6508,39 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Maximum number of topics to return. */
+        /** Optional. Maximum number of topics to return. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of topics to return.
+        /** Optional. Maximum number of topics to return.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of topics to return. */
+        /** Optional. Maximum number of topics to return. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * The value returned by the last `ListTopicsResponse`; indicates that this is a
+         * Optional. The value returned by the last `ListTopicsResponse`; indicates that this is a
          * continuation of a prior `ListTopics` call, and that the system should return the next
          * page of data.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListTopicsResponse`; indicates that this is a continuation of a
-       prior `ListTopics` call, and that the system should return the next page of data.
+        /** Optional. The value returned by the last `ListTopicsResponse`; indicates that this is a
+       continuation of a prior `ListTopics` call, and that the system should return the next page of data.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The value returned by the last `ListTopicsResponse`; indicates that this is a
+         * Optional. The value returned by the last `ListTopicsResponse`; indicates that this is a
          * continuation of a prior `ListTopics` call, and that the system should return the next
          * page of data.
          */
@@ -7312,41 +7314,42 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Maximum number of snapshot names to return. */
+          /** Optional. Maximum number of snapshot names to return. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of snapshot names to return.
+          /** Optional. Maximum number of snapshot names to return.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of snapshot names to return. */
+          /** Optional. Maximum number of snapshot names to return. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListTopicSnapshotsResponse`; indicates that this is a
-           * continuation of a prior `ListTopicSnapshots` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListTopicSnapshotsResponse`; indicates that
+           * this is a continuation of a prior `ListTopicSnapshots` call, and that the system should
+           * return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListTopicSnapshotsResponse`; indicates that this is a continuation
-         of a prior `ListTopicSnapshots` call, and that the system should return the next page of data.
+          /** Optional. The value returned by the last `ListTopicSnapshotsResponse`; indicates that this is a
+         continuation of a prior `ListTopicSnapshots` call, and that the system should return the next page
+         of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListTopicSnapshotsResponse`; indicates that this is a
-           * continuation of a prior `ListTopicSnapshots` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListTopicSnapshotsResponse`; indicates that
+           * this is a continuation of a prior `ListTopicSnapshots` call, and that the system should
+           * return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -7522,31 +7525,31 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Maximum number of subscription names to return. */
+          /** Optional. Maximum number of subscription names to return. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of subscription names to return.
+          /** Optional. Maximum number of subscription names to return.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of subscription names to return. */
+          /** Optional. Maximum number of subscription names to return. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is
-           * a continuation of a prior `ListTopicSubscriptions` call, and that the system should
-           * return the next page of data.
+           * Optional. The value returned by the last `ListTopicSubscriptionsResponse`; indicates
+           * that this is a continuation of a prior `ListTopicSubscriptions` call, and that the
+           * system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is a
+          /** Optional. The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is a
          continuation of a prior `ListTopicSubscriptions` call, and that the system should return the next
          page of data.
            */
@@ -7555,9 +7558,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is
-           * a continuation of a prior `ListTopicSubscriptions` call, and that the system should
-           * return the next page of data.
+           * Optional. The value returned by the last `ListTopicSubscriptionsResponse`; indicates
+           * that this is a continuation of a prior `ListTopicSubscriptions` call, and that the
+           * system should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

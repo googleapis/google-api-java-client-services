@@ -30,20 +30,20 @@ package com.google.api.services.pubsub.model;
 public final class PullResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Received Pub/Sub messages. The list will be empty if there are no more messages available in
-   * the backlog, or if no messages could be returned before the request timeout. For JSON, the
-   * response can be entirely empty. The Pub/Sub system may return fewer than the `maxMessages`
-   * requested even if there are more messages available in the backlog.
+   * Optional. Received Pub/Sub messages. The list will be empty if there are no more messages
+   * available in the backlog, or if no messages could be returned before the request timeout. For
+   * JSON, the response can be entirely empty. The Pub/Sub system may return fewer than the
+   * `maxMessages` requested even if there are more messages available in the backlog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ReceivedMessage> receivedMessages;
 
   /**
-   * Received Pub/Sub messages. The list will be empty if there are no more messages available in
-   * the backlog, or if no messages could be returned before the request timeout. For JSON, the
-   * response can be entirely empty. The Pub/Sub system may return fewer than the `maxMessages`
-   * requested even if there are more messages available in the backlog.
+   * Optional. Received Pub/Sub messages. The list will be empty if there are no more messages
+   * available in the backlog, or if no messages could be returned before the request timeout. For
+   * JSON, the response can be entirely empty. The Pub/Sub system may return fewer than the
+   * `maxMessages` requested even if there are more messages available in the backlog.
    * @return value or {@code null} for none
    */
   public java.util.List<ReceivedMessage> getReceivedMessages() {
@@ -51,10 +51,10 @@ public final class PullResponse extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Received Pub/Sub messages. The list will be empty if there are no more messages available in
-   * the backlog, or if no messages could be returned before the request timeout. For JSON, the
-   * response can be entirely empty. The Pub/Sub system may return fewer than the `maxMessages`
-   * requested even if there are more messages available in the backlog.
+   * Optional. Received Pub/Sub messages. The list will be empty if there are no more messages
+   * available in the backlog, or if no messages could be returned before the request timeout. For
+   * JSON, the response can be entirely empty. The Pub/Sub system may return fewer than the
+   * `maxMessages` requested even if there are more messages available in the backlog.
    * @param receivedMessages receivedMessages or {@code null} for none
    */
   public PullResponse setReceivedMessages(java.util.List<ReceivedMessage> receivedMessages) {

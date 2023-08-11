@@ -30,16 +30,16 @@ package com.google.api.services.pubsub.model;
 public final class NoWrapper extends com.google.api.client.json.GenericJson {
 
   /**
-   * When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the HTTP
-   * request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean writeMetadata;
 
   /**
-   * When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the HTTP
-   * request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWriteMetadata() {
@@ -47,8 +47,8 @@ public final class NoWrapper extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the HTTP
-   * request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-pubsub-:` headers of the
+   * HTTP request. Writes the Pub/Sub message attributes to `:` headers of the HTTP request.
    * @param writeMetadata writeMetadata or {@code null} for none
    */
   public NoWrapper setWriteMetadata(java.lang.Boolean writeMetadata) {

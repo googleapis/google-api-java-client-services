@@ -30,36 +30,36 @@ package com.google.api.services.pubsub.model;
 public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The resource name of the Cloud KMS CryptoKey to be used to protect access to messages
+   * published on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Indicates the minimum duration to retain a message after it is published to the topic. If this
-   * field is set, messages published to the topic in the last `message_retention_duration` are
-   * always available to subscribers. For instance, it allows any attached subscription to [seek to
-   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
-   * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
-   * minutes.
+   * Optional. Indicates the minimum duration to retain a message after it is published to the
+   * topic. If this field is set, messages published to the topic in the last
+   * `message_retention_duration` are always available to subscribers. For instance, it allows any
+   * attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-
+   * overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field
+   * is not set, message retention is controlled by settings on individual subscriptions. Cannot be
+   * more than 31 days or less than 10 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String messageRetentionDuration;
 
   /**
-   * Policy constraining the set of Google Cloud Platform regions where messages published to the
-   * topic may be stored. If not present, then no constraints are in effect.
+   * Optional. Policy constraining the set of Google Cloud Platform regions where messages published
+   * to the topic may be stored. If not present, then no constraints are in effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,23 +76,23 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Reserved for future use. This field is set only in responses from the server; it is ignored if
-   * it is set in any requests.
+   * Optional. Reserved for future use. This field is set only in responses from the server; it is
+   * ignored if it is set in any requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Settings for validating messages published against a schema.
+   * Optional. Settings for validating messages published against a schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SchemaSettings schemaSettings;
 
   /**
-   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The resource name of the Cloud KMS CryptoKey to be used to protect access to messages
+   * published on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -100,8 +100,8 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The resource name of the Cloud KMS CryptoKey to be used to protect access to messages
+   * published on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public Topic setKmsKeyName(java.lang.String kmsKeyName) {
@@ -110,7 +110,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -118,7 +118,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public Topic setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -127,13 +127,13 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the minimum duration to retain a message after it is published to the topic. If this
-   * field is set, messages published to the topic in the last `message_retention_duration` are
-   * always available to subscribers. For instance, it allows any attached subscription to [seek to
-   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
-   * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
-   * minutes.
+   * Optional. Indicates the minimum duration to retain a message after it is published to the
+   * topic. If this field is set, messages published to the topic in the last
+   * `message_retention_duration` are always available to subscribers. For instance, it allows any
+   * attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-
+   * overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field
+   * is not set, message retention is controlled by settings on individual subscriptions. Cannot be
+   * more than 31 days or less than 10 minutes.
    * @return value or {@code null} for none
    */
   public String getMessageRetentionDuration() {
@@ -141,13 +141,13 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the minimum duration to retain a message after it is published to the topic. If this
-   * field is set, messages published to the topic in the last `message_retention_duration` are
-   * always available to subscribers. For instance, it allows any attached subscription to [seek to
-   * a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to
-   * `message_retention_duration` in the past. If this field is not set, message retention is
-   * controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10
-   * minutes.
+   * Optional. Indicates the minimum duration to retain a message after it is published to the
+   * topic. If this field is set, messages published to the topic in the last
+   * `message_retention_duration` are always available to subscribers. For instance, it allows any
+   * attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-
+   * overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field
+   * is not set, message retention is controlled by settings on individual subscriptions. Cannot be
+   * more than 31 days or less than 10 minutes.
    * @param messageRetentionDuration messageRetentionDuration or {@code null} for none
    */
   public Topic setMessageRetentionDuration(String messageRetentionDuration) {
@@ -156,8 +156,8 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy constraining the set of Google Cloud Platform regions where messages published to the
-   * topic may be stored. If not present, then no constraints are in effect.
+   * Optional. Policy constraining the set of Google Cloud Platform regions where messages published
+   * to the topic may be stored. If not present, then no constraints are in effect.
    * @return value or {@code null} for none
    */
   public MessageStoragePolicy getMessageStoragePolicy() {
@@ -165,8 +165,8 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy constraining the set of Google Cloud Platform regions where messages published to the
-   * topic may be stored. If not present, then no constraints are in effect.
+   * Optional. Policy constraining the set of Google Cloud Platform regions where messages published
+   * to the topic may be stored. If not present, then no constraints are in effect.
    * @param messageStoragePolicy messageStoragePolicy or {@code null} for none
    */
   public Topic setMessageStoragePolicy(MessageStoragePolicy messageStoragePolicy) {
@@ -198,8 +198,8 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use. This field is set only in responses from the server; it is ignored if
-   * it is set in any requests.
+   * Optional. Reserved for future use. This field is set only in responses from the server; it is
+   * ignored if it is set in any requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -207,8 +207,8 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reserved for future use. This field is set only in responses from the server; it is ignored if
-   * it is set in any requests.
+   * Optional. Reserved for future use. This field is set only in responses from the server; it is
+   * ignored if it is set in any requests.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Topic setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -217,7 +217,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Settings for validating messages published against a schema.
+   * Optional. Settings for validating messages published against a schema.
    * @return value or {@code null} for none
    */
   public SchemaSettings getSchemaSettings() {
@@ -225,7 +225,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Settings for validating messages published against a schema.
+   * Optional. Settings for validating messages published against a schema.
    * @param schemaSettings schemaSettings or {@code null} for none
    */
   public Topic setSchemaSettings(SchemaSettings schemaSettings) {

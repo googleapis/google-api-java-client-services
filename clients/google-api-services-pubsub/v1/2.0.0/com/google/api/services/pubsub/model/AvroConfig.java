@@ -31,16 +31,20 @@ package com.google.api.services.pubsub.model;
 public final class AvroConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * as additional fields in the output.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key as additional fields in the output. The subscription name, message_id, and
+   * publish_time fields are put in their own fields while all other message properties other than
+   * data (for example, an ordering_key, if present) are added as entries in the attributes map.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean writeMetadata;
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * as additional fields in the output.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key as additional fields in the output. The subscription name, message_id, and
+   * publish_time fields are put in their own fields while all other message properties other than
+   * data (for example, an ordering_key, if present) are added as entries in the attributes map.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWriteMetadata() {
@@ -48,8 +52,10 @@ public final class AvroConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * as additional fields in the output.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key as additional fields in the output. The subscription name, message_id, and
+   * publish_time fields are put in their own fields while all other message properties other than
+   * data (for example, an ordering_key, if present) are added as entries in the attributes map.
    * @param writeMetadata writeMetadata or {@code null} for none
    */
   public AvroConfig setWriteMetadata(java.lang.Boolean writeMetadata) {

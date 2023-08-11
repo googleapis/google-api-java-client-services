@@ -20,7 +20,7 @@ package com.google.api.services.orgpolicy.v2;
  * Service definition for OrgPolicyAPI (v2).
  *
  * <p>
- * The Org Policy API allows users to configure governance rules on their GCP resources across the Cloud Resource Hierarchy.
+ * The Organization Policy API allows users to configure governance rules on their Google Cloud resources across the resource hierarchy.
  * </p>
  *
  * <p>
@@ -682,7 +682,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+       * @param name Required. Resource name of the policy. See Policy for naming requirements.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -709,7 +709,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+         * @param name Required. Resource name of the policy. See Policy for naming requirements.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -787,17 +787,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements.
+        /** Required. Resource name of the policy. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -824,7 +824,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link GetEffectivePolicy#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+       * @param name Required. The effective policy to compute. See Policy for naming requirements.
        * @return the request
        */
       public GetEffectivePolicy getEffectivePolicy(java.lang.String name) throws java.io.IOException {
@@ -854,7 +854,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+         * @param name Required. The effective policy to compute. See Policy for naming requirements.
          * @since 1.13
          */
         protected GetEffectivePolicy(java.lang.String name) {
@@ -932,17 +932,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (GetEffectivePolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules.
+        /** Required. The effective policy to compute. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         public GetEffectivePolicy setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1173,11 +1173,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -1211,11 +1211,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -1288,11 +1288,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */
@@ -1300,11 +1300,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       constraint_name is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint which this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       "projects/123/policies/compute.disableSerialPortAccess". Note:
+       `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
          */
@@ -1314,11 +1314,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */
@@ -2715,7 +2715,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+       * @param name Required. Resource name of the policy. See Policy for naming requirements.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2742,7 +2742,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+         * @param name Required. Resource name of the policy. See Policy for naming requirements.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2820,17 +2820,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements.
+        /** Required. Resource name of the policy. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2857,7 +2857,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link GetEffectivePolicy#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+       * @param name Required. The effective policy to compute. See Policy for naming requirements.
        * @return the request
        */
       public GetEffectivePolicy getEffectivePolicy(java.lang.String name) throws java.io.IOException {
@@ -2887,7 +2887,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+         * @param name Required. The effective policy to compute. See Policy for naming requirements.
          * @since 1.13
          */
         protected GetEffectivePolicy(java.lang.String name) {
@@ -2965,17 +2965,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (GetEffectivePolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules.
+        /** Required. The effective policy to compute. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         public GetEffectivePolicy setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3206,11 +3206,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -3244,11 +3244,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -3321,11 +3321,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */
@@ -3333,11 +3333,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       constraint_name is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint which this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       "projects/123/policies/compute.disableSerialPortAccess". Note:
+       `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
          */
@@ -3347,11 +3347,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */
@@ -3946,7 +3946,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+       * @param name Required. Resource name of the policy. See Policy for naming requirements.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3973,7 +3973,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the policy. See `Policy` for naming requirements.
+         * @param name Required. Resource name of the policy. See Policy for naming requirements.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4051,17 +4051,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements.
+        /** Required. Resource name of the policy. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Resource name of the policy. See `Policy` for naming requirements. */
+        /** Required. Resource name of the policy. See Policy for naming requirements. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4088,7 +4088,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link GetEffectivePolicy#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+       * @param name Required. The effective policy to compute. See Policy for naming requirements.
        * @return the request
        */
       public GetEffectivePolicy getEffectivePolicy(java.lang.String name) throws java.io.IOException {
@@ -4118,7 +4118,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. The effective policy to compute. See `Policy` for naming rules.
+         * @param name Required. The effective policy to compute. See Policy for naming requirements.
          * @since 1.13
          */
         protected GetEffectivePolicy(java.lang.String name) {
@@ -4196,17 +4196,17 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
           return (GetEffectivePolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules.
+        /** Required. The effective policy to compute. See Policy for naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The effective policy to compute. See `Policy` for naming rules. */
+        /** Required. The effective policy to compute. See Policy for naming requirements. */
         public GetEffectivePolicy setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4437,11 +4437,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -4475,11 +4475,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        constraint_name is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint which this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       *        "projects/123/policies/compute.disableSerialPortAccess". Note:
+       *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
@@ -4552,11 +4552,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */
@@ -4564,11 +4564,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       constraint_name is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint which this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
-       "projects/123/policies/compute.disableSerialPortAccess". Note:
+       `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
          */
@@ -4578,11 +4578,11 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * constraint_name is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint which this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
-         * "projects/123/policies/compute.disableSerialPortAccess". Note:
+         * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
          */

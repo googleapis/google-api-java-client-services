@@ -23,9 +23,9 @@ package com.google.api.services.orgpolicy.v2.model;
  * The `under:` prefix is used to denote resource subtree values. The `is:` prefix is used to denote
  * specific values, and is required only if the value contains a ":". Values prefixed with "is:" are
  * treated the same as values with no prefix. Ancestry subtrees must be in one of the following
- * formats: - "projects/", e.g. "projects/tokyo-rain-123" - "folders/", e.g. "folders/1234" -
- * "organizations/", e.g. "organizations/1234" The `supports_under` field of the associated
- * `Constraint` defines whether ancestry prefixes can be used.
+ * formats: - `projects/` (for example, `projects/tokyo-rain-123`) - `folders/` (for example,
+ * `folders/1234`) - `organizations/` (for example, `organizations/1234`) The `supports_under` field
+ * of the associated `Constraint` defines whether ancestry prefixes can be used.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation

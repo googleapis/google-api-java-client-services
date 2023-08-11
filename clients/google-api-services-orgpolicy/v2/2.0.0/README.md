@@ -1,6 +1,6 @@
 # Organization Policy API Client Library for Java
 
-The Org Policy API allows users to configure governance rules on their GCP resources across the Cloud Resource Hierarchy.
+The Organization Policy API allows users to configure governance rules on their Google Cloud resources across the resource hierarchy.
 
 This page contains information about getting started with the Organization Policy API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-orgpolicy</artifactId>
-      <version>v2-rev20230405-2.0.0</version>
+      <version>v2-rev20230806-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-orgpolicy:v2-rev20230405-2.0.0'
+  implementation 'com.google.apis:google-api-services-orgpolicy:v2-rev20230806-2.0.0'
 }
 ```
 

@@ -254,6 +254,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredMonitoringService;
 
   /**
+   * The desired network performance config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig;
+
+  /**
    * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
    * and node auto-provisioning enabled clusters.
    * The value may be {@code null}.
@@ -928,6 +935,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {
     this.desiredMonitoringService = desiredMonitoringService;
+    return this;
+  }
+
+  /**
+   * The desired network performance config.
+   * @return value or {@code null} for none
+   */
+  public ClusterNetworkPerformanceConfig getDesiredNetworkPerformanceConfig() {
+    return desiredNetworkPerformanceConfig;
+  }
+
+  /**
+   * The desired network performance config.
+   * @param desiredNetworkPerformanceConfig desiredNetworkPerformanceConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig) {
+    this.desiredNetworkPerformanceConfig = desiredNetworkPerformanceConfig;
     return this;
   }
 

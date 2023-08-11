@@ -78,6 +78,15 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean createSubnetwork;
 
   /**
+   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
+   * ratio is Usage/[Total number of IPs in the secondary range],
+   * Usage=numNodes*numZones*podIPsPerNode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double defaultPodIpv4RangeUtilization;
+
+  /**
    * The ipv6 access type (internal or external) when create_subnetwork is true
    * The value may be {@code null}.
    */
@@ -311,6 +320,27 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setCreateSubnetwork(java.lang.Boolean createSubnetwork) {
     this.createSubnetwork = createSubnetwork;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
+   * ratio is Usage/[Total number of IPs in the secondary range],
+   * Usage=numNodes*numZones*podIPsPerNode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDefaultPodIpv4RangeUtilization() {
+    return defaultPodIpv4RangeUtilization;
+  }
+
+  /**
+   * Output only. [Output only] The utilization of the cluster default IPv4 range for the pod. The
+   * ratio is Usage/[Total number of IPs in the secondary range],
+   * Usage=numNodes*numZones*podIPsPerNode.
+   * @param defaultPodIpv4RangeUtilization defaultPodIpv4RangeUtilization or {@code null} for none
+   */
+  public IPAllocationPolicy setDefaultPodIpv4RangeUtilization(java.lang.Double defaultPodIpv4RangeUtilization) {
+    this.defaultPodIpv4RangeUtilization = defaultPodIpv4RangeUtilization;
     return this;
   }
 

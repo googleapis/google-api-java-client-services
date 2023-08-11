@@ -17,8 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the
- * ClusterUpdate message.
+ * RangeInfo contains the range name and the range utilization by this cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,64 +28,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdditionalPodRangesConfig extends com.google.api.client.json.GenericJson {
+public final class RangeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Output only. [Output only] Name of a range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RangeInfo> podRangeInfo;
+  private java.lang.String rangeName;
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Output only. [Output only] The utilization of the range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> podRangeNames;
+  private java.lang.Double utilization;
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Output only. [Output only] Name of a range.
    * @return value or {@code null} for none
    */
-  public java.util.List<RangeInfo> getPodRangeInfo() {
-    return podRangeInfo;
+  public java.lang.String getRangeName() {
+    return rangeName;
   }
 
   /**
-   * Output only. [Output only] Information for additional pod range.
-   * @param podRangeInfo podRangeInfo or {@code null} for none
+   * Output only. [Output only] Name of a range.
+   * @param rangeName rangeName or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeInfo(java.util.List<RangeInfo> podRangeInfo) {
-    this.podRangeInfo = podRangeInfo;
+  public RangeInfo setRangeName(java.lang.String rangeName) {
+    this.rangeName = rangeName;
     return this;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Output only. [Output only] The utilization of the range.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPodRangeNames() {
-    return podRangeNames;
+  public java.lang.Double getUtilization() {
+    return utilization;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
-   * @param podRangeNames podRangeNames or {@code null} for none
+   * Output only. [Output only] The utilization of the range.
+   * @param utilization utilization or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeNames(java.util.List<java.lang.String> podRangeNames) {
-    this.podRangeNames = podRangeNames;
+  public RangeInfo setUtilization(java.lang.Double utilization) {
+    this.utilization = utilization;
     return this;
   }
 
   @Override
-  public AdditionalPodRangesConfig set(String fieldName, Object value) {
-    return (AdditionalPodRangesConfig) super.set(fieldName, value);
+  public RangeInfo set(String fieldName, Object value) {
+    return (RangeInfo) super.set(fieldName, value);
   }
 
   @Override
-  public AdditionalPodRangesConfig clone() {
-    return (AdditionalPodRangesConfig) super.clone();
+  public RangeInfo clone() {
+    return (RangeInfo) super.clone();
   }
 
 }

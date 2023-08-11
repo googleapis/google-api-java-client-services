@@ -152,6 +152,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private GcfsConfig desiredGcfsConfig;
 
   /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HostMaintenancePolicy desiredHostMaintenancePolicy;
+
+  /**
    * The desired Identity Service component configuration.
    * The value may be {@code null}.
    */
@@ -267,6 +275,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredMonitoringService;
+
+  /**
+   * The desired network performance config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig;
 
   /**
    * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
@@ -742,6 +757,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @return value or {@code null} for none
+   */
+  public HostMaintenancePolicy getDesiredHostMaintenancePolicy() {
+    return desiredHostMaintenancePolicy;
+  }
+
+  /**
+   * HostMaintenancePolicy contains the desired maintenance policy for the Google Compute Engine
+   * hosts.
+   * @param desiredHostMaintenancePolicy desiredHostMaintenancePolicy or {@code null} for none
+   */
+  public ClusterUpdate setDesiredHostMaintenancePolicy(HostMaintenancePolicy desiredHostMaintenancePolicy) {
+    this.desiredHostMaintenancePolicy = desiredHostMaintenancePolicy;
+    return this;
+  }
+
+  /**
    * The desired Identity Service component configuration.
    * @return value or {@code null} for none
    */
@@ -1014,6 +1048,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {
     this.desiredMonitoringService = desiredMonitoringService;
+    return this;
+  }
+
+  /**
+   * The desired network performance config.
+   * @return value or {@code null} for none
+   */
+  public ClusterNetworkPerformanceConfig getDesiredNetworkPerformanceConfig() {
+    return desiredNetworkPerformanceConfig;
+  }
+
+  /**
+   * The desired network performance config.
+   * @param desiredNetworkPerformanceConfig desiredNetworkPerformanceConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig) {
+    this.desiredNetworkPerformanceConfig = desiredNetworkPerformanceConfig;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * PlacementPolicy defines the placement policy used by the node pool.
+ * AdditionalNodeNetworkConfig is the configuration for additional node networks within the
+ * NodeNetworkConfig message
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,70 +29,64 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PlacementPolicy extends com.google.api.client.json.GenericJson {
+public final class AdditionalNodeNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
+   * Name of the VPC where the additional interface belongs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String policyName;
+  private java.lang.String network;
 
   /**
-   * The type of placement.
+   * Name of the subnetwork where the additional interface belongs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String subnetwork;
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
+   * Name of the VPC where the additional interface belongs
    * @return value or {@code null} for none
    */
-  public java.lang.String getPolicyName() {
-    return policyName;
+  public java.lang.String getNetwork() {
+    return network;
   }
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
-   * @param policyName policyName or {@code null} for none
+   * Name of the VPC where the additional interface belongs
+   * @param network network or {@code null} for none
    */
-  public PlacementPolicy setPolicyName(java.lang.String policyName) {
-    this.policyName = policyName;
+  public AdditionalNodeNetworkConfig setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 
   /**
-   * The type of placement.
+   * Name of the subnetwork where the additional interface belongs
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getSubnetwork() {
+    return subnetwork;
   }
 
   /**
-   * The type of placement.
-   * @param type type or {@code null} for none
+   * Name of the subnetwork where the additional interface belongs
+   * @param subnetwork subnetwork or {@code null} for none
    */
-  public PlacementPolicy setType(java.lang.String type) {
-    this.type = type;
+  public AdditionalNodeNetworkConfig setSubnetwork(java.lang.String subnetwork) {
+    this.subnetwork = subnetwork;
     return this;
   }
 
   @Override
-  public PlacementPolicy set(String fieldName, Object value) {
-    return (PlacementPolicy) super.set(fieldName, value);
+  public AdditionalNodeNetworkConfig set(String fieldName, Object value) {
+    return (AdditionalNodeNetworkConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PlacementPolicy clone() {
-    return (PlacementPolicy) super.clone();
+  public AdditionalNodeNetworkConfig clone() {
+    return (AdditionalNodeNetworkConfig) super.clone();
   }
 
 }

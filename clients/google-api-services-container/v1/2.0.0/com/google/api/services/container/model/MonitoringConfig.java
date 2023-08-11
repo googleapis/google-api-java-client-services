@@ -31,6 +31,13 @@ package com.google.api.services.container.model;
 public final class MonitoringConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration of Advanced Datapath Observability features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedDatapathObservabilityConfig advancedDatapathObservabilityConfig;
+
+  /**
    * Monitoring components configuration
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class MonitoringConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private ManagedPrometheusConfig managedPrometheusConfig;
+
+  /**
+   * Configuration of Advanced Datapath Observability features.
+   * @return value or {@code null} for none
+   */
+  public AdvancedDatapathObservabilityConfig getAdvancedDatapathObservabilityConfig() {
+    return advancedDatapathObservabilityConfig;
+  }
+
+  /**
+   * Configuration of Advanced Datapath Observability features.
+   * @param advancedDatapathObservabilityConfig advancedDatapathObservabilityConfig or {@code null} for none
+   */
+  public MonitoringConfig setAdvancedDatapathObservabilityConfig(AdvancedDatapathObservabilityConfig advancedDatapathObservabilityConfig) {
+    this.advancedDatapathObservabilityConfig = advancedDatapathObservabilityConfig;
+    return this;
+  }
 
   /**
    * Monitoring components configuration

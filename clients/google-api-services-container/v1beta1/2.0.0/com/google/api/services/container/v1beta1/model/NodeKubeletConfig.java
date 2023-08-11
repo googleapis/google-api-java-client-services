@@ -63,6 +63,13 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.String cpuManagerPolicy;
 
   /**
+   * Enable or disable Kubelet read only port.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean insecureKubeletReadonlyPortEnabled;
+
+  /**
    * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
    * limits Controls the maximum number of processes allowed to run in a pod. The value must be
    * greater than or equal to 1024 and less than 4194304.
@@ -141,6 +148,23 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setCpuManagerPolicy(java.lang.String cpuManagerPolicy) {
     this.cpuManagerPolicy = cpuManagerPolicy;
+    return this;
+  }
+
+  /**
+   * Enable or disable Kubelet read only port.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInsecureKubeletReadonlyPortEnabled() {
+    return insecureKubeletReadonlyPortEnabled;
+  }
+
+  /**
+   * Enable or disable Kubelet read only port.
+   * @param insecureKubeletReadonlyPortEnabled insecureKubeletReadonlyPortEnabled or {@code null} for none
+   */
+  public NodeKubeletConfig setInsecureKubeletReadonlyPortEnabled(java.lang.Boolean insecureKubeletReadonlyPortEnabled) {
+    this.insecureKubeletReadonlyPortEnabled = insecureKubeletReadonlyPortEnabled;
     return this;
   }
 

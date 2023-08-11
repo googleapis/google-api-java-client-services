@@ -17,8 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the
- * ClusterUpdate message.
+ * AdvancedDatapathObservabilityConfig specifies configuration of observability features of advanced
+ * datapath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,64 +29,64 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdditionalPodRangesConfig extends com.google.api.client.json.GenericJson {
+public final class AdvancedDatapathObservabilityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Expose flow metrics on nodes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RangeInfo> podRangeInfo;
+  private java.lang.Boolean enableMetrics;
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Method used to make Relay available
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> podRangeNames;
+  private java.lang.String relayMode;
 
   /**
-   * Output only. [Output only] Information for additional pod range.
+   * Expose flow metrics on nodes
    * @return value or {@code null} for none
    */
-  public java.util.List<RangeInfo> getPodRangeInfo() {
-    return podRangeInfo;
+  public java.lang.Boolean getEnableMetrics() {
+    return enableMetrics;
   }
 
   /**
-   * Output only. [Output only] Information for additional pod range.
-   * @param podRangeInfo podRangeInfo or {@code null} for none
+   * Expose flow metrics on nodes
+   * @param enableMetrics enableMetrics or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeInfo(java.util.List<RangeInfo> podRangeInfo) {
-    this.podRangeInfo = podRangeInfo;
+  public AdvancedDatapathObservabilityConfig setEnableMetrics(java.lang.Boolean enableMetrics) {
+    this.enableMetrics = enableMetrics;
     return this;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
+   * Method used to make Relay available
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPodRangeNames() {
-    return podRangeNames;
+  public java.lang.String getRelayMode() {
+    return relayMode;
   }
 
   /**
-   * Name for pod secondary ipv4 range which has the actual range defined ahead.
-   * @param podRangeNames podRangeNames or {@code null} for none
+   * Method used to make Relay available
+   * @param relayMode relayMode or {@code null} for none
    */
-  public AdditionalPodRangesConfig setPodRangeNames(java.util.List<java.lang.String> podRangeNames) {
-    this.podRangeNames = podRangeNames;
+  public AdvancedDatapathObservabilityConfig setRelayMode(java.lang.String relayMode) {
+    this.relayMode = relayMode;
     return this;
   }
 
   @Override
-  public AdditionalPodRangesConfig set(String fieldName, Object value) {
-    return (AdditionalPodRangesConfig) super.set(fieldName, value);
+  public AdvancedDatapathObservabilityConfig set(String fieldName, Object value) {
+    return (AdvancedDatapathObservabilityConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AdditionalPodRangesConfig clone() {
-    return (AdditionalPodRangesConfig) super.clone();
+  public AdvancedDatapathObservabilityConfig clone() {
+    return (AdvancedDatapathObservabilityConfig) super.clone();
   }
 
 }

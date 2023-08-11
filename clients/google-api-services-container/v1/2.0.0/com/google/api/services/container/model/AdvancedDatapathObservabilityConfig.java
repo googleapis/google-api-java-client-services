@@ -17,7 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * PlacementPolicy defines the placement policy used by the node pool.
+ * AdvancedDatapathObservabilityConfig specifies configuration of observability features of advanced
+ * datapath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,70 +29,64 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PlacementPolicy extends com.google.api.client.json.GenericJson {
+public final class AdvancedDatapathObservabilityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
+   * Expose flow metrics on nodes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String policyName;
+  private java.lang.Boolean enableMetrics;
 
   /**
-   * The type of placement.
+   * Method used to make Relay available
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String relayMode;
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
+   * Expose flow metrics on nodes
    * @return value or {@code null} for none
    */
-  public java.lang.String getPolicyName() {
-    return policyName;
+  public java.lang.Boolean getEnableMetrics() {
+    return enableMetrics;
   }
 
   /**
-   * If set, refers to the name of a custom resource policy supplied by the user. The resource
-   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
-   * error is returned.
-   * @param policyName policyName or {@code null} for none
+   * Expose flow metrics on nodes
+   * @param enableMetrics enableMetrics or {@code null} for none
    */
-  public PlacementPolicy setPolicyName(java.lang.String policyName) {
-    this.policyName = policyName;
+  public AdvancedDatapathObservabilityConfig setEnableMetrics(java.lang.Boolean enableMetrics) {
+    this.enableMetrics = enableMetrics;
     return this;
   }
 
   /**
-   * The type of placement.
+   * Method used to make Relay available
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getRelayMode() {
+    return relayMode;
   }
 
   /**
-   * The type of placement.
-   * @param type type or {@code null} for none
+   * Method used to make Relay available
+   * @param relayMode relayMode or {@code null} for none
    */
-  public PlacementPolicy setType(java.lang.String type) {
-    this.type = type;
+  public AdvancedDatapathObservabilityConfig setRelayMode(java.lang.String relayMode) {
+    this.relayMode = relayMode;
     return this;
   }
 
   @Override
-  public PlacementPolicy set(String fieldName, Object value) {
-    return (PlacementPolicy) super.set(fieldName, value);
+  public AdvancedDatapathObservabilityConfig set(String fieldName, Object value) {
+    return (AdvancedDatapathObservabilityConfig) super.set(fieldName, value);
   }
 
   @Override
-  public PlacementPolicy clone() {
-    return (PlacementPolicy) super.clone();
+  public AdvancedDatapathObservabilityConfig clone() {
+    return (AdvancedDatapathObservabilityConfig) super.clone();
   }
 
 }

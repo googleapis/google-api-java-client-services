@@ -77,6 +77,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableL4ilbSubsetting;
 
   /**
+   * Whether multi-networking is enabled for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableMultiNetworking;
+
+  /**
    * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
    * The value may be {@code null}.
    */
@@ -91,6 +98,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Network bandwidth tier configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterNetworkPerformanceConfig networkPerformanceConfig;
 
   /**
    * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access
@@ -227,6 +241,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Whether multi-networking is enabled for this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableMultiNetworking() {
+    return enableMultiNetworking;
+  }
+
+  /**
+   * Whether multi-networking is enabled for this cluster.
+   * @param enableMultiNetworking enableMultiNetworking or {@code null} for none
+   */
+  public NetworkConfig setEnableMultiNetworking(java.lang.Boolean enableMultiNetworking) {
+    this.enableMultiNetworking = enableMultiNetworking;
+    return this;
+  }
+
+  /**
    * GatewayAPIConfig contains the desired config of Gateway API on this cluster.
    * @return value or {@code null} for none
    */
@@ -261,6 +292,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Network bandwidth tier configuration.
+   * @return value or {@code null} for none
+   */
+  public ClusterNetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * Network bandwidth tier configuration.
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public NetworkConfig setNetworkPerformanceConfig(ClusterNetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
     return this;
   }
 

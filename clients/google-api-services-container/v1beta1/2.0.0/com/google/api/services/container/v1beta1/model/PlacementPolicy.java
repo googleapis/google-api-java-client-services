@@ -31,11 +31,68 @@ package com.google.api.services.container.v1beta1.model;
 public final class PlacementPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, refers to the name of a custom resource policy supplied by the user. The resource
+   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
+   * error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyName;
+
+  /**
+   * TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-
+   * topologies#tpu_topologies
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTopology;
+
+  /**
    * The type of placement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * If set, refers to the name of a custom resource policy supplied by the user. The resource
+   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
+   * error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyName() {
+    return policyName;
+  }
+
+  /**
+   * If set, refers to the name of a custom resource policy supplied by the user. The resource
+   * policy must be in the same project and region as the node pool. If not found, InvalidArgument
+   * error is returned.
+   * @param policyName policyName or {@code null} for none
+   */
+  public PlacementPolicy setPolicyName(java.lang.String policyName) {
+    this.policyName = policyName;
+    return this;
+  }
+
+  /**
+   * TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-
+   * topologies#tpu_topologies
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTopology() {
+    return tpuTopology;
+  }
+
+  /**
+   * TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-
+   * topologies#tpu_topologies
+   * @param tpuTopology tpuTopology or {@code null} for none
+   */
+  public PlacementPolicy setTpuTopology(java.lang.String tpuTopology) {
+    this.tpuTopology = tpuTopology;
+    return this;
+  }
 
   /**
    * The type of placement.

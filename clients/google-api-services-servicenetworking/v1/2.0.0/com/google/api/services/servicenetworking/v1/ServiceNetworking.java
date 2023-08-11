@@ -2421,6 +2421,438 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
       }
       /**
+       * Producers can use this method to retrieve information about the DNS record set added to the
+       * private zone inside the shared tenant host project associated with a consumer network.
+       *
+       * Create a request for the method "dnsRecordSets.get".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+       *        format services/{service}.
+       * @return the request
+       */
+      public Get get(java.lang.String parent) throws java.io.IOException {
+        Get result = new Get(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.DnsRecordSet> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsRecordSets:get";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Producers can use this method to retrieve information about the DNS record set added to the
+         * private zone inside the shared tenant host project associated with a consumer network.
+         *
+         * Create a request for the method "dnsRecordSets.get".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+       *        format services/{service}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String parent) {
+          super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.DnsRecordSet.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Parent resource identifying the connection which owns this collection of DNS
+         * zones in the format services/{service}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+       format services/{service}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Parent resource identifying the connection which owns this collection of DNS
+         * zones in the format services/{service}.
+         */
+        public Get setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The consumer network containing the record set. Must be in the form of
+         * projects/{project}/global/networks/{network}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String consumerNetwork;
+
+        /** Required. The consumer network containing the record set. Must be in the form of
+       projects/{project}/global/networks/{network}
+         */
+        public java.lang.String getConsumerNetwork() {
+          return consumerNetwork;
+        }
+
+        /**
+         * Required. The consumer network containing the record set. Must be in the form of
+         * projects/{project}/global/networks/{network}
+         */
+        public Get setConsumerNetwork(java.lang.String consumerNetwork) {
+          this.consumerNetwork = consumerNetwork;
+          return this;
+        }
+
+        /** Required. The domain name of the zone containing the recordset. */
+        @com.google.api.client.util.Key
+        private java.lang.String domain;
+
+        /** Required. The domain name of the zone containing the recordset.
+         */
+        public java.lang.String getDomain() {
+          return domain;
+        }
+
+        /** Required. The domain name of the zone containing the recordset. */
+        public Get setDomain(java.lang.String domain) {
+          this.domain = domain;
+          return this;
+        }
+
+        /**
+         * Required. RecordSet Type eg. type='A'. See the list of [Supported DNS
+         * Types](https://cloud.google.com/dns/records/json-record).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String type;
+
+        /** Required. RecordSet Type eg. type='A'. See the list of [Supported DNS
+       Types](https://cloud.google.com/dns/records/json-record).
+         */
+        public java.lang.String getType() {
+          return type;
+        }
+
+        /**
+         * Required. RecordSet Type eg. type='A'. See the list of [Supported DNS
+         * Types](https://cloud.google.com/dns/records/json-record).
+         */
+        public Get setType(java.lang.String type) {
+          this.type = type;
+          return this;
+        }
+
+        /** Required. The name of the zone containing the record set. */
+        @com.google.api.client.util.Key
+        private java.lang.String zone;
+
+        /** Required. The name of the zone containing the record set.
+         */
+        public java.lang.String getZone() {
+          return zone;
+        }
+
+        /** Required. The name of the zone containing the record set. */
+        public Get setZone(java.lang.String zone) {
+          this.zone = zone;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Producers can use this method to retrieve a list of available DNS RecordSets available inside the
+       * private zone on the tenant host project accessible from their network.
+       *
+       * Create a request for the method "dnsRecordSets.list".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ListDnsRecordSetsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsRecordSets:list";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Producers can use this method to retrieve a list of available DNS RecordSets available inside
+         * the private zone on the tenant host project accessible from their network.
+         *
+         * Create a request for the method "dnsRecordSets.list".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.ListDnsRecordSetsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The network that the consumer is using to connect with services. Must be in the
+         * form of projects/{project}/global/networks/{network} {project} is the project number, as
+         * in '12345' {network} is the network name.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String consumerNetwork;
+
+        /** Required. The network that the consumer is using to connect with services. Must be in the form of
+       projects/{project}/global/networks/{network} {project} is the project number, as in '12345'
+       {network} is the network name.
+         */
+        public java.lang.String getConsumerNetwork() {
+          return consumerNetwork;
+        }
+
+        /**
+         * Required. The network that the consumer is using to connect with services. Must be in the
+         * form of projects/{project}/global/networks/{network} {project} is the project number, as
+         * in '12345' {network} is the network name.
+         */
+        public List setConsumerNetwork(java.lang.String consumerNetwork) {
+          this.consumerNetwork = consumerNetwork;
+          return this;
+        }
+
+        /**
+         * Required. The name of the private DNS zone in the shared producer host project from which
+         * the record set will be removed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String zone;
+
+        /** Required. The name of the private DNS zone in the shared producer host project from which the
+       record set will be removed.
+         */
+        public java.lang.String getZone() {
+          return zone;
+        }
+
+        /**
+         * Required. The name of the private DNS zone in the shared producer host project from which
+         * the record set will be removed.
+         */
+        public List setZone(java.lang.String zone) {
+          this.zone = zone;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
        * Service producers can use this method to remove DNS record sets from private DNS zones in the
        * shared producer host project.
        *
@@ -3465,6 +3897,369 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
             }
           }
 
+          /**
+           * An accessor for creating requests from the DnsZones collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+           *   {@code ServiceNetworking.DnsZones.List request = servicenetworking.dnsZones().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public DnsZones dnsZones() {
+            return new DnsZones();
+          }
+
+          /**
+           * The "dnsZones" collection of methods.
+           */
+          public class DnsZones {
+
+            /**
+             * Service producers can use this method to retrieve a DNS zone in the shared producer host project
+             * and the matching peering zones in consumer project
+             *
+             * Create a request for the method "dnsZones.get".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The network that the consumer is using to connect with services. Must be in the form of
+             *        services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this {project} is the project number, as in
+             *        '12345' {network} is the network name. {zoneName} is the DNS zone name
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.GetDnsZoneResponse> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+/dnsZones/[^/]+$");
+
+              /**
+               * Service producers can use this method to retrieve a DNS zone in the shared producer host
+               * project and the matching peering zones in consumer project
+               *
+               * Create a request for the method "dnsZones.get".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The network that the consumer is using to connect with services. Must be in the form of
+             *        services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this {project} is the project number, as in
+             *        '12345' {network} is the network name. {zoneName} is the DNS zone name
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.GetDnsZoneResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/dnsZones/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The network that the consumer is using to connect with services. Must be
+               * in the form of
+               * services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName}
+               * Where {service} is the peering service that is managing connectivity for the
+               * service producer's organization. For Google services that support this {project} is
+               * the project number, as in '12345' {network} is the network name. {zoneName} is the
+               * DNS zone name
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The network that the consumer is using to connect with services. Must be in the form of
+             services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName} Where {service} is
+             the peering service that is managing connectivity for the service producer's organization. For
+             Google services that support this {project} is the project number, as in '12345' {network} is the
+             network name. {zoneName} is the DNS zone name
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The network that the consumer is using to connect with services. Must be
+               * in the form of
+               * services/{service}/projects/{project}/global/networks/{network}/zones/{zoneName}
+               * Where {service} is the peering service that is managing connectivity for the
+               * service producer's organization. For Google services that support this {project} is
+               * the project number, as in '12345' {network} is the network name. {zoneName} is the
+               * DNS zone name
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/dnsZones/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * * Service producers can use this method to retrieve a list of available DNS zones in the shared
+             * producer host project and the matching peering zones in the consumer project. *
+             *
+             * Create a request for the method "dnsZones.list".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+             *        format services/{service}/projects/{project}/global/networks/{network} Service: The
+             *        service that is managing connectivity for the service producer's organization. For Google
+             *        services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. Projects: the consumer project containing the consumer
+             *        network. Network: The consumer network accessible from the tenant project.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ListDnsZonesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/dnsZones:list";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+              /**
+               * * Service producers can use this method to retrieve a list of available DNS zones in the shared
+               * producer host project and the matching peering zones in the consumer project. *
+               *
+               * Create a request for the method "dnsZones.list".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+             *        format services/{service}/projects/{project}/global/networks/{network} Service: The
+             *        service that is managing connectivity for the service producer's organization. For Google
+             *        services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. Projects: the consumer project containing the consumer
+             *        network. Network: The consumer network accessible from the tenant project.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.ListDnsZonesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource identifying the connection which owns this collection of
+               * DNS zones in the format
+               * services/{service}/projects/{project}/global/networks/{network} Service: The
+               * service that is managing connectivity for the service producer's organization. For
+               * Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. Projects: the consumer project containing the
+               * consumer network. Network: The consumer network accessible from the tenant project.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent resource identifying the connection which owns this collection of DNS zones in the
+             format services/{service}/projects/{project}/global/networks/{network} Service: The service that is
+             managing connectivity for the service producer's organization. For Google services that support
+             this functionality, this value is `servicenetworking.googleapis.com`. Projects: the consumer
+             project containing the consumer network. Network: The consumer network accessible from the tenant
+             project.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent resource identifying the connection which owns this collection of
+               * DNS zones in the format
+               * services/{service}/projects/{project}/global/networks/{network} Service: The
+               * service that is managing connectivity for the service producer's organization. For
+               * Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. Projects: the consumer project containing the
+               * consumer network. Network: The consumer network accessible from the tenant project.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
           /**
            * An accessor for creating requests from the PeeredDnsDomains collection.
            *

@@ -20,7 +20,7 @@ package com.google.api.services.networkconnectivity.v1.model;
  * A Network Connectivity Center spoke represents one or more network connectivity resources. When
  * you create a spoke, you associate it with a hub. You must also identify a value for exactly one
  * of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments *
- * linked_router_appliance_instances
+ * linked_router_appliance_instances * linked_vpc_network
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -46,6 +46,13 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The name of the group that this spoke is associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String group;
 
   /**
    * Immutable. The name of the hub that this spoke is attached to.
@@ -77,6 +84,13 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private LinkedRouterApplianceInstances linkedRouterApplianceInstances;
 
   /**
+   * Optional. VPC network that is associated with the spoke.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinkedVpcNetwork linkedVpcNetwork;
+
+  /**
    * VPN tunnels that are associated with the spoke.
    * The value may be {@code null}.
    */
@@ -92,6 +106,21 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
+   * `INACTIVE` state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StateReason> reasons;
+
+  /**
+   * Output only. The type of resource associated with the spoke.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spokeType;
+
+  /**
    * Output only. The current lifecycle state of this spoke.
    * The value may be {@code null}.
    */
@@ -101,7 +130,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Google-generated UUID for the spoke. This value is unique across all spoke
    * resources. If a spoke is deleted and another with the same name is created, the new spoke is
-   * assigned a different unique_id.
+   * assigned a different `unique_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,6 +174,23 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
    */
   public Spoke setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * The name of the group that this spoke is associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroup() {
+    return group;
+  }
+
+  /**
+   * The name of the group that this spoke is associated with.
+   * @param group group or {@code null} for none
+   */
+  public Spoke setGroup(java.lang.String group) {
+    this.group = group;
     return this;
   }
 
@@ -219,6 +265,23 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. VPC network that is associated with the spoke.
+   * @return value or {@code null} for none
+   */
+  public LinkedVpcNetwork getLinkedVpcNetwork() {
+    return linkedVpcNetwork;
+  }
+
+  /**
+   * Optional. VPC network that is associated with the spoke.
+   * @param linkedVpcNetwork linkedVpcNetwork or {@code null} for none
+   */
+  public Spoke setLinkedVpcNetwork(LinkedVpcNetwork linkedVpcNetwork) {
+    this.linkedVpcNetwork = linkedVpcNetwork;
+    return this;
+  }
+
+  /**
    * VPN tunnels that are associated with the spoke.
    * @return value or {@code null} for none
    */
@@ -255,6 +318,42 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
+   * `INACTIVE` state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StateReason> getReasons() {
+    return reasons;
+  }
+
+  /**
+   * Output only. The reasons for current state of the spoke. Only present when the spoke is in the
+   * `INACTIVE` state.
+   * @param reasons reasons or {@code null} for none
+   */
+  public Spoke setReasons(java.util.List<StateReason> reasons) {
+    this.reasons = reasons;
+    return this;
+  }
+
+  /**
+   * Output only. The type of resource associated with the spoke.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpokeType() {
+    return spokeType;
+  }
+
+  /**
+   * Output only. The type of resource associated with the spoke.
+   * @param spokeType spokeType or {@code null} for none
+   */
+  public Spoke setSpokeType(java.lang.String spokeType) {
+    this.spokeType = spokeType;
+    return this;
+  }
+
+  /**
    * Output only. The current lifecycle state of this spoke.
    * @return value or {@code null} for none
    */
@@ -274,7 +373,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Google-generated UUID for the spoke. This value is unique across all spoke
    * resources. If a spoke is deleted and another with the same name is created, the new spoke is
-   * assigned a different unique_id.
+   * assigned a different `unique_id`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -284,7 +383,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Google-generated UUID for the spoke. This value is unique across all spoke
    * resources. If a spoke is deleted and another with the same name is created, the new spoke is
-   * assigned a different unique_id.
+   * assigned a different `unique_id`.
    * @param uniqueId uniqueId or {@code null} for none
    */
   public Spoke setUniqueId(java.lang.String uniqueId) {

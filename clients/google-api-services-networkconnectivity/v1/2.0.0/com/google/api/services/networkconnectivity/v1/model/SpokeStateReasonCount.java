@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * Configuration used for Private Service Connect connections. Used when Infrastructure is PSC.
+ * The number of spokes in the hub that are inactive for this reason.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -28,67 +28,67 @@ package com.google.api.services.networkconnectivity.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PscConfig extends com.google.api.client.json.GenericJson {
+public final class SpokeStateReasonCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Max number of PSC connections for this policy.
+   * Output only. The total number of spokes that are inactive for a particular reason and
+   * associated with a given hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long limit;
+  private java.lang.Long count;
 
   /**
-   * The resource paths of subnetworks to use for IP address management. Example:
-   * projects/{projectNumOrId}/regions/{region}/subnetworks/{resourceId}.
+   * Output only. The reason that a spoke is inactive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> subnetworks;
+  private java.lang.String stateReasonCode;
 
   /**
-   * Optional. Max number of PSC connections for this policy.
+   * Output only. The total number of spokes that are inactive for a particular reason and
+   * associated with a given hub.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getLimit() {
-    return limit;
+  public java.lang.Long getCount() {
+    return count;
   }
 
   /**
-   * Optional. Max number of PSC connections for this policy.
-   * @param limit limit or {@code null} for none
+   * Output only. The total number of spokes that are inactive for a particular reason and
+   * associated with a given hub.
+   * @param count count or {@code null} for none
    */
-  public PscConfig setLimit(java.lang.Long limit) {
-    this.limit = limit;
+  public SpokeStateReasonCount setCount(java.lang.Long count) {
+    this.count = count;
     return this;
   }
 
   /**
-   * The resource paths of subnetworks to use for IP address management. Example:
-   * projects/{projectNumOrId}/regions/{region}/subnetworks/{resourceId}.
+   * Output only. The reason that a spoke is inactive.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getSubnetworks() {
-    return subnetworks;
+  public java.lang.String getStateReasonCode() {
+    return stateReasonCode;
   }
 
   /**
-   * The resource paths of subnetworks to use for IP address management. Example:
-   * projects/{projectNumOrId}/regions/{region}/subnetworks/{resourceId}.
-   * @param subnetworks subnetworks or {@code null} for none
+   * Output only. The reason that a spoke is inactive.
+   * @param stateReasonCode stateReasonCode or {@code null} for none
    */
-  public PscConfig setSubnetworks(java.util.List<java.lang.String> subnetworks) {
-    this.subnetworks = subnetworks;
+  public SpokeStateReasonCount setStateReasonCode(java.lang.String stateReasonCode) {
+    this.stateReasonCode = stateReasonCode;
     return this;
   }
 
   @Override
-  public PscConfig set(String fieldName, Object value) {
-    return (PscConfig) super.set(fieldName, value);
+  public SpokeStateReasonCount set(String fieldName, Object value) {
+    return (SpokeStateReasonCount) super.set(fieldName, value);
   }
 
   @Override
-  public PscConfig clone() {
-    return (PscConfig) super.clone();
+  public SpokeStateReasonCount clone() {
+    return (SpokeStateReasonCount) super.clone();
   }
 
 }

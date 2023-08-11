@@ -65,12 +65,31 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The route tables that belong to this hub. They use the following form:
+   * `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}` This
+   * field is read-only. Network Connectivity Center automatically populates it based on the route
+   * tables nested under the hub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> routeTables;
+
+  /**
    * The VPC networks associated with this hub's spokes. This field is read-only. Network
    * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RoutingVPC> routingVpcs;
+
+  /**
+   * Output only. A summary of the spokes associated with a hub. The summary includes a count of
+   * spokes according to type and according to state. If any spokes are inactive, the summary also
+   * lists the reasons they are inactive, including a count for each reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpokeSummary spokeSummary;
 
   /**
    * Output only. The current lifecycle state of this hub.
@@ -168,6 +187,29 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The route tables that belong to this hub. They use the following form:
+   * `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}` This
+   * field is read-only. Network Connectivity Center automatically populates it based on the route
+   * tables nested under the hub.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRouteTables() {
+    return routeTables;
+  }
+
+  /**
+   * Output only. The route tables that belong to this hub. They use the following form:
+   * `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}` This
+   * field is read-only. Network Connectivity Center automatically populates it based on the route
+   * tables nested under the hub.
+   * @param routeTables routeTables or {@code null} for none
+   */
+  public Hub setRouteTables(java.util.List<java.lang.String> routeTables) {
+    this.routeTables = routeTables;
+    return this;
+  }
+
+  /**
    * The VPC networks associated with this hub's spokes. This field is read-only. Network
    * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
    * @return value or {@code null} for none
@@ -183,6 +225,27 @@ public final class Hub extends com.google.api.client.json.GenericJson {
    */
   public Hub setRoutingVpcs(java.util.List<RoutingVPC> routingVpcs) {
     this.routingVpcs = routingVpcs;
+    return this;
+  }
+
+  /**
+   * Output only. A summary of the spokes associated with a hub. The summary includes a count of
+   * spokes according to type and according to state. If any spokes are inactive, the summary also
+   * lists the reasons they are inactive, including a count for each reason.
+   * @return value or {@code null} for none
+   */
+  public SpokeSummary getSpokeSummary() {
+    return spokeSummary;
+  }
+
+  /**
+   * Output only. A summary of the spokes associated with a hub. The summary includes a count of
+   * spokes according to type and according to state. If any spokes are inactive, the summary also
+   * lists the reasons they are inactive, including a count for each reason.
+   * @param spokeSummary spokeSummary or {@code null} for none
+   */
+  public Hub setSpokeSummary(SpokeSummary spokeSummary) {
+    this.spokeSummary = spokeSummary;
     return this;
   }
 

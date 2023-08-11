@@ -107,6 +107,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean crashSafeReplicationEnabled;
 
   /**
+   * Configuration for data cache.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataCacheConfig dataCacheConfig;
+
+  /**
    * The size of data disk, in GB. The data disk size minimum is 10GB.
    * The value may be {@code null}.
    */
@@ -160,6 +167,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(DenyMaintenancePeriod.class);
   }
+
+  /**
+   * Optional. The edition of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
 
   /**
    * Insights configuration, for now relevant only for Postgres.
@@ -459,6 +473,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration for data cache.
+   * @return value or {@code null} for none
+   */
+  public DataCacheConfig getDataCacheConfig() {
+    return dataCacheConfig;
+  }
+
+  /**
+   * Configuration for data cache.
+   * @param dataCacheConfig dataCacheConfig or {@code null} for none
+   */
+  public Settings setDataCacheConfig(DataCacheConfig dataCacheConfig) {
+    this.dataCacheConfig = dataCacheConfig;
+    return this;
+  }
+
+  /**
    * The size of data disk, in GB. The data disk size minimum is 10GB.
    * @return value or {@code null} for none
    */
@@ -559,6 +590,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setDenyMaintenancePeriods(java.util.List<DenyMaintenancePeriod> denyMaintenancePeriods) {
     this.denyMaintenancePeriods = denyMaintenancePeriods;
+    return this;
+  }
+
+  /**
+   * Optional. The edition of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. The edition of the instance.
+   * @param edition edition or {@code null} for none
+   */
+  public Settings setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

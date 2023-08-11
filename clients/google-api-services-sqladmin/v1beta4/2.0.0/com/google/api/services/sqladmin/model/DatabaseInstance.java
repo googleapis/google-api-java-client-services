@@ -101,6 +101,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private DiskEncryptionStatus diskEncryptionStatus;
 
   /**
+   * Output only. The dns name of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dnsName;
+
+  /**
    * This field is deprecated and will be removed from a future version of the API. Use the
    * `settings.settingsVersion` field instead.
    * The value may be {@code null}.
@@ -204,6 +211,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
+
+  /**
+   * Output only. The link to service attachment of PSC instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscServiceAttachmentLink;
 
   /**
    * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1`
@@ -472,6 +486,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The dns name of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDnsName() {
+    return dnsName;
+  }
+
+  /**
+   * Output only. The dns name of the instance.
+   * @param dnsName dnsName or {@code null} for none
+   */
+  public DatabaseInstance setDnsName(java.lang.String dnsName) {
+    this.dnsName = dnsName;
+    return this;
+  }
+
+  /**
    * This field is deprecated and will be removed from a future version of the API. Use the
    * `settings.settingsVersion` field instead.
    * @return value or {@code null} for none
@@ -720,6 +751,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Output only. The link to service attachment of PSC instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscServiceAttachmentLink() {
+    return pscServiceAttachmentLink;
+  }
+
+  /**
+   * Output only. The link to service attachment of PSC instance.
+   * @param pscServiceAttachmentLink pscServiceAttachmentLink or {@code null} for none
+   */
+  public DatabaseInstance setPscServiceAttachmentLink(java.lang.String pscServiceAttachmentLink) {
+    this.pscServiceAttachmentLink = pscServiceAttachmentLink;
     return this;
   }
 

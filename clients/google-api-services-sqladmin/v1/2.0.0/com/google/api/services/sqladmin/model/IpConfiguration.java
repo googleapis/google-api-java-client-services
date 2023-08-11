@@ -78,6 +78,13 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.String privateNetwork;
 
   /**
+   * PSC settings for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
+
+  /**
    * Whether SSL connections over IP are enforced or not.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    */
   public IpConfiguration setPrivateNetwork(java.lang.String privateNetwork) {
     this.privateNetwork = privateNetwork;
+    return this;
+  }
+
+  /**
+   * PSC settings for this instance.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * PSC settings for this instance.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public IpConfiguration setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
     return this;
   }
 

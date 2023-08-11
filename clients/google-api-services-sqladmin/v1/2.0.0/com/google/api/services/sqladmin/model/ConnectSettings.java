@@ -73,6 +73,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * Whether PSC connectivity is enabled for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscEnabled;
+
+  /**
    * The cloud region for the instance. For example, `us-central1`, `europe-west1`. The region
    * cannot be changed after instance creation.
    * The value may be {@code null}.
@@ -185,6 +192,23 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Whether PSC connectivity is enabled for this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscEnabled() {
+    return pscEnabled;
+  }
+
+  /**
+   * Whether PSC connectivity is enabled for this instance.
+   * @param pscEnabled pscEnabled or {@code null} for none
+   */
+  public ConnectSettings setPscEnabled(java.lang.Boolean pscEnabled) {
+    this.pscEnabled = pscEnabled;
     return this;
   }
 

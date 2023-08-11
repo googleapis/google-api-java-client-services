@@ -6016,6 +6016,152 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Get Latest Recovery Time for a given instance.
+       *
+       * Create a request for the method "instances.getLatestRecoveryTime".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link GetLatestRecoveryTime#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public GetLatestRecoveryTime getLatestRecoveryTime(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        GetLatestRecoveryTime result = new GetLatestRecoveryTime(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class GetLatestRecoveryTime extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesGetLatestRecoveryTimeResponse> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/getLatestRecoveryTime";
+
+        /**
+         * Get Latest Recovery Time for a given instance.
+         *
+         * Create a request for the method "instances.getLatestRecoveryTime".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link GetLatestRecoveryTime#execute()} method to invoke the
+         * remote operation. <p> {@link GetLatestRecoveryTime#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param project Project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected GetLatestRecoveryTime(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesGetLatestRecoveryTimeResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetLatestRecoveryTime set$Xgafv(java.lang.String $Xgafv) {
+          return (GetLatestRecoveryTime) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setAccessToken(java.lang.String accessToken) {
+          return (GetLatestRecoveryTime) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setAlt(java.lang.String alt) {
+          return (GetLatestRecoveryTime) super.setAlt(alt);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setCallback(java.lang.String callback) {
+          return (GetLatestRecoveryTime) super.setCallback(callback);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setFields(java.lang.String fields) {
+          return (GetLatestRecoveryTime) super.setFields(fields);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setKey(java.lang.String key) {
+          return (GetLatestRecoveryTime) super.setKey(key);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setOauthToken(java.lang.String oauthToken) {
+          return (GetLatestRecoveryTime) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetLatestRecoveryTime) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setQuotaUser(java.lang.String quotaUser) {
+          return (GetLatestRecoveryTime) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setUploadType(java.lang.String uploadType) {
+          return (GetLatestRecoveryTime) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetLatestRecoveryTime setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetLatestRecoveryTime) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Project ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Project ID of the project that contains the instance. */
+        public GetLatestRecoveryTime setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public GetLatestRecoveryTime setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        @Override
+        public GetLatestRecoveryTime set(String parameterName, Object value) {
+          return (GetLatestRecoveryTime) super.set(parameterName, value);
+        }
+      }
+      /**
        * Perform Disk Shrink on primary instance.
        *
        * Create a request for the method "instances.performDiskShrink".

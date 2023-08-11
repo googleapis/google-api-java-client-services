@@ -32,9 +32,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to true, the _Default sink in newly created projects and folders will created
-   * in a disabled state. This can be used to automatically disable log ingestion if there is
-   * already an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled
-   * manually if needed.
+   * in a disabled state. This can be used to automatically disable log storage if there is already
+   * an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if
+   * needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,9 +85,11 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. The Cloud region that will be used for _Default and _Required log buckets for newly
-   * created projects and folders. For example europe-west1. This setting does not affect the
-   * location of custom log buckets.
+   * Optional. The storage location that Cloud Logging will use to create new resources when a
+   * location is needed but not explicitly provided. The use cases includes: The location of
+   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * west1.Note: this setting does not affect the location of resources where a location is
+   * explicitly provided when created, such as custom log buckets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +97,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to true, the _Default sink in newly created projects and folders will created
-   * in a disabled state. This can be used to automatically disable log ingestion if there is
-   * already an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled
-   * manually if needed.
+   * in a disabled state. This can be used to automatically disable log storage if there is already
+   * an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if
+   * needed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableDefaultSink() {
@@ -106,9 +108,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to true, the _Default sink in newly created projects and folders will created
-   * in a disabled state. This can be used to automatically disable log ingestion if there is
-   * already an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled
-   * manually if needed.
+   * in a disabled state. This can be used to automatically disable log storage if there is already
+   * an aggregated sink configured in the hierarchy. The _Default sink can be re-enabled manually if
+   * needed.
    * @param disableDefaultSink disableDefaultSink or {@code null} for none
    */
   public Settings setDisableDefaultSink(java.lang.Boolean disableDefaultSink) {
@@ -217,9 +219,11 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Cloud region that will be used for _Default and _Required log buckets for newly
-   * created projects and folders. For example europe-west1. This setting does not affect the
-   * location of custom log buckets.
+   * Optional. The storage location that Cloud Logging will use to create new resources when a
+   * location is needed but not explicitly provided. The use cases includes: The location of
+   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * west1.Note: this setting does not affect the location of resources where a location is
+   * explicitly provided when created, such as custom log buckets.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageLocation() {
@@ -227,9 +231,11 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Cloud region that will be used for _Default and _Required log buckets for newly
-   * created projects and folders. For example europe-west1. This setting does not affect the
-   * location of custom log buckets.
+   * Optional. The storage location that Cloud Logging will use to create new resources when a
+   * location is needed but not explicitly provided. The use cases includes: The location of
+   * _Default and _Required log bucket for newly created projects and folders.Example value: europe-
+   * west1.Note: this setting does not affect the location of resources where a location is
+   * explicitly provided when created, such as custom log buckets.
    * @param storageLocation storageLocation or {@code null} for none
    */
   public Settings setStorageLocation(java.lang.String storageLocation) {

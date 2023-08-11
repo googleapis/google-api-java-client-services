@@ -3432,11 +3432,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3462,11 +3462,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3535,31 +3535,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The full resource name of the link to
-           delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+            /** Required. The full resource name of the link to delete.
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3584,11 +3586,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3614,11 +3616,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3697,31 +3699,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the
-           link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+            /** Required. The resource name of the link:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3746,11 +3750,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3776,11 +3780,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3859,31 +3863,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource whose links are to be
-           listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+            /** Required. The parent resource whose links are to be listed:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4279,7 +4283,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets a view on a log bucket..
+           * Gets a view on a log bucket.
            *
            * Create a request for the method "views.get".
            *
@@ -4305,7 +4309,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^billingAccounts/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Gets a view on a log bucket..
+             * Gets a view on a log bucket.
              *
              * Create a request for the method "views.get".
              *
@@ -6029,9 +6033,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Sinks {
 
       /**
-       * Creates a sink that exports specified log entries to a destination. The export of newly-ingested
-       * log entries begins immediately, unless the sink's writer_identity is not permitted to write to
-       * the destination. A sink can export log entries only from the resource owning the sink.
+       * Creates a sink that exports specified log entries to a destination. The export begins upon
+       * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+       * can export log entries only from the resource owning the sink.
        *
        * Create a request for the method "sinks.create".
        *
@@ -6058,9 +6062,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Creates a sink that exports specified log entries to a destination. The export of newly-
-         * ingested log entries begins immediately, unless the sink's writer_identity is not permitted to
-         * write to the destination. A sink can export log entries only from the resource owning the sink.
+         * Creates a sink that exports specified log entries to a destination. The export begins upon
+         * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+         * can export log entries only from the resource owning the sink.
          *
          * Create a request for the method "sinks.create".
          *
@@ -6173,16 +6177,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -6190,9 +6195,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -6206,8 +6211,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -6217,8 +6223,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer_identity is the same group or service account used by Cloud Logging before the addition of
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
-       organization, then the value of writer_identity will be a unique service account used only for
-       exports from the new sink. For more information, see writer_identity in LogSink.
+       organization, then the value of writer_identity will be a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
+       same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -6231,8 +6238,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -6944,9 +6952,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -6955,8 +6964,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -6967,9 +6977,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -7207,9 +7218,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -7218,8 +7230,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -7230,9 +7243,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -7509,7 +7523,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Streaming read of log entries as they are ingested. Until the stream is terminated, it will
+     * Streaming read of log entries as they are received. Until the stream is terminated, it will
      * continue reading logs.
      *
      * Create a request for the method "entries.tail".
@@ -7531,7 +7545,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "v2/entries:tail";
 
       /**
-       * Streaming read of log entries as they are ingested. Until the stream is terminated, it will
+       * Streaming read of log entries as they are received. Until the stream is terminated, it will
        * continue reading logs.
        *
        * Create a request for the method "entries.tail".
@@ -12092,11 +12106,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12122,11 +12136,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -12195,31 +12209,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The full resource name of the link to
-           delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+            /** Required. The full resource name of the link to delete.
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -12244,11 +12260,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -12274,11 +12290,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -12357,31 +12373,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the
-           link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+            /** Required. The resource name of the link:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -12406,11 +12424,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -12436,11 +12454,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -12519,31 +12537,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource whose links are to be
-           listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+            /** Required. The parent resource whose links are to be listed:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -12939,7 +12957,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets a view on a log bucket..
+           * Gets a view on a log bucket.
            *
            * Create a request for the method "views.get".
            *
@@ -12965,7 +12983,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Gets a view on a log bucket..
+             * Gets a view on a log bucket.
              *
              * Create a request for the method "views.get".
              *
@@ -14689,9 +14707,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Sinks {
 
       /**
-       * Creates a sink that exports specified log entries to a destination. The export of newly-ingested
-       * log entries begins immediately, unless the sink's writer_identity is not permitted to write to
-       * the destination. A sink can export log entries only from the resource owning the sink.
+       * Creates a sink that exports specified log entries to a destination. The export begins upon
+       * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+       * can export log entries only from the resource owning the sink.
        *
        * Create a request for the method "sinks.create".
        *
@@ -14718,9 +14736,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a sink that exports specified log entries to a destination. The export of newly-
-         * ingested log entries begins immediately, unless the sink's writer_identity is not permitted to
-         * write to the destination. A sink can export log entries only from the resource owning the sink.
+         * Creates a sink that exports specified log entries to a destination. The export begins upon
+         * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+         * can export log entries only from the resource owning the sink.
          *
          * Create a request for the method "sinks.create".
          *
@@ -14833,16 +14851,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -14850,9 +14869,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -14866,8 +14885,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -14877,8 +14897,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer_identity is the same group or service account used by Cloud Logging before the addition of
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
-       organization, then the value of writer_identity will be a unique service account used only for
-       exports from the new sink. For more information, see writer_identity in LogSink.
+       organization, then the value of writer_identity will be a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
+       same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -14891,8 +14912,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -15604,9 +15626,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -15615,8 +15638,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -15627,9 +15651,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -15867,9 +15892,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -15878,8 +15904,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -15890,9 +15917,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -17981,11 +18009,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The full resource name of the link to
-         *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+         * @param name Required. The full resource name of the link to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+         *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18011,11 +18039,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The full resource name of the link to
-         *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * @param name Required. The full resource name of the link to delete.
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+         *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -18084,31 +18112,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The full resource name of the link to
-           * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "
-           * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_I
-           * D" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * Required. The full resource name of the link to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_I
+           * D]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/l
+           * inks/[LINK_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The full resource name of the link to
-         delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+          /** Required. The full resource name of the link to delete.
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The full resource name of the link to
-           * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "
-           * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_I
-           * D" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * Required. The full resource name of the link to delete.
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_I
+           * D]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/l
+           * inks/[LINK_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -18133,11 +18163,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the
-         *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+         * @param name Required. The resource name of the link:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+         *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -18163,11 +18193,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the
-         *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * @param name Required. The resource name of the link:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+         *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+         *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+         *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -18246,31 +18276,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The resource name of the
-           * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "
-           * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_I
-           * D" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * Required. The resource name of the link:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_I
+           * D]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/l
+           * inks/[LINK_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the
-         link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-         "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+          /** Required. The resource name of the link:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name of the
-           * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID" "
-           * billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_I
-           * D" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * Required. The resource name of the link:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "or
+           * ganizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_I
+           * D]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/l
+           * inks/[LINK_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -18295,11 +18327,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the logging server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource whose links are to be
-         *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+         * @param parent Required. The parent resource whose links are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -18325,11 +18357,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource whose links are to be
-         *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-         *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * @param parent Required. The parent resource whose links are to be listed:
+         *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18408,31 +18440,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The parent resource whose links are to be
-           * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * Required. The parent resource whose links are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource whose links are to be
-         listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-         "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-         "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+          /** Required. The parent resource whose links are to be listed:
+         "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource whose links are to be
-           * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * Required. The parent resource whose links are to be listed:
+           * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -18826,7 +18858,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets a view on a log bucket..
+         * Gets a view on a log bucket.
          *
          * Create a request for the method "views.get".
          *
@@ -18852,7 +18884,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^[^/]+/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
           /**
-           * Gets a view on a log bucket..
+           * Gets a view on a log bucket.
            *
            * Create a request for the method "views.get".
            *
@@ -24154,11 +24186,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -24184,11 +24216,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -24257,31 +24289,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The full resource name of the link to
-           delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+            /** Required. The full resource name of the link to delete.
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -24306,11 +24340,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -24336,11 +24370,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -24419,31 +24453,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the
-           link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+            /** Required. The resource name of the link:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -24468,11 +24504,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -24498,11 +24534,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -24581,31 +24617,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource whose links are to be
-           listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+            /** Required. The parent resource whose links are to be listed:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -25001,7 +25037,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets a view on a log bucket..
+           * Gets a view on a log bucket.
            *
            * Create a request for the method "views.get".
            *
@@ -25027,7 +25063,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Gets a view on a log bucket..
+             * Gets a view on a log bucket.
              *
              * Create a request for the method "views.get".
              *
@@ -26751,9 +26787,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Sinks {
 
       /**
-       * Creates a sink that exports specified log entries to a destination. The export of newly-ingested
-       * log entries begins immediately, unless the sink's writer_identity is not permitted to write to
-       * the destination. A sink can export log entries only from the resource owning the sink.
+       * Creates a sink that exports specified log entries to a destination. The export begins upon
+       * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+       * can export log entries only from the resource owning the sink.
        *
        * Create a request for the method "sinks.create".
        *
@@ -26780,9 +26816,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a sink that exports specified log entries to a destination. The export of newly-
-         * ingested log entries begins immediately, unless the sink's writer_identity is not permitted to
-         * write to the destination. A sink can export log entries only from the resource owning the sink.
+         * Creates a sink that exports specified log entries to a destination. The export begins upon
+         * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+         * can export log entries only from the resource owning the sink.
          *
          * Create a request for the method "sinks.create".
          *
@@ -26895,16 +26931,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -26912,9 +26949,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -26928,8 +26965,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -26939,8 +26977,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer_identity is the same group or service account used by Cloud Logging before the addition of
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
-       organization, then the value of writer_identity will be a unique service account used only for
-       exports from the new sink. For more information, see writer_identity in LogSink.
+       organization, then the value of writer_identity will be a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
+       same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -26953,8 +26992,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -27666,9 +27706,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -27677,8 +27718,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -27689,9 +27731,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -27929,9 +27972,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -27940,8 +27984,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -27952,9 +27997,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -31309,11 +31355,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+           * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -31339,11 +31385,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The full resource name of the link to
-           *        delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * @param name Required. The full resource name of the link to delete.
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -31412,31 +31458,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The full resource name of the link to
-           delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+            /** Required. The full resource name of the link to delete.
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The full resource name of the link to
-             * delete."projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
+             * Required. The full resource name of the link to delete.
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -31461,11 +31509,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+           * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -31491,11 +31539,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the
-           *        link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * @param name Required. The resource name of the link:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "organ
+           *        izations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "b
+           *        illingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LIN
+           *        K_ID]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -31574,31 +31622,33 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the
-           link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+            /** Required. The resource name of the link:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the
-             * link:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LIN
-             * K_ID" "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/LINK_ID
+             * Required. The resource name of the link:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]" "
+             * organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LI
+             * NK_ID]" "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET
+             * _ID]/links/[LINK_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -31623,11 +31673,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * This request holds the parameters needed by the logging server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+           * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -31653,11 +31703,11 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource whose links are to be
-           *        listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           *        "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           *        "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * @param parent Required. The parent resource whose links are to be listed:
+           *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -31736,31 +31786,31 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource whose links are to be
-           listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-           "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-           "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+            /** Required. The parent resource whose links are to be listed:
+           "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource whose links are to be
-             * listed:"projects/PROJECT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/links/"
-             * "organizations/ORGANIZATION_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "billingAccounts/BILLING_ACCOUNT_ID/locations/LOCATION_ID/buckets/BUCKET_ID/"
-             * "folders/FOLDER_ID/locations/LOCATION_ID/buckets/BUCKET_ID/
+             * Required. The parent resource whose links are to be listed:
+             * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -32156,7 +32206,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets a view on a log bucket..
+           * Gets a view on a log bucket.
            *
            * Create a request for the method "views.get".
            *
@@ -32182,7 +32232,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+/views/[^/]+$");
 
             /**
-             * Gets a view on a log bucket..
+             * Gets a view on a log bucket.
              *
              * Create a request for the method "views.get".
              *
@@ -34681,9 +34731,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Sinks {
 
       /**
-       * Creates a sink that exports specified log entries to a destination. The export of newly-ingested
-       * log entries begins immediately, unless the sink's writer_identity is not permitted to write to
-       * the destination. A sink can export log entries only from the resource owning the sink.
+       * Creates a sink that exports specified log entries to a destination. The export begins upon
+       * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+       * can export log entries only from the resource owning the sink.
        *
        * Create a request for the method "sinks.create".
        *
@@ -34710,9 +34760,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a sink that exports specified log entries to a destination. The export of newly-
-         * ingested log entries begins immediately, unless the sink's writer_identity is not permitted to
-         * write to the destination. A sink can export log entries only from the resource owning the sink.
+         * Creates a sink that exports specified log entries to a destination. The export begins upon
+         * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+         * can export log entries only from the resource owning the sink.
          *
          * Create a request for the method "sinks.create".
          *
@@ -34825,16 +34875,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         @com.google.api.client.util.Key
         private java.lang.String customWriterIdentity;
 
-        /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-       be of format serviceAccount:some@email. This can only be specified if writing to a destination
-       outside the sink's project. If not specified, a p4 service account will automatically be generated.
+        /** Optional. A service account provided by the caller that will be used to write the log entries. The
+       format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+       to a destination outside this sink's project. If not specified, a Logging service account will
+       automatically be generated.
          */
         public java.lang.String getCustomWriterIdentity() {
           return customWriterIdentity;
@@ -34842,9 +34893,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Optional. A service account provided by the caller that will be used to write the log
-         * entries. Must be of format serviceAccount:some@email. This can only be specified if
-         * writing to a destination outside the sink's project. If not specified, a p4 service
-         * account will automatically be generated.
+         * entries. The format must be serviceAccount:some@email. This field can only be specified
+         * if you are routing logs to a destination outside this sink's project. If not specified, a
+         * Logging service account will automatically be generated.
          */
         public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
           this.customWriterIdentity = customWriterIdentity;
@@ -34858,8 +34909,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -34869,8 +34921,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer_identity is the same group or service account used by Cloud Logging before the addition of
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
-       organization, then the value of writer_identity will be a unique service account used only for
-       exports from the new sink. For more information, see writer_identity in LogSink.
+       organization, then the value of writer_identity will be a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
+       same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -34883,8 +34936,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a unique service account used only for exports from the new
-         * sink. For more information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
+         * account-types#service-agents) used by the sinks with the same parent. For more
+         * information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -35596,9 +35650,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -35607,8 +35662,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -35619,9 +35675,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -35859,9 +35916,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -35870,8 +35928,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a unique service account. It is an error if the old value
-       is true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+       true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -35882,9 +35941,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * effect of this field on the value of writer_identity in the updated sink depends on both
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
-         * value is false and the new value is true, then writer_identity is changed to a unique
-         * service account. It is an error if the old value is true and the new value is set to
-         * false or defaulted to false.
+         * value is false and the new value is true, then writer_identity is changed to a service
+         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+         * Cloud Logging. It is an error if the old value is true and the new value is set to false
+         * or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -35961,9 +36021,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class Sinks {
 
     /**
-     * Creates a sink that exports specified log entries to a destination. The export of newly-ingested
-     * log entries begins immediately, unless the sink's writer_identity is not permitted to write to
-     * the destination. A sink can export log entries only from the resource owning the sink.
+     * Creates a sink that exports specified log entries to a destination. The export begins upon
+     * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+     * can export log entries only from the resource owning the sink.
      *
      * Create a request for the method "sinks.create".
      *
@@ -35990,9 +36050,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Creates a sink that exports specified log entries to a destination. The export of newly-
-       * ingested log entries begins immediately, unless the sink's writer_identity is not permitted to
-       * write to the destination. A sink can export log entries only from the resource owning the sink.
+       * Creates a sink that exports specified log entries to a destination. The export begins upon
+       * ingress, unless the sink's writer_identity is not permitted to write to the destination. A sink
+       * can export log entries only from the resource owning the sink.
        *
        * Create a request for the method "sinks.create".
        *
@@ -36105,16 +36165,17 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. A service account provided by the caller that will be used to write the log
-       * entries. Must be of format serviceAccount:some@email. This can only be specified if writing
-       * to a destination outside the sink's project. If not specified, a p4 service account will
-       * automatically be generated.
+       * entries. The format must be serviceAccount:some@email. This field can only be specified if
+       * you are routing logs to a destination outside this sink's project. If not specified, a
+       * Logging service account will automatically be generated.
        */
       @com.google.api.client.util.Key
       private java.lang.String customWriterIdentity;
 
-      /** Optional. A service account provided by the caller that will be used to write the log entries. Must
-     be of format serviceAccount:some@email. This can only be specified if writing to a destination
-     outside the sink's project. If not specified, a p4 service account will automatically be generated.
+      /** Optional. A service account provided by the caller that will be used to write the log entries. The
+     format must be serviceAccount:some@email. This field can only be specified if you are routing logs
+     to a destination outside this sink's project. If not specified, a Logging service account will
+     automatically be generated.
        */
       public java.lang.String getCustomWriterIdentity() {
         return customWriterIdentity;
@@ -36122,9 +36183,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. A service account provided by the caller that will be used to write the log
-       * entries. Must be of format serviceAccount:some@email. This can only be specified if writing
-       * to a destination outside the sink's project. If not specified, a p4 service account will
-       * automatically be generated.
+       * entries. The format must be serviceAccount:some@email. This field can only be specified if
+       * you are routing logs to a destination outside this sink's project. If not specified, a
+       * Logging service account will automatically be generated.
        */
       public Create setCustomWriterIdentity(java.lang.String customWriterIdentity) {
         this.customWriterIdentity = customWriterIdentity;
@@ -36138,8 +36199,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Logging before the addition of writer identities to this API. The sink's destination must
        * be in the same project as the sink itself.If this field is set to true, or if the sink is
        * owned by a non-project resource such as an organization, then the value of writer_identity
-       * will be a unique service account used only for exports from the new sink. For more
-       * information, see writer_identity in LogSink.
+       * will be a service agent (https://cloud.google.com/iam/docs/service-account-types#service-
+       * agents) used by the sinks with the same parent. For more information, see writer_identity
+       * in LogSink.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean uniqueWriterIdentity;
@@ -36149,8 +36211,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      writer_identity is the same group or service account used by Cloud Logging before the addition of
      writer identities to this API. The sink's destination must be in the same project as the sink
      itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
-     organization, then the value of writer_identity will be a unique service account used only for
-     exports from the new sink. For more information, see writer_identity in LogSink.
+     organization, then the value of writer_identity will be a service agent
+     (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
+     same parent. For more information, see writer_identity in LogSink.
        */
       public java.lang.Boolean getUniqueWriterIdentity() {
         return uniqueWriterIdentity;
@@ -36163,8 +36226,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Logging before the addition of writer identities to this API. The sink's destination must
        * be in the same project as the sink itself.If this field is set to true, or if the sink is
        * owned by a non-project resource such as an organization, then the value of writer_identity
-       * will be a unique service account used only for exports from the new sink. For more
-       * information, see writer_identity in LogSink.
+       * will be a service agent (https://cloud.google.com/iam/docs/service-account-types#service-
+       * agents) used by the sinks with the same parent. For more information, see writer_identity
+       * in LogSink.
        */
       public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
         this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -36876,8 +36940,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * effect of this field on the value of writer_identity in the updated sink depends on both
        * the old and new values of this field: If the old and new values of this field are both
        * false or both true, then there is no change to the sink's writer_identity. If the old value
-       * is false and the new value is true, then writer_identity is changed to a unique service
-       * account. It is an error if the old value is true and the new value is set to false or
+       * is false and the new value is true, then writer_identity is changed to a service agent
+       * (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       * Logging. It is an error if the old value is true and the new value is set to false or
        * defaulted to false.
        */
       @com.google.api.client.util.Key
@@ -36887,8 +36952,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      this field on the value of writer_identity in the updated sink depends on both the old and new
      values of this field: If the old and new values of this field are both false or both true, then
      there is no change to the sink's writer_identity. If the old value is false and the new value is
-     true, then writer_identity is changed to a unique service account. It is an error if the old value
-     is true and the new value is set to false or defaulted to false.
+     true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
+     /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
+     true and the new value is set to false or defaulted to false.
        */
       public java.lang.Boolean getUniqueWriterIdentity() {
         return uniqueWriterIdentity;
@@ -36899,8 +36965,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * effect of this field on the value of writer_identity in the updated sink depends on both
        * the old and new values of this field: If the old and new values of this field are both
        * false or both true, then there is no change to the sink's writer_identity. If the old value
-       * is false and the new value is true, then writer_identity is changed to a unique service
-       * account. It is an error if the old value is true and the new value is set to false or
+       * is false and the new value is true, then writer_identity is changed to a service agent
+       * (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       * Logging. It is an error if the old value is true and the new value is set to false or
        * defaulted to false.
        */
       public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {

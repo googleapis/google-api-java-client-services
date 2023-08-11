@@ -154,6 +154,119 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
   public class Customers {
 
     /**
+     * Returns resource names of customers directly accessible by the user authenticating the call. List
+     * of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
+     * [InternalError]() [QuotaError]() [RequestError]()
+     *
+     * Create a request for the method "customers.listAccessibleCustomers".
+     *
+     * This request holds the parameters needed by the searchads360 server.  After setting any optional
+     * parameters, call the {@link ListAccessibleCustomers#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public ListAccessibleCustomers listAccessibleCustomers() throws java.io.IOException {
+      ListAccessibleCustomers result = new ListAccessibleCustomers();
+      initialize(result);
+      return result;
+    }
+
+    public class ListAccessibleCustomers extends SA360Request<com.google.api.services.searchads360.v0.model.GoogleAdsSearchads360V0ServicesListAccessibleCustomersResponse> {
+
+      private static final String REST_PATH = "v0/customers:listAccessibleCustomers";
+
+      /**
+       * Returns resource names of customers directly accessible by the user authenticating the call.
+       * List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
+       * [InternalError]() [QuotaError]() [RequestError]()
+       *
+       * Create a request for the method "customers.listAccessibleCustomers".
+       *
+       * This request holds the parameters needed by the the searchads360 server.  After setting any
+       * optional parameters, call the {@link ListAccessibleCustomers#execute()} method to invoke the
+       * remote operation. <p> {@link ListAccessibleCustomers#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ListAccessibleCustomers() {
+        super(SA360.this, "GET", REST_PATH, null, com.google.api.services.searchads360.v0.model.GoogleAdsSearchads360V0ServicesListAccessibleCustomersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListAccessibleCustomers set$Xgafv(java.lang.String $Xgafv) {
+        return (ListAccessibleCustomers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListAccessibleCustomers setAccessToken(java.lang.String accessToken) {
+        return (ListAccessibleCustomers) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListAccessibleCustomers setAlt(java.lang.String alt) {
+        return (ListAccessibleCustomers) super.setAlt(alt);
+      }
+
+      @Override
+      public ListAccessibleCustomers setCallback(java.lang.String callback) {
+        return (ListAccessibleCustomers) super.setCallback(callback);
+      }
+
+      @Override
+      public ListAccessibleCustomers setFields(java.lang.String fields) {
+        return (ListAccessibleCustomers) super.setFields(fields);
+      }
+
+      @Override
+      public ListAccessibleCustomers setKey(java.lang.String key) {
+        return (ListAccessibleCustomers) super.setKey(key);
+      }
+
+      @Override
+      public ListAccessibleCustomers setOauthToken(java.lang.String oauthToken) {
+        return (ListAccessibleCustomers) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListAccessibleCustomers setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListAccessibleCustomers) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListAccessibleCustomers setQuotaUser(java.lang.String quotaUser) {
+        return (ListAccessibleCustomers) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListAccessibleCustomers setUploadType(java.lang.String uploadType) {
+        return (ListAccessibleCustomers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListAccessibleCustomers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListAccessibleCustomers) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ListAccessibleCustomers set(String parameterName, Object value) {
+        return (ListAccessibleCustomers) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the CustomColumns collection.
      *
      * <p>The typical use is:</p>

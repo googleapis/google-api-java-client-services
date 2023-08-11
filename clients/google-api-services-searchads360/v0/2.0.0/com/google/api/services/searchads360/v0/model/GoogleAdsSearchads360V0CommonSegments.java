@@ -31,6 +31,13 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ad network type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adNetworkType;
+
+  /**
    * Resource name of the conversion action.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer year;
+
+  /**
+   * Ad network type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdNetworkType() {
+    return adNetworkType;
+  }
+
+  /**
+   * Ad network type.
+   * @param adNetworkType adNetworkType or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setAdNetworkType(java.lang.String adNetworkType) {
+    this.adNetworkType = adNetworkType;
+    return this;
+  }
 
   /**
    * Resource name of the conversion action.

@@ -17,7 +17,7 @@
 package com.google.api.services.language.v1beta2.model;
 
 /**
- * Represents an output piece of text.
+ * Represents a text span in the input document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -39,7 +39,7 @@ public final class TextSpan extends com.google.api.client.json.GenericJson {
   private java.lang.Integer beginOffset;
 
   /**
-   * The content of the output text.
+   * The content of the text span, which is a substring of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class TextSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the output text.
+   * The content of the text span, which is a substring of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -73,7 +73,7 @@ public final class TextSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The content of the output text.
+   * The content of the text span, which is a substring of the document.
    * @param content content or {@code null} for none
    */
   public TextSpan setContent(java.lang.String content) {

@@ -148,6 +148,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private MemcacheParameters parameters;
 
   /**
+   * Optional. Contains the id of allocated IP address ranges associated with the private service
+   * access connection for example, "test-default" associated with IP range 10.0.0.0/29.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> reservedIpRangeId;
+
+  /**
    * Output only. The state of this Memcached instance.
    * The value may be {@code null}.
    */
@@ -453,6 +461,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setParameters(MemcacheParameters parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Contains the id of allocated IP address ranges associated with the private service
+   * access connection for example, "test-default" associated with IP range 10.0.0.0/29.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReservedIpRangeId() {
+    return reservedIpRangeId;
+  }
+
+  /**
+   * Optional. Contains the id of allocated IP address ranges associated with the private service
+   * access connection for example, "test-default" associated with IP range 10.0.0.0/29.
+   * @param reservedIpRangeId reservedIpRangeId or {@code null} for none
+   */
+  public Instance setReservedIpRangeId(java.util.List<java.lang.String> reservedIpRangeId) {
+    this.reservedIpRangeId = reservedIpRangeId;
     return this;
   }
 

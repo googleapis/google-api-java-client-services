@@ -154,6 +154,430 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
   public class Projects {
 
     /**
+     * The method enrolls a solution of type Retail Search into a project. The Recommendations AI
+     * solution type is enrolled by default when your project enables Retail API, so you don't need to
+     * call the enrollSolution method for recommendations.
+     *
+     * Create a request for the method "projects.enrollSolution".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link EnrollSolution#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+     * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaEnrollSolutionRequest}
+     * @return the request
+     */
+    public EnrollSolution enrollSolution(java.lang.String project, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaEnrollSolutionRequest content) throws java.io.IOException {
+      EnrollSolution result = new EnrollSolution(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EnrollSolution extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "v2alpha/{+project}:enrollSolution";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * The method enrolls a solution of type Retail Search into a project. The Recommendations AI
+       * solution type is enrolled by default when your project enables Retail API, so you don't need to
+       * call the enrollSolution method for recommendations.
+       *
+       * Create a request for the method "projects.enrollSolution".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link EnrollSolution#execute()} method to invoke the remote operation.
+       * <p> {@link EnrollSolution#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+       * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaEnrollSolutionRequest}
+       * @since 1.13
+       */
+      protected EnrollSolution(java.lang.String project, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaEnrollSolutionRequest content) {
+        super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleLongrunningOperation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public EnrollSolution set$Xgafv(java.lang.String $Xgafv) {
+        return (EnrollSolution) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EnrollSolution setAccessToken(java.lang.String accessToken) {
+        return (EnrollSolution) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EnrollSolution setAlt(java.lang.String alt) {
+        return (EnrollSolution) super.setAlt(alt);
+      }
+
+      @Override
+      public EnrollSolution setCallback(java.lang.String callback) {
+        return (EnrollSolution) super.setCallback(callback);
+      }
+
+      @Override
+      public EnrollSolution setFields(java.lang.String fields) {
+        return (EnrollSolution) super.setFields(fields);
+      }
+
+      @Override
+      public EnrollSolution setKey(java.lang.String key) {
+        return (EnrollSolution) super.setKey(key);
+      }
+
+      @Override
+      public EnrollSolution setOauthToken(java.lang.String oauthToken) {
+        return (EnrollSolution) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EnrollSolution setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EnrollSolution) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EnrollSolution setQuotaUser(java.lang.String quotaUser) {
+        return (EnrollSolution) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EnrollSolution setUploadType(java.lang.String uploadType) {
+        return (EnrollSolution) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EnrollSolution setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EnrollSolution) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}` */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}` */
+      public EnrollSolution setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public EnrollSolution set(String parameterName, Object value) {
+        return (EnrollSolution) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the Retail API
+     * service.
+     *
+     * Create a request for the method "projects.getRetailProject".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link GetRetailProject#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Full resource name of the project. Format: `projects/{project_number_or_id}/retailProject`
+     * @return the request
+     */
+    public GetRetailProject getRetailProject(java.lang.String name) throws java.io.IOException {
+      GetRetailProject result = new GetRetailProject(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetRetailProject extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaProject> {
+
+      private static final String REST_PATH = "v2alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/retailProject$");
+
+      /**
+       * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the Retail API
+       * service.
+       *
+       * Create a request for the method "projects.getRetailProject".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link GetRetailProject#execute()} method to invoke the remote operation.
+       * <p> {@link GetRetailProject#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+       * ClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Full resource name of the project. Format: `projects/{project_number_or_id}/retailProject`
+       * @since 1.13
+       */
+      protected GetRetailProject(java.lang.String name) {
+        super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaProject.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/retailProject$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetRetailProject set$Xgafv(java.lang.String $Xgafv) {
+        return (GetRetailProject) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetRetailProject setAccessToken(java.lang.String accessToken) {
+        return (GetRetailProject) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetRetailProject setAlt(java.lang.String alt) {
+        return (GetRetailProject) super.setAlt(alt);
+      }
+
+      @Override
+      public GetRetailProject setCallback(java.lang.String callback) {
+        return (GetRetailProject) super.setCallback(callback);
+      }
+
+      @Override
+      public GetRetailProject setFields(java.lang.String fields) {
+        return (GetRetailProject) super.setFields(fields);
+      }
+
+      @Override
+      public GetRetailProject setKey(java.lang.String key) {
+        return (GetRetailProject) super.setKey(key);
+      }
+
+      @Override
+      public GetRetailProject setOauthToken(java.lang.String oauthToken) {
+        return (GetRetailProject) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetRetailProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetRetailProject) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetRetailProject setQuotaUser(java.lang.String quotaUser) {
+        return (GetRetailProject) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetRetailProject setUploadType(java.lang.String uploadType) {
+        return (GetRetailProject) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetRetailProject setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetRetailProject) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Full resource name of the project. Format:
+       * `projects/{project_number_or_id}/retailProject`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Full resource name of the project. Format:
+     `projects/{project_number_or_id}/retailProject`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Full resource name of the project. Format:
+       * `projects/{project_number_or_id}/retailProject`
+       */
+      public GetRetailProject setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/retailProject$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetRetailProject set(String parameterName, Object value) {
+        return (GetRetailProject) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all the retail API solutions the project has enrolled.
+     *
+     * Create a request for the method "projects.listEnrolledSolutions".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link ListEnrolledSolutions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+     * @return the request
+     */
+    public ListEnrolledSolutions listEnrolledSolutions(java.lang.String parent) throws java.io.IOException {
+      ListEnrolledSolutions result = new ListEnrolledSolutions(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class ListEnrolledSolutions extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListEnrolledSolutionsResponse> {
+
+      private static final String REST_PATH = "v2alpha/{+parent}:enrolledSolutions";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Lists all the retail API solutions the project has enrolled.
+       *
+       * Create a request for the method "projects.listEnrolledSolutions".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link ListEnrolledSolutions#execute()} method to invoke the remote
+       * operation. <p> {@link ListEnrolledSolutions#initialize(com.google.api.client.googleapis.service
+       * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param parent Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+       * @since 1.13
+       */
+      protected ListEnrolledSolutions(java.lang.String parent) {
+        super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListEnrolledSolutionsResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListEnrolledSolutions set$Xgafv(java.lang.String $Xgafv) {
+        return (ListEnrolledSolutions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListEnrolledSolutions setAccessToken(java.lang.String accessToken) {
+        return (ListEnrolledSolutions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListEnrolledSolutions setAlt(java.lang.String alt) {
+        return (ListEnrolledSolutions) super.setAlt(alt);
+      }
+
+      @Override
+      public ListEnrolledSolutions setCallback(java.lang.String callback) {
+        return (ListEnrolledSolutions) super.setCallback(callback);
+      }
+
+      @Override
+      public ListEnrolledSolutions setFields(java.lang.String fields) {
+        return (ListEnrolledSolutions) super.setFields(fields);
+      }
+
+      @Override
+      public ListEnrolledSolutions setKey(java.lang.String key) {
+        return (ListEnrolledSolutions) super.setKey(key);
+      }
+
+      @Override
+      public ListEnrolledSolutions setOauthToken(java.lang.String oauthToken) {
+        return (ListEnrolledSolutions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListEnrolledSolutions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListEnrolledSolutions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListEnrolledSolutions setQuotaUser(java.lang.String quotaUser) {
+        return (ListEnrolledSolutions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListEnrolledSolutions setUploadType(java.lang.String uploadType) {
+        return (ListEnrolledSolutions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListEnrolledSolutions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListEnrolledSolutions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}` */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}`
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Full resource name of parent. Format: `projects/{project_number_or_id}` */
+      public ListEnrolledSolutions setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public ListEnrolledSolutions set(String parameterName, Object value) {
+        return (ListEnrolledSolutions) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -11541,6 +11965,168 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the RetailProject collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRetail retail = new CloudRetail(...);}
+     *   {@code CloudRetail.RetailProject.List request = retail.retailProject().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public RetailProject retailProject() {
+      return new RetailProject();
+    }
+
+    /**
+     * The "retailProject" collection of methods.
+     */
+    public class RetailProject {
+
+      /**
+       * Accepts service terms for this project. By making requests to this API, you agree to the terms of
+       * service linked below. https://cloud.google.com/retail/data-use-terms
+       *
+       * Create a request for the method "retailProject.acceptTerms".
+       *
+       * This request holds the parameters needed by the retail server.  After setting any optional
+       * parameters, call the {@link AcceptTerms#execute()} method to invoke the remote operation.
+       *
+       * @param project Required. Full resource name of the project. Format: `projects/{project_number_or_id}/retailProject`
+       * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAcceptTermsRequest}
+       * @return the request
+       */
+      public AcceptTerms acceptTerms(java.lang.String project, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAcceptTermsRequest content) throws java.io.IOException {
+        AcceptTerms result = new AcceptTerms(project, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AcceptTerms extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaProject> {
+
+        private static final String REST_PATH = "v2alpha/{+project}:acceptTerms";
+
+        private final java.util.regex.Pattern PROJECT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/retailProject$");
+
+        /**
+         * Accepts service terms for this project. By making requests to this API, you agree to the terms
+         * of service linked below. https://cloud.google.com/retail/data-use-terms
+         *
+         * Create a request for the method "retailProject.acceptTerms".
+         *
+         * This request holds the parameters needed by the the retail server.  After setting any optional
+         * parameters, call the {@link AcceptTerms#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * AcceptTerms#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param project Required. Full resource name of the project. Format: `projects/{project_number_or_id}/retailProject`
+         * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAcceptTermsRequest}
+         * @since 1.13
+         */
+        protected AcceptTerms(java.lang.String project, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAcceptTermsRequest content) {
+          super(CloudRetail.this, "POST", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaProject.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+/retailProject$");
+          }
+        }
+
+        @Override
+        public AcceptTerms set$Xgafv(java.lang.String $Xgafv) {
+          return (AcceptTerms) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AcceptTerms setAccessToken(java.lang.String accessToken) {
+          return (AcceptTerms) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AcceptTerms setAlt(java.lang.String alt) {
+          return (AcceptTerms) super.setAlt(alt);
+        }
+
+        @Override
+        public AcceptTerms setCallback(java.lang.String callback) {
+          return (AcceptTerms) super.setCallback(callback);
+        }
+
+        @Override
+        public AcceptTerms setFields(java.lang.String fields) {
+          return (AcceptTerms) super.setFields(fields);
+        }
+
+        @Override
+        public AcceptTerms setKey(java.lang.String key) {
+          return (AcceptTerms) super.setKey(key);
+        }
+
+        @Override
+        public AcceptTerms setOauthToken(java.lang.String oauthToken) {
+          return (AcceptTerms) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AcceptTerms setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AcceptTerms) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AcceptTerms setQuotaUser(java.lang.String quotaUser) {
+          return (AcceptTerms) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AcceptTerms setUploadType(java.lang.String uploadType) {
+          return (AcceptTerms) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AcceptTerms setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AcceptTerms) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Full resource name of the project. Format:
+         * `projects/{project_number_or_id}/retailProject`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Required. Full resource name of the project. Format:
+       `projects/{project_number_or_id}/retailProject`
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /**
+         * Required. Full resource name of the project. Format:
+         * `projects/{project_number_or_id}/retailProject`
+         */
+        public AcceptTerms setProject(java.lang.String project) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+                "Parameter project must conform to the pattern " +
+                "^projects/[^/]+/retailProject$");
+          }
+          this.project = project;
+          return this;
+        }
+
+        @Override
+        public AcceptTerms set(String parameterName, Object value) {
+          return (AcceptTerms) super.set(parameterName, value);
         }
       }
 

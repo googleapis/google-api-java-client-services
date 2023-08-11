@@ -89,11 +89,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   private String availableTime;
 
   /**
-   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
-   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Corresponding properties: Google Merchant Center property
-   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
-   * [Product.brand](https://schema.org/brand).
+   * The brands of the product. A maximum of 30 brands are allowed unless overridden through the
+   * Google Cloud console. Each brand must be a UTF-8 encoded string with a length limit of 1,000
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [brand](https://support.google.com/merchants/answer/6324351).
+   * Schema.org property [Product.brand](https://schema.org/brand).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -558,11 +558,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
-   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Corresponding properties: Google Merchant Center property
-   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
-   * [Product.brand](https://schema.org/brand).
+   * The brands of the product. A maximum of 30 brands are allowed unless overridden through the
+   * Google Cloud console. Each brand must be a UTF-8 encoded string with a length limit of 1,000
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [brand](https://support.google.com/merchants/answer/6324351).
+   * Schema.org property [Product.brand](https://schema.org/brand).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBrands() {
@@ -570,11 +570,11 @@ public final class GoogleCloudRetailV2Product extends com.google.api.client.json
   }
 
   /**
-   * The brands of the product. A maximum of 30 brands are allowed. Each brand must be a UTF-8
-   * encoded string with a length limit of 1,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Corresponding properties: Google Merchant Center property
-   * [brand](https://support.google.com/merchants/answer/6324351). Schema.org property
-   * [Product.brand](https://schema.org/brand).
+   * The brands of the product. A maximum of 30 brands are allowed unless overridden through the
+   * Google Cloud console. Each brand must be a UTF-8 encoded string with a length limit of 1,000
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google
+   * Merchant Center property [brand](https://support.google.com/merchants/answer/6324351).
+   * Schema.org property [Product.brand](https://schema.org/brand).
    * @param brands brands or {@code null} for none
    */
   public GoogleCloudRetailV2Product setBrands(java.util.List<java.lang.String> brands) {

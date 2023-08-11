@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The ServiceClass resource. Next id: 8
+ * The ServiceClass resource. Next id: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -45,6 +45,14 @@ public final class ServiceClass extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * User-defined labels.
    * The value may be {@code null}.
    */
@@ -67,13 +75,6 @@ public final class ServiceClass extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceClass;
-
-  /**
-   * Output only. URIs of all Service Connection Maps using this service class.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> serviceConnectionMaps;
 
   /**
    * Output only. Time when the ServiceClass was updated.
@@ -113,6 +114,25 @@ public final class ServiceClass extends com.google.api.client.json.GenericJson {
    */
   public ServiceClass setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public ServiceClass setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
@@ -170,23 +190,6 @@ public final class ServiceClass extends com.google.api.client.json.GenericJson {
    */
   public ServiceClass setServiceClass(java.lang.String serviceClass) {
     this.serviceClass = serviceClass;
-    return this;
-  }
-
-  /**
-   * Output only. URIs of all Service Connection Maps using this service class.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getServiceConnectionMaps() {
-    return serviceConnectionMaps;
-  }
-
-  /**
-   * Output only. URIs of all Service Connection Maps using this service class.
-   * @param serviceConnectionMaps serviceConnectionMaps or {@code null} for none
-   */
-  public ServiceClass setServiceConnectionMaps(java.util.List<java.lang.String> serviceConnectionMaps) {
-    this.serviceConnectionMaps = serviceConnectionMaps;
     return this;
   }
 

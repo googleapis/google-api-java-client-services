@@ -59,6 +59,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private GoogleRpcStatus error;
 
   /**
+   * Output only. The error info for the latest error during operating this connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcErrorInfo errorInfo;
+
+  /**
    * The error type indicates whether the error is consumer facing, producer facing or system
    * internal.
    * The value may be {@code null}.
@@ -152,6 +159,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. The error info for the latest error during operating this connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcErrorInfo getErrorInfo() {
+    return errorInfo;
+  }
+
+  /**
+   * Output only. The error info for the latest error during operating this connection.
+   * @param errorInfo errorInfo or {@code null} for none
+   */
+  public PscConnection setErrorInfo(GoogleRpcErrorInfo errorInfo) {
+    this.errorInfo = errorInfo;
     return this;
   }
 

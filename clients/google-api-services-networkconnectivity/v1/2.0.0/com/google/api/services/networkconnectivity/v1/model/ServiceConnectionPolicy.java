@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * The ServiceConnectionPolicy resource. Next id: 11
+ * The ServiceConnectionPolicy resource. Next id: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -43,6 +43,14 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
 
   /**
    * Output only. The type of underlying resources used to create the connection.
@@ -143,6 +151,25 @@ public final class ServiceConnectionPolicy extends com.google.api.client.json.Ge
    */
   public ServiceConnectionPolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. The etag is computed by the server, and may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public ServiceConnectionPolicy setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

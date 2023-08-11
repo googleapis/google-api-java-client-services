@@ -22,10 +22,7 @@ package com.google.api.services.securitycenter.v1beta2.model;
  * instance itself. Some database resources might not have the [full resource
  * name](https://google.aip.dev/122#full-resource-names) populated because these resource types,
  * such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only
- * the display name is provided. Some database resources may not have the [full resource
- * name](https://google.aip.dev/122#full-resource-names) populated because these resource types are
- * not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the
- * display name will be provided.
+ * the display name is provided.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -54,6 +51,9 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> grantees;
 
   /**
+   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
+   * resource-names) populated because these resource types are not yet supported by Cloud Asset
+   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
    * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
    * the user connected to, if it is supported by Cloud Asset Inventory.
    * The value may be {@code null}.
@@ -75,6 +75,14 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String userName;
+
+  /**
+   * The version of the database, for example, POSTGRES_14. See [the complete
+   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
 
   /**
    * The human-readable name of the database that the user connected to.
@@ -113,6 +121,9 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
+   * resource-names) populated because these resource types are not yet supported by Cloud Asset
+   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
    * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
    * the user connected to, if it is supported by Cloud Asset Inventory.
    * @return value or {@code null} for none
@@ -122,6 +133,9 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
+   * resource-names) populated because these resource types are not yet supported by Cloud Asset
+   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
    * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
    * the user connected to, if it is supported by Cloud Asset Inventory.
    * @param name name or {@code null} for none
@@ -164,6 +178,25 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setUserName(java.lang.String userName) {
     this.userName = userName;
+    return this;
+  }
+
+  /**
+   * The version of the database, for example, POSTGRES_14. See [the complete
+   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * The version of the database, for example, POSTGRES_14. See [the complete
+   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
+   * @param version version or {@code null} for none
+   */
+  public Database setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 

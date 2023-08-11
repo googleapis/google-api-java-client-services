@@ -30,23 +30,23 @@ package com.google.api.services.pubsub.model;
 public final class ListSnapshotsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If not empty, indicates that there may be more snapshot that match the request; this value
-   * should be passed in a new `ListSnapshotsRequest`.
+   * Optional. If not empty, indicates that there may be more snapshot that match the request; this
+   * value should be passed in a new `ListSnapshotsRequest`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The resulting snapshots.
+   * Optional. The resulting snapshots.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Snapshot> snapshots;
 
   /**
-   * If not empty, indicates that there may be more snapshot that match the request; this value
-   * should be passed in a new `ListSnapshotsRequest`.
+   * Optional. If not empty, indicates that there may be more snapshot that match the request; this
+   * value should be passed in a new `ListSnapshotsRequest`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListSnapshotsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * If not empty, indicates that there may be more snapshot that match the request; this value
-   * should be passed in a new `ListSnapshotsRequest`.
+   * Optional. If not empty, indicates that there may be more snapshot that match the request; this
+   * value should be passed in a new `ListSnapshotsRequest`.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSnapshotsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class ListSnapshotsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resulting snapshots.
+   * Optional. The resulting snapshots.
    * @return value or {@code null} for none
    */
   public java.util.List<Snapshot> getSnapshots() {
@@ -72,7 +72,7 @@ public final class ListSnapshotsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resulting snapshots.
+   * Optional. The resulting snapshots.
    * @param snapshots snapshots or {@code null} for none
    */
   public ListSnapshotsResponse setSnapshots(java.util.List<Snapshot> snapshots) {

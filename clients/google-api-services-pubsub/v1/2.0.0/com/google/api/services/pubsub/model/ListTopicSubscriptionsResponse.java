@@ -30,23 +30,23 @@ package com.google.api.services.pubsub.model;
 public final class ListTopicSubscriptionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If not empty, indicates that there may be more subscriptions that match the request; this value
-   * should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
+   * Optional. If not empty, indicates that there may be more subscriptions that match the request;
+   * this value should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The names of subscriptions attached to the topic specified in the request.
+   * Optional. The names of subscriptions attached to the topic specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subscriptions;
 
   /**
-   * If not empty, indicates that there may be more subscriptions that match the request; this value
-   * should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
+   * Optional. If not empty, indicates that there may be more subscriptions that match the request;
+   * this value should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   }
 
   /**
-   * If not empty, indicates that there may be more subscriptions that match the request; this value
-   * should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
+   * Optional. If not empty, indicates that there may be more subscriptions that match the request;
+   * this value should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTopicSubscriptionsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   }
 
   /**
-   * The names of subscriptions attached to the topic specified in the request.
+   * Optional. The names of subscriptions attached to the topic specified in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubscriptions() {
@@ -72,7 +72,7 @@ public final class ListTopicSubscriptionsResponse extends com.google.api.client.
   }
 
   /**
-   * The names of subscriptions attached to the topic specified in the request.
+   * Optional. The names of subscriptions attached to the topic specified in the request.
    * @param subscriptions subscriptions or {@code null} for none
    */
   public ListTopicSubscriptionsResponse setSubscriptions(java.util.List<java.lang.String> subscriptions) {

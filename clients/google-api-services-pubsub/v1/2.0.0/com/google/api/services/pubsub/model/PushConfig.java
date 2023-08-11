@@ -30,40 +30,40 @@ package com.google.api.services.pubsub.model;
 public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Endpoint configuration attributes that can be used to control different aspects of the message
-   * delivery. The only currently supported attribute is `x-goog-version`, which you can use to
-   * change the format of the pushed message. This attribute indicates the version of the data
-   * expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and
-   * metadata). If not present during the `CreateSubscription` call, it will default to the version
-   * of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its
-   * value will not be changed. `GetSubscription` calls will always return a valid version, even if
-   * the subscription was created without this attribute. The only supported values for the `x-goog-
-   * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
-   * { "x-goog-version": "v1" }`
+   * Optional. Endpoint configuration attributes that can be used to control different aspects of
+   * the message delivery. The only currently supported attribute is `x-goog-version`, which you can
+   * use to change the format of the pushed message. This attribute indicates the version of the
+   * data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields
+   * and metadata). If not present during the `CreateSubscription` call, it will default to the
+   * version of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call,
+   * its value will not be changed. `GetSubscription` calls will always return a valid version, even
+   * if the subscription was created without this attribute. The only supported values for the `x
+   * -goog-version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub
+   * API. * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example:
+   * `attributes { "x-goog-version": "v1" }`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
-   * When set, the payload to the push endpoint is not wrapped.
+   * Optional. When set, the payload to the push endpoint is not wrapped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NoWrapper noWrapper;
 
   /**
-   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
-   * in the HTTP request for every pushed message.
+   * Optional. If specified, Pub/Sub will generate and attach an OIDC JWT token as an
+   * `Authorization` header in the HTTP request for every pushed message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OidcToken oidcToken;
 
   /**
-   * When set, the payload to the push endpoint is in the form of the JSON representation of a
-   * PubsubMessage
+   * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
+   * of a PubsubMessage
    * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * The value may be {@code null}.
    */
@@ -71,25 +71,25 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   private PubsubWrapper pubsubWrapper;
 
   /**
-   * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use `https://example.com/push`.
+   * Optional. A URL locating the endpoint to which messages should be pushed. For example, a
+   * Webhook endpoint might use `https://example.com/push`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pushEndpoint;
 
   /**
-   * Endpoint configuration attributes that can be used to control different aspects of the message
-   * delivery. The only currently supported attribute is `x-goog-version`, which you can use to
-   * change the format of the pushed message. This attribute indicates the version of the data
-   * expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and
-   * metadata). If not present during the `CreateSubscription` call, it will default to the version
-   * of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its
-   * value will not be changed. `GetSubscription` calls will always return a valid version, even if
-   * the subscription was created without this attribute. The only supported values for the `x-goog-
-   * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
-   * { "x-goog-version": "v1" }`
+   * Optional. Endpoint configuration attributes that can be used to control different aspects of
+   * the message delivery. The only currently supported attribute is `x-goog-version`, which you can
+   * use to change the format of the pushed message. This attribute indicates the version of the
+   * data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields
+   * and metadata). If not present during the `CreateSubscription` call, it will default to the
+   * version of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call,
+   * its value will not be changed. `GetSubscription` calls will always return a valid version, even
+   * if the subscription was created without this attribute. The only supported values for the `x
+   * -goog-version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub
+   * API. * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example:
+   * `attributes { "x-goog-version": "v1" }`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -97,17 +97,17 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Endpoint configuration attributes that can be used to control different aspects of the message
-   * delivery. The only currently supported attribute is `x-goog-version`, which you can use to
-   * change the format of the pushed message. This attribute indicates the version of the data
-   * expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and
-   * metadata). If not present during the `CreateSubscription` call, it will default to the version
-   * of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its
-   * value will not be changed. `GetSubscription` calls will always return a valid version, even if
-   * the subscription was created without this attribute. The only supported values for the `x-goog-
-   * version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. *
-   * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example: `attributes
-   * { "x-goog-version": "v1" }`
+   * Optional. Endpoint configuration attributes that can be used to control different aspects of
+   * the message delivery. The only currently supported attribute is `x-goog-version`, which you can
+   * use to change the format of the pushed message. This attribute indicates the version of the
+   * data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields
+   * and metadata). If not present during the `CreateSubscription` call, it will default to the
+   * version of the Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call,
+   * its value will not be changed. `GetSubscription` calls will always return a valid version, even
+   * if the subscription was created without this attribute. The only supported values for the `x
+   * -goog-version` attribute are: * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub
+   * API. * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API. For example:
+   * `attributes { "x-goog-version": "v1" }`
    * @param attributes attributes or {@code null} for none
    */
   public PushConfig setAttributes(java.util.Map<String, java.lang.String> attributes) {
@@ -116,7 +116,7 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the payload to the push endpoint is not wrapped.
+   * Optional. When set, the payload to the push endpoint is not wrapped.
    * @return value or {@code null} for none
    */
   public NoWrapper getNoWrapper() {
@@ -124,7 +124,7 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the payload to the push endpoint is not wrapped.
+   * Optional. When set, the payload to the push endpoint is not wrapped.
    * @param noWrapper noWrapper or {@code null} for none
    */
   public PushConfig setNoWrapper(NoWrapper noWrapper) {
@@ -133,8 +133,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
-   * in the HTTP request for every pushed message.
+   * Optional. If specified, Pub/Sub will generate and attach an OIDC JWT token as an
+   * `Authorization` header in the HTTP request for every pushed message.
    * @return value or {@code null} for none
    */
   public OidcToken getOidcToken() {
@@ -142,8 +142,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
-   * in the HTTP request for every pushed message.
+   * Optional. If specified, Pub/Sub will generate and attach an OIDC JWT token as an
+   * `Authorization` header in the HTTP request for every pushed message.
    * @param oidcToken oidcToken or {@code null} for none
    */
   public PushConfig setOidcToken(OidcToken oidcToken) {
@@ -152,8 +152,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the payload to the push endpoint is in the form of the JSON representation of a
-   * PubsubMessage
+   * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
+   * of a PubsubMessage
    * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * @return value or {@code null} for none
    */
@@ -162,8 +162,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, the payload to the push endpoint is in the form of the JSON representation of a
-   * PubsubMessage
+   * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
+   * of a PubsubMessage
    * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * @param pubsubWrapper pubsubWrapper or {@code null} for none
    */
@@ -173,8 +173,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use `https://example.com/push`.
+   * Optional. A URL locating the endpoint to which messages should be pushed. For example, a
+   * Webhook endpoint might use `https://example.com/push`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPushEndpoint() {
@@ -182,8 +182,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
-   * might use `https://example.com/push`.
+   * Optional. A URL locating the endpoint to which messages should be pushed. For example, a
+   * Webhook endpoint might use `https://example.com/push`.
    * @param pushEndpoint pushEndpoint or {@code null} for none
    */
   public PushConfig setPushEndpoint(java.lang.String pushEndpoint) {

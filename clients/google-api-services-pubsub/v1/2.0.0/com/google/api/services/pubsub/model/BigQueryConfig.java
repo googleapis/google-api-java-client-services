@@ -30,10 +30,10 @@ package com.google.api.services.pubsub.model;
 public final class BigQueryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * When true and use_topic_schema is true, any fields that are a part of the topic schema that are
-   * not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the
-   * schemas must be kept in sync and any messages with extra fields are not written and remain in
-   * the subscription's backlog.
+   * Optional. When true and use_topic_schema is true, any fields that are a part of the topic
+   * schema that are not part of the BigQuery table schema are dropped when writing to BigQuery.
+   * Otherwise, the schemas must be kept in sync and any messages with extra fields are not written
+   * and remain in the subscription's backlog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,34 +48,36 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
+   * Optional. The name of the table to which to write data, of the form
+   * {projectId}.{datasetId}.{tableId}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String table;
 
   /**
-   * When true, use the topic's schema as the columns to write to in BigQuery, if it exists.
+   * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
+   * exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useTopicSchema;
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * to additional columns in the table. The subscription name, message_id, and publish_time fields
-   * are put in their own columns while all other message properties (other than data) are written
-   * to a JSON object in the attributes column.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key to additional columns in the table. The subscription name, message_id, and
+   * publish_time fields are put in their own columns while all other message properties (other than
+   * data) are written to a JSON object in the attributes column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean writeMetadata;
 
   /**
-   * When true and use_topic_schema is true, any fields that are a part of the topic schema that are
-   * not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the
-   * schemas must be kept in sync and any messages with extra fields are not written and remain in
-   * the subscription's backlog.
+   * Optional. When true and use_topic_schema is true, any fields that are a part of the topic
+   * schema that are not part of the BigQuery table schema are dropped when writing to BigQuery.
+   * Otherwise, the schemas must be kept in sync and any messages with extra fields are not written
+   * and remain in the subscription's backlog.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDropUnknownFields() {
@@ -83,10 +85,10 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * When true and use_topic_schema is true, any fields that are a part of the topic schema that are
-   * not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the
-   * schemas must be kept in sync and any messages with extra fields are not written and remain in
-   * the subscription's backlog.
+   * Optional. When true and use_topic_schema is true, any fields that are a part of the topic
+   * schema that are not part of the BigQuery table schema are dropped when writing to BigQuery.
+   * Otherwise, the schemas must be kept in sync and any messages with extra fields are not written
+   * and remain in the subscription's backlog.
    * @param dropUnknownFields dropUnknownFields or {@code null} for none
    */
   public BigQueryConfig setDropUnknownFields(java.lang.Boolean dropUnknownFields) {
@@ -114,7 +116,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
+   * Optional. The name of the table to which to write data, of the form
+   * {projectId}.{datasetId}.{tableId}
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -122,7 +125,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
+   * Optional. The name of the table to which to write data, of the form
+   * {projectId}.{datasetId}.{tableId}
    * @param table table or {@code null} for none
    */
   public BigQueryConfig setTable(java.lang.String table) {
@@ -131,7 +135,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * When true, use the topic's schema as the columns to write to in BigQuery, if it exists.
+   * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
+   * exists.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTopicSchema() {
@@ -139,7 +144,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * When true, use the topic's schema as the columns to write to in BigQuery, if it exists.
+   * Optional. When true, use the topic's schema as the columns to write to in BigQuery, if it
+   * exists.
    * @param useTopicSchema useTopicSchema or {@code null} for none
    */
   public BigQueryConfig setUseTopicSchema(java.lang.Boolean useTopicSchema) {
@@ -148,10 +154,10 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * to additional columns in the table. The subscription name, message_id, and publish_time fields
-   * are put in their own columns while all other message properties (other than data) are written
-   * to a JSON object in the attributes column.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key to additional columns in the table. The subscription name, message_id, and
+   * publish_time fields are put in their own columns while all other message properties (other than
+   * data) are written to a JSON object in the attributes column.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWriteMetadata() {
@@ -159,10 +165,10 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * When true, write the subscription name, message_id, publish_time, attributes, and ordering_key
-   * to additional columns in the table. The subscription name, message_id, and publish_time fields
-   * are put in their own columns while all other message properties (other than data) are written
-   * to a JSON object in the attributes column.
+   * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
+   * ordering_key to additional columns in the table. The subscription name, message_id, and
+   * publish_time fields are put in their own columns while all other message properties (other than
+   * data) are written to a JSON object in the attributes column.
    * @param writeMetadata writeMetadata or {@code null} for none
    */
   public BigQueryConfig setWriteMetadata(java.lang.Boolean writeMetadata) {

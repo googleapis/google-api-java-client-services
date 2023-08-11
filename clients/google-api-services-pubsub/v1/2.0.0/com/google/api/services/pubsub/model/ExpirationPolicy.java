@@ -31,20 +31,22 @@ package com.google.api.services.pubsub.model;
 public final class ExpirationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the "time-to-live" duration for an associated resource. The resource expires if it is
-   * not active for a period of `ttl`. The definition of "activity" depends on the type of the
-   * associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the
-   * associated resource, as well. If `ttl` is not set, the associated resource never expires.
+   * Optional. Specifies the "time-to-live" duration for an associated resource. The resource
+   * expires if it is not active for a period of `ttl`. The definition of "activity" depends on the
+   * type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the
+   * type of the associated resource, as well. If `ttl` is not set, the associated resource never
+   * expires.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String ttl;
 
   /**
-   * Specifies the "time-to-live" duration for an associated resource. The resource expires if it is
-   * not active for a period of `ttl`. The definition of "activity" depends on the type of the
-   * associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the
-   * associated resource, as well. If `ttl` is not set, the associated resource never expires.
+   * Optional. Specifies the "time-to-live" duration for an associated resource. The resource
+   * expires if it is not active for a period of `ttl`. The definition of "activity" depends on the
+   * type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the
+   * type of the associated resource, as well. If `ttl` is not set, the associated resource never
+   * expires.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -52,10 +54,11 @@ public final class ExpirationPolicy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specifies the "time-to-live" duration for an associated resource. The resource expires if it is
-   * not active for a period of `ttl`. The definition of "activity" depends on the type of the
-   * associated resource. The minimum and maximum allowed values for `ttl` depend on the type of the
-   * associated resource, as well. If `ttl` is not set, the associated resource never expires.
+   * Optional. Specifies the "time-to-live" duration for an associated resource. The resource
+   * expires if it is not active for a period of `ttl`. The definition of "activity" depends on the
+   * type of the associated resource. The minimum and maximum allowed values for `ttl` depend on the
+   * type of the associated resource, as well. If `ttl` is not set, the associated resource never
+   * expires.
    * @param ttl ttl or {@code null} for none
    */
   public ExpirationPolicy setTtl(String ttl) {

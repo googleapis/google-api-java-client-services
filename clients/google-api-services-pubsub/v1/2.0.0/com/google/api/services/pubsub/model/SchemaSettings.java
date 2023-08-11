@@ -30,23 +30,25 @@ package com.google.api.services.pubsub.model;
 public final class SchemaSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The encoding of messages validated against `schema`.
+   * Optional. The encoding of messages validated against `schema`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against last_revision or any revision created before.
+   * Optional. The minimum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against last_revision or any revision created
+   * before.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firstRevisionId;
 
   /**
-   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against first_revision or any revision created after.
+   * Optional. The maximum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against first_revision or any revision created
+   * after.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,7 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   private java.lang.String schema;
 
   /**
-   * The encoding of messages validated against `schema`.
+   * Optional. The encoding of messages validated against `schema`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -70,7 +72,7 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The encoding of messages validated against `schema`.
+   * Optional. The encoding of messages validated against `schema`.
    * @param encoding encoding or {@code null} for none
    */
   public SchemaSettings setEncoding(java.lang.String encoding) {
@@ -79,8 +81,9 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against last_revision or any revision created before.
+   * Optional. The minimum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against last_revision or any revision created
+   * before.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirstRevisionId() {
@@ -88,8 +91,9 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The minimum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against last_revision or any revision created before.
+   * Optional. The minimum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against last_revision or any revision created
+   * before.
    * @param firstRevisionId firstRevisionId or {@code null} for none
    */
   public SchemaSettings setFirstRevisionId(java.lang.String firstRevisionId) {
@@ -98,8 +102,9 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against first_revision or any revision created after.
+   * Optional. The maximum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against first_revision or any revision created
+   * after.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastRevisionId() {
@@ -107,8 +112,9 @@ public final class SchemaSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The maximum (inclusive) revision allowed for validating messages. If empty or not present,
-   * allow any revision to be validated against first_revision or any revision created after.
+   * Optional. The maximum (inclusive) revision allowed for validating messages. If empty or not
+   * present, allow any revision to be validated against first_revision or any revision created
+   * after.
    * @param lastRevisionId lastRevisionId or {@code null} for none
    */
   public SchemaSettings setLastRevisionId(java.lang.String lastRevisionId) {

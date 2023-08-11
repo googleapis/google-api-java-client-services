@@ -33,49 +33,49 @@ package com.google.api.services.pubsub.model;
 public final class Snapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * The snapshot is guaranteed to exist up until this time. A newly-created snapshot expires no
-   * later than 7 days from the time of its creation. Its exact lifetime is determined at creation
-   * by the existing backlog in the source subscription. Specifically, the lifetime of the snapshot
-   * is `7 days - (age of oldest unacked message in the subscription)`. For example, consider a
-   * subscription whose oldest unacked message is 3 days old. If a snapshot is created from this
-   * subscription, the snapshot -- which will always capture this 3-day-old backlog as long as the
-   * snapshot exists -- will expire in 4 days. The service will refuse to create a snapshot that
-   * would expire in less than 1 hour after creation.
+   * Optional. The snapshot is guaranteed to exist up until this time. A newly-created snapshot
+   * expires no later than 7 days from the time of its creation. Its exact lifetime is determined at
+   * creation by the existing backlog in the source subscription. Specifically, the lifetime of the
+   * snapshot is `7 days - (age of oldest unacked message in the subscription)`. For example,
+   * consider a subscription whose oldest unacked message is 3 days old. If a snapshot is created
+   * from this subscription, the snapshot -- which will always capture this 3-day-old backlog as
+   * long as the snapshot exists -- will expire in 4 days. The service will refuse to create a
+   * snapshot that would expire in less than 1 hour after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The name of the snapshot.
+   * Optional. The name of the snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the topic from which this snapshot is retaining messages.
+   * Optional. The name of the topic from which this snapshot is retaining messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topic;
 
   /**
-   * The snapshot is guaranteed to exist up until this time. A newly-created snapshot expires no
-   * later than 7 days from the time of its creation. Its exact lifetime is determined at creation
-   * by the existing backlog in the source subscription. Specifically, the lifetime of the snapshot
-   * is `7 days - (age of oldest unacked message in the subscription)`. For example, consider a
-   * subscription whose oldest unacked message is 3 days old. If a snapshot is created from this
-   * subscription, the snapshot -- which will always capture this 3-day-old backlog as long as the
-   * snapshot exists -- will expire in 4 days. The service will refuse to create a snapshot that
-   * would expire in less than 1 hour after creation.
+   * Optional. The snapshot is guaranteed to exist up until this time. A newly-created snapshot
+   * expires no later than 7 days from the time of its creation. Its exact lifetime is determined at
+   * creation by the existing backlog in the source subscription. Specifically, the lifetime of the
+   * snapshot is `7 days - (age of oldest unacked message in the subscription)`. For example,
+   * consider a subscription whose oldest unacked message is 3 days old. If a snapshot is created
+   * from this subscription, the snapshot -- which will always capture this 3-day-old backlog as
+   * long as the snapshot exists -- will expire in 4 days. The service will refuse to create a
+   * snapshot that would expire in less than 1 hour after creation.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -83,14 +83,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snapshot is guaranteed to exist up until this time. A newly-created snapshot expires no
-   * later than 7 days from the time of its creation. Its exact lifetime is determined at creation
-   * by the existing backlog in the source subscription. Specifically, the lifetime of the snapshot
-   * is `7 days - (age of oldest unacked message in the subscription)`. For example, consider a
-   * subscription whose oldest unacked message is 3 days old. If a snapshot is created from this
-   * subscription, the snapshot -- which will always capture this 3-day-old backlog as long as the
-   * snapshot exists -- will expire in 4 days. The service will refuse to create a snapshot that
-   * would expire in less than 1 hour after creation.
+   * Optional. The snapshot is guaranteed to exist up until this time. A newly-created snapshot
+   * expires no later than 7 days from the time of its creation. Its exact lifetime is determined at
+   * creation by the existing backlog in the source subscription. Specifically, the lifetime of the
+   * snapshot is `7 days - (age of oldest unacked message in the subscription)`. For example,
+   * consider a subscription whose oldest unacked message is 3 days old. If a snapshot is created
+   * from this subscription, the snapshot -- which will always capture this 3-day-old backlog as
+   * long as the snapshot exists -- will expire in 4 days. The service will refuse to create a
+   * snapshot that would expire in less than 1 hour after creation.
    * @param expireTime expireTime or {@code null} for none
    */
   public Snapshot setExpireTime(String expireTime) {
@@ -99,7 +99,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -107,7 +107,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
+   * Optional. See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public Snapshot setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -116,7 +116,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the snapshot.
+   * Optional. The name of the snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -124,7 +124,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the snapshot.
+   * Optional. The name of the snapshot.
    * @param name name or {@code null} for none
    */
   public Snapshot setName(java.lang.String name) {
@@ -133,7 +133,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this snapshot is retaining messages.
+   * Optional. The name of the topic from which this snapshot is retaining messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -141,7 +141,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this snapshot is retaining messages.
+   * Optional. The name of the topic from which this snapshot is retaining messages.
    * @param topic topic or {@code null} for none
    */
   public Snapshot setTopic(java.lang.String topic) {

@@ -30,16 +30,16 @@ package com.google.api.services.pubsub.model;
 public final class PublishResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The server-assigned ID of each published message, in the same order as the messages in the
-   * request. IDs are guaranteed to be unique within the topic.
+   * Optional. The server-assigned ID of each published message, in the same order as the messages
+   * in the request. IDs are guaranteed to be unique within the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> messageIds;
 
   /**
-   * The server-assigned ID of each published message, in the same order as the messages in the
-   * request. IDs are guaranteed to be unique within the topic.
+   * Optional. The server-assigned ID of each published message, in the same order as the messages
+   * in the request. IDs are guaranteed to be unique within the topic.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMessageIds() {
@@ -47,8 +47,8 @@ public final class PublishResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The server-assigned ID of each published message, in the same order as the messages in the
-   * request. IDs are guaranteed to be unique within the topic.
+   * Optional. The server-assigned ID of each published message, in the same order as the messages
+   * in the request. IDs are guaranteed to be unique within the topic.
    * @param messageIds messageIds or {@code null} for none
    */
   public PublishResponse setMessageIds(java.util.List<java.lang.String> messageIds) {

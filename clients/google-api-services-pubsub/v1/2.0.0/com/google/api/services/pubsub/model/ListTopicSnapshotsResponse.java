@@ -30,23 +30,23 @@ package com.google.api.services.pubsub.model;
 public final class ListTopicSnapshotsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If not empty, indicates that there may be more snapshots that match the request; this value
-   * should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
+   * Optional. If not empty, indicates that there may be more snapshots that match the request; this
+   * value should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The names of the snapshots that match the request.
+   * Optional. The names of the snapshots that match the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> snapshots;
 
   /**
-   * If not empty, indicates that there may be more snapshots that match the request; this value
-   * should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
+   * Optional. If not empty, indicates that there may be more snapshots that match the request; this
+   * value should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class ListTopicSnapshotsResponse extends com.google.api.client.json
   }
 
   /**
-   * If not empty, indicates that there may be more snapshots that match the request; this value
-   * should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
+   * Optional. If not empty, indicates that there may be more snapshots that match the request; this
+   * value should be passed in a new `ListTopicSnapshotsRequest` to get more snapshots.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListTopicSnapshotsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class ListTopicSnapshotsResponse extends com.google.api.client.json
   }
 
   /**
-   * The names of the snapshots that match the request.
+   * Optional. The names of the snapshots that match the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSnapshots() {
@@ -72,7 +72,7 @@ public final class ListTopicSnapshotsResponse extends com.google.api.client.json
   }
 
   /**
-   * The names of the snapshots that match the request.
+   * Optional. The names of the snapshots that match the request.
    * @param snapshots snapshots or {@code null} for none
    */
   public ListTopicSnapshotsResponse setSnapshots(java.util.List<java.lang.String> snapshots) {

@@ -31,19 +31,19 @@ package com.google.api.services.pubsub.model;
 public final class OidcToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Audience to be used when generating OIDC token. The audience claim identifies the recipients
-   * that the JWT is intended for. The audience value is a single case-sensitive string. Having
-   * multiple values (array) for the audience field is not supported. More info about the OIDC JWT
-   * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified,
-   * the Push endpoint URL will be used.
+   * Optional. Audience to be used when generating OIDC token. The audience claim identifies the
+   * recipients that the JWT is intended for. The audience value is a single case-sensitive string.
+   * Having multiple values (array) for the audience field is not supported. More info about the
+   * OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not
+   * specified, the Push endpoint URL will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audience;
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for generating
-   * the OIDC token. For more information on setting up authentication, see [Push
+   * Optional. [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for
+   * generating the OIDC token. For more information on setting up authentication, see [Push
    * subscriptions](https://cloud.google.com/pubsub/docs/push).
    * The value may be {@code null}.
    */
@@ -51,11 +51,11 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountEmail;
 
   /**
-   * Audience to be used when generating OIDC token. The audience claim identifies the recipients
-   * that the JWT is intended for. The audience value is a single case-sensitive string. Having
-   * multiple values (array) for the audience field is not supported. More info about the OIDC JWT
-   * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified,
-   * the Push endpoint URL will be used.
+   * Optional. Audience to be used when generating OIDC token. The audience claim identifies the
+   * recipients that the JWT is intended for. The audience value is a single case-sensitive string.
+   * Having multiple values (array) for the audience field is not supported. More info about the
+   * OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not
+   * specified, the Push endpoint URL will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -63,11 +63,11 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Audience to be used when generating OIDC token. The audience claim identifies the recipients
-   * that the JWT is intended for. The audience value is a single case-sensitive string. Having
-   * multiple values (array) for the audience field is not supported. More info about the OIDC JWT
-   * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified,
-   * the Push endpoint URL will be used.
+   * Optional. Audience to be used when generating OIDC token. The audience claim identifies the
+   * recipients that the JWT is intended for. The audience value is a single case-sensitive string.
+   * Having multiple values (array) for the audience field is not supported. More info about the
+   * OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not
+   * specified, the Push endpoint URL will be used.
    * @param audience audience or {@code null} for none
    */
   public OidcToken setAudience(java.lang.String audience) {
@@ -76,8 +76,8 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for generating
-   * the OIDC token. For more information on setting up authentication, see [Push
+   * Optional. [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for
+   * generating the OIDC token. For more information on setting up authentication, see [Push
    * subscriptions](https://cloud.google.com/pubsub/docs/push).
    * @return value or {@code null} for none
    */
@@ -86,8 +86,8 @@ public final class OidcToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for generating
-   * the OIDC token. For more information on setting up authentication, see [Push
+   * Optional. [Service account email](https://cloud.google.com/iam/docs/service-accounts) used for
+   * generating the OIDC token. For more information on setting up authentication, see [Push
    * subscriptions](https://cloud.google.com/pubsub/docs/push).
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */

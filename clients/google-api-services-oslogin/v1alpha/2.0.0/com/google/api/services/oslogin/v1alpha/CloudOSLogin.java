@@ -703,6 +703,174 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the Zones collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudOSLogin oslogin = new CloudOSLogin(...);}
+       *   {@code CloudOSLogin.Zones.List request = oslogin.zones().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Zones zones() {
+        return new Zones();
+      }
+
+      /**
+       * The "zones" collection of methods.
+       */
+      public class Zones {
+
+        /**
+         * Signs an SSH public key for a user to authenticate to a virtual machine on Google Compute Engine.
+         *
+         * Create a request for the method "zones.signSshPublicKey".
+         *
+         * This request holds the parameters needed by the oslogin server.  After setting any optional
+         * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
+         *        organization ISS processing and potentially to provide for the possibility of zone-
+         *        specific certificates used in the signing process.
+         * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
+         * @return the request
+         */
+        public SignSshPublicKey signSshPublicKey(java.lang.String parent, com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest content) throws java.io.IOException {
+          SignSshPublicKey result = new SignSshPublicKey(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SignSshPublicKey extends CloudOSLoginRequest<com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}:signSshPublicKey";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^users/[^/]+/projects/[^/]+/zones/[^/]+$");
+
+          /**
+           * Signs an SSH public key for a user to authenticate to a virtual machine on Google Compute
+           * Engine.
+           *
+           * Create a request for the method "zones.signSshPublicKey".
+           *
+           * This request holds the parameters needed by the the oslogin server.  After setting any optional
+           * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
+           * <p> {@link SignSshPublicKey#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
+         *        organization ISS processing and potentially to provide for the possibility of zone-
+         *        specific certificates used in the signing process.
+           * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
+           * @since 1.13
+           */
+          protected SignSshPublicKey(java.lang.String parent, com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest content) {
+            super(CloudOSLogin.this, "POST", REST_PATH, content, com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^users/[^/]+/projects/[^/]+/zones/[^/]+$");
+            }
+          }
+
+          @Override
+          public SignSshPublicKey set$Xgafv(java.lang.String $Xgafv) {
+            return (SignSshPublicKey) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SignSshPublicKey setAccessToken(java.lang.String accessToken) {
+            return (SignSshPublicKey) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SignSshPublicKey setAlt(java.lang.String alt) {
+            return (SignSshPublicKey) super.setAlt(alt);
+          }
+
+          @Override
+          public SignSshPublicKey setCallback(java.lang.String callback) {
+            return (SignSshPublicKey) super.setCallback(callback);
+          }
+
+          @Override
+          public SignSshPublicKey setFields(java.lang.String fields) {
+            return (SignSshPublicKey) super.setFields(fields);
+          }
+
+          @Override
+          public SignSshPublicKey setKey(java.lang.String key) {
+            return (SignSshPublicKey) super.setKey(key);
+          }
+
+          @Override
+          public SignSshPublicKey setOauthToken(java.lang.String oauthToken) {
+            return (SignSshPublicKey) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SignSshPublicKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SignSshPublicKey) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SignSshPublicKey setQuotaUser(java.lang.String quotaUser) {
+            return (SignSshPublicKey) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SignSshPublicKey setUploadType(java.lang.String uploadType) {
+            return (SignSshPublicKey) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SignSshPublicKey setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent project and zone for the signing request. This is needed to properly ensure
+           * per-organization ISS processing and potentially to provide for the possibility of zone-
+           * specific certificates used in the signing process.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent project and zone for the signing request. This is needed to properly ensure per-
+         organization ISS processing and potentially to provide for the possibility of zone-specific
+         certificates used in the signing process.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent project and zone for the signing request. This is needed to properly ensure
+           * per-organization ISS processing and potentially to provide for the possibility of zone-
+           * specific certificates used in the signing process.
+           */
+          public SignSshPublicKey setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^users/[^/]+/projects/[^/]+/zones/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public SignSshPublicKey set(String parameterName, Object value) {
+            return (SignSshPublicKey) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the SshPublicKeys collection.

@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * Eventing runtime data has the details related to eventing managed by the system.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,67 +27,67 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class EventingRuntimeData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Output only. Events listener endpoint. The value will populated after provisioning the events
+   * listener.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private java.lang.String eventsListenerEndpoint;
 
   /**
-   * Different types of resource supported.
+   * Output only. Current status of eventing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private EventingStatus status;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Output only. Events listener endpoint. The value will populated after provisioning the events
+   * listener.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  public java.lang.String getEventsListenerEndpoint() {
+    return eventsListenerEndpoint;
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * Output only. Events listener endpoint. The value will populated after provisioning the events
+   * listener.
+   * @param eventsListenerEndpoint eventsListenerEndpoint or {@code null} for none
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  public EventingRuntimeData setEventsListenerEndpoint(java.lang.String eventsListenerEndpoint) {
+    this.eventsListenerEndpoint = eventsListenerEndpoint;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * Output only. Current status of eventing.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public EventingStatus getStatus() {
+    return status;
   }
 
   /**
-   * Different types of resource supported.
-   * @param type type or {@code null} for none
+   * Output only. Current status of eventing.
+   * @param status status or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
-    this.type = type;
+  public EventingRuntimeData setStatus(EventingStatus status) {
+    this.status = status;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public EventingRuntimeData set(String fieldName, Object value) {
+    return (EventingRuntimeData) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public EventingRuntimeData clone() {
+    return (EventingRuntimeData) super.clone();
   }
 
 }

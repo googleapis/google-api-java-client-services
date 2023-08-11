@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * Response message for Connectors.ListEventTypes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,67 +27,70 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class ListEventTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * A list of connector versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private java.util.List<EventType> eventTypes;
 
-  /**
-   * Different types of resource supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  static {
+    // hack to force ProGuard to consider EventType used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EventType.class);
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * Next page token.
+   * The value may be {@code null}.
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * A list of connector versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EventType> getEventTypes() {
+    return eventTypes;
+  }
+
+  /**
+   * A list of connector versions.
+   * @param eventTypes eventTypes or {@code null} for none
+   */
+  public ListEventTypesResponse setEventTypes(java.util.List<EventType> eventTypes) {
+    this.eventTypes = eventTypes;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * Next page token.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Different types of resource supported.
-   * @param type type or {@code null} for none
+   * Next page token.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
-    this.type = type;
+  public ListEventTypesResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public ListEventTypesResponse set(String fieldName, Object value) {
+    return (ListEventTypesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public ListEventTypesResponse clone() {
+    return (ListEventTypesResponse) super.clone();
   }
 
 }

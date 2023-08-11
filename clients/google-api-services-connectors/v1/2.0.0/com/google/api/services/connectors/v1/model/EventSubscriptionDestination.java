@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * Message for EventSubscription Destination to act on receiving an event
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,44 +27,65 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class EventSubscriptionDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * OPTION 1: Hit an endpoint when we receive an event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private EndPoint endpoint;
 
   /**
-   * Different types of resource supported.
+   * Service account needed for runtime plane to trigger IP workflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
+   * type of the destination
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * OPTION 1: Hit an endpoint when we receive an event.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  public EndPoint getEndpoint() {
+    return endpoint;
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * OPTION 1: Hit an endpoint when we receive an event.
+   * @param endpoint endpoint or {@code null} for none
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  public EventSubscriptionDestination setEndpoint(EndPoint endpoint) {
+    this.endpoint = endpoint;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * Service account needed for runtime plane to trigger IP workflow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Service account needed for runtime plane to trigger IP workflow.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public EventSubscriptionDestination setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * type of the destination
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,22 +93,22 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Different types of resource supported.
+   * type of the destination
    * @param type type or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
+  public EventSubscriptionDestination setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public EventSubscriptionDestination set(String fieldName, Object value) {
+    return (EventSubscriptionDestination) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public EventSubscriptionDestination clone() {
+    return (EventSubscriptionDestination) super.clone();
   }
 
 }

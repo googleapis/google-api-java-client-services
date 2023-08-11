@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * EventingStatus indicates the state of eventing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class EventingStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Output only. Description of error if State is set to "ERROR".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private java.lang.String description;
 
   /**
-   * Different types of resource supported.
+   * Output only. State.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String state;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Output only. Description of error if State is set to "ERROR".
    * @return value or {@code null} for none
    */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * Output only. Description of error if State is set to "ERROR".
+   * @param description description or {@code null} for none
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  public EventingStatus setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * Output only. State.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Different types of resource supported.
-   * @param type type or {@code null} for none
+   * Output only. State.
+   * @param state state or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
-    this.type = type;
+  public EventingStatus setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public EventingStatus set(String fieldName, Object value) {
+    return (EventingStatus) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public EventingStatus clone() {
+    return (EventingStatus) super.clone();
   }
 
 }

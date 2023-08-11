@@ -58,6 +58,13 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String documentationUri;
 
   /**
+   * Output only. Eventing details. Will be null if eventing is not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventingDetails eventingDetails;
+
+  /**
    * Output only. Link to external page.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setDocumentationUri(java.lang.String documentationUri) {
     this.documentationUri = documentationUri;
+    return this;
+  }
+
+  /**
+   * Output only. Eventing details. Will be null if eventing is not supported.
+   * @return value or {@code null} for none
+   */
+  public EventingDetails getEventingDetails() {
+    return eventingDetails;
+  }
+
+  /**
+   * Output only. Eventing details. Will be null if eventing is not supported.
+   * @param eventingDetails eventingDetails or {@code null} for none
+   */
+  public Connector setEventingDetails(EventingDetails eventingDetails) {
+    this.eventingDetails = eventingDetails;
     return this;
   }
 

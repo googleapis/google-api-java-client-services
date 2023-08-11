@@ -31,7 +31,7 @@ package com.google.api.services.connectors.v1.model;
 public final class AuthorizationCodeLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * The client ID assigned to the GCP Connectors OAuth app for the connector data source.
+   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private java.lang.Boolean enablePkce;
 
   /**
-   * The scopes for which the user will authorize GCP Connectors on the connector data source.
+   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
+   * source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   private java.lang.String uri;
 
   /**
-   * The client ID assigned to the GCP Connectors OAuth app for the connector data source.
+   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -67,7 +68,7 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The client ID assigned to the GCP Connectors OAuth app for the connector data source.
+   * The client ID assigned to the Google Cloud Connectors OAuth app for the connector data source.
    * @param clientId clientId or {@code null} for none
    */
   public AuthorizationCodeLink setClientId(java.lang.String clientId) {
@@ -93,7 +94,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The scopes for which the user will authorize GCP Connectors on the connector data source.
+   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
+   * source.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -101,7 +103,8 @@ public final class AuthorizationCodeLink extends com.google.api.client.json.Gene
   }
 
   /**
-   * The scopes for which the user will authorize GCP Connectors on the connector data source.
+   * The scopes for which the user will authorize Google Cloud Connectors on the connector data
+   * source.
    * @param scopes scopes or {@code null} for none
    */
   public AuthorizationCodeLink setScopes(java.util.List<java.lang.String> scopes) {

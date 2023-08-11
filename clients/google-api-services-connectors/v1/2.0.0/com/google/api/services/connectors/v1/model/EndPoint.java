@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * Endpoint message includes details of the Destination endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class EndPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * The URI of the Endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private java.lang.String endpointUri;
 
   /**
-   * Different types of resource supported.
+   * List of Header to be added to the Endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.util.List<Header> headers;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * The URI of the Endpoint.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  public java.lang.String getEndpointUri() {
+    return endpointUri;
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * The URI of the Endpoint.
+   * @param endpointUri endpointUri or {@code null} for none
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  public EndPoint setEndpointUri(java.lang.String endpointUri) {
+    this.endpointUri = endpointUri;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * List of Header to be added to the Endpoint.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.util.List<Header> getHeaders() {
+    return headers;
   }
 
   /**
-   * Different types of resource supported.
-   * @param type type or {@code null} for none
+   * List of Header to be added to the Endpoint.
+   * @param headers headers or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
-    this.type = type;
+  public EndPoint setHeaders(java.util.List<Header> headers) {
+    this.headers = headers;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public EndPoint set(String fieldName, Object value) {
+    return (EndPoint) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public EndPoint clone() {
+    return (EndPoint) super.clone();
   }
 
 }

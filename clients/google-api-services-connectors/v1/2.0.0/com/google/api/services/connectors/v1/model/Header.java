@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Resource definition
+ * Header details for a given header to be added to Endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Resource extends com.google.api.client.json.GenericJson {
+public final class Header extends com.google.api.client.json.GenericJson {
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Key of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String pathTemplate;
+  private java.lang.String key;
 
   /**
-   * Different types of resource supported.
+   * Value of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String value;
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
+   * Key of Header.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPathTemplate() {
-    return pathTemplate;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * Template to uniquely represent a Google Cloud resource in a format IAM expects This is a
-   * template that can have references to other values provided in the config variable template.
-   * @param pathTemplate pathTemplate or {@code null} for none
+   * Key of Header.
+   * @param key key or {@code null} for none
    */
-  public Resource setPathTemplate(java.lang.String pathTemplate) {
-    this.pathTemplate = pathTemplate;
+  public Header setKey(java.lang.String key) {
+    this.key = key;
     return this;
   }
 
   /**
-   * Different types of resource supported.
+   * Value of Header.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Different types of resource supported.
-   * @param type type or {@code null} for none
+   * Value of Header.
+   * @param value value or {@code null} for none
    */
-  public Resource setType(java.lang.String type) {
-    this.type = type;
+  public Header setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public Resource set(String fieldName, Object value) {
-    return (Resource) super.set(fieldName, value);
+  public Header set(String fieldName, Object value) {
+    return (Header) super.set(fieldName, value);
   }
 
   @Override
-  public Resource clone() {
-    return (Resource) super.clone();
+  public Header clone() {
+    return (Header) super.clone();
   }
 
 }

@@ -72,6 +72,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Storage configuration for this environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageConfig storageConfig;
+
+  /**
    * Output only. The time at which this environment was last modified.
    * The value may be {@code null}.
    */
@@ -182,6 +189,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Storage configuration for this environment.
+   * @return value or {@code null} for none
+   */
+  public StorageConfig getStorageConfig() {
+    return storageConfig;
+  }
+
+  /**
+   * Optional. Storage configuration for this environment.
+   * @param storageConfig storageConfig or {@code null} for none
+   */
+  public Environment setStorageConfig(StorageConfig storageConfig) {
+    this.storageConfig = storageConfig;
     return this;
   }
 

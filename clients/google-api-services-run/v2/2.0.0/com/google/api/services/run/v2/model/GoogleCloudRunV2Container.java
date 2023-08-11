@@ -47,7 +47,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<java.lang.String> command;
 
   /**
-   * Container names which must start before this container.
+   * Names of the containers that must start before this container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Container names which must start before this container.
+   * Names of the containers that must start before this container.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDependsOn() {
@@ -168,7 +168,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Container names which must start before this container.
+   * Names of the containers that must start before this container.
    * @param dependsOn dependsOn or {@code null} for none
    */
   public GoogleCloudRunV2Container setDependsOn(java.util.List<java.lang.String> dependsOn) {

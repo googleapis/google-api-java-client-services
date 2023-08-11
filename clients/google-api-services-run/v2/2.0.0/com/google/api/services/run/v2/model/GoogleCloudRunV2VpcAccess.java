@@ -42,7 +42,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   private java.lang.String connector;
 
   /**
-   * Traffic VPC egress settings.
+   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Traffic VPC egress settings.
+   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * @return value or {@code null} for none
    */
   public java.lang.String getEgress() {
@@ -78,7 +78,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Traffic VPC egress settings.
+   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * @param egress egress or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setEgress(java.lang.String egress) {

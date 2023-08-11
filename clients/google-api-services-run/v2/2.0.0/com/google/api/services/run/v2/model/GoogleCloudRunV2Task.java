@@ -73,8 +73,8 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Represents time when the task was created by the job controller. It is not
-   * guaranteed to be set in happens-before order across separate operations.
+   * Output only. Represents time when the task was created by the system. It is not guaranteed to
+   * be set in happens-before order across separate operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,8 +350,8 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Represents time when the task was created by the job controller. It is not
-   * guaranteed to be set in happens-before order across separate operations.
+   * Output only. Represents time when the task was created by the system. It is not guaranteed to
+   * be set in happens-before order across separate operations.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -359,8 +359,8 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Represents time when the task was created by the job controller. It is not
-   * guaranteed to be set in happens-before order across separate operations.
+   * Output only. Represents time when the task was created by the system. It is not guaranteed to
+   * be set in happens-before order across separate operations.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudRunV2Task setCreateTime(String createTime) {

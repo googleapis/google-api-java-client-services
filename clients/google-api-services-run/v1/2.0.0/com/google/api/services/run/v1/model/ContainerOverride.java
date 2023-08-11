@@ -30,23 +30,24 @@ package com.google.api.services.run.v1.model;
 public final class ContainerOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
-   * if `clear_args` is set to true.
+   * Arguments to the entrypoint. The specified arguments replace and override any existing
+   * entrypoint arguments. Must be empty if `clear_args` is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * Optional. True if the intention is to clear out existing args list.
+   * Optional. Set to True to clear all existing arguments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean clearArgs;
 
   /**
-   * List of environment variables to set in the container. Will be merged with existing env for
-   * override.
+   * List of environment variables to set in the container. All specified environment variables are
+   * merged with existing environment variables. When the specified environment variables exist,
+   * these values override any existing values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +61,8 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
-   * if `clear_args` is set to true.
+   * Arguments to the entrypoint. The specified arguments replace and override any existing
+   * entrypoint arguments. Must be empty if `clear_args` is set to true.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -69,8 +70,8 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Arguments to the entrypoint. Will replace existing args for override if present. Must be empty
-   * if `clear_args` is set to true.
+   * Arguments to the entrypoint. The specified arguments replace and override any existing
+   * entrypoint arguments. Must be empty if `clear_args` is set to true.
    * @param args args or {@code null} for none
    */
   public ContainerOverride setArgs(java.util.List<java.lang.String> args) {
@@ -79,7 +80,7 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. True if the intention is to clear out existing args list.
+   * Optional. Set to True to clear all existing arguments.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClearArgs() {
@@ -87,7 +88,7 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. True if the intention is to clear out existing args list.
+   * Optional. Set to True to clear all existing arguments.
    * @param clearArgs clearArgs or {@code null} for none
    */
   public ContainerOverride setClearArgs(java.lang.Boolean clearArgs) {
@@ -96,8 +97,9 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of environment variables to set in the container. Will be merged with existing env for
-   * override.
+   * List of environment variables to set in the container. All specified environment variables are
+   * merged with existing environment variables. When the specified environment variables exist,
+   * these values override any existing values.
    * @return value or {@code null} for none
    */
   public java.util.List<EnvVar> getEnv() {
@@ -105,8 +107,9 @@ public final class ContainerOverride extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of environment variables to set in the container. Will be merged with existing env for
-   * override.
+   * List of environment variables to set in the container. All specified environment variables are
+   * merged with existing environment variables. When the specified environment variables exist,
+   * these values override any existing values.
    * @param env env or {@code null} for none
    */
   public ContainerOverride setEnv(java.util.List<EnvVar> env) {

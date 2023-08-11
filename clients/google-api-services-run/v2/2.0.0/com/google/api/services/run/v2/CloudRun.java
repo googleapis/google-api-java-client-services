@@ -1744,6 +1744,150 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         public class Executions {
 
           /**
+           * Cancels an Execution.
+           *
+           * Create a request for the method "executions.cancel".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Execution to cancel. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2CancelExecutionRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2CancelExecutionRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+
+            /**
+             * Cancels an Execution.
+             *
+             * Create a request for the method "executions.cancel".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Execution to cancel. Format:
+           *        projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project}
+           *        can be project id or number.
+             * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2CancelExecutionRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2CancelExecutionRequest content) {
+              super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Execution to cancel. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Execution to cancel. Format:
+           projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where {project} can be
+           project id or number.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the Execution to cancel. Format:
+             * projects/{project}/locations/{location}/jobs/{job}/executions/{execution}, where
+             * {project} can be project id or number.
+             */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
            * Deletes an Execution.
            *
            * Create a request for the method "executions.delete".

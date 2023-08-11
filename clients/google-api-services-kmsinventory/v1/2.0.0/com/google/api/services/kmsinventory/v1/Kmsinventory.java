@@ -379,6 +379,49 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Optional. A list of resource types that this request searches for. If empty, it will
+         * search all the [trackable resource types](https://cloud.google.com/kms/docs/view-key-
+         * usage#tracked-resource-types). Regular expressions are also supported. For example: *
+         * `compute.googleapis.com.*` snapshots resources whose type starts with
+         * `compute.googleapis.com`. * `.*Image` snapshots resources whose type ends with `Image`. *
+         * `.*Image.*` snapshots resources whose type contains `Image`. See
+         * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+         * syntax. If the regular expression does not match any supported resource type, an
+         * INVALID_ARGUMENT error will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceTypes;
+
+        /** Optional. A list of resource types that this request searches for. If empty, it will search all the
+       [trackable resource types](https://cloud.google.com/kms/docs/view-key-usage#tracked-resource-
+       types). Regular expressions are also supported. For example: * `compute.googleapis.com.*` snapshots
+       resources whose type starts with `compute.googleapis.com`. * `.*Image` snapshots resources whose
+       type ends with `Image`. * `.*Image.*` snapshots resources whose type contains `Image`. See
+       [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If
+       the regular expression does not match any supported resource type, an INVALID_ARGUMENT error will
+       be returned.
+         */
+        public java.util.List<java.lang.String> getResourceTypes() {
+          return resourceTypes;
+        }
+
+        /**
+         * Optional. A list of resource types that this request searches for. If empty, it will
+         * search all the [trackable resource types](https://cloud.google.com/kms/docs/view-key-
+         * usage#tracked-resource-types). Regular expressions are also supported. For example: *
+         * `compute.googleapis.com.*` snapshots resources whose type starts with
+         * `compute.googleapis.com`. * `.*Image` snapshots resources whose type ends with `Image`. *
+         * `.*Image.*` snapshots resources whose type contains `Image`. See
+         * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+         * syntax. If the regular expression does not match any supported resource type, an
+         * INVALID_ARGUMENT error will be returned.
+         */
+        public Search setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
+          this.resourceTypes = resourceTypes;
+          return this;
+        }
+
         @Override
         public Search set(String parameterName, Object value) {
           return (Search) super.set(parameterName, value);

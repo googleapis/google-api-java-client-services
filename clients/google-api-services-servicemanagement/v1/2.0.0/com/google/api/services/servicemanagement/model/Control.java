@@ -41,6 +41,13 @@ public final class Control extends com.google.api.client.json.GenericJson {
   private java.lang.String environment;
 
   /**
+   * Defines policies applying to the API methods of the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MethodPolicy> methodPolicies;
+
+  /**
    * The service controller environment to use. If empty, no control plane feature (like quota and
    * billing) will be enabled. The recommended value for most services is
    * servicecontrol.googleapis.com
@@ -58,6 +65,23 @@ public final class Control extends com.google.api.client.json.GenericJson {
    */
   public Control setEnvironment(java.lang.String environment) {
     this.environment = environment;
+    return this;
+  }
+
+  /**
+   * Defines policies applying to the API methods of the service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MethodPolicy> getMethodPolicies() {
+    return methodPolicies;
+  }
+
+  /**
+   * Defines policies applying to the API methods of the service.
+   * @param methodPolicies methodPolicies or {@code null} for none
+   */
+  public Control setMethodPolicies(java.util.List<MethodPolicy> methodPolicies) {
+    this.methodPolicies = methodPolicies;
     return this;
   }
 

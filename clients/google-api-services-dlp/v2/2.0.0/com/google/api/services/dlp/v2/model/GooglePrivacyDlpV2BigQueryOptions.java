@@ -32,7 +32,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
 
   /**
    * References to fields excluded from scanning. This allows you to skip inspection of entire
-   * columns which you know have no findings.
+   * columns which you know have no findings. When inspecting a table, we recommend that you inspect
+   * all columns. Otherwise, findings might be impacted because hints from excluded columns will not
+   * be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +52,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   private java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields;
 
   /**
-   * Limit scanning only to these fields.
+   * Limit scanning only to these fields. When inspecting a table, we recommend that you inspect all
+   * columns. Otherwise, findings might be impacted because hints from excluded columns will not be
+   * used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +94,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
 
   /**
    * References to fields excluded from scanning. This allows you to skip inspection of entire
-   * columns which you know have no findings.
+   * columns which you know have no findings. When inspecting a table, we recommend that you inspect
+   * all columns. Otherwise, findings might be impacted because hints from excluded columns will not
+   * be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FieldId> getExcludedFields() {
@@ -99,7 +105,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
 
   /**
    * References to fields excluded from scanning. This allows you to skip inspection of entire
-   * columns which you know have no findings.
+   * columns which you know have no findings. When inspecting a table, we recommend that you inspect
+   * all columns. Otherwise, findings might be impacted because hints from excluded columns will not
+   * be used.
    * @param excludedFields excludedFields or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryOptions setExcludedFields(java.util.List<GooglePrivacyDlpV2FieldId> excludedFields) {
@@ -133,7 +141,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   }
 
   /**
-   * Limit scanning only to these fields.
+   * Limit scanning only to these fields. When inspecting a table, we recommend that you inspect all
+   * columns. Otherwise, findings might be impacted because hints from excluded columns will not be
+   * used.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2FieldId> getIncludedFields() {
@@ -141,7 +151,9 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   }
 
   /**
-   * Limit scanning only to these fields.
+   * Limit scanning only to these fields. When inspecting a table, we recommend that you inspect all
+   * columns. Otherwise, findings might be impacted because hints from excluded columns will not be
+   * used.
    * @param includedFields includedFields or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryOptions setIncludedFields(java.util.List<GooglePrivacyDlpV2FieldId> includedFields) {

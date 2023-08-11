@@ -154,6 +154,114 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
   public class Customers {
 
     /**
+     * Checks whether a SAS deployment for the authentication context exists.
+     *
+     * Create a request for the method "customers.checkHasProvisionedDeployment".
+     *
+     * This request holds the parameters needed by the sasportal server.  After setting any optional
+     * parameters, call the {@link CheckHasProvisionedDeployment#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public CheckHasProvisionedDeployment checkHasProvisionedDeployment() throws java.io.IOException {
+      CheckHasProvisionedDeployment result = new CheckHasProvisionedDeployment();
+      initialize(result);
+      return result;
+    }
+
+    public class CheckHasProvisionedDeployment extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalCheckHasProvisionedDeploymentResponse> {
+
+      private static final String REST_PATH = "v1alpha1/customers:checkHasProvisionedDeployment";
+
+      /**
+       * Checks whether a SAS deployment for the authentication context exists.
+       *
+       * Create a request for the method "customers.checkHasProvisionedDeployment".
+       *
+       * This request holds the parameters needed by the the sasportal server.  After setting any
+       * optional parameters, call the {@link CheckHasProvisionedDeployment#execute()} method to invoke
+       * the remote operation. <p> {@link CheckHasProvisionedDeployment#initialize(com.google.api.client
+       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected CheckHasProvisionedDeployment() {
+        super(Sasportal.this, "GET", REST_PATH, null, com.google.api.services.sasportal.v1alpha1.model.SasPortalCheckHasProvisionedDeploymentResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment set$Xgafv(java.lang.String $Xgafv) {
+        return (CheckHasProvisionedDeployment) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setAccessToken(java.lang.String accessToken) {
+        return (CheckHasProvisionedDeployment) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setAlt(java.lang.String alt) {
+        return (CheckHasProvisionedDeployment) super.setAlt(alt);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setCallback(java.lang.String callback) {
+        return (CheckHasProvisionedDeployment) super.setCallback(callback);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setFields(java.lang.String fields) {
+        return (CheckHasProvisionedDeployment) super.setFields(fields);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setKey(java.lang.String key) {
+        return (CheckHasProvisionedDeployment) super.setKey(key);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setOauthToken(java.lang.String oauthToken) {
+        return (CheckHasProvisionedDeployment) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CheckHasProvisionedDeployment) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setQuotaUser(java.lang.String quotaUser) {
+        return (CheckHasProvisionedDeployment) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setUploadType(java.lang.String uploadType) {
+        return (CheckHasProvisionedDeployment) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CheckHasProvisionedDeployment) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CheckHasProvisionedDeployment set(String parameterName, Object value) {
+        return (CheckHasProvisionedDeployment) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns a requested customer.
      *
      * Create a request for the method "customers.get".
@@ -434,6 +542,109 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Migrates a SAS organization to the cloud. This will create GCP projects for each deployment and
+     * associate them. The SAS Organization is linked to the gcp project that called the command. go
+     * /sas-legacy-customer-migration
+     *
+     * Create a request for the method "customers.migrateOrganization".
+     *
+     * This request holds the parameters needed by the sasportal server.  After setting any optional
+     * parameters, call the {@link MigrateOrganization#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.sasportal.v1alpha1.model.SasPortalMigrateOrganizationRequest}
+     * @return the request
+     */
+    public MigrateOrganization migrateOrganization(com.google.api.services.sasportal.v1alpha1.model.SasPortalMigrateOrganizationRequest content) throws java.io.IOException {
+      MigrateOrganization result = new MigrateOrganization(content);
+      initialize(result);
+      return result;
+    }
+
+    public class MigrateOrganization extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalOperation> {
+
+      private static final String REST_PATH = "v1alpha1/customers:migrateOrganization";
+
+      /**
+       * Migrates a SAS organization to the cloud. This will create GCP projects for each deployment and
+       * associate them. The SAS Organization is linked to the gcp project that called the command. go
+       * /sas-legacy-customer-migration
+       *
+       * Create a request for the method "customers.migrateOrganization".
+       *
+       * This request holds the parameters needed by the the sasportal server.  After setting any
+       * optional parameters, call the {@link MigrateOrganization#execute()} method to invoke the remote
+       * operation. <p> {@link MigrateOrganization#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.sasportal.v1alpha1.model.SasPortalMigrateOrganizationRequest}
+       * @since 1.13
+       */
+      protected MigrateOrganization(com.google.api.services.sasportal.v1alpha1.model.SasPortalMigrateOrganizationRequest content) {
+        super(Sasportal.this, "POST", REST_PATH, content, com.google.api.services.sasportal.v1alpha1.model.SasPortalOperation.class);
+      }
+
+      @Override
+      public MigrateOrganization set$Xgafv(java.lang.String $Xgafv) {
+        return (MigrateOrganization) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public MigrateOrganization setAccessToken(java.lang.String accessToken) {
+        return (MigrateOrganization) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public MigrateOrganization setAlt(java.lang.String alt) {
+        return (MigrateOrganization) super.setAlt(alt);
+      }
+
+      @Override
+      public MigrateOrganization setCallback(java.lang.String callback) {
+        return (MigrateOrganization) super.setCallback(callback);
+      }
+
+      @Override
+      public MigrateOrganization setFields(java.lang.String fields) {
+        return (MigrateOrganization) super.setFields(fields);
+      }
+
+      @Override
+      public MigrateOrganization setKey(java.lang.String key) {
+        return (MigrateOrganization) super.setKey(key);
+      }
+
+      @Override
+      public MigrateOrganization setOauthToken(java.lang.String oauthToken) {
+        return (MigrateOrganization) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public MigrateOrganization setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (MigrateOrganization) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public MigrateOrganization setQuotaUser(java.lang.String quotaUser) {
+        return (MigrateOrganization) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public MigrateOrganization setUploadType(java.lang.String uploadType) {
+        return (MigrateOrganization) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public MigrateOrganization setUploadProtocol(java.lang.String uploadProtocol) {
+        return (MigrateOrganization) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public MigrateOrganization set(String parameterName, Object value) {
+        return (MigrateOrganization) super.set(parameterName, value);
       }
     }
     /**

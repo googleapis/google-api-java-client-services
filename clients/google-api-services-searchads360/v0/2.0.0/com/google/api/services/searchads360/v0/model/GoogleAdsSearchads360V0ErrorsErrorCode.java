@@ -45,6 +45,13 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
   private java.lang.String authorizationError;
 
   /**
+   * The reasons for the custom column error
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customColumnError;
+
+  /**
    * The reasons for the date error
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
    */
   public GoogleAdsSearchads360V0ErrorsErrorCode setAuthorizationError(java.lang.String authorizationError) {
     this.authorizationError = authorizationError;
+    return this;
+  }
+
+  /**
+   * The reasons for the custom column error
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomColumnError() {
+    return customColumnError;
+  }
+
+  /**
+   * The reasons for the custom column error
+   * @param customColumnError customColumnError or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ErrorsErrorCode setCustomColumnError(java.lang.String customColumnError) {
+    this.customColumnError = customColumnError;
     return this;
   }
 

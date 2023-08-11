@@ -94,6 +94,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView;
 
   /**
+   * The asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAsset asset;
+
+  /**
+   * The asset set referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetSet assetSet;
+
+  /**
    * The bidding strategy referenced in the query.
    * The value may be {@code null}.
    */
@@ -396,6 +410,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAgeRangeView(GoogleAdsSearchads360V0ResourcesAgeRangeView ageRangeView) {
     this.ageRangeView = ageRangeView;
+    return this;
+  }
+
+  /**
+   * The asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset getAsset() {
+    return asset;
+  }
+
+  /**
+   * The asset referenced in the query.
+   * @param asset asset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAsset(GoogleAdsSearchads360V0ResourcesAsset asset) {
+    this.asset = asset;
+    return this;
+  }
+
+  /**
+   * The asset set referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetSet getAssetSet() {
+    return assetSet;
+  }
+
+  /**
+   * The asset set referenced in the query.
+   * @param assetSet assetSet or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetSet(GoogleAdsSearchads360V0ResourcesAssetSet assetSet) {
+    this.assetSet = assetSet;
     return this;
   }
 

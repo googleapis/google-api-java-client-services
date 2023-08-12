@@ -63,7 +63,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
-   * supported.
+   * supported. Must specify an IPv4 range (e.g. 192.0.2.0/24) or an IPv6 range in RFC 4291 format
+   * (e.g. 2001:db8::/32). IPv6 range will be displayed using RFC 5952 compressed format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +156,11 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopInterconnectAttachment;
 
   /**
-   * The network IP address of an instance that should handle matching packets. Only IPv4 is
-   * supported.
+   * The network IP address of an instance that should handle matching packets. Both IPv6 address
+   * and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g.
+   * 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
+   * 2001:db8:0:0:2d9:51:0:0). IPv6 addresses will be displayed using RFC 5952 compressed format
+   * (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,7 +324,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
-   * supported.
+   * supported. Must specify an IPv4 range (e.g. 192.0.2.0/24) or an IPv6 range in RFC 4291 format
+   * (e.g. 2001:db8::/32). IPv6 range will be displayed using RFC 5952 compressed format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestRange() {
@@ -329,7 +334,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are
-   * supported.
+   * supported. Must specify an IPv4 range (e.g. 192.0.2.0/24) or an IPv6 range in RFC 4291 format
+   * (e.g. 2001:db8::/32). IPv6 range will be displayed using RFC 5952 compressed format.
    * @param destRange destRange or {@code null} for none
    */
   public Route setDestRange(java.lang.String destRange) {
@@ -538,8 +544,11 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The network IP address of an instance that should handle matching packets. Only IPv4 is
-   * supported.
+   * The network IP address of an instance that should handle matching packets. Both IPv6 address
+   * and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g.
+   * 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
+   * 2001:db8:0:0:2d9:51:0:0). IPv6 addresses will be displayed using RFC 5952 compressed format
+   * (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopIp() {
@@ -547,8 +556,11 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The network IP address of an instance that should handle matching packets. Only IPv4 is
-   * supported.
+   * The network IP address of an instance that should handle matching packets. Both IPv6 address
+   * and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g.
+   * 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
+   * 2001:db8:0:0:2d9:51:0:0). IPv6 addresses will be displayed using RFC 5952 compressed format
+   * (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
    * @param nextHopIp nextHopIp or {@code null} for none
    */
   public Route setNextHopIp(java.lang.String nextHopIp) {

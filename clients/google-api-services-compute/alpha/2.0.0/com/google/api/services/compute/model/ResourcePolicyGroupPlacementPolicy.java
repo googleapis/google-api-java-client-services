@@ -67,6 +67,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String scope;
 
   /**
+   * Specifies the number of slices in a multislice workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer sliceCount;
+
+  /**
    * Specifies instances to hosts placement relationship
    * The value may be {@code null}.
    */
@@ -173,6 +180,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setScope(java.lang.String scope) {
     this.scope = scope;
+    return this;
+  }
+
+  /**
+   * Specifies the number of slices in a multislice workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSliceCount() {
+    return sliceCount;
+  }
+
+  /**
+   * Specifies the number of slices in a multislice workload.
+   * @param sliceCount sliceCount or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setSliceCount(java.lang.Integer sliceCount) {
+    this.sliceCount = sliceCount;
     return this;
   }
 

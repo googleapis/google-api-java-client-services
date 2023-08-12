@@ -46,6 +46,22 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
+   * Duration time relative to reservation creation when GCE will automatically delete this
+   * resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration deleteAfterDuration;
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
+   * represented in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deleteAtTime;
+
+  /**
    * An optional description of this resource. Provide this property when you create the resource.
    * The value may be {@code null}.
    */
@@ -179,6 +195,44 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * Duration time relative to reservation creation when GCE will automatically delete this
+   * resource.
+   * @return value or {@code null} for none
+   */
+  public Duration getDeleteAfterDuration() {
+    return deleteAfterDuration;
+  }
+
+  /**
+   * Duration time relative to reservation creation when GCE will automatically delete this
+   * resource.
+   * @param deleteAfterDuration deleteAfterDuration or {@code null} for none
+   */
+  public Reservation setDeleteAfterDuration(Duration deleteAfterDuration) {
+    this.deleteAfterDuration = deleteAfterDuration;
+    return this;
+  }
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
+   * represented in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeleteAtTime() {
+    return deleteAtTime;
+  }
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by GCE. Timestamp is
+   * represented in RFC3339 text format.
+   * @param deleteAtTime deleteAtTime or {@code null} for none
+   */
+  public Reservation setDeleteAtTime(java.lang.String deleteAtTime) {
+    this.deleteAtTime = deleteAtTime;
     return this;
   }
 

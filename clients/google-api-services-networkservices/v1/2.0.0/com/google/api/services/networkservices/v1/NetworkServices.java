@@ -9574,21 +9574,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /**
-           * Required. Short name of the TcpRoute resource to be created. E.g. TODO(Add an example).
-           */
+          /** Required. Short name of the TcpRoute resource to be created. */
           @com.google.api.client.util.Key
           private java.lang.String tcpRouteId;
 
-          /** Required. Short name of the TcpRoute resource to be created. E.g. TODO(Add an example).
+          /** Required. Short name of the TcpRoute resource to be created.
            */
           public java.lang.String getTcpRouteId() {
             return tcpRouteId;
           }
 
-          /**
-           * Required. Short name of the TcpRoute resource to be created. E.g. TODO(Add an example).
-           */
+          /** Required. Short name of the TcpRoute resource to be created. */
           public Create setTcpRouteId(java.lang.String tcpRouteId) {
             this.tcpRouteId = tcpRouteId;
             return this;
@@ -10395,21 +10391,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /**
-           * Required. Short name of the TlsRoute resource to be created. E.g. TODO(Add an example).
-           */
+          /** Required. Short name of the TlsRoute resource to be created. */
           @com.google.api.client.util.Key
           private java.lang.String tlsRouteId;
 
-          /** Required. Short name of the TlsRoute resource to be created. E.g. TODO(Add an example).
+          /** Required. Short name of the TlsRoute resource to be created.
            */
           public java.lang.String getTlsRouteId() {
             return tlsRouteId;
           }
 
-          /**
-           * Required. Short name of the TlsRoute resource to be created. E.g. TODO(Add an example).
-           */
+          /** Required. Short name of the TlsRoute resource to be created. */
           public Create setTlsRouteId(java.lang.String tlsRouteId) {
             this.tlsRouteId = tlsRouteId;
             return this;

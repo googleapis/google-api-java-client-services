@@ -109,6 +109,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean calculatePValues;
 
   /**
+   * Categorical feature encoding method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryEncodingMethod;
+
+  /**
    * If true, clean spikes and dips in the input time series.
    * The value may be {@code null}.
    */
@@ -253,6 +260,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String holidayRegion;
 
   /**
+   * A list of geographical regions that are used for time series modeling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> holidayRegions;
+
+  /**
    * The number of periods ahead that need to be forecasted.
    * The value may be {@code null}.
    */
@@ -388,8 +402,9 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Long maxParallelTrials;
 
   /**
-   * Get truncated length by last n points in time series. Use separately from
-   * time_series_length_fraction and min_time_series_length.
+   * The maximum number of time points in a time series that can be used in modeling the trend
+   * component of the time series. Don't use this option with the `timeSeriesLengthFraction` or
+   * `minTimeSeriesLength` options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -418,8 +433,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double minSplitLoss;
 
   /**
-   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
-   * time_series_length_fraction.
+   * The minimum number of time points in a time series that are used in modeling the trend
+   * component of the time series. If you use this option you must also set the
+   * `timeSeriesLengthFraction` option. This training option ensures that enough time points are
+   * available when you use `timeSeriesLengthFraction` in trend modeling. This is particularly
+   * important when forecasting multiple time series in a single query using `timeSeriesIdColumn`.
+   * If the total number of time points is less than the `minTimeSeriesLength` value, then the query
+   * uses all available time points.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -578,7 +598,11 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> timeSeriesIdColumns;
 
   /**
-   * Get truncated length by fraction in time series.
+   * The fraction of the interpolated length of the time series that's used to model the time series
+   * trend component. All of the time points of the time series are used to model the non-trend
+   * component. This training option accelerates modeling training without sacrificing much
+   * forecasting accuracy. You can use this option with `minTimeSeriesLength` but not with
+   * `maxTimeSeriesLength`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -599,7 +623,10 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String treeMethod;
 
   /**
-   * The smoothing window size for the trend component of the time series.
+   * Smoothing window size for the trend component. When a positive value is specified, a center
+   * moving average smoothing is applied on the history trend. When the smoothing window is out of
+   * the boundary at the beginning or the end of the trend, the first element or the last element is
+   * padded to fill the smoothing window before the average is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -829,6 +856,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setCalculatePValues(java.lang.Boolean calculatePValues) {
     this.calculatePValues = calculatePValues;
+    return this;
+  }
+
+  /**
+   * Categorical feature encoding method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryEncodingMethod() {
+    return categoryEncodingMethod;
+  }
+
+  /**
+   * Categorical feature encoding method.
+   * @param categoryEncodingMethod categoryEncodingMethod or {@code null} for none
+   */
+  public TrainingOptions setCategoryEncodingMethod(java.lang.String categoryEncodingMethod) {
+    this.categoryEncodingMethod = categoryEncodingMethod;
     return this;
   }
 
@@ -1178,6 +1222,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * A list of geographical regions that are used for time series modeling.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHolidayRegions() {
+    return holidayRegions;
+  }
+
+  /**
+   * A list of geographical regions that are used for time series modeling.
+   * @param holidayRegions holidayRegions or {@code null} for none
+   */
+  public TrainingOptions setHolidayRegions(java.util.List<java.lang.String> holidayRegions) {
+    this.holidayRegions = holidayRegions;
+    return this;
+  }
+
+  /**
    * The number of periods ahead that need to be forecasted.
    * @return value or {@code null} for none
    */
@@ -1505,8 +1566,9 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Get truncated length by last n points in time series. Use separately from
-   * time_series_length_fraction and min_time_series_length.
+   * The maximum number of time points in a time series that can be used in modeling the trend
+   * component of the time series. Don't use this option with the `timeSeriesLengthFraction` or
+   * `minTimeSeriesLength` options.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTimeSeriesLength() {
@@ -1514,8 +1576,9 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Get truncated length by last n points in time series. Use separately from
-   * time_series_length_fraction and min_time_series_length.
+   * The maximum number of time points in a time series that can be used in modeling the trend
+   * component of the time series. Don't use this option with the `timeSeriesLengthFraction` or
+   * `minTimeSeriesLength` options.
    * @param maxTimeSeriesLength maxTimeSeriesLength or {@code null} for none
    */
   public TrainingOptions setMaxTimeSeriesLength(java.lang.Long maxTimeSeriesLength) {
@@ -1577,8 +1640,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
-   * time_series_length_fraction.
+   * The minimum number of time points in a time series that are used in modeling the trend
+   * component of the time series. If you use this option you must also set the
+   * `timeSeriesLengthFraction` option. This training option ensures that enough time points are
+   * available when you use `timeSeriesLengthFraction` in trend modeling. This is particularly
+   * important when forecasting multiple time series in a single query using `timeSeriesIdColumn`.
+   * If the total number of time points is less than the `minTimeSeriesLength` value, then the query
+   * uses all available time points.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTimeSeriesLength() {
@@ -1586,8 +1654,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Set fast trend ARIMA_PLUS model minimum training length. Use in pair with
-   * time_series_length_fraction.
+   * The minimum number of time points in a time series that are used in modeling the trend
+   * component of the time series. If you use this option you must also set the
+   * `timeSeriesLengthFraction` option. This training option ensures that enough time points are
+   * available when you use `timeSeriesLengthFraction` in trend modeling. This is particularly
+   * important when forecasting multiple time series in a single query using `timeSeriesIdColumn`.
+   * If the total number of time points is less than the `minTimeSeriesLength` value, then the query
+   * uses all available time points.
    * @param minTimeSeriesLength minTimeSeriesLength or {@code null} for none
    */
   public TrainingOptions setMinTimeSeriesLength(java.lang.Long minTimeSeriesLength) {
@@ -1963,7 +2036,11 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Get truncated length by fraction in time series.
+   * The fraction of the interpolated length of the time series that's used to model the time series
+   * trend component. All of the time points of the time series are used to model the non-trend
+   * component. This training option accelerates modeling training without sacrificing much
+   * forecasting accuracy. You can use this option with `minTimeSeriesLength` but not with
+   * `maxTimeSeriesLength`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTimeSeriesLengthFraction() {
@@ -1971,7 +2048,11 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Get truncated length by fraction in time series.
+   * The fraction of the interpolated length of the time series that's used to model the time series
+   * trend component. All of the time points of the time series are used to model the non-trend
+   * component. This training option accelerates modeling training without sacrificing much
+   * forecasting accuracy. You can use this option with `minTimeSeriesLength` but not with
+   * `maxTimeSeriesLength`.
    * @param timeSeriesLengthFraction timeSeriesLengthFraction or {@code null} for none
    */
   public TrainingOptions setTimeSeriesLengthFraction(java.lang.Double timeSeriesLengthFraction) {
@@ -2014,7 +2095,10 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The smoothing window size for the trend component of the time series.
+   * Smoothing window size for the trend component. When a positive value is specified, a center
+   * moving average smoothing is applied on the history trend. When the smoothing window is out of
+   * the boundary at the beginning or the end of the trend, the first element or the last element is
+   * padded to fill the smoothing window before the average is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTrendSmoothingWindowSize() {
@@ -2022,7 +2106,10 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The smoothing window size for the trend component of the time series.
+   * Smoothing window size for the trend component. When a positive value is specified, a center
+   * moving average smoothing is applied on the history trend. When the smoothing window is out of
+   * the boundary at the beginning or the end of the trend, the first element or the last element is
+   * padded to fill the smoothing window before the average is applied.
    * @param trendSmoothingWindowSize trendSmoothingWindowSize or {@code null} for none
    */
   public TrainingOptions setTrendSmoothingWindowSize(java.lang.Long trendSmoothingWindowSize) {

@@ -36,7 +36,7 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<IndexUnusedReason> indexUnusedReason;
+  private java.util.List<IndexUnusedReason> indexUnusedReasons;
 
   static {
     // hack to force ProGuard to consider IndexUnusedReason used, since otherwise it would be stripped out
@@ -57,18 +57,18 @@ public final class SearchStatistics extends com.google.api.client.json.GenericJs
    * populated.
    * @return value or {@code null} for none
    */
-  public java.util.List<IndexUnusedReason> getIndexUnusedReason() {
-    return indexUnusedReason;
+  public java.util.List<IndexUnusedReason> getIndexUnusedReasons() {
+    return indexUnusedReasons;
   }
 
   /**
    * When index_usage_mode is UNUSED or PARTIALLY_USED, this field explains why index was not used
    * in all or part of the search query. If index_usage_mode is FULLLY_USED, this field is not
    * populated.
-   * @param indexUnusedReason indexUnusedReason or {@code null} for none
+   * @param indexUnusedReasons indexUnusedReasons or {@code null} for none
    */
-  public SearchStatistics setIndexUnusedReason(java.util.List<IndexUnusedReason> indexUnusedReason) {
-    this.indexUnusedReason = indexUnusedReason;
+  public SearchStatistics setIndexUnusedReasons(java.util.List<IndexUnusedReason> indexUnusedReasons) {
+    this.indexUnusedReasons = indexUnusedReasons;
     return this;
   }
 

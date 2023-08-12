@@ -40,21 +40,21 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
    * [Output-only] Logging info is used to generate a link to Cloud Logging.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("logging_info")
+  @com.google.api.client.util.Key
   private SparkLoggingInfo loggingInfo;
 
   /**
    * [Output-only] Spark job id if a Spark job is created successfully.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("spark_job_id")
+  @com.google.api.client.util.Key
   private java.lang.String sparkJobId;
 
   /**
    * [Output-only] Location where the Spark job is executed.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("spark_job_location")
+  @com.google.api.client.util.Key
   private java.lang.String sparkJobLocation;
 
   /**

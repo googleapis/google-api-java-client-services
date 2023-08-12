@@ -41,6 +41,13 @@ public final class StandardSqlDataType extends com.google.api.client.json.Generi
   private StandardSqlDataType arrayElementType;
 
   /**
+   * The type of the range's elements, if type_kind = "RANGE".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StandardSqlDataType rangeElementType;
+
+  /**
    * The fields of this struct, in order, if type_kind = "STRUCT".
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class StandardSqlDataType extends com.google.api.client.json.Generi
    */
   public StandardSqlDataType setArrayElementType(StandardSqlDataType arrayElementType) {
     this.arrayElementType = arrayElementType;
+    return this;
+  }
+
+  /**
+   * The type of the range's elements, if type_kind = "RANGE".
+   * @return value or {@code null} for none
+   */
+  public StandardSqlDataType getRangeElementType() {
+    return rangeElementType;
+  }
+
+  /**
+   * The type of the range's elements, if type_kind = "RANGE".
+   * @param rangeElementType rangeElementType or {@code null} for none
+   */
+  public StandardSqlDataType setRangeElementType(StandardSqlDataType rangeElementType) {
+    this.rangeElementType = rangeElementType;
     return this;
   }
 

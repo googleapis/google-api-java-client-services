@@ -33,14 +33,14 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
    * [Output-only] Number of logical bytes copied to the destination table.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("copied_logical_bytes") @com.google.api.client.json.JsonString
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long copiedLogicalBytes;
 
   /**
    * [Output-only] Number of rows copied to the destination table.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("copied_rows") @com.google.api.client.json.JsonString
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long copiedRows;
 
   /**

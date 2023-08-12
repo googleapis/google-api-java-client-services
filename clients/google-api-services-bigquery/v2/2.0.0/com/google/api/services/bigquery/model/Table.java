@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Optional] Specifies the configuration of a BigLake managed table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigLakeConfiguration biglakeConfiguration;
+
+  /**
    * [Output-only] Clone definition.
    * The value may be {@code null}.
    */
@@ -354,6 +361,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ViewDefinition view;
+
+  /**
+   * [Optional] Specifies the configuration of a BigLake managed table.
+   * @return value or {@code null} for none
+   */
+  public BigLakeConfiguration getBiglakeConfiguration() {
+    return biglakeConfiguration;
+  }
+
+  /**
+   * [Optional] Specifies the configuration of a BigLake managed table.
+   * @param biglakeConfiguration biglakeConfiguration or {@code null} for none
+   */
+  public Table setBiglakeConfiguration(BigLakeConfiguration biglakeConfiguration) {
+    this.biglakeConfiguration = biglakeConfiguration;
+    return this;
+  }
 
   /**
    * [Output-only] Clone definition.

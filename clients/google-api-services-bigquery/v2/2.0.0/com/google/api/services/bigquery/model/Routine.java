@@ -50,6 +50,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.Long creationTime;
 
   /**
+   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
+   * validated as masking functions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataGovernanceType;
+
+  /**
    * Required. The body of the routine. For functions, this is the expression in the AS clause. If
    * language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the
    * function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string)
@@ -202,6 +210,25 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setCreationTime(java.lang.Long creationTime) {
     this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
+   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
+   * validated as masking functions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataGovernanceType() {
+    return dataGovernanceType;
+  }
+
+  /**
+   * Optional. Data governance specific option, if the value is DATA_MASKING, the function will be
+   * validated as masking functions.
+   * @param dataGovernanceType dataGovernanceType or {@code null} for none
+   */
+  public Routine setDataGovernanceType(java.lang.String dataGovernanceType) {
+    this.dataGovernanceType = dataGovernanceType;
     return this;
   }
 

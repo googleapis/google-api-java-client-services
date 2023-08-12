@@ -33,7 +33,7 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
    * [Optional] Allow non incremental materialized view definition. The default value is "false".
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("allow_non_incremental_definition")
+  @com.google.api.client.util.Key
   private java.lang.Boolean allowNonIncrementalDefinition;
 
   /**

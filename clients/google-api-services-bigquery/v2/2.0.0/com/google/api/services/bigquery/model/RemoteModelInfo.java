@@ -53,6 +53,13 @@ public final class RemoteModelInfo extends com.google.api.client.json.GenericJso
   private java.lang.Long maxBatchingRows;
 
   /**
+   * Output only. The model version for LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remoteModelVersion;
+
+  /**
    * Output only. The remote service type for remote model.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class RemoteModelInfo extends com.google.api.client.json.GenericJso
    */
   public RemoteModelInfo setMaxBatchingRows(java.lang.Long maxBatchingRows) {
     this.maxBatchingRows = maxBatchingRows;
+    return this;
+  }
+
+  /**
+   * Output only. The model version for LLM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemoteModelVersion() {
+    return remoteModelVersion;
+  }
+
+  /**
+   * Output only. The model version for LLM.
+   * @param remoteModelVersion remoteModelVersion or {@code null} for none
+   */
+  public RemoteModelInfo setRemoteModelVersion(java.lang.String remoteModelVersion) {
+    this.remoteModelVersion = remoteModelVersion;
     return this;
   }
 

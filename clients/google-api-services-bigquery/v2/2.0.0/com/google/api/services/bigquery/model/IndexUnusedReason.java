@@ -33,7 +33,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
    * [Output-only] Specifies the base table involved in the reason that no search index was used.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("base_table")
+  @com.google.api.client.util.Key
   private TableReference baseTable;
 
   /**
@@ -47,7 +47,7 @@ public final class IndexUnusedReason extends com.google.api.client.json.GenericJ
    * [Output-only] Specifies the name of the unused search index, if available.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("index_name")
+  @com.google.api.client.util.Key
   private java.lang.String indexName;
 
   /**

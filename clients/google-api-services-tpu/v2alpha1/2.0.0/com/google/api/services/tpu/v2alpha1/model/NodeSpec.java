@@ -31,6 +31,13 @@ package com.google.api.services.tpu.v2alpha1.model;
 public final class NodeSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Fields to specify in case of multi-node request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiNodeParams multiNodeParams;
+
+  /**
    * Required. The node.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class NodeSpec extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * Optional. Fields to specify in case of multi-node request.
+   * @return value or {@code null} for none
+   */
+  public MultiNodeParams getMultiNodeParams() {
+    return multiNodeParams;
+  }
+
+  /**
+   * Optional. Fields to specify in case of multi-node request.
+   * @param multiNodeParams multiNodeParams or {@code null} for none
+   */
+  public NodeSpec setMultiNodeParams(MultiNodeParams multiNodeParams) {
+    this.multiNodeParams = multiNodeParams;
+    return this;
+  }
 
   /**
    * Required. The node.

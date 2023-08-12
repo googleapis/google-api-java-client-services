@@ -50,7 +50,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * the accelerator type.
+   * The accelerator type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the accelerator type.
+   * The accelerator type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,7 +99,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the accelerator type.
+   * The accelerator type.
    * @param type type or {@code null} for none
    */
   public AcceleratorType setType(java.lang.String type) {

@@ -38,16 +38,16 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the generated file. The default is `manifest` with the extension suffix
-   * corresponding to the `Manifest.type`.
+   * corresponding to the Manifest.type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileName;
 
   /**
-   * Required. List of user given `MuxStream.key`s that should appear in this manifest. When
-   * `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is
-   * generated for each element of the `Manifest.mux_streams`.
+   * Required. List of user supplied MuxStream.key values that should appear in this manifest. When
+   * Manifest.type is `HLS`, a media manifest with name MuxStream.key and `.m3u8` extension is
+   * generated for each element in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the generated file. The default is `manifest` with the extension suffix
-   * corresponding to the `Manifest.type`.
+   * corresponding to the Manifest.type.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileName() {
@@ -88,7 +88,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the generated file. The default is `manifest` with the extension suffix
-   * corresponding to the `Manifest.type`.
+   * corresponding to the Manifest.type.
    * @param fileName fileName or {@code null} for none
    */
   public Manifest setFileName(java.lang.String fileName) {
@@ -97,9 +97,9 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of user given `MuxStream.key`s that should appear in this manifest. When
-   * `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is
-   * generated for each element of the `Manifest.mux_streams`.
+   * Required. List of user supplied MuxStream.key values that should appear in this manifest. When
+   * Manifest.type is `HLS`, a media manifest with name MuxStream.key and `.m3u8` extension is
+   * generated for each element in this list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMuxStreams() {
@@ -107,9 +107,9 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of user given `MuxStream.key`s that should appear in this manifest. When
-   * `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is
-   * generated for each element of the `Manifest.mux_streams`.
+   * Required. List of user supplied MuxStream.key values that should appear in this manifest. When
+   * Manifest.type is `HLS`, a media manifest with name MuxStream.key and `.m3u8` extension is
+   * generated for each element in this list.
    * @param muxStreams muxStreams or {@code null} for none
    */
   public Manifest setMuxStreams(java.util.List<java.lang.String> muxStreams) {

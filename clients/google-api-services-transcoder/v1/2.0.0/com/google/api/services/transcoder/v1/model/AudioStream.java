@@ -79,7 +79,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
   private java.lang.String languageCode;
 
   /**
-   * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+   * The mapping for the JobConfig.edit_list atoms with audio EditAtom.inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,7 +215,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+   * The mapping for the JobConfig.edit_list atoms with audio EditAtom.inputs.
    * @return value or {@code null} for none
    */
   public java.util.List<AudioMapping> getMapping() {
@@ -223,7 +223,7 @@ public final class AudioStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
+   * The mapping for the JobConfig.edit_list atoms with audio EditAtom.inputs.
    * @param mapping mapping or {@code null} for none
    */
   public AudioStream setMapping(java.util.List<AudioMapping> mapping) {

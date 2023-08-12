@@ -30,6 +30,15 @@ package com.google.api.services.transcoder.v1.model;
 public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
+   * The processing priority of a batch job. This field can only be set for batch mode jobs. The
+   * default value is 0. This value cannot be negative. Higher values correspond to higher
+   * priorities for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer batchModePriority;
+
+  /**
    * The configuration for this job.
    * The value may be {@code null}.
    */
@@ -52,7 +61,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An error object that describes the reason for the failure. This property is always
-   * present when `state` is `FAILED`.
+   * present when ProcessingState is `FAILED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +99,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The optimization strategy of the job. The default is `AUTODETECT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optimization;
 
   /**
    * Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or
@@ -131,6 +147,27 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ttlAfterCompletionDays;
+
+  /**
+   * The processing priority of a batch job. This field can only be set for batch mode jobs. The
+   * default value is 0. This value cannot be negative. Higher values correspond to higher
+   * priorities for the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getBatchModePriority() {
+    return batchModePriority;
+  }
+
+  /**
+   * The processing priority of a batch job. This field can only be set for batch mode jobs. The
+   * default value is 0. This value cannot be negative. Higher values correspond to higher
+   * priorities for the job.
+   * @param batchModePriority batchModePriority or {@code null} for none
+   */
+  public Job setBatchModePriority(java.lang.Integer batchModePriority) {
+    this.batchModePriority = batchModePriority;
+    return this;
+  }
 
   /**
    * The configuration for this job.
@@ -185,7 +222,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An error object that describes the reason for the failure. This property is always
-   * present when `state` is `FAILED`.
+   * present when ProcessingState is `FAILED`.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -194,7 +231,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An error object that describes the reason for the failure. This property is always
-   * present when `state` is `FAILED`.
+   * present when ProcessingState is `FAILED`.
    * @param error error or {@code null} for none
    */
   public Job setError(Status error) {
@@ -277,6 +314,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The optimization strategy of the job. The default is `AUTODETECT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptimization() {
+    return optimization;
+  }
+
+  /**
+   * Optional. The optimization strategy of the job. The default is `AUTODETECT`.
+   * @param optimization optimization or {@code null} for none
+   */
+  public Job setOptimization(java.lang.String optimization) {
+    this.optimization = optimization;
     return this;
   }
 

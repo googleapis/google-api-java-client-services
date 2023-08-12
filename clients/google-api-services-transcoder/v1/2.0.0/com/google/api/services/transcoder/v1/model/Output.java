@@ -31,7 +31,7 @@ public final class Output extends com.google.api.client.json.GenericJson {
 
   /**
    * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
-   * populated from `Job.output_uri`. See [Supported input and output
+   * populated from Job.output_uri. See [Supported input and output
    * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class Output extends com.google.api.client.json.GenericJson {
 
   /**
    * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
-   * populated from `Job.output_uri`. See [Supported input and output
+   * populated from Job.output_uri. See [Supported input and output
    * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @return value or {@code null} for none
    */
@@ -50,7 +50,7 @@ public final class Output extends com.google.api.client.json.GenericJson {
 
   /**
    * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is
-   * populated from `Job.output_uri`. See [Supported input and output
+   * populated from Job.output_uri. See [Supported input and output
    * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
    * @param uri uri or {@code null} for none
    */

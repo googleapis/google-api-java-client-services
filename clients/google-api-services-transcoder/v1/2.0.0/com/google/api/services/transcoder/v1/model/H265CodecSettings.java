@@ -48,7 +48,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than
-   * `VideoStream.gop_frame_count` if set. The default is 0.
+   * H265CodecSettings.gop_frame_count if set. The default is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   private java.lang.Integer crfLevel;
 
   /**
-   * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode`
-   * must be `vbr`. The default is `false`.
+   * Use two-pass encoding strategy to achieve better video quality.
+   * H265CodecSettings.rate_control_mode must be `vbr`. The default is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +160,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   private java.lang.String profile;
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate - `crf` - constant rate factor
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate - `crf` - constant rate factor
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +178,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than
-   * zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+   * zero. The default is equal to 90% of H265CodecSettings.vbv_size_bits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,7 +246,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than
-   * `VideoStream.gop_frame_count` if set. The default is 0.
+   * H265CodecSettings.gop_frame_count if set. The default is 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBFrameCount() {
@@ -255,7 +255,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * The number of consecutive B-frames. Must be greater than or equal to zero. Must be less than
-   * `VideoStream.gop_frame_count` if set. The default is 0.
+   * H265CodecSettings.gop_frame_count if set. The default is 0.
    * @param bFrameCount bFrameCount or {@code null} for none
    */
   public H265CodecSettings setBFrameCount(java.lang.Integer bFrameCount) {
@@ -321,8 +321,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode`
-   * must be `vbr`. The default is `false`.
+   * Use two-pass encoding strategy to achieve better video quality.
+   * H265CodecSettings.rate_control_mode must be `vbr`. The default is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableTwoPass() {
@@ -330,8 +330,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Use two-pass encoding strategy to achieve better video quality. `VideoStream.rate_control_mode`
-   * must be `vbr`. The default is `false`.
+   * Use two-pass encoding strategy to achieve better video quality.
+   * H265CodecSettings.rate_control_mode must be `vbr`. The default is `false`.
    * @param enableTwoPass enableTwoPass or {@code null} for none
    */
   public H265CodecSettings setEnableTwoPass(java.lang.Boolean enableTwoPass) {
@@ -507,8 +507,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate - `crf` - constant rate factor
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate - `crf` - constant rate factor
    * @return value or {@code null} for none
    */
   public java.lang.String getRateControlMode() {
@@ -516,8 +516,8 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate - `crf` - constant rate factor
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate - `crf` - constant rate factor
    * @param rateControlMode rateControlMode or {@code null} for none
    */
   public H265CodecSettings setRateControlMode(java.lang.String rateControlMode) {
@@ -548,7 +548,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than
-   * zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+   * zero. The default is equal to 90% of H265CodecSettings.vbv_size_bits.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVbvFullnessBits() {
@@ -557,7 +557,7 @@ public final class H265CodecSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Initial fullness of the Video Buffering Verifier (VBV) buffer in bits. Must be greater than
-   * zero. The default is equal to 90% of `VideoStream.vbv_size_bits`.
+   * zero. The default is equal to 90% of H265CodecSettings.vbv_size_bits.
    * @param vbvFullnessBits vbvFullnessBits or {@code null} for none
    */
   public H265CodecSettings setVbvFullnessBits(java.lang.Integer vbvFullnessBits) {

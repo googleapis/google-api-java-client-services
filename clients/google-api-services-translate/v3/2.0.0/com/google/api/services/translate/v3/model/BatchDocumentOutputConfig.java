@@ -50,13 +50,13 @@ public final class BatchDocumentOutputConfig extends com.google.api.client.json.
    * the process, please make sure there is no custom retention policy applied on the output bucket
    * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
    * policy) The naming format of translation output files follows (for target language code [trg]):
-   * `translation_output`: gs://translation_output/a_b_c_[trg]_translation.[extension]
+   * `translation_output`: `gs://translation_output/a_b_c_[trg]_translation.[extension]`
    * `glossary_translation_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.[extension] The output document will
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.[extension]`. The output document will
    * maintain the same file format as the input document. The naming format of error output files
    * follows (for target language code [trg]): `error_output`:
-   * gs://translation_test/a_b_c_[trg]_errors.txt `glossary_error_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.txt The error output is a txt file
+   * `gs://translation_test/a_b_c_[trg]_errors.txt` `glossary_error_output`:
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.txt`. The error output is a txt file
    * containing error details.
    * The value may be {@code null}.
    */
@@ -83,13 +83,13 @@ public final class BatchDocumentOutputConfig extends com.google.api.client.json.
    * the process, please make sure there is no custom retention policy applied on the output bucket
    * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
    * policy) The naming format of translation output files follows (for target language code [trg]):
-   * `translation_output`: gs://translation_output/a_b_c_[trg]_translation.[extension]
+   * `translation_output`: `gs://translation_output/a_b_c_[trg]_translation.[extension]`
    * `glossary_translation_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.[extension] The output document will
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.[extension]`. The output document will
    * maintain the same file format as the input document. The naming format of error output files
    * follows (for target language code [trg]): `error_output`:
-   * gs://translation_test/a_b_c_[trg]_errors.txt `glossary_error_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.txt The error output is a txt file
+   * `gs://translation_test/a_b_c_[trg]_errors.txt` `glossary_error_output`:
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.txt`. The error output is a txt file
    * containing error details.
    * @return value or {@code null} for none
    */
@@ -117,13 +117,13 @@ public final class BatchDocumentOutputConfig extends com.google.api.client.json.
    * the process, please make sure there is no custom retention policy applied on the output bucket
    * that may avoid file updating. (https://cloud.google.com/storage/docs/bucket-lock#retention-
    * policy) The naming format of translation output files follows (for target language code [trg]):
-   * `translation_output`: gs://translation_output/a_b_c_[trg]_translation.[extension]
+   * `translation_output`: `gs://translation_output/a_b_c_[trg]_translation.[extension]`
    * `glossary_translation_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.[extension] The output document will
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.[extension]`. The output document will
    * maintain the same file format as the input document. The naming format of error output files
    * follows (for target language code [trg]): `error_output`:
-   * gs://translation_test/a_b_c_[trg]_errors.txt `glossary_error_output`:
-   * gs://translation_test/a_b_c_[trg]_glossary_translation.txt The error output is a txt file
+   * `gs://translation_test/a_b_c_[trg]_errors.txt` `glossary_error_output`:
+   * `gs://translation_test/a_b_c_[trg]_glossary_translation.txt`. The error output is a txt file
    * containing error details.
    * @param gcsDestination gcsDestination or {@code null} for none
    */

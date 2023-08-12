@@ -60,15 +60,15 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * string as column 3 if there is no glossary applied. If input file extension is a txt or html,
    * the translation is directly written to the output file. If glossary is requested, a separate
    * glossary_translations_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_translations.[extension] The format of errors file
-   * (for target language code 'trg') is: gs://translation_test/a_b_c_'trg'_errors.[extension] If
+   * `gs://translation_test/a_b_c_'trg'_glossary_translations.[extension]` The format of errors file
+   * (for target language code 'trg') is: `gs://translation_test/a_b_c_'trg'_errors.[extension]` If
    * the input file extension is tsv, errors_file contains the following: Column 1: ID of the
    * request provided in the input, if it's not provided in the input, then the input row number is
    * used (0-based). Column 2: source sentence. Column 3: Error detail for the translation. Could be
    * empty. Column 4 (only present if a glossary is provided in the request): Error when applying
    * the glossary. If the input file extension is txt or html, glossary_error_file will be generated
    * that contains error details. glossary_error_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]
+   * `gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,15 +104,15 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * string as column 3 if there is no glossary applied. If input file extension is a txt or html,
    * the translation is directly written to the output file. If glossary is requested, a separate
    * glossary_translations_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_translations.[extension] The format of errors file
-   * (for target language code 'trg') is: gs://translation_test/a_b_c_'trg'_errors.[extension] If
+   * `gs://translation_test/a_b_c_'trg'_glossary_translations.[extension]` The format of errors file
+   * (for target language code 'trg') is: `gs://translation_test/a_b_c_'trg'_errors.[extension]` If
    * the input file extension is tsv, errors_file contains the following: Column 1: ID of the
    * request provided in the input, if it's not provided in the input, then the input row number is
    * used (0-based). Column 2: source sentence. Column 3: Error detail for the translation. Could be
    * empty. Column 4 (only present if a glossary is provided in the request): Error when applying
    * the glossary. If the input file extension is txt or html, glossary_error_file will be generated
    * that contains error details. glossary_error_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]
+   * `gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]`
    * @return value or {@code null} for none
    */
   public GcsDestination getGcsDestination() {
@@ -149,15 +149,15 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * string as column 3 if there is no glossary applied. If input file extension is a txt or html,
    * the translation is directly written to the output file. If glossary is requested, a separate
    * glossary_translations_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_translations.[extension] The format of errors file
-   * (for target language code 'trg') is: gs://translation_test/a_b_c_'trg'_errors.[extension] If
+   * `gs://translation_test/a_b_c_'trg'_glossary_translations.[extension]` The format of errors file
+   * (for target language code 'trg') is: `gs://translation_test/a_b_c_'trg'_errors.[extension]` If
    * the input file extension is tsv, errors_file contains the following: Column 1: ID of the
    * request provided in the input, if it's not provided in the input, then the input row number is
    * used (0-based). Column 2: source sentence. Column 3: Error detail for the translation. Could be
    * empty. Column 4 (only present if a glossary is provided in the request): Error when applying
    * the glossary. If the input file extension is txt or html, glossary_error_file will be generated
    * that contains error details. glossary_error_file has format of
-   * gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]
+   * `gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]`
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public OutputConfig setGcsDestination(GcsDestination gcsDestination) {

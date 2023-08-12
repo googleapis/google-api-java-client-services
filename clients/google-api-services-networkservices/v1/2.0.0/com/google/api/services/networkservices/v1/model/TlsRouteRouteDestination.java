@@ -38,7 +38,7 @@ public final class TlsRouteRouteDestination extends com.google.api.client.json.G
 
   /**
    * Optional. Specifies the proportion of requests forwareded to the backend referenced by the
-   * service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all
+   * service_name field. This is computed as: - weight/Sum(weights in destinations) Weights in all
    * destinations does not need to sum up to 100.
    * The value may be {@code null}.
    */
@@ -64,7 +64,7 @@ public final class TlsRouteRouteDestination extends com.google.api.client.json.G
 
   /**
    * Optional. Specifies the proportion of requests forwareded to the backend referenced by the
-   * service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all
+   * service_name field. This is computed as: - weight/Sum(weights in destinations) Weights in all
    * destinations does not need to sum up to 100.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class TlsRouteRouteDestination extends com.google.api.client.json.G
 
   /**
    * Optional. Specifies the proportion of requests forwareded to the backend referenced by the
-   * service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all
+   * service_name field. This is computed as: - weight/Sum(weights in destinations) Weights in all
    * destinations does not need to sum up to 100.
    * @param weight weight or {@code null} for none
    */

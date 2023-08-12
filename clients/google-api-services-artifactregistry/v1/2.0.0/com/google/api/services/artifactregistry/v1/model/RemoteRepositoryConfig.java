@@ -31,6 +31,13 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class RemoteRepositoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specific settings for an Apt remote repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AptRepository aptRepository;
+
+  /**
    * The description of the remote source.
    * The value may be {@code null}.
    */
@@ -64,6 +71,30 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private PythonRepository pythonRepository;
+
+  /**
+   * Specific settings for a Yum remote repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YumRepository yumRepository;
+
+  /**
+   * Specific settings for an Apt remote repository.
+   * @return value or {@code null} for none
+   */
+  public AptRepository getAptRepository() {
+    return aptRepository;
+  }
+
+  /**
+   * Specific settings for an Apt remote repository.
+   * @param aptRepository aptRepository or {@code null} for none
+   */
+  public RemoteRepositoryConfig setAptRepository(AptRepository aptRepository) {
+    this.aptRepository = aptRepository;
+    return this;
+  }
 
   /**
    * The description of the remote source.
@@ -147,6 +178,23 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
    */
   public RemoteRepositoryConfig setPythonRepository(PythonRepository pythonRepository) {
     this.pythonRepository = pythonRepository;
+    return this;
+  }
+
+  /**
+   * Specific settings for a Yum remote repository.
+   * @return value or {@code null} for none
+   */
+  public YumRepository getYumRepository() {
+    return yumRepository;
+  }
+
+  /**
+   * Specific settings for a Yum remote repository.
+   * @param yumRepository yumRepository or {@code null} for none
+   */
+  public RemoteRepositoryConfig setYumRepository(YumRepository yumRepository) {
+    this.yumRepository = yumRepository;
     return this;
   }
 

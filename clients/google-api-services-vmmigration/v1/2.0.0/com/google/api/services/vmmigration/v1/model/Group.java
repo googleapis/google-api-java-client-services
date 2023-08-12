@@ -51,6 +51,13 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Immutable. The target type of this group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String migrationTargetType;
+
+  /**
    * Output only. The Group name.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Immutable. The target type of this group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMigrationTargetType() {
+    return migrationTargetType;
+  }
+
+  /**
+   * Immutable. The target type of this group.
+   * @param migrationTargetType migrationTargetType or {@code null} for none
+   */
+  public Group setMigrationTargetType(java.lang.String migrationTargetType) {
+    this.migrationTargetType = migrationTargetType;
     return this;
   }
 

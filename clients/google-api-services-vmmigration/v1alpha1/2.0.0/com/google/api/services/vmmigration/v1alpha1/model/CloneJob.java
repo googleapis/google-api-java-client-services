@@ -36,6 +36,13 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class CloneJob extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Details of the target Persistent Disks in Compute Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComputeEngineDisksTargetDetails computeEngineDisksTargetDetails;
+
+  /**
    * Output only. Details of the target VM in Compute Engine.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class CloneJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TargetVMDetails targetDetails;
+
+  /**
+   * Output only. Details of the target Persistent Disks in Compute Engine.
+   * @return value or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDetails getComputeEngineDisksTargetDetails() {
+    return computeEngineDisksTargetDetails;
+  }
+
+  /**
+   * Output only. Details of the target Persistent Disks in Compute Engine.
+   * @param computeEngineDisksTargetDetails computeEngineDisksTargetDetails or {@code null} for none
+   */
+  public CloneJob setComputeEngineDisksTargetDetails(ComputeEngineDisksTargetDetails computeEngineDisksTargetDetails) {
+    this.computeEngineDisksTargetDetails = computeEngineDisksTargetDetails;
+    return this;
+  }
 
   /**
    * Output only. Details of the target VM in Compute Engine.

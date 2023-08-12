@@ -37,7 +37,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   private AppliedLicense appliedLicense;
 
   /**
-   * Output only. The VM Boot Option, as set in the source vm.
+   * Output only. The VM Boot Option, as set in the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,7 +203,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The VM Boot Option, as set in the source vm.
+   * Output only. The VM Boot Option, as set in the source VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getBootOption() {
@@ -211,7 +211,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The VM Boot Option, as set in the source vm.
+   * Output only. The VM Boot Option, as set in the source VM.
    * @param bootOption bootOption or {@code null} for none
    */
   public TargetVMDetails setBootOption(java.lang.String bootOption) {
@@ -426,7 +426,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNetworkTags() {
@@ -434,7 +434,7 @@ public final class TargetVMDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * @param networkTags networkTags or {@code null} for none
    */
   public TargetVMDetails setNetworkTags(java.util.List<java.lang.String> networkTags) {

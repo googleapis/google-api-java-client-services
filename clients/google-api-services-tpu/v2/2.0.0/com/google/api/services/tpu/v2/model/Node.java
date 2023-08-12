@@ -37,7 +37,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private AcceleratorConfig acceleratorConfig;
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * Optional. The type of hardware accelerators associated with this node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,6 +126,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multisliceNode;
+
+  /**
    * Output only. Immutable. The name of the TPU.
    * The value may be {@code null}.
    */
@@ -152,6 +159,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(NetworkEndpoint.class);
   }
+
+  /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queuedResource;
 
   /**
    * Required. The runtime version running in the Node.
@@ -222,7 +236,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * Optional. The type of hardware accelerators associated with this node.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -230,7 +244,7 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of hardware accelerators associated with this node.
+   * Optional. The type of hardware accelerators associated with this node.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public Node setAcceleratorType(java.lang.String acceleratorType) {
@@ -421,6 +435,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultisliceNode() {
+    return multisliceNode;
+  }
+
+  /**
+   * Output only. Whether the Node belongs to a Multislice group.
+   * @param multisliceNode multisliceNode or {@code null} for none
+   */
+  public Node setMultisliceNode(java.lang.Boolean multisliceNode) {
+    this.multisliceNode = multisliceNode;
+    return this;
+  }
+
+  /**
    * Output only. Immutable. The name of the TPU.
    * @return value or {@code null} for none
    */
@@ -470,6 +501,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setNetworkEndpoints(java.util.List<NetworkEndpoint> networkEndpoints) {
     this.networkEndpoints = networkEndpoints;
+    return this;
+  }
+
+  /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueuedResource() {
+    return queuedResource;
+  }
+
+  /**
+   * Output only. The qualified name of the QueuedResource that requested this Node.
+   * @param queuedResource queuedResource or {@code null} for none
+   */
+  public Node setQueuedResource(java.lang.String queuedResource) {
+    this.queuedResource = queuedResource;
     return this;
   }
 

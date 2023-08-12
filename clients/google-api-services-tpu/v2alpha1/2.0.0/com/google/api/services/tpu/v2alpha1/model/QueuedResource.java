@@ -38,7 +38,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private BestEffort bestEffort;
 
   /**
-   * The Guaranteed tier
+   * The Guaranteed tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,6 +65,13 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String reservationName;
+
+  /**
+   * Optional. The Spot tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Spot spot;
 
   /**
    * Output only. State of the QueuedResource request.
@@ -98,7 +105,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The Guaranteed tier
+   * The Guaranteed tier.
    * @return value or {@code null} for none
    */
   public Guaranteed getGuaranteed() {
@@ -106,7 +113,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The Guaranteed tier
+   * The Guaranteed tier.
    * @param guaranteed guaranteed or {@code null} for none
    */
   public QueuedResource setGuaranteed(Guaranteed guaranteed) {
@@ -164,6 +171,23 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   public QueuedResource setReservationName(java.lang.String reservationName) {
     this.reservationName = reservationName;
+    return this;
+  }
+
+  /**
+   * Optional. The Spot tier.
+   * @return value or {@code null} for none
+   */
+  public Spot getSpot() {
+    return spot;
+  }
+
+  /**
+   * Optional. The Spot tier.
+   * @param spot spot or {@code null} for none
+   */
+  public QueuedResource setSpot(Spot spot) {
+    this.spot = spot;
     return this;
   }
 

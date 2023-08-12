@@ -79,6 +79,13 @@ public final class QueuedResourceState extends com.google.api.client.json.Generi
   private java.lang.String state;
 
   /**
+   * Output only. The initiator of the QueuedResources's current state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stateInitiator;
+
+  /**
    * Further data for the suspended state.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class QueuedResourceState extends com.google.api.client.json.Generi
    */
   public QueuedResourceState setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The initiator of the QueuedResources's current state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStateInitiator() {
+    return stateInitiator;
+  }
+
+  /**
+   * Output only. The initiator of the QueuedResources's current state.
+   * @param stateInitiator stateInitiator or {@code null} for none
+   */
+  public QueuedResourceState setStateInitiator(java.lang.String stateInitiator) {
+    this.stateInitiator = stateInitiator;
     return this;
   }
 

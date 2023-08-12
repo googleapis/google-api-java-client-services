@@ -17,7 +17,7 @@
 package com.google.api.services.metastore.v1beta.model;
 
 /**
- * Network configuration for the Dataproc Metastore service.
+ * Network configuration for the Dataproc Metastore service.Next available ID: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation

@@ -38,6 +38,13 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private AwsSourceVmDetails awsSourceVmDetails;
 
   /**
+   * Details of the target Persistent Disks in Compute Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComputeEngineDisksTargetDefaults computeEngineDisksTargetDefaults;
+
+  /**
    * Details of the target VM in Compute Engine.
    * The value may be {@code null}.
    */
@@ -224,6 +231,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setAwsSourceVmDetails(AwsSourceVmDetails awsSourceVmDetails) {
     this.awsSourceVmDetails = awsSourceVmDetails;
+    return this;
+  }
+
+  /**
+   * Details of the target Persistent Disks in Compute Engine.
+   * @return value or {@code null} for none
+   */
+  public ComputeEngineDisksTargetDefaults getComputeEngineDisksTargetDefaults() {
+    return computeEngineDisksTargetDefaults;
+  }
+
+  /**
+   * Details of the target Persistent Disks in Compute Engine.
+   * @param computeEngineDisksTargetDefaults computeEngineDisksTargetDefaults or {@code null} for none
+   */
+  public MigratingVm setComputeEngineDisksTargetDefaults(ComputeEngineDisksTargetDefaults computeEngineDisksTargetDefaults) {
+    this.computeEngineDisksTargetDefaults = computeEngineDisksTargetDefaults;
     return this;
   }
 

@@ -45,7 +45,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private AppliedLicense appliedLicense;
 
   /**
-   * The VM Boot Option, as set in the source vm.
+   * The VM Boot Option, as set in the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private java.lang.String project;
 
   /**
-   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the VM
    * boot option is EFI.
    * The value may be {@code null}.
    */
@@ -192,7 +192,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * The VM Boot Option, as set in the source vm.
+   * The VM Boot Option, as set in the source VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getBootOption() {
@@ -200,7 +200,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * The VM Boot Option, as set in the source vm.
+   * The VM Boot Option, as set in the source VM.
    * @param bootOption bootOption or {@code null} for none
    */
   public ComputeEngineTargetDetails setBootOption(java.lang.String bootOption) {
@@ -362,7 +362,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNetworkTags() {
@@ -370,7 +370,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * A map of network tags to associate with the VM.
+   * A list of network tags to associate with the VM.
    * @param networkTags networkTags or {@code null} for none
    */
   public ComputeEngineTargetDetails setNetworkTags(java.util.List<java.lang.String> networkTags) {
@@ -396,7 +396,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the VM
    * boot option is EFI.
    * @return value or {@code null} for none
    */
@@ -405,7 +405,7 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   }
 
   /**
-   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm
+   * Defines whether the instance has Secure Boot enabled. This can be set to true only if the VM
    * boot option is EFI.
    * @param secureBoot secureBoot or {@code null} for none
    */

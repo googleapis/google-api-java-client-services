@@ -41,7 +41,7 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> metadatas;
+  private java.util.Map<String, java.lang.String> metadata;
 
   /**
    * [Output Only] Type of the resource. Always compute#metadata for metadata.
@@ -64,16 +64,16 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
    * A metadata key/value map. The total size of all keys and values must be less than 512KB.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getMetadatas() {
-    return metadatas;
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
   }
 
   /**
    * A metadata key/value map. The total size of all keys and values must be less than 512KB.
-   * @param metadatas metadatas or {@code null} for none
+   * @param metadata metadata or {@code null} for none
    */
-  public InstanceSettingsMetadata setMetadatas(java.util.Map<String, java.lang.String> metadatas) {
-    this.metadatas = metadatas;
+  public InstanceSettingsMetadata setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

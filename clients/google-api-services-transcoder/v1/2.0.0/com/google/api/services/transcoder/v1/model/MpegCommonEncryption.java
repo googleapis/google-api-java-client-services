@@ -17,7 +17,7 @@
 package com.google.api.services.transcoder.v1.model;
 
 /**
- * `DASH` manifest configuration.
+ * Configuration for MPEG Common Encryption (MPEG-CENC).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Transcoder API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.transcoder.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DashConfig extends com.google.api.client.json.GenericJson {
+public final class MpegCommonEncryption extends com.google.api.client.json.GenericJson {
 
   /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
+   * Required. Specify the encryption scheme. Supported encryption schemes: - `cenc` - `cbcs`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String segmentReferenceScheme;
+  private java.lang.String scheme;
 
   /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
+   * Required. Specify the encryption scheme. Supported encryption schemes: - `cenc` - `cbcs`
    * @return value or {@code null} for none
    */
-  public java.lang.String getSegmentReferenceScheme() {
-    return segmentReferenceScheme;
+  public java.lang.String getScheme() {
+    return scheme;
   }
 
   /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
-   * @param segmentReferenceScheme segmentReferenceScheme or {@code null} for none
+   * Required. Specify the encryption scheme. Supported encryption schemes: - `cenc` - `cbcs`
+   * @param scheme scheme or {@code null} for none
    */
-  public DashConfig setSegmentReferenceScheme(java.lang.String segmentReferenceScheme) {
-    this.segmentReferenceScheme = segmentReferenceScheme;
+  public MpegCommonEncryption setScheme(java.lang.String scheme) {
+    this.scheme = scheme;
     return this;
   }
 
   @Override
-  public DashConfig set(String fieldName, Object value) {
-    return (DashConfig) super.set(fieldName, value);
+  public MpegCommonEncryption set(String fieldName, Object value) {
+    return (MpegCommonEncryption) super.set(fieldName, value);
   }
 
   @Override
-  public DashConfig clone() {
-    return (DashConfig) super.clone();
+  public MpegCommonEncryption clone() {
+    return (MpegCommonEncryption) super.clone();
   }
 
 }

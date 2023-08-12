@@ -30,7 +30,7 @@ package com.google.api.services.transcoder.v1.model;
 public final class Overlay extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of Animations. The list should be chronological, without any time overlap.
+   * List of animations. The list should be chronological, without any time overlap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class Overlay extends com.google.api.client.json.GenericJson {
   private Image image;
 
   /**
-   * List of Animations. The list should be chronological, without any time overlap.
+   * List of animations. The list should be chronological, without any time overlap.
    * @return value or {@code null} for none
    */
   public java.util.List<Animation> getAnimations() {
@@ -58,7 +58,7 @@ public final class Overlay extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Animations. The list should be chronological, without any time overlap.
+   * List of animations. The list should be chronological, without any time overlap.
    * @param animations animations or {@code null} for none
    */
   public Overlay setAnimations(java.util.List<Animation> animations) {

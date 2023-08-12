@@ -39,25 +39,30 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   private java.lang.String container;
 
   /**
-   * List of `ElementaryStream.key`s multiplexed in this stream.
+   * List of ElementaryStream.key values multiplexed in this stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> elementaryStreams;
 
   /**
-   * The name of the generated file. The default is `MuxStream.key` with the extension suffix
-   * corresponding to the `MuxStream.container`. Individual segments also have an incremental
-   * 10-digit zero-padded suffix starting from 0 before the extension, such as
-   * `mux_stream0000000123.ts`.
+   * Identifier of the encryption configuration to use. If omitted, output will be unencrypted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String encryptionId;
+
+  /**
+   * The name of the generated file. The default is MuxStream.key with the extension suffix
+   * corresponding to the MuxStream.container. Individual segments also have an incremental 10-digit
+   * zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileName;
 
   /**
-   * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key`
-   * with the `.m3u8` extension suffix.
+   * A unique key for this multiplexed stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +97,7 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `ElementaryStream.key`s multiplexed in this stream.
+   * List of ElementaryStream.key values multiplexed in this stream.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getElementaryStreams() {
@@ -100,7 +105,7 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `ElementaryStream.key`s multiplexed in this stream.
+   * List of ElementaryStream.key values multiplexed in this stream.
    * @param elementaryStreams elementaryStreams or {@code null} for none
    */
   public MuxStream setElementaryStreams(java.util.List<java.lang.String> elementaryStreams) {
@@ -109,10 +114,26 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the generated file. The default is `MuxStream.key` with the extension suffix
-   * corresponding to the `MuxStream.container`. Individual segments also have an incremental
-   * 10-digit zero-padded suffix starting from 0 before the extension, such as
-   * `mux_stream0000000123.ts`.
+   * Identifier of the encryption configuration to use. If omitted, output will be unencrypted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEncryptionId() {
+    return encryptionId;
+  }
+
+  /**
+   * Identifier of the encryption configuration to use. If omitted, output will be unencrypted.
+   * @param encryptionId encryptionId or {@code null} for none
+   */
+  public MuxStream setEncryptionId(java.lang.String encryptionId) {
+    this.encryptionId = encryptionId;
+    return this;
+  }
+
+  /**
+   * The name of the generated file. The default is MuxStream.key with the extension suffix
+   * corresponding to the MuxStream.container. Individual segments also have an incremental 10-digit
+   * zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileName() {
@@ -120,10 +141,9 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the generated file. The default is `MuxStream.key` with the extension suffix
-   * corresponding to the `MuxStream.container`. Individual segments also have an incremental
-   * 10-digit zero-padded suffix starting from 0 before the extension, such as
-   * `mux_stream0000000123.ts`.
+   * The name of the generated file. The default is MuxStream.key with the extension suffix
+   * corresponding to the MuxStream.container. Individual segments also have an incremental 10-digit
+   * zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
    * @param fileName fileName or {@code null} for none
    */
   public MuxStream setFileName(java.lang.String fileName) {
@@ -132,8 +152,7 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key`
-   * with the `.m3u8` extension suffix.
+   * A unique key for this multiplexed stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -141,8 +160,7 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key`
-   * with the `.m3u8` extension suffix.
+   * A unique key for this multiplexed stream.
    * @param key key or {@code null} for none
    */
   public MuxStream setKey(java.lang.String key) {

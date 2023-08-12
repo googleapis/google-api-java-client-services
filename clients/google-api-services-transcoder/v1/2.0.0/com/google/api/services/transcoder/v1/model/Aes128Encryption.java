@@ -17,7 +17,7 @@
 package com.google.api.services.transcoder.v1.model;
 
 /**
- * `DASH` manifest configuration.
+ * Configuration for AES-128 encryption.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Transcoder API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.transcoder.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DashConfig extends com.google.api.client.json.GenericJson {
+public final class Aes128Encryption extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String segmentReferenceScheme;
-
-  /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSegmentReferenceScheme() {
-    return segmentReferenceScheme;
-  }
-
-  /**
-   * The segment reference scheme for a `DASH` manifest. The default is `SEGMENT_LIST`.
-   * @param segmentReferenceScheme segmentReferenceScheme or {@code null} for none
-   */
-  public DashConfig setSegmentReferenceScheme(java.lang.String segmentReferenceScheme) {
-    this.segmentReferenceScheme = segmentReferenceScheme;
-    return this;
+  @Override
+  public Aes128Encryption set(String fieldName, Object value) {
+    return (Aes128Encryption) super.set(fieldName, value);
   }
 
   @Override
-  public DashConfig set(String fieldName, Object value) {
-    return (DashConfig) super.set(fieldName, value);
-  }
-
-  @Override
-  public DashConfig clone() {
-    return (DashConfig) super.clone();
+  public Aes128Encryption clone() {
+    return (Aes128Encryption) super.clone();
   }
 
 }

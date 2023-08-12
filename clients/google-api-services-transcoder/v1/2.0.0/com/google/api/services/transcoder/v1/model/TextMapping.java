@@ -17,7 +17,7 @@
 package com.google.api.services.transcoder.v1.model;
 
 /**
- * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+ * The mapping for the JobConfig.edit_list atoms with text EditAtom.inputs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Transcoder API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.transcoder.v1.model;
 public final class TextMapping extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+   * Required. The EditAtom.key that references atom with text inputs in the JobConfig.edit_list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String atomKey;
 
   /**
-   * Required. The `Input.key` that identifies the input file.
+   * Required. The Input.key that identifies the input file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class TextMapping extends com.google.api.client.json.GenericJson {
   private java.lang.Integer inputTrack;
 
   /**
-   * Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+   * Required. The EditAtom.key that references atom with text inputs in the JobConfig.edit_list.
    * @return value or {@code null} for none
    */
   public java.lang.String getAtomKey() {
@@ -59,7 +59,7 @@ public final class TextMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
+   * Required. The EditAtom.key that references atom with text inputs in the JobConfig.edit_list.
    * @param atomKey atomKey or {@code null} for none
    */
   public TextMapping setAtomKey(java.lang.String atomKey) {
@@ -68,7 +68,7 @@ public final class TextMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The `Input.key` that identifies the input file.
+   * Required. The Input.key that identifies the input file.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputKey() {
@@ -76,7 +76,7 @@ public final class TextMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The `Input.key` that identifies the input file.
+   * Required. The Input.key that identifies the input file.
    * @param inputKey inputKey or {@code null} for none
    */
   public TextMapping setInputKey(java.lang.String inputKey) {

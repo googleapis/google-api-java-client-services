@@ -38,8 +38,8 @@ public final class EditAtom extends com.google.api.client.json.GenericJson {
   private String endTimeOffset;
 
   /**
-   * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs`
-   * must have the same timeline.
+   * List of Input.key values identifying files that should be used in this atom. The listed
+   * `inputs` must have the same timeline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class EditAtom extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs`
-   * must have the same timeline.
+   * List of Input.key values identifying files that should be used in this atom. The listed
+   * `inputs` must have the same timeline.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputs() {
@@ -88,8 +88,8 @@ public final class EditAtom extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs`
-   * must have the same timeline.
+   * List of Input.key values identifying files that should be used in this atom. The listed
+   * `inputs` must have the same timeline.
    * @param inputs inputs or {@code null} for none
    */
   public EditAtom setInputs(java.util.List<java.lang.String> inputs) {

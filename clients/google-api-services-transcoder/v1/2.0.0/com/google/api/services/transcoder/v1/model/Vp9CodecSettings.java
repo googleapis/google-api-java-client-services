@@ -106,8 +106,8 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
   private java.lang.String profile;
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,8 +302,8 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate
    * @return value or {@code null} for none
    */
   public java.lang.String getRateControlMode() {
@@ -311,8 +311,8 @@ public final class Vp9CodecSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` -
-   * variable bitrate
+   * Specify the mode. The default is `vbr`. Supported rate control modes: - `vbr` - variable
+   * bitrate
    * @param rateControlMode rateControlMode or {@code null} for none
    */
   public Vp9CodecSettings setRateControlMode(java.lang.String rateControlMode) {

@@ -43,7 +43,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+   * List of edit atoms. Defines the ultimate timeline of the resulting file or manifest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +66,21 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider ElementaryStream used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ElementaryStream.class);
+  }
+
+  /**
+   * List of encryption configurations for the content. Each configuration has an ID. Specify this
+   * ID in the MuxStream.encryption_id field to indicate the configuration to use for that
+   * `MuxStream` output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Encryption> encryptions;
+
+  static {
+    // hack to force ProGuard to consider Encryption used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Encryption.class);
   }
 
   /**
@@ -141,7 +156,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+   * List of edit atoms. Defines the ultimate timeline of the resulting file or manifest.
    * @return value or {@code null} for none
    */
   public java.util.List<EditAtom> getEditList() {
@@ -149,7 +164,7 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+   * List of edit atoms. Defines the ultimate timeline of the resulting file or manifest.
    * @param editList editList or {@code null} for none
    */
   public JobConfig setEditList(java.util.List<EditAtom> editList) {
@@ -171,6 +186,27 @@ public final class JobConfig extends com.google.api.client.json.GenericJson {
    */
   public JobConfig setElementaryStreams(java.util.List<ElementaryStream> elementaryStreams) {
     this.elementaryStreams = elementaryStreams;
+    return this;
+  }
+
+  /**
+   * List of encryption configurations for the content. Each configuration has an ID. Specify this
+   * ID in the MuxStream.encryption_id field to indicate the configuration to use for that
+   * `MuxStream` output.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Encryption> getEncryptions() {
+    return encryptions;
+  }
+
+  /**
+   * List of encryption configurations for the content. Each configuration has an ID. Specify this
+   * ID in the MuxStream.encryption_id field to indicate the configuration to use for that
+   * `MuxStream` output.
+   * @param encryptions encryptions or {@code null} for none
+   */
+  public JobConfig setEncryptions(java.util.List<Encryption> encryptions) {
+    this.encryptions = encryptions;
     return this;
   }
 

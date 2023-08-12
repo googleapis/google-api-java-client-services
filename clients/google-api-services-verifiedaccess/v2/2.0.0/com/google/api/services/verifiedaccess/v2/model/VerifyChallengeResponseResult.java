@@ -31,12 +31,26 @@ package com.google.api.services.verifiedaccess.v2.model;
 public final class VerifyChallengeResponseResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attested device ID (ADID).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attestedDeviceId;
+
+  /**
    * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
    * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
+
+  /**
+   * Device enrollment id for ChromeOS devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceEnrollmentId;
 
   /**
    * Device permanent id is returned in this field (for the machine response only).
@@ -105,6 +119,23 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   private java.lang.String virtualProfileId;
 
   /**
+   * Attested device ID (ADID).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttestedDeviceId() {
+    return attestedDeviceId;
+  }
+
+  /**
+   * Attested device ID (ADID).
+   * @param attestedDeviceId attestedDeviceId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setAttestedDeviceId(java.lang.String attestedDeviceId) {
+    this.attestedDeviceId = attestedDeviceId;
+    return this;
+  }
+
+  /**
    * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
    * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * @return value or {@code null} for none
@@ -120,6 +151,23 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
    */
   public VerifyChallengeResponseResult setCustomerId(java.lang.String customerId) {
     this.customerId = customerId;
+    return this;
+  }
+
+  /**
+   * Device enrollment id for ChromeOS devices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceEnrollmentId() {
+    return deviceEnrollmentId;
+  }
+
+  /**
+   * Device enrollment id for ChromeOS devices.
+   * @param deviceEnrollmentId deviceEnrollmentId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setDeviceEnrollmentId(java.lang.String deviceEnrollmentId) {
+    this.deviceEnrollmentId = deviceEnrollmentId;
     return this;
   }
 

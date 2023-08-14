@@ -5436,17 +5436,23 @@ public class CertificateManager extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /** Required. A user-provided name of the TrustConfig. */
+          /**
+           * Required. A user-provided name of the TrustConfig. Must match the regexp
+           * `[a-z0-9-]{1,63}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String trustConfigId;
 
-          /** Required. A user-provided name of the TrustConfig.
+          /** Required. A user-provided name of the TrustConfig. Must match the regexp `[a-z0-9-]{1,63}`.
            */
           public java.lang.String getTrustConfigId() {
             return trustConfigId;
           }
 
-          /** Required. A user-provided name of the TrustConfig. */
+          /**
+           * Required. A user-provided name of the TrustConfig. Must match the regexp
+           * `[a-z0-9-]{1,63}`.
+           */
           public Create setTrustConfigId(java.lang.String trustConfigId) {
             this.trustConfigId = trustConfigId;
             return this;

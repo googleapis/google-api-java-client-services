@@ -37,7 +37,7 @@ public final class CloudInterconnectWorkload extends com.google.api.client.json.
   private java.util.List<VlanAttachment> interconnectAttachments;
 
   /**
-   * Vlan attachment type.
+   * VLAN attachment type
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class CloudInterconnectWorkload extends com.google.api.client.json.
   }
 
   /**
-   * Vlan attachment type.
+   * VLAN attachment type
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectType() {
@@ -84,7 +84,7 @@ public final class CloudInterconnectWorkload extends com.google.api.client.json.
   }
 
   /**
-   * Vlan attachment type.
+   * VLAN attachment type
    * @param interconnectType interconnectType or {@code null} for none
    */
   public CloudInterconnectWorkload setInterconnectType(java.lang.String interconnectType) {

@@ -162,8 +162,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * When creating a subaccount, the current authenticated user must have the
      * `billing.accounts.update` IAM permission on the parent account, which is typically given to
      * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * This method will return an error if the parent account has not been provisioned as a reseller
-     * account.
+     * This method will return an error if the parent account has not been provisioned for subaccounts.
      *
      * Create a request for the method "billingAccounts.create".
      *
@@ -192,8 +191,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * ements/create). When creating a subaccount, the current authenticated user must have the
        * `billing.accounts.update` IAM permission on the parent account, which is typically given to
        * billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-       * This method will return an error if the parent account has not been provisioned as a reseller
-       * account.
+       * This method will return an error if the parent account has not been provisioned for
+       * subaccounts.
        *
        * Create a request for the method "billingAccounts.create".
        *
@@ -723,17 +722,17 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Options for how to filter the returned billing accounts. Currently this only supports
-       * filtering for [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single
-       * provided reseller billing account. (e.g.
+       * Options for how to filter the returned billing accounts. This only supports filtering for
+       * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+       * parent billing account. (e.g.
        * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
        * fields are not currently supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Options for how to filter the returned billing accounts. Currently this only supports filtering for
-     [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided reseller
+      /** Options for how to filter the returned billing accounts. This only supports filtering for
+     [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided parent
      billing account. (e.g. "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean
      algebra and other fields are not currently supported.
        */
@@ -742,9 +741,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Options for how to filter the returned billing accounts. Currently this only supports
-       * filtering for [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single
-       * provided reseller billing account. (e.g.
+       * Options for how to filter the returned billing accounts. This only supports filtering for
+       * [subaccounts](https://cloud.google.com/billing/docs/concepts) under a single provided
+       * parent billing account. (e.g.
        * "master_billing_account=billingAccounts/012345-678901-ABCDEF"). Boolean algebra and other
        * fields are not currently supported.
        */

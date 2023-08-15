@@ -17,7 +17,9 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Cross-profile policies applied on the device.
+ * Controls the data from the work profile that can be accessed from the personal profile and vice
+ * versa. A nonComplianceDetail with MANAGEMENT_MODE is reported if the device does not have a work
+ * profile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

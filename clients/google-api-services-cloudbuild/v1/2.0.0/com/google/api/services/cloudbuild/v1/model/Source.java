@@ -30,6 +30,13 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectedRepository connectedRepository;
+
+  /**
    * If provided, get the source from this Git repository.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private StorageSourceManifest storageSourceManifest;
+
+  /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * @return value or {@code null} for none
+   */
+  public ConnectedRepository getConnectedRepository() {
+    return connectedRepository;
+  }
+
+  /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * @param connectedRepository connectedRepository or {@code null} for none
+   */
+  public Source setConnectedRepository(ConnectedRepository connectedRepository) {
+    this.connectedRepository = connectedRepository;
+    return this;
+  }
 
   /**
    * If provided, get the source from this Git repository.

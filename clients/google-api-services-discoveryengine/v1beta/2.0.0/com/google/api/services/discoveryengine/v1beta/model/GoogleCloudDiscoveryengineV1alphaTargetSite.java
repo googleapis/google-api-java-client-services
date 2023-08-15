@@ -41,11 +41,25 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   private java.lang.Boolean exactMatch;
 
   /**
+   * Output only. Failure reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason failureReason;
+
+  /**
    * Output only. This is system-generated based on the provided_uri_pattern.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String generatedUriPattern;
+
+  /**
+   * Output only. Indexing status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String indexingStatus;
 
   /**
    * Output only. The fully qualified resource name of the target site. `projects/{project}/location
@@ -111,6 +125,23 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
+   * Output only. Failure reason.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason getFailureReason() {
+    return failureReason;
+  }
+
+  /**
+   * Output only. Failure reason.
+   * @param failureReason failureReason or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTargetSite setFailureReason(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason failureReason) {
+    this.failureReason = failureReason;
+    return this;
+  }
+
+  /**
    * Output only. This is system-generated based on the provided_uri_pattern.
    * @return value or {@code null} for none
    */
@@ -124,6 +155,23 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
    */
   public GoogleCloudDiscoveryengineV1alphaTargetSite setGeneratedUriPattern(java.lang.String generatedUriPattern) {
     this.generatedUriPattern = generatedUriPattern;
+    return this;
+  }
+
+  /**
+   * Output only. Indexing status.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIndexingStatus() {
+    return indexingStatus;
+  }
+
+  /**
+   * Output only. Indexing status.
+   * @param indexingStatus indexingStatus or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTargetSite setIndexingStatus(java.lang.String indexingStatus) {
+    this.indexingStatus = indexingStatus;
     return this;
   }
 

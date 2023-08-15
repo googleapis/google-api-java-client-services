@@ -638,6 +638,161 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
     }
     /**
+     * Validates a debug token secret that you have previously created using CreateDebugToken. If valid,
+     * returns an AppCheckToken. Note that a restrictive quota is enforced on this method to prevent
+     * accidental exposure of the app to abuse.
+     *
+     * Create a request for the method "oauthClients.exchangeDebugToken".
+     *
+     * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+     * optional parameters, call the {@link ExchangeDebugToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param app Required. The relative resource name of the app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest}
+     * @return the request
+     */
+    public ExchangeDebugToken exchangeDebugToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest content) throws java.io.IOException {
+      ExchangeDebugToken result = new ExchangeDebugToken(app, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ExchangeDebugToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
+
+      private static final String REST_PATH = "v1beta/{+app}:exchangeDebugToken";
+
+      private final java.util.regex.Pattern APP_PATTERN =
+          java.util.regex.Pattern.compile("^oauthClients/[^/]+$");
+
+      /**
+       * Validates a debug token secret that you have previously created using CreateDebugToken. If
+       * valid, returns an AppCheckToken. Note that a restrictive quota is enforced on this method to
+       * prevent accidental exposure of the app to abuse.
+       *
+       * Create a request for the method "oauthClients.exchangeDebugToken".
+       *
+       * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link ExchangeDebugToken#execute()} method to invoke the remote
+       * operation. <p> {@link ExchangeDebugToken#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param app Required. The relative resource name of the app, in the format: ```
+     *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+     *        be replaced with the project ID of the Firebase project. Learn more about using project
+     *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest}
+       * @since 1.13
+       */
+      protected ExchangeDebugToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest content) {
+        super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
+        this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+      }
+
+      @Override
+      public ExchangeDebugToken set$Xgafv(java.lang.String $Xgafv) {
+        return (ExchangeDebugToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ExchangeDebugToken setAccessToken(java.lang.String accessToken) {
+        return (ExchangeDebugToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ExchangeDebugToken setAlt(java.lang.String alt) {
+        return (ExchangeDebugToken) super.setAlt(alt);
+      }
+
+      @Override
+      public ExchangeDebugToken setCallback(java.lang.String callback) {
+        return (ExchangeDebugToken) super.setCallback(callback);
+      }
+
+      @Override
+      public ExchangeDebugToken setFields(java.lang.String fields) {
+        return (ExchangeDebugToken) super.setFields(fields);
+      }
+
+      @Override
+      public ExchangeDebugToken setKey(java.lang.String key) {
+        return (ExchangeDebugToken) super.setKey(key);
+      }
+
+      @Override
+      public ExchangeDebugToken setOauthToken(java.lang.String oauthToken) {
+        return (ExchangeDebugToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ExchangeDebugToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ExchangeDebugToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ExchangeDebugToken setQuotaUser(java.lang.String quotaUser) {
+        return (ExchangeDebugToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ExchangeDebugToken setUploadType(java.lang.String uploadType) {
+        return (ExchangeDebugToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ExchangeDebugToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ExchangeDebugToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative resource name of the app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String app;
+
+      /** Required. The relative resource name of the app, in the format: ```
+     projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+     replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+     Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public java.lang.String getApp() {
+        return app;
+      }
+
+      /**
+       * Required. The relative resource name of the app, in the format: ```
+       * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       * be replaced with the project ID of the Firebase project. Learn more about using project
+       * identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       */
+      public ExchangeDebugToken setApp(java.lang.String app) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+              "Parameter app must conform to the pattern " +
+              "^oauthClients/[^/]+$");
+        }
+        this.app = app;
+        return this;
+      }
+
+      @Override
+      public ExchangeDebugToken set(String parameterName, Object value) {
+        return (ExchangeDebugToken) super.set(parameterName, value);
+      }
+    }
+    /**
      * Generates a challenge that protects the integrity of an immediately following call to
      * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for
      * multiple calls.

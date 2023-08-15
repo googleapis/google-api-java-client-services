@@ -45,6 +45,13 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String defaultBranch;
 
   /**
+   * Optional. Authentication fields for remote uris using SSH protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SshAuthenticationConfig sshAuthenticationConfig;
+
+  /**
    * Output only. Deprecated: The field does not contain any token status information. Instead use h
    * ttps://cloud.google.com/dataform/reference/rest/v1beta1/projects.locations.repositories/compute
    * AccessTokenStatus
@@ -93,6 +100,23 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
    */
   public GitRemoteSettings setDefaultBranch(java.lang.String defaultBranch) {
     this.defaultBranch = defaultBranch;
+    return this;
+  }
+
+  /**
+   * Optional. Authentication fields for remote uris using SSH protocol.
+   * @return value or {@code null} for none
+   */
+  public SshAuthenticationConfig getSshAuthenticationConfig() {
+    return sshAuthenticationConfig;
+  }
+
+  /**
+   * Optional. Authentication fields for remote uris using SSH protocol.
+   * @param sshAuthenticationConfig sshAuthenticationConfig or {@code null} for none
+   */
+  public GitRemoteSettings setSshAuthenticationConfig(SshAuthenticationConfig sshAuthenticationConfig) {
+    this.sshAuthenticationConfig = sshAuthenticationConfig;
     return this;
   }
 

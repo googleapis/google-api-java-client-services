@@ -31,6 +31,14 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails;
+
+  /**
    * Output only. Response only. Resource name of the product. It will have the format of
    * "partners/{partner_id}/products/{product_id}"
    * The value may be {@code null}.
@@ -66,6 +74,25 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleTypeLocalizedText> titles;
+
+  /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails getFiniteBillingCycleDetails() {
+    return finiteBillingCycleDetails;
+  }
+
+  /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely.
+   * @param finiteBillingCycleDetails finiteBillingCycleDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Product setFiniteBillingCycleDetails(GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails) {
+    this.finiteBillingCycleDetails = finiteBillingCycleDetails;
+    return this;
+  }
 
   /**
    * Output only. Response only. Resource name of the product. It will have the format of

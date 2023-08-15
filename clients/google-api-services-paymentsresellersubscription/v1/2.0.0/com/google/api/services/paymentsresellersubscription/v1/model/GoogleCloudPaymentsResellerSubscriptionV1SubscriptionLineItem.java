@@ -46,6 +46,14 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private java.lang.String description;
 
   /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely. Used only with LINE_ITEM_RECURRENCE_TYPE_PERIODIC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails;
+
+  /**
    * Output only. The free trial end time will be populated after the line item is successfully
    * processed. End time of the line item free trial period, in ISO 8061 format. For example,
    * "2019-08-31T17:28:54.564Z". It will be set the same as createTime if no free trial promotion is
@@ -140,6 +148,25 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely. Used only with LINE_ITEM_RECURRENCE_TYPE_PERIODIC.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails getFiniteBillingCycleDetails() {
+    return finiteBillingCycleDetails;
+  }
+
+  /**
+   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
+   * item will be charged indefinitely. Used only with LINE_ITEM_RECURRENCE_TYPE_PERIODIC.
+   * @param finiteBillingCycleDetails finiteBillingCycleDetails or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setFiniteBillingCycleDetails(GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails) {
+    this.finiteBillingCycleDetails = finiteBillingCycleDetails;
     return this;
   }
 

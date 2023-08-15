@@ -404,7 +404,7 @@ public class ServerlessVPCAccess extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the vpcaccess server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location in which the configuration should be created, specified in the
+         * @param parent Required. The project id and location in which the configuration should be created, specified in the
          *        format `projects/locations`.
          * @param content the {@link com.google.api.services.vpcaccess.v1.model.Connector}
          * @return the request
@@ -433,7 +433,7 @@ public class ServerlessVPCAccess extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location in which the configuration should be created, specified in the
+           * @param parent Required. The project id and location in which the configuration should be created, specified in the
          *        format `projects/locations`.
            * @param content the {@link com.google.api.services.vpcaccess.v1.model.Connector}
            * @since 1.13
@@ -504,21 +504,21 @@ public class ServerlessVPCAccess extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The project and location in which the configuration should be created,
+           * Required. The project id and location in which the configuration should be created,
            * specified in the format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project and location in which the configuration should be created, specified in the
-         format `projects/locations`.
+          /** Required. The project id and location in which the configuration should be created, specified in
+         the format `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project and location in which the configuration should be created,
+           * Required. The project id and location in which the configuration should be created,
            * specified in the format `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {

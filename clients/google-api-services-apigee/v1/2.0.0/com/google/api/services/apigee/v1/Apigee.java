@@ -8075,11 +8075,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Creates an AppGroup. Once created, user can register apps under the AppGroup to obtain secret key
-       * and password. At creation time, the AppGroup's state is set as `active`. The attribute
-       * `Attribute` with key `attribute_name` as `__apigee_reserved__developer_details` can be used to
-       * store developers and their roles. The JSON format expected is: [ { "developer_id":"", "roles":[
-       * "" ] } ] and is dealt in base64encoded format. Etag will be available in attribute `Attribute`
-       * with key `attribute_name` as `__apigee_reserved__developer_details_etag` for that AppGroup.
+       * and password. At creation time, the AppGroup's state is set as `active`.
        *
        * Create a request for the method "appgroups.create".
        *
@@ -8106,11 +8102,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates an AppGroup. Once created, user can register apps under the AppGroup to obtain secret
-         * key and password. At creation time, the AppGroup's state is set as `active`. The attribute
-         * `Attribute` with key `attribute_name` as `__apigee_reserved__developer_details` can be used to
-         * store developers and their roles. The JSON format expected is: [ { "developer_id":"", "roles":[
-         * "" ] } ] and is dealt in base64encoded format. Etag will be available in attribute `Attribute`
-         * with key `attribute_name` as `__apigee_reserved__developer_details_etag` for that AppGroup.
+         * key and password. At creation time, the AppGroup's state is set as `active`.
          *
          * Create a request for the method "appgroups.create".
          *
@@ -8660,14 +8652,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The filter expression to be used to get the list of AppGroups, where filtering can be
-         * done on name, correlationID or channelID of the app group. Example: filter = "name =
-         * foobar"
+         * done on status, channelId or channelUri of the app group. Examples:
+         * filter=status=active", filter=channelId=, filter=channelUri=
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The filter expression to be used to get the list of AppGroups, where filtering can be done on name,
-       correlationID or channelID of the app group. Example: filter = "name = foobar"
+        /** The filter expression to be used to get the list of AppGroups, where filtering can be done on
+       status, channelId or channelUri of the app group. Examples: filter=status=active",
+       filter=channelId=, filter=channelUri=
          */
         public java.lang.String getFilter() {
           return filter;
@@ -8675,8 +8668,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * The filter expression to be used to get the list of AppGroups, where filtering can be
-         * done on name, correlationID or channelID of the app group. Example: filter = "name =
-         * foobar"
+         * done on status, channelId or channelUri of the app group. Examples:
+         * filter=status=active", filter=channelId=, filter=channelUri=
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -8732,8 +8725,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Updates an appGroup. This API replaces the existing appGroup details with those specified in the
        * request. Include or exclude any existing details that you want to retain or delete, respectively.
-       * Note that the state of the AppGroup should be updated using `action`, and not via AppGroup. The
-       * custom attribute limit is 1000, and is how `__apigee_reserved__developer_details` can be updated.
+       * Note that the state of the AppGroup should be updated using `action`, and not via AppGroup.
        * **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps, developers, and
        * API products) are cached for 180 seconds (current default). Any custom attributes associated with
        * these entities are cached for at least 180 seconds after the entity is accessed at runtime.
@@ -8767,8 +8759,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Updates an appGroup. This API replaces the existing appGroup details with those specified in
          * the request. Include or exclude any existing details that you want to retain or delete,
          * respectively. Note that the state of the AppGroup should be updated using `action`, and not via
-         * AppGroup. The custom attribute limit is 1000, and is how `__apigee_reserved__developer_details`
-         * can be updated. **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps,
+         * AppGroup. **Note**: OAuth access tokens and Key Management Service (KMS) entities (apps,
          * developers, and API products) are cached for 180 seconds (current default). Any custom
          * attributes associated with these entities are cached for at least 180 seconds after the entity
          * is accessed at runtime. Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be able
@@ -11042,15 +11033,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. The filter expression to be used to get the list of apps, where filtering can
-         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName and appType.
-         * Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer"
-         * "filter" is supported from ver 1.10.0 and above.
+         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName, appType and
+         * appGroup. Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or
+         * "appType=Developer" "filter" is supported from ver 1.10.0 and above.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. The filter expression to be used to get the list of apps, where filtering can be done on
-       developerEmail, apiProduct, consumerKey, status, appId, appName and appType. Examples:
+       developerEmail, apiProduct, consumerKey, status, appId, appName, appType and appGroup. Examples:
        "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer" "filter" is supported from
        ver 1.10.0 and above.
          */
@@ -11060,9 +11051,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Optional. The filter expression to be used to get the list of apps, where filtering can
-         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName and appType.
-         * Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or "appType=Developer"
-         * "filter" is supported from ver 1.10.0 and above.
+         * be done on developerEmail, apiProduct, consumerKey, status, appId, appName, appType and
+         * appGroup. Examples: "developerEmail=foo@bar.com", "appType=AppGroup", or
+         * "appType=Developer" "filter" is supported from ver 1.10.0 and above.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -34094,22 +34085,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The maximum number of incidents to return. The service may return fewer than this
-           * value. If unspecified, at most 50 incidents will be returned.
+           * Optional. The maximum number of incidents to return. The service may return fewer than
+           * this value. If unspecified, at most 50 incidents will be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of incidents to return. The service may return fewer than this value. If
-         unspecified, at most 50 incidents will be returned.
+          /** Optional. The maximum number of incidents to return. The service may return fewer than this value.
+         If unspecified, at most 50 incidents will be returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of incidents to return. The service may return fewer than this
-           * value. If unspecified, at most 50 incidents will be returned.
+           * Optional. The maximum number of incidents to return. The service may return fewer than
+           * this value. If unspecified, at most 50 incidents will be returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -34117,22 +34108,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * A page token, received from a previous `ListSecurityIncident` call. Provide this to
-           * retrieve the subsequent page.
+           * Optional. A page token, received from a previous `ListSecurityIncident` call. Provide
+           * this to retrieve the subsequent page.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListSecurityIncident` call. Provide this to retrieve the
-         subsequent page.
+          /** Optional. A page token, received from a previous `ListSecurityIncident` call. Provide this to
+         retrieve the subsequent page.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListSecurityIncident` call. Provide this to
-           * retrieve the subsequent page.
+           * Optional. A page token, received from a previous `ListSecurityIncident` call. Provide
+           * this to retrieve the subsequent page.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -45424,6 +45415,290 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
     public class SecurityProfiles {
 
       /**
+       * CreateSecurityProfile create a new custom security profile.
+       *
+       * Create a request for the method "securityProfiles.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of organization. Format: organizations/{org}
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile> {
+
+        private static final String REST_PATH = "v1/{+parent}/securityProfiles";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * CreateSecurityProfile create a new custom security profile.
+         *
+         * Create a request for the method "securityProfiles.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of organization. Format: organizations/{org}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of organization. Format: organizations/{org} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of organization. Format: organizations/{org}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Name of organization. Format: organizations/{org} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The ID to use for the SecurityProfile, which will become the final component of
+         * the action's resource name. This value should be 4-63 characters, and valid characters
+         * are /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String securityProfileId;
+
+        /** Required. The ID to use for the SecurityProfile, which will become the final component of the
+       action's resource name. This value should be 4-63 characters, and valid characters are
+       /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+         */
+        public java.lang.String getSecurityProfileId() {
+          return securityProfileId;
+        }
+
+        /**
+         * Required. The ID to use for the SecurityProfile, which will become the final component of
+         * the action's resource name. This value should be 4-63 characters, and valid characters
+         * are /(^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$/.
+         */
+        public Create setSecurityProfileId(java.lang.String securityProfileId) {
+          this.securityProfileId = securityProfileId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * DeleteSecurityProfile delete a profile with all its revisions.
+       *
+       * Create a request for the method "securityProfiles.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of profile. Format: organizations/{org}/securityProfiles/{profile}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+$");
+
+        /**
+         * DeleteSecurityProfile delete a profile with all its revisions.
+         *
+         * Create a request for the method "securityProfiles.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of profile. Format: organizations/{org}/securityProfiles/{profile}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of profile. Format: organizations/{org}/securityProfiles/{profile} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of profile. Format: organizations/{org}/securityProfiles/{profile}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of profile. Format: organizations/{org}/securityProfiles/{profile} */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
        * GetSecurityProfile gets the specified security profile. Returns NOT_FOUND if security profile is
        * not present for the specified organization.
        *
@@ -45969,6 +46244,161 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public ListRevisions set(String parameterName, Object value) {
           return (ListRevisions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * UpdateSecurityProfile update the metadata of security profile.
+       *
+       * Create a request for the method "securityProfiles.patch".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Immutable. Name of the security profile resource. Format:
+       *        organizations/{org}/securityProfiles/{profile}
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityProfiles/[^/]+$");
+
+        /**
+         * UpdateSecurityProfile update the metadata of security profile.
+         *
+         * Create a request for the method "securityProfiles.patch".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Immutable. Name of the security profile resource. Format:
+       *        organizations/{org}/securityProfiles/{profile}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile content) {
+          super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityProfile.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Immutable. Name of the security profile resource. Format:
+         * organizations/{org}/securityProfiles/{profile}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Immutable. Name of the security profile resource. Format:
+       organizations/{org}/securityProfiles/{profile}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Immutable. Name of the security profile resource. Format:
+         * organizations/{org}/securityProfiles/{profile}
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

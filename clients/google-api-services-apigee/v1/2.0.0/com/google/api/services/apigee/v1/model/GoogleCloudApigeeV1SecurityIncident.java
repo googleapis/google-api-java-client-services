@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
   private java.util.List<java.lang.String> detectionTypes;
 
   /**
-   * Display name of the security incident.
+   * Optional. Display name of the security incident.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
   }
 
   /**
-   * Display name of the security incident.
+   * Optional. Display name of the security incident.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -109,7 +109,7 @@ public final class GoogleCloudApigeeV1SecurityIncident extends com.google.api.cl
   }
 
   /**
-   * Display name of the security incident.
+   * Optional. Display name of the security incident.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityIncident setDisplayName(java.lang.String displayName) {

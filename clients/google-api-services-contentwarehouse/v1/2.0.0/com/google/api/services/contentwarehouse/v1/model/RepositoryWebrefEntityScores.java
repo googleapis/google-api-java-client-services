@@ -31,13 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefEntityScores extends com.google.api.client.json.GenericJson {
 
   /**
-   * Probability that any given name of this entity is fully capitalized.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float allCapsProb;
-
-  /**
    * This field is only for debugging and link weight experiments. It stores the entity's idf from
    * the alpha model. Alpha idfs are used for link weight computations and available during model
    * omega building via enricher_current_entity_idf_for_link_direction.
@@ -63,29 +56,12 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   private java.lang.Float entityIdf;
 
   /**
-   * The following fields are deprecated and should eventually be removed. They use data and rules
-   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
+   * The following field is deprecated and should eventually be removed. It uses data and rules that
+   * have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float nameCapitalizationProb;
-
-  /**
-   * Probability that any given name of this entity is fully capitalized.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getAllCapsProb() {
-    return allCapsProb;
-  }
-
-  /**
-   * Probability that any given name of this entity is fully capitalized.
-   * @param allCapsProb allCapsProb or {@code null} for none
-   */
-  public RepositoryWebrefEntityScores setAllCapsProb(java.lang.Float allCapsProb) {
-    this.allCapsProb = allCapsProb;
-    return this;
-  }
 
   /**
    * This field is only for debugging and link weight experiments. It stores the entity's idf from
@@ -147,8 +123,8 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   }
 
   /**
-   * The following fields are deprecated and should eventually be removed. They use data and rules
-   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
+   * The following field is deprecated and should eventually be removed. It uses data and rules that
+   * have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * @return value or {@code null} for none
    */
   public java.lang.Float getNameCapitalizationProb() {
@@ -156,8 +132,8 @@ public final class RepositoryWebrefEntityScores extends com.google.api.client.js
   }
 
   /**
-   * The following fields are deprecated and should eventually be removed. They use data and rules
-   * that have not been refreshed for ~10y and KG has changed a lot in the meantime.
+   * The following field is deprecated and should eventually be removed. It uses data and rules that
+   * have not been refreshed for ~10y and KG has changed a lot in the meantime.
    * @param nameCapitalizationProb nameCapitalizationProb or {@code null} for none
    */
   public RepositoryWebrefEntityScores setNameCapitalizationProb(java.lang.Float nameCapitalizationProb) {

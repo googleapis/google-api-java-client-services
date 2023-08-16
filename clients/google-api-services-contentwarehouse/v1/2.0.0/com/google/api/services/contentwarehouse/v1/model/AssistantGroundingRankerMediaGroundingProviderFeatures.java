@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 16
+ * Features to be passed from Media GP to HGR. Next ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -43,6 +43,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.String ambiguityClassifier;
+
+  /**
+   * Mid of the media item. This is currently only used in manual rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entityMid;
 
   /**
    * True if the argument's type was explicitly mentioned in the query.
@@ -177,6 +184,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setAmbiguityClassifier(java.lang.String ambiguityClassifier) {
     this.ambiguityClassifier = ambiguityClassifier;
+    return this;
+  }
+
+  /**
+   * Mid of the media item. This is currently only used in manual rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntityMid() {
+    return entityMid;
+  }
+
+  /**
+   * Mid of the media item. This is currently only used in manual rules.
+   * @param entityMid entityMid or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setEntityMid(java.lang.String entityMid) {
+    this.entityMid = entityMid;
     return this;
   }
 

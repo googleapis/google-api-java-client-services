@@ -38,13 +38,6 @@ public final class RepositoryWebrefAnnotatedCategoryInfo extends com.google.api.
   private java.lang.String debugString;
 
   /**
-   * Listiness score of the category.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float listiness;
-
-  /**
    * The mid of the entity representing the category.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class RepositoryWebrefAnnotatedCategoryInfo extends com.google.api.
    */
   public RepositoryWebrefAnnotatedCategoryInfo setDebugString(java.lang.String debugString) {
     this.debugString = debugString;
-    return this;
-  }
-
-  /**
-   * Listiness score of the category.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getListiness() {
-    return listiness;
-  }
-
-  /**
-   * Listiness score of the category.
-   * @param listiness listiness or {@code null} for none
-   */
-  public RepositoryWebrefAnnotatedCategoryInfo setListiness(java.lang.Float listiness) {
-    this.listiness = listiness;
     return this;
   }
 

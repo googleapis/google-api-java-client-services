@@ -27,8 +27,9 @@ package com.google.api.services.contentwarehouse.v1.model;
  * proto reflection (using google3/net/proto2/util/public/field_path.h), downstream systems can take
  * advantage of this annotation to automatically handle newly introduced data without modifying
  * their code. Please also see the comment of FieldProjector above. There are also some fields in
- * DataInfo that annotate who generates the data, the Index Signals or Goldmine annotator name. Next
- * ID: 538
+ * DataInfo that annotate who generates the data, the Index Signals or Goldmine annotator name for
+ * the fields already onboarded or being onboarded to FDP. Fields without annotation of signal_names
+ * or goldmine_annotator_names are not onboarded. Next ID: 538
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

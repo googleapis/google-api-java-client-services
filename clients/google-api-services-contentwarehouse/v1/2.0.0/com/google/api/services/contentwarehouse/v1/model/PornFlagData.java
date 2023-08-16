@@ -185,14 +185,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private java.lang.String url;
 
   /**
-   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
-   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ClassifierPornAggregatedUrlPornScores urlPornScores;
-
-  /**
    * DebugInfo stores debug information from the overall classifier. This allows for instance to
    * update counters related to blacklisting without running the full classifier again.
    * @return value or {@code null} for none
@@ -572,25 +564,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setUrl(java.lang.String url) {
     this.url = url;
-    return this;
-  }
-
-  /**
-   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
-   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
-   * @return value or {@code null} for none
-   */
-  public ClassifierPornAggregatedUrlPornScores getUrlPornScores() {
-    return urlPornScores;
-  }
-
-  /**
-   * Information about the URL porn scores for image URLs associated with this image. IMPORTANT:
-   * This signal is not populated from June 2023. Refer to b/209748384 for more information.
-   * @param urlPornScores urlPornScores or {@code null} for none
-   */
-  public PornFlagData setUrlPornScores(ClassifierPornAggregatedUrlPornScores urlPornScores) {
-    this.urlPornScores = urlPornScores;
     return this;
   }
 

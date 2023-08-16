@@ -52,7 +52,7 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QualityTimebasedDateReliability dateReliabilityInfo;
+  private QualityTimebasedDateUnreliability dateUnreliabilityInfo;
 
   /**
    * The source the signal comes from.
@@ -106,15 +106,15 @@ public final class QualityTimebasedLastSignificantUpdate extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public QualityTimebasedDateReliability getDateReliabilityInfo() {
-    return dateReliabilityInfo;
+  public QualityTimebasedDateUnreliability getDateUnreliabilityInfo() {
+    return dateUnreliabilityInfo;
   }
 
   /**
-   * @param dateReliabilityInfo dateReliabilityInfo or {@code null} for none
+   * @param dateUnreliabilityInfo dateUnreliabilityInfo or {@code null} for none
    */
-  public QualityTimebasedLastSignificantUpdate setDateReliabilityInfo(QualityTimebasedDateReliability dateReliabilityInfo) {
-    this.dateReliabilityInfo = dateReliabilityInfo;
+  public QualityTimebasedLastSignificantUpdate setDateUnreliabilityInfo(QualityTimebasedDateUnreliability dateUnreliabilityInfo) {
+    this.dateUnreliabilityInfo = dateUnreliabilityInfo;
     return this;
   }
 

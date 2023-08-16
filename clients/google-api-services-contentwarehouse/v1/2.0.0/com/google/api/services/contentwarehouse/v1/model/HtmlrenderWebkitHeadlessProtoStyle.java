@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 54
+ * Next id: 54 Font and text decorations:
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -198,7 +198,9 @@ public final class HtmlrenderWebkitHeadlessProtoStyle extends com.google.api.cli
   private java.lang.String display;
 
   /**
-   * Font and text decorations:
+   * `font_family` is the `font-family` computed style, not necessarily the actual font.
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/font-family. Note that it may contain multiple
+   * font families, not just one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -780,7 +782,9 @@ public final class HtmlrenderWebkitHeadlessProtoStyle extends com.google.api.cli
   }
 
   /**
-   * Font and text decorations:
+   * `font_family` is the `font-family` computed style, not necessarily the actual font.
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/font-family. Note that it may contain multiple
+   * font families, not just one.
    * @return value or {@code null} for none
    */
   public java.lang.String getFontFamily() {
@@ -788,7 +792,9 @@ public final class HtmlrenderWebkitHeadlessProtoStyle extends com.google.api.cli
   }
 
   /**
-   * Font and text decorations:
+   * `font_family` is the `font-family` computed style, not necessarily the actual font.
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/font-family. Note that it may contain multiple
+   * font families, not just one.
    * @param fontFamily fontFamily or {@code null} for none
    */
   public HtmlrenderWebkitHeadlessProtoStyle setFontFamily(java.lang.String fontFamily) {

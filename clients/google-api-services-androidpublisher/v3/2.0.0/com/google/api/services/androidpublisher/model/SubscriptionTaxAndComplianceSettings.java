@@ -41,6 +41,13 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
   private java.lang.String eeaWithdrawalRightType;
 
   /**
+   * Whether this subscription is declared as a product representing a tokenized digital asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTokenizedDigitalAsset;
+
+  /**
    * A mapping from region code to tax rate details. The keys are region codes as defined by
    * Unicode's "CLDR".
    * The value may be {@code null}.
@@ -74,6 +81,23 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
    */
   public SubscriptionTaxAndComplianceSettings setEeaWithdrawalRightType(java.lang.String eeaWithdrawalRightType) {
     this.eeaWithdrawalRightType = eeaWithdrawalRightType;
+    return this;
+  }
+
+  /**
+   * Whether this subscription is declared as a product representing a tokenized digital asset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTokenizedDigitalAsset() {
+    return isTokenizedDigitalAsset;
+  }
+
+  /**
+   * Whether this subscription is declared as a product representing a tokenized digital asset.
+   * @param isTokenizedDigitalAsset isTokenizedDigitalAsset or {@code null} for none
+   */
+  public SubscriptionTaxAndComplianceSettings setIsTokenizedDigitalAsset(java.lang.Boolean isTokenizedDigitalAsset) {
+    this.isTokenizedDigitalAsset = isTokenizedDigitalAsset;
     return this;
   }
 

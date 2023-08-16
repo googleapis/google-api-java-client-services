@@ -41,6 +41,13 @@ public final class ManagedProductTaxAndComplianceSettings extends com.google.api
   private java.lang.String eeaWithdrawalRightType;
 
   /**
+   * Whether this in-app product is declared as a product representing a tokenized digital asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTokenizedDigitalAsset;
+
+  /**
    * A mapping from region code to tax rate details. The keys are region codes as defined by
    * Unicode's "CLDR".
    * The value may be {@code null}.
@@ -68,6 +75,23 @@ public final class ManagedProductTaxAndComplianceSettings extends com.google.api
    */
   public ManagedProductTaxAndComplianceSettings setEeaWithdrawalRightType(java.lang.String eeaWithdrawalRightType) {
     this.eeaWithdrawalRightType = eeaWithdrawalRightType;
+    return this;
+  }
+
+  /**
+   * Whether this in-app product is declared as a product representing a tokenized digital asset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTokenizedDigitalAsset() {
+    return isTokenizedDigitalAsset;
+  }
+
+  /**
+   * Whether this in-app product is declared as a product representing a tokenized digital asset.
+   * @param isTokenizedDigitalAsset isTokenizedDigitalAsset or {@code null} for none
+   */
+  public ManagedProductTaxAndComplianceSettings setIsTokenizedDigitalAsset(java.lang.Boolean isTokenizedDigitalAsset) {
+    this.isTokenizedDigitalAsset = isTokenizedDigitalAsset;
     return this;
   }
 

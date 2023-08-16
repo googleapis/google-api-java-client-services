@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 44
+ * Next ID: 45
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -94,8 +94,7 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
   private java.lang.String deviceModelId;
 
   /**
-   * GCM address for cloud execution across google cloud messaging rather than 3p cloud; for future
-   * use.
+   * GCM address for cloud execution across google cloud messaging rather than 3p cloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,6 +253,13 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryName;
+
+  /**
+   * Whether device report state is out of sync with Query response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reportStateStatus;
 
   /**
    * User's role information for this device. This will be used in Home Automation server to decide
@@ -548,8 +554,7 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
   }
 
   /**
-   * GCM address for cloud execution across google cloud messaging rather than 3p cloud; for future
-   * use.
+   * GCM address for cloud execution across google cloud messaging rather than 3p cloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcmExecutionAddress() {
@@ -557,8 +562,7 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
   }
 
   /**
-   * GCM address for cloud execution across google cloud messaging rather than 3p cloud; for future
-   * use.
+   * GCM address for cloud execution across google cloud messaging rather than 3p cloud.
    * @param gcmExecutionAddress gcmExecutionAddress or {@code null} for none
    */
   public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setGcmExecutionAddress(java.lang.String gcmExecutionAddress) {
@@ -910,6 +914,23 @@ public final class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData e
    */
   public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setPrimaryName(java.lang.String primaryName) {
     this.primaryName = primaryName;
+    return this;
+  }
+
+  /**
+   * Whether device report state is out of sync with Query response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReportStateStatus() {
+    return reportStateStatus;
+  }
+
+  /**
+   * Whether device report state is out of sync with Query response.
+   * @param reportStateStatus reportStateStatus or {@code null} for none
+   */
+  public AssistantVerticalsHomeautomationProtoHomeAutomationMetaData setReportStateStatus(java.lang.String reportStateStatus) {
+    this.reportStateStatus = reportStateStatus;
     return this;
   }
 

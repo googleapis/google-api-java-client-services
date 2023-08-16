@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 61
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 62
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -167,6 +167,15 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float intentNamePauis;
+
+  /**
+   * intent_type differentiates between intents that share the top level intent name. For eg: for
+   * TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object
+   * argument within it must be of type "Media_unspecified".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String intentType;
 
   /**
    * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
@@ -410,9 +419,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private AssistantPfrSmartHomeIntentMetadata smarthomeIntentMetadata;
 
   /**
-   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
-   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
-   * media_object argument within it must be of type "Media_unspecified".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -760,6 +766,27 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentNamePauis(java.lang.Float intentNamePauis) {
     this.intentNamePauis = intentNamePauis;
+    return this;
+  }
+
+  /**
+   * intent_type differentiates between intents that share the top level intent name. For eg: for
+   * TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object
+   * argument within it must be of type "Media_unspecified".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntentType() {
+    return intentType;
+  }
+
+  /**
+   * intent_type differentiates between intents that share the top level intent name. For eg: for
+   * TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object
+   * argument within it must be of type "Media_unspecified".
+   * @param intentType intentType or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentType(java.lang.String intentType) {
+    this.intentType = intentType;
     return this;
   }
 
@@ -1342,9 +1369,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
-   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
-   * media_object argument within it must be of type "Media_unspecified".
    * @return value or {@code null} for none
    */
   public java.lang.String getSubIntentType() {
@@ -1352,9 +1376,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * sub_intent_type differentiates between intents that share the top level intent name. For eg:
-   * for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the
-   * media_object argument within it must be of type "Media_unspecified".
    * @param subIntentType subIntentType or {@code null} for none
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setSubIntentType(java.lang.String subIntentType) {

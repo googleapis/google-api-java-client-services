@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 17
+ * Next id: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -69,6 +69,13 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Float deltaSubchunkAdjustment;
+
+  /**
+   * Keto score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> keto;
 
   /**
    * The value may be {@code null}.
@@ -216,6 +223,23 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   public QualityNsrPQData setDeltaSubchunkAdjustment(java.lang.Float deltaSubchunkAdjustment) {
     this.deltaSubchunkAdjustment = deltaSubchunkAdjustment;
+    return this;
+  }
+
+  /**
+   * Keto score.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getKeto() {
+    return keto;
+  }
+
+  /**
+   * Keto score.
+   * @param keto keto or {@code null} for none
+   */
+  public QualityNsrPQData setKeto(java.util.List<QualityNsrVersionedFloatSignal> keto) {
+    this.keto = keto;
     return this;
   }
 

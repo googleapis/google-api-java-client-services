@@ -18,7 +18,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Metadata proto to be stored in concept tables. Note: Name table only stores name_type_mask for
- * better performance. Remember to change NameToConceptEntry if you add a field to this proto.
+ * better performance. Remember to change NameToConceptEntry if you add a field to this proto. Note:
+ * in the annotator output only URL and PHONE_NUMBER are populated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

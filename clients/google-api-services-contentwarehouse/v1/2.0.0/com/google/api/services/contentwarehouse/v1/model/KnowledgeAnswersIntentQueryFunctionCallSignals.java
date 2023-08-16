@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 36
+ * Next ID: 37
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -293,6 +293,14 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   @com.google.api.client.util.Key
   private java.util.List<KnowledgeAnswersIntentQuerySignalComputationFallbackIntent> signalsFallbackIntents;
+
+  /**
+   * Identifies whether this intent intends to be scored and pruned by the prefulfillment ranker
+   * after intent-generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usesPrefulfillmentRanker;
 
   /**
    * The argument mid that was used to compose the entity for a concept interpretation, along with
@@ -879,6 +887,25 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   public KnowledgeAnswersIntentQueryFunctionCallSignals setSignalsFallbackIntents(java.util.List<KnowledgeAnswersIntentQuerySignalComputationFallbackIntent> signalsFallbackIntents) {
     this.signalsFallbackIntents = signalsFallbackIntents;
+    return this;
+  }
+
+  /**
+   * Identifies whether this intent intends to be scored and pruned by the prefulfillment ranker
+   * after intent-generation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsesPrefulfillmentRanker() {
+    return usesPrefulfillmentRanker;
+  }
+
+  /**
+   * Identifies whether this intent intends to be scored and pruned by the prefulfillment ranker
+   * after intent-generation.
+   * @param usesPrefulfillmentRanker usesPrefulfillmentRanker or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCallSignals setUsesPrefulfillmentRanker(java.lang.Boolean usesPrefulfillmentRanker) {
+    this.usesPrefulfillmentRanker = usesPrefulfillmentRanker;
     return this;
   }
 

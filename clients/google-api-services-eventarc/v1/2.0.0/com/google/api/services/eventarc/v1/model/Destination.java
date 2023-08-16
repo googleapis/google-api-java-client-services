@@ -30,9 +30,9 @@ package com.google.api.services.eventarc.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * The Cloud Function resource name. Cloud Functions V1 and V2 are supported. Format:
    * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
-   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * Creating Cloud Functions V1/V2 triggers is only supported via the Cloud Functions product. An
    * error will be returned if the user sets this value.
    * The value may be {@code null}.
    */
@@ -65,9 +65,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private java.lang.String workflow;
 
   /**
-   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * The Cloud Function resource name. Cloud Functions V1 and V2 are supported. Format:
    * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
-   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * Creating Cloud Functions V1/V2 triggers is only supported via the Cloud Functions product. An
    * error will be returned if the user sets this value.
    * @return value or {@code null} for none
    */
@@ -76,9 +76,9 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format:
+   * The Cloud Function resource name. Cloud Functions V1 and V2 are supported. Format:
    * `projects/{project}/locations/{location}/functions/{function}` This is a read-only field.
-   * Creating Cloud Functions V2 triggers is only supported via the Cloud Functions product. An
+   * Creating Cloud Functions V1/V2 triggers is only supported via the Cloud Functions product. An
    * error will be returned if the user sets this value.
    * @param cloudFunction cloudFunction or {@code null} for none
    */

@@ -17372,6 +17372,29 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Optional. If set to `true`, the option selected for [handling unmanaged user
+       * accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean resolveConflictAccount;
+
+      /** Optional. If set to `true`, the option selected for [handling unmanaged user
+     accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+       */
+      public java.lang.Boolean getResolveConflictAccount() {
+        return resolveConflictAccount;
+      }
+
+      /**
+       * Optional. If set to `true`, the option selected for [handling unmanaged user
+       * accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+       */
+      public Insert setResolveConflictAccount(java.lang.Boolean resolveConflictAccount) {
+        this.resolveConflictAccount = resolveConflictAccount;
+        return this;
+      }
+
       @Override
       public Insert set(String parameterName, Object value) {
         return (Insert) super.set(parameterName, value);

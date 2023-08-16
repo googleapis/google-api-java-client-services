@@ -45,20 +45,12 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   private GoogleCloudAiplatformV1beta1DiskSpec diskSpec;
 
   /**
-   * Optional. The unique ID in a PersistentResource to refer the this resource pool. User can
+   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
    * specify it if need to use it, otherwise we will generate it automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
-
-  /**
-   * Output only. The number of machines currently not in use by training jobs for this resource
-   * pool. Deprecated. Use `used_replica_count` instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long idleReplicaCount;
 
   /**
    * Required. Immutable. The specification of a single machine.
@@ -117,7 +109,7 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   }
 
   /**
-   * Optional. The unique ID in a PersistentResource to refer the this resource pool. User can
+   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
    * specify it if need to use it, otherwise we will generate it automatically.
    * @return value or {@code null} for none
    */
@@ -126,31 +118,12 @@ public final class GoogleCloudAiplatformV1beta1ResourcePool extends com.google.a
   }
 
   /**
-   * Optional. The unique ID in a PersistentResource to refer the this resource pool. User can
+   * Immutable. The unique ID in a PersistentResource to refer the this resource pool. User can
    * specify it if need to use it, otherwise we will generate it automatically.
    * @param id id or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ResourcePool setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * Output only. The number of machines currently not in use by training jobs for this resource
-   * pool. Deprecated. Use `used_replica_count` instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getIdleReplicaCount() {
-    return idleReplicaCount;
-  }
-
-  /**
-   * Output only. The number of machines currently not in use by training jobs for this resource
-   * pool. Deprecated. Use `used_replica_count` instead.
-   * @param idleReplicaCount idleReplicaCount or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ResourcePool setIdleReplicaCount(java.lang.Long idleReplicaCount) {
-    this.idleReplicaCount = idleReplicaCount;
     return this;
   }
 

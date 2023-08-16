@@ -53,6 +53,16 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String displayName;
 
   /**
+   * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
+   * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
+   * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
+   * created runtime will be stopped and allowed for upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expirationTime;
+
+  /**
    * Output only. The health state of the NotebookRuntime.
    * The value may be {@code null}.
    */
@@ -158,6 +168,29 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
+   * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
+   * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
+   * created runtime will be stopped and allowed for upgrade.
+   * @return value or {@code null} for none
+   */
+  public String getExpirationTime() {
+    return expirationTime;
+  }
+
+  /**
+   * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
+   * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
+   * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
+   * created runtime will be stopped and allowed for upgrade.
+   * @param expirationTime expirationTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setExpirationTime(String expirationTime) {
+    this.expirationTime = expirationTime;
     return this;
   }
 

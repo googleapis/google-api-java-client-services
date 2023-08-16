@@ -65,6 +65,13 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableVideoRecording;
 
   /**
+   * An iOS Robo test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosRoboTest iosRoboTest;
+
+  /**
    * An iOS application with a test loop.
    * The value may be {@code null}.
    */
@@ -182,6 +189,23 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    */
   public TestSpecification setDisableVideoRecording(java.lang.Boolean disableVideoRecording) {
     this.disableVideoRecording = disableVideoRecording;
+    return this;
+  }
+
+  /**
+   * An iOS Robo test.
+   * @return value or {@code null} for none
+   */
+  public IosRoboTest getIosRoboTest() {
+    return iosRoboTest;
+  }
+
+  /**
+   * An iOS Robo test.
+   * @param iosRoboTest iosRoboTest or {@code null} for none
+   */
+  public TestSpecification setIosRoboTest(IosRoboTest iosRoboTest) {
+    this.iosRoboTest = iosRoboTest;
     return this;
   }
 

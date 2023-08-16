@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToAction extends com
   private GoogleCloudAiplatformV1PublisherModelCallToActionDeploy deploy;
 
   /**
+   * Optional. Open evaluation pipeline of the PublisherModel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences openEvaluationPipeline;
+
+  /**
    * Optional. Open fine-tuning pipeline of the PublisherModel.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToAction extends com
    */
   public GoogleCloudAiplatformV1PublisherModelCallToAction setDeploy(GoogleCloudAiplatformV1PublisherModelCallToActionDeploy deploy) {
     this.deploy = deploy;
+    return this;
+  }
+
+  /**
+   * Optional. Open evaluation pipeline of the PublisherModel.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences getOpenEvaluationPipeline() {
+    return openEvaluationPipeline;
+  }
+
+  /**
+   * Optional. Open evaluation pipeline of the PublisherModel.
+   * @param openEvaluationPipeline openEvaluationPipeline or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToAction setOpenEvaluationPipeline(GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences openEvaluationPipeline) {
+    this.openEvaluationPipeline = openEvaluationPipeline;
     return this;
   }
 

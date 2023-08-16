@@ -133,6 +133,14 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
   private GoogleCloudAiplatformV1PipelineJobRuntimeConfig runtimeConfig;
 
   /**
+   * Output only. The schedule resource name. Only returned if the Pipeline is created by Schedule
+   * API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scheduleName;
+
+  /**
    * The service account that the pipeline workload runs as. If not specified, the Compute Engine
    * default service account in the project will be used. See
    * https://cloud.google.com/compute/docs/access/service-accounts#default_service_account Users
@@ -418,6 +426,25 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1PipelineJob setRuntimeConfig(GoogleCloudAiplatformV1PipelineJobRuntimeConfig runtimeConfig) {
     this.runtimeConfig = runtimeConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The schedule resource name. Only returned if the Pipeline is created by Schedule
+   * API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScheduleName() {
+    return scheduleName;
+  }
+
+  /**
+   * Output only. The schedule resource name. Only returned if the Pipeline is created by Schedule
+   * API.
+   * @param scheduleName scheduleName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PipelineJob setScheduleName(java.lang.String scheduleName) {
+    this.scheduleName = scheduleName;
     return this;
   }
 

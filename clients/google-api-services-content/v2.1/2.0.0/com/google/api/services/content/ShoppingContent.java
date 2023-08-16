@@ -19333,17 +19333,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The maximum number of products to return in the response, used for paging. */
+      /**
+       * The maximum number of products to return in the response, used for paging. The default
+       * value is 25. The maximum value is 250.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of products to return in the response, used for paging.
+      /** The maximum number of products to return in the response, used for paging. The default value is 25.
+     The maximum value is 250.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of products to return in the response, used for paging. */
+      /**
+       * The maximum number of products to return in the response, used for paging. The default
+       * value is 25. The maximum value is 250.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19990,17 +19997,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The maximum number of product statuses to return in the response, used for paging. */
+      /**
+       * The maximum number of product statuses to return in the response, used for paging. The
+       * default value is 25. The maximum value is 250.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of product statuses to return in the response, used for paging.
+      /** The maximum number of product statuses to return in the response, used for paging. The default
+     value is 25. The maximum value is 250.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of product statuses to return in the response, used for paging. */
+      /**
+       * The maximum number of product statuses to return in the response, used for paging. The
+       * default value is 25. The maximum value is 250.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;

@@ -31,6 +31,13 @@ package com.google.api.services.connectors.v1.model;
 public final class ConnectorInfraConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * HPA autoscaling config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HPAConfig hpaConfig;
+
+  /**
    * Max QPS supported for internal requests originating from Connd.
    * The value may be {@code null}.
    */
@@ -43,6 +50,37 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long ratelimitThreshold;
+
+  /**
+   * System resource limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceLimits resourceLimits;
+
+  /**
+   * System resource requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceRequests resourceRequests;
+
+  /**
+   * HPA autoscaling config.
+   * @return value or {@code null} for none
+   */
+  public HPAConfig getHpaConfig() {
+    return hpaConfig;
+  }
+
+  /**
+   * HPA autoscaling config.
+   * @param hpaConfig hpaConfig or {@code null} for none
+   */
+  public ConnectorInfraConfig setHpaConfig(HPAConfig hpaConfig) {
+    this.hpaConfig = hpaConfig;
+    return this;
+  }
 
   /**
    * Max QPS supported for internal requests originating from Connd.
@@ -75,6 +113,40 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setRatelimitThreshold(java.lang.Long ratelimitThreshold) {
     this.ratelimitThreshold = ratelimitThreshold;
+    return this;
+  }
+
+  /**
+   * System resource limits.
+   * @return value or {@code null} for none
+   */
+  public ResourceLimits getResourceLimits() {
+    return resourceLimits;
+  }
+
+  /**
+   * System resource limits.
+   * @param resourceLimits resourceLimits or {@code null} for none
+   */
+  public ConnectorInfraConfig setResourceLimits(ResourceLimits resourceLimits) {
+    this.resourceLimits = resourceLimits;
+    return this;
+  }
+
+  /**
+   * System resource requests.
+   * @return value or {@code null} for none
+   */
+  public ResourceRequests getResourceRequests() {
+    return resourceRequests;
+  }
+
+  /**
+   * System resource requests.
+   * @param resourceRequests resourceRequests or {@code null} for none
+   */
+  public ConnectorInfraConfig setResourceRequests(ResourceRequests resourceRequests) {
+    this.resourceRequests = resourceRequests;
     return this;
   }
 

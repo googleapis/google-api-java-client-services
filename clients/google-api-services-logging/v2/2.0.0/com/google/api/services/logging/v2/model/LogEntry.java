@@ -197,8 +197,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
    * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
    * log entry receives a trace header that includes the trace ID "12345", then the service should
-   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
-   * and traces. By using this field, you can navigate from a log entry to a trace.
+   * use "projects/my-trace-project/traces/12345".The trace field provides the link between logs and
+   * traces. By using this field, you can navigate from a log entry to a trace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -594,8 +594,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
    * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
    * log entry receives a trace header that includes the trace ID "12345", then the service should
-   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
-   * and traces. By using this field, you can navigate from a log entry to a trace.
+   * use "projects/my-trace-project/traces/12345".The trace field provides the link between logs and
+   * traces. By using this field, you can navigate from a log entry to a trace.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrace() {
@@ -607,8 +607,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/trace) in association with this log entry. For example, if your trace
    * data is stored in the Cloud project "my-trace-project" and if the service that is creating the
    * log entry receives a trace header that includes the trace ID "12345", then the service should
-   * use "projects/my-tracing-project/traces/12345".The trace field provides the link between logs
-   * and traces. By using this field, you can navigate from a log entry to a trace.
+   * use "projects/my-trace-project/traces/12345".The trace field provides the link between logs and
+   * traces. By using this field, you can navigate from a log entry to a trace.
    * @param trace trace or {@code null} for none
    */
   public LogEntry setTrace(java.lang.String trace) {

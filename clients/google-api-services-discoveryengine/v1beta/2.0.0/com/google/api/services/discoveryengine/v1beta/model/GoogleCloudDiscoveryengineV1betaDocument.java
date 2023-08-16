@@ -30,6 +30,22 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.api.client.json.GenericJson {
 
   /**
+   * The unstructured data linked to this document. Content must be set if this document is under a
+   * `CONTENT_REQUIRED` data store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaDocumentContent content;
+
+  /**
+   * Output only. This field is OUTPUT_ONLY. It contains derived data that are not in the original
+   * input document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> derivedStructData;
+
+  /**
    * Immutable. The identifier of the document. Id should conform to
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
    * The value may be {@code null}.
@@ -77,6 +93,44 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> structData;
+
+  /**
+   * The unstructured data linked to this document. Content must be set if this document is under a
+   * `CONTENT_REQUIRED` data store.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocumentContent getContent() {
+    return content;
+  }
+
+  /**
+   * The unstructured data linked to this document. Content must be set if this document is under a
+   * `CONTENT_REQUIRED` data store.
+   * @param content content or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocument setContent(GoogleCloudDiscoveryengineV1betaDocumentContent content) {
+    this.content = content;
+    return this;
+  }
+
+  /**
+   * Output only. This field is OUTPUT_ONLY. It contains derived data that are not in the original
+   * input document.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getDerivedStructData() {
+    return derivedStructData;
+  }
+
+  /**
+   * Output only. This field is OUTPUT_ONLY. It contains derived data that are not in the original
+   * input document.
+   * @param derivedStructData derivedStructData or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocument setDerivedStructData(java.util.Map<String, java.lang.Object> derivedStructData) {
+    this.derivedStructData = derivedStructData;
+    return this;
+  }
 
   /**
    * Immutable. The identifier of the document. Id should conform to

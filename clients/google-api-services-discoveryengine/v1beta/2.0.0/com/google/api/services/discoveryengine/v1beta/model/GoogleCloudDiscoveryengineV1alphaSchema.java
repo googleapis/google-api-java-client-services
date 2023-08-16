@@ -30,6 +30,19 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Configurations for fields of the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaFieldConfig> fieldConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaFieldConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaFieldConfig.class);
+  }
+
+  /**
    * The JSON representation of the schema.
    * The value may be {@code null}.
    */
@@ -51,6 +64,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSchema extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> structSchema;
+
+  /**
+   * Output only. Configurations for fields of the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaFieldConfig> getFieldConfigs() {
+    return fieldConfigs;
+  }
+
+  /**
+   * Output only. Configurations for fields of the schema.
+   * @param fieldConfigs fieldConfigs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSchema setFieldConfigs(java.util.List<GoogleCloudDiscoveryengineV1alphaFieldConfig> fieldConfigs) {
+    this.fieldConfigs = fieldConfigs;
+    return this;
+  }
 
   /**
    * The JSON representation of the schema.

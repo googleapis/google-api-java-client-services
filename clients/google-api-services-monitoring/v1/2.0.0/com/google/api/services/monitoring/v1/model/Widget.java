@@ -67,6 +67,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private LogsPanel logsPanel;
 
   /**
+   * A widget that displays timeseries data as a pie chart.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PieChart pieChart;
+
+  /**
    * A scorecard summarizing time series data.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setLogsPanel(LogsPanel logsPanel) {
     this.logsPanel = logsPanel;
+    return this;
+  }
+
+  /**
+   * A widget that displays timeseries data as a pie chart.
+   * @return value or {@code null} for none
+   */
+  public PieChart getPieChart() {
+    return pieChart;
+  }
+
+  /**
+   * A widget that displays timeseries data as a pie chart.
+   * @param pieChart pieChart or {@code null} for none
+   */
+  public Widget setPieChart(PieChart pieChart) {
+    this.pieChart = pieChart;
     return this;
   }
 

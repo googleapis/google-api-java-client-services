@@ -85,6 +85,13 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Checks how feasible a migration from GmN to WbI is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RuntimeMigrationEligibility runtimeMigrationEligibility;
+
+  /**
    * The config settings for software inside the runtime.
    * The value may be {@code null}.
    */
@@ -240,6 +247,23 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   public Runtime setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Checks how feasible a migration from GmN to WbI is.
+   * @return value or {@code null} for none
+   */
+  public RuntimeMigrationEligibility getRuntimeMigrationEligibility() {
+    return runtimeMigrationEligibility;
+  }
+
+  /**
+   * Output only. Checks how feasible a migration from GmN to WbI is.
+   * @param runtimeMigrationEligibility runtimeMigrationEligibility or {@code null} for none
+   */
+  public Runtime setRuntimeMigrationEligibility(RuntimeMigrationEligibility runtimeMigrationEligibility) {
+    this.runtimeMigrationEligibility = runtimeMigrationEligibility;
     return this;
   }
 

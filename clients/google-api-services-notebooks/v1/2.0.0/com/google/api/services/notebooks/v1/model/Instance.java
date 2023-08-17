@@ -17,7 +17,7 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * The definition of a notebook instance.
+ * The definition of a notebook instance. Next tag: 43
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -138,6 +138,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean installGpuDriver;
 
   /**
+   * Output only. Checks how feasible a migration from UmN to WbI is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceMigrationEligibility instanceMigrationEligibility;
+
+  /**
    * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently
    * supports one owner only. If not specified, all of the service account users of your VM
    * instance's service account can use the instance.
@@ -235,13 +242,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String postStartupScript;
-
-  /**
-   * Output only. Check how possible a migration from UmN to WbI is.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PreMigrationCheck preMigrationCheck;
 
   /**
    * Output only. The proxy endpoint that is used to access the Jupyter notebook.
@@ -577,6 +577,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Checks how feasible a migration from UmN to WbI is.
+   * @return value or {@code null} for none
+   */
+  public InstanceMigrationEligibility getInstanceMigrationEligibility() {
+    return instanceMigrationEligibility;
+  }
+
+  /**
+   * Output only. Checks how feasible a migration from UmN to WbI is.
+   * @param instanceMigrationEligibility instanceMigrationEligibility or {@code null} for none
+   */
+  public Instance setInstanceMigrationEligibility(InstanceMigrationEligibility instanceMigrationEligibility) {
+    this.instanceMigrationEligibility = instanceMigrationEligibility;
+    return this;
+  }
+
+  /**
    * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently
    * supports one owner only. If not specified, all of the service account users of your VM
    * instance's service account can use the instance.
@@ -810,23 +827,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPostStartupScript(java.lang.String postStartupScript) {
     this.postStartupScript = postStartupScript;
-    return this;
-  }
-
-  /**
-   * Output only. Check how possible a migration from UmN to WbI is.
-   * @return value or {@code null} for none
-   */
-  public PreMigrationCheck getPreMigrationCheck() {
-    return preMigrationCheck;
-  }
-
-  /**
-   * Output only. Check how possible a migration from UmN to WbI is.
-   * @param preMigrationCheck preMigrationCheck or {@code null} for none
-   */
-  public Instance setPreMigrationCheck(PreMigrationCheck preMigrationCheck) {
-    this.preMigrationCheck = preMigrationCheck;
     return this;
   }
 

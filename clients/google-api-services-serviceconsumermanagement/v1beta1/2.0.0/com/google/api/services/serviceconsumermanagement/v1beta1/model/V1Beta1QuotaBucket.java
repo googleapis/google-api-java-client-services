@@ -78,6 +78,13 @@ public final class V1Beta1QuotaBucket extends com.google.api.client.json.Generic
   private V1Beta1QuotaOverride producerOverride;
 
   /**
+   * Producer policy inherited from the closet ancestor of the current consumer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private V1Beta1ProducerQuotaPolicy producerQuotaPolicy;
+
+  /**
    * Admin override on this quota bucket.
    * @return value or {@code null} for none
    */
@@ -186,6 +193,23 @@ public final class V1Beta1QuotaBucket extends com.google.api.client.json.Generic
    */
   public V1Beta1QuotaBucket setProducerOverride(V1Beta1QuotaOverride producerOverride) {
     this.producerOverride = producerOverride;
+    return this;
+  }
+
+  /**
+   * Producer policy inherited from the closet ancestor of the current consumer.
+   * @return value or {@code null} for none
+   */
+  public V1Beta1ProducerQuotaPolicy getProducerQuotaPolicy() {
+    return producerQuotaPolicy;
+  }
+
+  /**
+   * Producer policy inherited from the closet ancestor of the current consumer.
+   * @param producerQuotaPolicy producerQuotaPolicy or {@code null} for none
+   */
+  public V1Beta1QuotaBucket setProducerQuotaPolicy(V1Beta1ProducerQuotaPolicy producerQuotaPolicy) {
+    this.producerQuotaPolicy = producerQuotaPolicy;
     return this;
   }
 

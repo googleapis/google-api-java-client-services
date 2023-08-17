@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository connectedRepository;
+
+  /**
    * If provided, get the source from this Git repository.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
    */
   @com.google.api.client.util.Key
   private ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest storageSourceManifest;
+
+  /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository getConnectedRepository() {
+    return connectedRepository;
+  }
+
+  /**
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build repository resource.
+   * @param connectedRepository connectedRepository or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setConnectedRepository(ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository connectedRepository) {
+    this.connectedRepository = connectedRepository;
+    return this;
+  }
 
   /**
    * If provided, get the source from this Git repository.

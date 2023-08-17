@@ -189,26 +189,11 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private SnapshotReservationDetail snapshotReservationDetail;
 
   /**
-   * The name of the snapshot schedule policy in use for this volume, if any.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String snapshotSchedulePolicy;
-
-  /**
    * The state of this storage volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
-
-  /**
-   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
-   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String storageAggregatePool;
 
   /**
    * The storage type for this volume.
@@ -604,23 +589,6 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the snapshot schedule policy in use for this volume, if any.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSnapshotSchedulePolicy() {
-    return snapshotSchedulePolicy;
-  }
-
-  /**
-   * The name of the snapshot schedule policy in use for this volume, if any.
-   * @param snapshotSchedulePolicy snapshotSchedulePolicy or {@code null} for none
-   */
-  public Volume setSnapshotSchedulePolicy(java.lang.String snapshotSchedulePolicy) {
-    this.snapshotSchedulePolicy = snapshotSchedulePolicy;
-    return this;
-  }
-
-  /**
    * The state of this storage volume.
    * @return value or {@code null} for none
    */
@@ -634,25 +602,6 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
-   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStorageAggregatePool() {
-    return storageAggregatePool;
-  }
-
-  /**
-   * Input only. Name of the storage aggregate pool to allocate the volume in. Can be used only for
-   * VOLUME_PERFORMANCE_TIER_ASSIGNED volumes.
-   * @param storageAggregatePool storageAggregatePool or {@code null} for none
-   */
-  public Volume setStorageAggregatePool(java.lang.String storageAggregatePool) {
-    this.storageAggregatePool = storageAggregatePool;
     return this;
   }
 

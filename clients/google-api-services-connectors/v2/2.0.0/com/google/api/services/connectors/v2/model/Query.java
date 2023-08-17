@@ -31,11 +31,50 @@ package com.google.api.services.connectors.v2.model;
 public final class Query extends com.google.api.client.json.GenericJson {
 
   /**
+   * Sets the limit for the maximum number of rows returned after the query execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxRows;
+
+  /**
    * Required. Sql query to execute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
+
+  /**
+   * In the struct, the value corresponds to the value of query parameter and date type corresponds
+   * to the date type of the query parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QueryParameter> queryParameters;
+
+  /**
+   * Sets the number of seconds the driver will wait for a query to execute.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long timeout;
+
+  /**
+   * Sets the limit for the maximum number of rows returned after the query execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxRows() {
+    return maxRows;
+  }
+
+  /**
+   * Sets the limit for the maximum number of rows returned after the query execution.
+   * @param maxRows maxRows or {@code null} for none
+   */
+  public Query setMaxRows(java.lang.Long maxRows) {
+    this.maxRows = maxRows;
+    return this;
+  }
 
   /**
    * Required. Sql query to execute.
@@ -51,6 +90,42 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setQuery(java.lang.String query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * In the struct, the value corresponds to the value of query parameter and date type corresponds
+   * to the date type of the query parameter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QueryParameter> getQueryParameters() {
+    return queryParameters;
+  }
+
+  /**
+   * In the struct, the value corresponds to the value of query parameter and date type corresponds
+   * to the date type of the query parameter.
+   * @param queryParameters queryParameters or {@code null} for none
+   */
+  public Query setQueryParameters(java.util.List<QueryParameter> queryParameters) {
+    this.queryParameters = queryParameters;
+    return this;
+  }
+
+  /**
+   * Sets the number of seconds the driver will wait for a query to execute.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTimeout() {
+    return timeout;
+  }
+
+  /**
+   * Sets the number of seconds the driver will wait for a query to execute.
+   * @param timeout timeout or {@code null} for none
+   */
+  public Query setTimeout(java.lang.Long timeout) {
+    this.timeout = timeout;
     return this;
   }
 

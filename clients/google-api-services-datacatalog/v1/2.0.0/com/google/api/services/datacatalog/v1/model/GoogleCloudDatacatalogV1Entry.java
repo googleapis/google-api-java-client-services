@@ -90,6 +90,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1DatabaseTableSpec databaseTableSpec;
 
   /**
+   * Specification that applies to a dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1DatasetSpec datasetSpec;
+
+  /**
    * Entry description that can consist of several sentences or paragraphs that describe entry
    * contents. The description must not contain Unicode non-characters as well as C0 and C1 control
    * codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The
@@ -173,6 +180,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec;
+
+  /**
+   * Model specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1ModelSpec modelSpec;
 
   /**
    * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
@@ -396,6 +410,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
+   * Specification that applies to a dataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1DatasetSpec getDatasetSpec() {
+    return datasetSpec;
+  }
+
+  /**
+   * Specification that applies to a dataset.
+   * @param datasetSpec datasetSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setDatasetSpec(GoogleCloudDatacatalogV1DatasetSpec datasetSpec) {
+    this.datasetSpec = datasetSpec;
+    return this;
+  }
+
+  /**
    * Entry description that can consist of several sentences or paragraphs that describe entry
    * contents. The description must not contain Unicode non-characters as well as C0 and C1 control
    * codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The
@@ -589,6 +620,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setLookerSystemSpec(GoogleCloudDatacatalogV1LookerSystemSpec lookerSystemSpec) {
     this.lookerSystemSpec = lookerSystemSpec;
+    return this;
+  }
+
+  /**
+   * Model specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1ModelSpec getModelSpec() {
+    return modelSpec;
+  }
+
+  /**
+   * Model specification.
+   * @param modelSpec modelSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setModelSpec(GoogleCloudDatacatalogV1ModelSpec modelSpec) {
+    this.modelSpec = modelSpec;
     return this;
   }
 

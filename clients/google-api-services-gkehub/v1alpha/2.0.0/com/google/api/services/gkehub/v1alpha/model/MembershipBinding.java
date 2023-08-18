@@ -45,14 +45,6 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
   private String deleteTime;
 
   /**
-   * Whether the membershipbinding is Fleet-wide; true means that this Membership should be bound to
-   * all Namespaces in this entire Fleet.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean fleet;
-
-  /**
    * Optional. Labels for this MembershipBinding.
    * The value may be {@code null}.
    */
@@ -128,25 +120,6 @@ public final class MembershipBinding extends com.google.api.client.json.GenericJ
    */
   public MembershipBinding setDeleteTime(String deleteTime) {
     this.deleteTime = deleteTime;
-    return this;
-  }
-
-  /**
-   * Whether the membershipbinding is Fleet-wide; true means that this Membership should be bound to
-   * all Namespaces in this entire Fleet.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFleet() {
-    return fleet;
-  }
-
-  /**
-   * Whether the membershipbinding is Fleet-wide; true means that this Membership should be bound to
-   * all Namespaces in this entire Fleet.
-   * @param fleet fleet or {@code null} for none
-   */
-  public MembershipBinding setFleet(java.lang.Boolean fleet) {
-    this.fleet = fleet;
     return this;
   }
 

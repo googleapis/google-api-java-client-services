@@ -2893,6 +2893,1776 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
       }
       /**
+       * An accessor for creating requests from the SessionTemplates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataproc dataproc = new Dataproc(...);}
+       *   {@code Dataproc.SessionTemplates.List request = dataproc.sessionTemplates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SessionTemplates sessionTemplates() {
+        return new SessionTemplates();
+      }
+
+      /**
+       * The "sessionTemplates" collection of methods.
+       */
+      public class SessionTemplates {
+
+        /**
+         * Create an session template, synchronously.
+         *
+         * Create a request for the method "sessionTemplates.create".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this session template will be created.
+         * @param content the {@link com.google.api.services.dataproc.model.SessionTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataproc.model.SessionTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataprocRequest<com.google.api.services.dataproc.model.SessionTemplate> {
+
+          private static final String REST_PATH = "v1/{+parent}/sessionTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create an session template, synchronously.
+           *
+           * Create a request for the method "sessionTemplates.create".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this session template will be created.
+           * @param content the {@link com.google.api.services.dataproc.model.SessionTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataproc.model.SessionTemplate content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.SessionTemplate.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this session template will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this session template will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this session template will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a session template.
+         *
+         * Create a request for the method "sessionTemplates.delete".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the session template resource to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataprocRequest<com.google.api.services.dataproc.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+
+          /**
+           * Deletes a session template.
+           *
+           * Create a request for the method "sessionTemplates.delete".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the session template resource to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataproc.this, "DELETE", REST_PATH, null, com.google.api.services.dataproc.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session template resource to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the session template resource to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the session template resource to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the resource representation for a session template.
+         *
+         * Create a request for the method "sessionTemplates.get".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the session template to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataprocRequest<com.google.api.services.dataproc.model.SessionTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+
+          /**
+           * Gets the resource representation for a session template.
+           *
+           * Create a request for the method "sessionTemplates.get".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the session template to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SessionTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session template to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the session template to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the session template to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists session templates.
+         *
+         * Create a request for the method "sessionTemplates.list".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of session templates.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataprocRequest<com.google.api.services.dataproc.model.ListSessionTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/sessionTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists session templates.
+           *
+           * Create a request for the method "sessionTemplates.list".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of session templates.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.ListSessionTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent, which owns this collection of session templates. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of session templates.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent, which owns this collection of session templates. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter for the session templates to return in the response. Filters are
+           * case sensitive and have the following syntax:field = value AND field = value ...
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter for the session templates to return in the response. Filters are case sensitive
+         and have the following syntax:field = value AND field = value ...
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter for the session templates to return in the response. Filters are
+           * case sensitive and have the following syntax:field = value AND field = value ...
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of sessions to return in each response. The service may
+           * return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of sessions to return in each response. The service may return fewer
+         than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of sessions to return in each response. The service may
+           * return fewer than this value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token received from a previous ListSessions call. Provide this token
+           * to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token received from a previous ListSessions call. Provide this token to retrieve
+         the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token received from a previous ListSessions call. Provide this token
+           * to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the session template, synchronously.Disable check for update_mask, because all updates
+         * will be full replacements.
+         *
+         * Create a request for the method "sessionTemplates.patch".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the session template.
+         * @param content the {@link com.google.api.services.dataproc.model.SessionTemplate}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataproc.model.SessionTemplate content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataprocRequest<com.google.api.services.dataproc.model.SessionTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+
+          /**
+           * Updates the session template, synchronously.Disable check for update_mask, because all updates
+           * will be full replacements.
+           *
+           * Create a request for the method "sessionTemplates.patch".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the session template.
+           * @param content the {@link com.google.api.services.dataproc.model.SessionTemplate}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataproc.model.SessionTemplate content) {
+            super(Dataproc.this, "PATCH", REST_PATH, content, com.google.api.services.dataproc.model.SessionTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the session template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the session template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the session template. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessionTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Sessions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataproc dataproc = new Dataproc(...);}
+       *   {@code Dataproc.Sessions.List request = dataproc.sessions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Sessions sessions() {
+        return new Sessions();
+      }
+
+      /**
+       * The "sessions" collection of methods.
+       */
+      public class Sessions {
+
+        /**
+         * Create an interactive session asynchronously.
+         *
+         * Create a request for the method "sessions.create".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this session will be created.
+         * @param content the {@link com.google.api.services.dataproc.model.Session}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataproc.model.Session content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/sessions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create an interactive session asynchronously.
+           *
+           * Create a request for the method "sessions.create".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this session will be created.
+           * @param content the {@link com.google.api.services.dataproc.model.Session}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataproc.model.Session content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this session will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this session will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this session will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A unique ID used to identify the request. If the service receives two
+           * CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
+           * second request is ignored and the first Session is created and stored in the backend is
+           * returned.Recommendation: Set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
+           * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+           * length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique ID used to identify the request. If the service receives two
+         CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1
+         #google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the second request is ignored
+         and the first Session is created and stored in the backend is returned.Recommendation: Set this
+         value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must
+         contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+         length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique ID used to identify the request. If the service receives two
+           * CreateSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1#google.cloud.dataproc.v1.CreateSessionRequest)s with the same ID, the
+           * second request is ignored and the first Session is created and stored in the backend is
+           * returned.Recommendation: Set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
+           * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+           * length is 40 characters.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the session, which becomes the final component of the
+           * session's resource name.This value must be 4-63 characters. Valid characters are
+           * /a-z-/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String sessionId;
+
+          /** Required. The ID to use for the session, which becomes the final component of the session's
+         resource name.This value must be 4-63 characters. Valid characters are /a-z-/.
+           */
+          public java.lang.String getSessionId() {
+            return sessionId;
+          }
+
+          /**
+           * Required. The ID to use for the session, which becomes the final component of the
+           * session's resource name.This value must be 4-63 characters. Valid characters are
+           * /a-z-/.
+           */
+          public Create setSessionId(java.lang.String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the interactive session resource. If the session is not in terminal state, it will be
+         * terminated and deleted afterwards.
+         *
+         * Create a request for the method "sessions.delete".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the session resource to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+
+          /**
+           * Deletes the interactive session resource. If the session is not in terminal state, it will be
+           * terminated and deleted afterwards.
+           *
+           * Create a request for the method "sessions.delete".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the session resource to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataproc.this, "DELETE", REST_PATH, null, com.google.api.services.dataproc.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session resource to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the session resource to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the session resource to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A unique ID used to identify the request. If the service receives two
+           * DeleteSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1#google.cloud.dataproc.v1.DeleteSessionRequest)s with the same ID, the
+           * second request is ignored.Recommendation: Set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
+           * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+           * length is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique ID used to identify the request. If the service receives two
+         DeleteSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1
+         #google.cloud.dataproc.v1.DeleteSessionRequest)s with the same ID, the second request is
+         ignored.Recommendation: Set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique ID used to identify the request. If the service receives two
+           * DeleteSessionRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1#google.cloud.dataproc.v1.DeleteSessionRequest)s with the same ID, the
+           * second request is ignored.Recommendation: Set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
+           * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
+           * length is 40 characters.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the resource representation for an interactive session.
+         *
+         * Create a request for the method "sessions.get".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the session to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataprocRequest<com.google.api.services.dataproc.model.Session> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+
+          /**
+           * Gets the resource representation for an interactive session.
+           *
+           * Create a request for the method "sessions.get".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the session to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.Session.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the session to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the session to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Inject Credentials in the interactive session.
+         *
+         * Create a request for the method "sessions.injectCredentials".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link InjectCredentials#execute()} method to invoke the remote operation.
+         *
+         * @param session Required. The name of the session resource to inject credentials to.
+         * @param content the {@link com.google.api.services.dataproc.model.InjectSessionCredentialsRequest}
+         * @return the request
+         */
+        public InjectCredentials injectCredentials(java.lang.String session, com.google.api.services.dataproc.model.InjectSessionCredentialsRequest content) throws java.io.IOException {
+          InjectCredentials result = new InjectCredentials(session, content);
+          initialize(result);
+          return result;
+        }
+
+        public class InjectCredentials extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+session}:injectCredentials";
+
+          private final java.util.regex.Pattern SESSION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+
+          /**
+           * Inject Credentials in the interactive session.
+           *
+           * Create a request for the method "sessions.injectCredentials".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link InjectCredentials#execute()} method to invoke the remote
+           * operation. <p> {@link InjectCredentials#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param session Required. The name of the session resource to inject credentials to.
+           * @param content the {@link com.google.api.services.dataproc.model.InjectSessionCredentialsRequest}
+           * @since 1.13
+           */
+          protected InjectCredentials(java.lang.String session, com.google.api.services.dataproc.model.InjectSessionCredentialsRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                  "Parameter session must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public InjectCredentials set$Xgafv(java.lang.String $Xgafv) {
+            return (InjectCredentials) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public InjectCredentials setAccessToken(java.lang.String accessToken) {
+            return (InjectCredentials) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public InjectCredentials setAlt(java.lang.String alt) {
+            return (InjectCredentials) super.setAlt(alt);
+          }
+
+          @Override
+          public InjectCredentials setCallback(java.lang.String callback) {
+            return (InjectCredentials) super.setCallback(callback);
+          }
+
+          @Override
+          public InjectCredentials setFields(java.lang.String fields) {
+            return (InjectCredentials) super.setFields(fields);
+          }
+
+          @Override
+          public InjectCredentials setKey(java.lang.String key) {
+            return (InjectCredentials) super.setKey(key);
+          }
+
+          @Override
+          public InjectCredentials setOauthToken(java.lang.String oauthToken) {
+            return (InjectCredentials) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public InjectCredentials setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (InjectCredentials) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public InjectCredentials setQuotaUser(java.lang.String quotaUser) {
+            return (InjectCredentials) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public InjectCredentials setUploadType(java.lang.String uploadType) {
+            return (InjectCredentials) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public InjectCredentials setUploadProtocol(java.lang.String uploadProtocol) {
+            return (InjectCredentials) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session resource to inject credentials to. */
+          @com.google.api.client.util.Key
+          private java.lang.String session;
+
+          /** Required. The name of the session resource to inject credentials to.
+           */
+          public java.lang.String getSession() {
+            return session;
+          }
+
+          /** Required. The name of the session resource to inject credentials to. */
+          public InjectCredentials setSession(java.lang.String session) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                  "Parameter session must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+            this.session = session;
+            return this;
+          }
+
+          @Override
+          public InjectCredentials set(String parameterName, Object value) {
+            return (InjectCredentials) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists interactive sessions.
+         *
+         * Create a request for the method "sessions.list".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of sessions.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataprocRequest<com.google.api.services.dataproc.model.ListSessionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/sessions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists interactive sessions.
+           *
+           * Create a request for the method "sessions.list".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of sessions.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.ListSessionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent, which owns this collection of sessions. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of sessions.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent, which owns this collection of sessions. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter for the sessions to return in the response.A filter is a logical
+           * expression constraining the values of various fields in each session resource. Filters
+           * are case sensitive, and may contain multiple clauses combined with logical operators
+           * (AND/OR). Supported fields are session_id, session_uuid, state, and create_time.e.g.
+           * state = ACTIVE and create_time < "2023-01-01T00:00:00Z" filters for sessions in state
+           * ACTIVE that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
+           * filtering.txt for a detailed description of the filter syntax and a list of supported
+           * comparisons.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter for the sessions to return in the response.A filter is a logical expression
+         constraining the values of various fields in each session resource. Filters are case sensitive, and
+         may contain multiple clauses combined with logical operators (AND/OR). Supported fields are
+         session_id, session_uuid, state, and create_time.e.g. state = ACTIVE and create_time <
+         "2023-01-01T00:00:00Z" filters for sessions in state ACTIVE that were created before 2023-01-01See
+         https://google.aip.dev/assets/misc/ebnf-filtering.txt for a detailed description of the filter
+         syntax and a list of supported comparisons.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter for the sessions to return in the response.A filter is a logical
+           * expression constraining the values of various fields in each session resource. Filters
+           * are case sensitive, and may contain multiple clauses combined with logical operators
+           * (AND/OR). Supported fields are session_id, session_uuid, state, and create_time.e.g.
+           * state = ACTIVE and create_time < "2023-01-01T00:00:00Z" filters for sessions in state
+           * ACTIVE that were created before 2023-01-01See https://google.aip.dev/assets/misc/ebnf-
+           * filtering.txt for a detailed description of the filter syntax and a list of supported
+           * comparisons.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of sessions to return in each response. The service may
+           * return fewer than this value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of sessions to return in each response. The service may return fewer
+         than this value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of sessions to return in each response. The service may
+           * return fewer than this value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token received from a previous ListSessions call. Provide this token
+           * to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token received from a previous ListSessions call. Provide this token to retrieve
+         the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token received from a previous ListSessions call. Provide this token
+           * to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Terminates the interactive session.
+         *
+         * Create a request for the method "sessions.terminate".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Terminate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the session resource to terminate.
+         * @param content the {@link com.google.api.services.dataproc.model.TerminateSessionRequest}
+         * @return the request
+         */
+        public Terminate terminate(java.lang.String name, com.google.api.services.dataproc.model.TerminateSessionRequest content) throws java.io.IOException {
+          Terminate result = new Terminate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Terminate extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:terminate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+
+          /**
+           * Terminates the interactive session.
+           *
+           * Create a request for the method "sessions.terminate".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Terminate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Terminate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the session resource to terminate.
+           * @param content the {@link com.google.api.services.dataproc.model.TerminateSessionRequest}
+           * @since 1.13
+           */
+          protected Terminate(java.lang.String name, com.google.api.services.dataproc.model.TerminateSessionRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Terminate set$Xgafv(java.lang.String $Xgafv) {
+            return (Terminate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Terminate setAccessToken(java.lang.String accessToken) {
+            return (Terminate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Terminate setAlt(java.lang.String alt) {
+            return (Terminate) super.setAlt(alt);
+          }
+
+          @Override
+          public Terminate setCallback(java.lang.String callback) {
+            return (Terminate) super.setCallback(callback);
+          }
+
+          @Override
+          public Terminate setFields(java.lang.String fields) {
+            return (Terminate) super.setFields(fields);
+          }
+
+          @Override
+          public Terminate setKey(java.lang.String key) {
+            return (Terminate) super.setKey(key);
+          }
+
+          @Override
+          public Terminate setOauthToken(java.lang.String oauthToken) {
+            return (Terminate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Terminate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Terminate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Terminate setQuotaUser(java.lang.String quotaUser) {
+            return (Terminate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Terminate setUploadType(java.lang.String uploadType) {
+            return (Terminate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Terminate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Terminate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the session resource to terminate. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the session resource to terminate.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the session resource to terminate. */
+          public Terminate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sessions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Terminate set(String parameterName, Object value) {
+            return (Terminate) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the WorkflowTemplates collection.
        *
        * <p>The typical use is:</p>

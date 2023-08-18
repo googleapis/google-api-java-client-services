@@ -45,9 +45,9 @@ public final class BareMetalAdminControlPlaneConfig extends com.google.api.clien
   }
 
   /**
-   * Configures the node pool running the control plane. If specified the corresponding NodePool
-   * will be created for the cluster's control plane. The NodePool will have the same name and
-   * namespace as the cluster.
+   * Required. Configures the node pool running the control plane. If specified the corresponding
+   * NodePool will be created for the cluster's control plane. The NodePool will have the same name
+   * and namespace as the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +75,9 @@ public final class BareMetalAdminControlPlaneConfig extends com.google.api.clien
   }
 
   /**
-   * Configures the node pool running the control plane. If specified the corresponding NodePool
-   * will be created for the cluster's control plane. The NodePool will have the same name and
-   * namespace as the cluster.
+   * Required. Configures the node pool running the control plane. If specified the corresponding
+   * NodePool will be created for the cluster's control plane. The NodePool will have the same name
+   * and namespace as the cluster.
    * @return value or {@code null} for none
    */
   public BareMetalAdminControlPlaneNodePoolConfig getControlPlaneNodePoolConfig() {
@@ -85,9 +85,9 @@ public final class BareMetalAdminControlPlaneConfig extends com.google.api.clien
   }
 
   /**
-   * Configures the node pool running the control plane. If specified the corresponding NodePool
-   * will be created for the cluster's control plane. The NodePool will have the same name and
-   * namespace as the cluster.
+   * Required. Configures the node pool running the control plane. If specified the corresponding
+   * NodePool will be created for the cluster's control plane. The NodePool will have the same name
+   * and namespace as the cluster.
    * @param controlPlaneNodePoolConfig controlPlaneNodePoolConfig or {@code null} for none
    */
   public BareMetalAdminControlPlaneConfig setControlPlaneNodePoolConfig(BareMetalAdminControlPlaneNodePoolConfig controlPlaneNodePoolConfig) {

@@ -79,6 +79,13 @@ public final class VmwareVCenterConfig extends com.google.api.client.json.Generi
   private java.lang.String resourcePool;
 
   /**
+   * The name of the vCenter storage policy for the user cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePolicyName;
+
+  /**
    * The vCenter IP address.
    * @return value or {@code null} for none
    */
@@ -194,6 +201,23 @@ public final class VmwareVCenterConfig extends com.google.api.client.json.Generi
    */
   public VmwareVCenterConfig setResourcePool(java.lang.String resourcePool) {
     this.resourcePool = resourcePool;
+    return this;
+  }
+
+  /**
+   * The name of the vCenter storage policy for the user cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePolicyName() {
+    return storagePolicyName;
+  }
+
+  /**
+   * The name of the vCenter storage policy for the user cluster.
+   * @param storagePolicyName storagePolicyName or {@code null} for none
+   */
+  public VmwareVCenterConfig setStoragePolicyName(java.lang.String storagePolicyName) {
+    this.storagePolicyName = storagePolicyName;
     return this;
   }
 

@@ -114,6 +114,13 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * Disable bundled ingress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableBundledIngress;
+
+  /**
    * Enable control plane V2. Default to false.
    * The value may be {@code null}.
    */
@@ -225,6 +232,13 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Specifies upgrade policy for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareClusterUpgradePolicy upgradePolicy;
 
   /**
    * Output only. ValidationCheck represents the result of the preflight check job.
@@ -446,6 +460,23 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
    */
   public VmwareCluster setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Disable bundled ingress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableBundledIngress() {
+    return disableBundledIngress;
+  }
+
+  /**
+   * Disable bundled ingress.
+   * @param disableBundledIngress disableBundledIngress or {@code null} for none
+   */
+  public VmwareCluster setDisableBundledIngress(java.lang.Boolean disableBundledIngress) {
+    this.disableBundledIngress = disableBundledIngress;
     return this;
   }
 
@@ -717,6 +748,23 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
    */
   public VmwareCluster setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Specifies upgrade policy for the cluster.
+   * @return value or {@code null} for none
+   */
+  public VmwareClusterUpgradePolicy getUpgradePolicy() {
+    return upgradePolicy;
+  }
+
+  /**
+   * Specifies upgrade policy for the cluster.
+   * @param upgradePolicy upgradePolicy or {@code null} for none
+   */
+  public VmwareCluster setUpgradePolicy(VmwareClusterUpgradePolicy upgradePolicy) {
+    this.upgradePolicy = upgradePolicy;
     return this;
   }
 

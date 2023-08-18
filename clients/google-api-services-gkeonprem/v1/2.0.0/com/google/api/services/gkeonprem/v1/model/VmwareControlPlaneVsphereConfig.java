@@ -37,6 +37,13 @@ public final class VmwareControlPlaneVsphereConfig extends com.google.api.client
   private java.lang.String datastore;
 
   /**
+   * The Vsphere storage policy used by the control plane Node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePolicyName;
+
+  /**
    * The Vsphere datastore used by the control plane Node.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class VmwareControlPlaneVsphereConfig extends com.google.api.client
    */
   public VmwareControlPlaneVsphereConfig setDatastore(java.lang.String datastore) {
     this.datastore = datastore;
+    return this;
+  }
+
+  /**
+   * The Vsphere storage policy used by the control plane Node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePolicyName() {
+    return storagePolicyName;
+  }
+
+  /**
+   * The Vsphere storage policy used by the control plane Node.
+   * @param storagePolicyName storagePolicyName or {@code null} for none
+   */
+  public VmwareControlPlaneVsphereConfig setStoragePolicyName(java.lang.String storagePolicyName) {
+    this.storagePolicyName = storagePolicyName;
     return this;
   }
 

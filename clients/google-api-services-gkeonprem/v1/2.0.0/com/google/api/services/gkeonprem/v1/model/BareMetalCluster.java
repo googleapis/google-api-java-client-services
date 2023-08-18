@@ -63,6 +63,13 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
   private java.lang.String bareMetalVersion;
 
   /**
+   * Binary Authorization related configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BinaryAuthorization binaryAuthorization;
+
+  /**
    * Cluster operations configuration.
    * The value may be {@code null}.
    */
@@ -336,6 +343,23 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
    */
   public BareMetalCluster setBareMetalVersion(java.lang.String bareMetalVersion) {
     this.bareMetalVersion = bareMetalVersion;
+    return this;
+  }
+
+  /**
+   * Binary Authorization related configurations.
+   * @return value or {@code null} for none
+   */
+  public BinaryAuthorization getBinaryAuthorization() {
+    return binaryAuthorization;
+  }
+
+  /**
+   * Binary Authorization related configurations.
+   * @param binaryAuthorization binaryAuthorization or {@code null} for none
+   */
+  public BareMetalCluster setBinaryAuthorization(BinaryAuthorization binaryAuthorization) {
+    this.binaryAuthorization = binaryAuthorization;
     return this;
   }
 

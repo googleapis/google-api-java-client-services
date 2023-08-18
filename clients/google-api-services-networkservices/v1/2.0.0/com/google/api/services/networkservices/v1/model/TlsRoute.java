@@ -53,6 +53,13 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> gateways;
 
   /**
+   * Optional. Set of label tags associated with the TlsRoute resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. Meshes defines a list of meshes this TlsRoute is attached to, as one of the routing
    * rules to route the requests served by the mesh. Each mesh reference should match the pattern:
    * `projects/locations/global/meshes/` The attached Mesh should be of a type SIDECAR
@@ -143,6 +150,23 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
    */
   public TlsRoute setGateways(java.util.List<java.lang.String> gateways) {
     this.gateways = gateways;
+    return this;
+  }
+
+  /**
+   * Optional. Set of label tags associated with the TlsRoute resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Set of label tags associated with the TlsRoute resource.
+   * @param labels labels or {@code null} for none
+   */
+  public TlsRoute setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

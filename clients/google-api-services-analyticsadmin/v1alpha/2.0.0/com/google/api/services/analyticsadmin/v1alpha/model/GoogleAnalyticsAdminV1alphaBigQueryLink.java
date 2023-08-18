@@ -45,13 +45,6 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   private java.lang.Boolean dailyExportEnabled;
 
   /**
-   * If set true, enables enterprise export to the linked Google Cloud project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enterpriseExportEnabled;
-
-  /**
    * The list of event names that will be excluded from exports.
    * The value may be {@code null}.
    */
@@ -65,6 +58,13 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exportStreams;
+
+  /**
+   * If set true, enables fresh daily export to the linked Google Cloud project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean freshDailyExportEnabled;
 
   /**
    * If set true, exported data will include advertising identifiers for mobile app streams.
@@ -134,23 +134,6 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
   }
 
   /**
-   * If set true, enables enterprise export to the linked Google Cloud project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnterpriseExportEnabled() {
-    return enterpriseExportEnabled;
-  }
-
-  /**
-   * If set true, enables enterprise export to the linked Google Cloud project.
-   * @param enterpriseExportEnabled enterpriseExportEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaBigQueryLink setEnterpriseExportEnabled(java.lang.Boolean enterpriseExportEnabled) {
-    this.enterpriseExportEnabled = enterpriseExportEnabled;
-    return this;
-  }
-
-  /**
    * The list of event names that will be excluded from exports.
    * @return value or {@code null} for none
    */
@@ -183,6 +166,23 @@ public final class GoogleAnalyticsAdminV1alphaBigQueryLink extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaBigQueryLink setExportStreams(java.util.List<java.lang.String> exportStreams) {
     this.exportStreams = exportStreams;
+    return this;
+  }
+
+  /**
+   * If set true, enables fresh daily export to the linked Google Cloud project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFreshDailyExportEnabled() {
+    return freshDailyExportEnabled;
+  }
+
+  /**
+   * If set true, enables fresh daily export to the linked Google Cloud project.
+   * @param freshDailyExportEnabled freshDailyExportEnabled or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaBigQueryLink setFreshDailyExportEnabled(java.lang.Boolean freshDailyExportEnabled) {
+    this.freshDailyExportEnabled = freshDailyExportEnabled;
     return this;
   }
 

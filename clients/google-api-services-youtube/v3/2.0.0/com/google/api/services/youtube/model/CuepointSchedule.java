@@ -38,11 +38,12 @@ public final class CuepointSchedule extends com.google.api.client.json.GenericJs
   private java.lang.Boolean enabled;
 
   /**
-   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone").
+   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone"). The value
+   * is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String pauseAdsUntil;
+  private java.lang.String pauseAdsUntil;
 
   /**
    * Interval frequency that api uses to insert cuepoints automatically.
@@ -78,18 +79,20 @@ public final class CuepointSchedule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone").
+   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone"). The value
+   * is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
-  public String getPauseAdsUntil() {
+  public java.lang.String getPauseAdsUntil() {
     return pauseAdsUntil;
   }
 
   /**
-   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone").
+   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad Zone"). The value
+   * is specified in ISO 8601 format.
    * @param pauseAdsUntil pauseAdsUntil or {@code null} for none
    */
-  public CuepointSchedule setPauseAdsUntil(String pauseAdsUntil) {
+  public CuepointSchedule setPauseAdsUntil(java.lang.String pauseAdsUntil) {
     this.pauseAdsUntil = pauseAdsUntil;
     return this;
   }

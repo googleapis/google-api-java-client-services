@@ -39,7 +39,7 @@ package com.google.api.services.gkeonprem.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VmwareAdminSeesawConfig extends com.google.api.client.json.GenericJson {
+public final class VmwareSeesawConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Enable two load balancer VMs to achieve a highly-available Seesaw load balancer.
@@ -49,7 +49,7 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
   private java.lang.Boolean enableHa;
 
   /**
-   * In general the following format should be used for the Seesaw group name: seesaw-
+   * Required. In general the following format should be used for the Seesaw group name: seesaw-
    * for-[cluster_name].
    * The value may be {@code null}.
    */
@@ -57,14 +57,20 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
   private java.lang.String group;
 
   /**
-   * The IP Blocks to be used by the Seesaw load balancer
+   * Required. The IP Blocks to be used by the Seesaw load balancer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VmwareIpBlock> ipBlocks;
 
+  static {
+    // hack to force ProGuard to consider VmwareIpBlock used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(VmwareIpBlock.class);
+  }
+
   /**
-   * MasterIP is the IP announced by the master of Seesaw group.
+   * Required. MasterIP is the IP announced by the master of Seesaw group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,13 +102,13 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
    * Enable two load balancer VMs to achieve a highly-available Seesaw load balancer.
    * @param enableHa enableHa or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setEnableHa(java.lang.Boolean enableHa) {
+  public VmwareSeesawConfig setEnableHa(java.lang.Boolean enableHa) {
     this.enableHa = enableHa;
     return this;
   }
 
   /**
-   * In general the following format should be used for the Seesaw group name: seesaw-
+   * Required. In general the following format should be used for the Seesaw group name: seesaw-
    * for-[cluster_name].
    * @return value or {@code null} for none
    */
@@ -111,17 +117,17 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * In general the following format should be used for the Seesaw group name: seesaw-
+   * Required. In general the following format should be used for the Seesaw group name: seesaw-
    * for-[cluster_name].
    * @param group group or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setGroup(java.lang.String group) {
+  public VmwareSeesawConfig setGroup(java.lang.String group) {
     this.group = group;
     return this;
   }
 
   /**
-   * The IP Blocks to be used by the Seesaw load balancer
+   * Required. The IP Blocks to be used by the Seesaw load balancer
    * @return value or {@code null} for none
    */
   public java.util.List<VmwareIpBlock> getIpBlocks() {
@@ -129,16 +135,16 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The IP Blocks to be used by the Seesaw load balancer
+   * Required. The IP Blocks to be used by the Seesaw load balancer
    * @param ipBlocks ipBlocks or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setIpBlocks(java.util.List<VmwareIpBlock> ipBlocks) {
+  public VmwareSeesawConfig setIpBlocks(java.util.List<VmwareIpBlock> ipBlocks) {
     this.ipBlocks = ipBlocks;
     return this;
   }
 
   /**
-   * MasterIP is the IP announced by the master of Seesaw group.
+   * Required. MasterIP is the IP announced by the master of Seesaw group.
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterIp() {
@@ -146,10 +152,10 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * MasterIP is the IP announced by the master of Seesaw group.
+   * Required. MasterIP is the IP announced by the master of Seesaw group.
    * @param masterIp masterIp or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setMasterIp(java.lang.String masterIp) {
+  public VmwareSeesawConfig setMasterIp(java.lang.String masterIp) {
     this.masterIp = masterIp;
     return this;
   }
@@ -166,7 +172,7 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
    * Name to be used by Stackdriver.
    * @param stackdriverName stackdriverName or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setStackdriverName(java.lang.String stackdriverName) {
+  public VmwareSeesawConfig setStackdriverName(java.lang.String stackdriverName) {
     this.stackdriverName = stackdriverName;
     return this;
   }
@@ -183,19 +189,19 @@ public final class VmwareAdminSeesawConfig extends com.google.api.client.json.Ge
    * Names of the VMs created for this Seesaw group.
    * @param vms vms or {@code null} for none
    */
-  public VmwareAdminSeesawConfig setVms(java.util.List<java.lang.String> vms) {
+  public VmwareSeesawConfig setVms(java.util.List<java.lang.String> vms) {
     this.vms = vms;
     return this;
   }
 
   @Override
-  public VmwareAdminSeesawConfig set(String fieldName, Object value) {
-    return (VmwareAdminSeesawConfig) super.set(fieldName, value);
+  public VmwareSeesawConfig set(String fieldName, Object value) {
+    return (VmwareSeesawConfig) super.set(fieldName, value);
   }
 
   @Override
-  public VmwareAdminSeesawConfig clone() {
-    return (VmwareAdminSeesawConfig) super.clone();
+  public VmwareSeesawConfig clone() {
+    return (VmwareSeesawConfig) super.clone();
   }
 
 }

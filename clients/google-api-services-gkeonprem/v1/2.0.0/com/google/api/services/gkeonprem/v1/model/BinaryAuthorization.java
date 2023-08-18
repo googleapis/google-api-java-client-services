@@ -17,9 +17,7 @@
 package com.google.api.services.gkeonprem.v1.model;
 
 /**
- * BareMetalAdminControlPlaneNodePoolConfig specifies the control plane node pool configuration. We
- * have a control plane specific node pool config so that we can flexible about supporting control
- * plane specific fields in the future.
+ * Configuration for Binary Authorization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:
@@ -29,40 +27,40 @@ package com.google.api.services.gkeonprem.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BareMetalAdminControlPlaneNodePoolConfig extends com.google.api.client.json.GenericJson {
+public final class BinaryAuthorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The generic configuration for a node pool running the control plane.
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BareMetalNodePoolConfig nodePoolConfig;
+  private java.lang.String evaluationMode;
 
   /**
-   * Required. The generic configuration for a node pool running the control plane.
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
    * @return value or {@code null} for none
    */
-  public BareMetalNodePoolConfig getNodePoolConfig() {
-    return nodePoolConfig;
+  public java.lang.String getEvaluationMode() {
+    return evaluationMode;
   }
 
   /**
-   * Required. The generic configuration for a node pool running the control plane.
-   * @param nodePoolConfig nodePoolConfig or {@code null} for none
+   * Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED.
+   * @param evaluationMode evaluationMode or {@code null} for none
    */
-  public BareMetalAdminControlPlaneNodePoolConfig setNodePoolConfig(BareMetalNodePoolConfig nodePoolConfig) {
-    this.nodePoolConfig = nodePoolConfig;
+  public BinaryAuthorization setEvaluationMode(java.lang.String evaluationMode) {
+    this.evaluationMode = evaluationMode;
     return this;
   }
 
   @Override
-  public BareMetalAdminControlPlaneNodePoolConfig set(String fieldName, Object value) {
-    return (BareMetalAdminControlPlaneNodePoolConfig) super.set(fieldName, value);
+  public BinaryAuthorization set(String fieldName, Object value) {
+    return (BinaryAuthorization) super.set(fieldName, value);
   }
 
   @Override
-  public BareMetalAdminControlPlaneNodePoolConfig clone() {
-    return (BareMetalAdminControlPlaneNodePoolConfig) super.clone();
+  public BinaryAuthorization clone() {
+    return (BinaryAuthorization) super.clone();
   }
 
 }

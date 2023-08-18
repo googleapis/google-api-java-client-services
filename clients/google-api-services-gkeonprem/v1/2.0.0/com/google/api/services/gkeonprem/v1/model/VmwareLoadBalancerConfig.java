@@ -51,6 +51,13 @@ public final class VmwareLoadBalancerConfig extends com.google.api.client.json.G
   private VmwareMetalLbConfig metalLbConfig;
 
   /**
+   * Output only. Configuration for Seesaw typed load balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareSeesawConfig seesawConfig;
+
+  /**
    * The VIPs used by the load balancer.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class VmwareLoadBalancerConfig extends com.google.api.client.json.G
    */
   public VmwareLoadBalancerConfig setMetalLbConfig(VmwareMetalLbConfig metalLbConfig) {
     this.metalLbConfig = metalLbConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Configuration for Seesaw typed load balancers.
+   * @return value or {@code null} for none
+   */
+  public VmwareSeesawConfig getSeesawConfig() {
+    return seesawConfig;
+  }
+
+  /**
+   * Output only. Configuration for Seesaw typed load balancers.
+   * @param seesawConfig seesawConfig or {@code null} for none
+   */
+  public VmwareLoadBalancerConfig setSeesawConfig(VmwareSeesawConfig seesawConfig) {
+    this.seesawConfig = seesawConfig;
     return this;
   }
 

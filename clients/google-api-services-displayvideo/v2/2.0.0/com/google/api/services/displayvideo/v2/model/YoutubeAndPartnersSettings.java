@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeAndPartnersSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bidding strategy of the YouTube and Partners line item.
+   * Required. The bidding strategy of the YouTube and Partners line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private TargetFrequency targetFrequency;
 
   /**
-   * The third-party measurement settings of the line item.
+   * Optional. The third-party measurement settings of the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private FrequencyCap viewFrequencyCap;
 
   /**
-   * The bidding strategy of the YouTube and Partners line item.
+   * Required. The bidding strategy of the YouTube and Partners line item.
    * @return value or {@code null} for none
    */
   public YoutubeAndPartnersBiddingStrategy getBiddingStrategy() {
@@ -112,7 +112,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The bidding strategy of the YouTube and Partners line item.
+   * Required. The bidding strategy of the YouTube and Partners line item.
    * @param biddingStrategy biddingStrategy or {@code null} for none
    */
   public YoutubeAndPartnersSettings setBiddingStrategy(YoutubeAndPartnersBiddingStrategy biddingStrategy) {
@@ -227,7 +227,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The third-party measurement settings of the line item.
+   * Optional. The third-party measurement settings of the line item.
    * @return value or {@code null} for none
    */
   public YoutubeAndPartnersThirdPartyMeasurementSettings getThirdPartyMeasurementSettings() {
@@ -235,7 +235,7 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The third-party measurement settings of the line item.
+   * Optional. The third-party measurement settings of the line item.
    * @param thirdPartyMeasurementSettings thirdPartyMeasurementSettings or {@code null} for none
    */
   public YoutubeAndPartnersSettings setThirdPartyMeasurementSettings(YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings) {

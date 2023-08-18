@@ -17734,11 +17734,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
-         * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
-         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType`
-         * Examples: * `AssignedTargetingOption` resources of targeting type
+         * Optional. Allows filtering by assigned targeting option fields. Supported syntax: *
+         * Filter expressions are made up of one or more restrictions. * Restrictions can be
+         * combined by the logical operator `OR`. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+         * `targetingType` Examples: * `AssignedTargetingOption` resources of targeting type
          * `TARGETING_TYPE_YOUTUBE_VIDEO` or `TARGETING_TYPE_YOUTUBE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
          * targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no
@@ -17748,25 +17748,26 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are
-       made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. *
-       A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
-       operator. Supported fields: * `targetingType` Examples: * `AssignedTargetingOption` resources of
-       targeting type `TARGETING_TYPE_YOUTUBE_VIDEO` or `TARGETING_TYPE_YOUTUBE_CHANNEL`:
-       `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"`
-       The length of this field should be no more than 500 characters. Reference our [filter `LIST`
-       requests](/display-video/api/guides/how-tos/filters) guide for more information.
+        /** Optional. Allows filtering by assigned targeting option fields. Supported syntax: * Filter
+       expressions are made up of one or more restrictions. * Restrictions can be combined by the logical
+       operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields must use
+       the `EQUALS (=)` operator. Supported fields: * `targetingType` Examples: *
+       `AssignedTargetingOption` resources of targeting type `TARGETING_TYPE_YOUTUBE_VIDEO` or
+       `TARGETING_TYPE_YOUTUBE_CHANNEL`: `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
+       targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no more than 500
+       characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+       for more information.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering by assigned targeting option fields. Supported syntax: * Filter
-         * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`.
-         * * All fields must use the `EQUALS (=)` operator. Supported fields: * `targetingType`
-         * Examples: * `AssignedTargetingOption` resources of targeting type
+         * Optional. Allows filtering by assigned targeting option fields. Supported syntax: *
+         * Filter expressions are made up of one or more restrictions. * Restrictions can be
+         * combined by the logical operator `OR`. * A restriction has the form of `{field}
+         * {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
+         * `targetingType` Examples: * `AssignedTargetingOption` resources of targeting type
          * `TARGETING_TYPE_YOUTUBE_VIDEO` or `TARGETING_TYPE_YOUTUBE_CHANNEL`:
          * `targetingType="TARGETING_TYPE_YOUTUBE_VIDEO" OR
          * targetingType="TARGETING_TYPE_YOUTUBE_CHANNEL"` The length of this field should be no
@@ -17779,7 +17780,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
+         * Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId`
+         * (acceptable in v2) * `adGroupId` (acceptable in v3) *
          * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
          * specify descending order for a field, a suffix "desc" should be added to the field name.
          * Example: `targetingType desc`.
@@ -17787,17 +17789,18 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
-       `assignedTargetingOption.targetingType` The default sorting order is ascending. To specify
-       descending order for a field, a suffix "desc" should be added to the field name. Example:
-       `targetingType desc`.
+        /** Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (acceptable
+       in v2) * `adGroupId` (acceptable in v3) * `assignedTargetingOption.targetingType` The default
+       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+       added to the field name. Example: `targetingType desc`.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId` (default) *
+         * Optional. Field by which to sort the list. Acceptable values are: * `youtubeAdGroupId`
+         * (acceptable in v2) * `adGroupId` (acceptable in v3) *
          * `assignedTargetingOption.targetingType` The default sorting order is ascending. To
          * specify descending order for a field, a suffix "desc" should be added to the field name.
          * Example: `targetingType desc`.
@@ -17808,24 +17811,24 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
-         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
-         * specified.
+         * Optional. Requested page size. The size must be an integer between `1` and `5000`. If
+         * unspecified, the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid
+         * value is specified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Requested page size. The size must be an integer between `1` and `5000`. If unspecified, the
-       default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+        /** Optional. Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+       the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
-         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
-         * specified.
+         * Optional. Requested page size. The size must be an integer between `1` and `5000`. If
+         * unspecified, the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid
+         * value is specified.
          */
         public BulkListAdGroupAssignedTargetingOptions setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -17833,16 +17836,16 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A token that lets the client fetch the next page of results. Typically, this is the value
-         * of next_page_token returned from the previous call to the
+         * Optional. A token that lets the client fetch the next page of results. Typically, this is
+         * the value of next_page_token returned from the previous call to the
          * `BulkListAdGroupAssignedTargetingOptions` method. If not specified, the first page of
          * results will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token that lets the client fetch the next page of results. Typically, this is the value of
-       next_page_token returned from the previous call to the `BulkListAdGroupAssignedTargetingOptions`
+        /** Optional. A token that lets the client fetch the next page of results. Typically, this is the value
+       of next_page_token returned from the previous call to the `BulkListAdGroupAssignedTargetingOptions`
        method. If not specified, the first page of results will be returned.
          */
         public java.lang.String getPageToken() {
@@ -17850,8 +17853,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * A token that lets the client fetch the next page of results. Typically, this is the value
-         * of next_page_token returned from the previous call to the
+         * Optional. A token that lets the client fetch the next page of results. Typically, this is
+         * the value of next_page_token returned from the previous call to the
          * `BulkListAdGroupAssignedTargetingOptions` method. If not specified, the first page of
          * results will be returned.
          */

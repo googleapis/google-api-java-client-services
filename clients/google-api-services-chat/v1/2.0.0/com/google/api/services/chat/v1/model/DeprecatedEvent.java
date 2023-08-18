@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Google Chat events. To learn how to use events, see [Receive and respond to Google Chat
- * events](https://developers.google.com/chat/api/guides/message-formats).
+ * Google Chat app interaction events. To learn about interaction events, see [Receive and respond
+ * to Google Chat app interaction events](https://developers.google.com/chat/api/guides/message-
+ * formats).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -58,21 +59,22 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String configCompleteRedirectUrl;
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) event received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dialogEventType;
 
   /**
-   * The timestamp indicating when the event occurred.
+   * The timestamp indicating when the interaction event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * True when the event is related to [dialogs](https://developers.google.com/chat/how-
+   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs).
    * The value may be {@code null}.
    */
@@ -80,23 +82,23 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.Boolean isDialogEvent;
 
   /**
-   * The message that triggered the event, if applicable.
+   * The message that triggered the interaction event, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Message message;
 
   /**
-   * The space in which the event occurred.
+   * The space in which the interaction event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Space space;
 
   /**
-   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
-   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
-   * information.
+   * The Chat app-defined key for the thread related to the interaction event. See [`spaces.messages
+   * .thread.threadKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,14 +118,14 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String token;
 
   /**
-   * The type of the event.
+   * The type of the interaction event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The user that triggered the event.
+   * The user that triggered the interaction event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +195,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) event received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * received.
    * @return value or {@code null} for none
    */
   public java.lang.String getDialogEventType() {
@@ -201,7 +204,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) event received.
+   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * received.
    * @param dialogEventType dialogEventType or {@code null} for none
    */
   public DeprecatedEvent setDialogEventType(java.lang.String dialogEventType) {
@@ -210,7 +214,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The timestamp indicating when the event occurred.
+   * The timestamp indicating when the interaction event occurred.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -218,7 +222,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The timestamp indicating when the event occurred.
+   * The timestamp indicating when the interaction event occurred.
    * @param eventTime eventTime or {@code null} for none
    */
   public DeprecatedEvent setEventTime(String eventTime) {
@@ -227,7 +231,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * True when the event is related to [dialogs](https://developers.google.com/chat/how-
+   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs).
    * @return value or {@code null} for none
    */
@@ -236,7 +240,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * True when the event is related to [dialogs](https://developers.google.com/chat/how-
+   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
    * tos/dialogs).
    * @param isDialogEvent isDialogEvent or {@code null} for none
    */
@@ -246,7 +250,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message that triggered the event, if applicable.
+   * The message that triggered the interaction event, if applicable.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -254,7 +258,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The message that triggered the event, if applicable.
+   * The message that triggered the interaction event, if applicable.
    * @param message message or {@code null} for none
    */
   public DeprecatedEvent setMessage(Message message) {
@@ -263,7 +267,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The space in which the event occurred.
+   * The space in which the interaction event occurred.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -271,7 +275,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The space in which the event occurred.
+   * The space in which the interaction event occurred.
    * @param space space or {@code null} for none
    */
   public DeprecatedEvent setSpace(Space space) {
@@ -280,9 +284,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
-   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
-   * information.
+   * The Chat app-defined key for the thread related to the interaction event. See [`spaces.messages
+   * .thread.threadKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for
+   * more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadKey() {
@@ -290,9 +294,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Chat app-defined key for the thread related to the event. See [`spaces.messages.thread.thre
-   * adKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for more
-   * information.
+   * The Chat app-defined key for the thread related to the interaction event. See [`spaces.messages
+   * .thread.threadKey`](/chat/api/reference/rest/v1/spaces.messages#Thread.FIELDS.thread_key) for
+   * more information.
    * @param threadKey threadKey or {@code null} for none
    */
   public DeprecatedEvent setThreadKey(java.lang.String threadKey) {
@@ -330,7 +334,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the event.
+   * The type of the interaction event.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -338,7 +342,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the event.
+   * The type of the interaction event.
    * @param type type or {@code null} for none
    */
   public DeprecatedEvent setType(java.lang.String type) {
@@ -347,7 +351,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user that triggered the event.
+   * The user that triggered the interaction event.
    * @return value or {@code null} for none
    */
   public User getUser() {
@@ -355,7 +359,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user that triggered the event.
+   * The user that triggered the interaction event.
    * @param user user or {@code null} for none
    */
   public DeprecatedEvent setUser(User user) {

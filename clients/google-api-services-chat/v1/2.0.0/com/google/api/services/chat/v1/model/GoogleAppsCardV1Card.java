@@ -21,23 +21,25 @@ package com.google.api.services.chat.v1.model;
  * Use cards to present detailed information, gather information from users, and guide users to take
  * a next step. In Google Chat, cards appear in several places: - As stand-alone messages. -
  * Accompanying a text message, just beneath the text message. - As a
- * [dialog](https://developers.google.com/chat/how-tos/dialogs). The following example JSON creates
- * a "contact card" that features: - A header with the contact's name, job title, and avatar
- * picture. - A section with the contact information, including formatted text. - Buttons that users
- * can click to share the contact, or see more or less information. For more examples, see [Design
- * dynamic, interactive, and consistent UIs with cards](https://developers.google.com/chat/ui).
- * ![Example contact card](https://developers.google.com/chat/images/card_api_reference.png) ``` {
- * "cardsV2": [ { "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle":
- * "Software Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-
- * avatar.png", "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ {
- * "header": "Contact Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ {
- * "decoratedText": { "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, {
- * "decoratedText": { "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, {
- * "decoratedText": { "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, {
- * "buttonList": { "buttons": [ { "text": "Share", "onClick": { "openLink": { "url":
- * "https://example.com/share", } } }, { "text": "Edit", "onClick": { "action": { "function":
- * "goToView", "parameters": [ { "key": "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], },
- * } ], } ```
+ * [dialog](https://developers.google.com/chat/how-tos/dialogs). Only Google Chat apps can create
+ * card messages in Google Chat. If your Chat app uses [user
+ * authentication](https://developers.google.com/chat/api/guides/auth/users) to send messages on
+ * behalf of users, the messages can't contain cards. The following example JSON creates a "contact
+ * card" that features: - A header with the contact's name, job title, and avatar picture. - A
+ * section with the contact information, including formatted text. - Buttons that users can click to
+ * share the contact, or see more or less information. For more examples, see [Design dynamic,
+ * interactive, and consistent UIs with cards](https://developers.google.com/chat/ui). ![Example
+ * contact card](https://developers.google.com/chat/images/card_api_reference.png) ``` { "cardsV2":
+ * [ { "cardId": "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software
+ * Engineer", "imageUrl": "https://developers.google.com/chat/images/quickstart-app-avatar.png",
+ * "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact
+ * Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": {
+ * "startIcon": { "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": {
+ * "startIcon": { "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": {
+ * "startIcon": { "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": {
+ * "buttons": [ { "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", }
+ * } }, { "text": "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key":
+ * "viewType", "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

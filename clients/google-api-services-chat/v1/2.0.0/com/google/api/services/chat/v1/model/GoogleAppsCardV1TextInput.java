@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps.
+   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps.
+   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getAutoCompleteAction() {
@@ -127,7 +127,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
    * Optional. Specify what action to take when the text input field provides suggestions to users
    * who interact with it. If unspecified, the suggestions are set by `initialSuggestions` and are
    * processed by the client. If specified, the app takes the action specified here, such as running
-   * a custom function. Supported by Google Workspace Add-ons, but not Chat apps.
+   * a custom function. Supported by Google Workspace Add-ons, but not Google Chat apps.
    * @param autoCompleteAction autoCompleteAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setAutoCompleteAction(GoogleAppsCardV1Action autoCompleteAction) {

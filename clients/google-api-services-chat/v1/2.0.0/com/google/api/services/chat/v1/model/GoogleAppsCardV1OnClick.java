@@ -38,7 +38,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Chat apps.
+   * Workspace Add-ons, but not Google Chat apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Chat apps.
+   * Workspace Add-ons, but not Google Chat apps.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -89,7 +89,7 @@ public final class GoogleAppsCardV1OnClick extends com.google.api.client.json.Ge
 
   /**
    * A new card is pushed to the card stack after clicking if specified. Supported by Google
-   * Workspace Add-ons, but not Chat apps.
+   * Workspace Add-ons, but not Google Chat apps.
    * @param card card or {@code null} for none
    */
   public GoogleAppsCardV1OnClick setCard(GoogleAppsCardV1Card card) {

@@ -17,7 +17,8 @@
 package com.google.api.services.drive.model;
 
 /**
- * Representation of a shared drive.
+ * Representation of a shared drive. Some resource methods (such as `drives.update`) require a
+ * `driveId`. Use the `drives.list` method to retrieve the ID for a shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

@@ -17,7 +17,8 @@
 package com.google.api.services.drive.model;
 
 /**
- * A comment on a file in Google Drive.
+ * A comment on a file in Google Drive. Some resource methods (such as `replies.update`) require a
+ * `replyId`. Use the `replies.list` method to retrieve the ID for a reply.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

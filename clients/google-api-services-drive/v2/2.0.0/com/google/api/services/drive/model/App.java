@@ -18,7 +18,9 @@ package com.google.api.services.drive.model;
 
 /**
  * The apps resource provides a list of the apps that a user has installed, with information about
- * each app's supported MIME types, file extensions, and other details.
+ * each app's supported MIME types, file extensions, and other details. Some resource methods (such
+ * as `apps.get`) require an `appId`. Use the `apps.list` method to retrieve the ID for an installed
+ * application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

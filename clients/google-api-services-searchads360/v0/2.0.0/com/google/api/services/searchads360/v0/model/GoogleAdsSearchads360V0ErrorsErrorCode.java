@@ -87,6 +87,13 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
   private java.lang.String internalError;
 
   /**
+   * The reasons for invalid parameter errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String invalidParameterError;
+
+  /**
    * An error with the query
    * The value may be {@code null}.
    */
@@ -247,6 +254,23 @@ public final class GoogleAdsSearchads360V0ErrorsErrorCode extends com.google.api
    */
   public GoogleAdsSearchads360V0ErrorsErrorCode setInternalError(java.lang.String internalError) {
     this.internalError = internalError;
+    return this;
+  }
+
+  /**
+   * The reasons for invalid parameter errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInvalidParameterError() {
+    return invalidParameterError;
+  }
+
+  /**
+   * The reasons for invalid parameter errors.
+   * @param invalidParameterError invalidParameterError or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ErrorsErrorCode setInvalidParameterError(java.lang.String invalidParameterError) {
+    this.invalidParameterError = invalidParameterError;
     return this;
   }
 

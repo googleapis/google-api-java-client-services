@@ -38,6 +38,19 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.lang.String adNetworkType;
 
   /**
+   * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics. Indicates whether the
+   * interaction metrics occurred on the asset itself or a different asset or ad unit. Interactions
+   * (for example, clicks) are counted across all the parts of the served ad (for example, Ad itself
+   * and other components like Sitelinks) when they are served together. When
+   * interaction_on_this_asset is true, it means the interactions are on this specific asset and
+   * when interaction_on_this_asset is false, it means the interactions is not on this specific
+   * asset but on other parts of the served ad this asset is served with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonAssetInteractionTarget assetInteractionTarget;
+
+  /**
    * Resource name of the conversion action.
    * The value may be {@code null}.
    */
@@ -131,6 +144,35 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setAdNetworkType(java.lang.String adNetworkType) {
     this.adNetworkType = adNetworkType;
+    return this;
+  }
+
+  /**
+   * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics. Indicates whether the
+   * interaction metrics occurred on the asset itself or a different asset or ad unit. Interactions
+   * (for example, clicks) are counted across all the parts of the served ad (for example, Ad itself
+   * and other components like Sitelinks) when they are served together. When
+   * interaction_on_this_asset is true, it means the interactions are on this specific asset and
+   * when interaction_on_this_asset is false, it means the interactions is not on this specific
+   * asset but on other parts of the served ad this asset is served with.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonAssetInteractionTarget getAssetInteractionTarget() {
+    return assetInteractionTarget;
+  }
+
+  /**
+   * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics. Indicates whether the
+   * interaction metrics occurred on the asset itself or a different asset or ad unit. Interactions
+   * (for example, clicks) are counted across all the parts of the served ad (for example, Ad itself
+   * and other components like Sitelinks) when they are served together. When
+   * interaction_on_this_asset is true, it means the interactions are on this specific asset and
+   * when interaction_on_this_asset is false, it means the interactions is not on this specific
+   * asset but on other parts of the served ad this asset is served with.
+   * @param assetInteractionTarget assetInteractionTarget or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setAssetInteractionTarget(GoogleAdsSearchads360V0CommonAssetInteractionTarget assetInteractionTarget) {
+    this.assetInteractionTarget = assetInteractionTarget;
     return this;
   }
 

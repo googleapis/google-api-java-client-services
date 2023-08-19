@@ -161,14 +161,19 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double averageCost;
 
   /**
-   * The total cost of all clicks divided by the total number of clicks received.
+   * The total cost of all clicks divided by the total number of clicks received. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double averageCpc;
 
   /**
-   * Average cost-per-thousand impressions (CPM).
+   * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
+   * the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +300,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
-   * period.
+   * period. This metric is a monetary value and returned in the customer's currency by default. See
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -888,7 +895,10 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The total cost of all clicks divided by the total number of clicks received.
+   * The total cost of all clicks divided by the total number of clicks received. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageCpc() {
@@ -896,7 +906,10 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The total cost of all clicks divided by the total number of clicks received.
+   * The total cost of all clicks divided by the total number of clicks received. This metric is a
+   * monetary value and returned in the customer's currency by default. See the metrics_currency
+   * parameter at https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause
    * @param averageCpc averageCpc or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAverageCpc(java.lang.Double averageCpc) {
@@ -905,7 +918,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * Average cost-per-thousand impressions (CPM).
+   * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
+   * the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageCpm() {
@@ -913,7 +928,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * Average cost-per-thousand impressions (CPM).
+   * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
+   * the customer's currency by default. See the metrics_currency parameter at
+   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
    * @param averageCpm averageCpm or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAverageCpm(java.lang.Double averageCpm) {
@@ -1203,7 +1220,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
-   * period.
+   * period. This metric is a monetary value and returned in the customer's currency by default. See
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * @return value or {@code null} for none
    */
   public java.lang.Long getCostMicros() {
@@ -1212,7 +1231,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
-   * period.
+   * period. This metric is a monetary value and returned in the customer's currency by default. See
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * @param costMicros costMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setCostMicros(java.lang.Long costMicros) {

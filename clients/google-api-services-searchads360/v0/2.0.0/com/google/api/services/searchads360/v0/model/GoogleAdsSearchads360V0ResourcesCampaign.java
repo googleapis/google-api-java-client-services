@@ -273,7 +273,9 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
 
   /**
    * Selective optimization setting for this campaign, which includes a set of conversion actions to
-   * optimize this campaign towards.
+   * optimize this campaign towards. This feature only applies to app campaigns that use
+   * MULTI_CHANNEL as AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -946,7 +948,9 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
 
   /**
    * Selective optimization setting for this campaign, which includes a set of conversion actions to
-   * optimize this campaign towards.
+   * optimize this campaign towards. This feature only applies to app campaigns that use
+   * MULTI_CHANNEL as AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization getSelectiveOptimization() {
@@ -955,7 +959,9 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
 
   /**
    * Selective optimization setting for this campaign, which includes a set of conversion actions to
-   * optimize this campaign towards.
+   * optimize this campaign towards. This feature only applies to app campaigns that use
+   * MULTI_CHANNEL as AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * @param selectiveOptimization selectiveOptimization or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaign setSelectiveOptimization(GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization selectiveOptimization) {

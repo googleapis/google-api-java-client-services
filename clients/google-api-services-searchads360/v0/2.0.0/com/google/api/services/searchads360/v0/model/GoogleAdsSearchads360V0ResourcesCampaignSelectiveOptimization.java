@@ -18,7 +18,9 @@ package com.google.api.services.searchads360.v0.model;
 
 /**
  * Selective optimization setting for this campaign, which includes a set of conversion actions to
- * optimize this campaign towards.
+ * optimize this campaign towards. This feature only applies to app campaigns that use MULTI_CHANNEL
+ * as AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+ * AdvertisingChannelSubType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

@@ -30,6 +30,14 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baselineModelVersion;
+
+  /**
    * The summary content that is concatenated into one string.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummar
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> textSections;
+
+  /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaselineModelVersion() {
+    return baselineModelVersion;
+  }
+
+  /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * @param baselineModelVersion baselineModelVersion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummary setBaselineModelVersion(java.lang.String baselineModelVersion) {
+    this.baselineModelVersion = baselineModelVersion;
+    return this;
+  }
 
   /**
    * The summary content that is concatenated into one string.

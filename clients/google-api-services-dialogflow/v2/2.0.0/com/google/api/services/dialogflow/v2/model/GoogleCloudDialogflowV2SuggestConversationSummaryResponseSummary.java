@@ -37,6 +37,14 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryResponseSumm
   private java.lang.String answerRecord;
 
   /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baselineModelVersion;
+
+  /**
    * The summary content that is concatenated into one string.
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryResponseSumm
    */
   public GoogleCloudDialogflowV2SuggestConversationSummaryResponseSummary setAnswerRecord(java.lang.String answerRecord) {
     this.answerRecord = answerRecord;
+    return this;
+  }
+
+  /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaselineModelVersion() {
+    return baselineModelVersion;
+  }
+
+  /**
+   * The baseline model version used to generate this summary. It is empty if a baseline model was
+   * not used to generate this summary.
+   * @param baselineModelVersion baselineModelVersion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestConversationSummaryResponseSummary setBaselineModelVersion(java.lang.String baselineModelVersion) {
+    this.baselineModelVersion = baselineModelVersion;
     return this;
   }
 

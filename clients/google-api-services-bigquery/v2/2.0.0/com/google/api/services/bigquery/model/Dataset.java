@@ -126,6 +126,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * out when the dataset type is EXTERNAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalDatasetReference externalDatasetReference;
+
+  /**
    * [Optional] A descriptive name for the dataset.
    * The value may be {@code null}.
    */
@@ -430,6 +438,25 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * out when the dataset type is EXTERNAL.
+   * @return value or {@code null} for none
+   */
+  public ExternalDatasetReference getExternalDatasetReference() {
+    return externalDatasetReference;
+  }
+
+  /**
+   * [Optional] Information about the external metadata storage where the dataset is defined. Filled
+   * out when the dataset type is EXTERNAL.
+   * @param externalDatasetReference externalDatasetReference or {@code null} for none
+   */
+  public Dataset setExternalDatasetReference(ExternalDatasetReference externalDatasetReference) {
+    this.externalDatasetReference = externalDatasetReference;
     return this;
   }
 

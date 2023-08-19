@@ -54,6 +54,21 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   private java.lang.Integer maxExtractiveSegmentCount;
 
   /**
+   * Return at most `num_next_segments` segments after each selected segments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numNextSegments;
+
+  /**
+   * Specifies whether to also include the adjacent from each selected segments. Return at most
+   * `num_previous_segments` segments before each selected segments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numPreviousSegments;
+
+  /**
    * Specifies whether to return the confidence score from the extractive segments in each search
    * result. The default value is `false`.
    * The value may be {@code null}.
@@ -112,6 +127,42 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecExtractiveContentSpec setMaxExtractiveSegmentCount(java.lang.Integer maxExtractiveSegmentCount) {
     this.maxExtractiveSegmentCount = maxExtractiveSegmentCount;
+    return this;
+  }
+
+  /**
+   * Return at most `num_next_segments` segments after each selected segments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumNextSegments() {
+    return numNextSegments;
+  }
+
+  /**
+   * Return at most `num_next_segments` segments after each selected segments.
+   * @param numNextSegments numNextSegments or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecExtractiveContentSpec setNumNextSegments(java.lang.Integer numNextSegments) {
+    this.numNextSegments = numNextSegments;
+    return this;
+  }
+
+  /**
+   * Specifies whether to also include the adjacent from each selected segments. Return at most
+   * `num_previous_segments` segments before each selected segments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumPreviousSegments() {
+    return numPreviousSegments;
+  }
+
+  /**
+   * Specifies whether to also include the adjacent from each selected segments. Return at most
+   * `num_previous_segments` segments before each selected segments.
+   * @param numPreviousSegments numPreviousSegments or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecExtractiveContentSpec setNumPreviousSegments(java.lang.Integer numPreviousSegments) {
+    this.numPreviousSegments = numPreviousSegments;
     return this;
   }
 

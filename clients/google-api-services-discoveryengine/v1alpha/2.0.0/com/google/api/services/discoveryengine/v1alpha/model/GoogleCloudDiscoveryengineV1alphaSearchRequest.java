@@ -175,6 +175,16 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.lang.Boolean safeSearch;
 
   /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
+   * g`. This field is used to identify the serving configuration name, set of models used to make
+   * the search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String servingConfig;
+
+  /**
    * The spell correction specification that specifies the mode under which spell correction takes
    * effect.
    * The value may be {@code null}.
@@ -554,6 +564,29 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSafeSearch(java.lang.Boolean safeSearch) {
     this.safeSearch = safeSearch;
+    return this;
+  }
+
+  /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
+   * g`. This field is used to identify the serving configuration name, set of models used to make
+   * the search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServingConfig() {
+    return servingConfig;
+  }
+
+  /**
+   * Required. The resource name of the Search serving config, such as `projects/locations/global/co
+   * llections/default_collection/dataStores/default_data_store/servingConfigs/default_serving_confi
+   * g`. This field is used to identify the serving configuration name, set of models used to make
+   * the search.
+   * @param servingConfig servingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setServingConfig(java.lang.String servingConfig) {
+    this.servingConfig = servingConfig;
     return this;
   }
 

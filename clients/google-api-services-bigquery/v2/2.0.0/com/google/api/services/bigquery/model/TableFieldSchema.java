@@ -124,6 +124,15 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.Long precision;
 
   /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
+   * DATETIME - TIMESTAMP
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RangeElementType rangeElementType;
+
+  /**
    * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
    * type fields.
    * The value may be {@code null}.
@@ -367,6 +376,27 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
+   * DATETIME - TIMESTAMP
+   * @return value or {@code null} for none
+   */
+  public RangeElementType getRangeElementType() {
+    return rangeElementType;
+  }
+
+  /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
+   * DATETIME - TIMESTAMP
+   * @param rangeElementType rangeElementType or {@code null} for none
+   */
+  public TableFieldSchema setRangeElementType(RangeElementType rangeElementType) {
+    this.rangeElementType = rangeElementType;
+    return this;
+  }
+
+  /**
    * Optional. Rounding Mode specification of the field. It only can be set on NUMERIC or BIGNUMERIC
    * type fields.
    * @return value or {@code null} for none
@@ -519,6 +549,49 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     @Override
     public PolicyTags clone() {
       return (PolicyTags) super.clone();
+    }
+
+  }
+
+  /**
+   * Optional. The subtype of the RANGE, if the type of this field is RANGE. If the type is RANGE,
+   * this field is required. Possible values for the field element type of a RANGE include: - DATE -
+   * DATETIME - TIMESTAMP
+   */
+  public static final class RangeElementType extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The field element type of a RANGE
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
+
+    /**
+     * The field element type of a RANGE
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+      return type;
+    }
+
+    /**
+     * The field element type of a RANGE
+     * @param type type or {@code null} for none
+     */
+    public RangeElementType setType(java.lang.String type) {
+      this.type = type;
+      return this;
+    }
+
+    @Override
+    public RangeElementType set(String fieldName, Object value) {
+      return (RangeElementType) super.set(fieldName, value);
+    }
+
+    @Override
+    public RangeElementType clone() {
+      return (RangeElementType) super.clone();
     }
 
   }

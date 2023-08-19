@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-billingbudgets</artifactId>
-  <version>v1-rev20230624-2.0.0</version>
-  <name>Cloud Billing Budget API v1-rev20230624-2.0.0</name>
+  <version>v1-rev20230817-2.0.0</version>
+  <name>Cloud Billing Budget API v1-rev20230817-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

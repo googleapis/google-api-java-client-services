@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * The response proto for AnalyzePrivacyPolicy method.
+ * Response containing the analyzed privacy policy for the AnalyzePrivacyPolicy method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -30,21 +30,22 @@ package com.google.api.services.checks.v1alpha.model;
 public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected purposes in the privacy policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PolicyPurposeOfUseAnnotation> dataPurposeAnnotations;
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected data types in the privacy policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PolicyDataTypeAnnotation> dataTypeAnnotations;
 
   /**
-   * HTML content for the privacy policy page.
+   * HTML content for the privacy policy page. The byte offsets in each annotated section will match
+   * this content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +59,14 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   private LastUpdatedDate lastUpdatedDateInfo;
 
   /**
-   * List of all sections in the privacy policy.
+   * A list of detected topics in the privacy policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PolicySectionAnnotation> sectionAnnotations;
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected purposes in the privacy policy.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyPurposeOfUseAnnotation> getDataPurposeAnnotations() {
@@ -73,7 +74,7 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected purposes in the privacy policy.
    * @param dataPurposeAnnotations dataPurposeAnnotations or {@code null} for none
    */
   public AnalyzePrivacyPolicyResponse setDataPurposeAnnotations(java.util.List<PolicyPurposeOfUseAnnotation> dataPurposeAnnotations) {
@@ -82,7 +83,7 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected data types in the privacy policy.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyDataTypeAnnotation> getDataTypeAnnotations() {
@@ -90,7 +91,7 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * List of all data types in the privacy policy.
+   * A list of detected data types in the privacy policy.
    * @param dataTypeAnnotations dataTypeAnnotations or {@code null} for none
    */
   public AnalyzePrivacyPolicyResponse setDataTypeAnnotations(java.util.List<PolicyDataTypeAnnotation> dataTypeAnnotations) {
@@ -99,7 +100,8 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * HTML content for the privacy policy page.
+   * HTML content for the privacy policy page. The byte offsets in each annotated section will match
+   * this content.
    * @return value or {@code null} for none
    */
   public java.lang.String getHtmlContent() {
@@ -107,7 +109,8 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * HTML content for the privacy policy page.
+   * HTML content for the privacy policy page. The byte offsets in each annotated section will match
+   * this content.
    * @param htmlContent htmlContent or {@code null} for none
    */
   public AnalyzePrivacyPolicyResponse setHtmlContent(java.lang.String htmlContent) {
@@ -133,7 +136,7 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * List of all sections in the privacy policy.
+   * A list of detected topics in the privacy policy.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicySectionAnnotation> getSectionAnnotations() {
@@ -141,7 +144,7 @@ public final class AnalyzePrivacyPolicyResponse extends com.google.api.client.js
   }
 
   /**
-   * List of all sections in the privacy policy.
+   * A list of detected topics in the privacy policy.
    * @param sectionAnnotations sectionAnnotations or {@code null} for none
    */
   public AnalyzePrivacyPolicyResponse setSectionAnnotations(java.util.List<PolicySectionAnnotation> sectionAnnotations) {

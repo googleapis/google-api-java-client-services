@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * Response containing the analyzed privacy policy for the FindPrivacyPolicy method.
+ * Details of the permission in violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.checks.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FindPrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The permission in violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String privacyPolicy;
+  private GoogleChecksReportV1alphaPermission permission;
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The permission in violation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrivacyPolicy() {
-    return privacyPolicy;
+  public GoogleChecksReportV1alphaPermission getPermission() {
+    return permission;
   }
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
-   * @param privacyPolicy privacyPolicy or {@code null} for none
+   * The permission in violation.
+   * @param permission permission or {@code null} for none
    */
-  public FindPrivacyPolicyResponse setPrivacyPolicy(java.lang.String privacyPolicy) {
-    this.privacyPolicy = privacyPolicy;
+  public GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails setPermission(GoogleChecksReportV1alphaPermission permission) {
+    this.permission = permission;
     return this;
   }
 
   @Override
-  public FindPrivacyPolicyResponse set(String fieldName, Object value) {
-    return (FindPrivacyPolicyResponse) super.set(fieldName, value);
+  public GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails set(String fieldName, Object value) {
+    return (GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails) super.set(fieldName, value);
   }
 
   @Override
-  public FindPrivacyPolicyResponse clone() {
-    return (FindPrivacyPolicyResponse) super.clone();
+  public GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails clone() {
+    return (GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails) super.clone();
   }
 
 }

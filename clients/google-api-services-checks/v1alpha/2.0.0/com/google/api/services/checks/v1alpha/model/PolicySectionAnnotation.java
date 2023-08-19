@@ -45,7 +45,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   private java.lang.Float score;
 
   /**
-   * Type of the high-level category in the policy.
+   * Detected type of the high-level topic in the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   private java.lang.Long startOffset;
 
   /**
-   * Actual text content in the section. This makes it much easier to consume the information. NOTE:
-   * This field might contain HTML and does not guarantee a SafeHtml security contract
-   * go/safehtmltypecontracts#safehtml.
+   * Actual text content in the section.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +102,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Type of the high-level category in the policy.
+   * Detected type of the high-level topic in the policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getSectionType() {
@@ -112,7 +110,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Type of the high-level category in the policy.
+   * Detected type of the high-level topic in the policy.
    * @param sectionType sectionType or {@code null} for none
    */
   public PolicySectionAnnotation setSectionType(java.lang.String sectionType) {
@@ -138,9 +136,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Actual text content in the section. This makes it much easier to consume the information. NOTE:
-   * This field might contain HTML and does not guarantee a SafeHtml security contract
-   * go/safehtmltypecontracts#safehtml.
+   * Actual text content in the section.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextContent() {
@@ -148,9 +144,7 @@ public final class PolicySectionAnnotation extends com.google.api.client.json.Ge
   }
 
   /**
-   * Actual text content in the section. This makes it much easier to consume the information. NOTE:
-   * This field might contain HTML and does not guarantee a SafeHtml security contract
-   * go/safehtmltypecontracts#safehtml.
+   * Actual text content in the section.
    * @param textContent textContent or {@code null} for none
    */
   public PolicySectionAnnotation setTextContent(java.lang.String textContent) {

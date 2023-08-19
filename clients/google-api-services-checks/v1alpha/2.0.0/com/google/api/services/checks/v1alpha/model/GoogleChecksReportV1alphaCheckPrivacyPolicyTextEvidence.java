@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * Response containing the analyzed privacy policy for the FindPrivacyPolicy method.
+ * Evidence collected from your privacy policy(s).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.checks.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FindPrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The privacy policy fragment that was used during the check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String privacyPolicy;
+  private GoogleChecksReportV1alphaPolicyFragment policyFragment;
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The privacy policy fragment that was used during the check.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrivacyPolicy() {
-    return privacyPolicy;
+  public GoogleChecksReportV1alphaPolicyFragment getPolicyFragment() {
+    return policyFragment;
   }
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
-   * @param privacyPolicy privacyPolicy or {@code null} for none
+   * The privacy policy fragment that was used during the check.
+   * @param policyFragment policyFragment or {@code null} for none
    */
-  public FindPrivacyPolicyResponse setPrivacyPolicy(java.lang.String privacyPolicy) {
-    this.privacyPolicy = privacyPolicy;
+  public GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence setPolicyFragment(GoogleChecksReportV1alphaPolicyFragment policyFragment) {
+    this.policyFragment = policyFragment;
     return this;
   }
 
   @Override
-  public FindPrivacyPolicyResponse set(String fieldName, Object value) {
-    return (FindPrivacyPolicyResponse) super.set(fieldName, value);
+  public GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence set(String fieldName, Object value) {
+    return (GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence) super.set(fieldName, value);
   }
 
   @Override
-  public FindPrivacyPolicyResponse clone() {
-    return (FindPrivacyPolicyResponse) super.clone();
+  public GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence clone() {
+    return (GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence) super.clone();
   }
 
 }

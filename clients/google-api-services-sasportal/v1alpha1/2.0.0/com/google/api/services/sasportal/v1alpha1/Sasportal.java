@@ -895,6 +895,109 @@ public class Sasportal extends com.google.api.client.googleapis.services.json.Ab
         return (ProvisionDeployment) super.set(parameterName, value);
       }
     }
+    /**
+     * Setups the a GCP Project to receive SAS Analytics messages via GCP Pub/Sub with a subscription to
+     * BigQuery. All the Pub/Sub topics and BigQuery tables are created automatically as part of this
+     * service.
+     *
+     * Create a request for the method "customers.setupSasAnalytics".
+     *
+     * This request holds the parameters needed by the sasportal server.  After setting any optional
+     * parameters, call the {@link SetupSasAnalytics#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.sasportal.v1alpha1.model.SasPortalSetupSasAnalyticsRequest}
+     * @return the request
+     */
+    public SetupSasAnalytics setupSasAnalytics(com.google.api.services.sasportal.v1alpha1.model.SasPortalSetupSasAnalyticsRequest content) throws java.io.IOException {
+      SetupSasAnalytics result = new SetupSasAnalytics(content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetupSasAnalytics extends SasportalRequest<com.google.api.services.sasportal.v1alpha1.model.SasPortalOperation> {
+
+      private static final String REST_PATH = "v1alpha1/customers:setupSasAnalytics";
+
+      /**
+       * Setups the a GCP Project to receive SAS Analytics messages via GCP Pub/Sub with a subscription
+       * to BigQuery. All the Pub/Sub topics and BigQuery tables are created automatically as part of
+       * this service.
+       *
+       * Create a request for the method "customers.setupSasAnalytics".
+       *
+       * This request holds the parameters needed by the the sasportal server.  After setting any
+       * optional parameters, call the {@link SetupSasAnalytics#execute()} method to invoke the remote
+       * operation. <p> {@link SetupSasAnalytics#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.sasportal.v1alpha1.model.SasPortalSetupSasAnalyticsRequest}
+       * @since 1.13
+       */
+      protected SetupSasAnalytics(com.google.api.services.sasportal.v1alpha1.model.SasPortalSetupSasAnalyticsRequest content) {
+        super(Sasportal.this, "POST", REST_PATH, content, com.google.api.services.sasportal.v1alpha1.model.SasPortalOperation.class);
+      }
+
+      @Override
+      public SetupSasAnalytics set$Xgafv(java.lang.String $Xgafv) {
+        return (SetupSasAnalytics) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetupSasAnalytics setAccessToken(java.lang.String accessToken) {
+        return (SetupSasAnalytics) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetupSasAnalytics setAlt(java.lang.String alt) {
+        return (SetupSasAnalytics) super.setAlt(alt);
+      }
+
+      @Override
+      public SetupSasAnalytics setCallback(java.lang.String callback) {
+        return (SetupSasAnalytics) super.setCallback(callback);
+      }
+
+      @Override
+      public SetupSasAnalytics setFields(java.lang.String fields) {
+        return (SetupSasAnalytics) super.setFields(fields);
+      }
+
+      @Override
+      public SetupSasAnalytics setKey(java.lang.String key) {
+        return (SetupSasAnalytics) super.setKey(key);
+      }
+
+      @Override
+      public SetupSasAnalytics setOauthToken(java.lang.String oauthToken) {
+        return (SetupSasAnalytics) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetupSasAnalytics setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetupSasAnalytics) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetupSasAnalytics setQuotaUser(java.lang.String quotaUser) {
+        return (SetupSasAnalytics) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetupSasAnalytics setUploadType(java.lang.String uploadType) {
+        return (SetupSasAnalytics) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetupSasAnalytics setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetupSasAnalytics) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetupSasAnalytics set(String parameterName, Object value) {
+        return (SetupSasAnalytics) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Deployments collection.

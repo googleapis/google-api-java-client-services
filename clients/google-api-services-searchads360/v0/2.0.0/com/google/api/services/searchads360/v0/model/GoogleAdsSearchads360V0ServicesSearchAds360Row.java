@@ -52,6 +52,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel;
 
   /**
+   * The ad group asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAsset adGroupAsset;
+
+  /**
+   * The ad group asset set referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupAssetSet adGroupAssetSet;
+
+  /**
    * The ad group audience view referenced in the query.
    * The value may be {@code null}.
    */
@@ -108,6 +122,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesAssetSet assetSet;
 
   /**
+   * The asset set asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAssetSetAsset assetSetAsset;
+
+  /**
    * The bidding strategy referenced in the query.
    * The value may be {@code null}.
    */
@@ -120,6 +141,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesCampaign campaign;
+
+  /**
+   * The campaign asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCampaignAsset campaignAsset;
+
+  /**
+   * The campaign asset set referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCampaignAssetSet campaignAssetSet;
 
   /**
    * The campaign audience view referenced in the query.
@@ -177,6 +212,20 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   private GoogleAdsSearchads360V0ResourcesCustomer customer;
 
   /**
+   * The customer asset referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCustomerAsset customerAsset;
+
+  /**
+   * The customer asset set referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesCustomerAssetSet customerAssetSet;
+
+  /**
    * The CustomerClient referenced in the query.
    * The value may be {@code null}.
    */
@@ -203,6 +252,13 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesGenderView genderView;
+
+  /**
+   * The geo target constant referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesGeoTargetConstant geoTargetConstant;
 
   /**
    * The keyword view referenced in the query.
@@ -308,6 +364,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAdLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdLabel adGroupAdLabel) {
     this.adGroupAdLabel = adGroupAdLabel;
+    return this;
+  }
+
+  /**
+   * The ad group asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAsset getAdGroupAsset() {
+    return adGroupAsset;
+  }
+
+  /**
+   * The ad group asset referenced in the query.
+   * @param adGroupAsset adGroupAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAsset(GoogleAdsSearchads360V0ResourcesAdGroupAsset adGroupAsset) {
+    this.adGroupAsset = adGroupAsset;
+    return this;
+  }
+
+  /**
+   * The ad group asset set referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupAssetSet getAdGroupAssetSet() {
+    return adGroupAssetSet;
+  }
+
+  /**
+   * The ad group asset set referenced in the query.
+   * @param adGroupAssetSet adGroupAssetSet or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAdGroupAssetSet(GoogleAdsSearchads360V0ResourcesAdGroupAssetSet adGroupAssetSet) {
+    this.adGroupAssetSet = adGroupAssetSet;
     return this;
   }
 
@@ -448,6 +538,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The asset set asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAssetSetAsset getAssetSetAsset() {
+    return assetSetAsset;
+  }
+
+  /**
+   * The asset set asset referenced in the query.
+   * @param assetSetAsset assetSetAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAssetSetAsset(GoogleAdsSearchads360V0ResourcesAssetSetAsset assetSetAsset) {
+    this.assetSetAsset = assetSetAsset;
+    return this;
+  }
+
+  /**
    * The bidding strategy referenced in the query.
    * @return value or {@code null} for none
    */
@@ -478,6 +585,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaign(GoogleAdsSearchads360V0ResourcesCampaign campaign) {
     this.campaign = campaign;
+    return this;
+  }
+
+  /**
+   * The campaign asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignAsset getCampaignAsset() {
+    return campaignAsset;
+  }
+
+  /**
+   * The campaign asset referenced in the query.
+   * @param campaignAsset campaignAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignAsset(GoogleAdsSearchads360V0ResourcesCampaignAsset campaignAsset) {
+    this.campaignAsset = campaignAsset;
+    return this;
+  }
+
+  /**
+   * The campaign asset set referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaignAssetSet getCampaignAssetSet() {
+    return campaignAssetSet;
+  }
+
+  /**
+   * The campaign asset set referenced in the query.
+   * @param campaignAssetSet campaignAssetSet or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCampaignAssetSet(GoogleAdsSearchads360V0ResourcesCampaignAssetSet campaignAssetSet) {
+    this.campaignAssetSet = campaignAssetSet;
     return this;
   }
 
@@ -601,6 +742,40 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
   }
 
   /**
+   * The customer asset referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomerAsset getCustomerAsset() {
+    return customerAsset;
+  }
+
+  /**
+   * The customer asset referenced in the query.
+   * @param customerAsset customerAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCustomerAsset(GoogleAdsSearchads360V0ResourcesCustomerAsset customerAsset) {
+    this.customerAsset = customerAsset;
+    return this;
+  }
+
+  /**
+   * The customer asset set referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomerAssetSet getCustomerAssetSet() {
+    return customerAssetSet;
+  }
+
+  /**
+   * The customer asset set referenced in the query.
+   * @param customerAssetSet customerAssetSet or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setCustomerAssetSet(GoogleAdsSearchads360V0ResourcesCustomerAssetSet customerAssetSet) {
+    this.customerAssetSet = customerAssetSet;
+    return this;
+  }
+
+  /**
    * The CustomerClient referenced in the query.
    * @return value or {@code null} for none
    */
@@ -665,6 +840,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   public GoogleAdsSearchads360V0ServicesSearchAds360Row setGenderView(GoogleAdsSearchads360V0ResourcesGenderView genderView) {
     this.genderView = genderView;
+    return this;
+  }
+
+  /**
+   * The geo target constant referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesGeoTargetConstant getGeoTargetConstant() {
+    return geoTargetConstant;
+  }
+
+  /**
+   * The geo target constant referenced in the query.
+   * @param geoTargetConstant geoTargetConstant or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setGeoTargetConstant(GoogleAdsSearchads360V0ResourcesGeoTargetConstant geoTargetConstant) {
+    this.geoTargetConstant = geoTargetConstant;
     return this;
   }
 

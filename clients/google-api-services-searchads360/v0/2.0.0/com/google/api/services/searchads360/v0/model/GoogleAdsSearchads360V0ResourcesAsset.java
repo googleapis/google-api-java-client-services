@@ -33,6 +33,20 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A unified call asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUnifiedCallAsset callAsset;
+
+  /**
+   * Output only. A unified callout asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUnifiedCalloutAsset calloutAsset;
+
+  /**
    * Output only. The timestamp when this asset was created. The timestamp is in the customer's time
    * zone and in "yyyy-MM-dd HH:mm:ss" format.
    * The value may be {@code null}.
@@ -70,11 +84,25 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   private java.lang.String lastModifiedTime;
 
   /**
+   * Output only. A unified location asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUnifiedLocationAsset locationAsset;
+
+  /**
    * A mobile app asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0CommonMobileAppAsset mobileAppAsset;
+
+  /**
+   * Output only. A unified page feed asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset pageFeedAsset;
 
   /**
    * Immutable. The resource name of the asset. Asset resource names have the form:
@@ -83,6 +111,13 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
+
+  /**
+   * Output only. A unified sitelink asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset sitelinkAsset;
 
   /**
    * Output only. The status of the asset.
@@ -104,6 +139,40 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. A unified call asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUnifiedCallAsset getCallAsset() {
+    return callAsset;
+  }
+
+  /**
+   * Output only. A unified call asset.
+   * @param callAsset callAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setCallAsset(GoogleAdsSearchads360V0CommonUnifiedCallAsset callAsset) {
+    this.callAsset = callAsset;
+    return this;
+  }
+
+  /**
+   * Output only. A unified callout asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUnifiedCalloutAsset getCalloutAsset() {
+    return calloutAsset;
+  }
+
+  /**
+   * Output only. A unified callout asset.
+   * @param calloutAsset calloutAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setCalloutAsset(GoogleAdsSearchads360V0CommonUnifiedCalloutAsset calloutAsset) {
+    this.calloutAsset = calloutAsset;
+    return this;
+  }
 
   /**
    * Output only. The timestamp when this asset was created. The timestamp is in the customer's time
@@ -195,6 +264,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
   }
 
   /**
+   * Output only. A unified location asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUnifiedLocationAsset getLocationAsset() {
+    return locationAsset;
+  }
+
+  /**
+   * Output only. A unified location asset.
+   * @param locationAsset locationAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setLocationAsset(GoogleAdsSearchads360V0CommonUnifiedLocationAsset locationAsset) {
+    this.locationAsset = locationAsset;
+    return this;
+  }
+
+  /**
    * A mobile app asset.
    * @return value or {@code null} for none
    */
@@ -208,6 +294,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setMobileAppAsset(GoogleAdsSearchads360V0CommonMobileAppAsset mobileAppAsset) {
     this.mobileAppAsset = mobileAppAsset;
+    return this;
+  }
+
+  /**
+   * Output only. A unified page feed asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset getPageFeedAsset() {
+    return pageFeedAsset;
+  }
+
+  /**
+   * Output only. A unified page feed asset.
+   * @param pageFeedAsset pageFeedAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setPageFeedAsset(GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset pageFeedAsset) {
+    this.pageFeedAsset = pageFeedAsset;
     return this;
   }
 
@@ -227,6 +330,23 @@ public final class GoogleAdsSearchads360V0ResourcesAsset extends com.google.api.
    */
   public GoogleAdsSearchads360V0ResourcesAsset setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Output only. A unified sitelink asset.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset getSitelinkAsset() {
+    return sitelinkAsset;
+  }
+
+  /**
+   * Output only. A unified sitelink asset.
+   * @param sitelinkAsset sitelinkAsset or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAsset setSitelinkAsset(GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset sitelinkAsset) {
+    this.sitelinkAsset = sitelinkAsset;
     return this;
   }
 

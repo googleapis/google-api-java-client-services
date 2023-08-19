@@ -148,7 +148,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   private GoogleAdsSearchads360V0CommonListingGroupInfo listingGroup;
 
   /**
-   * Output only. Location.
+   * Immutable. Location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,6 +161,13 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean negative;
+
+  /**
+   * Output only. Estimates for criterion bids at various positions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates positionEstimates;
 
   /**
    * Output only. Information regarding the quality of the criterion.
@@ -502,7 +509,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
-   * Output only. Location.
+   * Immutable. Location.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonLocationInfo getLocation() {
@@ -510,7 +517,7 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
   }
 
   /**
-   * Output only. Location.
+   * Immutable. Location.
    * @param location location or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setLocation(GoogleAdsSearchads360V0CommonLocationInfo location) {
@@ -534,6 +541,23 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends com.
    */
   public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setNegative(java.lang.Boolean negative) {
     this.negative = negative;
+    return this;
+  }
+
+  /**
+   * Output only. Estimates for criterion bids at various positions.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates getPositionEstimates() {
+    return positionEstimates;
+  }
+
+  /**
+   * Output only. Estimates for criterion bids at various positions.
+   * @param positionEstimates positionEstimates or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAdGroupCriterion setPositionEstimates(GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates positionEstimates) {
+    this.positionEstimates = positionEstimates;
     return this;
   }
 

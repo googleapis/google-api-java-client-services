@@ -318,6 +318,174 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
+       * Creates new lineage events together with their parents: process and run. Updates the process and
+       * run if they already exist. Mapped from Open Lineage specification:
+       * https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+       *
+       * Create a request for the method "locations.processOpenLineageRunEvent".
+       *
+       * This request holds the parameters needed by the datalineage server.  After setting any optional
+       * parameters, call the {@link ProcessOpenLineageRunEvent#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The name of the project and its location that should own the process, run, and lineage
+       *        event.
+       * @param content the {@link com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent}
+       * @return the request
+       */
+      public ProcessOpenLineageRunEvent processOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent content) throws java.io.IOException {
+        ProcessOpenLineageRunEvent result = new ProcessOpenLineageRunEvent(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ProcessOpenLineageRunEvent extends DatalineageRequest<com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:processOpenLineageRunEvent";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Creates new lineage events together with their parents: process and run. Updates the process
+         * and run if they already exist. Mapped from Open Lineage specification:
+         * https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json.
+         *
+         * Create a request for the method "locations.processOpenLineageRunEvent".
+         *
+         * This request holds the parameters needed by the the datalineage server.  After setting any
+         * optional parameters, call the {@link ProcessOpenLineageRunEvent#execute()} method to invoke the
+         * remote operation. <p> {@link ProcessOpenLineageRunEvent#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project and its location that should own the process, run, and lineage
+       *        event.
+         * @param content the {@link com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent}
+         * @since 1.13
+         */
+        protected ProcessOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent content) {
+          super(Datalineage.this, "POST", REST_PATH, content, com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent set$Xgafv(java.lang.String $Xgafv) {
+          return (ProcessOpenLineageRunEvent) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setAccessToken(java.lang.String accessToken) {
+          return (ProcessOpenLineageRunEvent) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setAlt(java.lang.String alt) {
+          return (ProcessOpenLineageRunEvent) super.setAlt(alt);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setCallback(java.lang.String callback) {
+          return (ProcessOpenLineageRunEvent) super.setCallback(callback);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setFields(java.lang.String fields) {
+          return (ProcessOpenLineageRunEvent) super.setFields(fields);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setKey(java.lang.String key) {
+          return (ProcessOpenLineageRunEvent) super.setKey(key);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setOauthToken(java.lang.String oauthToken) {
+          return (ProcessOpenLineageRunEvent) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ProcessOpenLineageRunEvent) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setQuotaUser(java.lang.String quotaUser) {
+          return (ProcessOpenLineageRunEvent) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setUploadType(java.lang.String uploadType) {
+          return (ProcessOpenLineageRunEvent) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ProcessOpenLineageRunEvent) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project and its location that should own the process, run, and
+         * lineage event.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project and its location that should own the process, run, and lineage
+       event.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project and its location that should own the process, run, and
+         * lineage event.
+         */
+        public ProcessOpenLineageRunEvent setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         * recommended. This request is idempotent only if a `request_id` is provided.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String requestId;
+
+        /** A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+       recommended. This request is idempotent only if a `request_id` is provided.
+         */
+        public java.lang.String getRequestId() {
+          return requestId;
+        }
+
+        /**
+         * A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         * recommended. This request is idempotent only if a `request_id` is provided.
+         */
+        public ProcessOpenLineageRunEvent setRequestId(java.lang.String requestId) {
+          this.requestId = requestId;
+          return this;
+        }
+
+        @Override
+        public ProcessOpenLineageRunEvent set(String parameterName, Object value) {
+          return (ProcessOpenLineageRunEvent) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieve a list of links connected to a specific asset. Links represent the data flow between
        * **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are
        * stored in the same project as the Lineage Events that create them. You can retrieve links in

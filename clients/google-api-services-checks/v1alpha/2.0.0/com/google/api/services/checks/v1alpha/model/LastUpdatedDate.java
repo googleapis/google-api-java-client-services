@@ -51,7 +51,7 @@ public final class LastUpdatedDate extends com.google.api.client.json.GenericJso
   private java.lang.Long startOffset;
 
   /**
-   * The bytes of actual text content in the section. NOTE: - This will correspond to the whole
+   * The bytes of actual text content in the section. Note: - This will correspond to the whole
    * sentence that includes the date. - This field might contain HTML and it is not sanitized.
    * The value may be {@code null}.
    */
@@ -110,7 +110,7 @@ public final class LastUpdatedDate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes of actual text content in the section. NOTE: - This will correspond to the whole
+   * The bytes of actual text content in the section. Note: - This will correspond to the whole
    * sentence that includes the date. - This field might contain HTML and it is not sanitized.
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class LastUpdatedDate extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The bytes of actual text content in the section. NOTE: - This will correspond to the whole
+   * The bytes of actual text content in the section. Note: - This will correspond to the whole
    * sentence that includes the date. - This field might contain HTML and it is not sanitized.
    * @param textContent textContent or {@code null} for none
    */

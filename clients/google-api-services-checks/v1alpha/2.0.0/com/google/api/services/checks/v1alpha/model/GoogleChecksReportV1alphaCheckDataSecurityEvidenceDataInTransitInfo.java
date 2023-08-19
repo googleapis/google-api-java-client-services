@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * Response containing the analyzed privacy policy for the FindPrivacyPolicy method.
+ * Evidence related to data in transit detected in your app.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.checks.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FindPrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The URL contacted by your app. This includes the protocol, domain, and URL parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String privacyPolicy;
+  private java.lang.String uri;
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The URL contacted by your app. This includes the protocol, domain, and URL parameters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrivacyPolicy() {
-    return privacyPolicy;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
-   * @param privacyPolicy privacyPolicy or {@code null} for none
+   * The URL contacted by your app. This includes the protocol, domain, and URL parameters.
+   * @param uri uri or {@code null} for none
    */
-  public FindPrivacyPolicyResponse setPrivacyPolicy(java.lang.String privacyPolicy) {
-    this.privacyPolicy = privacyPolicy;
+  public GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public FindPrivacyPolicyResponse set(String fieldName, Object value) {
-    return (FindPrivacyPolicyResponse) super.set(fieldName, value);
+  public GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo set(String fieldName, Object value) {
+    return (GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo) super.set(fieldName, value);
   }
 
   @Override
-  public FindPrivacyPolicyResponse clone() {
-    return (FindPrivacyPolicyResponse) super.clone();
+  public GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo clone() {
+    return (GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo) super.clone();
   }
 
 }

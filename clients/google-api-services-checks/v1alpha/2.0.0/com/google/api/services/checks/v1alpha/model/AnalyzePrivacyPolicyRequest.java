@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * The request proto for AnalyzePrivacyPolicy method.
+ * Request for the AnalyzePrivacyPolicy method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -30,24 +30,23 @@ package com.google.api.services.checks.v1alpha.model;
 public final class AnalyzePrivacyPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Web page raw HTML content for the privacy policy page to be analyzed. Useful when the client
-   * wants to analyze a privacy policy already fetched.
+   * The HTML content of the privacy policy. This is useful if you'd like to manage the crawling and
+   * rendering of the privacy policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privacyPolicyPageContent;
 
   /**
-   * URL for the privacy policy page to be analyzed. https://linter.aip.dev/140/uri (Use `uri`
-   * instead of `url` in field name)
+   * The URI that points to the web page for the privacy policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privacyPolicyUri;
 
   /**
-   * Web page raw HTML content for the privacy policy page to be analyzed. Useful when the client
-   * wants to analyze a privacy policy already fetched.
+   * The HTML content of the privacy policy. This is useful if you'd like to manage the crawling and
+   * rendering of the privacy policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivacyPolicyPageContent() {
@@ -55,8 +54,8 @@ public final class AnalyzePrivacyPolicyRequest extends com.google.api.client.jso
   }
 
   /**
-   * Web page raw HTML content for the privacy policy page to be analyzed. Useful when the client
-   * wants to analyze a privacy policy already fetched.
+   * The HTML content of the privacy policy. This is useful if you'd like to manage the crawling and
+   * rendering of the privacy policy.
    * @param privacyPolicyPageContent privacyPolicyPageContent or {@code null} for none
    */
   public AnalyzePrivacyPolicyRequest setPrivacyPolicyPageContent(java.lang.String privacyPolicyPageContent) {
@@ -65,8 +64,7 @@ public final class AnalyzePrivacyPolicyRequest extends com.google.api.client.jso
   }
 
   /**
-   * URL for the privacy policy page to be analyzed. https://linter.aip.dev/140/uri (Use `uri`
-   * instead of `url` in field name)
+   * The URI that points to the web page for the privacy policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivacyPolicyUri() {
@@ -74,8 +72,7 @@ public final class AnalyzePrivacyPolicyRequest extends com.google.api.client.jso
   }
 
   /**
-   * URL for the privacy policy page to be analyzed. https://linter.aip.dev/140/uri (Use `uri`
-   * instead of `url` in field name)
+   * The URI that points to the web page for the privacy policy.
    * @param privacyPolicyUri privacyPolicyUri or {@code null} for none
    */
   public AnalyzePrivacyPolicyRequest setPrivacyPolicyUri(java.lang.String privacyPolicyUri) {

@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * Response containing the analyzed privacy policy for the FindPrivacyPolicy method.
+ * Evidence collected from endpoint restriction violation analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.checks.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FindPrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * Endpoints in violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String privacyPolicy;
+  private java.util.List<GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails> endpointDetails;
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * Endpoints in violation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrivacyPolicy() {
-    return privacyPolicy;
+  public java.util.List<GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails> getEndpointDetails() {
+    return endpointDetails;
   }
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
-   * @param privacyPolicy privacyPolicy or {@code null} for none
+   * Endpoints in violation.
+   * @param endpointDetails endpointDetails or {@code null} for none
    */
-  public FindPrivacyPolicyResponse setPrivacyPolicy(java.lang.String privacyPolicy) {
-    this.privacyPolicy = privacyPolicy;
+  public GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence setEndpointDetails(java.util.List<GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails> endpointDetails) {
+    this.endpointDetails = endpointDetails;
     return this;
   }
 
   @Override
-  public FindPrivacyPolicyResponse set(String fieldName, Object value) {
-    return (FindPrivacyPolicyResponse) super.set(fieldName, value);
+  public GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence set(String fieldName, Object value) {
+    return (GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence) super.set(fieldName, value);
   }
 
   @Override
-  public FindPrivacyPolicyResponse clone() {
-    return (FindPrivacyPolicyResponse) super.clone();
+  public GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence clone() {
+    return (GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence) super.clone();
   }
 
 }

@@ -939,7 +939,690 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
         }
 
       }
+      /**
+       * An accessor for creating requests from the Reports collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChecksService checks = new ChecksService(...);}
+       *   {@code ChecksService.Reports.List request = checks.reports().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Reports reports() {
+        return new Reports();
+      }
+
+      /**
+       * The "reports" collection of methods.
+       */
+      public class Reports {
+
+        /**
+         * Gets a report. By default, only the name and results_uri fields are returned. You can include
+         * other fields by listing them in the `fields` URL query parameter. For example,
+         * `?fields=name,checks` will return the name and checks fields.
+         *
+         * Create a request for the method "reports.get".
+         *
+         * This request holds the parameters needed by the checks server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the report. Example: `accounts/123/apps/456/reports/789`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaReport> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/apps/[^/]+/reports/[^/]+$");
+
+          /**
+           * Gets a report. By default, only the name and results_uri fields are returned. You can include
+           * other fields by listing them in the `fields` URL query parameter. For example,
+           * `?fields=name,checks` will return the name and checks fields.
+           *
+           * Create a request for the method "reports.get".
+           *
+           * This request holds the parameters needed by the the checks server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the report. Example: `accounts/123/apps/456/reports/789`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ChecksService.this, "GET", REST_PATH, null, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaReport.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/apps/[^/]+/reports/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the report. Example: `accounts/123/apps/456/reports/789`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the report. Example: `accounts/123/apps/456/reports/789`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the report. Example: `accounts/123/apps/456/reports/789`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/apps/[^/]+/reports/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks
+           * within the report. Only checks that match the filter string are included in the
+           * response. Example: `state = FAILED`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String checksFilter;
+
+          /** Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks within the
+         report. Only checks that match the filter string are included in the response. Example: `state =
+         FAILED`
+           */
+          public java.lang.String getChecksFilter() {
+            return checksFilter;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks
+           * within the report. Only checks that match the filter string are included in the
+           * response. Example: `state = FAILED`
+           */
+          public Get setChecksFilter(java.lang.String checksFilter) {
+            this.checksFilter = checksFilter;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists reports for the specified app. By default, only the name and results_uri fields are
+         * returned. You can include other fields by listing them in the `fields` URL query parameter. For
+         * example, `?fields=reports(name,checks)` will return the name and checks fields.
+         *
+         * Create a request for the method "reports.list".
+         *
+         * This request holds the parameters needed by the checks server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaListReportsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/reports";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/apps/[^/]+$");
+
+          /**
+           * Lists reports for the specified app. By default, only the name and results_uri fields are
+           * returned. You can include other fields by listing them in the `fields` URL query parameter. For
+           * example, `?fields=reports(name,checks)` will return the name and checks fields.
+           *
+           * Create a request for the method "reports.list".
+           *
+           * This request holds the parameters needed by the the checks server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ChecksService.this, "GET", REST_PATH, null, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaListReportsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of the app. Example: `accounts/123/apps/456` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the app. Example: `accounts/123/apps/456`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Resource name of the app. Example: `accounts/123/apps/456` */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks
+           * within reports. Only checks that match the filter string are included in the response.
+           * Example: `state = FAILED`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String checksFilter;
+
+          /** Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks within reports.
+         Only checks that match the filter string are included in the response. Example: `state = FAILED`
+           */
+          public java.lang.String getChecksFilter() {
+            return checksFilter;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter checks
+           * within reports. Only checks that match the filter string are included in the response.
+           * Example: `state = FAILED`
+           */
+          public List setChecksFilter(java.lang.String checksFilter) {
+            this.checksFilter = checksFilter;
+            return this;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter reports.
+           * Example: `appBundle.releaseType = PRE_RELEASE`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter reports. Example:
+         `appBundle.releaseType = PRE_RELEASE`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter string to filter reports.
+           * Example: `appBundle.releaseType = PRE_RELEASE`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of reports to return. If unspecified, at most 10 reports
+           * will be returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of reports to return. If unspecified, at most 10 reports will be
+         returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of reports to return. If unspecified, at most 10 reports
+           * will be returned. The maximum value is 50; values above 50 will be coerced to 50.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token received from a previous `ListReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListReports` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token received from a previous `ListReports` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListReports` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token received from a previous `ListReports` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListReports` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
+  }
+
+  /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ChecksService checks = new ChecksService(...);}
+   *   {@code ChecksService.Media.List request = checks.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Analyzes the uploaded app bundle and returns a google.longrunning.Operation containing the
+     * generated Report. ## Example (upload only) Send a regular POST request with the header `X-Goog-
+     * Upload-Protocol: raw`. ``` POST
+     * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+     * HTTP/1.1 X-Goog-Upload-Protocol: raw Content-Length: Content-Type: application/octet-stream ```
+     * ## Example (upload with metadata) Send a multipart POST request where the first body part
+     * contains the metadata JSON and the second body part contains the binary upload. Include the
+     * header `X-Goog-Upload-Protocol: multipart`. ``` POST
+     * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+     * HTTP/1.1 X-Goog-Upload-Protocol: multipart Content-Length: ? Content-Type: multipart/related;
+     * boundary=BOUNDARY --BOUNDARY Content-Type: application/json
+     * {"code_reference_id":"db5bcc20f94055fb5bc08cbb9b0e7a5530308786"} --BOUNDARY --BOUNDARY-- ```
+     * *Note:* Metadata-only requests are not supported.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the checks server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+     * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest}
+     * @return the request
+     */
+    public Upload upload(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest content) throws java.io.IOException {
+      Upload result = new Upload(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Analyzes the uploaded app bundle and returns a google.longrunning.Operation containing the
+     * generated Report. ## Example (upload only) Send a regular POST request with the header `X-Goog-
+     * Upload-Protocol: raw`. ``` POST
+     * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+     * HTTP/1.1 X-Goog-Upload-Protocol: raw Content-Length: Content-Type: application/octet-stream ```
+     * ## Example (upload with metadata) Send a multipart POST request where the first body part
+     * contains the metadata JSON and the second body part contains the binary upload. Include the
+     * header `X-Goog-Upload-Protocol: multipart`. ``` POST
+     * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+     * HTTP/1.1 X-Goog-Upload-Protocol: multipart Content-Length: ? Content-Type: multipart/related;
+     * boundary=BOUNDARY --BOUNDARY Content-Type: application/json
+     * {"code_reference_id":"db5bcc20f94055fb5bc08cbb9b0e7a5530308786"} --BOUNDARY --BOUNDARY-- ```
+     * *Note:* Metadata-only requests are not supported.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the checks server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+     * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(parent, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends ChecksServiceRequest<com.google.api.services.checks.v1alpha.model.Operation> {
+
+      private static final String REST_PATH = "v1alpha/{+parent}/reports:analyzeUpload";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+/apps/[^/]+$");
+
+      /**
+       * Analyzes the uploaded app bundle and returns a google.longrunning.Operation containing the
+       * generated Report. ## Example (upload only) Send a regular POST request with the header `X-Goog-
+       * Upload-Protocol: raw`. ``` POST
+       * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+       * HTTP/1.1 X-Goog-Upload-Protocol: raw Content-Length: Content-Type: application/octet-stream ```
+       * ## Example (upload with metadata) Send a multipart POST request where the first body part
+       * contains the metadata JSON and the second body part contains the binary upload. Include the
+       * header `X-Goog-Upload-Protocol: multipart`. ``` POST
+       * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+       * HTTP/1.1 X-Goog-Upload-Protocol: multipart Content-Length: ? Content-Type: multipart/related;
+       * boundary=BOUNDARY --BOUNDARY Content-Type: application/json
+       * {"code_reference_id":"db5bcc20f94055fb5bc08cbb9b0e7a5530308786"} --BOUNDARY --BOUNDARY-- ```
+       * *Note:* Metadata-only requests are not supported.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the checks server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+       * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest}
+       * @since 1.13
+       */
+      protected Upload(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest content) {
+        super(ChecksService.this, "POST", REST_PATH, content, com.google.api.services.checks.v1alpha.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^accounts/[^/]+/apps/[^/]+$");
+        }
+      }
+
+      /**
+       * Analyzes the uploaded app bundle and returns a google.longrunning.Operation containing the
+       * generated Report. ## Example (upload only) Send a regular POST request with the header `X-Goog-
+       * Upload-Protocol: raw`. ``` POST
+       * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+       * HTTP/1.1 X-Goog-Upload-Protocol: raw Content-Length: Content-Type: application/octet-stream ```
+       * ## Example (upload with metadata) Send a multipart POST request where the first body part
+       * contains the metadata JSON and the second body part contains the binary upload. Include the
+       * header `X-Goog-Upload-Protocol: multipart`. ``` POST
+       * https://checks.googleapis.com/upload/v1alpha/{parent=accounts/apps}/reports:analyzeUpload
+       * HTTP/1.1 X-Goog-Upload-Protocol: multipart Content-Length: ? Content-Type: multipart/related;
+       * boundary=BOUNDARY --BOUNDARY Content-Type: application/json
+       * {"code_reference_id":"db5bcc20f94055fb5bc08cbb9b0e7a5530308786"} --BOUNDARY --BOUNDARY-- ```
+       * *Note:* Metadata-only requests are not supported.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the checks server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param parent Required. Resource name of the app. Example: `accounts/123/apps/456`
+       * @param content the {@link com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Upload(java.lang.String parent, com.google.api.services.checks.v1alpha.model.GoogleChecksReportV1alphaAnalyzeUploadRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(ChecksService.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.checks.v1alpha.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Resource name of the app. Example: `accounts/123/apps/456` */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Resource name of the app. Example: `accounts/123/apps/456`
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. Resource name of the app. Example: `accounts/123/apps/456` */
+      public Upload setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^accounts/[^/]+/apps/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**
@@ -963,7 +1646,8 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
   public class Privacypolicy {
 
     /**
-     * Analyzes the privacy policy of the given policy URL or content.
+     * Performs a synchronous analysis of a privacy policy, where the policy content is mapped to
+     * privacy categories, data types, and purposes.
      *
      * Create a request for the method "privacypolicy.analyze".
      *
@@ -984,7 +1668,8 @@ public class ChecksService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1alpha/privacypolicy:analyze";
 
       /**
-       * Analyzes the privacy policy of the given policy URL or content.
+       * Performs a synchronous analysis of a privacy policy, where the policy content is mapped to
+       * privacy categories, data types, and purposes.
        *
        * Create a request for the method "privacypolicy.analyze".
        *

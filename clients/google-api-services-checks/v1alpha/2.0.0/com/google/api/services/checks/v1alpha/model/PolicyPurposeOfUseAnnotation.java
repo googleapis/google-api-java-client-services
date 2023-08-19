@@ -60,8 +60,7 @@ public final class PolicyPurposeOfUseAnnotation extends com.google.api.client.js
 
   /**
    * The bytes of actual text content in the sentence that mentions the purpose of use. This makes
-   * it much easier to consume the information. NOTE: This field might contain HTML and does not
-   * guarantee a SafeHtml security contract go/safehtmltypecontracts#safehtml.
+   * it much easier to consume the information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +138,7 @@ public final class PolicyPurposeOfUseAnnotation extends com.google.api.client.js
 
   /**
    * The bytes of actual text content in the sentence that mentions the purpose of use. This makes
-   * it much easier to consume the information. NOTE: This field might contain HTML and does not
-   * guarantee a SafeHtml security contract go/safehtmltypecontracts#safehtml.
+   * it much easier to consume the information.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextContent() {
@@ -149,8 +147,7 @@ public final class PolicyPurposeOfUseAnnotation extends com.google.api.client.js
 
   /**
    * The bytes of actual text content in the sentence that mentions the purpose of use. This makes
-   * it much easier to consume the information. NOTE: This field might contain HTML and does not
-   * guarantee a SafeHtml security contract go/safehtmltypecontracts#safehtml.
+   * it much easier to consume the information.
    * @param textContent textContent or {@code null} for none
    */
   public PolicyPurposeOfUseAnnotation setTextContent(java.lang.String textContent) {

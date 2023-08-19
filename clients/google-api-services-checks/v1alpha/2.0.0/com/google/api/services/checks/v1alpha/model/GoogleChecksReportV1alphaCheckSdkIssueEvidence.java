@@ -17,7 +17,7 @@
 package com.google.api.services.checks.v1alpha.model;
 
 /**
- * Response containing the analyzed privacy policy for the FindPrivacyPolicy method.
+ * Evidence concerning an SDK issue.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Checks API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.checks.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FindPrivacyPolicyResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleChecksReportV1alphaCheckSdkIssueEvidence extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The SDK with an issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String privacyPolicy;
+  private GoogleChecksReportV1alphaSdk sdk;
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
+   * The SDK version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sdkVersion;
+
+  /**
+   * The SDK with an issue.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPrivacyPolicy() {
-    return privacyPolicy;
+  public GoogleChecksReportV1alphaSdk getSdk() {
+    return sdk;
   }
 
   /**
-   * Resource name of the PrivacyPolicy that was found.
-   * @param privacyPolicy privacyPolicy or {@code null} for none
+   * The SDK with an issue.
+   * @param sdk sdk or {@code null} for none
    */
-  public FindPrivacyPolicyResponse setPrivacyPolicy(java.lang.String privacyPolicy) {
-    this.privacyPolicy = privacyPolicy;
+  public GoogleChecksReportV1alphaCheckSdkIssueEvidence setSdk(GoogleChecksReportV1alphaSdk sdk) {
+    this.sdk = sdk;
+    return this;
+  }
+
+  /**
+   * The SDK version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSdkVersion() {
+    return sdkVersion;
+  }
+
+  /**
+   * The SDK version.
+   * @param sdkVersion sdkVersion or {@code null} for none
+   */
+  public GoogleChecksReportV1alphaCheckSdkIssueEvidence setSdkVersion(java.lang.String sdkVersion) {
+    this.sdkVersion = sdkVersion;
     return this;
   }
 
   @Override
-  public FindPrivacyPolicyResponse set(String fieldName, Object value) {
-    return (FindPrivacyPolicyResponse) super.set(fieldName, value);
+  public GoogleChecksReportV1alphaCheckSdkIssueEvidence set(String fieldName, Object value) {
+    return (GoogleChecksReportV1alphaCheckSdkIssueEvidence) super.set(fieldName, value);
   }
 
   @Override
-  public FindPrivacyPolicyResponse clone() {
-    return (FindPrivacyPolicyResponse) super.clone();
+  public GoogleChecksReportV1alphaCheckSdkIssueEvidence clone() {
+    return (GoogleChecksReportV1alphaCheckSdkIssueEvidence) super.clone();
   }
 
 }

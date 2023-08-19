@@ -17,7 +17,8 @@
 package com.google.api.services.drive.model;
 
 /**
- * A comment on a file.
+ * A comment on a file. Some resource methods (such as `comments.update`) require a `commentId`. Use
+ * the `comments.list` method to retrieve the ID for a comment in a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

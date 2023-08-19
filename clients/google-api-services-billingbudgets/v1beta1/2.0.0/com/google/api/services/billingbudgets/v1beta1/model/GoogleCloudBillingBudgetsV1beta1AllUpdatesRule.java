@@ -40,6 +40,16 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
   private java.lang.Boolean disableDefaultIamRecipients;
 
   /**
+   * Optional. When set to true, and when the budget has a single project configured, notifications
+   * will be sent to project level recipients of that project. This field will be ignored if the
+   * budget has multiple or no project configured. Currently, project level recipients are the users
+   * with `Owner` role on a cloud project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableProjectLevelRecipients;
+
+  /**
    * Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to
    * default recipients who have billing account IAM roles. The value is the full REST resource name
    * of a monitoring notification channel with the form
@@ -94,6 +104,29 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
    */
   public GoogleCloudBillingBudgetsV1beta1AllUpdatesRule setDisableDefaultIamRecipients(java.lang.Boolean disableDefaultIamRecipients) {
     this.disableDefaultIamRecipients = disableDefaultIamRecipients;
+    return this;
+  }
+
+  /**
+   * Optional. When set to true, and when the budget has a single project configured, notifications
+   * will be sent to project level recipients of that project. This field will be ignored if the
+   * budget has multiple or no project configured. Currently, project level recipients are the users
+   * with `Owner` role on a cloud project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableProjectLevelRecipients() {
+    return enableProjectLevelRecipients;
+  }
+
+  /**
+   * Optional. When set to true, and when the budget has a single project configured, notifications
+   * will be sent to project level recipients of that project. This field will be ignored if the
+   * budget has multiple or no project configured. Currently, project level recipients are the users
+   * with `Owner` role on a cloud project.
+   * @param enableProjectLevelRecipients enableProjectLevelRecipients or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1beta1AllUpdatesRule setEnableProjectLevelRecipients(java.lang.Boolean enableProjectLevelRecipients) {
+    this.enableProjectLevelRecipients = enableProjectLevelRecipients;
     return this;
   }
 

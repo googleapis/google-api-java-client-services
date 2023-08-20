@@ -107,16 +107,6 @@ public final class GoogleCloudAiplatformV1Feature extends com.google.api.client.
   private java.lang.String valueType;
 
   /**
-   * The labels with user-defined metadata to organize your versions. Label keys and values can be
-   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. See
-   * https://goo.gl/xmQnxf for more information and examples of labels.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> versionLabels;
-
-  /**
    * Output only. Timestamp when this EntityType was created.
    * @return value or {@code null} for none
    */
@@ -292,29 +282,6 @@ public final class GoogleCloudAiplatformV1Feature extends com.google.api.client.
    */
   public GoogleCloudAiplatformV1Feature setValueType(java.lang.String valueType) {
     this.valueType = valueType;
-    return this;
-  }
-
-  /**
-   * The labels with user-defined metadata to organize your versions. Label keys and values can be
-   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. See
-   * https://goo.gl/xmQnxf for more information and examples of labels.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getVersionLabels() {
-    return versionLabels;
-  }
-
-  /**
-   * The labels with user-defined metadata to organize your versions. Label keys and values can be
-   * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
-   * characters, underscores and dashes. International characters are allowed. See
-   * https://goo.gl/xmQnxf for more information and examples of labels.
-   * @param versionLabels versionLabels or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1Feature setVersionLabels(java.util.Map<String, java.lang.String> versionLabels) {
-    this.versionLabels = versionLabels;
     return this;
   }
 

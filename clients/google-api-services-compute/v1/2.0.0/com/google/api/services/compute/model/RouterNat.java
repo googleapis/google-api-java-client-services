@@ -33,8 +33,8 @@ package com.google.api.services.compute.model;
 public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
-   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
-   * STANDARD. If not specified, PREMIUM tier will be used.
+   * The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, then the current project-level default tier is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,8 +190,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.lang.Integer udpIdleTimeoutSec;
 
   /**
-   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
-   * STANDARD. If not specified, PREMIUM tier will be used.
+   * The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, then the current project-level default tier is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoNetworkTier() {
@@ -199,8 +199,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM,
-   * STANDARD. If not specified, PREMIUM tier will be used.
+   * The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM,
+   * STANDARD. If not specified, then the current project-level default tier is used.
    * @param autoNetworkTier autoNetworkTier or {@code null} for none
    */
   public RouterNat setAutoNetworkTier(java.lang.String autoNetworkTier) {

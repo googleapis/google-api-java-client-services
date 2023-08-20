@@ -270,7 +270,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The
-   * opaque identifier of an PARTNER attachment used to initiate provisioning with a selected
+   * opaque identifier of a PARTNER attachment used to initiate provisioning with a selected
    * partner. Of the form "XXXXX/region/domain"
    * The value may be {@code null}.
    */
@@ -288,7 +288,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Informational metadata about Partner attachments from Partners to display to customers. Output
-   * only for for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
+   * only for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1001,7 +1001,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The
-   * opaque identifier of an PARTNER attachment used to initiate provisioning with a selected
+   * opaque identifier of a PARTNER attachment used to initiate provisioning with a selected
    * partner. Of the form "XXXXX/region/domain"
    * @return value or {@code null} for none
    */
@@ -1011,7 +1011,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output only for type PARTNER. Input only for PARTNER_PROVIDER. Not present for DEDICATED]. The
-   * opaque identifier of an PARTNER attachment used to initiate provisioning with a selected
+   * opaque identifier of a PARTNER attachment used to initiate provisioning with a selected
    * partner. Of the form "XXXXX/region/domain"
    * @param pairingKey pairingKey or {@code null} for none
    */
@@ -1043,7 +1043,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Informational metadata about Partner attachments from Partners to display to customers. Output
-   * only for for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
+   * only for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
    * @return value or {@code null} for none
    */
   public InterconnectAttachmentPartnerMetadata getPartnerMetadata() {
@@ -1052,7 +1052,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Informational metadata about Partner attachments from Partners to display to customers. Output
-   * only for for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
+   * only for PARTNER type, mutable for PARTNER_PROVIDER, not available for DEDICATED.
    * @param partnerMetadata partnerMetadata or {@code null} for none
    */
   public InterconnectAttachment setPartnerMetadata(InterconnectAttachmentPartnerMetadata partnerMetadata) {

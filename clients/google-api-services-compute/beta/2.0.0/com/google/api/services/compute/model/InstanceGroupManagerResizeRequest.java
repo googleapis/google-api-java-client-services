@@ -98,10 +98,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String state;
 
   /**
-   * [Output only] Status of the request. The Status message is aligned with QueuedResource.status.
-   * ResizeRequest.queuing_policy contains the queuing policy as provided by the user; it could have
-   * either valid_until_time or valid_until_duration. ResizeRequest.status.queuing_policy always
-   * contains absolute time as calculated by the server when the request is queued.
+   * [Output only] Status of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,10 +270,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Status of the request. The Status message is aligned with QueuedResource.status.
-   * ResizeRequest.queuing_policy contains the queuing policy as provided by the user; it could have
-   * either valid_until_time or valid_until_duration. ResizeRequest.status.queuing_policy always
-   * contains absolute time as calculated by the server when the request is queued.
+   * [Output only] Status of the request.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatus getStatus() {
@@ -284,10 +278,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Status of the request. The Status message is aligned with QueuedResource.status.
-   * ResizeRequest.queuing_policy contains the queuing policy as provided by the user; it could have
-   * either valid_until_time or valid_until_duration. ResizeRequest.status.queuing_policy always
-   * contains absolute time as calculated by the server when the request is queued.
+   * [Output only] Status of the request.
    * @param status status or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setStatus(InstanceGroupManagerResizeRequestStatus status) {

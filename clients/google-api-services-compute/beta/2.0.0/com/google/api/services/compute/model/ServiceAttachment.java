@@ -191,6 +191,15 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String targetService;
 
   /**
+   * When a tunneling config is set on this service attachment it will encapsulate traffic between
+   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
+   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceAttachmentTunnelingConfig tunnelingConfig;
+
+  /**
    * [Output Only] An array of connections for all the consumers connected to this service
    * attachment.
    * @return value or {@code null} for none
@@ -598,6 +607,27 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setTargetService(java.lang.String targetService) {
     this.targetService = targetService;
+    return this;
+  }
+
+  /**
+   * When a tunneling config is set on this service attachment it will encapsulate traffic between
+   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
+   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * @return value or {@code null} for none
+   */
+  public ServiceAttachmentTunnelingConfig getTunnelingConfig() {
+    return tunnelingConfig;
+  }
+
+  /**
+   * When a tunneling config is set on this service attachment it will encapsulate traffic between
+   * consumer and producer. When tunneling is enabled: - nat_subnets must be unset -
+   * enable_proxy_protocol must be false - producer_forwarding_rule must be a L4 ILB. -
+   * @param tunnelingConfig tunnelingConfig or {@code null} for none
+   */
+  public ServiceAttachment setTunnelingConfig(ServiceAttachmentTunnelingConfig tunnelingConfig) {
+    this.tunnelingConfig = tunnelingConfig;
     return this;
   }
 

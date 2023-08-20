@@ -38,6 +38,14 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   private GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig;
 
   /**
+   * Optional. Override the schema of the ProcessorVersion. Will return an Invalid Argument error if
+   * this field is set when the underlying ProcessorVersion doesn't support schema override.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentSchema schemaOverride;
+
+  /**
    * Only applicable to `OCR_PROCESSOR`. Returns error if set on other processor types.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptions setOcrConfig(GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig) {
     this.ocrConfig = ocrConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Override the schema of the ProcessorVersion. Will return an Invalid Argument error if
+   * this field is set when the underlying ProcessorVersion doesn't support schema override.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentSchema getSchemaOverride() {
+    return schemaOverride;
+  }
+
+  /**
+   * Optional. Override the schema of the ProcessorVersion. Will return an Invalid Argument error if
+   * this field is set when the underlying ProcessorVersion doesn't support schema override.
+   * @param schemaOverride schemaOverride or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptions setSchemaOverride(GoogleCloudDocumentaiV1beta3DocumentSchema schemaOverride) {
+    this.schemaOverride = schemaOverride;
     return this;
   }
 

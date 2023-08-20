@@ -103,6 +103,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowPscGlobalAccess;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPscPacketInjection;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load
    * balancer types.
@@ -155,10 +165,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when
-   * creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/
-   * project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
    * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * The value may be {@code null}.
@@ -564,6 +574,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPscPacketInjection() {
+    return allowPscPacketInjection;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * @param allowPscPacketInjection allowPscPacketInjection or {@code null} for none
+   */
+  public ForwardingRule setAllowPscPacketInjection(java.lang.Boolean allowPscPacketInjection) {
+    this.allowPscPacketInjection = allowPscPacketInjection;
+    return this;
+  }
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load
    * balancer types.
@@ -721,10 +754,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when
-   * creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/
-   * project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
    * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * @return value or {@code null} for none
@@ -735,10 +768,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
 
   /**
    * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
-   * IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when
-   * creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
-   * https://www.googleapis.com/compute/v1/projects/
-   * project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
    * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
    * regions/region/publicDelegatedPrefixes/sub-pdp-name
    * @param ipCollection ipCollection or {@code null} for none

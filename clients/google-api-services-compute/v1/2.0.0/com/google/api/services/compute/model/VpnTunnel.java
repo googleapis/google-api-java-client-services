@@ -132,11 +132,11 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.Integer peerExternalGatewayInterface;
 
   /**
-   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * URL of the peer side HA VPN gateway to which this VPN tunnel is connected. Provided by the
    * client when the VPN tunnel is created. This field can be used when creating highly available
    * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
    * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
-   * GCP VPN gateway.
+   * Google Cloud VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -518,11 +518,11 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * URL of the peer side HA VPN gateway to which this VPN tunnel is connected. Provided by the
    * client when the VPN tunnel is created. This field can be used when creating highly available
    * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
    * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
-   * GCP VPN gateway.
+   * Google Cloud VPN gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerGcpGateway() {
@@ -530,11 +530,11 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the
+   * URL of the peer side HA VPN gateway to which this VPN tunnel is connected. Provided by the
    * client when the VPN tunnel is created. This field can be used when creating highly available
    * VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway.
    * If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer
-   * GCP VPN gateway.
+   * Google Cloud VPN gateway.
    * @param peerGcpGateway peerGcpGateway or {@code null} for none
    */
   public VpnTunnel setPeerGcpGateway(java.lang.String peerGcpGateway) {

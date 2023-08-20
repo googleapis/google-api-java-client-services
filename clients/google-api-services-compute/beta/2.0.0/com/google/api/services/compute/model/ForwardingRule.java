@@ -103,6 +103,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowPscGlobalAccess;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPscPacketInjection;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load
    * balancer types.
@@ -540,6 +550,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setAllowPscGlobalAccess(java.lang.Boolean allowPscGlobalAccess) {
     this.allowPscGlobalAccess = allowPscGlobalAccess;
+    return this;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPscPacketInjection() {
+    return allowPscPacketInjection;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   * @param allowPscPacketInjection allowPscPacketInjection or {@code null} for none
+   */
+  public ForwardingRule setAllowPscPacketInjection(java.lang.Boolean allowPscPacketInjection) {
+    this.allowPscPacketInjection = allowPscPacketInjection;
     return this;
   }
 

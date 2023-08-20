@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceSettingsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * A metadata key/value items map. The total size of all keys and values must be less than 512KB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> items;
+
+  /**
    * [Output Only] Type of the resource. Always compute#metadata for metadata.
    * The value may be {@code null}.
    */
@@ -37,11 +44,21 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
   private java.lang.String kind;
 
   /**
-   * A metadata key/value map. The total size of all keys and values must be less than 512KB.
-   * The value may be {@code null}.
+   * A metadata key/value items map. The total size of all keys and values must be less than 512KB.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> metadata;
+  public java.util.Map<String, java.lang.String> getItems() {
+    return items;
+  }
+
+  /**
+   * A metadata key/value items map. The total size of all keys and values must be less than 512KB.
+   * @param items items or {@code null} for none
+   */
+  public InstanceSettingsMetadata setItems(java.util.Map<String, java.lang.String> items) {
+    this.items = items;
+    return this;
+  }
 
   /**
    * [Output Only] Type of the resource. Always compute#metadata for metadata.
@@ -57,23 +74,6 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
    */
   public InstanceSettingsMetadata setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * A metadata key/value map. The total size of all keys and values must be less than 512KB.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * A metadata key/value map. The total size of all keys and values must be less than 512KB.
-   * @param metadata metadata or {@code null} for none
-   */
-  public InstanceSettingsMetadata setMetadata(java.util.Map<String, java.lang.String> metadata) {
-    this.metadata = metadata;
     return this;
   }
 

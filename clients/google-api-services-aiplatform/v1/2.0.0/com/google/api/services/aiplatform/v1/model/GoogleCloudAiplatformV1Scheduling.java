@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Indicates if the job should retry for internal errors after the job starts running.
+   * If true, overrides `Scheduling.restart_job_on_worker_restart` to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableRetries;
+
+  /**
    * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by
    * distributed training jobs that are not resilient to workers leaving and joining a job.
    * The value may be {@code null}.
@@ -43,6 +51,25 @@ public final class GoogleCloudAiplatformV1Scheduling extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private String timeout;
+
+  /**
+   * Optional. Indicates if the job should retry for internal errors after the job starts running.
+   * If true, overrides `Scheduling.restart_job_on_worker_restart` to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableRetries() {
+    return disableRetries;
+  }
+
+  /**
+   * Optional. Indicates if the job should retry for internal errors after the job starts running.
+   * If true, overrides `Scheduling.restart_job_on_worker_restart` to false.
+   * @param disableRetries disableRetries or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Scheduling setDisableRetries(java.lang.Boolean disableRetries) {
+    this.disableRetries = disableRetries;
+    return this;
+  }
 
   /**
    * Restarts the entire CustomJob if a worker gets restarted. This feature can be used by

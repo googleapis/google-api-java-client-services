@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Metadata about a property.
+ * Metadata for document summarization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta3PropertyMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiV1beta3SummaryOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Field extraction metadata on the property.
+   * What format the summary should be in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3FieldExtractionMetadata fieldExtractionMetadata;
+  private java.lang.String format;
 
   /**
-   * Whether the property should be considered as "inactive".
+   * How long the summary should be.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean inactive;
+  private java.lang.String length;
 
   /**
-   * Field extraction metadata on the property.
+   * What format the summary should be in.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3FieldExtractionMetadata getFieldExtractionMetadata() {
-    return fieldExtractionMetadata;
+  public java.lang.String getFormat() {
+    return format;
   }
 
   /**
-   * Field extraction metadata on the property.
-   * @param fieldExtractionMetadata fieldExtractionMetadata or {@code null} for none
+   * What format the summary should be in.
+   * @param format format or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata setFieldExtractionMetadata(GoogleCloudDocumentaiV1beta3FieldExtractionMetadata fieldExtractionMetadata) {
-    this.fieldExtractionMetadata = fieldExtractionMetadata;
+  public GoogleCloudDocumentaiV1beta3SummaryOptions setFormat(java.lang.String format) {
+    this.format = format;
     return this;
   }
 
   /**
-   * Whether the property should be considered as "inactive".
+   * How long the summary should be.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getInactive() {
-    return inactive;
+  public java.lang.String getLength() {
+    return length;
   }
 
   /**
-   * Whether the property should be considered as "inactive".
-   * @param inactive inactive or {@code null} for none
+   * How long the summary should be.
+   * @param length length or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata setInactive(java.lang.Boolean inactive) {
-    this.inactive = inactive;
+  public GoogleCloudDocumentaiV1beta3SummaryOptions setLength(java.lang.String length) {
+    this.length = length;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta3PropertyMetadata) super.set(fieldName, value);
+  public GoogleCloudDocumentaiV1beta3SummaryOptions set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiV1beta3SummaryOptions) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3PropertyMetadata clone() {
-    return (GoogleCloudDocumentaiV1beta3PropertyMetadata) super.clone();
+  public GoogleCloudDocumentaiV1beta3SummaryOptions clone() {
+    return (GoogleCloudDocumentaiV1beta3SummaryOptions) super.clone();
   }
 
 }

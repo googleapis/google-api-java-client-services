@@ -109,8 +109,8 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Required. The organization address for the customer. To enforce US laws and embargoes, we
-   * require a region and zip code. You must provide valid addresses for every customer. To set the
-   * customer's language, use the Customer-level language code.
+   * require a region, postal code, and address lines. You must provide valid addresses for every
+   * customer. To set the customer's language, use the Customer-level language code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,8 +318,8 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Required. The organization address for the customer. To enforce US laws and embargoes, we
-   * require a region and zip code. You must provide valid addresses for every customer. To set the
-   * customer's language, use the Customer-level language code.
+   * require a region, postal code, and address lines. You must provide valid addresses for every
+   * customer. To set the customer's language, use the Customer-level language code.
    * @return value or {@code null} for none
    */
   public GoogleTypePostalAddress getOrgPostalAddress() {
@@ -328,8 +328,8 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Required. The organization address for the customer. To enforce US laws and embargoes, we
-   * require a region and zip code. You must provide valid addresses for every customer. To set the
-   * customer's language, use the Customer-level language code.
+   * require a region, postal code, and address lines. You must provide valid addresses for every
+   * customer. To set the customer's language, use the Customer-level language code.
    * @param orgPostalAddress orgPostalAddress or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setOrgPostalAddress(GoogleTypePostalAddress orgPostalAddress) {

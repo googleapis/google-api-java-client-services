@@ -37,14 +37,6 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
   private GoogleTypeDate date;
 
   /**
-   * Output only. Date of the endpoint expressed in RFC3339 format in the local timezone for the
-   * place. For example 2010-12-31.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dateDeprecated;
-
-  /**
    * Output only. A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is Monday, etc.
    * The value may be {@code null}.
    */
@@ -89,25 +81,6 @@ public final class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends com.go
    */
   public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setDate(GoogleTypeDate date) {
     this.date = date;
-    return this;
-  }
-
-  /**
-   * Output only. Date of the endpoint expressed in RFC3339 format in the local timezone for the
-   * place. For example 2010-12-31.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDateDeprecated() {
-    return dateDeprecated;
-  }
-
-  /**
-   * Output only. Date of the endpoint expressed in RFC3339 format in the local timezone for the
-   * place. For example 2010-12-31.
-   * @param dateDeprecated dateDeprecated or {@code null} for none
-   */
-  public GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint setDateDeprecated(java.lang.String dateDeprecated) {
-    this.dateDeprecated = dateDeprecated;
     return this;
   }
 

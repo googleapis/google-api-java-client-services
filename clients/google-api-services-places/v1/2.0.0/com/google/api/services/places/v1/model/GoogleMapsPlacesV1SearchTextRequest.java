@@ -48,15 +48,6 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.lang.String languageCode;
 
   /**
-   * [Deprecated!]The region to search. Setting location would usually yields better results.
-   * Recommended to set. This location serves as a bias unless strict_restriction is set to true,
-   * which turns the location to a strict restriction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1SearchTextRequestLocation location;
-
-  /**
    * The region to search. This location serves as a bias which means results around given location
    * might be returned. Cannot be set along with location_restriction.
    * The value may be {@code null}.
@@ -109,16 +100,6 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.util.List<java.lang.String> priceLevels;
 
   /**
-   * [Deprecated!]Used to restrict the search to places that are within a certain price range. This
-   * is on a scale of 0 to 4. Set a minimum of 0 or set a maximum of 4 has no effect on the search
-   * results. Min price is default to 0 and max price is default to 4. Default value will be used if
-   * either min or max is unset.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1Int32Range priceRange;
-
-  /**
    * How results will be ranked in the response.
    * The value may be {@code null}.
    */
@@ -126,10 +107,11 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private java.lang.String rankPreference;
 
   /**
-   * The Unicode country/region code (CLDR) of the location where the request is coming from. It is
-   * used to display the place details, like region-specific place name, if available. For more
-   * information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit
-   * region codes are not currently supported.
+   * The Unicode country/region code (CLDR) of the location where the request is coming from. This
+   * parameter is used to display the place details, like region-specific place name, if available.
+   * The parameter can affect results based on applicable law. For more information, see
+   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
+   * not currently supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,27 +171,6 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   public GoogleMapsPlacesV1SearchTextRequest setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
-    return this;
-  }
-
-  /**
-   * [Deprecated!]The region to search. Setting location would usually yields better results.
-   * Recommended to set. This location serves as a bias unless strict_restriction is set to true,
-   * which turns the location to a strict restriction.
-   * @return value or {@code null} for none
-   */
-  public GoogleMapsPlacesV1SearchTextRequestLocation getLocation() {
-    return location;
-  }
-
-  /**
-   * [Deprecated!]The region to search. Setting location would usually yields better results.
-   * Recommended to set. This location serves as a bias unless strict_restriction is set to true,
-   * which turns the location to a strict restriction.
-   * @param location location or {@code null} for none
-   */
-  public GoogleMapsPlacesV1SearchTextRequest setLocation(GoogleMapsPlacesV1SearchTextRequestLocation location) {
-    this.location = location;
     return this;
   }
 
@@ -336,29 +297,6 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * [Deprecated!]Used to restrict the search to places that are within a certain price range. This
-   * is on a scale of 0 to 4. Set a minimum of 0 or set a maximum of 4 has no effect on the search
-   * results. Min price is default to 0 and max price is default to 4. Default value will be used if
-   * either min or max is unset.
-   * @return value or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Int32Range getPriceRange() {
-    return priceRange;
-  }
-
-  /**
-   * [Deprecated!]Used to restrict the search to places that are within a certain price range. This
-   * is on a scale of 0 to 4. Set a minimum of 0 or set a maximum of 4 has no effect on the search
-   * results. Min price is default to 0 and max price is default to 4. Default value will be used if
-   * either min or max is unset.
-   * @param priceRange priceRange or {@code null} for none
-   */
-  public GoogleMapsPlacesV1SearchTextRequest setPriceRange(GoogleMapsPlacesV1Int32Range priceRange) {
-    this.priceRange = priceRange;
-    return this;
-  }
-
-  /**
    * How results will be ranked in the response.
    * @return value or {@code null} for none
    */
@@ -376,10 +314,11 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * The Unicode country/region code (CLDR) of the location where the request is coming from. It is
-   * used to display the place details, like region-specific place name, if available. For more
-   * information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit
-   * region codes are not currently supported.
+   * The Unicode country/region code (CLDR) of the location where the request is coming from. This
+   * parameter is used to display the place details, like region-specific place name, if available.
+   * The parameter can affect results based on applicable law. For more information, see
+   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
+   * not currently supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -387,10 +326,11 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * The Unicode country/region code (CLDR) of the location where the request is coming from. It is
-   * used to display the place details, like region-specific place name, if available. For more
-   * information, see http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit
-   * region codes are not currently supported.
+   * The Unicode country/region code (CLDR) of the location where the request is coming from. This
+   * parameter is used to display the place details, like region-specific place name, if available.
+   * The parameter can affect results based on applicable law. For more information, see
+   * http://www.unicode.org/reports/tr35/#unicode_region_subtag. Note that 3-digit region codes are
+   * not currently supported.
    * @param regionCode regionCode or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setRegionCode(java.lang.String regionCode) {

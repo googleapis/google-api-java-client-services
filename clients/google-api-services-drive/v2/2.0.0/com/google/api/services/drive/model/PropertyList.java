@@ -50,7 +50,7 @@ public final class PropertyList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#propertyList`.s
+   * This is always `drive#propertyList`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class PropertyList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#propertyList`.s
+   * This is always `drive#propertyList`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -106,7 +106,7 @@ public final class PropertyList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always `drive#propertyList`.s
+   * This is always `drive#propertyList`.
    * @param kind kind or {@code null} for none
    */
   public PropertyList setKind(java.lang.String kind) {

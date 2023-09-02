@@ -75,7 +75,9 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Required. The URL restriction for the user list.
+   * Required. Deprecated. This will be removed in October 2023. For more information, see the
+   * release notes: https://developers.google.com/authorized-buyers/apis/relnotes#real-time-bidding-
+   * api The URL restriction for the user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +181,9 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The URL restriction for the user list.
+   * Required. Deprecated. This will be removed in October 2023. For more information, see the
+   * release notes: https://developers.google.com/authorized-buyers/apis/relnotes#real-time-bidding-
+   * api The URL restriction for the user list.
    * @return value or {@code null} for none
    */
   public UrlRestriction getUrlRestriction() {
@@ -187,7 +191,9 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The URL restriction for the user list.
+   * Required. Deprecated. This will be removed in October 2023. For more information, see the
+   * release notes: https://developers.google.com/authorized-buyers/apis/relnotes#real-time-bidding-
+   * api The URL restriction for the user list.
    * @param urlRestriction urlRestriction or {@code null} for none
    */
   public UserList setUrlRestriction(UrlRestriction urlRestriction) {

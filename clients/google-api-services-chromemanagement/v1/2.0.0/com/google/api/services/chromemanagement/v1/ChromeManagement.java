@@ -3140,6 +3140,496 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
       }
       /**
+       * An accessor for creating requests from the NotificationConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+       *   {@code ChromeManagement.NotificationConfigs.List request = chromemanagement.notificationConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NotificationConfigs notificationConfigs() {
+        return new NotificationConfigs();
+      }
+
+      /**
+       * The "notificationConfigs" collection of methods.
+       */
+      public class NotificationConfigs {
+
+        /**
+         * Create a telemetry notification config.
+         *
+         * Create a request for the method "notificationConfigs.create".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this notification config will be created. Format:
+         *        `customers/{customer}`
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/telemetry/notificationConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Create a telemetry notification config.
+           *
+           * Create a request for the method "notificationConfigs.create".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this notification config will be created. Format:
+         *        `customers/{customer}`
+           * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig content) {
+            super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1TelemetryNotificationConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this notification config will be created. Format:
+           * `customers/{customer}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this notification config will be created. Format:
+         `customers/{customer}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this notification config will be created. Format:
+           * `customers/{customer}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a telemetry notification config.
+         *
+         * Create a request for the method "notificationConfigs.delete".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the notification config to delete. Format:
+         *        `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/telemetry/notificationConfigs/[^/]+$");
+
+          /**
+           * Delete a telemetry notification config.
+           *
+           * Create a request for the method "notificationConfigs.delete".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the notification config to delete. Format:
+         *        `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ChromeManagement.this, "DELETE", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/telemetry/notificationConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the notification config to delete. Format:
+           * `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the notification config to delete. Format:
+         `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the notification config to delete. Format:
+           * `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/telemetry/notificationConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List all telemetry notification configs.
+         *
+         * Create a request for the method "notificationConfigs.list".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent which owns the notification configs.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1ListTelemetryNotificationConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/telemetry/notificationConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * List all telemetry notification configs.
+           *
+           * Create a request for the method "notificationConfigs.list".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent which owns the notification configs.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1ListTelemetryNotificationConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent which owns the notification configs. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent which owns the notification configs.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent which owns the notification configs. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of notification configs to return. The service may return fewer than
+           * this value. If unspecified, at most 100 notification configs will be returned. The
+           * maximum value is 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of notification configs to return. The service may return fewer than this value.
+         If unspecified, at most 100 notification configs will be returned. The maximum value is 100; values
+         above 100 will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of notification configs to return. The service may return fewer than
+           * this value. If unspecified, at most 100 notification configs will be returned. The
+           * maximum value is 100; values above 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListTelemetryNotificationConfigs` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListTelemetryNotificationConfigs` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListTelemetryNotificationConfigs` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListTelemetryNotificationConfigs` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListTelemetryNotificationConfigs` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListTelemetryNotificationConfigs` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Users collection.
        *
        * <p>The typical use is:</p>

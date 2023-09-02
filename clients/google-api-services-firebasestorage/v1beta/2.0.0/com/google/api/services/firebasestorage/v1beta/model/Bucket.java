@@ -31,14 +31,14 @@ package com.google.api.services.firebasestorage.v1beta.model;
 public final class Bucket extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the bucket.
+   * Output only. Resource name of the bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Resource name of the bucket.
+   * Output only. Resource name of the bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -46,7 +46,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the bucket.
+   * Output only. Resource name of the bucket.
    * @param name name or {@code null} for none
    */
   public Bucket setName(java.lang.String name) {

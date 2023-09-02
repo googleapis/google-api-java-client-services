@@ -17,7 +17,9 @@
 package com.google.api.services.realtimebidding.v1.model;
 
 /**
- * Represents the URL restriction (for the URL captured by the pixel callback) for a user list.
+ * Deprecated. This will be removed in October 2023. For more information, see the release notes:
+ * https://developers.google.com/authorized-buyers/apis/relnotes#real-time-bidding-api Represents
+ * the URL restriction (for the URL captured by the pixel callback) for a user list.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Real-time Bidding API. For a detailed explanation

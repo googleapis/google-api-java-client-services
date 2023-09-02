@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * The behaviour for handling FHIR extensions that aren't otherwise specified for de-identification.
+ * The behavior for handling FHIR extensions that aren't otherwise specified for de-identification.
  * If provided, all extensions are preserved during de-identification by default. If unspecified,
  * all extensions are removed during de-identification by default.
  *

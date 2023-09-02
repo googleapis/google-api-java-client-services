@@ -31,17 +31,17 @@ public final class FhirFieldConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * `FieldMetadata` is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `keep_extensions`. If a field can be matched by more than one
-   * `FieldMetadata`, the first `FieldMetadata.Action` is applied. Overrides `options` and
-   * `profile`.
+   * FieldMetadata `action` is passed through to the output dataset unmodified. All extensions will
+   * be processed according to keep_extensions. If a field can be matched by more than one
+   * FieldMetadata `action`, the first `action` option is applied. Overrides options and the union
+   * field `profile` in FhirFieldConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata> fieldMetadataList;
 
   /**
-   * Specifies additional options, overriding the base `profile`.
+   * Specifies additional options, overriding the base ProfileType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +56,10 @@ public final class FhirFieldConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * `FieldMetadata` is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `keep_extensions`. If a field can be matched by more than one
-   * `FieldMetadata`, the first `FieldMetadata.Action` is applied. Overrides `options` and
-   * `profile`.
+   * FieldMetadata `action` is passed through to the output dataset unmodified. All extensions will
+   * be processed according to keep_extensions. If a field can be matched by more than one
+   * FieldMetadata `action`, the first `action` option is applied. Overrides options and the union
+   * field `profile` in FhirFieldConfig.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata> getFieldMetadataList() {
@@ -68,10 +68,10 @@ public final class FhirFieldConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
-   * `FieldMetadata` is passed through to the output dataset unmodified. All extensions will be
-   * processed according to `keep_extensions`. If a field can be matched by more than one
-   * `FieldMetadata`, the first `FieldMetadata.Action` is applied. Overrides `options` and
-   * `profile`.
+   * FieldMetadata `action` is passed through to the output dataset unmodified. All extensions will
+   * be processed according to keep_extensions. If a field can be matched by more than one
+   * FieldMetadata `action`, the first `action` option is applied. Overrides options and the union
+   * field `profile` in FhirFieldConfig.
    * @param fieldMetadataList fieldMetadataList or {@code null} for none
    */
   public FhirFieldConfig setFieldMetadataList(java.util.List<GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata> fieldMetadataList) {
@@ -80,7 +80,7 @@ public final class FhirFieldConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies additional options, overriding the base `profile`.
+   * Specifies additional options, overriding the base ProfileType.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyOptions getOptions() {
@@ -88,7 +88,7 @@ public final class FhirFieldConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies additional options, overriding the base `profile`.
+   * Specifies additional options, overriding the base ProfileType.
    * @param options options or {@code null} for none
    */
   public FhirFieldConfig setOptions(GoogleCloudHealthcareV1beta1DeidentifyOptions options) {

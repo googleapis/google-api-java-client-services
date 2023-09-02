@@ -19,7 +19,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 /**
  * Replace field value with masking character. Supported
  * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
- * Markdown, Oid, String, Uri, Uuid, Xhtml
+ * Markdown, Oid, String, Uri, Uuid, Xhtml.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

@@ -23,7 +23,7 @@ package com.google.api.services.healthcare.v1beta1.model;
  * attempts to transform phrases matching any of the tags marked for removal (action codes D, Z, X,
  * and U) in the [Basic
  * Profile](http://dicom.nema.org/medical/dicom/2018e/output/chtml/part15/chapter_E.html). These
- * contextual phrases are replaced with the token "[CTX]". This option uses an additional `InfoType`
+ * contextual phrases are replaced with the token "[CTX]". This option uses an additional infoType
  * during inspection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

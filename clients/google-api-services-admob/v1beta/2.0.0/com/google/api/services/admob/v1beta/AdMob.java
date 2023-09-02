@@ -659,6 +659,392 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
 
+      /**
+       * An accessor for creating requests from the Adapters collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdMob admob = new AdMob(...);}
+       *   {@code AdMob.Adapters.List request = admob.adapters().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Adapters adapters() {
+        return new Adapters();
+      }
+
+      /**
+       * The "adapters" collection of methods.
+       */
+      public class Adapters {
+
+        /**
+         * List the adapters of the ad source.
+         *
+         * Create a request for the method "adapters.list".
+         *
+         * This request holds the parameters needed by the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent which owns this collection of adapters. Format:
+         *        accounts/{publisher_id}/adSources/{ad_source_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdMobRequest<com.google.api.services.admob.v1beta.model.ListAdaptersResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/adapters";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adSources/[^/]+$");
+
+          /**
+           * List the adapters of the ad source.
+           *
+           * Create a request for the method "adapters.list".
+           *
+           * This request holds the parameters needed by the the admob server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent which owns this collection of adapters. Format:
+         *        accounts/{publisher_id}/adSources/{ad_source_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1beta.model.ListAdaptersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adSources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent which owns this collection of adapters. Format:
+           * accounts/{publisher_id}/adSources/{ad_source_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent which owns this collection of adapters. Format:
+         accounts/{publisher_id}/adSources/{ad_source_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent which owns this collection of adapters. Format:
+           * accounts/{publisher_id}/adSources/{ad_source_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adSources/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of adapters to return. If unspecified or 0, at most 10,000 adapters
+           * will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+           * 20,000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of adapters to return. If unspecified or 0, at most 10,000 adapters will be
+         returned. The maximum value is 20,000; values above 20,000 will be coerced to 20,000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of adapters to return. If unspecified or 0, at most 10,000 adapters
+           * will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+           * 20,000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAdapters` call. Provide this to retrieve
+           * the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAdapters` call. Provide this to retrieve the subsequent
+         page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAdapters` call. Provide this to retrieve
+           * the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the AdUnitMappings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.AdUnitMappings.List request = admob.adUnitMappings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AdUnitMappings adUnitMappings() {
+      return new AdUnitMappings();
+    }
+
+    /**
+     * The "adUnitMappings" collection of methods.
+     */
+    public class AdUnitMappings {
+
+      /**
+       * Batch create the ad unit mappings under the specific AdMob account. The maximum allowed batch
+       * size is 100.
+       *
+       * Create a request for the method "adUnitMappings.batchCreate".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The AdMob account which owns this collection of ad unit mappings. Format:
+       *        accounts/{publisher_id} See https://support.google.com/admob/answer/2784578 for
+       *        instructions on how to find your AdMob publisher ID.
+       * @param content the {@link com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsRequest}
+       * @return the request
+       */
+      public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsRequest content) throws java.io.IOException {
+        BatchCreate result = new BatchCreate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCreate extends AdMobRequest<com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/adUnitMappings:batchCreate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Batch create the ad unit mappings under the specific AdMob account. The maximum allowed batch
+         * size is 100.
+         *
+         * Create a request for the method "adUnitMappings.batchCreate".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The AdMob account which owns this collection of ad unit mappings. Format:
+       *        accounts/{publisher_id} See https://support.google.com/admob/answer/2784578 for
+       *        instructions on how to find your AdMob publisher ID.
+         * @param content the {@link com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsRequest}
+         * @since 1.13
+         */
+        protected BatchCreate(java.lang.String parent, com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsRequest content) {
+          super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.BatchCreateAdUnitMappingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCreate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCreate setAccessToken(java.lang.String accessToken) {
+          return (BatchCreate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCreate setAlt(java.lang.String alt) {
+          return (BatchCreate) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCreate setCallback(java.lang.String callback) {
+          return (BatchCreate) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCreate setFields(java.lang.String fields) {
+          return (BatchCreate) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCreate setKey(java.lang.String key) {
+          return (BatchCreate) super.setKey(key);
+        }
+
+        @Override
+        public BatchCreate setOauthToken(java.lang.String oauthToken) {
+          return (BatchCreate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCreate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCreate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCreate setUploadType(java.lang.String uploadType) {
+          return (BatchCreate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The AdMob account which owns this collection of ad unit mappings. Format:
+         * accounts/{publisher_id} See https://support.google.com/admob/answer/2784578 for
+         * instructions on how to find your AdMob publisher ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The AdMob account which owns this collection of ad unit mappings. Format:
+       accounts/{publisher_id} See https://support.google.com/admob/answer/2784578 for instructions on how
+       to find your AdMob publisher ID.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The AdMob account which owns this collection of ad unit mappings. Format:
+         * accounts/{publisher_id} See https://support.google.com/admob/answer/2784578 for
+         * instructions on how to find your AdMob publisher ID.
+         */
+        public BatchCreate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchCreate set(String parameterName, Object value) {
+          return (BatchCreate) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the AdUnits collection.
@@ -680,6 +1066,145 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
      */
     public class AdUnits {
 
+      /**
+       * Creates an ad unit under the specified AdMob account.
+       *
+       * Create a request for the method "adUnits.create".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the account to create the specified ad unit for. Example:
+       *        accounts/pub-9876543210987654
+       * @param content the {@link com.google.api.services.admob.v1beta.model.AdUnit}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.admob.v1beta.model.AdUnit content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AdMobRequest<com.google.api.services.admob.v1beta.model.AdUnit> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/adUnits";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Creates an ad unit under the specified AdMob account.
+         *
+         * Create a request for the method "adUnits.create".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the account to create the specified ad unit for. Example:
+       *        accounts/pub-9876543210987654
+         * @param content the {@link com.google.api.services.admob.v1beta.model.AdUnit}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.admob.v1beta.model.AdUnit content) {
+          super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.AdUnit.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the account to create the specified ad unit for. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the account to create the specified ad unit for. Example:
+       accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the account to create the specified ad unit for. Example:
+         * accounts/pub-9876543210987654
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
       /**
        * List the ad units under the specified AdMob account.
        *
@@ -875,6 +1400,397 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
 
+      /**
+       * An accessor for creating requests from the AdUnitMappings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdMob admob = new AdMob(...);}
+       *   {@code AdMob.AdUnitMappings.List request = admob.adUnitMappings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AdUnitMappings adUnitMappings() {
+        return new AdUnitMappings();
+      }
+
+      /**
+       * The "adUnitMappings" collection of methods.
+       */
+      public class AdUnitMappings {
+
+        /**
+         * Create an ad unit mapping under the specific AdMob account and ad unit.
+         *
+         * Create a request for the method "adUnitMappings.create".
+         *
+         * This request holds the parameters needed by the admob server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent which owns the ad unit mapping. Format:
+         *        accounts/{publisher_id}/adUnits/{ad_unit_id}
+         * @param content the {@link com.google.api.services.admob.v1beta.model.AdUnitMapping}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.admob.v1beta.model.AdUnitMapping content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AdMobRequest<com.google.api.services.admob.v1beta.model.AdUnitMapping> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/adUnitMappings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adUnits/[^/]+$");
+
+          /**
+           * Create an ad unit mapping under the specific AdMob account and ad unit.
+           *
+           * Create a request for the method "adUnitMappings.create".
+           *
+           * This request holds the parameters needed by the the admob server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent which owns the ad unit mapping. Format:
+         *        accounts/{publisher_id}/adUnits/{ad_unit_id}
+           * @param content the {@link com.google.api.services.admob.v1beta.model.AdUnitMapping}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.admob.v1beta.model.AdUnitMapping content) {
+            super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.AdUnitMapping.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adUnits/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent which owns the ad unit mapping. Format:
+           * accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent which owns the ad unit mapping. Format:
+         accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent which owns the ad unit mapping. Format:
+           * accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adUnits/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List ad unit mappings under the specified AdMob account and ad unit.
+         *
+         * Create a request for the method "adUnitMappings.list".
+         *
+         * This request holds the parameters needed by the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent which owns this collection of ad unit mappings. Format:
+         *        accounts/{publisher_id}/adUnits/{ad_unit_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AdMobRequest<com.google.api.services.admob.v1beta.model.ListAdUnitMappingsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/adUnitMappings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/adUnits/[^/]+$");
+
+          /**
+           * List ad unit mappings under the specified AdMob account and ad unit.
+           *
+           * Create a request for the method "adUnitMappings.list".
+           *
+           * This request holds the parameters needed by the the admob server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent which owns this collection of ad unit mappings. Format:
+         *        accounts/{publisher_id}/adUnits/{ad_unit_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1beta.model.ListAdUnitMappingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adUnits/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent which owns this collection of ad unit mappings. Format:
+           * accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent which owns this collection of ad unit mappings. Format:
+         accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent which owns this collection of ad unit mappings. Format:
+           * accounts/{publisher_id}/adUnits/{ad_unit_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/adUnits/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
+           * /ebnf-filtering.txt). Possible field to filter by is: - "DISPLAY_NAME" Possible filter
+           * function is: - `IN`: Used to filter fields that represent a singleton including
+           * "DISPLAY_NAME". The filter functions can be added together using `AND`. `OR`
+           * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Ad Unit Mapping
+           * 1", "Test Ad Unit Mapping 2")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc/ebnf-
+         filtering.txt). Possible field to filter by is: - "DISPLAY_NAME" Possible filter function is: -
+         `IN`: Used to filter fields that represent a singleton including "DISPLAY_NAME". The filter
+         functions can be added together using `AND`. `OR` functionality is not supported. Example: filter:
+         IN(DISPLAY_NAME, "Test Ad Unit Mapping 1", "Test Ad Unit Mapping 2")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
+           * /ebnf-filtering.txt). Possible field to filter by is: - "DISPLAY_NAME" Possible filter
+           * function is: - `IN`: Used to filter fields that represent a singleton including
+           * "DISPLAY_NAME". The filter functions can be added together using `AND`. `OR`
+           * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Ad Unit Mapping
+           * 1", "Test Ad Unit Mapping 2")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of ad unit mappings to return. If unspecified or 0, at most 10,000
+           * ad unit mappings will be returned. The maximum value is 20,000; values above 20,000
+           * will be coerced to 20,000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of ad unit mappings to return. If unspecified or 0, at most 10,000 ad unit
+         mappings will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+         20,000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of ad unit mappings to return. If unspecified or 0, at most 10,000
+           * ad unit mappings will be returned. The maximum value is 20,000; values above 20,000
+           * will be coerced to 20,000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAdUnitMappings` call. Provide this to
+           * retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAdUnitMappings` call. Provide this to retrieve the
+         subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAdUnitMappings` call. Provide this to
+           * retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Apps collection.
@@ -896,6 +1812,145 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
      */
     public class Apps {
 
+      /**
+       * Creates an app under the specified AdMob account.
+       *
+       * Create a request for the method "apps.create".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the account for which the app is being created. Example:
+       *        accounts/pub-9876543210987654
+       * @param content the {@link com.google.api.services.admob.v1beta.model.App}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.admob.v1beta.model.App content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AdMobRequest<com.google.api.services.admob.v1beta.model.App> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/apps";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Creates an app under the specified AdMob account.
+         *
+         * Create a request for the method "apps.create".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the account for which the app is being created. Example:
+       *        accounts/pub-9876543210987654
+         * @param content the {@link com.google.api.services.admob.v1beta.model.App}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.admob.v1beta.model.App content) {
+          super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.App.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the account for which the app is being created. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the account for which the app is being created. Example:
+       accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the account for which the app is being created. Example:
+         * accounts/pub-9876543210987654
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
       /**
        * List the apps under the specified AdMob account.
        *
@@ -1087,6 +2142,1062 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the CampaignReport collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.CampaignReport.List request = admob.campaignReport().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CampaignReport campaignReport() {
+      return new CampaignReport();
+    }
+
+    /**
+     * The "campaignReport" collection of methods.
+     */
+    public class CampaignReport {
+
+      /**
+       * Generates Campaign Report based on provided specifications.
+       *
+       * Create a request for the method "campaignReport.generate".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
+       * @param content the {@link com.google.api.services.admob.v1beta.model.GenerateCampaignReportRequest}
+       * @return the request
+       */
+      public Generate generate(java.lang.String parent, com.google.api.services.admob.v1beta.model.GenerateCampaignReportRequest content) throws java.io.IOException {
+        Generate result = new Generate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Generate extends AdMobRequest<com.google.api.services.admob.v1beta.model.GenerateCampaignReportResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/campaignReport:generate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Generates Campaign Report based on provided specifications.
+         *
+         * Create a request for the method "campaignReport.generate".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link Generate#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
+         * @param content the {@link com.google.api.services.admob.v1beta.model.GenerateCampaignReportRequest}
+         * @since 1.13
+         */
+        protected Generate(java.lang.String parent, com.google.api.services.admob.v1beta.model.GenerateCampaignReportRequest content) {
+          super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.GenerateCampaignReportResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Generate set$Xgafv(java.lang.String $Xgafv) {
+          return (Generate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Generate setAccessToken(java.lang.String accessToken) {
+          return (Generate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Generate setAlt(java.lang.String alt) {
+          return (Generate) super.setAlt(alt);
+        }
+
+        @Override
+        public Generate setCallback(java.lang.String callback) {
+          return (Generate) super.setCallback(callback);
+        }
+
+        @Override
+        public Generate setFields(java.lang.String fields) {
+          return (Generate) super.setFields(fields);
+        }
+
+        @Override
+        public Generate setKey(java.lang.String key) {
+          return (Generate) super.setKey(key);
+        }
+
+        @Override
+        public Generate setOauthToken(java.lang.String oauthToken) {
+          return (Generate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Generate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Generate setQuotaUser(java.lang.String quotaUser) {
+          return (Generate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Generate setUploadType(java.lang.String uploadType) {
+          return (Generate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Generate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the account to generate the report for. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Resource name of the account to generate the report for. Example:
+         * accounts/pub-9876543210987654
+         */
+        public Generate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Generate set(String parameterName, Object value) {
+          return (Generate) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the MediationGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdMob admob = new AdMob(...);}
+     *   {@code AdMob.MediationGroups.List request = admob.mediationGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public MediationGroups mediationGroups() {
+      return new MediationGroups();
+    }
+
+    /**
+     * The "mediationGroups" collection of methods.
+     */
+    public class MediationGroups {
+
+      /**
+       * Create a mediation group under the specific AdMob account.
+       *
+       * Create a request for the method "mediationGroups.create".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent which owns the mediation group. Format: accounts/{publisher_id}
+       * @param content the {@link com.google.api.services.admob.v1beta.model.MediationGroup}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.admob.v1beta.model.MediationGroup content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AdMobRequest<com.google.api.services.admob.v1beta.model.MediationGroup> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/mediationGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Create a mediation group under the specific AdMob account.
+         *
+         * Create a request for the method "mediationGroups.create".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent which owns the mediation group. Format: accounts/{publisher_id}
+         * @param content the {@link com.google.api.services.admob.v1beta.model.MediationGroup}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.admob.v1beta.model.MediationGroup content) {
+          super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.MediationGroup.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent which owns the mediation group. Format: accounts/{publisher_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent which owns the mediation group. Format: accounts/{publisher_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent which owns the mediation group. Format: accounts/{publisher_id} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List mediation groups under the specified AdMob account.
+       *
+       * Create a request for the method "mediationGroups.list".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource name of the account to list mediation groups for. Example:
+       *        accounts/pub-9876543210987654
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdMobRequest<com.google.api.services.admob.v1beta.model.ListMediationGroupsResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/mediationGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List mediation groups under the specified AdMob account.
+         *
+         * Create a request for the method "mediationGroups.list".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource name of the account to list mediation groups for. Example:
+       *        accounts/pub-9876543210987654
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AdMob.this, "GET", REST_PATH, null, com.google.api.services.admob.v1beta.model.ListMediationGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the account to list mediation groups for. Example:
+         * accounts/pub-9876543210987654
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource name of the account to list mediation groups for. Example:
+       accounts/pub-9876543210987654
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource name of the account to list mediation groups for. Example:
+         * accounts/pub-9876543210987654
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
+         * /ebnf-filtering.txt). Possible fields to filter by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS"
+         * - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" - "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" -
+         * "TARGETED_REGION_CODES" Possible filter functions are: - `IN`: Used to filter fields that
+         * represent a singleton including "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE",
+         * "PLATFORM", and "FORMAT". - `CONTAINS_ANY`: Used to filter fields that represent a
+         * collection including "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and
+         * "TARGETED_REGION_CODES". The filter functions can be added together using `AND`. `OR`
+         * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test
+         * Group 2") AND IN(PLATFORM, "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS,
+         * "5450213213286189855")
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc/ebnf-
+       filtering.txt). Possible fields to filter by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS" - "APP_IDS" -
+       "DISPLAY_NAME" - "FORMAT" - "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" - "TARGETED_REGION_CODES"
+       Possible filter functions are: - `IN`: Used to filter fields that represent a singleton including
+       "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE", "PLATFORM", and "FORMAT". - `CONTAINS_ANY`: Used to
+       filter fields that represent a collection including "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and
+       "TARGETED_REGION_CODES". The filter functions can be added together using `AND`. `OR` functionality
+       is not supported. Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test Group 2") AND
+       IN(PLATFORM, "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS, "5450213213286189855")
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
+         * /ebnf-filtering.txt). Possible fields to filter by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS"
+         * - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" - "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" -
+         * "TARGETED_REGION_CODES" Possible filter functions are: - `IN`: Used to filter fields that
+         * represent a singleton including "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE",
+         * "PLATFORM", and "FORMAT". - `CONTAINS_ANY`: Used to filter fields that represent a
+         * collection including "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and
+         * "TARGETED_REGION_CODES". The filter functions can be added together using `AND`. `OR`
+         * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test
+         * Group 2") AND IN(PLATFORM, "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS,
+         * "5450213213286189855")
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * The maximum number of mediation groups to return. If unspecified or 0, at most 10,000
+         * mediation groups will be returned. The maximum value is 20,000; values above 20,000 will
+         * be coerced to 20,000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of mediation groups to return. If unspecified or 0, at most 10,000 mediation
+       groups will be returned. The maximum value is 20,000; values above 20,000 will be coerced to
+       20,000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of mediation groups to return. If unspecified or 0, at most 10,000
+         * mediation groups will be returned. The maximum value is 20,000; values above 20,000 will
+         * be coerced to 20,000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListMediationGroupsResponse`; indicates that this is a
+         * continuation of a prior `ListMediationGroups` call, and that the system should return the
+         * next page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListMediationGroupsResponse`; indicates that this is a continuation
+       of a prior `ListMediationGroups` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListMediationGroupsResponse`; indicates that this is a
+         * continuation of a prior `ListMediationGroups` call, and that the system should return the
+         * next page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the specified mediation group under the specified AdMob account.
+       *
+       * Create a request for the method "mediationGroups.patch".
+       *
+       * This request holds the parameters needed by the admob server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name for this mediation group. Format is:
+       *        accounts/{publisher_id}/mediationGroups/{mediation_group_id} Example:
+       *        accounts/pub-9876543210987654/mediationGroups/0123456789
+       * @param content the {@link com.google.api.services.admob.v1beta.model.MediationGroup}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.admob.v1beta.model.MediationGroup content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends AdMobRequest<com.google.api.services.admob.v1beta.model.MediationGroup> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+$");
+
+        /**
+         * Update the specified mediation group under the specified AdMob account.
+         *
+         * Create a request for the method "mediationGroups.patch".
+         *
+         * This request holds the parameters needed by the the admob server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name for this mediation group. Format is:
+       *        accounts/{publisher_id}/mediationGroups/{mediation_group_id} Example:
+       *        accounts/pub-9876543210987654/mediationGroups/0123456789
+         * @param content the {@link com.google.api.services.admob.v1beta.model.MediationGroup}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.admob.v1beta.model.MediationGroup content) {
+          super(AdMob.this, "PATCH", REST_PATH, content, com.google.api.services.admob.v1beta.model.MediationGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/mediationGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name for this mediation group. Format is:
+         * accounts/{publisher_id}/mediationGroups/{mediation_group_id} Example:
+         * accounts/pub-9876543210987654/mediationGroups/0123456789
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name for this mediation group. Format is:
+       accounts/{publisher_id}/mediationGroups/{mediation_group_id} Example:
+       accounts/pub-9876543210987654/mediationGroups/0123456789
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name for this mediation group. Format is:
+         * accounts/{publisher_id}/mediationGroups/{mediation_group_id} Example:
+         * accounts/pub-9876543210987654/mediationGroups/0123456789
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/mediationGroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * List of mediation group fields to be updated. Updates to repeated fields such as items in
+         * a list will fully replace the existing value(s) with the new value(s). Updates to
+         * individual values in a map can be done by indexing by the key. The following field masks
+         * are supported for mediation group updates: -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"]" clang-format off -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].ad_unit_mappings[\"{ad_unit_id}\"]"
+         * clang-format on - "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_micros" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_mode" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].state" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].display_name" -
+         * "targeting.ad_unit_ids" To update a mediation group with a new mediation group line, use
+         * a distinct negative number for the "mediation_group_line_id". For Example: update_mask {
+         * paths: "mediation_group_lines[\"123456789012345\"].cpm_micros" }
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** List of mediation group fields to be updated. Updates to repeated fields such as items in a list
+       will fully replace the existing value(s) with the new value(s). Updates to individual values in a
+       map can be done by indexing by the key. The following field masks are supported for mediation group
+       updates: - "mediation_group_lines[\"{mediation_group_line_id}\"]" clang-format off -
+       "mediation_group_lines[\"{mediation_group_line_id}\"].ad_unit_mappings[\"{ad_unit_id}\"]" clang-
+       format on - "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_micros" -
+       "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_mode" -
+       "mediation_group_lines[\"{mediation_group_line_id}\"].state" -
+       "mediation_group_lines[\"{mediation_group_line_id}\"].display_name" - "targeting.ad_unit_ids" To
+       update a mediation group with a new mediation group line, use a distinct negative number for the
+       "mediation_group_line_id". For Example: update_mask { paths:
+       "mediation_group_lines[\"123456789012345\"].cpm_micros" }
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * List of mediation group fields to be updated. Updates to repeated fields such as items in
+         * a list will fully replace the existing value(s) with the new value(s). Updates to
+         * individual values in a map can be done by indexing by the key. The following field masks
+         * are supported for mediation group updates: -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"]" clang-format off -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].ad_unit_mappings[\"{ad_unit_id}\"]"
+         * clang-format on - "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_micros" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].cpm_mode" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].state" -
+         * "mediation_group_lines[\"{mediation_group_line_id}\"].display_name" -
+         * "targeting.ad_unit_ids" To update a mediation group with a new mediation group line, use
+         * a distinct negative number for the "mediation_group_line_id". For Example: update_mask {
+         * paths: "mediation_group_lines[\"123456789012345\"].cpm_micros" }
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the MediationAbExperiments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdMob admob = new AdMob(...);}
+       *   {@code AdMob.MediationAbExperiments.List request = admob.mediationAbExperiments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public MediationAbExperiments mediationAbExperiments() {
+        return new MediationAbExperiments();
+      }
+
+      /**
+       * The "mediationAbExperiments" collection of methods.
+       */
+      public class MediationAbExperiments {
+
+        /**
+         * Create an A/B testing experiment for a specified AdMob account and a mediation group.
+         *
+         * Create a request for the method "mediationAbExperiments.create".
+         *
+         * This request holds the parameters needed by the admob server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent which owns the mediation group. Format:
+         *        accounts/{publisher_id}/mediationGroups/{mediation_group_id}
+         * @param content the {@link com.google.api.services.admob.v1beta.model.MediationAbExperiment}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.admob.v1beta.model.MediationAbExperiment content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AdMobRequest<com.google.api.services.admob.v1beta.model.MediationAbExperiment> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/mediationAbExperiments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+$");
+
+          /**
+           * Create an A/B testing experiment for a specified AdMob account and a mediation group.
+           *
+           * Create a request for the method "mediationAbExperiments.create".
+           *
+           * This request holds the parameters needed by the the admob server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent which owns the mediation group. Format:
+         *        accounts/{publisher_id}/mediationGroups/{mediation_group_id}
+           * @param content the {@link com.google.api.services.admob.v1beta.model.MediationAbExperiment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.admob.v1beta.model.MediationAbExperiment content) {
+            super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.MediationAbExperiment.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/mediationGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent which owns the mediation group. Format:
+           * accounts/{publisher_id}/mediationGroups/{mediation_group_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent which owns the mediation group. Format:
+         accounts/{publisher_id}/mediationGroups/{mediation_group_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent which owns the mediation group. Format:
+           * accounts/{publisher_id}/mediationGroups/{mediation_group_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/mediationGroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stop the mediation A/B experiment and choose a variant.
+         *
+         * Create a request for the method "mediationAbExperiments.stop".
+         *
+         * This request holds the parameters needed by the admob server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Name of the mediation group, the experiment for which to choose a variant for. Example:
+         *        accounts/pub-9876543210987654/mediationGroups/0123456789/ mediationAbExperiments
+         * @param content the {@link com.google.api.services.admob.v1beta.model.StopMediationAbExperimentRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.admob.v1beta.model.StopMediationAbExperimentRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends AdMobRequest<com.google.api.services.admob.v1beta.model.MediationAbExperiment> {
+
+          private static final String REST_PATH = "v1beta/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/mediationGroups/[^/]+/mediationAbExperiments$");
+
+          /**
+           * Stop the mediation A/B experiment and choose a variant.
+           *
+           * Create a request for the method "mediationAbExperiments.stop".
+           *
+           * This request holds the parameters needed by the the admob server.  After setting any optional
+           * parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p> {@link
+           * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Name of the mediation group, the experiment for which to choose a variant for. Example:
+         *        accounts/pub-9876543210987654/mediationGroups/0123456789/ mediationAbExperiments
+           * @param content the {@link com.google.api.services.admob.v1beta.model.StopMediationAbExperimentRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.admob.v1beta.model.StopMediationAbExperimentRequest content) {
+            super(AdMob.this, "POST", REST_PATH, content, com.google.api.services.admob.v1beta.model.MediationAbExperiment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/mediationGroups/[^/]+/mediationAbExperiments$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the mediation group, the experiment for which to choose a variant for. Example:
+           * accounts/pub-9876543210987654/mediationGroups/0123456789/ mediationAbExperiments
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Name of the mediation group, the experiment for which to choose a variant for. Example:
+         accounts/pub-9876543210987654/mediationGroups/0123456789/ mediationAbExperiments
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Name of the mediation group, the experiment for which to choose a variant for. Example:
+           * accounts/pub-9876543210987654/mediationGroups/0123456789/ mediationAbExperiments
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/mediationGroups/[^/]+/mediationAbExperiments$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the MediationReport collection.

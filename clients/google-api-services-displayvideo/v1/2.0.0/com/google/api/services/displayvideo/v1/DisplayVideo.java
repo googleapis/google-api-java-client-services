@@ -1201,32 +1201,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * The config used in internal debugging and manual testing. Use comma to separate multiple
-       * values. Examples: To allow entity search to go through tangle `searchUsingTangle` To get
-       * only the advertiser Ids use `idOnly`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String internalDebuggingConfig;
-
-      /** The config used in internal debugging and manual testing. Use comma to separate multiple values.
-     Examples: To allow entity search to go through tangle `searchUsingTangle` To get only the
-     advertiser Ids use `idOnly`
-       */
-      public java.lang.String getInternalDebuggingConfig() {
-        return internalDebuggingConfig;
-      }
-
-      /**
-       * The config used in internal debugging and manual testing. Use comma to separate multiple
-       * values. Examples: To allow entity search to go through tangle `searchUsingTangle` To get
-       * only the advertiser Ids use `idOnly`
-       */
-      public List setInternalDebuggingConfig(java.lang.String internalDebuggingConfig) {
-        this.internalDebuggingConfig = internalDebuggingConfig;
-        return this;
-      }
-
-      /**
        * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
        * `entityStatus` * `updateTime` The default sorting order is ascending. To specify descending
        * order for a field, a suffix "desc" should be added to the field name. For example,
@@ -8465,8 +8439,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * targeting options provided in BulkEditLineItemAssignedTargetingOptionsRequest.delete_requests and
        * then create the assigned targeting options provided in
        * BulkEditLineItemAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot
-       * be made concurrently with the following requests updating the same line item: * UpdateLineItem *
-       * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+       * be made concurrently with the following requests updating the same line item: * lineItems.patch *
+       * assignedTargetingOptions.create * assignedTargetingOptions.delete
        *
        * Create a request for the method "lineItems.bulkEditLineItemAssignedTargetingOptions".
        *
@@ -8501,7 +8475,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * and then create the assigned targeting options provided in
          * BulkEditLineItemAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint
          * cannot be made concurrently with the following requests updating the same line item: *
-         * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+         * lineItems.patch * assignedTargetingOptions.create * assignedTargetingOptions.delete
          *
          * Create a request for the method "lineItems.bulkEditLineItemAssignedTargetingOptions".
          *
@@ -9718,8 +9692,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Updates an existing line item. Returns the updated line item if successful. Requests to this
        * endpoint cannot be made concurrently with the following requests updating the same line item: *
-       * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption *
-       * DeleteLineItemAssignedTargetingOption
+       * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
+       * assignedTargetingOptions.delete
        *
        * Create a request for the method "lineItems.patch".
        *
@@ -9750,8 +9724,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Updates an existing line item. Returns the updated line item if successful. Requests to this
          * endpoint cannot be made concurrently with the following requests updating the same line item: *
-         * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption
-         * * DeleteLineItemAssignedTargetingOption
+         * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
+         * assignedTargetingOptions.delete
          *
          * Create a request for the method "lineItems.patch".
          *
@@ -9924,8 +9898,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
            * Requests to this endpoint cannot be made concurrently with the following requests updating the
-           * same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
-           * DeleteLineItemAssignedTargetingOption
+           * same line item: * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate *
+           * lineItems.patch * DeleteLineItemAssignedTargetingOption
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -9981,8 +9955,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Assigns a targeting option to a line item. Returns the assigned targeting option if successful.
              * Requests to this endpoint cannot be made concurrently with the following requests updating the
-             * same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
-             * DeleteLineItemAssignedTargetingOption
+             * same line item: * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate *
+             * lineItems.patch * DeleteLineItemAssignedTargetingOption
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -10216,7 +10190,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
            * concurrently with the following requests updating the same line item: *
-           * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+           * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate * lineItems.patch *
            * CreateLineItemAssignedTargetingOption
            *
            * Create a request for the method "assignedTargetingOptions.delete".
@@ -10276,7 +10250,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made
              * concurrently with the following requests updating the same line item: *
-             * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem *
+             * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate * lineItems.patch *
              * CreateLineItemAssignedTargetingOption
              *
              * Create a request for the method "assignedTargetingOptions.delete".
@@ -23436,28 +23410,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /** Required. The ID of the inventory source to fetch. */
       public Get setInventorySourceId(java.lang.Long inventorySourceId) {
         this.inventorySourceId = inventorySourceId;
-        return this;
-      }
-
-      /**
-       * Optional. The advertiser_id is optional, when it is provided, the advertiser access is
-       * used.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Long advertiserId;
-
-      /** Optional. The advertiser_id is optional, when it is provided, the advertiser access is used.
-       */
-      public java.lang.Long getAdvertiserId() {
-        return advertiserId;
-      }
-
-      /**
-       * Optional. The advertiser_id is optional, when it is provided, the advertiser access is
-       * used.
-       */
-      public Get setAdvertiserId(java.lang.Long advertiserId) {
-        this.advertiserId = advertiserId;
         return this;
       }
 

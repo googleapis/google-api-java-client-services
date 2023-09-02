@@ -31,6 +31,13 @@ package com.google.api.services.verifiedaccess.v1.model;
 public final class VerifyChallengeResponseResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attested device id (ADID) of the device, read from the verified data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attestedDeviceId;
+
+  /**
    * Device enrollment id is returned in this field (for the machine response only).
    * The value may be {@code null}.
    */
@@ -62,6 +69,23 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String verificationOutput;
+
+  /**
+   * Attested device id (ADID) of the device, read from the verified data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttestedDeviceId() {
+    return attestedDeviceId;
+  }
+
+  /**
+   * Attested device id (ADID) of the device, read from the verified data.
+   * @param attestedDeviceId attestedDeviceId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setAttestedDeviceId(java.lang.String attestedDeviceId) {
+    this.attestedDeviceId = attestedDeviceId;
+    return this;
+  }
 
   /**
    * Device enrollment id is returned in this field (for the machine response only).

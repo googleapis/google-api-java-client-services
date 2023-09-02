@@ -349,7 +349,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Increment#execute()} method to invoke the remote operation.
      *
      * @param achievementId The ID of the achievement used by this method.
-     * @param stepsToIncrement The number of steps to increment.
+     * @param stepsToIncrement Required. The number of steps to increment.
      * @return the request
      */
     public Increment increment(java.lang.String achievementId, java.lang.Integer stepsToIncrement) throws java.io.IOException {
@@ -375,7 +375,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param achievementId The ID of the achievement used by this method.
-       * @param stepsToIncrement The number of steps to increment.
+       * @param stepsToIncrement Required. The number of steps to increment.
        * @since 1.13
        */
       protected Increment(java.lang.String achievementId, java.lang.Integer stepsToIncrement) {
@@ -455,17 +455,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The number of steps to increment. */
+      /** Required. The number of steps to increment. */
       @com.google.api.client.util.Key
       private java.lang.Integer stepsToIncrement;
 
-      /** The number of steps to increment.
+      /** Required. The number of steps to increment.
        */
       public java.lang.Integer getStepsToIncrement() {
         return stepsToIncrement;
       }
 
-      /** The number of steps to increment. */
+      /** Required. The number of steps to increment. */
       public Increment setStepsToIncrement(java.lang.Integer stepsToIncrement) {
         this.stepsToIncrement = stepsToIncrement;
         return this;
@@ -835,7 +835,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link SetStepsAtLeast#execute()} method to invoke the remote operation.
      *
      * @param achievementId The ID of the achievement used by this method.
-     * @param steps The minimum value to set the steps to.
+     * @param steps Required. The minimum value to set the steps to.
      * @return the request
      */
     public SetStepsAtLeast setStepsAtLeast(java.lang.String achievementId, java.lang.Integer steps) throws java.io.IOException {
@@ -862,7 +862,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * constructor. </p>
        *
        * @param achievementId The ID of the achievement used by this method.
-       * @param steps The minimum value to set the steps to.
+       * @param steps Required. The minimum value to set the steps to.
        * @since 1.13
        */
       protected SetStepsAtLeast(java.lang.String achievementId, java.lang.Integer steps) {
@@ -942,17 +942,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The minimum value to set the steps to. */
+      /** Required. The minimum value to set the steps to. */
       @com.google.api.client.util.Key
       private java.lang.Integer steps;
 
-      /** The minimum value to set the steps to.
+      /** Required. The minimum value to set the steps to.
        */
       public java.lang.Integer getSteps() {
         return steps;
       }
 
-      /** The minimum value to set the steps to. */
+      /** Required. The minimum value to set the steps to. */
       public SetStepsAtLeast setSteps(java.lang.Integer steps) {
         this.steps = steps;
         return this;
@@ -3458,6 +3458,467 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the Recall collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Games games = new Games(...);}
+   *   {@code Games.Recall.List request = games.recall().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Recall recall() {
+    return new Recall();
+  }
+
+  /**
+   * The "recall" collection of methods.
+   */
+  public class Recall {
+
+    /**
+     * Associate the PGS Player principal encoded in the provided recall session id with an in-game
+     * account
+     *
+     * Create a request for the method "recall.linkPersona".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link LinkPersona#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.games.model.LinkPersonaRequest}
+     * @return the request
+     */
+    public LinkPersona linkPersona(com.google.api.services.games.model.LinkPersonaRequest content) throws java.io.IOException {
+      LinkPersona result = new LinkPersona(content);
+      initialize(result);
+      return result;
+    }
+
+    public class LinkPersona extends GamesRequest<com.google.api.services.games.model.LinkPersonaResponse> {
+
+      private static final String REST_PATH = "games/v1/recall:linkPersona";
+
+      /**
+       * Associate the PGS Player principal encoded in the provided recall session id with an in-game
+       * account
+       *
+       * Create a request for the method "recall.linkPersona".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link LinkPersona#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * LinkPersona#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.games.model.LinkPersonaRequest}
+       * @since 1.13
+       */
+      protected LinkPersona(com.google.api.services.games.model.LinkPersonaRequest content) {
+        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.LinkPersonaResponse.class);
+      }
+
+      @Override
+      public LinkPersona set$Xgafv(java.lang.String $Xgafv) {
+        return (LinkPersona) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public LinkPersona setAccessToken(java.lang.String accessToken) {
+        return (LinkPersona) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public LinkPersona setAlt(java.lang.String alt) {
+        return (LinkPersona) super.setAlt(alt);
+      }
+
+      @Override
+      public LinkPersona setCallback(java.lang.String callback) {
+        return (LinkPersona) super.setCallback(callback);
+      }
+
+      @Override
+      public LinkPersona setFields(java.lang.String fields) {
+        return (LinkPersona) super.setFields(fields);
+      }
+
+      @Override
+      public LinkPersona setKey(java.lang.String key) {
+        return (LinkPersona) super.setKey(key);
+      }
+
+      @Override
+      public LinkPersona setOauthToken(java.lang.String oauthToken) {
+        return (LinkPersona) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public LinkPersona setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (LinkPersona) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public LinkPersona setQuotaUser(java.lang.String quotaUser) {
+        return (LinkPersona) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public LinkPersona setUploadType(java.lang.String uploadType) {
+        return (LinkPersona) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public LinkPersona setUploadProtocol(java.lang.String uploadProtocol) {
+        return (LinkPersona) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public LinkPersona set(String parameterName, Object value) {
+        return (LinkPersona) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Delete all Recall tokens linking the given persona to any player (with or without a profile).
+     *
+     * Create a request for the method "recall.resetPersona".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link ResetPersona#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.games.model.ResetPersonaRequest}
+     * @return the request
+     */
+    public ResetPersona resetPersona(com.google.api.services.games.model.ResetPersonaRequest content) throws java.io.IOException {
+      ResetPersona result = new ResetPersona(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ResetPersona extends GamesRequest<com.google.api.services.games.model.ResetPersonaResponse> {
+
+      private static final String REST_PATH = "games/v1/recall:resetPersona";
+
+      /**
+       * Delete all Recall tokens linking the given persona to any player (with or without a profile).
+       *
+       * Create a request for the method "recall.resetPersona".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link ResetPersona#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * ResetPersona#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.games.model.ResetPersonaRequest}
+       * @since 1.13
+       */
+      protected ResetPersona(com.google.api.services.games.model.ResetPersonaRequest content) {
+        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.ResetPersonaResponse.class);
+      }
+
+      @Override
+      public ResetPersona set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetPersona) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetPersona setAccessToken(java.lang.String accessToken) {
+        return (ResetPersona) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ResetPersona setAlt(java.lang.String alt) {
+        return (ResetPersona) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetPersona setCallback(java.lang.String callback) {
+        return (ResetPersona) super.setCallback(callback);
+      }
+
+      @Override
+      public ResetPersona setFields(java.lang.String fields) {
+        return (ResetPersona) super.setFields(fields);
+      }
+
+      @Override
+      public ResetPersona setKey(java.lang.String key) {
+        return (ResetPersona) super.setKey(key);
+      }
+
+      @Override
+      public ResetPersona setOauthToken(java.lang.String oauthToken) {
+        return (ResetPersona) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ResetPersona setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ResetPersona) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ResetPersona setQuotaUser(java.lang.String quotaUser) {
+        return (ResetPersona) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ResetPersona setUploadType(java.lang.String uploadType) {
+        return (ResetPersona) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetPersona setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetPersona) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ResetPersona set(String parameterName, Object value) {
+        return (ResetPersona) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
+     * recall session id. The API is only available for users that have active PGS Player profile.
+     *
+     * Create a request for the method "recall.retrieveTokens".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link RetrieveTokens#execute()} method to invoke the remote operation.
+     *
+     * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+     * @return the request
+     */
+    public RetrieveTokens retrieveTokens(java.lang.String sessionId) throws java.io.IOException {
+      RetrieveTokens result = new RetrieveTokens(sessionId);
+      initialize(result);
+      return result;
+    }
+
+    public class RetrieveTokens extends GamesRequest<com.google.api.services.games.model.RetrievePlayerTokensResponse> {
+
+      private static final String REST_PATH = "games/v1/recall/tokens/{sessionId}";
+
+      /**
+       * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
+       * recall session id. The API is only available for users that have active PGS Player profile.
+       *
+       * Create a request for the method "recall.retrieveTokens".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link RetrieveTokens#execute()} method to invoke the remote operation.
+       * <p> {@link RetrieveTokens#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+       * @since 1.13
+       */
+      protected RetrieveTokens(java.lang.String sessionId) {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.RetrievePlayerTokensResponse.class);
+        this.sessionId = com.google.api.client.util.Preconditions.checkNotNull(sessionId, "Required parameter sessionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public RetrieveTokens set$Xgafv(java.lang.String $Xgafv) {
+        return (RetrieveTokens) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RetrieveTokens setAccessToken(java.lang.String accessToken) {
+        return (RetrieveTokens) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RetrieveTokens setAlt(java.lang.String alt) {
+        return (RetrieveTokens) super.setAlt(alt);
+      }
+
+      @Override
+      public RetrieveTokens setCallback(java.lang.String callback) {
+        return (RetrieveTokens) super.setCallback(callback);
+      }
+
+      @Override
+      public RetrieveTokens setFields(java.lang.String fields) {
+        return (RetrieveTokens) super.setFields(fields);
+      }
+
+      @Override
+      public RetrieveTokens setKey(java.lang.String key) {
+        return (RetrieveTokens) super.setKey(key);
+      }
+
+      @Override
+      public RetrieveTokens setOauthToken(java.lang.String oauthToken) {
+        return (RetrieveTokens) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RetrieveTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RetrieveTokens) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RetrieveTokens setQuotaUser(java.lang.String quotaUser) {
+        return (RetrieveTokens) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RetrieveTokens setUploadType(java.lang.String uploadType) {
+        return (RetrieveTokens) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RetrieveTokens setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RetrieveTokens) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sessionId;
+
+      /** Required. Opaque server-generated string that encodes all the necessary information to identify the
+     PGS player / Google user and application.
+       */
+      public java.lang.String getSessionId() {
+        return sessionId;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      public RetrieveTokens setSessionId(java.lang.String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+      }
+
+      @Override
+      public RetrieveTokens set(String parameterName, Object value) {
+        return (RetrieveTokens) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Delete a Recall token linking the PGS Player principal identified by the Recall session and an
+     * in-game account identified either by the 'persona' or by the token value.
+     *
+     * Create a request for the method "recall.unlinkPersona".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link UnlinkPersona#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.games.model.UnlinkPersonaRequest}
+     * @return the request
+     */
+    public UnlinkPersona unlinkPersona(com.google.api.services.games.model.UnlinkPersonaRequest content) throws java.io.IOException {
+      UnlinkPersona result = new UnlinkPersona(content);
+      initialize(result);
+      return result;
+    }
+
+    public class UnlinkPersona extends GamesRequest<com.google.api.services.games.model.UnlinkPersonaResponse> {
+
+      private static final String REST_PATH = "games/v1/recall:unlinkPersona";
+
+      /**
+       * Delete a Recall token linking the PGS Player principal identified by the Recall session and an
+       * in-game account identified either by the 'persona' or by the token value.
+       *
+       * Create a request for the method "recall.unlinkPersona".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link UnlinkPersona#execute()} method to invoke the remote operation. <p>
+       * {@link UnlinkPersona#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @param content the {@link com.google.api.services.games.model.UnlinkPersonaRequest}
+       * @since 1.13
+       */
+      protected UnlinkPersona(com.google.api.services.games.model.UnlinkPersonaRequest content) {
+        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.UnlinkPersonaResponse.class);
+      }
+
+      @Override
+      public UnlinkPersona set$Xgafv(java.lang.String $Xgafv) {
+        return (UnlinkPersona) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UnlinkPersona setAccessToken(java.lang.String accessToken) {
+        return (UnlinkPersona) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UnlinkPersona setAlt(java.lang.String alt) {
+        return (UnlinkPersona) super.setAlt(alt);
+      }
+
+      @Override
+      public UnlinkPersona setCallback(java.lang.String callback) {
+        return (UnlinkPersona) super.setCallback(callback);
+      }
+
+      @Override
+      public UnlinkPersona setFields(java.lang.String fields) {
+        return (UnlinkPersona) super.setFields(fields);
+      }
+
+      @Override
+      public UnlinkPersona setKey(java.lang.String key) {
+        return (UnlinkPersona) super.setKey(key);
+      }
+
+      @Override
+      public UnlinkPersona setOauthToken(java.lang.String oauthToken) {
+        return (UnlinkPersona) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UnlinkPersona setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UnlinkPersona) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UnlinkPersona setQuotaUser(java.lang.String quotaUser) {
+        return (UnlinkPersona) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UnlinkPersona setUploadType(java.lang.String uploadType) {
+        return (UnlinkPersona) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UnlinkPersona setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UnlinkPersona) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public UnlinkPersona set(String parameterName, Object value) {
+        return (UnlinkPersona) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Revisions collection.
    *
    * <p>The typical use is:</p>
@@ -3485,9 +3946,10 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the games server.  After setting any optional
      * parameters, call the {@link Check#execute()} method to invoke the remote operation.
      *
-     * @param clientRevision The revision of the client SDK used by your application. Format: `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
-     *        Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is running the Android SDK. *
-     *        `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running as a Web App.
+     * @param clientRevision Required. The revision of the client SDK used by your application. Format:
+     *        `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
+     *        Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
+     *        Client is running as a Web App.
      * @return the request
      */
     public Check check(java.lang.String clientRevision) throws java.io.IOException {
@@ -3510,9 +3972,10 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param clientRevision The revision of the client SDK used by your application. Format: `[PLATFORM_TYPE]:[VERSION_NUMBER]`.
-     *        Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is running the Android SDK. *
-     *        `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running as a Web App.
+       * @param clientRevision Required. The revision of the client SDK used by your application. Format:
+     *        `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
+     *        Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
+     *        Client is running as a Web App.
        * @since 1.13
        */
       protected Check(java.lang.String clientRevision) {
@@ -3586,7 +4049,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The revision of the client SDK used by your application. Format:
+       * Required. The revision of the client SDK used by your application. Format:
        * `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
        * Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
        * Client is running as a Web App.
@@ -3594,7 +4057,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @com.google.api.client.util.Key
       private java.lang.String clientRevision;
 
-      /** The revision of the client SDK used by your application. Format:
+      /** Required. The revision of the client SDK used by your application. Format:
      `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` - Client is
      running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` - Client is running
      as a Web App.
@@ -3604,7 +4067,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The revision of the client SDK used by your application. Format:
+       * Required. The revision of the client SDK used by your application. Format:
        * `[PLATFORM_TYPE]:[VERSION_NUMBER]`. Possible values of `PLATFORM_TYPE` are: * `ANDROID` -
        * Client is running the Android SDK. * `IOS` - Client is running the iOS SDK. * `WEB_APP` -
        * Client is running as a Web App.
@@ -3901,7 +4364,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      *
      * @param leaderboardId The ID of the leaderboard.
      * @param collection The collection of scores you're requesting.
-     * @param timeSpan The time span for the scores and ranks you're requesting.
+     * @param timeSpan Required. The time span for the scores and ranks you're requesting.
      * @return the request
      */
     public List list(java.lang.String leaderboardId, java.lang.String collection, java.lang.String timeSpan) throws java.io.IOException {
@@ -3926,7 +4389,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param leaderboardId The ID of the leaderboard.
        * @param collection The collection of scores you're requesting.
-       * @param timeSpan The time span for the scores and ranks you're requesting.
+       * @param timeSpan Required. The time span for the scores and ranks you're requesting.
        * @since 1.13
        */
       protected List(java.lang.String leaderboardId, java.lang.String collection, java.lang.String timeSpan) {
@@ -4033,17 +4496,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The time span for the scores and ranks you're requesting. */
+      /** Required. The time span for the scores and ranks you're requesting. */
       @com.google.api.client.util.Key
       private java.lang.String timeSpan;
 
-      /** The time span for the scores and ranks you're requesting.
+      /** Required. The time span for the scores and ranks you're requesting.
        */
       public java.lang.String getTimeSpan() {
         return timeSpan;
       }
 
-      /** The time span for the scores and ranks you're requesting. */
+      /** Required. The time span for the scores and ranks you're requesting. */
       public List setTimeSpan(java.lang.String timeSpan) {
         this.timeSpan = timeSpan;
         return this;
@@ -4119,7 +4582,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      *
      * @param leaderboardId The ID of the leaderboard.
      * @param collection The collection of scores you're requesting.
-     * @param timeSpan The time span for the scores and ranks you're requesting.
+     * @param timeSpan Required. The time span for the scores and ranks you're requesting.
      * @return the request
      */
     public ListWindow listWindow(java.lang.String leaderboardId, java.lang.String collection, java.lang.String timeSpan) throws java.io.IOException {
@@ -4145,7 +4608,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param leaderboardId The ID of the leaderboard.
        * @param collection The collection of scores you're requesting.
-       * @param timeSpan The time span for the scores and ranks you're requesting.
+       * @param timeSpan Required. The time span for the scores and ranks you're requesting.
        * @since 1.13
        */
       protected ListWindow(java.lang.String leaderboardId, java.lang.String collection, java.lang.String timeSpan) {
@@ -4252,17 +4715,17 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The time span for the scores and ranks you're requesting. */
+      /** Required. The time span for the scores and ranks you're requesting. */
       @com.google.api.client.util.Key
       private java.lang.String timeSpan;
 
-      /** The time span for the scores and ranks you're requesting.
+      /** Required. The time span for the scores and ranks you're requesting.
        */
       public java.lang.String getTimeSpan() {
         return timeSpan;
       }
 
-      /** The time span for the scores and ranks you're requesting. */
+      /** Required. The time span for the scores and ranks you're requesting. */
       public ListWindow setTimeSpan(java.lang.String timeSpan) {
         this.timeSpan = timeSpan;
         return this;
@@ -4386,11 +4849,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
      * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
      *
      * @param leaderboardId The ID of the leaderboard.
-     * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
-     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
-     *        score value depends on the leaderboard format type. For fixed-point, the score represents
-     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
-     *        the score represents a value in micro units.
+     * @param score Required. The score you're submitting. The submitted score is ignored if it is worse than a
+     *        previously submitted score, where worse depends on the leaderboard sort order. The meaning
+     *        of the score value depends on the leaderboard format type. For fixed-point, the score
+     *        represents the raw value. For time, the score represents elapsed time in milliseconds. For
+     *        currency, the score represents a value in micro units.
      * @return the request
      */
     public Submit submit(java.lang.String leaderboardId, java.lang.Long score) throws java.io.IOException {
@@ -4417,11 +4880,11 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param leaderboardId The ID of the leaderboard.
-       * @param score The score you're submitting. The submitted score is ignored if it is worse than a previously
-     *        submitted score, where worse depends on the leaderboard sort order. The meaning of the
-     *        score value depends on the leaderboard format type. For fixed-point, the score represents
-     *        the raw value. For time, the score represents elapsed time in milliseconds. For currency,
-     *        the score represents a value in micro units.
+       * @param score Required. The score you're submitting. The submitted score is ignored if it is worse than a
+     *        previously submitted score, where worse depends on the leaderboard sort order. The meaning
+     *        of the score value depends on the leaderboard format type. For fixed-point, the score
+     *        represents the raw value. For time, the score represents elapsed time in milliseconds. For
+     *        currency, the score represents a value in micro units.
        * @since 1.13
        */
       protected Submit(java.lang.String leaderboardId, java.lang.Long score) {
@@ -4502,7 +4965,7 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The score you're submitting. The submitted score is ignored if it is worse than a
+       * Required. The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
        * represents the raw value. For time, the score represents elapsed time in milliseconds. For
@@ -4511,18 +4974,18 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       @com.google.api.client.util.Key
       private java.lang.Long score;
 
-      /** The score you're submitting. The submitted score is ignored if it is worse than a previously
-     submitted score, where worse depends on the leaderboard sort order. The meaning of the score value
-     depends on the leaderboard format type. For fixed-point, the score represents the raw value. For
-     time, the score represents elapsed time in milliseconds. For currency, the score represents a value
-     in micro units.
+      /** Required. The score you're submitting. The submitted score is ignored if it is worse than a
+     previously submitted score, where worse depends on the leaderboard sort order. The meaning of the
+     score value depends on the leaderboard format type. For fixed-point, the score represents the raw
+     value. For time, the score represents elapsed time in milliseconds. For currency, the score
+     represents a value in micro units.
        */
       public java.lang.Long getScore() {
         return score;
       }
 
       /**
-       * The score you're submitting. The submitted score is ignored if it is worse than a
+       * Required. The score you're submitting. The submitted score is ignored if it is worse than a
        * previously submitted score, where worse depends on the leaderboard sort order. The meaning
        * of the score value depends on the leaderboard format type. For fixed-point, the score
        * represents the raw value. For time, the score represents elapsed time in milliseconds. For

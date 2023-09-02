@@ -59,7 +59,7 @@ public final class FinalizedDeal extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the finalized deal. Format:
-   * `buyers/{accountId}/finalizeddeals/{finalizedDealId}`
+   * `buyers/{accountId}/finalizedDeals/{finalizedDealId}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class FinalizedDeal extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the finalized deal. Format:
-   * `buyers/{accountId}/finalizeddeals/{finalizedDealId}`
+   * `buyers/{accountId}/finalizedDeals/{finalizedDealId}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,7 +143,7 @@ public final class FinalizedDeal extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the finalized deal. Format:
-   * `buyers/{accountId}/finalizeddeals/{finalizedDealId}`
+   * `buyers/{accountId}/finalizedDeals/{finalizedDealId}`
    * @param name name or {@code null} for none
    */
   public FinalizedDeal setName(java.lang.String name) {

@@ -45,6 +45,13 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   private java.lang.String condition;
 
   /**
+   * Optional. The description of the transition route. The maximum length is 500 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates
    * that the transition can only happen when the given intent is matched. At least one of `intent`
    * or `condition` must be specified. When both `intent` and `condition` are specified, the
@@ -103,6 +110,23 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setCondition(java.lang.String condition) {
     this.condition = condition;
+    return this;
+  }
+
+  /**
+   * Optional. The description of the transition route. The maximum length is 500 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. The description of the transition route. The maximum length is 500 characters.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1TransitionRoute setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

@@ -71,6 +71,13 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
   }
 
   /**
+   * Optional. Knowledge connector configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3KnowledgeConnectorSettings knowledgeConnectorSettings;
+
+  /**
    * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class GoogleCloudDialogflowCxV3Flow extends com.google.api.client.j
    */
   public GoogleCloudDialogflowCxV3Flow setEventHandlers(java.util.List<GoogleCloudDialogflowCxV3EventHandler> eventHandlers) {
     this.eventHandlers = eventHandlers;
+    return this;
+  }
+
+  /**
+   * Optional. Knowledge connector configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3KnowledgeConnectorSettings getKnowledgeConnectorSettings() {
+    return knowledgeConnectorSettings;
+  }
+
+  /**
+   * Optional. Knowledge connector configuration.
+   * @param knowledgeConnectorSettings knowledgeConnectorSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Flow setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3KnowledgeConnectorSettings knowledgeConnectorSettings) {
+    this.knowledgeConnectorSettings = knowledgeConnectorSettings;
     return this;
   }
 

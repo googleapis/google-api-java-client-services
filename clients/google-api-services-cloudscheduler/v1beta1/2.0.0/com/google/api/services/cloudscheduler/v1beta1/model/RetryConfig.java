@@ -74,11 +74,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of attempts that the system will make to run a job using the exponential backoff
    * procedure described by max_doublings. The default value of retry_count is zero. If retry_count
-   * is zero, a job attempt will *not* be retried if it fails. Instead the Cloud Scheduler system
-   * will wait for the next scheduled execution time. If retry_count is set to a non-zero number
-   * then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count times,
-   * or until the next scheduled execution time, whichever comes first. Values greater than 5 and
-   * negative values are not allowed.
+   * is 0, a job attempt will not be retried if it fails. Instead the Cloud Scheduler system will
+   * wait for the next scheduled execution time. Setting retry_count to 0 does not prevent failed
+   * jobs from running according to schedule after the failure. If retry_count is set to a non-zero
+   * number then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count
+   * times, or until the next scheduled execution time, whichever comes first. Values greater than 5
+   * and negative values are not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,11 +180,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of attempts that the system will make to run a job using the exponential backoff
    * procedure described by max_doublings. The default value of retry_count is zero. If retry_count
-   * is zero, a job attempt will *not* be retried if it fails. Instead the Cloud Scheduler system
-   * will wait for the next scheduled execution time. If retry_count is set to a non-zero number
-   * then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count times,
-   * or until the next scheduled execution time, whichever comes first. Values greater than 5 and
-   * negative values are not allowed.
+   * is 0, a job attempt will not be retried if it fails. Instead the Cloud Scheduler system will
+   * wait for the next scheduled execution time. Setting retry_count to 0 does not prevent failed
+   * jobs from running according to schedule after the failure. If retry_count is set to a non-zero
+   * number then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count
+   * times, or until the next scheduled execution time, whichever comes first. Values greater than 5
+   * and negative values are not allowed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetryCount() {
@@ -193,11 +195,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of attempts that the system will make to run a job using the exponential backoff
    * procedure described by max_doublings. The default value of retry_count is zero. If retry_count
-   * is zero, a job attempt will *not* be retried if it fails. Instead the Cloud Scheduler system
-   * will wait for the next scheduled execution time. If retry_count is set to a non-zero number
-   * then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count times,
-   * or until the next scheduled execution time, whichever comes first. Values greater than 5 and
-   * negative values are not allowed.
+   * is 0, a job attempt will not be retried if it fails. Instead the Cloud Scheduler system will
+   * wait for the next scheduled execution time. Setting retry_count to 0 does not prevent failed
+   * jobs from running according to schedule after the failure. If retry_count is set to a non-zero
+   * number then Cloud Scheduler will retry failed attempts, using exponential backoff, retry_count
+   * times, or until the next scheduled execution time, whichever comes first. Values greater than 5
+   * and negative values are not allowed.
    * @param retryCount retryCount or {@code null} for none
    */
   public RetryConfig setRetryCount(java.lang.Integer retryCount) {

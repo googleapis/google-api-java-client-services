@@ -125,9 +125,11 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
-   * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event. Developer Preview.
+   * Specific type of the event. This cannot be modified after the event is created. Possible values
+   * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
+   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
+   * Extended support for other event types will be made available in later releases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -376,7 +378,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String visibility;
 
   /**
-   * Working Location event data. Developer Preview.
+   * Working location event data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -693,9 +695,11 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
-   * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event. Developer Preview.
+   * Specific type of the event. This cannot be modified after the event is created. Possible values
+   * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
+   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
+   * Extended support for other event types will be made available in later releases.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -703,9 +707,11 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
-   * not further specified.  - "outOfOffice" - An out-of-office event.  - "focusTime" - A focus-time
-   * event.  - "workingLocation" - A working location event. Developer Preview.
+   * Specific type of the event. This cannot be modified after the event is created. Possible values
+   * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
+   * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
+   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
+   * Extended support for other event types will be made available in later releases.
    * @param eventType eventType or {@code null} for none
    */
   public Event setEventType(java.lang.String eventType) {
@@ -1416,7 +1422,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working Location event data. Developer Preview.
+   * Working location event data.
    * @return value or {@code null} for none
    */
   public EventWorkingLocationProperties getWorkingLocationProperties() {
@@ -1424,7 +1430,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Working Location event data. Developer Preview.
+   * Working location event data.
    * @param workingLocationProperties workingLocationProperties or {@code null} for none
    */
   public Event setWorkingLocationProperties(EventWorkingLocationProperties workingLocationProperties) {

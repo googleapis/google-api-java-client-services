@@ -51,8 +51,11 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   private OfficeLocation officeLocation;
 
   /**
-   * Indicates what kind of location this is. Any details are specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields are ignored.
+   * Type of the working location. Possible values are: - "homeOffice" - The user is working at
+   * home.  - "officeLocation" - The user is working from an office.  - "customLocation" - The user
+   * is working from a custom location.  Any details are specified in a sub-field of the specified
+   * name, but this field may be missing if empty. Any other fields are ignored. Required when
+   * adding working location properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +113,11 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   }
 
   /**
-   * Indicates what kind of location this is. Any details are specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields are ignored.
+   * Type of the working location. Possible values are: - "homeOffice" - The user is working at
+   * home.  - "officeLocation" - The user is working from an office.  - "customLocation" - The user
+   * is working from a custom location.  Any details are specified in a sub-field of the specified
+   * name, but this field may be missing if empty. Any other fields are ignored. Required when
+   * adding working location properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -119,8 +125,11 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
   }
 
   /**
-   * Indicates what kind of location this is. Any details are specified in a sub-field of the
-   * specified name (but which may be missing if empty). Any other fields are ignored.
+   * Type of the working location. Possible values are: - "homeOffice" - The user is working at
+   * home.  - "officeLocation" - The user is working from an office.  - "customLocation" - The user
+   * is working from a custom location.  Any details are specified in a sub-field of the specified
+   * name, but this field may be missing if empty. Any other fields are ignored. Required when
+   * adding working location properties.
    * @param type type or {@code null} for none
    */
   public EventWorkingLocationProperties setType(java.lang.String type) {
@@ -193,28 +202,29 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     private java.lang.String buildingId;
 
     /**
-     * An optional arbitrary desk identifier.
+     * An optional desk identifier.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String deskId;
 
     /**
-     * An optional arbitrary floor identifier.
+     * An optional floor identifier.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String floorId;
 
     /**
-     * An optional arbitrary floor section identifier.
+     * An optional floor section identifier.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String floorSectionId;
 
     /**
-     * An optional extra label for additional information.
+     * The office name that's displayed in Calendar Web and Mobile clients. We recommend you reference
+     * a building name in the organization's Resources database.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -240,7 +250,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary desk identifier.
+     * An optional desk identifier.
      * @return value or {@code null} for none
      */
     public java.lang.String getDeskId() {
@@ -248,7 +258,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary desk identifier.
+     * An optional desk identifier.
      * @param deskId deskId or {@code null} for none
      */
     public OfficeLocation setDeskId(java.lang.String deskId) {
@@ -257,7 +267,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary floor identifier.
+     * An optional floor identifier.
      * @return value or {@code null} for none
      */
     public java.lang.String getFloorId() {
@@ -265,7 +275,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary floor identifier.
+     * An optional floor identifier.
      * @param floorId floorId or {@code null} for none
      */
     public OfficeLocation setFloorId(java.lang.String floorId) {
@@ -274,7 +284,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary floor section identifier.
+     * An optional floor section identifier.
      * @return value or {@code null} for none
      */
     public java.lang.String getFloorSectionId() {
@@ -282,7 +292,7 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional arbitrary floor section identifier.
+     * An optional floor section identifier.
      * @param floorSectionId floorSectionId or {@code null} for none
      */
     public OfficeLocation setFloorSectionId(java.lang.String floorSectionId) {
@@ -291,7 +301,8 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional extra label for additional information.
+     * The office name that's displayed in Calendar Web and Mobile clients. We recommend you reference
+     * a building name in the organization's Resources database.
      * @return value or {@code null} for none
      */
     public java.lang.String getLabel() {
@@ -299,7 +310,8 @@ public final class EventWorkingLocationProperties extends com.google.api.client.
     }
 
     /**
-     * An optional extra label for additional information.
+     * The office name that's displayed in Calendar Web and Mobile clients. We recommend you reference
+     * a building name in the organization's Resources database.
      * @param label label or {@code null} for none
      */
     public OfficeLocation setLabel(java.lang.String label) {

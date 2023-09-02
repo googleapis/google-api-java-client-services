@@ -76,9 +76,9 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   private java.lang.String sdkVersion;
 
   /**
-   * Possible unique matched link that server need to check before performing fingerprint match. If
-   * passed link is short server need to expand the link. If link is long server need to vslidate
-   * the link.
+   * Possible unique matched link that server need to check before performing device heuristics
+   * match. If passed link is short server need to expand the link. If link is long server need to
+   * vslidate the link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,9 +199,9 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   }
 
   /**
-   * Possible unique matched link that server need to check before performing fingerprint match. If
-   * passed link is short server need to expand the link. If link is long server need to vslidate
-   * the link.
+   * Possible unique matched link that server need to check before performing device heuristics
+   * match. If passed link is short server need to expand the link. If link is long server need to
+   * vslidate the link.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueMatchLinkToCheck() {
@@ -209,9 +209,9 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   }
 
   /**
-   * Possible unique matched link that server need to check before performing fingerprint match. If
-   * passed link is short server need to expand the link. If link is long server need to vslidate
-   * the link.
+   * Possible unique matched link that server need to check before performing device heuristics
+   * match. If passed link is short server need to expand the link. If link is long server need to
+   * vslidate the link.
    * @param uniqueMatchLinkToCheck uniqueMatchLinkToCheck or {@code null} for none
    */
   public GetIosPostInstallAttributionRequest setUniqueMatchLinkToCheck(java.lang.String uniqueMatchLinkToCheck) {

@@ -45,6 +45,20 @@ public final class GoogleChromeManagementV1TelemetryUserDevice extends com.googl
   }
 
   /**
+   * Output only. Device activity reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1DeviceActivityReport> deviceActivityReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1DeviceActivityReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1DeviceActivityReport.class);
+  }
+
+  /**
    * The unique Directory API ID of the device. This value is the same as the Admin Console's
    * Directory API ID in the ChromeOS Devices tab.
    * The value may be {@code null}.
@@ -80,6 +94,25 @@ public final class GoogleChromeManagementV1TelemetryUserDevice extends com.googl
    */
   public GoogleChromeManagementV1TelemetryUserDevice setAudioStatusReport(java.util.List<GoogleChromeManagementV1AudioStatusReport> audioStatusReport) {
     this.audioStatusReport = audioStatusReport;
+    return this;
+  }
+
+  /**
+   * Output only. Device activity reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1DeviceActivityReport> getDeviceActivityReport() {
+    return deviceActivityReport;
+  }
+
+  /**
+   * Output only. Device activity reports collected periodically sorted in a decreasing order of
+   * report_time.
+   * @param deviceActivityReport deviceActivityReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryUserDevice setDeviceActivityReport(java.util.List<GoogleChromeManagementV1DeviceActivityReport> deviceActivityReport) {
+    this.deviceActivityReport = deviceActivityReport;
     return this;
   }
 

@@ -46,13 +46,6 @@ public final class OSPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * OSPolicy fingerprint (checksum)
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fingerprint;
-
-  /**
    * Required. The id of the OS policy with the following restrictions: * Must contain only
    * lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63
    * characters. * Must end with a number or a letter. * Must be unique within the assignment.
@@ -114,23 +107,6 @@ public final class OSPolicy extends com.google.api.client.json.GenericJson {
    */
   public OSPolicy setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * OSPolicy fingerprint (checksum)
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFingerprint() {
-    return fingerprint;
-  }
-
-  /**
-   * OSPolicy fingerprint (checksum)
-   * @param fingerprint fingerprint or {@code null} for none
-   */
-  public OSPolicy setFingerprint(java.lang.String fingerprint) {
-    this.fingerprint = fingerprint;
     return this;
   }
 

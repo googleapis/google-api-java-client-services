@@ -203,6 +203,13 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Details of the VM from a Vmware source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareSourceVmDetails vmwareSourceVmDetails;
+
+  /**
    * Output only. Details of the VM from an AWS source.
    * @return value or {@code null} for none
    */
@@ -582,6 +589,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Details of the VM from a Vmware source.
+   * @return value or {@code null} for none
+   */
+  public VmwareSourceVmDetails getVmwareSourceVmDetails() {
+    return vmwareSourceVmDetails;
+  }
+
+  /**
+   * Output only. Details of the VM from a Vmware source.
+   * @param vmwareSourceVmDetails vmwareSourceVmDetails or {@code null} for none
+   */
+  public MigratingVm setVmwareSourceVmDetails(VmwareSourceVmDetails vmwareSourceVmDetails) {
+    this.vmwareSourceVmDetails = vmwareSourceVmDetails;
     return this;
   }
 

@@ -46,7 +46,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   private java.lang.String attributionConfidence;
 
   /**
-   * The deep-link attributed post-install via one of several techniques (fingerprint, copy unique).
+   * The deep-link attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   private java.lang.String fallbackLink;
 
   /**
-   * Invitation ID attributed post-install via one of several techniques (fingerprint, copy unique).
+   * Invitation ID attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +104,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   private java.lang.String requestIpVersion;
 
   /**
-   * Entire FDL (short or long) attributed post-install via one of several techniques (fingerprint,
-   * copy unique).
+   * Entire FDL (short or long) attributed post-install via one of several techniques (device
+   * heuristics, copy unique).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +193,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * The deep-link attributed post-install via one of several techniques (fingerprint, copy unique).
+   * The deep-link attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * @return value or {@code null} for none
    */
   public java.lang.String getDeepLink() {
@@ -199,7 +202,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * The deep-link attributed post-install via one of several techniques (fingerprint, copy unique).
+   * The deep-link attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * @param deepLink deepLink or {@code null} for none
    */
   public GetIosPostInstallAttributionResponse setDeepLink(java.lang.String deepLink) {
@@ -252,7 +256,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * Invitation ID attributed post-install via one of several techniques (fingerprint, copy unique).
+   * Invitation ID attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * @return value or {@code null} for none
    */
   public java.lang.String getInvitationId() {
@@ -260,7 +265,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * Invitation ID attributed post-install via one of several techniques (fingerprint, copy unique).
+   * Invitation ID attributed post-install via one of several techniques (device heuristics, copy
+   * unique).
    * @param invitationId invitationId or {@code null} for none
    */
   public GetIosPostInstallAttributionResponse setInvitationId(java.lang.String invitationId) {
@@ -324,8 +330,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * Entire FDL (short or long) attributed post-install via one of several techniques (fingerprint,
-   * copy unique).
+   * Entire FDL (short or long) attributed post-install via one of several techniques (device
+   * heuristics, copy unique).
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestedLink() {
@@ -333,8 +339,8 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
-   * Entire FDL (short or long) attributed post-install via one of several techniques (fingerprint,
-   * copy unique).
+   * Entire FDL (short or long) attributed post-install via one of several techniques (device
+   * heuristics, copy unique).
    * @param requestedLink requestedLink or {@code null} for none
    */
   public GetIosPostInstallAttributionResponse setRequestedLink(java.lang.String requestedLink) {

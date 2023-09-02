@@ -4315,7 +4315,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Drives {
 
     /**
-     * Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot
+     * Permanently deletes a shared drive for which the user is an `organizer`. The shared drive cannot
      * contain any untrashed items.
      *
      * Create a request for the method "drives.delete".
@@ -4337,8 +4337,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}";
 
       /**
-       * Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot
-       * contain any untrashed items.
+       * Permanently deletes a shared drive for which the user is an `organizer`. The shared drive
+       * cannot contain any untrashed items.
        *
        * Create a request for the method "drives.delete".
        *
@@ -5991,8 +5991,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own the
-     * file or be an organizer on the parent for shared drive files.
+     * Permanently deletes a file owned by the user without moving it to the trash. If the file belongs
+     * to a shared drive, the user must be an `organizer` on the parent folder. If the target is a
+     * folder, all descendants owned by the user are also deleted.
      *
      * Create a request for the method "files.delete".
      *
@@ -6013,8 +6014,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}";
 
       /**
-       * Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own
-       * the file or be an organizer on the parent for shared drive files.
+       * Permanently deletes a file owned by the user without moving it to the trash. If the file
+       * belongs to a shared drive, the user must be an `organizer` on the parent folder. If the target
+       * is a folder, all descendants owned by the user are also deleted.
        *
        * Create a request for the method "files.delete".
        *
@@ -8327,7 +8329,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link ListLabels#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID for the file or shared drive.
+     * @param fileId The ID for the file.
      * @return the request
      */
     public ListLabels listLabels(java.lang.String fileId) throws java.io.IOException {
@@ -8351,7 +8353,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * ListLabels#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID for the file or shared drive.
+       * @param fileId The ID for the file.
        * @since 1.13
        */
       protected ListLabels(java.lang.String fileId) {
@@ -8424,17 +8426,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (ListLabels) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID for the file or shared drive. */
+      /** The ID for the file. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID for the file or shared drive.
+      /** The ID for the file.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID for the file or shared drive. */
+      /** The ID for the file. */
       public ListLabels setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
@@ -9606,12 +9608,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-     * `fileOrganizer` on the parent for shared drive files. Only the owner may trash a file. The
-     * trashed item is excluded from all `files.list` responses returned for any user who doesn't own
-     * the file. However, all users with access to the file can see the trashed item metadata in an API
-     * response. All users with access can copy, download, export, and share the file. *Note:* Files
-     * moved to the trash still appear by default in results from the `files.list` method. To
-     * permanently remove a file, use `files.delete`.
+     * `fileOrganizer` on the parent for shared drive files.
      *
      * Create a request for the method "files.trash".
      *
@@ -9633,12 +9630,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Moves a file to the trash. The currently authenticated user must own the file or be at least a
-       * `fileOrganizer` on the parent for shared drive files. Only the owner may trash a file. The
-       * trashed item is excluded from all `files.list` responses returned for any user who doesn't own
-       * the file. However, all users with access to the file can see the trashed item metadata in an
-       * API response. All users with access can copy, download, export, and share the file. *Note:*
-       * Files moved to the trash still appear by default in results from the `files.list` method. To
-       * permanently remove a file, use `files.delete`.
+       * `fileOrganizer` on the parent for shared drive files.
        *
        * Create a request for the method "files.trash".
        *
@@ -9862,7 +9854,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Restores a file from the trash. The currently authenticated user must own the file or be at least
-     * a `fileOrganizer` on the parent for shared drive files. Only the owner may untrash a file.
+     * a `fileOrganizer` on the parent for shared drive files.
      *
      * Create a request for the method "files.untrash".
      *
@@ -9884,8 +9876,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Restores a file from the trash. The currently authenticated user must own the file or be at
-       * least a `fileOrganizer` on the parent for shared drive files. Only the owner may untrash a
-       * file.
+       * least a `fileOrganizer` on the parent for shared drive files.
        *
        * Create a request for the method "files.untrash".
        *

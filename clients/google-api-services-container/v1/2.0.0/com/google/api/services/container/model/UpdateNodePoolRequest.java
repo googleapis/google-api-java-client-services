@@ -46,6 +46,24 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Optional. The desired disk size for nodes in the node pool specified in GB. The smallest
+   * allowed disk size is 10GB. Initiates an upgrade operation that migrates the nodes in the node
+   * pool to the specified disk size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskSizeGb;
+
+  /**
+   * Optional. The desired disk type (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') for nodes in
+   * the node pool. Initiates an upgrade operation that migrates the nodes in the node pool to the
+   * specified disk type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diskType;
+
+  /**
    * The current etag of the node pool. If an etag is provided and does not match the current etag
    * of the node pool, update will be blocked and an ABORTED error will be returned.
    * The value may be {@code null}.
@@ -122,6 +140,16 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private NodePoolLoggingConfig loggingConfig;
+
+  /**
+   * Optional. The desired [Google Compute Engine machine
+   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
+   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
+   * machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
 
   /**
    * The name (project, location, cluster, node pool) of the node pool to update. Specified in the
@@ -256,6 +284,48 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Optional. The desired disk size for nodes in the node pool specified in GB. The smallest
+   * allowed disk size is 10GB. Initiates an upgrade operation that migrates the nodes in the node
+   * pool to the specified disk size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * Optional. The desired disk size for nodes in the node pool specified in GB. The smallest
+   * allowed disk size is 10GB. Initiates an upgrade operation that migrates the nodes in the node
+   * pool to the specified disk size.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public UpdateNodePoolRequest setDiskSizeGb(java.lang.Long diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. The desired disk type (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') for nodes in
+   * the node pool. Initiates an upgrade operation that migrates the nodes in the node pool to the
+   * specified disk type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiskType() {
+    return diskType;
+  }
+
+  /**
+   * Optional. The desired disk type (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') for nodes in
+   * the node pool. Initiates an upgrade operation that migrates the nodes in the node pool to the
+   * specified disk type.
+   * @param diskType diskType or {@code null} for none
+   */
+  public UpdateNodePoolRequest setDiskType(java.lang.String diskType) {
+    this.diskType = diskType;
     return this;
   }
 
@@ -442,6 +512,29 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
     this.loggingConfig = loggingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The desired [Google Compute Engine machine
+   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
+   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
+   * machine type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * Optional. The desired [Google Compute Engine machine
+   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
+   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
+   * machine type.
+   * @param machineType machineType or {@code null} for none
+   */
+  public UpdateNodePoolRequest setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 

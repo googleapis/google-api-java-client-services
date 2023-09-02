@@ -11938,6 +11938,395 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Merchantsupport collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Merchantsupport.List request = content.merchantsupport().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Merchantsupport merchantsupport() {
+    return new Merchantsupport();
+  }
+
+  /**
+   * The "merchantsupport" collection of methods.
+   */
+  public class Merchantsupport {
+
+    /**
+     * Provide a list of merchant's issues with a support content and available actions. This content
+     * and actions are meant to be rendered and shown in third-party applications.
+     *
+     * Create a request for the method "merchantsupport.renderaccountissues".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Renderaccountissues#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account to fetch issues for.
+     * @param content the {@link com.google.api.services.content.model.RenderAccountIssuesRequestPayload}
+     * @return the request
+     */
+    public Renderaccountissues renderaccountissues(java.lang.Long merchantId, com.google.api.services.content.model.RenderAccountIssuesRequestPayload content) throws java.io.IOException {
+      Renderaccountissues result = new Renderaccountissues(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Renderaccountissues extends ShoppingContentRequest<com.google.api.services.content.model.RenderAccountIssuesResponse> {
+
+      private static final String REST_PATH = "{merchantId}/merchantsupport/renderaccountissues";
+
+      /**
+       * Provide a list of merchant's issues with a support content and available actions. This content
+       * and actions are meant to be rendered and shown in third-party applications.
+       *
+       * Create a request for the method "merchantsupport.renderaccountissues".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Renderaccountissues#execute()} method to invoke the remote
+       * operation. <p> {@link Renderaccountissues#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account to fetch issues for.
+       * @param content the {@link com.google.api.services.content.model.RenderAccountIssuesRequestPayload}
+       * @since 1.13
+       */
+      protected Renderaccountissues(java.lang.Long merchantId, com.google.api.services.content.model.RenderAccountIssuesRequestPayload content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RenderAccountIssuesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Renderaccountissues set$Xgafv(java.lang.String $Xgafv) {
+        return (Renderaccountissues) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Renderaccountissues setAccessToken(java.lang.String accessToken) {
+        return (Renderaccountissues) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Renderaccountissues setAlt(java.lang.String alt) {
+        return (Renderaccountissues) super.setAlt(alt);
+      }
+
+      @Override
+      public Renderaccountissues setCallback(java.lang.String callback) {
+        return (Renderaccountissues) super.setCallback(callback);
+      }
+
+      @Override
+      public Renderaccountissues setFields(java.lang.String fields) {
+        return (Renderaccountissues) super.setFields(fields);
+      }
+
+      @Override
+      public Renderaccountissues setKey(java.lang.String key) {
+        return (Renderaccountissues) super.setKey(key);
+      }
+
+      @Override
+      public Renderaccountissues setOauthToken(java.lang.String oauthToken) {
+        return (Renderaccountissues) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Renderaccountissues setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Renderaccountissues) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Renderaccountissues setQuotaUser(java.lang.String quotaUser) {
+        return (Renderaccountissues) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Renderaccountissues setUploadType(java.lang.String uploadType) {
+        return (Renderaccountissues) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Renderaccountissues setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Renderaccountissues) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account to fetch issues for. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account to fetch issues for.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account to fetch issues for. */
+      public Renderaccountissues setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to
+       * localize support content. If not set, the result will be in default language ('en-US').
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to localize
+     support content. If not set, the result will be in default language ('en-US').
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to
+       * localize support content. If not set, the result will be in default language ('en-US').
+       */
+      public Renderaccountissues setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+       * support content. For example 'America/Los_Angeles'. If not set, results will use as a
+       * default UTC.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String timeZone;
+
+      /** Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in support
+     content. For example 'America/Los_Angeles'. If not set, results will use as a default UTC.
+       */
+      public java.lang.String getTimeZone() {
+        return timeZone;
+      }
+
+      /**
+       * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+       * support content. For example 'America/Los_Angeles'. If not set, results will use as a
+       * default UTC.
+       */
+      public Renderaccountissues setTimeZone(java.lang.String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+      }
+
+      @Override
+      public Renderaccountissues set(String parameterName, Object value) {
+        return (Renderaccountissues) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Provide a list of issues for merchant's product with a support content and available actions.
+     * This content and actions are meant to be rendered and shown in third-party applications.
+     *
+     * Create a request for the method "merchantsupport.renderproductissues".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Renderproductissues#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the product.
+     * @param productId Required. The [REST_ID](https://developers.google.com/shopping-
+     *        content/reference/rest/v2.1/products#Product.FIELDS.id) of the product to fetch issues
+     *        for.
+     * @param content the {@link com.google.api.services.content.model.RenderProductIssuesRequestPayload}
+     * @return the request
+     */
+    public Renderproductissues renderproductissues(java.lang.Long merchantId, java.lang.String productId, com.google.api.services.content.model.RenderProductIssuesRequestPayload content) throws java.io.IOException {
+      Renderproductissues result = new Renderproductissues(merchantId, productId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Renderproductissues extends ShoppingContentRequest<com.google.api.services.content.model.RenderProductIssuesResponse> {
+
+      private static final String REST_PATH = "{merchantId}/merchantsupport/renderproductissues/{productId}";
+
+      /**
+       * Provide a list of issues for merchant's product with a support content and available actions.
+       * This content and actions are meant to be rendered and shown in third-party applications.
+       *
+       * Create a request for the method "merchantsupport.renderproductissues".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Renderproductissues#execute()} method to invoke the remote
+       * operation. <p> {@link Renderproductissues#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the product.
+       * @param productId Required. The [REST_ID](https://developers.google.com/shopping-
+     *        content/reference/rest/v2.1/products#Product.FIELDS.id) of the product to fetch issues
+     *        for.
+       * @param content the {@link com.google.api.services.content.model.RenderProductIssuesRequestPayload}
+       * @since 1.13
+       */
+      protected Renderproductissues(java.lang.Long merchantId, java.lang.String productId, com.google.api.services.content.model.RenderProductIssuesRequestPayload content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RenderProductIssuesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public Renderproductissues set$Xgafv(java.lang.String $Xgafv) {
+        return (Renderproductissues) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Renderproductissues setAccessToken(java.lang.String accessToken) {
+        return (Renderproductissues) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Renderproductissues setAlt(java.lang.String alt) {
+        return (Renderproductissues) super.setAlt(alt);
+      }
+
+      @Override
+      public Renderproductissues setCallback(java.lang.String callback) {
+        return (Renderproductissues) super.setCallback(callback);
+      }
+
+      @Override
+      public Renderproductissues setFields(java.lang.String fields) {
+        return (Renderproductissues) super.setFields(fields);
+      }
+
+      @Override
+      public Renderproductissues setKey(java.lang.String key) {
+        return (Renderproductissues) super.setKey(key);
+      }
+
+      @Override
+      public Renderproductissues setOauthToken(java.lang.String oauthToken) {
+        return (Renderproductissues) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Renderproductissues setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Renderproductissues) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Renderproductissues setQuotaUser(java.lang.String quotaUser) {
+        return (Renderproductissues) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Renderproductissues setUploadType(java.lang.String uploadType) {
+        return (Renderproductissues) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Renderproductissues setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Renderproductissues) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account that contains the product. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the product.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account that contains the product. */
+      public Renderproductissues setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The [REST_ID](https://developers.google.com/shopping-
+       * content/reference/rest/v2.1/products#Product.FIELDS.id) of the product to fetch issues for.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** Required. The [REST_ID](https://developers.google.com/shopping-
+     content/reference/rest/v2.1/products#Product.FIELDS.id) of the product to fetch issues for.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /**
+       * Required. The [REST_ID](https://developers.google.com/shopping-
+       * content/reference/rest/v2.1/products#Product.FIELDS.id) of the product to fetch issues for.
+       */
+      public Renderproductissues setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      /**
+       * Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to
+       * localize support content. If not set, the result will be in default language ('en-US').
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to localize
+     support content. If not set, the result will be in default language ('en-US').
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional. The [IETF BCP-47](https://tools.ietf.org/html/bcp47) language code used to
+       * localize support content. If not set, the result will be in default language ('en-US').
+       */
+      public Renderproductissues setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+       * support content. For example 'America/Los_Angeles'. If not set, results will use as a
+       * default UTC.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String timeZone;
+
+      /** Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in support
+     content. For example 'America/Los_Angeles'. If not set, results will use as a default UTC.
+       */
+      public java.lang.String getTimeZone() {
+        return timeZone;
+      }
+
+      /**
+       * Optional. The [IANA](https://www.iana.org/time-zones) timezone used to localize times in
+       * support content. For example 'America/Los_Angeles'. If not set, results will use as a
+       * default UTC.
+       */
+      public Renderproductissues setTimeZone(java.lang.String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+      }
+
+      @Override
+      public Renderproductissues set(String parameterName, Object value) {
+        return (Renderproductissues) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Orderinvoices collection.
    *
    * <p>The typical use is:</p>

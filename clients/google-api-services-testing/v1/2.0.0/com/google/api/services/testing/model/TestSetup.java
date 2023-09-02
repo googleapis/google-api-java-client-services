@@ -37,7 +37,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   private Account account;
 
   /**
-   * APKs to install in addition to those being directly tested. Currently capped at 100.
+   * APKs to install in addition to those being directly tested. These will be installed after the
+   * app under test. Currently capped at 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +131,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * APKs to install in addition to those being directly tested. Currently capped at 100.
+   * APKs to install in addition to those being directly tested. These will be installed after the
+   * app under test. Currently capped at 100.
    * @return value or {@code null} for none
    */
   public java.util.List<Apk> getAdditionalApks() {
@@ -138,7 +140,8 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * APKs to install in addition to those being directly tested. Currently capped at 100.
+   * APKs to install in addition to those being directly tested. These will be installed after the
+   * app under test. Currently capped at 100.
    * @param additionalApks additionalApks or {@code null} for none
    */
   public TestSetup setAdditionalApks(java.util.List<Apk> additionalApks) {

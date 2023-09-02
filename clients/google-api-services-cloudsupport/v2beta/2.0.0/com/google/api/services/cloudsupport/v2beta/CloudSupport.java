@@ -498,11 +498,12 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a new case and associate it with the given Google Cloud Resource. The case object must
-     * have the following fields set: `display_name`, `description`, `classification`, and `priority`.
-     * Here is an example of calling this endpoint using cURL: ```shell parent="projects/some-project"
-     * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * --header 'Content-Type: application/json' \ --data '{ "display_name": "Test case created by me.",
+     * Create a new case and associate it with a Google Cloud Resource. The case object must have the
+     * following fields set: `display_name`, `description`, `classification`, and `priority`. If you're
+     * just testing the API and don't want to route your case to an agent, set `testCase=true`. Here is
+     * an example of calling this endpoint using cURL: ```shell parent="projects/some-project" curl \
+     * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
+     * 'Content-Type: application/json' \ --data '{ "display_name": "Test case created by me.",
      * "description": "a random test case, feel free to close", "classification": { "id": "100IK2AKCLHMG
      * RJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0G
      * RCDTQM8" }, "time_zone": "-07:00", "subscriber_email_addresses": [ "foo@domain.com",
@@ -532,8 +533,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Create a new case and associate it with the given Google Cloud Resource. The case object must
-       * have the following fields set: `display_name`, `description`, `classification`, and `priority`.
+       * Create a new case and associate it with a Google Cloud Resource. The case object must have the
+       * following fields set: `display_name`, `description`, `classification`, and `priority`. If
+       * you're just testing the API and don't want to route your case to an agent, set `testCase=true`.
        * Here is an example of calling this endpoint using cURL: ```shell parent="projects/some-project"
        * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
        * --header 'Content-Type: application/json' \ --data '{ "display_name": "Test case created by

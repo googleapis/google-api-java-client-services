@@ -12318,6 +12318,21 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      @com.google.api.client.util.Key
+      private java.lang.String videoPaidProductPlacement;
+
+      /**
+
+       */
+      public java.lang.String getVideoPaidProductPlacement() {
+        return videoPaidProductPlacement;
+      }
+
+      public List setVideoPaidProductPlacement(java.lang.String videoPaidProductPlacement) {
+        this.videoPaidProductPlacement = videoPaidProductPlacement;
+        return this;
+      }
+
       /** Filter on syndicated videos. */
       @com.google.api.client.util.Key
       private java.lang.String videoSyndicated;

@@ -17,9 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * A group is a set of spokes to which you can apply policies. Each group of spokes has its own
- * route table. For each group, you can also set different rules for whether spokes can be
- * automatically attached to the hub.
+ * A group represents a subset of spokes attached to a hub.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation

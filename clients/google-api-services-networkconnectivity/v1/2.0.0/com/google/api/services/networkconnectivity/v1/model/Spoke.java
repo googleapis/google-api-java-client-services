@@ -48,7 +48,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The name of the group that this spoke is associated with.
+   * Optional. The name of the group that this spoke is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +178,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the group that this spoke is associated with.
+   * Optional. The name of the group that this spoke is associated with.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -186,7 +186,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the group that this spoke is associated with.
+   * Optional. The name of the group that this spoke is associated with.
    * @param group group or {@code null} for none
    */
   public Spoke setGroup(java.lang.String group) {

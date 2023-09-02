@@ -114,7 +114,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
    * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
    * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time.
+   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
+   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
+   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
+   * according to schedule after the failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,7 +346,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
    * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
    * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time.
+   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
+   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
+   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
+   * according to schedule after the failure.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -361,7 +367,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be
    * delayed if the previous execution has not ended when its scheduled time occurs. If retry_count
    * > 0 and a job attempt fails, the job will be tried a total of retry_count times, with
-   * exponential backoff, until the next scheduled start time.
+   * exponential backoff, until the next scheduled start time. If retry_count is 0, a job attempt
+   * will not be retried if it fails. Instead the Cloud Scheduler system will wait for the next
+   * scheduled execution time. Setting retry_count to 0 does not prevent failed jobs from running
+   * according to schedule after the failure.
    * @param schedule schedule or {@code null} for none
    */
   public Job setSchedule(java.lang.String schedule) {

@@ -38,6 +38,13 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   private java.lang.String authority;
 
   /**
+   * Required. A unique code to identify the certification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String code;
+
+  /**
    * Optional. A URL link to the certification.
    * The value may be {@code null}.
    */
@@ -66,7 +73,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   private java.lang.String validUntil;
 
   /**
-   * Required. A custom value of the certification.
+   * Optional. A custom value of the certification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,6 +93,23 @@ public final class Certification extends com.google.api.client.json.GenericJson 
    */
   public Certification setAuthority(java.lang.String authority) {
     this.authority = authority;
+    return this;
+  }
+
+  /**
+   * Required. A unique code to identify the certification.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCode() {
+    return code;
+  }
+
+  /**
+   * Required. A unique code to identify the certification.
+   * @param code code or {@code null} for none
+   */
+  public Certification setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
@@ -158,7 +182,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A custom value of the certification.
+   * Optional. A custom value of the certification.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -166,7 +190,7 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. A custom value of the certification.
+   * Optional. A custom value of the certification.
    * @param value value or {@code null} for none
    */
   public Certification setValue(java.lang.String value) {

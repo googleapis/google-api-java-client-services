@@ -23,6 +23,9 @@ package com.google.api.services.games;
  */
 public class GamesScopes {
 
+  /** View and manage your Google Play Developer account. */
+  public static final String ANDROIDPUBLISHER = "https://www.googleapis.com/auth/androidpublisher";
+
   /** See, create, and delete its own configuration data in your Google Drive. */
   public static final String DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata";
 
@@ -36,6 +39,7 @@ public class GamesScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(ANDROIDPUBLISHER);
     set.add(DRIVE_APPDATA);
     set.add(GAMES);
     return java.util.Collections.unmodifiableSet(set);

@@ -33,18 +33,18 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   /**
    * An AES 128/192/256 bit key. The date shift is computed based on this key and the patient ID. If
    * the patient ID is empty for a DICOM resource, the date shift is computed based on this key and
-   * the study instance UID. If `crypto_key` is not set, then `kms_wrapped` is used to calculate the
+   * the study instance UID. If crypto_key is not set, then kms_wrapped is used to calculate the
    * date shift. If neither is set, a default key is generated for each de-identify operation. Must
-   * not be set if `kms_wrapped` is set.
+   * not be set if kms_wrapped is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKey;
 
   /**
-   * KMS wrapped key. If `kms_wrapped` is not set, then `crypto_key` is used to calculate the date
+   * KMS wrapped key. If kms_wrapped is not set, then crypto_key is used to calculate the date
    * shift. If neither is set, a default key is generated for each de-identify operation. Must not
-   * be set if `crypto_key` is set.
+   * be set if crypto_key is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +53,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   /**
    * An AES 128/192/256 bit key. The date shift is computed based on this key and the patient ID. If
    * the patient ID is empty for a DICOM resource, the date shift is computed based on this key and
-   * the study instance UID. If `crypto_key` is not set, then `kms_wrapped` is used to calculate the
+   * the study instance UID. If crypto_key is not set, then kms_wrapped is used to calculate the
    * date shift. If neither is set, a default key is generated for each de-identify operation. Must
-   * not be set if `kms_wrapped` is set.
+   * not be set if kms_wrapped is set.
    * @see #decodeCryptoKey()
    * @return value or {@code null} for none
    */
@@ -66,9 +66,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   /**
    * An AES 128/192/256 bit key. The date shift is computed based on this key and the patient ID. If
    * the patient ID is empty for a DICOM resource, the date shift is computed based on this key and
-   * the study instance UID. If `crypto_key` is not set, then `kms_wrapped` is used to calculate the
+   * the study instance UID. If crypto_key is not set, then kms_wrapped is used to calculate the
    * date shift. If neither is set, a default key is generated for each de-identify operation. Must
-   * not be set if `kms_wrapped` is set.
+   * not be set if kms_wrapped is set.
    * @see #getCryptoKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -81,9 +81,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   /**
    * An AES 128/192/256 bit key. The date shift is computed based on this key and the patient ID. If
    * the patient ID is empty for a DICOM resource, the date shift is computed based on this key and
-   * the study instance UID. If `crypto_key` is not set, then `kms_wrapped` is used to calculate the
+   * the study instance UID. If crypto_key is not set, then kms_wrapped is used to calculate the
    * date shift. If neither is set, a default key is generated for each de-identify operation. Must
-   * not be set if `kms_wrapped` is set.
+   * not be set if kms_wrapped is set.
    * @see #encodeCryptoKey()
    * @param cryptoKey cryptoKey or {@code null} for none
    */
@@ -95,9 +95,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   /**
    * An AES 128/192/256 bit key. The date shift is computed based on this key and the patient ID. If
    * the patient ID is empty for a DICOM resource, the date shift is computed based on this key and
-   * the study instance UID. If `crypto_key` is not set, then `kms_wrapped` is used to calculate the
+   * the study instance UID. If crypto_key is not set, then kms_wrapped is used to calculate the
    * date shift. If neither is set, a default key is generated for each de-identify operation. Must
-   * not be set if `kms_wrapped` is set.
+   * not be set if kms_wrapped is set.
    * @see #setCryptoKey()
    *
    * <p>
@@ -112,9 +112,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * KMS wrapped key. If `kms_wrapped` is not set, then `crypto_key` is used to calculate the date
+   * KMS wrapped key. If kms_wrapped is not set, then crypto_key is used to calculate the date
    * shift. If neither is set, a default key is generated for each de-identify operation. Must not
-   * be set if `crypto_key` is set.
+   * be set if crypto_key is set.
    * @return value or {@code null} for none
    */
   public KmsWrappedCryptoKey getKmsWrapped() {
@@ -122,9 +122,9 @@ public final class DateShiftConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * KMS wrapped key. If `kms_wrapped` is not set, then `crypto_key` is used to calculate the date
+   * KMS wrapped key. If kms_wrapped is not set, then crypto_key is used to calculate the date
    * shift. If neither is set, a default key is generated for each de-identify operation. Must not
-   * be set if `crypto_key` is set.
+   * be set if crypto_key is set.
    * @param kmsWrapped kmsWrapped or {@code null} for none
    */
   public DateShiftConfig setKmsWrapped(KmsWrappedCryptoKey kmsWrapped) {

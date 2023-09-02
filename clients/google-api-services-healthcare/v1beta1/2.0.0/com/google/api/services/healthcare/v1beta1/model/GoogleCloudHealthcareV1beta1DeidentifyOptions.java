@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Specifies additional options to apply to the base `profile`.
+ * Specifies additional options to apply to the base ProfileType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Character mask config for `CharacterMaskField` `FieldMetadatas`.
+   * Character mask config for CharacterMaskField.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   private ContextualDeidConfig contextualDeid;
 
   /**
-   * Crypo hash config for `CharacterMaskField` `FieldMetadatas`.
+   * Crypto hash config for CharacterMaskField.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CryptoHashConfig cryptoHashConfig;
 
   /**
-   * Date shifting config for `CharacterMaskField` `FieldMetadatas`.
+   * Date shifting config for CharacterMaskField.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   private KeepExtensionsConfig keepExtensions;
 
   /**
-   * Character mask config for `CharacterMaskField` `FieldMetadatas`.
+   * Character mask config for CharacterMaskField.
    * @return value or {@code null} for none
    */
   public CharacterMaskConfig getCharacterMaskConfig() {
@@ -73,7 +73,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   }
 
   /**
-   * Character mask config for `CharacterMaskField` `FieldMetadatas`.
+   * Character mask config for CharacterMaskField.
    * @param characterMaskConfig characterMaskConfig or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyOptions setCharacterMaskConfig(CharacterMaskConfig characterMaskConfig) {
@@ -99,7 +99,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   }
 
   /**
-   * Crypo hash config for `CharacterMaskField` `FieldMetadatas`.
+   * Crypto hash config for CharacterMaskField.
    * @return value or {@code null} for none
    */
   public CryptoHashConfig getCryptoHashConfig() {
@@ -107,7 +107,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   }
 
   /**
-   * Crypo hash config for `CharacterMaskField` `FieldMetadatas`.
+   * Crypto hash config for CharacterMaskField.
    * @param cryptoHashConfig cryptoHashConfig or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyOptions setCryptoHashConfig(CryptoHashConfig cryptoHashConfig) {
@@ -116,7 +116,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   }
 
   /**
-   * Date shifting config for `CharacterMaskField` `FieldMetadatas`.
+   * Date shifting config for CharacterMaskField.
    * @return value or {@code null} for none
    */
   public DateShiftConfig getDateShiftConfig() {
@@ -124,7 +124,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyOptions extends com.goo
   }
 
   /**
-   * Date shifting config for `CharacterMaskField` `FieldMetadatas`.
+   * Date shifting config for CharacterMaskField.
    * @param dateShiftConfig dateShiftConfig or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyOptions setDateShiftConfig(DateShiftConfig dateShiftConfig) {

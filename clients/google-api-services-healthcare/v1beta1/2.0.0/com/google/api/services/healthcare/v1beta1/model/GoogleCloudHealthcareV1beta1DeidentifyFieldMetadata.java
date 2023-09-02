@@ -32,16 +32,16 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace the field's value with a masking character. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CharacterMaskField characterMaskField;
 
   /**
-   * Inspect the field's text and transform sensitive text. Configure using `TextConfig`. Supported
+   * Inspect the field's text and transform sensitive text. Configure using TextConfig. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Date, DateTime, Decimal, HumanName, Id,
-   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml
+   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace field value with a hash of that value. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Shift the date by a randomized number of days. See [date
    * shifting](https://cloud.google.com/dlp/docs/concepts-date-shifting) for more information.
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime
+   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,17 +74,19 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
 
   /**
    * List of paths to FHIR fields to redact. Each path is a period-separated list where each
-   * component is either a field name or FHIR type name. All types begin with an upper case letter.
-   * For example, the resource field "Patient.Address.city", which uses a string type, can be
-   * matched by "Patient.Address.String". Path also supports partialkk matching. For example,
-   * "Patient.Address.city" can be matched by "Address.city" (Patient omitted). Partial matching and
-   * type matching can be combined, for example "Patient.Address.city" can be matched by
-   * "Address.String". For "choice" types (those defined in the FHIR spec with the form: field[x]),
-   * use two separate components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit".
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html) are: AdministrativeGenderCode,
-   * Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id, Instant, Integer,
-   * LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid, Xhtml. The sub-type
-   * for HumanName (for example HumanName.given, HumanName.family) can be omitted.
+   * component is either a field name or FHIR [type](https://www.hl7.org/fhir/datatypes.html) name.
+   * All types begin with an upper case letter. For example, the resource field
+   * `Patient.Address.city`, which uses a [string](https://www.hl7.org/fhir/datatypes-
+   * definitions.html#Address.city) type, can be matched by `Patient.Address.String`. Partial
+   * matching is supported. For example, `Patient.Address.city` can be matched by `Address.city`
+   * (with `Patient` omitted). Partial matching and type matching can be combined, for example
+   * `Patient.Address.city` can be matched by `Address.String`. For "choice" types (those defined in
+   * the FHIR spec with the format `field[x]`), use two separate components. For example,
+   * `deceasedAge.unit` is matched by `Deceased.Age.unit`. The following types are supported:
+   * AdministrativeGenderCode, Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id,
+   * Instant, Integer, LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid,
+   * Xhtml. The sub-type for HumanName (for example `HumanName.given`, `HumanName.family`) can be
+   * omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +102,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace the field's value with a masking character. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @return value or {@code null} for none
    */
   public CharacterMaskField getCharacterMaskField() {
@@ -110,7 +112,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace the field's value with a masking character. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @param characterMaskField characterMaskField or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata setCharacterMaskField(CharacterMaskField characterMaskField) {
@@ -119,9 +121,9 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   }
 
   /**
-   * Inspect the field's text and transform sensitive text. Configure using `TextConfig`. Supported
+   * Inspect the field's text and transform sensitive text. Configure using TextConfig. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Date, DateTime, Decimal, HumanName, Id,
-   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml
+   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @return value or {@code null} for none
    */
   public CleanTextField getCleanTextField() {
@@ -129,9 +131,9 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   }
 
   /**
-   * Inspect the field's text and transform sensitive text. Configure using `TextConfig`. Supported
+   * Inspect the field's text and transform sensitive text. Configure using TextConfig. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Date, DateTime, Decimal, HumanName, Id,
-   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml
+   * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @param cleanTextField cleanTextField or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata setCleanTextField(CleanTextField cleanTextField) {
@@ -142,7 +144,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace field value with a hash of that value. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @return value or {@code null} for none
    */
   public CryptoHashField getCryptoHashField() {
@@ -152,7 +154,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Replace field value with a hash of that value. Supported
    * [types](https://www.hl7.org/fhir/datatypes.html): Code, Decimal, HumanName, Id, LanguageCode,
-   * Markdown, Oid, String, Uri, Uuid, Xhtml
+   * Markdown, Oid, String, Uri, Uuid, Xhtml.
    * @param cryptoHashField cryptoHashField or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata setCryptoHashField(CryptoHashField cryptoHashField) {
@@ -163,7 +165,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Shift the date by a randomized number of days. See [date
    * shifting](https://cloud.google.com/dlp/docs/concepts-date-shifting) for more information.
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime
+   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime.
    * @return value or {@code null} for none
    */
   public DateShiftField getDateShiftField() {
@@ -173,7 +175,7 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
   /**
    * Shift the date by a randomized number of days. See [date
    * shifting](https://cloud.google.com/dlp/docs/concepts-date-shifting) for more information.
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime
+   * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime.
    * @param dateShiftField dateShiftField or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata setDateShiftField(DateShiftField dateShiftField) {
@@ -200,17 +202,19 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
 
   /**
    * List of paths to FHIR fields to redact. Each path is a period-separated list where each
-   * component is either a field name or FHIR type name. All types begin with an upper case letter.
-   * For example, the resource field "Patient.Address.city", which uses a string type, can be
-   * matched by "Patient.Address.String". Path also supports partialkk matching. For example,
-   * "Patient.Address.city" can be matched by "Address.city" (Patient omitted). Partial matching and
-   * type matching can be combined, for example "Patient.Address.city" can be matched by
-   * "Address.String". For "choice" types (those defined in the FHIR spec with the form: field[x]),
-   * use two separate components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit".
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html) are: AdministrativeGenderCode,
-   * Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id, Instant, Integer,
-   * LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid, Xhtml. The sub-type
-   * for HumanName (for example HumanName.given, HumanName.family) can be omitted.
+   * component is either a field name or FHIR [type](https://www.hl7.org/fhir/datatypes.html) name.
+   * All types begin with an upper case letter. For example, the resource field
+   * `Patient.Address.city`, which uses a [string](https://www.hl7.org/fhir/datatypes-
+   * definitions.html#Address.city) type, can be matched by `Patient.Address.String`. Partial
+   * matching is supported. For example, `Patient.Address.city` can be matched by `Address.city`
+   * (with `Patient` omitted). Partial matching and type matching can be combined, for example
+   * `Patient.Address.city` can be matched by `Address.String`. For "choice" types (those defined in
+   * the FHIR spec with the format `field[x]`), use two separate components. For example,
+   * `deceasedAge.unit` is matched by `Deceased.Age.unit`. The following types are supported:
+   * AdministrativeGenderCode, Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id,
+   * Instant, Integer, LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid,
+   * Xhtml. The sub-type for HumanName (for example `HumanName.given`, `HumanName.family`) can be
+   * omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPaths() {
@@ -219,17 +223,19 @@ public final class GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata extends c
 
   /**
    * List of paths to FHIR fields to redact. Each path is a period-separated list where each
-   * component is either a field name or FHIR type name. All types begin with an upper case letter.
-   * For example, the resource field "Patient.Address.city", which uses a string type, can be
-   * matched by "Patient.Address.String". Path also supports partialkk matching. For example,
-   * "Patient.Address.city" can be matched by "Address.city" (Patient omitted). Partial matching and
-   * type matching can be combined, for example "Patient.Address.city" can be matched by
-   * "Address.String". For "choice" types (those defined in the FHIR spec with the form: field[x]),
-   * use two separate components. For example, "deceasedAge.unit" is matched by "Deceased.Age.unit".
-   * Supported [types](https://www.hl7.org/fhir/datatypes.html) are: AdministrativeGenderCode,
-   * Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id, Instant, Integer,
-   * LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid, Xhtml. The sub-type
-   * for HumanName (for example HumanName.given, HumanName.family) can be omitted.
+   * component is either a field name or FHIR [type](https://www.hl7.org/fhir/datatypes.html) name.
+   * All types begin with an upper case letter. For example, the resource field
+   * `Patient.Address.city`, which uses a [string](https://www.hl7.org/fhir/datatypes-
+   * definitions.html#Address.city) type, can be matched by `Patient.Address.String`. Partial
+   * matching is supported. For example, `Patient.Address.city` can be matched by `Address.city`
+   * (with `Patient` omitted). Partial matching and type matching can be combined, for example
+   * `Patient.Address.city` can be matched by `Address.String`. For "choice" types (those defined in
+   * the FHIR spec with the format `field[x]`), use two separate components. For example,
+   * `deceasedAge.unit` is matched by `Deceased.Age.unit`. The following types are supported:
+   * AdministrativeGenderCode, Base64Binary, Boolean, Code, Date, DateTime, Decimal, HumanName, Id,
+   * Instant, Integer, LanguageCode, Markdown, Oid, PositiveInt, String, UnsignedInt, Uri, Uuid,
+   * Xhtml. The sub-type for HumanName (for example `HumanName.given`, `HumanName.family`) can be
+   * omitted.
    * @param paths paths or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1DeidentifyFieldMetadata setPaths(java.util.List<java.lang.String> paths) {

@@ -19,7 +19,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 /**
  * Shift the date by a randomized number of days. See [date
  * shifting](https://cloud.google.com/dlp/docs/concepts-date-shifting) for more information.
- * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime
+ * Supported [types](https://www.hl7.org/fhir/datatypes.html): Date, DateTime.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

@@ -17,9 +17,9 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Inspect text and transform sensitive text. Configure using `TextConfig`. Supported
+ * Inspect text and transform sensitive text. Configure using TextConfig. Supported
  * [types](https://www.hl7.org/fhir/datatypes.html): Code, Date, DateTime, Decimal, HumanName, Id,
- * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml
+ * LanguageCode, Markdown, Oid, String, Uri, Uuid, Xhtml.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

@@ -38,7 +38,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaFixedDiscount ext
 
   /**
    * Type of the fixed discount scope which indicates the source of the discount. It can have values
-   * such as 'sku-group'.
+   * such as 'unspecified' and 'sku-group'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaFixedDiscount ext
 
   /**
    * Type of the fixed discount scope which indicates the source of the discount. It can have values
-   * such as 'sku-group'.
+   * such as 'unspecified' and 'sku-group'.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiscountScopeType() {
@@ -86,7 +86,7 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaFixedDiscount ext
 
   /**
    * Type of the fixed discount scope which indicates the source of the discount. It can have values
-   * such as 'sku-group'.
+   * such as 'unspecified' and 'sku-group'.
    * @param discountScopeType discountScopeType or {@code null} for none
    */
   public GoogleCloudBillingBillingaccountpricesV1betaFixedDiscount setDiscountScopeType(java.lang.String discountScopeType) {

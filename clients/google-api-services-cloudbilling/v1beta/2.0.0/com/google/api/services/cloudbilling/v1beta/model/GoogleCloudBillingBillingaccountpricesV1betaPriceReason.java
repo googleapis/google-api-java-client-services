@@ -82,8 +82,9 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaPriceReason exten
   private GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice migratedPrice;
 
   /**
-   * Type of the price reason. It can values such as 'default-price', 'fixed-price', 'fixed-
-   * discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-as-ceiling'.
+   * Type of the price reason. It can have values such as 'unspecified', 'default-price', 'fixed-
+   * price', 'fixed-discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-
+   * as-ceiling'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,8 +216,9 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaPriceReason exten
   }
 
   /**
-   * Type of the price reason. It can values such as 'default-price', 'fixed-price', 'fixed-
-   * discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-as-ceiling'.
+   * Type of the price reason. It can have values such as 'unspecified', 'default-price', 'fixed-
+   * price', 'fixed-discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-
+   * as-ceiling'.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -224,8 +226,9 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaPriceReason exten
   }
 
   /**
-   * Type of the price reason. It can values such as 'default-price', 'fixed-price', 'fixed-
-   * discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-as-ceiling'.
+   * Type of the price reason. It can have values such as 'unspecified', 'default-price', 'fixed-
+   * price', 'fixed-discount', 'floating-discount', 'migrated-price', 'merged-price', 'list-price-
+   * as-ceiling'.
    * @param type type or {@code null} for none
    */
   public GoogleCloudBillingBillingaccountpricesV1betaPriceReason setType(java.lang.String type) {

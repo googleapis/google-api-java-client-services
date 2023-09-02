@@ -3214,6 +3214,128 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         }
       }
       /**
+       * Gets a device's SIM lock state.
+       *
+       * Create a request for the method "devices.getSimLockState".
+       *
+       * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
+       * any optional parameters, call the {@link GetSimLockState#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param partnerId Required. The ID of the partner.
+       * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateRequest}
+       * @return the request
+       */
+      public GetSimLockState getSimLockState(java.lang.Long partnerId, com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateRequest content) throws java.io.IOException {
+        GetSimLockState result = new GetSimLockState(partnerId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSimLockState extends AndroidProvisioningPartnerRequest<com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateResponse> {
+
+        private static final String REST_PATH = "v1/partners/{+partnerId}/devices:getSimLockState";
+
+        private final java.util.regex.Pattern PARTNER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Gets a device's SIM lock state.
+         *
+         * Create a request for the method "devices.getSimLockState".
+         *
+         * This request holds the parameters needed by the the androiddeviceprovisioning server.  After
+         * setting any optional parameters, call the {@link GetSimLockState#execute()} method to invoke
+         * the remote operation. <p> {@link GetSimLockState#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param partnerId Required. The ID of the partner.
+         * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateRequest}
+         * @since 1.13
+         */
+        protected GetSimLockState(java.lang.Long partnerId, com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateRequest content) {
+          super(AndroidProvisioningPartner.this, "POST", REST_PATH, content, com.google.api.services.androiddeviceprovisioning.v1.model.GetDeviceSimLockStateResponse.class);
+          this.partnerId = com.google.api.client.util.Preconditions.checkNotNull(partnerId, "Required parameter partnerId must be specified.");
+        }
+
+        @Override
+        public GetSimLockState set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSimLockState) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSimLockState setAccessToken(java.lang.String accessToken) {
+          return (GetSimLockState) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSimLockState setAlt(java.lang.String alt) {
+          return (GetSimLockState) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSimLockState setCallback(java.lang.String callback) {
+          return (GetSimLockState) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSimLockState setFields(java.lang.String fields) {
+          return (GetSimLockState) super.setFields(fields);
+        }
+
+        @Override
+        public GetSimLockState setKey(java.lang.String key) {
+          return (GetSimLockState) super.setKey(key);
+        }
+
+        @Override
+        public GetSimLockState setOauthToken(java.lang.String oauthToken) {
+          return (GetSimLockState) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSimLockState setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSimLockState) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSimLockState setQuotaUser(java.lang.String quotaUser) {
+          return (GetSimLockState) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSimLockState setUploadType(java.lang.String uploadType) {
+          return (GetSimLockState) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSimLockState setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSimLockState) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the partner. */
+        @com.google.api.client.util.Key
+        private java.lang.Long partnerId;
+
+        /** Required. The ID of the partner.
+         */
+        public java.lang.Long getPartnerId() {
+          return partnerId;
+        }
+
+        /** Required. The ID of the partner. */
+        public GetSimLockState setPartnerId(java.lang.Long partnerId) {
+          this.partnerId = partnerId;
+          return this;
+        }
+
+        @Override
+        public GetSimLockState set(String parameterName, Object value) {
+          return (GetSimLockState) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates reseller metadata associated with the device. Android devices only.
        *
        * Create a request for the method "devices.metadata".

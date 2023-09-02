@@ -17,8 +17,11 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A thread in a Google Chat space. For example usage, see [Start or reply to a message thread](http
- * s://developers.google.com/chat/api/guides/crudl/messages#start_or_reply_to_a_message_thread).
+ * A thread in a Google Chat space. For example usage, see [Start or reply to a message
+ * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-thread).
+ * If you specify a thread when creating a message, you can set the [`messageReplyOption`](https://d
+ * evelopers.google.com/chat/api/reference/rest/v1/spaces.messages/create#messagereplyoption) field
+ * to determine what happens if no matching thread is found.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,22 +34,25 @@ package com.google.api.services.chat.v1.model;
 public final class Thread extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
+   * Optional. Input for creating or updating a thread. Otherwise, output only. ID for the thread.
+   * Supports up to 4000 characters. This ID is unique to the Chat app that sets it. For example, if
+   * multiple Chat apps create a message using the same thread key, the messages are posted in
+   * different threads. To reply in a thread created by a person or another Chat app, specify the
+   * thread `name` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String threadKey;
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,7 +60,7 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
+   * Output only. Resource name of the thread. Example: `spaces/{space}/threads/{thread}`
    * @param name name or {@code null} for none
    */
   public Thread setName(java.lang.String name) {
@@ -63,8 +69,11 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
+   * Optional. Input for creating or updating a thread. Otherwise, output only. ID for the thread.
+   * Supports up to 4000 characters. This ID is unique to the Chat app that sets it. For example, if
+   * multiple Chat apps create a message using the same thread key, the messages are posted in
+   * different threads. To reply in a thread created by a person or another Chat app, specify the
+   * thread `name` field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreadKey() {
@@ -72,8 +81,11 @@ public final class Thread extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ID for the thread. Supports up to 4000 characters. Input for creating or updating a
-   * thread. Otherwise, output only.
+   * Optional. Input for creating or updating a thread. Otherwise, output only. ID for the thread.
+   * Supports up to 4000 characters. This ID is unique to the Chat app that sets it. For example, if
+   * multiple Chat apps create a message using the same thread key, the messages are posted in
+   * different threads. To reply in a thread created by a person or another Chat app, specify the
+   * thread `name` field instead.
    * @param threadKey threadKey or {@code null} for none
    */
   public Thread setThreadKey(java.lang.String threadKey) {

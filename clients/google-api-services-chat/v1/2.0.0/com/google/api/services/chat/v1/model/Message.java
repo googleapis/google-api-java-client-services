@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A message in Google Chat.
+ * A message in a Google Chat space.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -99,14 +99,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
-   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
-   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
-   * message and for identifying user input values. Currently supported widgets include: -
-   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
-   * `SelectionInput` - `Grid`
+   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
+   * apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
+   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
+   * consistent UIs with cards](https://developers.google.com/chat/ui).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -377,14 +374,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
-   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
-   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
-   * message and for identifying user input values. Currently supported widgets include: -
-   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
-   * `SelectionInput` - `Grid`
+   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
+   * apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
+   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
+   * consistent UIs with cards](https://developers.google.com/chat/ui).
    * @return value or {@code null} for none
    */
   public java.util.List<CardWithId> getCardsV2() {
@@ -392,14 +386,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Richly formatted and interactive cards that display UI elements and editable widgets, such as:
-   * - Formatted text - Buttons - Clickable images - Checkboxes - Radio buttons - Input widgets.
-   * Cards are usually displayed below the text body of a Chat message, but can situationally appear
-   * other places, such as [dialogs](https://developers.google.com/chat/how-tos/dialogs). Each card
-   * can have a maximum size of 32 KB. The `cardId` is a unique identifier among cards in the same
-   * message and for identifying user input values. Currently supported widgets include: -
-   * `TextParagraph` - `DecoratedText` - `Image` - `ButtonList` - `Divider` - `TextInput` -
-   * `SelectionInput` - `Grid`
+   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
+   * apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
+   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
+   * consistent UIs with cards](https://developers.google.com/chat/ui).
    * @param cardsV2 cardsV2 or {@code null} for none
    */
   public Message setCardsV2(java.util.List<CardWithId> cardsV2) {

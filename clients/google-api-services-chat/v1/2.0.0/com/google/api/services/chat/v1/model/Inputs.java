@@ -17,7 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Types of data inputs for widgets. Users enter data with these inputs.
+ * Types of data that users can enter on cards or dialogs. To learn how to process information from
+ * users, see [Read form data input by users on cards](https://developers.google.com/chat/ui/read-
+ * form-data).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -17,7 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Widgets for Chat apps to specify.
+ * A [card](https://developers.google.com/chat/api/reference/rest/v1/cards) in a Google Chat
+ * message. Only Chat apps can create cards. If your Chat app [authenticates as a
+ * user](https://developers.google.com/chat/api/guides/auth/users), the message can't contain cards.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,26 +32,21 @@ package com.google.api.services.chat.v1.model;
 public final class CardWithId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
-   * images. Use this card to present detailed information, gather information from users, and guide
-   * users to take a next step.
+   * A card. Maximum size is 32 KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Card card;
 
   /**
-   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
-   * message.
+   * Required if the message contains multiple cards. A unique identifier for a card in a message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cardId;
 
   /**
-   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
-   * images. Use this card to present detailed information, gather information from users, and guide
-   * users to take a next step.
+   * A card. Maximum size is 32 KB.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Card getCard() {
@@ -57,9 +54,7 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cards support a defined layout, interactive UI elements like buttons, and rich media like
-   * images. Use this card to present detailed information, gather information from users, and guide
-   * users to take a next step.
+   * A card. Maximum size is 32 KB.
    * @param card card or {@code null} for none
    */
   public CardWithId setCard(GoogleAppsCardV1Card card) {
@@ -68,8 +63,7 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
-   * message.
+   * Required if the message contains multiple cards. A unique identifier for a card in a message.
    * @return value or {@code null} for none
    */
   public java.lang.String getCardId() {
@@ -77,8 +71,7 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required for `cardsV2` messages. Chat app-specified identifier for this widget. Scoped within a
-   * message.
+   * Required if the message contains multiple cards. A unique identifier for a card in a message.
    * @param cardId cardId or {@code null} for none
    */
   public CardWithId setCardId(java.lang.String cardId) {

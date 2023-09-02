@@ -17,11 +17,13 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Annotations associated with the plain-text body of the message. Example plain-text message body:
- * ``` Hello @FooBot how are you!" ``` The corresponding annotations metadata: ``` "annotations":[{
- * "type":"USER_MENTION", "startIndex":6, "length":7, "userMention": { "user": {
- * "name":"users/{user}", "displayName":"FooBot", "avatarUrl":"https://goo.gl/aeDtrS", "type":"BOT"
- * }, "type":"MENTION" } }] ```
+ * Output only. Annotations associated with the plain-text body of the message. To add basic
+ * formatting to a text message, see [Format text
+ * messages](https://developers.google.com/chat/api/guides/message-formats/text#format-texts).
+ * Example plain-text message body: ``` Hello @FooBot how are you!" ``` The corresponding
+ * annotations metadata: ``` "annotations":[{ "type":"USER_MENTION", "startIndex":6, "length":7,
+ * "userMention": { "user": { "name":"users/{user}", "displayName":"FooBot",
+ * "avatarUrl":"https://goo.gl/aeDtrS", "type":"BOT" }, "type":"MENTION" } }] ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

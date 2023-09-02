@@ -40,6 +40,14 @@ public final class PlacementPolicy extends com.google.api.client.json.GenericJso
   private java.lang.String policyName;
 
   /**
+   * Optional. TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs
+   * /types-topologies#tpu_topologies
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTopology;
+
+  /**
    * The type of placement.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class PlacementPolicy extends com.google.api.client.json.GenericJso
    */
   public PlacementPolicy setPolicyName(java.lang.String policyName) {
     this.policyName = policyName;
+    return this;
+  }
+
+  /**
+   * Optional. TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs
+   * /types-topologies#tpu_topologies
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTopology() {
+    return tpuTopology;
+  }
+
+  /**
+   * Optional. TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs
+   * /types-topologies#tpu_topologies
+   * @param tpuTopology tpuTopology or {@code null} for none
+   */
+  public PlacementPolicy setTpuTopology(java.lang.String tpuTopology) {
+    this.tpuTopology = tpuTopology;
     return this;
   }
 

@@ -44,7 +44,7 @@ public final class PieChart extends com.google.api.client.json.GenericJson {
   private java.util.List<PieChartDataSet> dataSets;
 
   /**
-   * Optional. Indicates whether or not the pie chart should slices' labels
+   * Optional. Indicates whether or not the pie chart should show slices' labels
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class PieChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether or not the pie chart should slices' labels
+   * Optional. Indicates whether or not the pie chart should show slices' labels
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShowLabels() {
@@ -108,7 +108,7 @@ public final class PieChart extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether or not the pie chart should slices' labels
+   * Optional. Indicates whether or not the pie chart should show slices' labels
    * @param showLabels showLabels or {@code null} for none
    */
   public PieChart setShowLabels(java.lang.Boolean showLabels) {

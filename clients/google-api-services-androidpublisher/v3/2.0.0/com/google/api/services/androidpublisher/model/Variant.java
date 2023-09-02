@@ -38,6 +38,13 @@ public final class Variant extends com.google.api.client.json.GenericJson {
   private DeviceSpec deviceSpec;
 
   /**
+   * Optional. Options applied to the generated APK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SystemApkOptions options;
+
+  /**
    * Output only. The ID of a previously created system APK variant.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class Variant extends com.google.api.client.json.GenericJson {
    */
   public Variant setDeviceSpec(DeviceSpec deviceSpec) {
     this.deviceSpec = deviceSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Options applied to the generated APK.
+   * @return value or {@code null} for none
+   */
+  public SystemApkOptions getOptions() {
+    return options;
+  }
+
+  /**
+   * Optional. Options applied to the generated APK.
+   * @param options options or {@code null} for none
+   */
+  public Variant setOptions(SystemApkOptions options) {
+    this.options = options;
     return this;
   }
 

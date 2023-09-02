@@ -30,45 +30,16 @@ package com.google.api.services.cloudbilling.v1beta.model;
 public final class GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice extends com.google.api.client.json.GenericJson {
 
   /**
-   * The source SKU floating discount is applied on the target SKU's default price.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudBillingBillingaccountpricesV1betaSourceDiscountOnTargetPrice sourceDiscountOnTargetPrice;
-
-  /**
-   * Source SKU where the discount is migrated from.
+   * Source SKU where the discount is migrated from. Format:
+   * billingAccounts/{billing_account}/skus/{sku}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSku;
 
   /**
-   * Type of the migrated price. It can have values such as 'source-discount-on-target-price'.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * The source SKU floating discount is applied on the target SKU's default price.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudBillingBillingaccountpricesV1betaSourceDiscountOnTargetPrice getSourceDiscountOnTargetPrice() {
-    return sourceDiscountOnTargetPrice;
-  }
-
-  /**
-   * The source SKU floating discount is applied on the target SKU's default price.
-   * @param sourceDiscountOnTargetPrice sourceDiscountOnTargetPrice or {@code null} for none
-   */
-  public GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice setSourceDiscountOnTargetPrice(GoogleCloudBillingBillingaccountpricesV1betaSourceDiscountOnTargetPrice sourceDiscountOnTargetPrice) {
-    this.sourceDiscountOnTargetPrice = sourceDiscountOnTargetPrice;
-    return this;
-  }
-
-  /**
-   * Source SKU where the discount is migrated from.
+   * Source SKU where the discount is migrated from. Format:
+   * billingAccounts/{billing_account}/skus/{sku}
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSku() {
@@ -76,28 +47,12 @@ public final class GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice ext
   }
 
   /**
-   * Source SKU where the discount is migrated from.
+   * Source SKU where the discount is migrated from. Format:
+   * billingAccounts/{billing_account}/skus/{sku}
    * @param sourceSku sourceSku or {@code null} for none
    */
   public GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice setSourceSku(java.lang.String sourceSku) {
     this.sourceSku = sourceSku;
-    return this;
-  }
-
-  /**
-   * Type of the migrated price. It can have values such as 'source-discount-on-target-price'.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Type of the migrated price. It can have values such as 'source-discount-on-target-price'.
-   * @param type type or {@code null} for none
-   */
-  public GoogleCloudBillingBillingaccountpricesV1betaMigratedPrice setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

@@ -85,6 +85,14 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Settings for a rewarded ad unit. This can be set or unset only when the ad_format is
+   * "REWARDED".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdUnitRewardSettings rewardSettings;
+
+  /**
    * AdFormat of the ad unit. Possible values are as follows: "APP_OPEN" - App Open ad format.
    * "BANNER" - Banner ad format. "BANNER_INTERSTITIAL" - Legacy format that can be used as either
    * banner or interstitial. This format can no longer be created but can be targeted by mediation
@@ -209,6 +217,25 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
    */
   public AdUnit setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for a rewarded ad unit. This can be set or unset only when the ad_format is
+   * "REWARDED".
+   * @return value or {@code null} for none
+   */
+  public AdUnitRewardSettings getRewardSettings() {
+    return rewardSettings;
+  }
+
+  /**
+   * Optional. Settings for a rewarded ad unit. This can be set or unset only when the ad_format is
+   * "REWARDED".
+   * @param rewardSettings rewardSettings or {@code null} for none
+   */
+  public AdUnit setRewardSettings(AdUnitRewardSettings rewardSettings) {
+    this.rewardSettings = rewardSettings;
     return this;
   }
 

@@ -30,6 +30,16 @@ package com.google.api.services.admob.v1beta.model;
 public final class AppLinkedAppInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The app store information for published Android apps. This field is only used for
+   * apps on the Android platform and will be ignored if the PLATFORM is set to iOS. The default
+   * value is the Google Play App store. This field can be updated after app is created. If the app
+   * is not published, this field will not be included in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> androidAppStores;
+
+  /**
    * The app store ID of the app; present if and only if the app is linked to an app store. If the
    * app is added to the Google Play store, it will be the application ID of the app. For example:
    * "com.example.myapp". See https://developer.android.com/studio/build/application-id. If the app
@@ -48,6 +58,29 @@ public final class AppLinkedAppInfo extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Optional. The app store information for published Android apps. This field is only used for
+   * apps on the Android platform and will be ignored if the PLATFORM is set to iOS. The default
+   * value is the Google Play App store. This field can be updated after app is created. If the app
+   * is not published, this field will not be included in the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAndroidAppStores() {
+    return androidAppStores;
+  }
+
+  /**
+   * Optional. The app store information for published Android apps. This field is only used for
+   * apps on the Android platform and will be ignored if the PLATFORM is set to iOS. The default
+   * value is the Google Play App store. This field can be updated after app is created. If the app
+   * is not published, this field will not be included in the response.
+   * @param androidAppStores androidAppStores or {@code null} for none
+   */
+  public AppLinkedAppInfo setAndroidAppStores(java.util.List<java.lang.String> androidAppStores) {
+    this.androidAppStores = androidAppStores;
+    return this;
+  }
 
   /**
    * The app store ID of the app; present if and only if the app is linked to an app store. If the

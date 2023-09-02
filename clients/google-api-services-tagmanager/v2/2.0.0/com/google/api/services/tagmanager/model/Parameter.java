@@ -30,9 +30,9 @@ package com.google.api.services.tagmanager.model;
 public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether or not a reference type parameter is strongly or weakly referenced. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
+   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
+   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +110,9 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * Whether or not a reference type parameter is strongly or weakly referenced. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
+   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
+   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsWeakReference() {
@@ -120,9 +120,9 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not a reference type parameter is strongly or weakly referenced. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
+   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
+   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
    * @param isWeakReference isWeakReference or {@code null} for none
    */
   public Parameter setIsWeakReference(java.lang.Boolean isWeakReference) {

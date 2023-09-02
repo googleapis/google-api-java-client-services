@@ -8717,7 +8717,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Moves entities to a GTM Folder.
+           * Moves entities to a GTM Folder. If {folder_id} in the request path equals 0, this will instead
+           * move entities out of the folder they currently belong to.
            *
            * Create a request for the method "folders.move_entities_to_folder".
            *
@@ -8745,7 +8746,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
-             * Moves entities to a GTM Folder.
+             * Moves entities to a GTM Folder. If {folder_id} in the request path equals 0, this will instead
+             * move entities out of the folder they currently belong to.
              *
              * Create a request for the method "folders.move_entities_to_folder".
              *

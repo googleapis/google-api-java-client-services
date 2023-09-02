@@ -704,25 +704,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. Indicates if all child assets of the source resource should also be analyzed
-           * in addition to the source.
+           * Optional. List of asset types to be analyzed,including and under the source resource.
+           * If empty, all assets are analyzed. The complete list of asset types is available
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
+           * types#searchable_asset_types)
            */
           @com.google.api.client.util.Key
-          private java.lang.Boolean analyzeChildAssets;
+          private java.util.List<java.lang.String> assetTypes;
 
-          /** Optional. Indicates if all child assets of the source resource should also be analyzed in addition
-         to the source.
+          /** Optional. List of asset types to be analyzed,including and under the source resource. If empty, all
+         assets are analyzed. The complete list of asset types is available [here](https://cloud.google.com
+         /asset-inventory/docs/supported-asset-types#searchable_asset_types)
            */
-          public java.lang.Boolean getAnalyzeChildAssets() {
-            return analyzeChildAssets;
+          public java.util.List<java.lang.String> getAssetTypes() {
+            return assetTypes;
           }
 
           /**
-           * Optional. Indicates if all child assets of the source resource should also be analyzed
-           * in addition to the source.
+           * Optional. List of asset types to be analyzed,including and under the source resource.
+           * If empty, all assets are analyzed. The complete list of asset types is available
+           * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
+           * types#searchable_asset_types)
            */
-          public AnalyzeWorkloadMove setAnalyzeChildAssets(java.lang.Boolean analyzeChildAssets) {
-            this.analyzeChildAssets = analyzeChildAssets;
+          public AnalyzeWorkloadMove setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+            this.assetTypes = assetTypes;
             return this;
           }
 

@@ -74,6 +74,13 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   private GoogleCloudDialogflowCxV3Form form;
 
   /**
+   * Optional. Knowledge connector configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3KnowledgeConnectorSettings knowledgeConnectorSettings;
+
+  /**
    * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage
    * populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
@@ -82,8 +89,10 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must
-   * be unique within a page. * If multiple transition routes within a page scope refer to the same
+   * Ordered list of `TransitionRouteGroups` added to the page. Transition route groups must be
+   * unique within a page. If the page links both flow-level transition route groups and agent-level
+   * transition route groups, the flow-level ones will have higher priority and will be put before
+   * the agent-level ones. * If multiple transition routes within a page scope refer to the same
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.
@@ -179,6 +188,23 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   }
 
   /**
+   * Optional. Knowledge connector configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3KnowledgeConnectorSettings getKnowledgeConnectorSettings() {
+    return knowledgeConnectorSettings;
+  }
+
+  /**
+   * Optional. Knowledge connector configuration.
+   * @param knowledgeConnectorSettings knowledgeConnectorSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Page setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3KnowledgeConnectorSettings knowledgeConnectorSettings) {
+    this.knowledgeConnectorSettings = knowledgeConnectorSettings;
+    return this;
+  }
+
+  /**
    * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage
    * populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
@@ -198,8 +224,10 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   }
 
   /**
-   * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must
-   * be unique within a page. * If multiple transition routes within a page scope refer to the same
+   * Ordered list of `TransitionRouteGroups` added to the page. Transition route groups must be
+   * unique within a page. If the page links both flow-level transition route groups and agent-level
+   * transition route groups, the flow-level ones will have higher priority and will be put before
+   * the agent-level ones. * If multiple transition routes within a page scope refer to the same
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.
@@ -212,8 +240,10 @@ public final class GoogleCloudDialogflowCxV3Page extends com.google.api.client.j
   }
 
   /**
-   * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must
-   * be unique within a page. * If multiple transition routes within a page scope refer to the same
+   * Ordered list of `TransitionRouteGroups` added to the page. Transition route groups must be
+   * unique within a page. If the page links both flow-level transition route groups and agent-level
+   * transition route groups, the flow-level ones will have higher priority and will be put before
+   * the agent-level ones. * If multiple transition routes within a page scope refer to the same
    * intent, then the precedence order is: page's transition route -> page's transition route group
    * -> flow's transition routes. * If multiple transition route groups within a page contain the
    * same intent, then the first group in the ordered list takes precedence.

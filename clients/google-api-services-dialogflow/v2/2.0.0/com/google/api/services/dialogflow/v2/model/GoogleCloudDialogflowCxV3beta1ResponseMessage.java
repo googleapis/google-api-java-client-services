@@ -64,6 +64,13 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessage extends com.goo
   private GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteraction endInteraction;
 
   /**
+   * Represents info card for knowledge answers, to be better rendered in Dialogflow Messenger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ResponseMessageKnowledgeInfoCard knowledgeInfoCard;
+
+  /**
    * Hands off conversation to a human agent.
    * The value may be {@code null}.
    */
@@ -174,6 +181,23 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessage extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1ResponseMessage setEndInteraction(GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteraction endInteraction) {
     this.endInteraction = endInteraction;
+    return this;
+  }
+
+  /**
+   * Represents info card for knowledge answers, to be better rendered in Dialogflow Messenger.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ResponseMessageKnowledgeInfoCard getKnowledgeInfoCard() {
+    return knowledgeInfoCard;
+  }
+
+  /**
+   * Represents info card for knowledge answers, to be better rendered in Dialogflow Messenger.
+   * @param knowledgeInfoCard knowledgeInfoCard or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ResponseMessage setKnowledgeInfoCard(GoogleCloudDialogflowCxV3beta1ResponseMessageKnowledgeInfoCard knowledgeInfoCard) {
+    this.knowledgeInfoCard = knowledgeInfoCard;
     return this;
   }
 

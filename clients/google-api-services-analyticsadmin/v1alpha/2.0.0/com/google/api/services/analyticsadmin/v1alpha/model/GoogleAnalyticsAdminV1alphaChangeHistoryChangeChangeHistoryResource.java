@@ -185,6 +185,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link;
 
   /**
+   * A snapshot of SKAdNetworkConversionValueSchema resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema skadnetworkConversionValueSchema;
+
+  /**
    * A snapshot of an Account resource in change history.
    * @return value or {@code null} for none
    */
@@ -555,6 +562,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setSearchAds360Link(GoogleAnalyticsAdminV1alphaSearchAds360Link searchAds360Link) {
     this.searchAds360Link = searchAds360Link;
+    return this;
+  }
+
+  /**
+   * A snapshot of SKAdNetworkConversionValueSchema resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema getSkadnetworkConversionValueSchema() {
+    return skadnetworkConversionValueSchema;
+  }
+
+  /**
+   * A snapshot of SKAdNetworkConversionValueSchema resource in change history.
+   * @param skadnetworkConversionValueSchema skadnetworkConversionValueSchema or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setSkadnetworkConversionValueSchema(GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema skadnetworkConversionValueSchema) {
+    this.skadnetworkConversionValueSchema = skadnetworkConversionValueSchema;
     return this;
   }
 

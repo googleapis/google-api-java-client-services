@@ -18,7 +18,7 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * Specifies a BigQuery table definition. Only [native
- * tables](https://cloud.google.com/bigquery/docs/tables-intro) is allowed.
+ * tables](https://cloud.google.com/bigquery/docs/tables-intro) are allowed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

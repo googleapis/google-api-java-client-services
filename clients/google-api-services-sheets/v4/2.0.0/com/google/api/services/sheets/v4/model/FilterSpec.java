@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class FilterSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The column index.
+   * The zero-based column index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class FilterSpec extends com.google.api.client.json.GenericJson {
   private FilterCriteria filterCriteria;
 
   /**
-   * The column index.
+   * The zero-based column index.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumnIndex() {
@@ -59,7 +59,7 @@ public final class FilterSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column index.
+   * The zero-based column index.
    * @param columnIndex columnIndex or {@code null} for none
    */
   public FilterSpec setColumnIndex(java.lang.Integer columnIndex) {

@@ -45,7 +45,7 @@ public final class WaterfallChartCustomSubtotal extends com.google.api.client.js
   private java.lang.String label;
 
   /**
-   * The 0-based index of a data point within the series. If data_is_subtotal is true, the data
+   * The zero-based index of a data point within the series. If data_is_subtotal is true, the data
    * point at this index is the subtotal. Otherwise, the subtotal appears after the data point with
    * this index. A series can have multiple subtotals at arbitrary indices, but subtotals do not
    * affect the indices of the data points. For example, if a series has three data points, their
@@ -93,7 +93,7 @@ public final class WaterfallChartCustomSubtotal extends com.google.api.client.js
   }
 
   /**
-   * The 0-based index of a data point within the series. If data_is_subtotal is true, the data
+   * The zero-based index of a data point within the series. If data_is_subtotal is true, the data
    * point at this index is the subtotal. Otherwise, the subtotal appears after the data point with
    * this index. A series can have multiple subtotals at arbitrary indices, but subtotals do not
    * affect the indices of the data points. For example, if a series has three data points, their
@@ -106,7 +106,7 @@ public final class WaterfallChartCustomSubtotal extends com.google.api.client.js
   }
 
   /**
-   * The 0-based index of a data point within the series. If data_is_subtotal is true, the data
+   * The zero-based index of a data point within the series. If data_is_subtotal is true, the data
    * point at this index is the subtotal. Otherwise, the subtotal appears after the data point with
    * this index. A series can have multiple subtotals at arbitrary indices, but subtotals do not
    * affect the indices of the data points. For example, if a series has three data points, their

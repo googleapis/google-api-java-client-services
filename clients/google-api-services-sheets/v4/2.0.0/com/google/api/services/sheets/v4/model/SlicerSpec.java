@@ -52,7 +52,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   private ColorStyle backgroundColorStyle;
 
   /**
-   * The column index in the data table on which the filter is applied to.
+   * The zero-based column index in the data table on which the filter is applied to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column index in the data table on which the filter is applied to.
+   * The zero-based column index in the data table on which the filter is applied to.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumnIndex() {
@@ -155,7 +155,7 @@ public final class SlicerSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column index in the data table on which the filter is applied to.
+   * The zero-based column index in the data table on which the filter is applied to.
    * @param columnIndex columnIndex or {@code null} for none
    */
   public SlicerSpec setColumnIndex(java.lang.Integer columnIndex) {

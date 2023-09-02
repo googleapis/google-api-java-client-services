@@ -46,7 +46,7 @@ public final class BasicSeriesDataPointStyleOverride extends com.google.api.clie
   private ColorStyle colorStyle;
 
   /**
-   * Zero based index of the series data point.
+   * The zero-based index of the series data point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class BasicSeriesDataPointStyleOverride extends com.google.api.clie
   }
 
   /**
-   * Zero based index of the series data point.
+   * The zero-based index of the series data point.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -108,7 +108,7 @@ public final class BasicSeriesDataPointStyleOverride extends com.google.api.clie
   }
 
   /**
-   * Zero based index of the series data point.
+   * The zero-based index of the series data point.
    * @param index index or {@code null} for none
    */
   public BasicSeriesDataPointStyleOverride setIndex(java.lang.Integer index) {

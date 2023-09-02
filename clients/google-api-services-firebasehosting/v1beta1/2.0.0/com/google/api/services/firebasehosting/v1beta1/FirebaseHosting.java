@@ -503,6 +503,29 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return this;
         }
 
+        /**
+         * Optional. If set, validates that the site_id is available and that the request would
+         * succeed, returning the expected resulting site or error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean validateOnly;
+
+        /** Optional. If set, validates that the site_id is available and that the request would succeed,
+       returning the expected resulting site or error.
+         */
+        public java.lang.Boolean getValidateOnly() {
+          return validateOnly;
+        }
+
+        /**
+         * Optional. If set, validates that the site_id is available and that the request would
+         * succeed, returning the expected resulting site or error.
+         */
+        public Create setValidateOnly(java.lang.Boolean validateOnly) {
+          this.validateOnly = validateOnly;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);

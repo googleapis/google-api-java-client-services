@@ -45,6 +45,15 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private java.lang.String contentCategory;
 
   /**
+   * Output only. The content category which takes effect when serving the line item. When content
+   * category is set in both line item and advertiser, the stricter one will take effect when
+   * serving the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveContentCategory;
+
+  /**
    * Settings that control what YouTube and Partners inventories the line item will target.
    * The value may be {@code null}.
    */
@@ -134,6 +143,27 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
    */
   public YoutubeAndPartnersSettings setContentCategory(java.lang.String contentCategory) {
     this.contentCategory = contentCategory;
+    return this;
+  }
+
+  /**
+   * Output only. The content category which takes effect when serving the line item. When content
+   * category is set in both line item and advertiser, the stricter one will take effect when
+   * serving the line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveContentCategory() {
+    return effectiveContentCategory;
+  }
+
+  /**
+   * Output only. The content category which takes effect when serving the line item. When content
+   * category is set in both line item and advertiser, the stricter one will take effect when
+   * serving the line item.
+   * @param effectiveContentCategory effectiveContentCategory or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setEffectiveContentCategory(java.lang.String effectiveContentCategory) {
+    this.effectiveContentCategory = effectiveContentCategory;
     return this;
   }
 

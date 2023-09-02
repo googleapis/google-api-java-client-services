@@ -47,8 +47,9 @@ public final class AssignedLocation extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. The ID of the targeting option assigned to the location list. Must be of type
-   * TARGETING_TYPE_GEO_REGION.
+   * Required. The ID of the targeting option assigned to the location list. Assigned locations can
+   * only be modified in TARGETING_LOCATION_TYPE_REGIONAL location lists. When creating or deleting
+   * assigned locations, this value must be of type TARGETING_TYPE_GEO_REGION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +92,9 @@ public final class AssignedLocation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The ID of the targeting option assigned to the location list. Must be of type
-   * TARGETING_TYPE_GEO_REGION.
+   * Required. The ID of the targeting option assigned to the location list. Assigned locations can
+   * only be modified in TARGETING_LOCATION_TYPE_REGIONAL location lists. When creating or deleting
+   * assigned locations, this value must be of type TARGETING_TYPE_GEO_REGION.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingOptionId() {
@@ -100,8 +102,9 @@ public final class AssignedLocation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The ID of the targeting option assigned to the location list. Must be of type
-   * TARGETING_TYPE_GEO_REGION.
+   * Required. The ID of the targeting option assigned to the location list. Assigned locations can
+   * only be modified in TARGETING_LOCATION_TYPE_REGIONAL location lists. When creating or deleting
+   * assigned locations, this value must be of type TARGETING_TYPE_GEO_REGION.
    * @param targetingOptionId targetingOptionId or {@code null} for none
    */
   public AssignedLocation setTargetingOptionId(java.lang.String targetingOptionId) {

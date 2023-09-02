@@ -32,6 +32,13 @@ package com.google.api.services.integrations.v1alpha.model;
 public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. HPA autoscaling config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1HPAConfig hpaConfig;
+
+  /**
    * Output only. Max QPS supported for internal requests originating from Connd.
    * The value may be {@code null}.
    */
@@ -44,6 +51,37 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long ratelimitThreshold;
+
+  /**
+   * Output only. System resource limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1ResourceLimits resourceLimits;
+
+  /**
+   * Output only. System resource requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1ResourceRequests resourceRequests;
+
+  /**
+   * Output only. HPA autoscaling config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1HPAConfig getHpaConfig() {
+    return hpaConfig;
+  }
+
+  /**
+   * Output only. HPA autoscaling config.
+   * @param hpaConfig hpaConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setHpaConfig(GoogleCloudConnectorsV1HPAConfig hpaConfig) {
+    this.hpaConfig = hpaConfig;
+    return this;
+  }
 
   /**
    * Output only. Max QPS supported for internal requests originating from Connd.
@@ -76,6 +114,40 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setRatelimitThreshold(java.lang.Long ratelimitThreshold) {
     this.ratelimitThreshold = ratelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Output only. System resource limits.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ResourceLimits getResourceLimits() {
+    return resourceLimits;
+  }
+
+  /**
+   * Output only. System resource limits.
+   * @param resourceLimits resourceLimits or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setResourceLimits(GoogleCloudConnectorsV1ResourceLimits resourceLimits) {
+    this.resourceLimits = resourceLimits;
+    return this;
+  }
+
+  /**
+   * Output only. System resource requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ResourceRequests getResourceRequests() {
+    return resourceRequests;
+  }
+
+  /**
+   * Output only. System resource requests.
+   * @param resourceRequests resourceRequests or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setResourceRequests(GoogleCloudConnectorsV1ResourceRequests resourceRequests) {
+    this.resourceRequests = resourceRequests;
     return this;
   }
 

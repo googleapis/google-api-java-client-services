@@ -46,14 +46,6 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   private String endTime;
 
   /**
-   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
-   * item will be charged indefinitely. Used only with PROMOTION_TYPE_REGULAR_REDUCTION.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails;
-
-  /**
    * Optional. Specifies the duration of the free trial of the subscription when promotion_type is
    * PROMOTION_TYPE_FREE_TRIAL
    * The value may be {@code null}.
@@ -140,25 +132,6 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Promotion setEndTime(String endTime) {
     this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
-   * item will be charged indefinitely. Used only with PROMOTION_TYPE_REGULAR_REDUCTION.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails getFiniteBillingCycleDetails() {
-    return finiteBillingCycleDetails;
-  }
-
-  /**
-   * Optional. Details for a subscription line item with finite billing cycles. If unset, the line
-   * item will be charged indefinitely. Used only with PROMOTION_TYPE_REGULAR_REDUCTION.
-   * @param finiteBillingCycleDetails finiteBillingCycleDetails or {@code null} for none
-   */
-  public GoogleCloudPaymentsResellerSubscriptionV1Promotion setFiniteBillingCycleDetails(GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails) {
-    this.finiteBillingCycleDetails = finiteBillingCycleDetails;
     return this;
   }
 

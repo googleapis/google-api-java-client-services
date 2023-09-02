@@ -380,6 +380,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
+      /** Options to include extra data */
+      @com.google.api.client.util.Key
+      private java.lang.String includeExtraData;
+
+      /** Options to include extra data
+       */
+      public java.lang.String getIncludeExtraData() {
+        return includeExtraData;
+      }
+
+      /** Options to include extra data */
+      public Get setIncludeExtraData(java.lang.String includeExtraData) {
+        this.includeExtraData = includeExtraData;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

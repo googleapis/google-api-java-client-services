@@ -61,6 +61,17 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
+   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
+   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
+   * lifetime will be explicitly truncated to match it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maximumLifetime;
+
+  /**
    * Output only. The resource name for this CertificateTemplate in the format
    * `projects/locations/certificateTemplates`.
    * The value may be {@code null}.
@@ -168,6 +179,31 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
    */
   public CertificateTemplate setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
+   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
+   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
+   * lifetime will be explicitly truncated to match it.
+   * @return value or {@code null} for none
+   */
+  public String getMaximumLifetime() {
+    return maximumLifetime;
+  }
+
+  /**
+   * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
+   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
+   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
+   * lifetime will be explicitly truncated to match it.
+   * @param maximumLifetime maximumLifetime or {@code null} for none
+   */
+  public CertificateTemplate setMaximumLifetime(String maximumLifetime) {
+    this.maximumLifetime = maximumLifetime;
     return this;
   }
 

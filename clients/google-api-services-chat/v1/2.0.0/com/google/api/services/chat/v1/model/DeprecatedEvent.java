@@ -17,9 +17,10 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Google Chat app interaction events. To learn about interaction events, see [Receive and respond
- * to Google Chat app interaction events](https://developers.google.com/chat/api/guides/message-
- * formats).
+ * A Google Chat app interaction event. To learn about interaction events, see [Receive and respond
+ * to interactions with your Google Chat app](https://developers.google.com/chat/api/guides/message-
+ * formats). To learn about event types and for example event payloads, see [Types of Google Chat
+ * app interaction events](https://developers.google.com/chat/api/guides/message-formats/events).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,9 +33,9 @@ package com.google.api.services.chat.v1.model;
 public final class DeprecatedEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
-   * information.
+   * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
+   * card or dialog. To learn more, see [Read form data input by users on
+   * cards](https://developers.google.com/chat/ui/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +75,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private String eventTime;
 
   /**
-   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs).
+   * For `CARD_CLICKED` interaction events, whether the user interacted with a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +119,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private java.lang.String token;
 
   /**
-   * The type of the interaction event.
+   * The type of interaction event. For details, see [Types of Google Chat app interaction
+   * events](https://developers.google.com/chat/api/guides/message-formats/events).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,9 +134,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private User user;
 
   /**
-   * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
-   * information.
+   * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
+   * card or dialog. To learn more, see [Read form data input by users on
+   * cards](https://developers.google.com/chat/ui/read-form-data).
    * @return value or {@code null} for none
    */
   public FormAction getAction() {
@@ -142,9 +144,9 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The form action data associated with an interactive card that was clicked. Only populated for
-   * CARD_CLICKED events. See the [Interactive Cards guide](/chat/how-tos/cards-onclick) for more
-   * information.
+   * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
+   * card or dialog. To learn more, see [Read form data input by users on
+   * cards](https://developers.google.com/chat/ui/read-form-data).
    * @param action action or {@code null} for none
    */
   public DeprecatedEvent setAction(FormAction action) {
@@ -231,8 +233,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs).
+   * For `CARD_CLICKED` interaction events, whether the user interacted with a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDialogEvent() {
@@ -240,8 +242,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * True when the interaction event is related to [dialogs](https://developers.google.com/chat/how-
-   * tos/dialogs).
+   * For `CARD_CLICKED` interaction events, whether the user interacted with a
+   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
    * @param isDialogEvent isDialogEvent or {@code null} for none
    */
   public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {
@@ -334,7 +336,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the interaction event.
+   * The type of interaction event. For details, see [Types of Google Chat app interaction
+   * events](https://developers.google.com/chat/api/guides/message-formats/events).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -342,7 +345,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of the interaction event.
+   * The type of interaction event. For details, see [Types of Google Chat app interaction
+   * events](https://developers.google.com/chat/api/guides/message-formats/events).
    * @param type type or {@code null} for none
    */
   public DeprecatedEvent setType(java.lang.String type) {

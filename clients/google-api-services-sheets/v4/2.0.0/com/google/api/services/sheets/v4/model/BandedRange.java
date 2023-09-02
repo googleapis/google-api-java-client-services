@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class BandedRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the banded range.
+   * The ID of the banded range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class BandedRange extends com.google.api.client.json.GenericJson {
   private BandingProperties rowProperties;
 
   /**
-   * The id of the banded range.
+   * The ID of the banded range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBandedRangeId() {
@@ -69,7 +69,7 @@ public final class BandedRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The id of the banded range.
+   * The ID of the banded range.
    * @param bandedRangeId bandedRangeId or {@code null} for none
    */
   public BandedRange setBandedRangeId(java.lang.Integer bandedRangeId) {

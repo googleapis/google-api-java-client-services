@@ -38,7 +38,7 @@ public final class BooleanRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The format to apply. Conditional formatting can only apply a subset of formatting: bold,
-   * italic, strikethrough, foreground color & background color.
+   * italic, strikethrough, foreground color and, background color.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class BooleanRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The format to apply. Conditional formatting can only apply a subset of formatting: bold,
-   * italic, strikethrough, foreground color & background color.
+   * italic, strikethrough, foreground color and, background color.
    * @return value or {@code null} for none
    */
   public CellFormat getFormat() {
@@ -72,7 +72,7 @@ public final class BooleanRule extends com.google.api.client.json.GenericJson {
 
   /**
    * The format to apply. Conditional formatting can only apply a subset of formatting: bold,
-   * italic, strikethrough, foreground color & background color.
+   * italic, strikethrough, foreground color and, background color.
    * @param format format or {@code null} for none
    */
   public BooleanRule setFormat(CellFormat format) {

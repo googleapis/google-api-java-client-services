@@ -31,7 +31,7 @@ public final class DataSourceRefreshMonthlySchedule extends com.google.api.clien
 
   /**
    * Days of the month to refresh. Only 1-28 are supported, mapping to the 1st to the 28th day. At
-   * lesat one day must be specified.
+   * least one day must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class DataSourceRefreshMonthlySchedule extends com.google.api.clien
 
   /**
    * Days of the month to refresh. Only 1-28 are supported, mapping to the 1st to the 28th day. At
-   * lesat one day must be specified.
+   * least one day must be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getDaysOfMonth() {
@@ -56,7 +56,7 @@ public final class DataSourceRefreshMonthlySchedule extends com.google.api.clien
 
   /**
    * Days of the month to refresh. Only 1-28 are supported, mapping to the 1st to the 28th day. At
-   * lesat one day must be specified.
+   * least one day must be specified.
    * @param daysOfMonth daysOfMonth or {@code null} for none
    */
   public DataSourceRefreshMonthlySchedule setDaysOfMonth(java.util.List<java.lang.Integer> daysOfMonth) {

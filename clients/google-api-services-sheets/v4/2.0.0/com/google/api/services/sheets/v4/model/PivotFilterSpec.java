@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class PivotFilterSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The column offset of the source range.
+   * The zero-based column offset of the source range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class PivotFilterSpec extends com.google.api.client.json.GenericJso
   private PivotFilterCriteria filterCriteria;
 
   /**
-   * The column offset of the source range.
+   * The zero-based column offset of the source range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumnOffsetIndex() {
@@ -59,7 +59,7 @@ public final class PivotFilterSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The column offset of the source range.
+   * The zero-based column offset of the source range.
    * @param columnOffsetIndex columnOffsetIndex or {@code null} for none
    */
   public PivotFilterSpec setColumnOffsetIndex(java.lang.Integer columnOffsetIndex) {

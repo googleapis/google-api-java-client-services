@@ -20,7 +20,7 @@ package com.google.api.services.sheets.v4.model;
  * Schedule for refreshing the data source. Data sources in the spreadsheet are refreshed within a
  * time interval. You can specify the start time by clicking the Scheduled Refresh button in the
  * Sheets editor, but the interval is fixed at 4 hours. For example, if you specify a start time of
- * 8am , the refresh will take place between 8am and 12pm every day.
+ * 8 AM , the refresh will take place between 8 AM and 12 PM every day.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

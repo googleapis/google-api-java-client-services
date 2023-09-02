@@ -93,7 +93,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * asking the user to confirm the edit. When writing: if this field is true, then editors are
    * ignored. Additionally, if this field is changed from true to false and the `editors` field is
    * not set (nor included in the field mask), then the editors will be set to all the editors in
    * the document.
@@ -236,7 +236,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * asking the user to confirm the edit. When writing: if this field is true, then editors are
    * ignored. Additionally, if this field is changed from true to false and the `editors` field is
    * not set (nor included in the field mask), then the editors will be set to all the editors in
    * the document.
@@ -249,7 +249,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning
-   * asking the user to confirm the edit. When writing: if this field is true, then editors is
+   * asking the user to confirm the edit. When writing: if this field is true, then editors are
    * ignored. Additionally, if this field is changed from true to false and the `editors` field is
    * not set (nor included in the field mask), then the editors will be set to all the editors in
    * the document.

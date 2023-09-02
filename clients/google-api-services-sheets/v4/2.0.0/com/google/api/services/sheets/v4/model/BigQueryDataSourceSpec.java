@@ -30,8 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class BigQueryDataSourceSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of a BigQuery enabled GCP project with a billing account attached. For any queries
-   * executed against the data source, the project is charged.
+   * The ID of a BigQuery enabled Google Cloud project with a billing account attached. For any
+   * queries executed against the data source, the project is charged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class BigQueryDataSourceSpec extends com.google.api.client.json.Gen
   private BigQueryTableSpec tableSpec;
 
   /**
-   * The ID of a BigQuery enabled GCP project with a billing account attached. For any queries
-   * executed against the data source, the project is charged.
+   * The ID of a BigQuery enabled Google Cloud project with a billing account attached. For any
+   * queries executed against the data source, the project is charged.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -61,8 +61,8 @@ public final class BigQueryDataSourceSpec extends com.google.api.client.json.Gen
   }
 
   /**
-   * The ID of a BigQuery enabled GCP project with a billing account attached. For any queries
-   * executed against the data source, the project is charged.
+   * The ID of a BigQuery enabled Google Cloud project with a billing account attached. For any
+   * queries executed against the data source, the project is charged.
    * @param projectId projectId or {@code null} for none
    */
   public BigQueryDataSourceSpec setProjectId(java.lang.String projectId) {

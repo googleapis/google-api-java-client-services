@@ -32,7 +32,7 @@ package com.google.api.services.privateca.v1.model;
 public final class SubjectConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Contains distinguished name fields such as the common name, location and
+   * Optional. Contains distinguished name fields such as the common name, location and
    * organization.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class SubjectConfig extends com.google.api.client.json.GenericJson 
   private SubjectAltNames subjectAltName;
 
   /**
-   * Required. Contains distinguished name fields such as the common name, location and
+   * Optional. Contains distinguished name fields such as the common name, location and
    * organization.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class SubjectConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Contains distinguished name fields such as the common name, location and
+   * Optional. Contains distinguished name fields such as the common name, location and
    * organization.
    * @param subject subject or {@code null} for none
    */

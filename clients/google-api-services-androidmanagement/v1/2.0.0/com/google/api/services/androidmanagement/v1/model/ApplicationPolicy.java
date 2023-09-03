@@ -18,7 +18,8 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Policy for an individual app. Note: Application availability on a given device cannot be changed
- * using this policy if installAppsDisabled is enabled.
+ * using this policy if installAppsDisabled is enabled. The maximum number of applications that you
+ * can specify per enterprise policy is 3,000.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -81,7 +82,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String defaultPermissionPolicy;
 
   /**
-   * The scopes delegated to the app from Android Device Policy.
+   * The scopes delegated to the app from Android Device Policy. These provide additional privileges
+   * for the applications they are applied to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,7 +286,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The scopes delegated to the app from Android Device Policy.
+   * The scopes delegated to the app from Android Device Policy. These provide additional privileges
+   * for the applications they are applied to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDelegatedScopes() {
@@ -292,7 +295,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The scopes delegated to the app from Android Device Policy.
+   * The scopes delegated to the app from Android Device Policy. These provide additional privileges
+   * for the applications they are applied to.
    * @param delegatedScopes delegatedScopes or {@code null} for none
    */
   public ApplicationPolicy setDelegatedScopes(java.util.List<java.lang.String> delegatedScopes) {

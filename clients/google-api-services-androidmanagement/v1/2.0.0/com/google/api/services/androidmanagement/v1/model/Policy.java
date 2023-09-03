@@ -173,7 +173,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean cellBroadcastsConfigDisabled;
 
   /**
-   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details. This
+   * must be empty if any application has CERT_SELECTION delegation scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -580,7 +581,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
    * rules in ChoosePrivateKeyRules. For devices below Android P, setting this may leave enterprise
-   * keys vulnerable.
+   * keys vulnerable. This value will have no effect if any application has CERT_SELECTION
+   * delegation scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1108,7 +1110,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details. This
+   * must be empty if any application has CERT_SELECTION delegation scope.
    * @return value or {@code null} for none
    */
   public java.util.List<ChoosePrivateKeyRule> getChoosePrivateKeyRules() {
@@ -1116,7 +1119,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details.
+   * Rules for determining apps' access to private keys. See ChoosePrivateKeyRule for details. This
+   * must be empty if any application has CERT_SELECTION delegation scope.
    * @param choosePrivateKeyRules choosePrivateKeyRules or {@code null} for none
    */
   public Policy setChoosePrivateKeyRules(java.util.List<ChoosePrivateKeyRule> choosePrivateKeyRules) {
@@ -1989,7 +1993,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
    * rules in ChoosePrivateKeyRules. For devices below Android P, setting this may leave enterprise
-   * keys vulnerable.
+   * keys vulnerable. This value will have no effect if any application has CERT_SELECTION
+   * delegation scope.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrivateKeySelectionEnabled() {
@@ -1999,7 +2004,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
    * rules in ChoosePrivateKeyRules. For devices below Android P, setting this may leave enterprise
-   * keys vulnerable.
+   * keys vulnerable. This value will have no effect if any application has CERT_SELECTION
+   * delegation scope.
    * @param privateKeySelectionEnabled privateKeySelectionEnabled or {@code null} for none
    */
   public Policy setPrivateKeySelectionEnabled(java.lang.Boolean privateKeySelectionEnabled) {

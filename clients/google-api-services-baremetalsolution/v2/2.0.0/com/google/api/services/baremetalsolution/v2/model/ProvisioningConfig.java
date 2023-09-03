@@ -102,6 +102,14 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
   }
 
   /**
+   * Optional. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes, nfsshares) allocated in the same pod only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pod;
+
+  /**
    * Output only. State of ProvisioningConfig.
    * The value may be {@code null}.
    */
@@ -282,6 +290,25 @@ public final class ProvisioningConfig extends com.google.api.client.json.Generic
    */
   public ProvisioningConfig setNetworks(java.util.List<NetworkConfig> networks) {
     this.networks = networks;
+    return this;
+  }
+
+  /**
+   * Optional. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes, nfsshares) allocated in the same pod only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPod() {
+    return pod;
+  }
+
+  /**
+   * Optional. Pod name. Pod is an independent part of infrastructure. Instance can be connected to
+   * the assets (networks, volumes, nfsshares) allocated in the same pod only.
+   * @param pod pod or {@code null} for none
+   */
+  public ProvisioningConfig setPod(java.lang.String pod) {
+    this.pod = pod;
     return this;
   }
 

@@ -96,7 +96,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Network can only be
+   * connected to the assets (instances, nfsshares) allocated in the same pod.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,7 +304,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Network can only be
+   * connected to the assets (instances, nfsshares) allocated in the same pod.
    * @return value or {@code null} for none
    */
   public java.lang.String getPod() {
@@ -311,7 +313,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Network can only be
+   * connected to the assets (instances, nfsshares) allocated in the same pod.
    * @param pod pod or {@code null} for none
    */
   public Network setPod(java.lang.String pod) {

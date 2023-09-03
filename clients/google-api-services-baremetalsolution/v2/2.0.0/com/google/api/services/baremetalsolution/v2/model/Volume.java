@@ -139,7 +139,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String performanceTier;
 
   /**
-   * Immutable. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Volume can only be connected
+   * to the instances allocated in the same pod.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -468,7 +469,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Volume can only be connected
+   * to the instances allocated in the same pod.
    * @return value or {@code null} for none
    */
   public java.lang.String getPod() {
@@ -476,7 +478,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Pod name.
+   * Immutable. Pod name. Pod is an independent part of infrastructure. Volume can only be connected
+   * to the instances allocated in the same pod.
    * @param pod pod or {@code null} for none
    */
   public Volume setPod(java.lang.String pod) {

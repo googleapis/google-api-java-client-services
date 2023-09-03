@@ -82,7 +82,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the instance config.
+   * The name of the instance config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private NetworkAddress privateNetwork;
 
   /**
-   * List of names of ssh keys used to provision the instance.
+   * Optional. List of names of ssh keys used to provision the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +241,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the instance config.
+   * The name of the instance config.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -249,7 +249,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the instance config.
+   * The name of the instance config.
    * @param name name or {@code null} for none
    */
   public InstanceConfig setName(java.lang.String name) {
@@ -328,7 +328,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of names of ssh keys used to provision the instance.
+   * Optional. List of names of ssh keys used to provision the instance.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSshKeyNames() {
@@ -336,7 +336,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of names of ssh keys used to provision the instance.
+   * Optional. List of names of ssh keys used to provision the instance.
    * @param sshKeyNames sshKeyNames or {@code null} for none
    */
   public InstanceConfig setSshKeyNames(java.util.List<java.lang.String> sshKeyNames) {

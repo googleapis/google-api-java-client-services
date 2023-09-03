@@ -74,6 +74,14 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
   private java.lang.String nfsShareId;
 
   /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. NFSShare can only be
+   * connected to the assets (networks, instances) allocated in the same pod.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pod;
+
+  /**
    * The requested size, in GiB.
    * The value may be {@code null}.
    */
@@ -187,6 +195,25 @@ public final class NfsShare extends com.google.api.client.json.GenericJson {
    */
   public NfsShare setNfsShareId(java.lang.String nfsShareId) {
     this.nfsShareId = nfsShareId;
+    return this;
+  }
+
+  /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. NFSShare can only be
+   * connected to the assets (networks, instances) allocated in the same pod.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPod() {
+    return pod;
+  }
+
+  /**
+   * Immutable. Pod name. Pod is an independent part of infrastructure. NFSShare can only be
+   * connected to the assets (networks, instances) allocated in the same pod.
+   * @param pod pod or {@code null} for none
+   */
+  public NfsShare setPod(java.lang.String pod) {
+    this.pod = pod;
     return this;
   }
 

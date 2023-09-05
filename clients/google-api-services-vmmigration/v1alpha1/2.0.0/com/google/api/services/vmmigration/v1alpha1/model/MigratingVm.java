@@ -38,6 +38,13 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private AwsSourceVmDetails awsSourceVmDetails;
 
   /**
+   * Output only. Details of the VM from an Azure source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureSourceVmDetails azureSourceVmDetails;
+
+  /**
    * Details of the target Persistent Disks in Compute Engine.
    * The value may be {@code null}.
    */
@@ -238,6 +245,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setAwsSourceVmDetails(AwsSourceVmDetails awsSourceVmDetails) {
     this.awsSourceVmDetails = awsSourceVmDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Details of the VM from an Azure source.
+   * @return value or {@code null} for none
+   */
+  public AzureSourceVmDetails getAzureSourceVmDetails() {
+    return azureSourceVmDetails;
+  }
+
+  /**
+   * Output only. Details of the VM from an Azure source.
+   * @param azureSourceVmDetails azureSourceVmDetails or {@code null} for none
+   */
+  public MigratingVm setAzureSourceVmDetails(AzureSourceVmDetails azureSourceVmDetails) {
+    this.azureSourceVmDetails = azureSourceVmDetails;
     return this;
   }
 

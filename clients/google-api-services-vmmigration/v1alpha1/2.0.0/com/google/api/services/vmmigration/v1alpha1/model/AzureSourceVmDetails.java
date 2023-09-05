@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.vmmigration.v1.model;
+package com.google.api.services.vmmigration.v1alpha1.model;
 
 /**
- * Represent the source Vmware VM details.
+ * Represent the source Azure VM details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.vmmigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VmwareSourceVmDetails extends com.google.api.client.json.GenericJson {
+public final class AzureSourceVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * The total size of the disks being migrated in bytes.
@@ -41,12 +41,12 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<VmwareDiskDetails> disks;
+  private java.util.List<AzureDiskDetails> disks;
 
   static {
-    // hack to force ProGuard to consider VmwareDiskDetails used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider AzureDiskDetails used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(VmwareDiskDetails.class);
+    com.google.api.client.util.Data.nullOf(AzureDiskDetails.class);
   }
 
   /**
@@ -75,7 +75,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * The total size of the disks being migrated in bytes.
    * @param committedStorageBytes committedStorageBytes or {@code null} for none
    */
-  public VmwareSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
+  public AzureSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
     this.committedStorageBytes = committedStorageBytes;
     return this;
   }
@@ -84,7 +84,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * The disks attached to the source VM.
    * @return value or {@code null} for none
    */
-  public java.util.List<VmwareDiskDetails> getDisks() {
+  public java.util.List<AzureDiskDetails> getDisks() {
     return disks;
   }
 
@@ -92,7 +92,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * The disks attached to the source VM.
    * @param disks disks or {@code null} for none
    */
-  public VmwareSourceVmDetails setDisks(java.util.List<VmwareDiskDetails> disks) {
+  public AzureSourceVmDetails setDisks(java.util.List<AzureDiskDetails> disks) {
     this.disks = disks;
     return this;
   }
@@ -109,7 +109,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * The firmware type of the source VM.
    * @param firmware firmware or {@code null} for none
    */
-  public VmwareSourceVmDetails setFirmware(java.lang.String firmware) {
+  public AzureSourceVmDetails setFirmware(java.lang.String firmware) {
     this.firmware = firmware;
     return this;
   }
@@ -126,19 +126,19 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
    * Output only. Information about VM capabilities needed for some Compute Engine features.
    * @param vmCapabilitiesInfo vmCapabilitiesInfo or {@code null} for none
    */
-  public VmwareSourceVmDetails setVmCapabilitiesInfo(VmCapabilities vmCapabilitiesInfo) {
+  public AzureSourceVmDetails setVmCapabilitiesInfo(VmCapabilities vmCapabilitiesInfo) {
     this.vmCapabilitiesInfo = vmCapabilitiesInfo;
     return this;
   }
 
   @Override
-  public VmwareSourceVmDetails set(String fieldName, Object value) {
-    return (VmwareSourceVmDetails) super.set(fieldName, value);
+  public AzureSourceVmDetails set(String fieldName, Object value) {
+    return (AzureSourceVmDetails) super.set(fieldName, value);
   }
 
   @Override
-  public VmwareSourceVmDetails clone() {
-    return (VmwareSourceVmDetails) super.clone();
+  public AzureSourceVmDetails clone() {
+    return (AzureSourceVmDetails) super.clone();
   }
 
 }

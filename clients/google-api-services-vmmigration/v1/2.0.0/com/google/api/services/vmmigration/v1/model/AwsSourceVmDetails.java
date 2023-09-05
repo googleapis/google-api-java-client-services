@@ -57,6 +57,13 @@ public final class AwsSourceVmDetails extends com.google.api.client.json.Generic
   private java.lang.String firmware;
 
   /**
+   * Output only. Information about VM capabilities needed for some Compute Engine features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmCapabilities vmCapabilitiesInfo;
+
+  /**
    * The total size of the disks being migrated in bytes.
    * @return value or {@code null} for none
    */
@@ -104,6 +111,23 @@ public final class AwsSourceVmDetails extends com.google.api.client.json.Generic
    */
   public AwsSourceVmDetails setFirmware(java.lang.String firmware) {
     this.firmware = firmware;
+    return this;
+  }
+
+  /**
+   * Output only. Information about VM capabilities needed for some Compute Engine features.
+   * @return value or {@code null} for none
+   */
+  public VmCapabilities getVmCapabilitiesInfo() {
+    return vmCapabilitiesInfo;
+  }
+
+  /**
+   * Output only. Information about VM capabilities needed for some Compute Engine features.
+   * @param vmCapabilitiesInfo vmCapabilitiesInfo or {@code null} for none
+   */
+  public AwsSourceVmDetails setVmCapabilitiesInfo(VmCapabilities vmCapabilitiesInfo) {
+    this.vmCapabilitiesInfo = vmCapabilitiesInfo;
     return this;
   }
 

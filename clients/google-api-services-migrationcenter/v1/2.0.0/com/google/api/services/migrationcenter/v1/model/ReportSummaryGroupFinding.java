@@ -51,8 +51,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   private java.lang.String displayName;
 
   /**
-   * Count of the number of assets in this group which are also included in another group within the
-   * same report.
+   * This field is deprecated, do not rely on it having a value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -117,8 +116,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Count of the number of assets in this group which are also included in another group within the
-   * same report.
+   * This field is deprecated, do not rely on it having a value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOverlappingAssetCount() {
@@ -126,8 +124,7 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   }
 
   /**
-   * Count of the number of assets in this group which are also included in another group within the
-   * same report.
+   * This field is deprecated, do not rely on it having a value.
    * @param overlappingAssetCount overlappingAssetCount or {@code null} for none
    */
   public ReportSummaryGroupFinding setOverlappingAssetCount(java.lang.Long overlappingAssetCount) {

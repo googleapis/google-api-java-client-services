@@ -38,6 +38,13 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private AwsSourceDetails aws;
 
   /**
+   * Azure type source details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureSourceDetails azure;
+
+  /**
    * Output only. The create time timestamp.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setAws(AwsSourceDetails aws) {
     this.aws = aws;
+    return this;
+  }
+
+  /**
+   * Azure type source details.
+   * @return value or {@code null} for none
+   */
+  public AzureSourceDetails getAzure() {
+    return azure;
+  }
+
+  /**
+   * Azure type source details.
+   * @param azure azure or {@code null} for none
+   */
+  public Source setAzure(AzureSourceDetails azure) {
+    this.azure = azure;
     return this;
   }
 

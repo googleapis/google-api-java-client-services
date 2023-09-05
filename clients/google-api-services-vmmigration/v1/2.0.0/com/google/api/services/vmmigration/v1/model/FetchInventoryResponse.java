@@ -37,6 +37,13 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
   private AwsVmsDetails awsVms;
 
   /**
+   * The description of the VMs in a Source of type Azure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AzureVmsDetails azureVms;
+
+  /**
    * Output only. A token, which can be sent as `page_token` to retrieve the next page. If this
    * field is omitted, there are no subsequent pages.
    * The value may be {@code null}.
@@ -72,6 +79,23 @@ public final class FetchInventoryResponse extends com.google.api.client.json.Gen
    */
   public FetchInventoryResponse setAwsVms(AwsVmsDetails awsVms) {
     this.awsVms = awsVms;
+    return this;
+  }
+
+  /**
+   * The description of the VMs in a Source of type Azure.
+   * @return value or {@code null} for none
+   */
+  public AzureVmsDetails getAzureVms() {
+    return azureVms;
+  }
+
+  /**
+   * The description of the VMs in a Source of type Azure.
+   * @param azureVms azureVms or {@code null} for none
+   */
+  public FetchInventoryResponse setAzureVms(AzureVmsDetails azureVms) {
+    this.azureVms = azureVms;
     return this;
   }
 

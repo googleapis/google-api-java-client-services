@@ -205,6 +205,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private SqlOutOfDiskReport outOfDiskReport;
 
   /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryDnsName;
+
+  /**
    * The project ID of the project containing the Cloud SQL instance. The Google apps domain is
    * prefixed if applicable.
    * The value may be {@code null}.
@@ -732,6 +739,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setOutOfDiskReport(SqlOutOfDiskReport outOfDiskReport) {
     this.outOfDiskReport = outOfDiskReport;
+    return this;
+  }
+
+  /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryDnsName() {
+    return primaryDnsName;
+  }
+
+  /**
+   * Output only. The dns name of the primary instance in a replication group.
+   * @param primaryDnsName primaryDnsName or {@code null} for none
+   */
+  public DatabaseInstance setPrimaryDnsName(java.lang.String primaryDnsName) {
+    this.primaryDnsName = primaryDnsName;
     return this;
   }
 

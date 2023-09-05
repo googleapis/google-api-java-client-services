@@ -31,7 +31,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class DeviceRadioState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not
+   * Controls whether airplane mode can be toggled by the user or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String wifiState;
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not
+   * Controls whether airplane mode can be toggled by the user or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getAirplaneModeState() {
@@ -53,7 +53,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not
+   * Controls whether airplane mode can be toggled by the user or not.
    * @param airplaneModeState airplaneModeState or {@code null} for none
    */
   public DeviceRadioState setAirplaneModeState(java.lang.String airplaneModeState) {

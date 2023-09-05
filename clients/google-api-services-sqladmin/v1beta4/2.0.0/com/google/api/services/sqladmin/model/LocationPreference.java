@@ -48,7 +48,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
-   * central1-b, etc.).
+   * central1-b, etc.). To disable this field, set it to 'no_secondary_zone'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
-   * central1-b, etc.).
+   * central1-b, etc.). To disable this field, set it to 'no_secondary_zone'.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryZone() {
@@ -109,7 +109,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
 
   /**
    * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-
-   * central1-b, etc.).
+   * central1-b, etc.). To disable this field, set it to 'no_secondary_zone'.
    * @param secondaryZone secondaryZone or {@code null} for none
    */
   public LocationPreference setSecondaryZone(java.lang.String secondaryZone) {

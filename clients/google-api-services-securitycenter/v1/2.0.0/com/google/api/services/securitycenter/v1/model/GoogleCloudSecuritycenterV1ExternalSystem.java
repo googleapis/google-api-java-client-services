@@ -38,15 +38,14 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   private java.util.List<java.lang.String> assignees;
 
   /**
-   * The most recent time when the corresponding finding's ticket/tracker was updated in the
-   * external system.
+   * The time when the case was last updated, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String externalSystemUpdateTime;
 
   /**
-   * Identifier that's used to track the given finding in the external system.
+   * The identifier that's used to track the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +62,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   private java.lang.String name;
 
   /**
-   * Most recent status of the corresponding finding's ticket/tracker in the external system.
+   * The most recent status of the finding's corresponding case, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +86,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * The most recent time when the corresponding finding's ticket/tracker was updated in the
-   * external system.
+   * The time when the case was last updated, as reported by the external system.
    * @return value or {@code null} for none
    */
   public String getExternalSystemUpdateTime() {
@@ -96,8 +94,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * The most recent time when the corresponding finding's ticket/tracker was updated in the
-   * external system.
+   * The time when the case was last updated, as reported by the external system.
    * @param externalSystemUpdateTime externalSystemUpdateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setExternalSystemUpdateTime(String externalSystemUpdateTime) {
@@ -106,7 +103,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * Identifier that's used to track the given finding in the external system.
+   * The identifier that's used to track the finding's corresponding case in the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUid() {
@@ -114,7 +111,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * Identifier that's used to track the given finding in the external system.
+   * The identifier that's used to track the finding's corresponding case in the external system.
    * @param externalUid externalUid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setExternalUid(java.lang.String externalUid) {
@@ -146,7 +143,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * Most recent status of the corresponding finding's ticket/tracker in the external system.
+   * The most recent status of the finding's corresponding case, as reported by the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -154,7 +151,7 @@ public final class GoogleCloudSecuritycenterV1ExternalSystem extends com.google.
   }
 
   /**
-   * Most recent status of the corresponding finding's ticket/tracker in the external system.
+   * The most recent status of the finding's corresponding case, as reported by the external system.
    * @param status status or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ExternalSystem setStatus(java.lang.String status) {

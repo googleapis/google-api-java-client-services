@@ -61,6 +61,13 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Total exfiltrated bytes processed for the entire job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalExfiltratedBytes;
+
+  /**
    * If there are multiple sources, then the data is considered "joined" between them. For instance,
    * BigQuery can join multiple tables, and each table would be considered a source.
    * @return value or {@code null} for none
@@ -95,6 +102,23 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
    */
   public Exfiltration setTargets(java.util.List<ExfilResource> targets) {
     this.targets = targets;
+    return this;
+  }
+
+  /**
+   * Total exfiltrated bytes processed for the entire job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalExfiltratedBytes() {
+    return totalExfiltratedBytes;
+  }
+
+  /**
+   * Total exfiltrated bytes processed for the entire job.
+   * @param totalExfiltratedBytes totalExfiltratedBytes or {@code null} for none
+   */
+  public Exfiltration setTotalExfiltratedBytes(java.lang.Long totalExfiltratedBytes) {
+    this.totalExfiltratedBytes = totalExfiltratedBytes;
     return this;
   }
 

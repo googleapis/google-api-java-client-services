@@ -36,7 +36,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class AttestationAuthenticator extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A user-provided name for this AttestationAuthenticator. This field has no effect on
+   * Optional. A user-provided name for this `AttestationAuthenticator`. This field has no effect on
    * the policy evaluation behavior except to improve readability of messages in evaluation results.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class AttestationAuthenticator extends com.google.api.client.json.G
   private PkixPublicKeySet pkixPublicKeySet;
 
   /**
-   * Optional. A user-provided name for this AttestationAuthenticator. This field has no effect on
+   * Optional. A user-provided name for this `AttestationAuthenticator`. This field has no effect on
    * the policy evaluation behavior except to improve readability of messages in evaluation results.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class AttestationAuthenticator extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. A user-provided name for this AttestationAuthenticator. This field has no effect on
+   * Optional. A user-provided name for this `AttestationAuthenticator`. This field has no effect on
    * the policy evaluation behavior except to improve readability of messages in evaluation results.
    * @param displayName displayName or {@code null} for none
    */

@@ -305,7 +305,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
     /**
      * Creates or updates a project's policy, and returns a copy of the new policy. A policy is always
      * updated as a whole, to avoid race conditions with concurrent policy enforcement (or management!)
-     * requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is
+     * requests. Returns `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the request is
      * malformed.
      *
      * Create a request for the method "projects.updatePolicy".
@@ -335,8 +335,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       /**
        * Creates or updates a project's policy, and returns a copy of the new policy. A policy is always
        * updated as a whole, to avoid race conditions with concurrent policy enforcement (or
-       * management!) requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the
-       * request is malformed.
+       * management!) requests. Returns `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if
+       * the request is malformed.
        *
        * Create a request for the method "projects.updatePolicy".
        *
@@ -471,8 +471,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
     public class Attestors {
 
       /**
-       * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project
-       * does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor
+       * Creates an attestor, and returns a copy of the new attestor. Returns `NOT_FOUND` if the project
+       * does not exist, `INVALID_ARGUMENT` if the request is malformed, `ALREADY_EXISTS` if the attestor
        * already exists.
        *
        * Create a request for the method "attestors.create".
@@ -498,9 +498,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project
-         * does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor
-         * already exists.
+         * Creates an attestor, and returns a copy of the new attestor. Returns `NOT_FOUND` if the project
+         * does not exist, `INVALID_ARGUMENT` if the request is malformed, `ALREADY_EXISTS` if the
+         * attestor already exists.
          *
          * Create a request for the method "attestors.create".
          *
@@ -622,7 +622,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
+       * Deletes an attestor. Returns `NOT_FOUND` if the attestor does not exist.
        *
        * Create a request for the method "attestors.delete".
        *
@@ -646,7 +646,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
+         * Deletes an attestor. Returns `NOT_FOUND` if the attestor does not exist.
          *
          * Create a request for the method "attestors.delete".
          *
@@ -751,7 +751,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
+       * Gets an attestor. Returns `NOT_FOUND` if the attestor does not exist.
        *
        * Create a request for the method "attestors.get".
        *
@@ -775,7 +775,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
+         * Gets an attestor. Returns `NOT_FOUND` if the attestor does not exist.
          *
          * Create a request for the method "attestors.get".
          *
@@ -1089,7 +1089,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Lists attestors. Returns INVALID_ARGUMENT if the project does not exist.
+       * Lists attestors. Returns `INVALID_ARGUMENT` if the project does not exist.
        *
        * Create a request for the method "attestors.list".
        *
@@ -1113,7 +1113,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists attestors. Returns INVALID_ARGUMENT if the project does not exist.
+         * Lists attestors. Returns `INVALID_ARGUMENT` if the project does not exist.
          *
          * Create a request for the method "attestors.list".
          *
@@ -1583,7 +1583,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Updates an attestor. Returns NOT_FOUND if the attestor does not exist.
+       * Updates an attestor. Returns `NOT_FOUND` if the attestor does not exist.
        *
        * Create a request for the method "attestors.update".
        *
@@ -1608,7 +1608,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Updates an attestor. Returns NOT_FOUND if the attestor does not exist.
+         * Updates an attestor. Returns `NOT_FOUND` if the attestor does not exist.
          *
          * Create a request for the method "attestors.update".
          *
@@ -1720,7 +1720,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+       * Returns whether the given `Attestation` for the given image URI was signed by the given
+       * `Attestor`
        *
        * Create a request for the method "attestors.validateAttestationOccurrence".
        *
@@ -1746,7 +1747,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+         * Returns whether the given `Attestation` for the given image URI was signed by the given
+         * `Attestor`
          *
          * Create a request for the method "attestors.validateAttestationOccurrence".
          *
@@ -1900,10 +1902,10 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
       public class Policies {
 
         /**
-         * Creates a platform policy, and returns a copy of it. Returns NOT_FOUND if the project or platform
-         * doesn't exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the policy already
-         * exists, and INVALID_ARGUMENT if the policy contains a platform-specific policy that does not
-         * match the platform value specified in the URL.
+         * Creates a platform policy, and returns a copy of it. Returns `NOT_FOUND` if the project or
+         * platform doesn't exist, `INVALID_ARGUMENT` if the request is malformed, `ALREADY_EXISTS` if the
+         * policy already exists, and `INVALID_ARGUMENT` if the policy contains a platform-specific policy
+         * that does not match the platform value specified in the URL.
          *
          * Create a request for the method "policies.create".
          *
@@ -1928,9 +1930,9 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+$");
 
           /**
-           * Creates a platform policy, and returns a copy of it. Returns NOT_FOUND if the project or
-           * platform doesn't exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
-           * policy already exists, and INVALID_ARGUMENT if the policy contains a platform-specific policy
+           * Creates a platform policy, and returns a copy of it. Returns `NOT_FOUND` if the project or
+           * platform doesn't exist, `INVALID_ARGUMENT` if the request is malformed, `ALREADY_EXISTS` if the
+           * policy already exists, and `INVALID_ARGUMENT` if the policy contains a platform-specific policy
            * that does not match the platform value specified in the URL.
            *
            * Create a request for the method "policies.create".
@@ -2053,7 +2055,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Deletes a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         * Deletes a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
          *
          * Create a request for the method "policies.delete".
          *
@@ -2077,7 +2079,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
 
           /**
-           * Deletes a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           * Deletes a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
            *
            * Create a request for the method "policies.delete".
            *
@@ -2188,7 +2190,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         * Gets a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
          *
          * Create a request for the method "policies.get".
          *
@@ -2212,7 +2214,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
 
           /**
-           * Gets a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           * Gets a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
            *
            * Create a request for the method "policies.get".
            *
@@ -2333,8 +2335,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Lists platform policies owned by a project in the specified platform. Returns INVALID_ARGUMENT if
-         * the project or the platform doesn't exist.
+         * Lists platform policies owned by a project in the specified platform. Returns `INVALID_ARGUMENT`
+         * if the project or the platform doesn't exist.
          *
          * Create a request for the method "policies.list".
          *
@@ -2359,8 +2361,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+$");
 
           /**
-           * Lists platform policies owned by a project in the specified platform. Returns INVALID_ARGUMENT
-           * if the project or the platform doesn't exist.
+           * Lists platform policies owned by a project in the specified platform. Returns
+           * `INVALID_ARGUMENT` if the project or the platform doesn't exist.
            *
            * Create a request for the method "policies.list".
            *
@@ -2532,7 +2534,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Replaces a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+         * Replaces a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
          *
          * Create a request for the method "policies.replacePlatformPolicy".
          *
@@ -2540,7 +2542,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link ReplacePlatformPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Output only. The relative resource name of the BinAuthz platform policy, in the form of
+         * @param name Output only. The relative resource name of the Binary Authorization platform policy, in the form of
          *        `projects/platforms/policies`.
          * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
          * @return the request
@@ -2559,7 +2561,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/platforms/[^/]+/policies/[^/]+$");
 
           /**
-           * Replaces a platform policy. Returns NOT_FOUND if the policy doesn't exist.
+           * Replaces a platform policy. Returns `NOT_FOUND` if the policy doesn't exist.
            *
            * Create a request for the method "policies.replacePlatformPolicy".
            *
@@ -2569,7 +2571,7 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
            * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name Output only. The relative resource name of the BinAuthz platform policy, in the form of
+           * @param name Output only. The relative resource name of the Binary Authorization platform policy, in the form of
          *        `projects/platforms/policies`.
            * @param content the {@link com.google.api.services.binaryauthorization.v1.model.PlatformPolicy}
            * @since 1.13
@@ -2640,13 +2642,13 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Output only. The relative resource name of the BinAuthz platform policy, in the form of
-           * `projects/platforms/policies`.
+           * Output only. The relative resource name of the Binary Authorization platform policy, in
+           * the form of `projects/platforms/policies`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The relative resource name of the BinAuthz platform policy, in the form of
+          /** Output only. The relative resource name of the Binary Authorization platform policy, in the form of
          `projects/platforms/policies`.
            */
           public java.lang.String getName() {
@@ -2654,8 +2656,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Output only. The relative resource name of the BinAuthz platform policy, in the form of
-           * `projects/platforms/policies`.
+           * Output only. The relative resource name of the Binary Authorization platform policy, in
+           * the form of `projects/platforms/policies`.
            */
           public ReplacePlatformPolicy setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -18,8 +18,8 @@ package com.google.api.services.binaryauthorization.v1.model;
 
 /**
  * A bundle of PKIX public keys, used to authenticate attestation signatures. Generally, a signature
- * is considered to be authenticated by a PkixPublicKeySet if any of the public keys verify it (i.e.
- * it is an "OR" of the keys).
+ * is considered to be authenticated by a `PkixPublicKeySet` if any of the public keys verify it
+ * (i.e. it is an "OR" of the keys).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation

@@ -31,9 +31,9 @@ package com.google.api.services.binaryauthorization.v1beta1.model;
 public final class ValidateAttestationOccurrenceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. An AttestationOccurrence to be checked that it can be verified by the Attestor. It
+   * Required. An AttestationOccurrence to be checked that it can be verified by the `Attestor`. It
    * does not have to be an existing entity in Container Analysis. It must otherwise be a valid
-   * AttestationOccurrence.
+   * `AttestationOccurrence`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +55,9 @@ public final class ValidateAttestationOccurrenceRequest extends com.google.api.c
   private java.lang.String occurrenceResourceUri;
 
   /**
-   * Required. An AttestationOccurrence to be checked that it can be verified by the Attestor. It
+   * Required. An AttestationOccurrence to be checked that it can be verified by the `Attestor`. It
    * does not have to be an existing entity in Container Analysis. It must otherwise be a valid
-   * AttestationOccurrence.
+   * `AttestationOccurrence`.
    * @return value or {@code null} for none
    */
   public AttestationOccurrence getAttestation() {
@@ -65,9 +65,9 @@ public final class ValidateAttestationOccurrenceRequest extends com.google.api.c
   }
 
   /**
-   * Required. An AttestationOccurrence to be checked that it can be verified by the Attestor. It
+   * Required. An AttestationOccurrence to be checked that it can be verified by the `Attestor`. It
    * does not have to be an existing entity in Container Analysis. It must otherwise be a valid
-   * AttestationOccurrence.
+   * `AttestationOccurrence`.
    * @param attestation attestation or {@code null} for none
    */
   public ValidateAttestationOccurrenceRequest setAttestation(AttestationOccurrence attestation) {

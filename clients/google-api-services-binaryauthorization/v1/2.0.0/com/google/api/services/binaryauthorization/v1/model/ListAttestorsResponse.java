@@ -17,7 +17,7 @@
 package com.google.api.services.binaryauthorization.v1.model;
 
 /**
- * Response message for BinauthzManagementService.ListAttestors.
+ * Response message for BinauthzManagementServiceV1.ListAttestors.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation

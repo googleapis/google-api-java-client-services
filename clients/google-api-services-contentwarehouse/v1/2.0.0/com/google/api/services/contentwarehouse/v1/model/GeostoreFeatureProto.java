@@ -496,7 +496,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private java.util.List<GeostorePointProto> point;
 
   /**
-   * ** DEPRECATED ** Detail discussion could be found at b/18611003.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -759,6 +758,13 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GeostoreAnchoredGeometryProto.class);
   }
+
+  /**
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreGeometryStoreReferenceProto storefrontGeometryModel;
 
   /**
    * We prefer features that have geometry over those that do not. In some cases we synthesize
@@ -1825,7 +1831,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * ** DEPRECATED ** Detail discussion could be found at b/18611003.
    * @return value or {@code null} for none
    */
   public GeostorePoliticalProto getPolitical() {
@@ -1833,7 +1838,6 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * ** DEPRECATED ** Detail discussion could be found at b/18611003.
    * @param political political or {@code null} for none
    */
   public GeostoreFeatureProto setPolitical(GeostorePoliticalProto political) {
@@ -2393,6 +2397,23 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setStorefrontGeometry(java.util.List<GeostoreAnchoredGeometryProto> storefrontGeometry) {
     this.storefrontGeometry = storefrontGeometry;
+    return this;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * @return value or {@code null} for none
+   */
+  public GeostoreGeometryStoreReferenceProto getStorefrontGeometryModel() {
+    return storefrontGeometryModel;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * @param storefrontGeometryModel storefrontGeometryModel or {@code null} for none
+   */
+  public GeostoreFeatureProto setStorefrontGeometryModel(GeostoreGeometryStoreReferenceProto storefrontGeometryModel) {
+    this.storefrontGeometryModel = storefrontGeometryModel;
     return this;
   }
 

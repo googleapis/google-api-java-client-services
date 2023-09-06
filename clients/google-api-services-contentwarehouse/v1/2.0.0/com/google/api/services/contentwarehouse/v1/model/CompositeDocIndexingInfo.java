@@ -139,6 +139,18 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
   private java.lang.Float normalizedClickScore;
 
   /**
+   * Vertical membership of the document. - `primary_vertical` is the vertical that initiated
+   * indexing of this document (or empty if the vertical was websearch). - `verticals` is the full
+   * list of verticals that contained this document (excluding websearch) at indexing time.
+   * `primary_vertical` may or may not be an element of `verticals` because of vertical membership
+   * skew between the ingestion time and indexing time. See go/one-indexing-for-web for more
+   * background.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryVertical;
+
+  /**
    * The raw navboost count for the canonical url without aggregating the navboost from dup urls.
    * This field is used when building forwarding map.
    * The value may be {@code null}.
@@ -199,6 +211,12 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private IndexingSignalAggregatorUrlPatternSignals urlPatternSignals;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> verticals;
 
   /**
    * Indexing info about videos.
@@ -461,6 +479,33 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
   }
 
   /**
+   * Vertical membership of the document. - `primary_vertical` is the vertical that initiated
+   * indexing of this document (or empty if the vertical was websearch). - `verticals` is the full
+   * list of verticals that contained this document (excluding websearch) at indexing time.
+   * `primary_vertical` may or may not be an element of `verticals` because of vertical membership
+   * skew between the ingestion time and indexing time. See go/one-indexing-for-web for more
+   * background.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryVertical() {
+    return primaryVertical;
+  }
+
+  /**
+   * Vertical membership of the document. - `primary_vertical` is the vertical that initiated
+   * indexing of this document (or empty if the vertical was websearch). - `verticals` is the full
+   * list of verticals that contained this document (excluding websearch) at indexing time.
+   * `primary_vertical` may or may not be an element of `verticals` because of vertical membership
+   * skew between the ingestion time and indexing time. See go/one-indexing-for-web for more
+   * background.
+   * @param primaryVertical primaryVertical or {@code null} for none
+   */
+  public CompositeDocIndexingInfo setPrimaryVertical(java.lang.String primaryVertical) {
+    this.primaryVertical = primaryVertical;
+    return this;
+  }
+
+  /**
    * The raw navboost count for the canonical url without aggregating the navboost from dup urls.
    * This field is used when building forwarding map.
    * @return value or {@code null} for none
@@ -602,6 +647,21 @@ public final class CompositeDocIndexingInfo extends com.google.api.client.json.G
    */
   public CompositeDocIndexingInfo setUrlPatternSignals(IndexingSignalAggregatorUrlPatternSignals urlPatternSignals) {
     this.urlPatternSignals = urlPatternSignals;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getVerticals() {
+    return verticals;
+  }
+
+  /**
+   * @param verticals verticals or {@code null} for none
+   */
+  public CompositeDocIndexingInfo setVerticals(java.util.List<java.lang.String> verticals) {
+    this.verticals = verticals;
     return this;
   }
 

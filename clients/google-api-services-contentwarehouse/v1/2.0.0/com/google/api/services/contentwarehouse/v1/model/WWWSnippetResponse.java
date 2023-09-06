@@ -282,9 +282,10 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The display name of the document's domain used as the first part of VisUrl, e.g, "Google > play
-   * > store" is the VisUrl of "https://play.google.com/store/". Wherein, "Google" is
-   * site_display_name of the domain "google.com". See go/site-display-name for more details.
+   * The domain-level display name of the website, such as "Google" for google.com. See go/site-
+   * display-name for more details. As of Aug 2023, this field is being deprecated in favor of
+   * `info.[AlternativeTitlesResponse].site_display_name_response` field, which also contains host-
+   * level site display names with additional information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -382,7 +383,7 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   /**
    * How tokens are rendered in generating title. Note: In rendering a title, the page title part
    * and the site/host/domain title part can be flipped after initial rendering. The flip, if
-   * happend, may not be reflected in this field. That is, this field may contain the tokens in the
+   * happened, may not be reflected in this field. That is, this field may contain the tokens in the
    * original, pre-flip, order.
    * The value may be {@code null}.
    */
@@ -1015,9 +1016,10 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The display name of the document's domain used as the first part of VisUrl, e.g, "Google > play
-   * > store" is the VisUrl of "https://play.google.com/store/". Wherein, "Google" is
-   * site_display_name of the domain "google.com". See go/site-display-name for more details.
+   * The domain-level display name of the website, such as "Google" for google.com. See go/site-
+   * display-name for more details. As of Aug 2023, this field is being deprecated in favor of
+   * `info.[AlternativeTitlesResponse].site_display_name_response` field, which also contains host-
+   * level site display names with additional information.
    * @return value or {@code null} for none
    */
   public java.lang.String getSiteDisplayName() {
@@ -1025,9 +1027,10 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The display name of the document's domain used as the first part of VisUrl, e.g, "Google > play
-   * > store" is the VisUrl of "https://play.google.com/store/". Wherein, "Google" is
-   * site_display_name of the domain "google.com". See go/site-display-name for more details.
+   * The domain-level display name of the website, such as "Google" for google.com. See go/site-
+   * display-name for more details. As of Aug 2023, this field is being deprecated in favor of
+   * `info.[AlternativeTitlesResponse].site_display_name_response` field, which also contains host-
+   * level site display names with additional information.
    * @param siteDisplayName siteDisplayName or {@code null} for none
    */
   public WWWSnippetResponse setSiteDisplayName(java.lang.String siteDisplayName) {
@@ -1234,7 +1237,7 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   /**
    * How tokens are rendered in generating title. Note: In rendering a title, the page title part
    * and the site/host/domain title part can be flipped after initial rendering. The flip, if
-   * happend, may not be reflected in this field. That is, this field may contain the tokens in the
+   * happened, may not be reflected in this field. That is, this field may contain the tokens in the
    * original, pre-flip, order.
    * @return value or {@code null} for none
    */
@@ -1245,7 +1248,7 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   /**
    * How tokens are rendered in generating title. Note: In rendering a title, the page title part
    * and the site/host/domain title part can be flipped after initial rendering. The flip, if
-   * happend, may not be reflected in this field. That is, this field may contain the tokens in the
+   * happened, may not be reflected in this field. That is, this field may contain the tokens in the
    * original, pre-flip, order.
    * @param titleRenderedToken titleRenderedToken or {@code null} for none
    */

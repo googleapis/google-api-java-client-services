@@ -40,6 +40,14 @@ public final class KnowledgeAnswersAttributeType extends com.google.api.client.j
   private java.util.List<java.lang.String> attribute;
 
   /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
+
+  /**
    * If exist, the attribute will be applied on the given pivot slot. This helps type checking when
    * qrewrite constructs function calls with an attribute-typed slot.
    * The value may be {@code null}.
@@ -71,6 +79,25 @@ public final class KnowledgeAnswersAttributeType extends com.google.api.client.j
    */
   public KnowledgeAnswersAttributeType setAttribute(java.util.List<java.lang.String> attribute) {
     this.attribute = attribute;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersAttributeType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 

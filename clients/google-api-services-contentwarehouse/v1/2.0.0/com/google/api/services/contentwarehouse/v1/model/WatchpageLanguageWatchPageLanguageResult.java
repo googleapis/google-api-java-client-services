@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for WatchpageLanguageWatchPageLanguageResult.
+ * Next ID: 3
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,14 +31,49 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class WatchpageLanguageWatchPageLanguageResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The language predicted by the WatchPage Language model.
+   * Versioned WatchPageLanguageResults. This is to experiment and launch new models. The first
+   * prediction is the latest production version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WatchpageLanguageWatchPageLanguageModelPredictions> predictions;
+
+  static {
+    // hack to force ProGuard to consider WatchpageLanguageWatchPageLanguageModelPredictions used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(WatchpageLanguageWatchPageLanguageModelPredictions.class);
+  }
+
+  /**
+   * The language predicted by the V1 WatchPage Language model. For new and experimental versions
+   * use versioned_language_result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String watchpageLanguage;
 
   /**
-   * The language predicted by the WatchPage Language model.
+   * Versioned WatchPageLanguageResults. This is to experiment and launch new models. The first
+   * prediction is the latest production version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WatchpageLanguageWatchPageLanguageModelPredictions> getPredictions() {
+    return predictions;
+  }
+
+  /**
+   * Versioned WatchPageLanguageResults. This is to experiment and launch new models. The first
+   * prediction is the latest production version.
+   * @param predictions predictions or {@code null} for none
+   */
+  public WatchpageLanguageWatchPageLanguageResult setPredictions(java.util.List<WatchpageLanguageWatchPageLanguageModelPredictions> predictions) {
+    this.predictions = predictions;
+    return this;
+  }
+
+  /**
+   * The language predicted by the V1 WatchPage Language model. For new and experimental versions
+   * use versioned_language_result.
    * @return value or {@code null} for none
    */
   public java.lang.String getWatchpageLanguage() {
@@ -46,7 +81,8 @@ public final class WatchpageLanguageWatchPageLanguageResult extends com.google.a
   }
 
   /**
-   * The language predicted by the WatchPage Language model.
+   * The language predicted by the V1 WatchPage Language model. For new and experimental versions
+   * use versioned_language_result.
    * @param watchpageLanguage watchpageLanguage or {@code null} for none
    */
   public WatchpageLanguageWatchPageLanguageResult setWatchpageLanguage(java.lang.String watchpageLanguage) {

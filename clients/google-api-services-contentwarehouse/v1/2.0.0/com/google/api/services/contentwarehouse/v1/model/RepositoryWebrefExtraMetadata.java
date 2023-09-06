@@ -131,7 +131,7 @@ public final class RepositoryWebrefExtraMetadata extends com.google.api.client.j
   private java.math.BigInteger primaryRecording;
 
   /**
-   * Products-specific entity metadata.
+   * Products-specific entity metadata. Only available in QrefMetadata output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -386,7 +386,7 @@ public final class RepositoryWebrefExtraMetadata extends com.google.api.client.j
   }
 
   /**
-   * Products-specific entity metadata.
+   * Products-specific entity metadata. Only available in QrefMetadata output.
    * @return value or {@code null} for none
    */
   public RepositoryWebrefProductMetadata getProductMetadata() {
@@ -394,7 +394,7 @@ public final class RepositoryWebrefExtraMetadata extends com.google.api.client.j
   }
 
   /**
-   * Products-specific entity metadata.
+   * Products-specific entity metadata. Only available in QrefMetadata output.
    * @param productMetadata productMetadata or {@code null} for none
    */
   public RepositoryWebrefExtraMetadata setProductMetadata(RepositoryWebrefProductMetadata productMetadata) {

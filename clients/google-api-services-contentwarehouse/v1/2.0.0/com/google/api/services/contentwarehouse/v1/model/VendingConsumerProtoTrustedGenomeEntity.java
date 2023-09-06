@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Proto message containing the id, localized title, score, and hierarchy level of a trusted genome
- * entity. Next ID: 10
+ * entity. Next ID: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -47,6 +47,13 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
   private java.lang.String id;
 
   /**
+   * Indicate whether the trusted genome entity has localized title.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isLocalized;
+
+  /**
    * The level of the entity. E.g. in hierarchy like Action -> Platformer > Endless Runner. Action
    * is level 1, Platformer is level 2 and Endless Runner is level 3. Currently, only APP_TAXONOMY
    * and GAME_TAXONOMY type may have the levels. For entity that does not have hierarchy, its level
@@ -70,6 +77,13 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String queryText;
+
+  /**
+   * The corresponding recs topics created from the trusted genome entity if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> recsTopicId;
 
   /**
    * The confidence score of the entity to the app.
@@ -130,6 +144,23 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
   }
 
   /**
+   * Indicate whether the trusted genome entity has localized title.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsLocalized() {
+    return isLocalized;
+  }
+
+  /**
+   * Indicate whether the trusted genome entity has localized title.
+   * @param isLocalized isLocalized or {@code null} for none
+   */
+  public VendingConsumerProtoTrustedGenomeEntity setIsLocalized(java.lang.Boolean isLocalized) {
+    this.isLocalized = isLocalized;
+    return this;
+  }
+
+  /**
    * The level of the entity. E.g. in hierarchy like Action -> Platformer > Endless Runner. Action
    * is level 1, Platformer is level 2 and Endless Runner is level 3. Currently, only APP_TAXONOMY
    * and GAME_TAXONOMY type may have the levels. For entity that does not have hierarchy, its level
@@ -185,6 +216,23 @@ public final class VendingConsumerProtoTrustedGenomeEntity extends com.google.ap
    */
   public VendingConsumerProtoTrustedGenomeEntity setQueryText(java.lang.String queryText) {
     this.queryText = queryText;
+    return this;
+  }
+
+  /**
+   * The corresponding recs topics created from the trusted genome entity if available.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRecsTopicId() {
+    return recsTopicId;
+  }
+
+  /**
+   * The corresponding recs topics created from the trusted genome entity if available.
+   * @param recsTopicId recsTopicId or {@code null} for none
+   */
+  public VendingConsumerProtoTrustedGenomeEntity setRecsTopicId(java.util.List<java.lang.String> recsTopicId) {
+    this.recsTopicId = recsTopicId;
     return this;
   }
 

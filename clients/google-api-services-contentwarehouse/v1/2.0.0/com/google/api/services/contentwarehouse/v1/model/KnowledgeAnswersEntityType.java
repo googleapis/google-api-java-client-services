@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * An EntityType configures a value whose type is intended to be an entity. Entities may be
  * specified using either the collection(s) to which they belong, or explicitly via a list of KG-
  * ids. Both collections and ids can be specified, in which case the type will be the union of the
- * id(s) and all mids within the collection(s). Next available tag: 9
+ * id(s) and all mids within the collection(s). Next available tag: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -43,6 +43,14 @@ public final class KnowledgeAnswersEntityType extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> collection;
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
 
   /**
    * The entity that this value is filled with must not be any of these collections (denoted by a
@@ -115,6 +123,25 @@ public final class KnowledgeAnswersEntityType extends com.google.api.client.json
    */
   public KnowledgeAnswersEntityType setCollection(java.util.List<java.lang.String> collection) {
     this.collection = collection;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersEntityType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 

@@ -50,14 +50,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
   private java.lang.Float docScore;
 
   /**
-   * If the annotation corresponds to a geo topic, this is populated with
-   * GeoTopic::normalized_score.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float geoTopicNormalizedScore;
-
-  /**
    * True if the entity is the author of the document. This was mainly developed and tuned for news
    * articles (e.g. /m/02x27qn on "www.vogue.com/article/flint-town-netflix") but is also popluated
    * for other content (e.g. scientific articles). Important: the semantics of this field may change
@@ -82,14 +74,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isReferencePage;
-
-  /**
-   * If the annotation corresponds to a local entity, this is populated with
-   * LocalEntityAnnotations::Instance::location_confidence.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float localEntityLocationConfidence;
 
   /**
    * Representation of the topicality score that is normalized in [0, 1] and which sum over all
@@ -171,25 +155,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
   }
 
   /**
-   * If the annotation corresponds to a geo topic, this is populated with
-   * GeoTopic::normalized_score.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getGeoTopicNormalizedScore() {
-    return geoTopicNormalizedScore;
-  }
-
-  /**
-   * If the annotation corresponds to a geo topic, this is populated with
-   * GeoTopic::normalized_score.
-   * @param geoTopicNormalizedScore geoTopicNormalizedScore or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setGeoTopicNormalizedScore(java.lang.Float geoTopicNormalizedScore) {
-    this.geoTopicNormalizedScore = geoTopicNormalizedScore;
-    return this;
-  }
-
-  /**
    * True if the entity is the author of the document. This was mainly developed and tuned for news
    * articles (e.g. /m/02x27qn on "www.vogue.com/article/flint-town-netflix") but is also popluated
    * for other content (e.g. scientific articles). Important: the semantics of this field may change
@@ -247,25 +212,6 @@ public final class RepositoryWebrefDetailedEntityScores extends com.google.api.c
    */
   public RepositoryWebrefDetailedEntityScores setIsReferencePage(java.lang.Boolean isReferencePage) {
     this.isReferencePage = isReferencePage;
-    return this;
-  }
-
-  /**
-   * If the annotation corresponds to a local entity, this is populated with
-   * LocalEntityAnnotations::Instance::location_confidence.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getLocalEntityLocationConfidence() {
-    return localEntityLocationConfidence;
-  }
-
-  /**
-   * If the annotation corresponds to a local entity, this is populated with
-   * LocalEntityAnnotations::Instance::location_confidence.
-   * @param localEntityLocationConfidence localEntityLocationConfidence or {@code null} for none
-   */
-  public RepositoryWebrefDetailedEntityScores setLocalEntityLocationConfidence(java.lang.Float localEntityLocationConfidence) {
-    this.localEntityLocationConfidence = localEntityLocationConfidence;
     return this;
   }
 

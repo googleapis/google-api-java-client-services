@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 8
+ * Next Tag: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -49,7 +49,6 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   private java.lang.String langWithoutLocale;
 
   /**
-   * Identifying which ASR models are used for the result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +60,13 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<ImageRepositorySpeechRecognitionResult> results;
+
+  /**
+   * The metadata about the S3 recognizer used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryS3RecognizerMetadataResponse s3RecognizerMetadataResponse;
 
   /**
    * This field contains full (stitched) transcription, word-level time offset , and word-level byte
@@ -113,7 +119,6 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   }
 
   /**
-   * Identifying which ASR models are used for the result
    * @return value or {@code null} for none
    */
   public java.lang.String getModelIdentifier() {
@@ -121,7 +126,6 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
   }
 
   /**
-   * Identifying which ASR models are used for the result
    * @param modelIdentifier modelIdentifier or {@code null} for none
    */
   public ImageRepositoryAmarnaCloudSpeechSignals setModelIdentifier(java.lang.String modelIdentifier) {
@@ -143,6 +147,23 @@ public final class ImageRepositoryAmarnaCloudSpeechSignals extends com.google.ap
    */
   public ImageRepositoryAmarnaCloudSpeechSignals setResults(java.util.List<ImageRepositorySpeechRecognitionResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * The metadata about the S3 recognizer used.
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryS3RecognizerMetadataResponse getS3RecognizerMetadataResponse() {
+    return s3RecognizerMetadataResponse;
+  }
+
+  /**
+   * The metadata about the S3 recognizer used.
+   * @param s3RecognizerMetadataResponse s3RecognizerMetadataResponse or {@code null} for none
+   */
+  public ImageRepositoryAmarnaCloudSpeechSignals setS3RecognizerMetadataResponse(ImageRepositoryS3RecognizerMetadataResponse s3RecognizerMetadataResponse) {
+    this.s3RecognizerMetadataResponse = s3RecognizerMetadataResponse;
     return this;
   }
 

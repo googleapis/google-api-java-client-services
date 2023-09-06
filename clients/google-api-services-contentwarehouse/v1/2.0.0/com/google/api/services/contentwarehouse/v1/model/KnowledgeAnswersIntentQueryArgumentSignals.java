@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A message representing the signals associated with an argument. NEXT ID TO USE: 58 For
+ * A message representing the signals associated with an argument. NEXT ID TO USE: 59 For
  * //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange",
  * fields under Argument.signals in the serving proto are stored directly under Argument on the
  * logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/
@@ -237,6 +237,13 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersIntentQueryLocationMarkersSignals locationMarkersSignals;
+
+  /**
+   * The type category for the location stored in this Argument, if it exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationType;
 
   /**
    * Signals about the media entity for this argument.
@@ -924,6 +931,23 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setLocationMarkersSignals(KnowledgeAnswersIntentQueryLocationMarkersSignals locationMarkersSignals) {
     this.locationMarkersSignals = locationMarkersSignals;
+    return this;
+  }
+
+  /**
+   * The type category for the location stored in this Argument, if it exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationType() {
+    return locationType;
+  }
+
+  /**
+   * The type category for the location stored in this Argument, if it exists.
+   * @param locationType locationType or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setLocationType(java.lang.String locationType) {
+    this.locationType = locationType;
     return this;
   }
 

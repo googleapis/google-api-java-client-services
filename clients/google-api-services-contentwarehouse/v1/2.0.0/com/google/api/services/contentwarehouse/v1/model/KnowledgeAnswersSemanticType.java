@@ -46,6 +46,14 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   private java.lang.Boolean allowAll;
 
   /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
+
+  /**
    * Determines whether or not the meaning schema that contains this semantic_type conforms to a
    * function call with the name and arguments taken from the meaning schema. As it refers to the
    * "containing_intent", this field should only be set in a semantic_type declared in an intent's
@@ -74,6 +82,13 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   private java.util.List<java.lang.String> name;
 
   /**
+   * Like `name_remodelings`, but for ComponentSpecificContracts instead of remodelings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NlpMeaningSemanticTypeNameComponentSpecificContracts> nameContracts;
+
+  /**
    * Contains data about current schema remodelings at the SemanticType name level. The "name" field
    * contains all possible semantic type names and "semantic_type_name_remodelings" acts as an
    * overlay to determine which ones to surface based on which schema remodeling IDs are requested.
@@ -84,7 +99,7 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   private java.util.List<NlpMeaningSemanticTypeNameMeaningRemodelings> nameRemodelings;
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
+   * Contains data about current schema remodelings at this ValueType lev©el. For more information
    * see go/meaning-remodeling-framework.
    * The value may be {@code null}.
    */
@@ -119,6 +134,25 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
    */
   public KnowledgeAnswersSemanticType setAllowAll(java.lang.Boolean allowAll) {
     this.allowAll = allowAll;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersSemanticType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 
@@ -185,6 +219,23 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   }
 
   /**
+   * Like `name_remodelings`, but for ComponentSpecificContracts instead of remodelings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NlpMeaningSemanticTypeNameComponentSpecificContracts> getNameContracts() {
+    return nameContracts;
+  }
+
+  /**
+   * Like `name_remodelings`, but for ComponentSpecificContracts instead of remodelings.
+   * @param nameContracts nameContracts or {@code null} for none
+   */
+  public KnowledgeAnswersSemanticType setNameContracts(java.util.List<NlpMeaningSemanticTypeNameComponentSpecificContracts> nameContracts) {
+    this.nameContracts = nameContracts;
+    return this;
+  }
+
+  /**
    * Contains data about current schema remodelings at the SemanticType name level. The "name" field
    * contains all possible semantic type names and "semantic_type_name_remodelings" acts as an
    * overlay to determine which ones to surface based on which schema remodeling IDs are requested.
@@ -208,7 +259,7 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   }
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
+   * Contains data about current schema remodelings at this ValueType lev©el. For more information
    * see go/meaning-remodeling-framework.
    * @return value or {@code null} for none
    */
@@ -217,7 +268,7 @@ public final class KnowledgeAnswersSemanticType extends com.google.api.client.js
   }
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
+   * Contains data about current schema remodelings at this ValueType lev©el. For more information
    * see go/meaning-remodeling-framework.
    * @param remodelings remodelings or {@code null} for none
    */

@@ -27,7 +27,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * this file. The specific opaque value types must be empty messages. If you find a need to add any
  * fields to these messages, make them non-opaque and implement all of the code to treat them as
  * first class types. It is allowable for a value to have more than one of the opaque types. See
- * http://go/opaque-type-for-value-type. LINT.IfChange Next Id: 31
+ * http://go/opaque-type-for-value-type. LINT.IfChange Next Id: 32
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -87,6 +87,14 @@ public final class KnowledgeAnswersOpaqueType extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersOpaqueComponentReferenceIndexType componentReferenceType;
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
 
   /**
    * The value may be {@code null}.
@@ -339,6 +347,25 @@ public final class KnowledgeAnswersOpaqueType extends com.google.api.client.json
    */
   public KnowledgeAnswersOpaqueType setComponentReferenceType(KnowledgeAnswersOpaqueComponentReferenceIndexType componentReferenceType) {
     this.componentReferenceType = componentReferenceType;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersOpaqueType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 

@@ -68,6 +68,13 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableQueryFeatures;
 
   /**
+   * Indicates to not add any new candidates in SnippetFlow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean forceLeadingTextOrMeta;
+
+  /**
    * Snippet candidate index selected by snippet brain model. This field will get populated in
    * SnippetFlow in superroot. go/snippets-brain
    * The value may be {@code null}.
@@ -168,6 +175,23 @@ public final class SnippetExtraInfo extends com.google.api.client.json.GenericJs
    */
   public SnippetExtraInfo setDisableQueryFeatures(java.lang.Boolean disableQueryFeatures) {
     this.disableQueryFeatures = disableQueryFeatures;
+    return this;
+  }
+
+  /**
+   * Indicates to not add any new candidates in SnippetFlow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForceLeadingTextOrMeta() {
+    return forceLeadingTextOrMeta;
+  }
+
+  /**
+   * Indicates to not add any new candidates in SnippetFlow.
+   * @param forceLeadingTextOrMeta forceLeadingTextOrMeta or {@code null} for none
+   */
+  public SnippetExtraInfo setForceLeadingTextOrMeta(java.lang.Boolean forceLeadingTextOrMeta) {
+    this.forceLeadingTextOrMeta = forceLeadingTextOrMeta;
     return this;
   }
 

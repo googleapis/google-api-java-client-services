@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This defines the per-doc data which is extracted from thumbnails and propagated over to indexing.
- * It contains all information that can be used for restricts. Next tag id: 129
+ * It contains all information that can be used for restricts. Next tag id: 130
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -300,7 +300,9 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
   private java.lang.Float h2c;
 
   /**
-   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image.
+   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image. These are considered Search
+   * CPS Personal Data due to concerns that they may be used to reidentify or confirm the presence
+   * of specific singleton (unique) queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -441,6 +443,13 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer lineartDetectorVersion;
+
+  /**
+   * Bitmask of LinkInfo enum in google3/indexing/converter/outlinks/linkinfo.h.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger linkinfoType;
 
   /**
    * The value may be {@code null}.
@@ -1373,7 +1382,9 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image.
+   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image. These are considered Search
+   * CPS Personal Data due to concerns that they may be used to reidentify or confirm the presence
+   * of specific singleton (unique) queries.
    * @return value or {@code null} for none
    */
   public java.lang.Float getH2i() {
@@ -1381,7 +1392,9 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image.
+   * 'Hovers to Impressions' and 'Hovers to Clicks' ratios for an image. These are considered Search
+   * CPS Personal Data due to concerns that they may be used to reidentify or confirm the presence
+   * of specific singleton (unique) queries.
    * @param h2i h2i or {@code null} for none
    */
   public ImageData setH2i(java.lang.Float h2i) {
@@ -1712,6 +1725,23 @@ public final class ImageData extends com.google.api.client.json.GenericJson {
    */
   public ImageData setLineartDetectorVersion(java.lang.Integer lineartDetectorVersion) {
     this.lineartDetectorVersion = lineartDetectorVersion;
+    return this;
+  }
+
+  /**
+   * Bitmask of LinkInfo enum in google3/indexing/converter/outlinks/linkinfo.h.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getLinkinfoType() {
+    return linkinfoType;
+  }
+
+  /**
+   * Bitmask of LinkInfo enum in google3/indexing/converter/outlinks/linkinfo.h.
+   * @param linkinfoType linkinfoType or {@code null} for none
+   */
+  public ImageData setLinkinfoType(java.math.BigInteger linkinfoType) {
+    this.linkinfoType = linkinfoType;
     return this;
   }
 

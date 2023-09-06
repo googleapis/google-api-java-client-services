@@ -17,16 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A LocationType configures a value whose type is a Location message, for example, the output of
- * the Location subgrammar. Note that this location type is not the same as a "location entity" (an
- * entity with a location indicating type/collection, which is annotated by QRef). The scope of a
- * LocationType is usually broader than a location entity, it may represent - businesses, places,
- * and POIs (location entities from QRef) - addresses ("123 Main St., New York, NY") or even just
- * coordinates (latitude, longitude) - business categories (e.g., "pharmacies" or "gas stations") -
- * SAFT locations - aliases (including "home" and "work") - contacts - combinations of a location
- * with modifiers and constraints (e.g., "chinese restaurant near me" or "cheap kid-friendly
- * hotels") - ungrounded locations produced by ungrounded_location model See go/location-type for
- * the details of the location proto output by location subgrammar.
+ * Model definition for KnowledgeAnswersOpaqueLocationType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

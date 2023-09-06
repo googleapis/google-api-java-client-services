@@ -94,6 +94,17 @@ public final class PersonalizationMapsAliasIcon extends com.google.api.client.js
   private GeostorePointProto point;
 
   /**
+   * Encapsulates the privacy policy relevant signals for this event. See go/kansas-embedded-ptokens
+   * for additional details. Keep the type fully qualified in case (when) we decide to make proto
+   * compiler enforce '.ptoken.PToken' as the only allowed type for the field number 9099. Hence,
+   * don't remove the leading '.'. See go/protobuf-ptoken-field for details around the 9099 field
+   * number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PtokenPToken ptoken;
+
+  /**
    * The id of the sticker asset chosen by the user to replace the default asset for the alias.
    * The value may be {@code null}.
    */
@@ -260,6 +271,31 @@ public final class PersonalizationMapsAliasIcon extends com.google.api.client.js
    */
   public PersonalizationMapsAliasIcon setPoint(GeostorePointProto point) {
     this.point = point;
+    return this;
+  }
+
+  /**
+   * Encapsulates the privacy policy relevant signals for this event. See go/kansas-embedded-ptokens
+   * for additional details. Keep the type fully qualified in case (when) we decide to make proto
+   * compiler enforce '.ptoken.PToken' as the only allowed type for the field number 9099. Hence,
+   * don't remove the leading '.'. See go/protobuf-ptoken-field for details around the 9099 field
+   * number.
+   * @return value or {@code null} for none
+   */
+  public PtokenPToken getPtoken() {
+    return ptoken;
+  }
+
+  /**
+   * Encapsulates the privacy policy relevant signals for this event. See go/kansas-embedded-ptokens
+   * for additional details. Keep the type fully qualified in case (when) we decide to make proto
+   * compiler enforce '.ptoken.PToken' as the only allowed type for the field number 9099. Hence,
+   * don't remove the leading '.'. See go/protobuf-ptoken-field for details around the 9099 field
+   * number.
+   * @param ptoken ptoken or {@code null} for none
+   */
+  public PersonalizationMapsAliasIcon setPtoken(PtokenPToken ptoken) {
+    this.ptoken = ptoken;
     return this;
   }
 

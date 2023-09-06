@@ -17,8 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Proto used to represent rights for a field type. See go/geo-rights for more details. NOTE: Use
- * google3/geostore/provenance/public/rights.h or
+ * Proto used to represent rights for a feature property id. See go/geo-rights for more details.
+ * NOTE: Use google3/geostore/provenance/public/rights.h or
  * google3/java/com/google/geostore/provenance/rights/Rights.java instead of accessing this proto
  * directly.
  *
@@ -34,37 +34,36 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreFieldWithRightsProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * ** DEPRECATED ** If field_type is set to FEATURE_ATTRIBUTE or KNOWLEDGE_GRAPH_PROPERTY, the
-   * attribute ID / KG property ID that makes this field with rights complete.
+   * **DEPRECATED** Never set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributeId;
 
   /**
+   * The feature property id for which this entry tracks rights.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GeostoreFeaturePropertyIdProto featurePropertyId;
 
   /**
-   * The field type for which the rights level are tracked on. The default value here has to match
-   * the value of fieldtype::NONE.
+   * **DEPRECATED** The field type for which this entry tracks rights. There may be multiple entries
+   * for the same field type - prefer feature_property_id to uniquely identify a particular entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer fieldType;
 
   /**
-   * The minimum rights level for all the current values on the field type.
+   * The minimum rights level among all current values for this feature property id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String minRightsLevel;
 
   /**
-   * ** DEPRECATED ** If field_type is set to FEATURE_ATTRIBUTE or KNOWLEDGE_GRAPH_PROPERTY, the
-   * attribute ID / KG property ID that makes this field with rights complete.
+   * **DEPRECATED** Never set.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeId() {
@@ -72,8 +71,7 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
-   * ** DEPRECATED ** If field_type is set to FEATURE_ATTRIBUTE or KNOWLEDGE_GRAPH_PROPERTY, the
-   * attribute ID / KG property ID that makes this field with rights complete.
+   * **DEPRECATED** Never set.
    * @param attributeId attributeId or {@code null} for none
    */
   public GeostoreFieldWithRightsProto setAttributeId(java.lang.String attributeId) {
@@ -82,6 +80,7 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
+   * The feature property id for which this entry tracks rights.
    * @return value or {@code null} for none
    */
   public GeostoreFeaturePropertyIdProto getFeaturePropertyId() {
@@ -89,6 +88,7 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
+   * The feature property id for which this entry tracks rights.
    * @param featurePropertyId featurePropertyId or {@code null} for none
    */
   public GeostoreFieldWithRightsProto setFeaturePropertyId(GeostoreFeaturePropertyIdProto featurePropertyId) {
@@ -97,8 +97,8 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
-   * The field type for which the rights level are tracked on. The default value here has to match
-   * the value of fieldtype::NONE.
+   * **DEPRECATED** The field type for which this entry tracks rights. There may be multiple entries
+   * for the same field type - prefer feature_property_id to uniquely identify a particular entry.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFieldType() {
@@ -106,8 +106,8 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
-   * The field type for which the rights level are tracked on. The default value here has to match
-   * the value of fieldtype::NONE.
+   * **DEPRECATED** The field type for which this entry tracks rights. There may be multiple entries
+   * for the same field type - prefer feature_property_id to uniquely identify a particular entry.
    * @param fieldType fieldType or {@code null} for none
    */
   public GeostoreFieldWithRightsProto setFieldType(java.lang.Integer fieldType) {
@@ -116,7 +116,7 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
-   * The minimum rights level for all the current values on the field type.
+   * The minimum rights level among all current values for this feature property id.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinRightsLevel() {
@@ -124,7 +124,7 @@ public final class GeostoreFieldWithRightsProto extends com.google.api.client.js
   }
 
   /**
-   * The minimum rights level for all the current values on the field type.
+   * The minimum rights level among all current values for this feature property id.
    * @param minRightsLevel minRightsLevel or {@code null} for none
    */
   public GeostoreFieldWithRightsProto setMinRightsLevel(java.lang.String minRightsLevel) {

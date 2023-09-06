@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This is an optional container of arbitrary data that can be added to a FetchReplyData. This data
  * is meant to be logged, but not sent back in a fetch reply (it should be added *after* the reply
  * is prepared). Use FetchResponsePreparatorImpl::AddTrawlerPrivateDataToFetchReplyData to add. See
- * also the comment in fetch_response_preparator_impl.cc. Next Tag: 46
+ * also the comment in fetch_response_preparator_impl.cc. Next Tag: 47
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -343,6 +343,13 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private TrawlerOriginalClientParams originalClientParams;
+
+  /**
+   * Log the prod region (only for regional harpoon requestor ids)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prodRegion;
 
   /**
    * If the requestor shares resource bucket with other requestorids, we will store the resource
@@ -1146,6 +1153,23 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   public TrawlerTrawlerPrivateFetchReplyData setOriginalClientParams(TrawlerOriginalClientParams originalClientParams) {
     this.originalClientParams = originalClientParams;
+    return this;
+  }
+
+  /**
+   * Log the prod region (only for regional harpoon requestor ids)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProdRegion() {
+    return prodRegion;
+  }
+
+  /**
+   * Log the prod region (only for regional harpoon requestor ids)
+   * @param prodRegion prodRegion or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setProdRegion(java.lang.String prodRegion) {
+    this.prodRegion = prodRegion;
     return this;
   }
 

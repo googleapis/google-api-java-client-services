@@ -46,11 +46,11 @@ public final class CuepointSchedule extends com.google.api.client.json.GenericJs
   private java.lang.String pauseAdsUntil;
 
   /**
-   * Interval frequency that api uses to insert cuepoints automatically.
+   * Interval frequency in seconds that api uses to insert cuepoints automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String repeatInterval;
+  private java.lang.Integer repeatIntervalSecs;
 
   /**
    * The strategy to use when scheduling cuepoints.
@@ -98,19 +98,19 @@ public final class CuepointSchedule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Interval frequency that api uses to insert cuepoints automatically.
+   * Interval frequency in seconds that api uses to insert cuepoints automatically.
    * @return value or {@code null} for none
    */
-  public String getRepeatInterval() {
-    return repeatInterval;
+  public java.lang.Integer getRepeatIntervalSecs() {
+    return repeatIntervalSecs;
   }
 
   /**
-   * Interval frequency that api uses to insert cuepoints automatically.
-   * @param repeatInterval repeatInterval or {@code null} for none
+   * Interval frequency in seconds that api uses to insert cuepoints automatically.
+   * @param repeatIntervalSecs repeatIntervalSecs or {@code null} for none
    */
-  public CuepointSchedule setRepeatInterval(String repeatInterval) {
-    this.repeatInterval = repeatInterval;
+  public CuepointSchedule setRepeatIntervalSecs(java.lang.Integer repeatIntervalSecs) {
+    this.repeatIntervalSecs = repeatIntervalSecs;
     return this;
   }
 

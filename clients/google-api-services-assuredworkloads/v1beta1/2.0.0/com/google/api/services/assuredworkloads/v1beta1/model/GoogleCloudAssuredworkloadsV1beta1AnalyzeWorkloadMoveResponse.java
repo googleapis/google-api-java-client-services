@@ -38,14 +38,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1AssetMoveAnalysis> assetMoveAnalyses;
 
   /**
-   * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload. This field is now deprecated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> blockers;
-
-  /**
    * The next page token. Is empty if the last page is reached.
    * The value may be {@code null}.
    */
@@ -66,25 +58,6 @@ public final class GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse
    */
   public GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse setAssetMoveAnalyses(java.util.List<GoogleCloudAssuredworkloadsV1beta1AssetMoveAnalysis> assetMoveAnalyses) {
     this.assetMoveAnalyses = assetMoveAnalyses;
-    return this;
-  }
-
-  /**
-   * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload. This field is now deprecated.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getBlockers() {
-    return blockers;
-  }
-
-  /**
-   * A list of blockers that should be addressed before moving the source project or project-based
-   * workload to the destination folder-based workload. This field is now deprecated.
-   * @param blockers blockers or {@code null} for none
-   */
-  public GoogleCloudAssuredworkloadsV1beta1AnalyzeWorkloadMoveResponse setBlockers(java.util.List<java.lang.String> blockers) {
-    this.blockers = blockers;
     return this;
   }
 

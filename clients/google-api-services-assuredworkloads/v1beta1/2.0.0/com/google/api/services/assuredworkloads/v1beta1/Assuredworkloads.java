@@ -544,8 +544,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class Workloads {
 
         /**
-         * Analyzes a hypothetical move of a source resource to a target(destination) folder-based workload
-         * to surface compliance risks.
+         * Analyzes a hypothetical move of a source resource to a target workload to surface compliance
+         * risks. The analysis is best effort and is not guaranteed to be exhaustive.
          *
          * Create a request for the method "workloads.analyzeWorkloadMove".
          *
@@ -574,8 +574,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
 
           /**
-           * Analyzes a hypothetical move of a source resource to a target(destination) folder-based
-           * workload to surface compliance risks.
+           * Analyzes a hypothetical move of a source resource to a target workload to surface compliance
+           * risks. The analysis is best effort and is not guaranteed to be exhaustive.
            *
            * Create a request for the method "workloads.analyzeWorkloadMove".
            *
@@ -704,27 +704,27 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. List of asset types to be analyzed,including and under the source resource.
+           * Optional. List of asset types to be analyzed, including and under the source resource.
            * If empty, all assets are analyzed. The complete list of asset types is available
            * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-           * types#searchable_asset_types)
+           * types#searchable_asset_types).
            */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> assetTypes;
 
-          /** Optional. List of asset types to be analyzed,including and under the source resource. If empty, all
-         assets are analyzed. The complete list of asset types is available [here](https://cloud.google.com
-         /asset-inventory/docs/supported-asset-types#searchable_asset_types)
+          /** Optional. List of asset types to be analyzed, including and under the source resource. If empty,
+         all assets are analyzed. The complete list of asset types is available
+         [here](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
            */
           public java.util.List<java.lang.String> getAssetTypes() {
             return assetTypes;
           }
 
           /**
-           * Optional. List of asset types to be analyzed,including and under the source resource.
+           * Optional. List of asset types to be analyzed, including and under the source resource.
            * If empty, all assets are analyzed. The complete list of asset types is available
            * [here](https://cloud.google.com/asset-inventory/docs/supported-asset-
-           * types#searchable_asset_types)
+           * types#searchable_asset_types).
            */
           public AnalyzeWorkloadMove setAssetTypes(java.util.List<java.lang.String> assetTypes) {
             this.assetTypes = assetTypes;
@@ -796,37 +796,6 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            */
           public AnalyzeWorkloadMove setProject(java.lang.String project) {
             this.project = project;
-            return this;
-          }
-
-          /**
-           * The source type is a project-based workload. Specify the workloads's relative resource
-           * name, formatted as:
-           * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-           * example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This
-           * option is now deprecated.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String source;
-
-          /** The source type is a project-based workload. Specify the workloads's relative resource name,
-         formatted as: "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-         example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This option is now
-         deprecated.
-           */
-          public java.lang.String getSource() {
-            return source;
-          }
-
-          /**
-           * The source type is a project-based workload. Specify the workloads's relative resource
-           * name, formatted as:
-           * "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}" For
-           * example: "organizations/123/locations/us-east1/workloads/assured-workload-1" This
-           * option is now deprecated.
-           */
-          public AnalyzeWorkloadMove setSource(java.lang.String source) {
-            this.source = source;
             return this;
           }
 

@@ -95,6 +95,14 @@ public final class Stream extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. If the stream was recovered, the time of the last recovery. Note: This field is
+   * currently experimental.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastRecoveryTime;
+
+  /**
    * Output only. The stream's name.
    * The value may be {@code null}.
    */
@@ -261,6 +269,25 @@ public final class Stream extends com.google.api.client.json.GenericJson {
    */
   public Stream setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. If the stream was recovered, the time of the last recovery. Note: This field is
+   * currently experimental.
+   * @return value or {@code null} for none
+   */
+  public String getLastRecoveryTime() {
+    return lastRecoveryTime;
+  }
+
+  /**
+   * Output only. If the stream was recovered, the time of the last recovery. Note: This field is
+   * currently experimental.
+   * @param lastRecoveryTime lastRecoveryTime or {@code null} for none
+   */
+  public Stream setLastRecoveryTime(String lastRecoveryTime) {
+    this.lastRecoveryTime = lastRecoveryTime;
     return this;
   }
 

@@ -50,6 +50,13 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
   private java.lang.String exactSearchableOption;
 
   /**
+   * Contains facet options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaCatalogAttributeFacetConfig facetConfig;
+
+  /**
    * Output only. Indicates whether this attribute has been used by any products. `True` if at least
    * one Product is using this attribute in Product.attributes. Otherwise, this field is `False`.
    * CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute,
@@ -165,6 +172,23 @@ public final class GoogleCloudRetailV2alphaCatalogAttribute extends com.google.a
    */
   public GoogleCloudRetailV2alphaCatalogAttribute setExactSearchableOption(java.lang.String exactSearchableOption) {
     this.exactSearchableOption = exactSearchableOption;
+    return this;
+  }
+
+  /**
+   * Contains facet options.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCatalogAttributeFacetConfig getFacetConfig() {
+    return facetConfig;
+  }
+
+  /**
+   * Contains facet options.
+   * @param facetConfig facetConfig or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCatalogAttribute setFacetConfig(GoogleCloudRetailV2alphaCatalogAttributeFacetConfig facetConfig) {
+    this.facetConfig = facetConfig;
     return this;
   }
 

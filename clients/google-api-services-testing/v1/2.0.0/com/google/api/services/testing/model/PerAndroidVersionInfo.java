@@ -37,6 +37,13 @@ public final class PerAndroidVersionInfo extends com.google.api.client.json.Gene
   private java.lang.String deviceCapacity;
 
   /**
+   * Output only. Identifies supported clients for DirectAccess for this Android version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectAccessVersionInfo directAccessVersionInfo;
+
+  /**
    * An Android version.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class PerAndroidVersionInfo extends com.google.api.client.json.Gene
    */
   public PerAndroidVersionInfo setDeviceCapacity(java.lang.String deviceCapacity) {
     this.deviceCapacity = deviceCapacity;
+    return this;
+  }
+
+  /**
+   * Output only. Identifies supported clients for DirectAccess for this Android version.
+   * @return value or {@code null} for none
+   */
+  public DirectAccessVersionInfo getDirectAccessVersionInfo() {
+    return directAccessVersionInfo;
+  }
+
+  /**
+   * Output only. Identifies supported clients for DirectAccess for this Android version.
+   * @param directAccessVersionInfo directAccessVersionInfo or {@code null} for none
+   */
+  public PerAndroidVersionInfo setDirectAccessVersionInfo(DirectAccessVersionInfo directAccessVersionInfo) {
+    this.directAccessVersionInfo = directAccessVersionInfo;
     return this;
   }
 

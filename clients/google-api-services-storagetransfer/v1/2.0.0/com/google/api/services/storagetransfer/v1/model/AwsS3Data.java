@@ -50,6 +50,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
+   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
+   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudfrontDomain;
+
+  /**
    * Optional. The Resource name of a secret in Secret Manager. The Azure SAS token must be stored
    * in Secret Manager in JSON format: { "sas_token" : "SAS_TOKEN" } GoogleServiceAccount must be
    * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
@@ -123,6 +131,25 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setBucketName(java.lang.String bucketName) {
     this.bucketName = bucketName;
+    return this;
+  }
+
+  /**
+   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
+   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudfrontDomain() {
+    return cloudfrontDomain;
+  }
+
+  /**
+   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
+   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * @param cloudfrontDomain cloudfrontDomain or {@code null} for none
+   */
+  public AwsS3Data setCloudfrontDomain(java.lang.String cloudfrontDomain) {
+    this.cloudfrontDomain = cloudfrontDomain;
     return this;
   }
 

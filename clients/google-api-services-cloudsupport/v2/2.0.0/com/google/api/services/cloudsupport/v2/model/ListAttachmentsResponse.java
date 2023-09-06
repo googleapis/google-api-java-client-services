@@ -31,7 +31,7 @@ package com.google.api.services.cloudsupport.v2.model;
 public final class ListAttachmentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of attachments associated with the given case.
+   * The list of attachments associated with a case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +44,15 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `cases.attachments.list` requests. If unspecified, there are no more results to
-   * retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.attachments.list` requests. If unspecified, there are no more results to retrieve.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of attachments associated with the given case.
+   * The list of attachments associated with a case.
    * @return value or {@code null} for none
    */
   public java.util.List<Attachment> getAttachments() {
@@ -61,7 +60,7 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of attachments associated with the given case.
+   * The list of attachments associated with a case.
    * @param attachments attachments or {@code null} for none
    */
   public ListAttachmentsResponse setAttachments(java.util.List<Attachment> attachments) {
@@ -70,9 +69,8 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `cases.attachments.list` requests. If unspecified, there are no more results to
-   * retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.attachments.list` requests. If unspecified, there are no more results to retrieve.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -80,9 +78,8 @@ public final class ListAttachmentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `cases.attachments.list` requests. If unspecified, there are no more results to
-   * retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.attachments.list` requests. If unspecified, there are no more results to retrieve.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAttachmentsResponse setNextPageToken(java.lang.String nextPageToken) {

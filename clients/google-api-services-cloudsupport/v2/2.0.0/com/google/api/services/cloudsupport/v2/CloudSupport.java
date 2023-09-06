@@ -1612,17 +1612,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     public class Attachments {
 
       /**
-       * Retrieve all attachments associated with a support case. Here is an example of calling this
-       * endpoint using cURL: ```shell case="projects/some-project/cases/23598314" curl \ --header
-       * "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$case/attachments" ```
+       * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell case="projects
+       * /some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
+       * token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = ( supportApiService.cases() .attachments() .list(parent="projects/some-
+       * project/cases/43595344") ) print(request.execute()) ```
        *
        * Create a request for the method "attachments.list".
        *
        * This request holds the parameters needed by the cloudsupport server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of Case object for which attachments should be listed.
+       * @param parent Required. The name of the case for which attachments should be listed.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1639,10 +1643,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
         /**
-         * Retrieve all attachments associated with a support case. Here is an example of calling this
-         * endpoint using cURL: ```shell case="projects/some-project/cases/23598314" curl \ --header
-         * "Authorization: Bearer $(gcloud auth print-access-token)" \
-         * "https://cloudsupport.googleapis.com/v2/$case/attachments" ```
+         * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell
+         * case="projects/some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud
+         * auth print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ```
+         * Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = ( supportApiService.cases() .attachments() .list(parent="projects/some-
+         * project/cases/43595344") ) print(request.execute()) ```
          *
          * Create a request for the method "attachments.list".
          *
@@ -1651,7 +1659,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of Case object for which attachments should be listed.
+         * @param parent Required. The name of the case for which attachments should be listed.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1729,17 +1737,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of Case object for which attachments should be listed. */
+        /** Required. The name of the case for which attachments should be listed. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of Case object for which attachments should be listed.
+        /** Required. The name of the case for which attachments should be listed.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The resource name of Case object for which attachments should be listed. */
+        /** Required. The name of the case for which attachments should be listed. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1823,18 +1831,24 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     public class Comments {
 
       /**
-       * Add a new comment to the specified Case. The comment object must have the following fields set:
-       * body. Here is an example of calling this endpoint using cURL: ```shell case="projects/some-
-       * project/cases/43591344" curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth
-       * print-access-token)" \ --header 'Content-Type: application/json' \ --data '{ "body": "This is a
-       * test comment." }' \ "https://cloudsupport.googleapis.com/v2/$case/comments" ```
+       * Add a new comment to a case. The comment must have the following fields set: `body`. EXAMPLES:
+       * cURL: ```shell case="projects/some-project/cases/43591344" curl \ --request POST \ --header
+       * "Authorization: Bearer $(gcloud auth print-access-token)" \ --header 'Content-Type:
+       * application/json' \ --data '{ "body": "This is a test comment." }' \
+       * "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = ( supportApiService.cases() .comments() .create( parent="projects/some-
+       * project/cases/43595344", body={"body": "This is a test comment."}, ) ) print(request.execute())
+       * ```
        *
        * Create a request for the method "comments.create".
        *
        * This request holds the parameters needed by the cloudsupport server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of Case to which this comment should be added.
+       * @param parent Required. The name of the case to which the comment should be added.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.Comment}
        * @return the request
        */
@@ -1852,11 +1866,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
         /**
-         * Add a new comment to the specified Case. The comment object must have the following fields set:
-         * body. Here is an example of calling this endpoint using cURL: ```shell case="projects/some-
-         * project/cases/43591344" curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth
-         * print-access-token)" \ --header 'Content-Type: application/json' \ --data '{ "body": "This is a
-         * test comment." }' \ "https://cloudsupport.googleapis.com/v2/$case/comments" ```
+         * Add a new comment to a case. The comment must have the following fields set: `body`. EXAMPLES:
+         * cURL: ```shell case="projects/some-project/cases/43591344" curl \ --request POST \ --header
+         * "Authorization: Bearer $(gcloud auth print-access-token)" \ --header 'Content-Type:
+         * application/json' \ --data '{ "body": "This is a test comment." }' \
+         * "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
+         * googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = ( supportApiService.cases() .comments() .create( parent="projects/some-
+         * project/cases/43595344", body={"body": "This is a test comment."}, ) ) print(request.execute())
+         * ```
          *
          * Create a request for the method "comments.create".
          *
@@ -1866,7 +1886,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of Case to which this comment should be added.
+         * @param parent Required. The name of the case to which the comment should be added.
          * @param content the {@link com.google.api.services.cloudsupport.v2.model.Comment}
          * @since 1.13
          */
@@ -1935,17 +1955,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of Case to which this comment should be added. */
+        /** Required. The name of the case to which the comment should be added. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of Case to which this comment should be added.
+        /** Required. The name of the case to which the comment should be added.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The resource name of Case to which this comment should be added. */
+        /** Required. The name of the case to which the comment should be added. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1962,17 +1982,21 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Retrieve all comments associated with the Case object. Here is an example of calling this
-       * endpoint using cURL: ```shell case="projects/cloud-support-qa-premium/cases/43595344" curl \
-       * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$case/comments" ```
+       * List all the comments associated with a case. EXAMPLES: cURL: ```shell case="projects/some-
+       * project/cases/43595344" curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)"
+       * \ "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = ( supportApiService.cases() .comments() .list(parent="projects/some-
+       * project/cases/43595344") ) print(request.execute()) ```
        *
        * Create a request for the method "comments.list".
        *
        * This request holds the parameters needed by the cloudsupport server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of Case object for which comments should be listed.
+       * @param parent Required. The name of the case for which to list comments.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1989,10 +2013,14 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
         /**
-         * Retrieve all comments associated with the Case object. Here is an example of calling this
-         * endpoint using cURL: ```shell case="projects/cloud-support-qa-premium/cases/43595344" curl \
-         * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-         * "https://cloudsupport.googleapis.com/v2/$case/comments" ```
+         * List all the comments associated with a case. EXAMPLES: cURL: ```shell case="projects/some-
+         * project/cases/43595344" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
+         * token)" \ "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
+         * googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = ( supportApiService.cases() .comments() .list(parent="projects/some-project/cases/43595344")
+         * ) print(request.execute()) ```
          *
          * Create a request for the method "comments.list".
          *
@@ -2001,7 +2029,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of Case object for which comments should be listed.
+         * @param parent Required. The name of the case for which to list comments.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2079,17 +2107,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of Case object for which comments should be listed. */
+        /** Required. The name of the case for which to list comments. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of Case object for which comments should be listed.
+        /** Required. The name of the case for which to list comments.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The resource name of Case object for which comments should be listed. */
+        /** Required. The name of the case for which to list comments. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2100,17 +2128,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The maximum number of comments fetched with each request. Defaults to 10. */
+        /** The maximum number of comments to fetch. Defaults to 10. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of comments fetched with each request. Defaults to 10.
+        /** The maximum number of comments to fetch. Defaults to 10.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of comments fetched with each request. Defaults to 10. */
+        /** The maximum number of comments to fetch. Defaults to 10. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2118,12 +2146,12 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
         /**
          * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
+         * returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A token identifying the page of results to return. If unspecified, the first page is retrieved.
+        /** A token identifying the page of results to return. If unspecified, the first page is returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2131,7 +2159,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
 
         /**
          * A token identifying the page of results to return. If unspecified, the first page is
-         * retrieved.
+         * returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2168,18 +2196,24 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class Media {
 
     /**
-     * Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
-     * Here is an example of calling this endpoint using cURL: ```shell name="projects/some-
+     * Download a file attached to a case. Note: HTTP requests must append "?alt=media" to the URL.
+     * EXAMPLES: cURL: ```shell name="projects/some-
      * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
      * $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ```
+     * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+     * serviceName="cloudsupport", version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) request = supportApiService.media().download( name="projects/some-
+     * project/cases/43595344/attachments/0684M00000Pw6pHQAR" ) request.uri = request.uri.split("?")[0]
+     * + "?alt=media" print(request.execute()) ```
      *
      * Create a request for the method "media.download".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the attachment to be downloaded.
+     * @param name The name of the file attachment to download.
      * @return the request
      */
     public Download download(java.lang.String name) throws java.io.IOException {
@@ -2196,11 +2230,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
 
       /**
-       * Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
-       * Here is an example of calling this endpoint using cURL: ```shell name="projects/some-
+       * Download a file attached to a case. Note: HTTP requests must append "?alt=media" to the URL.
+       * EXAMPLES: cURL: ```shell name="projects/some-
        * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
        * $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ```
+       * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+       * = supportApiService.media().download( name="projects/some-
+       * project/cases/43595344/attachments/0684M00000Pw6pHQAR" ) request.uri =
+       * request.uri.split("?")[0] + "?alt=media" print(request.execute()) ```
        *
        * Create a request for the method "media.download".
        *
@@ -2210,7 +2250,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the attachment to be downloaded.
+       * @param name The name of the file attachment to download.
        * @since 1.13
        */
       protected Download(java.lang.String name) {
@@ -2312,17 +2352,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the attachment to be downloaded. */
+      /** The name of the file attachment to download. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the attachment to be downloaded.
+      /** The name of the file attachment to download.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The resource name of the attachment to be downloaded. */
+      /** The name of the file attachment to download. */
       public Download setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2339,19 +2379,27 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Create a file attachment on a case or Cloud resource. The attachment object must have the
-     * following fields set: filename. Here is an example of calling this endpoint using cURL: ```shell
-     * echo "This text is in a file I'm uploading using CSAPI." \ > "./example_file.txt" case="projects
-     * /some-project/cases/43594844" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-     * token)" \ --data-binary @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2bet
-     * a/$case/attachments?attachment.filename=uploaded_via_curl.txt" ```
+     * Create a file attachment on a case or Cloud resource. The attachment must have the following
+     * fields set: `filename`. EXAMPLES: cURL: ```shell echo "This text is in a file I'm uploading using
+     * CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \ --header
+     * "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary @"./example_file.txt" \
+     * "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded
+     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+     * supportApiService = googleapiclient.discovery.build( serviceName="cloudsupport",
+     * version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) file_path = "./example_file.txt" with open(file_path, "w") as file: file.write( "This text is
+     * inside a file I'm going to upload using the Cloud Support API.", ) request =
+     * supportApiService.media().upload( parent="projects/some-project/cases/43595344",
+     * media_body=file_path ) request.uri = request.uri.split("?")[0] +
+     * "?attachment.filename=uploaded_via_python.txt" print(request.execute()) ```
      *
      * Create a request for the method "media.upload".
      *
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
+     * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest}
      * @return the request
      */
@@ -2362,12 +2410,20 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     }
 
     /**
-     * Create a file attachment on a case or Cloud resource. The attachment object must have the
-     * following fields set: filename. Here is an example of calling this endpoint using cURL: ```shell
-     * echo "This text is in a file I'm uploading using CSAPI." \ > "./example_file.txt" case="projects
-     * /some-project/cases/43594844" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-     * token)" \ --data-binary @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2bet
-     * a/$case/attachments?attachment.filename=uploaded_via_curl.txt" ```
+     * Create a file attachment on a case or Cloud resource. The attachment must have the following
+     * fields set: `filename`. EXAMPLES: cURL: ```shell echo "This text is in a file I'm uploading using
+     * CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \ --header
+     * "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary @"./example_file.txt" \
+     * "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded
+     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+     * supportApiService = googleapiclient.discovery.build( serviceName="cloudsupport",
+     * version=api_version,
+     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+     * ) file_path = "./example_file.txt" with open(file_path, "w") as file: file.write( "This text is
+     * inside a file I'm going to upload using the Cloud Support API.", ) request =
+     * supportApiService.media().upload( parent="projects/some-project/cases/43595344",
+     * media_body=file_path ) request.uri = request.uri.split("?")[0] +
+     * "?attachment.filename=uploaded_via_python.txt" print(request.execute()) ```
      *
      * Create a request for the method "media.upload".
      *
@@ -2378,7 +2434,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
+     * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
      * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
@@ -2398,12 +2454,19 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
 
       /**
-       * Create a file attachment on a case or Cloud resource. The attachment object must have the
-       * following fields set: filename. Here is an example of calling this endpoint using cURL:
-       * ```shell echo "This text is in a file I'm uploading using CSAPI." \ > "./example_file.txt"
-       * case="projects/some-project/cases/43594844" curl \ --header "Authorization: Bearer $(gcloud
-       * auth print-access-token)" \ --data-binary @"./example_file.txt" \ "https://cloudsupport.googlea
-       * pis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded_via_curl.txt" ```
+       * Create a file attachment on a case or Cloud resource. The attachment must have the following
+       * fields set: `filename`. EXAMPLES: cURL: ```shell echo "This text is in a file I'm uploading
+       * using CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \
+       * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary
+       * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?at
+       * tachment.filename=uploaded_via_curl.txt" ``` Python: ```python import googleapiclient.discovery
+       * api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https://cloudsupport.goo
+       * gleapis.com/$discovery/rest?version={api_version}", ) file_path = "./example_file.txt" with
+       * open(file_path, "w") as file: file.write( "This text is inside a file I'm going to upload using
+       * the Cloud Support API.", ) request = supportApiService.media().upload( parent="projects/some-
+       * project/cases/43595344", media_body=file_path ) request.uri = request.uri.split("?")[0] +
+       * "?attachment.filename=uploaded_via_python.txt" print(request.execute()) ```
        *
        * Create a request for the method "media.upload".
        *
@@ -2413,7 +2476,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
+       * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest}
        * @since 1.13
        */
@@ -2428,12 +2491,19 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Create a file attachment on a case or Cloud resource. The attachment object must have the
-       * following fields set: filename. Here is an example of calling this endpoint using cURL:
-       * ```shell echo "This text is in a file I'm uploading using CSAPI." \ > "./example_file.txt"
-       * case="projects/some-project/cases/43594844" curl \ --header "Authorization: Bearer $(gcloud
-       * auth print-access-token)" \ --data-binary @"./example_file.txt" \ "https://cloudsupport.googlea
-       * pis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded_via_curl.txt" ```
+       * Create a file attachment on a case or Cloud resource. The attachment must have the following
+       * fields set: `filename`. EXAMPLES: cURL: ```shell echo "This text is in a file I'm uploading
+       * using CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \
+       * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary
+       * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?at
+       * tachment.filename=uploaded_via_curl.txt" ``` Python: ```python import googleapiclient.discovery
+       * api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https://cloudsupport.goo
+       * gleapis.com/$discovery/rest?version={api_version}", ) file_path = "./example_file.txt" with
+       * open(file_path, "w") as file: file.write( "This text is inside a file I'm going to upload using
+       * the Cloud Support API.", ) request = supportApiService.media().upload( parent="projects/some-
+       * project/cases/43595344", media_body=file_path ) request.uri = request.uri.split("?")[0] +
+       * "?attachment.filename=uploaded_via_python.txt" print(request.execute()) ```
        *
        * Create a request for the method "media.upload".
        *
@@ -2447,7 +2517,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param parent Required. The resource name of the case (or case parent) to which the attachment should be attached.
+       * @param parent Required. The name of the case or Cloud resource to which the attachment should be attached.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.CreateAttachmentRequest} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
@@ -2514,21 +2584,20 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * Required. The name of the case or Cloud resource to which the attachment should be
        * attached.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. The resource name of the case (or case parent) to which the attachment should be
-     attached.
+      /** Required. The name of the case or Cloud resource to which the attachment should be attached.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. The resource name of the case (or case parent) to which the attachment should be
+       * Required. The name of the case or Cloud resource to which the attachment should be
        * attached.
        */
       public Upload setParent(java.lang.String parent) {

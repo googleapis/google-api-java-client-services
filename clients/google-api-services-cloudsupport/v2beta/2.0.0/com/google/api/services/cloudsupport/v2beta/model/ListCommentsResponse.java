@@ -31,7 +31,7 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class ListCommentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Comments associated with the given Case.
+   * List of the comments associated with the case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +44,15 @@ public final class ListCommentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCommentsRequest` message that is issued. If unspecified, there are no more
-   * results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.comments.list` requests. If unspecified, there are no more results to retrieve.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Comments associated with the given Case.
+   * List of the comments associated with the case.
    * @return value or {@code null} for none
    */
   public java.util.List<Comment> getComments() {
@@ -61,7 +60,7 @@ public final class ListCommentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The list of Comments associated with the given Case.
+   * List of the comments associated with the case.
    * @param comments comments or {@code null} for none
    */
   public ListCommentsResponse setComments(java.util.List<Comment> comments) {
@@ -70,9 +69,8 @@ public final class ListCommentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCommentsRequest` message that is issued. If unspecified, there are no more
-   * results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.comments.list` requests. If unspecified, there are no more results to retrieve.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -80,9 +78,8 @@ public final class ListCommentsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A token to retrieve the next page of results. This should be set in the `page_token` field of
-   * subsequent `ListCommentsRequest` message that is issued. If unspecified, there are no more
-   * results to retrieve.
+   * A token to retrieve the next page of results. Set this in the `page_token` field of subsequent
+   * `cases.comments.list` requests. If unspecified, there are no more results to retrieve.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListCommentsResponse setNextPageToken(java.lang.String nextPageToken) {

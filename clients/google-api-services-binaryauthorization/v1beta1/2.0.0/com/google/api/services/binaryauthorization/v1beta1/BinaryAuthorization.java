@@ -1720,7 +1720,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+       * Returns whether the given `Attestation` for the given image URI was signed by the given
+       * `Attestor`
        *
        * Create a request for the method "attestors.validateAttestationOccurrence".
        *
@@ -1746,7 +1747,8 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/attestors/[^/]+$");
 
         /**
-         * Returns whether the given Attestation for the given image URI was signed by the given Attestor
+         * Returns whether the given `Attestation` for the given image URI was signed by the given
+         * `Attestor`
          *
          * Create a request for the method "attestors.validateAttestationOccurrence".
          *

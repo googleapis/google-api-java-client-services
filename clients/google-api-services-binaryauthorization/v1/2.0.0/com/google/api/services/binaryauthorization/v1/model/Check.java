@@ -17,8 +17,8 @@
 package com.google.api.services.binaryauthorization.v1.model;
 
 /**
- * A single check to perform against a Pod. Checks are grouped into CheckSets, which are defined by
- * the top-level policy.
+ * A single check to perform against a Pod. Checks are grouped into `CheckSet` objects, which are
+ * defined by the top-level policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation
@@ -33,8 +33,8 @@ public final class Check extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A special-case check that always denies. Note that this still only applies when the
-   * scope of the CheckSet applies and the image isn't exempted by an image allowlist. This check is
-   * primarily useful for testing, or to set the default behavior for all unmatched scopes to
+   * scope of the `CheckSet` applies and the image isn't exempted by an image allowlist. This check
+   * is primarily useful for testing, or to set the default behavior for all unmatched scopes to
    * "deny".
    * The value may be {@code null}.
    */
@@ -42,7 +42,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean alwaysDeny;
 
   /**
-   * Optional. A user-provided name for this Check. This field has no effect on the policy
+   * Optional. A user-provided name for this check. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * The value may be {@code null}.
    */
@@ -50,7 +50,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Optional. Images exempted from this Check. If any of the patterns match the image url, the
+   * Optional. Images exempted from this check. If any of the patterns match the image url, the
    * check will not be evaluated.
    * The value may be {@code null}.
    */
@@ -73,9 +73,9 @@ public final class Check extends com.google.api.client.json.GenericJson {
   private SimpleSigningAttestationCheck simpleSigningAttestationCheck;
 
   /**
-   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build or
-   * GitHub), meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was
-   * built from a trusted source code repostitory.
+   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build),
+   * meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was built from a
+   * trusted source code repostitory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class Check extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A special-case check that always denies. Note that this still only applies when the
-   * scope of the CheckSet applies and the image isn't exempted by an image allowlist. This check is
-   * primarily useful for testing, or to set the default behavior for all unmatched scopes to
+   * scope of the `CheckSet` applies and the image isn't exempted by an image allowlist. This check
+   * is primarily useful for testing, or to set the default behavior for all unmatched scopes to
    * "deny".
    * @return value or {@code null} for none
    */
@@ -109,8 +109,8 @@ public final class Check extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A special-case check that always denies. Note that this still only applies when the
-   * scope of the CheckSet applies and the image isn't exempted by an image allowlist. This check is
-   * primarily useful for testing, or to set the default behavior for all unmatched scopes to
+   * scope of the `CheckSet` applies and the image isn't exempted by an image allowlist. This check
+   * is primarily useful for testing, or to set the default behavior for all unmatched scopes to
    * "deny".
    * @param alwaysDeny alwaysDeny or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-provided name for this Check. This field has no effect on the policy
+   * Optional. A user-provided name for this check. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * @return value or {@code null} for none
    */
@@ -129,7 +129,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-provided name for this Check. This field has no effect on the policy
+   * Optional. A user-provided name for this check. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * @param displayName displayName or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Images exempted from this Check. If any of the patterns match the image url, the
+   * Optional. Images exempted from this check. If any of the patterns match the image url, the
    * check will not be evaluated.
    * @return value or {@code null} for none
    */
@@ -148,7 +148,7 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Images exempted from this Check. If any of the patterns match the image url, the
+   * Optional. Images exempted from this check. If any of the patterns match the image url, the
    * check will not be evaluated.
    * @param imageAllowlist imageAllowlist or {@code null} for none
    */
@@ -194,9 +194,9 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build or
-   * GitHub), meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was
-   * built from a trusted source code repostitory.
+   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build),
+   * meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was built from a
+   * trusted source code repostitory.
    * @return value or {@code null} for none
    */
   public SlsaCheck getSlsaCheck() {
@@ -204,9 +204,9 @@ public final class Check extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build or
-   * GitHub), meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was
-   * built from a trusted source code repostitory.
+   * Optional. Require that an image was built by a trusted builder (such as Google Cloud Build),
+   * meets requirements for Supply chain Levels for Software Artifacts (SLSA), and was built from a
+   * trusted source code repostitory.
    * @param slsaCheck slsaCheck or {@code null} for none
    */
   public Check setSlsaCheck(SlsaCheck slsaCheck) {

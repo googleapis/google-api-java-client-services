@@ -41,8 +41,8 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
   private AttestationSource attestationSource;
 
   /**
-   * If true, require the image to be built from a top-level configuration. trusted_source_repo
-   * patterns specifies the repositories containing this configuration.
+   * If true, require the image to be built from a top-level configuration.
+   * `trusted_source_repo_patterns` specifies the repositories containing this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,16 +60,17 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
 
   /**
    * List of trusted source code repository URL patterns. These patterns match the full repository
-   * URL without its scheme (e.g. "https://"). The patterns must not include schemes. For example,
-   * the pattern "source.cloud.google.com/my-project/my-repo-name" matches the following URLs: -
-   * "source.cloud.google.com/my-project/my-repo-name" - "git+ssh://source.cloud.google.com/my-
-   * project/my-repo-name" - "https://source.cloud.google.com/my-project/my-repo-name" A pattern
-   * matches a URL either exactly or with * wildcards. * can be used in only two ways: 1. trailing *
-   * after hosturi/ to match varying endings; 2. trailing ** after hosturi/ to match "/" as well. *
-   * and ** can only be used as wildcards and can only occur at the end of the pattern after a /.
-   * (So it's not possible to match a URL that contains literal *.) For example: - "github.com/my-
-   * project/my-repo" is valid to match a single repo - "github.com/my-project" will match all
-   * direct repos in my-project - "github.com*" matches all repos in GitHub
+   * URL without its scheme (e.g. `https://`). The patterns must not include schemes. For example,
+   * the pattern `source.cloud.google.com/my-project/my-repo-name` matches the following URLs: -
+   * `source.cloud.google.com/my-project/my-repo-name` - `git+ssh://source.cloud.google.com/my-
+   * project/my-repo-name` - `https://source.cloud.google.com/my-project/my-repo-name` A pattern
+   * matches a URL either exactly or with `*` wildcards. `*` can be used in only two ways: 1.
+   * trailing `*` after hosturi/ to match varying endings; 2. trailing `**` after hosturi/ to match
+   * `/` as well. `*` and `**` can only be used as wildcards and can only occur at the end of the
+   * pattern after a `/`. (So it's not possible to match a URL that contains literal `*`.) For
+   * example: - `github.com/my-project/my-repo` is valid to match a single repo - `github.com/my-
+   * project` will match all direct repos in `my-project` - `github.com*` matches all repos in
+   * GitHub
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +94,8 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * If true, require the image to be built from a top-level configuration. trusted_source_repo
-   * patterns specifies the repositories containing this configuration.
+   * If true, require the image to be built from a top-level configuration.
+   * `trusted_source_repo_patterns` specifies the repositories containing this configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getConfigBasedBuildRequired() {
@@ -102,8 +103,8 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * If true, require the image to be built from a top-level configuration. trusted_source_repo
-   * patterns specifies the repositories containing this configuration.
+   * If true, require the image to be built from a top-level configuration.
+   * `trusted_source_repo_patterns` specifies the repositories containing this configuration.
    * @param configBasedBuildRequired configBasedBuildRequired or {@code null} for none
    */
   public VerificationRule setConfigBasedBuildRequired(java.lang.Boolean configBasedBuildRequired) {
@@ -136,16 +137,17 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
 
   /**
    * List of trusted source code repository URL patterns. These patterns match the full repository
-   * URL without its scheme (e.g. "https://"). The patterns must not include schemes. For example,
-   * the pattern "source.cloud.google.com/my-project/my-repo-name" matches the following URLs: -
-   * "source.cloud.google.com/my-project/my-repo-name" - "git+ssh://source.cloud.google.com/my-
-   * project/my-repo-name" - "https://source.cloud.google.com/my-project/my-repo-name" A pattern
-   * matches a URL either exactly or with * wildcards. * can be used in only two ways: 1. trailing *
-   * after hosturi/ to match varying endings; 2. trailing ** after hosturi/ to match "/" as well. *
-   * and ** can only be used as wildcards and can only occur at the end of the pattern after a /.
-   * (So it's not possible to match a URL that contains literal *.) For example: - "github.com/my-
-   * project/my-repo" is valid to match a single repo - "github.com/my-project" will match all
-   * direct repos in my-project - "github.com*" matches all repos in GitHub
+   * URL without its scheme (e.g. `https://`). The patterns must not include schemes. For example,
+   * the pattern `source.cloud.google.com/my-project/my-repo-name` matches the following URLs: -
+   * `source.cloud.google.com/my-project/my-repo-name` - `git+ssh://source.cloud.google.com/my-
+   * project/my-repo-name` - `https://source.cloud.google.com/my-project/my-repo-name` A pattern
+   * matches a URL either exactly or with `*` wildcards. `*` can be used in only two ways: 1.
+   * trailing `*` after hosturi/ to match varying endings; 2. trailing `**` after hosturi/ to match
+   * `/` as well. `*` and `**` can only be used as wildcards and can only occur at the end of the
+   * pattern after a `/`. (So it's not possible to match a URL that contains literal `*`.) For
+   * example: - `github.com/my-project/my-repo` is valid to match a single repo - `github.com/my-
+   * project` will match all direct repos in `my-project` - `github.com*` matches all repos in
+   * GitHub
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrustedSourceRepoPatterns() {
@@ -154,16 +156,17 @@ public final class VerificationRule extends com.google.api.client.json.GenericJs
 
   /**
    * List of trusted source code repository URL patterns. These patterns match the full repository
-   * URL without its scheme (e.g. "https://"). The patterns must not include schemes. For example,
-   * the pattern "source.cloud.google.com/my-project/my-repo-name" matches the following URLs: -
-   * "source.cloud.google.com/my-project/my-repo-name" - "git+ssh://source.cloud.google.com/my-
-   * project/my-repo-name" - "https://source.cloud.google.com/my-project/my-repo-name" A pattern
-   * matches a URL either exactly or with * wildcards. * can be used in only two ways: 1. trailing *
-   * after hosturi/ to match varying endings; 2. trailing ** after hosturi/ to match "/" as well. *
-   * and ** can only be used as wildcards and can only occur at the end of the pattern after a /.
-   * (So it's not possible to match a URL that contains literal *.) For example: - "github.com/my-
-   * project/my-repo" is valid to match a single repo - "github.com/my-project" will match all
-   * direct repos in my-project - "github.com*" matches all repos in GitHub
+   * URL without its scheme (e.g. `https://`). The patterns must not include schemes. For example,
+   * the pattern `source.cloud.google.com/my-project/my-repo-name` matches the following URLs: -
+   * `source.cloud.google.com/my-project/my-repo-name` - `git+ssh://source.cloud.google.com/my-
+   * project/my-repo-name` - `https://source.cloud.google.com/my-project/my-repo-name` A pattern
+   * matches a URL either exactly or with `*` wildcards. `*` can be used in only two ways: 1.
+   * trailing `*` after hosturi/ to match varying endings; 2. trailing `**` after hosturi/ to match
+   * `/` as well. `*` and `**` can only be used as wildcards and can only occur at the end of the
+   * pattern after a `/`. (So it's not possible to match a URL that contains literal `*`.) For
+   * example: - `github.com/my-project/my-repo` is valid to match a single repo - `github.com/my-
+   * project` will match all direct repos in `my-project` - `github.com*` matches all repos in
+   * GitHub
    * @param trustedSourceRepoPatterns trustedSourceRepoPatterns or {@code null} for none
    */
   public VerificationRule setTrustedSourceRepoPatterns(java.util.List<java.lang.String> trustedSourceRepoPatterns) {

@@ -17,8 +17,8 @@
 package com.google.api.services.binaryauthorization.v1.model;
 
 /**
- * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7
- * for details). Public keys of this type are typically textually encoded using the PEM format.
+ * A public key in the PkixPublicKey [format](https://tools.ietf.org/html/rfc5280#section-4.1.2.7).
+ * Public keys of this type are typically textually encoded using the PEM format.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation

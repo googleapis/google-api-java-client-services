@@ -17,7 +17,7 @@
 package com.google.api.services.binaryauthorization.v1.model;
 
 /**
- * A scope specifier for CheckSets.
+ * A scope specifier for `CheckSet` objects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation
@@ -39,7 +39,7 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   private java.lang.String kubernetesNamespace;
 
   /**
-   * Optional. Matches a single Kubernetes service account, e.g. 'my-namespace:my-service-account'.
+   * Optional. Matches a single Kubernetes service account, e.g. `my-namespace:my-service-account`.
    * `kubernetes_service_account` scope is always more specific than `kubernetes_namespace` scope
    * for the same namespace.
    * The value may be {@code null}.
@@ -67,7 +67,7 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Matches a single Kubernetes service account, e.g. 'my-namespace:my-service-account'.
+   * Optional. Matches a single Kubernetes service account, e.g. `my-namespace:my-service-account`.
    * `kubernetes_service_account` scope is always more specific than `kubernetes_namespace` scope
    * for the same namespace.
    * @return value or {@code null} for none
@@ -77,7 +77,7 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Matches a single Kubernetes service account, e.g. 'my-namespace:my-service-account'.
+   * Optional. Matches a single Kubernetes service account, e.g. `my-namespace:my-service-account`.
    * `kubernetes_service_account` scope is always more specific than `kubernetes_namespace` scope
    * for the same namespace.
    * @param kubernetesServiceAccount kubernetesServiceAccount or {@code null} for none

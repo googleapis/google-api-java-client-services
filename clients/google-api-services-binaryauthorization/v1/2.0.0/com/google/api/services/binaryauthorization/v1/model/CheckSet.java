@@ -18,7 +18,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 
 /**
  * A conjunction of policy checks, scoped to a particular namespace or Kubernetes service account.
- * In order for evaluation of a CheckSet to return "allowed" for a given image in a given Pod, one
+ * In order for evaluation of a `CheckSet` to return "allowed" for a given image in a given Pod, one
  * of the following conditions must be satisfied: * The image is explicitly exempted by an entry in
  * `image_allowlist`, OR * ALL of the `checks` evaluate to "allowed".
  *
@@ -35,7 +35,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The checks to apply. The ultimate result of evaluating the check set will be "allow"
-   * if and only if every check in 'checks' evaluates to "allow". If `checks` is empty, the default
+   * if and only if every check in `checks` evaluates to "allow". If `checks` is empty, the default
    * behavior is "always allow".
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-provided name for this CheckSet. This field has no effect on the policy
+   * Optional. A user-provided name for this `CheckSet`. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * The value may be {@code null}.
    */
@@ -57,17 +57,17 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Optional. Images exempted from this CheckSet. If any of the patterns match the image being
-   * evaluated, no checks in the CheckSet will be evaluated.
+   * Optional. Images exempted from this `CheckSet`. If any of the patterns match the image being
+   * evaluated, no checks in the `CheckSet` will be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ImageAllowlist imageAllowlist;
 
   /**
-   * Optional. The scope to which this CheckSet applies. If unset or an empty string (the default),
-   * applies to all namespaces and service accounts. See the Scope message documentation for details
-   * on scoping rules.
+   * Optional. The scope to which this `CheckSet` applies. If unset or an empty string (the
+   * default), applies to all namespaces and service accounts. See the `Scope` message documentation
+   * for details on scoping rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The checks to apply. The ultimate result of evaluating the check set will be "allow"
-   * if and only if every check in 'checks' evaluates to "allow". If `checks` is empty, the default
+   * if and only if every check in `checks` evaluates to "allow". If `checks` is empty, the default
    * behavior is "always allow".
    * @return value or {@code null} for none
    */
@@ -85,7 +85,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The checks to apply. The ultimate result of evaluating the check set will be "allow"
-   * if and only if every check in 'checks' evaluates to "allow". If `checks` is empty, the default
+   * if and only if every check in `checks` evaluates to "allow". If `checks` is empty, the default
    * behavior is "always allow".
    * @param checks checks or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-provided name for this CheckSet. This field has no effect on the policy
+   * Optional. A user-provided name for this `CheckSet`. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-provided name for this CheckSet. This field has no effect on the policy
+   * Optional. A user-provided name for this `CheckSet`. This field has no effect on the policy
    * evaluation behavior except to improve readability of messages in evaluation results.
    * @param displayName displayName or {@code null} for none
    */
@@ -114,8 +114,8 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Images exempted from this CheckSet. If any of the patterns match the image being
-   * evaluated, no checks in the CheckSet will be evaluated.
+   * Optional. Images exempted from this `CheckSet`. If any of the patterns match the image being
+   * evaluated, no checks in the `CheckSet` will be evaluated.
    * @return value or {@code null} for none
    */
   public ImageAllowlist getImageAllowlist() {
@@ -123,8 +123,8 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Images exempted from this CheckSet. If any of the patterns match the image being
-   * evaluated, no checks in the CheckSet will be evaluated.
+   * Optional. Images exempted from this `CheckSet`. If any of the patterns match the image being
+   * evaluated, no checks in the `CheckSet` will be evaluated.
    * @param imageAllowlist imageAllowlist or {@code null} for none
    */
   public CheckSet setImageAllowlist(ImageAllowlist imageAllowlist) {
@@ -133,9 +133,9 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The scope to which this CheckSet applies. If unset or an empty string (the default),
-   * applies to all namespaces and service accounts. See the Scope message documentation for details
-   * on scoping rules.
+   * Optional. The scope to which this `CheckSet` applies. If unset or an empty string (the
+   * default), applies to all namespaces and service accounts. See the `Scope` message documentation
+   * for details on scoping rules.
    * @return value or {@code null} for none
    */
   public Scope getScope() {
@@ -143,9 +143,9 @@ public final class CheckSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The scope to which this CheckSet applies. If unset or an empty string (the default),
-   * applies to all namespaces and service accounts. See the Scope message documentation for details
-   * on scoping rules.
+   * Optional. The scope to which this `CheckSet` applies. If unset or an empty string (the
+   * default), applies to all namespaces and service accounts. See the `Scope` message documentation
+   * for details on scoping rules.
    * @param scope scope or {@code null} for none
    */
   public CheckSet setScope(Scope scope) {

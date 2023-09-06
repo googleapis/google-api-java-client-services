@@ -32,19 +32,20 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class GkePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The CheckSets to apply, scoped by namespace or namespace and service account. Exactly
-   * one CheckSet will be evaluated for a given Pod (unless the list is empty, in which case the
-   * behavior is "always allow"). If multiple CheckSets have scopes that match the namespace and
-   * service account of the Pod being evaluated, only the CheckSet with the MOST SPECIFIC scope will
-   * match. CheckSets must be listed in order of decreasing specificity, i.e. if a scope matches a
-   * given service account (which must include the namespace), it must come before a CheckSet with a
-   * scope matching just that namespace. This property is enforced by server-side validation. The
-   * purpose of this restriction is to ensure that if more than one CheckSet matches a given Pod,
-   * the CheckSet that will be evaluated will always be the first in the list to match (because if
-   * any other matches, it must be less specific). If `check_sets` is empty, the default behavior is
-   * to allow all images. If `check_sets` is non-empty, the last `check_sets` entry must always be a
-   * CheckSet with no scope set, i.e. a catchall to handle any situation not caught by the preceding
-   * CheckSets.
+   * Optional. The `CheckSet` objects to apply, scoped by namespace or namespace and service
+   * account. Exactly one `CheckSet` will be evaluated for a given Pod (unless the list is empty, in
+   * which case the behavior is "always allow"). If multiple `CheckSet` objects have scopes that
+   * match the namespace and service account of the Pod being evaluated, only the `CheckSet` with
+   * the MOST SPECIFIC scope will match. `CheckSet` objects must be listed in order of decreasing
+   * specificity, i.e. if a scope matches a given service account (which must include the
+   * namespace), it must come before a `CheckSet` with a scope matching just that namespace. This
+   * property is enforced by server-side validation. The purpose of this restriction is to ensure
+   * that if more than one `CheckSet` matches a given Pod, the `CheckSet` that will be evaluated
+   * will always be the first in the list to match (because if any other matches, it must be less
+   * specific). If `check_sets` is empty, the default behavior is to allow all images. If
+   * `check_sets` is non-empty, the last `check_sets` entry must always be a `CheckSet` with no
+   * scope set, i.e. a catchall to handle any situation not caught by the preceding `CheckSet`
+   * objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,19 +66,20 @@ public final class GkePolicy extends com.google.api.client.json.GenericJson {
   private ImageAllowlist imageAllowlist;
 
   /**
-   * Optional. The CheckSets to apply, scoped by namespace or namespace and service account. Exactly
-   * one CheckSet will be evaluated for a given Pod (unless the list is empty, in which case the
-   * behavior is "always allow"). If multiple CheckSets have scopes that match the namespace and
-   * service account of the Pod being evaluated, only the CheckSet with the MOST SPECIFIC scope will
-   * match. CheckSets must be listed in order of decreasing specificity, i.e. if a scope matches a
-   * given service account (which must include the namespace), it must come before a CheckSet with a
-   * scope matching just that namespace. This property is enforced by server-side validation. The
-   * purpose of this restriction is to ensure that if more than one CheckSet matches a given Pod,
-   * the CheckSet that will be evaluated will always be the first in the list to match (because if
-   * any other matches, it must be less specific). If `check_sets` is empty, the default behavior is
-   * to allow all images. If `check_sets` is non-empty, the last `check_sets` entry must always be a
-   * CheckSet with no scope set, i.e. a catchall to handle any situation not caught by the preceding
-   * CheckSets.
+   * Optional. The `CheckSet` objects to apply, scoped by namespace or namespace and service
+   * account. Exactly one `CheckSet` will be evaluated for a given Pod (unless the list is empty, in
+   * which case the behavior is "always allow"). If multiple `CheckSet` objects have scopes that
+   * match the namespace and service account of the Pod being evaluated, only the `CheckSet` with
+   * the MOST SPECIFIC scope will match. `CheckSet` objects must be listed in order of decreasing
+   * specificity, i.e. if a scope matches a given service account (which must include the
+   * namespace), it must come before a `CheckSet` with a scope matching just that namespace. This
+   * property is enforced by server-side validation. The purpose of this restriction is to ensure
+   * that if more than one `CheckSet` matches a given Pod, the `CheckSet` that will be evaluated
+   * will always be the first in the list to match (because if any other matches, it must be less
+   * specific). If `check_sets` is empty, the default behavior is to allow all images. If
+   * `check_sets` is non-empty, the last `check_sets` entry must always be a `CheckSet` with no
+   * scope set, i.e. a catchall to handle any situation not caught by the preceding `CheckSet`
+   * objects.
    * @return value or {@code null} for none
    */
   public java.util.List<CheckSet> getCheckSets() {
@@ -85,19 +87,20 @@ public final class GkePolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The CheckSets to apply, scoped by namespace or namespace and service account. Exactly
-   * one CheckSet will be evaluated for a given Pod (unless the list is empty, in which case the
-   * behavior is "always allow"). If multiple CheckSets have scopes that match the namespace and
-   * service account of the Pod being evaluated, only the CheckSet with the MOST SPECIFIC scope will
-   * match. CheckSets must be listed in order of decreasing specificity, i.e. if a scope matches a
-   * given service account (which must include the namespace), it must come before a CheckSet with a
-   * scope matching just that namespace. This property is enforced by server-side validation. The
-   * purpose of this restriction is to ensure that if more than one CheckSet matches a given Pod,
-   * the CheckSet that will be evaluated will always be the first in the list to match (because if
-   * any other matches, it must be less specific). If `check_sets` is empty, the default behavior is
-   * to allow all images. If `check_sets` is non-empty, the last `check_sets` entry must always be a
-   * CheckSet with no scope set, i.e. a catchall to handle any situation not caught by the preceding
-   * CheckSets.
+   * Optional. The `CheckSet` objects to apply, scoped by namespace or namespace and service
+   * account. Exactly one `CheckSet` will be evaluated for a given Pod (unless the list is empty, in
+   * which case the behavior is "always allow"). If multiple `CheckSet` objects have scopes that
+   * match the namespace and service account of the Pod being evaluated, only the `CheckSet` with
+   * the MOST SPECIFIC scope will match. `CheckSet` objects must be listed in order of decreasing
+   * specificity, i.e. if a scope matches a given service account (which must include the
+   * namespace), it must come before a `CheckSet` with a scope matching just that namespace. This
+   * property is enforced by server-side validation. The purpose of this restriction is to ensure
+   * that if more than one `CheckSet` matches a given Pod, the `CheckSet` that will be evaluated
+   * will always be the first in the list to match (because if any other matches, it must be less
+   * specific). If `check_sets` is empty, the default behavior is to allow all images. If
+   * `check_sets` is non-empty, the last `check_sets` entry must always be a `CheckSet` with no
+   * scope set, i.e. a catchall to handle any situation not caught by the preceding `CheckSet`
+   * objects.
    * @param checkSets checkSets or {@code null} for none
    */
   public GkePolicy setCheckSets(java.util.List<CheckSet> checkSets) {

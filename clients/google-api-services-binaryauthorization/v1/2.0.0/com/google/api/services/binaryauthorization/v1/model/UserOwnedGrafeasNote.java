@@ -31,11 +31,11 @@ package com.google.api.services.binaryauthorization.v1.model;
 public final class UserOwnedGrafeasNote extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. This field will contain the service account email address that this Attestor will
+   * Output only. This field will contain the service account email address that this attestor will
    * use as the principal when querying Container Analysis. Attestor administrators must grant this
    * service account the IAM role needed to read attestations from the note_reference in Container
    * Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the
-   * lifetime of the Attestor, but callers should not make any other assumptions about the service
+   * lifetime of the attestor, but callers should not make any other assumptions about the service
    * account email; future versions may use an email based on a different naming pattern.
    * The value may be {@code null}.
    */
@@ -69,11 +69,11 @@ public final class UserOwnedGrafeasNote extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. This field will contain the service account email address that this Attestor will
+   * Output only. This field will contain the service account email address that this attestor will
    * use as the principal when querying Container Analysis. Attestor administrators must grant this
    * service account the IAM role needed to read attestations from the note_reference in Container
    * Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the
-   * lifetime of the Attestor, but callers should not make any other assumptions about the service
+   * lifetime of the attestor, but callers should not make any other assumptions about the service
    * account email; future versions may use an email based on a different naming pattern.
    * @return value or {@code null} for none
    */
@@ -82,11 +82,11 @@ public final class UserOwnedGrafeasNote extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. This field will contain the service account email address that this Attestor will
+   * Output only. This field will contain the service account email address that this attestor will
    * use as the principal when querying Container Analysis. Attestor administrators must grant this
    * service account the IAM role needed to read attestations from the note_reference in Container
    * Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the
-   * lifetime of the Attestor, but callers should not make any other assumptions about the service
+   * lifetime of the attestor, but callers should not make any other assumptions about the service
    * account email; future versions may use an email based on a different naming pattern.
    * @param delegationServiceAccountEmail delegationServiceAccountEmail or {@code null} for none
    */

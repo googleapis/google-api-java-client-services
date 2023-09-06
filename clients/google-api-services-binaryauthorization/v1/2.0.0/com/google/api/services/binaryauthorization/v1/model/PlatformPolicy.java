@@ -45,8 +45,8 @@ public final class PlatformPolicy extends com.google.api.client.json.GenericJson
   private GkePolicy gkePolicy;
 
   /**
-   * Output only. The relative resource name of the BinAuthz platform policy, in the form of
-   * `projects/platforms/policies`.
+   * Output only. The relative resource name of the Binary Authorization platform policy, in the
+   * form of `projects/platforms/policies`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +94,8 @@ public final class PlatformPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The relative resource name of the BinAuthz platform policy, in the form of
-   * `projects/platforms/policies`.
+   * Output only. The relative resource name of the Binary Authorization platform policy, in the
+   * form of `projects/platforms/policies`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,8 +103,8 @@ public final class PlatformPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The relative resource name of the BinAuthz platform policy, in the form of
-   * `projects/platforms/policies`.
+   * Output only. The relative resource name of the Binary Authorization platform policy, in the
+   * form of `projects/platforms/policies`.
    * @param name name or {@code null} for none
    */
   public PlatformPolicy setName(java.lang.String name) {

@@ -61,6 +61,13 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
   private GoogleCloudRetailV2alphaRuleFilterAction filterAction;
 
   /**
+   * Force returns an attribute as a facet in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaRuleForceReturnFacetAction forceReturnFacetAction;
+
+  /**
    * Ignores specific terms from query during search.
    * The value may be {@code null}.
    */
@@ -81,6 +88,13 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private GoogleCloudRetailV2alphaRuleRedirectAction redirectAction;
+
+  /**
+   * Remove an attribute as a facet in the request (if present).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRetailV2alphaRuleRemoveFacetAction removeFacetAction;
 
   /**
    * Replaces specific terms in the query.
@@ -167,6 +181,23 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
   }
 
   /**
+   * Force returns an attribute as a facet in the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRuleForceReturnFacetAction getForceReturnFacetAction() {
+    return forceReturnFacetAction;
+  }
+
+  /**
+   * Force returns an attribute as a facet in the request.
+   * @param forceReturnFacetAction forceReturnFacetAction or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRule setForceReturnFacetAction(GoogleCloudRetailV2alphaRuleForceReturnFacetAction forceReturnFacetAction) {
+    this.forceReturnFacetAction = forceReturnFacetAction;
+    return this;
+  }
+
+  /**
    * Ignores specific terms from query during search.
    * @return value or {@code null} for none
    */
@@ -216,6 +247,23 @@ public final class GoogleCloudRetailV2alphaRule extends com.google.api.client.js
    */
   public GoogleCloudRetailV2alphaRule setRedirectAction(GoogleCloudRetailV2alphaRuleRedirectAction redirectAction) {
     this.redirectAction = redirectAction;
+    return this;
+  }
+
+  /**
+   * Remove an attribute as a facet in the request (if present).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRuleRemoveFacetAction getRemoveFacetAction() {
+    return removeFacetAction;
+  }
+
+  /**
+   * Remove an attribute as a facet in the request (if present).
+   * @param removeFacetAction removeFacetAction or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaRule setRemoveFacetAction(GoogleCloudRetailV2alphaRuleRemoveFacetAction removeFacetAction) {
+    this.removeFacetAction = removeFacetAction;
     return this;
   }
 

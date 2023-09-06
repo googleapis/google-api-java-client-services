@@ -41,6 +41,14 @@ public final class GoogleCloudRetailV2Condition extends com.google.api.client.js
   private java.util.List<GoogleCloudRetailV2ConditionTimeRange> activeTimeRange;
 
   /**
+   * Used to support browse uses cases. A list (up to 10 entries) of categories or departments. The
+   * format should be the same as UserEvent.page_categories;
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pageCategories;
+
+  /**
    * A list (up to 10 entries) of terms to match the query on. If not specified, match all queries.
    * If many query terms are specified, the condition is matched if any of the terms is a match
    * (i.e. using the OR operator).
@@ -63,6 +71,25 @@ public final class GoogleCloudRetailV2Condition extends com.google.api.client.js
    */
   public GoogleCloudRetailV2Condition setActiveTimeRange(java.util.List<GoogleCloudRetailV2ConditionTimeRange> activeTimeRange) {
     this.activeTimeRange = activeTimeRange;
+    return this;
+  }
+
+  /**
+   * Used to support browse uses cases. A list (up to 10 entries) of categories or departments. The
+   * format should be the same as UserEvent.page_categories;
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPageCategories() {
+    return pageCategories;
+  }
+
+  /**
+   * Used to support browse uses cases. A list (up to 10 entries) of categories or departments. The
+   * format should be the same as UserEvent.page_categories;
+   * @param pageCategories pageCategories or {@code null} for none
+   */
+  public GoogleCloudRetailV2Condition setPageCategories(java.util.List<java.lang.String> pageCategories) {
+    this.pageCategories = pageCategories;
     return this;
   }
 

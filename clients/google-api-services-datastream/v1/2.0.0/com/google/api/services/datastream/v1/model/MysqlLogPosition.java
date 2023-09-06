@@ -30,21 +30,21 @@ package com.google.api.services.datastream.v1.model;
 public final class MysqlLogPosition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The binary log file name.
+   * Required. The binary log file name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logFile;
 
   /**
-   * The position within the binary log file. Default is head of file.
+   * Optional. The position within the binary log file. Default is head of file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer logPosition;
 
   /**
-   * The binary log file name.
+   * Required. The binary log file name.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogFile() {
@@ -52,7 +52,7 @@ public final class MysqlLogPosition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The binary log file name.
+   * Required. The binary log file name.
    * @param logFile logFile or {@code null} for none
    */
   public MysqlLogPosition setLogFile(java.lang.String logFile) {
@@ -61,7 +61,7 @@ public final class MysqlLogPosition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The position within the binary log file. Default is head of file.
+   * Optional. The position within the binary log file. Default is head of file.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLogPosition() {
@@ -69,7 +69,7 @@ public final class MysqlLogPosition extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The position within the binary log file. Default is head of file.
+   * Optional. The position within the binary log file. Default is head of file.
    * @param logPosition logPosition or {@code null} for none
    */
   public MysqlLogPosition setLogPosition(java.lang.Integer logPosition) {

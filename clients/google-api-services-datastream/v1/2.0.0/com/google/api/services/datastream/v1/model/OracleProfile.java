@@ -51,6 +51,13 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
   private java.lang.String hostname;
 
   /**
+   * Optional. SSL configuration for the Oracle connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OracleSslConfig oracleSslConfig;
+
+  /**
    * Required. Password for the Oracle connection.
    * The value may be {@code null}.
    */
@@ -119,6 +126,23 @@ public final class OracleProfile extends com.google.api.client.json.GenericJson 
    */
   public OracleProfile setHostname(java.lang.String hostname) {
     this.hostname = hostname;
+    return this;
+  }
+
+  /**
+   * Optional. SSL configuration for the Oracle connection.
+   * @return value or {@code null} for none
+   */
+  public OracleSslConfig getOracleSslConfig() {
+    return oracleSslConfig;
+  }
+
+  /**
+   * Optional. SSL configuration for the Oracle connection.
+   * @param oracleSslConfig oracleSslConfig or {@code null} for none
+   */
+  public OracleProfile setOracleSslConfig(OracleSslConfig oracleSslConfig) {
+    this.oracleSslConfig = oracleSslConfig;
     return this;
   }
 

@@ -43,8 +43,8 @@ public final class Snippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snippet of the document. The snippet of the document. May contain escaped HTML character
-   * that should be unescaped prior to rendering.
+   * The snippet of the document. May contain escaped HTML character that should be unescaped prior
+   * to rendering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class Snippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snippet of the document. The snippet of the document. May contain escaped HTML character
-   * that should be unescaped prior to rendering.
+   * The snippet of the document. May contain escaped HTML character that should be unescaped prior
+   * to rendering.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnippet() {
@@ -77,8 +77,8 @@ public final class Snippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snippet of the document. The snippet of the document. May contain escaped HTML character
-   * that should be unescaped prior to rendering.
+   * The snippet of the document. May contain escaped HTML character that should be unescaped prior
+   * to rendering.
    * @param snippet snippet or {@code null} for none
    */
   public Snippet setSnippet(java.lang.String snippet) {

@@ -59,8 +59,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxInstances;
 
   /**
-   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both maxThroughput
-   * and maxInstances are set, the value for maxInstances is utilzed.
+   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both max-
+   * throughput and max-instances are provided, max-instances takes precedence over max-throughput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.Integer minInstances;
 
   /**
-   * Minimum throughput of the connector in Mbps. Default and min is 200. If both max-throughput and
-   * max-instances are provided, max-instances takes precedence over max-throughput.
+   * Minimum throughput of the connector in Mbps. Default and min is 200. If both min-throughput and
+   * min-instances are provided, min-instances takes precedence over min-throughput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,8 +178,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both maxThroughput
-   * and maxInstances are set, the value for maxInstances is utilzed.
+   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both max-
+   * throughput and max-instances are provided, max-instances takes precedence over max-throughput.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxThroughput() {
@@ -187,8 +187,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both maxThroughput
-   * and maxInstances are set, the value for maxInstances is utilzed.
+   * Maximum throughput of the connector in Mbps. Default is 300, max is 1000. If both max-
+   * throughput and max-instances are provided, max-instances takes precedence over max-throughput.
    * @param maxThroughput maxThroughput or {@code null} for none
    */
   public Connector setMaxThroughput(java.lang.Integer maxThroughput) {
@@ -214,8 +214,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum throughput of the connector in Mbps. Default and min is 200. If both max-throughput and
-   * max-instances are provided, max-instances takes precedence over max-throughput.
+   * Minimum throughput of the connector in Mbps. Default and min is 200. If both min-throughput and
+   * min-instances are provided, min-instances takes precedence over min-throughput.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinThroughput() {
@@ -223,8 +223,8 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum throughput of the connector in Mbps. Default and min is 200. If both max-throughput and
-   * max-instances are provided, max-instances takes precedence over max-throughput.
+   * Minimum throughput of the connector in Mbps. Default and min is 200. If both min-throughput and
+   * min-instances are provided, min-instances takes precedence over min-throughput.
    * @param minThroughput minThroughput or {@code null} for none
    */
   public Connector setMinThroughput(java.lang.Integer minThroughput) {

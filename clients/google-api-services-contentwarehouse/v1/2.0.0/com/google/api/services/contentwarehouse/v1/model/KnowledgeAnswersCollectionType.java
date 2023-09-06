@@ -39,6 +39,14 @@ public final class KnowledgeAnswersCollectionType extends com.google.api.client.
   private java.util.List<java.lang.String> collection;
 
   /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
+
+  /**
    * Contains data about current schema remodelings at this ValueType level. For more information
    * see go/meaning-remodeling-framework.
    * The value may be {@code null}.
@@ -62,6 +70,25 @@ public final class KnowledgeAnswersCollectionType extends com.google.api.client.
    */
   public KnowledgeAnswersCollectionType setCollection(java.util.List<java.lang.String> collection) {
     this.collection = collection;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersCollectionType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 

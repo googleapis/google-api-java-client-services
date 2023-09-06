@@ -39,35 +39,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
   private java.lang.Float bookScore;
 
   /**
-   * The raw topicality score of the primary entity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float firstScore;
-
-  /**
-   * Whether the primary entity has any "special" links. Currently a link is considered special if
-   * it has a good implication probability and has no negative disambiguation probability.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean hasSpecialLinks;
-
-  /**
-   * The median mentions core of the primary entity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float medianMentionScore;
-
-  /**
-   * The navboost token coverage ratio. All queries are taken into account.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float navboostCoverage;
-
-  /**
    * Reference page score used to select the reference page owner.
    * The value may be {@code null}.
    */
@@ -96,21 +67,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
   private java.lang.Float singleTopicnessV2;
 
   /**
-   * =================================== Signals for the single topicness. Only filled in for the
-   * primary (i.e., top ranked) entity. The title token coverage ratio.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float titleCoverage;
-
-  /**
-   * The sum of raw topicality scores for all entities in this page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float totalSum;
-
-  /**
    * Stores score for later offline voting to choose reference pages. If zero, it's not a good book
    * reference page.
    * @return value or {@code null} for none
@@ -126,76 +82,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
    */
   public RepositoryWebrefReferencePageScores setBookScore(java.lang.Float bookScore) {
     this.bookScore = bookScore;
-    return this;
-  }
-
-  /**
-   * The raw topicality score of the primary entity.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getFirstScore() {
-    return firstScore;
-  }
-
-  /**
-   * The raw topicality score of the primary entity.
-   * @param firstScore firstScore or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setFirstScore(java.lang.Float firstScore) {
-    this.firstScore = firstScore;
-    return this;
-  }
-
-  /**
-   * Whether the primary entity has any "special" links. Currently a link is considered special if
-   * it has a good implication probability and has no negative disambiguation probability.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getHasSpecialLinks() {
-    return hasSpecialLinks;
-  }
-
-  /**
-   * Whether the primary entity has any "special" links. Currently a link is considered special if
-   * it has a good implication probability and has no negative disambiguation probability.
-   * @param hasSpecialLinks hasSpecialLinks or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setHasSpecialLinks(java.lang.Boolean hasSpecialLinks) {
-    this.hasSpecialLinks = hasSpecialLinks;
-    return this;
-  }
-
-  /**
-   * The median mentions core of the primary entity.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getMedianMentionScore() {
-    return medianMentionScore;
-  }
-
-  /**
-   * The median mentions core of the primary entity.
-   * @param medianMentionScore medianMentionScore or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setMedianMentionScore(java.lang.Float medianMentionScore) {
-    this.medianMentionScore = medianMentionScore;
-    return this;
-  }
-
-  /**
-   * The navboost token coverage ratio. All queries are taken into account.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNavboostCoverage() {
-    return navboostCoverage;
-  }
-
-  /**
-   * The navboost token coverage ratio. All queries are taken into account.
-   * @param navboostCoverage navboostCoverage or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setNavboostCoverage(java.lang.Float navboostCoverage) {
-    this.navboostCoverage = navboostCoverage;
     return this;
   }
 
@@ -264,42 +150,6 @@ public final class RepositoryWebrefReferencePageScores extends com.google.api.cl
    */
   public RepositoryWebrefReferencePageScores setSingleTopicnessV2(java.lang.Float singleTopicnessV2) {
     this.singleTopicnessV2 = singleTopicnessV2;
-    return this;
-  }
-
-  /**
-   * =================================== Signals for the single topicness. Only filled in for the
-   * primary (i.e., top ranked) entity. The title token coverage ratio.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getTitleCoverage() {
-    return titleCoverage;
-  }
-
-  /**
-   * =================================== Signals for the single topicness. Only filled in for the
-   * primary (i.e., top ranked) entity. The title token coverage ratio.
-   * @param titleCoverage titleCoverage or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setTitleCoverage(java.lang.Float titleCoverage) {
-    this.titleCoverage = titleCoverage;
-    return this;
-  }
-
-  /**
-   * The sum of raw topicality scores for all entities in this page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getTotalSum() {
-    return totalSum;
-  }
-
-  /**
-   * The sum of raw topicality scores for all entities in this page.
-   * @param totalSum totalSum or {@code null} for none
-   */
-  public RepositoryWebrefReferencePageScores setTotalSum(java.lang.Float totalSum) {
-    this.totalSum = totalSum;
     return this;
   }
 

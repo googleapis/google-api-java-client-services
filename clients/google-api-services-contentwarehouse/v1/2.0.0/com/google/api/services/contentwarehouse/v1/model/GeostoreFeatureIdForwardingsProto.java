@@ -36,8 +36,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
 
   /**
    * If the feature has been marked as a DUPLICATE of another feature, this is the feature ID of
-   * that other feature. Note that the other feature may itself be removed. This field is NOT set in
-   * (1).
+   * that other feature. Note that the other feature may itself be removed. This field is always
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
 
   /**
    * If the feature has been marked as a DUPLICATE of another feature, this is the feature ID of
-   * that other feature. Note that the other feature may itself be removed. This field is NOT set in
-   * (1).
+   * that other feature. Note that the other feature may itself be removed. This field is always
+   * set.
    * @return value or {@code null} for none
    */
   public GeostoreFeatureIdProto getDuplicateOf() {
@@ -90,8 +90,8 @@ public final class GeostoreFeatureIdForwardingsProto extends com.google.api.clie
 
   /**
    * If the feature has been marked as a DUPLICATE of another feature, this is the feature ID of
-   * that other feature. Note that the other feature may itself be removed. This field is NOT set in
-   * (1).
+   * that other feature. Note that the other feature may itself be removed. This field is always
+   * set.
    * @param duplicateOf duplicateOf or {@code null} for none
    */
   public GeostoreFeatureIdForwardingsProto setDuplicateOf(GeostoreFeatureIdProto duplicateOf) {

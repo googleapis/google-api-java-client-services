@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The states of the device. They are dynamic and may change based on the current context. Next ID:
- * 5
+ * 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -32,9 +32,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends com.google.api.client.json.GenericJson {
 
   /**
-   * The distance of the device relative to others that hear the user's OKG. Timestamp of when the
-   * device was last used. Should correspond to when the AssistantRequestParams (in
-   * ASSISTANT_SNAPSHOT corpus) were last written for this device.
+   * The distance of the device relative to others that hear the user's OKG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +44,19 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDocked;
+
+  /**
+   * Whether the device is a local device, i.e. the device that heard OKG from a user and is
+   * processed by an assistant pipeline. If multiple devices heard OKG (MDA case), each hearing
+   * device would be considered a local device in its own assistant pipeline. Example: A user says
+   * "OKG, play music on TV" to Google Home, and music is played on the TV. Google home is
+   * considered a local device, while TV is considered a remote device. Timestamp of when the device
+   * was last used. Should correspond to when the AssistantRequestParams (in ASSISTANT_SNAPSHOT
+   * corpus) were last written for this device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isLocal;
 
   /**
    * Indicate whether the device is locked.
@@ -62,9 +73,7 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
   private java.lang.Boolean isTethered;
 
   /**
-   * The distance of the device relative to others that hear the user's OKG. Timestamp of when the
-   * device was last used. Should correspond to when the AssistantRequestParams (in
-   * ASSISTANT_SNAPSHOT corpus) were last written for this device.
+   * The distance of the device relative to others that hear the user's OKG.
    * @return value or {@code null} for none
    */
   public java.lang.String getDistance() {
@@ -72,9 +81,7 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
   }
 
   /**
-   * The distance of the device relative to others that hear the user's OKG. Timestamp of when the
-   * device was last used. Should correspond to when the AssistantRequestParams (in
-   * ASSISTANT_SNAPSHOT corpus) were last written for this device.
+   * The distance of the device relative to others that hear the user's OKG.
    * @param distance distance or {@code null} for none
    */
   public AssistantGroundingRankerDeviceTargetingFeaturesStates setDistance(java.lang.String distance) {
@@ -96,6 +103,35 @@ public final class AssistantGroundingRankerDeviceTargetingFeaturesStates extends
    */
   public AssistantGroundingRankerDeviceTargetingFeaturesStates setIsDocked(java.lang.Boolean isDocked) {
     this.isDocked = isDocked;
+    return this;
+  }
+
+  /**
+   * Whether the device is a local device, i.e. the device that heard OKG from a user and is
+   * processed by an assistant pipeline. If multiple devices heard OKG (MDA case), each hearing
+   * device would be considered a local device in its own assistant pipeline. Example: A user says
+   * "OKG, play music on TV" to Google Home, and music is played on the TV. Google home is
+   * considered a local device, while TV is considered a remote device. Timestamp of when the device
+   * was last used. Should correspond to when the AssistantRequestParams (in ASSISTANT_SNAPSHOT
+   * corpus) were last written for this device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsLocal() {
+    return isLocal;
+  }
+
+  /**
+   * Whether the device is a local device, i.e. the device that heard OKG from a user and is
+   * processed by an assistant pipeline. If multiple devices heard OKG (MDA case), each hearing
+   * device would be considered a local device in its own assistant pipeline. Example: A user says
+   * "OKG, play music on TV" to Google Home, and music is played on the TV. Google home is
+   * considered a local device, while TV is considered a remote device. Timestamp of when the device
+   * was last used. Should correspond to when the AssistantRequestParams (in ASSISTANT_SNAPSHOT
+   * corpus) were last written for this device.
+   * @param isLocal isLocal or {@code null} for none
+   */
+  public AssistantGroundingRankerDeviceTargetingFeaturesStates setIsLocal(java.lang.Boolean isLocal) {
+    this.isLocal = isLocal;
     return this;
   }
 

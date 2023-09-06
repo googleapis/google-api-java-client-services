@@ -673,16 +673,18 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   private java.util.List<AppsPeopleOzExternalMergedpeopleapiPosixAccount> posixAccount;
 
   /**
-   * DEPRECATED. (go/people-api-concepts#repeated): Use person.profile_url_repeated instead. Access
-   * to this field is restricted to a set of legacy clients. This is a Google+-only field. See
-   * go/fbs-g+-deprecation. NOTE: `Person.profile_url` is only populated for profile-centric person.
+   * DEPRECATED. No data is returned for this field anymore. (go/people-api-concepts#repeated): Use
+   * person.profile_url_repeated instead. Access to this field is restricted to a set of legacy
+   * clients. This is a Google+-only field. See go/fbs-g+-deprecation. NOTE: `Person.profile_url` is
+   * only populated for profile-centric person.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profileUrl;
 
   /**
-   * This is a Google+-only field. See go/fbs-g+-deprecation.
+   * DEPRECATED. No data is returned for this field anymore. This is a Google+-only field. See
+   * go/fbs-g+-deprecation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1760,9 +1762,10 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * DEPRECATED. (go/people-api-concepts#repeated): Use person.profile_url_repeated instead. Access
-   * to this field is restricted to a set of legacy clients. This is a Google+-only field. See
-   * go/fbs-g+-deprecation. NOTE: `Person.profile_url` is only populated for profile-centric person.
+   * DEPRECATED. No data is returned for this field anymore. (go/people-api-concepts#repeated): Use
+   * person.profile_url_repeated instead. Access to this field is restricted to a set of legacy
+   * clients. This is a Google+-only field. See go/fbs-g+-deprecation. NOTE: `Person.profile_url` is
+   * only populated for profile-centric person.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileUrl() {
@@ -1770,9 +1773,10 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * DEPRECATED. (go/people-api-concepts#repeated): Use person.profile_url_repeated instead. Access
-   * to this field is restricted to a set of legacy clients. This is a Google+-only field. See
-   * go/fbs-g+-deprecation. NOTE: `Person.profile_url` is only populated for profile-centric person.
+   * DEPRECATED. No data is returned for this field anymore. (go/people-api-concepts#repeated): Use
+   * person.profile_url_repeated instead. Access to this field is restricted to a set of legacy
+   * clients. This is a Google+-only field. See go/fbs-g+-deprecation. NOTE: `Person.profile_url` is
+   * only populated for profile-centric person.
    * @param profileUrl profileUrl or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setProfileUrl(java.lang.String profileUrl) {
@@ -1781,7 +1785,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * This is a Google+-only field. See go/fbs-g+-deprecation.
+   * DEPRECATED. No data is returned for this field anymore. This is a Google+-only field. See
+   * go/fbs-g+-deprecation.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiProfileUrl> getProfileUrlRepeated() {
@@ -1789,7 +1794,8 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * This is a Google+-only field. See go/fbs-g+-deprecation.
+   * DEPRECATED. No data is returned for this field anymore. This is a Google+-only field. See
+   * go/fbs-g+-deprecation.
    * @param profileUrlRepeated profileUrlRepeated or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setProfileUrlRepeated(java.util.List<AppsPeopleOzExternalMergedpeopleapiProfileUrl> profileUrlRepeated) {

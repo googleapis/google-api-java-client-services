@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 37
+ * Next ID: 38
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -176,6 +176,14 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isNeuralCategoricalInterpretation;
+
+  /**
+   * Whether the FunctionCall is created as a refined_meaning in resolution. Downstream code will
+   * look at this field to see if it needs to create a new refined QueryInterpretation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isRefinedMeaning;
 
   /**
    * Denotes this is a sub-intent used for composing an Assistant UI response. The assistant dialog
@@ -608,6 +616,25 @@ public final class KnowledgeAnswersIntentQueryFunctionCallSignals extends com.go
    */
   public KnowledgeAnswersIntentQueryFunctionCallSignals setIsNeuralCategoricalInterpretation(java.lang.Boolean isNeuralCategoricalInterpretation) {
     this.isNeuralCategoricalInterpretation = isNeuralCategoricalInterpretation;
+    return this;
+  }
+
+  /**
+   * Whether the FunctionCall is created as a refined_meaning in resolution. Downstream code will
+   * look at this field to see if it needs to create a new refined QueryInterpretation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsRefinedMeaning() {
+    return isRefinedMeaning;
+  }
+
+  /**
+   * Whether the FunctionCall is created as a refined_meaning in resolution. Downstream code will
+   * look at this field to see if it needs to create a new refined QueryInterpretation.
+   * @param isRefinedMeaning isRefinedMeaning or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryFunctionCallSignals setIsRefinedMeaning(java.lang.Boolean isRefinedMeaning) {
+    this.isRefinedMeaning = isRefinedMeaning;
     return this;
   }
 

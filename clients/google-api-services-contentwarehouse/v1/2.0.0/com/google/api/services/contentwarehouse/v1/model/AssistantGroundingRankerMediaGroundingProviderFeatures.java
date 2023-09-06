@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be passed from Media GP to HGR. Next ID: 17
+ * Features to be passed from Media GP to HGR. Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -50,6 +50,13 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   @com.google.api.client.util.Key
   private java.lang.String entityMid;
+
+  /**
+   * True if the candidate has a CAST_VIDEO deeplink regardless of which provider was chosen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasCastVideoDeeplink;
 
   /**
    * True if the argument's type was explicitly mentioned in the query.
@@ -201,6 +208,23 @@ public final class AssistantGroundingRankerMediaGroundingProviderFeatures extend
    */
   public AssistantGroundingRankerMediaGroundingProviderFeatures setEntityMid(java.lang.String entityMid) {
     this.entityMid = entityMid;
+    return this;
+  }
+
+  /**
+   * True if the candidate has a CAST_VIDEO deeplink regardless of which provider was chosen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasCastVideoDeeplink() {
+    return hasCastVideoDeeplink;
+  }
+
+  /**
+   * True if the candidate has a CAST_VIDEO deeplink regardless of which provider was chosen.
+   * @param hasCastVideoDeeplink hasCastVideoDeeplink or {@code null} for none
+   */
+  public AssistantGroundingRankerMediaGroundingProviderFeatures setHasCastVideoDeeplink(java.lang.Boolean hasCastVideoDeeplink) {
+    this.hasCastVideoDeeplink = hasCastVideoDeeplink;
     return this;
   }
 

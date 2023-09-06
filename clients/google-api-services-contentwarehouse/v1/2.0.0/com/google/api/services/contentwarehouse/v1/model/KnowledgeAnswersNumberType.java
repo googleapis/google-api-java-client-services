@@ -31,6 +31,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class KnowledgeAnswersNumberType extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
+
+  /**
    * If true, the semantics of the NumberType argument are retained as a string, rather than being
    * converted to a float-type object. This option is particularly useful in cases where leading 0s
    * in the user input are meaningful, e.g. for zip codes or sports jersey numbers. For the user-
@@ -64,6 +72,25 @@ public final class KnowledgeAnswersNumberType extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subType;
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersNumberType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
+    return this;
+  }
 
   /**
    * If true, the semantics of the NumberType argument are retained as a string, rather than being

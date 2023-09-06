@@ -367,6 +367,13 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   private GeostoreFieldMetadataProto priorityMetadata;
 
   /**
+   * RESERVED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreSegmentProtoRampProto ramp;
+
+  /**
    * The set of restrictions that apply to this segment. Restrictions may make a single segment,
    * turn, or more complex maneuver along a set of segments unroutable for the specified travel
    * modes, or may only add penalties or warnings, depending on the restriction type. Turn
@@ -1244,6 +1251,23 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
    */
   public GeostoreSegmentProto setPriorityMetadata(GeostoreFieldMetadataProto priorityMetadata) {
     this.priorityMetadata = priorityMetadata;
+    return this;
+  }
+
+  /**
+   * RESERVED
+   * @return value or {@code null} for none
+   */
+  public GeostoreSegmentProtoRampProto getRamp() {
+    return ramp;
+  }
+
+  /**
+   * RESERVED
+   * @param ramp ramp or {@code null} for none
+   */
+  public GeostoreSegmentProto setRamp(GeostoreSegmentProtoRampProto ramp) {
+    this.ramp = ramp;
     return this;
   }
 

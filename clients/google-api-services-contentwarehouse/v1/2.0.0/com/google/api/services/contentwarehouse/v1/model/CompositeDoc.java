@@ -22,7 +22,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * information (e.g: pagerank, language)? - What does each field in CompositeDoc mean and who should
  * I contact if I have questions? To add a new field into CompositeDoc, or change existing field's
  * size significantly, please file a ticket at go/dj-new-field, fill in necessary information and
- * get approved by docjoin-access@ team. Next id: 191
+ * get approved by docjoin-access@ team. Next id: 193
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -64,12 +64,17 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   private java.util.List<CompositeDocAlternateName> alternatename;
 
   /**
+   * Mark as non-personal since it's an aggregation of anchors. For more details of Search personal
+   * data, see go/dma52-search-cdoc-fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerAnchorStatistics anchorStats;
 
   /**
+   * Mark as non-personal since no personal fields will be populated in
+   * `anchors.link_additional_info` and `anchors.additional_info`. For more details of Search
+   * personal data, see go/dma52-search-cdoc-fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -450,6 +455,8 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Mark as non-personal since it's an aggregation of anchors. For more details of Search personal
+   * data, see go/dma52-search-cdoc-fields.
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerAnchorStatistics getAnchorStats() {
@@ -457,6 +464,8 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Mark as non-personal since it's an aggregation of anchors. For more details of Search personal
+   * data, see go/dma52-search-cdoc-fields.
    * @param anchorStats anchorStats or {@code null} for none
    */
   public CompositeDoc setAnchorStats(IndexingDocjoinerAnchorStatistics anchorStats) {
@@ -465,6 +474,9 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Mark as non-personal since no personal fields will be populated in
+   * `anchors.link_additional_info` and `anchors.additional_info`. For more details of Search
+   * personal data, see go/dma52-search-cdoc-fields.
    * @return value or {@code null} for none
    */
   public Anchors getAnchors() {
@@ -472,6 +484,9 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Mark as non-personal since no personal fields will be populated in
+   * `anchors.link_additional_info` and `anchors.additional_info`. For more details of Search
+   * personal data, see go/dma52-search-cdoc-fields.
    * @param anchors anchors or {@code null} for none
    */
   public CompositeDoc setAnchors(Anchors anchors) {

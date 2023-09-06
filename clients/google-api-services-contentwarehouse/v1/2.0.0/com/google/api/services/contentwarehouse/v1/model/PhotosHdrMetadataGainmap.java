@@ -40,6 +40,14 @@ public final class PhotosHdrMetadataGainmap extends com.google.api.client.json.G
   private java.lang.Boolean adobeHdr;
 
   /**
+   * Indicates that this image can be processed as an Apple HDR image by reading the MPF segments
+   * (if JPEG) or HEIF segments (if HEIC).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean appleHdr;
+
+  /**
    * Indicates that this image can be processed as a go/ghdr (UltraHDR) image by reading the
    * GContainer in the primary XMP block.
    * The value may be {@code null}.
@@ -63,6 +71,25 @@ public final class PhotosHdrMetadataGainmap extends com.google.api.client.json.G
    */
   public PhotosHdrMetadataGainmap setAdobeHdr(java.lang.Boolean adobeHdr) {
     this.adobeHdr = adobeHdr;
+    return this;
+  }
+
+  /**
+   * Indicates that this image can be processed as an Apple HDR image by reading the MPF segments
+   * (if JPEG) or HEIF segments (if HEIC).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAppleHdr() {
+    return appleHdr;
+  }
+
+  /**
+   * Indicates that this image can be processed as an Apple HDR image by reading the MPF segments
+   * (if JPEG) or HEIF segments (if HEIC).
+   * @param appleHdr appleHdr or {@code null} for none
+   */
+  public PhotosHdrMetadataGainmap setAppleHdr(java.lang.Boolean appleHdr) {
+    this.appleHdr = appleHdr;
     return this;
   }
 

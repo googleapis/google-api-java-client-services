@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 53
+ * be updated. Next ID: 54
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -56,6 +56,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float chardVariance;
+
+  /**
+   * Site-level Chrome views.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float chromeInTotal;
 
   /**
    * An id for defining clusters of sites. Used in ecosystem experiments (project Tundra).
@@ -432,6 +439,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setChardVariance(java.lang.Float chardVariance) {
     this.chardVariance = chardVariance;
+    return this;
+  }
+
+  /**
+   * Site-level Chrome views.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getChromeInTotal() {
+    return chromeInTotal;
+  }
+
+  /**
+   * Site-level Chrome views.
+   * @param chromeInTotal chromeInTotal or {@code null} for none
+   */
+  public QualityNsrNsrData setChromeInTotal(java.lang.Float chromeInTotal) {
+    this.chromeInTotal = chromeInTotal;
     return this;
   }
 

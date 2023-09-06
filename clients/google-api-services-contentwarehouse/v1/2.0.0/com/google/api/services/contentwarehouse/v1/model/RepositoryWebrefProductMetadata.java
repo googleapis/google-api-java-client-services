@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Products-specific information about the entity. Next available tag: 16.
+ * Products-specific information about the entity. Only available in QrefMetadata output. Next
+ * available tag: 16.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -47,12 +48,6 @@ public final class RepositoryWebrefProductMetadata extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private KnowledgeAnswersIntentQueryShoppingIds shoppingIds;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
 
   /**
    * All unique variant cluster ids (shopping's GPCs) of this entity.
@@ -100,21 +95,6 @@ public final class RepositoryWebrefProductMetadata extends com.google.api.client
    */
   public RepositoryWebrefProductMetadata setShoppingIds(KnowledgeAnswersIntentQueryShoppingIds shoppingIds) {
     this.shoppingIds = shoppingIds;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * @param type type or {@code null} for none
-   */
-  public RepositoryWebrefProductMetadata setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

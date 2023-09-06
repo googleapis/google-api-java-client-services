@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 6
+ * Features to be extracted from Podcast GP for ranking in HGR. Next ID: 7
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -64,6 +64,15 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
    */
   @com.google.api.client.util.Key
   private java.lang.Double scubedTstarScore;
+
+  /**
+   * This score is in the range [0.0, 1.0] and is used for cross-backend (e.g., YT vs another
+   * Music/Podcast service provider) ranking and scoring. 0.0 means no confidence and 1.0 means full
+   * confidence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double youtubeConfidenceScore;
 
   /**
    * Whether the podcast is exclusive to a provider a not.
@@ -147,6 +156,27 @@ public final class AssistantGroundingRankerPodcastGroundingProviderFeatures exte
    */
   public AssistantGroundingRankerPodcastGroundingProviderFeatures setScubedTstarScore(java.lang.Double scubedTstarScore) {
     this.scubedTstarScore = scubedTstarScore;
+    return this;
+  }
+
+  /**
+   * This score is in the range [0.0, 1.0] and is used for cross-backend (e.g., YT vs another
+   * Music/Podcast service provider) ranking and scoring. 0.0 means no confidence and 1.0 means full
+   * confidence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getYoutubeConfidenceScore() {
+    return youtubeConfidenceScore;
+  }
+
+  /**
+   * This score is in the range [0.0, 1.0] and is used for cross-backend (e.g., YT vs another
+   * Music/Podcast service provider) ranking and scoring. 0.0 means no confidence and 1.0 means full
+   * confidence.
+   * @param youtubeConfidenceScore youtubeConfidenceScore or {@code null} for none
+   */
+  public AssistantGroundingRankerPodcastGroundingProviderFeatures setYoutubeConfidenceScore(java.lang.Double youtubeConfidenceScore) {
+    this.youtubeConfidenceScore = youtubeConfidenceScore;
     return this;
   }
 

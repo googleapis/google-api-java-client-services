@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A DateType configures a value whose type is intended to be a date. LINT.IfChange Next id: 16
+ * A DateType configures a value whose type is intended to be a date. LINT.IfChange Next id: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -127,6 +127,14 @@ public final class KnowledgeAnswersDateType extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowYearResolution;
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
 
   /**
    * Contains data about current schema remodelings at this ValueType level. For more information
@@ -374,6 +382,25 @@ public final class KnowledgeAnswersDateType extends com.google.api.client.json.G
    */
   public KnowledgeAnswersDateType setAllowYearResolution(java.lang.Boolean allowYearResolution) {
     this.allowYearResolution = allowYearResolution;
+    return this;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersDateType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 

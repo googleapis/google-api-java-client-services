@@ -37,6 +37,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class KnowledgeAnswersNormalizedStringType extends com.google.api.client.json.GenericJson {
 
   /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NlpMeaningComponentSpecificContracts componentSpecificContracts;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +57,25 @@ public final class KnowledgeAnswersNormalizedStringType extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private NlpMeaningMeaningRemodelings remodelings;
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @return value or {@code null} for none
+   */
+  public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
+    return componentSpecificContracts;
+  }
+
+  /**
+   * Contains data about the contracts that this ValueType level is available for. For more
+   * information see go/contract-based-conformance.
+   * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
+   */
+  public KnowledgeAnswersNormalizedStringType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+    this.componentSpecificContracts = componentSpecificContracts;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

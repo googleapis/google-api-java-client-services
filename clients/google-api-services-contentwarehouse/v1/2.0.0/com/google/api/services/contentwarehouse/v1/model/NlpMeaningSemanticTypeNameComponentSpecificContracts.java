@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A TrackingNumberType configures a value whose type is a TrackingNumber.
+ * Component-Specific Contract for SemanticTypes, which are atomic string values (and thus can't
+ * have a ComponentSpecificContracts message attached to them). go/contract-based-conformance
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -28,27 +29,22 @@ package com.google.api.services.contentwarehouse.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class KnowledgeAnswersTrackingNumberType extends com.google.api.client.json.GenericJson {
+public final class NlpMeaningSemanticTypeNameComponentSpecificContracts extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains data about the contracts that this ValueType level is available for. For more
-   * information see go/contract-based-conformance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NlpMeaningComponentSpecificContracts componentSpecificContracts;
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
-   * see go/meaning-remodeling-framework.
+   * Semantic type name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private NlpMeaningMeaningRemodelings remodelings;
+  private java.lang.String name;
 
   /**
-   * Contains data about the contracts that this ValueType level is available for. For more
-   * information see go/contract-based-conformance.
    * @return value or {@code null} for none
    */
   public NlpMeaningComponentSpecificContracts getComponentSpecificContracts() {
@@ -56,42 +52,38 @@ public final class KnowledgeAnswersTrackingNumberType extends com.google.api.cli
   }
 
   /**
-   * Contains data about the contracts that this ValueType level is available for. For more
-   * information see go/contract-based-conformance.
    * @param componentSpecificContracts componentSpecificContracts or {@code null} for none
    */
-  public KnowledgeAnswersTrackingNumberType setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
+  public NlpMeaningSemanticTypeNameComponentSpecificContracts setComponentSpecificContracts(NlpMeaningComponentSpecificContracts componentSpecificContracts) {
     this.componentSpecificContracts = componentSpecificContracts;
     return this;
   }
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
-   * see go/meaning-remodeling-framework.
+   * Semantic type name.
    * @return value or {@code null} for none
    */
-  public NlpMeaningMeaningRemodelings getRemodelings() {
-    return remodelings;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Contains data about current schema remodelings at this ValueType level. For more information
-   * see go/meaning-remodeling-framework.
-   * @param remodelings remodelings or {@code null} for none
+   * Semantic type name.
+   * @param name name or {@code null} for none
    */
-  public KnowledgeAnswersTrackingNumberType setRemodelings(NlpMeaningMeaningRemodelings remodelings) {
-    this.remodelings = remodelings;
+  public NlpMeaningSemanticTypeNameComponentSpecificContracts setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public KnowledgeAnswersTrackingNumberType set(String fieldName, Object value) {
-    return (KnowledgeAnswersTrackingNumberType) super.set(fieldName, value);
+  public NlpMeaningSemanticTypeNameComponentSpecificContracts set(String fieldName, Object value) {
+    return (NlpMeaningSemanticTypeNameComponentSpecificContracts) super.set(fieldName, value);
   }
 
   @Override
-  public KnowledgeAnswersTrackingNumberType clone() {
-    return (KnowledgeAnswersTrackingNumberType) super.clone();
+  public NlpMeaningSemanticTypeNameComponentSpecificContracts clone() {
+    return (NlpMeaningSemanticTypeNameComponentSpecificContracts) super.clone();
   }
 
 }

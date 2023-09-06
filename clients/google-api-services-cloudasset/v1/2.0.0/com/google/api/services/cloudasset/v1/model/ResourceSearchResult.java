@@ -240,6 +240,19 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
+   * The actual content of Security Command Center security marks associated with the asset. Note
+   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
+   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
+   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
+   * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
+   * `sccSecurityMarks.foo:*`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> sccSecurityMarks;
+
+  /**
    * The state of this resource. Different resources types have different state definitions that are
    * mapped from various fields of different resource types. This field is available only when the
    * resource's Protobuf contains it. Example: If the resource is an instance provided by Compute
@@ -753,6 +766,35 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setRelationships(java.util.Map<String, RelatedResources> relationships) {
     this.relationships = relationships;
+    return this;
+  }
+
+  /**
+   * The actual content of Security Command Center security marks associated with the asset. Note
+   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
+   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
+   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
+   * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
+   * `sccSecurityMarks.foo:*`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSccSecurityMarks() {
+    return sccSecurityMarks;
+  }
+
+  /**
+   * The actual content of Security Command Center security marks associated with the asset. Note
+   * that both staging & prod SecurityMarks are attached on prod resources. In CAS preprod/prod,
+   * both staging & prod SecurityMarks are ingested and returned in the following `security_marks`
+   * map. In that case, the prefix "staging." will be added to the keys of all the staging marks. To
+   * search against SCC SecurityMarks field: * Use a field query: - query by a given key value pair.
+   * Example: `sccSecurityMarks.foo=bar` - query by a given key's existence. Example:
+   * `sccSecurityMarks.foo:*`
+   * @param sccSecurityMarks sccSecurityMarks or {@code null} for none
+   */
+  public ResourceSearchResult setSccSecurityMarks(java.util.Map<String, java.lang.String> sccSecurityMarks) {
+    this.sccSecurityMarks = sccSecurityMarks;
     return this;
   }
 
